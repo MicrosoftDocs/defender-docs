@@ -610,13 +610,13 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 
 2. On the **General** tab, specify the following details:
 
-    - **Name**: `MDATP MDAV System Extensions`
-    - **Description**: `MDATP system extensions`
-    - **Category**: `None`
-    - **Distribution Method**: `Install Automatically`
-    - **Level**: `Computer Level`
+   - **Name**: `MDATP MDAV System Extensions`
+   - **Description**: `MDATP system extensions`
+   - **Category**: `None`
+   - **Distribution Method**: `Install Automatically`
+   - **Level**: `Computer Level`
 
-    :::image type="content" source="media/sysext-new-profile.png" alt-text="The configuration settings sysext new profile." lightbox="media/sysext-new-profile.png":::
+   :::image type="content" source="media/sysext-new-profile.png" alt-text="The configuration settings sysext new profile." lightbox="media/sysext-new-profile.png":::
 
 3. In **System Extensions** select **Configure**.
 
@@ -659,39 +659,38 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 
 > [!NOTE]
 > These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
+
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
 2. Select **New**, and enter the following details for **Options**:
 
-    - On the **General** tab, specify the following values:
-      - **Name**: `Microsoft Defender Network Extension`
-      - **Description**: `macOS 11 (Big Sur) or later`
-      - **Category**: `None *(default)*`
-      - **Distribution Method**: `Install Automatically *(default)*`
-      - **Level**: `Computer Level *(default)*`
+3. On the **General** tab, specify the following values:
 
-    - On the **Content Filter** tab, specify the following values:
-      - **Filter Name**: `Microsoft Defender Content Filter`
-      - **Identifier**: `com.microsoft.wdav`
-      - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
-      - **Filter Order**: `Inspector`
-      - **Socket Filter**: `com.microsoft.wdav.netext`
-      - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
-      - Leave **Network Filter** fields blank (**Include** is *not* selected)
+   - **Name**: `Microsoft Defender Network Extension`
+   - **Description**: `macOS 11 (Big Sur) or later`
+   - **Category**: `None *(default)*`
+   - **Distribution Method**: `Install Automatically *(default)*`
+   - **Level**: `Computer Level *(default)*`
 
-      Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
+4. On the **Content Filter** tab, specify the following values:
 
-      :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
+   - **Filter Name**: `Microsoft Defender Content Filter`
+   - **Identifier**: `com.microsoft.wdav`
+   - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
+   - **Filter Order**: `Inspector`
+   - **Socket Filter**: `com.microsoft.wdav.netext`
+   - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+   - Leave **Network Filter** fields blank (**Include** is *not* selected)
 
-3. Select the **Scope** tab.
+   Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
+
+   :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
+
+5. Select the **Scope** tab.
 
    :::image type="content" source="media/0df36fc308ba569db204ee32db3fb40a.png" alt-text="The configuration settings sco tab." lightbox="media/0df36fc308ba569db204ee32db3fb40a.png":::
 
-4. Select **+ Add**.
-
-5. Select **Computer Groups** > under **Group Name** > select **Contoso's Machine Group**.
-
-6. Select **+ Add**.
+6. Select **+ Add**. Select **Computer Groups**, and then under **Group Name**, select **Contoso's Machine Group**. Then select **+ Add**.
 
    :::image type="content" source="media/0dde8a4c41110dbc398c485433a81359.png" alt-text="The configuration settings adim." lightbox="media/0dde8a4c41110dbc398c485433a81359.png":::
 
@@ -710,6 +709,7 @@ Alternatively, you can download [netfilter.mobileconfig](https://github.com/micr
 > [!CAUTION]
 > macOS 13 (Ventura) contains new privacy enhancements. Beginning with this version, by default, applications cannot run in background without explicit consent. Microsoft Defender for Endpoint must run its daemon process in background.
 > > This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through Jamf, we recommend you update the deployment with this configuration profile.
+
 Download [**background_services.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/background_services.mobileconfig) from [our GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 Upload downloaded mobileconfig to Jamf Configuration Profiles as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
