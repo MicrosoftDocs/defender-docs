@@ -42,7 +42,6 @@ Microsoft Defender for Endpoint utilizes the [anti-malware Scan Interface (AMSI)
 In this demonstration page, you have three engine choices to test AMSI:
 
 - PowerShell
-- JScript
 - VBScript
 
 ### Testing AMSI with PowerShell
@@ -81,27 +80,6 @@ Invoke-Expression $testString
     
     ```
 
-### Testing AMSI with jscript
-
-
-```javascript
-// Save this sample AMSI jscript as AMSI_jscript.js
-var testString = "AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386"; 
-eval(testString); 
-WScript.Echo("Script executed successfully."); 
-```
-
-1. Open Command Prompt as an administrator.
-
-2. Type `cscript /E:jscript AMSI_jscript.js`, and then press **Enter**.
-
-   The result should be as follows:
-
-   ```console
-
-   CScript Error: Loading script "C:\Users\Admin\Desktop\AMSI_jscript.js" failed (Operation did not complete successfully because the file contains a virus or potentially unwanted software. ).
-
-   ```
 
 ### Testing AMSI with VBScript
 
@@ -204,7 +182,7 @@ https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threa
 
      Category: Virus
 
-     Path: _\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or _C:\Users\Admin\Desktop\AMSI_jscript.js;   file:_C:\Users\Admin\Desktop\AMSI_jscript.js->[Eval] or _C:\Users\Admin\Desktop\AMSI_vbscript.vbs
+     Path: _\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or _C:\Users\Admin\Desktop\AMSI_vbscript.vbs;   file:_C:\Users\Admin\Desktop\AMSI_vbscript.vbs
 
      Detection Origin: Local machine or Unknown
 
@@ -214,7 +192,7 @@ https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threa
 
      User: NT AUTHORITY\SYSTEM
 
-     Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exeor C:\Windows\System32\cscript.exe or C:\Windows\System32\wscript.exe or Unknown 
+     Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or C:\Windows\System32\cscript.exe or C:\Windows\System32\wscript.exe or Unknown 
 
      Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
 
