@@ -1,5 +1,5 @@
 ---
-title: Allow or block files using the Tenant Allow/Block List
+title: Allow or block IP addresses using the Tenant Allow/Block List
 f1.keywords:
   - NOCSH
 ms.author: chrisda
@@ -13,22 +13,22 @@ search.appverid:
 ms.collection:
   - m365-security
   - tier1
-description: Admins can learn how to allow or block files in the Tenant Allow/Block List.
+description: Admins can learn how to allow or block IP addresses in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/18/2024
+ms.date: 09/20/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Allow or block files using the Tenant Allow/Block List
+# Allow or block IP addresses using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for IP addresses in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
-This article describes how admins can manage entries for files in the Microsoft Defender portal and in Exchange Online PowerShell.
+This article describes how admins can manage entries for IP addresses in the Microsoft Defender portal and in Exchange Online PowerShell.
 
 ## What do you need to know before you begin?
 
@@ -36,20 +36,15 @@ This article describes how admins can manage entries for files in the Microsoft 
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- You specify files by using the SHA256 hash value of the file. To find the SHA256 hash value of a file in Windows, run the following command in a Command Prompt:
+- IPv6 addresses are supported only in the following formats:
+  - Single addresses in colon-hexadecimal format. For example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+  - Single addresses in zero-compression format. For example, 2001:db8::1 represents 2001:0db8:0000:0000:0000:0000:0000:0001.
+  - CIDR IPv6 range. For example, 2001:0db8::/32. 1-128 range is supported.
 
-  ```DOS
-  certutil.exe -hashfile "<Path>\<Filename>" SHA256
-  ```
-
-  An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3a`. Perceptual hash (pHash) values aren't supported.
-
-- Entry limits for files:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 file entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 file entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 file entries in total).
-
-- You can enter a maximum of 64 characters in a file entry.
+- Entry limits for IP addresses:
+  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 IP entries in total).
+  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 IP entries in total).
+  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 IP entries in total).
 
 - An entry should be active within 5 minutes.
 
@@ -69,78 +64,109 @@ This article describes how admins can manage entries for files in the Microsoft 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- A **Files** tab is available on the **Submissions** page only in organizations with Microsoft Defender XDR or Microsoft Defender for Endpoint Plan 2. For information and instructions to submit files from the **Files** tab, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+## Create allow entries for IP addresses
 
-## Create allow entries for files
+The allow entry overrides only the IP filters for the specified sending IP address.
 
-You can't create allow entries for files directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+You can create allow entries for IP addresses directly in the Tenant Allow/Block List as described in this section.
 
-Instead, you use the **Email attachments** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=emailAttachment>. When you submit a blocked file as **I've confirmed it's clean**, you can select **Allow this file** to add an allow entry for the file on the **Files** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email attachments to Microsoft](submissions-admin.md#report-good-email-attachments-to-microsoft).
-
-[!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
->
-> During time of click, the file allow entry overrides all filters associated with the file entity, which allows users to access the file.
-
-## Create block entries for files
-
-Email messages that contain these blocked files are blocked as *malware*. Messages that contain the blocked files are quarantined.
-
-To create block entries for files, use either of the following methods:
-
-- From the **Email attachments** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=emailAttachment>. When you submit a file as **I've confirmed it's a threat**, you can select **Block this file** to add a block entry to the **Files** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report questionable email attachments to Microsoft](submissions-admin.md#report-questionable-email-attachments-to-microsoft).
-
-- From the **Files** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
-
-### Use the Microsoft Defender portal to create block entries for files in the Tenant Allow/Block List
+### Use the Microsoft Defender portal to create allow entries for IP addresses in the Tenant Allow/Block List
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
-2. On the **Tenant Allow/Block Lists** page, select the **Files** tab.
+2. On the **Tenant Allow/Block Lists** page, select the **IP addresses** tab.
 
-3. On the **Files** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **IP addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Allow**.
 
-4. In the **Block files** flyout that opens, configure the following settings:
+4. In the **Allow IP addresses** flyout that opens, configure the following settings:
 
-   - **Add file hashes**: Enter one SHA256 hash value per line, up to a maximum of 20.
+   - **Add IP address**: Enter one IP address per line, up to a maximum of 20.
 
-   - **Remove block entry after**: Select from the following values:
+   - **Remove allow entry after**: Select from the following values:
      - **1 day**
      - **7 days**
-     - **30 days** (default)
-     - **Never expire**
+     - **30 days**
+     - **Never expire** (default)
      - **Specific date**: The maximum value is 90 days from today.
 
-   - **Optional note**: Enter descriptive text for why you're blocking the files.
+   - **Optional note**: Enter descriptive text for why you're allowing the IP addresses.
 
-   When you're finished in the **Block files** flyout, select **Add**.
+   When you're finished in the **Allow IP addresses** flyout, select **Add**.
 
-Back on the **Files** tab, the entry is listed.
+Back on the **IP addresses** tab, the entry is listed.
 
-#### Use PowerShell to create block entries for files in the Tenant Allow/Block List
+#### Use PowerShell to create allow entries for IP addresses in the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "HashValue1","HashValue2",..."HashValueN" <-ExpirationDate Date | -NoExpiration> [-Notes <String>]
+New-TenantAllowBlockListItems -ListType IP -Allow -Entries "IPAddress1","IPAddress2",..."IPAddressN" <-ExpirationDate Date | -NoExpiration> [-Notes <String>]
 ```
 
-This example adds a block entry for the specified files that never expires.
+This example adds an allow entry for the specified IP address that never expires.
 
 ```powershell
-New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -NoExpiration
+New-TenantAllowBlockListItems -ListType IP -Allow -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
 For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
 
-## Use the Microsoft Defender portal to view entries for files in the Tenant Allow/Block List
+## Create block entries for IP addresses
+
+You can create block entries for IP addresses directly in the Tenant Allow/Block List as described in this section.
+
+Incoming email messages from IP addresses in block entries are blocked at the edge of the service.
+
+### Use the Microsoft Defender portal to create block entries for IP addresses in the Tenant Allow/Block List
+
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+
+2. On the **Tenant Allow/Block Lists** page, select the **IP addresses** tab.
+
+3. On the **IP addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+
+4. In the **Block IP addresses** flyout that opens, configure the following settings:
+
+   - **Add IP address**: Enter one IP address per line, up to a maximum of 20.
+
+   - **Remove block entry after**: Select from the following values:
+     - **1 day**
+     - **7 days**
+     - **30 days**
+     - **Never expire** (default)
+     - **Specific date**: The maximum value is 90 days from today.
+
+   - **Optional note**: Enter descriptive text for why you're blocking the IP addresses.
+
+   When you're finished in the **Block IP addresses** flyout, select **Add**.
+
+Back on the **IP addresses** tab, the entry is listed.
+
+#### Use PowerShell to create block entries for IP addresses in the Tenant Allow/Block List
+
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+
+```powershell
+New-TenantAllowBlockListItems -ListType IP -Block -Entries "IPAddress1","IPAddress2",..."IPAddressN" <-ExpirationDate Date | -NoExpiration> [-Notes <String>]
+```
+
+This example adds an block entry for the specified IP address that never expires.
+
+```powershell
+New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
+```
+
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+
+## Use the Microsoft Defender portal to view entries for IP addresses in the Tenant Allow/Block List
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
-Select the **Files** tab.
+Select the **IP addresses** tab.
 
-On the **Files** tab, you can sort the entries by clicking on an available column header. The following columns are available:
+On the **IP addresses** tab, you can sort the entries by clicking on an available column header. The following columns are available:
 
-- **Value**: The file hash.
+- **Value**: The IP address.
 - **Action**: The available values are  **Allow** or **Block**.
 - **Modified by**
 - **Last updated**
@@ -162,45 +188,45 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 
 To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
-### Use PowerShell to view entries for files in the Tenant Allow/Block List
+### Use PowerShell to view entries for IP addresses in the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-Get-TenantAllowBlockListItems -ListType FileHash [-Allow] [-Block] [-Entry <FileHashValue>] [<-ExpirationDate Date | -NoExpiration>]
+Get-TenantAllowBlockListItems -ListType IP [-Allow] [-Block] [-Entry <IPaddress>] [<-ExpirationDate Date | -NoExpiration>]
 ```
 
-This example returns all allowed and blocked files.
+This example returns all allowed and blocked IP addresses.
 
 ```powershell
-Get-TenantAllowBlockListItems -ListType FileHash
+Get-TenantAllowBlockListItems -ListType IP
 ```
 
-This example returns information for the specified file hash value.
+This example returns information for the specified IP address.
 
 ```powershell
-Get-TenantAllowBlockListItems -ListType FileHash -Entry "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+Get-TenantAllowBlockListItems -ListType IP -Entry "2001:db8:3333:4444:5555:6666:7777:8882"
 ```
 
-This example filters the results by blocked files.
+This example filters the results by blocked IP address.
 
 ```powershell
-Get-TenantAllowBlockListItems -ListType FileHash -Block
+Get-TenantAllowBlockListItems -ListType IP -Block
 ```
 
 For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
 
-## Use the Microsoft Defender portal to modify entries for files in the Tenant Allow/Block List
+## Use the Microsoft Defender portal to modify entries for IP addresses in the Tenant Allow/Block List
 
-In existing file entries, you can change the expiration date and note.
+For existing IP addresses entries, you can change the expiration date and note.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
-2. Select the **Files** tab
+2. Select the **IP addresses** tab
 
-3. On the **Files** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **IP addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
 
-4. In the **Edit file** flyout that opens, the following settings are available:
+4. In the **Edit IP addresses** flyout that opens, the following settings are available:
    - **Block entries**:
      - **Remove block entry after**: Select from the following values:
        - **1 day**
@@ -214,38 +240,35 @@ In existing file entries, you can change the expiration date and note.
        - **1 day**
        - **7 days**
        - **30 days**
-       - **45 days after last used date**
+       - **Never expire**
        - **Specific date**: The maximum value is 30 days from today.
      - **Optional note**
 
-   When you're finished in the **Edit file** flyout, select **Save**.
+   When you're finished in the **Edit IP addresses** flyout, select **Save**.
 
-> [!TIP]
-> In the details flyout of an entry on the **Files** tab, use :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
-
-### Use PowerShell to modify existing allow or block entries for files in the Tenant Allow/Block List
+### Use PowerShell to modify existing allow or block entries for IP addresses in the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-Set-TenantAllowBlockListItems -ListType FileHash <-Ids <Identity value> | -Entries <Value>> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
+Set-TenantAllowBlockListItems -ListType IP <-Ids <Identity value> | -Entries <Value> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
 ```
 
-This example changes the expiration date of the specified file block entry.
+This example changes the expiration date of the specified IP address block entry.
 
 ```powershell
-Set-TenantAllowBlockListItems -ListType FileHash -Entries "27c5973b2451db9deeb01114a0f39e2cbcd2f868d08cedb3e210ab3ece102214" -ExpirationDate "9/1/2022"
+Set-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -ExpirationDate "9/1/2024"
 ```
 
 For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
 
-## Use the Microsoft Defender portal to remove entries for files from the Tenant Allow/Block List
+## Use the Microsoft Defender portal to remove entries for IP addresses from the Tenant Allow/Block List
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
-2. Select the **Files** tab.
+2. Select the **IP addresses** tab.
 
-3. On the **Files** tab, do one of the following steps:
+3. On the **IP addresses** tab, do one of the following steps:
 
    - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
    - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
@@ -255,23 +278,23 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListItem
 
 4. In the warning dialog that opens, select **Delete**.
 
-Back on the **Files** tab, the entry is no longer listed.
+Back on the **IP addresses** tab, the entry is no longer listed.
 
 > [!TIP]
 > You can select multiple entries by selecting each check box, or select all entries by selecting the check box next to the **Value** column header.
 
-### Use PowerShell to remove entries for files from the Tenant Allow/Block List
+### Use PowerShell to remove entries for IP addresses from the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-Remove-TenantAllowBlockListItems -ListType FileHash <-Ids <Identity value> | -Entries <Value>>
+Remove-TenantAllowBlockListItems -ListType IP <-Ids <Identity value> | -Entries <Value>>
 ```
 
-This example removes the specified file block from the Tenant Allow/Block List.
+This example removes the specified IP address block from the Tenant Allow/Block List.
 
 ```powershell
-Remove-TenantAllowBlockListItems -ListType FileHash -Entries "27c5973b2451db9deeb01114a0f39e2cbcd2f868d08cedb3e210ab3ece102214"
+Remove-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882"
 ```
 
 For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
@@ -283,4 +306,4 @@ For detailed syntax and parameter information, see [Remove-TenantAllowBlockListI
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block emails in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
 - [Allow or block URLs in the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md)
-- [Allow or block IP addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)
+- [Allow or block files in the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)

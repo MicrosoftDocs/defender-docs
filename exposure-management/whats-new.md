@@ -27,6 +27,12 @@ Security Exposure Management is currently in public preview.
 
 ## September 2024
 
+### New Enterprise IoT Security Initiative
+
+With this new initiative, Enterprise IoT Security offers a powerful solution to identify unmanaged IoT devices and enhance your security. With continuous monitoring, vulnerability assessments, and tailored recommendations designed for Enterprise IoT devices, you gain comprehensive visibility into the risks posed by these devices. This initiative not only helps you understand the potential threats but also strengthens your organization's resilience in mitigating them.
+
+For more information, see, [Review security initiatives](initiatives.md)
+
 ### New predefined classifications
 
 The following predefined classification rule was added to the critical assets list:

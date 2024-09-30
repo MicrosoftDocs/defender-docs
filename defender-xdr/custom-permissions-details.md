@@ -74,7 +74,7 @@ Permissions for managing the organization's security posture and performing vuln
 |Remediation handling|Manage|Create remediation tickets, submit new requests, and manage remediation activities in Defender Vulnerability Management.|
 |Application handling|Manage|Manage vulnerable applications and software, including blocking and unblocking them in Defender Vulnerability Management.|
 |Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply to security industry baselines.|
-|Secure Score|Read / Manage|Manage permissions to Secure Score data including which users have access to the data and the products for which they will see Secure Score data.|
+|Exposure Management|Read / Manage|View or manage Secure Score recommendations from all products included in Secure Score.|
 
 ### Authorization and settings
 
