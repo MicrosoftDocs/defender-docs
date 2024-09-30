@@ -682,7 +682,7 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
    - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
    - Leave **Network Filter** fields blank (**Include** is *not* selected)
 
-   Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
+   Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified earlier.
 
    :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
 
