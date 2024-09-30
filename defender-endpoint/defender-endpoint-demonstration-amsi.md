@@ -196,12 +196,11 @@ Affected items:
 
 ##### Via Powershell
 
-
-```powershell
-Get-MpThreat
-```
+Open PowerShell, and type the following command: `Get-MpThreat`.
 
 You might see the following results:
+
+```console
 
 CategoryID       : 42
 
@@ -224,6 +223,8 @@ ThreatName       : Virus:Win32/MpTest!amsi
 TypeID           : 0
 
 PSComputerName   :
+
+```
 
 ## See also
 
