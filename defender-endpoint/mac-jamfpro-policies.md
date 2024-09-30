@@ -135,9 +135,9 @@ For more information about managing security settings, see the following article
 
 You can either use Jamf Pro GUI to edit individual settings of the Microsoft Defender for Endpoint configuration, or use the legacy method by creating a configuration Plist in a text editor, and uploading it to Jamf Pro.
 
-Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings.
+You must use exact `com.microsoft.wdav` as the **Preference Domain**. Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings.
 
-(The `com.microsoft.wdav.ext` version may be used in rare cases when you prefer to use GUI method, but also need to configure a setting that hasn't been added to the schema yet.)
+(The `com.microsoft.wdav.ext` version can be used in rare cases when you prefer to use GUI method, but also need to configure a setting that hasn't been added to the schema yet.)
 
 ### GUI method
 
