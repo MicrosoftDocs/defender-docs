@@ -398,38 +398,39 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
      :::image type="content" source="media/c9820a5ff84aaf21635c04a23a97ca93.png" alt-text="The new macOS configuration profile page." lightbox="media/c9820a5ff84aaf21635c04a23a97ca93.png":::
 
-    - On the **Notifications** tab, select **Add**, and specify the following values:
-        - **Bundle ID**: `com.microsoft.wdav.tray`
-        - **Critical Alerts**: Select **Disable**
-        - **Notifications**: Select **Enable**
-        - **Banner alert type**: Select **Include** and **Temporary** *(default)*
-        - **Notifications on lock screen**: Select **Hide**
-        - **Notifications in Notification Center**: Select **Display**
-        - **Badge app icon**: Select **Display**
+3. On the **Notifications** tab, select **Add**, and specify the following values:
 
-          :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
+   - **Bundle ID**: `com.microsoft.wdav.tray`
+   - **Critical Alerts**: Select **Disable**
+   - **Notifications**: Select **Enable**
+   - **Banner alert type**: Select **Include** and **Temporary** *(default)*
+   - **Notifications on lock screen**: Select **Hide**
+   - **Notifications in Notification Center**: Select **Display**
+   - **Badge app icon**: Select **Display**
 
-    - On the **Notifications** tab, select **Add** one more time, and then scroll down to **New Notifications Settings**
-        - **Bundle ID**: `com.microsoft.autoupdate.fba`
-        - Configure the rest of the settings to the same values mentioned earlier
+   :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
 
-          :::image type="content" source="media/4bac6ce277aedfb4a674f2d9fcb2599a.png" alt-text="The configuration settings mdatpmdav notifications mau." lightbox="media/4bac6ce277aedfb4a674f2d9fcb2599a.png":::
+4. On the **Notifications** tab, select **Add** one more time, and then scroll down to **New Notifications Settings**.
 
-          Note that now you have two tables with notification configurations, one for **Bundle ID: com.microsoft.wdav.tray**, and another for **Bundle ID: com.microsoft.autoupdate.fba**. While you can configure alert settings per your requirements, Bundle IDs must be exactly the same as described before, and **Include** switch must be **On** for **Notifications**.
+   - **Bundle ID**: `com.microsoft.autoupdate.fba`
 
-3. Select the **Scope** tab, and then select **Add**.
+5. Configure the rest of the settings to the same values mentioned earlier
+
+   :::image type="content" source="media/4bac6ce277aedfb4a674f2d9fcb2599a.png" alt-text="The configuration settings mdatpmdav notifications mau." lightbox="media/4bac6ce277aedfb4a674f2d9fcb2599a.png":::
+
+   Note that now you have two tables with notification configurations, one for **Bundle ID: com.microsoft.wdav.tray**, and another for **Bundle ID: com.microsoft.autoupdate.fba**. While you can configure alert settings per your requirements, Bundle IDs must be exactly the same as described before, and **Include** switch must be **On** for **Notifications**.
+
+6. Select the **Scope** tab, and then select **Add**.
 
    :::image type="content" source="media/441aa2ecd36abadcdd8aed03556080b5.png" alt-text="The page on which you can add values for the configuration settings." lightbox="media/441aa2ecd36abadcdd8aed03556080b5.png":::
 
-4. Select **Contoso's Machine Group**.
-
-5. Select **Add**, and then select **Save**.
+7. Select **Contoso's Machine Group**. Select **Add**, and then select **Save**.
 
    :::image type="content" source="media/09a275e321268e5e3ac0c0865d3e2db5.png" alt-text="The page on which you can save values for the configuration settings contoso machine group." lightbox="media/09a275e321268e5e3ac0c0865d3e2db5.png":::
 
    :::image type="content" source="media/4d2d1d4ee13d3f840f425924c3df0d51.png" alt-text="The page that displays the completion notification of the configuration settings." lightbox="media/4d2d1d4ee13d3f840f425924c3df0d51.png":::
 
-6. Select **Done**. You should see the new **Configuration profile**.
+8. Select **Done**. You should see the new **Configuration profile**.
 
    :::image type="content" source="media/633ad26b8bf24ec683c98b2feb884bdf.png" alt-text="The completed configuration settings." lightbox="media/633ad26b8bf24ec683c98b2feb884bdf.png":::
 
@@ -458,7 +459,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 2. Save it as `MDATP_MDAV_MAU_settings.plist`.
 
-1. In the Jamf Pro dashboard, select **General**.
+3. In the Jamf Pro dashboard, select **General**.
 
       :::image type="content" source="media/eaba2a23dd34f73bf59e826217ba6f15.png" alt-text="The configuration settings." lightbox="media/eaba2a23dd34f73bf59e826217ba6f15.png":::
 
@@ -538,9 +539,9 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 5. In **Privacy Preferences Policy Control**, enter the following details:
 
-    - **Identifier**: `com.microsoft.wdav`
-    - **Identifier Type**: `Bundle ID`
-    - **Code Requirement**: `identifier "com.microsoft.wdav" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+   - **Identifier**: `com.microsoft.wdav`
+   - **Identifier Type**: `Bundle ID`
+   - **Code Requirement**: `identifier "com.microsoft.wdav" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
 
     :::image type="content" source="media/22cb439de958101c0a12f3038f905b27.png" alt-text="The configuration setting privacy preference policy control details." lightbox="media/22cb439de958101c0a12f3038f905b27.png":::
 
@@ -548,8 +549,8 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
    :::image type="content" source="media/bd93e78b74c2660a0541af4690dd9485.png" alt-text="The configuration setting add system policy all files option." lightbox="media/bd93e78b74c2660a0541af4690dd9485.png":::
 
-    - Under **App or service**, select **SystemPolicyAllFiles**.
-    - Under **access**, select **Allow**.
+   - Under **App or service**, select **SystemPolicyAllFiles**.
+   - Under **access**, select **Allow**.
 
 7. Select **Save** (not the one at the bottom right).
 
@@ -561,38 +562,36 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 9. Enter the following details:
 
-    - **Identifier**: `com.microsoft.wdav.epsext`
-    - **Identifier Type**: `Bundle ID`
-    - **Code Requirement**: `identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+   - **Identifier**: `com.microsoft.wdav.epsext`
+   - **Identifier Type**: `Bundle ID`
+   - **Code Requirement**: `identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
 
 10. Select **+ Add**.
 
     :::image type="content" source="media/tcc-epsext-entry.png" alt-text="The configuration setting tcc epsext entry." lightbox="media/tcc-epsext-entry.png":::
 
-    - Under **App or service**, select **SystemPolicyAllFiles**.
-    - Under **access**, select **Allow**.
+   - Under **App or service**, select **SystemPolicyAllFiles**.
+   - Under **access**, select **Allow**.
 
 11. Select **Save** (not the one at the bottom right).
 
-    :::image type="content" source="media/tcc-epsext-entry2.png" alt-text="The other instance of configuration setting tcc epsext." lightbox="media/tcc-epsext-entry2.png":::
+   :::image type="content" source="media/tcc-epsext-entry2.png" alt-text="The other instance of configuration setting tcc epsext." lightbox="media/tcc-epsext-entry2.png":::
 
 12. Select the **Scope** tab.
 
-    :::image type="content" source="media/2c49b16cd112729b3719724f581e6882.png" alt-text="The page depicting the scope for the configuration setting." lightbox="media/2c49b16cd112729b3719724f581e6882.png":::
+   :::image type="content" source="media/2c49b16cd112729b3719724f581e6882.png" alt-text="The page depicting the scope for the configuration setting." lightbox="media/2c49b16cd112729b3719724f581e6882.png":::
 
 13. Select **+ Add**.
 
-    :::image type="content" source="media/57cef926d1b9260fb74a5f460cee887a.png" alt-text="The page depicting the configuration setting." lightbox="media/57cef926d1b9260fb74a5f460cee887a.png":::
+   :::image type="content" source="media/57cef926d1b9260fb74a5f460cee887a.png" alt-text="The page depicting the configuration setting." lightbox="media/57cef926d1b9260fb74a5f460cee887a.png":::
 
 14. Select **Computer Groups**, and under **Group Name**, select **Contoso's MachineGroup**.
 
-    :::image type="content" source="media/368d35b3d6179af92ffdbfd93b226b69.png" alt-text="The configuration setting contoso machine group." lightbox="media/368d35b3d6179af92ffdbfd93b226b69.png":::
+   :::image type="content" source="media/368d35b3d6179af92ffdbfd93b226b69.png" alt-text="The configuration setting contoso machine group." lightbox="media/368d35b3d6179af92ffdbfd93b226b69.png":::
 
-15. Select **Add**.
+15. Select **Add**. Then select **Save**.
 
-16. Select **Save**.
-
-17. Select **Done**.
+16. Select **Done**.
 
     :::image type="content" source="media/809cef630281b64b8f07f20913b0039b.png" alt-text="The configuration setting contoso machine-group." lightbox="media/809cef630281b64b8f07f20913b0039b.png":::
 
