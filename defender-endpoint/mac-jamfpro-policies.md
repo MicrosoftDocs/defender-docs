@@ -44,7 +44,7 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 
 4. Extract `WindowsDefenderATPOnboardingPackage.zip`.
 
-1. Copy the file to your preferred location. For example, `C:\Users\JaneDoe_or_JohnDoe.contoso\Downloads\WindowsDefenderATPOnboardingPackage_macOS_MDM_contoso\Jamf\WindowsDefenderATPOnboarding.plist`.
+5. Copy the file to your preferred location. For example, `C:\Users\JaneDoe_or_JohnDoe.contoso\Downloads\WindowsDefenderATPOnboardingPackage_macOS_MDM_contoso\Jamf\WindowsDefenderATPOnboarding.plist`.
 
 ## Step 2: Create a configuration profile in Jamf Pro using the onboarding package
 
@@ -52,7 +52,7 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 
    :::image type="content" source="media/plist-onboarding-file.png" alt-text="The  Windows Defender ATP Onboarding file." lightbox="media/plist-onboarding-file.png":::
 
-1. Sign in to Jamf Pro, navigate to **Computers** > **Configuration Profiles**, and select **New**.
+2. Sign in to Jamf Pro, navigate to **Computers** > **Configuration Profiles**, and select **New**.
 
       :::image type="content" source="media/jamf-pro-configure-profile.png" alt-text="The page on which you create a new Jamf Pro dashboard." lightbox="media/jamf-pro-configure-profile.png":::
 
@@ -143,9 +143,9 @@ Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; 
 
 1. Download schema.json file from [Defender's GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema) and save it to a local file:
 
-    ```bash
-    curl -o ~/Documents/schema.json https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/schema/schema.json
-    ```
+   ```bash
+   curl -o ~/Documents/schema.json https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/schema/schema.json
+   ```
 
 2. Create a new configuration profile. Under **Computers**, go to **Configuration Profiles**, and then, on the **General** tab, specify the following details:
 
