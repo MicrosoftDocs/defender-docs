@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 09/27/2024
+ms.date: 09/30/2024
 ---
 
 # Manage the sources for Microsoft Defender Antivirus protection updates
@@ -91,7 +91,7 @@ You can manage the order in which update sources are used with Group Policy, Mic
 > [!IMPORTANT]
 > If you set Windows Server Update Service as a download location, you must approve the updates, regardless of the management tool you use to specify the location. You can set up an automatic approval rule with Windows Server Update Service, which might be useful as updates arrive at least once a day. To learn more, see [synchronize endpoint protection updates in standalone Windows Server Update Service](/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
-The procedures in this article first describe how to set the order, and then how to set up the **File share** option if it's enabled.
+The procedures in this article first describe how to set the order, and then how to set up the Windows File Server - **File share** option if it's enabled.
 
 ## Use Group Policy to manage the update location
 
@@ -117,10 +117,10 @@ The procedures in this article first describe how to set the order, and then how
 
 7. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
 
-8. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\host-name1\share-name\object-name|\\host-name2\share-name\object-name`. 
+1. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\WindowsFileServer\share-name\object-name|\\host-name2\share-name\object-name`. 
 
    If you don't enter any paths, then this source is skipped when the VM downloads updates.
-      
+   
 9. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
 
 
@@ -174,7 +174,7 @@ For example, suppose that Contoso has hired Fabrikam to manage their security so
 
 ## Create a UNC share for security intelligence and platform updates
 
-On a Windows Server set up a network file share (UNC/mapped drive) to download security intelligence and platform updates from the MMPC site by using a scheduled task.
+On a Windows File Server set up a network file share (UNC/mapped drive) to download security intelligence and platform updates from the MMPC site by using a scheduled task.
 
 1. On the system for which you want to provision the share and download the updates, create a folder for the script.
 
