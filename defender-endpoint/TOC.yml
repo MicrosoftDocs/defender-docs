@@ -79,6 +79,9 @@
         href: demonstration-behavior-monitoring.md
       - name: Validate antimalware
         href: validate-antimalware.md
+      - name: AMSI demonstrations
+        href: defender-endpoint-demonstration-amsi.md
+        displayName: Antimalware Scan Interface (AMSI), AMSI
       - name: Attack surface reduction rules demonstrations
         href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
       - name: Cloud-delivered protection demonstration
