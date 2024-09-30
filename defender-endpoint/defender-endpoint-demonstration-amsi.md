@@ -202,7 +202,7 @@ You can view detected threats by using the Event log or PowerShell.
 
 ##### Use Powershell
 
-Open PowerShell, and type the following command: `Get-MpThreat`.
+Open PowerShell, and then type the following command: `Get-MpThreat`.
 
 You might see the following results:
 
