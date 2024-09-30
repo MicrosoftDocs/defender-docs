@@ -47,7 +47,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
 
 
-### Binary drift detection released as GA.
+### Binary drift detection released as GA
 
 October 9, 2024
 
