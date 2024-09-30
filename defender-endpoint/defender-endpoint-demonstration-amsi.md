@@ -160,7 +160,7 @@ Affected items:
 
 You can view detected threats by using the Event log or PowerShell.
 
-#### Via the Event log
+#### Use the Event log
 
 1. Go to **Start**, and search for `EventVwr.msc`. Open Event Viewer in the list of results.
 
@@ -172,7 +172,7 @@ You can view detected threats by using the Event log or PowerShell.
 
    Microsoft Defender Antivirus has detected malware or other potentially unwanted software.
 
-    For more information please see the following: https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threatid=2147694217&enterprise=0
+   For more information please see the following: https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threatid=2147694217&enterprise=0
 
    Name: Virus:Win32/MpTest!amsi
 
@@ -200,7 +200,7 @@ You can view detected threats by using the Event log or PowerShell.
 
    ```
 
-##### Via Powershell
+##### Use Powershell
 
 Open PowerShell, and type the following command: `Get-MpThreat`.
 
