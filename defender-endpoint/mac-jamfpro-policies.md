@@ -185,7 +185,7 @@ You must use exact `com.microsoft.wdav` as the **Preference Domain**. Microsoft 
 
    :::image type="content" source="media/6f093e42856753a3955cab7ee14f12d9.png" alt-text="The page on which you can save the Configuration settings." lightbox="media/6f093e42856753a3955cab7ee14f12d9.png":::
 
-10. Select **Done**. You'll see the new **Configuration profile**.
+10. Select **Done**. You see the new **Configuration profile**.
 
     :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The page on which you complete the Configuration settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
@@ -196,7 +196,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 1. Use the following Microsoft Defender for Endpoint configuration settings:
 
    - `enableRealTimeProtection`
-   - `passiveMode` (This setting is not turned on by default. If you are planning to run a third-party antivirus for macOS, set it to `true`.)
+   - `passiveMode` (This setting isn't turned on by default. If you're planning to run non-Microsoft antivirus software on Mac, set it to `true`.)
    - `exclusions`
    - `excludedPath`
    - `excludedFileExtension`
