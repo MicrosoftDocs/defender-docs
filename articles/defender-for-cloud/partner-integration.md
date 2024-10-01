@@ -1,12 +1,12 @@
 ---
-title: Integrate partner solutions
+title: External security solutions
 description: Learn about how Microsoft Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 09/11/2024
+ms.date: 10/01/2024
 #customer intent: As a reader, I want to learn how security solutions integrate into Defender for Cloud.
 ---
 
-# Integrate partner solutions
+# External security solutions
 
 This article provides information about security solutions that integrate with Microsoft Defender for Cloud.
 

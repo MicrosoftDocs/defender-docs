@@ -2,7 +2,7 @@
 title: Overview of partner Integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 09/29/2024
+ms.date: 10/01/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -22,11 +22,6 @@ The following table lists the partner solutions that provide data to Defender fo
 | Partner name | Description | Documentation |
 |--|--|--|
 | Endor Labs | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. | [Integrate partner solutions](https://docs.endorlabs.com/integrations/) |
-| Barracuda Networks | Barracuda Networks is a cybersecurity company that provides security, networking, and storage solutions. It offers a range of products including email protection, application security, network security, and data protection to help organizations safeguard their digital environments. | [Integrate partner solutions](partner-integration.md) |
-| Check Point | Check Point is a cybersecurity company that provides comprehensive security solutions for networks, endpoints, clouds, and mobile devices. It offers a range of products and services designed to protect organizations from cyber threats and ensure robust security management. | [Integrate partner solutions](partner-integration.md) |
-| F5 Networks | F5 Networks is a technology company that specializes in application security, multi-cloud management, and application delivery networking. It provides solutions to ensure the security, availability, and performance of applications across various environments. |  [Integrate partner solutions](partner-integration.md) |
-| Rapid7 | Rapid7 is a cybersecurity company that provides security data and analytics solutions. It helps organizations manage vulnerabilities, detect threats, and respond to incidents in real-time, enhancing their overall security posture. | [Integrate partner solutions](partner-integration.md) |
-| Qualys | Qualys is a cybersecurity company that provides cloud-based security and compliance solutions. It helps organizations identify and manage security risks, ensuring continuous protection and compliance across their IT environments. | [Integrate partner solutions](partner-integration.md) |
 
 ## Share data with external partners
 
@@ -53,6 +48,16 @@ The following table lists our partners that can receive data from Defender for C
 | Kondukto | Kondukto is a cybersecurity company that specializes in application security orchestration and posture management. It provides a platform that integrates security data, automates vulnerability remediation workflows, and helps manage risks with key security performance indicators. | [Partner integration page](https://kondukto.io/integrations?search=defender) |
 | Phoenix Security | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Partner integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |
 | Nucleus | Nucleus is a cybersecurity company that provides a unified vulnerability management platform. It helps organizations centralize, prioritize, and remediate security vulnerabilities across their entire IT environment. | [Partner integration page](https://nucleussec.com/Integration/) |
+
+## External security solutions
+
+| Partner name | Description | Documentation |
+|--|--|--|
+| Barracuda Networks | Barracuda Networks is a cybersecurity company that provides security, networking, and storage solutions. It offers a range of products including email protection, application security, network security, and data protection to help organizations safeguard their digital environments. | [Integrate partner solutions](partner-integration.md) |
+| Check Point | Check Point is a cybersecurity company that provides comprehensive security solutions for networks, endpoints, clouds, and mobile devices. It offers a range of products and services designed to protect organizations from cyber threats and ensure robust security management. | [Integrate partner solutions](partner-integration.md) |
+| F5 Networks | F5 Networks is a technology company that specializes in application security, multi-cloud management, and application delivery networking. It provides solutions to ensure the security, availability, and performance of applications across various environments. |  [Integrate partner solutions](partner-integration.md) |
+| Rapid7 | Rapid7 is a cybersecurity company that provides security data and analytics solutions. It helps organizations manage vulnerabilities, detect threats, and respond to incidents in real-time, enhancing their overall security posture. | [Integrate partner solutions](partner-integration.md) |
+| Qualys | Qualys is a cybersecurity company that provides cloud-based security and compliance solutions. It helps organizations identify and manage security risks, ensuring continuous protection and compliance across their IT environments. | [Integrate partner solutions](partner-integration.md) |
 
 ## Next step
 
