@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.date: 09/29/2024
 ms.author: dacurwin
 author: dcurwin
-ai-usage: ai-assisted
 # Customer Intent: As a security professional, I want to learn how to build queries with Cloud Security Explorer in Microsoft Defender for Cloud to show software vulnerabilities in VMs and container iamges.
 ---
 
