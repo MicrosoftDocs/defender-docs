@@ -13,6 +13,7 @@ ms.collection:
   - m365-security
   - tier1
   - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 search.appverid:
   - MOE150
@@ -20,7 +21,7 @@ search.appverid:
 ms.date: 09/23/2024
 appliesto:
 - Microsoft Defender XDR
-- Microsoft Sentinel in the unified security operations center (SOC) platform
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Summarize identity information with Microsoft Copilot in Microsoft Defender
