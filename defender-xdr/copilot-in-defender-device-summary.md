@@ -12,21 +12,21 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
+  - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
 ms.date: 04/01/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Summarize device information with Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal helps security teams in speeding up device inspection through AI-powered investigation capabilities.
 
