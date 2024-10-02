@@ -2,7 +2,7 @@
 title: Secure your AI applications from code to runtime
 description: Learn about Microsoft's Defender for Cloud ability to secure your AI applications from code to runtime.
 ms.topic: reference
-ms.date: 08/13/2024
+ms.date: 08/18/2024
 ---
 
 # Secure your AI applications from code to runtime
@@ -12,10 +12,10 @@ ms.date: 08/13/2024
 
 > [!VIDEO https://aka.ms/docs/player?id=91c48435-1ef1-452e-bc4a-41ae82091387]
 
-- [02:13](/shows/mdc-in-the-field/secure-ai-applicationsy#time=02m13s) - What is security for AI?
-- [07:13](/shows/mdc-in-the-field/secure-ai-applicationsy#time=07m13s) - Top concerns for decision makers regarding AI security.
-- [08:54](/shows/mdc-in-the-field/secure-ai-applicationsy#time=08m54s) - How Defender for Cloud helps to secure Gen AI apps?
-- [15:42](/shows/mdc-in-the-field/secure-ai-applicationsy#time=15m42s) - Demonstration
+- [02:13](/shows/mdc-in-the-field/secure-ai-applications#time=02m13s) - What is security for AI?
+- [07:13](/shows/mdc-in-the-field/secure-ai-applications#time=07m13s) - Top concerns for decision makers regarding AI security.
+- [08:54](/shows/mdc-in-the-field/secure-ai-applications#time=08m54s) - How Defender for Cloud helps to secure Gen AI apps?
+- [15:42](/shows/mdc-in-the-field/secure-ai-applications#time=15m42s) - Demonstration
 
 ## Recommended resources
 

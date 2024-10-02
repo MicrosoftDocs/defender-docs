@@ -5412,7 +5412,7 @@ Updates in September include:
 
 The experience of managing rules for virtual machines using adaptive application controls has improved. Azure Security Center's adaptive application controls help you control which applications can run on your virtual machines. In addition to a general improvement to rule management, a new benefit enables you to control which file types will be protected when you add a new rule.
 
-[Learn more about adaptive application controls](adaptive-application-controls.md).
+Learn more about adaptive application controls.
 
 ### Control container security recommendation using Azure Policy
 

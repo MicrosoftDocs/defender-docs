@@ -39,7 +39,7 @@ Defender for SQL servers on machines protects your SQL servers hosted in Azure, 
 |Release state:|General availability (GA)|
 |Pricing:|**Microsoft Defender for SQL servers on machines** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)|
 |Protected SQL versions:|SQL Server version: 2012, 2014, 2016, 2017, 2019, 2022 <br>- [SQL on Azure virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)<br>- [SQL Server on Azure Arc-enabled servers](/sql/sql-server/azure-arc/overview)<br><br>|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Microsoft Azure operated by 21Vianet **(Advanced Threat Protection Only)**|
+|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Microsoft Azure operated by 21Vianet|
 
 ## Enable Defender for SQL on non-Azure machines using the AMA agent
 
@@ -192,6 +192,9 @@ The managed identity is part of the Azure Policy, which pushes out the AMA. It's
 ### Can I use my own DCR or managed-identity instead of Defender for Cloud creating a new one?
 
 Yes, we allow you to bring your own identity or DCR using the following script only. For more information, see [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
+
+### How many resource groups and Log analytics workspaces are created through the auto-provisioning process?
+By default, we create the resource group, workspace and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resoure group and DCR is created in the same location as the workspace. 
 
 ### How can I enable SQL servers on machines with AMA at scale?
 

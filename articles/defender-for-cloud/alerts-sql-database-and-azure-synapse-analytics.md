@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Alerts for SQL Database and Azure Synapse Analytics
 
-This article lists the security alerts you might get for SQL Database and Azure Synapse Analytics from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration.  
+This article lists the security alerts you might get for SQL Database and Azure Synapse Analytics. Microsoft Defender for Cloud and any enabled Microsoft Defender plans generate these alerts. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration.  
 
 > [!NOTE]
 > Some of the recently added alerts powered by Microsoft Defender Threat Intelligence and Microsoft Defender for Endpoint might be undocumented.
@@ -33,9 +33,9 @@ SQL.MI_VulnerabilityToSqlInjection
 SQL.DW_VulnerabilityToSqlInjection
 Synapse.SQLPool_VulnerabilityToSqlInjection)
 
-**Description**: An application has generated a faulty SQL statement in the database. This can indicate a possible vulnerability to SQL injection attacks. There are two possible reasons for a faulty statement. A defect in application code might have constructed the faulty SQL statement. Or, application code or stored procedures didn't sanitize user input when constructing the faulty SQL statement, which can be exploited for SQL injection.
+**Description**: An application generates a faulty SQL statement in the database. This indicates a possible vulnerability to SQL injection attacks. There are two possible reasons for a faulty statement. A defect in application code might construct the faulty SQL statement. Or, application code or stored procedures don't sanitize user input when constructing the faulty SQL statement, which can be exploited for SQL injection.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: Medium
 
@@ -49,7 +49,7 @@ Synapse.SQLPool_HarmfulApplication)
 
 **Description**: A potentially harmful application attempted to access your resource.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: High
 
@@ -119,7 +119,7 @@ Synapse.SQLPool_SuspiciousIpAnomaly)
 
 **Description**: Your resource has been accessed successfully from an IP address that Microsoft Threat Intelligence has associated with suspicious activity.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: Medium
 
@@ -133,7 +133,7 @@ Synapse.SQLPool_PotentialSqlInjection)
 
 **Description**: An active exploit has occurred against an identified application vulnerable to SQL injection. This means an attacker is trying to inject malicious SQL statements by using the vulnerable application code or stored procedures.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: High
 
@@ -145,9 +145,9 @@ SQL.DW_BruteForce
 SQL.MI_BruteForce
 Synapse.SQLPool_BruteForce)
 
-**Description**: A potential brute force attack has been detected on your resource. The attacker is using the valid user (username), which has permissions to log in.
+**Description**: A potential brute force attack has been detected on your resource. The attacker is using the valid user (username), which has permissions to sign-in.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: High
 
@@ -161,7 +161,7 @@ Synapse.SQLPool_BruteForce)
 
 **Description**: A potential brute force attack has been detected on your resource.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: High
 
@@ -173,9 +173,9 @@ SQL.DW_BruteForce
 SQL.MI_BruteForce
 Synapse.SQLPool_BruteForce)
 
-**Description**: A successful login occurred after an apparent brute force attack on your resource.
+**Description**: A successful sign-in occurred after an apparent brute force attack on your resource.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: PreAttack
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack
 
 **Severity**: High
 
@@ -197,7 +197,7 @@ Synapse.SQLPool_ShellExternalSourceAnomaly)
 
 (SQL.VM_PotentialSqlInjection)
 
-**Description**: Someone has initiated a new payload utilizing the layer in SQL Server that communicates with the operating system while concealing the command in the SQL query. Attackers commonly hide impactful commands which are popularly monitored like xp_cmdshell, sp_add_job and others. Obfuscation techniques abuse legitimate commands like string concatenation, casting, base changing, and others, to avoid regex detection and hurt the readability of the logs.
+**Description**: Someone has initiated a new payload utilizing the layer in SQL Server that communicates with the operating system while concealing the command in the SQL query. Attackers commonly hide impactful commands, which are popularly monitored like xp_cmdshell, sp_add_job and others. Obfuscation techniques abuse legitimate commands like string concatenation, casting, base changing, and others, to avoid regex detection and hurt the readability of the logs.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
 
@@ -206,7 +206,7 @@ Synapse.SQLPool_ShellExternalSourceAnomaly)
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
-## Next steps
+## Related content
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
 - [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml)

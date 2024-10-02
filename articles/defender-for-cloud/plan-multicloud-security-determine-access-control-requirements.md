@@ -25,7 +25,6 @@ As part of your multicloud solution design you should review access requirements
 - Does your organization need identity and access management (IAM permissions) to be inherited to the resource group level?
 - Do you need to determine any IAM requirements for people who:
   - Implement JIT attack surface reduction VMs and AWS EC2?  
-  - Define Adaptive Application Controls (access defined by application owner)?
   - Security operations?
 
 With clear answers available, you can figure out your Defender for Cloud access requirements. Other things to consider:

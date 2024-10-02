@@ -33,6 +33,9 @@ For a list of the Azure network layer alerts, see the [Reference table of alerts
 
 ### Display Azure WAF alerts in Defender for Cloud
 
+> [!IMPORTANT]
+> This feature will be retired on September 25, 2024. For Sentinel customers, you can configure the Azure Web Application Firewall [connector](/azure/web-application-firewall/waf-sentinel).
+
 Azure Application Gateway offers a web application firewall (WAF) that provides centralized protection of your web applications from common exploits and vulnerabilities.
 
 Web applications are increasingly targeted by malicious attacks that exploit commonly known vulnerabilities. The Application Gateway WAF is based on Core Rule Set 3.2 or higher from the Open Web Application Security Project. The WAF is updated automatically to protect against new vulnerabilities.

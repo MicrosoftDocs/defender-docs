@@ -38,7 +38,7 @@ This recommendation replaces the old recommendation *Cognitive Services accounts
 **Severity**: Medium
 
 
-### [Azure AI Services resources should use Azure Private Link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/54f53ddf-6ebd-461e-a247-394c542bc5d1)
+### [Azure AI Services resources should use Azure Private Link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/67279c29-fa4c-4f09-ae59-cb1491565995)
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform reduces data leakage risks by handling the connectivity between the consumer and services over the Azure backbone network.
 
@@ -141,6 +141,11 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Severity** Medium
 
+### [AWS Bedrock agents should use guardrails when allowing access to generative AI applications](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/7c0c3e91-b674-40d1-8fc4-1bc3c70533e4)
+
+**Description** Guardrails for Amazon Bedrock enhance the safety of generative AI applications by evaluating both user inputs and model-generated responses. These guardrails include content filters, which help detect and filter harmful content. Specifically, the "Prompt Attacks" category that includes safeguards on user prompts to prevent jailbreaks and prompt injections.
+
+**Severity** Medium
 
 ## Related content
 

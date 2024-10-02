@@ -52,11 +52,9 @@ The applicable Permissions Management (CIEM) recommendations appear on your subs
 
 List of Azure recommendations:
 
-- Azure over-provisioned identities should have only the necessary permissions
+- Azure overprovisioned identities should have only the necessary permissions
 
 - Permissions of inactive identities in your Azure subscription should be revoked
-
-- Super identities in your Azure environment should be revoked/removed
 
 ## Enable Permissions Management (CIEM) for AWS
 
@@ -97,9 +95,9 @@ The applicable Permissions Management (CIEM) recommendations appear on your subs
 
 List of AWS recommendations:
 
-- AWS over-provisioned identities should have only the necessary permissions
+- AWS overprovisioned identities should have only the necessary permissions
 
-- Permissions of inactive identities in your Azure subscription should be revoked
+- Permissions of inactive identities in your AWS account should be revoked
 
 ## Enable Permissions Management (CIEM) for GCP
 
@@ -143,11 +141,9 @@ The applicable Permissions Management **(CIEM)** recommendations appear on your 
 
 List of GCP recommendations:
 
-- GCP over-provisioned identities should have only necessary permissions
+- GCP overprovisioned identities should have only necessary permissions
 
 - Permissions of inactive identities in your GCP project should be revoked
-
-- Super identities in your GCP environment should be revoked/removed
 
 ## Next step
 

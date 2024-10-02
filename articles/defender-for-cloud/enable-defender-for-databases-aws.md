@@ -57,7 +57,7 @@ Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender
     >
     > :::image type="content" source="media/enable-defender-for-databases-aws/cspm-shared.png" alt-text="Screenshot that shows the settings page for Defender CSPM and the sensitive data turned on with the protected resources." lightbox="media/enable-defender-for-databases-aws/cspm-shared.png":::
     >
-    > Learn more about [sensitive data discovery in AWS RDS instances](concept-data-security-posture-prepare.md#discovering-aws-rds-instances).
+    > Learn more about [sensitive data discovery in AWS RDS instances](concept-data-security-posture-prepare.md#discovering-and-scanning-aws-rds-instances).
 
 1. Select **Configure access**.
 
@@ -139,7 +139,7 @@ An option group is required for MySQL and MariaDB with the following options for
 ## Related content
 
 - [What's supported in Sensitive Data Discovery](concept-data-security-posture-prepare.md#whats-supported).
-- [Discovering sensitive data on AWS RDS instances](concept-data-security-posture-prepare.md#discovering-aws-rds-instances).
+- [Discovering sensitive data on AWS RDS instances](concept-data-security-posture-prepare.md#discovering-and-scanning-aws-rds-instances).
 
 ## Next step
 

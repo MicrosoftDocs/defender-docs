@@ -80,10 +80,6 @@ landingContent:
         links:
           - text: Manage just-in-time access
             url: just-in-time-access-usage.yml
-          - text: Set up adaptive application controls
-            url: adaptive-application-controls.md
-          - text: Implement adaptive network hardening
-            url: adaptive-network-hardening.md
           - text: Use the Workload protections
             url: workload-protections-dashboard.md
 

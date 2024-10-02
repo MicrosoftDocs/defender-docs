@@ -197,6 +197,12 @@ Secure your storage account with greater flexibility using customer-managed keys
 
 **Severity**: Medium
 
+### [Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/5d19e32c-489d-407c-9549-15d9ea36a8e0)
+
+**Description**: Disabling local authentication methods and requiring Microsoft Entra authentication improves security by ensuring that Azure Database for PostgreSQL flexible server can be accessed by Microsoft Entra identities only (Related policy: [Azure PostgreSQL flexible server should have Microsoft Entra Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffa498b91-8a7e-4710-9578-da944c68d1fe)).
+
+**Severity**: Medium
+
 ### [Azure Cosmos DB accounts should have firewall rules](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/276b1952-c364-852b-11e5-657f0fa34dc6)
 
 **Description**: Firewall rules should be defined on your Azure Cosmos DB accounts to prevent traffic from unauthorized sources. Accounts that have at least one IP rule defined with the virtual network filter enabled are deemed compliant. Accounts disabling public access are also deemed compliant.

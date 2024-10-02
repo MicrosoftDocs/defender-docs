@@ -3,16 +3,16 @@ title: Defender Threat Intelligence  | Defender for Cloud in the field
 
 description: Learn about Microsoft Defender Threat Intelligence (Defender TI)
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 08/18/2024
 ---
 
 # Defender threat Intelligence | Defender for Cloud in the Field
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Alexandra Roland joins Yuri Diogenes to talk about Microsoft Defender Threat Intelligence (Defender TI). Alexandra explains how Defender TI works and how it integrates with Defender EASM. Alexandra goes over an end-to-end scenario to demonstrate how to use Defender TI to perform a security investigation based on the data collected by the platform.
+**Episode description**: In this episode of Defender for Cloud in the Field, Alexandra Roland joins Yuri Diogenes to talk about Microsoft Defender Threat Intelligence (Defender TI). Alexandra explains how Defender TI works and how it integrates with Defender External Attack Surface Management (EASM). Alexandra goes over an end-to-end scenario to demonstrate how to use Defender TI to perform a security investigation based on the data collected by the platform.
 
 > [!VIDEO https://aka.ms/docs/player?id=adfb8027-21ca-4bd0-9e54-28b0d642558a]
 
-- [04:09](/shows/mdc-in-the-field/threat-intelligence#time=04m09s) - How Defender for Cloud leverages Defender TI
+- [04:09](/shows/mdc-in-the-field/threat-intelligence#time=04m09s) - How Defender for Cloud applies Defender TI
 
 - [05:25](/shows/mdc-in-the-field/threat-intelligence#time=05m25s) - What is reputation score in Defender TI
 

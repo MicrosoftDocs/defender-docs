@@ -1,7 +1,7 @@
 ---
 title: Defender for Cloud glossary
 description: The glossary provides a brief description of important Defender for Cloud platform terms and concepts.
-ms.date: 11/08/2023
+ms.date: 09/09/2024
 ms.topic: article
 ---
 
@@ -11,23 +11,9 @@ This glossary provides a brief description of important terms and concepts for t
 
 ## A
 
-### **AAC**
-
-Adaptive application controls are an intelligent and automated solution for defining allowlists of known-safe applications for your machines. See [Adaptive Application Controls](adaptive-application-controls.md).
-
-<a name='aad'></a>
-
-### **Microsoft Entra ID**
-
-Microsoft Entra ID is a cloud-based identity and access management service. See [Adaptive Application Controls](/azure/active-directory/fundamentals/active-directory-whatis).
-
 ### **ACR Tasks**
 
 A suite of features within Azure container registry. See [Frequently asked questions - Azure Container Registry](/azure/container-registry/container-registry-faq).
-
-### **Adaptive network hardening**
-
-Adaptive network hardening provides recommendations to further harden the [network security groups (NSG)](/azure/virtual-network/network-security-groups-overview) rules. See [What is Adaptive Network Hardening?](adaptive-network-hardening.md#what-is-adaptive-network-hardening).
 
 ### **ADO**
 
@@ -40,10 +26,6 @@ Azure Kubernetes Service, Microsoft's managed service for developing, deploying,
 ### **Alerts**
 
 Alerts defend your workloads in real-time so you can react immediately and prevent security events from developing. See [Security alerts and incidents](alerts-overview.md).
-
-### **ANH**
-
-Adaptive network hardening. Learn how to [improve your network security posture with adaptive network hardening](adaptive-network-hardening.md).
 
 ### **APT**
 
@@ -210,6 +192,10 @@ Kusto Query Language - a tool to explore your data and discover patterns, identi
 Local Security Authority. Learn about [secure and use policies on virtual machines in Azure](/azure/virtual-machines/security-policy).
 
 ## M
+
+### **Microsoft Entra ID**
+
+Microsoft Entra ID is a cloud-based identity and access management service. 
 
 ### **MCSB**
 

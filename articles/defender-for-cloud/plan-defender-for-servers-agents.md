@@ -67,7 +67,6 @@ Foundational CSPM: [System updates recommendations](recommendations-reference-co
 Foundational CSPM: [Antimalware/endpoint protection recommendations](endpoint-protection-recommendations-technical.md) (Azure VMs) | :::image type="icon" source="./media/icons/yes-icon.png" ::: | :::image type="icon" source="./media/icons/yes-icon.png" :::
 Attack detection at the OS level and network layer, including fileless attack detection<br/><br/> Plan 1 relies on Defender for Endpoint capabilities for attack detection. | :::image type="icon" source="./media/icons/yes-icon.png" :::<br/><br/> Plan 2| :::image type="icon" source="./media/icons/yes-icon.png" :::<br/><br/> Plan 2
 File integrity monitoring (Plan 2 only)  | :::image type="icon" source="./media/icons/yes-icon.png" ::: | :::image type="icon" source="./media/icons/yes-icon.png" :::
-[Adaptive application controls](adaptive-application-controls.md) (Plan 2 only) | :::image type="icon" source="./media/icons/yes-icon.png" ::: | :::image type="icon" source="./media/icons/yes-icon.png" :::
 
 ## Qualys extension
 
