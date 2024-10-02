@@ -13,6 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 - security-copilot
+- magic-ai-copilot 
 ms.topic: conceptual
 search.appverid:
 - MOE150
