@@ -138,6 +138,7 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Protection|Do a full scan|`mdatp scan full`|
 |Protection|Cancel an ongoing on-demand scan|`mdatp scan cancel`|
 |Protection|Request a security intelligence update|`mdatp definitions update`|
+|Protection|Rollback security intelligence to the original default set|`mdatp definitions restore`|
 |Protection history|Print the full protection history|`mdatp threat list`|
 |Protection history|Get threat details|`mdatp threat get --id [threat-id]`|
 |Quarantine management|List all quarantined files|`mdatp threat quarantine list`|
