@@ -131,7 +131,7 @@ If a proxy or firewall is blocking anonymous traffic, make sure that anonymous t
 
 #### Test network connectivity
 
-To test that a connection isn't blocked, open <https://x.cp.wd.microsoft.com/api/report> and <https://cdn.x.cp.wd.microsoft.com/ping> in a browser.
+To test that a connection isn't blocked, open `https://x.cp.wd.microsoft.com/api/report` and `https://cdn.x.cp.wd.microsoft.com/ping` in a browser.
 
 If you prefer the command line, you can also check the connection by running the following command in Terminal:
 
