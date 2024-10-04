@@ -333,6 +333,8 @@ Valid URL entries and their results are described in the following subsections.
   - b.abcd.TLD
   - TLD/contoso.com
   - TLD/q=contoso.com
+  - `www.abcd.com\xyz.TLD`
+  - `www.abcd.com\xyz.TLD?q=1234`
   - `www.abcd.TLD`
   - `www.abcd.TLD/q=a@contoso.com`
 
