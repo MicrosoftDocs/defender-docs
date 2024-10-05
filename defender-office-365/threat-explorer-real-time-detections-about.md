@@ -140,7 +140,7 @@ Threat Explorer and Real-time detections contain the following elements:
 
 ## All email view in Threat Explorer
 
-The **All email** view in Threat Explorer shows information about all email inbound, outbound and intra-org messages. The view shows malicious and non-malicious email. For example:
+The **All email** view in Threat Explorer shows information about all inbound, outbound and intra-org email messages. The view shows malicious and non-malicious email. For example:
 
 - Email identified phishing or malware.
 - Email identified as spam or bulk.
