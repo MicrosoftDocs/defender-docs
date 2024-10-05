@@ -96,7 +96,7 @@ Threat Explorer and Real-time detections contain the following elements:
 
   |View|Threat<br/>Explorer|Real-time<br/>detections|Description|
   |---|:---:|:---:|---|
-  |**All email**|✔||Default view for Threat Explorer. Information about all email messages sent by external users into your organization, or email sent between internal users in your organization.|
+  |**All email**|✔||Default view for Threat Explorer. Information about all email messages sent by external users into your organization (Inbound emails), email messages sent by internal users in your organization to external users (Outbound emails), email messages sent between internal users in your organization (Intra-org emails).|
   |**Malware**|✔|✔|Default view for Real-time detections. Information about email messages that contain malware.|
   |**Phish**|✔|✔|Information about email messages that contain phishing threats.|
   |**Campaigns**|✔||Information about malicious email that Defender for Office 365 Plan 2 identified as part of a [coordinated phishing or malware campaign](campaigns.md).|
