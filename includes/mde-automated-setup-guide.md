@@ -4,8 +4,8 @@ description: Learn about the Defender for Endpoint automated setup guide.
 ms.reviewer: 
 ms.date: 05/28/2024
 manager: deniseb
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.service: microsoft-365-security
 ms.subservice: mdo
 search.appverid: met150

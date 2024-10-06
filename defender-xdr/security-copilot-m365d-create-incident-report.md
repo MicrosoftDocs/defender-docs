@@ -13,21 +13,20 @@ ms.collection:
   - m365-security
   - tier1
   - security-copilot
+  - magic-ai-copilot 
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
 ms.date: 04/01/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Create an incident report with Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal assists security operations teams with writing incident reports efficiently. Utilizing Copilot for Security's AI-powered data processing, security teams can immediately create incident reports with a click of a button in the Microsoft Defender portal.
 

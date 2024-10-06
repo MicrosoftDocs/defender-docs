@@ -2,8 +2,8 @@
 title: How to schedule an antivirus scan using Anacron in Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux for better protection of your organization's assets.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 12/02/2023
 manager: deniseb

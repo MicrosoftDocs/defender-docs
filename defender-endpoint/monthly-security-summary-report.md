@@ -3,8 +3,8 @@ title: Monthly security summary reporting in Microsoft Defender for Endpoint
 description: Use the monthly security summary to see threats detected and prevented, current status from Microsoft Secure Score, and recommended actions.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 06/12/2023
 manager: deniseb

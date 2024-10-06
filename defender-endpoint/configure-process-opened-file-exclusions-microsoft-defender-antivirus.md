@@ -4,8 +4,8 @@ description: You can exclude files from scans if they've been opened by a specif
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
 ms.reviewer:
@@ -94,7 +94,7 @@ Note that a process exclusion may also be defined via a [Contextual exclusion](c
 
 ### Use Microsoft Intune to exclude files that have been opened by specified processes from scans
 
-For more information, see [Configure device restriction settings in Microsoft Intune](/intune/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
+For more information, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 ### Use Microsoft Configuration Manager to exclude files that have been opened by specified processes from scans
 
@@ -162,7 +162,7 @@ Follow the instructions in [Add exclusions in the Windows Security app](microsof
 
 ## Review the list of exclusions
 
-You can retrieve the items in the exclusion list with MpCmdRun, PowerShell, [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/intune/device-restrictions-configure), or the [Windows Security app](microsoft-defender-security-center-antivirus.md).
+You can retrieve the items in the exclusion list with MpCmdRun, PowerShell, [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/mem/intune/configuration/device-restrictions-configure), or the [Windows Security app](microsoft-defender-security-center-antivirus.md).
 
 If you use PowerShell, you can retrieve the list in two ways:
 

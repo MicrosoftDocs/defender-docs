@@ -3,8 +3,8 @@ title: Configure managed security service provider support
 description: Take the necessary steps to configure the MSSP integration with the Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

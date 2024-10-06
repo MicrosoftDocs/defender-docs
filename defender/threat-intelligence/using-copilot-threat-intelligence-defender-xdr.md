@@ -11,6 +11,7 @@ audience: ITPro
 ms.collection: 
   - Tier1
   - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 ms.date: 04/01/2024
 ---
@@ -26,7 +27,7 @@ ms.date: 04/01/2024
 Microsoft Copilot in Defender applies the capabilities of [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) to deliver Microsoft Defender Threat Intelligence (Defender TI) information about threat actors and tools, as well as contextual threat intelligence, directly into the Microsoft Defender portal. Based on threat analytics reports, intel profiles, and other available Defender TI content, you can use Copilot in Defender to summarize the latest threats affecting your organization, know which threats to prioritize based on your exposure level, or gain more knowledge about your organization's or the global threat landscape.
 
 > [!NOTE]
-> Defender TI capabilities are also available in Copilot for Security standalone experience through the Microsoft Defender Threat Intelligence plugin. [Learn more about Defender TI integration with Copilot for Security](security-copilot-and-defender-threat-intelligence.md)
+> Defender TI capabilities are also available in Copilot for Security standalone experience through the Microsoft Threat Intelligence plugin. [Learn more about Defender TI integration with Copilot for Security](security-copilot-and-defender-threat-intelligence.md)
 
 ## Technical requirements
 

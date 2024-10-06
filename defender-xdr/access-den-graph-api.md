@@ -12,7 +12,6 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-  - essentials-overview
 ms.topic: conceptual
 search.appverid: met150
 ms.date: 08/14/2024

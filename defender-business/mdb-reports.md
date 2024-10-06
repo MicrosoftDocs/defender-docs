@@ -2,8 +2,8 @@
 title: Reports in Microsoft Defender for Business
 description: Get an overview of security reports in Defender for Business. Reports will show detected threats, alerts, vulnerabilities, and device status.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview

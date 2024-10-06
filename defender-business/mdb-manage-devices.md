@@ -2,8 +2,8 @@
 title: Manage devices in Microsoft Defender for Business
 description: Learn how to add, remove, and manage devices in Defender for Business, endpoint protection for small and medium sized businesses.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: how-to

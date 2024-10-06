@@ -4,8 +4,8 @@ description: Enable or disable users from locally changing settings in Microsoft
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
 ms.date: 07/25/2024

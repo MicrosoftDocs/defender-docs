@@ -2,8 +2,8 @@
 title: What is Microsoft Defender for Business?
 description: Microsoft Defender for Business is a cybersecurity solution for small and medium sized businesses. Defender for Business protects against threats across your devices.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview

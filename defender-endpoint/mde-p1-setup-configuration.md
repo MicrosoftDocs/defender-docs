@@ -2,16 +2,16 @@
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
 description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
 search.appverid: MET150 
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb 
 audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 07/25/2024
-ms.reviewer: shlomiakirav
+ms.date: 09/26/2024
+ms.reviewer: 
 f1.keywords: NOCSH
 ms.collection: 
 - m365-security
@@ -50,7 +50,7 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 
 | Requirement | Description |
 |:---|:---|
-| Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3 or A3) |
+| Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3) |
 | Browser requirements | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
 | Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
 | Operating systems (server) | Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution)<br/>[Linux Server](microsoft-defender-endpoint-linux.md)   |

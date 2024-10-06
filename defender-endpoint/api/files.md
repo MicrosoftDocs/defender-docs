@@ -2,8 +2,8 @@
 title: File resource type
 description: Retrieve recent Microsoft Defender for Endpoint alerts related to files.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -2,8 +2,8 @@
 title: Offboard a device from Microsoft Defender for Business
 description: Learn about how to remove or offboard a device from Microsoft Defender for Business.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview

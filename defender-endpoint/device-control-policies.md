@@ -1,10 +1,10 @@
 ---
 title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
-ms.date: 08/27/2024
+ms.date: 09/18/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -73,7 +73,7 @@ Device control policies can be applied to users and/or user groups.
 > [!NOTE]
 > In the articles related to device control, groups of users are referred to as <i>user groups</i>.  The term <i>groups</i> refer to [groups](#groups) defined in the device control policy.
 
- Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
+Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
 
 On Windows, a user or user group can be a condition on an [entry](#entries) in a policy.
 
@@ -198,15 +198,29 @@ Device control policies define access (called an entry) for a set of devices. En
 | Action | Allow <br/> Deny <br/> AuditAllow <br/> AuditDeny |
 | Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> |
 
-If device control is configured, and a user attempts to use a device that's not allowed, the user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.
+### Entry evaluation
+
+There are two types of entries: enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
+
+Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
+
+### Audit entries
+
+Audit events control the behavior when device control enforces a rule (allow/deny). Device control can display a notification to the end-user. The user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.  
+
+Device control can also create an event that is available in Advanced Hunting.
+
+> [!IMPORTANT]
+> There is a limit of 300 events per device per day. Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
+
+### Conditions
 
 An entry supports the following optional conditions:
 
 - User/User Group Condition: Applies the action only to the user/user group identified by the SID
 
 > [!NOTE]
-> For user groups and users that are stored in Microsoft Entra Id, use the object id in the condition.  For user groups and users that are stored localy, use the Security Identifier (SID)
-
+> For user groups and users that are stored in Microsoft Entra Id, use the object id in the condition.  For user groups and users that are stored locally, use the Security Identifier (SID)
 > [!NOTE]
 > On Windows, The SID of the user who's signed in can be retrieved by running the PowerShell command `whoami /user`.
 
@@ -382,7 +396,7 @@ The devices that are in scope for the policy determined by a list of included gr
 | `FriendlyNameId`  | The friendly name in Windows Device Manager | Y | N | Y |
 | `PrimaryId` | The type of the device | Y | Y | Y |
 | `VID_PID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. Product ID is the four-digit product code that the vendor assigns to the device. Wildcards are supported. For example, `0751_55E0` | Y | N | Y |
-|`PrinterConnectionId` | The type of printer connection: <br/>- USB<br/>- Corporate<br/>- Network<br/>- Universal<br/>- File<br/>- Custom<br/>- Local | N | N | Y |
+|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premise Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that is not connecting through Microsoft print port<br/>- `Local`: printer not any of above type, e.g. print through RDP or redirect printers | N | N | Y |
 | `BusId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `DeviceId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `HardwareId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |

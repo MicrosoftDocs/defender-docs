@@ -333,6 +333,8 @@ Valid URL entries and their results are described in the following subsections.
   - b.abcd.TLD
   - TLD/contoso.com
   - TLD/q=contoso.com
+  - `www.abcd.com\xyz.TLD`
+  - `www.abcd.com\xyz.TLD?q=1234`
   - `www.abcd.TLD`
   - `www.abcd.TLD/q=a@contoso.com`
 
@@ -523,3 +525,4 @@ The following entries are invalid:
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block files in the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - [Allow or block emails in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
+- [Allow or block IP addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)

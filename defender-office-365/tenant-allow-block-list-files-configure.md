@@ -283,3 +283,4 @@ For detailed syntax and parameter information, see [Remove-TenantAllowBlockListI
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block emails in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
 - [Allow or block URLs in the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md)
+- [Allow or block IP addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)

@@ -3,8 +3,8 @@ title: Block potentially unwanted applications with Microsoft Defender Antivirus
 description: Enable the potentially unwanted application (PUA) antivirus feature to block unwanted software such as adware.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: mimilone, julih
@@ -115,8 +115,8 @@ See the following articles:
 
 See the following articles:
 
-- [Configure device restriction settings in Microsoft Intune](/intune/device-restrictions-configure)
-- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus)
+- [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure)
+- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
 
 ### Use Configuration Manager to configure PUA protection
 

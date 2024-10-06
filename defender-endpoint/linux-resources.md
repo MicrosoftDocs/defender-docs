@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for Endpoint on Linux resources
-ms.reviewer: gopkr
+ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 10/03/2024
 ---
 
 # Resources
@@ -138,6 +138,7 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Protection|Do a full scan|`mdatp scan full`|
 |Protection|Cancel an ongoing on-demand scan|`mdatp scan cancel`|
 |Protection|Request a security intelligence update|`mdatp definitions update`|
+|Protection|Rollback security intelligence to the original default set|`mdatp definitions restore`|
 |Protection history|Print the full protection history|`mdatp threat list`|
 |Protection history|Get threat details|`mdatp threat get --id [threat-id]`|
 |Quarantine management|List all quarantined files|`mdatp threat quarantine list`|

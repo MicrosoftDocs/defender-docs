@@ -2,10 +2,10 @@
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 08/22/2023
+ms.date: 09/27/2024
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: jesquive
 manager: deniseb
@@ -51,12 +51,31 @@ This guide describes how to configure Microsoft Defender Antivirus on your VMs f
 
 ## Set up a dedicated VDI file share for security intelligence
 
-In Windows 10, version 1903, Microsoft introduced the shared security intelligence feature, which offloads the unpackaging of downloaded security intelligence updates onto a host machine. This method reduces the usage of CPU, disk, and memory resources on individual machines. Shared security intelligence now works on Windows 10, version 1703 and later. You can set up this capability by using Group Policy or PowerShell, as described in the following table:
+In Windows 10, version 1903, Microsoft introduced the shared security intelligence feature, which offloads the unpackaging of downloaded security intelligence updates onto a host machine. This method reduces the usage of CPU, disk, and memory resources on individual machines. Shared security intelligence now works on Windows 10, version 1703 and later. You can set up this capability by using Group Policy or PowerShell.
 
-|Method  | Procedure  |
-|---------|---------|
-| Group Policy | 1. On your Group Policy management computer, open the Group Policy Management Console, right-click the Group Policy Object you want to configure, and then select **Edit**.<br/><br/>2. In the Group Policy Management Editor, go to **Computer configuration**.<br/><br/>Select **Administrative templates**.<br/><br/>Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.<br/><br/>3. Double-click **Define security intelligence location for VDI clients**, and then set the option to **Enabled**. A field automatically appears.<br/><br/>4. Enter `\\<sharedlocation\>\wdav-update` (for help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates)).<br/><br/>5. Select **OK**.<br/><br/>Deploy the GPO to the VMs you want to test. |
-| PowerShell | 1. On each RDS or VDI device, use the following cmdlet to enable the feature: `Set-MpPreference -SharedSignaturesPath \\<shared location>\wdav-update`. <br/><br/>2. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section the \<shared location\> entry.) |
+### Group Policy
+
+1. On your Group Policy management computer, open the Group Policy Management Console, right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+2. In the Group Policy Management Editor, go to **Computer configuration**.
+
+3. Select **Administrative templates**. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Security Intelligence Updates**.
+
+4. Double-click **Define security intelligence location for VDI clients**, and then set the option to **Enabled**. 
+
+   A field automatically appears.
+
+5. Enter `\\<Windows File Server shared location\>\wdav-update` (for help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates)).
+
+6. Select **OK**, and then deploy the GPO to the VMs you want to test.
+
+### PowerShell
+
+1. On each RDS or VDI device, use the following cmdlet to enable the feature: 
+
+   `Set-MpPreference -SharedSignaturesPath \\<Windows File Server shared location>\wdav-update`
+   
+2. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.) 
 
 ## Download and unpackage the latest updates
 
@@ -75,54 +94,59 @@ Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64'
 Start-Process -FilePath $vdmpackage -WorkingDirectory $vdmpath -ArgumentList "/x"
 ```
 
-You can set a scheduled task to run once a day so that whenever the package is downloaded and unpacked then the VMs will receive the new update.
-We suggest starting with once a day, but you should experiment with increasing or decreasing the frequency to understand the impact.
+You can set a scheduled task to run once a day so that whenever the package is downloaded and unpacked then the VMs receive the new update. We suggest starting with once a day, but you should experiment with increasing or decreasing the frequency to understand the impact.
 
 Security intelligence packages are typically published once every three to four hours. Setting a frequency shorter than four hours isn't advisable because it will increase the network overhead on your management machine for no benefit.
 
 You can also set up your single server or machine to fetch the updates on behalf of the VMs at an interval and place them in the file share for consumption.
-This configuration is possible when the devices have the share and read access (NTFS permissions) to the share so they can grab the updates. To set this configuration up, follow these steps:
+This configuration is possible when the devices have the share and read access (NTFS permissions) to the share so they can grab the updates. To set up this configuration, follow these steps:
 
 1. Create an SMB/CIFS file share.
 
- 2. Use the following example to create a file share with the following share permissions.
+2. Use the following example to create a file share with the following share permissions.
 
-    ```PowerShell
-    PS c:\> Get-SmbShareAccess -Name mdatp$
+   ```PowerShell
+   
+   PS c:\> Get-SmbShareAccess -Name mdatp$
 
-    Name   ScopeName AccountName AccessControlType AccessRight
-    ----   --------- ----------- ----------------- -----------
-    mdatp$ *         Everyone    Allow             Read
-    ```
+   Name   ScopeName AccountName AccessControlType AccessRight
+   ----   --------- ----------- ----------------- -----------
+   mdatp$ *         Everyone    Allow             Read
+   
+   ```
 
-    > [!NOTE]
-    > An NTFS permission is added for **Authenticated Users:Read:**.
+   > [!NOTE]
+   > An NTFS permission is added for **Authenticated Users:Read:**.
 
-    For this example, the file share is:
-
-    `\\fileserver.fqdn\mdatp$\wdav-update`
-
+   For this example, the file share is `\\WindowsFileServer.fqdn\mdatp$\wdav-update`.
+   
 ### Set a scheduled task to run the PowerShell script
 
-1. On the management machine, open the Start menu and type **Task Scheduler**. Open it and select **Create task...** on the side panel.
+1. On the management machine, open the Start menu and type `Task Scheduler`. From the results, Task Scheduler and then select **Create task...** on the side panel.
 
-2. Enter the name as **Security intelligence unpacker**. Go to the **Trigger** tab. Select **New...** \> **Daily**, and select **OK**.
+2. Specify the name as `Security intelligence unpacker`. 
 
-3. Go to the **Actions** tab. Select **New...** Enter **PowerShell** in the **Program/Script** field. Enter `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1` in the **Add arguments** field. Select **OK**.
+3. On the **Trigger** tab, select **New...** > **Daily**, and select **OK**.
 
-4. Configure any other settings as appropriate.
+4. On the **Actions** tab, select **New...**.
 
-5. Select **OK** to save the scheduled task.
+5. Specify `PowerShell` in the **Program/Script** field. 
 
-You can initiate the update manually by right-clicking on the task and then selecting **Run**.
+6. In the **Add arguments**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
+
+7. Configure any other settings as appropriate.
+
+8. Select **OK** to save the scheduled task.
+
+To initiate the update manually, right-click on the task, and then select **Run**.
 
 ### Download and unpackage manually
 
 If you would prefer to do everything manually, here's what to do to replicate the script's behavior:
 
-1. Create a new folder on the system root called `wdav_update` to store intelligence updates, for example, create the folder `c:\wdav_update`.
+1. Create a new folder on the system root called `wdav_update` to store intelligence updates. For example, create the folder `c:\wdav_update`.
 
-2. Create a subfolder under *wdav_update* with a GUID name, such as `{00000000-0000-0000-0000-000000000000}`
+2. Create a subfolder under `wdav_update` with a GUID name, such as `{00000000-0000-0000-0000-000000000000}`
 
    Here's an example: `c:\wdav_update\{00000000-0000-0000-0000-000000000000}`
 
@@ -131,7 +155,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
 
 3. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
-4. Open a cmd prompt window and navigate to the GUID folder you created. Use the **/X** extraction command to extract the files, for example `mpam-fe.exe /X`.
+4. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example `mpam-fe.exe /X`.
 
    > [!NOTE]
    > The VMs will pick up the updated package whenever a new GUID folder is created with an extracted update package or whenever an existing folder is updated with a new extracted package.

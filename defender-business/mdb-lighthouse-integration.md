@@ -2,8 +2,8 @@
 title: Microsoft 365 Lighthouse and Microsoft Defender for Business
 description: See how Microsoft Defender for Business integrates with Microsoft 365 Lighthouse, a security solution for Microsoft partners.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview

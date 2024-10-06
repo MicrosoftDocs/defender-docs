@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 08/26/2024
+ms.date: 09/27/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,6 +39,15 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## October 2024
+
+- **Tenant Allow/Block List in Microsoft 365 now supports IPv6 address**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) now supports [allowing and blocking IPv6 addresses] (tenant-allow-block-list-ip-addresses-configure.md). It's available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments.
+
+## September 2024
+
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Mac now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
+
+
 ## August 2024
 
 - (Preview) You can now run [simulations](attack-simulation-training-simulations.md) with QR code payloads in [Attack simulation training](attack-simulation-training-get-started.md). You can track user responses and assign training to end users.
@@ -49,7 +58,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - **Tenant Allow/Block List in Microsoft 365 GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) is now available these environments. They are on parity with the WW commercial experiences.
 
-- **45 days after last used date**: The value **Remove allow entry after** \> **45 days after last used date** is now the default on new allow entries from submissions and existing allow entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). The allow entry is triggered and the **LastUsedDate** property is updated when the entity is encountered and identified as malicious during mail flow or at time of click. After the filtering system determines that the entity is clean, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
+- **45 days after last used date**: The value **Remove allow entry after** \> **45 days after last used date** is now the default on new allow entries from submissions. The existing allow entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md) can also be modified to include the value **Remove allow entry after** \> **45 days after last used date**. The allow entry is triggered and the **LastUsedDate** property is updated when the entity is encountered and identified as malicious during mail flow or at time of click. After the filtering system determines that the entity is clean, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
 
 - (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
 

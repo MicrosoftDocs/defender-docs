@@ -4,10 +4,10 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 09/07/2024
+ms.date: 09/18/2024
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: 
 - nextgen
 - partner-contribution
@@ -128,7 +128,8 @@ In order for Microsoft Defender Antivirus to run in passive mode, endpoints must
 
 - Operating system: Windows 10 or newer; Windows Server 2022, Windows Server 2019, or Windows Server, version 1803, or newer <br/>(Windows Server 2012 R2 and Windows Server 2016 if onboarded using the [modern, unified solution](configure-server-endpoints.md)). 
 - Microsoft Defender Antivirus must be installed. 
-- Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. 
+- Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. ([Add Microsoft Defender for Endpoint to your exclusion list for your existing solution](/defender-endpoint/switch-to-mde-phase-2)). 
+
 - Endpoints must be onboarded to Defender for Endpoint. 
 
 > [!IMPORTANT]

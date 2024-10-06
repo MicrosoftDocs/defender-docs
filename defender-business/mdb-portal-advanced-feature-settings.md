@@ -2,8 +2,8 @@
 title: Review and edit settings in Microsoft Defender for Business
 description: View and edit settings for the Microsoft Defender portal and advanced features in Defender for Business
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview
