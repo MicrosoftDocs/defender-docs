@@ -31,13 +31,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| September 29 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
-| September 29 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
-| September 29 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
-| September 29 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
-| September 29 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
-| September 29 | GA | [Dangling ACR hardening recommendation](#dangling-acr-hardening-recommendation-preview) |
-| September 29 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer)
+| October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
+| October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
+| October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
+| October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
+| October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
+| October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer)
 | September 22 |Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
 | September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
@@ -54,13 +53,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Updated containers runtime recommendations (preview)
 
-September 29, 2024
+October 6, 2024
 
 The preview recommendations for "Containers running in AWS/Azure/GCP should have vulnerabilities findings resolved" are updated to group all containers that are part of the same workload into a single recommendation, reducing duplications and avoid fluctuations due to new and terminated containers.
 
-Assessment IDs prior to September 29, 2024 are replaced for all three recommendations as follows:
+As of October 6, 2024 the following assessment IDs are replaced for these recommendations:
 
-| Recommendation                                                          | Old assessment ID                    | New assessment ID                    |
+| Recommendation                                                          | Previous assessment ID               | New assessment ID                    |
 |-------------------------------------------------------------------------|--------------------------------------|--------------------------------------|
 |--|--|--|
 | Containers running in Azure should have vulnerability findings resolved | e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0 | c5045ea3-afc6-4006-ab8f-86c8574dbf3d |
@@ -71,39 +70,35 @@ Assessment IDs prior to September 29, 2024 are replaced for all three recommenda
 
 ### Kubernetes Identity and Access information in the security graph (preview)
 
-September 29, 2024
+October 6, 2024
 
 Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
 
 ### Kubernetes Identity and Access information-based attack paths (preview)
 
-September 29, 2024
+October 6, 2024
 
-Using the Kubernetes RBAC data in the security graph, we start detecting Cloud to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and report on additional attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from and within Kubernetes clusters.
+Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on another attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
 
 ### Improved attack path analysis
 
-September 29, 2024
+October 6, 2024
 
-The new attack path analysis engine [released last November now supports container use cases as well](/azure/defender-for-cloud/release-notes-archive#attack-path-analysis-new-engine-and-extensive-enhancements), dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud environments.
+The new attack path analysis engine [released last November now supports container use cases as well](/azure/defender-for-cloud/release-notes-archive#attack-path-analysis-new-engine-and-extensive-enhancements), dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud and Kubernetes environments.
 
 ### Full discovery of container images in supported registries
 
-September 29, 2024
+October 6, 2024
 
 Defender for Cloud now collects inventory data for all container images in supported registries, providing full visibility within the security graph to all images in your cloud environments, including images that currently don't have any posture recommendations.
 
-### Dangling ACR hardening recommendation (preview)
-
-September 29, 2024
-
-Defender for Cloud now detects when container workloads try to pull images from deleted ACRs and provides a recommendation to stop using those images. This recommendation helps organizations protect themselves against malicious actors that would recreate the ACRs the images are pulled from and replace the images with malicious images.
+Querying capabilities through the Cloud Security Explorer are improved so users can now search for container images based on their metadata (digest, repository, OS, tag, and etc.)
 
 ### Containers software inventory with Cloud Security Explorer
 
-Sept 29, 2024
+October 6, 2024
 
-Customers are now able to get a list of software installed in their containers and container images through the Cloud Security Explorer. This list can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with a software impacted by a 0-day vulnerability, even before a CVE is published.
+Customers are now able to get a [list of software installed in their containers and container images through the Cloud Security Explorer](/azure/defender-for-cloud/cloud-security-explorer-software-vulnerabilities). This list can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with software impacted by a 0-day vulnerability, even before a CVE is published.
 
 ### Cloud security explorer experience improvements
 
