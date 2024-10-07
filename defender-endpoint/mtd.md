@@ -62,7 +62,19 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md), and
 - [Overview of Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-ios.md)
 
-**Android**
+**Android Enrollment Scenarios**
+
+|Scenarios|Is MDE Supported?|Is the company portal (Intune) app required on the device?|Protection Profile/Prerequisites|Steps|
+| -------- | -------- | -------- | -------- | -------- |
+|Android Enterprise personally owned devices using a work profile|Yes|Yes|1) It protects only the work profile section            2) To Know more about work profile [click here](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deployment steps](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
+|Android Enterprise personally owned devices using a personal profile|Yes|Yes|c1 ||
+|Android Enterprise corporate owned work profile (COPE)|Yes|Yes| Cell 3   | Cell 4   |
+|Android Enterprise corporate owned personal profile|No|-|||
+|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Yes|||
+|Android Enterprise corporate owned dedicated devices (COSU)(Kiosk/Shared)|No|-|||
+|MAM|Yes|Yes, (Need to just install, setup is not required)|||
+|Device Administrator|Yes|Yes (Intune is ending support for devices with access to Google Mobile Services (GMS) on December 31, 2024|||
+|Android Open-Source Project (AOSP)|No|-|-|-|
 
 |Enrollment type     |Details      |
 |--------------------|-------------|
