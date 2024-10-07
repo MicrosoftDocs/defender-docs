@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
-ms.reviewer: sugamar, niwelton
+ms.reviewer: sugamar, yongrhee
 manager: deniseb
 ms.custom: asr
 ms.topic: reference
