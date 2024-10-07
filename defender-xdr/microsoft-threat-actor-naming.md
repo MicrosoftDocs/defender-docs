@@ -113,6 +113,7 @@ Use the following reference table to understand how our previously publicly disc
 |Ruby Sleet|CERIUM|North Korea||
 |Ruza Flood|Storm-1099|Russia, Influence operations||
 |Salmon Typhoon|SODIUM|China|APT4, Maverick Panda|
+|Salt Typhoon||China|GhostEmperor, FamousSparrow|
 |Sangria Tempest|ELBRUS|Financially motivated|Carbon Spider, FIN7|
 |Sapphire Sleet|COPERNICIUM|North Korea|Genie Spider, BlueNoroff|
 |Seashell Blizzard|IRIDIUM|Russia|APT44, Sandworm|

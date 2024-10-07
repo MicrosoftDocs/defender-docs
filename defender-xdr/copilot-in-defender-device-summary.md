@@ -12,21 +12,21 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
+  - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
 ms.date: 04/01/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Summarize device information with Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal helps security teams in speeding up device inspection through AI-powered investigation capabilities.
 
@@ -53,7 +53,7 @@ You can access the device summary capability through the following ways:
 
    :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page.png":::
 
-- From an incident page, you can choose a device on the incident graph and then select **Device details** (1). On the device pane, select **Summarize** (2) to generate the device summary. The summary is displayed in the Copilot pane.
+- From an incident page, you can choose a device on the incident graph and then (1) select **Device details**. On the device pane, (2) select **Summarize** to generate the device summary. The summary is displayed in the Copilot pane.
 
    :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot highlighting the steps to access the device summary in an incident page in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png":::
 

@@ -11,13 +11,10 @@ ms.collection:
 - m365-security
 - tier1
 - essentials-overview
-- essentials-privacy
-- essentials-security
-- essentials-compliance
 ms.custom: intro-overview
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/31/2024
+ms.date: 09/25/2024
 ---
 
 # Microsoft Defender for Endpoint

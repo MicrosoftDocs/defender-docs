@@ -13,14 +13,15 @@ ms.collection:
   - m365-security
   - tier1
   - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
 ms.date: 09/23/2024
-appliiesto:
+appliesto:
 - Microsoft Defender XDR
-- Microsoft Sentinel in the unified security operations center (SOC) platform
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Summarize identity information with Microsoft Copilot in Microsoft Defender
@@ -51,17 +52,21 @@ You can access the identity summary capability in the following ways:
 
 - From an incident page, choose an identity on the incident graph and then (1) select **User details**. In the user details pane, (2) select **Summarize**. The results are displayed in the Copilot side panel.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph.png":::
+  :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-summary-incident-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-summary-incident.png":::
 
 - Alternatively, you can select **Go to user page** on the bottom of the user details pane to open the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
 - You can also access the identity summary capability by choosing a user in the **Assets** tab of an incident. Select **Summarize** in the user details pane to generate the identity summary.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-assets-small.png" alt-text="Screenshot showing the Assets tab and a user account highlighted." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-assets.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-summary-assets-small.png" alt-text="Screenshot showing the Assets tab and a user account highlighted." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-summary-assets.png":::
+
+- In an alert page, select a user then select **Summarize** in the user details pane to generate the identity summary.
+
+- In the advanced hunting page, you can access the identity summary capability by selecting a user in the results table, then selecting the link to the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
 - From the main menu, navigate to **Assets > Identities**. Select a username from the list, then select **View user page** to open the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-identities-small.png" alt-text="Screenshot highlighting the view user page option in an username search within Identities." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-identities.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-summary-viewuser-small.png" alt-text="Screenshot highlighting the view user page option in an username search within Identities." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-summary-viewuser.png":::
 
 - Type a username in the Microsoft Defender portal’s **search box** then select the username from the search results. In the user details side panel, select **Summarize** to generate the identity summary.
 

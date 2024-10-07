@@ -15,6 +15,7 @@ ms.collection:
   - m365-security
   - tier1
   - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 ms.date: 04/01/2024
 ---

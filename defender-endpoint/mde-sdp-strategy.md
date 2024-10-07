@@ -35,7 +35,7 @@ Defender for Endpoint’s kernel drivers capture system-wide signals like proces
 
 The process for rolling out software and driver updates for Defender for Endpoint is shown in this image:
 
-:::image type="content" alt-text="process for rolling out software and driver updates for Defender for Endpoint" source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
+:::image type="content" alt-text="Screenshot that shows the process for rolling out software and driver updates for Defender for Endpoint." source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
 
 ### Microsoft SDP for monthly updates
 
