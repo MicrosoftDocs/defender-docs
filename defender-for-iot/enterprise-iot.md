@@ -19,7 +19,7 @@ While the number of IoT devices continues to grow, they often lack the security 
 
 ## Enterprise IoT monitoring in the Defender portal
 
-Extend Microsoft Defender for IoT's security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related vulnerabilities, and recommendations for IoT devices that are seemlessly integrated into the Microsoft Defender portal.
+Extend Microsoft Defender for IoT's security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related vulnerabilities and recommendations for IoT devices that are seemlessly integrated into the Microsoft Defender portal.
 
 :::image type="content" source="media/enterprise-iot/eiot-architecture.png" alt-text="The architecture showing the use of enterprise IoT":::
 
