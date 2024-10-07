@@ -26,7 +26,7 @@ This article describes features available in Microsoft Defender for IoT in the D
 
 You can now review the new Enterprise IoT Security initiative in the Microsoft Security Exposure Management Initiatives page. This new initiative provides a metric-driven way of tracking exposure about unmanaged enterprise IoT devices.
 
-For more information, see the [Microsoft Security Exposure Management release notes](/security-exposure-management/whats-new.md#new-enterprise-iot-security-initiative).
+For more information, see the [Microsoft Security Exposure Management release notes](/security-exposure-management/whats-new#new-enterprise-iot-security-initiative).
 
 ### New Building Management Systems (BMS) device category
 
