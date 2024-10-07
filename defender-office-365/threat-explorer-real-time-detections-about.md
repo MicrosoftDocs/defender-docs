@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 07/11/2024
+ms.date: 10/07/2024
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -96,7 +96,7 @@ Threat Explorer and Real-time detections contain the following elements:
 
   |View|Threat<br/>Explorer|Real-time<br/>detections|Description|
   |---|:---:|:---:|---|
-  |**All email**|✔||Default view for Threat Explorer. Information about all email messages sent by external users into your organization (Inbound emails), email messages sent by internal users in your organization to external users (Outbound emails), email messages sent between internal users in your organization (Intra-org emails).|
+  |**All email**|✔||Default view for Threat Explorer. Information about all email messages sent by external users into your organization (**Inbound**), email messages sent by internal users in your organization to external users (**Outbound**), and email messages sent between internal users in your organization (**Intra-org**).|
   |**Malware**|✔|✔|Default view for Real-time detections. Information about email messages that contain malware.|
   |**Phish**|✔|✔|Information about email messages that contain phishing threats.|
   |**Campaigns**|✔||Information about malicious email that Defender for Office 365 Plan 2 identified as part of a [coordinated phishing or malware campaign](campaigns.md).|
@@ -140,7 +140,7 @@ Threat Explorer and Real-time detections contain the following elements:
 
 ## All email view in Threat Explorer
 
-The **All email** view in Threat Explorer shows information about all inbound, outbound and intra-org email messages. The view shows malicious and non-malicious email. For example:
+The **All email** view in Threat Explorer shows information about all inbound, outbound, and intra-org email messages. The view shows malicious and non-malicious email. For example:
 
 - Email identified phishing or malware.
 - Email identified as spam or bulk.
