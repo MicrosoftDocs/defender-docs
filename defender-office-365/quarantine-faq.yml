@@ -217,7 +217,7 @@ sections:
           >
           > If you select every four hours, and a message is quarantined _just after_ the last notification generation, the recipient will receive the quarantine notification _slightly more than_ four hours later.
           >
-          > For messages quarantied by zero-hour auto purge (ZAP), quarantine notifications are generated based on when the message was quarantined, not when the message was delivered to the mailbox.
+          > For messages quarantined by zero-hour auto purge (ZAP), quarantine notifications are generated based on when the message was quarantined, not when the message was delivered to the mailbox.
 
       - question: |
           Why aren't users receiving notifications about their quarantined messages?
