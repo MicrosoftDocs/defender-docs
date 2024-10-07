@@ -32,7 +32,13 @@ When you take your environment's contextual information into account, attack pat
 
 :::image type="content" source="media/concept-cloud-map/attack-path.png" alt-text="Image that shows a sample attack path from attacker to your sensitive data.":::
 
-Defender for Cloud offers a dynamic attack path analysis that is based on each customers individual cloud security graph. Attack paths are unique for each individual customer and the analysis performed by Defender for Cloud is updated in real-time as new data is collected from your multicloud environments. Unlike other products that offer attack path analysis, Defender for Cloud doesn't rely on static rules or predefined attack paths. Instead, it uses a graph-based algorithm that is unique to each customer's environment to provide the most accurate and up-to-date attack path analysis for each customer's environment.
+Defender for Cloud offers a graph based algorithm that searches each for unique attack paths based on each customers individual cloud security graph.  Defender for Cloud's algorithm uses the customer's cloud security graph to search for every possible entry point, a weakness that gives an attacker an opportunity to break into an environment, such as an internet exposed Virtual Machine (VM) with high severity vulnerability. These entry points then allow the attacker to gain initial access to the system where he can then move laterally. The algorithm finds these entry points and then searches for the steps an attacker can take that could be attacked, and searches all potential paths available from that entry point to see if any of them are connected to vulnerable targets, such as databases.  
+
+is updated in real-time as new data is collected from your multicloud environments. Unlike other products that offer attack path analysis, Defender for Cloud doesn't rely on static rules or predefined attack paths. Instead, it uses a graph-based algorithm that is unique to each customer's environment to provide the most accurate and up-to-date attack path analysis for each customer's environment.
+
+Entry point 
+step
+target
 
 Learn how to use [attack path analysis](how-to-manage-attack-path.md).
 
