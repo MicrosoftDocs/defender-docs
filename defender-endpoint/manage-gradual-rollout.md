@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 09/25/2024
+ms.date: 10/07/2024
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
@@ -90,7 +90,7 @@ The following update channels are available:
 
 ### Update channels for security intelligence updates
 
-You can also assign a machine to a channel to define the cadence in which it receives SIUs (formerly referred to as signature, definition, or daily updates). Unlike the monthly process, there's no Beta channel and this gradual release cycle occurs multiple times a day.
+You can also assign a machine to a channel to define the cadence in which it receives SIUs (formerly referred to as signature, definition, or daily updates). Unlike the monthly process, this gradual release cycle occurs multiple times a day.
 
 |Channel name|Description|Application|
 |---|---|---|
