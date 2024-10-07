@@ -36,7 +36,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
 | October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
-| October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer)
+| October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
 | September 22 |Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
 | September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
