@@ -13,7 +13,7 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: conceptual
-ms.date: 08/19/2024
+ms.date: 09/30/2024
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
@@ -37,6 +37,12 @@ For more information, see:
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
 
+Multitenant management is also available to US government customers. Refer to the table below for specific scenarios for GCC, GCC High, DoD, and Commercial customers.
+
+| Scenario | Availability |
+| ------ | ------ |
+|Multitenant management | Available to all GCC, GCC High, DoD, and Commercial customers.|
+|Cross cloud collaboration| - Both DoD and GCC High customers can manage tenants in each other's clouds. </br></br> - GCC customers can manage tenants in the Commercial cloud. |
 
 ## Benefits of multitenant management
 
@@ -64,6 +70,9 @@ The following key capabilities are available for each tenant you have access to 
 |**Endpoints** >**Vulnerability Management** > **Dashboard** |The Microsoft Defender Vulnerability Management dashboard provides both security administrators and security operations teams with aggregated vulnerability management information across multiple tenants. |
 |**Endpoints** > **Vulnerability management** > **Tenants** |For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
 |**Configuration** > **Settings**|Lists the tenants you have access to. Use this page to view and manage your tenants.|
+
+> [!NOTE]
+> The content distribution capability is not yet available for all GCC, GCC High, and DoD customers.
 
 ## Next steps
 
