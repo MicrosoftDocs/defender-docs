@@ -10,7 +10,7 @@ ms.date: 09/30/2024
 
 # Identify and remediate attack paths
 
-Defender for Cloud's dynamic approach to attack paths lets you search for attack paths specific to your environment. Instead of looking for preset attack paths, Defender for Cloud uses a dynamic algorithm to detect potential attack paths based on your multicloud context. Attack path analysis helps you focus on the most critical security issues that could lead to a breach.
+Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. Instead of looking for preset attack paths, Defender for Cloud it's algorithm to detect potential attack paths based on your multicloud multicloud security graph. Attack path analysis helps you focus on the most critical security issues that could lead to a breach.
 
 You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
 
