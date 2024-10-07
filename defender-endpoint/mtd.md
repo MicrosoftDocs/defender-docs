@@ -66,14 +66,14 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 
 |Scenarios|Is MDE Supported?|Is the company portal app required on the device?|Protection Profile/Prerequisites|Steps|
 | -------- | -------- | -------- | -------- | -------- |
-|Android Enterprise personally owned devices using a work profile|Yes|Yes|1) It protects only the work profile section            2) To Know more about work profile [click here](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deployment steps](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
-|Android Enterprise personally owned devices using a personal profile|Yes|Yes|1) It protects the personal profile. When a customer has a scenario with work profile as well then it protects the entire device. 2) Prerequisites: A. The company portal app needs to be enabled on personal profile. B. Microsoft Defender must be already installed and active in work profile to enable Microsoft Defender in personal profile.|[Deployment Steps](/defender-endpoint/android-intune)|
-|Android Enterprise corporate owned work profile (COPE)|Yes|Yes|1) It protects only the work profile section. 2) Company Portal app and Microsoft Intune app both are auto installed| [Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/android-intune#deploy-on-android-enterprise-enrolled-devices) |
+|Android Enterprise personally owned devices using a work profile|Yes|Yes|1) It protects only the work profile section                                         2) To Know more about work profile [click here](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deployment steps](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
+|Android Enterprise personally owned devices using a personal profile|Yes|Yes|1) It protects the personal profile. When a customer has a scenario with work profile as well then it protects the entire device.           2) Prerequisites: A. The company portal app needs to be enabled on personal profile. B. Microsoft Defender must be already installed and active in work profile to enable Microsoft Defender in personal profile.|[Deployment Steps](/defender-endpoint/android-intune)|
+|Android Enterprise corporate owned work profile (COPE)|Yes|Yes|1) It protects only the work profile section.                                         2) Company Portal app and Microsoft Intune app both are auto installed| [Deployment Steps](/defender-endpoint/android-intune) |
 |Android Enterprise corporate owned personal profile|No|-|-|-|
-|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Yes|1) It protects the entire device.   2) Company Portal app and Microsoft Intune app both are auto installed.|[Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/android-intune#deploy-on-android-enterprise-enrolled-devices)|
+|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Yes|1) It protects the entire device.    2) Company Portal app and Microsoft Intune app both are auto installed.|[Deployment Steps](/defender-endpoint/android-intune)|
 |Android Enterprise corporate owned dedicated devices (COSU)(Kiosk/Shared)|No|-|-|-|
-|MAM|Yes|Yes, (Need to just install, setup is not required)|1) It protects only enrolled apps. 2) MAM supports with/without Device enrollment or enrolled with third party Enterprise Mobility Management.|[Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/android-configure-mam)|
-|Device Administrator|Yes|Yes|1) Intune is ending support for android device administrator management on devices with access to Google Mobile Services (GMS) on December 31, 2024.|c 5|
+|MAM|Yes|Yes, (Need to just install, setup is not required)|1) It protects only enrolled apps. 2) MAM supports with/without Device enrollment or enrolled with third party Enterprise Mobility Management.|[Deployment Steps](/defender-endpoint/android-configure-mam)|
+|Device Administrator|Yes|Yes|1) Intune is ending support for android device administrator management on devices with access to Google Mobile Services (GMS) on December 31, 2024.|-|
 |Android Open-Source Project (AOSP)|No|-|-|-|
 
 |Enrollment type     |Details      |
@@ -82,7 +82,16 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 |Device Administrator with Intune |[Deploy on Device Administrator enrolled devices](android-intune.md#deploy-on-device-administrator-enrolled-devices)|
 |Unmanaged BYOD OR devices managed by other enterprise mobility management / Set up app protection policy (MAM)|[Configure Defender risk signals in app protection policy (MAM)](android-configure-mam.md)|
 
-**iOS**
+**iOS Enrollment Scenarios**
+
+
+|Scenarios|Is MDE supported?|Is company portal app required on device?|Protection Profile/Prerequisites|Steps|
+| -------- | -------- | -------- | -------- | -------- |
+|Supervised Devices (ADE and Apple Configurator Enrollment|Yes|Yes|1) It protects the entire device. In terms of ADE if they use Just In Time (JIT) registration - company portal app not required because app itself will enroll the device through connecting to Intune server|1)  Cell 2   |
+|Unsupervised Devices (Device Enrollment)|Yes|Yes|1) It protects the entire device. (In case of web-based device enrollment company portal app is not required because through this after managed app sign in it leads to download configuration policy and not the company portal app)||
+|Unsupervised Devices (User Enrollment)|Yes|Yes|1) It protects work data only. (VPN has access to entire device so can scan all app traffic)||
+|MAM|Yes|No|1) It protects only enrolled apps. (VPN has access to entire device so can scan all app traffic)||
+|Dedicated/Shared/Kiosk Devices|No|-|-|-  |
 
 |Enrollment type     |Details      |
 |--------------------|-------------|
