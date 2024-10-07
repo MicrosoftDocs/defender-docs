@@ -162,6 +162,9 @@
     - name: Azure Resource Graph queries
       displayName: sample, query, queries, resource, graph
       href: ./resource-graph-samples.md
+    - name: Cloud Security Explorer software queries
+      displayName: sample, query, cloud security explorer
+      href: cloud-security-explorer-software-vulnerabilities.md
 
 
 - name: Concepts
