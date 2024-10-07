@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 09/11/2024
+  ms.date: 10/07/2024
   audience: ITPro
   ms.topic: faq
 
@@ -133,9 +133,13 @@ sections:
 
             If a third party filter isn't preventing the message from reaching the user's Inbox and the first release attempt didn't work, admins can try using the [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) with the _Force_ switch to release the message.
 
-            If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the third party service is turned off.
+            If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the third party service is turned off. Forced release might cause messages to be released multiple times.
+
+            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine has not occurred.
 
           - Inbox rules ([created by users in Outlook](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) or by admins using the **\*-InboxRule** cmdlets in Exchange Online PowerShell) can move or delete messages from the Inbox.
+
+          - Some mail flow rules that quarantined a message can cause the released message to be quarantined again.
 
           Admins can use [message trace](message-trace-defender-portal.md) to determine if a released message was delivered to the recipient's Inbox.
 
@@ -158,6 +162,8 @@ sections:
           Admins can use the [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) and [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlets in Exchange Online PowerShell or standalone EOP PowerShell to find and release quarantined messages in bulk, and to report false positives in bulk.
 
           For bulk actions that are available on the **Quarantine** page, see [Take action on multiple quarantined email messages](quarantine-admin-manage-messages-files.md#take-action-on-multiple-quarantined-email-messages).
+
+          In Defender for Office 365 Plan 2, you can use Explorer (Threat Explorer) to do larger bulk release operations (a maximum of 200,000 messages).
 
       - question: |
           Are wildcards supported when searching for quarantined messages? Can I search for quarantined messages for a specific domain?
@@ -210,6 +216,8 @@ sections:
           > The fastest, most frequent notification schedule that's available is every four hours.
           >
           > If you select every four hours, and a message is quarantined _just after_ the last notification generation, the recipient will receive the quarantine notification _slightly more than_ four hours later.
+          >
+          > For messages quarantined by zero-hour auto purge (ZAP), quarantine notifications are generated based on when the message was quarantined, not when the message was delivered to the mailbox.
 
       - question: |
           Why aren't users receiving notifications about their quarantined messages?
