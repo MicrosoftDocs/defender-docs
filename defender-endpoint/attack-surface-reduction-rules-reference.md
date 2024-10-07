@@ -185,7 +185,7 @@ For rules with the "Rule State" specified:
 - EDR alerts are generated for ASR rules in the specified states, for devices at cloud block level "High+"
 - Toast notifications occur in block mode only and for devices at cloud block level "High"
 
-| Rule name | Rule state | EDR alerts? | Toast notifications?  |
+| Rule name | Rule state | EDR alerts | Toast notifications  |
 |---|---|---|---|
 |[Block abuse of exploited vulnerable signed drivers](#block-abuse-of-exploited-vulnerable-signed-drivers) |   | N  | Y |
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes) | Block  | Y   | Y  |
