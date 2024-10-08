@@ -25,7 +25,7 @@ Defender for Cloud then uses the generated graph to perform an attack path analy
 
 ## What is an attack path?
 
-An attack path is a series of steps a potential attacker can use to breach your environment and access your assets. An attack path starts at entry point, for example a vulnerable resource. The attack path then follows the available lateral movement within your multicloud environment, for example by using attached identities that have permissions to other resources.  The attack path continues until the attacker reaches a vulnerable target, such as databases that contain sensitive data.. 
+An attack path is a series of steps a potential attacker can use to breach your environment and access your assets. An attack path starts at entry point, for example a vulnerable resource. The attack path then follows the available lateral movement within your multicloud environment, for example by using attached identities that have permissions to other resources. The attack path continues until the attacker reaches a critical target, such as databases that contain sensitive data.
 
 Defender for Cloud's attack path analysis feature uses the cloud security graph, and a proprietary algorithm to find exploitable entry points and the steps an attacker can take to reach your vital assets. The algorithm exposes attack paths and suggests recommendations to fix issues that break the attack path and prevent a breach. 
 
