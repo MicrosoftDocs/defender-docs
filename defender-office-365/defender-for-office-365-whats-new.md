@@ -63,8 +63,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-- We will be introducing Intra-org protection data into 3 of our core customer facing reports (Mail flow status reports, Threat protection status reports, and Top senders/recipient reports). With this Optics, Admins and security operators will have insight into how MDO is protecting users from malicious email traffic inside the organization tenant. https://learn.microsoft.com/en-us/defender-office-365/reports-email-security?view=o365-worldwide#email-security-report-changes-in-the-microsoft-365-defender-portal
-
+- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how Exchange Online Protection and Defender for Office 365 are protecting users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-365-defender-portal).
 
 ## May 2024
 
