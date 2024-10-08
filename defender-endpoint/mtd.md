@@ -7,7 +7,7 @@ ms.subservice: onboard
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 09/05/2024
+ms.date: 0/08/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -103,10 +103,10 @@ The following sections describe the different scenarios for how to onboard Andro
 
 ### Android Enterprise corporate-owned work profile (COPE) 
 **Prerequisites**
-The Company portal app and Microsoft Intune app both are automatically installed  
+- The Company portal app and Microsoft Intune app both are automatically installed  
 
 **Protection mode**
-This mode protects only the work profile section. 
+- This mode protects only the work profile section. 
 
 **How to deploy**
 [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune#deploy-on-android-enterprise-enrolled-devices)
