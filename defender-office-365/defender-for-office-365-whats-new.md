@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 09/27/2024
+ms.date: 10/08/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -45,10 +45,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## September 2024
 
-- With one click SecOps can take a quarantine release action  from Threat explorer and Email entity page without the need to tab out to the Quarantine portal to take the action https://learn.microsoft.com/en-us/defender-office-365/remediate-malicious-email-delivered-office-365?view=o365-worldwide
+- With one click, SecOps personnel can take a quarantine release action directly from Explorer (Threat Explorer) or the Email entity page (no need to go to the Quarantine page in the Defender portal). For more information, see [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md).
 - [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Mac v16.89 (24090815) or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
-- We are Updating the experience for end user allow and block list management of their emails. With one click, end users will block emails from unwanted senders and prevent those emails from showing up in their default quarantine view anymore as well as in their Quarantine notifications. End users will also be able to allow emails from trusted  and prevent future emails from those senders from landing in quarantine given there are no Admin overrides in place. End users will also have visibility into Admin overrides that led to a Quarantined email message if there is one. https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files#view-quarantined-email
-
+- We're updating the end user experience for allow and block list management of their email messages. With one click, users can block email from unwanted senders and prevent those messages from appearing in their default quarantine view and in quarantine notifications. Users can also allow email from trusted and prevent future messages from those senders from being quarantined (if there are no admin overrides). Users also have visibility into any admin overrides that led to a quarantined email message. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
 
 ## August 2024
 
