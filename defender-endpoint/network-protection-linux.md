@@ -53,8 +53,7 @@ You can use web content filtering for testing with Network protection for Linux.
   - Customer feedback is being collected to drive further design improvements
 
 > [!NOTE]
-> To evaluate the effectiveness of Linux Web Threat Protection, we recommend using the Firefox browser which is the default for all the distributions.
-
+> Most server installations of Linux lack a graphical user interface and web browser. To evaluate the effectiveness of Linux Web Threat Protection with Linux, we recommend testing on a non-production server with a graphical user interface and web browser.
 ### Prerequisites
 
 - Licensing: Microsoft Defender for Endpoint tenant (can be trial) and platform specific requirements found in [Microsoft Defender for Endpoint for non-Windows platforms](non-windows.md#licensing-requirements)
