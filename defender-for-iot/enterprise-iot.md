@@ -19,7 +19,7 @@ While the number of IoT devices continues to grow, they often lack the security 
 
 ## Enterprise IoT monitoring in the Defender portal
 
-Extend Microsoft Defender for IoT's security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related alerts, vulnerabilities, and recommendations for IoT devices that are seemlessly integrated into the Microsoft Defender portal.
+Extend Microsoft Defender for IoT's security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related vulnerabilities and recommendations for IoT devices that are seemlessly integrated into the Microsoft Defender portal.
 
 :::image type="content" source="media/enterprise-iot/eiot-architecture.png" alt-text="The architecture showing the use of enterprise IoT":::
 
@@ -31,13 +31,7 @@ Extend Microsoft Defender for IoT's security features to include enterprise IoT 
 
 ## Enterprise IoT data in the Defender portal
 
-Enterprise IoT data for features such as alerts, recommendations and vulnerabilities, seamlessly integrates with other data in the Defender portal.
-
-### Alerts
-
-Most Defender for Endpoint alerts are also relevant for enterprise IoT devices, such as alerts for scans involving managed endpoints. Alerts for enterprise IoT devices detected by Defender for Endpoint are only available in Defender for Endpoint.
-
-For more information, see [Alerts queue in Microsoft 365 Defender](/defender-endpoint/alerts-queue).
+Enterprise IoT data for features such as recommendations and vulnerabilities, seamlessly integrates with other data in the Defender portal.
 
 ### Recommendations
 
