@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 08/15/2024
+ms.date: 10/08/2024
 audience: ITPro
 ms.topic: how-to
 author: denisebmsft
