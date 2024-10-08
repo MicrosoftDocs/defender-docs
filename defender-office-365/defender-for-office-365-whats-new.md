@@ -45,8 +45,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## September 2024
 
-- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Mac now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
-
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Mac v16.89 (24090815) or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 ## August 2024
 
