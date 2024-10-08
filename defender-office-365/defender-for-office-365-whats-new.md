@@ -55,7 +55,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
-- In Microsoft Defender for Office 365, we are rolling out new details on who or what is responsible for releasing a message from quarantine. These details will now be included in the email summary flyout panel accessible from the Quarantine page. https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files#view-quarantined-email
+- We're rolling out new details into who or what was responsible for releasing a message from quarantine. These details are included in the email summary flyout that's accessible from the Quarantine page. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
 
 ## July 2024
 
