@@ -172,11 +172,11 @@ You can also create custom payloads that use QR codes as phishing links as descr
 3. On the **Select technique** page, the available options are the same as on the **Select technique** page in the new simulation wizard:
    - **Credential Harvest**<sup>\*</sup>
    - **Malware Attachment**
-   - **Link in Attachment**
+   - **Link in Attachment**<sup>\*</sup>
    - **Link to Malware**<sup>\*</sup>
-   - **Drive-by URL**
+   - **Drive-by URL**<sup>\*</sup>
    - **OAuth Consent Grant**<sup>\*</sup>
-   - **How-to Guide**<sup>\*</sup>
+   - **How-to Guide**
 
    <sup>\*</sup> This social engineering technique allows you to use QR codes (currently in Preview).
 
