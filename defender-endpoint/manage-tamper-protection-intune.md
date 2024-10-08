@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 08/15/2024
+ms.date: 10/08/2024
 audience: ITPro
 ms.topic: how-to
 author: denisebmsft
@@ -55,7 +55,7 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 | Requirement | Details |
 |---|---|
 | Roles and permissions | You must have appropriate permissions assigned through roles, such as Security Administrator. See [Microsoft Entra roles with Intune access](/mem/intune/fundamentals/role-based-access-control#azure-active-directory-roles-with-intune-access). |
-| Device management | Your organization uses [Intune to manage devices](/mem/intune/fundamentals/manage-devices). |
+| Device management | Your organization uses Configuration Manager or [Intune to manage devices](/mem/intune/fundamentals/manage-devices). Co-Managed devices are not supported for this feature|
 | Intune licenses | Intune licenses are required. See [Microsoft Intune licensing](/mem/intune/fundamentals/licenses). |
 | Operating System | Windows devices must be running Windows 10 [version 1709 or later](/lifecycle/announcements/revised-end-of-service-windows-10-1709) or Windows 11. (For more information about releases, see [Windows release information](/windows/release-health/release-information).) <br/><br/>For Mac, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md). |
 | Security intelligence | You must be using Windows security with [security intelligence](https://www.microsoft.com/wdsi/definitions) updated to version `1.287.60.0` (or later). |
@@ -117,9 +117,10 @@ You can use a registry key to determine whether the functionality to protect Mic
    |---|---|---|
    | `6` | (any value) |The device is managed by Intune only. <br/>(*Meets a requirement for exclusions to be tamper protected.*) |
    | `7` | `4` | The device is managed by Configuration Manager. <br/>(*Meets a requirement for exclusions to be tamper protected.*) |
+   | `7` | `3` | The device is co-managed by Configuration Manager and Intune. <br/>(*This is not supported for exclusions to be tamper protected.*) |
    | A value other than `6` or `7` | (any value) | The device isn't managed by Intune only or Configuration Manager only. <br/>(*Exclusions aren't tamper protected*.) |
 
-3. To confirm that tamper protection is deployed and that exclusions are tamper protected, check the `TPExclusions` registry key (located at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features` or `HKLM\SOFTWARE\Microsoft\Windows Defender\Features`).
+4. To confirm that tamper protection is deployed and that exclusions are tamper protected, check the `TPExclusions` registry key (located at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features` or `HKLM\SOFTWARE\Microsoft\Windows Defender\Features`).
 
    | `TPExclusions` | What the value means |
    |---|---|
