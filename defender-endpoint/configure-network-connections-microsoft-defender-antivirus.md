@@ -46,7 +46,7 @@ After you've enabled the service, you need to configure your network or firewall
 
 The table in this section lists services and their associated website addresses (URLs).
 
-Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs. The URLs in the following table use port 443 for communication. (Port 80 is also required for some URLs, as noted in the following table.)
+Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs. The URLs in the following table use port `443` for communication. (Port `80` is also required for some URLs, as noted in the following table.)
 
 |Service and description|URL|
 |---|---|
