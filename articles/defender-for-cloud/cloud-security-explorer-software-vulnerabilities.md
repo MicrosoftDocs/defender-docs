@@ -20,7 +20,7 @@ Read [Build queries Cloud Security Explorer](how-to-manage-cloud-security-explor
 
 1. Navigate to [Microsoft Defender for Cloud > Cloud Security Explorer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SecurityGraph)
 
-    :::image type="content" source="./media/concept-cloud-map/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/concept-cloud-map/cloud-security-explorer-main-page.png":::
+    :::image type="content" source="./media/cloud-security-explorer-software-vulnerabilities/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/concept-cloud-map/cloud-security-explorer-main-page.png":::
 
 1. Filter on the software in the VMs to query.
 
@@ -40,7 +40,7 @@ Read [Build queries Cloud Security Explorer](how-to-manage-cloud-security-explor
 
 1. Navigate to [Microsoft Defender for Cloud > Cloud Security Explorer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SecurityGraph)
 
-    :::image type="content" source="./media/concept-cloud-map/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/concept-cloud-map/cloud-security-explorer-main-page.png":::
+    :::image type="content" source="./media/cloud-security-explorer-software-vulnerabilities/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/concept-cloud-map/cloud-security-explorer-main-page.png":::
 
 1. Filter on the software in the container images to query.
 
