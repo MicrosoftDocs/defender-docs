@@ -136,7 +136,7 @@
         - name: Protect APIs with Defender for APIs
           displayName: APIs, enable
           href: defender-for-apis-deploy.md
-    - name: Integrate external solutions
+    - name: Integrate partner integrations
       expanded: false
       items:
         - name: Overview of partner integrations
@@ -152,6 +152,22 @@
             - name: Connect ServiceNow to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, ServiceNow
               href: connect-servicenow.md
+          - name: API partners
+            items:
+                - name: Overview of API integrations
+                  href: defender-partner-applications.md
+                - name: Onboard 42Crunch (preview)
+                  href: onboarding-guide-42crunch.md
+                - name: Onboard StackHawk (preview)
+                  href: onboarding-guide-stackhawk.md
+                - name: Onboard Bright Security (preview)
+                  href: onboarding-guide-bright.md
+        - name: Integrate partner solutions (legacy)
+          displayName: security, solutions, integrate, integrated, data sources
+          href: partner-integration.md
+    - name: Integrate Microsoft solutions
+      expanded: false
+      items:
           - name: Power BI
             items:
             - name: Overview Power BI integration
@@ -162,45 +178,33 @@
               href: add-data-power-bi.md
           - name: Microsoft Defender for Endpoint
             items:
-            - name: Overview Microsoft Defender for Endpoint integration
-              displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
-              href: integration-defender-for-endpoint.md
-            - name: Enable the Defender for Endpoint integration
-              displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
-              href: enable-defender-for-endpoint.md
+              - name: Overview Microsoft Defender for Endpoint integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                href: integration-defender-for-endpoint.md
+              - name: Enable the Defender for Endpoint integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                href: enable-defender-for-endpoint.md
           - name: Microsoft Defender XDR
-            itenms:
-            - name: Overview Microsoft Defender XDR integration
-              displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
-              href: concept-integration-365.md
+            items:
+              - name: Overview Microsoft Defender XDR integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
+                href: concept-integration-365.md
           - name: Microsoft Entra Permissions Management
             items:
-            - name: Enable the Microsoft Entra Permissions Management integration
-              displayName: CSPM, cloud security, posture, management, Microsoft Entra Permissions Management
-              href: enable-permissions-management.md
+              - name: Enable the Microsoft Entra Permissions Management integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Entra Permissions Management
+                href: enable-permissions-management.md
           - name: Microsoft Defender external attack surface management (EASM)
             items:
-            - name: Overview Microsoft Defender EASM integration
-              displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
-              href: concept-easm.md
+              - name: Overview Microsoft Defender EASM integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
+                href: concept-easm.md
           - name: Microsoft Copilot for Security
             items:
-            - name: Overview Microsoft Copilot for Security integration
-              displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
-              href: copilot-security-in-defender-for-cloud.md
-          - name: API partners
-            items:
-            - name: Partner applications
-              href: defender-partner-applications.md
-            - name: Onboard 42Crunch (preview)
-              href: onboarding-guide-42crunch.md
-            - name: Onboard StackHawk (preview)
-              href: onboarding-guide-stackhawk.md
-            - name: Onboard Bright Security (preview)
-              href: onboarding-guide-bright.md
-        - name: External security solutions
-          displayName: security, solutions, integrate, integrated, data sources
-          href: partner-integration.md
+              - name: Overview Microsoft Copilot for Security integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
+                href: copilot-security-in-defender-for-cloud.md
+
 
 - name: Tutorials
   items:

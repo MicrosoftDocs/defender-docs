@@ -1,5 +1,5 @@
 ---
-title: Partner applications in Microsoft Defender for Cloud for API security testing (preview)
+title: Overview of API integrations(preview)
 description: Learn about security testing scan results from partner applications within Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 11/15/2023
 ---
 
-# Partner applications in Microsoft Defender for Cloud for API security testing (preview)
+# Overview of API integrations (preview)
 
 Microsoft Defender for Cloud supports third-party tools to help enhance the existing runtime security capabilities that are provided by Defender for APIs. Defender for Cloud supports proactive API security testing capabilities in early stages of the development lifecycle (including source code repositories & CI/CD pipelines).
 
