@@ -110,7 +110,7 @@ You can use a registry key to determine whether the functionality to protect Mic
 
    | `ManagedDefenderProductType` value | `EnrollmentStatus` value | What the value means |
    |---|---|---|
-   | `6` | (any value) |The device is managed by Intune only. <br/>(*Meets a requirement for exclusions to be tamper protected.*) |
+   | `6` | (any value) |The device is managed in Intune only. <br/>(*Meets a requirement for exclusions to be tamper protected.*) |
    | `7` | `4` | The device is managed by Configuration Manager. <br/>(*Meets a requirement for exclusions to be tamper protected.*) |
    | A value other than `6` or `7` | (any value) | The device isn't managed by Intune only or Configuration Manager only. <br/>(*Exclusions aren't tamper protected*.) |
 
