@@ -9,7 +9,7 @@ manager: deniseb
 ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 05/17/2024
+ms.date: 10/08/2024
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
@@ -35,7 +35,7 @@ To ensure Microsoft Defender Antivirus cloud-delivered protection works properly
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 
-The Microsoft Defender Antivirus cloud service provides fast, and strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it is highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) for enabling the service with Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
+The Microsoft Defender Antivirus cloud service provides fast, strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it is highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) for enabling the service with Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
 
 After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
 
