@@ -81,10 +81,10 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 
 |Scenarios|Is MDE supported?|Is company portal app required on device?|Protection Profile/Prerequisites|Steps|
 | -------- | -------- | -------- | -------- | -------- |
-|Supervised Devices (ADE and Apple Configurator Enrollment|Yes|Yes|1) It protects the entire device. In terms of ADE if they use Just In Time (JIT) registration - company portal app not required because app itself will enroll the device through connecting to Intune server| [Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/ios-install#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)   |
-|Unsupervised Devices (Device Enrollment)|Yes|Yes|1) It protects the entire device. (In case of web-based device enrollment company portal app is not required because through this after managed app sign in it leads to download configuration policy and not the company portal app)|[Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/ios-install#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)|
-|Unsupervised Devices (User Enrollment)|Yes|Yes|1) It protects work data only. (VPN has access to entire device so can scan all app traffic)|[Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/ios-install#user-enrollment-setup-only-for-intune-user-enrolled-devices)|
-|MAM|Yes|No|1) It protects only enrolled apps. (VPN has access to entire device so can scan all app traffic)|[Deployment Steps](https://learn.microsoft.com/en-us/defender-endpoint/ios-install-unmanaged)|
+|Supervised Devices (ADE and Apple Configurator Enrollment|Yes|Yes|1) It protects the entire device. In terms of ADE if they use Just in Time (JIT) registration - company portal app not required because app itself will enroll the device through connecting to Intune server| [Deployment Steps](/defender-endpoint/ios-install)   |
+|Unsupervised Devices (Device Enrollment)|Yes|Yes|1) It protects the entire device. (In case of web-based device enrollment company portal app is not required because through this after managed app sign in it leads to download configuration policy and not the company portal app)|[Deployment Steps](/defender-endpoint/ios-install)|
+|Unsupervised Devices (User Enrollment)|Yes|Yes|1) It protects work data only. (VPN has access to entire device so can scan all app traffic)|[Deployment Steps](/defender-endpoint/ios-install)|
+|MAM|Yes|No|1) It protects only enrolled apps. (VPN has access to entire device so can scan all app traffic)|[Deployment Steps](/defender-endpoint/ios-install-unmanaged)|
 |Dedicated/Shared/Kiosk Devices|No|-|-|-  |
 
 **Android low touch onboarding supported scenarios**
