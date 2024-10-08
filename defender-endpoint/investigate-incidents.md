@@ -3,8 +3,8 @@ title: Investigate incidents in Microsoft Defender for Endpoint
 description: See associated alerts, manage the incident, and see alert metadata to help you investigate an incident
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - mde-edr
 ms.topic: conceptual
 ms.subservice: edr
-ms.date: 01/24/2024
+ms.date: 06/05/2024
 ---
 
 # Investigate incidents in Microsoft Defender for Endpoint
@@ -38,9 +38,6 @@ When you investigate an incident, you'll see:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUV]
 
 ## Analyze incident details
-
-> [!TIP]
-> For a limited time during January 2024, when you visit the **Incidents** page, Defender Boxed appears. Defender Boxed highlights your organization's security successes, improvements, and response actions during 2023. To reopen Defender Boxed, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
 
 Click an incident to see the **Incident pane**. Select **Open incident page** to see the incident details and related information (alerts, devices, investigations, evidence, graph).
 

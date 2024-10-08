@@ -1,10 +1,10 @@
 - name: Microsoft Defender XDR
   href: index.yml
   expanded: true
-  items: 
+  items:
     - name: Overview
       items:
-      - name: What is Microsoft Defender XDR
+      - name: What is Microsoft Defender XDR?
         href: microsoft-365-defender.md
       - name: What's new
         href: whats-new.md
@@ -13,7 +13,7 @@
       - name: Zero Trust
         href: zero-trust-with-microsoft-365-defender.md
       - name: Microsoft Copilot in Microsoft Defender
-        href: security-copilot-in-microsoft-365-defender.md  
+        href: security-copilot-in-microsoft-365-defender.md
       - name: US Government customers
         href: usgov.md
       - name: Industry tests
@@ -22,10 +22,10 @@
         items:
         - name: Portal overview
           href: microsoft-365-defender-portal.md
-        - name: Microsoft Defender Security Center to the Microsoft Defender portal
-          href: microsoft-365-security-mde-redirection.md
         - name: Defender for Endpoint
           href: microsoft-365-security-center-mde.md
+        - name: Defender for IoT
+          href: /defender-for-iot/microsoft-defender-iot
         - name: Defender for Office 365
           href: microsoft-365-security-center-mdo.md
         - name: Defender for Identity
@@ -36,74 +36,34 @@
           href: microsoft-365-security-center-defender-cloud.md
         - name: Microsoft Sentinel
           items:
+          - name: Integration overview
+            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
           - name: Experience in Defender portal
             href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Connect Microsoft Sentinel to Microsoft Defender
-            href: microsoft-sentinel-onboard.md    
+            href: microsoft-sentinel-onboard.md
     - name: Plan
-      items: 
+      items:
         - name: Prerequisites
           href: prerequisites.md
         - name: Data security and privacy
           href: data-privacy.md
         - name: Microsoft security portals
           href: portals.md
-    - name: Evaluate and pilot
-      items: 
+    - name: Pilot and deploy Microsoft Defender XDR
+      items:
         - name: Overview
-          href: eval-overview.md 
-        - name: Step 1. Create the evaluation environment
-          href: eval-create-eval-environment.md  
-        - name: Step 2. Defender for Identity
-          items:
-            - name: Overview
-              href: eval-defender-identity-overview.md   
-            - name: Review architecture requirements
-              href: eval-defender-identity-architecture.md
-            - name: Enable the evaluation 
-              href: eval-defender-identity-enable-eval.md       
-            - name: Pilot Defender for Identity
-              href: eval-defender-identity-pilot.md                      
-        - name: Step 3. Defender for Office 365
-          items:
-            - name: Overview
-              href: eval-defender-office-365-overview.md
-            - name: Review architecture requirements
-              href: eval-defender-office-365-architecture.md
-            - name: Enable the evaluation 
-              href: eval-defender-office-365-enable-eval.md
-            - name: Pilot Defender for Office
-              href: eval-defender-office-365-pilot.md        
-        - name: Step 4. Defender for Endpoint
-          items: 
-            - name: Overview
-              href: eval-defender-endpoint-overview.md
-            - name: Review architecture requirements
-              href: eval-defender-endpoint-architecture.md
-            - name: Enable the evaluation
-              href: eval-defender-endpoint-enable-eval.md
-            - name: Pilot Defender for Endpoint
-              href: eval-defender-endpoint-pilot.md         
-        - name: Step 5. Microsoft Defender for Cloud Apps
-          items:
-            - name: Overview
-              href: eval-defender-mcas-overview.md
-            - name: Review architecture requirements
-              href: eval-defender-mcas-architecture.md
-            - name: Enable the evaluation 
-              href: eval-defender-mcas-enable-eval.md
-            - name: Pilot Microsoft Defender for Cloud Apps
-              href: eval-defender-mcas-pilot.md  
-        - name: Step 6. Investigate and respond    
-          items:
-            - name: Overview
-              href: eval-defender-investigate-respond.md  
-            - name: Simulate an attack
-              href: eval-defender-investigate-respond-simulate-attack.md    
-            - name: Try capabilities
-              href: eval-defender-investigate-respond-additional.md    
-        - name: Step 7. Promote the trial to production
-          href: eval-defender-promote-to-production.md                    
+          href: pilot-deploy-overview.md
+        - name: Defender for Identity
+          href: pilot-deploy-defender-identity.md
+        - name: Defender for Office 365
+          href: pilot-deploy-defender-office-365.md
+        - name: Defender for Endpoint
+          href: pilot-deploy-defender-endpoint.md
+        - name: Defender for Cloud Apps
+          href: pilot-deploy-defender-cloud-apps.md
+        - name: Investigate and respond to threats
+          href: pilot-deploy-investigate-respond.md
     - name: Get started
       items:
         - name: Overview
@@ -112,27 +72,43 @@
           href: m365d-enable.md
         - name: 2. Deploy supported services
           href: deploy-supported-services.md
-        - name: Setup guides for Microsoft Defender XDR
-          href: deploy-configure-m365-defender.md  
-        - name: Turning on Microsoft Defender XDR FAQs
-          href: m365d-enable-faq.md              
-        - name: Train your security staff
-          href: microsoft-365-defender-train-security-staff.md              
+        - name: 3. Train your security staff
+          href: microsoft-365-defender-train-security-staff.md
+        - name : Guides and FAQs
+          items:
+          - name: Setup guides for Microsoft Defender XDR
+            href: deploy-configure-m365-defender.md
+          - name: Turning on Microsoft Defender XDR FAQs
+            href: m365d-enable-faq.md
+          - name: Guides for your security staff
+            items:
+            - name: Respond to your first incident
+              href: respond-first-incident-365-defender.md
+            - name: Analyze your first incident
+              href: respond-first-incident-analyze.md
+            - name: Remediate your first incident
+              href: respond-first-incident-remediate.md
+            - name: Additional incident examples
+              items:
+              - name: Phishing email
+                href: first-incident-path-phishing.md
+              - name: Identity
+                href: first-incident-path-identity.md
     - name: Protect against threats
-      items: 
+      items:
       - name: Microsoft Secure Score
-        items: 
+        items:
+          - name: Overview
+            href: microsoft-secure-score.md
           - name: What's new
             href: microsoft-secure-score-whats-new.md
-          - name: Secure Score overview
-            href: microsoft-secure-score.md
           - name: Assess your security posture
             href: microsoft-secure-score-improvement-actions.md
           - name: Track your score history and meet goals
             href: microsoft-secure-score-history-metrics-trends.md
-          - name: Secure Score data storage and privacy
+          - name: Data storage and privacy
             href: secure-score-data-storage-privacy.md
-      - name: Protect your endpoints 
+      - name: Protect your endpoints
         href: /defender-endpoint
       - name: Protect your identities
         items:
@@ -155,29 +131,13 @@
       - name: Create Custom Defender XDR reports
         href: defender-xdr-custom-reports.md
     - name: Investigate and respond to threats
-      items: 
+      items:
        - name: Overview
          href: incident-response-overview.md
-       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
-         items:
-              - name: Overview
-                href: security-copilot-in-microsoft-365-defender.md
-              - name: Summarize incidents
-                href: security-copilot-m365d-incident-summary.md
-              - name: Run script analysis
-                href: security-copilot-m365d-script-analysis.md
-              - name: Analyze files
-                href: copilot-in-defender-file-analysis.md
-              - name: Generate device summaries
-                href: copilot-in-defender-device-summary.md                               
-              - name: Use guided responses
-                href: security-copilot-m365d-guided-response.md
-              - name: Generate KQL queries
-                href: advanced-hunting-security-copilot.md   
-              - name: Create incident reports
-                href: security-copilot-m365d-create-incident-report.md                                                                   
+       - name: Alerts, incidents, and correlation
+         href: alerts-incidents-correlation.md
        - name: Respond to incidents
-         items: 
+         items:
               - name: Overview
                 href: incidents-overview.md
               - name: Prioritize incidents
@@ -186,22 +146,8 @@
                 href: manage-incidents.md
               - name: Export incidents queue to CSV file
                 href: export-incidents-queue.md
-              - name: Respond to your first incident
-                items: 
-                 - name: Overview
-                   href: respond-first-incident-365-defender.md
-                 - name: Analyze your first incident
-                   href: respond-first-incident-analyze.md
-                 - name: Remediate your first incident
-                   href: respond-first-incident-remediate.md
-                 - name: Additional incident examples
-                   items: 
-                    - name: Phishing email
-                      href: first-incident-path-phishing.md
-                    - name: Identity
-                      href: first-incident-path-identity.md
               - name: Investigate incidents
-                items: 
+                items:
                  - name: Incidents
                    href: investigate-incidents.md
                  - name: Investigate data loss prevention alerts with Microsoft Defender XDR
@@ -209,9 +155,9 @@
                  - name: Investigate data loss prevention alerts with Microsoft Sentinel
                    href: dlp-investigate-alerts-sentinel.md
                  - name: Alerts
-                   href: investigate-alerts.md    
+                   href: investigate-alerts.md
                  - name: Alert classification playbooks
-                   items: 
+                   items:
                     - name: Overview
                       href: alert-classification-playbooks.md
                     - name: Suspicious email forwarding activity
@@ -221,11 +167,11 @@
                     - name: Suspicious inbox manipulation rules
                       href: alert-grading-playbook-inbox-manipulation-rules.md
                     - name: Suspicious password-spray-related IP address
-                      href: alert-classification-suspicious-ip-password-spray.md                      
+                      href: alert-classification-suspicious-ip-password-spray.md
                     - name: Malicious exchange connectors
                       href: alert-classification-malicious-exchange-connectors.md
                     - name: Password spray attacks
-                      href: alert-classification-password-spray-attack.md                    
+                      href: alert-classification-password-spray-attack.md
                  - name: Entity pages
                    items:
                    - name: User
@@ -239,7 +185,7 @@
               - name: Investigate domains and URLs associated with Microsoft Defender XDR
                 href: /defender-endpoint/investigate-domain
        - name: Manage automated investigation and response
-         items: 
+         items:
               - name: Overview
                 href: m365d-autoir.md
               - name: Configure capabilities
@@ -255,7 +201,7 @@
               - name: Address false positives and negatives
                 href: m365d-autoir-report-false-positives-negatives.md
        - name: Manage automatic attack disruption
-         items: 
+         items:
               - name: Overview
                 href: automatic-attack-disruption.md
               - name: Configure capabilities
@@ -263,13 +209,13 @@
               - name: View details and results
                 href: autoad-results.md
        - name: Manage the deception capability
-         items: 
+         items:
               - name: Overview
                 href: deception-overview.md
               - name: Configure capabilities
-                href: configure-deception.md                             
+                href: configure-deception.md
        - name: Search for threats with advanced hunting
-         items: 
+         items:
              - name: Overview
                href: advanced-hunting-overview.md
              - name: Guided and advanced modes
@@ -277,19 +223,19 @@
              - name: Generate KQL queries with Security Copilot
                href: advanced-hunting-security-copilot.md
              - name: Advanced hunting in the Microsoft Defender portal
-               href: advanced-hunting-microsoft-defender.md                                                        
-             - name: Build queries using guided mode 
-               items: 
+               href: advanced-hunting-microsoft-defender.md
+             - name: Build queries using guided mode
+               items:
                  - name: Get started with query builder
                    href: advanced-hunting-query-builder.md
                  - name: Refine your query in guided mode
                    href: advanced-hunting-query-builder-details.md
                  - name: Work with query results in guided mode
-                   href: advanced-hunting-query-builder-results.md                                   
+                   href: advanced-hunting-query-builder-results.md
              - name: Create queries using advanced mode
                items:
                  - name: Learn, train, & get examples
-                   items: 
+                   items:
                      - name: Learn the query language
                        href: advanced-hunting-query-language.md
                      - name: Get expert training
@@ -302,24 +248,24 @@
                        href: advanced-hunting-find-ransomware.md
                      - name: Hunt for email threats
                        href: advanced-hunting-email-threats.md
-                     - name: Transition from Defender for Endpoint 
-                       href: advanced-hunting-migrate-from-mde.md 
+                     - name: Transition from Defender for Endpoint
+                       href: advanced-hunting-migrate-from-mde.md
                  - name: Quickly investigate with go hunt
                    href: advanced-hunting-go-hunt.md
-                 - name: Create custom functions 
-                   href: advanced-hunting-custom-functions.md                   
+                 - name: Create custom functions
+                   href: advanced-hunting-custom-functions.md
                  - name: Use built-in functions
-                   items: 
+                   items:
                     - name: AssignedIPAddresses()
-                      href: advanced-hunting-assignedipaddresses-function.md                    
+                      href: advanced-hunting-assignedipaddresses-function.md
                     - name: DeviceFromIP()
                       href: advanced-hunting-devicefromip-function.md
                     - name: FileProfile()
                       href: advanced-hunting-fileprofile-function.md
                     - name: SeenBy()
-                      href: advanced-hunting-seenby-function.md                   
+                      href: advanced-hunting-seenby-function.md
                  - name: Optimize & handle errors
-                   items: 
+                   items:
                     - name: Apply query best practices
                       href: advanced-hunting-best-practices.md
                     - name: Handle errors
@@ -327,9 +273,9 @@
              - name: Work with query results
                href: advanced-hunting-query-results.md
              - name: Rerun query in query history
-               href: advanced-hunting-query-history.md                       
+               href: advanced-hunting-query-history.md
              - name: Data schema
-               items: 
+               items:
                 - name: Understand the schema
                   href: advanced-hunting-schema-tables.md
                 - name: Schema naming changes
@@ -345,9 +291,11 @@
                 - name: BehaviorEntities
                   href: advanced-hunting-behaviorentities-table.md
                 - name: BehaviorInfo
-                  href: advanced-hunting-behaviorinfo-table.md                                    
+                  href: advanced-hunting-behaviorinfo-table.md
                 - name: CloudAppEvents
                   href: advanced-hunting-cloudappevents-table.md
+                - name: CloudAuditEvents
+                  href: advanced-hunting-cloudauditevents-table.md
                 - name: DeviceEvents
                   href: advanced-hunting-deviceevents-table.md
                 - name: DeviceFileCertificateInfo
@@ -373,7 +321,7 @@
                 - name: DeviceTvmInfoGathering
                   href: advanced-hunting-devicetvminfogathering-table.md
                 - name: DeviceTvmInfoGatheringKB
-                  href: advanced-hunting-devicetvminfogatheringkb-table.md                  
+                  href: advanced-hunting-devicetvminfogatheringkb-table.md
                 - name: DeviceTvmSecureConfigurationAssessment
                   href: advanced-hunting-devicetvmsecureconfigurationassessment-table.md
                 - name: DeviceTvmSecureConfigurationAssessmentKB
@@ -397,7 +345,7 @@
                 - name: ExposureGraphEdges
                   href: advanced-hunting-exposuregraphedges-table.md
                 - name: ExposureGraphNodes
-                  href: advanced-hunting-exposuregraphnodes-table.md                                    
+                  href: advanced-hunting-exposuregraphnodes-table.md
                 - name: IdentityDirectoryEvents
                   href: advanced-hunting-identitydirectoryevents-table.md
                 - name: IdentityInfo
@@ -409,7 +357,7 @@
                 - name: UrlClickEvents
                   href: advanced-hunting-urlclickevents-table.md
              - name: Custom detections
-               items: 
+               items:
                 - name: Custom detections overview
                   href: custom-detections-overview.md
                 - name: Create & manage detection rules
@@ -421,15 +369,15 @@
              - name: Find resource-heavy queries
                href: advanced-hunting-limits.md
              - name: Extend data coverage
-               href: advanced-hunting-extend-data.md                                                    
+               href: advanced-hunting-extend-data.md
        - name: Track and respond to emerging threats
          items:
               - name: Threat analytics overview
                 href: threat-analytics.md
-              - name: Defender Threat Intelligence in Microsoft Defender XDR
-                href: defender-threat-intelligence.md
               - name: Understand the analyst report
                 href: threat-analytics-analyst-reports.md
+              - name: Defender Threat Intelligence in Microsoft Defender XDR
+                href: defender-threat-intelligence.md
        - name: Endpoint Attack Notifications
          href: /defender-endpoint/endpoint-attack-notifications
        - name: Collaborate with Microsoft Defender Experts for Hunting
@@ -457,7 +405,7 @@
               - name: Get started with Microsoft Defender Experts for XDR service
                 href: get-started-xdr.md
               - name: Start using Microsoft Defender Experts for XDR service
-                items: 
+                items:
                 - name: Managed detection and response
                   href: managed-detection-and-response-xdr.md
                 - name: Reports
@@ -466,12 +414,10 @@
                   href: communicate-defender-experts-xdr.md
                 - name: Defender Experts for Hunting
                   href: defender-experts-for-hunting.md
-                - name: Ask Defender Experts
-                  href: experts-on-demand.md
                 - name: Auditing
                   href: auditing.md
               - name: Frequently asked questions
-                items: 
+                items:
                 - name: General information
                   href: frequently-asked-questions.md
                 - name: Defender Experts for XDR Incident notifications
@@ -480,14 +426,34 @@
                   href: faq-managed-response.md
               - name: Additional information on Defender Experts for XDR
                 items:
-                - name: Important considerations  
+                - name: Important considerations
                   href: additional-information-xdr.md
                 - name: How Defender Experts for XDR permissions work
                   href: dex-xdr-permissions.md
                 - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
                   href: teams-restrictions-dexapp.md
+       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
+         items:
+              - name: Overview
+                href: security-copilot-in-microsoft-365-defender.md
+              - name: Summarize incidents
+                href: security-copilot-m365d-incident-summary.md
+              - name: Run script analysis
+                href: security-copilot-m365d-script-analysis.md
+              - name: Analyze files
+                href: copilot-in-defender-file-analysis.md
+              - name: Generate device summaries
+                href: copilot-in-defender-device-summary.md
+              - name: Summarize identities
+                href: security-copilot-defender-identity-summary.md                
+              - name: Use guided responses
+                href: security-copilot-m365d-guided-response.md
+              - name: Generate KQL queries
+                href: advanced-hunting-security-copilot.md
+              - name: Create incident reports
+                href: security-copilot-m365d-create-incident-report.md
        - name: Ransomware playbooks
-         items: 
+         items:
               - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
                 href: playbook-detecting-ransomware-m365-defender.md
               - name: Responding to ransomware attacks
@@ -495,7 +461,7 @@
     - name: Enhance security operations
       items:
       - name: Security operations guide
-        items: 
+        items:
         - name: Overview
           href: integrate-microsoft-365-defender-secops.md
         - name: Step 1. Operations readiness
@@ -514,14 +480,16 @@
         items:
         - name: SOC optimization overview
           display name: SOC optimization
-          href: https://aka.ms/soc-opt-from-defender
+          href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Use SOC optimizations programmatically
+          href: /azure/sentinel/soc-optimization/soc-optimization-api?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: SOC optimization reference
-          href: https://aka.ms/soc-opt-ref
-    - name: Multitenant management in Microsoft Defender XDR
+          href: /azure/sentinel/soc-optimization/soc-optimization-reference?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+    - name: Manage multitenant environments
       items:
-        - name: Multitenant management in Microsoft Defender XDR
+        - name: Overview
           href: mto-overview.md
-        - name: Set up multitenant management in Microsoft Defender XDR 
+        - name: Set up multitenant management
           href: mto-requirements.md
         - name: View and manage incidents and alerts
           href: mto-incidents-alerts.md
@@ -532,69 +500,77 @@
         - name: Vulnerability management
           href: mto-dashboard.md
         - name: Manage tenants
-          href: mto-tenants.md      
-    - name: Reference
-      items: 
-      - name: Manage roles and permissions
-        items: 
-            - name: Manage access to Microsoft Defender XDR
+          href: mto-tenants.md
+        - name: Create and manage endpoint security policies
+          href: mto-endpoint-security-policy.md
+        - name: Manage content distribution with tenant groups
+          href: mto-tenantgroups.md
+    - name: Manage roles and permissions
+      items:
+        - name: Manage access and roles in Microsoft Defender XDR
+          items:
+            - name: Manage access
               href: m365d-permissions.md
-            - name: Custom roles in role-based access 
+            - name: Custom roles in role-based access
               href: custom-roles.md
-            - name: Manage permissions with Microsoft Defender XDR Unified RBAC
-              items: 
-              - name: Overview
-                href: manage-rbac.md
-              - name: What's new in Microsoft Defender XDR Unified RBAC
-                href: whats-new-in-microsoft-defender-urbac.md
-              - name: Create custom roles 
-                href: create-custom-rbac-roles.md
-              - name: Import roles
-                href: Import-rbac-roles.md
-              - name: Activate Microsoft Defender XDR Unified RBAC 
-                href: activate-defender-rbac.md
-              - name: Edit, delete and export roles
-                href: edit-delete-rbac-roles.md
-              - name: Map Unified RBAC permission
-                href: compare-rbac-roles.md
-              - name: About Unified RBAC custom permission
-                href: custom-permissions-details.md
-      - name: Portal settings
-        items: 
+        - name: Manage permissions with Defender XDR Unified RBAC
+          items:
+            - name: Overview
+              href: manage-rbac.md
+            - name: What's new
+              href: whats-new-in-microsoft-defender-urbac.md
+            - name: Create custom roles
+              href: create-custom-rbac-roles.md
+            - name: Import roles
+              href: Import-rbac-roles.md
+            - name: Activate Defender XDR Unified RBAC
+              href: activate-defender-rbac.md
+            - name: Edit, delete and export roles
+              href: edit-delete-rbac-roles.md
+            - name: Map Defender XDR Unified RBAC permissions
+              href: compare-rbac-roles.md
+            - name: About Defender XDR Unified RBAC custom permissions
+              href: custom-permissions-details.md
+    - name: Reference
+      items:
+        - name: Audit activities and events
+          href: microsoft-xdr-auditing.md
+        - name: Portal actions
+          items:
+            - name: Configure notifications
+              items:
+              - name: Get notified about new and updated incidents
+                href: m365d-notifications-incidents.md
+              - name: Set up email notifications for response actions
+                href: m365d-response-actions-notifications.md
+              - name: Set up email notifications for Threat analytics reports
+                href: m365d-threat-analytics-notifications.md
+              - name: Configure alert notifications
+                href: configure-email-notifications.md
             - name: Set time zone
               href: m365d-time-zone.md
             - name: View device profiles
               href: device-profile.md
-            - name: Troubleshoot Microsoft Defender XDR service issues
+            - name: Troubleshoot service issues
               href: troubleshoot.md
-            - name: Get notified about new and updated incidents
-              href: m365d-notifications-incidents.md
-            - name: Set up email notifications for response actions
-              href: m365d-response-actions-notifications.md
-            - name: Set up email notifications for Threat analytics reports
-              href: m365d-threat-analytics-notifications.md              
-            - name: Configure alert notifications
-              href: configure-email-notifications.md
-            - name: Asset rule management
+            - name: Set up dynamic rules for devices
               href: configure-asset-rules.md
             - name: Provide feedback
               href: feedback.md
             - name: Provide managed service provider (MSSP) access
               href: mssp-access.md
             - name: Create ServiceNow tickets and tasks
-              items: 
-               - name: ServiceNow integration overview
-                 href: ./tickets.md
-      - name: Use auditing in Microsoft Defender XDR
-        href: microsoft-xdr-auditing.md
-      - name: Microsoft Defender XDR APIs
-        items: 
-            - name: Overview of Microsoft Defender XDR APIs
+              items:
+              - name: ServiceNow integration overview
+                href: ./tickets.md
+        - name: Microsoft Defender XDR APIs
+          items:
+            - name: Overview
               href: api-overview.md
             - name: Supported Microsoft Defender XDR APIs
               href: api-supported.md
-            - name: Get started with Microsoft Defender XDR APIs 
-              items: 
+            - name: Get started
+              items:
                 - name: Microsoft Defender XDR API license and terms of use
                   href: /legal/microsoft-365/api-terms
                 - name: Access Microsoft Defender XDR APIs
@@ -609,8 +585,8 @@
                   href: api-partner-access.md
                 - name: Other API resources
                   href: api-articles.md
-            - name: Microsoft Defender XDR APIs and schema 
-              items: 
+            - name: Microsoft Defender XDR APIs and schema
+              items:
                 - name: Common REST API error codes
                   href: api-error-codes.md
                 - name: Streaming API
@@ -622,15 +598,15 @@
                     - name: Stream advanced hunting events to your storage account
                       href: streaming-api-storage.md
                     - name: Supported streaming event types
-                      href: supported-event-types.md  
+                      href: supported-event-types.md
                     - name: Configure your Event hub
                       href: configure-event-hub.md
                 - name: Advanced hunting API
                   href: api-advanced-hunting.md
                 - name: Custom detections API
-                  href: /graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections                  
+                  href: /graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections
                 - name: Incidents APIs
-                  items: 
+                  items:
                     - name: Incidents methods and properties
                       href: api-incident.md
                     - name: List incidents
@@ -639,7 +615,7 @@
                       href: api-update-incidents.md
                     - name: Get Incident
                       href: api-get-incident.md
-            - name: Fetch Microsoft Defender XDR incidents 
+            - name: Fetch Microsoft Defender XDR incidents
               href: fetch-incidents.md
             - name: SIEM integration
               items:
@@ -650,33 +626,33 @@
             - name: Partner catalog
               items:
                - name: Technological partners of Microsoft Defender XDR
-                 href: /defender-endpoint/technological-partners 
+                 href: /defender-endpoint/technological-partners
                - name: Professional services supported by Microsoft Defender XDR
-                 href: /defender-endpoint/professional-services           
+                 href: /defender-endpoint/professional-services
             - name: Understand threat intelligence concepts
-              href: /defender-endpoint/threat-indicator-concepts 
-      - name: Bi-directional connector for Microsoft Sentinel
-        href: microsoft-365-defender-integration-with-azure-sentinel.md 
-      - name: Microsoft Security Resources
-        items: 
-          - name: Threat actor naming
-            href: microsoft-threat-actor-naming.md
-          - name: Malware names
-            href: malware-naming.md
-          - name: How Microsoft identifies malware and PUA
-            href: criteria.md
-          - name: Submit files for analysis
-            href: submission-guide.md
-          - name: Troubleshoot MSI portal errors caused by admin block
-            href: portal-submission-troubleshooting.md
-          - name: Microsoft virus initiative
-            href: virus-initiative-criteria.md
-          - name: Software developer FAQ
-            href: developer-faq.yml
+              href: /defender-endpoint/threat-indicator-concepts
+        - name: Bi-directional connector for Microsoft Sentinel
+          href: microsoft-365-defender-integration-with-azure-sentinel.md
+    - name: Resources
+      items:
+        - name: Threat actor naming
+          href: microsoft-threat-actor-naming.md
+        - name: Malware names
+          href: malware-naming.md
+        - name: How Microsoft identifies malware and PUA
+          href: criteria.md
+        - name: Submit files for analysis
+          href: submission-guide.md
+        - name: Troubleshoot MSI portal errors caused by admin block
+          href: portal-submission-troubleshooting.md
+        - name: Microsoft virus initiative
+          href: virus-initiative-criteria.md
+        - name: Software developer FAQ
+          href: developer-faq.yml
     - name: Microsoft Sentinel docs
       href: /azure/sentinel
     - name: Microsoft Defender XDR docs
-      items: 
+      items:
        - name: Defender for Office 365
          href: /defender-office-365
        - name: Defender for Endpoint

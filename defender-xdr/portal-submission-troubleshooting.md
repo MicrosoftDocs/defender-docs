@@ -2,10 +2,7 @@
 title: Troubleshoot Microsoft Security intelligence malware submission errors caused by administrator block
 description: Troubleshoot MSI portal errors
 ms.reviewer:
-keywords: security, sample submission help, malware file, virus file, trojan file, submit, send to Microsoft, submit a sample, virus, trojan, worm, undetected, doesn't detect, email microsoft, email malware, I think this is malware, I think it's a virus, where can I send a virus, is this a virus, MSE, doesn't detect, no signature, no detection, suspect file, MMPC, Microsoft Malware Protection Center, researchers, analyst, WDSI, security intelligence
 ms.service: microsoft-365-security
-ms.mktglfcycl: secure
-ms.sitesec: library
 ms.localizationpriority: medium
 ms.author: dansimp
 author: dansimp
@@ -16,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 03/18/2022
+ms.date: 06/28/2024
 ---
 
 # Troubleshooting Microsoft Security intelligence malware submission errors caused by administrator block
@@ -27,16 +24,21 @@ In some instances, an administrator block might cause submission issues when you
 
 Open your Azure [Enterprise application settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/). Under **Enterprise Applications** >  **Users can consent to apps accessing company data on their behalf**, check whether Yes or No is selected.
 
-- If **No** is selected, a Microsoft Entra administrator for the customer tenant will need to provide consent for the organization. Depending on the configuration with Microsoft Entra ID, users might be able to submit a request right from the same dialog box. If there's no option to ask for admin consent,  users need to request for these permissions to be added to their Microsoft Entra admin. Go to the following section for more information.
+- If **No** is selected, a Microsoft Entra administrator for the customer tenant needs to provide consent for the organization. Depending on the configuration with Microsoft Entra ID, users might be able to submit a request right from the same dialog box. If there's no option to ask for admin consent,  users need to request for these permissions to be added to their Microsoft Entra admin. Go to the following section for more information.
 
-- If **Yes** is selected, ensure the Windows Defender Security Intelligence app setting **Enabled for users to sign in?** is set to **Yes** [in Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d). If **No** is selected, you'll need to request a Microsoft Entra admin enable it.
+- If **Yes** is selected, ensure the Windows Defender Security Intelligence app setting **Enabled for users to sign in?** is set to **Yes** [in Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d). If **No** is selected, you need to request a Microsoft Entra admin enable it.
 
 ## Implement Required Enterprise Application permissions
 
-This process requires a global or application admin in the tenant.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+This process requires a Global Administrator or Application Administrator in the tenant.
 
 1. Open [Enterprise Application settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d).
+
 2. Select **Grant admin consent for organization**.
+
 3. If you're able to do so, review the API permissions required for this application, as the following image shows. Provide consent for the tenant.
 
     ![grant consent image.](/defender/media/security-intelligence-images/msi-grant-admin-consent.jpg)
@@ -45,10 +47,7 @@ This process requires a global or application admin in the tenant.
 
 ## Option 1 Approve enterprise application permissions by user request
 
-> [!NOTE]
-> This is currently a preview feature.
-
-Microsoft Entra admins will need to allow for users to request admin consent to apps. Verify the setting is configured to **Yes** in [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/).
+Microsoft Entra Administrators need to allow for users to request admin consent to apps. Verify the setting is configured to **Yes** in [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/).
 
 ![Enterprise applications user settings.](/defender/media/security-intelligence-images/msi-enterprise-app-user-setting.jpg)
 
@@ -58,19 +57,19 @@ Once this setting is verified, users can go through the enterprise customer sign
 
 ![Contoso sign in flow.](/defender/media/security-intelligence-images/msi-contoso-approval-required.png)
 
-Admin will be able to review and approve the application permissions [Azure admin consent requests](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AccessRequests/menuId/).
+Administrators can review and approve the application permissions [Azure admin consent requests](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AccessRequests/menuId/).
 
 After providing consent, all users in the tenant will be able to use the application.
 
 ## Option 2 Provide admin consent by authenticating the application as an admin
 
-This process requires that global admins go through the Enterprise customer sign-in flow at [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission).
+This process requires that Global Administrators go through the Enterprise customer sign-in flow at [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission).
 
 ![Consent sign in flow.](/defender/media/security-intelligence-images/msi-microsoft-permission-required.jpg)
 
 Then, admins review the permissions and make sure to select **Consent on behalf of your organization**, and then select **Accept**.
 
-All users in the tenant will now be able to use this application.
+All users in the tenant can now use this application.
 
 ## Option 3: Delete and readd app permissions
 
@@ -81,10 +80,11 @@ and select **delete**.
 
    ![Delete app permissions.](/defender/media/security-intelligence-images/msi-properties.png)
 
-2. Capture TenantID from [Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
+2. Capture `TenantID` from [Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
 
-3. Replace {tenant-id} with the specific tenant that needs to grant consent to this application in the URL below. Copy this URL into browser. The rest of the parameters are already completed.
-``https://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=f0cf43e5-8a9b-451c-b2d5-7285c785684d&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffilesubmission&scope=openid+profile+email+offline_access``
+3. Replace `{tenant-id}` with the specific tenant that needs to grant consent to this application in the URL below. Copy the following URL into browser: `https://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=f0cf43e5-8a9b-451c-b2d5-7285c785684d&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffilesubmission&scope=openid+profile+email+offline_access`
+
+   The rest of the parameters are already completed.
 
    ![Permissions needed.](/defender/media/security-intelligence-images/msi-microsoft-permission-requested-your-organization.png)
 
@@ -96,4 +96,4 @@ and select **delete**.
 
 6. Sign in to [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission) as an enterprise user with a non-admin account to see if you have access.
 
- If the warning is not resolved after following these troubleshooting steps, call Microsoft support.
+ If the warning isn't resolved after following these troubleshooting steps, call Microsoft support.

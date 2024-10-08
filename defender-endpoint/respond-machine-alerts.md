@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 12/15/2023
+ms.date: 09/09/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -266,10 +266,12 @@ When a device is being isolated, the following notification is displayed to info
 
 ## Contain devices from the network
 
-When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network. When you contain a device any Microsoft Defender for Endpoint onboarded device will block incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
+When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device will block incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
 
 > [!NOTE]
 > Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Microsoft Defender for Endpoint Windows 10 and Windows Server 2019+ devices.
+
+Once devices are contained, we recommend investigating and remediating the threat on the contained devices as soon as possible. After remediation, you should remove the devices from containment.
 
 ### How to contain a device
 
@@ -282,6 +284,9 @@ When you have identified an unmanaged device that is compromised or potentially 
 3. On the contain device popup, type a comment, and select **Confirm**.
 
 :::image type="content" alt-text="Screenshot of the contain device menu item." source="/defender/media/defender-endpoint/contain_device_popup.png" lightbox="/defender/media/defender-endpoint/contain_device_popup.png":::
+
+> [!IMPORTANT]
+> Containing a large number of devices might cause performance issues on Defender for Endpoint-onboarded devices. To prevent any issues, Microsoft recommends containing up to 100 devices at any given time.
 
 ### Contain a device from the device page
 
@@ -314,6 +319,9 @@ When an identity in your network might be compromised, you must prevent that ide
 
 > [!NOTE]
 > Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
+
+> [!IMPORTANT]
+> Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
 
 ### How to contain a user
 

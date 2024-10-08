@@ -3,8 +3,8 @@ title: Advanced Hunting with PowerShell API Basics
 ms.reviewer: 
 description: Learn the basics of querying the Microsoft Defender for Endpoint API, using PowerShell.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/19/2024
 ---
 
 # Advanced Hunting using PowerShell
@@ -85,7 +85,7 @@ Run the following query:
 $token = $aadToken
 $query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
-$url = "https://api.securitycenter.microsoft.com/api/advancedhunting/run"
+$url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
 $headers = @{ 
     'Content-Type' = 'application/json'
     Accept = 'application/json'

@@ -1,0 +1,71 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md",
+          "SECURITY.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/defender-for-cloud/breadcrumb/toc.json",
+      "feedback_system": "Standard",
+      "permissioned-type": "public",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
+      "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
+      "titleSuffix": "Microsoft Defender for Cloud",
+      "searchScope": [
+        "Microsoft Defender for Cloud"
+      ],
+      "contributors_to_exclude": [
+        "dstrome",
+        "shdyas",
+        "rjagiewich",
+        "American-Dipper",
+        "claydetels19",
+        "jborsecnik",
+        "v-stchambers",
+        "Stacyrch140",
+        "garycentric",
+        "alekyaj"
+      ]
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "defender-for-cloud"
+  }
+}

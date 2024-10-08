@@ -2,8 +2,8 @@
 title: Offboard machine API
 description: Learn how to use an API to offboard a device from Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 08/29/2024
 ---
 
 # Offboard machine API
@@ -39,7 +39,7 @@ Offboard device from Defender for Endpoint.
 
 ## Limitations
 
-- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
   [!include[Machine actions note](../../includes/machineactionsnote.md)]
 
@@ -52,18 +52,21 @@ Offboard device from Defender for Endpoint.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Machine.Offboard|'Offboard machine'
-Delegated (work or school account)|Machine.Offboard|'Offboard machine'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|`Machine.Offboard`|`Offboard machine`|
+|Delegated (work or school account)|`Machine.Offboard`|`Offboard machine`|
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to 'Global Admin' AD role
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+When obtaining a token using user credentials:
+
+- The user must have an appropriate role assigned (see [Permission options](../user-roles.md#permission-options)).
+
+- The user must have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
+Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
 ## HTTP request
 
@@ -84,19 +87,19 @@ Content-Type|string|application/json. **Required**.
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
----|---|---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
-If successful, this method returns 200 - Created response code and [Machine Action](machineaction.md) in the response body.
+If successful, this method returns `200 - Created response` code and [Machine Action](machineaction.md) in the response body.
 
 ## Example
 
 ### Request
 
-Here's an example of the request. If there's no JSON comment added, it will error out with code **400**.
+Here's an example of the request. If there's no JSON comment added, it errors out with code `400`.
 
 ```http
 POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/offboard
@@ -107,4 +110,5 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Offboard machine by automation"
 }
 ```
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

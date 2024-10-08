@@ -6,9 +6,9 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 08/07/2023
-author: siosulli
-ms.author: siosulli
+ms.date: 08/21/2023
+author: denisebmsft
+ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
 ms.collection: 
@@ -29,7 +29,7 @@ search.appverid: met150
 
 **Platforms**
 
-- Windows
+- Windows Server
 
 This article describes types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
 

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: thdoucet
 manager: deniseb
@@ -128,7 +128,15 @@ Also, if you're using FSlogix user profiles, we recommend you follow the guidanc
 
 #### Licensing requirements
 
-Note on licensing: When using Windows Enterprise multi-session, depending on your requirements, you can choose to either have all users licensed through Microsoft Defender for Endpoint (per user), Windows Enterprise E5, Microsoft 365 E5 Security, or Microsoft 365 E5, or have the VM licensed through Microsoft Defender for Cloud.
+When using Windows Enterprise multi-session, per our security best practices the virtual machine can be licensed through Microsoft Defender for Servers or you can choose to have all Azure Virtual Desktop virtual machine users licensed through one of the following licenses:
+
+- Microsoft Defender for Endpoint Plan 1 or Plan 2 (per user)
+- Windows Enterprise E3
+- Windows Enterprise E5
+- Microsoft 365 E3
+- Microsoft 365 E5 Security
+- Microsoft 365 E5
+
 Licensing requirements for Microsoft Defender for Endpoint can be found at: [Licensing requirements](minimum-requirements.md#licensing-requirements).
 
 #### Related Links

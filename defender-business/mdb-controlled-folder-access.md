@@ -1,29 +1,29 @@
 ---
-title: Set up or edit your controlled folder access policy in Microsoft Defender for Business           
-description: Get an overview of attack surface reduction capabilities in Microsoft Defender for Business            
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
-ms.date: 08/21/2023
+title: Set up or edit your controlled folder access policy in Microsoft Defender for Business
+description: Get an overview of attack surface reduction capabilities in Microsoft Defender for Business
+author: chrisda
+ms.author: chrisda
+manager: deniseb
+ms.date: 06/07/2024
 ms.topic: conceptual
 ms.service: defender-business
-ms.localizationpriority: medium 
-ms.collection: 
+ms.localizationpriority: medium
+ms.collection:
 - m365-security
 - tier1
-ms.reviewer: efratka 
+ms.reviewer: efratka
 search.appverid: MET150
-f1.keywords: NOCSH 
+f1.keywords: NOCSH
 audience: Admin
 ---
 
 # Set up or edit your controlled folder access policy in Microsoft Defender for Business
 
-Controlled folder access allows only trusted apps to access protected folders on Windows devices. Think of this capability as ransomware mitigation. You can set up or edit your controlled folder access policy using Microsoft Intune. 
+Controlled folder access allows only trusted apps to access protected folders on Windows devices. Think of this capability as ransomware mitigation. You can set up or edit your controlled folder access policy using Microsoft Intune.
 
 ## Set up controlled folder access
 
-1. As a global administrator, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Attack surface reduction**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Attack surface reduction**.
 
 2. Select an existing policy, or choose **Create policy** to create a new policy.
 
@@ -33,7 +33,7 @@ Controlled folder access allows only trusted apps to access protected folders on
 3. Set up your policy as follows:
 
    1. Specify a name and description, and then choose **Next**.
-   
+
    2. Scroll down, and set **Enable Controlled Folder Access** to **Enabled**. Then choose **Next**.
 
    3. On the **Scope tags** step, choose **Next**.
@@ -48,4 +48,3 @@ To learn more about controlled folder access, see [Protect important folders wit
 
 - [Enable your attack surface reduction rules](mdb-asr.md)
 - [Review settings for advanced features and the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md).
-

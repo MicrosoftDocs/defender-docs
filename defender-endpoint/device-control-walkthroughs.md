@@ -1,8 +1,8 @@
 ---
 title: Device control walkthroughs            
 description: Learn how to work with device control in Defender for Endpoint. 
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 ms.date: 02/14/2024
 ms.topic: overview

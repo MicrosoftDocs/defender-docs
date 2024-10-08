@@ -2,8 +2,8 @@
 title: Migrate to Microsoft Defender for Endpoint from non-Microsoft endpoint protection
 description: Move to Microsoft Defender for Endpoint, which includes Microsoft Defender Antivirus for your endpoint protection solution.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - m365initiative-defender-endpoint
 - highpri
 - tier1
-ms.topic: overview
+ms.topic: solution-overview
 ms.custom: migrationguides
 ms.date: 10/24/2023
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee

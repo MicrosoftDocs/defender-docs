@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: chrisda
 author: MSFTBen
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -26,15 +26,18 @@ Depending on whether you're licensed for Defender for Office 365, you also get a
 
 ## Choose between which add-in to deploy
 
-- The Report Phishing add-in provides the option to report only phishing messages
-- The Report Message add-in provides the option to report junk, not junk (false positive), and phishing messages
-- The built-in Report button in Outlook on the web *[Learn More](../submissions-outlook-report-messages.md)*
+- The Report Phishing add-in provides the option to report only phishing messages.
+- The Report Message add-in provides the option to report junk, not junk (false positive), and phishing messages.
+- The built-in Report button in supported versions of Outlook. *[Learn More](../submissions-outlook-report-messages.md)*
 
 ## What you need
 
 - Exchange Online Protection (some features require Defender for Office 365 Plan 2).
-- Sufficient permissions (Global admin for add-in deployment, security admin for customization).
+- Sufficient permissions (Global Administrator<sup>\*</sup> for add-in deployment, Security Administrator for customization).
 - 5-10 minutes to perform the steps in this article.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Deploy the add-in for users
 
@@ -52,7 +55,7 @@ Depending on whether you're licensed for Defender for Office 365, you also get a
 1. **Login** to the Microsoft Security portal at <https://security.microsoft.com>.
 2. On the left nav, select **Settings** and choose **Email & collaboration**.
 3. Select **User reported settings**.
-4. Ensure **Monitor report messages in outlook** is selected and select **use the built-in report button**.
+4. Ensure **Monitor report messages in outlook** is selected and select **Use the built-in Report button**.
 5. Under **Send the reported messages to** choose **Microsoft Only** (Recommended).
 
 ## Optional steps – configure notifications

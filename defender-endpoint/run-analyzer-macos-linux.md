@@ -4,10 +4,10 @@ description: Learn how to run the Microsoft Defender for Endpoint Client Analyze
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 04/16/2024
+ms.date: 09/26/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -42,21 +42,20 @@ If you're using a terminal, download the tool by entering the following command:
     wget --quiet -O XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
     ```
 
-2. Verify the download.
+1. Verify the download.
 
-    > [!NOTE]
-    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469'
-
+   > [!NOTE]
+   > The current SHA256 hash of `XMDEClientAnalyzerBinary.zip` that is downloaded from this link is: `4E972F7950EA475A21735042484CD00CED6EA70ED9CBB48B4C9405FFD2706DFA`.
    - Linux
 
-    ```console
-    echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+       ```console
+    echo '4E972F7950EA475A21735042484CD00CED6EA70ED9CBB48B4C9405FFD2706DFA XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
    - macOS
 
-    ```console
-    echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+       ```console
+    echo '4E972F7950EA475A21735042484CD00CED6EA70ED9CBB48B4C9405FFD2706DFA  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
     ```
 
 
@@ -74,13 +73,14 @@ If you're using a terminal, download the tool by entering the following command:
     cd XMDEClientAnalyzerBinary
     ```
 
-5. Three new zip files are produced:
+5. Two new zip files are produced:
 
    - **SupportToolLinuxBinary.zip** : For all Linux devices
    - **SupportToolMacOSBinary.zip** : For Mac devices
 
-6. Unzip one of the above 2 zip files based on the machine you need to investigate.\
-When using a terminal, unzip the file by entering one of the following commands based on OS type:
+6. Unzip one of the above 2 zip files based on the machine you need to investigate.
+
+   When using a terminal, unzip the file by entering one of the following commands based on OS type:
 
    - Linux
 
@@ -128,16 +128,16 @@ When using a terminal, unzip the file by entering one of the following commands 
    - Linux
 
     ```console
-    echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c
+    echo 'E1C3D20516C849D8CD27257BB6084FBC2991B8F6214BF9121BB9B1446F95BB1F XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66  XMDEClientAnalyzer.zip' | shasum -a 256 -c
+    echo 'E1C3D20516C849D8CD27257BB6084FBC2991B8F6214BF9121BB9B1446F95BB1F  XMDEClientAnalyzer.zip' | shasum -a 256 -c
     ```
 
-3. Extract the contents of XMDEClientAnalyzer.zip on the machine.\
+3. Extract the contents of XMDEClientAnalyzer.zip on the machine.
     If you're using a terminal, extract the files by using the following command:
 
     ```console
@@ -183,6 +183,9 @@ Use the following command to get the machine diagnostic.
 --force, -f           Will overwrite if output directory exists
 --diagnostic, -d      Collect extensive machine diagnostic information
 --bypass-disclaimer   Do not display disclaimer banner
+--interactive, -i     Interactive diagnostic
+--delay DELAY, -dd DELAY
+                      Set MDATP log level. If you use interactive or delay mode, the log level will set to debug automatically, and reset after 48h.
 --mdatp-log {info,debug,verbose,error,trace,warning}
                       Set MDATP log level
 --max-log-size MAX_LOG_SIZE
@@ -190,6 +193,8 @@ Use the following command to get the machine diagnostic.
 ```
 
 Usage example: `sudo ./MDESupportTool -d`
+
+NOTE: The log level auto-reset feature only available in 2405 or newer client version.
 
 ### Positional arguments
 
@@ -292,36 +297,36 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 
 - report.html
 
-  Description: The main HTML output file that contains the findings and guidance that the analyzer script run on the machine can produce.
-
+  Description: The main HTML output file that contains the findings and guidance from running the client analyzer tool on the device. This file is only generated when running the Python-based version of the client analyzer tool.
+  
 - mde_diagnostic.zip
 
   Description: Same diagnostic output that gets generated when running *mdatp diagnostic create* on either [macOS](mac-resources.md#collecting-diagnostic-information) or [Linux](linux-resources.md#collect-diagnostic-information).
-
+  
 - mde.xml
 
   Description: XML output that is generated while running and is used to build the html report file.
-
+  
 - Processes_information.txt
 
   Description: contains the details of the running Microsoft Defender for Endpoint related processes on the system.
-
+  
 - Log.txt
 
   Description: contains the same log messages written on screen during the data collection.
-
+  
 - Health.txt
 
   Description: The same basic health output that is shown when running *mdatp health* command.
-
+  
 - Events.xml
 
   Description: Additional XML file used by the analyzer when building the HTML report.
-
+  
 - Audited_info.txt
 
   Description: details on audited service and related components for [Linux](linux-resources.md) OS.
-
+  
 - perf_benchmark.tar.gz
 
   Description: The performance test reports. You'll see this only if you're using the performance parameter.

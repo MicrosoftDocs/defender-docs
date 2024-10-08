@@ -3,6 +3,7 @@ title: Key infrastructure requirements before enrolling in the Microsoft Defende
 ms.reviewer:
 description: This section outlines the key infrastructure requirements you must meet and important information on data access and compliance
 ms.service: defender-experts
+ms.subservice: dex-hunting
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
@@ -12,9 +13,10 @@ ms.collection:
   - m365-security
   - m365initiative-defender-endpoint
   - tier1
+  - essentials-compliance
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/05/2024
+ms.date: 08/14/2024
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -67,7 +69,7 @@ Anyone from your organization can complete the customer interest form for Micros
 
 Defender Experts for Hunting is a managed threat hunting service that proactively hunts for threats across endpoints, email, identity, and cloud apps. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Enrolling in this service means you're granting permission to Microsoft experts to access the said data.
 
-The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > [**Microsoft Defender Expert for Hunting**](https://aka.ms/trustcenter-defenderexperts).
+The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > [**Microsoft Defender Experts**](https://aka.ms/trustcenter-defenderexperts).
 
 ### Data collection, usage, and retention
 
@@ -80,8 +82,6 @@ Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tabl
 ### Security and compliance
 
 When you purchase and onboard to Defender Experts for Hunting, you're granting permission to Microsoft experts to access your advanced hunting data.
-
-This service has been developed in alignment with existing security and privacy standards and is working towards several certifications, including ISO 27001 and ISO 27018.
 
 ### Availability
 

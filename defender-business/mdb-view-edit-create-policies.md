@@ -2,17 +2,17 @@
 title: View or edit policies in Microsoft Defender for Business
 description: Learn how to view, edit, create, and delete cybersecurity policies in Defender for Business. Protect your devices with security policies.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 05/05/2023
 ms.reviewer: nehabha
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
@@ -37,7 +37,7 @@ This article describes how to view, edit, and create security policies in Defend
 
 In Defender for Business, there are two main types of default policies that are designed to protect your company's devices as soon as they're onboarded:
 
-- **Next-generation protection policies**, which determine how Microsoft Defender Antivirus and other threat protection features are configured; and 
+- **Next-generation protection policies**, which determine how Microsoft Defender Antivirus and other threat protection features are configured; and
 - **Firewall policies**, which determine what network traffic is permitted to flow to and from your company's devices.
 
 [Next-generation protection](mdb-next-generation-protection.md) includes robust antivirus and antimalware protection for computers and mobile devices. The default policies are designed to protect your devices and users without hindering productivity. However, you can customize your policies to suit your business needs. For more details, see [Review or edit your next-generation protection policies](mdb-next-generation-protection.md).
@@ -69,11 +69,11 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 ## [**Microsoft Defender portal**](#tab/M365D)
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in. 
+1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, choose **Configuration management** > **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**). 
+2. In the navigation pane, choose **Configuration management** > **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**).
 
-3. Select an operating system tab (for example, **Windows clients**), and then review the list of policies under each category (such as **Next-generation protection** and **Firewall**). 
+3. Select an operating system tab (for example, **Windows clients**), and then review the list of policies under each category (such as **Next-generation protection** and **Firewall**).
 
 4. To view more details about a policy, select its name. A side pane will open that provides more information about that policy, such as which devices are protected by that policy.
 
@@ -81,7 +81,7 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com)) and sign in.
 
-2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**. 
+2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**.
 
 3. Any existing policies are listed for the category you selected. To view more details about a policy, select its name.
 
@@ -95,17 +95,17 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 ## [**Microsoft Defender portal**](#tab/M365D)
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in. 
+1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, choose **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**). 
+2. In the navigation pane, choose **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**).
 
-3. Select an operating system tab (for example, **Windows clients**), and then review the list of policies under the **Next-generation protection** and **Firewall** categories. 
+3. Select an operating system tab (for example, **Windows clients**), and then review the list of policies under the **Next-generation protection** and **Firewall** categories.
 
 4. To edit a policy, select its name, and then choose **Edit**.
 
 5. On the **General information** tab, review the information. If necessary, you can edit the description. Then choose **Next**.
 
-6. On the **Device groups** tab, determine which device groups should receive this policy.  
+6. On the **Device groups** tab, determine which device groups should receive this policy.
 
    - To keep the selected device group as it is, choose **Next**.
    - To remove a device group from the policy, select **Remove**.
@@ -114,14 +114,14 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
    After you have specified which device groups should receive the policy, choose **Next**.
 
-7. On the **Configuration settings** tab, review the settings. If necessary, you can edit the settings for your policy. To get help with this task, see the following articles: 
+7. On the **Configuration settings** tab, review the settings. If necessary, you can edit the settings for your policy. To get help with this task, see the following articles:
 
-   - [Understand next-generation configuration settings](mdb-next-generation-protection.md)   
+   - [Understand next-generation configuration settings](mdb-next-generation-protection.md)
    - [Firewall settings](mdb-firewall.md)
 
    After you have specified your next-generation protection settings, choose **Next**.
 
-8. On the **Review your policy** tab, review the general information, targeted devices, and configuration settings. 
+8. On the **Review your policy** tab, review the general information, targeted devices, and configuration settings.
 
    - Make any needed changes by selecting **Edit**.
    - When you're ready to proceed, choose **Update policy**.
@@ -130,11 +130,11 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com)) and sign in.
 
-2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**. 
+2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**.
 
 3. Existing policies are listed. Select a policy to view more details about it.
 
-4. Next to **Configuration settings**, choose **Edit**. 
+4. Next to **Configuration settings**, choose **Edit**.
 
    To get help with this task, see [Edit a policy in Intune](/mem/intune/protect/endpoint-security-policy#to-edit-a-policy).
 
@@ -146,11 +146,11 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 ## [**Microsoft Defender portal**](#tab/M365D)
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in. 
+1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, choose **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**). 
+2. In the navigation pane, choose **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**).
 
-3. Select an operating system tab (for example, **Windows clients**), and then review the list of **Next-generation protection** policies. 
+3. Select an operating system tab (for example, **Windows clients**), and then review the list of **Next-generation protection** policies.
 
 4. Under **Next-generation protection** or **Firewall**, select **+ Add**.
 
@@ -158,20 +158,20 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
    1. Specify a name and description. This information will help you and your team identify the policy later on.
    2. Review the policy order, and edit it if necessary. (For more information, see [Policy order](mdb-policy-order.md).)
-   3. Choose **Next**. 
+   3. Choose **Next**.
 
-7. On the **Device groups** tab, either create a new device group, or use an existing group. Policies are assigned to devices through device groups. Here are some things to keep in mind:
+6. On the **Device groups** tab, either create a new device group, or use an existing group. Policies are assigned to devices through device groups. Here are some things to keep in mind:
 
    - Initially, you might only have your default device group, which includes the devices people in your company are using to access company data and email. You can keep and use your default device group.
-   - Create a new device group to apply a policy with specific settings that are different from the default policy. 
-   - When you set up your device group, you specify certain criteria, such as the operating system version. Devices that meet the criteria are included in that device group, unless you exclude them. 
+   - Create a new device group to apply a policy with specific settings that are different from the default policy.
+   - When you set up your device group, you specify certain criteria, such as the operating system version. Devices that meet the criteria are included in that device group, unless you exclude them.
    - All device groups, including the default and custom device groups that you define, are stored in Microsoft Entra ID.
 
    To learn more about device groups, see [Device groups](mdb-create-edit-device-groups.md).
 
-8. On the **Configuration settings** tab, specify the settings for your policy, and then choose **Next**. For more information about the individual settings, see [Configuration settings for Defender for Business](mdb-next-generation-protection.md).
+7. On the **Configuration settings** tab, specify the settings for your policy, and then choose **Next**. For more information about the individual settings, see [Configuration settings for Defender for Business](mdb-next-generation-protection.md).
 
-9. On the **Review your policy** tab, review the general information, targeted devices, and configuration settings. 
+8. On the **Review your policy** tab, review the general information, targeted devices, and configuration settings.
 
    - Make any needed changes by selecting **Edit**.
    - When you're ready to proceed, choose **Create policy**.
@@ -180,9 +180,9 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com)) and sign in.
 
-2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**. 
+2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**.
 
-3. Select **+ Create Policy**. 
+3. Select **+ Create Policy**.
 
    - If your policy is for Windows devices, in the **Platform** list, choose **Windows 10, Windows 11, and Windows Server**.
    - If your policy is for Mac, in the **Platform** list, choose **macOS**.
@@ -191,15 +191,15 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
    The **Profile** list varies depending on what you selected for **Platform**, as summarized in the following table:
 
-   | Platform | Profile | Description |
+   |Platform|Profile|Description|
    |---|---|---|
-   | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus exclusions | Select this template to define [exclusions for Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions#microsoft-defender-antivirus-exclusions).  |
-   | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus | Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md). |
-   | Windows 10, Windows 11, and Windows Server | Windows Security Experience | Select this template to turn on [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) and to configure what users can see or do with the Windows Security app on their computer. | 
-   | macOS | Antivirus | Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md) for devices running macOS. |
-   | Windows 10, Windows 11, and Windows Server | Microsoft Defender Firewall | Select this template to set up your [firewall protection policy](mdb-firewall.md). | 
-   | Windows 10, Windows 11, and Windows Server | Microsoft Defender Firewall Rules | Select this template to set up exceptions to your firewall policy. These exceptions are defined through [custom rules](mdb-firewall.md#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business). |
-   | Windows 10, Windows 11, and Windows Server | Attack Surface Reduction Rules | Select this template to set up [attack surface reduction rules](mdb-asr.md) or [controlled folder access](mdb-controlled-folder-access.md). |
+   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Antivirus exclusions|Select this template to define [exclusions for Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions#microsoft-defender-antivirus-exclusions).|
+   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Antivirus|Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md).|
+   |Windows 10, Windows 11, and Windows Server|Windows Security Experience|Select this template to turn on [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) and to configure what users can see or do with the Windows Security app on their computer.|
+   |macOS|Antivirus|Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md) for devices running macOS.|
+   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Firewall|Select this template to set up your [firewall protection policy](mdb-firewall.md).|
+   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Firewall Rules|Select this template to set up exceptions to your firewall policy. These exceptions are defined through [custom rules](mdb-firewall.md#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business).|
+   |Windows 10, Windows 11, and Windows Server|Attack Surface Reduction Rules|Select this template to set up [attack surface reduction rules](mdb-asr.md) or [controlled folder access](mdb-controlled-folder-access.md).|
 
 5. Use the wizard to set up your policy. To get help, see [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy).
 
@@ -209,4 +209,3 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 - [Understand policy order](mdb-policy-order.md)
 - [Set up your security policies and settings](mdb-configure-security-settings.md)
-

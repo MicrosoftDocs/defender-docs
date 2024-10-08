@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Mac
 ms.reviewer: yongrhee, pahuijbr
 description: Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/08/2024
+ms.date: 10/03/2024
 ---
 
 # Microsoft Defender for Endpoint on Mac
@@ -69,15 +69,25 @@ There are several methods and deployment tools that you can use to install and c
 
 ### System requirements
 
-The three most recent major releases of macOS are supported.
-- 14 (Sonoma), 13 (Ventura), 12 (Monterey)
-  > [!IMPORTANT]
-  > On macOS 11 (Big Sur) and above, Microsoft Defender for Endpoint requires additional configuration profiles. If you are an existing customer upgrading from earlier versions of macOS, make sure to deploy the additional configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md).
+These four most recent major releases of macOS are supported.
 
-- Supported processors: x64 and ARM64.
+- 15.0.1 (Sequoia)
+
+- 14 (Sonoma)
+
+- 13 (Ventura)
+
+- 12 (Monterey)
+
+- Supported processors: x64 and ARM64
+
 - Disk space: 1GB
 
-Beta versions of macOS aren't supported.
+- Beta versions of macOS aren't supported.
+
+- Important
+
+> On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires additional configuration profiles. If you are an existing customer upgrading from earlier versions of macOS, make sure to deploy the additional configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmicrosoft-defender-endpoint-mac.md/main/979628aa-e0a5-ba01-7de6-f03ef27b15df/mac-sysext-policies.md).
 
 After you've enabled the service, you may need to configure your network or firewall to allow outbound connections between it and your endpoints.
 
@@ -119,7 +129,9 @@ If a proxy or firewall is blocking anonymous traffic, make sure that anonymous t
 >
 > SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Microsoft Defender for Endpoint on macOS to the relevant URLs without interception. Adding your interception certificate to the global store will not allow for interception.
 
-To test that a connection isn't blocked, open <https://x.cp.wd.microsoft.com/api/report> and <https://cdn.x.cp.wd.microsoft.com/ping> in a browser.
+#### Test network connectivity
+
+To test that a connection isn't blocked, open `https://x.cp.wd.microsoft.com/api/report` and `https://cdn.x.cp.wd.microsoft.com/ping` in a browser.
 
 If you prefer the command line, you can also check the connection by running the following command in Terminal:
 

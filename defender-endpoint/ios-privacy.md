@@ -3,8 +3,8 @@ title: Privacy information - Microsoft Defender for Endpoint on iOS
 ms.reviewer:
 description: Describes privacy information for Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 07/15/2024
 ---
 
 # Privacy information - Microsoft Defender for Endpoint on iOS
@@ -48,9 +48,8 @@ Here is a list of the types of data being collected:
 
 ### Device and account information
 
-- Device information such as date & time, iOS version, CPU info, and Device identifier, where Device identifier is one of the following:
-  - Wi-Fi adapter MAC address
-  - Randomly generated globally unique identifier (GUID)
+- Device information such as date and time, iOS version, CPU info, and device identifier (randomly generated globally unique identifier GUID).
+
 - Tenant, Device, and User information
   - Microsoft Entra Device ID and Azure User ID - Uniquely identifies the device, User respectively at Microsoft Entra ID.
   - Azure tenant ID - GUID that identifies your organization within Microsoft Entra ID.

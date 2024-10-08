@@ -4,22 +4,22 @@ description: Microsoft Defender XDR is a coordinated threat protection solution 
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 audience: ITPro
 ms.custom: 
-  - admindeeplinkDEFENDER
-  - intro-overview
+- admindeeplinkDEFENDER
+- intro-overview
 ms.collection:
 - essentials-overview
 - tier1
 ms.topic: conceptual
 adobe-target: true
-ms.date: 03/28/2024
+ms.date: 08/19/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+- ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 manager: deniseb
 ---
 
@@ -36,10 +36,10 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 - [**Microsoft Defender for Identity**](/defender-for-identity/what-is)
 - [**Microsoft Defender for Cloud Apps**](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 - [**Microsoft Defender Vulnerability Management**](/defender-vulnerability-management/defender-vulnerability-management)
+- [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [**Microsoft Entra ID Protection**](/azure/active-directory/identity-protection/overview-identity-protection)
 - [**Microsoft Data Loss Prevention**](/microsoft-365/compliance/dlp-learn-about-dlp)
 - [**App Governance**](/defender-cloud-apps/app-governance-manage-app-governance)
-
 
 With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 
@@ -49,7 +49,7 @@ With the integrated Microsoft Defender XDR solution, security professionals can 
 
 Microsoft Defender XDR services protect:
 
-- **Endpoints with Defender for Endpoint** - Defender for Endpoint is a unified endpoint platform for preventative protection, post-breach detection, automated investigation, and response.
+- **Endpoints with Defender for Endpoint** - Microsoft Defender for Endpoint is a unified endpoint platform for preventative protection, post-breach detection, automated investigation, and response.
 
 - **Assets with Defender Vulnerability Management** - Microsoft Defender Vulnerability Management delivers continuous asset visibility, intelligent risk-based assessments, and built-in remediation tools to help your security and IT teams prioritize and address critical vulnerabilities and misconfigurations across your organization.
 
@@ -57,7 +57,7 @@ Microsoft Defender XDR services protect:
 
 - **Identities with  Defender for Identity and Microsoft Entra ID Protection** - Microsoft Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. Microsoft Entra ID Protection uses the learnings Microsoft acquired from their position in organizations with Microsoft Entra ID, the consumer space with Microsoft Accounts, and in gaming with Xbox to protect your users.
 
-- **Applications with Microsoft Defender for Cloud Apps** - Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
+- **Applications with Defender for Cloud Apps** - Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
 
 Microsoft Defender XDR's unique cross-product layer augments the individual service components to:
 

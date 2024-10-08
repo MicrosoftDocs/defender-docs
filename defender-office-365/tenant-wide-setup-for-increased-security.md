@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 ms.author: bcarter
 author: BrendaCarter
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -84,7 +84,7 @@ For information about ransomware protection, see the following articles:
 
 ## Configure tenant-wide sharing policies in SharePoint admin center
 
-Microsoft recommendations for configuring SharePoint team sites at increasing levels of protection, starting with baseline protection. For more information, see [Policy recommendations for securing SharePoint sites and files](zero-trust-identity-device-access-policies-sharepoint.md).
+Microsoft recommendations for configuring SharePoint team sites at increasing levels of protection, starting with baseline protection. For more information, see [Policy recommendations for securing SharePoint sites and files](/security/zero-trust/zero-trust-identity-device-access-policies-sharepoint).
 
 SharePoint team sites configured at the baseline level allow sharing files with external users by using anonymous access links. This approach is recommended instead of sending files in email.
 
@@ -143,4 +143,4 @@ These articles and guides provide additional prescriptive information for securi
 
 - [Microsoft security guidance for political campaigns, nonprofits, and other agile organizations](/microsoft-365/solutions/productivity-illustrations#security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations) (you can use these recommendations in any environment, especially cloud-only environments)
 
-- [Recommended security policies and configurations for identities and devices](zero-trust-identity-device-access-policies-overview.md) (these recommendations include help for AD FS environments)
+- [Recommended security policies and configurations for identities and devices](/security/zero-trust/zero-trust-identity-device-access-policies-overview) (these recommendations include help for AD FS environments)

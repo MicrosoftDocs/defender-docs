@@ -13,12 +13,14 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/09/2024
+ms.date: 09/12/2024
 ---
 
 # Microsoft Virus Initiative
 
 The Microsoft Virus Initiative (MVI) helps organizations improve the security solutions our customers rely on to keep them safe. We provide tools, resources, and knowledge to support better-together experiences with great performance, reliability, and compatibility.
+
+Microsoft collaborates with MVI partners to define and follow Safe Deployment Practices (SDP) to support the safety and resiliency of our mutual customers. In addition, Microsoft engages MVI partners in the development of new platform capabilities to create highly available security solutions building on the foundational security features in Windows 11.
 
 ## Become a member
 
@@ -41,7 +43,7 @@ To be considered for the MVI program, your organization must meet all the follow
 |[SKD Labs](http://www.skdlabs.com)|Certification Requirements Product: Anti-virus or Antimalware.|Score >= 98.5% with On Demand, On Access and Total Detection tests|
 |[VB 100](https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1)|VB100 Certification Test V1.1|VB100 Certification|
 |[West Coast Labs](https://www.westcoastlabs.com/wclvalid)|West Coast Labs Verified|Product rating of A or higher with both Malware Detection and Malware Remediation|
-|[SE Labs](https://selabs.uk/en/reports/consumers)|Protection, Small Business, or Enterprise EP Protection Test.|- Protection A rating <br/>- Small Business EP A rating<br/>- Enterprise EP Protection A rating |
+|[SE Labs](https://selabs.uk/en/reports/)|Protection, Small Business, or Enterprise EP Protection Test.|- Protection A rating <br/>- Small Business EP A rating<br/>- Enterprise EP Protection A rating |
 
 ## Apply now
 

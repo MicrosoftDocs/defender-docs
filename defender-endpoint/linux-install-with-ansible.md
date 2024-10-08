@@ -3,10 +3,10 @@ title: Deploy Microsoft Defender for Endpoint on Linux with Ansible
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Ansible.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: deniseb
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,13 +15,12 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 09/19/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Ansible
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Applies to:**
 
@@ -129,11 +128,17 @@ Create a subtask or role files that contribute to a playbook or task.
 
 - Add the Defender for Endpoint repository and key, `add_apt_repo.yml`:
 
-    Defender for Endpoint on Linux can be deployed from one of the following channels (denoted below as *[channel]*): *insiders-fast*, *insiders-slow*, or *prod*. Each of these channels corresponds to a Linux software repository.
+    Defender for Endpoint on Linux can be deployed from one of the following channels:
+    - *insiders-fast*, denoted as `[channel]`
+    - *insiders-slow*, denoted as `[channel]`
+    - *prod*, denoted as `[channel]` using the version name (see [Linux Software Repository for Microsoft Products](/linux/packages))
 
-    The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow* and lastly by *prod*.
+    Each channel corresponds to a Linux software repository.
 
-    In order to preview new features and provide early feedback, it is recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
+    The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow*, and lastly by *prod*.
+
+
+    In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
     > [!WARNING]
     > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
@@ -187,8 +192,12 @@ Create a subtask or role files that contribute to a playbook or task.
         ```Output
         - hosts: servers
           tasks:
-            - include: ../roles/onboarding_setup.yml
-            - include: ../roles/add_apt_repo.yml
+            - name: include onboarding tasks
+              import_tasks:
+                file: ../roles/onboarding_setup.yml
+            - name: add apt repository
+              import_tasks:
+                file: ../roles/add_apt_repo.yml
             - name: Install MDATP
               apt:
                 name: mdatp
@@ -216,8 +225,12 @@ Create a subtask or role files that contribute to a playbook or task.
         ```Output
         - hosts: servers
           tasks:
-            - include: ../roles/onboarding_setup.yml
-            - include: ../roles/add_yum_repo.yml
+            - name: include onboarding tasks
+              import_tasks:
+                file: ../roles/onboarding_setup.yml
+            - name: add apt repository
+              import_tasks:
+                file: ../roles/add_yum_repo.yml
             - name: Install MDATP
               dnf:
                 name: mdatp

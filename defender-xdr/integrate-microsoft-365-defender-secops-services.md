@@ -1,7 +1,6 @@
 ---
 title: Step 3. Plan for Microsoft Defender XDR integration with your SOC catalog of services
 description: The basics of integrating Microsoft Defender XDR into your security operations catalog of services.
-keywords: incidents, alerts, investigate, correlation, attack, devices, users, identities, identity, mailbox, email, 365, microsoft, m365, incident response, cyber-attack, secops, security operations, soc
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -11,7 +10,6 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - zerotrust-solution
   - msftsolution-secops
   - tier3
 ms.topic: conceptual

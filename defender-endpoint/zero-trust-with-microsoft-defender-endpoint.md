@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: microsoft-365-zero-trust
 f1.keywords:
   - NOCSH
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 05/10/2024
 manager: deniseb
@@ -15,6 +15,9 @@ ms.collection:
   - m365-security
   - tier1
   - zerotrust-services
+  - essentials-privacy
+  - essentials-security
+  - essentials-compliance
 ms.custom: 
 ms.topic: conceptual
 adobe-target: true

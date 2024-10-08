@@ -2,8 +2,9 @@
 title: Identify internet-facing devices in Microsoft Defender for Endpoint
 description: Identify internet-facing devices in the device inventory list
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.subservice: onboard
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 07/10/2023
+ms.date: 07/31/2024
 ---
 
 # Internet-facing devices
@@ -62,6 +63,10 @@ At the top of the page, you can view a counter that shows the number of devices 
 You can use filters to focus in on internet-facing devices and investigate the risk they may introduce into your organization.
 
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter" lightbox="/defender/media/defender-endpoint/internet-facing-filter.png":::
+
+The internet-facing device tag also appears in Microsoft Defender Vulnerability Management. This allows you to filter for internet-facing devices from the [weaknesses](/defender-vulnerability-management/tvm-weaknesses) and the [security recommendations](/defender-vulnerability-management/tvm-security-recommendation) pages in the Microsoft Defender portal. 
+
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-weaknesses.png" alt-text="Screenshot of the internet-facing weaknesses" lightbox="/defender/media/defender-endpoint/internet-facing-weaknesses.png":::
 
 > [!NOTE]
 > If no new events for a device occur for 48 hours, the Internet-facing tag is removed and it will no longer be visible in the Microsoft Defender portal.

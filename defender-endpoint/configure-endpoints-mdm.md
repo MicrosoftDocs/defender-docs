@@ -2,8 +2,8 @@
 title: Onboard Windows devices to Defender for Endpoint using Intune 
 description: Use Microsoft Intune to deploy the configuration package on devices so that they're onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/28/2024
+ms.date: 08/12/2024
 ---
 
 # Onboard Windows devices to Defender for Endpoint using Intune 
@@ -60,28 +60,36 @@ After onboarding the device, you can choose to run a detection test to verify th
 
 ## Offboard devices using Mobile Device Management tools
 
-For security reasons, the package used to Offboard devices will expire 30 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you'll be notified of the packages expiry date and it will also be included in the package name.
+For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you'll be notified of the packages expiry date and it will also be included in the package name.
 
 > [!NOTE]
 > Onboarding and offboarding policies must not be deployed on the same device at the same time, otherwise this will cause unpredictable collisions.
 
-1. Get the offboarding package from <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com) as follows:
 
-   2. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
+   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
 
-   3. Select Windows 10 or Windows 11 as the operating system.
+   2. Select **Windows 10 or Windows 11** as the operating system.
 
-   4. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
+   3. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
 
-   5. Click **Download package**, and save the .zip file.
+   4. Click **Download package**, and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the network administrators who will deploy the package. You should have a file named *WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding*.
+2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the network administrators who will deploy the package. You should have a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`.
 
-3. Use the Microsoft Intune custom configuration policy to deploy the following supported OMA-URI settings.
+3. In Microsoft Intune admin center, create a custom configuration policy.
 
-   - OMA-URI: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding
-   - Date type: String
-   - Value: [Copy and paste the value from the content of the WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding file]
+   1. In the navigation pane, select **Devices** \> **By platform** \> **Windows** \> **Manage Devices** \> **Configuration**.
+   2. Under **Policies** click **Create** \> **New Policy**.
+   3. In the **Create a profile** slide out, select **Windows 10 and later** as **Platform** and **Templates** as **Profile Type**.
+   4. Under **Template Name**, click the **Custom** template and click **Create**.
+   5. Enter a value for **Name** and click **Next**. 
+   6. Under **Configuration settings**, click **Add** and use the following OMA-URI settings.
+      - Name: Provide a name
+      - OMA-URI: `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding`
+      - Date type: String
+      - Value: *Copy and paste the value from the content of the WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding file*
+   7. Make the appropriate group assignments, applicability rules, and on the **Review + create** step, click the **Create** button to finish the policy.
 
 For more information on Microsoft Intune policy settings, see [Windows 10 policy settings in Microsoft Intune](/mem/intune/configuration/custom-settings-windows-10).
 
@@ -89,7 +97,7 @@ For more information on Microsoft Intune policy settings, see [Windows 10 policy
 > The **Health Status for offboarded devices** policy uses read-only properties and can't be remediated.
 
 > [!IMPORTANT]
-> Offboarding causes the device to stop sending sensor data to the portal but data from the device, including reference to any alerts it has had will be retained for up to 6 months.
+> Offboarding causes the device to stop sending sensor data to Defender for Endpoint, but data from the device, including references to any alerts it has, is retained for up to 6 months.
 
 ## Related articles
 

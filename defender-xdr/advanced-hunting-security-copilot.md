@@ -15,6 +15,7 @@ ms.collection:
   - m365-security
   - tier1
   - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 ms.date: 04/01/2024
 ---
@@ -31,7 +32,7 @@ ms.date: 04/01/2024
 
 [Microsoft Copilot for Security in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) comes with a query assistant capability in advanced hunting.
 
-Threat hunters or security analysts who are not yet familiar with or have yet to learn KQL can make a request or ask a question in natural language (for instance, *Get all alerts involving user admin123*). Copilot for Security then generates a KQL query that corresponds to the request using the advanced hunting data schema.
+Threat hunters or security analysts who aren't yet familiar with or have yet to learn KQL can make a request or ask a question in natural language (for instance, *Get all alerts involving user admin123*). Copilot for Security then generates a KQL query that corresponds to the request using the advanced hunting data schema.
 
 This feature reduces the time  it takes to write a hunting query from scratch so that threat hunters and security analysts can focus on hunting and investigating threats.
 
@@ -71,15 +72,19 @@ Users with access to Copilot for Security have access to this capability in adva
     The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
 
 
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing  **Confirm**, **Off-target**, or **Potentially harmful**.
+1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Confirm**, **Off-target**, or **Potentially harmful**.
 
 
 > [!TIP]
 > Providing feedback is an important way to let the Copilot for Security team know how well the query assistant was able to help in generating a useful KQL query. Feel free to articulate what could have made the query better, what adjustments you had to make before running the generated KQL query, or share the KQL query that you eventually used.
 
+
+> [!NOTE]
+> In the [unified Microsoft Defender portal](advanced-hunting-microsoft-defender.md), you can prompt Copilot for Security to generate advanced hunting queries for both Defender XDR and Microsoft Sentinel tables. Not all Microsoft Sentinel tables are currently supported, but support for these tables can be expected in the future.
+
 ## Query sessions
 
-You can start your first session anytime by asking a question in the Copilot side pane in advanced hunting. Your session contains the requests you made using your user account. Closing the side pane or refreshing the advanced hunting page does not discard the session. You can still access the generated queries should you need them.
+You can start your first session anytime by asking a question in the Copilot side pane in advanced hunting. Your session contains the requests you made using your user account. Closing the side pane or refreshing the advanced hunting page doesn't discard the session. You can still access the generated queries should you need them.
 
 Select the chat bubble icon (**New chat**) to discard the current session.
 

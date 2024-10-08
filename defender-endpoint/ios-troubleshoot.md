@@ -2,8 +2,8 @@
 title: Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS
 description: Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 05/15/2021
+ms.date: 06/19/2024
 ---
 
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
@@ -28,33 +28,32 @@ ms.date: 05/15/2021
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-> [!NOTE]
-> **Control Filter not working as expected on Supervised devices**
-Control Filter is not working as expected from iOS 16.1 onwards. This has impacted the Web Protection capability for Supervised devices without local loopback VPN. The issue has been resolved with iOS 16.3. Support for Control Filter is re-enabled with the new version - 1.1.38010102.
  
-
-This topic provides troubleshooting information to help you address issues that may arise as you use Microsoft Defender for Endpoint on iOS.
+This article provides troubleshooting information to help you address issues that might arise with Microsoft Defender for Endpoint on iOS.
 
 > [!NOTE]
-> Defender for Endpoint on iOS would use a VPN in order to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
+> - Defender for Endpoint on iOS requires configuring its VPN to activate the Web Protection feature and to send periodic status signals while the app operates in the background. This VPN is local and pass-through, meaning it does not route traffic through a remote VPN server.
+> - Customers who opt not to set up a Defender for Endpoint VPN can disable Web Protection and still deploy Defender for Endpoint. In such cases, Defender for Endpoint will only send status signals to the Microsoft Defender portal when the user opens the app. If the app is not opened for 7 days, the device may be marked as inactive in the Microsoft Defender Portal.
 
 ## Apps don't work when VPN is turned on
 
 There are some apps that stop functioning when an active VPN is detected. You can disable the VPN during the time you're using such apps.
 
-By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Defender for Endpoint on iOS uses a VPN in order to provide this protection. Note that this is a local VPN and unlike traditional VPN, network traffic isn't sent outside the device.
+By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Defender for Endpoint on iOS uses a VPN in order to provide this protection. This is a local VPN and unlike traditional VPN, network traffic isn't sent outside the device.
 
 While enabled by default, there might be some cases that require you to disable VPN. For example, you want to run some apps that don't work when a VPN is configured. In such cases, you can choose to disable the VPN directly from the Defender for Endpoint app or using the following steps:
 
-1. On your iOS device, open the **Settings** app, click or tap **General** and then **VPN**.
-1. Click or tap the "i" button for Microsoft Defender for Endpoint.
-1. Toggle off **Connect On Demand** to disable VPN.
+1. On your iOS device, open the **Settings** app, select **General**, and then select **VPN**.
+
+2. Select the **i** button for Defender for Endpoint.
+
+3. Toggle off **Connect On Demand** to disable VPN.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
 
 > [!NOTE]
-> Web Protection will not be available when VPN is disabled. To re-enable Web Protection, open the Microsoft Defender for Endpoint app on the device and Enable Web Protection.
+> Web Protection isn't available when VPN is disabled. To re-enable Web Protection, open the Defender for Endpoint app on the device and enable Web Protection.
 
 ## Coexistence with multiple VPN profiles
 
@@ -62,11 +61,11 @@ Apple iOS doesn't support multiple **device-wide** VPNs to be active simultaneou
 
 ## Battery consumption
 
-In order to provide you all-time protection from web-based threats, Microsoft Defender for Endpoint needs to run in the background at all times. This might lead to a minor increase in overall battery consumption of your device. In case you're seeing significant battery drain, [send us feedback](ios-troubleshoot.md#send-in-app-feedback) and we'll investigate.
+To help ensure protection from web-based threats is active, Defender for Endpoint needs to run in the background at all times. This might lead to a minor increase in overall battery consumption of your device. In case you're seeing significant battery drain, [send us feedback](ios-troubleshoot.md#send-in-app-feedback) and we'll investigate.
 
-Also, in the Settings app, iOS only shows battery usage of apps that are visible to the user for a specific duration of time. The battery usage by apps shown on the screen is only for that time duration and is computed by iOS based on a multitude of factors, including CPU and Network usage. Microsoft Defender for Endpoint uses a local/loop-back VPN in the background to check web traffic for any malicious websites or connections. Network packets from any app go through this check and that causes the battery usage of Microsoft Defender for Endpoint to be computed inaccurately. The actual battery consumption of Microsoft Defender for Endpoint is lesser than what is shown on the Battery Settings page on the device.
+Also, in the **Settings** app, iOS only shows battery usage of apps that are visible to the user for a specific duration of time. The battery usage by apps shown on the screen is only for that time duration and is computed by iOS based on a multitude of factors, including CPU and Network usage. Microsoft Defender for Endpoint uses a local/loop-back VPN in the background to check web traffic for any malicious websites or connections. Network packets from any app go through this check and that causes the battery usage of Microsoft Defender for Endpoint to be computed inaccurately. The actual battery consumption of Microsoft Defender for Endpoint is lesser than what is shown on the Battery Settings page on the device.
 
-Note that the VPN used is a local VPN and unlike a traditional VPN, network traffic isn't sent outside the device.
+The VPN used is a local VPN and unlike a traditional VPN, network traffic isn't sent outside the device.
 
 ## Data usage
 
@@ -102,13 +101,10 @@ For details about data collected and privacy, see [Privacy Information - Microso
 
 ## Connectivity issue on cellular network
 
-If you are facing internet connectivity issues on cellular network, check if Microsoft Defender for Endpoint has cellular data enabled: Open Settings app > MS Defender > ensure that "Cellular data" is enabled for MS Defender.
+If you're facing internet connectivity issues on cellular network, check if Microsoft Defender for Endpoint has cellular data enabled: Open Settings app > MS Defender > ensure that "Cellular data" is enabled for MS Defender.
 
 If you still have connectivity issues, check if turning on/off Airplane mode helps resolve the issue. If the issue persists, [send us logs](ios-troubleshoot.md#send-in-app-feedback).
 
-## Issues on supervised devices with content filter profile installed
-
-There's an issue on supervised devices with Defender for Endpoint content filter installed. If you observe slowness or latency in internet connectivity on such devices, uninstall or delete the content filter profile from the device. We're working to resolve this issue and will update this place once we've a resolution. 
 
 ## Issues during app updates from the app store
 
@@ -126,12 +122,32 @@ If you observe issues when the app is updated through the app store (either auto
 
 ## Send in-app feedback
 
-If a user faces an issue which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide in-app feedback along with diagnostic data. Our team will then investigate the logs to provide the right solution. Users can use the following steps to send feedback:
+If a user faces an issue that isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide in-app feedback along with diagnostic data. Our team will then investigate the logs to provide the right solution. 
 
-- Open MSDefender app on the iOS/iPadOS device.
-- Tap on Menu (profile icon) on the top-left corner.
-- Tap **Send Feedback**.
-- Choose from the given options. To report an issue, select **I don't like something**.
-- Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
-- Tap **Submit** to successfully send the feedback.
+1. Users can use the following steps to send feedback if they are signed in to the app and can see the Send Feedback option:
+
+   1. Open the MS Defender app on the iOS/iPadOS device.
+   
+   2. Select the menu (profile icon) on the top-left corner, and then select **Send Feedback**.
+   
+   3. Choose from the given options. To report an issue, select **I don't like something**.
+
+      Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
+
+   4. Select **Submit** to successfully send your feedback.
+
+2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
+
+   1. Sign out of the MS Defender app (applicable when Send Feedback option is disabled).
+
+   2. Select **Sign in with a different account**.
+
+   3. Select **Get help signing in**.
+
+   4. Select **Report a problem**, and provide details about the issue you are facing. Don't include personal information, such as your email account.
+
+   5. Select the toggle to include diagnostic data, and submit your feedback. 
+   
+   6. Sign back in to the app (applicable if user has signed out).
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

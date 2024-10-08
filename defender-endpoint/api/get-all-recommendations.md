@@ -2,8 +2,8 @@
 title: List all recommendations
 description: Retrieves a list of all security recommendations affecting the organization.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -100,34 +100,36 @@ Here is an example of the response.
     "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Recommendations",
     "value": [
         {
-            "id": "va-_-microsoft-_-windows_10" "va-_-microsoft-_-windows_11",
-            "productName": "windows_10" "Windows_11",
-            "recommendationName": "Update Windows 10" "Update Windows 11",
-            "weaknesses": 397,
+            "id": "va-_-microsoft-_-edge_chromium-based",
+            "productName": "edge_chromium-based",
+            "recommendationName": "Update Microsoft Edge Chromium-based to version 127.0.2651.74",
+            "weaknesses": 762,
             "vendor": "microsoft",
-            "recommendedVersion": "",
+            "recommendedVersion": "127.0.2651.74",
+            "recommendedVendor": "",
+            "recommendedProgram": "",
             "recommendationCategory": "Application",
             "subCategory": "",
             "severityScore": 0,
             "publicExploit": true,
             "activeAlert": false,
             "associatedThreats": [
-                "3098b8ef-23b1-46b3-aed4-499e1928f9ed",
-                "40c189d5-0330-4654-a816-e48c2b7f9c4b",
-                "4b0c9702-9b6c-4ca2-9d02-1556869f56f8",
-                "e8fc2121-3cf3-4dd2-9ea0-87d7e1d2b29d",
-                "94b6e94b-0c1d-4817-ac06-c3b8639be3ab"
+                "71d9120e-7eea-4058-889a-1a60bbf7e312"
             ],
             "remediationType": "Update",
             "status": "Active",
             "configScoreImpact": 0,
-            "exposureImpact": 7.674418604651163,
-            "totalMachineCount": 37,
-            "exposedMachinesCount": 7,
+            "exposureImpact": 1.1744086343876479,
+            "totalMachineCount": 261,
+            "exposedMachinesCount": 193,
             "nonProductivityImpactedAssets": 0,
-            "relatedComponent": "Windows 10" "Windows 11"
+            "relatedComponent": "Edge Chromium-based",
+            "hasUnpatchableCve": false,
+            "tags": [
+            "internetFacing"
+            ],
+            "exposedCriticalDevices": 116
         }
-        ...
      ]
 }
 ```

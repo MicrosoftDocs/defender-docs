@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/03/2022
+ms.date: 07/09/2024
 ---
 
 # Train your security staff for Microsoft Defender XDR
@@ -50,20 +50,21 @@ Use these learning paths and their modules to build an understanding of Microsof
 
 ## Learning paths in the Microsoft Defender portal learning hub
 
-The [Microsoft Defender portal learning hub](https://security.microsoft.com/learning) includes these learning paths:
+Learning paths and training modules are available at [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). You can access resources like these:
 
-- Getting started with the Microsoft 365 security center
-- How to Investigate Using Microsoft Defender XDR
-- Microsoft Defender XDR Basic Training
-- Microsoft Defender for Endpoint Basic Training
-- Microsoft Defender for Office 365 Best Practices
-- Setup
+- Defender XDR learning paths
+- Microsoft Defender XDR Ninja training
+- Virtual training sessions
+- Microsoft Tech Community
+- Microsoft Copilot for Security
+
+Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product/service, role, level, and more.
 
 ## Hands-on with a trial environment
 
-One of the best ways to learn is by configuring and testing Microsoft Defender XDR and its associated services in a trial environment. See [Evaluate and pilot Microsoft Defender XDR](eval-overview.md) for the details.
+One of the best ways to learn is by configuring and testing Microsoft Defender XDR and its associated services in a trial environment. See [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md) for the details.
 
 ## Simulating an attack
 
-To test your security staff on their ability to detect and respond to a cyberattack, use a simulated attack. See [Simulate attacks with the Microsoft Defender portal](eval-defender-investigate-respond-simulate-attack.md#simulate-attacks-with-the-microsoft-365-defender-portal) for more information. 
+To test your security staff on their ability to detect and respond to a cyberattack, use a simulated attack. See [Simulate attacks with the Microsoft Defender portal](pilot-deploy-investigate-respond.md#simulate-attacks-with-the-microsoft-365-defender-portal) for more information. 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

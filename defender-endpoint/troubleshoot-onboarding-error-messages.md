@@ -2,8 +2,8 @@
 title: Troubleshoot onboarding issues and error messages
 description: Troubleshoot onboarding issues and error message while completing setup of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 07/18/2024
 ---
 
 # Troubleshoot subscription and portal access issues
@@ -55,7 +55,7 @@ If while accessing Microsoft Defender XDR you get a **Your subscription has expi
 You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date a **Your subscription has expired** message will be presented with an option to download the device offboarding package, should you choose to not renew the license.
 
 > [!NOTE]
-> For security reasons, the package used to Offboard devices will expire 30 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you will be notified of the packages expiry date and it will also be included in the package name.
+> For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you will be notified of the packages expiry date and it will also be included in the package name.
 
 :::image type="content" source="media/atp-subscription-expired.png" alt-text="The subscription expired notification message" lightbox="media/atp-subscription-expired.png":::
 
@@ -76,7 +76,7 @@ You'll need to allow the `security.windows.com` and all subdomains under it on y
 
 ## Portal communication issues
 
-If you encounter issues with accessing the portal, missing data, or restricted access to portions of the portal, you'll need to verify that the following URLs are allowed and open for communication.
+If you encounter issues with accessing the portal, missing data, or restricted access to portions of the portal, you'll need to verify that the following URLs are accessible through the browser for authorized users:
 
 - `*.blob.core.windows.net`
 - `crl.microsoft.com`

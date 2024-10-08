@@ -1,12 +1,12 @@
 ---
 title: Microsoft Defender for Endpoint on Linux resources
-ms.reviewer: gopkr
+ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 10/03/2024
 ---
 
 # Resources
@@ -115,6 +115,9 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Configuration|Add/remove an antivirus exclusion for a file|`mdatp exclusion file [add\|remove] --path [path-to-file]`|
 |Configuration|Add/remove an antivirus exclusion for a directory|`mdatp exclusion folder [add\|remove] --path [path-to-directory]`|
 |Configuration|Add/remove an antivirus exclusion for a process|`mdatp exclusion process [add\|remove] --path [path-to-process]` <p> `mdatp exclusion process [add\|remove] --name [process-name]`|
+|Configuration|Add/remove a global exclusion for a file|`mdatp exclusion file [add\|remove] --path [path-to-file] --scope global`|
+|Configuration|Add/remove a global exclusion for a directory|`mdatp exclusion folder [add\|remove] --path [path-to-directory] --scope global`|
+|Configuration|Add/remove a global exclusion for a process|`mdatp exclusion process [add\|remove] --path [path-to-process] --scope global`|
 |Configuration|List all antivirus exclusions|`mdatp exclusion list`|
 |Configuration|Add a threat name to the allowed list|`mdatp threat allowed add --name [threat-name]`|
 |Configuration|Remove a threat name from the allowed list|`mdatp threat allowed remove --name [threat-name]`|
@@ -135,6 +138,7 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Protection|Do a full scan|`mdatp scan full`|
 |Protection|Cancel an ongoing on-demand scan|`mdatp scan cancel`|
 |Protection|Request a security intelligence update|`mdatp definitions update`|
+|Protection|Rollback security intelligence to the original default set|`mdatp definitions restore`|
 |Protection history|Print the full protection history|`mdatp threat list`|
 |Protection history|Get threat details|`mdatp threat get --id [threat-id]`|
 |Quarantine management|List all quarantined files|`mdatp threat quarantine list`|

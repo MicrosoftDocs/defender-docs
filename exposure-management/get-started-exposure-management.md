@@ -1,12 +1,12 @@
 ---
 title: Start using Microsoft Security Exposure Management
 description: This article describes how to start using the Microsoft Security Exposure Management dashboard
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 06/24/2024
 ---
 
 # Start using Microsoft Security Exposure Management
@@ -55,7 +55,7 @@ Drilling down into an individual security metric takes you to its metric page. Y
 
 The **Attack surface map** displays your tenant's total and critical device, identity, and cloud assets.
 
-You can select and search on a specific asset type, and open it in the map. 
+You can select and search on a specific asset type, and open it in the map.
 
 :::image type="content" source="./media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
 

@@ -1,10 +1,10 @@
 ---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Microsoft Intune
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb 
-ms.date: 05/15/2024
+ms.date: 07/30/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -55,6 +55,7 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
    - Under **Connectivity**, see [Allow USB Connection](/windows/client-management/mdm/policy-csp-Connectivity#allowusbconnection)** and [Allow Bluetooth](/windows/client-management/mdm/policy-csp-Connectivity#allowbluetooth) settings.
    - Under **Bluetooth**, see a list of settings that pertain to Bluetooth connections and services. For more details, see [Policy CSP - Bluetooth](/windows/client-management/mdm/policy-csp-Bluetooth?WT.mc_id=Portal-fx).
    - Under **Device Control**, you can configure custom policies with reusable settings. For more details, see [Device control overview: Rules](device-control-policies.md#rules).
+   - Under **System**, see [Allow Storage Card](/windows/client-management/mdm/policy-csp-System#allowstoragecard) settings.
 
 6. After you have configured your settings, proceed to the **Scope tags** tab, where you can specify [scope tags](/mem/intune/fundamentals/scope-tags) for the policy.
 
@@ -80,7 +81,7 @@ You can add audit policies, and you can add Allow/Deny policies. It is recommend
 > If you only configure audit policies, the permissions are inherited from the default enforcement setting.
 
 > [!NOTE]
-> - The order in the which policies are listed in the user interface isn't preserved for policy enforcement. The best practice is to use **Allow/Deny policies**. Ensure that the **Allow/Deny policies** option is non-intersecting by explicitly adding devices to be excluded. Using Intune's graphical interface, you cannot change the default enforcement. If you change the default enforcement to Deny, any allow policy results in blocking actions.
+> - The order in the which policies are listed in the user interface isn't preserved for policy enforcement. The best practice is to use **Allow/Deny policies**. Ensure that the **Allow/Deny policies** option is non-intersecting by explicitly adding devices to be excluded. Using Intune's graphical interface, you cannot change the default enforcement. If you change the default enforcement to `Deny`, and create an `Allow` policy to be applied specific devices, all devices are blocked except for any devices that are set in the `Allow` policy.
 
 ## Defining Settings with OMA-URI
 
@@ -91,11 +92,9 @@ In the following table, identify the setting you want to configure, and then use
 
 | Setting | OMA-URI, data type, & values |
 |---|---|
-| **Device control default enforcement** <br/>Default enforcement establishes what decisions are made during device control access checks when none of the policy rules match | `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`<br/><br/>Integer: <br/>- `DefaultEnforcementAllow` = `1`<br/>- `DefaultEnforcementDeny` = `2` | 
+| **Device control default enforcement** <br/>Default enforcement establishes what decisions are made during device control access checks when none of the policy rules match | `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`<br/><br/>Integer: <br/>- `DefaultEnforcementAllow` = `1`<br/>- `DefaultEnforcementDeny` = `2` |
 | **Device types** <br/>Device types, identified by their Primary IDs, with device control protection turned on | `./Vendor/MSFT/Defender/Configuration/SecuredDevicesConfiguration`<br/><br/>String:<br/>- `RemovableMediaDevices`<br/>- `CdRomDevices`<br/>- `WpdDevices`<br/>- `PrinterDevices` |
 | **Enable device control** <br/>Enable or disable device control on the device | `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`<br/><br/>Integer:<br/>- Disable = `0`<br/>- Enable = `1` |
-| **Evidence data remote location** <br/>Device control moves evidence data captured | `./Vendor/MSFT/Defender/Configuration/DataDuplicationRemoteLocation`<br/><br/>String |
-| **Local evidence cache duration** <br/>Sets the retention period in days for files in the local device control cache | `./Vendor/MSFT/Defender/Configuration/DataDuplicationLocalRetentionPeriod`<br/><br/>Integer <br/>Example: `60` (60 days) |
 
 ### Creating policies with OMA-URI
 
@@ -106,13 +105,13 @@ When you create policies with OMA-URI in Intune, create one XML file for each po
 In the **Add Row** pane, specify the following settings:
 
 - In the **Name** field, type `Allow Read Activity`.
-- In the **OMA-URI** field, type `/Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b[PolicyRule Id]%7d/RuleData`.
+- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b[PolicyRule Id]%7d/RuleData`. (You could use the PowerShell command `New-Guid` to generate a new Guid, and replace `[PolicyRule Id]`.)
 - In the **Data Type** field, select **String (XML file)**, and use **Custom XML**.
 
 You can use parameters to set conditions for specific entries. Here's a [group example XML file for Allow Read access for each removable storage](https://github.com/microsoft/mdatp-devicecontrol/blob/main/windows/device/Intune%20OMA-URI/Allow%20Read.xml).
 
 > [!NOTE]
-> Comments using XML comment notation <!-- COMMENT --> can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the first line of the XML file.
+> Comments using XML comment notation `<!-- COMMENT -->` can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the first line of the XML file.
 
 ### Creating groups with OMA-URI
 
@@ -123,7 +122,7 @@ When you create groups with OMA-URI in Intune, create one XML file for each grou
 In the **Add Row** pane, specify the following settings:
 
 - In the **Name** field, type `Any Removable Storage Group`.
-- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b**[GroupId]**%7d/GroupData`. (To get your GroupID, in the Intune admin center, go to **Groups**, and then select **Copy the Object ID**.)
+- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b[GroupId]%7d/GroupData`. (To get your GroupID, in the Intune admin center, go to **Groups**, and then select **Copy the Object ID**. Or, you could use the PowerShell command `New-Guid` to generate a new Guid, and replace `[GroupId]`.)
 - In the **Data Type** field, select **String (XML file)**, and use **Custom XML**.
 
 > [!NOTE]
@@ -149,7 +148,7 @@ In the **Add Row** pane, specify the following settings:
 
 In Intune, device control groups appear as reusable settings.
 
-1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and sign in.
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
 2. Go to **Endpoint Security** > **Attack Surface Reduction**. 
 

@@ -3,20 +3,20 @@ title: Manage the deception capability in Microsoft Defender XDR
 description: Detect human-operated attacks with lateral movement in the early stages using high confidence signals from the deception feature in Microsoft Defender XDR.
 ms.service: defender-xdr
 f1.keywords: 
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - tier1
+- m365-security
+- tier1
 ms.topic: conceptual
 search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 05/02/2023
+- MOE150
+- MET150
+ms.date: 08/14/2024
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
@@ -50,6 +50,9 @@ The following table lists the requirements to enable the deception capability in
 > |Deployment requirements|Requirements:</br> - Defender for Endpoint is the primary EDR solution</br> - [Automated investigation and response capabilities in Defender for Endpoint](/defender-endpoint/configure-automated-investigations-remediation) is configured</br> - Devices are [joined](/entra/identity/devices/concept-directory-join/) or [hybrid joined](/entra/identity/devices/concept-hybrid-join/) in Microsoft Entra</br> - PowerShell is enabled on the devices</br> - The deception feature covers clients operating on Windows 10 RS5 and later in preview|
 > |Permissions|You must have one of the following roles assigned in the [Microsoft Entra admin center](https://entra.microsoft.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com) to configure deception capabilities:</br> - Global administrator</br> - Security administrator</br> - Manage portal system settings|
 
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+
 ## What is deception technology?
 
 Deception technology is a security measure that provides immediate alerts of a potential attack to security teams, allowing them to respond in real-time. Deception technology creates fake assets like devices, users, and hosts that appear to belong to your network.
@@ -76,7 +79,7 @@ There are two types of lures available in the deception feature:
 
 You can specify decoys, lures, and the scope in a deception rule. See [Configure the deception feature](configure-deception.md) to learn more about how to create and modify deception rules.  
 
-When an attacker uses a decoy or a lure on any Defender for Endpoint-onboarded client, the deception capability triggers an alert that indicates possible attacker activity, regardless of whether deception was deployed on the client or not.
+When an attacker uses a decoy on any Defender for Endpoint-onboarded client, the deception capability triggers an alert that indicates possible attacker activity, regardless of whether deception was deployed on the client or not.
 
 ## Identify incidents and alerts activated by deception
 
@@ -91,7 +94,7 @@ The alert details contain:
 - The decoy device or user account where the alert originated
 - The type of attack like sign in attempts or lateral movement attempts
 
-:::image type="content" source="/defender/media/deception/fig2-deception.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/fig2-deception.png":::
+:::image type="content" source="/defender/media/deception/deception-alert-small.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/deception-alert.png":::
 
 *Figure 2. Details of a deception-related alert*
 

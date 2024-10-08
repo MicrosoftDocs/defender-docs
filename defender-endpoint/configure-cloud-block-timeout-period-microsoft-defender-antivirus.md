@@ -3,14 +3,14 @@ title: Configure the Microsoft Defender Antivirus cloud block timeout period
 description: You can configure how long Microsoft Defender Antivirus will block a file from running while waiting for a cloud determination.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 02/18/2024
+ms.date: 07/25/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -58,7 +58,7 @@ To specify the cloud block timeout period with Microsoft Defender for Endpoint S
 
 You can specify the cloud block timeout period with an [endpoint security policy in Microsoft Intune](/mem/intune/protect/endpoint-security-policy).
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) and sign in.
+1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)) and sign in.
 
 2. Select **Endpoint security**, and then under **Manage**, choose **Antivirus**.
 

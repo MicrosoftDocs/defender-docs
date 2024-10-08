@@ -344,7 +344,7 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 5. After a while, return to Exchange Online PowerShell, replace \<Domain\> with the domain that you configured, and run the following command:
 
    ```powerShell
-   Set-DkimConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
+   Set-DkimSigningConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
    ```
 
    - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
@@ -357,13 +357,13 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    For example:
 
    ```powerShell
-   Set-DkimConfig -Identity contoso.com -Enabled $true
+   Set-DkimSigningConfig -Identity contoso.com -Enabled $true
    ```
 
    Or
 
    ```powerShell
-   Set-DkimConfig -Identity contoso.onmicrosoft.com -Enabled $true
+   Set-DkimSigningConfig -Identity contoso.onmicrosoft.com -Enabled $true
    ```
 
    - For a custom domain, if Microsoft 365 is able to detect the CNAME records at the domain registrar, the command runs without error, and the domain is now used to DKIM sign outbound messages from the domain.
@@ -581,7 +581,10 @@ Use any of the following methods to verify DKIM signing of outbound email from M
      >  header.d=none;dmarc=none action=none header.from=contoso.com;
      > ```
 
-- **Use the test in Microsoft 365 help**: This feature requires a Global Administrator account, and isn't available in Microsoft 365 Government Community Cloud (GCC), GCC High, DoD, or Office 365 operated by 21Vianet.
+- **Use the test in Microsoft 365 help**: This feature requires a Global Administrator<sup>\*</sup> account, and isn't available in Microsoft 365 Government Community Cloud (GCC), GCC High, DoD, or Office 365 operated by 21Vianet.
+
+  > [!IMPORTANT]
+  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
   <div class="nextstepaction">
   <p><a href="https://admin.microsoft.com/AdminPortal/?searchSolutions=DKIM#/homepage" data-linktype="external">Run Tests: DKIM</a></p>
@@ -624,3 +627,6 @@ As described in [How SPF, DKIM, and DMARC work together to authenticate email me
 - [Use DMARC to validate email](email-authentication-dmarc-configure.md)
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+> [!TIP]
+> Exchange 2016 and Exchange 2019 are known to modify messages that flow through them, which can impact DKIM.

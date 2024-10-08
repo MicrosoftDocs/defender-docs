@@ -5,7 +5,7 @@ ms.service: defender-office-365
 ms.author: chrisda
 author: MSFTBen
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-guidance-templates
@@ -126,6 +126,6 @@ Note that external organizations must also allow your organization's domain for 
 
 Consider configuring access policies to implement Zero Trust identity and device access policies to protect Microsoft Teams chats, groups, and content such as files and calendars.
 
-Learn more about teams access policies: [Policy recommendations for securing Teams chats, groups, and files](../zero-trust-identity-device-access-policies-teams.md).
+Learn more about teams access policies: [Policy recommendations for securing Teams chats, groups, and files](/security/zero-trust/zero-trust-identity-device-access-policies-teams).
 
 Security in Microsoft Teams: [Overview of security and compliance - Microsoft Teams | Microsoft Docs](/microsoftteams/security-compliance-overview).

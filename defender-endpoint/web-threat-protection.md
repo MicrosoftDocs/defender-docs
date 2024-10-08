@@ -3,10 +3,10 @@ title: Protect your organization against web threats
 description: Learn about web protection in Microsoft Defender for Endpoint and how it can protect your organization.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 08/22/2022
+ms.date: 07/25/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -49,7 +49,7 @@ To turn on network protection on your devices:
 
 The following procedure describes how to configure web threat protection using the Microsoft Intune admin center.
 
-1. Go to the Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), and sign in.
+1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), and sign in.
  
 2. Choose **Endpoint security** \> **Attack surface reduction**, and then choose **+ Create policy**.
 

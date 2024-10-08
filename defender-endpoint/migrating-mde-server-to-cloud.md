@@ -1,12 +1,13 @@
 ---
 title: Migrating servers from Microsoft Defender for Endpoint to Microsoft Defender for Cloud
 description: Learn how to migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Cloud.
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security

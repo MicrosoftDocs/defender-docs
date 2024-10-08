@@ -4,11 +4,11 @@ description: Enable or disable users from locally changing settings in Microsoft
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 07/13/2023
+ms.date: 07/25/2024
 ms.reviewer: 
 manager: deniseb
 ms.collection: 
@@ -92,7 +92,7 @@ By default, lists that have been configured in local group policy and the Window
 
 ### Use Microsoft Intune to disable local list merging
 
-1. In the [Microsoft Intune admin center](https://endpoint.microsoft.com), select **Endpoint security** > **Antivirus**.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com), select **Endpoint security** > **Antivirus**.
 
 2. Choose **Create Policy**, or modify an existing Microsoft Defender Antivirus policy.
 

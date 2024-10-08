@@ -3,12 +3,12 @@ title: Enable block at first sight to detect malware in seconds
 description: Turn on the block at first sight feature to detect and block malware within seconds.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.reviewer: marcmcc
 manager: deniseb
 ms.custom: nextgen
-ms.date: 02/16/2024
+ms.date: 07/25/2024
 ms.subservice: ngp
 ms.topic: conceptual
 ms.collection: 
@@ -69,7 +69,7 @@ Microsoft Defender Antivirus uses multiple detection and prevention technologies
 
 ## Turn on block at first sight with Microsoft Intune
 
-1. In the Microsoft Intune admin center (<https://endpoint.microsoft.com>), go to **Endpoint security** \> **Antivirus**.
+1. In the Microsoft Intune admin center (<https://intune.microsoft.com>), go to **Endpoint security** \> **Antivirus**.
 
 2. Select an existing policy, or create a new policy using the **Microsoft Defender Antivirus** profile type. In our example, we selected **Windows 10, Windows 11, or Windows Server** for the platform.
 
@@ -128,7 +128,7 @@ You can confirm that block at first sight is enabled on individual client device
 
 ### Turn off block at first sight with Microsoft Intune
 
-1. Go to the Microsoft Intune admin center (<https://endpoint.microsoft.com>) and sign in.
+1. Go to the Microsoft Intune admin center (<https://intune.microsoft.com>) and sign in.
 
 2. Go to **Endpoint security** \> **Antivirus**, and then select your Microsoft Defender Antivirus policy.
 

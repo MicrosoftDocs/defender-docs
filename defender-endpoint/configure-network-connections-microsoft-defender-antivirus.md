@@ -4,13 +4,13 @@ description: Configure and test your connection to the Microsoft Defender Antivi
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: siosulli
+author: denisebmsft
 manager: deniseb
-ms.author: siosulli
+ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 06/26/2023
-ms.reviewer: mkaminska; pahuijbr
+ms.date: 10/08/2024
+ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
 - tier2
@@ -22,33 +22,31 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
+
+> [!IMPORTANT]
+> This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
 **Platforms**
 
 - Windows
 
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists connections that must be allowed for using the firewall rules. It also provides instructions for validating your connection. Configuring your protection properly ensures you receive the best value from your cloud-delivered protection services.
-
-> [!IMPORTANT]
-> This article contains information about configuring network connections only for Microsoft Defender Antivirus. If you are using Microsoft Defender for Endpoint (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 
-The Microsoft Defender Antivirus cloud service provides fast, and strong protection for your endpoints. It's optional to enable the cloud-delivered protection service. Microsoft Defender Antivirus cloud service is recommended, because it provides important protection against malware on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) for enabling service with Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
+The Microsoft Defender Antivirus cloud service provides fast, strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it's highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md), which describes how to enable the service by using Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
 
-After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Because your protection is a cloud service, computers must have access to the internet and reach the Microsoft cloud services. Don't exclude the URL `*.blob.core.windows.net` from any kind of network inspection.
+After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
 
 > [!NOTE]
-> The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as only protection for your files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates.
+> The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as protection for or against files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates, and applies to file-based and file-less threats, regardless of where they originate from.
 
 ## Services and URLs
 
 The table in this section lists services and their associated website addresses (URLs).
 
-Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs (excluding the URL `*.blob.core.windows.net`). The URLs in the following table use port 443 for communication. (Port 80 is also required for some URLs, as noted in the following table.)
+Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs. The URLs in the following table use port `443` for communication. (Port `80` is also required for some URLs, as noted in the following table.)
 
 |Service and description|URL|
 |---|---|
@@ -76,17 +74,44 @@ Use the following argument with the Microsoft Defender Antivirus command-line ut
 
 For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
 
-Use the tables below to see error messages you might encounter along with information on the root cause and possible solutions:
+#### Error messages
 
-|Error messages|Root cause|
-|:---|:---|:---|
-|Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS <br/> MpEnsureProcessMitigationPolicy: hr = 0x1 <br/> ValidateMapsConnection<br/>ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80070006 httpcore=451)<br/> MpCmdRun.exe: hr = 0x80070006**<br/><br/> ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072F8F httpcore=451)<br/>MpCmdRun.exe: hr = 0x80072F8F <br/><br/> ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE httpcore=451)<br/> MpCmdRun.exe: hr = 0x80072EFE| The root cause of these error messages is that the device doesn't have its system-wide WinHttp proxy configured. If you don't set the system-wide WinHttp proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` will not fully succeed. You'll see successful (response 200) connections to the endpoints but the MAPS connections would still fail.|
+Here are some error messages you might see: 
+
+```console
+Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS 
+MpEnsureProcessMitigationPolicy: hr = 0x1 
+ValidateMapsConnection
+```
+
+```console
+ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80070006 httpcore=451)
+MpCmdRun.exe: hr = 0x80070006
+```
+
+```console
+ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072F8F httpcore=451)
+MpCmdRun.exe: hr = 0x80072F8F
+```
+
+```output
+ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE httpcore=451)
+MpCmdRun.exe: hr = 0x80072EFE
+```
+
+#### Root causes
+
+The root cause of these error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set this proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
+
+#### Solutions
+
+The following table lists solutions:
 
 |Solution|Description|
 |:---|:---|
-|Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
-|Solution (Preferred 2) | - [Setup Redirect the Microsoft Automatic Update URL for a disconnected environment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> - [Configure a server that has access to the Internet to retrieve the CTL files](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> - [Redirect the Microsoft Automatic Update URL for a disconnected environment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> <br/> _Useful references:_ <br/> - Go to **Computer Configuration > Windows Settings > Security Settings > Public Key Policies > Certificate Path Validation Settings** > **Select the Network Retrieval tab** > **Select Define these policy settings** > **Select to clear the Automatically update certificates in the Microsoft Root Certificate Program (recommended) check box.** <br/> - [Certificate Revocation List (CRL) Verification - an Application Choice](https://social.technet.microsoft.com/wiki/contents/articles/964.certificate-revocation-list-crl-verification-an-application-choice.aspx) <br/> - [https://support.microsoft.com/help/931125/how-to-get-a-root-certificate-update-for-windows](https://support.microsoft.com/help/931125/how-to-get-a-root-certificate-update-for-windows) <br/> - [https://technet.microsoft.com/library/dn265983(v=ws.11).aspx](https://technet.microsoft.com/library/dn265983(v=ws.11).aspx) <br/> - [/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element](/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element) - [https://blogs.msdn.microsoft.com/amolravande/2008/07/20/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config/](https://blogs.msdn.microsoft.com/amolravande/2008/07/20/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config/)|
-|Work-around solution (Alternative) <br/> _Not best practice since you'll no longer check for revoked certificates or certificate pinning_.| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> To to this: <br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet** > set SSLOptions (dword) to 0 (hex). <br/> - 0 – disable pinning and revocation checks <br/> - 1 – disable pinning <br/>  - 2 – disable revocation checks only <br/> - 3 – enable revocation checks and pinning (default)|
+| Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
+| Solution (Preferred 2) | 1. Go to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Public Key Policies** > **Certificate Path Validation Settings**.<br/>2. Select the **Network Retrieval** tab, and then select **Define these policy settings**.<br/>3. Clear the **Automatically update certificates in the Microsoft Root Certificate Program (recommended)** check box.<br/><br/> Here are some useful resources: <br/> - [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))<br/>- [Improving application Start up time: GeneratePublisherEvidence setting in Machine.config](/archive/blogs/amolravande/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config)|
+| Work-around solution (Alternative) <br/> *This is not a best practice since you're no longer checking for revoked certificates or certificate pinning.*| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet**, and then set `SSLOptions (dword)` to `2` (hex). <br/>For reference, here are possible values for the DWORD: <br/> - `0 – disable pinning and revocation checks` <br/> - `1 – disable pinning` <br/>  - `2 – disable revocation checks only` <br/> - `3 – enable revocation checks and pinning (default)` |
 
 ## Attempt to download a fake malware file from Microsoft
 
@@ -121,18 +146,9 @@ A similar message occurs if you're using Internet Explorer:
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 >
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
->
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
->
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
->
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
->
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
->
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
->
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 ## See also

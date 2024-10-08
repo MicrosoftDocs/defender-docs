@@ -3,8 +3,8 @@ title: Configure Microsoft Defender for Endpoint on Android risk signals using A
 description: Describes how to configure Microsoft Defender for Endpoint risk signals using App Protection policies
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - mde-android
 ms.topic: conceptual
 ms.subservice: android
-ms.date: 01/13/2023
+ms.date: 08/26/2024
 ---
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
@@ -44,15 +44,15 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 - **Validate that the Microsoft Defender for Endpoint-Intune connector is enabled**.
 
-  a. Go to security.microsoft.com.
+  1. Go to security.microsoft.com.
 
-  b. Select **Settings > Endpoints > Advanced Features > Microsoft Intune Connection** is turned on.
+  1. Select **Settings > Endpoints > Advanced Features > Microsoft Intune Connection** is turned on.
 
-  c. If the connection isn't turned on, select the toggle to turn it on and then select **Save Preferences**.
+  1. If the connection isn't turned on, select the toggle to turn it on and then select **Save Preferences**.
 
      :::image type="content" source="media/enable-intune-connection.png" alt-text="The Advanced features section in the Microsoft Defender portal." lightbox="media/enable-intune-connection.png":::
 
-  d. Go to the **Microsoft Intune admin center** and Validate whether Microsoft Defender for Endpoint-Intune connector is enabled.
+  1. Go to the **Microsoft Intune admin center** and Validate whether Microsoft Defender for Endpoint-Intune connector is enabled.
 
      :::image type="content" source="media/validate-intune-connector.png" alt-text="The intune-connector status pane in the Microsoft Defender portal." lightbox="media/validate-intune-connector.png":::
 
@@ -60,11 +60,11 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
   Configure the connector on Microsoft Intune for App protection policies:
 
-  a. Go to **Tenant Administration > Connectors and Tokens > Microsoft Defender for Endpoint**.
+  1. Go to **Tenant Administration > Connectors and Tokens > Microsoft Defender for Endpoint**.
 
-  b. Turn on the toggle for the app protection policy for Android (as seen in the following screenshot).
+  1. Turn on the toggle for the app protection policy for Android (as seen in the following screenshot).
 
-  c. Select **Save**.
+  1. Select **Save**.
 
      :::image type="content" source="media/app-settings.png" alt-text="The application settings pane in the Microsoft Defender portal." lightbox="media/app-settings.png":::
 
@@ -82,13 +82,13 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
   2. Add apps.
 
-     a. Choose how you want to apply this policy to apps on different devices. Then add at least one app.
+     1. Choose how you want to apply this policy to apps on different devices. Then add at least one app.
 
         Use this option to specify whether this policy applies to unmanaged devices. In Android, you can specify the policy applies to Android Enterprise, Device Admin, or Unmanaged devices. You can also choose to target your policy to apps on devices of any management state.
 
         Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
-     b. Select Apps.
+     1. Select Apps.
 
         A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
 
@@ -106,7 +106,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
   Select **Included groups**. Then add the relevant groups.
 
-    :::image type="content" source="media/assignment.png" alt-text="The Included groups pane in the Microsoft Defender portal." lightbox="media/assignment.png":::
+  :::image type="content" source="media/assignment.png" alt-text="The Included groups pane in the Microsoft Defender portal." lightbox="media/assignment.png":::
 
 > [!NOTE]
 > If a config policy is to be targeted at unenrolled devices (MAM), the recommendation is to deploy the general app configuration settings in Managed Apps instead of using Managed Devices.
@@ -124,21 +124,21 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 1. Sign in to a managed application, for example, Outlook. The device is registered and the application protection policy is synchronized to the device. The application protection policy recognizes the device's health state.
 
-2. Select **Continue**. A screen is presented which recommends downloading and setting up of Microsoft Defender for Endpoint on Android app.
+2. Select **Continue**. A screen is presented which recommends downloading and setting up of the Microsoft Defender: Antivirus (Mobile) app.
 
 3. Select **Download**. You'll be redirected to the app store (Google play).
 
-4. Install the Microsoft Defender for Endpoint (Mobile) app and launch back Managed app onboarding screen.
+4. Install the Microsoft Defender: Antivirus (Mobile) app and go back to the managed app onboarding screen.
 
-   :::image type="content" source="media/download-mde.png" alt-text="The illustrative pages that contain the procedure of downloading MDE and launching back the app-onboarding screen." lightbox="media/download-mde.png":::
-
+   :::image type="content" source="media/mam-flow.png" alt-text="Shows the procedure of downloading Microsoft Defender: Antivirus (Mobile) app." lightbox="media/mam-flow.png":::
+   
 5. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
 
 6. Select **Continue** to log into the managed application.
 
 ## Configure Web protection
 
-Defender for Endpoint on Android allows IT Administrators to configure web protection. Web protection is available within the [Microsoft Intune admin center](https://endpoint.microsoft.com).
+Defender for Endpoint on Android allows IT Administrators to configure web protection. Web protection is available within the [Microsoft Intune admin center](https://intune.microsoft.com).
 
 Web protection helps to secure devices against web threats and protect users from phishing attacks. Note that anti-phishing and custom indicators (URL and IP addresses) are supported as part of web protection. Web content filtering is currently not supported on mobile platforms.
 
@@ -149,14 +149,14 @@ Web protection helps to secure devices against web threats and protect users fro
 3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
 4. In the **Settings** page, under the **General Configuration Settings**, add the following keys and set their value as required.
-    - **antiphishing**
-    - **vpn**
+   - **antiphishing**
+   - **vpn**
 
    To disable web protection, enter 0 for the antiphishing and VPN values.
 
    To disable only the use of VPN by web protection, enter these values:
-    - 0 for vpn
-    - 1 for antiphishing
+   - 0 for vpn
+   - 1 for antiphishing
 
    Add **DefenderMAMConfigs** key and set the value as 1.
 
@@ -170,22 +170,24 @@ Web protection helps to secure devices against web threats and protect users fro
 
 2. Provide a name and description to uniquely identify the policy. Target the policy to **'Selected apps'** and search for **'Microsoft Defender Endpoint for Android'**. Click the entry and then click **Select** and then **Next**.
 
-3. Add the key and value from the following table. Ensure that the **"DefenderMAMConfigs"** key is present in every policy that you create using Managed Apps route. For Managed Devices route, this key shouldn't exist. When you're done, click **Next**.
+1. Add the key and value from the following table. Ensure that the **"DefenderMAMConfigs"** key is present in every policy that you create using Managed Apps route. For Managed Devices route, this key shouldn't exist. When you're done, click **Next**.
 
-   | Key | Value Type | Default (true-enable, false-disable) | Description |
+   | Key | Value Type | Default (1-enable, 0-disable) | Description |
    | --- | --- | --- | --- |
-   | `DefenderNetworkProtectionEnable` | Integer | 0 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the network protection capabilities in the defender app.|
+   | `DefenderNetworkProtectionEnable` | Integer | 1 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the network protection capabilities in the defender app.|
    |`DefenderAllowlistedCACertificates`| String | None | None-Disable; This setting is used by IT admins to establish trust for root CA and self-signed certificates.|
    |`DefenderCertificateDetection`|Integer| 0 |2-Enable, 1 - Audit mode, 0 - Disable; When this feature is enabled with value as 2, end user notifications are sent to the user when Defender detects a bad certificate. Alerts are also sent to SOC Admins. In audit mode (1), notification alerts are sent to SOC admins, but no end user notifications are displayed to the user when Defender detects a bad certificate. Admins can disable this detection with 0 as the value and enable full feature functionality by setting 2 as the value.  |
-   | `DefenderOpenNetworkDetection` | Integer | 0 |2-Enable, 1 - Audit mode, 0 - Disable; This setting is used by IT Admins to enable or disable open network detection. By default, the open network detection is disabled with value as 0 and defender does not send end user notifications or alerts to SOC admins in security portal. If switched to audit mode with value 1, notification alert is sent to SOC admin, but no end user notification is displayed to the user when defender detects an open network. If it's enabled with value 2, then end user notification is displayed and also alerts to SOC admins is sent.|
+   | `DefenderOpenNetworkDetection` | Integer | 2 |2-Enable, 1 - Audit mode, 0 - Disable; This setting is used by IT Admins to enable or disable open network detection. If switched to audit mode with value 1, notification alert is sent to SOC admin, but no end user notification is displayed to the user when defender detects an open network. If it's enabled with value 2, then end user notification is displayed and also alerts to SOC admins is sent.|
    | `DefenderEndUserTrustFlowEnable` | Integer | 0 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
    | `DefenderNetworkProtectionAutoRemediation` | Integer | 1 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points or deleting suspicious certificates detected by Defender. |
    | `DefenderNetworkProtectionPrivacy` | Integer | 1 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable privacy in network protection. If privacy is disabled with value 0, then user consent is shown to share the malicious wifi or certs data. If its in enabled state with value 1, then no user consent is shown and no app data is collected.|
-
+   
 4. Include or exclude the groups you want the policy to apply to. Proceed to review and submit the policy.
 
 > [!NOTE]
-> Users need to enable location permission (which is an optional permission); this enables Defender for Endpoint to scan their networks and alert them when there are WiFi-related threats. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+> - The other config keys of Network Protection will only work if the parent key 'DefenderNetworkProtectionEnable' is enabled.
+> - Users need to enable location permission (which is an optional permission) and need to grant “Allow All the Time” permission to ensure protection against Wi-Fi threat, even when the app is not actively in use. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+
 
 ## Configure privacy controls
 
@@ -252,12 +254,12 @@ Use the following steps to configure the Disable sign out:
 2. Provide the policy a **name**.
 3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 4. In the **Settings** page, under the **General Configuration Settings**, add **DisableSignOut** as the key and set the value as 1.
+
    - By default, Disable Sign Out = 0.
    - Admin needs to make Disable Sign Out = 1 to disable the sign-out button in the app. Users will not see the sign out button once the policy is pushed to the device.
+
 5. Select **Next** and assign this profile to targeted devices and users.
 
-> [!IMPORTANT]
-> This feature is in Public Preview. The following information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Device Tagging
 
@@ -269,6 +271,7 @@ Use the following steps to configure the Device tags:
 2. Provide the policy a **name**.
 3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select Use configuration designer and add **DefenderDeviceTag** as the key and value type as **String**.
+
    - Admin can assign a new tag by adding the key **DefenderDeviceTag** and setting a value for device tag.
    - Admin can edit an existing tag by modifying the value of the key **DefenderDeviceTag**.
    - Admin can delete an existing tag by removing the key **DefenderDeviceTag**.

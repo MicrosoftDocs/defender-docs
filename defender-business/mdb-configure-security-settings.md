@@ -2,17 +2,17 @@
 title: Set up, review, and edit your security policies and settings in Microsoft Defender for Business
 description: View and edit security policies and settings in Defender for Business
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 05/05/2023
 ms.reviewer: efratka
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
  - SMB
  - m365-security
  - m365solution-mdb-setup
@@ -46,19 +46,19 @@ In addition to your default security policies, you can add other policies, such 
 You can view and edit settings for advanced features, such as:
 
 - [Turning on (or off) advanced features](mdb-portal-advanced-feature-settings.md#view-settings-for-advanced-features);
-- [Specifying which time zone to use in the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md#view-and-edit-other-settings-in-the-microsoft-365-defender-portal); and 
+- [Specifying which time zone to use in the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md#view-and-edit-other-settings-in-the-microsoft-365-defender-portal); and
 - [Whether to receive preview features as they become available](/defender-xdr/preview).
 
 ## Choose where to manage security policies and devices
 
 Before you begin setting up your security policies, you'll need to choose which portal you want to use. You can choose to use either the Microsoft Defender portal or the Microsoft Intune admin center to onboard devices and create or edit security policies. The following table explains both options.
 
-| Option | Description |
-|:---|:---|
-| **Microsoft Defender portal** | The Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)) is a one-stop shop for managing your company's devices, security policies, and security settings in Defender for Business. With a simplified configuration process, you can use the Microsoft Defender portal to onboard devices, access your security policies and settings, use the [Microsoft Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md), and [view and manage incidents](mdb-view-manage-incidents.md) in one place. <br/><br/>Note that currently, controlled folder access and attack surface reduction rules are set up and configured in the Microsoft Intune admin center. |
-| **Microsoft Intune admin center** | The Microsoft Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)) lets you manage your workforce's devices and apps, including how they access your company data. You can onboard devices and access your security policies and settings in Intune. You can also use Intune to set up and configure attack surface reduction rules in Defender for Business. Intune is not included in the standalone version of Defender for Business, but it can be added on. <br/><br/>If your company has been using Intune, you can choose to continue using it to manage your devices and security policies. To learn more, see [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy)  |
+|Option|Description|
+|---|---|
+|**Microsoft Defender portal**|The Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)) is a one-stop shop for managing your company's devices, security policies, and security settings in Defender for Business. With a simplified configuration process, you can use the Microsoft Defender portal to onboard devices, access your security policies and settings, use the [Microsoft Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md), and [view and manage incidents](mdb-view-manage-incidents.md) in one place. <br/><br/>Note that currently, controlled folder access and attack surface reduction rules are set up and configured in the Microsoft Intune admin center.|
+|**Microsoft Intune admin center**|The Microsoft Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)) lets you manage your workforce's devices and apps, including how they access your company data. You can onboard devices and access your security policies and settings in Intune. You can also use Intune to set up and configure attack surface reduction rules in Defender for Business. Intune is not included in the standalone version of Defender for Business, but it can be added on. <br/><br/>If your company has been using Intune, you can choose to continue using it to manage your devices and security policies. To learn more, see [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy)|
 
-If you're using Intune, and you attempt to view or edit security policies in the Microsoft Defender portal by going to **Configuration management** > **Device configuration**, you'll be prompted to choose whether to continue using Intune, or switch to using the Microsoft Defender portal instead, as shown in the following screenshot: 
+If you're using Intune, and you attempt to view or edit security policies in the Microsoft Defender portal by going to **Configuration management** > **Device configuration**, you'll be prompted to choose whether to continue using Intune, or switch to using the Microsoft Defender portal instead, as shown in the following screenshot:
 
 :::image type="content" source="media/mdb-usingintune-switchquestion.png" alt-text="Screenshot showing a screen that prompts the user to keep using Intune or switch to the Microsoft Defender portal.":::
 
@@ -67,7 +67,7 @@ In the preceding image, **Use Defender for Business configuration instead** refe
 > [!NOTE]
 > If you're managing your security policies in the Microsoft Defender portal, you can view those policies in the Intune admin center, where they're listed as **Antivirus** or **Firewall** policies. When you view your firewall policies in the Intune admin center, you'll see two policies listed: one policy for firewall protection and another for custom rules.
 >
-> You can export your list of policies through the [Microsoft Intune admin center](https://intune.microsoft.com/). 
+> You can export your list of policies through the [Microsoft Intune admin center](https://intune.microsoft.com/).
 
 ## Next steps
 
