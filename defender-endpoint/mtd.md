@@ -7,7 +7,7 @@ ms.subservice: onboard
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 0/08/2024
+ms.date: 10/08/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -85,10 +85,10 @@ The following sections describe the different scenarios for how to onboard Andro
 
 **Protection mode**
  - This mode only protects the work profile section. 
- - Learn more: [Mobile Application Management (MAM) and Android Enterprise personally-owned work profiles in Microsoft Intune](https://learn.microsoft.com/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles#android-enterprise-personally-owned-work-profiles)
+ - Learn more: [Mobile Application Management (MAM) and Android Enterprise personally-owned work profiles in Microsoft Intune](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles#android-enterprise-personally-owned-work-profiles)
 
 **How to deploy**
-[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune#deploy-on-android-enterprise-enrolled-devices)
+[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-android-enterprise-enrolled-devices)
 
 ### Android Enterprise personally owned devices using a personal profile  
 **Prerequisites**
@@ -99,7 +99,7 @@ The following sections describe the different scenarios for how to onboard Andro
 - This mode protects the Android personal profile. When a customer has a scenario with work profile as well this mode protects the entire device.
 
 **How to deploy**
-[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode)
+[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/android-intune.md#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode)
 
 ### Android Enterprise corporate-owned work profile (COPE) 
 **Prerequisites**
@@ -109,7 +109,7 @@ The following sections describe the different scenarios for how to onboard Andro
 - This mode protects only the work profile section. 
 
 **How to deploy**
-[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune#deploy-on-android-enterprise-enrolled-devices)
+[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-android-enterprise-enrolled-devices)
  
 ### Unsupported scenarios
 These scenarios are not currently supported:
