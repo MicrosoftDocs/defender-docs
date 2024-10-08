@@ -1,12 +1,12 @@
 ---
-title: Overview of partner Integration
+title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
 ms.date: 10/08/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
-# Overview of partner Integration
+# Overview of partner integration
 
 Microsoft Defender for Cloud is a Cloud Native Application Protection Platform (CNAPP) that helps customers protect their cloud resources from threats and vulnerabilities. Many customers use multiple security solutions to protect their cloud resources. Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources. Integration with solutions helps you to both gain and provide insights from each security solution with Defender for Cloud.
 
@@ -68,6 +68,8 @@ The following table lists the partner solutions that provide API security testin
 | F5 Networks | F5 Networks is a technology company that specializes in application security, multi-cloud management, and application delivery networking. It provides solutions to ensure the security, availability, and performance of applications across various environments. |  [Integrate partner solutions](partner-integration.md) |
 | Rapid7 | Rapid7 is a cybersecurity company that provides security data and analytics solutions. It helps organizations manage vulnerabilities, detect threats, and respond to incidents in real-time, enhancing their overall security posture. | [Integrate partner solutions](partner-integration.md) |
 | Qualys | Qualys is a cybersecurity company that provides cloud-based security and compliance solutions. It helps organizations identify and manage security risks, ensuring continuous protection and compliance across their IT environments. | [Integrate partner solutions](partner-integration.md) |
+
+Learn how to [integrate these security solutions](partner-integration.md).
 
 ## Next step
 

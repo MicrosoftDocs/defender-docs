@@ -142,6 +142,9 @@
         - name: Overview of partner integrations
           displayName: partner, integration, integrations, partners
           href: partner-integrations.md
+        - name: Integrate partner integrations
+          displayName: partner, integration, integrations, partners
+          href: integrate-partner-integrations.md
         - name: Partner integrations
           items:  
           - name: ServiceNow
@@ -162,7 +165,7 @@
                   href: onboarding-guide-stackhawk.md
                 - name: Onboard Bright Security (preview)
                   href: onboarding-guide-bright.md
-        - name: Integrate partner solutions (legacy)
+        - name: Security solutions (legacy)
           displayName: security, solutions, integrate, integrated, data sources
           href: partner-integration.md
     - name: Integrate Microsoft solutions

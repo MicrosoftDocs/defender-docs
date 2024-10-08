@@ -4,8 +4,8 @@ description: Learn about security testing scan results from partner applications
 author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
-ms.topic: conceptual
-ms.date: 11/15/2023
+ms.topic: concept-article
+ms.date: 10/08/2024
 ---
 
 # Overview of API integrations (preview)
