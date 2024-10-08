@@ -9,7 +9,7 @@ manager: deniseb
 ms.author: deniseb
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 05/17/2024
+ms.date: 10/08/2024
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
@@ -22,33 +22,31 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
+
+> [!IMPORTANT]
+> This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
 **Platforms**
 
 - Windows
 
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists connections that must be allowed for using the firewall rules. It also provides instructions for validating your connection. Configuring your protection properly ensures you receive the best value from your cloud-delivered protection services.
-
-> [!IMPORTANT]
-> This article contains information about configuring network connections only for Microsoft Defender Antivirus. If you are using Microsoft Defender for Endpoint (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 
-The Microsoft Defender Antivirus cloud service provides fast, and strong protection for your endpoints. It's optional to enable the cloud-delivered protection service. Microsoft Defender Antivirus cloud service is recommended, because it provides important protection against malware on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) for enabling service with Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
+The Microsoft Defender Antivirus cloud service provides fast, strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it's highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md), which describes how to enable the service by using Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
 
-After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Because your protection is a cloud service, computers must have access to the internet and reach the Microsoft cloud services. Don't exclude the URL `*.blob.core.windows.net` from any kind of network inspection.
+After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
 
 > [!NOTE]
-> The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as only protection for your files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates.
+> The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as protection for or against files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates, and applies to file-based and file-less threats, regardless of where they originate from.
 
 ## Services and URLs
 
 The table in this section lists services and their associated website addresses (URLs).
 
-Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs (excluding the URL `*.blob.core.windows.net`). The URLs in the following table use port 443 for communication. (Port 80 is also required for some URLs, as noted in the following table.)
+Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs. The URLs in the following table use port `443` for communication. (Port `80` is also required for some URLs, as noted in the following table.)
 
 |Service and description|URL|
 |---|---|
