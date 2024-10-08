@@ -5,7 +5,7 @@ manager: deniseb
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/17/2024
+ms.date: 10/08/2024
 audience: ITPro
 ms.topic: conceptual
 author: denisebmsft
