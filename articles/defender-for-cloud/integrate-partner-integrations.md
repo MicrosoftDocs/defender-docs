@@ -24,3 +24,24 @@ You can review the [list of available integrations](partner-integrations.md).
 
 ## Enable a partner integration
 
+Depending on which integration you want to enable, after you finish the steps presented below, you might need to follow additional steps to complete the integration on the partners' side.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Search for and select **Microsoft Entra ID**.
+
+1. Select **+ Add** > **App registration** > **New registration**.
+
+    :::image type="content" source="media/integrate-partner-integrations/app-registration.png" alt-text="Screenshot that shows  how to navigate to the app registration button." lightbox="media/integrate-partner-integrations/app-registration.png":::
+
+1. Enter a name.
+
+1. Select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
+
+1. Select **Register**.
+
+1. Navigate to the **Manage** > **Certificates & secrets**.
+
+    :::image type="content" source="media/integrate-partner-integrations/secrets.png" alt-text="Screenshot that shows you where to navigate to to get to the Certificates and Secrets screen." lightbox="media/integrate-partner-integrations/secrets.png":::
+
+1. 
