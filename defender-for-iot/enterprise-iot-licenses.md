@@ -11,7 +11,7 @@ ms.topic: overview
 
 # Set up and manage enterprise IoT security licenses
 
-Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. The security monitoring includes IoT related alerts, vulnerabilities, and recommendations that are integrated with your existing Microsoft Defender for Endpoint data.
+Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. The security monitoring includes IoT related vulnerabilities and recommendations that are integrated with your existing Microsoft Defender for Endpoint data.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 

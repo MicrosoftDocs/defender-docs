@@ -13,7 +13,7 @@ ms.topic: how-to
 
 Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices.
 
-When enterprise IoT is activated, the data for alerts, recommendations, and vulnerabilities is shown in the Microsoft Defender portal.
+When enterprise IoT is activated, the data for recommendations and vulnerabilities is shown in the Microsoft Defender portal.
 
 ## View enterprise IoT data in the Defender portal
 
