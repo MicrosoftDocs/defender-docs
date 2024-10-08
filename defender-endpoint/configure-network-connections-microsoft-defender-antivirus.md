@@ -31,7 +31,7 @@ search.appverid: met150
 
 - Windows
 
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Defender Antivirus cloud-delivered protection services.
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 
