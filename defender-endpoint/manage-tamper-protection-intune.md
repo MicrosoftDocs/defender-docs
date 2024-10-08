@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/24/2023
+ms.date: 10/08/2024
 audience: ITPro
 ms.topic: how-to
 author: siosulli
@@ -56,7 +56,7 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 | Intune licenses | Intune licenses are required. See [Microsoft Intune licensing](/mem/intune/fundamentals/licenses). |
 | Operating System | Windows devices must be running Windows 10 [version 1709 or later](/lifecycle/announcements/revised-end-of-service-windows-10-1709) or Windows 11. (For more information about releases, see [Windows release information](/windows/release-health/release-information).) <br/><br/>For Mac, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md). |
 | Security intelligence | You must be using Windows security with [security intelligence](https://www.microsoft.com/wdsi/definitions) updated to version `1.287.60.0` (or later). |
-| Antimalware platform | Devices must be using antimalware platform version `4.18.1906.3` (or above) and anti-malware engine version `1.1.15500.X` (or later). See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md). |
+| Antimalware platform | Devices must be using antimalware platform version `4.18.1906.3` (or later) and anti-malware engine version `1.1.15500.X` (or later). See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md). |
 | Microsoft Entra ID | Your Intune and Defender for Endpoint tenants must share the same Microsoft Entra infrastructure. |
 | Defender for Endpoint | Your devices must be onboarded to Defender for Endpoint. |
 
