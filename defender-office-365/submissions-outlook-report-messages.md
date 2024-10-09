@@ -14,7 +14,7 @@ ms.collection:
 description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button or the Report Message and Report Phishing add-ins.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 10/07/2024
+ms.date: 10/09/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -41,16 +41,15 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
 ## Use the built-in Report button in Outlook
 
 - The built-in **Report** button is available in the following versions of Outlook:
-  - Outlook for Microsoft 365 and Outlook 2021 Version 2407 (Build 17830.20138) or later.  Now available in Current Channel and coming soon to Monthly Enterprise Channel.
-    
+  - Outlook for Microsoft 365 and Outlook 2021 Version 2407 (Build 17830.20138) or later (available in the Current Channel and coming soon to the Monthly Enterprise Channel).
   - Outlook for Mac version 16.89 (24090815) or later.
   - The new Outlook for Windows.
   - Outlook on the web.
 
   The **Report** button is available in supported versions of Outlook if both of the following conditions are true:
 
-- User reporting is turned on.
-- The built-in **Report** button is configured in the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) at <https://security.microsoft.com/securitysettings/userSubmission>.
+  - User reporting is turned on.
+  - The built-in **Report** button is configured in the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) at <https://security.microsoft.com/securitysettings/userSubmission>.
 
   If user reporting is turned off and a non-Microsoft add-in button is selected, the **Report** button isn't available in supported versions of Outlook.
 
