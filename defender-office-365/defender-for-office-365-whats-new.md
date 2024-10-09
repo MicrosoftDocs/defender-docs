@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 10/09/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -48,6 +48,7 @@ For more information on what's new with other Microsoft Defender security produc
 - With one click, SecOps personnel can take a quarantine release action directly from Explorer (Threat Explorer) or the Email entity page (no need to go to the Quarantine page in the Defender portal). For more information, see [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md).
 - [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Mac v16.89 (24090815) or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 - We're updating the end user experience for allow and block list management of their email messages. With one click, users can block email from unwanted senders and prevent those messages from appearing in their default quarantine view and in quarantine notifications. Users can also allow email from trusted and prevent future messages from those senders from being quarantined (if there are no admin overrides). Users also have visibility into any admin overrides that led to a quarantined email message. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
+- Admins can see [policy](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-modify-anti-spam-policies) what-if insights for the bulk complaint level (BCL) threshold, spoof, and impersonation settings, which lets them understand the implication of a setting change based on historical data. This capability lets admins confidently tune their settings without anxiety about possible repurcussions on users.
 
 ## August 2024
 
