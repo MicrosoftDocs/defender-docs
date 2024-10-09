@@ -81,7 +81,9 @@ This article lists the security alerts you might get for Azure Cosmos DB from Mi
 
 **Severity**: Medium
 
-### **Suspicious extraction of Azure Cosmos DB account keys** (AzureCosmosDB_SuspiciousListKeys.SuspiciousPrincipal)
+### **Suspicious extraction of Azure Cosmos DB account keys** 
+
+(AzureCosmosDB_SuspiciousListKeys.SuspiciousPrincipal)
 
 **Description**: A suspicious source extracted Azure Cosmos DB account access keys from your subscription. If this source is not a legitimate source, this might be a high impact issue. The access key that was extracted provides full control over the associated databases and the data stored within. See the details of each specific alert to understand why the source was flagged as suspicious.
 
