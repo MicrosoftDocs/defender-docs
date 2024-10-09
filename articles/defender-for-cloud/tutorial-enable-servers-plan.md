@@ -71,9 +71,9 @@ After enabling the plan, you have the ability to [configure the features of the 
 
 ## Enable Plan 1 for specific resources
 
-Although we recommend that you enable the plan for an entire Azure subscription, you can turn on Plan 1 for a specific resource using the Defender for Cloud REST API or a PowerShell script.
+Although we recommend that you enable the plan for an entire Azure subscription, you can enable Defender for Servers Plan 1 for a specific resource. Note that plan ettings, such as Defender for Endpoint and Defender Vulnerability Management are enabled at the subscription level.
 
--  Defender for Server settings for each resource are inherited by the subscription-level settings by default.
+-  Defender for Servers settings for each resource are inherited by the subscription-level settings by default.
 - If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured.
 
 ### Enable for a specific machine
