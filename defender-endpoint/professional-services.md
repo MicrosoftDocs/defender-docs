@@ -104,7 +104,7 @@ Respond to security incidents quickly, effectively and at scale with complete in
 |[Synergy Advisors E-Visor Teams App](https://synergyadvisors.biz/e-visor-for-teams/)|Synergy Advisors LLC|E-Visor Teams App is a centralized place to involve and empower your end-users in the security and productivity of the organization by presenting unique information using data from Microsoft Defenders and Microsoft Entra ID while ensuring identity governance, and compliance.|
 |[SepagoSOC](https://go.microsoft.com/fwlink/?linkid=2202677)|Sepago GmbH|SepagoSOC experts ensure that your environment is constantly monitored and protected utilizing the complete range of Microsoft Defender XDR solutions and Microsoft Sentinel.SepagoSOC helps you to constantly evolve your security landscape with both technical and organizational experience.|
 |[SecureShield365](https://patriotconsultingtech.com/)|Patriot Consulting|SecureShield365 includes a full deployment of all Microsoft Defender XDR products including Intune plus 12 months of support. Microsoft XDR including Sentinel, Defender for Cloud, and MDR are available options.|
-|[Open Systems MDR+](https://go.microsoft.com/fwlink/?linkid=2208895)|Open Systems|Built for Microsoft security customers, MDR+ combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
+|[Ontinue](https://go.microsoft.com/fwlink/?linkid=2208895)|Ontinue|Built for Microsoft security customers, Ontinue combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
 
 ## Protect
 
@@ -138,7 +138,7 @@ Protect your organization proactively by evaluating your organization's ability 
 |[Managed Microsoft XDR](https://www.cyberproof.com/security-services/managed-xdr-for-microsoft/)|Quorum Cyber|Quorum Cyber's Managed Microsoft XDR, a solution designed to enable customers to unleash the power of Microsoft security to reduce cyber risk and maximize return of investment in security.|
 |[SepagoSOC](https://go.microsoft.com/fwlink/?linkid=2202677)|Sepago GmbH|SepagoSOC experts ensure that your environment is constantly monitored and protected utilizing the complete range of Microsoft Defender XDR solutions and Microsoft Sentinel. They help you to constantly evolve your security landscape with both technical and organizational experience.|
 |[SecureShield365](https://patriotconsultingtech.com/)|Patriot Consulting|SecureShield365 includes a full deployment of all Microsoft Defender XDR products including Intune plus 12 months of support. Microsoft XDR including Sentinel, Defender for Cloud, and MDR are available options.|
-|[Open Systems MDR+](https://www.ontinue.com/mdr/microsoft-mdr/)|Open Systems|Built for Microsoft security customers, MDR+ combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
+|[Ontinue](https://www.ontinue.com/mdr/microsoft-mdr/)|Ontinue|Built for Microsoft security customers, Ontinue combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
 
 ## Evolve
 
@@ -163,7 +163,7 @@ Evolve your organization's security posture through improved processes and techn
 |[Managed Microsoft XDR](https://www.cyberproof.com/security-services/managed-xdr-for-microsoft/)|Quorum Cyber|Quorum Cyber's Managed Microsoft XDR, a solution designed to enable customers to unleash the power of Microsoft security to reduce cyber risk and maximize return of investment in security.|
 |[SepagoSOC](https://go.microsoft.com/fwlink/?linkid=2202677)|Sepago GmbH|SepagoSOC experts ensure that your environment is constantly monitored and protected utilizing the complete range of Microsoft Defender XDR solutions and Microsoft Sentinel. They help you to constantly evolve your security landscape with both technical and organizational experience.|
 |[SecureShield365](https://patriotconsultingtech.com/)|Patriot Consulting|SecureShield365 includes a full deployment of all Microsoft Defender XDR products including Intune plus 12 months of support. Microsoft XDR including Sentinel, Defender for Cloud, and MDR are available options.|
-|[Open Systems MDR+](https://www.ontinue.com/mdr/microsoft-mdr/)|Open Systems|Built for Microsoft security customers, MDR+ combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
+|[Ontinue MDR+](https://www.ontinue.com/mdr/microsoft-mdr/)|Ontinue|Built for Microsoft security customers, Ontinue combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
 
 ## Educate
 
