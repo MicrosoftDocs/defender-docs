@@ -10,7 +10,7 @@ ms.date: 10/08/2024
 
 Microsoft Defender for Cloud is a Cloud Native Application Protection Platform (CNAPP) that helps customers protect their cloud resources from threats and vulnerabilities. Many customers use multiple security solutions to protect their cloud resources. Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources. Integration with solutions helps you to both gain and provide insights from each security solution with Defender for Cloud.
 
-These the types of partner integration in Defender for Cloud:
+The following are the types of partner integration available in Defender for Cloud:
 
 - [Obtain insights from partner integrations](#obtain-insights-from-partner-integrations)
 - [Provide insights to partner integrations](#provide-insights-to-partner-integrations)
@@ -30,7 +30,7 @@ Defender for Cloud can obtain insights from the following types of partner integ
 
 The following table shows the list of software composition analysis (SCA) partners that are partnered with Defender for Cloud. 
 
-SCA partners play a vital role in software development by identifying and managing open-source and third-party components within applications. This process ensures that these components are secure, free from known vulnerabilities, and compliant with their respective licenses.
+SCA partners play a vital role in software development by identifying and managing open-source and partner components within applications. This process ensures that these components are secure, free from known vulnerabilities, and compliant with their respective licenses.
 
 | Partner name | Description | Documentation |
 |--|--|--|
@@ -66,7 +66,7 @@ Learn how to connect Defender for Cloud to an external [partner integrations](in
 | IBM QRadar | IBM QRadar is a Security Information and Event Management (SIEM) platform that provides real-time visibility into IT infrastructure. It collects, analyzes, and correlates security events from various sources to help organizations detect, investigate, and respond to security threats. | [Partner integration page](https://www.ibm.com/docs/en/dsm?topic=microsoft-defender-cloud) |
 | Datadog | Datadog provides a monitoring and security platform for cloud applications. It offers infrastructure monitoring, application performance monitoring, log management, and cloud security solutions. | [Partner integration page](https://docs.datadoghq.com/integrations/microsoft_defender_for_cloud/) |
 | VMware Aria | VMware Aria is a multicloud management portfolio that provides end-to-end solutions for managing the cost, performance, configuration, and delivery of infrastructure and applications. It's designed to address the operational challenges of cloud-native applications and public cloud environments. <br><br> VMware  Aria automatically collects MDC data when an Azure subscription is onboarded. | [Partner integration page](https://docs.vmware.com/en/VMware-Aria-Automation-for-Secure-Clouds/services/chss-getting-started/GUID-integrations-microsoft-defender.html) |
-| SAFE One | SAFE One is a unified platform for managing partner and first-party cyber risk. It uses AI-driven technology to provide real-time insights into cyber risk and suggests security improvements based on business affect. | [Partner integration page](https://docs.safe.security/docs/azure) |
+| SAFE One | SAFE One is a unified platform for managing partner and first-party cyber risk. It uses AI-driven technology to provide real-time insights into cyber risk and suggests security improvements based on business effect. | [Partner integration page](https://docs.safe.security/docs/azure) |
 | Cortex XSOAR | Cortex XSOAR is a security orchestration, automation, and response (SOAR) platform. It unifies automation, case management, real-time collaboration, and threat intelligence to streamline security operations. | [Partner integration page](https://xsoar.pan.dev/docs/reference/integrations/azure-security-center-v2) |
 | VulcanCyber | VulcanCyber provides a SaaS platform for cyber risk management. It focuses on risk reporting, vulnerability data correlation, and risk prioritization to help organizations mitigate cyber threats effectively. | [Partner integration page](https://help.vulcancyber.com/en/articles/7850120-microsoft-defender-for-cloud-connector-new-revision) |
 | Autobahn security | Autobahn Security is a SaaS platform that helps IT teams manage and remediate cybersecurity vulnerabilities more efficiently. It aggregates, filters, and prioritizes vulnerabilities from various scanners, providing easy-to-understand remediation guides to enhance network security. | [Partner integration page](https://support.autobahn-security.com/knowledge/integrate-ms-defender-for-cloud-with-autobahn-fit) |
@@ -88,7 +88,7 @@ The following table presents our partners who provide security solutions.
 |--|--|--|
 | Barracuda Networks | Barracuda Networks is a cybersecurity company that provides security, networking, and storage solutions. It offers a range of products including email protection, application security, network security, and data protection to help organizations safeguard their digital environments. | [Integrate partner solutions](partner-integration.md) |
 | Check Point | Check Point is a cybersecurity company that provides comprehensive security solutions for networks, endpoints, clouds, and mobile devices. It offers a range of products and services designed to protect organizations from cyber threats and ensure robust security management. | [Integrate partner solutions](partner-integration.md) |
-| F5 Networks | F5 Networks is a technology company that specializes in application security, multi-cloud management, and application delivery networking. It provides solutions to ensure the security, availability, and performance of applications across various environments. |  [Integrate partner solutions](partner-integration.md) |
+| F5 Networks | F5 Networks is a technology company that specializes in application security, multicloud management, and application delivery networking. It provides solutions to ensure the security, availability, and performance of applications across various environments. |  [Integrate partner solutions](partner-integration.md) |
 | Rapid7 | Rapid7 is a cybersecurity company that provides security data and analytics solutions. It helps organizations manage vulnerabilities, detect threats, and respond to incidents in real-time, enhancing their overall security posture. | [Integrate partner solutions](partner-integration.md) |
 | Qualys | Qualys is a cybersecurity company that provides cloud-based security and compliance solutions. It helps organizations identify and manage security risks, ensuring continuous protection and compliance across their IT environments. | [Integrate partner solutions](partner-integration.md) |
 
