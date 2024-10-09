@@ -347,6 +347,7 @@ Valid URL entries and their results are described in the following subsections.
 - **Allow not matched**:
   - abc-contoso.com
   - contoso.com/a
+  - abc.xyz.contoso.com/a/b/c
   - payroll.contoso.com
   - test.com/contoso.com
   - test.com/q=contoso.com
@@ -356,6 +357,7 @@ Valid URL entries and their results are described in the following subsections.
 - **Block match**:
   - contoso.com
   - contoso.com/a
+  - abc.xyz.contoso.com/a/b/c
   - payroll.contoso.com
   - test.com/contoso.com
   - test.com/q=contoso.com
