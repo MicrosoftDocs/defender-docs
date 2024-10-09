@@ -10,18 +10,25 @@ ms.date: 10/08/2024
 
 Microsoft Defender for Cloud is a Cloud Native Application Protection Platform (CNAPP) that helps customers protect their cloud resources from threats and vulnerabilities. Many customers use multiple security solutions to protect their cloud resources. Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources. Integration with solutions helps you to both gain and provide insights from each security solution with Defender for Cloud.
 
-There are two types of partner Integration in Defender for Cloud:
+These the types of partner integration in Defender for Cloud:
 
-- [Obtain external partner data](#obtain-external-partner-data)
-- [Share data with external partners](#share-data-with-external-partners)
+- [Obtain insights from partner integrations](#obtain-insights-from-partner-integrations)
+- [Provide insights to partner integrations](#provide-insights-to-partner-integrations)
+- [External security solutions (legacy)](#external-security-solutions-legacy)
 
-## Obtain external partner data
+## Obtain insights from partner integrations
 
 The following table lists the partner solutions that provide data to Defender for Cloud. These solutions help you to gain more visibility into your cloud resources and enhance your security posture.
 
+### Software composition analysis (SCA)
+
+The following table shows the list of software composition analysis (SCA) partners that are partnered with Defender for Cloud. 
+
+SCA partners play a vital role in software development by identifying and managing open-source and third-party components within applications. This process ensures that these components are secure, free from known vulnerabilities, and compliant with their respective licenses.
+
 | Partner name | Description | Documentation |
 |--|--|--|
-| Endor Labs | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Integrate partner integrations](integrate-partner-integrations.md) ||
+| Endor Labs | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Integrate partner integrations](integrate-partner-integrations.md) |
 
 ### API integrations
 
@@ -37,13 +44,13 @@ The following table lists the partner solutions that provide API security testin
 
 | Partner name | Description | Documentation |
 |--|--|--|
-| ServiceNow | ServiceNow is a cloud computing platform that helps companies manage digital workflows for enterprise operations. ServiceNow provides a range of services including IT service management, customer service management, and HR service delivery. | [Integrate partner integrations](integrate-partner-integrations.md) |
+| ServiceNow | ServiceNow is a cloud computing platform that helps companies manage digital workflows for enterprise operations. ServiceNow provides a range of services including IT service management, customer service management, and HR service delivery. | [ServiceNow integration with Defender for Cloud](integration-servicenow.md) |
 
-
-
-## Share data with external partners
+## Provide insights to partner integrations
 
 The following table lists our partners that can receive data from Defender for Cloud. These solutions help you to provide insights from Defender for Cloud to other security solutions.
+
+Learn how to connect Defender for Cloud to an external [partner integrations](integrate-partner-integrations.md).
 
 | Partner name | Description | Partner integration documentation |
 |--|--|--|
@@ -67,7 +74,9 @@ The following table lists our partners that can receive data from Defender for C
 | Phoenix Security | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Partner integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |
 | Nucleus | Nucleus is a cybersecurity company that provides a unified vulnerability management platform. It helps organizations centralize, prioritize, and remediate security vulnerabilities across their entire IT environment. | [Partner integration page](https://nucleussec.com/Integration/) |
 
-## External security solutions
+## External security solutions (legacy)
+
+The following table presents our partners who provide security solutions.
 
 | Partner name | Description | Documentation |
 |--|--|--|
