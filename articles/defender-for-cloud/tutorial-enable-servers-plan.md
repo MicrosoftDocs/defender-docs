@@ -23,7 +23,7 @@ Defender for Servers provides two plans.
 
 - **Plan the deployment**. Work through the [Defender for Servers planning guide](plan-defender-for-servers.md).
 - **Review plans**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plans.
-- **Decide on deployment scope**: Decide where you want to enable Defender for Servers. [Learn more](defender-for-servers-overview.md#enabling-plans).
+- **Decide on deployment scope**: Decide where you want to enable Defender for Servers. [Learn more](defender-for-servers-overview.md#enabling-deployment-scope).
 - **Review pricing**. Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
 - Ensure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
@@ -33,10 +33,8 @@ Defender for Servers provides two plans.
     If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md), Defender Plan 1 features are available. For Defender for Servers Plan 2, in addition to Plan 1 features, the only other available capability will be premium Defender Vulnerability Management features.
 
 - **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-- **Onboard with a custom Log Analytics workspace**: If you [used the default Log Analytics workspace](plan-defender-for-servers-data-workspace.md) when you enabled Defender for Cloud on a subscription for the first time, when you turn on Defender for Servers Plan 2 it's enabled automatically on that workspace.
-
-    If you used a custom workspace, you need to specifically enable Defender for Servers Plan 2 on it. The workspace isn't relevant for Plan 1.
-
+- **Onboard with a Log Analytics workspace**: The benefit of free 500 MB data ingestion (available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-)) is available for machines running the  Azure Monitor agent (AMA) in subscriptions with Defender for Servers Plan 2 enabled. The benefit is granted to the Log Analytics workspace to which the machine reports. 
+- You need to specifically enable Defender for Servers Plan 2 on the workspace.
 - **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
 
 ## Enable on Azure, AWS, or GCP
@@ -69,32 +67,10 @@ You can enable a Defender for Servers plan for an Azure subscription, AWS accoun
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
 
-## Enable Plan 1 for specific resources
+## Enable Plan 2 on a workspace
 
-Although we recommend that you enable the plan for an entire Azure subscription, you can enable Defender for Servers Plan 1 for a specific resource. Note that plan ettings, such as Defender for Endpoint and Defender Vulnerability Management are enabled at the subscription level.
+If you're using a Log Analytics workspace to take advantage of the free data ingestion for machines running the AMA, enable Plan 2 on that workspace.
 
--  Defender for Servers settings for each resource are inherited by the subscription-level settings by default.
-- If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured.
-
-### Enable for a specific machine
-
-To turn Plan 1 on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
-
-### Enable for a resource group or tags
-
-Enable Plan 1 on a resource group or Azure resource tags as follows:
-
-1. [Download and save this file](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
-1. Run the downloaded file.
-1. Customize as needed. Set pricing by **tag** or by **resource group**.
-1. Follow the rest of the onscreen instructions.
-
-
-## Enable Plan 2 on a custom workspace
-
-If you're not using the default workspace created when you enabled Defender for Cloud on an Azure subscription, you should enable Plan 2 on your custom workspaces.
-
-After you enable on the custom workspace, all machines connected to the workspace have Plan 2 enabled, regardless of the settings on their connected subscription.
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
 
@@ -106,6 +82,24 @@ After you enable on the custom workspace, all machines connected to the workspac
 
     :::image type="content" source="media/tutorial-enable-servers-plan/enable-workspace-servers.png" alt-text="Screenshot that shows the plan enablement page at the Log Analytics workspace level." lightbox="media/tutorial-enable-servers-plan/enable-workspace-servers.png":::
 
+
+
+## Enable Plan 1 at resource level
+
+Although we recommend that you enable the plan for an entire Azure subscription, you can enable Defender for Servers Plan 1 at resource level for specific machines.
+
+### Enable for a specific machine
+
+To turn Plan 1 on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
+
+### Enable for a resource group or based on resource tags
+
+Enable Plan 1 on a resource group or Azure resource tags as follows:
+
+1. [Download and save this file](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
+1. Run the downloaded file.
+1. Customize as needed. Set pricing by **tag** or by **resource group**.
+1. Follow the rest of the onscreen instructions.
 
 
 ## Next steps
