@@ -18,7 +18,13 @@ These the types of partner integration in Defender for Cloud:
 
 ## Obtain insights from partner integrations
 
-The following table lists the partner solutions that provide data to Defender for Cloud. These solutions help you to gain more visibility into your cloud resources and enhance your security posture.
+Defender for Cloud has the ability to gain different types of insights from partner integrations. These integrations help you to gain more visibility into your cloud resources and enhance your security posture.
+
+Defender for Cloud can obtain insights from the following types of partner integrations:
+
+- [Software composition analysis (SCA)](#software-composition-analysis-sca)
+- [API integrations](#api-integrations)
+- [Ticketing services](#ticketing-services)
 
 ### Software composition analysis (SCA)
 
@@ -91,4 +97,4 @@ Learn how to [integrate these security solutions](partner-integration.md).
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Integrate partner solutions](partner-integration.md)
+> [Integrate partner integrations](integrate-partner-integrations.md)
