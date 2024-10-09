@@ -31,12 +31,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
 | October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
 | October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
 | October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
 | October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
+
+### Binary drift detection released as GA
+
+October 9, 2024
+
+Binary drift detection is now released as GA in the Defender for Container plan. Please note that binary drift detection now works on all AKS versions.
 
 ### Updated containers runtime recommendations (preview)
 
