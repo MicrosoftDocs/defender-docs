@@ -21,7 +21,25 @@ The following table lists the partner solutions that provide data to Defender fo
 
 | Partner name | Description | Documentation |
 |--|--|--|
-| Endor Labs | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. | [Integrate partner solutions](https://docs.endorlabs.com/integrations/) |
+| Endor Labs | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Integrate partner integrations](integrate-partner-integrations.md) ||
+
+### API integrations
+
+The following table lists the partner solutions that provide API security testing capabilities to Defender for Cloud. These solutions help you to proactively test and harden APIs within your CI/CD pipelines.
+
+| Partner name | Description | Enablement Guide |
+|--|--|--|
+| [42Crunch](https://aka.ms/APISecurityTestingPartnershipIgnite2023) | Developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. | [42Crunch onboarding guide](onboarding-guide-42crunch.md) |
+| [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk) | StackHawk is the only modern DAST and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
+| [Bright Security](https://aka.ms/APISecurityTestingPRBrightSecurity) | Bright Security’s dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and LLM applications. Bright knows how to deliver the right tests, at the right time in the SDLC, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) | 
+
+### Ticketing services
+
+| Partner name | Description | Documentation |
+|--|--|--|
+| ServiceNow | ServiceNow is a cloud computing platform that helps companies manage digital workflows for enterprise operations. ServiceNow provides a range of services including IT service management, customer service management, and HR service delivery. | [Integrate partner integrations](integrate-partner-integrations.md) |
+
+
 
 ## Share data with external partners
 
@@ -48,16 +66,6 @@ The following table lists our partners that can receive data from Defender for C
 | Kondukto | Kondukto is a cybersecurity company that specializes in application security orchestration and posture management. It provides a platform that integrates security data, automates vulnerability remediation workflows, and helps manage risks with key security performance indicators. | [Partner integration page](https://kondukto.io/integrations?search=defender) |
 | Phoenix Security | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Partner integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |
 | Nucleus | Nucleus is a cybersecurity company that provides a unified vulnerability management platform. It helps organizations centralize, prioritize, and remediate security vulnerabilities across their entire IT environment. | [Partner integration page](https://nucleussec.com/Integration/) |
-
-## Supported API integrations
-
-The following table lists the partner solutions that provide API security testing capabilities to Defender for Cloud. These solutions help you to proactively test and harden APIs within your CI/CD pipelines.
-
-| Partner name | Description | Enablement Guide |
-|--|--|--|
-| [42Crunch](https://aka.ms/APISecurityTestingPartnershipIgnite2023) | Developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. | [42Crunch onboarding guide](onboarding-guide-42crunch.md) |
-| [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk) | StackHawk is the only modern DAST and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
-| [Bright Security](https://aka.ms/APISecurityTestingPRBrightSecurity) | Bright Security’s dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and LLM applications. Bright knows how to deliver the right tests, at the right time in the SDLC, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) |
 
 ## External security solutions
 
