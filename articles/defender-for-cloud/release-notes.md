@@ -43,7 +43,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 October 9, 2024
 
-Binary drift detection is now released as GA in the Defender for Container plan. Please note that binary drift detection now works on all AKS versions, and not just on V1.29 and above as it was in the preview release.
+Binary drift detection is now released as GA in the Defender for Container plan. Please note that binary drift detection now works on all AKS versions.
 
 ### Updated containers runtime recommendations (preview)
 
