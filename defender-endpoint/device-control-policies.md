@@ -136,7 +136,7 @@ The following code snippet shows the syntax for a device control policy rule in 
   </IncludedIdList>
   <ExcludedIdList>
       <GroupId>{3f5253e4-0e73-4587-bb9e-bb29a2171695}</GroupId>
-  <ExcludedIdList>
+  </ExcludedIdList>
   <Entry Id="{e3837e60-5e56-43ce-8095-043ccd793eac}">
    ...
   </Entry>
