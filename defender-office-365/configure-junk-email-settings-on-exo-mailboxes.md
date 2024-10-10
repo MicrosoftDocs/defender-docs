@@ -152,7 +152,7 @@ The safelist collection (the Safe Senders list, the Safe Recipients list, and th
 
 - The synchronized safelist collection in EOP has the following synchronization limits:
   - 1024 total entries in the Safe Senders list, the Safe Recipients list, and external contacts if **Trust email from my contacts** is enabled.
-  - 500 total entries in the Blocked Senders list and the Blocked Domains list.
+  - 65535 total entries in the Blocked Senders list and the Blocked Domains list.
 
   When the 1024 entry limit is reached, the following things happen:
 
