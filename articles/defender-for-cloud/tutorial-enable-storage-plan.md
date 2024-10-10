@@ -2,7 +2,7 @@
 title: Protect your storage accounts with the Microsoft Defender for Storage plan
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 08/21/2023
+ms.date: 10/10/2024
 ---
 
 # Deploy Microsoft Defender for Storage
@@ -14,7 +14,16 @@ With Microsoft Defender for Storage, organizations can customize their protectio
    > [!TIP]
    > If you're currently using Microsoft Defender for Storage classic, consider [migrating to the new plan](defender-for-storage-classic-migrate.md), which offers several benefits over the classic plan.
 
-## Availability
+Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about pricing and reginal availability.
+
+## Prerequisites
+
+
+|<br><br> Supported storage types:|[Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2): Activity monitoring, Malware Scanning, Sensitive Data Discovery<br>Azure Files (over REST API and SMB): Activity monitoring |
+|Required roles and permissions:|For Malware Scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner) or specific roles with corresponding data actions. To enable Activity Monitoring, you need 'Security Admin' permissions. Read more about the required permissions.|
+|Clouds:|:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds\*<br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government (only activity monitoring support on the [classic plan](defender-for-storage-classic.md))<br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet (only activity monitoring support on the [classic plan](defender-for-storage-classic.md))<br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Connected AWS accounts|
+
+\* Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
 
 | Aspect | Details |
 |---------|---------|

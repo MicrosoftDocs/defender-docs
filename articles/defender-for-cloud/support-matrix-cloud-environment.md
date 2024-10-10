@@ -36,7 +36,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | **DEFENDER CSPM FEATURES** | | | |
 | [Data security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
-|**DEFENDER FOR CLOUD PLANS** | | ||
+|**DEFENDER FOR CLOUD PLANS** | | | |
 |[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | NA|
@@ -49,8 +49,12 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) | GA | GA | GA|
 |[Defender for Resource Manager](defender-for-resource-manager-introduction.md) | GA | GA | GA|
 |[Defender for Servers](plan-defender-for-servers.md)<br/>[Review detailed feature support](support-matrix-defender-for-servers.md). | GA | GA | GA|
-|[Defender for Storage](defender-for-storage-introduction.md) | GA | GA (activity monitoring) | NA|
 |[Defender for SQL Servers on Machines](defender-for-sql-introduction.md) | GA | GA | NA|
+|[Defender for Storage](defender-for-storage-introduction.md) | GA | GA (activity monitoring) | NA|
+| **DEFENDER FOR STORAGE FEATURES** | | | |
+| Activity monitoring (security alerts) | GA | NA | NA |
+| Malware scanning | GA | NA | NA |
+| Sensitive data threat detection (Sensitive Data Discovery) | GA/Preview | NA | NA |
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 
