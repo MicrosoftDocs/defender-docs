@@ -82,7 +82,7 @@ These scenarios are not currently supported:
 
 ## Supported iOS enrollment Scenarios
 
-|Scenarios|Is company portal app required on device?|Protection Profile/Prerequisites|Steps|
+|Scenarios|Company portal app required on device?|Protection Profile/Prerequisites|Steps|
 | -------- | -------- | -------- | -------- |
 |Supervised Devices (ADE and Apple Configurator Enrollment|Yes|Protects the entire device. For ADE, if users who use Just in Time (JIT) registration, the Company portal app is not required because app will enroll the device automatically by connecting to Intune server| [Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](/defender-endpoint/ios-install)   |
 |Unsupervised Devices (Device Enrollment)|Yes|1)Protects the entire device. For web-based device enrollment, the company portal app is not required because after the managed app signs in, the app downloads configuration policies directly and not the company portal app)|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](/defender-endpoint/ios-install)|
