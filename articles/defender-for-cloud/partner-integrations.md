@@ -2,7 +2,7 @@
 title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 10/08/2024
+ms.date: 10/10/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -14,7 +14,7 @@ The following are the types of partner integration available in Defender for Clo
 
 - [Obtain insights from partner integrations](#obtain-insights-from-partner-integrations)
 - [Provide insights to partner integrations](#provide-insights-to-partner-integrations)
-- [External security solutions (legacy)](#external-security-solutions-legacy)
+- [Security solutions (legacy)](#security-solutions-legacy)
 
 ## Obtain insights from partner integrations
 
@@ -80,7 +80,7 @@ Learn how to connect Defender for Cloud to an external [partner integrations](in
 | Phoenix Security | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Partner integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |
 | Nucleus | Nucleus is a cybersecurity company that provides a unified vulnerability management platform. It helps organizations centralize, prioritize, and remediate security vulnerabilities across their entire IT environment. | [Partner integration page](https://nucleussec.com/Integration/) |
 
-## External security solutions (legacy)
+## Security solutions (legacy)
 
 The following table presents our partners who provide security solutions.
 
