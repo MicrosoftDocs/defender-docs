@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 10/09/2024
+ms.date: 10/10/2024
 ---
 
 # Professional services supported by Microsoft Defender XDR
@@ -68,7 +68,7 @@ Managed security services that assist organizations to detect threats early and 
 |[Synergy Advisors E-Visor Teams App](https://synergyadvisors.biz/e-visor-for-teams/)|Synergy Advisors LLC|E-Visor Teams App is a centralized place to involve and empower your end-users in the security and productivity of the organization by presenting unique information using data from Microsoft Defenders and Microsoft Entra ID while ensuring identity governance, and compliance.|
 |[Managed Microsoft XDR](https://www.cyberproof.com/security-services/managed-xdr-for-microsoft/)|Quorum Cyber|Quorum Cyber's Managed Microsoft XDR, a solution designed to enable customers to unleash the power of Microsoft security to reduce cyber risk and maximize return of investment in security.|
 |[SecureShield365](https://patriotconsultingtech.com/)|Patriot Consulting|SecureShield365 includes a full deployment of all Microsoft Defender XDR products including Intune plus 12 months of support. Microsoft XDR including Sentinel, Defender for Cloud, and MDR are available options.|
-|[Ontinue MXDR](https://go.microsoft.com/fwlink/?linkid=2208895)<br/>(formerly known as *Open Systems*) |Ontinue MXDR|Built for Microsoft security customers, Ontinue MXDR combines certified experts, exemplary processes, and seamless technology to deliver tailored, 24x7 protection while reducing attack surfaces and MTTR.|
+|[Ontinue MXDR](https://www.ontinue.com)<br/>(*formerly Open Systems*) |Ontinue ION is purpose-built for organizations who want to consolidate their security stack using Microsoft’s XDR and SIEM ecosystem. Our unrivaled Microsoft expertise and focus on operationalizing the Microsoft Defender stack and Microsoft Sentinel empowers customers to get rid of redundant security controls and reduce their data ingestion costs.|
 |[Kroll](https://www.kroll.com/en/services/cyber-risk/managed-security/kroll-responder)|Kroll|Kroll provides proprietary data, technology, and insights to help our clients stay ahead of complex demands related to risk, governance, and growth. Our solutions deliver a powerful competitive advantage, enabling faster, smarter and more sustainable decisions. With 5,000 experts around the world, we create value for our clients and communities.|
 
 ## Respond
