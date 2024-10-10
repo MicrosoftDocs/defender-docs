@@ -59,12 +59,6 @@ All updates contain:
 
 ### What's new
 
-**Identity Protection**
-
-- Added CertificateTemplate and EnrollmentService entities collection
-- Added large entities compression and encoding
-- Improved ACL parsing process
-
 **Data Loss Prevention (DLP)**
 
 - Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
