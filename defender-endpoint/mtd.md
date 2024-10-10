@@ -89,20 +89,18 @@ These scenarios are not currently supported:
 |Unsupervised Devices (User Enrollment)|Yes|1) Protects work data only. The VPN has access to entire device, and the VPN can scan all app traffic)|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](/defender-endpoint/ios-install)|
 |MAM|No|Protects only enrolled apps. The VPN has access to entire device and can scan all app traffic)|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](/defender-endpoint/ios-install-unmanaged)|
 
+### Unsupported iOS enrollment scenarios
 iOS Dedicated/shared/kiosk device enrollment is not supported.
 
-**Android low touch onboarding supported scenarios**
+### Android low touch onboarding supported scenarios
 
 1. Android Enterprise personally owned devices using a work profile
-
 1. Android Enterprise corporate owned work profile (COPE)
-
 1. Android Enterprise corporate owned fully managed - No work profile (COBO)
 
-**iOS zero touch onboarding supported scenarios**
+### iOS zero touch onboarding supported scenarios
 
 1. Supervised Devices (ADE and Apple Configurator Enrollment)
-
 1. Unsupervised Devices (Device Enrollment)
 
 ### End-user onboarding
