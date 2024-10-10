@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 07/17/2024
+ms.date: 10/10/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -77,6 +77,7 @@ Devices on your network must be running one of these editions. New features or c
 - Windows 11 Education
 - Windows 11 Pro
 - Windows 11 Pro Education
+- [Windows 10 and 11 on Arm](/windows/arm/overview)
 - Windows 10 Enterprise
 - [Windows 10 Enterprise LTSC 2016 (or later)](/windows/whats-new/ltsc/)
 - Windows 10 IoT Enterprise (including LTSC)
