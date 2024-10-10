@@ -48,6 +48,8 @@ The following table lists the partner solutions that provide API security testin
 
 ### Ticketing services
 
+The following table lists the partner solutions that provide ticketing services to Defender for Cloud. These solutions help you to create and manage tickets for security incidents and vulnerabilities detected by Defender for Cloud. Yicketing services allow users to submit, track, and fix tickets efficiently, improving communication between the IT department and end-users, and ensuring that issues are resolved quickly and effectively.
+
 | Partner name | Description | Documentation |
 |--|--|--|
 | ServiceNow | ServiceNow is a cloud computing platform that helps companies manage digital workflows for enterprise operations. ServiceNow provides a range of services including IT service management, customer service management, and HR service delivery. | [ServiceNow integration with Defender for Cloud](integration-servicenow.md) |
@@ -56,7 +58,7 @@ The following table lists the partner solutions that provide API security testin
 
 The following table lists our partners that can receive data from Defender for Cloud. These solutions help you to provide insights from Defender for Cloud to other security solutions.
 
-Learn how to connect Defender for Cloud to an external [partner integrations](integrate-partner-integrations.md).
+Learn how to [connect your partner integration](integrate-partner-integrations.md) to Defender for Cloud.
 
 | Partner name | Description | Partner integration documentation |
 |--|--|--|

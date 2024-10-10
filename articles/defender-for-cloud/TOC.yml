@@ -146,7 +146,9 @@
           displayName: partner, integration, integrations, partners
           href: integrate-partner-integrations.md
         - name: Partner integrations
-          items:  
+          items:
+          - name: Endor labs
+            items:
           - name: ServiceNow
             items:
             - name: Overview ServiceNow integration
