@@ -113,27 +113,29 @@ To configure your network filter:
 
 1. Under **Configuration profiles**, select **Create Profile**.
 
-2. Under **Platform**, select **macOS**.
+1. Under **Platform**, select **macOS**.
 
-3. Under **Profile type**, select **Templates**.
+1. Under **Profile type**, select **Templates**.
 
-4. Under **Template name**, select **Custom**.
+1. Under **Template name**, select **Custom**.
 
-5. Select **Create**.
+1. Select **Create**.
 
-6. On the **Basics** tab, **Name** the profile. For example, `NetFilter-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `NetFilter-prod-macOS-Default-MDE`.
 
-7. Select **Next**.
+1. Select **Next**.
 
-8. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `NetFilter-prod-macOS-Default-MDE`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `NetFilter-prod-macOS-Default-MDE`.
 
-9. Choose a Deployment channel and select **Next**.
+1. Choose a **Deployment channel** and select **Next**.
 
-10. Select **Next**.
+1. Select a **Configuration profile file**.
+ 
+1. Select **Next**.
 
-11. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
+1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
 
-12. Review the configuration profile. Select **Create**.
+1. Review the configuration profile. Select **Create**.
 
 ### Step 3: Full Disk Access
 
@@ -160,7 +162,7 @@ To configure Full Disk Access:
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
 
-1. Choose a **Deployment channel** and then select **Next**.
+1. Choose a **Deployment channel** and select **Next**.
 
 1. Select a **Configuration profile file**.
 
@@ -196,9 +198,7 @@ To configure background services:
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `backgroundServices-prod-macOS-Default-MDE`.
 
-1. Choose a **Deployment channel**.
-
-1. Select **Next**.
+1. Choose a **Deployment channel** and select **Next**.
 
 1. Select a **Configuration profile file**.
 
@@ -264,9 +264,7 @@ Download [accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/b
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Accessibility.mobileconfig`.
 
-1. Choose a **Deployment channel**.
-
-1. Select **Next**.
+1. Choose a **Deployment channel** and select **Next**.
 
 1. Select a **Configuration profile file**.
 
@@ -315,9 +313,7 @@ Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blo
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Autoupdate.mobileconfig`.
 
-1. Choose a **Deployment channel**.
-
-1. Select **Next**.
+1. Choose a **Deployment channel** and select **Next**.
 
 1. Select a **Configuration profile file**.
 
@@ -482,7 +478,7 @@ For more information, see [Add Microsoft Defender for Endpoint to macOS devices 
 
 To download the onboarding packages from Microsoft 365 Defender portal:
 
-1. In the Microsoft 365 Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+1. In the Microsoft 365 Defender portal, go to **System** > **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
 2. Set the operating system to **macOS** and the deployment method to **Mobile Device Management / Microsoft Intune**.
 
@@ -524,15 +520,13 @@ To deploy the onboarding package:
 
    :::image type="content" source="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-1.png" alt-text="Screenshot that shows the deploy onboarding package." lightbox="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-1.png":::
 
-1. On the **Basics** tab, **Name** the profile. For example, `Autoupdate-prod-macOS-Default-MDE`. Select **Next**.
+1. On the **Basics** tab, **Name** the profile. For example, `Onboarding-prod-macOS-Default-MDE`. Select **Next**.
 
    :::image type="content" source="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-2.png" alt-text="Screenshot that shows the Custom page." lightbox="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-2.png":::
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Autoupdate.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `WindowsDefenderATPOnboarding`.
 
-1. Choose a **Deployment channel**.
-
-1. Select **Next**.
+1. Choose a **Deployment channel** and select **Next**.
 
 1. Select a **Configuration profile file**.
 
