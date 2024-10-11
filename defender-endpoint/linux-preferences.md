@@ -62,6 +62,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 - Real-time (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 - On-demand (`on_demand`): Files are scanned only on demand. In this:
   - Real-time protection is turned off.
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
 - Passive (`passive`): Runs the antivirus engine in passive mode. In this case, all of the following apply:
   - Real-time protection is turned off: Threats are not remediated by Microsoft Defender Antivirus.
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
@@ -221,7 +222,7 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 - Muted (`mute`): Mount points marked as noexec aren't scanned as part of RTP, these mount point can be created for:
   - Database files on Database servers for keeping data base files.
   - File server can keep data files mountpoints with noexec option.
-  - Back up can keep data files mountpoints with noexec option.
+  - Backup can keep data files mountpoints with noexec option.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -626,6 +627,7 @@ Determines whether security intelligence updates are installed automatically:
 |**Data type**|Boolean|Drop down|
 |**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
+Depending on the enforcement level, the automatic security intelligence updates are installed differently. In RTP mode, updates are installed periodically. In Passive/ On-Demand mode updates are installed before every scan.
 
 ### Advanced optional features
 
