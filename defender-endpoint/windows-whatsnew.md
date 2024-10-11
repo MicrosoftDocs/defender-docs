@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 09/25/2024
+ms.date: 10/10/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -58,12 +58,6 @@ All updates contain:
 |Windows Server 2016 <br/>Windows Server 2012 R2 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
 ### What's new
-
-**Identity Protection**
-
-- Added CertificateTemplate and EnrollmentService entities collection
-- Added large entities compression and encoding
-- Improved ACL parsing process
 
 **Data Loss Prevention (DLP)**
 

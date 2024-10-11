@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/07/2024
+ms.date: 10/11/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -24,9 +24,8 @@ ms.date: 10/07/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Servers
+- Microsoft Defender XDR
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -77,11 +76,11 @@ In general you need to take the following steps:
 ### System requirements
 
 - Disk space: 2 GB
-> [!NOTE]
-> An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections. Please make sure that you have free disk space in /var.
+  > [!NOTE]
+  > An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections. Please make sure that you have free disk space in /var.
 - Cores: 2 minimum, 4 preferred
-> [!NOTE]
-> If you are on Passive or RTP ON mode, 2 Cores are minimum and 4 Cores are preferred. If you are turning on BM, then a minimum of 4 Cores is required.
+  > [!NOTE]
+  > If you are on Passive or RTP ON mode, 2 Cores are minimum and 4 Cores are preferred. If you are turning on BM, then a minimum of 4 Cores is required.
 - Memory: 1 GB minimum, 4 preferred
 - List of supported Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions:
   - Red Hat Enterprise Linux 6.7 or higher (In preview)
