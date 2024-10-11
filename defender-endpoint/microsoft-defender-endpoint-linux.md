@@ -76,11 +76,11 @@ In general you need to take the following steps:
 ### System requirements
 
 - Disk space: 2 GB
-> [!NOTE]
-> An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections. Please make sure that you have free disk space in /var.
+  > [!NOTE]
+  > An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections. Please make sure that you have free disk space in /var.
 - Cores: 2 minimum, 4 preferred
-> [!NOTE]
-> If you are on Passive or RTP ON mode, 2 Cores are minimum and 4 Cores are preferred. If you are turning on BM, then a minimum of 4 Cores is required.
+  > [!NOTE]
+  > If you are on Passive or RTP ON mode, 2 Cores are minimum and 4 Cores are preferred. If you are turning on BM, then a minimum of 4 Cores is required.
 - Memory: 1 GB minimum, 4 preferred
 - List of supported Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions:
   - Red Hat Enterprise Linux 6.7 or higher (In preview)
