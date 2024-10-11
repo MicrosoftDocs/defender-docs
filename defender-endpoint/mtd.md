@@ -87,7 +87,7 @@ These scenarios are not currently supported:
 |Supervised Devices (ADE and Apple Configurator Enrollment|Yes|Protects the entire device. For ADE, if users who use Just in Time (JIT) registration, the Company portal app is not required because app will enroll the device automatically by connecting to Intune server| [Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)   |
 |Unsupervised Devices (Device Enrollment)|Yes|Protects the entire device. For web-based device enrollment, the company portal app is not required because after the managed app signs in, the app downloads configuration policies directly and not the company portal app)|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)|
 |Unsupervised Devices (User Enrollment)|Yes|Protects work data only. The VPN has access to entire device, and the VPN can scan all app traffic|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#user-enrollment-setup-only-for-intune-user-enrolled-devices)|
-|MAM|No|Protects only enrolled apps. The VPN has access to entire device and can scan all app traffic)|[Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management e](ios-install-unmanaged.md)|
+|MAM|No|Protects only enrolled apps. The VPN has access to entire device and can scan all app traffic)|[Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management](ios-install-unmanaged.md)|
 
 ### Unsupported iOS enrollment scenarios
 iOS Dedicated/shared/kiosk device enrollment is not supported.
