@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb
-ms.date: 09/18/2024
+ms.date: 10/11/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -136,7 +136,7 @@ The following code snippet shows the syntax for a device control policy rule in 
   </IncludedIdList>
   <ExcludedIdList>
       <GroupId>{3f5253e4-0e73-4587-bb9e-bb29a2171695}</GroupId>
-  <ExcludedIdList>
+  </ExcludedIdList>
   <Entry Id="{e3837e60-5e56-43ce-8095-043ccd793eac}">
    ...
   </Entry>
