@@ -6,7 +6,7 @@ ms.author: deniseb
 author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-ms.date: 05/01/2024
+ms.date: 10/11/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -24,10 +24,8 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Servers
+- Microsoft Defender XDR
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 

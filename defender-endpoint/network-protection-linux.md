@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 - mde-linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 10/08/2024
 ---
 
 # Network protection for Linux
@@ -23,9 +23,8 @@ ms.date: 05/01/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Servers
+- Microsoft Defender XDR
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -49,11 +48,10 @@ You can use web content filtering for testing with Network protection for Linux.
 ### Known issues
 
 - Network Protection is implemented as a virtual private network (VPN) tunnel. Advanced packet routing options using custom nftables/iptables scripts are available.
-- Block/Warn UX isn't available
-  - Customer feedback is being collected to drive further design improvements
+- Block/Warn UX isn't available (Customer feedback is being collected to drive further design improvements)
 
 > [!NOTE]
-> To evaluate the effectiveness of Linux Web Threat Protection, we recommend using the Firefox browser which is the default for all the distributions.
+> Most server installations of Linux lack a graphical user interface and web browser. To evaluate the effectiveness of Linux Web Threat Protection with Linux, we recommend testing on a non-production server with a graphical user interface and web browser.
 
 ### Prerequisites
 

@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 ms.subservice: linux
-ms.date: 05/01/2024
+ms.date: 10/11/2024
 ---
 
 # Troubleshoot issues for Microsoft Defender for Endpoint on Linux RHEL6
@@ -24,9 +24,8 @@ ms.date: 05/01/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Servers
+- Microsoft Defender XDR
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
