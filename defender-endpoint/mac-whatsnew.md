@@ -58,6 +58,18 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
+### Oct-2024 (Build: 101.24082.0009  | Release version: 20.124082.9.0)
+
+| Build:             | **101.24082.0009**    |
+|--------------------|-----------------------|
+| Release version:   | **20.124082.9.0**     |
+| Engine version:    | **1.1.24080.9**       |
+| Signature version: | **1.411.410.0**       |
+
+##### What's new
+
+- Product improvements and performance fixes
+
 ### Sep-2024 (Build: 101.24072.0007  | Release version: 20.124072.7)
 
 | Build:             | **101.24072.0007**    |
