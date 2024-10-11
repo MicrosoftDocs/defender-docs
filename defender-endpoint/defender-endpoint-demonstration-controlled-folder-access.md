@@ -77,6 +77,20 @@ You can perform these manual steps instead:
 
 3. Execute PowerShell commands listed earlier in this article.
 
+Next, check that status of the *Aggressive Ransomware Prevention* ASR rule and disable it for the duration of this test if it's enabled:
+
+
+```powershell
+$idx = $(Get-MpPreference).AttackSurfaceReductionRules_Ids.IndexOf("C1DB55AB-C21A-4637-BB3F-A12568109D35")
+if ($idx -ge 0) {Write-Host "Rule Status: " $(Get-MpPreference).AttackSurfaceReductionRules_Actions[$idx]} else {Write-Host "Rule does not exist on this machine"}
+```
+
+If the rule exists and the status if 1 (Enabled) or 6(Warn), it must be disabled to run this test:
+
+```powershell
+Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568109D35 -AttackSurfaceReductionRules_Actions Disabled
+```
+
 ### Scenario 1: CFA blocks ransomware test file
 
 1. Turn on CFA using PowerShell command:
@@ -122,6 +136,13 @@ Set-MpPreference -EnableControlledFolderAccess Disabled
 ```
 
 Clean up c:\demo encryption by using the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
+
+Finally, if the *Aggressive Ransomware Prevention* ASR rule was enabled and you disabled it at the beginning of this test, enable it again:
+
+
+```powershell
+Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568109D35 -AttackSurfaceReductionRules_Actions Enabled
+```
 
 ## See also
 
