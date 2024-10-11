@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 09/12/2024
+ms.date: 10/11/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
