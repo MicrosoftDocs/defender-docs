@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 07/31/2024
+ms.date: 10/11/2024
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
@@ -24,9 +24,8 @@ ms.date: 07/31/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Servers
+- Microsoft Defender XDR
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
@@ -141,7 +140,7 @@ For more information, see [Set preferences for Defender for Endpoint on Linux](l
 Run the following command to see the available switches for managing exclusions:
 
 > [!NOTE]
-> `--scope` is an optional flag with accepted value as `epp` or `global`. It provides the same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn’t mentioned, the scope value is set as `epp`.
+> `--scope` is an optional flag with accepted value as `epp` or `global`. It provides the same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn't mentioned, the scope value is set as `epp`.
 > Exclusions added through CLI before the introduction of `--scope` flag remain unaffected and their scope is considered `epp`.
 
 ```bash
