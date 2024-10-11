@@ -176,22 +176,22 @@ Once the Mirror Server is set up, we need to propagate this URL to the Linux end
 
 - Use the following sample `mdatp_managed.json` and update the parameters as per the configuration and copy the file to the location `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
 
-```json
-{
-  "cloudService": {
-    "automaticDefinitionUpdateEnabled": true,
-    "definitionUpdatesInterval": 1202
-  },
-  "antivirusEngine": {
-    "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/",
-    "offlineDefintionUpdateFallbackToCloud":false,
-    "offlineDefinitionUpdate": "enabled"
-  },
-"features": {
-"offlineDefinitionUpdateVerifySig": "enabled"
-}
-}
-```
+    ```json
+    {
+      "cloudService": {
+        "automaticDefinitionUpdateEnabled": true,
+        "definitionUpdatesInterval": 1202
+      },
+      "antivirusEngine": {
+        "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/",
+        "offlineDefintionUpdateFallbackToCloud":false,
+        "offlineDefinitionUpdate": "enabled"
+      },
+    "features": {
+    "offlineDefinitionUpdateVerifySig": "enabled"
+    }
+    }
+    ```
 
 | Field Name                                | Values               | Comments                                            |
 |-------------------------------------------|----------------------|-----------------------------------------------------|
