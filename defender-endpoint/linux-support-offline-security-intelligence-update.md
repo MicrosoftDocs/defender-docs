@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 08/27/2024
+ms.date: 10/11/2024
 ---
 
 # Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux 
@@ -24,9 +24,8 @@ ms.date: 08/27/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Servers
+- Microsoft Defender XDR
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on Linux.
 
