@@ -52,9 +52,11 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Defender for SQL Servers on Machines](defender-for-sql-introduction.md) | GA | GA | NA|
 |[Defender for Storage](defender-for-storage-introduction.md) | GA | GA (activity monitoring) | NA|
 | **DEFENDER FOR STORAGE FEATURES** | | | |
-| Activity monitoring (security alerts) | GA | NA | NA |
-| Malware scanning | GA | NA | NA |
-| Sensitive data threat detection (Sensitive Data Discovery) | GA/Preview | NA | NA |
+| Activity monitoring (security alerts) | GA | GA for [classic plan](defender-for-storage-classic.md) only. | GA for [classic plan](defender-for-storage-classic.md) only. |
+| Malware scanning | GA<sup>[1](#footnote1)</sup> | NA | NA |
+| Sensitive data threat detection (Sensitive Data Discovery) | GA<sup>[1](#footnote1)</sup> | NA | NA |
+
+<sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 

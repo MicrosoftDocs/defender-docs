@@ -18,25 +18,18 @@ Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pric
 
 ## Prerequisites
 
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
-|<br><br> Supported storage types:|[Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2): Activity monitoring, Malware Scanning, Sensitive Data Discovery<br>Azure Files (over REST API and SMB): Activity monitoring |
-|Required roles and permissions:|For Malware Scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner) or specific roles with corresponding data actions. To enable Activity Monitoring, you need 'Security Admin' permissions. Read more about the required permissions.|
-|Clouds:|:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds\*<br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government (only activity monitoring support on the [classic plan](defender-for-storage-classic.md))<br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet (only activity monitoring support on the [classic plan](defender-for-storage-classic.md))<br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Connected AWS accounts|
+- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-\* Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
-
-| Aspect | Details |
-|---------|---------|
-|Release state: | General Availability (GA) |
-| Feature availability: |- Activity monitoring (security alerts) – General Availability (GA)<br>- Malware scanning – General Availability (GA)<br>- Sensitive data threat detection (Sensitive Data Discovery) – General Availability (GA)<br><br>Visit the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud) to learn more. |
-|Required roles and permissions: | For malware scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner) or specific roles with corresponding data actions. To enable Activity Monitoring, you need 'Security Admin' permissions. Read more about the required permissions. |
-| Clouds:    | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Commercial clouds*<br> :::image type="icon" source="./media/icons/no-icon.png"::: Azure Government (only activity monitoring support on the classic plan)<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure China 21Vianet<br>:::image type="icon" source="./media/icons/no-icon.png"::: Connected AWS accounts        |
-
-*Azure DNS Zone is not supported for malware scanning and sensitive data threat detection.
-
-## Prerequisites for malware scanning
-
-To enable and configure malware scanning, you must have Owner roles (such as Subscription Owner or Storage Account Owner) or specific roles with the necessary data actions. Learn more about the [required permissions](support-matrix-defender-for-storage.md).
+- The following storage types are supported:
+    - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, Malware Scanning, Sensitive Data Discovery.
+    - Azure Files (over REST API and SMB): Activity monitoring.
+    
+- Required roles and permissions:
+    - For Malware Scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner), or specific roles with corresponding data actions. 
+    - To enable Activity Monitoring, you need Security Admin permissions.
+    - Learn more about the [required permissions](support-matrix-defender-for-storage.md).
 
 ## Set up and configure Microsoft Defender for Storage
 
