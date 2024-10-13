@@ -27,11 +27,82 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## October 2024
+
+|Date | Category | Update|
+|--|--|--|
+| October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
+| October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
+| October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
+| October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
+| October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
+| October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
+| October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
+
+### Binary drift detection released as GA
+
+October 9, 2024
+
+Binary drift detection is now released as GA in the Defender for Container plan. Please note that binary drift detection now works on all AKS versions.
+
+### Updated containers runtime recommendations (preview)
+
+October 6, 2024
+
+The preview recommendations for "Containers running in AWS/Azure/GCP should have vulnerabilities findings resolved" are updated to group all containers that are part of the same workload into a single recommendation, reducing duplications and avoid fluctuations due to new and terminated containers.
+
+As of October 6, 2024 the following assessment IDs are replaced for these recommendations:
+
+| Recommendation                                                          | Previous assessment ID               | New assessment ID                    |
+|-------------------------------------------------------------------------|--------------------------------------|--------------------------------------|
+|--|--|--|
+| Containers running in Azure should have vulnerability findings resolved | e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0 | c5045ea3-afc6-4006-ab8f-86c8574dbf3d |
+| Containers running in AWS should have vulnerability findings resolved   | d5d1e526-363a-4223-b860-f4b6e710859f | 8749bb43-cd24-4cf9-848c-2a50f632043c |
+| Containers running in GCP should have vulnerability findings resolved   | c7c1d31d-a604-4b86-96df-63448618e165 | 1b3abfa4-9e53-46f1-9627-51f2957f8bba |
+
+ If you're currently retrieving vulnerability reports from these recommendations via API, ensure you update the API call with the new assessment ID.
+
+### Kubernetes Identity and Access information in the security graph (preview)
+
+October 6, 2024
+
+Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
+
+### Kubernetes Identity and Access information-based attack paths (preview)
+
+October 6, 2024
+
+Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on another attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
+
+### Improved attack path analysis
+
+October 6, 2024
+
+The new attack path analysis engine [released last November now supports container use cases as well](/azure/defender-for-cloud/release-notes-archive#attack-path-analysis-new-engine-and-extensive-enhancements), dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud and Kubernetes environments.
+
+### Full discovery of container images in supported registries
+
+October 6, 2024
+
+Defender for Cloud now collects inventory data for all container images in supported registries, providing full visibility within the security graph to all images in your cloud environments, including images that currently don't have any posture recommendations.
+
+Querying capabilities through the Cloud Security Explorer are improved so users can now search for container images based on their metadata (digest, repository, OS, tag, and etc.)
+
+### Containers software inventory with Cloud Security Explorer
+
+October 6, 2024
+
+Customers are now able to get a [list of software installed in their containers and container images through the Cloud Security Explorer](/azure/defender-for-cloud/cloud-security-explorer-software-vulnerabilities). This list can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with software impacted by a 0-day vulnerability, even before a CVE is published.
+
 ## September 2024
 
 |Date | Category | Update|
 |--|--|--|
-| September 15 | GA | Integration with Power BI |
+| September 22 |Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
+| September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
+| September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
+| September 18 | Deprecation | [Deprecation of MMA auto-provisioning capability](#deprecation-of-mma-auto-provisioning-capability) |
+| September 15 | GA | [Integration with Power BI](#integration-with-power-bi) |
 |September 11|Upcoming change|[Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements)|
 | September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
 | September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
@@ -40,6 +111,48 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Cloud security explorer experience improvements
+
+September 22, 2024
+
+**Estimated date for change:** October 2024
+
+The Cloud Security Explorer is set to improve performance and grid functionality, provide more data enrichment on each cloud asset, improve search categories, and improve CSV export report with more insights on the exported cloud assets.
+
+### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
+September 18, 2024
+
+The new version of File Integrity Monitoring based on Microsoft Defender for Endpoint is now GA as part of Defender for Servers Plan 2. FIM enables you to:
+
+- Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
+- Identify potential security issues by detecting suspicious file content changes.
+
+This improved FIM experience replaces the existing one that set for deprecation with the Log Analytics Agent (MMA) retirement. The [FIM experience over MMA](/azure/defender-for-cloud/file-integrity-monitoring-enable-log-analytics) will remain supported until the end of November 2024.
+
+With this release, an in-product experience has been released to allow you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
+
+For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](/azure/defender-for-cloud/file-integrity-monitoring-enable-defender-endpoint). For information on how to disable previous versions, see [Migrate File Integrity Monitoring from previous versions](/azure/defender-for-cloud/migrate-file-integrity-monitoring).
+
+### FIM migration experience is available in Defender for Cloud
+September 18, 2024
+
+An in-product experience has been released to allow you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
+With this experience you can:
+- Review affected environment with previous FIM version over MMA enabled and required migration.
+- Export your current FIM rules from MMA- based experience and reside on workspaces
+- Migrate to P2 enabled subscriptions with new FIM over MDE.
+
+To use the migration experience, navigate to "Environment settings" blade and click "MMA migration" button in the upper row. 
+
+### Deprecation of MMA auto-provisioning capability
+
+September 18, 2024
+As part of the MMA agent retirement, the auto provisioning capability that provides the installation and configuration of the agent for MDC customers, will be deprecated as well in 2 stages:
+
+1. **By the end of September 2024**- auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions. After end of September, the capability will no longer be able to be re-enable on those subscriptions.
+
+1. **End of November 2024-** auto provisioning of MMA will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
 
 ### Integration with Power BI
 
@@ -366,10 +479,10 @@ Originally, SQL Vulnerability Assessment (VA) with Express Configuration was onl
 
 We will be updating all Azure SQL Servers that had Microsoft Defender for SQL activated before December 2022 and had no existing SQL VA policy in place, to have SQL Vulnerability Assessment (SQL VA) automatically enabled with Express Configuration.
 
-- The implementation of this change will be gradual, spanning several weeks, and does not require any action on the user’s part.
+- The implementation of this change will be gradual, spanning several weeks, and does not require any action on the user's part.
 - This change applies to Azure SQL Servers where Microsoft Defender for SQL was activated at the Azure subscription level.
 - Servers with an existing classic configuration (whether valid or invalid) will not be affected by this change.
-- Upon activation, the recommendation ‘SQL databases should have vulnerability findings resolved’ may appear and could potentially impact your secure score.
+- Upon activation, the recommendation 'SQL databases should have vulnerability findings resolved' may appear and could potentially impact your secure score.
 
 ### Update: Changes in identity recommendations behavior
 
@@ -587,7 +700,7 @@ Until now agentless scanning covered CMK encrypted VMs in AWS and GCP. With this
 
 - Defender for Cloud doesn't handle the key or decryption process. Keys and decryption are seamlessly handled by Azure Compute and is transparent to Defender for Cloud's agentless scanning service.
 - The unencrypted VM disk data is never copied or re-encrypted with another key.
-- The original key isn't replicated during the process. Purging it eradicates the data on both your production VM and Defender for Cloud’s temporary snapshot.
+- The original key isn't replicated during the process. Purging it eradicates the data on both your production VM and Defender for Cloud's temporary snapshot.
 
 During public preview this capability isn't automatically enabled. If you're using Defender for Servers P2 or Defender CSPM and your environment has VMs with CMK encrypted disks, you can now have them scanned for vulnerabilities, secrets, and malware following these [enablement steps](enable-agentless-scanning-vms.md#agentless-vulnerability-assessment-on-azure).
 
@@ -620,7 +733,7 @@ We're announcing the general availability (GA) of the [ServiceNow integration](i
 
 March 12, 2024
 
-Defender for Cloud now includes a business criticality feature, using Microsoft Security Exposure Management’s critical assets engine, to identify and protect important assets through risk prioritization, attack path analysis, and cloud security explorer. For more information, see [Critical assets protection in Microsoft Defender for Cloud (Preview)](critical-assets-protection.md).
+Defender for Cloud now includes a business criticality feature, using Microsoft Security Exposure Management's critical assets engine, to identify and protect important assets through risk prioritization, attack path analysis, and cloud security explorer. For more information, see [Critical assets protection in Microsoft Defender for Cloud (Preview)](critical-assets-protection.md).
 
 ### Update: Enhanced AWS and GCP recommendations with automated remediation scripts
 
@@ -671,7 +784,7 @@ On September 30, 2025, the locations where you access two preview features, Comp
 
 The table that lists the compliance status of Microsoft's products (accessed from the **Compliance offerings** button in the toolbar of Defender's [regulatory compliance dashboard](regulatory-compliance-dashboard.md)). After this button is removed from Defender for Cloud, you'll still be able to access this information using the [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-For a subset of controls, Microsoft Actions was accessible from the **Microsoft Actions (Preview)** button in the controls details pane. After this button is removed, you can view Microsoft Actions by visiting Microsoft’s [Service Trust Portal for FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP) and accessing  the Azure System Security Plan document.
+For a subset of controls, Microsoft Actions was accessible from the **Microsoft Actions (Preview)** button in the controls details pane. After this button is removed, you can view Microsoft Actions by visiting Microsoft's [Service Trust Portal for FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP) and accessing  the Azure System Security Plan document.
 
 ### Update: Changes in where you access Compliance offerings and Microsoft Actions
 
@@ -683,7 +796,7 @@ On September 30, 2025, the locations where you access two preview features, Comp
 
 The table that lists the compliance status of Microsoft's products (accessed from the **Compliance offerings** button in the toolbar of Defender's [regulatory compliance dashboard](regulatory-compliance-dashboard.md)). After this button is removed from Defender for Cloud, you'll still be able to access this information using the [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-For a subset of controls, Microsoft Actions was accessible from the **Microsoft Actions (Preview)** button in the controls details pane. After this button is removed, you can view Microsoft Actions by visiting Microsoft’s [Service Trust Portal for FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP) and accessing  the Azure System Security Plan document.
+For a subset of controls, Microsoft Actions was accessible from the **Microsoft Actions (Preview)** button in the controls details pane. After this button is removed, you can view Microsoft Actions by visiting Microsoft's [Service Trust Portal for FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP) and accessing  the Azure System Security Plan document.
 
 ### Deprecation: Defender for Cloud Containers Vulnerability Assessment powered by Qualys retirement
 

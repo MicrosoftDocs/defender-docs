@@ -165,6 +165,9 @@
     - name: Azure Resource Graph queries
       displayName: sample, query, queries, resource, graph
       href: ./resource-graph-samples.md
+    - name: Cloud Security Explorer software queries
+      displayName: sample, query, cloud security explorer
+      href: cloud-security-explorer-software-vulnerabilities.md
 
 
 - name: Concepts
@@ -803,7 +806,7 @@
             href: transition-to-defender-vulnerability-management.md
           - name: Common questions 
             href: common-questions-microsoft-defender-vulnerability-management.md
-      - name: Binary drift detection (preview)
+      - name: Binary drift detection
         displayName: k8s, containers, aks
         href: binary-drift-detection.md
       - name: Kubernetes data plane hardening
@@ -945,6 +948,8 @@
                 href: defender-for-storage-infrastructure-as-code-enablement.md
               - name: Enable with REST API
                 href: defender-for-storage-rest-api-enablement.md
+              - name: Enable with PowerShell
+                href: defender-for-storage-powershell-enablement.md
               - name: Enable with the Azure portal
                 href: defender-for-storage-azure-portal-enablement.md
           - name: Advanced configurations for malware scanning

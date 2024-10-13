@@ -214,11 +214,9 @@ When Defender for Cloud finds misconfigurations in your endpoint detection and r
 
     :::image type="content" source="media/endpoint-detection-response/resources-findings.png" alt-text="Screenshot that shows the findings of an affected unhealthy resource." lightbox="media/endpoint-detection-response/resources-findings.png":::
 
-1. Select the security check to see additional information and the remediation steps.
+1. Select the security check to see additional information and follow the remediation steps.
 
     :::image type="content" source="media/endpoint-detection-response/security-check-remediation.png" alt-text="Screenshot that shows the additional details section.":::
-
-1. Follow the remediation steps.
 
 After the process is completed, it can take up to 24 hours until your machine appears in the Healthy resources tab.
 
