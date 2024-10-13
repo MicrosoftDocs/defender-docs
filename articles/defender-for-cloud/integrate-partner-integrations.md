@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 10/08/2024
+ms.date: 10/13/2024
 ---
 
 # Integrate partner integrations
@@ -26,7 +26,7 @@ You can review the [list of available integrations](partner-integrations.md).
 
 Before you can 
 
-Depending on which integration you want to enable, after you finish the steps presented below, you might need to follow additional steps to complete the integration on the partners' side.
+Depending on which integration you want to enable, after you finish these steps, you might need to follow other steps to complete the integration on the partners' side.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -44,13 +44,13 @@ Depending on which integration you want to enable, after you finish the steps pr
 
 ## Create a client secret
 
-Once you've created the application, you need to create a client secret.
+Once you create the application, you need to create a client secret.
 
 1. Select the application you created.
 
 1. Navigate to the **Manage** > **Certificates & secrets**.
 
-    :::image type="content" source="media/integrate-partner-integrations/secrets.png" alt-text="Screenshot that shows you where to navigate to to get to the Certificates and Secrets screen." lightbox="media/integrate-partner-integrations/secrets.png":::
+    :::image type="content" source="media/integrate-partner-integrations/secrets.png" alt-text="Screenshot that shows you where to navigate to get to the Certificates and Secrets screen." lightbox="media/integrate-partner-integrations/secrets.png":::
 
 1. Select **Client secrets** > **+ New client secret**.
 
@@ -60,7 +60,7 @@ Once you've created the application, you need to create a client secret.
 
 ## Grant permissions
 
-Once you've created the client secret, you need to grant permissions to the application.
+Once you create the client secret, you need to grant permissions to the application.
 
 1. Search for and navigate to **Subscriptions**.
 

@@ -145,6 +145,9 @@
         - name: Integrate partner integrations
           displayName: partner, integration, integrations, partners
           href: integrate-partner-integrations.md
+        - name: Connect an integration
+          displayName: partner, integration, integrations, partners
+          href: connect-an-integration.md
         - name: Partner integrations
           items:
           - name: Endor labs
