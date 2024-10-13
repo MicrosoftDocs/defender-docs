@@ -19,7 +19,7 @@ With Microsoft Defender for Storage, organizations can customize their protectio
 | Aspect | Details |
 |---------|---------|
 |Release state: | General Availability (GA) |
-| Feature availability: |- Activity monitoring (security alerts) – General Availability (GA)<br>- Malware scanning – General Availability (GA)<br>- Sensitive data threat detection (Sensitive Data Discovery) – Preview<br><br>Visit the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud) to learn more. |
+| Feature availability: |- Activity monitoring (security alerts) – General Availability (GA)<br>- Malware scanning – General Availability (GA)<br>- Sensitive data threat detection (Sensitive Data Discovery) – General Availability (GA)<br><br>Visit the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud) to learn more. |
 |Required roles and permissions: | For malware scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner) or specific roles with corresponding data actions. To enable Activity Monitoring, you need 'Security Admin' permissions. Read more about the required permissions. |
 | Clouds:    | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Commercial clouds*<br> :::image type="icon" source="./media/icons/no-icon.png"::: Azure Government (only activity monitoring support on the classic plan)<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure China 21Vianet<br>:::image type="icon" source="./media/icons/no-icon.png"::: Connected AWS accounts        |
 
