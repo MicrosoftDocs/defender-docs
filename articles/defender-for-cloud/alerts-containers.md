@@ -1,5 +1,5 @@
 ---
-title: Alerts for Containers
+title: Alerts for Kubernetes Clusters
 description: This article lists the security alerts for containers and Kubernetes clusters visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
@@ -7,9 +7,9 @@ ms.date: 06/03/2024
 ai-usage: ai-assisted
 ---
 
-# Alerts for Containers
+# Alerts for Kubernetes Clusters
 
-This document outlines the Defender for Containers (MDC Containers) enhanced alert capabilities for threats to the Kubernetes (K8s) services control plane and the workload runtime. MDC Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide comprehensive and actionable alerts to safeguard your K8s environment.
+This document describes the Defender for Containers (MDC Containers) enhanced alert capabilities for threats to Kubernetes (K8s) services control plane and workload runtime. MDC Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide comprehensive and actionable alerts to safeguard your K8s environment.
 
 ## Control plane detection
 
@@ -23,7 +23,7 @@ Examples of suspicious operations captured by MDC Containers include:
 
 ## Workload runtime detection
 
-MDC Containers monitors the workload runtime activity to detect suspicious operations, including workload process creation events and workload DNS activity.
+MDC Containers monitors the K8s workload runtime activity to detect suspicious operations, including workload process creation events and workload DNS activity.
 
 Examples of suspicious workload runtime activity include:
 
@@ -34,12 +34,12 @@ Examples of suspicious workload runtime activity include:
 
 ## K8s alerts simulation tool
 
-MDC Containers provides a tool to simulate the alerts generated for various attack scenarios. The simulation tool deploys two pods in your cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
+MDC Containers provides a tool to simulate the alerts generated for various attack scenarios. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
 
 > !Note
 > Although the simulation tool doesn't run any malicious components, it's recommended to run it on a dedicated cluster without production workloads.
 
-The simulation tool is executed on your local machine using a Python-based CLI that deploys Helm charts in the cluster running the simulation (the target cluster).
+The simulation tool is executed on your local machine using a Python-based CLI that deploys Helm charts in the target cluster.
 
 ### Install the simulation tool
 
