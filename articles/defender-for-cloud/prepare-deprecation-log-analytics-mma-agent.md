@@ -2,7 +2,7 @@
 title: Prepare for retirement of the Log Analytics agent 
 description: Learn how to prepare for the deprecation of the Log Analytics (MMA) agent in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 08/22/2024
+ms.date: 10/14/2024
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
 ---
 
@@ -391,6 +391,30 @@ We recommend you plan agent migration in accordance with your business requireme
 | No | --- | Yes | 1. You can [migrate to SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) now.<br/>2. [Disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) Log Analytics/Azure Monitor Agent. |
 | Yes | Yes | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can use the Log Analytics agent and AMA side-by-side to get all features in GA. [Learn more](auto-deploy-azure-monitoring-agent.md#impact-of-running-with-both-the-log-analytics-and-azure-monitor-agents) about running agents side-by-side.<br>3. Migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines. Alternatively, start the migration from Log Analytics agent to AMA in April 2024.<br/>4. Once the migration is finished, [disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 | Yes | No | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines now.<br/>3. [Disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
+
+### MMA migration wizard
+
+The MMA migration wizard is a tool that helps you migrate from the MMA to the AMA. The wizard provides a step-by-step guide to help you migrate your machines from the MMA to the AMA.
+
+With this tool, you can:
+
+- Migrate servers from the legacy onboarding through the Log analytic workspace.
+- Ensure subscriptions meet all of the prerequisites to receive all of Defender for Servers Plan 2's benefits.
+- Migrate to FIM's new version over MDE.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Navigate to the **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **MMA migration**.
+
+    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/mma-migration.png" alt-text="Screenshot that shows where the MMA migration button is located." lightbox="media/prepare-deprecation-log-analytics-mma-agent/mma-migration.png":::
+
+1. Select **Take action** for one of the available actions:
+
+    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/take-action.png" alt-text="Screenshot that shows where the take action button is located for all of the options." lightbox="media/prepare-deprecation-log-analytics-mma-agent/take-action.png":::
+
+Allow the wizard to load and follow the steps to complete the migration.
 
 ## Next step
 

@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| October 14 | GA | MMA migration wizard is now available |
 | October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
 | October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
 | October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
@@ -38,6 +39,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
+
+### MMA migration wizard is now available
+
+October 14, 2024
+
+A new MMA migration wizard is now available to assist you with the migration process. This wizard ensures your environments are ready for the transition in Defender for Servers following the deprecation of the Log Analytics agent (MMA).
+
+With this experience you can review and take action at scale over affected environments:
+
+- That are missing prerequisites necessary to gain the full security coverage offered by Defender for Servers Plan 2.
+- That are [connected to Defender for Servers Plan 2 using the legacy onboarding approach via Log Analytics workspace](prepare-deprecation-log-analytics-mma-agent.md#changes-to-legacy-defender-for-servers-plan-2-onboarding-via-log-analytics-agent).
+- That use the old File Integrity Monitoring (FIM) version with the Log Analytics agent (MMA) need to migrate to the new, [improved FIM version with Defender for Endpoint (MDE)](file-integrity-monitoring-enable-defender-endpoint.md).
+ 
+Learn how to [use the new MMA migration wizard](prepare-deprecation-log-analytics-mma-agent.md#mma-migration-wizard).
 
 ### Binary drift detection released as GA
 
