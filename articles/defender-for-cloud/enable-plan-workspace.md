@@ -7,7 +7,7 @@ ms.date: 10/14/2024
 
 # Protect resources that report to a Log Analytics workspace
 
-Defender for Cloud utilizes Log Analytics workspaces, both default and custom, to collect and analyze data from your connected resources. To protect your resources, you can enable specific Defender for Cloud plans on both the subscription level or on specific workspaces that have resources that report to that Log Analytics workspace.
+Defender for Cloud utilizes Log Analytics workspaces, both default and custom, to collect and analyze data from your connected resources. To protect your resources, you can enable specific Defender for Cloud plans on both the subscription level or on specific workspaces that have resources that report to that Log Analytics workspace. 
 
 The available plans that you can enable on a Log Analytics workspace level are:
 
