@@ -2,7 +2,7 @@
 title: Protect resources that report to a Log Analytics workspace
 description: Learn how to enable the Defender for Cloud plans that are available on workspaces to protect the resources that report to that workspace.
 ms.topic: install-set-up-deploy
-ms.date: 10/13/2024
+ms.date: 10/14/2024
 ---
 
 # Protect resources that report to a Log Analytics workspace
@@ -16,7 +16,7 @@ The available plans that you can enable on a Log Analytics workspace level are:
 - [Defender for SQL servers on machines](defender-for-sql-usage.md)
 
 > [!IMPORTANT]
-> We recommend [enabling SQL servers on machines on the subscription level](tutorial-enable-servers-plan.md) and not on the workspace level. When you enable the the SQL servers on machines plan on the workspace level only, it doesn't include Azure Monitor Agent AMA autoprovisioning.
+> We recommend you [enable the SQL servers on machines plan using the Azure Monitoring Agent (AMA) auto provisioning on the subscription level](tutorial-enable-servers-plan.md), and not on the workspace level. When you enable the SQL servers on machines plan on the workspace level, it uses the deprecated Microsoft Monitoring Agent (MMA).
 
 ## Prerequisites
 

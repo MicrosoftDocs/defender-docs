@@ -103,6 +103,10 @@
         - name: Deploy Defender for Servers
           displayName: servers, server, enable
           href: tutorial-enable-servers-plan.md
+          items:
+            - name: Protect resources that report to a Log Analytics workspace
+              displayName: workSystem, namespace, enable, plans
+              href: enable-plan-workspace.md
         - name: Protect applications with Defender for App Service
           displayName: App, service, enable, app service
           href: tutorial-enable-app-service-plan.md
@@ -136,10 +140,6 @@
         - name: Protect APIs with Defender for APIs
           displayName: APIs, enable
           href: defender-for-apis-deploy.md
-        - name: Protect resources that report to a Log Analytics workspace
-          displayName: workSystem, namespace, enable, plans
-          href: enable-plan-workspace.md
-
 
 - name: Tutorials
   items:
