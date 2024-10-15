@@ -8,100 +8,98 @@ ms.date: 06/01/2023
 
 ## Enable the plan
 
-**To enable the plan**:
+1. In Defender for Cloud, select **Settings**, and then select the relevant subscription.
 
-1. From Defender for Cloud's menu, open the Settings page and select the relevant subscription.
+1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Defender for Containers** > **Settings**.
 
-1. In the [Defender plans page](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier), select **Defender for Containers** and select **Settings**.
-
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="screenshot of Defender plans page." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the Defender plans page." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
 
     > [!TIP]
-    > If the subscription already has Defender for Kubernetes and/or Defender for container registries enabled, an update notice is shown. Otherwise, the only option will be **Defender for Containers**.
+    > If the subscription already has Defender for Kubernetes and/or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Defender for Containers**.
     >
-    > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Defender for container registries and Defender for Kubernetes plans showing 'Deprecated' and upgrade information.":::
+    > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernets and Defender for container registries plans in a deprecated state, along with upgrade information.":::
 
-1. Turn the relevant component on to enable it.
+1. Turn on the relevant component.
 
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="screenshot of turning on components." lightbox="../media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="../media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
     > [!NOTE]
     >
-    > - Defenders for Containers customers who joined before August 2023 and don't have Agentless discovery for Kubernetes enabled as part of Defender CSPM when they enabled the plan, must manually enable the Agentless discovery for Kubernetes extension within the Defender for Containers plan.
-    > - When you turn off Defender for Containers, the components are set to off and are not deployed to any more containers but they are not removed from containers that they are already installed on.
+    > - Defender for Containers customers who joined before August 2023 and don't have **Agentless discovery for Kubernetes** turned on as part of Defender cloud security posture management (CSPM) when they enabled the plan must manually enable the **Agentless discovery for Kubernetes** extension within the Defender for Containers plan.
+    > - When you turn off Defender for Containers, the components are set to off. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
 
 ### Enablement method per capability
 
-By default, when enabling the plan through the Azure portal, [Microsoft Defender for Containers](../defender-for-containers-introduction.md) is configured to automatically enable all capabilities and install all required components to provide the protections offered by the plan, including the assignment of a default workspace.
+By default, when you enable the plan through the Azure portal, [Microsoft Defender for Containers](../defender-for-containers-introduction.md) is configured to automatically enable all capabilities and install all required components to provide the protections that the plan offers. This configuration includes the assignment of a default workspace.
 
-If you don't want to enable all capabilities of the plans, you can manually select which specific capabilities to enable by selecting **Edit configuration** for the **Containers** plan. Then, in the **Settings & monitoring** page, select the capabilities you want to enable.
-In addition, you can modify this configuration from the [Defender plans page](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) after initial configuration of the plan.
+If you don't want to enable all capabilities of the plans, you can manually select which specific capabilities to enable by selecting **Edit configuration** for the **Containers** plan. Then, on the **Settings & monitoring** page, select the capabilities that you want to enable.
+You can also modify this configuration from the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page after initial configuration of the plan.
 
 For detailed information on the enablement method for each one the capabilities, see the [support matrix](../support-matrix-defender-for-containers.md#aws).
 
 ### Roles and permissions
 
-Learn more about the [roles used to provision Defender for Containers extensions](../permissions.md#roles-used-to-automatically-provision-agents-and-extensions).
+Learn more about the [roles for provisioning Defender for Containers extensions](../permissions.md#roles-used-to-automatically-provision-agents-and-extensions).
 
-### Assigning custom workspace for Defender sensor
+### Assigning a custom workspace for the Defender sensor
 
 You can [assign a custom workspace](../defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) through Azure Policy.
 
-### Manual deployment of Defender sensor or Azure policy agent without auto-provisioning using recommendations
+### Manual deployment of the Defender sensor or Azure policy agent without automatic provisioning by using recommendations
 
 Capabilities that require sensor installation can also be deployed on one or more Kubernetes clusters, using the appropriate recommendation:
 
 | Sensor | Recommendation |
 |--|--|
 | Defender Sensor for Kubernetes | [Azure Kubernetes Service clusters should have Defender profile enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9) |
-| Defender Sensor for Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6) |
-| Azure policy agent for Kubernetes | [Azure Kubernetes Service clusters should have the Azure Policy Add-on for Kubernetes installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/08e628db-e2ed-4793-bc91-d13e684401c3) |
-| Azure policy agent for Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0642d770-b189-42ef-a2ce-9dcc3ec6c169) |
+| Defender Sensor for Azure Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6) |
+| Azure Policy agent for Kubernetes | [Azure Kubernetes Service clusters should have the Azure Policy Add-on for Kubernetes installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/08e628db-e2ed-4793-bc91-d13e684401c3) |
+| Azure Policy agent for Azure Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0642d770-b189-42ef-a2ce-9dcc3ec6c169) |
 
-Perform the following steps to perform deployment of the Defender sensor on specific clusters:
+To deploy the Defender sensor on specific clusters:
 
-1. From Microsoft Defender for Cloud's recommendations page, open the **Enable enhanced security** security control or search directly for one of the above recommendations (or use the above links to open the recommendation directly)
+1. On the Microsoft Defender for Cloud **Recommendations** page, open the **Enable enhanced security** security control or search for one of the preceding recommendations. (You can also use the preceding links to open the recommendation directly.)
 
-1. View all clusters without a sensor via the unhealthy tab.
+1. View all clusters without a sensor by opening the **Unhealthy** tab.
 
-1. Select the clusters to deploy the desired sensor on and select **Fix**.
+1. Select the clusters where you want to deploy the sensor, and then select **Fix**.
 
 1. Select **Fix X resources**.
 
-## Deploying Defender sensor - all options
+## Deploy the Defender sensor: All options
 
-You can enable the Defender for Containers plan and deploy all of the relevant components from the Azure portal, the REST API, or with a Resource Manager template. For detailed steps, select the relevant tab.
+You can enable the Defender for Containers plan and deploy all of the relevant components by using the Azure portal, the REST API, or an Azure Resource Manager template. For detailed steps, select the relevant tab.
 
-Once the Defender sensor has been deployed, a default workspace is automatically assigned. You can [assign a custom workspace](../defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) in place of the default workspace through Azure Policy.
+After the Defender sensor is deployed, a default workspace is automatically assigned. You can [assign a custom workspace](../defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) in place of the default workspace through Azure Policy.
 
 > [!NOTE]
-> The Defender sensor is deployed to each node to provide the runtime protections and collect signals from those nodes using [eBPF technology](https://ebpf.io/).
+> The Defender sensor is deployed to each node to provide the runtime protections and collect signals from those nodes by using [eBPF technology](https://ebpf.io/).
 
-### [**Azure portal**](#tab/aks-deploy-portal)
+### [Azure portal](#tab/aks-deploy-portal)
 
-### Use the fix button from the Defender for Cloud recommendation
+### Use the Fix button from the Defender for Cloud recommendation
 
-A streamlined, frictionless, process lets you use the Azure portal pages to enable the Defender for Cloud plan and setup auto provisioning of all the necessary components for defending your Kubernetes clusters at scale.
+You can use Azure portal pages to enable the Defender for Cloud plan and set up automatic provisioning of all the necessary components for defending your Kubernetes clusters at scale. The process is streamlined.
 
 A dedicated Defender for Cloud recommendation provides:
 
-- **Visibility** about which of your clusters has the Defender sensor deployed
-- **Fix** button to deploy it to those clusters without the sensor
+- Visibility into which of your clusters has the Defender sensor deployed.
+- A **Fix** button to deploy the sensor to those clusters that don't have it.
 
 1. From Microsoft Defender for Cloud's recommendations page, open the **Enable enhanced security** security control.
 
 1. Use the filter to find the recommendation named **Azure Kubernetes Service clusters should have Defender profile enabled**.
 
     > [!TIP]
-    > Notice the **Fix** icon in the actions column
+    > Notice the **Fix** icon in the actions column.
 
-1. Select the clusters to see the details of the healthy and unhealthy resources - clusters with and without the sensor.
+1. Select the clusters to see the details of the healthy and unhealthy resources (clusters with and without the sensor).
 
 1. From the unhealthy resources list, select a cluster and select **Remediate** to open the pane with the remediation confirmation.
 
 1. Select **Fix X resources**.
 
-### [**REST API**](#tab/aks-deploy-rest)
+### [REST API](#tab/aks-deploy-rest)
 
 ### Use the REST API to deploy the Defender sensor
 
@@ -148,9 +146,9 @@ Request body parameters:
 | properties.securityProfile.defender.securityMonitoring.enabled | Determines whether to enable or disable Microsoft Defender for Containers on the cluster | Yes |
 | properties.securityProfile.defender.logAnalyticsWorkspaceResourceId | Log Analytics workspace Azure resource ID | Yes |
 
-### [**Azure CLI**](#tab/k8s-deploy-cli)
+### [Azure CLI](#tab/k8s-deploy-cli)
 
-### Use Azure CLI to deploy the Defender sensor
+### Use the Azure CLI to deploy the Defender sensor
 
 1. Sign in to Azure:
 
@@ -198,7 +196,7 @@ Request body parameters:
 
     When the sensor is added, you should see a pod called `microsoft-defender-XXXXX` in `Running` state. It might take a few minutes for pods to be added.
 
-### [**Resource Manager**](#tab/aks-deploy-arm)
+### [Resource Manager](#tab/aks-deploy-arm)
 
 ### Use Azure Resource Manager to deploy the Defender sensor
 
@@ -207,7 +205,7 @@ To use Azure Resource Manager to deploy the Defender sensor, you'll need a Log A
 > [!TIP]
 > If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](/azure/azure-resource-manager/templates/overview)
 
-To install the 'SecurityProfile' on an existing cluster with Resource Manager:
+To install the `securityProfile` on an existing cluster by using Resource Manager:
 
 ```json
 { 
@@ -219,7 +217,7 @@ To install the 'SecurityProfile' on an existing cluster with Resource Manager:
         …
         "securityProfile": { 
             "defender": { 
-                "logAnalyticsWorkspaceResourceId": “logAnalyticsWorkspaceResourceId",
+                "logAnalyticsWorkspaceResourceId": "logAnalyticsWorkspaceResourceId",
                 "securityMonitoring": {
                     "enabled": true
                 }
