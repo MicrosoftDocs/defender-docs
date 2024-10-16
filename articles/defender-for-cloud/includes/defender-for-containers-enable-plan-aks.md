@@ -12,12 +12,12 @@ ms.date: 06/01/2023
 
 1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Defender for Containers** > **Settings**.
 
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the Defender plans page." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the page for Defender plans." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
 
     > [!TIP]
-    > If the subscription already has Defender for Kubernetes and/or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Defender for Containers**.
+    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Defender for Containers**.
     >
-    > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernets and Defender for container registries plans in a deprecated state, along with upgrade information.":::
+    > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernetes and Defender for container registries plans in a deprecated state, along with upgrade information.":::
 
 1. Turn on the relevant component.
 
@@ -35,7 +35,7 @@ By default, when you enable the plan through the Azure portal, [Microsoft Defend
 If you don't want to enable all capabilities of the plans, you can manually select which specific capabilities to enable by selecting **Edit configuration** for the **Containers** plan. Then, on the **Settings & monitoring** page, select the capabilities that you want to enable.
 You can also modify this configuration from the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page after initial configuration of the plan.
 
-For detailed information on the enablement method for each one the capabilities, see the [support matrix](../support-matrix-defender-for-containers.md#aws).
+For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md#aws).
 
 ### Roles and permissions
 
@@ -47,7 +47,7 @@ You can [assign a custom workspace](../defender-for-containers-enable.md?pivots=
 
 ### Manual deployment of the Defender sensor or Azure policy agent without automatic provisioning by using recommendations
 
-Capabilities that require sensor installation can also be deployed on one or more Kubernetes clusters, using the appropriate recommendation:
+Capabilities that require sensor installation can also be deployed on one or more Kubernetes clusters. Use the appropriate recommendation:
 
 | Sensor | Recommendation |
 |--|--|
@@ -86,16 +86,18 @@ A dedicated Defender for Cloud recommendation provides:
 - Visibility into which of your clusters has the Defender sensor deployed.
 - A **Fix** button to deploy the sensor to those clusters that don't have it.
 
-1. From Microsoft Defender for Cloud's recommendations page, open the **Enable enhanced security** security control.
+To enable the plan:
+
+1. On the Microsoft Defender for Cloud **Recommendations** page, open the **Enable enhanced security** security control.
 
 1. Use the filter to find the recommendation named **Azure Kubernetes Service clusters should have Defender profile enabled**.
 
     > [!TIP]
-    > Notice the **Fix** icon in the actions column.
+    > Notice the **Fix** icon in the **Actions** column.
 
 1. Select the clusters to see the details of the healthy and unhealthy resources (clusters with and without the sensor).
 
-1. From the unhealthy resources list, select a cluster and select **Remediate** to open the pane with the remediation confirmation.
+1. From the list of unhealthy resources, select a cluster and then select **Remediate** to open the pane with the remediation confirmation.
 
 1. Select **Fix X resources**.
 
@@ -103,7 +105,7 @@ A dedicated Defender for Cloud recommendation provides:
 
 ### Use the REST API to deploy the Defender sensor
 
-To install the 'SecurityProfile' on an existing cluster with the REST API, run the following PUT command:
+To install `securityProfile` on an existing cluster by using the REST API, run the following `PUT` command:
 
 ```rest
 PUT https://management.azure.com/subscriptions/{{Subscription Id}}/resourcegroups/{{Resource Group}}/providers/Microsoft.Kubernetes/connectedClusters/{{Cluster Name}}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes?api-version=2020-07-01-preview
@@ -115,12 +117,12 @@ Request query parameters:
 
 | Name           | Description                        | Mandatory |
 |----------------|------------------------------------|-----------|
-| SubscriptionId | Cluster's subscription ID          | Yes       |
-| ResourceGroup  | Cluster's resource group           | Yes       |
-| ClusterName    | Cluster's name                     | Yes       |
-| ApiVersion     | API version, must be >= 2022-06-01 | Yes       |
+| `SubscriptionId` | Cluster's subscription ID          | Yes       |
+| `ResourceGroup`  | Cluster's resource group           | Yes       |
+| `ClusterName`    | Cluster's name                     | Yes       |
+| `ApiVersion`     | API version; must be 2022-06-01 or later | Yes       |
 
-Request Body:
+Request body:
 
 ```rest
 {
@@ -142,9 +144,9 @@ Request body parameters:
 
 | Name | Description | Mandatory |
 |--|--|--|
-| location | Cluster's location | Yes |
-| properties.securityProfile.defender.securityMonitoring.enabled | Determines whether to enable or disable Microsoft Defender for Containers on the cluster | Yes |
-| properties.securityProfile.defender.logAnalyticsWorkspaceResourceId | Log Analytics workspace Azure resource ID | Yes |
+| `location` | Cluster's location | Yes |
+| `properties.securityProfile.defender.securityMonitoring.enabled` | Determines whether to enable or disable Microsoft Defender for Containers on the cluster | Yes |
+| `properties.securityProfile.defender.logAnalyticsWorkspaceResourceId` | Azure resource ID for the Log Analytics workspace | Yes |
 
 ### [Azure CLI](#tab/k8s-deploy-cli)
 
@@ -158,27 +160,27 @@ Request body parameters:
     ```
 
     > [!IMPORTANT]
-    > Ensure that you use the same subscription ID for ``<your-subscription-id>`` as the one associated with your AKS cluster.
+    > Ensure that you use the same subscription ID for `<your-subscription-id>` as the one that's associated with your AKS cluster.
 
 1. Enable the Defender sensor on your containers:
 
     - Run the following command to create a new cluster with the Defender sensor enabled:
 
-        ```azurecli
-        az aks create --enable-defender --resource-group <your-resource-group> --name <your-cluster-name>
-        ```
+      ```azurecli
+      az aks create --enable-defender --resource-group <your-resource-group> --name <your-cluster-name>
+      ```
 
     - Run the following command to enable the Defender sensor on an existing cluster:
 
-        ```azurecli
-        az aks update --enable-defender --resource-group <your-resource-group> --name <your-cluster-name>
-        ```
+      ```azurecli
+      az aks update --enable-defender --resource-group <your-resource-group> --name <your-cluster-name>
+      ```
 
-    A description of all the supported configuration settings on the Defender sensor type is given below:
+    Here are the supported configuration settings on the Defender sensor type:
 
     | Property | Description |
     |----------|-------------|
-    | logAnalyticsWorkspaceResourceId | **Optional**. Full resource ID of your own Log Analytics workspace.<br>When not provided, the default workspace of the region will be used.<br><br>To get the full resource ID, run the following command to display the list of workspaces in your subscriptions in the default JSON format:<br>```az resource list --resource-type Microsoft.OperationalInsights/workspaces -o json```<br><br>The Log Analytics workspace resource ID has the following syntax:<br>/subscriptions/{your-subscription-id}/resourceGroups/{your-resource-group}/providers/Microsoft.OperationalInsights/workspaces/{your-workspace-name}. <br>Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview) |
+    | `logAnalyticsWorkspaceResourceId` | *Optional*. Full resource ID of your own Log Analytics workspace.<br>If you don't provide one, the default workspace of the region is used.<br><br>To get the full resource ID, run the following command to display the list of workspaces in your subscriptions in the default JSON format:<br>```az resource list --resource-type Microsoft.OperationalInsights/workspaces -o json```<br><br>The Log Analytics workspace's resource ID has the following syntax:<br>`/subscriptions/{your-subscription-id}/resourceGroups/{your-resource-group}/providers/Microsoft.OperationalInsights/workspaces/{your-workspace-name}` <br>Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview). |
 
     You can include these settings in a JSON file and specify the JSON file in the `az aks create` and `az aks update` commands with this parameter: `--defender-config <path-to-JSON-file>`. The format of the JSON file must be:
 
@@ -194,18 +196,18 @@ Request body parameters:
     kubectl get pods -n kube-system
     ```
 
-    When the sensor is added, you should see a pod called `microsoft-defender-XXXXX` in `Running` state. It might take a few minutes for pods to be added.
+    When the sensor is added, you should see a pod called `microsoft-defender-XXXXX` in the `Running` state. It might take a few minutes for pods to be added.
 
 ### [Resource Manager](#tab/aks-deploy-arm)
 
 ### Use Azure Resource Manager to deploy the Defender sensor
 
-To use Azure Resource Manager to deploy the Defender sensor, you'll need a Log Analytics workspace on your subscription. Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview).
+To use Azure Resource Manager to deploy the Defender sensor, you need a Log Analytics workspace on your subscription. Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview).
 
 > [!TIP]
-> If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](/azure/azure-resource-manager/templates/overview)
+> If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](/azure/azure-resource-manager/templates/overview).
 
-To install the `securityProfile` on an existing cluster by using Resource Manager:
+To install `securityProfile` on an existing cluster by using Resource Manager:
 
 ```json
 { 
