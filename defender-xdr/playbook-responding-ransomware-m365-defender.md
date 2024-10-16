@@ -7,10 +7,9 @@ ms.author:                 noriordan
 manager:                   dolmont
 audience:                  ITPro
 ms.topic:                  article
-ms.date:                   05/30/2022 
+ms.date:                   10/16/2024 
 ms.service:                microsoft-365-security
 ms.subservice:             m365d
-ms.localizationpriority:   medium
 ms.collection: 
   - msftsolution-secops
   - tier1
