@@ -17,7 +17,7 @@ To remove this (or any) Defender for Cloud extension, it's not enough to turn of
 
 Nevertheless, to ensure that the Defender for Containers components aren't automatically provisioned to your resources from now on, disable automatic provisioning of the extensions. Follow the instructions in [Configure auto provisioning for agents and extensions from Microsoft Defender for Cloud](../monitoring-components.md).
 
-You can remove the extension by using the REST API or a Resource Manager template, as explained on the following tabs.
+You can remove the extension by using the REST API, the Azure CLI, or a Resource Manager template, as explained on the following tabs.
 
 ### [REST API](#tab/aks-removeprofile-api)
 
