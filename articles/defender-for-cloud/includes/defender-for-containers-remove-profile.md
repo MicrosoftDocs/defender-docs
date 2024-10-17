@@ -7,34 +7,36 @@ author: dcurwin
 ---
 ## Remove the Defender sensor
 
-To remove this - or any - Defender for Cloud extension, it's not enough to turn off auto provisioning:
+To remove this (or any) Defender for Cloud extension, it's not enough to turn off automatic provisioning:
 
-- **Enabling** auto provisioning, potentially impacts *existing* and *future* machines.
-- **Disabling** auto provisioning for an extension, only affects the *future* machines - nothing is uninstalled by disabling auto provisioning.
+- Enabling automatic provisioning potentially affects *existing* and *future* machines.
+- Disabling automatic provisioning for an extension affects only the *future* machines. Nothing is uninstalled when you disable automatic provisioning.
 
 > [!NOTE]
-> To turn off the Defender for Containers plan entirely, go to **Environment settings** and disable the **Microsoft Defender for Containers** plan.
+> To disable the Defender for Containers plan entirely, go to **Environment settings** and turn off **Microsoft Defender for Containers**.
 
-Nevertheless, to ensure the Defender for Containers components aren't automatically provisioned to your resources from now on, disable auto provisioning of the extensions as explained in [Configure auto provisioning for agents and extensions from Microsoft Defender for Cloud](../monitoring-components.md).
+Nevertheless, to ensure that the Defender for Containers components aren't automatically provisioned to your resources from now on, disable automatic provisioning of the extensions. Follow the instructions in [Configure auto provisioning for agents and extensions from Microsoft Defender for Cloud](../monitoring-components.md).
 
-You can remove the extension using the REST API or a Resource Manager template as explained in the tabs below.
+You can remove the extension by using the REST API or a Resource Manager template, as explained on the following tabs.
 
-### [**REST API**](#tab/aks-removeprofile-api)
+### [REST API](#tab/aks-removeprofile-api)
 
-### Use REST API to remove the Defender sensor from AKS
+### Use the REST API to remove the Defender sensor from AKS
 
-To remove the extension using the REST API, run the following PUT command:
+To remove the extension by using the REST API, run the following `PUT` command:
 
 ```rest
 https://management.azure.com/subscriptions/{{SubscriptionId}}/resourcegroups/{{ResourceGroup}}/providers/Microsoft.ContainerService/managedClusters/{{ClusterName}}?api-version={{ApiVersion}}
 ```
 
+The command includes these placeholders:
+
 | Name           | Description                        | Mandatory |
 |----------------|------------------------------------|-----------|
-| SubscriptionId | Cluster's subscription ID          | Yes       |
-| ResourceGroup  | Cluster's resource group           | Yes       |
-| ClusterName    | Cluster's name                     | Yes       |
-| ApiVersion     | API version, must be >= 2022-06-01 | Yes       |
+| `SubscriptionId` | Cluster's subscription ID          | Yes       |
+| `ResourceGroup`  | Cluster's resource group           | Yes       |
+| `ClusterName`    | Cluster's name                     | Yes       |
+| `ApiVersion`     | API version; must be 2022-06-01 or later | Yes       |
 
 Request body:
 
@@ -57,14 +59,14 @@ Request body parameters:
 
 | Name | Description | Mandatory |
 |--|--|--|
-| location | Cluster's location | Yes |
-| properties.securityProfile.defender.securityMonitoring.enabled | Determines whether to enable or disable Microsoft Defender for Containers on the cluster | Yes |
+| `location` | Cluster's location | Yes |
+| `properties.securityProfile.defender.securityMonitoring.enabled` | Determines whether to enable or disable Microsoft Defender for Containers on the cluster | Yes |
 
-### [**Azure CLI**](#tab/k8s-remove-cli)
+### [Azure CLI](#tab/k8s-remove-cli)
 
-### Use Azure CLI to remove the Defender sensor
+### Use the Azure CLI to remove the Defender sensor
 
-1. Remove the Microsoft Defender for  with the following commands:
+1. Run the following commands:
 
     ```azurecli
     az login
@@ -74,22 +76,22 @@ Request body parameters:
 
     Removing the extension might take a few minutes.
 
-1. To verify that the extension was successfully removed, run the following command:
+1. To verify that you successfully removed the extension, run the following command:
 
     ```console
     kubectl get pods -n kube-system | grep microsoft-defender
     ```
 
-    When the extension is removed, you should see that no pods are returned in the `get pods` command. It might take a few minutes for the pods to be deleted.
+    When the extension is removed, the `get pods` command doesn't return any pods. Deletion of the pods might take a few minutes.
 
-### [**Resource Manager**](#tab/aks-removeprofile-resource-manager)
+### [Resource Manager](#tab/aks-removeprofile-resource-manager)
 
 ### Use Azure Resource Manager to remove the Defender sensor from AKS
 
-To use Azure Resource Manager to remove the Defender sensor, you'll need a Log Analytics workspace on your subscription. Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview).
+To use Azure Resource Manager to remove the Defender sensor, you need a Log Analytics workspace on your subscription. Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview).
 
 > [!TIP]
-> If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](/azure/azure-resource-manager/templates/overview)
+> If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](/azure/azure-resource-manager/templates/overview).
 
 The relevant template and parameters to remove the Defender sensor from AKS are:
 

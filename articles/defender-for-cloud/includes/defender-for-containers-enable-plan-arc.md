@@ -70,7 +70,7 @@ To deploy the sensor:
 
 1. On the Microsoft Defender for Cloud **Recommendations** page, open the **Enable enhanced security** security control.
 
-1. Use the filter to find the recommendation named **Azure Arc-enabled Kubernetes clusters should have the Defender extension installed**.
+1. Use the filter to find the recommendation named **Azure Arc-enabled Kubernetes clusters should have the Microsoft Defender's extension installed**.
 
     :::image type="content" source="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Screenshot that shows the Microsoft Defender for Cloud recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
 
@@ -190,7 +190,7 @@ To verify that your cluster has the Defender sensor installed on it, follow the 
 
 1. On the Microsoft Defender for Cloud **Recommendations** page, open the  **Enable Microsoft Defender for Cloud** security control.
 
-1. Select the recommendation named **Azure Arc-enabled Kubernetes clusters should have the Defender extension installed**.
+1. Select the recommendation named **Azure Arc-enabled Kubernetes clusters should have the Microsoft Defender's extension installed**.
 
     :::image type="content" source="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Screenshot that shows the Defender for Cloud recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
 

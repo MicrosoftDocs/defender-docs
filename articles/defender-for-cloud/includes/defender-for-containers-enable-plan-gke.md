@@ -37,37 +37,37 @@ To help protect your GKE clusters, use the following steps to enable the Defende
     - **Kubernetes audit logs to Defender for Cloud**: Enabled by default. This configuration is available at the GCP project level only. It provides agentless collection of the audit log data through [GCP Cloud Logging](https://cloud.google.com/logging/) to the Microsoft Defender for Cloud back end for further analysis. Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the toggle to **On**.
 
         > [!NOTE]
-        > If you disable this configuration, the **Threat detection (control plane)** feature will be disabled. [Learn more about feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
+        > If you disable this configuration, the **Threat detection (control plane)** feature is also disabled. [Learn more about feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
 
     - **Auto provision Defender's sensor for Azure Arc** and **Auto provision Azure Policy extension for Azure Arc**: Enabled by default. You can install Azure Arc-enabled Kubernetes and its extensions on your GKE clusters in three ways:
-      - Enable Defender for Containers autoprovisioning at the project level, as explained in the instructions in this section. We recommend this method.
-      - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud recommendations page. [Learn how to deploy the solution to specific clusters](../defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
+      - Enable Defender for Containers automatic provisioning at the project level, as explained in the instructions in this section. We recommend this method.
+      - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud **Recommendations** page. [Learn how to deploy the solution to specific clusters](../defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
       - Manually install [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
     - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. To enable the feature, set its toggle to **On**.
-    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google Registries (GAR and GCR) and running images on your GKE clusters. To enable the feature, set its toggle to **On**.
+    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google registries (Google Artifact Registry and Google Container Registry) and running images on your GKE clusters. To enable the feature, set its toggle to **On**.
 
 1. Select the **Copy** button.
 
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/copy-button.png" alt-text="Screenshot showing the location of the copy button.":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/copy-button.png" alt-text="Screenshot that shows the location of the copy button.":::
 
 1. Select the **GCP Cloud Shell >** button.
 
-1. Paste the script into the Cloud Shell terminal, and run it.
+1. Paste the script into the Cloud Shell terminal and run it.
 
 The connector is updated after the script runs. This process can take up to 8 hours to finish.
 
 ### Deploy the solution to specific clusters
 
-If you disabled any of the default auto provisioning configurations to Off, during the [GCP connector onboarding process](../quickstart-onboard-gcp.md#configure-the-defender-for-containers-plan), or afterwards. You need to manually install Azure Arc-enabled Kubernetes, the Defender sensor, and the Azure Policy for Kubernetes to each of your GKE clusters to get the full security value out of Defender for Containers.
+If you set any of the default automatic provisioning configurations to **Off** during the [GCP connector onboarding process](../quickstart-onboard-gcp.md#configure-the-defender-for-containers-plan) or afterward, you need to manually install Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernetes in each of your GKE clusters. Installing them helps ensure that you get the full security value out of Defender for Containers.
 
-There are two dedicated Defender for Cloud recommendations that you can use to install the extensions (and Azure Arc, if necessary):
+You can use two dedicated Defender for Cloud recommendations to install the extensions (and Azure Arc, if necessary):
 
-- `GKE clusters should have Microsoft Defender's extension for Azure Arc installed`
-- `GKE clusters should have the Azure Policy extension installed`
+- **GKE clusters should have Microsoft Defender's extension for Azure Arc installed**
+- **GKE clusters should have the Azure Policy extension installed**
 
 > [!NOTE]
-> When you're installing Arc extensions, you must verify that the GCP project provided is identical to the one in the relevant connector.
+> When you're installing Arc extensions, you must verify that the provided GCP project is identical to the one in the relevant connector.
 
 To deploy the solution to specific clusters:
 
@@ -90,7 +90,7 @@ To deploy the solution to specific clusters:
 
 1. Select **Fix**.
 
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot showing the location of the fix button.":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot that shows the location of the Fix button.":::
 
 1. Defender for Cloud generates a script in the language of your choice:
     - For Linux, select **Bash**.
@@ -110,7 +110,7 @@ To deploy the solution to specific clusters:
 
 1. Select the :::image type="icon" source="../media/defender-for-containers-enable-plan-gke/add-filter.png" border="false"::: button.
 
-1. On the **Filter** dropdown menu, select **Resource type.**
+1. On the **Filter** dropdown menu, select **Resource type**.
 
 1. On the **Value** dropdown menu, select **GCP GKE Cluster**.
 
@@ -118,7 +118,7 @@ To deploy the solution to specific clusters:
 
 ## Deploy the Defender sensor
 
-To deploy the Defender sensor on your GCP clusters, follow these steps:
+To deploy the Defender sensor on your GCP clusters:
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Add environment** > **Google Cloud Platform**.
 
