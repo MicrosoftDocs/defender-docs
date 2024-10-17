@@ -8,13 +8,9 @@ author: dcurwin
 
 ## Network requirements
 
-Validate that the following endpoints are configured for outbound access so that the Defender sensor can connect to Microsoft Defender for Cloud to send security data and events.
+Validate that the following endpoints are configured for outbound access so that the Defender sensor can connect to Microsoft Defender for Cloud to send security data and events. Also, see the [required FQDN/application rules for Microsoft Defender for Containers](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers).
 
-See the [required FQDN/application rules for Microsoft Defender for Containers](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers).
-
-By default, AKS clusters have unrestricted outbound (egress) internet access.
-
-The Defender sensor must connect to the configured Azure Monitor Log Analytics workspace. If event egress from the cluster requires the use of an Azure Monitor Private Link Scope (AMPLS), you must:
+By default, AKS clusters have unrestricted outbound (egress) internet access. The Defender sensor must connect to the configured Azure Monitor Log Analytics workspace. If event egress from the cluster requires the use of an Azure Monitor Private Link Scope (AMPLS), you must:
 
 - Define the cluster with Container insights and a Log Analytics workspace.
 - Configure the AMPLS with query access mode and ingestion access mode set to **Open**.
