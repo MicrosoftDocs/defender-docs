@@ -26,7 +26,7 @@ ms.date: 06/01/2023
     > [!NOTE]
     >
     > - Defender for Containers customers who joined before August 2023 and don't have **Agentless discovery for Kubernetes** turned on as part of Defender cloud security posture management (CSPM) when they enabled the plan must manually enable the **Agentless discovery for Kubernetes** extension within the Defender for Containers plan.
-    > - When you turn off Defender for Containers, the components are set to off. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
+    > - When you turn off Defender for Containers, the components are set to **Off**. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
 
 ### Enablement method per capability
 
@@ -84,9 +84,9 @@ You can use Azure portal pages to enable the Defender for Cloud plan and set up 
 A dedicated Defender for Cloud recommendation provides:
 
 - Visibility into which of your clusters has the Defender sensor deployed.
-- A **Fix** button to deploy the sensor to those clusters that don't have it.
+- A **Fix** button to deploy the sensor to clusters that don't have it.
 
-To enable the plan:
+To deploy the sensor:
 
 1. On the Microsoft Defender for Cloud **Recommendations** page, open the **Enable enhanced security** security control.
 
@@ -97,7 +97,7 @@ To enable the plan:
 
 1. Select the clusters to see the details of the healthy and unhealthy resources (clusters with and without the sensor).
 
-1. From the list of unhealthy resources, select a cluster and then select **Remediate** to open the pane with the remediation confirmation.
+1. In the list of unhealthy resources, select a cluster and then select **Remediate** to open the pane with the remediation confirmation.
 
 1. Select **Fix X resources**.
 
