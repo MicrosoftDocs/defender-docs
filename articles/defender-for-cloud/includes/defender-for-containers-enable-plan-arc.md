@@ -141,7 +141,7 @@ To manually deploy the sensor by using the REST API, run the following `PUT` com
 PUT https://management.azure.com/subscriptions/{{Subscription ID}}/resourcegroups/{{Resource Group}}/providers/Microsoft.Kubernetes/connectedClusters/{{Cluster Name}}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes?api-version=2020-07-01-preview
 ```
 
-The command includes these placeholders:
+The command includes these parameters:
 
 | Name            | In   | Required | Type   | Description   |
 |-----------------|------|----------|--------|---------------|

@@ -29,7 +29,7 @@ To remove the extension by using the REST API, run the following `PUT` command:
 https://management.azure.com/subscriptions/{{SubscriptionId}}/resourcegroups/{{ResourceGroup}}/providers/Microsoft.ContainerService/managedClusters/{{ClusterName}}?api-version={{ApiVersion}}
 ```
 
-The command includes these placeholders:
+The command includes these parameters:
 
 | Name           | Description                        | Mandatory |
 |----------------|------------------------------------|-----------|
@@ -38,7 +38,7 @@ The command includes these placeholders:
 | `ClusterName`    | Cluster's name                     | Yes       |
 | `ApiVersion`     | API version; must be 2022-06-01 or later | Yes       |
 
-Request body:
+This is the request body:
 
 ```rest
 {
@@ -55,7 +55,7 @@ Request body:
 }
 ```
 
-Request body parameters:
+The request body has these parameters:
 
 | Name | Description | Mandatory |
 |--|--|--|

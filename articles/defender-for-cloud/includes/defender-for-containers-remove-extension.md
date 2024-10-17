@@ -70,7 +70,7 @@ To remove the extension by using the REST API, run the following `DELETE` comman
 DELETE https://management.azure.com/subscriptions/{{Subscription Id}}/resourcegroups/{{Resource Group}}/providers/Microsoft.Kubernetes/connectedClusters/{{Cluster Name}}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes?api-version=2020-07-01-preview
 ```
 
-The command includes these placeholders:
+The command includes these parameters:
 
 | Name            | In   | Required | Type   | Description                                           |
 |-----------------|------|----------|--------|-------------------------------------------------------|
