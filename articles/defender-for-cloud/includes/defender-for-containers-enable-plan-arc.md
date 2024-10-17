@@ -10,12 +10,12 @@ ms.date: 06/04/2023
 
 1. In Defender for Cloud, select **Settings**, and then select the relevant subscription.
 
-1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Defender for Containers** > **Settings**.
+1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Containers** > **Settings**.
 
     :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the page for Defender plans." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
 
     > [!TIP]
-    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Defender for Containers**.
+    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Containers**.
     >
     > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernetes and Defender for container registries plans in a deprecated state, along with upgrade information.":::
 
@@ -70,7 +70,7 @@ To deploy the sensor:
 
 1. On the Microsoft Defender for Cloud **Recommendations** page, open the **Enable enhanced security** security control.
 
-1. Use the filter to find the recommendation named **Azure Arc-enabled Kubernetes clusters should have the Microsoft Defender's extension installed**.
+1. Use the filter to find the recommendation named **Azure Arc-enabled Kubernetes clusters should have Microsoft Defender's extension enabled**.
 
     :::image type="content" source="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Screenshot that shows the Microsoft Defender for Cloud recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
 
@@ -79,7 +79,7 @@ To deploy the sensor:
 
 1. Select the sensor to see the details of the healthy and unhealthy resources (clusters with and without the sensor).
 
-1. In the list of unhealthy resources, select a cluster and then select **Remediate** to open the pane with the remediation options.
+1. In the list of unhealthy resources, select a cluster. Then select **Remediate** to open the pane with the remediation options.
 
 1. Select the relevant Log Analytics workspace, and then select **Remediate x resource**.
 
@@ -182,7 +182,7 @@ The message body includes these properties:
 
 ## Verify the deployment
 
-To verify that your cluster has the Defender sensor installed on it, follow the steps on one of the following tabs:
+To verify that your cluster has the Defender sensor installed on it, follow the steps on one of the following tabs.
 
 ### [Azure portal - Defender for Cloud](#tab/k8s-verify-asc)
 
@@ -190,7 +190,7 @@ To verify that your cluster has the Defender sensor installed on it, follow the 
 
 1. On the Microsoft Defender for Cloud **Recommendations** page, open the  **Enable Microsoft Defender for Cloud** security control.
 
-1. Select the recommendation named **Azure Arc-enabled Kubernetes clusters should have the Microsoft Defender's extension installed**.
+1. Select the recommendation named **Azure Arc-enabled Kubernetes clusters should have Microsoft Defender's extension enabled**.
 
     :::image type="content" source="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Screenshot that shows the Defender for Cloud recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="../media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
 
@@ -225,7 +225,7 @@ To verify that your cluster has the Defender sensor installed on it, follow the 
     > [!NOTE]
     > The response might show `"installState": "Pending"` for the first few minutes.
 
-1. If the state shows `Installed`, run the following command on your machine with the `kubeconfig` file pointed to your cluster to check that all pods under the `mdc` namespace are in the `Running` state:
+1. If the state shows `Installed`, run the following command on your machine with the `kubeconfig` file pointed to your cluster. Then check that all pods under the `mdc` namespace are in the `Running` state.
 
     ```console
     kubectl get pods -n mdc
@@ -248,7 +248,7 @@ To confirm a successful deployment, or to validate the status of your sensor at 
     > [!TIP]
     > The response might show `"installState": "Pending"` for the first few minutes.
 
-1. If the state shows `Installed`, run the following command on your machine with the `kubeconfig` file pointed to your cluster, to check that all pods under the `mdc` namespace are in the `Running` state:
+1. If the state shows `Installed`, run the following command on your machine with the `kubeconfig` file pointed to your cluster. Then check that all pods under the `mdc` namespace are in the `Running` state.
 
     ```console
     kubectl get pods -n mdc

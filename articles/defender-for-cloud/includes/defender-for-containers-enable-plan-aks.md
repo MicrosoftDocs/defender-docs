@@ -10,12 +10,12 @@ ms.date: 06/01/2023
 
 1. In Defender for Cloud, select **Settings**, and then select the relevant subscription.
 
-1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Defender for Containers** > **Settings**.
+1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Containers** > **Settings**.
 
     :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the page for Defender plans." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
 
     > [!TIP]
-    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Defender for Containers**.
+    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Containers**.
     >
     > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernetes and Defender for container registries plans in a deprecated state, along with upgrade information.":::
 
@@ -97,7 +97,7 @@ To deploy the sensor:
 
 1. Select the clusters to see the details of the healthy and unhealthy resources (clusters with and without the sensor).
 
-1. In the list of unhealthy resources, select a cluster and then select **Remediate** to open the pane with the remediation confirmation.
+1. In the list of unhealthy resources, select a cluster. Then select **Remediate** to open the pane with the remediation confirmation.
 
 1. Select **Fix X resources**.
 
