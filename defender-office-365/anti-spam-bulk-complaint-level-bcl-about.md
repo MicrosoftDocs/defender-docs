@@ -43,7 +43,7 @@ The BCL thresholds are described in the following table.
 The default BCL threshold that's used in anti-spam policies is described in the following list:
 
 - **Default anti-spam policy and new anti-spam policies**: 7.
-- **[Standard preset security policy](preset-security-policies.md)**: 6.
+- **[Standard preset security policy](preset-security-policies.md)**: 7.
 - **Strict preset security policy**: 5.
 
 Messages that meet or exceed the configured BCL threshold have the following default actions taken on them:
