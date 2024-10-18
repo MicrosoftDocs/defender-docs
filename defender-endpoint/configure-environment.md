@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/14/2024
+ms.date: 10/18/2024
 ---
 
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
@@ -27,7 +27,7 @@ ms.date: 06/14/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
-Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
+Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service, by allowing outbound connection and bypassings HTTPS inspection for the service URLs. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 
 > [!NOTE]
 > - After May 8, 2024, you have the option to keep streamlined connectivity ([consolidated set of URLs](https://aka.ms/MDE-streamlined-urls)) as the default onboarding method, or downgrade to standard connectivity through (**Settings > Endpoints > Advanced Features**). For onboarding through Intune or Microsoft Defender for Cloud, you need to activate the relevant option. Devices already onboarded aren't reonboarded automatically. In such cases, create a new policy in Intune, where it is recommended to first assign the policy to a set of test devices to verify connectivity is successful, and then expand the audience. Devices in Defender for Cloud can be reonboarded using the relevant onboarding script, while newly onboarded devices will automatically receive streamlined onboarding.
