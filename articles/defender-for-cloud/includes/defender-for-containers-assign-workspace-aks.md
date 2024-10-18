@@ -58,7 +58,7 @@ To assign a custom workspace:
 
 1. On the **Parameters** tab, clear the **Only show parameters that need input or review** option.
 
-1. Select a **LogAnalyticsWorkspaceResource** ID from the dropdown menu.
+1. Select a **LogAnalyticsWorkspaceResourceId** value from the dropdown menu.
 
    :::image type="content" source="../media/defender-for-containers/drop-down-menu.png" alt-text="Screenshot that shows the dropdown menu for Log Analytics workspace resource ID." lightbox="../media/defender-for-containers/drop-down-menu.png":::
 
@@ -85,7 +85,7 @@ To assign a custom workspace:
 
 1. On the **Parameters** tab, clear the **Only show parameters that need input or review** option.
 
-1. Select a **LogAnalyticsWorkspaceResource** ID from the dropdown menu.
+1. Select a **LogAnalyticsWorkspaceResourceId** value from the dropdown menu.
 
    :::image type="content" source="../media/defender-for-containers/drop-down-menu.png" alt-text="Screenshot that shows the dropdown menu for a Log Analytics workspace resource ID." lightbox="../media/defender-for-containers/drop-down-menu.png":::
 

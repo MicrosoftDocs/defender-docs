@@ -6,7 +6,7 @@ ms.author: dacurwin
 author: dcurwin
 ---
 
-## Default Log Analytics workspace for Arc
+## Default Log Analytics workspace for Azure Arc
 
 The Defender sensor uses the Log Analytics workspace as a data pipeline to send data from the cluster to Defender for Cloud. The workspace doesn't retain any of the data. As a result, users aren't billed in this use case.
 
@@ -58,7 +58,7 @@ To assign a custom workspace:
 
 1. On the **Parameters** tab, clear the **Only show parameters that need input or review** option.
 
-1. Select a **LogAnalyticsWorkspaceResource** ID from the dropdown menu.
+1. Select a **LogAnalyticsWorkspaceResourceId** value from the dropdown menu.
 
    :::image type="content" source="../media/defender-for-containers/drop-down-menu-arc.png" alt-text="Screenshot that shows the dropdown menu for a Log Analytics workspace resource ID related to Azure Arc." lightbox="../media/defender-for-containers/drop-down-menu-arc.png":::
 
@@ -85,7 +85,7 @@ To assign a custom workspace:
 
 1. On the **Parameters** tab, clear the **Only show parameters that need input or review** option.
 
-1. Select a **LogAnalyticsWorkspaceResource** ID from the dropdown menu.
+1. Select a **LogAnalyticsWorkspaceResourceId** value from the dropdown menu.
 
    :::image type="content" source="../media/defender-for-containers/drop-down-menu-arc.png" alt-text="Screenshot that shows the dropdown menu for a Log Analytics workspace resource ID for Azure Arc." lightbox="../media/defender-for-containers/drop-down-menu-arc.png":::
 

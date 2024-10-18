@@ -26,7 +26,7 @@ You can remove the extension by using Azure portal, the Azure CLI, or the REST A
 ### Use the Azure portal to remove the extension
 
 1. In the Azure portal, open Azure Arc.
-1. In the infrastructure list, select **Kubernetes clusters** and then select the specific cluster.
+1. In the infrastructure list, select **Kubernetes clusters**, and then select the specific cluster.
 1. Open the **Extensions** page, which lists extensions on the cluster.
 1. Select the extension, and then select **Uninstall**.
 
@@ -58,7 +58,7 @@ You can remove the extension by using Azure portal, the Azure CLI, or the REST A
     kubectl get pods -n mdc
     ```
 
-    It might take a few minutes for the pods to be deleted.
+    Deletion of the pods might take a few minutes.
 
 ### [REST API](#tab/k8s-remove-api)
 
