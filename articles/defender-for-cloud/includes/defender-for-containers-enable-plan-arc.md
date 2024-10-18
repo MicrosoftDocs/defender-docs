@@ -240,7 +240,7 @@ To confirm a successful deployment, or to validate the status of your sensor at 
 1. Run the following `GET` command:
 
     ```rest
-    GET https://management.azure.com/subscriptions/{{Subscription Id}}/resourcegroups/{{Resource Group}}/providers/Microsoft.Kubernetes/connectedClusters/{{Cluster Name}}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes?api-version=2020-07-01-preview
+    GET https://management.azure.com/subscriptions/{{Subscription ID}}/resourcegroups/{{Resource Group}}/providers/Microsoft.Kubernetes/connectedClusters/{{Cluster Name}}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes?api-version=2020-07-01-preview
     ```
 
 1. In the response, look in `"extensionType": "microsoft.azuredefender.kubernetes"` for `"installState": "Installed"`.
