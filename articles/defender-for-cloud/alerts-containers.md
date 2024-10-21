@@ -34,12 +34,12 @@ Examples of suspicious workload runtime activity include:
 
 ## K8s alerts simulation tool
 
-MDC Containers provides a tool to simulate the alerts generated for various attack scenarios. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
+MDC Containers provides a tool to simulate various attack scenarios within your K8s environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
 
 > !Note
 > Although the simulation tool doesn't run any malicious components, it's recommended to run it on a dedicated cluster without production workloads.
 
-The simulation tool is executed on your local machine using a Python-based CLI that deploys Helm charts in the target cluster.
+The simulation tool runs on your local machine using a Python-based CLI that deploys Helm charts in the target cluster.
 
 ### Install the simulation tool
 
@@ -64,14 +64,14 @@ The simulation tool is executed on your local machine using a Python-based CLI t
 1. Run the simulation script with the following command:
     `./simulation.py`
 
-1. Choose the attack scenario to simulate or choose to simulate all of the attack scenarios at once. The available attack scenario simulations are:
+2. Choose a simulated attack scenario or choose to simulate all of the attack scenarios at once. The available simulated attack scenarios are:
     
 | Scenario | Expected alerts |
 |--|--|
 | **Reconnaissance** | Possible Web Shell activity detected <br/> Suspicious access to workload identity token or service account token detected <br/> Suspicious Kubernetes service account operation detected <br/> Network scanning tool detected  |
 | **Lateral Movement** | Possible Web Shell activity detected <br/> Access to cloud metadata service detected  |
 | **Secrets Gathering** | Possible Web Shell activity detected <br/> Sensitive files access detected <br/> Suspicious access to workload identity token or service account token detected <br/> Possible secret reconnaissance detected  |
-| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected  |
+| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container <br/> Digital currency mining related behavior detected |
 | **Web shell** | Possible Web Shell activity detected|
 
 ## Next steps
