@@ -32,6 +32,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | October 22 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
+| October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
+| October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
 | October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
 | October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
 | October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
@@ -55,6 +57,32 @@ October 22, 2024
 * Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
 * Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
 * Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
+
+### Deprecation of three compliance standards
+
+October 14, 2024
+
+**Estimated date for change:** November 17, 2024
+
+Three compliance standards are being removed from the product:
+
+- **SWIFT CSP-CSCF v2020 (for Azure)** - This was superseded by the v2022 version
+- **CIS Microsoft Azure Foundations Benchmark v1.1.0** and **v1.3.0** - We have two newer versions available (v1.4.0 and v2.0.0)
+
+Learn more about the compliance standards available in Defender for Cloud in [Available compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards).
+
+### Deprecation of three Defender for Cloud standards
+
+October 8, 2024
+
+**Estimated date for change:** November 17, 2024
+
+To simplify the management of Defender for Cloud with AWS accounts and GCP projects, we're removing the following three Defender for Cloud standards:
+
+- For AWS - **AWS CSPM**
+- For GCP - **GCP CSPM** and **GCP Default**
+
+The default standard, [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md), now contains all the assessments which were unique to these standards.
 
 ### Binary drift detection released as GA
 
