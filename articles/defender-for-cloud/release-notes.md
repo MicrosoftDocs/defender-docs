@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga)
 | October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
 | October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
 | October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
@@ -41,6 +42,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
 
+### Security findings for GitHub repositories without GitHub Advanced Security is now GA
+
+October 21, 2024
+
+The ability to receive security findings for infrastructure-as-code (IaC) misconfigurations, container vulnerabilities, and code weaknesses for GitHub repositories without GitHub Advanced Security is now generally available. 
+
+Note that secret scanning, code scanning using [GitHub CodeQL](https://codeql.github.com/), and dependency scanning still require GitHub Advanced Scanning.
+
+To learn more about required licenses, see the [DevOps support page](devops-support.md). To learn how to onboard your GitHub environment to Defender for Cloud, follow the [GitHub onboarding guide](quickstart-onboard-github.md). To learn how to configure the Microsoft Security DevOps GitHub Action, see our [GitHub Action documentation](github-action.md).
 
 ### Deprecation of three compliance standards
 
