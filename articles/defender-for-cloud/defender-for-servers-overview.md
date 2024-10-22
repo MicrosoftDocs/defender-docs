@@ -2,21 +2,21 @@
 title: Overview of Defender for Servers in Microsoft Defender for Cloud
 description: Get a quick overview of the Defender for Servers plan in Microsoft Defender for Cloud
 ms.topic: conceptual
-ms.author: dacurwin
-author: dcurwin
-ms.date: 10/08/2024
+ms.author: elkrieger
+author: elazark
+ms.date: 10/20/2024
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
 ---
 
 # Overview - Defender for Servers
 
-The Defender for Servers plan in [Microsoft Defender for Cloud](defender-for-cloud-introduction.md) reduces risk and exposure with security recommendations for improving multicloud security posture. Defender for Servers also provides protection against real-time threats and attacks.
+The Defender for Servers plan in [Microsoft Defender for Cloud](defender-for-cloud-introduction.md) reduces organizational security risk and exposure with security recommendations to improve security posture. Defender for Servers also provides protection against real-time security threats and attacks.
 
 > [!NOTE]
-> - Older versions of the plan use the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), or the Azure Monitoring Agent (AMA) in preview to gather information from machines.
+> - Defender for Servers previously used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), or the Azure Monitoring Agent (AMA) (in preview) to collect information from machines.
 > - Support for using these agents in Defender for Servers is ending.
-> - For most plan features, the use of the MMA/AMA is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
-> - [Learn more](prepare-deprecation-log-analytics-mma-agent.md) about deprecations and upcoming changes.
+> - For most plan features, the use of agents is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
+> - [Learn more](prepare-deprecation-log-analytics-mma-agent.md) about feature changes.
 
 ## Defender for Server benefits
 

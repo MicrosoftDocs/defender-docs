@@ -2,7 +2,9 @@
 title: Deploy the Defender for Servers plan in Microsoft Defender for Cloud
 description: Learn how to enable the Defender for Servers plan in Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 08/19/2024
+ms.author: elkrieger
+author: elazark
+ms.date: 10/20/2024
 # customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.
 
 ---
@@ -21,20 +23,25 @@ Defender for Servers provides two plans.
 
 ## Prerequisites
 
-- **Plan the deployment**. Work through the [Defender for Servers planning guide](plan-defender-for-servers.md).
+- **Plan your deployment**. Review the [Defender for Servers planning guide](plan-defender-for-servers.md).
 - **Review plans**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plans.
 - **Decide on deployment scope**: Decide where you want to enable Defender for Servers. [Learn more](defender-for-servers-overview.md#enabling-deployment-scope).
 - **Review pricing**. Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
-- Ensure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
-- **Onboard AWS/GCP machines**. To protect AWS, GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud. By default the connection process onboards multicloud machines as Azure Arc-enabled VMs.
-- **Onboard on-premises machines**. To use full Defender for Servers functionality, on-premises machines should be [onboarded to the subscription as Azure Arc VMs](quickstart-onboard-machines.md).
+- **Turn on Defender for Cloud**: Make sure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
+- **Onboard AWS/GCP machines**. To protect AWS and GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud. By default the connection process onboards multicloud machines as Azure Arc-enabled VMs.
+- **Onboard on-premises machines**. For full Defender for Servers functionality, on-premises machines should be [onboarded to the subscription as Azure Arc VMs](quickstart-onboard-machines.md).
 
-    If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md), Defender Plan 1 features are available. For Defender for Servers Plan 2, in addition to Plan 1 features, the only other available capability will be premium Defender Vulnerability Management features.
+    If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md) instead of onboarding machines with Azure Arc:
+
+        - Defender for Servers Plan functionality is available.
+        - For Defender for Servers Plan 2, in addition to Plan 1 features, only the premium Defender Vulnerability Management features will be available.
 
 - **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-- **Onboard with a Log Analytics workspace**: The benefit of free 500 MB data ingestion (available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-)) is available for machines running the  Azure Monitor agent (AMA) in subscriptions with Defender for Servers Plan 2 enabled. The benefit is granted to the Log Analytics workspace to which the machine reports. 
-- You need to specifically enable Defender for Servers Plan 2 on the workspace.
+- **Take advantage of 500 MB free data ingestion**: A benefit of free 500 MB data ingestion (available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-)) is available in Defender for Servers Plan 2.
+    - Machines must be running the Azure Monitor agent (AMA), and located in subscriptions with Defender for Servers Plan 2 enabled. 
+    - You need to specifically enable Defender for Servers Plan 2 on a Log Analytics workspace. The benefit is granted to the Log Analytics workspace to which the machine reports.
+
 - **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
 
 ## Enable on Azure, AWS, or GCP
