@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 07/18/2024
+ms.date: 10/22/2024
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -55,15 +55,13 @@ Safe Links protection by Safe Links policies is available in the following locat
   For more information about Safe Links protection for email messages, see the [Safe Links settings for email messages](#safe-links-settings-for-email-messages) section later in this article.
 
   > [!NOTE]
-  > Safe Links doesn't work on mail-enabled public folders.
   >
-  > Safe Links doesn't provide protection for URLs in Rich Text Format (RTF) email messages.
-  >
-  > Safe Links supports only HTTP(S) and FTP formats.
-  >
-  > Safe Links no longer wraps URLs pointing to SharePoint Online sites. SharePoint URLs are still processed by the Safe Links service. This change doesn't cause a degradation in the protection a tenant receives. It's intended to improve the performance of loading SharePoint URLs.
-  >
-  > Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
+  > - Safe Links doesn't work on mail-enabled public folders.
+  > - Safe Links doesn't provide protection for URLs in Rich Text Format (RTF) email messages.
+  > - Safe Links supports only HTTP(S) and FTP formats.
+  > - Safe Links ignores S/MIME signed messages.
+  > - Safe Links no longer wraps URLs pointing to SharePoint Online sites. SharePoint URLs are still processed by the Safe Links service. This change doesn't cause a degradation in the protection a tenant receives. It's intended to improve the performance of loading SharePoint URLs.
+  > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
 
 - **Microsoft Teams**: Safe Links protection for links in Teams conversations, group chats, or from channels.
 
