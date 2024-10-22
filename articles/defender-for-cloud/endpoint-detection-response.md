@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to review and remediate endpoint detection and response recommendations in order to ensure the security of my virtual machine.
 ---
 
-# Remediate EDR solutions (agentless)
+# Remediate EDR solution recommendations
 
 Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 

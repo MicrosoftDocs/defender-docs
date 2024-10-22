@@ -49,7 +49,7 @@ Azure Security Benchmark provides recommendations on how you can secure your clo
 
 ### **Attack Path Analysis**
 
-A graph-based algorithm that scans the cloud security graph, exposes attack paths and suggests recommendations as to how best remediate issues that break the attack path and prevent successful breach. See [What is attack path analysis?](concept-attack-path.md#what-is-attack-path-analysis).
+A graph-based algorithm that scans the cloud security graph, exposes attack paths and suggests recommendations as to how best remediate issues that break the attack path and prevent successful breach. See [What is attack path analysis?](concept-attack-path.md#what-is-an-attack-path).
 
 ### **Auto-provisioning**
 

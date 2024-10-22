@@ -198,6 +198,9 @@ The managed identity is part of the Azure Policy, which pushes out the AMA. It's
 
 Yes, we allow you to bring your own identity or DCR using the following script only. For more information, see [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
+### How many resource groups and Log analytics workspaces are created through the auto-provisioning process?
+By default, we create the resource group, workspace and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resoure group and DCR is created in the same location as the workspace. 
+
 ### How can I enable SQL servers on machines with AMA at scale?
 
 See [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md) for the process of how to enable Microsoft Defender for SQL’s autoprovisioning across multiple subscriptions simultaneously. It's applicable to SQL servers hosted on Azure Virtual Machines, on-premises environments, and Azure Arc-enabled SQL servers.
