@@ -79,73 +79,75 @@ The following code shows the schema you need to use to schedule scans according 
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
 <plist version="1.0"> 
 <dict> 
-     <key>PayloadUUID</key>
-     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-     <key>PayloadType</key>
-     <string>Configuration</string>
-     <key>PayloadOrganization</key>
-     <string>Microsoft</string>
-     <key>PayloadIdentifier</key>
-     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-     <key>PayloadDisplayName</key>
-     <string>Microsoft Defender for Endpoint settings</string>
-     <key>PayloadDescription</key>
-     <string>Microsoft Defender for Endpoint configuration settings</string>
-     <key>PayloadVersion</key>
-     <integer>1</integer>
-     <key>PayloadEnabled</key>
-     <true/>
-     <key>PayloadRemovalDisallowed</key>
-     <true/>
-     <key>PayloadScope</key>
-     <string>System</string>
-     <key>PayloadContent</key>
-     <array>
-       <dict>
-           <key>PayloadUUID</key>
-           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-           <key>PayloadType</key>
-           <string>com.microsoft.wdav</string>
-           <key>PayloadOrganization</key>
-           <string>Microsoft</string>
-           <key>PayloadIdentifier</key>
-           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-           <key>PayloadDisplayName</key>
-           <string>Microsoft Defender for Endpoint configuration settings</string>
-           <key>PayloadDescription</key>
-           <string/>
-           <key>PayloadVersion</key>
-           <integer>1</integer>
-           <key>PayloadEnabled</key>
-           <true/>
-    <key>features</key> 
-    <dict> 
-        <key>scheduledScan</key> 
-        <string>enabled</string> 
-    </dict> 
-    <key>scheduledScan</key> 
-    <dict> 
-        <key>ignoreExclusions</key> 
-        <true/> 
-        <key>lowPriorityScheduledScan</key> 
-        <true/> 
-        <key>dailyConfiguration</key> 
-        <dict> 
-            <key>timeOfDay</key> 
-            <integer>885</integer> 
-        </dict> 
-        <key>weeklyConfiguration</key> 
-        <dict> 
-            <key>dayOfWeek</key> 
-            <integer>4</integer> 
-            <key>timeOfDay</key> 
-            <integer>880</integer> 
-            <key>scanType</key> 
-            <string>full</string> 
-        </dict> 
-    </dict> 
+    <key>PayloadUUID</key>
+    <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadOrganization</key>
+    <string>Microsoft</string>
+    <key>PayloadIdentifier</key>
+    <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+    <key>PayloadDisplayName</key>
+    <string>Microsoft Defender for Endpoint settings</string>
+    <key>PayloadDescription</key>
+    <string>Microsoft Defender for Endpoint configuration settings</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadEnabled</key>
+    <true/>
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadUUID</key>
+            <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+            <key>PayloadType</key>
+            <string>com.microsoft.wdav</string>
+            <key>PayloadOrganization</key>
+            <string>Microsoft</string>
+            <key>PayloadIdentifier</key>
+            <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+            <key>PayloadDisplayName</key>
+            <string>Microsoft Defender for Endpoint configuration settings</string>
+            <key>PayloadDescription</key>
+            <string/>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadEnabled</key>
+            <true/>
+            <key>features</key> 
+            <dict>
+                <key>scheduledScan</key> 
+                <string>enabled</string> 
+            </dict> 
+            <key>scheduledScan</key> 
+            <dict> 
+                <key>ignoreExclusions</key> 
+                <true/> 
+                <key>lowPriorityScheduledScan</key> 
+                <true/> 
+                <key>dailyConfiguration</key> 
+                <dict> 
+                    <key>timeOfDay</key> 
+                    <integer>880</integer> 
+                </dict> 
+                <key>weeklyConfiguration</key> 
+                <dict> 
+                    <key>dayOfWeek</key> 
+                    <integer>4</integer> 
+                    <key>timeOfDay</key> 
+                    <integer>885</integer> 
+                    <key>scanType</key> 
+                    <string>full</string>
+                </dict>
+            </dict> 
+        </dict>
+    </array>
 </dict> 
-</plist> 
+</plist>
 ```
 
 2. Save the file as _com.microsoft.wdav.mobileconfig_.
