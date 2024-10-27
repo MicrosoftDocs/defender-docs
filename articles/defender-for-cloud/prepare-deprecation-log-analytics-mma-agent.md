@@ -392,9 +392,9 @@ We recommend you plan agent migration in accordance with your business requireme
 | Yes | Yes | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can use the Log Analytics agent and AMA side-by-side to get all features in GA. [Learn more](auto-deploy-azure-monitoring-agent.md#impact-of-running-with-both-the-log-analytics-and-azure-monitor-agents) about running agents side-by-side.<br>3. Migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines. Alternatively, start the migration from Log Analytics agent to AMA in April 2024.<br/>4. Once the migration is finished, [disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 | Yes | No | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines now.<br/>3. [Disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 
-### MMA migration wizard
+### MMA migration experience
 
-The MMA migration wizard is a tool that helps you migrate from the MMA to the AMA. The wizard provides a step-by-step guide to help you migrate your machines from the MMA to the AMA.
+The MMA migration experience is a tool that helps you migrate from the MMA to the AMA. The experience provides a step-by-step guide to help you migrate your machines from the MMA to the AMA.
 
 With this tool, you can:
 
@@ -414,7 +414,7 @@ With this tool, you can:
 
     :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/take-action.png" alt-text="Screenshot that shows where the take action button is located for all of the options." lightbox="media/prepare-deprecation-log-analytics-mma-agent/take-action.png":::
 
-Allow the wizard to load and follow the steps to complete the migration.
+Allow the experience to load and follow the steps to complete the migration.
 
 ## Next step
 

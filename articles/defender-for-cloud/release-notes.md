@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| October 27 | GA | [MMA migration wizard is now available](#mma-migration-wizard-is-now-available) |
+| October 27 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
 | October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
 | October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
 | October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
@@ -43,19 +43,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
 
-### MMA migration wizard is now available
+### MMA migration experience is now available
 
 October 27, 2024
 
-A new MMA migration wizard is now available to assist you with the migration process. This wizard ensures your environments are ready for the transition in Defender for Servers following the deprecation of the Log Analytics agent (MMA).
+You can now ensure that all of your environments are fully prepared for the post the Log Analytics agent (MMA) deprecation.
 
-With this experience you can review and take action at scale over affected environments:
+Defender for Cloud has added a new experience that allows you to take action at scale for all of your affected environments:
 
 - That are missing prerequisites necessary to gain the full security coverage offered by Defender for Servers Plan 2.
 - That are [connected to Defender for Servers Plan 2 using the legacy onboarding approach via Log Analytics workspace](prepare-deprecation-log-analytics-mma-agent.md#changes-to-legacy-defender-for-servers-plan-2-onboarding-via-log-analytics-agent).
 - That use the old File Integrity Monitoring (FIM) version with the Log Analytics agent (MMA) need to migrate to the new, [improved FIM version with Defender for Endpoint (MDE)](file-integrity-monitoring-enable-defender-endpoint.md).
  
-Learn how to [use the new MMA migration wizard](prepare-deprecation-log-analytics-mma-agent.md#mma-migration-wizard).
+Learn how to [use the new MMA migration experience](prepare-deprecation-log-analytics-mma-agent.md#mma-migration-experience).
 
 ### Security findings for GitHub repositories without GitHub Advanced Security is now GA
 
