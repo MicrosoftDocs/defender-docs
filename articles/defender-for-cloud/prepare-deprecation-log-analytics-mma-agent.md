@@ -302,7 +302,7 @@ When you enable Defender for Cloud on an Azure subscription, the [Microsoft clou
 
 If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
 
-As a work around, you can disable the MMA recommendations, "Machines should be configured securely", and "Auto provisioning of the Log Analytics agent should be enabled on subscriptions", by navigating to the Regulatory compliance page in Defender for Cloud.
+As a work-around, you can disable the MMA recommendations, "Machines should be configured securely", and "Auto provisioning of the Log Analytics agent should be enabled on subscriptions", by navigating to the Regulatory compliance page in Defender for Cloud.
 
 :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text="Screenshot of the regulatory compliance dashboard that shows where one of the MMA recommendations exist." lightbox="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png":::
 
