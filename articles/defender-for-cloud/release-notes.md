@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/15/2024
+ms.date: 10/27/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,7 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| October 14 | GA | [MMA migration wizard is now available](#mma-migration-wizard-is-now-available) |
+| October 27 | GA | [MMA migration wizard is now available](#mma-migration-wizard-is-now-available) |
+| October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
 | October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
 | October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
 | October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
@@ -44,7 +45,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### MMA migration wizard is now available
 
-October 14, 2024
+October 27, 2024
 
 A new MMA migration wizard is now available to assist you with the migration process. This wizard ensures your environments are ready for the transition in Defender for Servers following the deprecation of the Log Analytics agent (MMA).
 
@@ -55,6 +56,16 @@ With this experience you can review and take action at scale over affected envir
 - That use the old File Integrity Monitoring (FIM) version with the Log Analytics agent (MMA) need to migrate to the new, [improved FIM version with Defender for Endpoint (MDE)](file-integrity-monitoring-enable-defender-endpoint.md).
  
 Learn how to [use the new MMA migration wizard](prepare-deprecation-log-analytics-mma-agent.md#mma-migration-wizard).
+
+### Security findings for GitHub repositories without GitHub Advanced Security is now GA
+
+October 21, 2024
+
+The ability to receive security findings for infrastructure-as-code (IaC) misconfigurations, container vulnerabilities, and code weaknesses for GitHub repositories without GitHub Advanced Security is now generally available. 
+
+Note that secret scanning, code scanning using [GitHub CodeQL](https://codeql.github.com/), and dependency scanning still require GitHub Advanced Scanning.
+
+To learn more about required licenses, see the [DevOps support page](devops-support.md). To learn how to onboard your GitHub environment to Defender for Cloud, follow the [GitHub onboarding guide](quickstart-onboard-github.md). To learn how to configure the Microsoft Security DevOps GitHub Action, see our [GitHub Action documentation](github-action.md).
 
 ### Deprecation of three compliance standards
 
