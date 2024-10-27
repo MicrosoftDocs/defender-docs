@@ -47,7 +47,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 October 27, 2024
 
-You can now ensure that all of your environments are fully prepared for the post the Log Analytics agent (MMA) deprecation.
+You can now ensure that all of your environments are fully prepared for the post Log Analytics agent (MMA) deprecation expected at the end of November 2024.
 
 Defender for Cloud has added a new experience that allows you to take action at scale for all of your affected environments:
 
