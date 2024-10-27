@@ -31,6 +31,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga)
+| October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
+| October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
 | October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
 | October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
 | October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
@@ -38,6 +41,42 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
+
+### Security findings for GitHub repositories without GitHub Advanced Security is now GA
+
+October 21, 2024
+
+The ability to receive security findings for infrastructure-as-code (IaC) misconfigurations, container vulnerabilities, and code weaknesses for GitHub repositories without GitHub Advanced Security is now generally available. 
+
+Note that secret scanning, code scanning using [GitHub CodeQL](https://codeql.github.com/), and dependency scanning still require GitHub Advanced Scanning.
+
+To learn more about required licenses, see the [DevOps support page](devops-support.md). To learn how to onboard your GitHub environment to Defender for Cloud, follow the [GitHub onboarding guide](quickstart-onboard-github.md). To learn how to configure the Microsoft Security DevOps GitHub Action, see our [GitHub Action documentation](github-action.md).
+
+### Deprecation of three compliance standards
+
+October 14, 2024
+
+**Estimated date for change:** November 17, 2024
+
+Three compliance standards are being removed from the product:
+
+- **SWIFT CSP-CSCF v2020 (for Azure)** - This was superseded by the v2022 version
+- **CIS Microsoft Azure Foundations Benchmark v1.1.0** and **v1.3.0** - We have two newer versions available (v1.4.0 and v2.0.0)
+
+Learn more about the compliance standards available in Defender for Cloud in [Available compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards).
+
+### Deprecation of three Defender for Cloud standards
+
+October 8, 2024
+
+**Estimated date for change:** November 17, 2024
+
+To simplify the management of Defender for Cloud with AWS accounts and GCP projects, we're removing the following three Defender for Cloud standards:
+
+- For AWS - **AWS CSPM**
+- For GCP - **GCP CSPM** and **GCP Default**
+
+The default standard, [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md), now contains all the assessments which were unique to these standards.
 
 ### Binary drift detection released as GA
 
