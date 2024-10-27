@@ -30,7 +30,7 @@ Examples of suspicious workload runtime activity include:
 * Web shell activity
 * Crypto mining activity
 * Binary drift
-* Applying the MDE detection library... ??????????????
+* Workload activity detected by the MDE detection library
 
 ## K8s alerts simulation tool
 
