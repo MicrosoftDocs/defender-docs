@@ -1,19 +1,19 @@
 ---
-title: Deploy the Defender for Servers plan in Microsoft Defender for Cloud
+title: Deploy Defender for Servers in Microsoft Defender for Cloud
 description: Learn how to enable the Defender for Servers plan in Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
 ms.author: elkrieger
 author: elazark
-ms.date: 10/20/2024
+ms.date: 10/28/2024
 # customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.
 
 ---
 
 # Deploy Defender for Servers
 
-The Defender for Servers plan in Microsoft Defender for Cloud protects Windows and Linux virtual machines (VMs) that run in Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and in on-premises environments.
+The Defender for Servers plan in Microsoft Defender for Cloud protects Windows and Linux virtual machines (VMs) that run in Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and in on-premises environments. Defender for Servers provides recommendations to improve the security posture of machines, and protects machines against security threats.
 
-Defender for Servers provides two plans. 
+Defender for Servers provides two plans.
 
 - **Plan 1** provides vulnerability management and endpoint detection and response (EDR) features, based on integration of Defender for Servers with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management.
 - **Plan 2** provides Plan 1 features and more capabilities, including agentless vulnerabilities scanning, cloud-native protection features, and premium Defender Vulnerability Management features.
@@ -36,8 +36,9 @@ Defender for Servers provides two plans.
 
 - **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
 - **Take advantage of 500 MB free data ingestion**: A benefit of free 500 MB data ingestion (available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-)) is available in Defender for Servers Plan 2.
-    - Machines must be running the Azure Monitor agent (AMA), and located in subscriptions with Defender for Servers Plan 2 enabled. 
-    - You need to specifically enable Defender for Servers Plan 2 on a Log Analytics workspace. The benefit is granted to the Log Analytics workspace to which the machine reports.
+
+- Machines must be running the Azure Monitor agent (AMA), and located in subscriptions with Defender for Servers Plan 2 enabled. 
+- You need to specifically enable Defender for Servers Plan 2 on a Log Analytics workspace. The benefit is granted to the Log Analytics workspace to which the machine reports.
 
 - **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
 

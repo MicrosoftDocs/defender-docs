@@ -67,7 +67,7 @@ Plan features are summarized in the table.
 **File integrity monitoring** | Supported in Plan 2 only | [File integrity monitoring](file-integrity-monitoring-overview.md) examines files and registries for changes that might indicate an attack. You configure file integrity monitoring after enabling Defender for Servers Plan 2.<br/><br/> File integrity monitoring uses the Defender for Endpoint sensor to collect information. The previous collection method that used the MMA is now deprecated. [Learn more](migrate-file-integrity-monitoring.md).
 **Just-in-time virtual machine access** | Supported in Plan 2 only | [Just-in-time virtual machine access](just-in-time-access-overview.md) locks down machine ports to reduce the attack surface.
 **Network map** | Plan 2 only | The [network map](protect-network-resources.md) provides a geographical view of recommendations for hardening your network resources.
-**Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-) in Log Analytics workspaces.
+**Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for specific data types in Log Analytics workspaces.
 
 ## Using the free data ingestion benefit
 
@@ -79,6 +79,29 @@ The benefit is available for every machine running the Azure Monitor agent (AMA)
 - Data ingestion is calculated per node, per reported workspace, and per day.
 - The relevant workspace should have the *Security* or *AntiMalware* solution installed. [Learn how to enable the Security solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-to-configure-security-events-collection-with-azure-monitor/ba-p/3770719).
 
+### Supported data types
+
+Defender for Servers Plan 2 provides an allocation of 500 MB per node per day for machines against the following subset of [security data types](/azure/azure-monitor/reference/tables-category#security).
+
+- [SecurityAlert](/azure/azure-monitor/reference/tables/securityalert)
+- [SecurityBaseline](/azure/azure-monitor/reference/tables/securitybaseline)
+- [SecurityBaselineSummary](/azure/azure-monitor/reference/tables/securitybaselinesummary)
+- [SecurityDetection](/azure/azure-monitor/reference/tables/securitydetection)
+- [SecurityEvent](/azure/azure-monitor/reference/tables/securityevent)
+- [WindowsFirewall](/azure/azure-monitor/reference/tables/windowsfirewall)
+- [ProtectionStatus](/azure/azure-monitor/reference/tables/protectionstatus)
+- [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
+- [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
+
+If the workspace is in the legacy per-node pricing tier, the Defender for Cloud and Log Analytics allocations are combined and applied jointly to all billable ingested data.
+
+
+### Allowance
+
+When you have Defender for Servers Plan 2 enabled, you get 500 MB of free data ingestion per day. 
+
+- The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
+- This allowance is a daily rate that's averaged across all nodes. Your total daily free limit is equal to [number of machines] × 500 MB. You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 
 
 
