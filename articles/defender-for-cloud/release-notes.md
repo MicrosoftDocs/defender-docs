@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 10/27/2024
+ms.date: 10/28/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| October 27 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
+| October 28 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
 | October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
 | October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
 | October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
@@ -45,7 +45,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### MMA migration experience is now available
 
-October 27, 2024
+October 28, 2024
 
 You can now ensure that all of your environments are fully prepared for the post Log Analytics agent (MMA) deprecation expected at the end of November 2024.
 
