@@ -1862,7 +1862,6 @@ File integrity monitoring (FIM) examines operating system files and registries f
 
 FIM is now available in a new version based on Azure Monitor Agent (AMA), which you can [deploy through Defender for Cloud](auto-deploy-azure-monitoring-agent.md).
 
-Learn more about [File Integrity Monitoring with the Azure Monitor Agent](file-integrity-monitoring-enable-ama.md).
 
 ### Legacy Assessments APIs deprecation
 

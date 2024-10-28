@@ -26,7 +26,7 @@ This article describes how to migrate existing workspace-based file integrity mo
     - The source is the workspace from which you want to transfer existing rules into the new experience.
     - The target is the workspace to which change logs will be written when monitored files and registries change.
 - After the new experience is enabled, machines in the enable scope are all covered by the same file integrity monitoring rules.
-- If you want to exempt individual machines from file integrity monitoring, you can you can downgrade some of them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](https://review.learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-servers-plan?branch=pr-en-us-20#enable-plan-1-for-specific-resources).  
+- If you want to exempt individual machines from file integrity monitoring, you can you can downgrade some of them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](/azure/defender-for-cloud/tutorial-enable-servers-plan#enable-plan-1-for-specific-resources).  
 
 
 ## Prerequisites
@@ -55,7 +55,7 @@ Access the migration experience in Defender for Cloud > **Environment settings**
 1. In the **Prepare your environments** page, start the migration.
 1. Under **Migrate to FIM's new version over MDE**, select **Take action**.
 
-     :::image type="content" source="./media/migrate-file-integrity-monitoring/take-action.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/take-action.png":::
+    :::image type="content" source="./media/migrate-file-integrity-monitoring/take-action.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/take-action.png":::
 
 1. In **Migrate to the new FIM** tab, you can see all the subscriptions that host machines with legacy file integrity monitoring enabled.
     - **Total machines on subscriptions** shows all of the Azure VMs, and Azure Arc-enabled VMs in the subscription.

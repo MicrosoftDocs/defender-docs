@@ -1,6 +1,6 @@
 ---
-title: Set up Azure Policy guest configuration on machines protected by Microsoft Defender for Cloud
-description: Learn how to install the guest configuration on machines protected by Microsoft Defender for Cloud to assess OS misconfigurations. 
+title: Overview of improving operating system baseline configurations in Microsoft Defender for Cloud
+description: Learn how to improve operating system baseline configurations in Microsoft Defender for Cloud
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
@@ -53,5 +53,6 @@ Additional features provided by Azure Policy machine configuration outside of De
 
 ## Next step
 
-[Review](apply-security-baseline.md) OS misconfiguration recommendations
+- (Set up the Azure policy machine configuration)[security-baseline-guest-configuration.md]
+- [Remediate](remediate-security-baseline.md) OS baseline misconfigurations.
 

@@ -85,4 +85,4 @@ Now that you enabled the Log Analytics agent, check out the features that are su
 
 - [Endpoint protection assessment](endpoint-protection-recommendations-technical.md)
 - [Fileless attack detection](defender-for-servers-introduction.md#plan-features)
-- [File integrity monitoring](file-integrity-monitoring-enable-ama.md)
+
