@@ -22,7 +22,7 @@ Integration of Defender for Endpoint with Defender for Servers provides:
 
 ## Security capabilities
 
-Defender for Cloud integrates these security capabilities provided by Defender for Endpoint and Defender Vulnerability Managemet.
+Defender for Cloud integrates these security capabilities provided by Defender for Endpoint and Defender Vulnerability Management.
 
 - **Vulnerability management**: Provided by [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management). Features include an [inventory of known software](/defender-vulnerability-management/tvm-software-inventory), [continuous vulnerability assessment and insights](/defender-vulnerability-management/tvm-weaknesses), [secure score for devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices), [prioritized security recommendations](defender-vulnerability-management/tvm-security-recommendation), and [vulnerability remediation](/defender-vulnerability-management/tvm-remediation). 
 

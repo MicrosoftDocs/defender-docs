@@ -663,6 +663,8 @@
         items:
           - name: Overview
             displayName: mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
+            href: endpoint-detection-response.md
+          - name: Defender for Endpoint integration
             href: integration-defender-for-endpoint.md
           - name: Enable Defender for Endpoint integration
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
@@ -737,7 +739,7 @@
       items:
       - name: Remediate EDR solutions (agentless)
         displayName: defender for endpoint, endpoint, edr
-        href: endpoint-detection-response.md   
+        href: endpoint-detection-response-solution-recommendations.md   
       - name: Remediate EDR solutions (MMA)
         href: endpoint-protection-recommendations-technical.md 
       - name: Remediate Defender for Endpoint misconfigurations
