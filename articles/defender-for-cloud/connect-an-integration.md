@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 10/13/2024
+ms.date: 10/28/2024
 #customer intent: As a cloud administrator, I want to connect partner integrations so that I can enhance security and gain insights.
 ---
 
@@ -38,13 +38,15 @@ For the full list of available integrations, see the [overview of partner integr
 
 1. Select **+ Add integration**.
 
+    :::image type="content" source="media/connect-an-integration/add-integration.png" alt-text="Screenshot that shows where the add integration button is located." lightbox="media/connect-an-integration/add-integration.png":::
+
 1. Select the relevant partner integration.
 
 1. Enter the required information for the integration.
 
 1. Select **Save**.
 
-The integration is now connected to Defender for Cloud and will appear in the list of connected integrations.
+The integration is now connected to Defender for Cloud and appears in the list of connected integrations.
 
 ## Next step
 

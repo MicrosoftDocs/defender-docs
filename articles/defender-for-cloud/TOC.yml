@@ -155,6 +155,13 @@
           items:
           - name: Endor labs
             items:
+            - name: Overview Endor labs integration
+              displayName: CSPM, cloud security, posture, management, Endor labs
+              href: integration-endor-labs.md
+            - name: Connect Endor labs to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, Endor labs
+              href: connect-endor-labs.md
+            - name: 
           - name: ServiceNow
             items:
             - name: Overview ServiceNow integration
