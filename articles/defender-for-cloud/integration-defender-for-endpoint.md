@@ -33,10 +33,6 @@ Defender for Cloud integrates these security capabilities provided by Defender f
 - **Endpoint detection and response (EDR)**: [EDR detects, investigates, and responds to advanced threats](/defender-endpoint/overview-endpoint-detection-response), including [advanced threat hunting](/defender-xdr/advanced-hunting-overview), and [automatic investigation and remediation](/defender-xdr/m365d-autoir) capabilities.
 - **Threat analytics**. [Get threat intelligence data](/defender-xdr/threat-analytics) provided by Microsoft threat hunters and security teams, augmented by intelligence provided by partners. Security alerts are generated when Defender for Endpoint identifies attacker tools, techniques, and procedures.
 
-
-
-
-
 ## Integration architecture
 
 A Defender for Endpoint tenant is automatically created when you use Defender for Cloud to monitor your machines.
@@ -49,7 +45,6 @@ A Defender for Endpoint tenant is automatically created when you use Defender fo
     
 
 ## Moving between subscriptions
-
 
 - **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
 - **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).

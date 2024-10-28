@@ -16,6 +16,7 @@ Agentless machine scanning in Microsoft Defender for Cloud improves the security
 
 Agentless machine scanning:
 
+- **Scans endpoint detection and response (EDR) settings**: Scan machines to assess whether they're running an EDR solution, and whether settings are correct if machines integrate with Microsoft Defender for Endpoint. [Learn more](endpoint-detection-response.md)
 - **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) with integrated Microsoft Defender Vulnerability Management.
 -  **Scans for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
 - **Scans for secrets on machines**: Locate plain text secrets in your compute environment with agentless [secrets scanning](secrets-scanning.md).

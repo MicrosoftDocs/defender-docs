@@ -105,7 +105,6 @@ Enable Plan 1 on a resource group or Azure resource tags as follows:
 1. Customize as needed. Set pricing by **tag** or by **resource group**.
 1. Follow the rest of the onscreen instructions.
 
-
 ## Next steps
 
 - If you enabled Defender for Servers Plan 2, [enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md) 

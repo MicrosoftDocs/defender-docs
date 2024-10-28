@@ -13,6 +13,7 @@ ms.date: 10/20/2024
 The Defender for Servers plan in [Microsoft Defender for Cloud](defender-for-cloud-introduction.md) reduces organizational security risk and exposure with security recommendations to improve security posture. Defender for Servers also provides protection against real-time security threats and attacks.
 
 > [!NOTE]
+>
 > - Defender for Servers previously used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), or the Azure Monitoring Agent (AMA) (in preview) to collect information from machines.
 > - Support for using these agents in Defender for Servers is ending.
 > - For most plan features, the use of agents is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
@@ -30,13 +31,11 @@ Defender for Servers provides a number of security benefits.
 - **Protect against threats in near real-time**: Defender for Servers identifies and analyzes real-time threats, and issues security alerts as needed.
 - **Get intelligent threat detection**: Defender for Cloud evaluates events and detects threats using advanced security analytics and machine-learning technologies with multiple threat intelligence sources, including [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc).
 
-
 ## Defender for Endpoint integration
 
 Defender for Endpoint and Defender for Vulnerability Management integrate natively into Defender for Cloud.
 
 This default integration allows Defender for Servers to take advantage of the endpoint detection and response (EDR) capabilities of Defender for Endpoint, and the vulnerability scanning, software inventory, and premium features provided by Defender for Vulnerability Management. [Learn more](integration-defender-for-endpoint.md).
-
 
 ## Defender for Servers plans
 
@@ -50,7 +49,7 @@ Defender for Servers offers two plans:
 Plan features are summarized in the table. Some plan features have upcoming changes to the way that information is collected. Review the table, and read about [upcoming deprecations](prepare-deprecation-log-analytics-mma-agent.md).
 
 **Feature** | **Plan support** | **Details**
---- | --- | --- 
+--- | --- | ---
 **Multicloud and hybrid support** | Supported in Plan 1 and 2 | Defender for Servers can protect Azure VMs, AWS/GCP machines connected to Defender for Cloud, and on-premises machines onboarded as Azure Arc-enabled VMs.<br/><br/> Review Defender for Servers [support and requirements](support-matrix-defender-for-servers.md).
 **Automatic onboarding** | Supported in Plan 1 and 2 | Defender for Cloud can [automatically onboard machines to Defender for Endpoint](enable-defender-for-endpoint.md) by installing the Defender for Endpoint sensor on machines.
 **Integrated alerts and incidents** | Supported in Plan 1 and 2 | Defender for Endpoint alerts and incidents for connected machines are displayed in Defender for Cloud, with drill-down in the Defender portal.
@@ -65,12 +64,11 @@ Plan features are summarized in the table. Some plan features have upcoming chan
 **Malware scanning (agentless)** | Supported in Plan 2 only | In addition to the next-generation antimalware protection provided by the Defender for Endpoint integration, Defender for Servers Plan 2 provides [malware scanning](agentless-malware-scanning.md) as part of its [agentless scanning capabilities](concept-agentless-data-collection.md) capabilities.
 **Machine secrets scanning (agentless)** | Supported in Plan 2 only | As part of its [agentless secrets scanning capabilities](secrets-scanning.md), Defender for Cloud provides [machine secrets scanning](secrets-scanning-servers.md) to locate plain text secrets on machines.<br/><br/> Secrets scanning is also available with the Defender Cloud Security Posture Management (CSPM) plan.
 **Threat detection (OS-level)** | Supported in Plan 1 and 2 | Integration with Defender for Endpoint provides OS-level threat detection.
-**Threat detection (Azure network layer)** | Supported in Plan 2 only  | Defender for Servers uses agentless detection to detect threats that are directed at the control plan on the network, including [network-based security alerts](alerts-azure-network-layer.md) for Azure VMs. 
+**Threat detection (Azure network layer)** | Supported in Plan 2 only  | Defender for Servers uses agentless detection to detect threats that are directed at the control plan on the network, including [network-based security alerts](alerts-azure-network-layer.md) for Azure VMs.
 **File integrity monitoring** | Supported in Plan 2 only | [File integrity monitoring](file-integrity-monitoring-overview.md) examines files and registries for changes that might indicate an attack. You configure file integrity monitoring after enabling Defender for Servers Plan 2.<br/> File integrity monitoring uses the Defender for Endpoint sensor to collect information. The previous collection method that used the MMA is now deprecated. [Learn more](migrate-file-integrity-monitoring.md).
-**Just-in-time virtual machine access** | Supported in Plan 2 only | [Just-in-time virtual machine access](just-in-time-access-overview.md) locks down machine ports to reduce the attack surface. 
+**Just-in-time virtual machine access** | Supported in Plan 2 only | [Just-in-time virtual machine access](just-in-time-access-overview.md) locks down machine ports to reduce the attack surface.
 **Network map** | Plan 2 only | The [network map](protect-network-resources.md) provides a geographical view of recommendations for hardening your network resources.
 **Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-) in Log Analytics workspaces.<br/><br/>  The benefit is available for every machines running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.<br/><br/> The benefit is granted to the Log Analytics workspace to which the machine reports. If the machine reports to more than one workspace, the benefit is only granted to one of them.<br/><br/>- Data ingestion is calculated per node, per reported workspace, and per day.<br/><br/>- The relevant workspace should have the *Security* or *AntiMalware* solution installed. [Learn](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-to-configure-security-events-collection-with-azure-monitor/ba-p/3770719) how to enable the Security solution.
-
 
 ## Enabling deployment scope
 
@@ -90,7 +88,6 @@ This option allows you to:
 - Manage Defender for Server protection at machine level.
 - Exclude specific machines in a subscription from the plan.
 - Enable both Plan 1 and Plan 2 within a subscription. You can enable Plan 2 at the subscription level, and then downgrade specific machines to Plan 1.
-
 
 ## After enabling
 

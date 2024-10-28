@@ -7,7 +7,7 @@ author: elazark
 ms.date: 10/20/2024
 ---
 
-# Review and modify Defender for Servers plan settings
+# Review and modify Defender for Servers settings
 
 After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check which machines are protected by the plan, configure plan settings, and turn plans on and off as needed.
 

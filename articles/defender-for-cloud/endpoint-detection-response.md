@@ -13,16 +13,17 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 
-- [Integrates natively with Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md) for machine protection. to provide EDR capabilities for protected machines.
-- Provides support for third-party EDR solutions.
+- [Integrates natively with Microsoft Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md) for endpoint protection. 
+- Assesses whether machines are connected to a supported EDR solution.
 
 
 > [!NOTE]
-> - Defender for Cloud uses agentless scanning to assess EDR settings.
+> - Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess EDR settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - Scanning using the MMA will be deprecated in November 2024.
 
-EDR solution recommendations are available when you have Defender for Cloud in the subscription and you're running either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md), [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md). [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on in the plan.
+
+Agentless scanning for EDR settings is available when Defender for Cloud is running in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled. 
 
 ## Checking for an EDR solution
 
