@@ -2,7 +2,7 @@
 title: Prepare for retirement of the Log Analytics agent 
 description: Learn how to prepare for the deprecation of the Log Analytics (MMA) agent in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 08/28/2024
+ms.date: 10/14/2024
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
 ---
 
@@ -302,7 +302,7 @@ When you enable Defender for Cloud on an Azure subscription, the [Microsoft clou
 
 If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
 
-As a work around, you can disable the MMA recommendations, "Machines should be configured securely", and "Auto provisioning of the Log Analytics agent should be enabled on subscriptions", by navigating to the Regulatory compliance page in Defender for Cloud.
+As a work-around, you can disable the MMA recommendations, "Machines should be configured securely", and "Auto provisioning of the Log Analytics agent should be enabled on subscriptions", by navigating to the Regulatory compliance page in Defender for Cloud.
 
 :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text="Screenshot of the regulatory compliance dashboard that shows where one of the MMA recommendations exist." lightbox="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png":::
 
@@ -392,3 +392,31 @@ We recommend you plan agent migration in accordance with your business requireme
 | Yes | Yes | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can use the Log Analytics agent and AMA side-by-side to get all features in GA. [Learn more](auto-deploy-azure-monitoring-agent.md) about running agents side-by-side.<br>3. Migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines. Alternatively, start the migration from Log Analytics agent to AMA in April 2024.<br/>4. Once the migration is finished, [disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 | Yes | No | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines now.<br/>3. [Disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 
+### MMA migration experience
+
+The MMA migration experience is a tool that helps you migrate from the MMA to the AMA. The experience provides a step-by-step guide to help you migrate your machines from the MMA to the AMA.
+
+With this tool, you can:
+
+- Migrate servers from the legacy onboarding through the Log analytic workspace.
+- Ensure subscriptions meet all of the prerequisites to receive all of Defender for Servers Plan 2's benefits.
+- Migrate to FIM's new version over MDE.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Navigate to the **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **MMA migration**.
+
+    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/mma-migration.png" alt-text="Screenshot that shows where the MMA migration button is located." lightbox="media/prepare-deprecation-log-analytics-mma-agent/mma-migration.png":::
+
+1. Select **Take action** for one of the available actions:
+
+    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/take-action.png" alt-text="Screenshot that shows where the take action button is located for all of the options." lightbox="media/prepare-deprecation-log-analytics-mma-agent/take-action.png":::
+
+Allow the experience to load and follow the steps to complete the migration.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Upcoming changes to the Defender for Cloud plan and strategy for the Log Analytics agent deprecation](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation)
