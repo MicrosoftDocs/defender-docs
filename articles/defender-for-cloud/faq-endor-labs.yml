@@ -1,0 +1,40 @@
+### YamlMime:FAQ
+metadata:
+  title: Common questions - Endor Labs integration
+  description: Get answers to frequently asked questions about the Endor Labs integration.
+  ms.topic: faq
+  ms.service: defender-for-cloud
+  author: dcurwin
+  ms.author: dacurwin
+  ms.date: 10/28/2024
+title: Common questions about the Endor Labs integration
+summary: Get answers to common questions about the Endor Labs integration.
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          How do I configure Endor Labs?
+        answer: |
+          Endor Labs can be deployed in various methods across your repositories and pipelines depending on your Source Code Management environment. It is recommended to start with monitoring scans to gain the initial visibility and then advance to CI scans to achieve comprehensive and actionable results.
+  
+      - question: |
+          How do I configure Endor Labs for GitHub environments?
+        answer: |
+          Endor Labs offers continuous monitoring for GitHub via the Endor GitHub App. This app provides extensive visibility into your GitHub organizations by cloning and scanning all repositories every 24 hours. 
+
+          > [!NOTE]
+          > Repositories are temporarily cloned and retained only during the scan. You can refer to [Endor Lab's documentation for assistance with setting up continuous monitoring for GitHub](https://docs.endorlabs.com/integrations/github-app/). 
+
+      - question: |
+          How do I configure Endor Labs for GitHub Workflows?
+        answer: |
+          Customers can integrate with GitHub Workflows using the Endor Labs Action. Workflow scans help teams focus on the most actionable results, optimizing their time. These scans can be triggered from automated GitHub Workflows to identify new vulnerabilities compared to the baseline of the target branch. [Refer to Endor Lab's documentation for assistance with setting up the Endor Labs Action](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-github-actions/).
+
+      - question: |
+          How do I configure Endor Labs for Azure DevOps environments?
+        answer: |
+          Endor Labs can be implemented in Azure Pipelines to scan during build time for vulnerabilities. The results from these scans can also be sent to Advanced Security for developer visibility. Refer to [Endor Labs documentation for assistance with setting up the Azure Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-azuredevops/).
+
+      - question: |
+       
