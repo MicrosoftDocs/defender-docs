@@ -9,23 +9,23 @@ ms.date: 07/31/2023
 
 # Overview - OS baseline misconfigurations
 
-Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
+Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 
-Defender for Cloud assesses and enforces security configurations using [built-in Azure policy initiatives](policy-reference.md), including its default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative.
+Defender for Cloud assesses and enforces best-practice security configurations using [built-in Azure policy initiatives](policy-reference.md). The [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) is Defender for Cloud's default initiative.
+
+When you enable Defender for Cloud on a subscription, Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features) assess subscription resources against some of the MCSB security standards.
 
 
 ## Compute security baselines
 
-The MCSB covers Azure, AWS, and GCP environments. When you enable Defender for Cloud on a subscription, [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features) assess protected resource configurations against some of the MCSB security standards.
+MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) machine operating system (OS) compliance is assessed against these baselines.
 
-As part of its security standards, MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating system (OS) compliance is assessed against these baselines.
-
-Operating system recommendations based on MCSB compute security baselines are available when Defender for Servers Plan 2 is enabled. With the plan enabled, these Azure policies are enabled on the subscription.
+Operating system recommendations based on MCSB compute security baselines aren't included as part of Defender for Cloud's free foundational posture capabilities. These recommendations are available when Defender for Servers Plan 2 is enabled. With the plan enabled, the relevant Azure policies are enabled on the subscription:
 
 - "Windows machines should meet requirements of the Azure compute security baseline" 
 - "Linux machines should meet requirements for the Azure compute security baseline"
 
-Make sure you don't remove these policies or you won't be able to leverage the machine configuration extension.
+Make sure you don't remove these policies or you won't be able to leverage the machine configuration extension that's used to collect machine data.
 
 ## Data collection
 
@@ -53,6 +53,6 @@ Additional features provided by Azure Policy machine configuration outside of De
 
 ## Next step
 
-- (Set up the Azure policy machine configuration)[security-baseline-guest-configuration.md]
+- [Install the Azure policy machine configuration](security-baseline-guest-configuration.md).
 - [Remediate](remediate-security-baseline.md) OS baseline misconfigurations.
 

@@ -7,21 +7,23 @@ author: dcurwin
 ms.date: 07/31/2023
 ---
 
-# Set up Azure Policy machine configuration
+# Install the Azure Policy machine configuration extension
 
 
-Defender for Cloud assesses and enforces security configurations using [built-in Azure policy initiatives], including its default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative.
+Defender for Cloud assesses and enforces security configurations using built-in Azure policy initiatives, including its default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative.
 
-As part of the MCSB offering, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems in these environments.
+As part of the MCSB offering, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
-Machine information for assessment against baselines is collected using the Azure machine configuration extension (formerly known as the Azure Policy guest configuration). This article describes how the extension is deployed on machines.
+Machine information for assessment against compute security baselines is collected using the Azure machine configuration extension (formerly known as the Azure Policy guest configuration). This article describes how to the extension is deployed machines.
 
 ## Prerequisites
 
-- To receive operating system recommendations based on MCSB compute security baselines, [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) must be enabled.
-- Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
-- Review [deployment requirements](/azure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
-- To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.
+**Requirement** | **Details**
+--- | ---
+**Plan** | To receive operating system recommendations based on MCSB compute security baselines, [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) must be enabled.
+**Machine support** |  Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
+**Extension requirements** |  Review [extension deployment requirements](/azure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
+**Permissions** | To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.
 
 > [!NOTE]
 > Collection with the machine configuration extension replaces the older method of data collection that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)). Use of the MMA will be supported until November 2024.

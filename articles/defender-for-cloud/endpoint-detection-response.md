@@ -29,7 +29,7 @@ Agentless scanning for EDR settings is available when Defender for Cloud is runn
 
 Defender for Cloud scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a supported third-party solution.
 
-Based on EDR solution findings, Defender for Cloud provides the following recommendations to help you identify VMs that don't have an EDR solution running, and remediate. EDR solution recommendations are as follows:
+Based on EDR solution findings, Defender for Cloud provides the following recommendations to help you identify and remediate machines that don't have an EDR solution running. EDR solution recommendations are as follows:
 
 - `EDR solution should be installed on Virtual Machines`
 - `EDR solution should be installed on EC2s`
@@ -55,11 +55,11 @@ Cortex XDR | Windows and Linux
 
 ## Assessing Defender for Endpoint settings
 
-As part of the Defender for Endpoint integration, for machines running Defender for Endpoint as an EDR, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
+For machines running Defender for Endpoint as an EDR solution, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
 
 - Both full and quick scans are out of 7 days
 - Signature out of date
 - Anti-virus is off or partially configured
 
-If misconfigurations are found Defender for Cloud makes recommendations to fix them. [Learn more](ndpoint-detection-misconfiguration.md)
+If misconfigurations are found Defender for Cloud makes recommendations to fix them. [Learn more](ndpoint-detection-misconfiguration.md).
 

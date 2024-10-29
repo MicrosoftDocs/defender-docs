@@ -71,13 +71,22 @@ Plan features are summarized in the table.
 
 ## Using the free data ingestion benefit
 
-The benefit is available for every machine running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.
+When you have Defender for Servers Plan 2 enabled, you get 500 MB of free data ingestion per day. The benefit is available for every machine running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.
 
 - The benefit is granted to the Log Analytics workspace to which the machine reports.
-- You need to specifically [enable Defender for Servers Plan 2 on the workspace](tutorial-enable-servers-plan.md#enable-the-plan-at-the-log-analytics-workspace-level).
+- You need to specifically enable Defender for Servers Plan 2 on the workspace.
 - If the machine reports to more than one workspace, the benefit is only granted to one of them.
-- Data ingestion is calculated per node, per reported workspace, and per day.
+
+### Configuring a workspace
+
+Create the Log Analytics workspace outside of Defender for Cloud. For example if you're running Microsoft Sentinel you could use the Sentinel workspace.
+
 - The relevant workspace should have the *Security* or *AntiMalware* solution installed. [Learn how to enable the Security solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-to-configure-security-events-collection-with-azure-monitor/ba-p/3770719).
+- [Enable Defender for Servers Plan 2 on the workspace](tutorial-enable-servers-plan.md#enable-the-plan-at-the-log-analytics-workspace-level) in Defender for Cloud, or use this Azure CLI command:
+
+    ```azurecli
+    az monitor log-analytics solution create --resource-group <ResourceGroupName> --solution-type Security --workspace <LogAnalyticsWorkspaceResourceID>
+    ```
 
 ### Supported data types
 
@@ -93,16 +102,15 @@ Defender for Servers Plan 2 provides an allocation of 500 MB per node per day fo
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
 
-If the workspace is in the legacy per-node pricing tier, the Defender for Cloud and Log Analytics allocations are combined and applied jointly to all billable ingested data.
-
 
 ### Allowance
 
-When you have Defender for Servers Plan 2 enabled, you get 500 MB of free data ingestion per day. 
+Data ingestion is calculated per node, per reported workspace, and per day.
 
 - The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
-- This allowance is a daily rate that's averaged across all nodes. Your total daily free limit is equal to [number of machines] × 500 MB. You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
-
+- The allowance is a daily rate averaged across all nodes.
+- Your total daily free limit is equal to [number of machines] x 500 MB.
+- You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 
 
 ## Enabling deployment scope

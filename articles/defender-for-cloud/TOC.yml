@@ -720,7 +720,7 @@
           - name: Overview
             displayName: fim, change
             href: file-integrity-monitoring-overview.md
-          - name: Migrate to the latest file integrity monitoring
+          - name: Migrate from previous version
             href: migrate-file-integrity-monitoring.md
           - name: Enable file integrity monitoring
             href: file-integrity-monitoring-enable-defender-endpoint.md

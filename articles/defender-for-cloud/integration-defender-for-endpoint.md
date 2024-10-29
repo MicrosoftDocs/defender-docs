@@ -37,11 +37,11 @@ Defender for Cloud integrates these security capabilities provided by Defender f
 
 A Defender for Endpoint tenant is automatically created when you use Defender for Cloud to monitor your machines.
 
-- **Collected data:** Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
+Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
 
-    - Customer data, in pseudonymized form, might also be stored in the central storage and processing systems in the United States.
-    - After you configure the location, you can't change it.
-    - If you have your own license for Defender for Endpoint and need to move your data to another location, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to reset the tenant.
+- Customer data, in pseudonymized form, might also be stored in the central storage and processing systems in the United States.
+- After you configure the location, you can't change it.
+- If you have your own license for Defender for Endpoint and need to move your data to another location, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to reset the tenant.
     
 
 ## Moving between subscriptions

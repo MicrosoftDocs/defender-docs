@@ -28,14 +28,11 @@ If misconfigurations are found Defender for Cloud makes recommendations to fix t
 
 ## Prerequisites
 
-Recommendations for Defender for Endpoint misconfigurations are available when:
-
-- [Defender for Cloud](connect-azure-subscription.md) is available in the Azure subscription.
-- One of these Defender for Cloud plans is enabled:
-  - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
-  - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default when you enable a supported plan, but [follow these instructions](enable-agentless-scanning-vms.md) if you need to turn it on manually.
-- You're running Defender for Endpoint as an EDR solution on VMs.
+**Requirement** | **Details**
+--- | ---
+**Plan** | [Defender for Cloud](connect-azure-subscription.md) must be available in the Azure subscription and one of these plans must be enabled:<br/><br/>- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)<br/>- [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
+**AGentless scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+**Machines** | Defender for Endpoint must be running as the EDR solution on VMs.
 
 ## Investigate misconfiguration recommendations
 

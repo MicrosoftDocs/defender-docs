@@ -16,9 +16,7 @@ Microsoft Defender for Cloud includes endpoint detection and response (EDR) capa
 - [Integrates natively with Defender for Endpoint as an EDR solution](integration-detection-response.md) for machine protection. to provide EDR capabilities for protected machines.
 - Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
 
-Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on VMs.
-
-This article describes how to remediate those recommendations.
+Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on machines. This article describes how to remediate those recommendations.
 
 > [!NOTE]
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
@@ -27,13 +25,10 @@ This article describes how to remediate those recommendations.
 
 ## Prerequisites
 
-EDR solution recommendations are available when:
-
-- [Defender for Cloud](connect-azure-subscription.md) is available in the Azure subscription.
-- One of these Defender for Cloud plans is enabled:
-  - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
-  - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+**Requirement** | **Details**
+--- | ---
+**Plan** | [Defender for Cloud](connect-azure-subscription.md) must be available in the Azure subscription and one of these plans must be enabled:<br/><br/>- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)<br/>- [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
+**AGentless scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 
 
 ## Investigate EDR solution recommendations
