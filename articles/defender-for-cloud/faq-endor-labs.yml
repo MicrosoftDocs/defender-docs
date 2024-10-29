@@ -37,4 +37,6 @@ sections:
           Endor Labs can be implemented in Azure Pipelines to scan during build time for vulnerabilities. The results from these scans can also be sent to Advanced Security for developer visibility. Refer to [Endor Labs documentation for assistance with setting up the Azure Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-azuredevops/).
 
       - question: |
-       
+          How do I configure Endor Labs for GitLab environments?
+        answer: |
+          Endor Labs can scan during GitLab CI pipeline runs after code is built to check for vulnerabilities. Refer to [Endor Labs documentation for assistance with setting up the GitLab CI Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-gitlab/)
