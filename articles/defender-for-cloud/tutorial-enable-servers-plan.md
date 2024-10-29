@@ -13,10 +13,7 @@ ms.date: 10/28/2024
 
 The Defender for Servers plan in Microsoft Defender for Cloud protects Windows and Linux virtual machines (VMs) that run in Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and in on-premises environments. Defender for Servers provides recommendations to improve the security posture of machines, and protects machines against security threats.
 
-Defender for Servers provides two plans.
-
-- **Plan 1** provides vulnerability management and endpoint detection and response (EDR) features, based on integration of Defender for Servers with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management.
-- **Plan 2** provides Plan 1 features and more capabilities, including agentless vulnerabilities scanning, cloud-native protection features, and premium Defender Vulnerability Management features.
+This article helps you to deploy a Defender for Servers plan.
 
 > [!NOTE]
 > After a plan is enabled, a 30-day trial period begins. There is no way to stop, pause, or extend this trial period. To get the most out of the full 30-day trial, [plan your evaluation goals](plan-defender-for-servers.md).
