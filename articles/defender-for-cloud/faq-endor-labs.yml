@@ -63,7 +63,8 @@ sections:
             - Unreachable Dependency: Endor Labs determined that the imported dependency is not being used. The customer can use this information to remove the dependency, which is helpful for technical debt reduction initiatives.
             - Potentially Reachable Dependency: Endor Labs cannot definitively determine whether a dependency is or is not in use, generally because a given language or package manager is not supported.
   
-          > [!NOTE] “Reachability analysis” can mean many different things. Learn more about the [5 Types of Reachability Analysis (and Which is Right for You)](https://www.endorlabs.com/learn/5-types-of-reachability-analysis-and-which-is-right-for-you).
+          > [!NOTE] 
+          > “Reachability analysis” can mean many different things. Learn more about the [5 Types of Reachability Analysis (and Which is Right for You)](https://www.endorlabs.com/learn/5-types-of-reachability-analysis-and-which-is-right-for-you).
 
       - question: | 
           How is Endor Labs licensed? 
