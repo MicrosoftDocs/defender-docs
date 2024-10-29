@@ -48,8 +48,6 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
   You can use the resource filter to review the outstanding recommendations for your container-related resources, whether in asset inventory or the recommendations page:
 
-  :::image type="content" source="media/defender-for-containers/resource-filter.png" alt-text="Screenshot showing you where the resource filter is located." lightbox="media/defender-for-containers/resource-filter.png":::
-
   For details included with this capability, review [container recommendations](recommendations-reference-container.md ), and look for recommendations with type "Control plane"
 
 ### Sensor-based capabilities
@@ -87,12 +85,6 @@ Examples of security events that Microsoft Defenders for Containers monitors inc
 - Creation of sensitive mounts
 
 You can view security alerts by selecting the Security alerts tile at the top of the Defender for Cloud's overview page, or the link from the sidebar.
-
-  :::image type="content" source="media/managing-and-responding-alerts/overview-page-alerts-links.png" alt-text="Screenshot showing how to get to the security alerts page from Microsoft Defender for Cloud's overview page." lightbox="media/managing-and-responding-alerts/overview-page-alerts-links.png":::
-
-The security alerts page opens:
-
-   :::image type="content" source="media/defender-for-containers/view-containers-alerts.png" alt-text="Screenshot showing you where to view the list of alerts." lightbox="media/defender-for-containers/view-containers-alerts.png":::
 
 Security alerts for runtime workload in the clusters can be recognized by the `K8S.NODE_` prefix of the alert type.  For a full list of the cluster level alerts, see the [reference table of alerts](alerts-containers.md).
 
