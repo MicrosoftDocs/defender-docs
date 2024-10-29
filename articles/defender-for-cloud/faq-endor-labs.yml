@@ -40,3 +40,51 @@ sections:
           How do I configure Endor Labs for GitLab environments?
         answer: |
           Endor Labs can scan during GitLab CI pipeline runs after code is built to check for vulnerabilities. Refer to [Endor Labs documentation for assistance with setting up the GitLab CI Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-gitlab/)
+
+      - question: |
+          How do I view results from Endor Labs scans?
+        answer: |
+          Reachability analysis findings from Endor Labs are natively integrated with existing Defender CSPM experiences, including Cloud Security Explorer and Attack Path analysis.
+
+      - question: |
+          Which programming languages are supported by Endor Labs? 
+        answer: |
+          Endor Labs supports a wide range of languages for reachability analysis, including Java, Python, and C#. Refer to Endor Labs documentation for the most up-to-date list of supported languages: Scan for open source risks | Endor Labs Docs.
+  
+      - question: | 
+          What do the different levels of reachability mean? 
+        answer: | 
+          Defender for Cloud ingests finding attributes from Endor Labs that relate to the reachability of vulnerabilities at the function level and the dependency level. Function level reachability analysis is the most accurate way to determine exploitability in the context of an organization’s application, which is critical for determining which risks should be remediated. The different function reachability labels include:
+            - Reachable Function: Endor Labs established that there is a path from the code written by the developer to a vulnerable function, meaning the finding is exploitable in the customer’s environment. This will be demonstrated by a “call graph” that shows each step between the source code and vulnerable library.
+            - Unreachable Function: Endor Labs determined that there is no risk of exploitation because there is no path between the source code and the vulnerable function. This finding will be accompanied by a call graph demonstrating the lack of a path. Unreachable findings can be considered a false positive and are not generally required to be remediated under compliance standards such as FedRAMP.
+            - Potentially Reachable Function: Endor Labs is unable to determine whether a finding is reachable or unreachable, typically because call graph analysis is unsupported for a given language or package manager.
+          Endor Labs also supports dependency level reachability, which indicates that the imported package is being used somewhere in the application but does not determine whether the vulnerable package is being called by the source code. The different dependency reachability labels include:
+            - Reachable Dependency: Endor Labs established that an imported package is being used somewhere in the application.
+            - Unreachable Dependency: Endor Labs determined that the imported dependency is not being used. The customer can use this information to remove the dependency, which is helpful for technical debt reduction initiatives.
+            - Potentially Reachable Dependency: Endor Labs cannot definitively determine whether a dependency is or is not in use, generally because a given language or package manager is not supported.
+  
+          > [!NOTE: “Reachability analysis” can mean many different things. Read 5 Types of Reachability Analysis (and Which is Right for You) to learn more.
+
+      - question: | 
+          How is Endor Labs licensed? 
+        answer: | 
+          Endor Labs is licensed on a per contributing developer basis. Check out [Endor Labs pricing options](https://www.endorlabs.com/pricing). There are two applicable plans for reachability analysis in Defender for Cloud which include:
+          - Endor Supply Chain: A single platform for open-source dependency management, CI/CD security, and compliance.
+          - Endor Open Source - Core Edition: Advanced SCA and SBOM capabilities including SCA with reachability, Endor Score factors, AI-assisted OSS selection, DroidGPT, SBOM / VEX generation.
+
+          Customers that need additional remediation capabilities can upgrade to the Pro Edition, which includes upgrade impact analysis, container scanning, and artifact signing.
+
+      - question: | 
+          Is Endor Labs available on the Azure commercial marketplace? 
+        answer: | 
+          Yes, Endor Labs is available for purchase on the Microsoft commercial marketplace. The prices listed on the marketplace do not reflect the cost that your organization will pay. If you enroll through the marketplace, Endor Labs representatives will work with your organization to generate a custom quote. Note that purchases of Endor Labs made through the Azure commercial marketplace count towards your Minimum Azure Consumption Commitments (MACC).
+
+      - question: | 
+          Does Endor Labs offer a free trial? 
+        answer: | 
+          Yes, a full-featured, 30-day free trial is available. Begin your trial at [Endor Labs free trial](https://www.endorlabs.com/free-trial).
+
+additionalContent: |
+
+  ## Next steps
+  - [Connect Endor Labs](https://docs.microsoft.com/defender-for-cloud/connect-endor-labs)
