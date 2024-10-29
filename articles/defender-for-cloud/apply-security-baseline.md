@@ -12,11 +12,11 @@ ms.date: 07/31/2023
 
 Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening.
 
-Defender for Cloud uses the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) to assess the security state of resources. The MCSB covers Azure, AWS, and GCP environments.
+Defender for Cloud assesses and enforces security configurations using built-in Azure policy initiatives. When you enable Defender for Cloud on a subscription, [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features) assess connected resource configurations against some of the security standards in the  [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). 
 
-- When you enable Defender for Cloud on a subscription, free foundational security posture capabilities assess protected resource configurations against some MCSB security standards.
-- As part of its security standards, MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating system (OS) compliance is assessed against these baselines.
-- Assessment of OS configurations against compute security baselines in Defender for Cloud requires Defender for Servers Plan 2.
+
+As part of its security standards, MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating system compliance is assessed against these baselines.
+
 
 This article describes how to review recommendations made by the assessment.
 
@@ -29,8 +29,12 @@ This article describes how to review recommendations made by the assessment.
 
 ## Prerequisites
 
-- [Defender for Servers Plan 2 must be enabled](plan-defender-for-servers-select-plan.md) 
-- The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
+**Requirements** | **Details**
+--- | ---
+**Plan** | [Defender for Servers Plan 2 must be enabled](plan-defender-for-servers-select-plan.md) 
+**Extension** | The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
+
+
  If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
 
 

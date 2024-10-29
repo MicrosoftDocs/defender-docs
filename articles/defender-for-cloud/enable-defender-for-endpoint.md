@@ -18,18 +18,15 @@ This article describes how to enable Defender for Endpoint integration manually 
 
 ## Prerequisites
 
-- **Windows support**: Verify that Windows machines are [supported by Defender for Endpoint](/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
-- **Linux servers**: 
-    - For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher.
-    - Automatic deployment of the Defender for Endpoint sensor on Linux machines might not work as expected if machines run services that use [fanotify](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements). Manually install the Defender for Endpoint sensor on these machines.
-- **Azure VMs**: Check that VMs can connect to the Defender for Endpoint service.
-    - If machines don't have direct access, proxy settings or firewall rules need to allow access to Defender for Endpoint URLs.
-    - Review proxy settings for [Windows](/defender-endpoint/configure-proxy-internet) and [Linux](/defender-endpoint/linux-static-proxy-configuration) machines.
-- **On-premises VMs**: We recommend that you [onboard on-premises machines as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+**Requirement** | **Details**
+--- | ---
+**Windows support** | Verify that Windows machines are [supported by Defender for Endpoint](/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
+**Linux support** | For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher.<br/><br/> Automatic deployment of the Defender for Endpoint sensor on Linux machines might not work as expected if machines run services that use [fanotify](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements). Manually install the Defender for Endpoint sensor on these machines.
+**Azure VMs** |  Check that VMs can connect to the Defender for Endpoint service.<br/><br/> If machines don't have direct access, proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review proxy settings for [Windows](/defender-endpoint/configure-proxy-internet) and [Linux](/defender-endpoint/linux-static-proxy-configuration) machines.
+**On-premises VMs** | We recommend that you [onboard on-premises machines as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).<br/><br/> If you [onboard on-premises VMs directly](onboard-machines-with-defender-for-endpoint.md), Defender Server Plan 1 features are available, but most Defender for Servers Plan 2 functionality doesn't work.
+**Azure tenant** | If you've moved your subscription between Azure tenants, some manual preparatory steps are also required. [Contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview) for details.
+**Windows Server 2016, 2012 R2** | Unlike later versions of Windows Server, which come with the Defender for Endpoint sensor preinstalled, Defender for Cloud installs the sensor on machines running Windows Server 2016/2012 R2 using the unified Defender for Endpoint solution. After you enable a Defender for Servers plan with the integration, you can't roll it back. Even if you disable the plan and then reenable it, integration will be reenabled.
 
-    If you [onboard on-premises VMs directly](onboard-machines-with-defender-for-endpoint.md), Defender Server Plan 1 features are available, but most Defender for Servers Plan 2 functionality doesn't work.
-- If you've moved your subscription between Azure tenants, some manual preparatory steps are also required. [Contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview) for details.
-- **Downgrading to Plan 1 for Windows machines**: If you deploy Defender for Servers Plan 2 and don't deploy the Defender for Endpoint sensor on Windows 2012 R2 and 2016 servers, the sensor won't be automatically deployed if you later downgrade to Plan 1.  This ensures that your existing deployment isn't changed without your explicit consent.
 
 
 ## Enable on a subscription
@@ -63,18 +60,10 @@ Verify Defender for Endpoint sensor installation on a Linux machine as follows:
 1. Additionally, in the Azure portal, you can check that Linux machines have a new Azure extension called `MDE.Linux`.
 
 
-MDE extension is there by default in later Windows servers. In 
-ll legacy (2012R2/2016) Arc onboarded servers have the same MDE Agent version 10.8295.22621.1023 (May 2023). I guess the MDE agent is getting pushed by MDE extension since it’s not built-in for these legacy OSs. If you confirm this, the next question would be why are we getting an old MDE version (May 2023)? Do we have any control on this?
-For modern OSs (2019/2022) the discrepancies are mainly due to patching hygiene since MDE is OS built-in.
 
-Defender for Cloud automatically deploys MDE agent to machines when you enable Defender for Servers Plan 1 or 2. Defender fro Cloud downloads the latest MDE onboarding package from Defender XDR and installs it. 
- 
+## Enable Defender for Endpoint unified solution on Windows Server 2016/2012 R2
 
-Thanks for your support
-
-## Enable on Windows machines running Windows Server 2016/2012 R2
-
-If Defender for Servers is already enabled and Defender for Endpoint integration is on in a subscription, you can manually turn on the integration for machines running Windows Server 2016 or Windows Server 2012 R2 in the subscription.
+If Defender for Servers is already enabled and Defender for Endpoint integration is on in a subscription, you can manually turn on integration of the unified solution for machines running Windows Server 2016 or Windows Server 2012 R2 in the subscription.
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Windows machines that you want to receive Defender for Endpoint.
 
@@ -153,7 +142,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
     - Automatically onboards Linux machines to Defender for Endpoint in the selected subscriptions.
     - Detects any previous installations of Defender for Endpoint, and reconfigures them to integrate with Defender for Cloud.
 
-Use the [Defender for Servers deployment status workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Servers%20Deployment%20Status) to verify installation and deployment status of Defender for Endpoint on a Linux machine.
+Use the [Defender for Servers deployment status workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Servers%20Deployment%20Status). Among other things in this workbook, you can verify installation and deployment status of Defender for Endpoint on a Linux machine.
 
 
 
