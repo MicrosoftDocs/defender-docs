@@ -62,7 +62,7 @@ The simulation tool runs on your local machine using a Python-based CLI that dep
 ### Run the simulation tool
 
 1. Run the simulation script with the following command:
-    `./simulation.py`
+    `python simulation.py`
 
 2. Choose a simulated attack scenario or choose to simulate all of the attack scenarios at once. The available simulated attack scenarios are:
     
