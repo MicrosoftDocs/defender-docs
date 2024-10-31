@@ -9,28 +9,27 @@ ai-usage: ai-assisted
 
 # Alerts for Kubernetes Clusters
 
-This document describes the Defender for Containers (MDC Containers) enhanced alert capabilities for threats to Kubernetes (K8s) services control plane and workload runtime. MDC Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide comprehensive and actionable alerts to safeguard your K8s environment.
+Defender for Containers (MDC Containers) provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. MDC Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
 
 ## Control plane detection
 
-The activities of the K8s API server are continuously monitored, based on the K8s audit log.  Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
+In Kubernetes, the control plane manages and orchestrates all the resources within the cluster. MDC Containers identifies potential threats in the control plane that can compromise the security and integrity of the entire cluster by monitoring the activities of the K8s API server. Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
 
 Examples of suspicious operations captured by MDC Containers include:
 
-* Privileged container deployments
-* Risky service exposures to the public Internet
-* Suspicious service account activities
+* **Privileged container deployments** can be a security risk as they grant containers elevated privileges within the host system. Privileged containers are monitored for unauthorized deployments, excessive use of privileges, and potential misconfigurations that could lead to security breaches.
+* **Risky service exposures to the public Internet** can expose the Kubernetes cluster to potential attacks. The cluster is monitored for services that are unintentionally exposed, misconfigured with overly permissive access controls, or lacking proper security measures.
+* **Suspicious service account activities** can indicate unauthorized access or malicious behavior within the cluster. The cluster is monitored for unusual patterns such as excessive resource requests, unauthorized API calls, or access to sensitive data.
 
 ## Workload runtime detection
 
-MDC Containers monitors the K8s workload runtime activity to detect suspicious operations, including workload process creation events and workload DNS activity.
+MDC Containers uses the [Defender sensor](defender-for-containers-introduction#run-time-protection-for-kubernetes-nodes-and-clusters.md) to monitor the K8s workload runtime activity to detect suspicious operations, including workload process creation events.
 
 Examples of suspicious workload runtime activity include:
 
 * Web shell activity
 * Crypto mining activity
 * Binary drift
-* Workload activity detected by the MDE detection library
 
 ## K8s alerts simulation tool
 
