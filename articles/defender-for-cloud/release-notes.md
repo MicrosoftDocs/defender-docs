@@ -27,6 +27,28 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## November 2024
+
+|Date | Category | Update|
+|--|--|--|
+| November 19 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
+
+### AI security posture management is now generally available (GA)
+
+November 19, 2024
+
+Defender for Cloud's AI security posture management features are now generally available (GA). 
+
+Defender for Cloud reduces risk to cross cloud AI workloads by:
+
+- Discovering generative AI Bill of Materials (AI BOM), which includes application components, data, and AI artifacts from code to cloud.
+
+- Strengthening generative AI application security posture with built-in recommendations and by exploring and remediating security risks.
+
+- Using the attack path analysis to identify and remediate risks.
+
+Learn more about [AI security posture management](ai-security-posture.md).
+
 ## October 2024
 
 |Date | Category | Update|
