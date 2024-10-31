@@ -213,7 +213,7 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 
 ### Supported host operating systems
 
-Defender for Containers relies on the **Defender sensor** for several features. The Defender sensor is supported only with Linux Kernel 5.4 and on the following host operating systems:
+Defender for Containers relies on the Defender sensor for several features. The Defender sensor is supported only with Linux Kernel 5.4 and above, on the following host operating systems:
 
 - Amazon Linux 2
 - CentOS 8  (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)
@@ -228,7 +228,7 @@ Defender for Containers relies on the **Defender sensor** for several features. 
 - Ubuntu 20.04
 - Ubuntu 22.04
 
-Ensure your Kubernetes node is running on one of the verified supported operating systems. Clusters with different host operating systems, only get partial coverage.
+Ensure your Kubernetes node is running on one of these verified operating systems. Clusters with unsupported host operating systems don't get the benefits of features relying on Defender sensor.
 
 ### Defender sensor limitations
 
