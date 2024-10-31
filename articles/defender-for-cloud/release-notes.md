@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| October 31 | Upcoming change | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 | October 28 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
 | October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
 | October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
@@ -43,6 +44,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
 
+### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
+
+October 31, 2024
+
+**Estimated date for change:** November 6, 2024
+
+API security coverage within Defender for Cloud will now have full support for Azure API Management multi-region deployments, including full security posture and threat detection support to both primary and secondary regions
+
+Onboarding and offboarding APIs to Defender for APIs will now be managed at the Azure API Management API level. All associated [Azure API Management revisions](https://learn.microsoft.com/azure/api-management/api-management-revisions) will automatically be included in the process, eliminating the need to manage onboarding and offboarding for each API revision individually. 
+
+This change will include a one-time rollout to existing Defender for APIs customers.
+
+Rollout Details:
+- The rollout will occur during the week of November 6th for existing Defender for APIs customers.
+- If the 'current' revision for an Azure API Management API is already onboarded to Defender for APIs, all associated revisions for that API will also be automatically onboarded to Defender for APIs.
+- If the 'current' revision for an Azure API Management API is not onboarded to Defender for APIs, any associated API revisions that were onboarded to Defender for APIs will be offboarded.
+  
 ### MMA migration experience is now available
 
 October 28, 2024
