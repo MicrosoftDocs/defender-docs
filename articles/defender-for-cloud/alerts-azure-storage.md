@@ -309,7 +309,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: Medium
 
-### **The access level of a sensitive storage blob container was changed to allow unauthenticated public access (Preview)**
+### **The access level of a sensitive storage blob container was changed to allow unauthenticated public access**
 
 Storage.Blob_OpenACL.Sensitive
 
