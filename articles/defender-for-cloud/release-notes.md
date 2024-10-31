@@ -485,7 +485,7 @@ With DevOps security capabilities in Microsoft Defender Cloud Security Posture M
 | June 27 | GA                   | [Checkov IaC Scanning in Defender for Cloud](#ga-checkov-iac-scanning-in-defender-for-cloud). |
 | June 24 | Update               | [Change in pricing for multicloud Defender for Containers](#update-change-in-pricing-for-defender-for-containers-in-multicloud) |
 | June 20 | Upcoming deprecation | [Reminder of deprecation for adaptive recommendations at Microsoft Monitoring Agent (MMA) deprecation](#deprecation-reminder-of-deprecation-for-adaptive-recommendations).<br/><br/> Estimated deprecation August 2024. |
-| June 10 | Preview              | [Copilot in Defender for Cloud](#preview-copilot-for-security-in-defender-for-cloud) |
+| June 10 | Preview              | [Copilot in Defender for Cloud](#preview-copilot-in-defender-for-cloud) |
 | June 10 | Upcoming update      | [SQL vulnerability assessment automatic enablement using express configuration on unconfigured servers](#update-sql-vulnerability-assessment-automatic-enablement).<br/><br/> Estimated update: July 10, 2024. |
 | June 3  | Upcoming update      | [Changes in identity recommendations behavior](#update-changes-in-identity-recommendations-behavior)<br/><br/> Estimated update: July 10 2024. |
 
@@ -515,7 +515,7 @@ As part of the [MMA deprecation and the Defender for Servers updated deployment 
 
 Adaptive Security Recommendations, known as Adaptive Application Controls and Adaptive Network Hardening, will be discontinued. The current GA version based on the MMA and the preview version based on the AMA will be deprecated in August 2024.
 
-### Preview: Microsoft Security Copilot in Defender for Cloud
+### Preview: Copilot in Defender for Cloud
 
 June 10, 2024
 
