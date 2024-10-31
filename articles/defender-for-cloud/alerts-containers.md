@@ -68,10 +68,10 @@ The simulation tool runs on your local machine using a Python-based CLI that dep
     
 | Scenario | Expected alerts |
 |--|--|
-| **Reconnaissance** | Possible Web Shell activity detected <br/> Suspicious access to workload identity token or service account token detected <br/> Suspicious Kubernetes service account operation detected <br/> Network scanning tool detected  |
+| **Reconnaissance** | Possible Web Shell activity detected <br/> Suspicious Kubernetes service account operation detected <br/> Network scanning tool detected  |
 | **Lateral Movement** | Possible Web Shell activity detected <br/> Access to cloud metadata service detected  |
-| **Secrets Gathering** | Possible Web Shell activity detected <br/> Sensitive files access detected <br/> Suspicious access to workload identity token or service account token detected <br/> Possible secret reconnaissance detected  |
-| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container <br/> Digital currency mining related behavior detected |
+| **Secrets Gathering** | Possible Web Shell activity detected <br/> Sensitive files access detected <br/> Possible secret reconnaissance detected  |
+| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
 | **Web shell** | Possible Web Shell activity detected|
 
 ## Next steps
