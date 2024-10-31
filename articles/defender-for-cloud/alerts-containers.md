@@ -23,7 +23,7 @@ Examples of suspicious operations captured by MDC Containers include:
 
 ## Workload runtime detection
 
-MDC Containers uses the [Defender sensor](defender-for-containers-introduction#run-time-protection-for-kubernetes-nodes-and-clusters.md) to monitor the K8s workload runtime activity to detect suspicious operations, including workload process creation events.
+MDC Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor the K8s workload runtime activity to detect suspicious operations, including workload process creation events.
 
 Examples of suspicious workload runtime activity include:
 
