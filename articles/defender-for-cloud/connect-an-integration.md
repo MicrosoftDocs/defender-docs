@@ -5,13 +5,13 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 10/28/2024
+ms.date: 11/03/2024
 #customer intent: As a cloud administrator, I want to connect partner integrations so that I can enhance security and gain insights.
 ---
 
 # Connect an integration
 
-Microsoft Defender for Cloud has many partner integrations that it can connect to. Depending on the which partner integration you connect, Defender for Cloud can either obtain or provide valuable insights to to secure your multicloud environment.
+Microsoft Defender for Cloud can connect with various partner integrations. The specific integration you choose, allows Defender for Cloud to either receive or share important information to help secure your multicloud environment.
 
 For the full list of available integrations, see the [overview of partner integrations](partner-integrations.md).
 
@@ -21,7 +21,7 @@ For the full list of available integrations, see the [overview of partner integr
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS accounts](quickstart-onboard-aws.md) or [GCP projects](quickstart-onboard-gcp.md).
+- Connect your [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service accounts](quickstart-onboard-aws.md), or [Google Cloud Projects](quickstart-onboard-gcp.md).
 
 - Have a subscription or an account with your partner integration.
 
@@ -38,7 +38,7 @@ For the full list of available integrations, see the [overview of partner integr
 
 1. Select **+ Add integration**.
 
-    :::image type="content" source="media/connect-an-integration/add-integration.png" alt-text="Screenshot that shows where the add integration button is located." lightbox="media/connect-an-integration/add-integration.png":::
+    :::image type="content" source="media/connect-an-integration/add-integration.png" alt-text="Screenshot that shows where the Add Integration button is located." lightbox="media/connect-an-integration/add-integration.png":::
 
 1. Select the relevant partner integration.
 
