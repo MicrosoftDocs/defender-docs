@@ -18,19 +18,19 @@ The following are the types of partner integration available in Defender for Clo
 
 ## Obtain insights from partner integrations
 
-Defender for Cloud has the ability to gain different types of insights from partner integrations. These integrations help you to gain more visibility into your cloud resources and enhance your security posture.
+Defender for Cloud has the ability to gain different types of insights from partner integrations. These integrations enhance your security posture with extra security context that enriches the experience for Defender for Cloud's users with a broader understanding of your environments overall security posture.
 
 Defender for Cloud can obtain insights from the following types of partner integrations:
 
 - [Software composition analysis (SCA)](#software-composition-analysis-sca)
-- [API integrations](#api-integrations)
+- [API security testing integrations](#api-security-testing-integrations)
 - [Ticketing services](#ticketing-services)
 
 ### Software composition analysis (SCA)
 
 The following table shows the list of software composition analysis (SCA) partners that are partnered with Defender for Cloud. 
 
-SCA partners play a vital role in software development by identifying and managing open-source and partner components within applications. This process ensures that these components are secure, free from known vulnerabilities, and compliant with their respective licenses.
+SCA partners play a vital role in software development by identifying security issues. This process investigates these components to find out if they're free from known vulnerabilities, and compliant with their respective licenses.
 
 | Partner name | Description | Documentation |
 |--|--|--|
@@ -38,17 +38,17 @@ SCA partners play a vital role in software development by identifying and managi
 
 ### API security testing integrations
 
-Microsoft Defender for Cloud supports partner tools to help enhance the existing runtime security capabilities that are provided by Defender for APIs. This support enables full lifecycle API security, and the ability for security teams to effectively discover and remediate API security vulnerabilities before they're deployed in production. The security scan results from partner applications are now available within Defender for Cloud, ensuring that central security teams have visibility into the health of APIs within the Defender for Cloud recommendation experience. 
+Microsoft Defender for Cloud supports partner tools to help enhance the existing runtime security capabilities that are provided by Defender for APIs. This support enables full lifecycle API security, and the ability for security teams to effectively discover and remediate API security vulnerabilities before they're deployed in production. Partner application security scan results are available in Defender for Cloud, giving central security teams visibility into API health within the Defender for Cloud recommendations. 
 
 | Logo | Partner name | Description | Enablement Guide |
 |--|--|--|--|
 | :::image type="icon" source="media/partner-integrations/42crunch-logo.png" border="false"::: | [42Crunch](https://aka.ms/APISecurityTestingPartnershipIgnite2023) | Developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. | [42Crunch onboarding guide](onboarding-guide-42crunch.md) |
-| :::image type="icon" source="media/partner-integrations/stackhawk-logo.png" border="false"::: | [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk) | StackHawk is the only modern DAST and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
-| :::image type="icon" source="media/partner-integrations/bright-security-logo.png" border="false"::: | [Bright Security](https://aka.ms/APISecurityTestingPRBrightSecurity) | Bright Security’s dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and LLM applications. Bright knows how to deliver the right tests, at the right time in the SDLC, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) | 
+| :::image type="icon" source="media/partner-integrations/stackhawk-logo.png" border="false"::: | [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk) | StackHawk is the only modern Dynamic Application Security Testing (DAST) and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
+| :::image type="icon" source="media/partner-integrations/bright-security-logo.png" border="false"::: | [Bright Security](https://aka.ms/APISecurityTestingPRBrightSecurity) | Bright Security's dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and LLM applications. Bright knows how to deliver the right tests, at the right time in the SDLC, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) | 
 
 ### Ticketing services
 
-The following table lists the partner solutions that provide ticketing services to Defender for Cloud. These solutions help you to create and manage tickets for security incidents and vulnerabilities detected by Defender for Cloud. Yicketing services allow users to submit, track, and fix tickets efficiently, improving communication between the IT department and end-users, and ensuring that issues are resolved quickly and effectively.
+The following table lists the partner solutions that provide ticketing services to Defender for Cloud. These solutions help you to create and manage tickets for security incidents and vulnerabilities detected by Defender for Cloud. Ticketing services let users easily submit, track, and fix tickets. This improves communication between the IT department and end-users, ensuring quick and effective issue resolution.
 
 | Partner name | Description | Documentation |
 |--|--|--|
@@ -56,7 +56,7 @@ The following table lists the partner solutions that provide ticketing services 
 
 ## Provide insights to partner integrations
 
-The following table lists our partners that can receive data from Defender for Cloud. These solutions help you to provide insights from Defender for Cloud to other security solutions.
+The following table lists our partners that can receive data from Defender for Cloud. Defender for Cloud is an amazing tool that generates vital information not provided by the partner services. These solutions integrate data from Defender for Cloud to enrich their own services, offering customers invaluable insights to better understand their overall security posture.
 
 Learn how to [connect your partner integration](integrate-partner-integrations.md) to Defender for Cloud.
 
@@ -84,7 +84,9 @@ Learn how to [connect your partner integration](integrate-partner-integrations.m
 
 ## Security solutions (legacy)
 
-The following table presents our partners who provide security solutions.
+Searching your page for information
+
+Microsoft Defender for Cloud integrates with both Microsoft services and partner solutions to simplify deployment, integrate detection, unify monitoring and management, and extend capabilities. It provides streamlined provisioning, automatic collection and aggregation of security events, and advanced threat-detection capabilities.
 
 | Partner name | Description | Documentation |
 |--|--|--|
