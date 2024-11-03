@@ -1,13 +1,13 @@
 ---
-title: Alerts for AI workloads
+title: Alerts for AI workloads (Preview)
 description: This article lists the security alerts for AI workloads visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 06/03/2024
+ms.date: 11/03/2024
 ai-usage: ai-assisted
 ---
 
-# Alerts for AI workloads
+# Alerts for AI workloads (Preview)
 
 This article lists the security alerts you might get for AI workloads from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration.  
 
