@@ -9,13 +9,13 @@ ai-usage: ai-assisted
 
 # Alerts for Kubernetes Clusters
 
-Defender for Containers (MDC Containers) provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. MDC Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
+Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. Defender for Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
 
 ## Control plane detection
 
-In Kubernetes, the control plane manages and orchestrates all the resources within the cluster. MDC Containers identifies potential threats in the control plane that can compromise the security and integrity of the entire cluster by monitoring the activities of the K8s API server. Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
+In Kubernetes, the control plane manages and orchestrates all the resources within the cluster. Defender for Containers identifies potential threats in the control plane that can compromise the security and integrity of the entire cluster by monitoring the activities of the K8s API server. Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
 
-Examples of suspicious operations captured by MDC Containers include:
+Examples of suspicious operations captured by Defender for Containers include:
 
 * **Privileged container deployments** can be a security risk as they grant containers elevated privileges within the host system. Privileged containers are monitored for unauthorized deployments, excessive use of privileges, and potential misconfigurations that could lead to security breaches.
 * **Risky service exposures to the public Internet** can expose the Kubernetes cluster to potential attacks. The cluster is monitored for services that are unintentionally exposed, misconfigured with overly permissive access controls, or lacking proper security measures.
@@ -23,22 +23,23 @@ Examples of suspicious operations captured by MDC Containers include:
 
 ## Workload runtime detection
 
-MDC Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor the K8s workload runtime activity to detect suspicious operations, including workload process creation events.
+Defender for Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor the K8s workload runtime activity to detect suspicious operations, including workload process creation events.
 
 Examples of suspicious workload runtime activity include:
 
-* Web shell activity
-* Crypto mining activity
-* Binary drift
+* **Web shell activity** - Defender for Containers monitors the activity on the running containers to identify behaviors that resemble web shell invocations.
+* **Crypto currency mining activity** - Defender for Containers uses several heuristics to identify crypto currency mining activity on the running containers, including suspicious download activity, CPU optimization, suspicious process execution, and more.
+* **Network scanning tools** – Defender for Containers identifies usage of scanning tools that have been used for malicious activities.
+* **Binary drift detection** - Defender for Cloud identifies execution of workload binaries that have drifted from the original container image. For more information, read about [Binary drift detection](binary-drift-detection.md).
 
 ## K8s alerts simulation tool
 
-MDC Containers provides a tool to simulate various attack scenarios within your K8s environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
+Defender for Containers provides a tool to simulate various attack scenarios within your K8s environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
 
 > !Note
 > Although the simulation tool doesn't run any malicious components, it's recommended to run it on a dedicated cluster without production workloads.
 
-The simulation tool runs on your local machine using a Python-based CLI that deploys Helm charts in the target cluster.
+The simulation tool runs using a Python-based CLI that deploys Helm charts in the target cluster.
 
 ### Install the simulation tool
 
@@ -46,7 +47,7 @@ The simulation tool runs on your local machine using a Python-based CLI that dep
 
    * A user with admin permissions over the target cluster.
 
-   * MDC Containers is enabled. Make sure the MDC Containers is running the target cluster.
+   * Defender for Containers is enabled. Make sure the Defender for Containers is running the target cluster.
 
    * A Helm client is installed on your local machine.
 
@@ -70,8 +71,11 @@ The simulation tool runs on your local machine using a Python-based CLI that dep
 | **Reconnaissance** | Possible Web Shell activity detected <br/> Suspicious Kubernetes service account operation detected <br/> Network scanning tool detected  |
 | **Lateral Movement** | Possible Web Shell activity detected <br/> Access to cloud metadata service detected  |
 | **Secrets Gathering** | Possible Web Shell activity detected <br/> Sensitive files access detected <br/> Possible secret reconnaissance detected  |
-| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
+| **Crypto currency mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
 | **Web shell** | Possible Web Shell activity detected|
+
+> !Note
+> While some alerts are triggered in near real-time, others may take up to an hour.
 
 ## Next steps
 
