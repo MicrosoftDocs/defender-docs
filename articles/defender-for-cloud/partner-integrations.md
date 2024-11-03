@@ -2,7 +2,7 @@
 title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 10/10/2024
+ms.date: 11/03/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -36,9 +36,9 @@ SCA partners play a vital role in software development by identifying and managi
 |--|--|--|
 | Endor Labs | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Integrate partner integrations](integrate-partner-integrations.md) |
 
-### API integrations
+### API security testing integrations
 
-The following table lists the partner solutions that provide API security testing capabilities to Defender for Cloud. These solutions help you to proactively test and harden APIs within your CI/CD pipelines.
+Microsoft Defender for Cloud supports partner tools to help enhance the existing runtime security capabilities that are provided by Defender for APIs. This support enables full lifecycle API security, and the ability for security teams to effectively discover and remediate API security vulnerabilities before they're deployed in production. The security scan results from partner applications are now available within Defender for Cloud, ensuring that central security teams have visibility into the health of APIs within the Defender for Cloud recommendation experience. 
 
 | Partner name | Description | Enablement Guide |
 |--|--|--|

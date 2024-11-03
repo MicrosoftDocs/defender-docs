@@ -172,9 +172,9 @@
             - name: Connect ServiceNow to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, ServiceNow
               href: connect-servicenow.md
-          - name: API partners
+          - name: API security testing partners
             items:
-                - name: Overview of API integrations
+                - name: Overview of API security testing integrations
                   href: defender-partner-applications.md
                 - name: Onboard 42Crunch (preview)
                   href: onboarding-guide-42crunch.md

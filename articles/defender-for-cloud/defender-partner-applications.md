@@ -1,24 +1,23 @@
 ---
-title: Overview of API integrations(preview)
+title: Overview of API security testing integrations (preview)
 description: Learn about security testing scan results from partner applications within Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 10/08/2024
+ms.date: 11/03/2024
+#customer intent: As a security administrator, I want to understand the integration of API security testing tools so that I can enhance the security of our APIs.
 ---
 
-# Overview of API integrations (preview)
+# Overview of API security testing integrations (preview)
 
 Microsoft Defender for Cloud supports partner tools to help enhance the existing runtime security capabilities that are provided by Defender for APIs. Defender for Cloud supports proactive API security testing capabilities in early stages of the development lifecycle (including source code repositories & CI/CD pipelines).
-
-## Overview
 
 The support for partner solutions helps to further streamline, integrate, and orchestrate security findings from partner solutions with Microsoft Defender for Cloud. This support enables full lifecycle API security, and the ability for security teams to effectively discover and remediate API security vulnerabilities before they're deployed in production.
 
 The security scan results from partner applications are available within Defender for Cloud. The ability to view the results in Defender for Cloud ensures that central security teams have visibility into the health of APIs within the Defender for Cloud recommendation experience. These security teams can now take governance steps that are natively available through Defender for Cloud recommendations, and extensibility to export scan results from the Azure Resource Graph into management tools of their choice.
 
-:::image type="content" source="media/defender-partner-applications/api-security.png" alt-text="Screenshot of security analysis." lightbox="media/defender-partner-applications/api-security.png":::
+:::image type="content" source="media/defender-partner-applications/api-security.png" alt-text="Screenshot of security analysis" lightbox="media/defender-partner-applications/api-security.png":::
 
 ## Prerequisites
 
