@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 10/28/2024
+ms.date: 10/31/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -53,6 +53,7 @@ Learn more about [AI security posture management](ai-security-posture.md).
 
 |Date | Category | Update|
 |--|--|--|
+| October 31 | Upcoming change | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 | October 28 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
 | October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
 | October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
@@ -65,6 +66,23 @@ Learn more about [AI security posture management](ai-security-posture.md).
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
 
+### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
+
+October 31, 2024
+
+**Estimated date for change:** November 6, 2024
+
+API security coverage within Defender for Cloud will now have full support for Azure API Management multi-region deployments, including full security posture and threat detection support to both primary and secondary regions
+
+Onboarding and offboarding APIs to Defender for APIs will now be managed at the Azure API Management API level. All associated [Azure API Management revisions](/azure/api-management/api-management-revisions) will automatically be included in the process, eliminating the need to manage onboarding and offboarding for each API revision individually. 
+
+This change will include a one-time rollout to existing Defender for APIs customers.
+
+Rollout Details:
+- The rollout will occur during the week of November 6th for existing Defender for APIs customers.
+- If the 'current' revision for an Azure API Management API is already onboarded to Defender for APIs, all associated revisions for that API will also be automatically onboarded to Defender for APIs.
+- If the 'current' revision for an Azure API Management API is not onboarded to Defender for APIs, any associated API revisions that were onboarded to Defender for APIs will be offboarded.
+  
 ### MMA migration experience is now available
 
 October 28, 2024
@@ -680,271 +698,6 @@ As part of the [MMA deprecation and the Defender for Servers updated deployment 
 The new version of File Integrity Monitoring (FIM) over Microsoft Defender for Endpoint (MDE) allows you to meet compliance requirements by monitoring critical files and registries in real-time, auditing changes, and detecting suspicious file content alterations.
 
 As part of this release, FIM experience over AMA will no longer be available through the Defender for Cloud portal beginning August 2024. For more information, see [File Integrity Monitoring experience - changes and migration guidance](prepare-deprecation-log-analytics-mma-agent.md#file-integrity-monitoring-experience---changes-and-migration-guidance).
-
-## April 2024
-
-|Date| Category | Update |
-|--|--|--|
-| April 16 | Upcoming update | [Change in CIEM assessment IDs](#update-change-in-ciem-assessment-ids).<br/><br/> Estimated update: May 2024. |
-| April 15 | GA | [Defender for Containers is now available for AWS and GCP](#ga-defender-for-containers-for-aws-and-gcp). |
-| April 3 | Update | [Risk prioritization is now the default experience in Defender for Cloud](#update-risk-prioritization) |
-| April 3 | Update | [Defender for open-source relational databases updates](#update-defender-for-open-source-relational-databases-updates). |
-
-### Update: Change in CIEM assessment IDs
-
-April 16, 2024
-
-**Estimated date for change**: May 2024
-
-The following recommendations are scheduled for remodeling, which will result in changes to their assessment IDs:
-
-- `Azure overprovisioned identities should have only the necessary permissions`
-- `AWS Overprovisioned identities should have only the necessary permissions`
-- `GCP overprovisioned identities should have only the necessary permissions`
-- `Super identities in your Azure environment should be removed`
-- `Unused identities in your Azure environment should be removed`
-
-### GA: Defender for Containers for AWS and GCP
-
-April 15, 2024
-
-Runtime threat detection and agentless discovery for AWS and GCP in Defender for Containers are now generally available. In addition, there's a new authentication capability in AWS which simplifies provisioning.
-
-Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](/azure/defender-for-cloud/defender-for-containers-enable?branch=pr-en-us-269845&tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-eks#deploying-the-defender-sensor).
-
-### Update: Risk prioritization
-
-April 3, 2024
-
-Risk prioritization is now the default experience in Defender for Cloud. This feature helps you to focus on the most critical security issues in your environment by prioritizing recommendations based on the risk factors of each resource. The risk factors include the potential impact of the security issue being breached, the categories of risk, and the attack path that the security issue is part of. Learn more about [risk prioritization](risk-prioritization.md).
-
-### Update: Defender for Open-Source Relational Databases
-
-April 3, 2024
-
-- **Defender for PostgreSQL Flexible Servers post-GA updates** - The update enables customers to enforce protection for existing PostgreSQL flexible servers at the subscription level, allowing complete flexibility to enable protection on a per-resource basis or for automatic protection of all resources at the subscription level.
-- **Defender for MySQL Flexible Servers Availability and GA** - Defender for Cloud expanded its support for Azure open-source relational databases by incorporating MySQL Flexible Servers.
-
-This release includes:
-
-- Alert compatibility with existing alerts for Defender for MySQL Single Servers.
-- Enablement of individual resources.
-- Enablement at the subscription level.
-- Updates for Azure Database for MySQL flexible servers are rolling out over the next few weeks. If you see the error `The server <servername> is not compatible with Advanced Threat Protection`, you can either wait for the update, or open a support ticket to update the server sooner to a supported version.
-
-If you're already protecting your subscription with Defender for open-source relational databases, your flexible server resources are automatically enabled, protected, and billed. Specific billing notifications have been sent via email for affected subscriptions.
-
-Learn more about [Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
-
-## March 2024
-
-|Date| Category | Update |
-|--|--|--|
-| March 31 | GA | [Windows container images scanning](#ga-windows-container-images-scanning) |
-| March 25 | Update  |[Continuous export now includes attack path data](#update-continuous-export-now-includes-attack-path-data) |
-| March 21 | Preview | [Agentless scanning supports CMK encrypted VMs in Azure](#preview-agentless-scanning-supports-cmk-encrypted-vms-in-azure) |
-| March 17 | Preview | [Custom recommendations based on KQL for Azure](#preview-custom-recommendations-based-on-kql-for-azure). |
-| March 13 | Update |[Inclusion of DevOps recommendations in the Microsoft cloud security benchmark](#update-inclusion-of-devops-recommendations-in-the-microsoft-cloud-security-benchmark) |
-| March 13 | GA | [ServiceNow integration](#ga-servicenow-integration-is-now-generally-available). |
-| March 13 | Preview | [Critical assets protection in Microsoft Defender for Cloud](#preview-critical-assets-protection-in-microsoft-defender-for-cloud). |
-| March 12 | Update |[Enhanced AWS and GCP recommendations with automated remediation scripts](#update-enhanced-aws-and-gcp-recommendations-with-automated-remediation-scripts) |
-| March 6 | Preview | [Compliance standards added to compliance dashboard](#preview-compliance-standards-added-to-compliance-dashboard)  |
-| March 6 | Upcoming update |[Defender for open-source relational databases updates](#update-defender-for-open-source-relational-databases-updates)<br/><br/> Expected: April, 2024 |
-| March 3 | Upcoming update |[Changes in where you access Compliance offerings and Microsoft Actions](#update-changes-to-compliance-offerings-and-microsoft-actions-settings)<br/><br/> Expected: September 2025 |
-| March 3 | Deprecation | [Defender for Cloud Containers Vulnerability Assessment powered by Qualys retirement](#deprecation-defender-for-cloud-containers-vulnerability-assessment-powered-by-qualys-retirement) |
-| March 3 | Upcoming update |[Changes in where you access Compliance offerings and Microsoft Actions](#update-changes-in-where-you-access-compliance-offerings-and-microsoft-actions).<br/><br/> Estimated deprecation: September 30, 2025. |
-
-### GA: Windows container images scanning
-
-March 31, 2024
-
-We're announcing the general availability (GA) of the Windows container images support for scanning by Defender for Containers.
-
-### Update: Continuous export now includes attack path data
-
-March 25, 2024
-
-We're announcing that continuous export now includes attack path data. This feature allows you to stream security data to Log Analytics in Azure Monitor, to Azure Event Hubs, or to another Security Information and Event Management (SIEM), Security Orchestration Automated Response (SOAR), or IT classic deployment model solution.
-
-Learn more about [continuous export](benefits-of-continuous-export.md).
-
-### Preview: Agentless scanning supports CMK encrypted VMs in Azure
-
-March 21, 2024
-
-Until now agentless scanning covered CMK encrypted VMs in AWS and GCP. With this release, we're completing support for Azure as well. The capability employs a unique scanning approach for CMK in Azure:
-
-- Defender for Cloud doesn't handle the key or decryption process. Keys and decryption are seamlessly handled by Azure Compute and is transparent to Defender for Cloud's agentless scanning service.
-- The unencrypted VM disk data is never copied or re-encrypted with another key.
-- The original key isn't replicated during the process. Purging it eradicates the data on both your production VM and Defender for Cloud's temporary snapshot.
-
-During public preview this capability isn't automatically enabled. If you're using Defender for Servers P2 or Defender CSPM and your environment has VMs with CMK encrypted disks, you can now have them scanned for vulnerabilities, secrets, and malware following these [enablement steps](enable-agentless-scanning-vms.md#agentless-vulnerability-assessment-on-azure).
-
-- [Learn more on agentless scanning for VMs](concept-agentless-data-collection.md)
-- [Learn more on agentless scanning permissions](faq-permissions.yml#which-permissions-are-used-by-agentless-scanning-)
-
-### Preview: Custom recommendations based on KQL for Azure
-
-March 17, 2024
-
-Custom recommendations based on KQL for Azure are now in public preview, and supported for all clouds. For more information, see [Create custom security standards and recommendations](create-custom-recommendations.md).
-
-### Update: Inclusion of DevOps recommendations in the Microsoft cloud security benchmark
-
-March 13, 2024
-
-Today, we are announcing that you can now monitor your DevOps security and compliance posture in the [Microsoft cloud security benchmark](concept-regulatory-compliance.md) (MCSB) in addition to Azure, AWS, and GCP. DevOps assessments are part of the DevOps Security control in the MCSB.
-
-The MCSB is a framework that defines fundamental cloud security principles based on common industry standards and compliance frameworks. MCSB provides prescriptive details for how to implement its cloud-agnostic security recommendations.
-
-Learn more about the [DevOps recommendations](recommendations-reference-devops.md) that will be included and the [Microsoft cloud security benchmark](concept-regulatory-compliance.md).
-
-### GA: ServiceNow integration is now generally available
-
-March 12, 2024
-
-We're announcing the general availability (GA) of the [ServiceNow integration](integration-servicenow.md).
-
-### Preview: Critical assets protection in Microsoft Defender for Cloud
-
-March 12, 2024
-
-Defender for Cloud now includes a business criticality feature, using Microsoft Security Exposure Management's critical assets engine, to identify and protect important assets through risk prioritization, attack path analysis, and cloud security explorer. For more information, see [Critical assets protection in Microsoft Defender for Cloud (Preview)](critical-assets-protection.md).
-
-### Update: Enhanced AWS and GCP recommendations with automated remediation scripts
-
-March 12, 2024
-
-We're enhancing the AWS and GCP recommendations with automated remediation scripts that allow you to remediate them programmatically and at scale.
-Learn more about [automated remediation scripts](implement-security-recommendations.md#use-the-automated-remediation-scripts).
-
-### Preview: Compliance standards added to compliance dashboard
-
-March 6, 2024
-
-Based on customer feedback, we've added compliance standards in preview to Defender for Cloud.
-
-Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards)
-
-We are continuously working on adding and updating new standards for Azure, AWS, and GCP environments.
-
-Learn how to [assign a security standard](update-regulatory-compliance-packages.yml).
-
-### Update: Defender for open-source relational databases updates
-
-March 6, 2024**
-
-**Estimated date for change**: April, 2024
-
-**Defender for PostgreSQL Flexible Servers post-GA updates** - The update enables customers to enforce protection for existing PostgreSQL flexible servers at the subscription level, allowing complete flexibility to enable protection on a per-resource basis or for automatic protection of all resources at the subscription level.
-
-**Defender for MySQL Flexible Servers Availability and GA** - Defender for Cloud is set to expand its support for Azure open-source relational databases by incorporating MySQL Flexible Servers.
-This release will include:
-
-- Alert compatibility with existing alerts for Defender for MySQL Single Servers.
-- Enablement of individual resources.
-- Enablement at the subscription level.
-
-If you're already protecting your subscription with Defender for open-source relational databases, your flexible server resources are automatically enabled, protected, and billed.
-Specific billing notifications have been sent via email for affected subscriptions.
-
-Learn more about [Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
-
-### Update: Changes to Compliance Offerings and Microsoft Actions settings
-
-March 3, 2024
-
-**Estimated date for change**: September 30, 2025
-
-On September 30, 2025, the locations where you access two preview features, Compliance offering and Microsoft Actions, will change.
-
-The table that lists the compliance status of Microsoft's products (accessed from the **Compliance offerings** button in the toolbar of Defender's [regulatory compliance dashboard](regulatory-compliance-dashboard.md)). After this button is removed from Defender for Cloud, you'll still be able to access this information using the [Service Trust Portal](https://servicetrust.microsoft.com/).
-
-For a subset of controls, Microsoft Actions was accessible from the **Microsoft Actions (Preview)** button in the controls details pane. After this button is removed, you can view Microsoft Actions by visiting Microsoft's [Service Trust Portal for FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP) and accessing  the Azure System Security Plan document.
-
-### Update: Changes in where you access Compliance offerings and Microsoft Actions
-
-March 3, 2024**
-
-**Estimated date for change**: September 2025
-
-On September 30, 2025, the locations where you access two preview features, Compliance offering and Microsoft Actions, will change.
-
-The table that lists the compliance status of Microsoft's products (accessed from the **Compliance offerings** button in the toolbar of Defender's [regulatory compliance dashboard](regulatory-compliance-dashboard.md)). After this button is removed from Defender for Cloud, you'll still be able to access this information using the [Service Trust Portal](https://servicetrust.microsoft.com/).
-
-For a subset of controls, Microsoft Actions was accessible from the **Microsoft Actions (Preview)** button in the controls details pane. After this button is removed, you can view Microsoft Actions by visiting Microsoft's [Service Trust Portal for FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP) and accessing  the Azure System Security Plan document.
-
-### Deprecation: Defender for Cloud Containers Vulnerability Assessment powered by Qualys retirement
-
-March 3, 2024
-
-The Defender for Cloud Containers Vulnerability Assessment powered by Qualys is being retired. The retirement will be completed by March 6, and until that time partial results may still appear both in the Qualys recommendations, and Qualys results in the security graph. Any customers who were previously using this assessment should upgrade to [Vulnerability assessments for Azure with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md). For information about transitioning to the container vulnerability assessment offering powered by Microsoft Defender Vulnerability Management, see [Transition from Qualys to Microsoft Defender Vulnerability Management](transition-to-defender-vulnerability-management.md).
-
-## February 2024
-
-|Date|Category|Update|
-|--|--|--|
-| February 28 | Deprecation |[Microsoft Security Code Analysis (MSCA) is no longer operational](#deprecation-microsoft-security-code-analysis-msca-is-no-longer-operational). |
-| February 28 | Update |[Updated security policy management expands support to AWS and GCP](#update-security-policy-management-expands-support-to-aws-and-gcp). |
-| February 26 | Update |[Cloud support for Defender for Containers](#update-cloud-support-for-defender-for-containers) |
-| February 20 | Update |[New version of Defender sensor for Defender for Containers](#update-new-version-of-defender-sensor-for-defender-for-containers) |
-| February 18| Update |[Open Container Initiative (OCI) image format specification support](#update-open-container-initiative-oci-image-format-specification-support) |
-| February 13 | Deprecation |[AWS container vulnerability assessment powered by Trivy retired](#deprecation-aws-container-vulnerability-assessment-powered-by-trivy-retired). |
-| February 5 | Upcoming update |[Decommissioning of Microsoft.SecurityDevOps resource provider](#update-decommissioning-of-microsoftsecuritydevops-resource-provider)<br/><br/>Expected: March 6, 2024 |
-
-### Deprecation: Microsoft Security Code Analysis (MSCA) is no longer operational
-
-February 28, 2024
-
-In February 2021, the deprecation of the MSCA task was communicated to all customers and has been past end of life support since [March 2022](https://devblogs.microsoft.com/premier-developer/microsoft-security-code-analysis/). As of February 26, 2024, MSCA is officially no longer operational.
-
-Customers can get the latest DevOps security tooling from Defender for Cloud through [Microsoft Security DevOps](azure-devops-extension.yml) and more security tooling through [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
-
-### Update: Security policy management expands support to AWS and GCP
-
-February 28, 2024
-
-The updated experience for managing security policies, initially released in Preview for Azure, is expanding its support to cross cloud (AWS and GCP) environments. This Preview release includes:
-
-- Managing [regulatory compliance standards](update-regulatory-compliance-packages.yml) in Defender for Cloud across Azure, AWS, and GCP environments.
-- Same cross cloud interface experience for creating and managing [Microsoft Cloud Security Benchmark(MCSB) custom recommendations](manage-mcsb.md).
-- The updated experience is applied to AWS and GCP for [creating custom recommendations with a KQL query](create-custom-recommendations.md).
-
-### Update: Cloud support for Defender for Containers
-
-February 26, 2024
-
-Azure Kubernetes Service (AKS) threat detection features in Defender for Containers are now fully supported in commercial, Azure Government, and Azure China 21Vianet clouds. [Review](support-matrix-defender-for-containers.md#azure) supported features.
-
-### Update: New version of Defender sensor for Defender for Containers
-
-February 20, 2024
-
-[A new version](/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar) of the [Defender sensor for Defender for Containers](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) is available. It includes performance and security improvements, support for both AMD64 and Arm64 arch nodes (Linux only), and uses [Inspektor Gadget](https://www.inspektor-gadget.io/) as the process collection agent instead of Sysdig. The new version is only supported on Linux kernel versions 5.4 and higher, so if you have older versions of the Linux kernel, you need to upgrade. Support for Arm64 is only available from AKS V1.29 and above. For more information, see [Supported host operating systems](support-matrix-defender-for-containers.md#supported-host-operating-systems).
-
-### Update: Open Container Initiative (OCI) image format specification support
-
-February 18, 2024
-
-The [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification is now supported by vulnerability assessment, powered by Microsoft Defender Vulnerability Management for AWS, Azure & GCP clouds.
-
-### Deprecation: AWS container vulnerability assessment powered by Trivy retired
-
-February 13, 2024
-
-The container vulnerability assessment powered by Trivy has been retired. Any customers who were previously using this assessment should upgrade to the new [AWS container vulnerability assessment powered by Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-aws.md). For instructions on how to upgrade, see [How do I upgrade from the retired Trivy vulnerability assessment to the AWS vulnerability assessment powered by Microsoft Defender Vulnerability Management?](faq-defender-for-containers.yml#how-do-i-upgrade-from-the-retired-trivy-vulnerability-assessment-to-the-aws-vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management-)
-
-### Update: Decommissioning of Microsoft.SecurityDevOps resource provider
-
-February 5, 2024
-
-**Estimated date for change**: March 6, 2024
-
-Microsoft Defender for Cloud is decommissioning the resource provider `Microsoft.SecurityDevOps` that was used during public preview of DevOps security, having migrated to the existing `Microsoft.Security` provider. The reason for the change is to improve customer experiences by reducing the number of resource providers associated with DevOps connectors.
-
-Customers that are still using the API version **2022-09-01-preview** under `Microsoft.SecurityDevOps` to query Defender for Cloud DevOps security data will be impacted. To avoid disruption to their service, customer will need to update to the new API version **2023-09-01-preview** under the `Microsoft.Security` provider.
-
-Customers currently using Defender for Cloud DevOps security from Azure portal won't be impacted.
 
 For details on the new API version, see [Microsoft Defender for Cloud REST APIs](/rest/api/defenderforcloud/operation-groups).
 
