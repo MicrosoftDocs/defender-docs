@@ -70,8 +70,9 @@ To investigate exposed secrets and lateral movement possibilities, you can use t
 
 It’s important to be able to prioritize secrets and identify which ones need immediate attention. To help you do this, Defender for Cloud provides: 
 
-- Providing rich metadata for every secret, such as the file path, line number, column, commit hash, file URL, GitHub Advanced Security alert URL, and an indication to whether the target resource that the secrets provide access to exists. 
-- Combining secrets metadata with cloud assets context. This helps you to start with assets that are exposed to the internet or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization. 
+- Rich metadata for every secret, such as the file path, line number, column, commit hash, file URL, GitHub Advanced Security alert URL, and an indication to whether the target resource that the secrets provide access to exists. 
+
+- Secrets metadata combined with cloud assets context. This helps you to start with assets that are exposed to the internet or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization. 
 
 ## Related content
 [Cloud deployments secrets scanning](secrets-scanning-cloud-deployment.md)
