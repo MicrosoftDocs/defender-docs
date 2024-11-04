@@ -231,6 +231,8 @@
         - name: Protecting cloud deployment secrets
           href: secrets-scanning-cloud-deployment.md
           
+        - name: Protecting code repository secrets
+          href: secrets-scanning-code.md
       - name: Integrations
         items:  
         - name: ServiceNow
