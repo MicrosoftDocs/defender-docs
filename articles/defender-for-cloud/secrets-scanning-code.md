@@ -3,12 +3,12 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title: Protecting code repository secrets
-description: Describes how to interpret secret scanning results from code repositories in Defender for Cloud
+title: Protecting code repository secrets with Microsoft Defender for Cloud
+description: Learn how to protect code repository secrets with Defender for Cloud's secret detections.
 author:      laragoldstein13 # GitHub alias
 ms.author:   lgoldstein # Microsoft alias
 ms.service: defender-for-cloud
-ms.topic: concept-article
+ms.topic: overview
 ms.date:     11/04/2024
 ---
 
