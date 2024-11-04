@@ -29,7 +29,7 @@ To learn more, visit GitHub Advanced Security documentation for [GitHub](https:/
 
 Code repository secret scanning is available with the necessary GitHub Advanced Security license. Viewing the findings in Defender for Cloud is provided as part of Foundational Cloud Security Posture Management. To detect lateral movement possibilities to runtime resources, Defender Cloud Security Posture Management is required.  
 
-At this time, attack paths for exposed are only available for Azure DevOps repositories.  
+At this time, attack paths for exposed secrets are only available for Azure DevOps repositories.  
 
 ## How does code repository scanning mitigate risk?
 
@@ -50,35 +50,30 @@ There are several ways to identify and remediate exposed secrets. However, not e
 The following secrets security recommendations are available: 
 
 - Azure DevOps repositories: [Azure DevOps repositories should have secret scanning findings resolved](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/b5ef903f-8655-473b-9784-4f749eeb25c6) 
-
-- GitHub repositories: [GitHub repositories should have secret scanning findings resolved](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/dd98425c-1407-40cc-8a2c-da5d0a2f80da) 
+- GitHub repositories: [GitHub repositories should have secret scanning findings resolved](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/dd98425c-1407-40cc-8a2c-da5d0a2f80da) 
 
 ### Attack path scenarios
 
 Attack path analysis is a graph-based algorithm that scans your cloud security graph to expose exploitable paths that attackers might use to reach high-impact assets. Potential attack paths include: 
-
-Azure DevOps repository contains an exposed secret with lateral movement to a SQL database. 
-
-Publicly accessible Azure DevOps repository contains an exposed secret with lateral movement to a Storage Account.  
+- Azure DevOps repository contains an exposed secret with lateral movement to a SQL database. 
+- Publicly accessible Azure DevOps repository contains an exposed secret with lateral movement to a Storage Account.  
 
 ### Cloud security explorer queries
 
 To investigate exposed secrets and lateral movement possibilities, you can use the following queries:  
 
-[Code repositories contain secrets](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityGraph.ReactView/query/%7B%22type%22%3A%22securitygraphquery%22%2C%22version%22%3A2%2C%22properties%22%3A%7B%22source%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22code_repository%22%7D%7D%5D%2C%22conditions%22%3A%7B%22type%22%3A%22conditiongroup%22%2C%22properties%22%3A%7B%22operator%22%3A%22and%22%2C%22conditions%22%3A%5B%7B%22type%22%3A%22connection%22%2C%22properties%22%3A%7B%22name%22%3A%22contains%22%2C%22direction%22%3A%22outgoing%22%2C%22target%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22connection_string%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22key%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22sas_token%22%7D%7D%5D%7D%7D%7D%7D%5D%7D%7D%7D%7D%7D%7D) 
-
-[Azure DevOps repositories contain secrets that can authenticate to Object Storage or Managed Databases](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityGraph.ReactView/query/%7B%22type%22%3A%22securitygraphquery%22%2C%22version%22%3A2%2C%22properties%22%3A%7B%22source%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22entity%22%2C%22properties%22%3A%7B%22source%22%3A%22azuredevopsrepository%22%7D%7D%5D%2C%22conditions%22%3A%7B%22type%22%3A%22conditiongroup%22%2C%22properties%22%3A%7B%22operator%22%3A%22and%22%2C%22conditions%22%3A%5B%7B%22type%22%3A%22connection%22%2C%22properties%22%3A%7B%22name%22%3A%22contains%22%2C%22direction%22%3A%22outgoing%22%2C%22target%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22connection_string%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22sas_token%22%7D%7D%5D%2C%22conditions%22%3A%7B%22type%22%3A%22conditiongroup%22%2C%22properties%22%3A%7B%22operator%22%3A%22and%22%2C%22conditions%22%3A%5B%7B%22type%22%3A%22connection%22%2C%22properties%22%3A%7B%22name%22%3A%22can%20authenticate%20to%22%2C%22direction%22%3A%22outgoing%22%2C%22target%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22managed_database%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22object_storage%22%7D%7D%5D%7D%7D%7D%7D%5D%7D%7D%7D%7D%7D%7D%5D%7D%7D%7D%7D%7D%7D) 
+- [Code repositories contain secrets](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityGraph.ReactView/query/%7B%22type%22%3A%22securitygraphquery%22%2C%22version%22%3A2%2C%22properties%22%3A%7B%22source%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22code_repository%22%7D%7D%5D%2C%22conditions%22%3A%7B%22type%22%3A%22conditiongroup%22%2C%22properties%22%3A%7B%22operator%22%3A%22and%22%2C%22conditions%22%3A%5B%7B%22type%22%3A%22connection%22%2C%22properties%22%3A%7B%22name%22%3A%22contains%22%2C%22direction%22%3A%22outgoing%22%2C%22target%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22connection_string%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22key%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22sas_token%22%7D%7D%5D%7D%7D%7D%7D%5D%7D%7D%7D%7D%7D%7D) 
+- [Azure DevOps repositories contain secrets that can authenticate to Object Storage or Managed Databases](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityGraph.ReactView/query/%7B%22type%22%3A%22securitygraphquery%22%2C%22version%22%3A2%2C%22properties%22%3A%7B%22source%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22entity%22%2C%22properties%22%3A%7B%22source%22%3A%22azuredevopsrepository%22%7D%7D%5D%2C%22conditions%22%3A%7B%22type%22%3A%22conditiongroup%22%2C%22properties%22%3A%7B%22operator%22%3A%22and%22%2C%22conditions%22%3A%5B%7B%22type%22%3A%22connection%22%2C%22properties%22%3A%7B%22name%22%3A%22contains%22%2C%22direction%22%3A%22outgoing%22%2C%22target%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22connection_string%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22sas_token%22%7D%7D%5D%2C%22conditions%22%3A%7B%22type%22%3A%22conditiongroup%22%2C%22properties%22%3A%7B%22operator%22%3A%22and%22%2C%22conditions%22%3A%5B%7B%22type%22%3A%22connection%22%2C%22properties%22%3A%7B%22name%22%3A%22can%20authenticate%20to%22%2C%22direction%22%3A%22outgoing%22%2C%22target%22%3A%7B%22type%22%3A%22datasource%22%2C%22properties%22%3A%7B%22sources%22%3A%5B%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22managed_database%22%7D%7D%2C%7B%22type%22%3A%22family%22%2C%22properties%22%3A%7B%22source%22%3A%22object_storage%22%7D%7D%5D%7D%7D%7D%7D%5D%7D%7D%7D%7D%7D%7D%5D%7D%7D%7D%7D%7D%7D) 
 
 
 ## How do I mitigate secrets issues effectively?
 
 It’s important to be able to prioritize secrets and identify which ones need immediate attention. To help you do this, Defender for Cloud provides: 
 
-Providing rich metadata for every secret, such as the file path, line number, column, commit hash, file URL, GitHub Advanced Security alert URL, and an indication to whether the target resource that the secrets provide access to exists. 
-
-Combining secrets metadata with cloud assets context. This helps you to start with assets that are exposed to the internet or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization. 
+- Providing rich metadata for every secret, such as the file path, line number, column, commit hash, file URL, GitHub Advanced Security alert URL, and an indication to whether the target resource that the secrets provide access to exists. 
+- Combining secrets metadata with cloud assets context. This helps you to start with assets that are exposed to the internet or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization. 
 
 ## Related content
-[Protecting cloud deployment secrets](secrets-scanning-cloud-deployment.md)
-[Protecting VM secrets](secrets-scanning-servers.md)
+[Cloud deployments secrets scanning](secrets-scanning-cloud-deployment.md)
+[VM secrets scanning](secrets-scanning-servers.md)
 [DevOps security overview](defender-for-devops-introduction.md)
