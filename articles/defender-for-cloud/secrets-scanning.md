@@ -119,4 +119,4 @@ Plaintext Azure Service Bus Shared Access Signature.|No |Yes | Invento
 
 - [VM secrets scanning](secrets-scanning-servers.md).
 - [Cloud deployment secrets scanning](secrets-scanning-cloud-deployment.md)
-- [Azure DevOps scanning](devops-support.md)
+- [Code secrets scanning](secrets-scanning-code.md)
