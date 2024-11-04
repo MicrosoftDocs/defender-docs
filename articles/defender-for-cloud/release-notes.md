@@ -27,26 +27,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
-## October 2024
+## November 2024
 
 |Date | Category | Update|
 |--|--|--|
-| October 29 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
-| October 28 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
-| October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
-| October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
-| October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
-| October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
-| October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
-| October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
-| October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
-| October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
-| October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
-| October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
+| November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
-October 29, 2024
+November 7, 2024
 
 #### Key features
 
@@ -60,6 +49,40 @@ October 29, 2024
 * Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
 * Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
 
+## October 2024
+
+|Date | Category | Update|
+|--|--|--|
+| October 31 | Upcoming change | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+| October 28 | GA | [MMA migration experience is now available](#mma-migration-experience-is-now-available) |
+| October 21 | GA | [Security findings for GitHub repositories without GitHub Advanced Security is now GA](#security-findings-for-github-repositories-without-github-advanced-security-is-now-ga) |
+| October 14 | Upcoming change|[Deprecation of three compliance standards](#deprecation-of-three-compliance-standards)|
+| October 14 | Upcoming change|[Deprecation of three Defender for Cloud standards](#deprecation-of-three-defender-for-cloud-standards)|
+| October 9 | GA | [Binary drift detection released as GA](#binary-drift-detection-released-as-ga)|
+| October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
+| October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
+| October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
+| October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
+| October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
+| October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
+
+### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
+
+October 31, 2024
+
+**Estimated date for change:** November 6, 2024
+
+API security coverage within Defender for Cloud will now have full support for Azure API Management multi-region deployments, including full security posture and threat detection support to both primary and secondary regions
+
+Onboarding and offboarding APIs to Defender for APIs will now be managed at the Azure API Management API level. All associated [Azure API Management revisions](/azure/api-management/api-management-revisions) will automatically be included in the process, eliminating the need to manage onboarding and offboarding for each API revision individually. 
+
+This change will include a one-time rollout to existing Defender for APIs customers.
+
+Rollout Details:
+- The rollout will occur during the week of November 6th for existing Defender for APIs customers.
+- If the 'current' revision for an Azure API Management API is already onboarded to Defender for APIs, all associated revisions for that API will also be automatically onboarded to Defender for APIs.
+- If the 'current' revision for an Azure API Management API is not onboarded to Defender for APIs, any associated API revisions that were onboarded to Defender for APIs will be offboarded.
+  
 ### MMA migration experience is now available
 
 October 28, 2024
