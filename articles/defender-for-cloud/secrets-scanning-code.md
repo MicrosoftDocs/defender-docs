@@ -23,7 +23,7 @@ If secrets are detected, Defender for Cloud can assist your security team to pri
 
 Secrets scanning for code repositories relies on GitHub Advanced Security for GitHub and Azure DevOps. GitHub Advanced Security scans the entire Git history on all branches present in your repository for secrets, even if the repository is archived. 
 
-To learn more, visit GitHub Advanced Security documentation for [GitHub](https://docs.github.com/en/enterprise-cloud@latest/code-security/secret-scanning/introduction/about-secret-scanning) and [Azure DevOps.](/azure/devops/repos/security/github-advanced-security-secret-scanning?view=azure-devops)  
+To learn more, visit GitHub Advanced Security documentation for [GitHub](https://docs.github.com/en/enterprise-cloud@latest/code-security/secret-scanning/introduction/about-secret-scanning) and [Azure DevOps.](/azure/devops/repos/security/github-advanced-security-secret-scanning)  
 
 ## What’s supported?
 
