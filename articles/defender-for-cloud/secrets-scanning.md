@@ -42,8 +42,9 @@ Required roles and permissions:
 Secrets scanning is provided as a feature in Defender for Cloud plans:
 
 - **VM scanning**: Provided with Defender for Cloud Security Posture Management (CSPM) plan, or with Defender for Servers Plan 2.
-- **Cloud deployment resource scanning** Provided with Defender CSPM.
-- **DevOps scanning**: Provided with Defender CSPM.
+- **Cloud deployment resource scanning**: Provided with Defender CSPM.
+
+- **Code repository scanning**: Provided with Defender CSPM and Advanced Security for GitHub and Azure DevOps.
 
 ## Reviewing secrets findings
 
