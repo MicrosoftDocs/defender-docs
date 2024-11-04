@@ -13,6 +13,8 @@ ms.date:     11/04/2024
 ---
 
 
+# Protecting code repository secrets 
+
 Defender for Cloud notifies organizations about exposed secrets in code repositories from GitHub and Azure DevOps. Secret detection helps you to quickly detect, prioritize, and remediate exposed secrets such as tokens, passwords, keys, or credentials stored in any file within the code repository. 
 
 If secrets are detected, Defender for Cloud can assist your security team to prioritize and take actionable remediation steps to minimize the risk of lateral movement by identifying the target resource that the secret can access. 
