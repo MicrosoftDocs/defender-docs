@@ -2,7 +2,7 @@
 title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 11/03/2024
+ms.date: 11/05/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -12,15 +12,15 @@ Microsoft Defender for Cloud is a Cloud Native Application Protection Platform (
 
 The following are the types of partner integration available in Defender for Cloud:
 
-- [Obtain insights from partner integrations](#obtain-insights-from-partner-integrations)
-- [Provide insights to partner integrations](#provide-insights-to-partner-integrations)
+- [Gain insights from partner integrations](#gain-insights-from-partner-integrations)
+- [Convey insights to partner integrations](#convey-insights-to-partner-integrations)
 - [Security solutions (legacy)](#security-solutions-legacy)
 
-## Obtain insights from partner integrations
+## Gain insights from partner integrations
 
-Defender for Cloud has the ability to gain different types of insights from partner integrations. These integrations enhance your security posture with extra security context that enriches the experience for Defender for Cloud's users with a broader understanding of your environments overall security posture.
+Defender for Cloud has the ability to gain different types of information from partner integrations. These integrations have the ability to  provide you with additional insights that enrich the experience for Defender for Cloud's users with a broader understanding of your environments overall security posture.
 
-Defender for Cloud can obtain insights from the following types of partner integrations:
+Defender for Cloud can gain insights from the following types of partner integrations:
 
 - [Software composition analysis (SCA)](#software-composition-analysis-sca)
 - [API security testing integrations](#api-security-testing-integrations)
@@ -54,9 +54,9 @@ The following table lists the partner solutions that provide ticketing services 
 |--|--|--|
 | ServiceNow | ServiceNow is a cloud computing platform that helps companies manage digital workflows for enterprise operations. ServiceNow provides a range of services including IT service management, customer service management, and HR service delivery. | [ServiceNow integration with Defender for Cloud](integration-servicenow.md) |
 
-## Provide insights to partner integrations
+## Convey insights to partner integrations
 
-The following table lists our partners that can receive data from Defender for Cloud. Defender for Cloud is an amazing tool that generates vital information not provided by the partner services. These solutions integrate data from Defender for Cloud to enrich their own services, offering customers invaluable insights to better understand their overall security posture.
+The following table lists our partners that can receive data from Defender for Cloud. Defender for Cloud generates security insights that are not provided by other security solutions. Some of these solutions have partnered with with Defender for Cloud to integrate Defender for Cloud's findings within their programs to enrich their own services. By offering customers Defender for Cloud's security information, their customers are able to get a better understanding of their overall security posture.
 
 Learn how to [connect your partner integration](integrate-partner-integrations.md) to Defender for Cloud.
 
