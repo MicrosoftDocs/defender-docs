@@ -151,7 +151,7 @@ Using the Kubernetes RBAC data in the security graph, Defender for Cloud now det
 
 October 6, 2024
 
-The new attack path analysis engine [released last November now supports container use cases as well](/azure/defender-for-cloud/release-notes-archive#attack-path-analysis-new-engine-and-extensive-enhancements), dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud and Kubernetes environments.
+The new attack path analysis engine [released last November now supports container use cases as well](release-notes-archive.md#attack-path-analysis-new-engine-and-extensive-enhancements), dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud and Kubernetes environments.
 
 ### Full discovery of container images in supported registries
 
@@ -165,7 +165,7 @@ Querying capabilities through the Cloud Security Explorer are improved so users 
 
 October 6, 2024
 
-Customers are now able to get a [list of software installed in their containers and container images through the Cloud Security Explorer](/azure/defender-for-cloud/cloud-security-explorer-software-vulnerabilities). This list can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with software impacted by a zero-day vulnerability, even before a CVE is published.
+Customers are now able to get a [list of software installed in their containers and container images through the Cloud Security Explorer](cloud-security-explorer-software-vulnerabilities.md). This list can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with software impacted by a zero-day vulnerability, even before a CVE is published.
 
 ## September 2024
 
@@ -202,11 +202,11 @@ The new version of File Integrity Monitoring based on Microsoft Defender for End
 - Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
 - Identify potential security issues by detecting suspicious file content changes.
 
-This improved FIM experience replaces the existing one that set for deprecation with the Log Analytics Agent (MMA) retirement. The [FIM experience over MMA](/azure/defender-for-cloud/file-integrity-monitoring-enable-log-analytics) will remain supported until the end of November 2024.
+This improved FIM experience replaces the existing one that set for deprecation with the Log Analytics Agent (MMA) retirement. The [FIM experience over MMA](file-integrity-monitoring-enable-log-analytics.md) will remain supported until the end of November 2024.
 
 With this release, an in-product experience is released to allow you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
 
-For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](/azure/defender-for-cloud/file-integrity-monitoring-enable-defender-endpoint). For information on how to disable previous versions, see [Migrate File Integrity Monitoring from previous versions](/azure/defender-for-cloud/migrate-file-integrity-monitoring).
+For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md). For information on how to disable previous versions, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
 
 ### FIM migration experience is available in Defender for Cloud
 
@@ -370,9 +370,9 @@ July 31, 2024
 
 Improved discovery features for endpoint protection solutions and enhanced identification of configuration issues are now GA and available for multicloud servers. These updates are included in the Defender for Servers Plan 2 and Defender Cloud Security Posture Management (CSPM).  
 
-The enhanced recommendations feature uses [agentless machine scanning](/azure/defender-for-cloud/concept-agentless-data-collection), enabling comprehensive discovery and assessment of the configuration of [supported endpoint detection and response solutions](/azure/defender-for-cloud/endpoint-detection-response). When configuration issues are identified, remediation steps are provided.  
+The enhanced recommendations feature uses [agentless machine scanning](concept-agentless-data-collection.md), enabling comprehensive discovery and assessment of the configuration of [supported endpoint detection and response solutions](endpoint-detection-response.md). When configuration issues are identified, remediation steps are provided.  
 
-With this general availability release, the list of [supported solutions](/azure/defender-for-cloud/endpoint-detection-response) is expanded to include two more endpoint detection and response tools:  
+With this general availability release, the list of [supported solutions](endpoint-detection-response.md) is expanded to include two more endpoint detection and response tools:  
 
 - Singularity Platform by SentinelOne  
 - Cortex XDR
@@ -453,7 +453,7 @@ July 14, 2024
 
 In March, we released automated remediation scripts for AWS & GCP to Public Preview, that allows you to remediate recommendations for AWS & GCP at scale programmatically.
 
-Today we're releasing this feature to  generally available (GA). [Learn how to use automated remediation scripts](/azure/defender-for-cloud/implement-security-recommendations)>
+Today we're releasing this feature to  generally available (GA). [Learn how to use automated remediation scripts](implement-security-recommendations.md).
 
 ### GitHub application permissions update
 
