@@ -9,12 +9,12 @@ ms.date: 05/07/2024
 
 When you enable Defender for Containers capabilities that use automatic provisioning, or use recommendations to manually deploy container capabilities on specific resources, Defender agents and other components are installed in your environment. To help you understand and keep track of these components, we provide tables in the subsequent sections of this article. These tables serve as an inventory, listing out all the installed components.
 
-If you decide to stop using those capabilities, you might also want to remove such components from your environment. Since installed components can't be automatically removed, this article assists you in understanding which components are installed and the actions that could be taken to remove them. Only nonactive Defender for Cloud services are disabled.
+If you decide to stop using those capabilities, you might also want to remove such components from your environment. Since installed components can't be automatically removed, this article assists you in understanding which components are installed and the actions that could be taken to remove them. Only nonactive Defenders for Cloud services are disabled.
 
 The resources for offboarding fall under two removal-type categories:
 
 - **Safe to remove** - Resources and settings exclusively used by Defender for Containers, and can be safely removed if you're no longer using the associated capability.
-- **Shared component** - Resources that may be used by other solutions in the target Cloud environment, and not exclusively by Defender for Containers. If a shared resource is disabled, the other solutions may be negatively affected. You should review in the target Cloud environment what other solutions may need that resource before removing it.
+- **Shared component** - Resources that may be used by other solutions in the target Cloud environment, and not exclusively by Defender for Containers. If a shared resource is disabled, the other solutions may be negatively affected. You should review in the target Cloud environment if other solutions need that resource before removing it.
 
 ## Azure scenarios for resources created automatically after enabling Defender for Containers on the subscription
 
@@ -74,7 +74,7 @@ The resources for offboarding fall under two removal-type categories:
 
 | Offering                                                     | Resource                                                     | Manual offboarding                                           | Removal information |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
-| Agentless threat protection                                  | Pub/Sub Topic                                                | [gcloud   pubsub topics delete](https://cloud.google.com/sdk/gcloud/reference/pubsub/topics/delete); For each cluster in a project a topic is created  with the prefix: "MicrosoftDefender-" | Safe to remove      |
+| Agentless threat protection                                  | Pub/Sub Topic                                                | [gcloud   pubsub articles delete](https://cloud.google.com/sdk/gcloud/reference/pubsub/topics/delete); For each cluster in a project a topic is created  with the prefix: "MicrosoftDefender-" | Safe to remove      |
 | Agentless threat protection                                  | Pub/sub Subscription                                         | [gcloud   pubsub subscription delete](https://cloud.google.com/sdk/gcloud/reference/pubsub/subscriptions/delete); For each cluster in a project a subscription  is created with the prefix: "MicrosoftDefender-" | Safe to remove      |
 | Agentless threat protection                                  | SINK                                                         | [gcloud   logging sinks delete  \| Google Cloud CLI Documentation](https://cloud.google.com/sdk/gcloud/reference/logging/sinks/delete) | Safe to remove      |
 | Defender sensor                                              | Defender sensor (per cluster inside project)  + Arc for Kubernetes | [Defender sensor removal](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-arc&preserve-view=true#use-the-azure-cli-to-remove-the-defender-sensor) |                     |
