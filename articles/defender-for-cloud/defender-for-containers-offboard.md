@@ -14,7 +14,7 @@ If you decide to stop using those capabilities, you might also want to remove su
 The resources for offboarding fall under two removal-type categories:
 
 - **Safe to remove** - Resources and settings exclusively used by Defender for Containers, and can be safely removed if you're no longer using the associated capability.
-- **Shared component** - Resources (mainly settings) not exclusively used by Defender for Cloud or Defender for Containers. It's possible that other solutions take advantage of these settings and if disabled might affect those services.
+- **Shared component** - Resources that may be used by other solutions in the target Cloud environment, and not exclusively by Defender for Containers. If a shared resource is disabled, the other solutions may be negatively affected. You should review in the target Cloud environment what other solutions may need that resource before removing it.
 
 ## Azure scenarios for resources created automatically after enabling Defender for Containers on the subscription
 
@@ -57,7 +57,7 @@ The resources for offboarding fall under two removal-type categories:
 
 | Offering                                                     | Resource                                                 | Manual offboarding                                           | Removal information |
 | ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------- |
-| Agentless threat protection                                  | logging.googleapis.com                                  | [API-GCP   Console](https://cloud.google.com/container-registry/docs/enable-service#console) | Shared component    |
+| Agentless threat protection                                  | logging.googleapis.com                                  | [Disable GCP API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) | Shared component    |
 | Agentless threat protection                                  | Data Access audit logs configuration                     | [Disable data access audit logs](https://cloud.google.com/logging/docs/audit/configure-data-access) for the Kubernetes Engine API | Shared component    |
 | Agentless threat protection <br /> Auto provision Defender's sensor for Azure Arc <br /> Auto provision Azure Policy extension for Azure Arc | ms-defender-containers (Service Account)                 | [Delete   gcloud IAM service-accounts](https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/delete) | Safe to remove      |
 | Agentless threat protection                                  | ms-defender-containers-stream (Service Account)          | [Delete gcloud IAM service-accounts](https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/delete) | Safe to remove      |
@@ -68,7 +68,7 @@ The resources for offboarding fall under two removal-type categories:
 | Agentless discovery for Kubernetes                           | MDCGkeClusterWriteRole                                   | [gcloud iam roles delete  \| Google Cloud CLI Documentation](https://cloud.google.com/sdk/gcloud/reference/iam/roles/delete) | Safe to remove      |
 | Shared between all five Containers  offerings.               | containers OIDC workload identity pool  provider         | [Manage workload identity pools and providers](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#iam-workload-pools-delete-gcloud) | Safe to remove      |
 | Agentless threat protection                                  | containers-streams OIDC workload identity  pool provider | [Manage workload identity pools and providers](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#iam-workload-pools-delete-gcloud) | Safe to remove      |
-| Agentless threat protection <br/> Auto provision Defender's sensor for Azure Arc <br/> Auto provision Azure Policy extension for Azure Arc <br/> Agentless discovery for Kubernetes | Container.googleapis.com                                 | [API-GCP   Console](https://cloud.google.com/container-registry/docs/enable-service#console) | Shared component    |
+| Agentless threat protection <br/> Auto provision Defender's sensor for Azure Arc <br/> Auto provision Azure Policy extension for Azure Arc <br/> Agentless discovery for Kubernetes | container.googleapis.com                                 | [Disable GCP API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) | Shared component    |
 
 ### Resources created automatically after connector creation - GCP
 
