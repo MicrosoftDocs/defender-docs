@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Alerts for Kubernetes Clusters
 
-Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence also detect threats relevant to K8s containers, and combined with Defender for Containers sensors, give enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
+Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence also detect threats relevant to K8s containers, and combined with the Defender sensor, give enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
 
 ## Control plane detection
 
