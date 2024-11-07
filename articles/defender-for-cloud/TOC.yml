@@ -102,7 +102,7 @@
           href: tutorial-enable-cspm-plan.md
         - name: Deploy Defender for Servers
           displayName: servers, server, enable
-          href: tutorial-enable-servers-plan.md
+          href: tutorial-enable-servers-plan.md 
         - name: Protect applications with Defender for App Service
           displayName: App, service, enable, app service
           href: tutorial-enable-app-service-plan.md
@@ -136,7 +136,9 @@
         - name: Protect APIs with Defender for APIs
           displayName: APIs, enable
           href: defender-for-apis-deploy.md
-
+        - name: Protect resources that report to a Log Analytics workspace
+          displayName: workSystem, namespace, enable, plans
+          href: enable-plan-workspace.md
 
 - name: Tutorials
   items:
@@ -359,7 +361,7 @@
               href: alerts-azure-ddos-protection.md
             - name: Alerts for Defender for APIs
               href: alerts-defender-for-apis.md
-            - name: Alerts for AI workloads
+            - name: Alerts for AI workloads (Preview)
               href: alerts-ai-workloads.md
             - name: Deprecated security alerts
               href: deprecated-alerts.md
