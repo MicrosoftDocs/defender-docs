@@ -47,7 +47,8 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
 
    * A user with admin permissions over the target cluster.
 
-   * Defender for Containers is enabled. Make sure the Defender for Containers is running the target cluster.
+   * Defender for Containers is enabled and the Defender sensor is also installed. You can check that the Defender sensor is installed by running:
+    `kubectl get ds microsoft-defender-collector-ds -n kube-system`
 
    * A Helm client is installed on your local machine.
 
@@ -56,7 +57,7 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
 1. Point `kubeconfig` to the target cluster. For Azure Kubernetes Service, you can run:
     `az aks get-credentials --name [cluster-name] --resource-group [resource-group]`
 
-1. Download the simulation tool with the following command:
+2. Download the simulation tool with the following command:
     `curl -O https://raw.githubusercontent.com/microsoft/Defender-for-Cloud-Attack-Simulation/refs/heads/main/simulation.py`
 
 ### Run the simulation tool
