@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Alerts for Kubernetes Clusters
 
-Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. Defender for Containers uses Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence to provide enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
+Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence also detect threats relevant to K8s containers, and combined with Defender for Containers sensors, give enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
 
 ## Control plane detection
 
@@ -28,7 +28,7 @@ Defender for Containers uses the [Defender sensor](defender-for-containers-intro
 Examples of suspicious workload runtime activity include:
 
 * **Web shell activity** - Defender for Containers monitors the activity on the running containers to identify behaviors that resemble web shell invocations.
-* **Crypto currency mining activity** - Defender for Containers uses several heuristics to identify crypto currency mining activity on the running containers, including suspicious download activity, CPU optimization, suspicious process execution, and more.
+* **Crypto mining activity** - Defender for Containers uses several heuristics to identify crypto mining activity on the running containers, including suspicious download activity, CPU optimization, suspicious process execution, and more.
 * **Network scanning tools** – Defender for Containers identifies usage of scanning tools that have been used for malicious activities.
 * **Binary drift detection** - Defender for Cloud identifies execution of workload binaries that have drifted from the original container image. For more information, read about [Binary drift detection](binary-drift-detection.md).
 
@@ -71,7 +71,7 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
 | **Reconnaissance** | Possible Web Shell activity detected <br/> Suspicious Kubernetes service account operation detected <br/> Network scanning tool detected  |
 | **Lateral Movement** | Possible Web Shell activity detected <br/> Access to cloud metadata service detected  |
 | **Secrets Gathering** | Possible Web Shell activity detected <br/> Sensitive files access detected <br/> Possible secret reconnaissance detected  |
-| **Crypto currency mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
+| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
 | **Web shell** | Possible Web Shell activity detected|
 
 > !Note
