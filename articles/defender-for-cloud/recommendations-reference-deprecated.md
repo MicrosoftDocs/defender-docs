@@ -14,7 +14,6 @@ ai-usage: ai-assisted
 
 This article lists all the deprecated security recommendations in Microsoft Defender for Cloud.
 
-
 ## Azure deprecated recommendations
 
 ### Access to App Services should be restricted
@@ -26,7 +25,7 @@ This article lists all the deprecated security recommendations in Microsoft Defe
 
 ### [Endpoint protection health issues on machines should be resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000)
 
-**Description**: Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. See the documentation for the [endpoint protection solutions supported by Defender for Cloud](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds#supported-endpoint-protection-solutions-) and the [endpoint protection assessments](/azure/defender-for-cloud/endpoint-protection-recommendations-technical).
+**Description**: Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. See the documentation for the [endpoint protection solutions supported by Defender for Cloud](supported-machines-endpoint-solutions-clouds.md#supported-endpoint-protection-solutions-) and the [endpoint protection assessments](endpoint-protection-recommendations-technical.md).
 (No related policy)
 
 **Severity**: Medium
@@ -34,7 +33,7 @@ This article lists all the deprecated security recommendations in Microsoft Defe
 ### [Endpoint protection should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439)
 
 **Description**: To protect machines from threats and vulnerabilities, install a supported endpoint protection solution.
-Learn more about how endpoint protection for machines is evaluated in [Endpoint protection assessment and recommendations in Microsoft Defender for Cloud](/azure/defender-for-cloud/endpoint-protection-recommendations-technical).
+Learn more about how endpoint protection for machines is evaluated in [Endpoint protection assessment and recommendations in Microsoft Defender for Cloud](endpoint-protection-recommendations-technical.md).
 (No related policy)
 
 **Severity**: High
@@ -119,28 +118,6 @@ Using the latest Python version for web apps is recommended to benefit from secu
 (Related policy: System updates should be installed on your machines).
 
 **Severity**: Medium
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Related content
 
