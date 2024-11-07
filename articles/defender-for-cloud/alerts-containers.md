@@ -36,7 +36,7 @@ Examples of suspicious workload runtime activity include:
 
 Defender for Containers provides a tool to simulate various attack scenarios within your K8s environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
 
-> !Note
+> [!Note]
 > Although the simulation tool doesn't run any malicious components, it's recommended to run it on a dedicated cluster without production workloads.
 
 The simulation tool runs using a Python-based CLI that deploys Helm charts in the target cluster.
@@ -48,16 +48,19 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
    * A user with admin permissions over the target cluster.
 
    * Defender for Containers is enabled and the Defender sensor is also installed. You can check that the Defender sensor is installed by running:
-    `kubectl get ds microsoft-defender-collector-ds -n kube-system`
+
+        `kubectl get ds microsoft-defender-collector-ds -n kube-system`
 
    * A Helm client is installed on your local machine.
 
    * Python version 3.7 or above is installed on your local machine.
 
 1. Point `kubeconfig` to the target cluster. For Azure Kubernetes Service, you can run:
+    
     `az aks get-credentials --name [cluster-name] --resource-group [resource-group]`
 
-2. Download the simulation tool with the following command:
+1. Download the simulation tool with the following command:  
+    
     `curl -O https://raw.githubusercontent.com/microsoft/Defender-for-Cloud-Attack-Simulation/refs/heads/main/simulation.py`
 
 ### Run the simulation tool
@@ -65,7 +68,7 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
 1. Run the simulation script with the following command:
     `python simulation.py`
 
-2. Choose a simulated attack scenario or choose to simulate all of the attack scenarios at once. The available simulated attack scenarios are:
+1. Choose a simulated attack scenario or choose to simulate all of the attack scenarios at once. The available simulated attack scenarios are:
     
 | Scenario | Expected alerts |
 |--|--|
@@ -75,7 +78,7 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
 | **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
 | **Web shell** | Possible Web Shell activity detected|
 
-> !Note
+> [!Note]
 > While some alerts are triggered in near real-time, others may take up to an hour.
 
 ## Next steps

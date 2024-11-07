@@ -166,7 +166,7 @@ Kubernetes Identity and Access information is added to the security graph, inclu
 
 October 6, 2024
 
-Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on another attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
+Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on other attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
 
 ### Improved attack path analysis
 
