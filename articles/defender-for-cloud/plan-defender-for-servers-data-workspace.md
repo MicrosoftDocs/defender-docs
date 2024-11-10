@@ -1,5 +1,5 @@
 ---
-title: Plan Defender for Servers data residency and workspaces 
+title: Plan Defender for Servers data residency
 description: Review data residency and workspace design for Microsoft Defender for Servers.
 ms.topic: conceptual
 ms.author: dacurwin
@@ -7,7 +7,7 @@ author: dcurwin
 ms.date: 06/15/2023
 ms.custom: references_regions
 ---
-# Plan data residency and workspaces for Defender for Servers
+# Plan for data residency and workspaces in Defender for Servers
 
 This article helps you understand how your data is stored in Microsoft Defender for Servers and how Log Analytics workspaces are used in Defender for Servers.
 
@@ -37,36 +37,13 @@ Understand where Defender for Cloud stores data and how you can work with your d
 
 ## Workspace considerations
 
-In Defender for Cloud, you can store server data in the default Log Analytics workspace for your Defender for Cloud deployment or in a custom workspace.
+Defender for Servers needs a Log Analytics workspace when:
 
-Here's more information:
+You deploy Defender for Servers Plan 2.
+You want to take advantage of free daily ingestion for specific data types. [Learn more](data-ingestion-benefit.md).
+You're using file integrity monitoring. [Learn more](file-integrity-monitoring-overview.md).
 
-- By default, when you enable Defender for Cloud for the first time, a new resource group and a default workspace are created in the subscription region for each subscription that has Defender for Cloud enabled.
-- When you use only free foundational cloud security posture management (CSPM), Defender for Cloud sets up the default workspace with the *SecurityCenterFree* solution enabled.
-- When you turn on a Defender for Cloud plan (including Defender for Servers), the plan is enabled for the default workspace, and the *Security* solution is enabled.
-- If you have virtual machines in multiple locations, Defender for Cloud creates multiple workspaces accordingly to ensure data compliance.
-- Default workspace names are in the format `[subscription-id]-[geo]`.
-
-## Default workspaces
-
-Defender for Cloud default workspaces are created in the following locations:
-
-**Server location** | **Workspace location**
---- | ---
-United States, Canada, Europe, United Kingdom, Korea, India, Japan, China, Australia | The workspace is created in the matching location.
-Brazil | United States
-East Asia, Southeast Asia | Asia
-
-## Custom workspaces
-
-You can store your server information in the default workspace or you can use a custom workspace. A custom workspace must meet these requirements:
-
-- You must enable the Defender for Servers plan in the custom workspace.
-- The custom workspace must be associated with the Azure subscription in which Defender for Cloud is enabled.
-- You must have at least read permissions for the workspace.
-- If the *Security & Audit* solution is installed in a workspace, Defender for Cloud uses the existing solution.
 
 ## Next steps
 
-- After you work through these planning steps, review [Defender for Server access roles](plan-defender-for-servers-roles.md).
-- Check out the [common questions](faq-defender-for-servers.yml) about workspaces in Defender for Servers.
+After you understand how data is stored and when workspaces are needed, review [Defender for Server access roles](plan-defender-for-servers-roles.md).

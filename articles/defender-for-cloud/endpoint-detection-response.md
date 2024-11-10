@@ -1,5 +1,5 @@
 ---
-title: Endpoint detection and response in Microsoft Defender for Cloud
+title: Endpoint detection and response with Defender for Endpoint Microsoft Defender for Cloud
 description: Learn about endpoint detection and response capabilities in Microsoft Defender for Cloud
 author: dcurwin
 ms.author: dacurwin
@@ -9,57 +9,28 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
 
-# Overview - Endpoint detection and response
+# Endpoint detection and response with Defender for Endpoint
 
-Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
+Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint as an endpoint detection and response (EDR) solution.
 
-- [Integrates natively with Microsoft Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md) for endpoint protection. 
-- Assesses whether machines are connected to a supported EDR solution.
+EDR capabilities in Defender for Endpoint [detect, investigate, and respond to advanced threats](/defender-endpoint/overview-endpoint-detection-response), including [advanced threat hunting](/defender-xdr/advanced-hunting-overview), and [automatic investigation and remediation](/defender-xdr/m365d-autoir) capabilities.
 
-
-> [!NOTE]
-> - Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess EDR settings.
-> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
-> - Scanning using the MMA will be deprecated in November 2024.
-
+Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess EDR settings.
 
 Agentless scanning for EDR settings is available when Defender for Cloud is running in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled. 
-
-## Checking for an EDR solution
-
-Defender for Cloud scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a supported third-party solution.
-
-Based on EDR solution findings, Defender for Cloud provides the following recommendations to help you identify and remediate machines that don't have an EDR solution running. EDR solution recommendations are as follows:
-
-- `EDR solution should be installed on Virtual Machines`
-- `EDR solution should be installed on EC2s`
-- `EDR solution should be installed on Virtual Machines (GCP)`
-
-[Learn more](endpoint-detection-response-solution-recommendations.md) about working with EDR solution recommendations.
-
-
-## Supported EDR solutions
-
-**Solution** | **Supported platform**
---- | ---
-Microsoft Defender for Endpoint | Windows 
-Microsoft Defender for Endpoint | Linux
-Microsoft Defender for Endpoint Unified SolutioWindon | Windows Server 2012/2012 R2
-CrowdStrike (Falcon) | Windows and Linux
-Trellix	| Windows and Linux
-Symantec | Windows and Linux
-Sophos | Windows and Linux
-Singularity Platform by SentinelOne	| Windows and Linux
-Cortex XDR | Windows and Linux
 
 
 ## Assessing Defender for Endpoint settings
 
-For machines running Defender for Endpoint as an EDR solution, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
+When machines run Defender for Endpoint as an EDR solution, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
 
 - Both full and quick scans are out of 7 days
 - Signature out of date
 - Anti-virus is off or partially configured
 
-If misconfigurations are found Defender for Cloud makes recommendations to fix them. [Learn more](ndpoint-detection-misconfiguration.md).
+If misconfigurations are found Defender for Cloud makes recommendations to fix them.
 
+
+## Next steps
+
+[Detect EDR misconfigurations in Defender for Endpoint](endpoint-detection-misconfiguration.md).

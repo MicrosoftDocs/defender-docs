@@ -634,6 +634,8 @@
     items:
     - name: Overview
       href: defender-for-servers-overview.md
+    - name: Defender for Endpoint integration
+      href: integration-defender-for-endpoint.md
     - name: Plan 
       items:
         - name: Get started
@@ -643,9 +645,7 @@
           href: plan-defender-for-servers-data-workspace.md
         - name: Determine roles and access
           href: plan-defender-for-servers-roles.md
-        - name: Select a plan
-          href: plan-defender-for-servers-select-plan.md
-        - name: Review agents and extensions
+        - name: Understand data collection
           href: plan-defender-for-servers-agents.md
         - name: Scale a Defender for Servers deployment
           href: plan-defender-for-servers-scale.md  
@@ -654,18 +654,19 @@
       items:
       - name: Deploy Defender for Servers
         href: tutorial-enable-servers-plan.md
+      - name: Set up the free data ingestion benefit
+        href: data-ingestion-benefit.md
       - name: Modify plan settings
         displayName: Defender for Servers, monitoring coverage, Log analytics, agentless scanning, Vulnerability assessment, Endpoint protection
         href: configure-servers-coverage.md
     - name: Configure
       items:
-      - name: Endpoint detection and response
+      - name: Endpoint detection and response (EDR)
         items:
-          - name: Overview
-            displayName: mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
+          - name: Detecting EDR solutions
+            href: detect-endpoint-detection-response-solutions.md
+          - name: Detection and response with Defender for Endpoint
             href: endpoint-detection-response.md
-          - name: Defender for Endpoint integration
-            href: integration-defender-for-endpoint.md
           - name: Enable Defender for Endpoint integration
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
             href: enable-defender-for-endpoint.md
@@ -709,7 +710,7 @@
             href: enable-agentless-scanning-vms.md
           - name: Test agentless malware scanning alerts
             href: test-agentless-malware-scanning.md
-      - name: OS baseline misconfigurations
+      - name: OS misconfigurations
         items:
          - name: Overview
            href: operating-system-misconfiguration.md
@@ -750,9 +751,6 @@
       - name: Disable vulnerability findings
         displayName: qualys, rapid7, va
         href: disable-vulnerability-findings.md
-      - name: Remediate security baselines assessments
-        displayName: security, baseline, remediate, mdvm, vulnerability, assessment, va
-        href: remediate-security-baseline.md
       - name: Remediate OS misconfigurations (Cloud Security Benchmark)
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
         href: apply-security-baseline.md

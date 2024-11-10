@@ -32,11 +32,7 @@ This article helps you to deploy a Defender for Servers plan.
     If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md) instead of onboarding machines with Azure Arc, Defender for Servers Plan functionality is available. For Defender for Servers Plan 2, in addition to Plan 1 features, only the premium Defender Vulnerability Management features are available.
 
 - **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-- **Take advantage of 500 MB free data ingestion**: A benefit of free 500 MB data ingestion (available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-)) is available in Defender for Servers Plan 2.
-
-- Machines must be running the Azure Monitor agent (AMA), and located in subscriptions with Defender for Servers Plan 2 enabled. 
-- You need to specifically enable Defender for Servers Plan 2 on a Log Analytics workspace. The benefit is granted to the Log Analytics workspace to which the machine reports.
-
+- **Take advantage of 500 MB free data ingestion**: When Defender for Servers Plan 2 is enabled, a benefit of free 500 MB data ingestion is available for specific data types. To take advantage of this benefit. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
 - **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
 
 ## Enable on Azure, AWS, or GCP
@@ -69,22 +65,6 @@ You can enable a Defender for Servers plan for an Azure subscription, AWS accoun
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
 
-## Enable Plan 2 on a workspace
-
-If you're using a Log Analytics workspace to take advantage of the free data ingestion for machines running the AMA, enable Plan 2 on that workspace.
-
-
-1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
-
-1. In the Defender for Cloud menu, select **Environment settings**, and select the relevant workspace.
-
-1. Select the relevant workspace.
-
-1. Toggle the servers plan to **On**, and then select **Save**.
-
-    :::image type="content" source="media/tutorial-enable-servers-plan/enable-workspace-servers.png" alt-text="Screenshot that shows the plan enablement page at the Log Analytics workspace level." lightbox="media/tutorial-enable-servers-plan/enable-workspace-servers.png":::
-
-
 
 ## Enable Plan 1 at resource level
 
@@ -105,5 +85,6 @@ Enable Plan 1 on a resource group or Azure resource tags as follows:
 
 ## Next steps
 
-- If you enabled Defender for Servers Plan 2, [enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md) 
+- If you enabled Defender for Servers Plan 2, [take advantage of the free data ingestion benefit](data-ingestion-benefit.md).
+- After enabling Defender for Servers Plan 2, [enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md) 
 - [Modify plan settings](configure-servers-coverage.md) as needed.

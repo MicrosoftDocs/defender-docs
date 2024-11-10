@@ -7,24 +7,19 @@ author: dcurwin
 ms.date: 07/31/2023
 ---
 
-# Review OS misconfigurations (Cloud Security Baseline)
+# Remediate OS misconfigurations
 
 
-Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening.
+Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening. 
 
-Defender for Cloud assesses and enforces security configurations using built-in Azure policy initiatives. When you enable Defender for Cloud on a subscription, [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features) assess connected resource configurations against some of the security standards in the  [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). 
-
-
-As part of its security standards, MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating system compliance is assessed against these baselines.
-
+Defender for Cloud assessess operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment using the Azure Policy machine configuration extension (formerly known as the guest configuration) on the machine. [Learn more](operating-system-misconfiguration.md)
 
 This article describes how to review recommendations made by the assessment.
 
 > [!NOTE]
-> - Machine information is gathered for assessment against OS baselines using the Azure Policy machine configuration (formerly known as the guest configuration) extension on the machine.
-> - Using the machine configuration to collect data replaces use of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA).
-> - Use of the MMA will deprecate in November 2024.
+> - Using the machine configuration extension to collect data replaces use of the deprecated Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA).
 > - Support for assessing misconfigurations in Docker hub and Azure virtual machine scale sets also ends in November 2024.
+> - Defender for Cloud also provides support for assessing operating system settings against security baseline assessments provided by Microsoft Defender Vulnerability management. This feature is in public preview in Defender for Cloud. [Learn more](operating-system-misconfiguration.md##assessing-os-settings-defender-vulnerability-management).
 
 
 ## Prerequisites
@@ -35,7 +30,7 @@ This article describes how to review recommendations made by the assessment.
 **Extension** | The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
 
 
- If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
+If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
 
 
 ## Review and remediate OS baseline recommendations
@@ -83,5 +78,6 @@ Here are two sample queries you can use:
     ```
 
 ## Next steps
+
 Learn more about [Azure Resource Graph's query language](/azure/governance/resource-graph/concepts/query-language?branch=main).
 

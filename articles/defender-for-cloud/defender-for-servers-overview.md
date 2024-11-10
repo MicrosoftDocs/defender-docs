@@ -69,49 +69,6 @@ Plan features are summarized in the table.
 **Network map** | Supported in Plan 2 only | The [network map](protect-network-resources.md) provides a geographical view of recommendations for hardening your network resources.
 **Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for specific data types in Log Analytics workspaces.
 
-## Using the free data ingestion benefit
-
-When you have Defender for Servers Plan 2 enabled, you get 500 MB of free data ingestion per day. The benefit is available for every machine running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.
-
-- The benefit is granted to the Log Analytics workspace to which the machine reports.
-- You need to specifically enable Defender for Servers Plan 2 on the workspace.
-- If the machine reports to more than one workspace, the benefit is only granted to one of them.
-
-### Configuring a workspace
-
-Create the Log Analytics workspace outside of Defender for Cloud. For example if you're running Microsoft Sentinel you could use the Sentinel workspace.
-
-- The relevant workspace should have the *Security* or *AntiMalware* solution installed. [Learn how to enable the Security solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-to-configure-security-events-collection-with-azure-monitor/ba-p/3770719).
-- [Enable Defender for Servers Plan 2 on the workspace](tutorial-enable-servers-plan.md#enable-the-plan-at-the-log-analytics-workspace-level) in Defender for Cloud, or use this Azure CLI command:
-
-    ```azurecli
-    az monitor log-analytics solution create --resource-group <ResourceGroupName> --solution-type Security --workspace <LogAnalyticsWorkspaceResourceID>
-    ```
-
-### Supported data types
-
-Defender for Servers Plan 2 provides an allocation of 500 MB per node per day for machines against the following subset of [security data types](/azure/azure-monitor/reference/tables-category#security).
-
-- [SecurityAlert](/azure/azure-monitor/reference/tables/securityalert)
-- [SecurityBaseline](/azure/azure-monitor/reference/tables/securitybaseline)
-- [SecurityBaselineSummary](/azure/azure-monitor/reference/tables/securitybaselinesummary)
-- [SecurityDetection](/azure/azure-monitor/reference/tables/securitydetection)
-- [SecurityEvent](/azure/azure-monitor/reference/tables/securityevent)
-- [WindowsFirewall](/azure/azure-monitor/reference/tables/windowsfirewall)
-- [ProtectionStatus](/azure/azure-monitor/reference/tables/protectionstatus)
-- [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
-- [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
-
-
-### Allowance
-
-Data ingestion is calculated per node, per reported workspace, and per day.
-
-- The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
-- The allowance is a daily rate averaged across all nodes.
-- Your total daily free limit is equal to [number of machines] x 500 MB.
-- You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
-
 
 ## Enabling deployment scope
 
