@@ -47,7 +47,7 @@ After enabling Defender for Servers Plan 2, this article describes how to config
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the FIM configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
     > [!IMPORTANT]
-    > Events collected for FIM powered by Defender for Endpoint are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. For more information, see [What data types are included in the daily allowance?](/azure/defender-for-cloud/faq-defender-for-servers#what-data-types-are-included-in-the-daily-allowance-).
+    > Events collected for FIM powered by Defender for Endpoint are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. For more information, see [What data types are included in the daily allowance?](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-).
 
 1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
 
