@@ -31,8 +31,25 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+### Agentless code scanning in Microsoft Defender for Cloud (Preview)
+
+November 19, 2024
+
+### Agentless code scanning in Microsoft Defender for Cloud  
+
+Agentless code scanning in Microsoft Defender for Cloud is now available for public preview. It offers fast and scalable security for all repositories in Azure DevOps organizations with one connector. This solution helps security teams find and fix vulnerabilities in code and infrastructure as code (IaC) configurations across Azure DevOps environments. It doesn't require agents, changes to pipelines, or interruptions to developer workflows, making setup and maintenance simple. It works independently from continuous integration and continuous deployment (CI/CD) pipelines. The solution provides continuous and automated insights to speed up risk detection and response, ensuring security without interrupting workflows.  
+
+Use cases:
+
+- **Organization-wide scanning:** You can securely monitor all repositories in Azure DevOps organizations with one connector.  
+- **Early vulnerability detection:** Quickly find code and IaC risks for proactive risk management.  
+- **Continuous security insights:** Keep visibility and respond quickly across development cycles without affecting productivity.
+
+For more information, see [Agentless code scanning in Microsoft Defender for Cloud](agentless-code-scanning.md).
 
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
