@@ -80,5 +80,5 @@ To review recommendations made by security baseline assessments, search for the 
 ## Next steps
 
 - [Install the Azure Policy machine configuration](security-baseline-guest-configuration.md).
-- [Remediate](remediate-security-baseline.md) OS baseline misconfigurations.
+- [Remediate](apply-security-baseline.md) OS baseline misconfigurations.
 

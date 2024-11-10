@@ -40,4 +40,4 @@ Learn more about [allowed role actions](permissions.md#roles-and-allowed-actions
 
 ## Next steps
 
-After you work through these planning steps, [decide which Defender for Servers plan](plan-defender-for-servers-select-plan.md) is right for your organization.
+After you work through these planning steps, [decide which Defender for Servers plan](defender-for-servers-overview.md) is right for your organization.

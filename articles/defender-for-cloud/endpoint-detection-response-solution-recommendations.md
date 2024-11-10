@@ -13,8 +13,8 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 
-- [Integrates natively with Defender for Endpoint as an EDR solution](integration-detection-response.md) for machine protection. to provide EDR capabilities for protected machines.
-- Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
+- [Integrates natively with Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md) for machine protection. to provide EDR capabilities for protected machines.
+- Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](detect-endpoint-detection-response-solutions.md#supported-edr-solutions).
 
 Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on machines. This article describes how to remediate those recommendations.
 

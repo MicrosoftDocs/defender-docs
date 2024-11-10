@@ -31,7 +31,7 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent to coll
 
 - The Defender for Endpoint agent collects data from machines in accordance with the files and resources defined for file integrity monitoring.
     - Data collected by the Defender for Endpoint agent is stored for access and analysis in a Log Analytics workspace.
-    - Collected file integrity monitoring data is part of the the [500 MB benefit included in Defender for Servers Plan 2](defender-for-servers-overview.md#using-the-free-data-ingestion-benefit).
+    - Collected file integrity monitoring data is part of the the [500 MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
 - File integrity monitoring provides details about the file/resource change, including the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
 ### Migrating to the new collection method

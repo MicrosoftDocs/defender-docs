@@ -25,7 +25,7 @@ These recommendations rely on [Azure Update Manager](/azure/update-manager/overv
 
 ## Prerequisites
 
-- [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) must be enabled.
+- [Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled.
 - To verify system updates [machines must be supported](/azure/update-manager/support-matrix) by Azure Update Manager.
 - On-premises machines must be [connected as Azure Arc-enabled VMs](quickstart-onboard-machines.md).
 - Multicloud (AWS/GCP machines) must be onboarded with Azure Arc when you connect [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md).

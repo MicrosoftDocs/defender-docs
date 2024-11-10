@@ -29,7 +29,7 @@ Azure Arc-enabled machines have the Azure Arc Connected Machine agent installed.
 
 When you use the Defender for Cloud multicloud connector to connect to [AWS accounts](quickstart-onboard-aws.md)  and [GCP projects](quickstart-onboard-gcp.md) , you can automatically onboard the Azure Arc agent to your AWS or GCP servers.
 
-You can also [onboard on-premises machines as Azure Arc-enabled](quickstart-onboard-machines).
+You can also [onboard on-premises machines as Azure Arc-enabled](quickstart-onboard-machines.md).
 
 
 Before you deploy Azure Arc:

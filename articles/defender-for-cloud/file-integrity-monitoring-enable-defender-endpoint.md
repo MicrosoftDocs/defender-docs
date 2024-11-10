@@ -20,7 +20,7 @@ After enabling Defender for Servers Plan 2, this article describes how to config
 
 ## Prerequisites
 
-- [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) should be enabled.
+- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) should be enabled.
 - The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent should be installed on machines you want to monitor.
 - You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
 - File integrity monitoring with Defender for Endpoint is supported for Azure VMs, Azure Arc-enabled VMs, connected AWS accounts and GCP projects.

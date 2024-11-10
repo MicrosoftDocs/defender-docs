@@ -97,7 +97,7 @@ sections:
       - question: |
           Is the 500 MB of free data ingestion allowance applied per workspace or per machine?
         answer: |
-          When you have [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) enabled, you get 500 MB of free data ingestion per day. The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
+          When you have [Defender for Servers Plan 2](defender-for-servers-overview.md) enabled, you get 500 MB of free data ingestion per day. The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
           
           This allowance is a daily rate that's averaged across all nodes. Your total daily free limit is equal to \[number of machines\] &times; 500 MB. You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 

@@ -11,7 +11,7 @@ ms.date: 08/12/2024
 
 In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the file integrity monitoring feature helps keeps enterprise assets and resources secure by scanning and analyzing files, and comparing their current state with previous scans. Fi
 
-File integrity monitoring now uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules. [Defender for Endpoint is integrated by default](integration-defender-for-endpoint.md#integration-with-defender-for-endpoint-edr) with Defender for Cloud. 
+File integrity monitoring now uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules. [Defender for Endpoint is integrated by default](integration-defender-for-endpoint.md) with Defender for Cloud. 
 
 The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
 
@@ -50,7 +50,7 @@ Access the migration experience in Defender for Cloud > **Environment settings**
 1. In the banner, selectm **Click here to migrate your environments**.
 
 
-         :::image type="content" source="./media/migrate-file-integrity-monitoring/migrate-banner.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/migrate-banner.png":::
+    :::image type="content" source="./media/migrate-file-integrity-monitoring/migrate-banner.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/migrate-banner.png":::
 
 1. In the **Prepare your environments** page, start the migration.
 1. Under **Migrate to FIM's new version over MDE**, select **Take action**.
