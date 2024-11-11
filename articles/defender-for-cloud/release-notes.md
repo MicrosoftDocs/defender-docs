@@ -32,12 +32,46 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
+| November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
+| November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
 ## API Security Posture Management Native Integration within Defender CSPM plan now in public preview
 
 November 15, 2024
 
 API security posture management (Preview) capabilities are now included in the Defender CSPM plan and can be enabled through extensions within the plan under environment settings page. For more information, see [Improve your API security posture (Preview)](api-security-posture-overview.md).
+
+### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
+
+November 7, 2024
+
+#### Key features
+
+- Scenario-based alert documentation: K8s alerts are now documented based on real-world scenarios, providing clearer guidance on potential threats and recommended actions.
+- Microsoft Defender for Endpoint (MDE) integration: Alerts are enriched with additional context and threat intelligence from MDE, improving you the ability to respond effectively.
+- New Simulation Tool: A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
+
+#### Benefits
+
+- Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
+- Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
+- Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
+
+### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
+
+November 6, 2024
+
+API security coverage within Defender for Cloud will now have full support for Azure API Management multi-region deployments, including full security posture and threat detection support to both primary and secondary regions
+
+Onboarding and offboarding APIs to Defender for APIs will now be managed at the Azure API Management API level. All associated [Azure API Management revisions](/azure/api-management/api-management-revisions) will automatically be included in the process, eliminating the need to manage onboarding and offboarding for each API revision individually.
+
+This change will include a one-time rollout to existing Defender for APIs customers.
+
+Rollout Details:
+
+- The rollout will occur during the week of November 6 for existing Defender for APIs customers.
+- If the 'current' revision for an Azure API Management API is already onboarded to Defender for APIs, all associated revisions for that API will also be automatically onboarded to Defender for APIs.
+- If the 'current' revision for an Azure API Management API isn't onboarded to Defender for APIs, any associated API revisions that were onboarded to Defender for APIs will be offboarded.
 
 ## October 2024
 
@@ -55,24 +89,6 @@ API security posture management (Preview) capabilities are now included in the D
 | October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
-
-### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
-
-October 31, 2024
-
-**Estimated date for change:** November 6, 2024
-
-API security coverage within Defender for Cloud will now have full support for Azure API Management multi-region deployments, including full security posture and threat detection support to both primary and secondary regions
-
-Onboarding and offboarding APIs to Defender for APIs will now be managed at the Azure API Management API level. All associated [Azure API Management revisions](/azure/api-management/api-management-revisions) will automatically be included in the process, eliminating the need to manage onboarding and offboarding for each API revision individually.
-
-This change will include a one-time rollout to existing Defender for APIs customers.
-
-Rollout Details:
-
-- The rollout will occur during the week of November 6 for existing Defender for APIs customers.
-- If the 'current' revision for an Azure API Management API is already onboarded to Defender for APIs, all associated revisions for that API will also be automatically onboarded to Defender for APIs.
-- If the 'current' revision for an Azure API Management API isn't onboarded to Defender for APIs, any associated API revisions that were onboarded to Defender for APIs will be offboarded.
   
 ### MMA migration experience is now available
 
@@ -157,7 +173,7 @@ Kubernetes Identity and Access information is added to the security graph, inclu
 
 October 6, 2024
 
-Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on another attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
+Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on other attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
 
 ### Improved attack path analysis
 

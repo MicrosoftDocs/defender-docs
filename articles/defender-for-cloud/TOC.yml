@@ -345,7 +345,7 @@
               href: alerts-azure-vm-extensions.md
             - name: Alerts for Azure App Service
               href: alerts-azure-app-service.md
-            - name: Alerts for containers - Kubernetes clusters
+            - name: Alerts for Kubernetes clusters
               href: alerts-containers.md
             - name: Alerts for SQL Database and Azure Synapse Analytics
               href: alerts-sql-database-and-azure-synapse-analytics.md
