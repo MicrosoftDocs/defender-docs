@@ -8,7 +8,6 @@ ms.date: 11/05/2024
 #customer intent: As a cloud administrator, I want to learn how to enable API security posture management to protect my APIs in Azure API Management.
 ---
 
-
 # Enable API security posture with Defender CSPM  
 
 The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud gives you a complete view of your APIs in Azure API Management. It helps you improve API security by finding misconfigurations and vulnerabilities. This article explains how to enable API security posture management in your Defender CSPM plan and assess your APIs' security. Defender CSPM onboards APIs without an agent and regularly checks for risks and sensitive data exposure. It provides prioritized risk insights and mitigation through API attack path analysis and security recommendations.  
@@ -25,13 +24,15 @@ The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender
 ## Enable API security posture management extension
   
 1. Sign in to the [Azure portal](https://portal.azure.com/).  
-2. Search for and select **Microsoft Defender for Cloud**.  
-3. Navigate to **Environment settings**.  
-4. Select the relevant subscription in scope.  
-5. Go to the Defender CSPM plan and select **Settings**.  
-6. Enable **API security posture management (Preview)**.  
-   <image 1>  
-7. Select **Save**.  
+1. Search for and select **Microsoft Defender for Cloud**.  
+1. Navigate to **Environment settings**.  
+1. Select the relevant subscription in scope.  
+1. Go to the Defender CSPM plan and select **Settings**.  
+1. Enable **API security posture management (Preview)**.  
+
+   :::image type="content" source="media/enable-api-security-posture/enable-api-security-posture-management.png" alt-text="Screenshot of Enable API security posture management." lightbox="media/enable-api-security-posture/enable-api-security-posture-management.png":::
+
+1. Select **Save**.  
 
 You'll see a notification message confirming that the settings were saved successfully. Once enabled, APIs start onboarding and appear in your Defender for Cloud Inventory within a few hours.  
 
@@ -40,14 +41,17 @@ You'll see a notification message confirming that the settings were saved succes
 APIs onboarded to the Defender CSPM plan appear in the API security dashboard under **Workload protection** and Microsoft Defender for Cloud **Inventory**.  
 
 1. Navigate to the Cloud Security section of the Defender for Cloud menu and select **API security** under **Advanced Workload protections**.  
-   <image 2>  
+
+   :::image type="content" source="media/enable-api-security-posture/select-api-security.png" alt-text="Screenshot of the API security dashboard." lightbox="media/enable-api-security-posture/select-api-security.png":::
 
 1. The dashboard shows the number of onboarded APIs, broken down by API collections, endpoints, and Azure API Management services. It includes a summary of APIs onboarded for threat detection security coverage with Defender for APIs workload protections plan.  
 1. To see APIs onboarded to the Defender CSPM plan for posture protection, apply the filter **Defender plan == Defender CSPM**.  
-   <image 3>  
+
+   :::image type="content" source="media/enable-api-security-posture/filter-defender-cspm.png" alt-text="Screenshot of filtered APIs for Defender CSPM plan for posture." lightbox="media/enable-api-security-posture/filter-defender-cspm.png":::
 
 1. Drill down into the **API collection details** page to review security findings for specific API operations. These are visible in the side context pane when you select an API operation of interest.  
-   <image 4>  
+
+   :::image type="content" source="media/enable-api-security-posture/api-collection-details.png" alt-text="Screenshot of API collection details page." lightbox="media/enable-api-security-posture/api-collection-details.png":::
 
 ### API endpoint detailed findings  
 
@@ -61,7 +65,8 @@ Review API security posture findings along with your API inventory in the Micros
 
 1. Navigate to the Microsoft Defender for Cloud menu and select **Inventory**.  
 1. Within the **Inventory** page, apply filters by selecting resource types and select **API Management API**, **API Management operation**, and **API Management service** to see all your API assets.  
-   <image 5>  
+
+   :::image type="content" source="media/enable-api-security-posture/inventory-api-assets.png" alt-text="Screenshot of API Management resources in the inventory." lightbox="media/enable-api-security-posture/inventory-api-assets.png":::
 
 ## Investigating API security recommendations
 
@@ -72,7 +77,8 @@ To investigate your API security posture recommendations:
 1. Navigate to the Defender for Cloud main menu and select **Recommendations**.  
 1. Toggle on **Group by Title** and apply the **Resource Type** filter, selecting **API Management Operation**.  
 1. Review the security recommendations, affected resources, risk factors, and risk levels. Take actions to remediate API posture risks.  
-   <image 6>  
+
+   :::image type="content" source="media/enable-api-security-posture/security-recommendations.png" alt-text="Screenshot of API security recommendations." lightbox="media/enable-api-security-posture/security-recommendations.png":::
 
 ## Explore API risks and remediate with attack path analysis
 
@@ -81,24 +87,29 @@ The [cloud security explorer](concept-attack-path.md#what-is-cloud-security-expl
 1. Sign in to the [Azure portal](https://portal.azure.com/).  
 1. Navigate to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.  
 1. Use the built-in query template to quickly identify APIs with security insights.  
-   <image 7>  
+
+   :::image type="content" source="media/enable-api-security-posture/cloud-security-explorer.png" alt-text="Screenshot of Cloud Security Explorer with API security insights query template." lightbox="media/enable-api-security-posture/cloud-security-explorer.png":::
 
 1. Alternatively, [build a custom query with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md) to find API risks and see API endpoints connected to backend compute or data stores. For example, you can see API endpoints routing traffic to virtual machines with remote code vulnerabilities.  
-   <image 8>  
+
+   :::image type="content" source="media/enable-api-security-posture/custom-query.png" alt-text="Screenshot of custom query in Cloud Security Explorer." lightbox="media/enable-api-security-posture/custom-query.png":::
 
 Attack path analysis in Defender for Cloud addresses security issues that pose immediate threats to your cloud applications and environments. [Identify and remediate API-led attack paths](how-to-manage-attack-path.md) to address your most critical API risks that can significantly threaten your organization.  
 
 1. In the Defender for Cloud menu, go to **Attack path analysis**.  
 1. Filter by resource type **API Management operation** to investigate API-related attack paths.  
-   <image 9>  
+
+   :::image type="content" source="media/enable-api-security-posture/filter-resource-type.png" alt-text="Screenshot of Attack path analysis filtered by API Management operation." lightbox="media/enable-api-security-posture/filter-resource-type.png":::
 
 1. View the security recommendations for your API endpoints in scope and remediate the recommendations to protect your APIs from high-risk attack surfaces.  
-   <image 10>  
+
+   :::image type="content" source="media/enable-api-security-posture/attack-path.png" alt-text="Screenshot of API security recommendations in Attack path analysis." lightbox="media/enable-api-security-posture/attack-path.png":::
 
 ## Offboarding API security posture protection
 
 APIs that are part of the Defender CSPM plan can't be offboarded individually. If you want to offboard all APIs from the Defender CSPM plan, go to the Defender CSPM Plan Settings page and disable the API posture extension.  
-   <image 11>  
+
+:::image type="content" source="media/enable-api-security-posture/offboard-api-security-posture.png" alt-text="Screenshot of Disable API security posture management." lightbox="media/enable-api-security-posture/offboard-api-security-posture.png":::
 
 ## Related content
 
