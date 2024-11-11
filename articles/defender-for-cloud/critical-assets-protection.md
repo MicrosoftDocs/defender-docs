@@ -7,18 +7,22 @@ ms.date: 03/03/2024
 
 # Critical assets protection in Microsoft Defender for Cloud
 
-Defender for Cloud now has business criticality concept added to its security posture management capabilities. This feature helps you to identify and protect your most important assets. It uses the critical assets engine created by Microsoft Security Exposure Management (MSEM). You can define critical asset rules in MSEM, and Defender for Cloud can then them in scenarios such as risk prioritization, attack path analysis, and cloud security explorer.
+Critical assets protection enables security administrators to automatically tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above anything else.
+
+Defender for Cloud suggest pre-defined classification rules that was developed by our research team to discover critical assets automatically, and allow you to create custom classification rules based on your business and organizational conventions.
+
+Critical asset rules are bi-directionally synced with Microsoft Security Exposure Management - rules that were created in Microsoft Security Exposure Management are synced to Defender for Cloud, and vice versa. [Learn more about critical assets protection in Microsoft Security Exposure Management>](/security-exposure-management/critical-asset-management)
 
 ## Availability
 
 | Aspect | Details |
 |--|--|
-| Release state | Preview |
+| Release state | General Availability|
 | Prerequisites | Defender Cloud Security Posture Management (CSPM) enabled  |
 | Required Microsoft Entra ID built-in roles: | To create/edit/read classification rules: Security Operator or higher <br> To read classification rules: Global Reader, Security Reader  |
 | Clouds: | All commercial clouds |
 
-## Set up critical asset management
+## Set up critical asset rules
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -60,7 +64,7 @@ Defender for Cloud now has business criticality concept added to its security po
 > [!NOTE]
 > Your critical asset rules apply to all the resources in the tenant that match the rule's condition.
 
-## View your critical assets in Defender for Cloud
+## View and protect your critical assets in Defender for Cloud
 
 1. Once your assets are updated, go to the [Attack path analysis](how-to-manage-attack-path.md) page in Defender for Cloud. You can see all the attack paths to your critical assets.
 
