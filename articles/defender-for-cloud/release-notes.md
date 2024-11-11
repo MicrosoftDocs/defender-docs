@@ -31,8 +31,17 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+|November 17|GA|[Critical assets protection in Microsoft Defender for Cloud](#Critical-assets-protection-in-Microsoft-Defender-for-Cloud)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+### Critical assets protection in Microsoft Defender for Cloud
+
+November 17, 2024
+
+Today we are releasing the Critical assets protection in Microsoft Defender for Cloud for General Availability. With Critical assets protection, Security Admins can tag the most critical resources to their business, to empower Defender for Cloud protect them in the most 
+
+- Extend support for Kubernetes and Non-human identities
 
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
