@@ -4,7 +4,6 @@
 
 title: Protecting code repository secrets with Microsoft Defender for Cloud
 description: Learn how to protect code repository secrets with Defender for Cloud's secret detections.
-ms.author:   lgoldstein # Microsoft alias
 ms.service: defender-for-cloud
 ms.topic: overview
 ms.date:     11/04/2024
