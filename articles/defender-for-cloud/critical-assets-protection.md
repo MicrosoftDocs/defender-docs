@@ -11,7 +11,7 @@ Critical assets protection enables security administrators to automatically tag 
 
 Defender for Cloud suggests pre-defined classification rules that was developed by our research team to discover critical assets automatically, and allows you to create custom classification rules based on your business and organizational conventions.
 
-Critical asset rules are bi-directionally synced with Microsoft Security Exposure Management - rules that were created in Microsoft Security Exposure Management are synced to Defender for Cloud, and vice versa. [Learn more about critical assets protection in Microsoft Security Exposure Management>](/security-exposure-management/critical-asset-management)
+Critical asset rules are bi-directionally synced with Microsoft Security Exposure Management - rules that were created in Microsoft Security Exposure Management are synced to Defender for Cloud, and vice versa. [Learn more about critical assets protection in Microsoft Security Exposure Management](/security-exposure-management/critical-asset-management).
 
 ## Availability
 
