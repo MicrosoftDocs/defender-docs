@@ -39,9 +39,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November 17, 2024
 
-Today we are releasing the Critical assets protection in Microsoft Defender for Cloud for General Availability. With Critical assets protection, Security Admins can tag the most critical resources to their business, to empower Defender for Cloud protect them in the most 
+Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection>](/azure/defender-for-cloud/critical-assets-protection)
 
-- Extend support for Kubernetes and Non-human identities
+Alongside with the General Availability release, we are also expending support for tagging Kubernetes and non-human identity resources.
 
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
