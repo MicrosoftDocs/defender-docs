@@ -55,7 +55,7 @@ Access the migration experience in Defender for Cloud > **Environment settings**
 1. In the **Prepare your environments** page, start the migration.
 1. Under **Migrate to FIM's new version over MDE**, select **Take action**.
 
-    :::image type="content" source="./media/migrate-file-integrity-monitoring/take-action.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/take-action.png":::
+    :::image type="content" source="./media/migrate-file-integrity-monitoring/take-action.png" alt-text="Screenshot showing the take action button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/take-action.png":::
 
 1. In **Migrate to the new FIM** tab, you can see all the subscriptions that host machines with legacy file integrity monitoring enabled.
     - **Total machines on subscriptions** shows all of the Azure VMs, and Azure Arc-enabled VMs in the subscription.

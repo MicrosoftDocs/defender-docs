@@ -20,7 +20,7 @@ Machine information for assessment against compute security baselines is collect
 
 **Requirement** | **Details**
 --- | ---
-**Plan** | To receive operating system recommendations based on MCSB compute security baselines, [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) must be enabled.
+**Plan** | To receive operating system recommendations based on MCSB compute security baselines, [Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled.
 **Machine support** |  Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
 **Extension requirements** |  Review [extension deployment requirements](/azure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
 **Permissions** | To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.

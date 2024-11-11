@@ -30,7 +30,7 @@ It’s important to be able to prioritize secrets and identify which ones need i
 - An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
 - [Defender for Cloud](get-started.md) must be available in your Azure subscription.
 - At least one of these plans [must be enabled](enable-enhanced-security.md#enable-defender-plans-to-get-the-enhanced-security-features):
-  - [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md)
+  - [Defender for Servers Plan 2](defender-for-servers-overview.md)
   - [Defender CSPM](concept-cloud-security-posture-management.md)
 - [Agentless machine scanning](concept-agentless-data-collection.md) must be enabled.
 

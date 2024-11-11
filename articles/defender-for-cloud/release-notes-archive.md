@@ -333,7 +333,7 @@ You can also read about Agentless container posture management for multicloud in
 
 January 16, 2024
 
-We're announcing the release of Defender for Cloud's agentless malware detection for Azure virtual machines (VM), AWS EC2 instances and GCP VM instances, as a new feature included in [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features).
+We're announcing the release of Defender for Cloud's agentless malware detection for Azure virtual machines (VM), AWS EC2 instances and GCP VM instances, as a new feature included in [Defender for Servers Plan 2](defender-for-servers-overview.md#plan-features).
 
 Agentless malware detection for VMs is now included in our agentless scanning platform. Agentless malware scanning utilizes [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows) anti-malware engine to scan and detect malicious files. Any detected threats, trigger security alerts directly into Defender for Cloud and Defender XDR, where they can be investigated and remediated. The Agentless malware scanner complements the agent-based coverage with a second layer of threat detection with frictionless onboarding and has no effect on your machine's performance.
 
@@ -773,7 +773,7 @@ To apply the new recommendation, you need to:
 1. Turn on the [periodic assessment property](/azure/update-manager/assessment-options). You can use the Quick Fix in the new recommendation, `[Machines should be configured to periodically check for missing system updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/90386950-71ca-4357-a12e-486d1679427c)` to fix the recommendation.
 
 > [!NOTE]
-> Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 isn't enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). Arc enabled machines that [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.
+> Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 isn't enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). Arc enabled machines that [Defender for Servers Plan 2](defender-for-servers-overview.md#plan-features) is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.
 
 ## October 2023
 
@@ -1588,7 +1588,7 @@ If you already have the Defender for Endpoint integration enabled, no further ac
 
 If you don't have the Defender for Endpoint integration enabled in Defender for Servers, you'll need to enable the Defender for Endpoint integration to maintain and improve your alert coverage.
 
-All Defender for Servers customers, have full access to the Defender for Endpoint's integration as a part of the [Defender for Servers plan](plan-defender-for-servers-select-plan.md#plan-features).  
+All Defender for Servers customers, have full access to the Defender for Endpoint's integration as a part of the [Defender for Servers plan](defender-for-servers-overview.md#plan-features).  
 
 You can learn more about [Microsoft Defender for Endpoint onboarding options](enable-defender-for-endpoint.md).
 
@@ -2417,7 +2417,7 @@ There are now connector-level settings for Defender for Servers in multicloud.
 
 The new connector-level settings provide granularity for pricing and autoprovisioning configuration per connector, independently of the subscription.
 
-All autoprovisioning components available in the connector-level (Azure Arc, MDE, and vulnerability assessments) are enabled by default, and the new configuration supports both [Plan 1 and Plan 2 pricing tiers](plan-defender-for-servers-select-plan.md#plan-features).
+All autoprovisioning components available in the connector-level (Azure Arc, MDE, and vulnerability assessments) are enabled by default, and the new configuration supports both [Plan 1 and Plan 2 pricing tiers](defender-for-servers-overview.md#plan-features).
 
 Updates in the UI include a reflection of the selected pricing tier and the required components configured.
 
@@ -2467,7 +2467,7 @@ Microsoft Defender for Servers is now offered in two incremental plans:
 - Defender for Servers Plan 2, formerly Defender for Servers
 - Defender for Servers Plan 1, provides support for Microsoft Defender for Endpoint only
 
-While Defender for Servers Plan 2 continues to provide protections from threats and vulnerabilities to your cloud and on-premises workloads, Defender for Servers Plan 1 provides endpoint protection only, powered by the natively integrated Defender for Endpoint. Read more about the [Defender for Servers plans](plan-defender-for-servers-select-plan.md#plan-features).
+While Defender for Servers Plan 2 continues to provide protections from threats and vulnerabilities to your cloud and on-premises workloads, Defender for Servers Plan 1 provides endpoint protection only, powered by the natively integrated Defender for Endpoint. Read more about the [Defender for Servers plans](defender-for-servers-overview.md#plan-features).
 
 If you have been using Defender for Servers until now no action is required.
 

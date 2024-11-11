@@ -22,7 +22,7 @@ To solve this dilemma, Defender for Cloud offers just-in-time machine access so 
 
 In Azure, you can block inbound traffic on specific ports, by enabling just-in-time access. 
 
-- Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview.#security-rules) and [Azure Firewall rules](/azure/firewall/rule-processing).
+- Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview#security-rules) and [Azure Firewall rules](/azure/firewall/rule-processing).
 - These rules restrict access to your Azure VMs’ management ports and defend them from attack.
 - If other rules already exist for the selected ports, then those existing rules take priority over the new "deny all inbound traffic" rules.
 - If there are no existing rules on the selected ports, then the new rules take top priority in the NSG and Azure Firewall.
