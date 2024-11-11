@@ -12,16 +12,16 @@ ms.date: 11/10/2024
 
 # Agentless code scanning in Microsoft Defender for Cloud
 
-Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories. It helps security teams find weaknesses in code and infrastructure-as-code (IaC) setups in Azure DevOps. This solution works without needing agent installations, pipeline changes, or permissions from development teams. It simplifies setup and reduces ongoing maintenance.
+Agentless code scanning in Microsoft Defender for Cloud offers fast, scalable security coverage across all repositories in Azure DevOps. It helps security teams and developers quickly find and fix vulnerabilities in code and infrastructure-as-code (IaC) configurations. This solution works without needing agent installations or changes to the pipeline. This setup simplifies the process and reduces ongoing maintenance by using a single Azure DevOps connector.
 
-This method runs independently from continuous integration and continuous deployment (CI/CD) pipelines. It provides continuous insights into code risks, allowing teams to quickly find and fix vulnerabilities and misconfigurations. This approach improves security across repositories without disrupting workflows or reducing productivity.
+This feature runs independently of Continuous Integration and Continuous Deployment (CI/CD) pipelines. It provides broad coverage and continuous insights into code and IaC risks. It gives teams actionable security findings. Security and development teams can focus on resolving risks without disrupting the development process. This method ensures rapid, seamless security monitoring across all repositories.
 
 ## Prerequisites
 
 - **Release state**: Public preview
 - **Pricing**: Free (during preview)
 - **Supported use cases**:
-  - ✔️ [Security recommendations to prioritize fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
+  - ✔️ [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
   - ✔️ [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
 - **Clouds**: Azure commercial clouds
 - **Supported regions**: Australia East, Canada Central, Central US, East Asia, East US, North Europe, Sweden Central, UK South, West Europe
@@ -40,7 +40,7 @@ This method runs independently from continuous integration and continuous deploy
 
 ## Risks detection capabilities
 
-Agentless code scanning improves security by offering targeted security advice for both code and Infrastructure-as-Code (IaC) templates. This is in addition to basic Cloud Security Posture Management (CSPM) recommendations provided through the connector. Key detection abilities include:  
+Agentless code scanning improves security by offering targeted security recommendations for both code and Infrastructure-as-Code (IaC) templates. This is in addition to Foundational Cloud Security Posture Management (CSPM) security recommendations provided through the connector. Key detection abilities include:  
 
 - **Code vulnerabilities**: Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.  
 - **Infrastructure-as-Code misconfigurations**: Detect security misconfigurations in IaC templates that could lead to insecure deployments.  
@@ -53,11 +53,11 @@ Agentless code scanning uses various open-source tools to find vulnerabilities a
 
 | **Tool**              | **Supported IaC/Languages**                                  | **License** |
 | --------------------- | ------------------------------------------------------------ | ----------- |
-| **Bandit**            | Python                                                       | Apache 2.0  |
-| **Checkov**           | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | Apache 2.0  |
-| **ESLint**            | JavaScript, TypeScript, JSX, TSX                             | MIT         |
-| **Template Analyzer** | ARM IaC templates, Bicep IaC templates                       | MIT         |
-| **Terrascan**         | Terraform IaC templates (HCL2), Kubernetes manifest files (YAML/JSON), Dockerfiles, AWS CloudFormation templates (YAML/JSON), Azure ARM IaC templates, Helm chart files (v3), Kustomize files | Apache 2.0  |
+| **[Bandit](https://github.com/PyCQA/bandit)**            | Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
+| **[Checkov](https://github.com/bridgecrewio/checkov)**           | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE)  |
+| **[ESLint](https://github.com/eslint/eslint)**            | JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
+| **[Template Analyzer](https://github.com/Azure/template-analyzer)** | ARM IaC templates, Bicep IaC templates                       | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt)         |
+| **[Terrascan](https://github.com/accurics/terrascan)**         | Terraform IaC templates (HCL2), Kubernetes manifest files (YAML/JSON), Dockerfiles, AWS CloudFormation templates (YAML/JSON), Azure ARM IaC templates, Helm chart files (v3), Kustomize files | [Apache 2.0](https://github.com/accurics/terrascan/blob/master/LICENSE)  |
 
 These tools support a wide range of languages and IaC frameworks, ensuring thorough security analysis across your codebase.
 
@@ -93,7 +93,7 @@ These tools support a wide range of languages and IaC frameworks, ensuring thoro
 
 To connect your Azure DevOps organizations to Defender for Cloud and enable agentless code scanning, refer to the instructions in [Connect your Azure DevOps organizations](quickstart-onboard-devops.md#connect-your-azure-devops-organization). The following visual shows the quick, straightforward setup process, guiding you through each step for seamless onboarding.
 
-:::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-setup.gif" alt-text="GIF image showing the setup process for enabling agentless code scanning":::
+:::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-setup.gif" alt-text="GIF image showing the setup process for enabling agentless code scanning" lightbox="media/agentless-code-scanning/agentless-code-scanning-setup.gif":::
 
 ## How agentless code scanning works
 
@@ -109,13 +109,13 @@ Once you enable the agentless code scanning feature within a connector, the scan
 1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, first after connector setup and then every 3-4 days.  
 1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and IaC templates.  
 1. **Findings processing**: It processes scan findings through Defender for Cloud’s backend to create actionable security recommendations.  
-1. **Results delivery**: The system shows findings as security recommendations in Defender for Cloud, allowing security teams to review and address issues.
+1. **Results delivery**: The system shows findings as [security recommendations](recommendations-reference-devops.md) in Defender for Cloud, allowing security teams to review and address issues.
 
 ### Scan frequency and duration
 
 - **Scan frequency**:  
   - The security posture of repositories, pipelines, and service connections is assessed when you create the connector and then every 8 hours.  
-  - The system scans code and Infrastructure-as-Code (IaC) templates for vulnerabilities every 3-4 days after you create the connector.  
+  - The system scans code and Infrastructure-as-Code (IaC) templates for vulnerabilities after you create the connector and then every 3-4 days.  
 - **Scan duration**: Scans typically finish within 15 to 60 minutes, depending on the size and complexity of the repository.
 
 ## Viewing and managing scan results
@@ -135,15 +135,15 @@ After the scans finish, you can access security findings within Microsoft Defend
         :::image type="content" source="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png" alt-text="Screenshot of recommendation Azure DevOps repositories should have infrastructure as code scanning findings resolved" lightbox="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png":::
 
     - Other security recommendations generated by the Azure DevOps connector might include:
-            - [Azure   DevOps repositories should have GitHub Advanced Security for Azure DevOps   (GHAzDO) enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/c7a934bf-7be6-407a-84d9-4f20e6e49592/showSecurityCenterCommandBar~/false)
-            - [Azure   DevOps pipelines shouldn't have secrets available to builds of forks](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/d5711372-9b5f-4926-a711-13dcf51565a6)
-            - [Azure   DevOps service connections shouldn't grant access to all pipelines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/9245366d-393f-49c5-b8e6-258b1b1c2daa)
-            - [Azure   DevOps variable groups with secret variables shouldn't grant access to   all pipelines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/2c2c801e-6279-4d88-a419-af73f0eff4fb)
-            - [Azure   DevOps Classic Azure service connections shouldn't be used to access a   subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/a887e860-40ff-4b57-9ef9-5177a11091ac)
-            - [(Preview)   Azure DevOps repositories should require minimum two-reviewer approval   for code pushes](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/470742ea-324a-406c-b91f-fc1da6a27c0c)
-            - [(Preview)   Azure DevOps repositories should not allow requestors to approve their   own Pull Requests](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/98b5895a-0ad8-4ed9-8c9d-d654f5bda816)
-            - [(Preview)   Azure DevOps projects should have creation of classic pipelines disabled](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/9f4a17ee-7a02-4978-b968-8c36b74ac8e3)
-            - [Azure   DevOps secure files shouldn't grant access to all pipelines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6855e9b1-c493-4a43-a6d1-74f30e72c5af)
+        - [Azure   DevOps repositories should have GitHub Advanced Security for Azure DevOps   (GHAzDO) enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/c7a934bf-7be6-407a-84d9-4f20e6e49592/showSecurityCenterCommandBar~/false)
+        - [Azure   DevOps pipelines shouldn't have secrets available to builds of forks](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/d5711372-9b5f-4926-a711-13dcf51565a6)
+        - [Azure   DevOps service connections shouldn't grant access to all pipelines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/9245366d-393f-49c5-b8e6-258b1b1c2daa)
+        - [Azure   DevOps variable groups with secret variables shouldn't grant access to   all pipelines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/2c2c801e-6279-4d88-a419-af73f0eff4fb)
+        - [Azure   DevOps Classic Azure service connections shouldn't be used to access a   subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/a887e860-40ff-4b57-9ef9-5177a11091ac)
+        - [(Preview)   Azure DevOps repositories should require minimum two-reviewer approval   for code pushes](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/470742ea-324a-406c-b91f-fc1da6a27c0c)
+        - [(Preview)   Azure DevOps repositories should not allow requestors to approve their   own Pull Requests](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/98b5895a-0ad8-4ed9-8c9d-d654f5bda816)
+        - [(Preview)   Azure DevOps projects should have creation of classic pipelines disabled](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/9f4a17ee-7a02-4978-b968-8c36b74ac8e3)
+        - [Azure   DevOps secure files shouldn't grant access to all pipelines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6855e9b1-c493-4a43-a6d1-74f30e72c5af)
 
 1. Select any recommendation for detailed information, including affected files, severity levels, and remediation guidance.
 
@@ -163,10 +163,7 @@ Agentless code scanning and in-pipeline scanning using the Microsoft Security De
 
 ### Scalability and performance impact
 
-Agentless code scanning aims to minimize impact on your Azure DevOps environment:  
-
-- **Minimal impact on resource limits**: The system sends some REST requests to pull metadata and code, but it manages scans externally. This approach reduces extra load on pipelines and repositories.  
-- **Protection from rate throttling**: By reducing direct interactions, agentless scanning helps avoid triggering rate limits. This ensures smooth workflows for your teams.
+Agentless code scanning avoids creating resources in the subscription and doesn't require scanning during the pipeline process. It uses the Azure DevOps REST API to pull metadata and code. This means API calls count toward Azure DevOps rate limits, but you won't incur direct data transfer costs. You can manage scans to stay within these limits. This method provides efficient, high-performance scanning across repositories without affecting DevOps workflows. For more information, see [Azure DevOps Rate and Usage Limits](/azure/devops/integrate/concepts/rate-limits).
 
 ## Data security, compliance, and access control for agentless code scanning
 
@@ -183,7 +180,7 @@ These measures ensure a secure, compliant, and efficient code scanning process, 
 
 During the **public preview** phase, the following limitations apply:  
 
-- **No binary scanning**: The system scans only code and Infrastructure-as-Code (IaC) files. It excludes binary files.  
+- **No binary scanning**: The system scans only code and Infrastructure-as-Code (IaC) files.  
 - **Scan frequency**: It scans repositories every 3-4 days.  
 - **Repository size**: It limits scanning to repositories under 100 MB.  
 - **Branch coverage**: Scans cover only the default (main) branch.  
@@ -192,4 +189,4 @@ During the **public preview** phase, the following limitations apply:
 ## Related content
 
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
-- [Scan your connected GitHub repository or Azure DevOps project](iac-vulnerabilities.md)
+- [Connect Azure DevOps environments to Defender for Cloud](quickstart-onboard-devops.md)
