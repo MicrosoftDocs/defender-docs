@@ -31,8 +31,32 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes
+
+November 13, 2024
+
+Defender for Cloud now provides vulnerability assessment and malware detection for the nodes in Azure Kubernetes Service (AKS), and provides clarity to customers on their part in the shared security responsibility they have with the managed cloud provider.
+
+Providing security protection for these Kubernetes nodes allow customers to maintain security and compliance across the managed Kubernetes service. 
+
+To receive the new capabilities, you have to enable the **agentless scanning for machines** option in the Defender CSPM, Defender for Containers, or Defender for Servers P2 plan in your subscription.
+
+#### Vulnerability Assessment 
+
+A new recommendation is now available in Azure portal: `AKS nodes should have vulnerability findings resolved`. Through this recommendation, you can now review and remediate vulnerabilities and CVEs found on Azure Kubernetes Service (AKS) nodes. 
+
+#### Malware detection
+
+New security alerts are triggered when the agentless malware detection capability detects malware in AKS nodes.
+
+Agentless malware detection uses the Microsoft Defender Antivirus anti-malware engine to scan and detect malicious files. When threats are detected, security alerts are directed into Defender for Cloud and Defender XDR, where they can be investigated and remediated. 
+
+> [!IMPORTANT]
+> Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments.
 
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
