@@ -12,14 +12,11 @@ ms.date: 11/10/2024
 
 # Agentless code scanning in Microsoft Defender for Cloud
 
-Agentless code scanning in Microsoft Defender for Cloud offers fast, scalable security coverage across all repositories in Azure DevOps. It helps security teams and developers quickly find and fix vulnerabilities in code and infrastructure-as-code (IaC) configurations. This solution works without needing agent installations or changes to the pipeline. This setup simplifies the process and reduces ongoing maintenance by using a single Azure DevOps connector.
-
-This feature runs independently of Continuous Integration and Continuous Deployment (CI/CD) pipelines. It provides broad coverage and continuous insights into code and IaC risks. It gives teams actionable security findings. Security and development teams can focus on resolving risks without disrupting the development process. This method ensures rapid, seamless security monitoring across all repositories.
+Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps. It quickly finds vulnerabilities in code and infrastructure-as-code (IaC) setups without needing agents or Continuous Integration and Continuous Deployment (CI/CD) pipeline changes. This approach simplifies setup and maintenance with a single Azure DevOps connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
 
 ## Prerequisites
 
 - **Release state**: Public preview
-- **Pricing**: Free (during preview)
 - **Supported use cases**:
   - ✔️ [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
   - ✔️ [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
@@ -42,8 +39,8 @@ This feature runs independently of Continuous Integration and Continuous Deploym
 
 Agentless code scanning improves security by offering targeted security recommendations for both code and Infrastructure-as-Code (IaC) templates. This is in addition to Foundational Cloud Security Posture Management (CSPM) security recommendations provided through the connector. Key detection abilities include:  
 
-- **Code vulnerabilities**: Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.  
-- **Infrastructure-as-Code misconfigurations**: Detect security misconfigurations in IaC templates that could lead to insecure deployments.  
+- [Code vulnerabilities](recommendations-reference-devops.md#azure-devops-repositories-should-have-code-scanning-findings-resolved): Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.  
+- [Infrastructure-as-Code misconfigurations](recommendations-reference-devops.md#azure-devops-repositories-should-have-infrastructure-as-code-scanning-findings-resolved): Detect security misconfigurations in IaC templates that could lead to insecure deployments.  
 
 Creating the connector enhances security by providing a foundational set of security recommendations for repositories, pipelines, and service connections.
 
@@ -163,7 +160,7 @@ Agentless code scanning and in-pipeline scanning using the Microsoft Security De
 
 ### Scalability and performance impact
 
-Agentless code scanning avoids creating resources in the subscription and doesn't require scanning during the pipeline process. It uses the Azure DevOps REST API to pull metadata and code. This means API calls count toward Azure DevOps rate limits, but you won't incur direct data transfer costs. You can manage scans to stay within these limits. This method provides efficient, high-performance scanning across repositories without affecting DevOps workflows. For more information, see [Azure DevOps Rate and Usage Limits](/azure/devops/integrate/concepts/rate-limits).
+Agentless code scanning avoids creating resources in the subscription and doesn't require scanning during the pipeline process. It uses the Azure DevOps REST API to pull metadata and code. This means API calls count toward Azure DevOps rate limits, but you won't incur direct data transfer costs. The service manages scans to ensure they stay within Azure DevOps rate limits without interrupting the development environment. This method provides efficient, high-performance scanning across repositories without affecting DevOps workflows. For more information, see [Azure DevOps Rate and Usage Limits](/azure/devops/integrate/concepts/rate-limits).
 
 ## Data security, compliance, and access control for agentless code scanning
 
