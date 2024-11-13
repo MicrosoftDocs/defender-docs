@@ -36,6 +36,8 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 ## Configure StackHawk API security testing scan
 
 ### For GitHub Actions CI/CD environments
+> [!NOTE]
+> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enabling-defender-for-cloud-integration-without-github-code-scanning).
 
 1. To use the [StackHawk HawkScan Action](https://github.com/marketplace/actions/stackhawk-hawkscan-action), make sure you're logged into [GitHub](https://github.com/login), and have a [StackHawk account](http://auth.stackhawk.com/signup).
 1. From GitHub, you can use a GitHub repository with a defined GitHub Actions workflow process already in place, or create a new workflow. We scan this GitHub repository for API vulnerabilities as part of the GitHub Actions workflow.
@@ -76,7 +78,27 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 
 1. You now verified that the StackHawk security scan results are showing in GitHub Code Scanning. Next, verify that these scan results are available within Defender for Cloud. It might take up to 30 minutes for results to show in Defender for Cloud.
 
-**Navigate to Defender for Cloud**:
+#### Enabling Defender for Cloud integration without GitHub Code Scanning
+If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from StackHawk into Defender for Cloud, you can follow these steps. After adding in the StackHawk workflow step, add the following steps to your GitHub Workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+```yml
+- name: Upload SARIF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: StackHawk_Report_${{ github.run_id }}
+          path: stackhawk.sarif
+          if-no-files-found: error
+- name: Upload results to MSDO
+        uses: microsoft/security-devops-action@v1
+        id: msdo
+        with:
+          existingFilename: stackhawk.sarif
+ ```
+
+Next, add an additional permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
+
+After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud. 
+
+#### Navigate to Defender for Cloud
 
 1. Select **Recommendations**.
 1. Filter by searching for **API security testing**.
