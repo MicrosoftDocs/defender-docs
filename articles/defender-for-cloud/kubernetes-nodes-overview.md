@@ -33,7 +33,7 @@ When malware is detected in a K8s node, a security alert is generated to enable 
 
 ## How vulnerability assessment and malware detection is performed
 
-Snapshots are taken of node host VM disks for scanning. The scan generates an OS and software inventory list which is reviewed to determine what software should be updated. See the [Agentless scanning architecure description](concept-agentless-data-collection#how-agentless-scanning-works) for details.
+Snapshots are taken of node host VM disks for scanning. The scan generates an OS and software inventory list which is reviewed to determine what software should be updated. See the [Agentless scanning architecure description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
 
 ## Prerequisites
 
