@@ -59,7 +59,7 @@ To create a new default workflow:
 1. Copy the full sample workflow and paste it in the workflow editor.
 
    > [!NOTE]
-   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](####).
+   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enabling-defender-for-cloud-integration-without-github-code-scanning).
 
 
    :::image type="content" source="media/onboarding-guide-42crunch/workflow-editor.png" alt-text="Screenshot showing GitHub workflow editor." lightbox="media/onboarding-guide-42crunch/workflow-editor.png":::
