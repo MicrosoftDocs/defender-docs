@@ -272,6 +272,10 @@
       items:
         - name: Agentless container posture in Defender CSPM
           href: concept-agentless-containers.md
+    - name: Improve API security posture
+      items:
+        - name: Overview
+          href: api-security-posture-overview.md
     - name: Improve AI security posture
       items:
       - name: AI security posture management (Preview)
@@ -399,6 +403,10 @@
         - name: Enable permissions management (CIEM)
           displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
           href: enable-permissions-management.md
+    - name: API security posture
+      items:
+        - name: Enable API security posture with Defender CSPM
+          href: enable-api-security-posture.md
     - name: AI security posture
       items:
         - name: Discover generative AI workloads
