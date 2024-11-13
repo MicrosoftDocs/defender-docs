@@ -59,7 +59,7 @@ To create a new default workflow:
 1. Copy the full sample workflow and paste it in the workflow editor.
 
    > [!NOTE]
-   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](####)
+   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](####)
 
 
    :::image type="content" source="media/onboarding-guide-42crunch/workflow-editor.png" alt-text="Screenshot showing GitHub workflow editor." lightbox="media/onboarding-guide-42crunch/workflow-editor.png":::
@@ -97,7 +97,7 @@ Next, add an additional permission to the workflow, setting [**id-token** to **w
 
 After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud. 
 
-#### Navigate to Defender for Cloud:
+#### Navigate to Defender for Cloud
 
 1. Select **Recommendations**.
 1. Select **All recommendations**.
