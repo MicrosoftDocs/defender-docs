@@ -31,8 +31,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+## API Security Posture Management Native Integration within Defender CSPM plan now in public preview
+
+November 15, 2024
+
+API security posture management (Preview) capabilities are now included in the Defender CSPM plan and can be enabled through extensions within the plan under environment settings page. For more information, see [Improve your API security posture (Preview)](api-security-posture-overview.md).
 
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
@@ -40,15 +47,15 @@ November 7, 2024
 
 #### Key features
 
-* Scenario-based alert documentation: K8s alerts are now documented based on real-world scenarios, providing clearer guidance on potential threats and recommended actions.
-* Microsoft Defender for Endpoint (MDE) integration: Alerts are enriched with additional context and threat intelligence from MDE, improving you the ability to respond effectively.
-* New Simulation Tool: A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
+- Scenario-based alert documentation: K8s alerts are now documented based on real-world scenarios, providing clearer guidance on potential threats and recommended actions.
+- Microsoft Defender for Endpoint (MDE) integration: Alerts are enriched with additional context and threat intelligence from MDE, improving you the ability to respond effectively.
+- New Simulation Tool: A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
 
 #### Benefits
 
-* Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
-* Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
-* Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
+- Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
+- Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
+- Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
 
 ### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
 
