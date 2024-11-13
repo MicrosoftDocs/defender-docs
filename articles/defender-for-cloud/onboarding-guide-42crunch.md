@@ -86,7 +86,7 @@ If you do not have GitHub Code Scanning for your environment and wish to integra
           name: 42Crunch_AuditReport_${{ github.run_id }}
           path: 42Crunch_AuditReport_${{ github.run_id }}.SARIF
           if-no-files-found: error
-      - name: Upload results to MSDO
+- name: Upload results to MSDO
         uses: microsoft/security-devops-action@v1
         id: msdo
         with:
