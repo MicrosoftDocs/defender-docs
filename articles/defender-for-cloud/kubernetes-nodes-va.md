@@ -1,10 +1,8 @@
 ---
-title: Kubernetes nodes vulnerability assessment
-description: Learn about Defender for Containers vulnerability assessment for Kubernetes nodes
-author: ehorwitz-ms
-ms.author: dacurwin
+title: Kubernetes Nodes Vulnerability Assessment
+description: Learn about Defender for Containers vulnerability assessment for Kubernetes nodes.
 ms.date: 11/15/2024
-ms.topic: 
+ms.topic: conceptual
 ---
 
 # Kubernetes(K8s) node vulnerability assessment

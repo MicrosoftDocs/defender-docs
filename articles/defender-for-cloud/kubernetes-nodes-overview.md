@@ -1,10 +1,8 @@
 ---
-title: Overview of Kubernetes nodes protection
-description: Learn about Defender for Containers vulnerability assessment and malware detection for Kubernetes nodes
-author: ehorwitz-ms
-ms.author: dacurwin
+title: Overview of Kubernetes Nodes Protection
+description: Learn about Defender for Containers vulnerability assessment and malware detection for Kubernetes nodes.
 ms.date: 11/15/2024
-ms.topic: 
+ms.topic: overview
 ---
 
 # Overview of Defender for Containers protection of Kubernetes (K8s) node hosts
