@@ -79,7 +79,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 1. You now verified that the StackHawk security scan results are showing in GitHub Code Scanning. Next, verify that these scan results are available within Defender for Cloud. It might take up to 30 minutes for results to show in Defender for Cloud.
 
 #### Enabling Defender for Cloud integration without GitHub Code Scanning
-If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from StackHawk into Defender for Cloud, you can follow these steps. After adding in the StackHawk workflow step, add the following steps to your GitHub Workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from StackHawk into Defender for Cloud, you can follow these steps. After adding in the StackHawk workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
 ```yml
 - name: Upload SARIF file
         uses: actions/upload-artifact@v4
