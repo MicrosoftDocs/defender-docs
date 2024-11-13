@@ -1,15 +1,15 @@
 ---
-title: ServiceNow integration with Defender for Cloud
+title: Overview of the ServiceNow integration
 description: Learn about integrating ServiceNow with Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
-ms.date: 08/18/2024
+ms.date: 10/28/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between ServiceNow and Microsoft Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
 
-# ServiceNow integration with Defender for Cloud
+# Overview of the ServiceNow integration
 
 ServiceNow is a cloud-based workflow automation and enterprise-oriented solution that enables organizations to manage and track digital workflows within a unified, robust platform. ServiceNow helps to improve operational efficiencies by streamlining and automating routine work tasks and delivers resilient services that help increase your productivity.  
 

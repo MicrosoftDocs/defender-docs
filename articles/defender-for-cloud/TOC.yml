@@ -139,6 +139,92 @@
         - name: Protect resources that report to a Log Analytics workspace
           displayName: workSystem, namespace, enable, plans
           href: enable-plan-workspace.md
+    - name: Integrate partner integrations
+      expanded: false
+      items:
+        - name: Overview of partner integrations
+          displayName: partner, integration, integrations, partners
+          href: partner-integrations.md
+        - name: Integrate partner integrations
+          displayName: partner, integration, integrations, partners
+          href: integrate-partner-integrations.md
+        - name: Connect an integration
+          displayName: partner, integration, integrations, partners
+          href: connect-an-integration.md
+        - name: Partner integrations
+          items:
+          - name: Endor labs
+            items:
+            - name: Overview Endor labs integration
+              displayName: CSPM, cloud security, posture, management, Endor labs
+              href: integration-endor-labs.md
+            - name: Connect Endor labs to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, Endor labs
+              href: connect-endor-labs.md
+            - name: Common questions about Endor labs
+              displayName: FAQ, questions, endor labs
+              href: faq-endor-labs.yml
+          - name: ServiceNow
+            items:
+            - name: Overview ServiceNow integration
+              displayName: CSPM, cloud security, posture, management, ServiceNow
+              href: integration-servicenow.md
+            - name: Connect ServiceNow to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, ServiceNow
+              href: connect-servicenow.md
+          - name: API security testing partners
+            items:
+                - name: Overview of API security testing integrations
+                  href: defender-partner-applications.md
+                - name: Onboard 42Crunch (preview)
+                  href: onboarding-guide-42crunch.md
+                - name: Onboard StackHawk (preview)
+                  href: onboarding-guide-stackhawk.md
+                - name: Onboard Bright Security (preview)
+                  href: onboarding-guide-bright.md
+        - name: Security solutions (legacy)
+          displayName: security, solutions, integrate, integrated, data sources
+          href: partner-integration.md
+    - name: Integrate Microsoft solutions
+      expanded: false
+      items:
+          - name: Power BI
+            items:
+            - name: Overview Power BI integration
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: integration-power-bi.md
+            - name: Add Defender for Cloud data to Power BI
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: add-data-power-bi.md
+          - name: Microsoft Defender for Endpoint
+            items:
+              - name: Overview Microsoft Defender for Endpoint integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                href: integration-defender-for-endpoint.md
+              - name: Enable the Defender for Endpoint integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                href: enable-defender-for-endpoint.md
+          - name: Microsoft Defender XDR
+            items:
+              - name: Overview Microsoft Defender XDR integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
+                href: concept-integration-365.md
+          - name: Microsoft Entra Permissions Management
+            items:
+              - name: Enable the Microsoft Entra Permissions Management integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Entra Permissions Management
+                href: enable-permissions-management.md
+          - name: Microsoft Defender external attack surface management (EASM)
+            items:
+              - name: Overview Microsoft Defender EASM integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
+                href: concept-easm.md
+          - name: Microsoft Copilot for Security
+            items:
+              - name: Overview Microsoft Copilot for Security integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
+                href: copilot-security-in-defender-for-cloud.md
+
 
 - name: Tutorials
   items:
@@ -235,7 +321,7 @@
         items:  
         - name: ServiceNow
           items:
-          - name: ServiceNow integration with Defender for Cloud
+          - name: Overview ServiceNow integration
             displayName: CSPM, cloud security, posture, management, ServiceNow
             href: integration-servicenow.md
           - name: Connect ServiceNow to Defender for Cloud
@@ -249,7 +335,7 @@
             href: create-governance-rule-servicenow.md
         - name: Power BI
           items:
-          - name: Power BI integration with Defender for Cloud
+          - name: Overview Power BI integration
             displayName: CSPM, cloud security, posture, management, Power BI
             href: integration-power-bi.md
           - name: Add Defender for Cloud data to Power BI
@@ -397,9 +483,6 @@
         - name: Track secure score
           displayName: secure score, rest api, resource graph
           href: secure-score-access-and-track.md
-        - name: Integrate security solutions
-          displayName: security, solutions, integrate, integrated, data sources
-          href: partner-integration.md
         - name: Enable permissions management (CIEM)
           displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
           href: enable-permissions-management.md
