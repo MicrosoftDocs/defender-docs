@@ -9,11 +9,11 @@ ms.topic: overview
 Defender for Containers runs vulnerability assessment and malware detection of the K8s cluster control plane and workloads. In addition, Defender for Containers can also assess vulnerabilities and discover malware threats in an K8s node.
 
 > [!Note]
-> Protection of K8s nodes is offered for Microsoft Azure Kubernetes Services (AKS).
+> Protection of K8s nodes is presently offered for Microsoft Azure Kubernetes Services (AKS).
 
-## K8s node host
+## K8s node VMs
 
-A K8s cluster node is hosted on a VM supported by the K8s service. A cluster has ***node pools*** (or ***node groups***). A node pool is a set of nodes with the same supported VM type and version. The K8s service allows the customer to configure a cluster, including node pools and the VM type for each node pool as required for the applications running in the cluster.
+A K8s node is hosted on a VM supported by the K8s service. A cluster has ***node pools*** (or ***node groups***). A node pool is a set of nodes with the same supported VM type and version. The K8s service allows the customer to configure a cluster, including node pools and the VM type for each node pool as required for the applications running in the cluster.
 
 ## Shared responsibility of K8s nodes
 

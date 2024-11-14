@@ -5,16 +5,9 @@ ms.date: 11/15/2024
 ms.topic: conceptual
 ---
 
-# Kubernetes (K8s) node host vulnerability assessment
+# Kubernetes (K8s) node vulnerability assessment
 
-Defender for Containers can scan the VMs that host K8s nodes to assess vulnerabilities to the OS and installed software. Recommendations for remediation are generated for the customer security team to review.
-
-> [!Note]
-> Protection of K8s nodes is offered for Microsoft Azure Kubernetes Services (AKS).
-
-## K8s node host
-
-A K8s cluster node is hosted on a VM supported by the K8s service. A set of nodes ("node pool" or "node group") must have the same supported VM and version for each node. The K8s service allows the customer to configure a cluster, including the selection of node host VMs, to support the requirements of applications running in the cluster. Maintenance of the node host VM is [a shared responsibility](./kubernetes-nodes-overview.md#share-responsibility-of-k8s-nodes) between the K8s provider and the customer.
+Defender for Containers can scan the [VMs that host K8s nodes](./kubernetes-nodes-overview.md#k8s-node-vms) to assess vulnerabilities to the OS and installed software. Recommendations for remediation are generated for the customer security team to review and remediate as part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility-of-k8s-nodes) to maintain the K8s nodes of a cluster.
 
 ## How vulnerability assessment is done
 
