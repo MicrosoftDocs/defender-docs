@@ -11,10 +11,9 @@ In addition to providing vulnerability assessment and malware detection of the K
 > [!Note]
 > Protection of K8s nodes is offered for Microsoft Azure Kubernetes Services (AKS).
 
-## What is a K8s node
+## K8s node host
 
-- A K8s cluster node is hosted on a VM supported by the K8s service. A set of nodes ("node pool" or "node group") must have the same supported VM and version for each node.
-- The K8s service allows the customer to configure a cluster, including the selection of node host VMs, to support the requirements of applications running in the cluster.
+A K8s cluster node is hosted on a VM supported by the K8s service. A set of nodes ("node pool" or "node group") must have the same supported VM and version for each node. The K8s service allows the customer to configure a cluster, including the selection of node host VMs, to support the requirements of applications running in the cluster.
 
 ## Shared responsibility of K8s nodes
 
