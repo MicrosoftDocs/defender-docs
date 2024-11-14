@@ -33,11 +33,12 @@ To enable the agentless scanning for machines option in Defender for Containers 
 1. Select the relevant subscription.
 1. Select **Environment Settings** from the **Defender for Cloud** menu.
 1. Select **Settings** for the **Defender for Container** plan.
-    :::image type="content" source="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png":::
+
+:::image type="content" source="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png":::
 
 1. In the settings pane, turn on **Agentless scanning for machines**.
 
-    :::image type="content" source="media/kubernetes-nodes-va/agentless-scanning-for-machines.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/agentless-scanning-for-machines.png":::
+:::image type="content" source="media/kubernetes-nodes-va/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines option." lightbox="media/kubernetes-nodes-va/agentless-scanning-for-machines.png":::
 
 1. Select **Save**.
 
@@ -46,20 +47,23 @@ To enable the agentless scanning for machines option in Defender for Containers 
 If the vulnerability assessment finds vulnerabilities for a K8s node, a recommendation is generated for the customer to review. To review K8s node recommendations for remediation in the Azure portal:
 
 1. Select **Recommendations** from the **Defender for Cloud** menu.
-:::image type="content" source="media/kubernetes-nodes-va/recommendations-list.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/recommendations-list.png":::
+
+:::image type="content" source="media/kubernetes-nodes-va/recommendations-list.png" alt-text="Screenshot of selecting the recommendations submenu of the Defender for Cloud pane." lightbox="media/kubernetes-nodes-va/recommendations-list.png":::
 
 1. Select the **AKS nodes should have vulnerability findings resolved** recommendation.
-:::image type="content" source="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png":::
 
-1. The full details of the K8s node recommendation are presented.
-:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/recommendation-node-details.png":::
+:::image type="content" source="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png" alt-text="Screenshot showing the selection of the nodes recommendation line." lightbox="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png":::
 
-    The recommendation details include a full description of the vulnerability, and other details such as the name of the affected K8s node pool and its cluster.
+1. The full details of the K8s node recommendation are shown. Along with a full description of the vulnerability, other details such as the name of the affected K8s node pool and its cluster are presented.
+
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details.png" alt-text="Screenshot showing the details of the recommendation for the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details.png":::
 
 1. Select the **Findings** tab to view a list of CVEs relating to the K8s node.
-:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-findings.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/recommendation-node-details-findings.png":::
+
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-findings.png" alt-text="Screenshot of selecting the findings tab to view a list of CVEs related to the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details-findings.png":::
 
 1. Selecting one of the CVE lines opens a pane giving full details about the CVE and all the K8s node resources that also have this vulnerability.
-:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-details.png" alt-text="Screenshot of the how the agentless scanning for machines option is enabled." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
+
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-details.png" alt-text="Screenshot of the pane showing all the details of the CVE and K8s node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
 
 ## Describe remediation process in MDC portal
