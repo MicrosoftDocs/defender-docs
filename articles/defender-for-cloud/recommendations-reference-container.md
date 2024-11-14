@@ -551,7 +551,8 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 **Type**: Vulnerability Assessment
 
-### [[Preview] Container images in JFrog Artifactory registry should have vulnerability findings resolved]
+
+### [[Preview] Container images in JFrog Artifactory registry should have vulnerability findings resolved
 (https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/942c9df8-97d1-4db9-8428-5372b9655110)
 
 **Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Remediating vulnerabilities in container images helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.",
