@@ -34,6 +34,20 @@ When malware is detected in a K8s node, a security alert is generated to enable 
 
 Snapshots are taken of node host VM disks for scanning. The scan generates an OS and software inventory list which is reviewed to determine what software should be updated. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
 
-## Prerequisites
+## Prerequisite - Enable agentless scanning for machines
 
-Vulnerability assessment and malware detection for node VM hosts can be enabled by turning on the **Agentless scanning for machines** option in the Defender for Containers plan.
+Vulnerability assessment and malware detection for nodes must be enabled by turning on the **Agentless scanning for machines** option in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
+
+To enable the agentless scanning for machines option in Defender for Containers in the Azure portal:
+
+1. Select the relevant subscription.
+2. Select **Environment Settings** from the **Defender for Cloud** menu.
+3. Select **Settings** for the **Defender for Container** plan.
+
+:::image type="content" source="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png":::
+
+1. In the settings pane, turn on **Agentless scanning for machines**.
+
+:::image type="content" source="media/kubernetes-nodes-va/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines option." lightbox="media/kubernetes-nodes-va/agentless-scanning-for-machines.png":::
+
+1. Select **Save**.
