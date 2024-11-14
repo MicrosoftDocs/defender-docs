@@ -54,7 +54,7 @@ We are dedicated to enhancing your security experience with Defender for Cloud. 
 
 We recommend that all customers transition to the new connectors' solution within Microsoft Defender. Our team is here to support you through this transition. 
 
- For more information on using the connectors, please visit the [Overview of connecting data sources in Microsoft Security Exposure Management - Microsoft Security Exposure Management | Microsoft Learn](/security-exposure-management/overview-data-connectors?branch=pr-en-us-1317) documentation. 
+ For more information on using the connectors, please visit the [Overview of connecting data sources in Microsoft Security Exposure Management - Microsoft Security Exposure Management(/security-exposure-management/overview-data-connectors) documentation. 
 
 ### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
 
