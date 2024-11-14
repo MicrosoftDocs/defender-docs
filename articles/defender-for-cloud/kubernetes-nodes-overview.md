@@ -6,7 +6,7 @@ ms.topic: overview
 ---
 
 # Overview of Defender for Containers protection of Kubernetes (K8s) nodes
-Defender for Containers runs vulnerability assessment and malware detection of the K8s cluster control plane and workloads. In addition, Defender for Containers can also assess vulnerabilities and discover malware threats in an K8s node.
+Defender for Containers runs vulnerability assessment and malware detection of the K8s cluster control plane and workloads. In addition, Defender for Containers can also assess vulnerabilities and discover malware threats in K8s nodes.
 
 > [!Note]
 > Protection of K8s nodes is presently offered for Microsoft Azure Kubernetes Services (AKS).
@@ -24,11 +24,14 @@ The responsibility for maintaining the K8s nodes is shared between the K8s servi
 
 ## Vulnerability assessment
 
-  The K8s nodes are frequently scanned and an inventory of the OS and software applications are created. The inventory is then searched for known vulnerabilities. When vulnerabilities are found, recommendations are generated and the customer can review them to decide what action to take.
+  Vulnerability assessment is provided using Microsoft Defender Vulnerability Management. The K8s nodes are frequently scanned and an inventory of the OS and software applications are created. The inventory is then searched for known vulnerabilities. When vulnerabilities are found, recommendations are generated and the customer can review them to decide what action to take.
 
 ## Malware detection
 
-When malware is detected in a K8s node, a security alert is generated to enable the security team to review and remediation.
+Defender for Containers uses the Microsoft Defender Antivirus anti-malware engine to scan and detect malicious files in K8s nodes. When threats are detected, security alerts are directed into Defender for Cloud and Defender XDR, where they can be investigated and remediated.
+
+> [!Note]
+> Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments.
 
 ## The vulnerability assessment and malware detection process
 
