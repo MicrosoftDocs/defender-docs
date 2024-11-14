@@ -24,8 +24,16 @@ Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable
 - **Supported regions**: Australia East, Canada Central, Central US, East Asia, East US, North Europe, Sweden Central, UK South, West Europe
 - **Supported environments**: Azure DevOps connector
 - **Roles and permissions**:
-  - **Security Admin**: Can create new connectors or modify existing ones.
-  - **Security Reader**: Can view security recommendations, alerts, security policies, and security states but can't modify connector configurations.
+
+  To set up and configure the connector:
+
+  - **Project Collection Admin**: Required in Azure DevOps to perform the initial setup.
+  - **Subscription Contributor**: Needed on the Azure subscription to create and configure the connector.
+
+  To view security results:
+
+  - **Security Admin**: Can manage security settings, policies, and alerts but can't modify the connector.
+  - **Security Reader**: Can view recommendations, alerts, and policies but can't make any changes.
 
 ## Key benefits
 
@@ -160,7 +168,7 @@ Agentless code scanning and in-pipeline scanning using the Microsoft Security De
 
 ### Scalability and performance impact
 
-Agentless code scanning avoids creating resources in the subscription and doesn't require scanning during the pipeline process. It uses the Azure DevOps REST API to pull metadata and code. This means API calls count toward Azure DevOps rate limits, but you won't incur direct data transfer costs. The service manages scans to ensure they stay within Azure DevOps rate limits without interrupting the development environment. This method provides efficient, high-performance scanning across repositories without affecting DevOps workflows. For more information, see [Azure DevOps Rate and Usage Limits](/azure/devops/integrate/concepts/rate-limits).
+Agentless code scanning avoids creating resources in the subscription and doesn't require scanning during the pipeline process. It uses the Azure DevOps REST API to pull metadata and code. This means API calls count toward Azure DevOps rate limits, but you don't incur direct data transfer costs. The service manages scans to ensure they stay within Azure DevOps rate limits without interrupting the development environment. This method provides efficient, high-performance scanning across repositories without affecting DevOps workflows. For more information, see [Azure DevOps Rate and Usage Limits](/azure/devops/integrate/concepts/rate-limits).
 
 ## Data security, compliance, and access control for agentless code scanning
 
