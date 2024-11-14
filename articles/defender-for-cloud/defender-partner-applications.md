@@ -22,14 +22,14 @@ The security scan results from partner applications are now available within Def
 
 ## Prerequisites
 
-This feature requires a GitHub connector in Defender for Cloud. See [how to onboard your GitHub organizations](quickstart-onboard-github.md).
+This feature requires a DevOps connector in Defender for Cloud. See [how to onboard onboard DevOps environments](devops-support.md).
 
 | Aspect                                          | Details                                                                                                                                               |
 |-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Release state | Preview <br> The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.|
 | Required/preferred environmental requirements | APIs within source code repository, including API specification files such as OpenAPI, Swagger.                                                      |
 | Clouds                                          |  Available in commercial clouds. Not available in national/sovereign clouds (Azure Government, Microsoft Azure operated by 21Vianet).                                                 |
-| Source code management systems                  |   [GitHub Enterprise Cloud](https://docs.github.com/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud). This also requires a license for GitHub Advanced Security (GHAS). <br> <br > [Azure DevOps Services](https://azure.microsoft.com/products/devops/)  |
+| Source code management systems                  |   [GitHub Enterprise Cloud](https://docs.github.com/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud) <br > [Azure DevOps Services](https://azure.microsoft.com/products/devops/)  |
 
 ## Supported applications
 
