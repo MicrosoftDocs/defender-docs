@@ -34,6 +34,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
+| November 6 | GA | [Enhanced Support for API sensitive data classification](#enhanced-api-security-sensitive-data-classification-support-for-api-url-path-and-query-parameters) |
+| November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
 ### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
@@ -80,6 +82,20 @@ November 7, 2024
 - Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
 - Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
 - Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
+
+### Enhanced Support for API sensitive data classification
+
+November 6, 2024
+
+Microsoft Defender for Cloud extends API Security sensitive data classification capabilities to API URL path and query parameters along with API request and responses, including the source of sensitive information found in the API properties. This information will be available in the Attack Path Analysis experience, the Cloud Security Explorer's **Additional Details** page when API Management operations with sensitive data are selected, and on the API Security Dashboard under the Workload Protections within API collection details page, with a new side context menu that provides detailed insights into sensitive data found, enabling security teams efficiently locate and mitigate data exposure risks.
+
+Note: This change will include a one-time rollout to existing Defender for APIs and Defender CSPM customers.
+
+### New support for mapping Azure API Management API endpoints to backend compute
+
+November 6, 2024
+
+Defender for Cloud's API security posture now supports mapping API endpoints published through Azure API Management Gateway to backend compute resources, such as virtual machines, in the Defender Cloud Security Posture Management (Defender CSPM) Cloud Security Explorer. This visibility helps identify API traffic routing to backend cloud compute destinations, enabling you to detect and address exposure risks associated with API endpoints and their connected backend resources.
 
 ### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
 
