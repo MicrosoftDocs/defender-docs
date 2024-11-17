@@ -31,11 +31,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 18 | Preview | [Introducing Cloud Native Response Actions for Kubernetes Pods](#introducing-cloud-native-response-actions-for-kubernetes-pods) |
 | November 18 | Upcoming Change | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+## Introducing Cloud Native Response Actions for Kubernetes Pods
+
+November 18, 2024
+
+Defender for Cloud now offers multicloud response actions for Kubernetes pods, accessible exclusively from the Defender XDR portal. These capabilities enhance incident response for AKS, EKS, and GKE clusters.
+
+The following are new response actions:
+
+**Network Isolation** - Instantly block all traffic to a pod, preventing lateral movement and data exfiltration. Requires network policy configuration on your kubernetes cluster.
+
+**Pod Termination** - Quickly terminate suspicious pods, stopping malicious activity without disrupting the broader application.
+
+These actions empower SOC teams to contain threats effectively across cloud environments.
 
 ## Deprecation of Bring your own License (BYOL) feature in vulnerability management
 November 18, 2024
@@ -48,7 +63,7 @@ November 18, 2024
   
 **Description**
 
-We are dedicated to enhancing your security experience with Defender for Cloud. As part of this mission, we are making strategic changes to streamline and improve our vulnerability assessment (VA) solutions. One of the changes involves deprecating the “Bring Your Own License” capability within Defender for Cloud and transitioning to the Microsoft Defender connectors to provide a more seamless, integrated, and comprehensive solution. 
+We are dedicated to enhancing your security experience with Defender for Cloud. As part of this mission, we are making strategic changes to streamline and improve our vulnerability assessment (VA) solutions. One of the changes involves deprecating the "Bring Your Own License" capability within Defender for Cloud and transitioning to the Microsoft Defender connectors to provide a more seamless, integrated, and comprehensive solution. 
 
 **Next Steps**  
 
