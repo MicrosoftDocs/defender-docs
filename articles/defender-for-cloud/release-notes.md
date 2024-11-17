@@ -42,7 +42,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November 18, 2024
 
-Defender for Cloud provides a suite of new features to empower SOC teams to [tackle container threats](https://learn.microsoft.com/defender-xdr/investigate-respond-container-threats) in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
+Defender for Cloud provides a suite of new features to empower SOC teams to [tackle container threats](/defender-xdr/investigate-respond-container-threats) in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
 
 #### Threat Analytics report for containers
 
