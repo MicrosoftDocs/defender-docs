@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 11/05/2024
+ms.date: 11/17/2024
 #customer intent: As a security administrator, I want to understand the integration of API security testing tools so that I can enhance the security of our APIs.
 ---
 
@@ -32,10 +32,10 @@ This feature requires a DevOps connector in Defender for Cloud. See [how to onbo
 
 ## Supported applications
 
-| Logo                                                         | Partner name                                                 | Description                                                  | Enablement Guide                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Logo | Partner name | Description | Enablement Guide |
+|--|--|--|--|
 | :::image type="icon" source="media/defender-partner-applications/42crunch-logo.png" border="false"::: | [42Crunch](https://aka.ms/APISecurityTestingPartnershipIgnite2023) | [42Crunch](https://aka.ms/APISecurityTestingPartnershipIgnite2023) | Developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. |
-| :::image type="icon" source="media/defender-partner-applications/stackhawk-logo.png" border="false"::: | [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk)    | StackHawk is the only modern DAST and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
+| :::image type="icon" source="media/defender-partner-applications/stackhawk-logo.png" border="false"::: | [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk) | StackHawk is the only modern DAST and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
 | :::image type="icon" source="media/defender-partner-applications/bright-security-logo.png" border="false"::: | [Bright Security](https://aka.ms/APISecurityTestingPRBrightSecurity) | Bright Security’s dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and LLM applications. Bright knows how to deliver the right tests, at the right time in the SDLC, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) |
 
 ## Related content
