@@ -32,7 +32,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | November 18 | Preview | [Introducing Cloud Native Response Actions for Kubernetes Pods](#introducing-cloud-native-response-actions-for-kubernetes-pods) |
-| November 18 | Upcoming Change | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
@@ -51,25 +50,6 @@ The following are new response actions:
 **Pod Termination** - Quickly terminate suspicious pods, stopping malicious activity without disrupting the broader application.
 
 These actions empower SOC teams to contain threats effectively across cloud environments.
-
-## Deprecation of Bring your own License (BYOL) feature in vulnerability management
-November 18, 2024
-
-- **Estimated date for change:**
-
-  - *February 2025:* The feature will no longer be available for onboarding new machines & subscriptions. 
-  
-  - *May 2025:* The feature will be fully deprecated and no longer available. 
-  
-**Description**
-
-We are dedicated to enhancing your security experience with Defender for Cloud. As part of this mission, we are making strategic changes to streamline and improve our vulnerability assessment (VA) solutions. One of the changes involves deprecating the "Bring Your Own License" capability within Defender for Cloud and transitioning to the Microsoft Defender connectors to provide a more seamless, integrated, and comprehensive solution. 
-
-**Next Steps**  
-
-We recommend that all customers transition to the new connectors' solution within Microsoft Defender. Our team is here to support you through this transition. 
-
- For more information on using the connectors, please visit the [Overview of connecting data sources in Microsoft Security Exposure Management - Microsoft Security Exposure Management(/security-exposure-management/overview-data-connectors) documentation. 
 
 ### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
 
