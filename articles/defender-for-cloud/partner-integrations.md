@@ -82,7 +82,7 @@ The following table lists partners that provide integration with Defender for Cl
 | Phoenix Security |  | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Phoenix integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |
 | Nucleus | :::image type="icon" source="media/partner-integrations/nucleus-logo.png" border="false"::: | Nucleus is a cybersecurity company that unifies your security, asset, and threat data so teams can automatically prioritize and mitigate critical exposures. | [Nucleus integration page](https://nucleussec.com/Integration/) |
 
-Security solutions providers are invited to utilize the following link to learn how to integrate their partner solutions with Defender for Cloud.
+Security solutions providers are invited to [learn how to integrate their partner solutions with Defender for Cloud](integrate-partner-integrations.md).
 
 ## Security solutions (legacy)
 
