@@ -27,7 +27,6 @@ For the full list of available integrations, see the [overview of partner integr
 
 ## Connect the integration
 
-
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
@@ -47,8 +46,3 @@ For the full list of available integrations, see the [overview of partner integr
 1. Select **Save**.
 
 The integration is now connected to Defender for Cloud and appears in the list of connected integrations.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> 

@@ -24,8 +24,6 @@ You can review the [list of available integrations](partner-integrations.md).
 
 ## Create the partner application
 
-Before you can 
-
 Depending on which integration you want to enable, after you finish these steps, you might need to follow other steps to complete the integration on the partners' side.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -87,6 +85,3 @@ Once you create the client secret, you need to grant permissions to the applicat
 1. Follow the steps again to add the **Reader** role.
 
 Repeat these steps for any other relevant subscriptions.
-
-## Next step
-

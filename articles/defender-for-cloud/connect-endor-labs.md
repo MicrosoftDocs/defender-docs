@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Connect Endor Labs to Defender for Cloud
 
-Microsoft Defender for Cloud's integration with Endor Labs enhances the security of software applications by identifying and mitigating vulnerabilities in partner dependencies. This integration streamlines the discovery and remediation processes, improving overall security. 
+Microsoft Defender for Cloud's integration with Endor Labs enhances the security of software applications by identifying and mitigating vulnerabilities in partner dependencies. This integration streamlines the discovery and remediation processes, improving overall security.
 
 This article provides a detailed explanation of the benefits and procedures needed to connect Endor Labs to Defender for Cloud. By following the steps outlined, security teams are able to gain enhanced visibility and control over potential threats, from the initial stages of code development all the way through to runtime.
 
@@ -23,18 +23,18 @@ This article provides a detailed explanation of the benefits and procedures need
 
 - You must [enable Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
-- Connect your DevOps environments to Defender for Cloud: 
-    - [Azure DevOps organizations](quickstart-onboard-devops.md)
-    - [GitHub organizations](quickstart-onboard-github.md)
-    - [GitLab groups](quickstart-onboard-devops.md)
+- Connect your DevOps environments to Defender for Cloud:
+  - [Azure DevOps organizations](quickstart-onboard-devops.md)
+  - [GitHub organizations](quickstart-onboard-github.md)
+  - [GitLab groups](quickstart-onboard-devops.md)
 
 - Have an account with [Endor Labs](https://www.endorlabs.com/).
 
-- Have an [API key from Endor Labs](https://docs.endorlabs.com/administration/api-keys/) with read-only permissions. We recommend setting the expiration date to be 180 days. 
+- Have an [API key from Endor Labs](https://docs.endorlabs.com/administration/api-keys/) with read-only permissions. We recommend setting the expiration date to be 180 days.
 
 - You must have the appropriate role to:
-    - **Create the connector**: Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra.
-    - **View reachability analysis findings**: Security Admin or Security Reader assigned through Azure role-based-access control (RBAC).
+  - **Create the connector**: Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra.
+  - **View reachability analysis findings**: Security Admin or Security Reader assigned through Azure role-based-access control (RBAC).
 
 ## Connect Endor Labs
 
