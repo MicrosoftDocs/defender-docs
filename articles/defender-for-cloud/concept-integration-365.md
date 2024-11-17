@@ -36,7 +36,9 @@ Microsoft Defender XDR's advanced hunting capabilities are extended to include D
 
 The advanced hunting experience in Microsoft Defender XDR is designed to provide security teams with the flexibility to create custom queries to hunt for threats across their environment. The integration with Defender for Cloud alerts and incidents allows security teams to hunt for threats across their cloud resources, devices, and identities.
 
-The [CloudAuditEvents table](/defender-xdr/advanced-hunting-cloudauditevents-table) in advanced hunting allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.
+The [CloudAuditEvents table](/defender-xdr/advanced-hunting-cloudauditevents-table) in advanced hunting allows you to investigate and hunt through control plane events and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.  
+
+The [CloudProcessEvents table](/defender-xdr/advanced-hunting-cloudauditevents-table) in advanced hunting allows you to triage, investigate and create custom detections for suspicious activities that are invoked in your cloud infrastructure with information that includes details on the process details.   
 
 ## Sentinel customers
 
