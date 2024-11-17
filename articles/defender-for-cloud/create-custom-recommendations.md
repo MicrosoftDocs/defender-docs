@@ -60,6 +60,19 @@ We recommend using the query editor to create a recommendation query.
 1. Select **Run query** to test the query you created.
 1. When the query is ready, cut and paste it from the editor into the **Recommendations query** pane.
 
+## Use custom recommendations at scale
+
+Creating custom recommendations through the Azure portal user interface is best for most users. The interface provides a convenient Kusto Query Language (KQL) editor and built-in validation tools. However, automating the creation of recommendations with a programmatic approach can be helpful. This method is especially useful when you need to deploy recommendations across many environments or subscriptions.  
+
+### Automate via the API  
+
+If you prevalidated KQL queries and want to automate creating custom recommendations, you can use the Azure Defender for Cloud application programming interface (API). This method lets you deploy recommendations quickly, ensuring they're consistent and scalable across your cloud environments.  
+
+- **Advantages**: You can automate and scale the deployment of custom recommendations.  
+- **When to use**: This method is ideal for large-scale implementations where you need to apply recommendations consistently across multiple environments.  
+
+For more information about using the API to manage custom recommendations, see the [API documentation](/rest/api/defenderforcloud/operation-groups).
+
 ## Create a custom standard
 
 Custom recommendations can be assigned to one or more custom standards.
@@ -162,8 +175,6 @@ This example shows you how to remove an assignment:
   DELETE   
   https://management.azure.com/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01 
 ```
-
-
 
 ### Enhance custom recommendations (legacy)
 
