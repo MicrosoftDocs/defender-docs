@@ -31,14 +31,48 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| November 18 | Preview | [Introducing Cloud Native Response Actions for Kubernetes Pods](#introducing-cloud-native-response-actions-for-kubernetes-pods) |
+| November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
+| November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods) |
 | November 18 | Upcoming Change | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
-## Introducing Cloud Native Response Actions for Kubernetes Pods
+## Enhancements to detect & respond to container threats 
+
+November 18, 2024
+
+Defender for Cloud provides a suite of new features to empower SOC teams to [tackle container threats](https://learn.microsoft.com/defender-xdr/investigate-respond-container-threats) in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
+
+### Threat Analytics report for containers
+
+We are introducing a dedicated Threat Analytics report, designed to provide comprehensive visibility into threats targeting containerized environments. This report equips SOC teams with insights to detect and respond to the latest attack patterns on AKS, EKS, and GKE clusters.
+
+**Key Highlights**
+
+* Detailed analysis of top threats and associated attack techniques within Kubernetes environments.
+* Actionable recommendations to strengthen your cloud-native security posture and mitigate emerging risks.
+
+### GoHunt for Kubernetes pods & Azure resources
+
+GoHunt now extends its hunting capabilities to include Kubernetes pods and Azure resources, within the Defender XDR portal. This feature enhances proactive threat hunting, enabling SOC analysts to conduct in-depth investigations across cloud-native workloads.
+
+**Key Features**
+
+* Advanced query capabilities to detect anomalies in Kubernetes pods and Azure resources, offering richer context for threat analysis.
+* Seamless integration with Kubernetes entities for efficient threat hunting and investigation.
+
+### Security Copilot Guided Response for Kubernetes pods
+
+Introducing Guided Response for Kubernetes pods, a feature powered by Security Copilot. This new capability provides real-time, step-by-step guidance, helping SOC teams respond to container threats swiftly and effectively.
+
+**Key Benefits**
+
+* Contextual response playbooks tailored to common Kubernetes attack scenarios.
+* Expert, real-time support from Security Copilot, bridging the knowledge gap and enabling faster resolution.
+
+## Introducing cloud-native response actions for Kubernetes pods (Preview)
 
 November 18, 2024
 
