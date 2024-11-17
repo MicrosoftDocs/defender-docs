@@ -86,25 +86,6 @@ The following are new response actions:
 
 These actions empower SOC teams to contain threats effectively across cloud environments.
 
-## Deprecation of Bring your own License (BYOL) feature in vulnerability management
-November 18, 2024
-
-- **Estimated date for change:**
-
-  - *February 2025:* The feature will no longer be available for onboarding new machines & subscriptions. 
-  
-  - *May 2025:* The feature will be fully deprecated and no longer available. 
-  
-**Description**
-
-We are dedicated to enhancing your security experience with Defender for Cloud. As part of this mission, we are making strategic changes to streamline and improve our vulnerability assessment (VA) solutions. One of the changes involves deprecating the "Bring Your Own License" capability within Defender for Cloud and transitioning to the Microsoft Defender connectors to provide a more seamless, integrated, and comprehensive solution. 
-
-**Next Steps**  
-
-We recommend that all customers transition to the new connectors' solution within Microsoft Defender. Our team is here to support you through this transition. 
-
- For more information on using the connectors, please visit the [Overview of connecting data sources in Microsoft Security Exposure Management - Microsoft Security Exposure Management(/security-exposure-management/overview-data-connectors) documentation. 
-
 ### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
 
 November 15, 2024
