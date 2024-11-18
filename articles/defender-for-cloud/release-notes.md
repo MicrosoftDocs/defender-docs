@@ -31,9 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| November 19 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
-| November 18 | Preview | [Introducing Cloud Native Response Actions for Kubernetes Pods](#introducing-cloud-native-response-actions-for-kubernetes-pods) |
-| November 18 | Upcoming Change | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
+| November 18 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
+| November 18 | GA | [Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
 | November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
 | November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
 | November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
@@ -44,7 +43,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### AI security posture management is now generally available (GA)
 
-November 19, 2024
+November 18, 2024
 
 Defender for Cloud's AI security posture management features are now generally available (GA). 
 
@@ -58,7 +57,31 @@ Defender for Cloud reduces risk to cross cloud AI workloads by:
 
 Learn more about [AI security posture management](ai-security-posture.md).
 
-### Introducing Cloud Native Response Actions for Kubernetes Pods
+### Critical assets protection in Microsoft Defender for Cloud
+
+November 18, 2024
+
+Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](/azure/defender-for-cloud/critical-assets-protection).
+
+Alongside the General Availability release, we are also expending support for tagging Kubernetes and non-human identity resources.
+
+### Enhanced critical asset protection for containers
+
+November 18, 2024 
+
+[Critical asset protection](./critical-assets-protection.md) has been extended to support additional use cases for containers.
+
+Users can now create custom rules that mark assets managed by Kubernetes (workloads, containers, etc.) as critical based on the asset Kubernetes namespace and/or the asset Kubernetes label. 
+
+As with other critical asset protection use cases, Defender for Cloud takes into account asset criticality for risk prioritization, attack path analysis, and security explorer.
+
+### Enhancements to detect & respond to container threats 
+
+November 18, 2024
+
+Defender for Cloud provides a suite of new features to empower SOC teams to tackle container threats in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
+
+### Introducing cloud-native response actions for Kubernetes pods
 
 November 18, 2024
 
@@ -71,22 +94,6 @@ The following are new response actions:
 **Pod Termination** - Quickly terminate suspicious pods, stopping malicious activity without disrupting the broader application.
 
 These actions empower SOC teams to contain threats effectively across cloud environments.
-
-### Enhanced critical asset protection for containers
-
-November 18, 2024 
-
-[Critical asset protection](./critical-assets-protection.md) has been extended to support additional use cases for containers.
-
-Users can now create custom rules that mark assets managed by Kubernetes (workloads, containers, etc.) as critical based on the asset Kubernetes namespace and/or the asset Kubernetes label. 
-
-As with other critical asset protection use cases, Defender for Cloud takes into account asset criticality for risk prioritization, attack path analysis, and security explorer.  
-
-### Enhancements to detect & respond to container threats 
-
-November 18, 2024
-
-Defender for Cloud provides a suite of new features to empower SOC teams to tackle container threats in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
 
 #### Threat Analytics report for containers
 
