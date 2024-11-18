@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 10/31/2024
+ms.date: 11/18/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -32,10 +32,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | November 19 | Preview | [On-demand malware scanning in Microsoft Defender for Storage (Preview)](#on-demand-malware-scanning-in-microsoft-defender-for-storage-preview) |
-| November 18 |GA|[Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
+| November 18 | Preview | [JFrog Artifactory container registry support by Defender for Containers](#jfrog-artifactory-container-registry-support-by-defender-for-containers-preview) |
+| November 18 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
+| November 18 | GA | [Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
 | November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
 | November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
-| November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
+| November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods (Preview)](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
@@ -55,6 +57,28 @@ Use cases:
 
 For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
 
+### JFrog Artifactory container registry support by Defender for Containers (Preview)
+
+November 18, 2024
+
+This feature extends Microsoft Defender for Containers coverage of external registries to include JFrog Artifactory. Your JFrog Artifactory container images are scanned using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
+
+### AI security posture management is now generally available (GA)
+
+November 18, 2024
+
+Defender for Cloud's AI security posture management features are now generally available (GA).
+
+Defender for Cloud reduces risk to cross cloud AI workloads by:
+
+- Discovering generative AI Bill of Materials (AI BOM), which includes application components, data, and AI artifacts from code to cloud.
+
+- Strengthening generative AI application security posture with built-in recommendations and by exploring and remediating security risks.
+
+- Using the attack path analysis to identify and remediate risks.
+
+Learn more about [AI security posture management](ai-security-posture.md).
+
 ### Critical assets protection in Microsoft Defender for Cloud
 
 November 18, 2024
@@ -71,13 +95,27 @@ November 18, 2024
 
 Users can now create custom rules that mark assets managed by Kubernetes (workloads, containers, etc.) as critical based on the asset Kubernetes namespace and/or the asset Kubernetes label.
 
-As with other critical asset protection use cases, Defender for Cloud takes into account asset criticality for risk prioritization, attack path analysis, and security explorer.  
+As with other critical asset protection use cases, Defender for Cloud takes into account asset criticality for risk prioritization, attack path analysis, and security explorer.
 
 ### Enhancements to detect & respond to container threats
 
 November 18, 2024
 
-Defender for Cloud provides a suite of new features to empower SOC teams to tackle container threats in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
+Defender for Cloud provides a suite of new features to empower SOC teams to [tackle container threats](/defender-xdr/investigate-respond-container-threats) in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
+
+### Introducing cloud-native response actions for Kubernetes pods (Preview)
+
+November 18, 2024
+
+Defender for Cloud now offers multicloud response actions for Kubernetes pods, accessible exclusively from the Defender XDR portal. These capabilities enhance incident response for AKS, EKS, and GKE clusters.
+
+The following are new response actions:
+
+**Network Isolation** - Instantly block all traffic to a pod, preventing lateral movement and data exfiltration. Requires network policy configuration on your kubernetes cluster.
+
+**Pod Termination** - Quickly terminate suspicious pods, stopping malicious activity without disrupting the broader application.
+
+These actions empower SOC teams to contain threats effectively across cloud environments.
 
 #### Threat Analytics report for containers
 
@@ -105,20 +143,6 @@ Introducing Guided Response for Kubernetes pods, a feature powered by Security C
 
 - Contextual response playbooks tailored to common Kubernetes attack scenarios.
 - Expert, real-time support from Security Copilot, bridging the knowledge gap and enabling faster resolution.
-
-### Introducing cloud-native response actions for Kubernetes pods (Preview)
-
-November 18, 2024
-
-Defender for Cloud now offers multicloud response actions for Kubernetes pods, accessible exclusively from the Defender XDR portal. These capabilities enhance incident response for AKS, EKS, and GKE clusters.
-
-The following are new response actions:
-
-**Network Isolation** - Instantly block all traffic to a pod, preventing lateral movement and data exfiltration. Requires network policy configuration on your kubernetes cluster.
-
-**Pod Termination** - Quickly terminate suspicious pods, stopping malicious activity without disrupting the broader application.
-
-These actions empower SOC teams to contain threats effectively across cloud environments.
 
 ### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
 
