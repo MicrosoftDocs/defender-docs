@@ -40,7 +40,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
-### Agentless code scanning in Microsoft Defender for Cloud (Preview)
+### Agentless code scanning in Microsoft Defender for Cloud (preview)
 
 November 19, 2024
 
