@@ -55,4 +55,4 @@ Remediation of K8s node vulnerabilities is performed by updating the VM image ve
 
 1. Select the `Fix` button in the recommendations pane.
 
-:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details.png" alt-text="Screenshot showing the details of the recommendation for the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details.png":::
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png" alt-text="Screenshot showing the details of the recommendation for the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details.png":::
