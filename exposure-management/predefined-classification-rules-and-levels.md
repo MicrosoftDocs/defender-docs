@@ -97,6 +97,14 @@ Current asset types are:
 | Yammer Administrator                          | Identity   | High                      | Identities in this role can manage all aspects of the Yammer service. |
 | Authentication Extensibility Administrator    | Identity   | High                      | Identities in this role can customize sign in and sign up experiences for users by creating and managing custom authentication extensions. |
 | Lifecycle Workflows Administrator             | Identity   | High                      | Identities in this role create and manage all aspects of workflows and tasks associated with Lifecycle Workflows in Microsoft Entra ID. |
+| Senior Executive (Technology)      | Identity | Very High | Identities with this classification belong to senior executives in the field of Technology. |
+| Senior Executive (Finance)         | Identity | Very High | Identities with this classification belong to senior executives in the field of Finance. |
+| Senior Executive (Operations)      | Identity | Very High | Identities with this classification belong to senior executives in the field of Operations. |
+| igh Level Executives (Marketing)   | Identity | Very High | Identities with this classification belong to senior executives in the field of Marketing. |
+| Senior Executive (Information)     | Identity | Very High | Identities with this classification belong to senior executives in the field of Information. |
+| Senior Executive (Execution)       | Identity | Very High | Identities with this classification belong to senior executives in the field of Execution. |
+| Senior Executive (Human Resources) | Identity | Very High | Identities with this classification belong to senior executives in the field of Human Resources. |
+| Senior Executive (Unclassified)    | Identity | Very High | Identities with this classification belong to senior executives in an unclassified field. |
 
 ##### Cloud resource
 

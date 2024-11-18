@@ -26,6 +26,23 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 ## November 2024
 
+### New predefined classifications
+
+The following predefined **Identity** classification rules were added to the critical assets list:
+
+| Classification                     | Description                                                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Senior Executive (Technology)      | This rule applies to identities classified as senior executives in the field of Technology. |
+| Senior Executive (Finance)         | This rule applies to identities classified as senior executives in the field of Finance. |
+| Senior Executive (Operations)      | This rule applies to identities classified as senior executives in the field of Operations. |
+| igh Level Executives (Marketing)   | This rule applies to identities classified as senior executives in the field of Marketing. |
+| Senior Executive (Information)     | This rule applies to identities classified as senior executives in the field of Information. |
+| Senior Executive (Execution)       | This rule applies to identities classified as senior executives in the field of Execution. |
+| Senior Executive (Human Resources) | This rule applies to identities classified as senior executives in the field of Resources. |
+| Senior Executive (Unclassified)    | This rule applies to identities classified as senior executives in an unclassified field. |
+
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
+
 ### Announcing the General Availability of Microsoft Security Exposure Management
 
 We are excited to announce the general availability of Microsoft Security Exposure Management. This powerful tool helps organizations focus on their most critical exposures and act swiftly. By integrating security insights across the entire digital estate, it provides a comprehensive view of risk posture, enabling faster, more informed decisions to reduce exposure before attackers can exploit it.
