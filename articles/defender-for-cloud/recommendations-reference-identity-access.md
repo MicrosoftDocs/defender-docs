@@ -35,30 +35,6 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: High
 
-### [Accounts with owner permissions on Azure resources should be MFA enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6240402e-f77c-46fa-9060-a7ce53997754)
-
-**Description**: If you only use passwords to authenticate your users, you're leaving an attack vector open. Users often use weak passwords for multiple services. By enabling [multifactor authentication](multi-factor-authentication-enforcement.md) (MFA), you provide better security for your accounts, while still allowing your users to authenticate to almost any application with single sign-on (SSO). Multifactor authentication is a process by which users are prompted, during the sign-in process, for another form of identification. For example, a code might be sent to their cellphone, or they might be asked for a fingerprint scan. We recommend you to enable MFA for all accounts that have [owner permissions](/azure/role-based-access-control/built-in-roles#owner) on Azure resources, to prevent breach and attacks.
- More details and frequently asked questions are available here: [Manage multifactor authentication (MFA) enforcement on your subscriptions](multi-factor-authentication-enforcement.md)
-(No related policy).
-
-**Severity**: High
-
-### [Accounts with read permissions on Azure resources should be MFA enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/dabc9bc4-b8a8-45bd-9a5a-43000df8aa1c)
-
-**Description**: If you only use passwords to authenticate your users, you're leaving an attack vector open. Users often use weak passwords for multiple services. By enabling [multifactor authentication](multi-factor-authentication-enforcement.md) (MFA), you provide better security for your accounts, while still allowing your users to authenticate to almost any application with single sign-on (SSO). Multifactor authentication is a process by which users are prompted, during the sign-in process, for an additional form of identification. For example, a code might be sent to their cellphone, or they might be asked for a fingerprint scan. We recommend you to enable MFA for all accounts that have [read permissions](/azure/role-based-access-control/built-in-roles#owner) on Azure resources, to prevent breach and attacks.
- More details and frequently asked questions are available [here](multi-factor-authentication-enforcement.md).
-(No related policy)
-
-**Severity**: High
-
-### [Accounts with write permissions on Azure resources should be MFA enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c0cb17b2-0607-48a7-b0e0-903ed22de39b)
-
-**Description**: If you only use passwords to authenticate your users, you are leaving an attack vector open. Users often use weak passwords for multiple services. By enabling [multifactor authentication](multi-factor-authentication-enforcement.md) (MFA), you provide better security for your accounts, while still allowing your users to authenticate to almost any application with single sign-on (SSO). Multifactor authentication is a process by which users are prompted, during the sign-in process, for an additional form of identification. For example, a code might be sent to their cellphone, or they might be asked for a fingerprint scan. We recommend you to enable MFA for all accounts that have [write permissions](/azure/role-based-access-control/built-in-roles#owner) on Azure resources, to prevent breach and attacks.
- More details and frequently asked questions are available here: [Manage multifactor authentication (MFA) enforcement on your subscriptions](multi-factor-authentication-enforcement.md)
-(No related policy).
-
-**Severity**: High
-
 ### [Azure Cosmos DB accounts should use Azure Active Directory as the only authentication method](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/14acab4e-ad95-11ec-b909-0242ac120002)
 
 **Description**: The best way to authenticate to Azure services is by using Role-Based Access Control (RBAC). RBAC allows you to maintain the minimum privilege principle and supports the ability to revoke permissions as an effective method of response when compromised. You can configure your Azure Cosmos DB account to enforce RBAC as the only authentication method. When the enforcement is configured, all other methods of access will be denied (primary/secondary keys and access tokens).
