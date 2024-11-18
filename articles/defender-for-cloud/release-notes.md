@@ -32,6 +32,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | November 19 | Preview | [On-demand malware scanning in Microsoft Defender for Storage (Preview)](#on-demand-malware-scanning-in-microsoft-defender-for-storage-preview) |
+| November 18 |GA|[Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
+| November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
+| November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
+| November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
+| November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
+| November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
@@ -49,6 +55,100 @@ Use cases:
 
 For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
 
+### Critical assets protection in Microsoft Defender for Cloud
+
+November 18, 2024
+
+Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](/azure/defender-for-cloud/critical-assets-protection).
+
+Alongside the General Availability release, we are also expending support for tagging Kubernetes and non-human identity resources.
+
+### Enhanced critical asset protection for containers
+
+November 18, 2024
+
+[Critical asset protection](./critical-assets-protection.md) has been extended to support additional use cases for containers.
+
+Users can now create custom rules that mark assets managed by Kubernetes (workloads, containers, etc.) as critical based on the asset Kubernetes namespace and/or the asset Kubernetes label.
+
+As with other critical asset protection use cases, Defender for Cloud takes into account asset criticality for risk prioritization, attack path analysis, and security explorer.  
+
+### Enhancements to detect & respond to container threats
+
+November 18, 2024
+
+Defender for Cloud provides a suite of new features to empower SOC teams to tackle container threats in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
+
+#### Threat Analytics report for containers
+
+We are introducing a dedicated Threat Analytics report, designed to provide comprehensive visibility into threats targeting containerized environments. This report equips SOC teams with insights to detect and respond to the latest attack patterns on AKS, EKS, and GKE clusters.
+
+**Key Highlights**:
+
+- Detailed analysis of top threats and associated attack techniques within Kubernetes environments.
+- Actionable recommendations to strengthen your cloud-native security posture and mitigate emerging risks.
+
+#### GoHunt for Kubernetes pods & Azure resources
+
+GoHunt now extends its hunting capabilities to include Kubernetes pods and Azure resources, within the Defender XDR portal. This feature enhances proactive threat hunting, enabling SOC analysts to conduct in-depth investigations across cloud-native workloads.
+
+**Key Features**:
+
+- Advanced query capabilities to detect anomalies in Kubernetes pods and Azure resources, offering richer context for threat analysis.
+- Seamless integration with Kubernetes entities for efficient threat hunting and investigation.
+
+#### Security Copilot Guided Response for Kubernetes pods
+
+Introducing Guided Response for Kubernetes pods, a feature powered by Security Copilot. This new capability provides real-time, step-by-step guidance, helping SOC teams respond to container threats swiftly and effectively.
+
+**Key Benefits**:
+
+- Contextual response playbooks tailored to common Kubernetes attack scenarios.
+- Expert, real-time support from Security Copilot, bridging the knowledge gap and enabling faster resolution.
+
+### Introducing cloud-native response actions for Kubernetes pods (Preview)
+
+November 18, 2024
+
+Defender for Cloud now offers multicloud response actions for Kubernetes pods, accessible exclusively from the Defender XDR portal. These capabilities enhance incident response for AKS, EKS, and GKE clusters.
+
+The following are new response actions:
+
+**Network Isolation** - Instantly block all traffic to a pod, preventing lateral movement and data exfiltration. Requires network policy configuration on your kubernetes cluster.
+
+**Pod Termination** - Quickly terminate suspicious pods, stopping malicious activity without disrupting the broader application.
+
+These actions empower SOC teams to contain threats effectively across cloud environments.
+
+### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
+
+November 15, 2024
+
+API security posture management (Preview) capabilities are now included in the Defender CSPM plan and can be enabled through extensions within the plan under environment settings page. For more information, see [Improve your API security posture (Preview)](api-security-posture-overview.md).
+
+### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes
+
+November 13, 2024
+
+Defender for Cloud now provides vulnerability assessment and malware detection for the nodes in Azure Kubernetes Service (AKS), and provides clarity to customers on their part in the shared security responsibility they have with the managed cloud provider.
+
+Providing security protection for these Kubernetes nodes allow customers to maintain security and compliance across the managed Kubernetes service.
+
+To receive the new capabilities, you have to enable the **agentless scanning for machines** option in the Defender CSPM, Defender for Containers, or Defender for Servers P2 plan in your subscription.
+
+#### Vulnerability Assessment
+
+A new recommendation is now available in Azure portal: `AKS nodes should have vulnerability findings resolved`. Through this recommendation, you can now review and remediate vulnerabilities and CVEs found on Azure Kubernetes Service (AKS) nodes.
+
+#### Malware detection
+
+New security alerts are triggered when the agentless malware detection capability detects malware in AKS nodes.
+
+Agentless malware detection uses the Microsoft Defender Antivirus anti-malware engine to scan and detect malicious files. When threats are detected, security alerts are directed into Defender for Cloud and Defender XDR, where they can be investigated and remediated.
+
+> [!IMPORTANT]
+> Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments.
+
 ### Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool
 
 November 7, 2024
@@ -57,7 +157,12 @@ November 7, 2024
 
 - Scenario-based alert documentation: K8s alerts are now documented based on real-world scenarios, providing clearer guidance on potential threats and recommended actions.
 - Microsoft Defender for Endpoint (MDE) integration: Alerts are enriched with additional context and threat intelligence from MDE, improving you the ability to respond effectively.
+<<<<<<< HEAD
 - New Simulation Tool: A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
+=======
+- [New Simulation Tool](./alerts-containers.md#k8s-alerts-simulation-tool): A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
+
+>>>>>>> 77d995790cdf19314a7565ff2128f2ac834b4d5b
 
 #### Benefits
 
