@@ -36,7 +36,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
 | November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
-| November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes) |
+| November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
@@ -54,7 +54,7 @@ Use cases:
 
 For more information, see [Agentless code scanning in Microsoft Defender for Cloud](agentless-code-scanning.md).
 
-### Enhanced critical asset protection for containers
+## Enhanced critical asset protection for containers
 
 November 18, 2024
 
