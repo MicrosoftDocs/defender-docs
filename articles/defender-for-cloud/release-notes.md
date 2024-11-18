@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/17/2024
+ms.date: 11/18/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -34,6 +34,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 19 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
 | November 18 | Preview | [Introducing Cloud Native Response Actions for Kubernetes Pods](#introducing-cloud-native-response-actions-for-kubernetes-pods) |
 | November 18 | Upcoming Change | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
+| November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
+| November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
+| November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
@@ -55,7 +58,7 @@ Defender for Cloud reduces risk to cross cloud AI workloads by:
 
 Learn more about [AI security posture management](ai-security-posture.md).
 
-## Introducing Cloud Native Response Actions for Kubernetes Pods
+### Introducing Cloud Native Response Actions for Kubernetes Pods
 
 November 18, 2024
 
@@ -69,24 +72,48 @@ The following are new response actions:
 
 These actions empower SOC teams to contain threats effectively across cloud environments.
 
-## Deprecation of Bring your own License (BYOL) feature in vulnerability management
+### Enhanced critical asset protection for containers
+
+November 18, 2024 
+
+[Critical asset protection](./critical-assets-protection.md) has been extended to support additional use cases for containers.
+
+Users can now create custom rules that mark assets managed by Kubernetes (workloads, containers, etc.) as critical based on the asset Kubernetes namespace and/or the asset Kubernetes label. 
+
+As with other critical asset protection use cases, Defender for Cloud takes into account asset criticality for risk prioritization, attack path analysis, and security explorer.  
+
+### Enhancements to detect & respond to container threats 
+
 November 18, 2024
 
-- **Estimated date for change:**
+Defender for Cloud provides a suite of new features to empower SOC teams to tackle container threats in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
 
-  - *February 2025:* The feature will no longer be available for onboarding new machines & subscriptions. 
-  
-  - *May 2025:* The feature will be fully deprecated and no longer available. 
-  
-**Description**
+#### Threat Analytics report for containers
 
-We are dedicated to enhancing your security experience with Defender for Cloud. As part of this mission, we are making strategic changes to streamline and improve our vulnerability assessment (VA) solutions. One of the changes involves deprecating the "Bring Your Own License" capability within Defender for Cloud and transitioning to the Microsoft Defender connectors to provide a more seamless, integrated, and comprehensive solution. 
+We are introducing a dedicated Threat Analytics report, designed to provide comprehensive visibility into threats targeting containerized environments. This report equips SOC teams with insights to detect and respond to the latest attack patterns on AKS, EKS, and GKE clusters.
 
-**Next Steps**  
+**Key Highlights**
 
-We recommend that all customers transition to the new connectors' solution within Microsoft Defender. Our team is here to support you through this transition. 
+* Detailed analysis of top threats and associated attack techniques within Kubernetes environments.
+* Actionable recommendations to strengthen your cloud-native security posture and mitigate emerging risks.
 
- For more information on using the connectors, please visit the [Overview of connecting data sources in Microsoft Security Exposure Management - Microsoft Security Exposure Management(/security-exposure-management/overview-data-connectors) documentation. 
+#### GoHunt for Kubernetes pods & Azure resources
+
+GoHunt now extends its hunting capabilities to include Kubernetes pods and Azure resources, within the Defender XDR portal. This feature enhances proactive threat hunting, enabling SOC analysts to conduct in-depth investigations across cloud-native workloads.
+
+**Key Features**
+
+* Advanced query capabilities to detect anomalies in Kubernetes pods and Azure resources, offering richer context for threat analysis.
+* Seamless integration with Kubernetes entities for efficient threat hunting and investigation.
+
+#### Security Copilot Guided Response for Kubernetes pods
+
+Introducing Guided Response for Kubernetes pods, a feature powered by Security Copilot. This new capability provides real-time, step-by-step guidance, helping SOC teams respond to container threats swiftly and effectively.
+
+**Key Benefits**
+
+* Contextual response playbooks tailored to common Kubernetes attack scenarios.
+* Expert, real-time support from Security Copilot, bridging the knowledge gap and enabling faster resolution.
 
 ### API Security Posture Management Native Integration within Defender CSPM plan now in public preview
 
