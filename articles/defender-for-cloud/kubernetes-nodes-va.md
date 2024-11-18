@@ -59,8 +59,8 @@ Remediation of K8s node vulnerabilities is performed by updating the VM image ve
 
 1. To update the node pool VM image, select the **Update Image** button
 
-:::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the details of the recommendation for the K8s node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
+:::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the K8s node pool for updating its image." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
 
 1. To update the cluster K8s service version, select the **Update Kubernetes** button
 
-:::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the details of the recommendation for the K8s node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
+:::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the recommendation for the K8s node for updating its K8s version." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
