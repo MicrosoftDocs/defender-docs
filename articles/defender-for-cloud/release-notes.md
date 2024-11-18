@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 18 | Preview | [JFrog Artifactory container registry support by Defender for Containers](#jfrog-artifactory-container-registry-support-by-defender-for-containers-preview) |
 | November 18 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
 | November 18 | GA | [Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
 | November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
@@ -40,6 +41,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+### JFrog Artifactory container registry support by Defender for Containers (Preview)
+
+November 18, 2024
+
+This feature extends Microsoft Defender for Containers coverage of external registries to include JFrog Artifactory. Your JFrog Artifactory container images are scanned using MDVM to identify security threats and mitigate potential security risks.
 
 ### AI security posture management is now generally available (GA)
 
