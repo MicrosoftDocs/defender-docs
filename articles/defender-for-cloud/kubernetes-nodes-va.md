@@ -23,7 +23,7 @@ Vulnerability assessment of the nodes must be [enabled by turning on the **Agent
 
 ## Review the K8s node vulnerability recommendations
 
-If the vulnerability assessment finds vulnerabilities for a K8s node, a recommendation is generated for the customer to review. To review K8s node recommendations for remediation in the Azure portal:
+If vulnerabilities are found for a K8s node, a recommendation is generated for the customer to review. To review K8s node recommendations for remediation in the Azure portal:
 
 1. Select **Recommendations** from the **Defender for Cloud** menu.
 
@@ -43,6 +43,8 @@ If the vulnerability assessment finds vulnerabilities for a K8s node, a recommen
 
 1. Selecting one of the CVE lines opens a pane giving full details about the CVE and all the K8s node resources that also have this vulnerability.
 
-:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-details.png" alt-text="Screenshot of the pane showing all the details of the CVE and K8s node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-detail.png" alt-text="Screenshot of the pane showing all the details of the CVE and K8s node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
 
-## Describe remediation process in MDC portal
+## Remediate K8s node vulnerabilities
+
+Remediation of K8s node vulnerabilities is performed by updating the VM image of the node.
