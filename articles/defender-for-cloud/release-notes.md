@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
+|November 18|GA|[Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
 | November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
 | November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
 | November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
@@ -54,7 +55,15 @@ Use cases:
 
 For more information, see [Agentless code scanning in Microsoft Defender for Cloud](agentless-code-scanning.md).
 
-## Enhanced critical asset protection for containers
+### Critical assets protection in Microsoft Defender for Cloud
+
+November 18, 2024
+
+Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](critical-assets-protection.md).
+
+Alongside the General Availability release, we are also expending support for tagging Kubernetes and non-human identity resources.
+
+### Enhanced critical asset protection for containers
 
 November 18, 2024
 
