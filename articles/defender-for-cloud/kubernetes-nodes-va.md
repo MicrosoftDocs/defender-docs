@@ -49,10 +49,15 @@ The category column indicates whether a vulnerability has a new node pool VM ima
 
 ## Remediate K8s node vulnerabilities
 
-Remediation of K8s node vulnerabilities is performed by updating the VM image version of the node pool. The node pool is updated by the customer as part of the shared responsibility between the K8s service and the customer. The customer updates the node pool in one of two ways - either update the node pool VM image or update the cluster's Kubernetes to a newer version. In some cases, the customer may need to update the cluster's Kubernetes version as well as the node pool VM image version.
+Remediation of K8s node vulnerabilities is performed by updating the VM image version of the node pool. The node pool is updated by the customer as part of the shared responsibility between the K8s service and the customer. The customer updates the node pool in one of two ways - either update the node pool VM image or update the cluster's Kubernetes to a newer version. **???It is recommended to update the cluster's Kubernetes version first. In the event that does not remediate the vulnerability, the node pool VM image can be updated next.???** In some cases, the customer may need to update the cluster's Kubernetes version as well as the node pool VM image version.
 
 ### Update the node pool VM image
 
 1. Select the `Fix` button in the recommendations pane.
 
-:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png" alt-text="Screenshot showing the details of the recommendation for the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details.png":::
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png" alt-text="Screenshot showing the details of the recommendation for the K8s node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png":::
+
+1. To update the node pool VM image, select the **Update Image** button
+
+:::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the details of the recommendation for the K8s node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
+
