@@ -41,10 +41,18 @@ If vulnerabilities are found for a K8s node, a recommendation is generated for t
 
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-findings.png" alt-text="Screenshot of selecting the findings tab to view a list of CVEs related to the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details-findings.png":::
 
+The category column indicates whether a vulnerability has a new node pool VM image or cluster Kubernetes version is available to remediate the vulnerability.
+
 1. Selecting one of the CVE lines opens a pane giving full details about the CVE and all the K8s node resources that also have this vulnerability.
 
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-detail.png" alt-text="Screenshot of the pane showing all the details of the CVE and K8s node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
 
 ## Remediate K8s node vulnerabilities
 
-Remediation of K8s node vulnerabilities is performed by updating the VM image of the node.
+Remediation of K8s node vulnerabilities is performed by updating the VM image version of the node pool. The node pool is updated by the customer as part of the shared responsibility between the K8s service and the customer. The customer updates the node pool in one of two ways - either update the node pool VM image or update the cluster's Kubernetes to a newer version. In some cases, the customer may need to update the cluster's Kubernetes version as well as the node pool VM image version.
+
+### Update the node pool VM image
+
+1. Select the `Fix` button in the recommendations pane.
+
+:::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details.png" alt-text="Screenshot showing the details of the recommendation for the K8s node." lightbox="media/kubernetes-nodes-va/recommendation-node-details.png":::
