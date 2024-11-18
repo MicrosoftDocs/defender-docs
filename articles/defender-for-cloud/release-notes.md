@@ -157,12 +157,7 @@ November 7, 2024
 
 - Scenario-based alert documentation: K8s alerts are now documented based on real-world scenarios, providing clearer guidance on potential threats and recommended actions.
 - Microsoft Defender for Endpoint (MDE) integration: Alerts are enriched with additional context and threat intelligence from MDE, improving you the ability to respond effectively.
-<<<<<<< HEAD
-- New Simulation Tool: A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
-=======
-- [New Simulation Tool](./alerts-containers.md#k8s-alerts-simulation-tool): A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
-
->>>>>>> 77d995790cdf19314a7565ff2128f2ac834b4d5b
+- [New Simulation Tool](alerts-containers.md#k8s-alerts-simulation-tool): A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
 
 #### Benefits
 
