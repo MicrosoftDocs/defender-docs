@@ -231,6 +231,8 @@
         - name: Protecting cloud deployment secrets
           href: secrets-scanning-cloud-deployment.md
           
+        - name: Protecting code repository secrets
+          href: secrets-scanning-code.md
       - name: Integrations
         items:  
         - name: ServiceNow
@@ -272,6 +274,10 @@
       items:
         - name: Agentless container posture in Defender CSPM
           href: concept-agentless-containers.md
+    - name: Improve API security posture
+      items:
+        - name: Overview
+          href: api-security-posture-overview.md
     - name: Improve AI security posture
       items:
       - name: AI security posture management (Preview)
@@ -341,7 +347,7 @@
               href: alerts-azure-vm-extensions.md
             - name: Alerts for Azure App Service
               href: alerts-azure-app-service.md
-            - name: Alerts for containers - Kubernetes clusters
+            - name: Alerts for Kubernetes clusters
               href: alerts-containers.md
             - name: Alerts for SQL Database and Azure Synapse Analytics
               href: alerts-sql-database-and-azure-synapse-analytics.md
@@ -361,7 +367,7 @@
               href: alerts-azure-ddos-protection.md
             - name: Alerts for Defender for APIs
               href: alerts-defender-for-apis.md
-            - name: Alerts for AI workloads
+            - name: Alerts for AI workloads (Preview)
               href: alerts-ai-workloads.md
             - name: Deprecated security alerts
               href: deprecated-alerts.md
@@ -399,6 +405,10 @@
         - name: Enable permissions management (CIEM)
           displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
           href: enable-permissions-management.md
+    - name: API security posture
+      items:
+        - name: Enable API security posture with Defender CSPM
+          href: enable-api-security-posture.md
     - name: AI security posture
       items:
         - name: Discover generative AI workloads
