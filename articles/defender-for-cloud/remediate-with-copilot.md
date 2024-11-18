@@ -1,5 +1,5 @@
 ---
-title: Remediate recommendations with Copilot for Security
+title: Remediate recommendations with Microsoft Security Copilot
 author: Elazark
 ms.author: elkrieger
 description: Learn how to remediate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
@@ -8,11 +8,11 @@ ms.date: 06/10/2024
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
-# Remediate recommendations with Copilot for Security
+# Remediate recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Copilot for Security allows you to remediate recommendations that are present on the recommendations page with natural language prompts. Remediating a recommendation with Copilot for Security allows you to improve your security posture by addressing the risks and vulnerabilities that are present in your environment.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to remediate recommendations that are present on the recommendations page with natural language prompts. Remediating a recommendation with Microsoft Security Copilot allows you to improve your security posture by addressing the risks and vulnerabilities that are present in your environment.
 
-Once a recommendation is summarized with Copilot for Security in Defender for Cloud, you can decide how best to handle it. By using prompts, you can have Copilot for Security assist you in the remediation process.
+Once a recommendation is summarized with Microsoft Security Copilot in Defender for Cloud, you can decide how best to handle it. By using prompts, you can have Microsoft Security Copilot assist you in the remediation process.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Once a recommendation is summarized with Copilot for Security in Defender for Cl
 
 - [Have access to Azure Copilot](/azure/copilot/overview).
 
-- [Have Security Compute Units assigned for Copilot for Security](/copilot/security/get-started-security-copilot).
+- [Have Security Compute Units assigned for Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
 ## Remediate a recommendation
 
@@ -53,4 +53,4 @@ If you're unable or unsure how to remediate a recommendation, you can ask Copilo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Delegate recommendations with Copilot for Security](delegate-with-copilot.md)
+> [Delegate recommendations with Microsoft Security Copilot](delegate-with-copilot.md)
