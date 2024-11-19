@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
 | November 19 | Preview | [On-demand malware scanning in Microsoft Defender for Storage (Preview)](#on-demand-malware-scanning-in-microsoft-defender-for-storage-preview) |
 | November 18 | Preview | [JFrog Artifactory container registry support by Defender for Containers](#jfrog-artifactory-container-registry-support-by-defender-for-containers-preview) |
 | November 18 | GA | [AI security posture management is now generally available (GA)](#ai-security-posture-management-is-now-generally-available-ga) |
@@ -42,6 +43,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+### Agentless code scanning in Microsoft Defender for Cloud (preview)
+
+November 19, 2024
+
+Agentless code scanning in Microsoft Defender for Cloud is now available for public preview. It offers fast and scalable security for all repositories in Azure DevOps organizations with one connector. This solution helps security teams find and fix vulnerabilities in code and infrastructure as code (IaC) configurations across Azure DevOps environments. It doesn't require agents, changes to pipelines, or interruptions to developer workflows, making setup and maintenance simple. It works independently from continuous integration and continuous deployment (CI/CD) pipelines. The solution provides continuous and automated insights to speed up risk detection and response, ensuring security without interrupting workflows.  
+
+Use cases:
+
+- **Organization-wide scanning:** You can securely monitor all repositories in Azure DevOps organizations with one connector.  
+- **Early vulnerability detection:** Quickly find code and IaC risks for proactive risk management.  
+- **Continuous security insights:** Keep visibility and respond quickly across development cycles without affecting productivity.
+
+For more information, see [Agentless code scanning in Microsoft Defender for Cloud](agentless-code-scanning.md).
 
 ### On-demand malware scanning in Microsoft Defender for Storage (Preview)
 
@@ -83,7 +98,7 @@ Learn more about [AI security posture management](ai-security-posture.md).
 
 November 18, 2024
 
-Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](/azure/defender-for-cloud/critical-assets-protection).
+Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](critical-assets-protection.md).
 
 Alongside the General Availability release, we are also expending support for tagging Kubernetes and non-human identity resources.
 

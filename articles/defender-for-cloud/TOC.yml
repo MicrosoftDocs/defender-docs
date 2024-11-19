@@ -1036,6 +1036,8 @@
         items:
           - name: Connect Azure DevOps environments
             href: quickstart-onboard-devops.md
+          - name: Configure agentless code scanning for Azure DevOps
+            href: agentless-code-scanning.md
           - name: Connect GitHub environments
             href: quickstart-onboard-github.md
           - name: Connect GitLab environments
