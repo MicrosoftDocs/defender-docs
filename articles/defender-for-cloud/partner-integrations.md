@@ -16,7 +16,7 @@ Defender for Cloud can integrate with partner solutions to:
 - [Convey insights to partner integrations](#convey-insights-to-partner-integrations)
 - [Partner with security solutions (legacy)](#security-solutions-legacy)
 
-:::image type="content" source="media/partner-integrations/data-sharing.png" alt-text="Conceptual image that shows the different ways information can be shared between Defender for Cloud and partner integrations.":::
+:::image type="content" source="media/partner-integrations/data-sharing.png" alt-text="Conceptual image that shows the different ways information can be shared between Defender for Cloud and partner integrations." lightbox="media/partner-integrations/data-sharing.png":::
 
 ## Ingest insights from partner integrations
 
