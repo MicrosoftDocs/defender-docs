@@ -83,7 +83,7 @@ November 7, 2024
 - Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
 - Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
 
-### Enhanced Support for API sensitive data classification
+### Enhanced support for API sensitive data classification
 
 November 6, 2024
 
