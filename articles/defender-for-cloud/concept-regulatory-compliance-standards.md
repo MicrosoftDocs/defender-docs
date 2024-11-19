@@ -73,7 +73,7 @@ The following standards are available in Defender for Cloud:
 | Australian Government ISM Protected | AWS Foundational Security Best Practices | Brazilian General Personal Data Protection Law (LGPD)|
 | Canada Federal PBMM | AWS Well-Architected Framework | California Consumer Privacy Act (CCPA)|
 | CIS Azure Foundations | Brazilian General Personal Data Protection Law (LGPD) | CIS Controls|
-| CIS Azure Kubernetes Service (AKS Benchmark) | California Consumer Privacy Act (CCPA) | CIS GCP Foundations|
+| CIS Azure Kubernetes Service (AKS) Benchmark | California Consumer Privacy Act (CCPA) | CIS GCP Foundations|
 | CMMC |CIS Amazon Elastic Kubernetes Service (EKS) Benchmark| CIS Google Cloud Platform Foundation Benchmark|
 | FedRAMP ‘H’ & ‘M’ | CIS AWS Foundations | CIS Google Kubernetes Engine (GKE) Benchmark|
 | HIPAA/HITRUST | CRI Profile | CRI Profile|
