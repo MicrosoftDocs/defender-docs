@@ -940,7 +940,13 @@
           security, hash reputation analysis
         href: defender-for-storage-introduction.md
       - name: Malware Scanning
-        href: defender-for-storage-malware-scan.md
+        items:
+              - name: Introduction to malware scanning
+                href: introduction-malware-scanning.md
+              - name: On-upload malware scanning
+                href: on-upload-malware-scanning.md
+              - name: On-demand malware scanning
+                href: on-demand-malware-scanning.md
       - name: Sensitive data threat detection
         href: defender-for-storage-data-sensitivity.md
       - name: Enable and configure Defender for Storage
