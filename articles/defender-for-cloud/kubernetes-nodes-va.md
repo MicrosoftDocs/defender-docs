@@ -41,21 +41,17 @@ The category column indicates whether a vulnerability has a new node pool VM ima
 
 ## Remediate K8s node vulnerabilities
 
-K8s node vulnerabilities are remediated by updating the node pool VM image version. The node pool is updated by the customer, as part of the shared responsibility between the K8s service and the customer. The customer updates the node pool in one of two ways - either update the node pool VM image and/or update the cluster's K8s service to a newer version. **It is recommended to update the node pool VM image first.** In some cases, the customer may need to update the cluster's K8s service version as well as the node pool VM image version to remediate the vulnerability.
+K8s node vulnerabilities are remediated by updating the node pool VM image version. The node pool is upgraded by the customer, as part of the shared responsibility between the K8s service and the customer. The customer upgrades the node pool in one of two ways - either upgrade the node pool VM image and/or the cluster's K8s service, to a newer version. **It is recommended to upgrade the node pool VM image first.** In some cases, the customer may need to upgrade the cluster's K8s service version as well as the node pool VM image version to remediate the vulnerability.
 
 > [!NOTE]
-> The cluster's Kubernetes version and the node pool VM image can be [set to auto-update](/azure/aks/upgrade-cluster#configure-automatic-upgrades). These versions should be [regularly updated](/azure/aks/upgrade-cluster) to provide maximum security for you AKS resources.
+> The cluster's Kubernetes version and the node pool VM image can be [set to auto-upgrade](/azure/aks/upgrade-cluster#configure-automatic-upgrades). These versions should be [regularly upgraded](/azure/aks/upgrade-cluster) to provide maximum security for you AKS resources.
 
-### Update the node pool VM image
+### Upgrade the node pool VM image
 
 1. Select the `Fix` button in the recommendations pane.
 
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png" alt-text="Screenshot showing the details of the recommendation for the K8s node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png":::
 
-1. To update the node pool VM image, select the **Update Image** button
+1. To upgrade the node pool VM image, select the **Update Image** button or select **Upgrade Kubernetes** to upgrade the cluster K8s service version.
 
 :::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the K8s node pool for updating its image." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
-
-1. To update the cluster K8s service version, select the **Update Kubernetes** button
-
-:::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the recommendation for the K8s node for updating its K8s version." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
