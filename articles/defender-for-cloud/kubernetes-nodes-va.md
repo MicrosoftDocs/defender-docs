@@ -49,7 +49,10 @@ The category column indicates whether a vulnerability has a new node pool VM ima
 
 ## Remediate K8s node vulnerabilities
 
-Remediation of K8s node vulnerabilities is performed by updating the VM image version of the node pool. The node pool is updated by the customer as part of the shared responsibility between the K8s service and the customer. The customer updates the node pool in one of two ways - either update the node pool VM image or update the cluster's K8s service to a newer version. **???It is recommended to update the cluster's Kubernetes version first. In the event that does not remediate the vulnerability, the node pool VM image can be updated next.???** In some cases, the customer may need to update the cluster's K8s service version as well as the node pool VM image version.
+K8s node vulnerabilities are remediated by updating the node pool VM image version. The node pool is updated by the customer, as part of the shared responsibility between the K8s service and the customer. The customer updates the node pool in one of two ways - either update the node pool VM image and/or update the cluster's K8s service to a newer version. **It is recommended to update the node pool VM image first.** In some cases, the customer may need to update the cluster's K8s service version as well as the node pool VM image version to remediate the vulnerability.
+
+> [!NOTE]
+> The cluster's Kubernetes version and the node pool VM image can be [set to auto-update](/azure/aks/upgrade-cluster#configure-automatic-upgrades). These versions should be [regularly updated](/azure/aks/upgrade-cluster) to provide maximum security for you AKS resources.
 
 ### Update the node pool VM image
 
