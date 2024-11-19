@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 11/17/2024
+ms.date: 11/19/2024
 #customer intent: As a security administrator, I want to understand the integration of API security testing tools so that I can enhance the security of our APIs.
 ---
 
@@ -17,7 +17,7 @@ The support for partner solutions helps to further streamline, integrate, and or
 
 The security scan results from partner applications are available within Defender for Cloud. The ability to view the results in Defender for Cloud ensures that central security teams have visibility into the health of APIs within the Defender for Cloud recommendation experience. These security teams can now take governance steps that are natively available through Defender for Cloud recommendations, and extensibility to export scan results from the Azure Resource Graph into management tools of their choice.
 
-:::image type="content" source="media/defender-partner-applications/api-security.png" alt-text="Screenshot of security analysis" lightbox="media/defender-partner-applications/api-security.png":::
+:::image type="content" source="media/defender-partner-applications/api-security.png" alt-text="Screenshot of security analysis." lightbox="media/defender-partner-applications/api-security.png":::
 
 ## Prerequisites
 
