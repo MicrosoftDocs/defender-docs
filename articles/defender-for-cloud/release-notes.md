@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
@@ -45,6 +46,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+
+## Updated versions of CIS standards for managed Kubernetes environments and new recommendations
+
+November 19, 2024
+
+Defender for Cloud's regulatory compliance dashboard now offers updated versions of the Center for Internet Security (CIS) standards for assessing the security posture of managed Kubernetes environments.
+
+From the dashboard, you can assign the following standards to your AWS/EKS/GKE Kubernetes resources:
+
+- CIS Azure Kubernetes Service (AKS) v1.5.0
+- CIS Google Kubernetes Engine (GKE) v1.6.0
+- CIS Amazon Elastic Kubernetes Service (EKS) v1.5.0
+
+To ensure the best possible depth of coverage for these standards, we’ve enriched our coverage by also releasing 79 new Kubernetes-centric recommendations.
+
+To use these new recommendations, either assign the standards listed above or create a custom standard and include one or more of the new assessments in it. 
+
 
 ## Public preview of Kubernetes cloud process events in advanced hunting
 
