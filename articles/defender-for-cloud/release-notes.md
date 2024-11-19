@@ -31,6 +31,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
+| November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
+| November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
 | November 19 | Preview | [On-demand malware scanning in Microsoft Defender for Storage (Preview)](#on-demand-malware-scanning-in-microsoft-defender-for-storage-preview) |
 | November 18 | Preview | [JFrog Artifactory container registry support by Defender for Containers](#jfrog-artifactory-container-registry-support-by-defender-for-containers-preview) |
@@ -42,7 +45,47 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
+| November 6 | GA | [Enhanced Support for API sensitive data classification](#enhanced-support-for-api-sensitive-data-classification) |
+| November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+
+## Updated versions of CIS standards for managed Kubernetes environments and new recommendations
+
+November 19, 2024
+
+Defender for Cloud's regulatory compliance dashboard now offers updated versions of the Center for Internet Security (CIS) standards for assessing the security posture of managed Kubernetes environments.
+
+From the dashboard, you can assign the following standards to your AWS/EKS/GKE Kubernetes resources:
+
+- CIS Azure Kubernetes Service (AKS) v1.5.0
+- CIS Google Kubernetes Engine (GKE) v1.6.0
+- CIS Amazon Elastic Kubernetes Service (EKS) v1.5.0
+
+To ensure the best possible depth of coverage for these standards, we’ve enriched our coverage by also releasing 79 new Kubernetes-centric recommendations.
+
+To use these new recommendations, either assign the standards listed above or create a custom standard and include one or more of the new assessments in it. 
+
+
+## Public preview of Kubernetes cloud process events in advanced hunting
+
+We're announcing the preview release of Kubernetes cloud process events in advanced hunting. This powerful integration provides detailed information about Kubernetes process events occurring across your multicloud environments. You can use it to discover threats that can be observed through process details, such as malicious processes invoked in your cloud infrastructure. For more information, see [CloudProcessEvents](/defender-xdr/advanced-hunting-cloudprocessevents-table).
+
+## Deprecation of Bring your own License (BYOL) feature in vulnerability management
+
+November 19, 2024
+
+**Estimated date for change:**
+
+- **February 3 2025**: The feature will no longer be available for onboarding new machines and subscriptions.
+
+- **May 1 2025**: The feature will be fully deprecated and no longer available.
+
+As part of our efforts to improve the Defender for Cloud security experience, we're streamlining our vulnerability assessment solutions. We're removing the "Bring Your Own License" feature in Defender for Cloud. You'll now use Microsoft Security Exposure Management connectors for a more seamless, integrated, and complete solution.
+
+We recommend that you transition to the new connector solution within Microsoft Security Exposure Management. Our team is here to support you through this transition.
+
+For more information on using the connectors, see [Overview of connecting data sources in Microsoft Security Exposure Management - Microsoft Security Exposure Management](/security-exposure-management/overview-data-connectors).
 
 ### Agentless code scanning in Microsoft Defender for Cloud (preview)
 
@@ -98,15 +141,15 @@ Learn more about [AI security posture management](ai-security-posture.md).
 
 November 18, 2024
 
-Today, we are excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](critical-assets-protection.md).
+Today, we're excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](critical-assets-protection.md).
 
-Alongside the General Availability release, we are also expending support for tagging Kubernetes and non-human identity resources.
+Alongside the General Availability release, we're also expending support for tagging Kubernetes and nonhuman identity resources.
 
 ### Enhanced critical asset protection for containers
 
 November 18, 2024
 
-[Critical asset protection](./critical-assets-protection.md) has been extended to support additional use cases for containers.
+[Critical asset protection](./critical-assets-protection.md) is extended to support additional use cases for containers.
 
 Users can now create custom rules that mark assets managed by Kubernetes (workloads, containers, etc.) as critical based on the asset Kubernetes namespace and/or the asset Kubernetes label.
 
@@ -134,7 +177,7 @@ These actions empower SOC teams to contain threats effectively across cloud envi
 
 #### Threat Analytics report for containers
 
-We are introducing a dedicated Threat Analytics report, designed to provide comprehensive visibility into threats targeting containerized environments. This report equips SOC teams with insights to detect and respond to the latest attack patterns on AKS, EKS, and GKE clusters.
+We're introducing a dedicated Threat Analytics report, designed to provide comprehensive visibility into threats targeting containerized environments. This report equips SOC teams with insights to detect and respond to the latest attack patterns on AKS, EKS, and GKE clusters.
 
 **Key Highlights**:
 
@@ -202,7 +245,22 @@ November 7, 2024
 
 - Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
 - Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
-- Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they are exploited.
+- Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they're exploited.
+
+### Enhanced support for API sensitive data classification
+
+November 6, 2024
+
+Microsoft Defender for Cloud extends API Security sensitive data classification capabilities to API URL path and query parameters along with API request and responses, including the source of sensitive information found in the API properties. This information will be available in the Attack Path Analysis experience, the Cloud Security Explorer's **Additional Details** page when API Management operations with sensitive data are selected, and on the API Security Dashboard under the Workload Protections within API collection details page, with a new side context menu that provides detailed insights into sensitive data found, enabling security teams efficiently locate and mitigate data exposure risks.
+
+> [!NOTE]
+> This change will include a one-time rollout to existing Defender for APIs and Defender CSPM customers.
+
+### New support for mapping Azure API Management API endpoints to backend compute
+
+November 6, 2024
+
+Defender for Cloud's API security posture now supports mapping API endpoints published through Azure API Management Gateway to backend compute resources, such as virtual machines, in the Defender Cloud Security Posture Management (Defender CSPM) Cloud Security Explorer. This visibility helps identify API traffic routing to backend cloud compute destinations, enabling you to detect and address exposure risks associated with API endpoints and their connected backend resources.
 
 ### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
 
@@ -212,7 +270,7 @@ API security coverage within Defender for Cloud will now have full support for A
 
 Onboarding and offboarding APIs to Defender for APIs will now be managed at the Azure API Management API level. All associated [Azure API Management revisions](/azure/api-management/api-management-revisions) will automatically be included in the process, eliminating the need to manage onboarding and offboarding for each API revision individually.
 
-This change will include a one-time rollout to existing Defender for APIs customers.
+This change includes a one-time rollout to existing Defender for APIs customers.
 
 Rollout Details:
 
