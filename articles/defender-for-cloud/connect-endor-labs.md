@@ -34,7 +34,7 @@ This article provides a detailed explanation of the benefits and procedures need
 
 - You must have the appropriate role to:
   - **Create DevOps connectors**: Security Admin or Contributor assigned at the **subscription level** through Azure role-based-access control (RBAC).
-  - **Create the connector**: **Create the connector**: Security Administrator or Global Administrator assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management] (https://learn.microsoft.com/entra/id-governance/privileged-identity-management/pim-configure).
+  - **Create the connector**: **Create the connector**: Security Administrator or Global Administrator assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
   - **View reachability analysis findings**: Security Admin or Security Reader assigned at the **subscription level** through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector.
 
 - You can only have one connector to Ender Labs per tenant.
