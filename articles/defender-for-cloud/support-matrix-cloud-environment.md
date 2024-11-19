@@ -26,7 +26,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Alert bi-directional synchronization with Microsoft Sentinel](/azure/sentinel/connect-azure-security-center) | GA | GA | NA|
 |[Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA|
 |[Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA|
-|[Copilot for Security in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | Preview | NA | NA |
+|[Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | Preview | NA | NA |
 |**FOUNDATIONAL CSPM FEATURES (FREE)** | | ||
 |[Asset inventory](asset-inventory.md) | GA | GA | GA|
 |[Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA|
