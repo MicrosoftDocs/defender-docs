@@ -6,6 +6,7 @@ ms.topic: overview
 ---
 
 # Overview of Defender for Containers protection of Kubernetes (K8s) nodes
+
 Defender for Containers runs vulnerability assessment and malware detection of the K8s cluster control plane and workloads. In addition, Defender for Containers can also assess vulnerabilities and discover malware threats in K8s nodes.
 
 > [!Note]
@@ -35,7 +36,7 @@ Defender for Containers uses the Microsoft Defender Antivirus anti-malware engin
 
 ## The vulnerability assessment and malware detection process
 
-Snapshots are taken of node host VM disks for scanning. The scan generates an OS and software inventory list which is reviewed to determine what software should be updated. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
+Snapshots are taken of node host VM disks for scanning. The scan generates an OS and software inventory list which is reviewed to determine what software has vulnerabilities and detect installed malware. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
 
 ## Prerequisite - Enable agentless scanning for machines
 
