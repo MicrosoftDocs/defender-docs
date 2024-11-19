@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 10/28/2024
+  ms.date: 11/19/2024
 title: Common questions about the Endor Labs integration
 summary: Get answers to common questions about the Endor Labs integration.
 
@@ -49,7 +49,7 @@ sections:
       - question: |
           Which programming languages does Endor Labs support? 
         answer: |
-          Endor Labs supports a wide range of languages for reachability analysis, including Java, Python, and C#. Refer to Endor Labs documentation for the most up-to-date [list of supported languages](https://docs.endorlabs.com/scan-with-endorlabs/language-scanning/#supported-languages).
+          Endor Labs supports a wide range of languages for reachability analysis, including Java, Python, and C#. Refer to Endor Labs documentation for the most up-to-date [list of supported languages](https://docs.endorlabs.com/scan-with-endorlabs/language-scanning/#supported-languages). Findings from Endor Labs will only be shown if the corresponding repository is also connected to Defender for Cloud.
   
       - question: | 
           What do the different levels of reachability mean? 

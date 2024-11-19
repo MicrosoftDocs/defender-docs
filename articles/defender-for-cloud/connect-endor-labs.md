@@ -1,10 +1,10 @@
 ---
 title: Connect Endor Labs to Defender for Cloud
-description: Learn how to connect Endor Labs with Microsoft Defender for Cloud to enhance vulnerability analysis and gain comprehensive visibility of critical vulnerabilities.
+description: Learn how to connect Endor Labs with Microsoft Defender for Cloud to enhance vulnerability analysis and gain visibility of critical vulnerabilities.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 10/28/2024
+ms.date: 11/19/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided by Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
 ---
@@ -33,8 +33,13 @@ This article provides a detailed explanation of the benefits and procedures need
 - Have an [API key from Endor Labs](https://docs.endorlabs.com/administration/api-keys/) with read-only permissions. We recommend setting the expiration date to be 180 days.
 
 - You must have the appropriate role to:
-  - **Create the connector**: Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra.
-  - **View reachability analysis findings**: Security Admin or Security Reader assigned through Azure role-based-access control (RBAC).
+  - **Create DevOps connectors**: Security Admin or Contributor assigned at the **subscription level** through Azure role-based-access control (RBAC).
+  - **Create the connector**: **Create the connector**: Security Administrator or Global Administrator assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management] (https://learn.microsoft.com/entra/id-governance/privileged-identity-management/pim-configure).
+  - **View reachability analysis findings**: Security Admin or Security Reader assigned at the **subscription level** through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector.
+
+- You can only have one connector to Ender Labs per tenant.
+
+- Findings from Endor Labs will only be shown if the corresponding repository is also connected to Defender for Cloud.
 
 ## Connect Endor Labs
 
@@ -52,14 +57,17 @@ To connect your Endor Labs account to Defender for Cloud:
 
    :::image type="content" border="true" source="./media/connect-endor-labs/add-endor-labs.png" alt-text="Screenshot that shows where the Add Integration button is and the ServiceNow option." lightbox="media/connect-endor-labs/add-endor-labs.png":::
 
+    > [!NOTE]
+    > The option to add the Endor labs integration is not available if you don't have the appropriate permissions, or if you already have already an existing connector to Endor Labs.
+
 1. Enter an Endor Labs namespace, API key ID, API secret.
 
     :::image type="content" source="media/connect-endor-labs/enter-information.png" alt-text="Screenshot that shows where the button is located to add your Endor Labs connection.":::
 
 1. Select **Create**.
 
-A notice appears after successful creation of integration.
+A notice appears after the integration is successfully created. Defender for Cloud scans repositories that are connected to Endor Labs, and populates with results after six hours.
 
 ## Related content
 
-- FAQ about the Endor Labs integration
+- [FAQ about the Endor Labs integration](faq-endor-labs.yml)
