@@ -47,10 +47,10 @@ To enable the agentless scanning for machines option in Defender for Containers 
 2. Select **Environment Settings** from the **Defender for Cloud** menu.
 3. Select **Settings** for the **Defender for Container** plan.
 
-:::image type="content" source="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-va/settings-plans-containers-settings-select.png":::
+:::image type="content" source="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png":::
 
 1. In the settings pane, turn on **Agentless scanning for machines**.
 
-:::image type="content" source="media/kubernetes-nodes-va/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines option." lightbox="media/kubernetes-nodes-va/agentless-scanning-for-machines.png":::
+:::image type="content" source="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines option." lightbox="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png":::
 
 1. Select **Save**.

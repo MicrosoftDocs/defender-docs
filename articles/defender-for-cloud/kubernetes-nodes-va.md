@@ -9,14 +9,6 @@ ms.topic: conceptual
 
 Defender for Containers can scan the [VMs that host K8s nodes](./kubernetes-nodes-overview.md#k8s-node-vms) to assess vulnerabilities to the OS and installed software. Recommendations for remediation are generated for the customer security team to review and remediate as part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility-of-k8s-nodes) to maintain the K8s nodes of a cluster.
 
-## How vulnerability assessment is done
-
-- Scan disk
-- Frequency
-- Recommendations
-- Review
-- Remediation
-
 ## Prerequisite
 
 Vulnerability assessment of the nodes must be [enabled by turning on the **Agentless scanning for machines**](./kubernetes-nodes-overview.md#prerequisite---enable-agentless-scanning-for-machines) option in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
