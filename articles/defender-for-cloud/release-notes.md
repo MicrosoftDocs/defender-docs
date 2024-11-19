@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
 | November 19 | Preview | [On-demand malware scanning in Microsoft Defender for Storage (Preview)](#on-demand-malware-scanning-in-microsoft-defender-for-storage-preview) |
@@ -44,6 +45,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+## Public preview of Kubernetes cloud process events in advanced hunting
+
+We're announcing the preview release of Kubernetes cloud process events in advanced hunting. This powerful integration provides detailed information about Kubernetes process events occurring across your multicloud environments. You can use it to discover threats that can be observed through process details, such as malicious processes invoked in your cloud infrastructure. For more information, see [CloudProcessEvents](/defender-xdr/advanced-hunting-cloudprocessevents-table).
 
 ## Deprecation of Bring your own License (BYOL) feature in vulnerability management
 
