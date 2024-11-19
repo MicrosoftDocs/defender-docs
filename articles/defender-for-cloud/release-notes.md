@@ -89,7 +89,8 @@ November 6, 2024
 
 Microsoft Defender for Cloud extends API Security sensitive data classification capabilities to API URL path and query parameters along with API request and responses, including the source of sensitive information found in the API properties. This information will be available in the Attack Path Analysis experience, the Cloud Security Explorer's **Additional Details** page when API Management operations with sensitive data are selected, and on the API Security Dashboard under the Workload Protections within API collection details page, with a new side context menu that provides detailed insights into sensitive data found, enabling security teams efficiently locate and mitigate data exposure risks.
 
-Note: This change will include a one-time rollout to existing Defender for APIs and Defender CSPM customers.
+> [!NOTE]
+> This change will include a one-time rollout to existing Defender for APIs and Defender CSPM customers.
 
 ### New support for mapping Azure API Management API endpoints to backend compute
 
