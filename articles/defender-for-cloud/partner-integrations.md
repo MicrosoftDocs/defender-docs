@@ -2,7 +2,7 @@
 title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 11/17/2024
+ms.date: 11/19/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -42,9 +42,9 @@ Microsoft Defender for Cloud supports partner tools to help enhance the existing
 
 | Partner name | Logo | Description | Enablement Guide |
 |--|--|--|--|
-| [42Crunch](https://aka.ms/APISecurityTestingPartnershipIgnite2023) | :::image type="icon" source="media/partner-integrations/42crunch-logo.png" border="false"::: | Developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. | [42Crunch onboarding guide](onboarding-guide-42crunch.md) |
-| [StackHawk](https://aka.ms/APISecurityTestingPRStackHawk) | :::image type="icon" source="media/partner-integrations/stackhawk-logo.png" border="false"::: | StackHawk is the only modern Dynamic Application Security Testing (DAST) and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
-| [Bright Security](https://aka.ms/APISecurityTestingPRBrightSecurity) | :::image type="icon" source="media/partner-integrations/bright-security-logo.png" border="false"::: | Bright Security's dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and Large Language Models (LLM) applications. Bright knows how to deliver the right tests, at the right time in the software development lifecycle, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) |
+| 42Crunch | :::image type="icon" source="media/partner-integrations/42crunch-logo.png" border="false"::: | Developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. | [42Crunch onboarding guide](onboarding-guide-42crunch.md) |
+| StackHawk | :::image type="icon" source="media/partner-integrations/stackhawk-logo.png" border="false"::: | StackHawk is the only modern Dynamic Application Security Testing (DAST) and API security testing tool that runs in CI/CD, enabling developers to quickly find and fix security issues before they hit production. | [StackHawk onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideStackHawk) |
+| Bright Security | :::image type="icon" source="media/partner-integrations/bright-security-logo.png" border="false"::: | Bright Security's dev-centric DAST platform empowers both developers and AppSec professionals with enterprise grade security testing capabilities for web applications, APIs, and GenAI and Large Language Models (LLM) applications. Bright knows how to deliver the right tests, at the right time in the software development lifecycle, in developers and AppSec tools and stacks of choice with minimal false positives and alert fatigue. | [Bright Security onboarding guide](https://aka.ms/APISecurityTestingOnboardingGuideBrightSecurity) |
 
 ### Ticketing services
 
