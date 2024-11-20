@@ -39,6 +39,8 @@ The category column indicates whether a vulnerability has a new node pool VM ima
 
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-detail.png" alt-text="Screenshot of the pane showing all the details of the CVE and K8s node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
 
+In the details pane, the **Node pool instances** section shows the scaled node pools that will be affected by the remediation. The **More affected resources** shows other scaled node pools that have the same CVE and should be remediated as well.
+
 ## Remediate K8s node vulnerabilities
 
 K8s node vulnerabilities are remediated by updating the node pool VM image version. The node pool is upgraded by the customer, as part of the shared responsibility between the K8s service and the customer. The customer upgrades the node pool in one of two ways - either upgrade the node pool VM image and/or the cluster's K8s service, to a newer version. **It is recommended to upgrade the node pool VM image first.** In some cases, the customer may need to upgrade the cluster's K8s service version as well as the node pool VM image version to remediate the vulnerability.
