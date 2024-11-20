@@ -34,10 +34,10 @@ This article provides a detailed explanation of the benefits and procedures need
 
 - You must have the appropriate role to:
   - **Create DevOps connectors**: Security Admin or Contributor assigned at the **subscription level** through Azure role-based-access control (RBAC).
-  - **Create the connector**: **Create the connector**: Security Administrator or Global Administrator assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
+  - **Create the Endor Labs connector**: Security Administrator or Global Administrator assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
   - **View reachability analysis findings**: Security Admin or Security Reader assigned at the **subscription level** through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector.
 
-- You can only have one connector to Ender Labs per tenant.
+- You can only have one connector to Endor Labs per tenant.
 
 - Findings from Endor Labs will only be shown if the corresponding repository is also connected to Defender for Cloud.
 
