@@ -4,7 +4,7 @@ description: Learn how to create a governance rule in Defender for Cloud that co
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 03/11/2024
+ms.date: 10/13/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to create automatic tickets using governance rules in Defender for Cloud that automatically assigns an owner to specific recommendation or a recommendation with a severity level in Defender for Cloud to my my ServiceNow account.
 ---

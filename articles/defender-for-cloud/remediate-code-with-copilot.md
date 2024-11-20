@@ -1,5 +1,5 @@
 ---
-title: Remediate code with Copilot for Security
+title: Remediate code with Microsoft Security Copilot
 author: Elazark
 ms.author: elkrieger
 description: Learn how to remediate code with Copilot in Microsoft Defender for Cloud and improve your security posture.
@@ -8,9 +8,9 @@ ms.date: 06/10/2024
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate code in Defender for Cloud so that I can improve my security posture.
 ---
 
-# Remediate code with Copilot for Security
+# Remediate code with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Copilot for Security allows you to remediate Infrastructure as Code (IaC) misconfigurations that are discovered in your code repositories. Remediating an IaC finding with Copilot allows you to address security misconfigurations and vulnerabilities early in the development cycle by automatically generating Pull Requests (PRs) that correct the identified weaknesses. Remediating these misconfigurations and vulnerabilities ensure that security issues in code are addressed accurately and promptly.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to remediate Infrastructure as Code (IaC) misconfigurations that are discovered in your code repositories. Remediating an IaC finding with Copilot allows you to address security misconfigurations and vulnerabilities early in the development cycle by automatically generating Pull Requests (PRs) that correct the identified weaknesses. Remediating these misconfigurations and vulnerabilities ensure that security issues in code are addressed accurately and promptly.
 
 ## Prerequisites
 
@@ -19,11 +19,11 @@ Microsoft Defender for Cloud's integration with Microsoft Copilot for Security a
 - [Configure the Microsoft Security DevOps Azure DevOps extension](azure-devops-extension.yml).
 - [Review and ensure you meet the DevOps security support and prerequisites requirements](devops-support.md).
 - [Have access to Azure Copilot](/azure/copilot/overview).
-- [Have Security Compute Units assigned for Copilot for Security](/copilot/security/get-started-security-copilot).
+- [Have Security Compute Units assigned for Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
 ## Remediate an Infrastructure as Code scanning finding
 
-With Copilot for Security in Defender for Cloud you can remediate recommendations.
+With Microsoft Security Copilot in Defender for Cloud you can remediate recommendations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
