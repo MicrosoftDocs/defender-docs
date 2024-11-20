@@ -31,6 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
+| November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
 | November 19 | Preview | [Agentless code scanning in Microsoft Defender for Cloud](#agentless-code-scanning-in-microsoft-defender-for-cloud-preview) |
 | November 19 | Preview | [On-demand malware scanning in Microsoft Defender for Storage (Preview)](#on-demand-malware-scanning-in-microsoft-defender-for-storage-preview) |
@@ -43,7 +45,31 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
 | November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
+| November 6 | GA | [Enhanced Support for API sensitive data classification](#enhanced-support-for-api-sensitive-data-classification) |
+| November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+
+## Updated versions of CIS standards for managed Kubernetes environments and new recommendations
+
+November 19, 2024
+
+Defender for Cloud's regulatory compliance dashboard now offers updated versions of the Center for Internet Security (CIS) standards for assessing the security posture of managed Kubernetes environments.
+
+From the dashboard, you can assign the following standards to your AWS/EKS/GKE Kubernetes resources:
+
+- CIS Azure Kubernetes Service (AKS) v1.5.0
+- CIS Google Kubernetes Engine (GKE) v1.6.0
+- CIS Amazon Elastic Kubernetes Service (EKS) v1.5.0
+
+To ensure the best possible depth of coverage for these standards, we’ve enriched our coverage by also releasing 79 new Kubernetes-centric recommendations.
+
+To use these new recommendations, either assign the standards listed above or create a custom standard and include one or more of the new assessments in it. 
+
+
+## Public preview of Kubernetes cloud process events in advanced hunting
+
+We're announcing the preview release of Kubernetes cloud process events in advanced hunting. This powerful integration provides detailed information about Kubernetes process events occurring across your multicloud environments. You can use it to discover threats that can be observed through process details, such as malicious processes invoked in your cloud infrastructure. For more information, see [CloudProcessEvents](/defender-xdr/advanced-hunting-cloudprocessevents-table).
 
 ## Deprecation of Bring your own License (BYOL) feature in vulnerability management
 
@@ -220,6 +246,21 @@ November 7, 2024
 - Improved alert understanding: Scenario-based documentation provides a more intuitive understanding of K8s alerts.
 - Enhanced threat response: Alerts are enriched with valuable context, enabling faster and more accurate responses.
 - Proactive security testing: The new simulation tool allows you to test your security defenses and identify potential vulnerabilities before they're exploited.
+
+### Enhanced support for API sensitive data classification
+
+November 6, 2024
+
+Microsoft Defender for Cloud extends API Security sensitive data classification capabilities to API URL path and query parameters along with API request and responses, including the source of sensitive information found in the API properties. This information will be available in the Attack Path Analysis experience, the Cloud Security Explorer's **Additional Details** page when API Management operations with sensitive data are selected, and on the API Security Dashboard under the Workload Protections within API collection details page, with a new side context menu that provides detailed insights into sensitive data found, enabling security teams efficiently locate and mitigate data exposure risks.
+
+> [!NOTE]
+> This change will include a one-time rollout to existing Defender for APIs and Defender CSPM customers.
+
+### New support for mapping Azure API Management API endpoints to backend compute
+
+November 6, 2024
+
+Defender for Cloud's API security posture now supports mapping API endpoints published through Azure API Management Gateway to backend compute resources, such as virtual machines, in the Defender Cloud Security Posture Management (Defender CSPM) Cloud Security Explorer. This visibility helps identify API traffic routing to backend cloud compute destinations, enabling you to detect and address exposure risks associated with API endpoints and their connected backend resources.
 
 ### Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions
 
