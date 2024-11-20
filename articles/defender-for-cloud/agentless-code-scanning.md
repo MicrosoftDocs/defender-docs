@@ -188,8 +188,7 @@ During the **public preview** phase, the following limitations apply:
 
 - **No binary scanning**: The system scans only code and Infrastructure-as-Code (IaC) files.  
 - **Scan frequency**: It scans repositories every 3-4 days.  
-- **Repository size**: It limits scanning to repositories under 1 GB.
-
+- **Repository size**: It limits scanning to repositories under 100 MB.  
 - **Branch coverage**: Scans cover only the default (main) branch.  
 - **Tool customization**: You can't customize scanning tools.
 
