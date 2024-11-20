@@ -50,7 +50,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
 
-## Updated versions of CIS standards for managed Kubernetes environments and new recommendations
+### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 
 November 19, 2024
 
@@ -62,16 +62,16 @@ From the dashboard, you can assign the following standards to your AWS/EKS/GKE K
 - CIS Google Kubernetes Engine (GKE) v1.6.0
 - CIS Amazon Elastic Kubernetes Service (EKS) v1.5.0
 
-To ensure the best possible depth of coverage for these standards, we’ve enriched our coverage by also releasing 79 new Kubernetes-centric recommendations.
+To ensure the best possible depth of coverage for these standards, we've enriched our coverage by also releasing 79 new Kubernetes-centric recommendations.
 
 To use these new recommendations, either assign the standards listed above or create a custom standard and include one or more of the new assessments in it. 
 
 
-## Public preview of Kubernetes cloud process events in advanced hunting
+### Public preview of Kubernetes cloud process events in advanced hunting
 
 We're announcing the preview release of Kubernetes cloud process events in advanced hunting. This powerful integration provides detailed information about Kubernetes process events occurring across your multicloud environments. You can use it to discover threats that can be observed through process details, such as malicious processes invoked in your cloud infrastructure. For more information, see [CloudProcessEvents](/defender-xdr/advanced-hunting-cloudprocessevents-table).
 
-## Deprecation of Bring your own License (BYOL) feature in vulnerability management
+### Deprecation of Bring your own License (BYOL) feature in vulnerability management
 
 November 19, 2024
 
