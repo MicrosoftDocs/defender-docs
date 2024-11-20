@@ -1,0 +1,91 @@
+### YamlMime:FAQ
+metadata:
+  title: Common questions - Endor Labs integration
+  description: Get answers to frequently asked questions about the Endor Labs integration.
+  ms.topic: faq
+  ms.service: defender-for-cloud
+  author: dcurwin
+  ms.author: dacurwin
+  ms.date: 11/20/2024
+title: Common questions about the Endor Labs integration
+summary: Get answers to common questions about the Endor Labs integration.
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          How do I configure Endor Labs?
+        answer: |
+          Endor Labs can be deployed in various methods across your repositories and pipelines depending on your Source Code Management environment. We recommend you start with monitoring scans to gain the initial visibility and then advance to CI scans to achieve comprehensive and actionable results.
+  
+      - question: |
+          How do I configure Endor Labs for GitHub environments?
+        answer: |
+          Endor Labs offers continuous monitoring for GitHub via the Endor GitHub App. This app provides extensive visibility into your GitHub organizations by cloning and scanning all repositories every 24 hours. 
+
+          > [!NOTE]
+          > Repositories are temporarily cloned and retained only during the scan. You can refer to [Endor Lab's documentation for assistance with setting up continuous monitoring for GitHub](https://docs.endorlabs.com/integrations/github-app/). 
+
+      - question: |
+          How do I configure Endor Labs for GitHub Workflows?
+        answer: |
+          Customers can integrate with GitHub Workflows using the Endor Labs Action. Workflow scans help teams focus on the most actionable results, optimizing their time. These scans can be triggered from automated GitHub Workflows to identify new vulnerabilities compared to the baseline of the target branch. [Refer to Endor Lab's documentation for assistance with setting up the Endor Labs Action](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-github-actions/).
+
+      - question: |
+          How do I configure Endor Labs for Azure DevOps environments?
+        answer: |
+          Endor Labs can be implemented in Azure Pipelines to scan during build time for vulnerabilities. The results from these scans can also be sent to Advanced Security for developer visibility. Refer to [Endor Labs documentation for assistance with setting up the Azure Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-azuredevops/).
+
+      - question: |
+          How do I configure Endor Labs for GitLab environments?
+        answer: |
+          Endor Labs can scan during GitLab CI pipeline runs after code is built to check for vulnerabilities. Refer to [Endor Labs documentation for assistance with setting up the GitLab CI Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-gitlab/)
+
+      - question: |
+          How do I view results from Endor Labs scans?
+        answer: |
+          Reachability analysis findings from Endor Labs are natively integrated with existing Defender Cloud Security Posture Management (CSPM) experiences, including Cloud Security Explorer and Attack Path analysis.
+
+      - question: |
+          Which programming languages does Endor Labs support? 
+        answer: |
+          Endor Labs supports a wide range of languages for reachability analysis, including Java, Python, and C#. Refer to Endor Labs documentation for the most up-to-date [list of supported languages](https://docs.endorlabs.com/scan-with-endorlabs/language-scanning/#supported-languages). Findings from Endor Labs will only be shown if the corresponding repository is also connected to Defender for Cloud.
+  
+      - question: | 
+          What do the different levels of reachability mean? 
+        answer: | 
+          Defender for Cloud ingests [finding attributes](https://docs.endorlabs.com/managing-projects/view-findings/#finding-attributes) from Endor Labs that relate to the reachability of vulnerabilities at the function level and the dependency level. Function level reachability analysis is the most accurate way to determine exploitability in the context of an organization's application, which is critical for determining which risks should be remediated. The different function reachability labels include:
+            - Reachable Function: Endor Labs established that there's a path from the code written by the developer to a vulnerable function, meaning the finding is exploitable in the customer's environment. This is demonstrated with a "call graph" that shows each step between the source code and vulnerable library.
+            - Unreachable Function: Endor Labs determined that there's no risk of exploitation because there's no path between the source code and the vulnerable function. Finding accompany a "call graph" demonstrating the lack of a path. Unreachable findings can be considered a false positive and aren't required to be remediated under compliance standards such as FedRAMP.
+            - Potentially Reachable Function: Endor Labs is unable to determine whether a finding is reachable or unreachable, typically because "call graph" analysis is unsupported for a given language or package manager.
+          Endor Labs also checks if imported packages are used in the application, but it doesn't show if vulnerable packages are called by the source code. The different labels for this are:
+            - Reachable Dependency: Endor Labs established that an imported package is being used somewhere in the application.
+            - Unreachable Dependency: Endor Labs determined that the imported dependency isn't being used. The customer can use this information to remove the dependency, which is helpful for technical debt reduction initiatives.
+            - Potentially Reachable Dependency: Endor Labs can't definitively determine whether a dependency is or isn't in use, generally because a given language or package manager isn't supported.
+  
+          > [!NOTE] 
+          > "Reachability analysis" can mean many different things. Learn more about the [Five Types of Reachability Analysis (and Which is Right for You)](https://www.endorlabs.com/learn/5-types-of-reachability-analysis-and-which-is-right-for-you).
+
+      - question: | 
+          How is Endor Labs licensed? 
+        answer: | 
+          Endor Labs is licensed on a per contributing developer basis. Check out [Endor Labs pricing options](https://www.endorlabs.com/pricing). There are two applicable plans for reachability analysis in Defender for Cloud include:
+          - [Endor Supply Chain](https://www.endorlabs.com/pricing): A single platform for open-source dependency management, CI/CD security, and compliance.
+          - [Endor Open Source](https://www.endorlabs.com/pricing) - Core Edition: Advanced software composition analysis (SCA) and SBOM capabilities including SCA with reachability, Endor Score factors, AI-assisted OSS selection, DroidGPT, SBOM / VEX generation.
+
+          Customers that need extra remediation capabilities can upgrade to the Pro Edition, which includes upgrade affect analysis, container scanning, and artifact signing.
+
+      - question: | 
+          Is Endor Labs available on the Azure commercial marketplace? 
+        answer: | 
+          Yes, Endor Labs is available for purchase on the [Microsoft commercial marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/endorlabsinc1711052071976.test123?tab=Overview). The prices listed on the marketplace don't reflect the cost that your organization pays. If you enroll through the marketplace, Endor Labs representatives work with your organization to generate a custom quote. Purchases of Endor Labs made through the Azure commercial marketplace count towards your Minimum Azure Consumption Commitments (MACC).
+
+      - question: | 
+          Does Endor Labs offer a free trial? 
+        answer: | 
+          Yes, a full-featured, 30-day free trial is available. Begin your trial at [Endor Labs free trial](https://www.endorlabs.com/free-trial).
+
+additionalContent: |
+
+  ## Next steps
+  - [Connect Endor Labs](connect-endor-labs.md)
