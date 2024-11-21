@@ -15,9 +15,8 @@ Microsoft Defender for Cloud integrates natively with Microsoft Defender for End
 
 EDR capabilities in Defender for Endpoint [detect, investigate, and respond to advanced threats](/defender-endpoint/overview-endpoint-detection-response), including [advanced threat hunting](/defender-xdr/advanced-hunting-overview), and [automatic investigation and remediation](/defender-xdr/m365d-autoir) capabilities.
 
-Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess EDR settings.
-
-Agentless scanning for EDR settings is available when Defender for Cloud is running in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled. 
+- Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess EDR settings.
+- Agentless scanning for EDR settings is available when Defender for Cloud is running in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled. 
 
 
 ## Assessing Defender for Endpoint settings

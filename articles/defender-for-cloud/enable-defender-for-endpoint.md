@@ -12,7 +12,8 @@ ms.date: 03/13/2024
 
 Microsoft Defender for Cloud [integrates natively with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) to provide Defender for Endpoint and Microsoft Defender Vulnerability Management capabilities in Defender for Cloud.
 
-When you turn on the Defender for Servers plan in Defender for Cloud, Defender for Endpoint integration is turned on by default. Integration automatically deploys the Defender for Endpoint sensor on machines.
+- When you turn on the Defender for Servers plan in Defender for Cloud, Defender for Endpoint integration is turned on by default.
+- Integration automatically deploys the Defender for Endpoint agent on machines.
 
 This article describes how to enable Defender for Endpoint integration manually as needed.
 

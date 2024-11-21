@@ -10,11 +10,11 @@ ms.custom: template-concept
 #customer intent: As a user, I want to understand how agentless machine scanning works in Defender for Cloud so that I can effectively collect data from my machines.
 ---
 
-# Overview - Agentless machine scanning
+# Agentless machine scanning
 
-Agentless machine scanning in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance..
+Agentless machine scanning in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. 
 
-Agentless machine scanning:
+Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance. Agentless machine scanning:
 
 - **Scans endpoint detection and response (EDR) settings**: Scan machines to assess whether they're running an EDR solution, and whether settings are correct if machines integrate with Microsoft Defender for Endpoint. [Learn more](endpoint-detection-response.md)
 - **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) with integrated Microsoft Defender Vulnerability Management.

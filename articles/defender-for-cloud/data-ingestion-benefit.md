@@ -9,16 +9,11 @@ ms.date: 10/20/2024
 
 # Use the data ingestion benefit
 
-When you enabled Defender for Servers Plan 2 in Microsoft Defender for Cloud, you get 500 MB of free data ingestion per day.
+When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you can take advantage of 500 MB of free data ingestion per day. Here's how it works.
 
-## How it works
-
-Here's how it works.
-
-- Defender for Servers Plan 2 provides an allocation of 500 MB per node per day for specific types of data.
-- The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
+- Defender for Servers Plan 2 provides an allowance of 500 MB per node per day for specific security data types that are directly collected by Defender for Cloud.
 - Data ingestion is calculated per machine, per reported workspace, and per day.
-- - Your total daily free limit is equal to [number of machines] x 500 MB.
+- Total daily free limit is equal to [number of machines] x 500 MB.
 - The allowance is a daily rate averaged across all machines.
 - You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 - The benefit is granted to the Log Analytics workspace to which the machine reports.
@@ -29,7 +24,7 @@ Here's how it works.
 - You need to specifically enable Defender for Servers Plan 2 on the workspace to which machines report.
 - If the machine reports to more than one workspace, the benefit is only granted to one of them.
 
-The following subset of [security data types](/azure/azure-monitor/reference/tables-category#security)are supported for the benefit:
+The following subset of [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:
 
 - [SecurityAlert](/azure/azure-monitor/reference/tables/securityalert)
 - [SecurityBaseline](/azure/azure-monitor/reference/tables/securitybaseline)
@@ -44,12 +39,10 @@ The following subset of [security data types](/azure/azure-monitor/reference/tab
 
 ## Configure a workspace
 
-Follow instructions to [create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) in the Auzre Monitor documentation.
+Follow the instructions in the Azure Monitor documentation to [create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace).
 
 
-## Enable Defender for Servers Plan 2 o
-
-Enable Plan 2 on the workspace.
+## Enable Defender for Servers Plan 2 on the workspace
 
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
@@ -64,6 +57,6 @@ Enable Plan 2 on the workspace.
 
 
 > [!Note]
-> If you want to disable Defender for Servers Plan 2 in the future, you need to explicitly disable the plan on any Log Analytics workspace that have it enabled.
+> If you want to disable Defender for Servers Plan 2 in the future, you need to explicitly disable the plan on any Log Analytics workspace that has it enabled.
 
 

@@ -5,13 +5,13 @@ ms.topic: how-to
 ms.date: 06/29/2023
 ---
 
-# Overview - Just-in-time machine access
+# Just-in-time machine access
 
-Microsoft Defender for Cloud provides a just-in-time machine access feature.
+Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time machine access feature. 
 
 Threat actors actively hunt accessible machines with open management ports, like RDP or SSH. All of your machines are potential targets for an attack. When a machine is successfully compromised, it's used as the entry point to attack further resources in the environment.
 
-Like all cybersecurity prevention techniques, your goal should be to reduce the attack surface. In this case that means having fewer open ports especially management ports. Legitimate users also use these ports, so it's not practical to keep them closed.
+To reduce attack surfaces, we want fewer open ports, especially management ports. Legitimate users also use these ports, so it's not practical to keep them closed.
 
 To solve this dilemma, Defender for Cloud offers just-in-time machine access so that you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed. Just-in-time access is available when Defender for Servers Plan 2 is enabled.
 

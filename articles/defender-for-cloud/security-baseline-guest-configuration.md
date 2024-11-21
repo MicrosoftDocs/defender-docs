@@ -7,14 +7,14 @@ author: dcurwin
 ms.date: 07/31/2023
 ---
 
-# Install the Azure Policy machine configuration extension
+# Install the Azure machine configuration extension
 
 
-Defender for Cloud assesses and enforces security configurations using built-in Azure policy initiatives, including its default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative.
+Defender for Cloud assesses operating system configuration against the [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) compute security baselines in the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
 
-As part of the MCSB offering, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
+The information needed for assessment is collected by the Azure machine configuration extension (formerly known as the Azure Policy guest configuration).
 
-Machine information for assessment against compute security baselines is collected using the Azure machine configuration extension (formerly known as the Azure Policy guest configuration). This article describes how to the extension is deployed machines.
+This article describes how to deploy the extension.
 
 ## Prerequisites
 
