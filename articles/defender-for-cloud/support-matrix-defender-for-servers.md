@@ -103,7 +103,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 The following table shows feature support for AWS and GCP machines.
 
 | **Feature** | **Availability in AWS** | **Availability in GCP** |
-|--|:-:|:-:|
+|--|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ | ✔ |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
