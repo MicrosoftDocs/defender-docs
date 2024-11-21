@@ -1,6 +1,6 @@
 ---
 title: Triage and investigate incidents with guided responses with Microsoft Copilot in Microsoft Defender
-description: Resolve incidents using guided responses delivered by Microsoft Copilot in Microsoft Defender.
+description: Triage, mitigate, and respond to incidents using guided responses delivered by Microsoft Copilot in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 10/14/2024
+ms.date: 11/18/2024
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
@@ -73,9 +73,9 @@ To use guided responses, perform the following steps:
 
 2. Review each card before applying the recommendations. Select the More actions ellipsis (...) on top of a response card to view the options available for each recommendation. Here are some examples.
 
-   ![Screenshot that shows the options available to users in a guided response card in the Copilot side panel.](/defender/media/copilot-in-defender/guided-response/copilot-defender-guided-response-more-actions1.png)
+   ![Screenshot that shows the options available to users in a guided response card in the Copilot side panel.](/defender/media/copilot-in-defender/guided-response/guided-response-options1.png)
 
-   ![Screenshot that shows the options available to users in an automation response card in the Copilot pane in Microsoft Defender XDR.](/defender/media/copilot-in-defender/guided-response/copilot-defender-guided-response-more-actions2.png)
+   ![Screenshot that shows the options available to users in an automation response card in the Copilot pane in Microsoft Defender XDR.](/defender/media/copilot-in-defender/guided-response/guided-response-options2.png)
 
 3. To apply an action, select the desired action found on each card. The guided response action on each card is tailored to the type of incident and the specific entity involved.
 

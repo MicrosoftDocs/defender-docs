@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 10/14/2024
+ms.date: 11/20/2024
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -68,13 +68,17 @@ To begin analysis, perform the following steps:
   
 2. Copilot runs script analysis and displays the results in the Copilot pane. Select **Show code** to expand the script, or **Hide code** to close the expansion.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results-small.png" alt-text="Screenshot that shows the Copilot pane with script analysis results in the Microsoft Defender XDR incident page." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/show-code-script-small.png" alt-text="Screenshot highlighting the show or hide code option within the script analysis results." lightbox="/defender/media/copilot-in-defender/script-analyzer/show-code-script.png":::
 
-3. Select the **More actions** ellipsis (...) on the upper right of the script analysis card to copy or regenerate the results, or view the results in the Security Copilot standalone experience. Selecting **Open in Security Copilot** opens a new tab to the Copilot standalone portal where you can input prompts and access other plugins.
+3. Select **Show MITRE techniques** to view the MITRE ATT&CK techniques associated with the script. This information helps you understand the techniques used by the script and how it can impact your environment. Select **Hide MITRE techniques** to close the expansion.
+
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/hide-mitre-script-small.png" alt-text="Screenshot highlighting the show or hide MITRE techniques option within the script analysis results." lightbox="/defender/media/copilot-in-defender/script-analyzer/hide-mitre-script.png":::
+
+4. Select the **More actions** ellipsis (...) on the upper right of the script analysis card to copy or regenerate the results, or view the results in the Security Copilot standalone experience. Selecting **Open in Security Copilot** opens a new tab to the Copilot standalone portal where you can input prompts and access other plugins.
   
-    ![Screenshot that shows the More actions option in the Copilot script analysis card.](/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-more-actions.png)
+    ![Screenshot that shows the More actions option in the Copilot script analysis card.](/defender/media/copilot-in-defender/script-analyzer/script-analysis-options.png)
 
-4. Review the results an use the information to guide your investigation and response to the incident.
+5. Review the results an use the information to guide your investigation and response to the incident.
 
 ## Sample script analysis prompt
 

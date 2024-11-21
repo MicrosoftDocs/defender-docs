@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 10/14/2024
+ms.date: 11/18/2024
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -74,7 +74,7 @@ To summarize an incident, perform the following steps:
 
 3. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-more-actions.png" alt-text="Screenshot that shows the actions available on the incident summary card." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-more-actions.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
 
 4. Review the summary and use the information to guide your investigation and response to the incident.
 
