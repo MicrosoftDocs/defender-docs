@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 27 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
 | November 27 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
@@ -49,6 +50,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 6 | GA | [Enhanced Support for API sensitive data classification](#enhanced-support-for-api-sensitive-data-classification) |
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
+
+### Sensitivity label consent changes
+
+**Estimated date for change**: August 29, 2024
+
+You will no longer need to provide consent to benefit from custom information types and sensitivity labels configured in the Defender portal or Microsoft Purview compliance portal. Currently, customers need to select a dedicated consent button in the Defender portal under the "Information Protection" section within the "Labels" blade.
+
+With this upcoming change, all custom information types and sensitivity labels will be automatically imported into the Microsoft Defender for Cloud portal.
+
+Learn more about [data sensitivity settings](data-sensitivity-settings.md#import-custom-sensitivity-info-typeslabels).
 
 ### Sensitivity label changes
 

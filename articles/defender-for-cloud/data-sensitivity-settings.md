@@ -29,20 +29,10 @@ Changes in sensitivity settings take effect the next time that resources are dis
 
 ## Import custom sensitivity info types/labels
 
-To import custom sensitivity info types and labels, you need to have Enterprise Mobility and Security E5/A5/G5 licensing. Learn more about [sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-information-protection-sensitivity-labeling).
-
-Defender for Cloud uses built-in sensitive info types. You can optionally import your own custom sensitive info types and labels from Microsoft Purview compliance portal to align with your organization's needs.
-
-Import as follows (Import only once):
-
-1. Log into Microsoft Purview compliance portal.
-1. Navigate to Information Protection > [Labels](https://compliance.microsoft.com/informationprotection/labels).
-1. In the consent notice message, select **Turn on** and then select **Yes** to share your custom info types and sensitivity labels with Defender for Cloud.
+Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud if you have Enterprise Mobility and Security E5/A5/G5 licensing. Learn more about [sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-information-protection-sensitivity-labeling).
 
 > [!NOTE]
->
-> - Imported labels appear in Defender for Cloud in the order rank that's set in Microsoft Purview.
-> - The two sensitivity labels that are set to highest priority in Microsoft Purview are turned on by default in Defender for Cloud.
+> There is no need to manually provide consent in the M365 portal.
 
 ## Customize sensitive data categories/types
 
