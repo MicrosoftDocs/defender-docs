@@ -39,7 +39,7 @@ The category column indicates whether a vulnerability has a new node pool VM ima
 
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-detail.png" alt-text="Screenshot of the pane showing all the details of the CVE and K8s node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
 
-In the details pane, the **Node pool instances** section shows the scaled node pools that will be affected by the remediation. The **More affected resources** shows other scaled node pools that have the same CVE and should be remediated as well.
+In the details pane, the **Node pool instances** section shows the nodes that will be affected by the remediation. The **More affected resources** shows other nodes that have the same CVE and should be remediated as well.
 
 ## Remediate K8s node vulnerabilities
 
