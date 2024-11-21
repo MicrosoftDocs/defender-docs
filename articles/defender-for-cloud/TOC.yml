@@ -141,6 +141,92 @@
         - name: Protect resources that report to a Log Analytics workspace
           displayName: workSystem, namespace, enable, plans
           href: enable-plan-workspace.md
+    - name: Integrate partner integrations
+      expanded: false
+      items:
+        - name: Overview of partner integrations
+          displayName: partner, integration, integrations, partners
+          href: partner-integrations.md
+        - name: Integrate partner integrations
+          displayName: partner, integration, integrations, partners
+          href: integrate-partner-integrations.md
+        - name: Connect an integration
+          displayName: partner, integration, integrations, partners
+          href: connect-an-integration.md
+        - name: Partner integrations
+          items:
+          - name: Endor labs
+            items:
+            - name: Overview Endor labs integration
+              displayName: CSPM, cloud security, posture, management, Endor labs
+              href: integration-endor-labs.md
+            - name: Connect Endor labs to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, Endor labs
+              href: connect-endor-labs.md
+            - name: Common questions about Endor labs
+              displayName: FAQ, questions, endor labs
+              href: faq-endor-labs.yml
+          - name: ServiceNow
+            items:
+            - name: Overview ServiceNow integration
+              displayName: CSPM, cloud security, posture, management, ServiceNow
+              href: integration-servicenow.md
+            - name: Connect ServiceNow to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, ServiceNow
+              href: connect-servicenow.md
+          - name: API security testing partners
+            items:
+                - name: Overview of API security testing integrations
+                  href: defender-partner-applications.md
+                - name: Onboard 42Crunch (preview)
+                  href: onboarding-guide-42crunch.md
+                - name: Onboard StackHawk (preview)
+                  href: onboarding-guide-stackhawk.md
+                - name: Onboard Bright Security (preview)
+                  href: onboarding-guide-bright.md
+        - name: Security solutions (legacy)
+          displayName: security, solutions, integrate, integrated, data sources
+          href: partner-integration.md
+    - name: Integrate Microsoft solutions
+      expanded: false
+      items:
+          - name: Power BI
+            items:
+            - name: Overview Power BI integration
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: integration-power-bi.md
+            - name: Add Defender for Cloud data to Power BI
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: add-data-power-bi.md
+          - name: Microsoft Defender for Endpoint
+            items:
+              - name: Overview Microsoft Defender for Endpoint integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                href: integration-defender-for-endpoint.md
+              - name: Enable the Defender for Endpoint integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                href: enable-defender-for-endpoint.md
+          - name: Microsoft Defender XDR
+            items:
+              - name: Overview Microsoft Defender XDR integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
+                href: concept-integration-365.md
+          - name: Microsoft Entra Permissions Management
+            items:
+              - name: Enable the Microsoft Entra Permissions Management integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Entra Permissions Management
+                href: enable-permissions-management.md
+          - name: Microsoft Defender external attack surface management (EASM)
+            items:
+              - name: Overview Microsoft Defender EASM integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
+                href: concept-easm.md
+          - name: Microsoft Copilot for Security
+            items:
+              - name: Overview Microsoft Copilot for Security integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
+                href: copilot-security-in-defender-for-cloud.md
+
 
 - name: Tutorials
   items:
@@ -233,11 +319,13 @@
         - name: Protecting cloud deployment secrets
           href: secrets-scanning-cloud-deployment.md
           
+        - name: Protecting code repository secrets
+          href: secrets-scanning-code.md
       - name: Integrations
         items:  
         - name: ServiceNow
           items:
-          - name: ServiceNow integration with Defender for Cloud
+          - name: Overview ServiceNow integration
             displayName: CSPM, cloud security, posture, management, ServiceNow
             href: integration-servicenow.md
           - name: Connect ServiceNow to Defender for Cloud
@@ -251,7 +339,7 @@
             href: create-governance-rule-servicenow.md
         - name: Power BI
           items:
-          - name: Power BI integration with Defender for Cloud
+          - name: Overview Power BI integration
             displayName: CSPM, cloud security, posture, management, Power BI
             href: integration-power-bi.md
           - name: Add Defender for Cloud data to Power BI
@@ -274,12 +362,16 @@
       items:
         - name: Agentless container posture in Defender CSPM
           href: concept-agentless-containers.md
+    - name: Improve API security posture
+      items:
+        - name: Overview
+          href: api-security-posture-overview.md
     - name: Improve AI security posture
       items:
       - name: AI security posture management (Preview)
         displayName: AI, security, posture, management
         href: ai-security-posture.md
-    - name: Copilot for Security in Defender for Cloud
+    - name: Microsoft Security Copilot in Defender for Cloud
       displayName: copilot, security, recommendations
       href: copilot-security-in-defender-for-cloud.md
     - name: Security recommendations
@@ -395,12 +487,13 @@
         - name: Track secure score
           displayName: secure score, rest api, resource graph
           href: secure-score-access-and-track.md
-        - name: Integrate security solutions
-          displayName: security, solutions, integrate, integrated, data sources
-          href: partner-integration.md
         - name: Enable permissions management (CIEM)
           displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
           href: enable-permissions-management.md
+    - name: API security posture
+      items:
+        - name: Enable API security posture with Defender CSPM
+          href: enable-api-security-posture.md
     - name: AI security posture
       items:
         - name: Discover generative AI workloads
@@ -432,21 +525,21 @@
         href: remediate-server-secrets.md
       - name: Remediate cloud deployment secrets
         href: remediate-cloud-deployment-secrets.md
-    - name: Improve security posture with Copilot for Security
+    - name: Improve security posture with Microsoft Security Copilot
       items:
-        - name: Analyze recommendations with Copilot for Security
+        - name: Analyze recommendations with Microsoft Security Copilot
           displayName: copilot, security, recommendations, analyze
           href: analyze-with-copilot.md
-        - name: Summarize recommendations with Copilot for Security
+        - name: Summarize recommendations with Microsoft Security Copilot
           displayName: copilot, security, recommendations, summarize
           href: summarize-with-copilot.md
-        - name: Remediate recommendations with Copilot for Security
+        - name: Remediate recommendations with Microsoft Security Copilot
           displayName: copilot, security, recommendations, remediate
           href: remediate-with-copilot.md
-        - name: Delegate recommendations with Copilot for Security
+        - name: Delegate recommendations with Microsoft Security Copilot
           displayName: copilot, security, recommendations, delegate
           href: delegate-with-copilot.md
-        - name: Remediate code with Copilot for Security
+        - name: Remediate code with Microsoft Security Copilot
           displayName: copilot, security, recommendations, code, remediate, iac, infrastructure as code
           href: remediate-code-with-copilot.md
     - name: Manage security standards and recommendations
@@ -805,6 +898,8 @@
             href: agentless-vulnerability-assessment-gcp.md
           - name: Vulnerability assessments for Docker Hub
             href: agentless-vulnerability-assessment-docker-hub.md
+          - name: Vulnerability assessments for JFrog Artifactory
+            href: agentless-vulnerability-assessment-jfrog-artifactory.md
           - name: Enable vulnerability assessments
             href: enable-vulnerability-assessment.md
           - name: Remediate vulnerabilities for registry images (risk-based)
@@ -947,7 +1042,13 @@
           security, hash reputation analysis
         href: defender-for-storage-introduction.md
       - name: Malware Scanning
-        href: defender-for-storage-malware-scan.md
+        items:
+              - name: Introduction to malware scanning
+                href: introduction-malware-scanning.md
+              - name: On-upload malware scanning
+                href: on-upload-malware-scanning.md
+              - name: On-demand malware scanning
+                href: on-demand-malware-scanning.md
       - name: Sensitive data threat detection
         href: defender-for-storage-data-sensitivity.md
       - name: Enable and configure Defender for Storage
@@ -1037,6 +1138,8 @@
         items:
           - name: Connect Azure DevOps environments
             href: quickstart-onboard-devops.md
+          - name: Configure agentless code scanning for Azure DevOps
+            href: agentless-code-scanning.md
           - name: Connect GitHub environments
             href: quickstart-onboard-github.md
           - name: Connect GitLab environments
@@ -1199,7 +1302,7 @@
         - name: Microsoft CNAPP solution 
           displayName: CNAPP
           href: episode-forty-eight.md
-        - name: Microsoft Copilot for Security integration
+        - name: Microsoft Security Copilot integration
           displayName: Copilot, security
           href: episode-forty-nine.md
         - name: Secure AI applications from code to runtime
