@@ -17,20 +17,21 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 07/18/2024
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Microsoft Defender XDR prerequisites
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- Microsoft Defender XDR
-
 Learn about licensing and other requirements for provisioning and using [Microsoft Defender XDR](microsoft-365-defender.md).
 
 ## Licensing requirements
-Any of these licenses gives you access to Microsoft Defender XDR features via the Microsoft Defender portal without additional cost:
+
+Microsoft Defender XDR natively correlates Microsoft security products' signals, providing security operations teams a single pane of glass to detect, investigate, respond, and protect your assets. These signals are dependent on the license that you have and the access provisioned to you.
+
+Any of the these licenses gives you access to Microsoft Defender XDR features via the Microsoft Defender portal without additional cost:
 
 - Microsoft 365 E5 or A5
 - Microsoft 365 E3 with the Microsoft 365 E5 Security add-on
@@ -65,10 +66,8 @@ Go to Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.
 
 You must at least be a **security administrator** in Microsoft Entra ID to turn on Microsoft Defender XDR. For the list of roles required to use Microsoft Defender XDR and information on how access to data is regulated, read about [managing access to Microsoft Defender XDR](m365d-permissions.md).
 
->[!IMPORTANT]
->Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Browser requirements
 
@@ -86,10 +85,10 @@ Currently, the Microsoft Defender for Office 365 integration into the unified Mi
 - Sweden
 - Singapore
 
-
 ## Related articles
 
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Manage access and permissions](m365d-permissions.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
