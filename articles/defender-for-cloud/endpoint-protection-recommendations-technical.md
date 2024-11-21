@@ -13,7 +13,7 @@ ms.date: 09/08/2024
 
 Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud.
 
-As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be the integrated Defender for Endpoint solution, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be the integrated Defender for Endpoint solution, or a [supported third-party solution](detect-endpoint-detection-response-solutions.md#supported-edr-solutions).
 
 
 Based on findings, Defender for Cloud makes recommendations to address EDR solution issues. This article describes how to remediate those recommendations when you're using the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to collect EDR solution information.

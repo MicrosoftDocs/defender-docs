@@ -15,7 +15,7 @@ This article helps you to identify and remediate [machine secrets scan](secrets-
 - You can review and remediate findings using [machine secrets recommendations](secrets-scanning-servers.md#machine-secrets-recommendations).
 - View secrets discovered on a specific machine in the [Defender for Cloud inventory](asset-inventory.md)
 - Drill down into machine secrets findings using [cloud security explorer queries](secrets-scanning-servers.md#predefined-cloud-security-explorer-queries) and [machine secrets attack paths](secrets-scanning-servers.md#machine-secrets-attack-paths)
-- Not every method is supported for every secret. Review the [supported methods](secrets-scanning.md#investigation-and-remediation-methods) for different types of secrets. 
+- Not every method is supported for every secret. Review the [supported methods](secrets-scanning.md#reviewing-secrets-findings) for different types of secrets. 
 
 It’s important to be able to prioritize secrets and identify which ones need immediate attention. To help you do this, Defender for Cloud provides:
 

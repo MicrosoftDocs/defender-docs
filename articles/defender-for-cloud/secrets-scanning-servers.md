@@ -64,7 +64,7 @@ Defender for Cloud provides these predefined queries for investigating secrets s
 
 ## Investigating and remediating machine secrets
 
-You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#investigation-and-remediation-methods) for different types of secrets.
+You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#secrets-support) for different types of secrets.
 
 
 ## Related content
