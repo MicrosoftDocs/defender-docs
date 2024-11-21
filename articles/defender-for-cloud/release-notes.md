@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/18/2024
+ms.date: 11/21/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 27 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
@@ -49,6 +50,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
+### Sensitivity label changes
+
+November 27, 2024
+
+Until today, Defender for Cloud pulled all sensitivity labels from Microsoft 365 portal that met the following two conditions:
+
+- Sensitivity labels that had the scope is set to `Items -> files`, or `Items -> emails`, under the `Define the scope of your label` section in `Information Protection`.
+- The sensitivity label has an automatic labeling rule configured.
+
+The names of the sensitivity label's scopes in the user interface, has changed in both the Microsoft M365 portal and the Purview portal. Defender for Cloud now only pulls sensitivity labels with the `Files and other data assets` scope applied to them. Defender for Cloud no longer pull labels with the `Emails` scope applied to them.
+
+> [!NOTE]
+> Labels that were configured with `Items -> files` before this change took place automatically migrate to the new `Files and other data assets` scope.
+
+Learn more about [how to configure sensitivity labels](data-sensitivity-settings.md).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 

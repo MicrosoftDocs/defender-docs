@@ -1,11 +1,13 @@
 ---
 title: Customize data sensitivity settings
-description: Learn how to customize data sensitivity settings in Defender for Cloud
+description: Learn how to customize data sensitivity settings in Microsoft Defender for Cloud to better manage and protect your organization's sensitive data.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 01/04/2024
+ms.date: 11/21/2024
+#customer intent: As a security administrator, I want to customize data sensitivity settings so that I can better manage and protect sensitive data in my organization.
 ---
+
 # Customize data sensitivity settings
 
 This article describes how to customize data sensitivity settings in Microsoft Defender for Cloud.
@@ -64,8 +66,8 @@ To customize data sensitivity settings that appear in Defender for Cloud, review
 
 If you're using Microsoft Purview sensitivity labels, make sure that:
 
-- the label scope is set to "Items"; under which you should configure [auto labeling for files and emails](/microsoft-365/compliance/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps)
-- labels must be [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with a label policy that is in effect.
+- the label scope is set to `Files and other data assets`.
+- labels must be [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with an automatic labeling rule, and a label policy that is in effect.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
@@ -84,6 +86,7 @@ If you're using Microsoft Purview sensitivity labels, make sure that:
 > - You can’t select a sub label in the threshold. However, you can see the sublabel as the affected label on resources in attack path/Cloud Security Explorer, if the parent label is part of the threshold (part of the sensitive labels selected).
 > - The same settings will apply to any supported resource (object storage and databases).
 
-## Next steps
+## Next step
 
-[Review risks](data-security-review-risks.md) to sensitive data
+> [!div class="nextstepaction"]
+> [Review risks](data-security-review-risks.md) to sensitive data
