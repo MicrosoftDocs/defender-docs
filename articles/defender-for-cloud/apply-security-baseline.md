@@ -16,11 +16,6 @@ Defender for Cloud assessess operating system settings against compute security 
 
 This article describes how to review recommendations made by the assessment.
 
-> [!NOTE]
-> - Using the machine configuration extension to collect data replaces use of the deprecated Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA).
-> - Support for assessing misconfigurations in Docker hub and Azure virtual machine scale sets also ends in November 2024.
-> - Defender for Cloud also provides support for assessing operating system settings against security baseline assessments provided by Microsoft Defender Vulnerability management. This feature is in public preview in Defender for Cloud. [Learn more](operating-system-misconfiguration.md##assessing-os-settings--defender-vulnerability-management).
-
 
 ## Prerequisites
 

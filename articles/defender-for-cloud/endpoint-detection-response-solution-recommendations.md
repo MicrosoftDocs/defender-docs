@@ -16,7 +16,7 @@ Microsoft Defender for Cloud includes endpoint detection and response (EDR) capa
 - [Integrates natively with Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md) for machine protection. to provide EDR capabilities for protected machines.
 - Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](detect-endpoint-detection-response-solutions.md#supported-edr-solutions).
 
-Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on machines. This article describes how to remediate those recommendations.
+Based on EDR solution findings, Defender for Cloud provides [recommendations](detect-endpoint-detection-response-solutions.md) to ensure that EDR solutions are installed and running correctly on machines. This article describes how to remediate those recommendations.
 
 > [!NOTE]
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
@@ -59,7 +59,7 @@ Based on EDR solution findings, Defender for Cloud provides [recommendations](in
 
 ## Enable Defender for Endpoint integration
 
-This recommended action is available when Defender for Endpoint can be installed on a machine, and a [supported third-party EDR solution](integration-defender-for-endpoint.md#supported-edr-solutions) isn't detected on the machine.
+This recommended action is available when Defender for Endpoint can be installed on a machine, and a [supported third-party EDR solution](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
 
 
 Enable Defender for Endpoint on the machine as follows:
@@ -81,7 +81,7 @@ Enable Defender for Endpoint on the machine as follows:
 
 This recommended action is available when:
 
-- A [supported third-party EDR solutions](integration-defender-for-endpoint.md#supported-edr-solutions) isn't detected on the machine.
+- A [supported third-party EDR solutions](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
 - A required Defender for Cloud plan (Defender for Servers Plan 2 or Defender CSPM) isn't enabled for the machine.
 
 Fix the recommendation as follows:
