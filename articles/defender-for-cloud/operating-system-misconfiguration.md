@@ -34,7 +34,7 @@ MSCB includes compute security baselines.
 
 Machine information is gathered for assessment using the Azure Policy machine configuration extension (formerly known as the guest configuration) running on the machine. 
 
-> [!!NOTE]
+> [!NOTE]
 > - Using the machine configuration extension to collect data replaces use of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA).
 > - Use of the MMA will deprecate in November 2024.
 > - Support for assessing misconfigurations in Docker hub and Azure virtual machine scale sets also ends in November 2024.

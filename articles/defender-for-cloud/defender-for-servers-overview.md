@@ -96,7 +96,9 @@ After a plan is enabled.
 - **Trial period**: 30-day trial period begins. There is no way to stop, pause, or extend this trial period. To enjoy the full 30-day trial, plan ahead to meet your evaluation goals.
 - **Endpoint protection**: The Defender for Endpoint sensor is automatically installed on all supported machines connected to Defender for Cloud. You can disable automatic provisioning if you need to.
 - **Vulnerability assessment**: Defender Vulnerability Management is enabled by default on machines with the Defender for Endpoint sensor installed.
-- **Azure Policy machine configuration**: The [Azure Policy machine configuration](/azure/virtual-machines/extensions/guest-configuration) (formerly known as the Azure Policy guest configuration) provides a set of built-in policies that help you to assess and enforce security configurations for machines. [Learn more](security-baseline-guest-configuration.md) about enabling machine configuration.
+- **Agentless scanning**: [Agentless scanning](concept-agentless-data-collection.md) is enabled by default when you turn on Defender for Servers Plan 2.
+- **OS configuration assessment**: When you enable Defender for Servers Plan 2, Defender for Cloud [assesses operation system configuration settings](operating-system-misconfiguration.md) against compute security baselines in Microsoft Cloud Security Benchmark. To use this feature, machines must be running the Azure machine configuration extension. [Learn more](security-baseline-guest-configuration.md) about setting up the extension.
+- **File integrity monitoring**: You set up [file integrity monitoring](file-integrity-monitoring-overview.md) after enabling Defender for Servers Plan 2.
 
 ## Next steps
 
