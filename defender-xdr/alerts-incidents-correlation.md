@@ -82,6 +82,8 @@ Over the course of investigating an incident, you might discover that other inci
 
 Merging incidents together is preferable to unlinking alerts from one incident and linking them to another, because all the incident information (for example, the activity log) is preserved.
 
+For now, only two incidents at a time can be merged manually.
+
 For instructions and more information on how to merge incidents manually, see [Merge incidents manually in the Microsoft Defender portal](merge-incidents-manually.md).
 
 ## Next steps
