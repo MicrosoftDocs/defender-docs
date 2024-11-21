@@ -38,17 +38,15 @@ The following table summarizes how Defender for Servers features will be provide
 
 ### Log analytics agent autoprovisioning experience - deprecation plan
 
-
-
-As part of the MMA agent retirement, the auto provisioning capability that provides the installation and configuration of the agent for MDC customers, will be deprecated as well in 2 stages: 
+As part of the MMA agent retirement, the auto provisioning capability that provides the installation and configuration of the agent for MDC customers, will be deprecated as well in 2 stages:
 
 1. **By the end of September 2024** - auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions:​
 
      - **Existing subscriptions** that switch off MMA auto provisioning after end of September will no longer be able to enable the capability afterwards.​
 
-  - On **newly created subscriptions** auto provisioning can no longer be enabled and is automatically turned off.​
+- On **newly created subscriptions** auto provisioning can no longer be enabled and is automatically turned off.​
 
-2. **End of November 2024** - the capability will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
+1. **End of November 2024** - the capability will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
 
 ### The 500-MB benefit for data ingestion
 
@@ -69,35 +67,34 @@ Learn more about how to [deploy AMA](/azure/azure-monitor/vm/monitor-virtual-mac
 For SQL servers on machines, we recommend to [migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process](defender-for-sql-autoprovisioning.md).
 
 ### Changes to legacy Defender for Servers Plan 2 onboarding via Log Analytics agent
+
 The legacy approach to onboard servers to Defender for Servers Plan 2 based on the Log Analytics agent and using Log analytics workspaces is set for retirement as well:
+
 - The onboarding experience for [onboarding new non-Azure machines](quickstart-onboard-machines.md) to Defender for Servers using Log Analytics agents and workspaces is removed from the **Inventory** and **Getting started** blades in the Defender for Cloud portal.
 - To avoid losing security coverage on the affected machines connected to a Log Analytics Workspace, with the Agent retirement:
 - If you onboarded non-Azure servers (both on-premises and multicloud) using the [legacy approach](quickstart-onboard-machines.md), you should now connect these machines via Azure Arc-enabled servers to Defender for Servers Plan 2 Azure subscriptions and connectors. [Learn more](/azure/azure-arc/servers/deployment-options) about deploying Arc machines at scale.
-    
-  - If you used the legacy approach to enable Defender for Servers Plan 2 on selected Azure VMs, we recommend enabling Defender for Servers Plan 2 on the Azure subscriptions for these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
-    
-This is a summary of the required action for each of the servers onboarded to Defender for Servers Plan 2 through the legacy approach:
 
- 
+  - If you used the legacy approach to enable Defender for Servers Plan 2 on selected Azure VMs, we recommend enabling Defender for Servers Plan 2 on the Azure subscriptions for these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
+
+This is a summary of the required action for each of the servers onboarded to Defender for Servers Plan 2 through the legacy approach:
 
 |Machine type |Action required to preserve security coverage|
 | -------- | -------- |
-|On premise servers| [Onboarded to Arc ](/azure/azure-arc/servers/deployment-options) and connected to a subscription with Defender for Servers Plan 2 |
+|On premise servers| [Onboarded to Arc](/azure/azure-arc/servers/deployment-options) and connected to a subscription with Defender for Servers Plan 2 |
 |Azure Virtual machines|Connect to subscription with Defender for Servers Plan 2|
-|Multicloud Servers |Connect to [multicloud connector](/azure/defender-for-cloud/quickstart-onboard-aws) with Azure Arc provisioning and Defender for Servers plan 2|
+|Multicloud Servers |Connect to [multicloud connector](quickstart-onboard-aws.md) with Azure Arc provisioning and Defender for Servers plan 2|
 
+### System update and patches recommendations experience - changes and migration guidance
 
-### System update and patches recommendations experience - changes and migration guidance 
+System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
 
-System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.  
+System updates recommendations were previously provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent. This experience has been replaced by security recommendations that are gathered using [Azure Update Manager](/azure/update-manager/overview?branch=main) and constructed out of 2 new recommendations:
 
-System updates recommendations were previously provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent. This experience has been replaced by security recommendations that are gathered using [Azure Update Manager](/azure/update-manager/overview?branch=main) and constructed out of 2 new recommendations: 
+1. [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9)
 
-1. [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9) 
+2. [System updates should be installed on your machines (powered by Azure Update Manager)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)
 
-2. [System updates should be installed on your machines (powered by Azure Update Manager)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f) 
-
-Learn how to [Remediate system updates and patches recommendations on your machines](/azure/defender-for-cloud/enable-periodic-system-updates). 
+Learn how to [Remediate system updates and patches recommendations on your machines](enable-periodic-system-updates.md).
 
 #### Which recommendations are being Replaced?
 
@@ -105,22 +102,23 @@ The following table summarizes the timetable for recommendations being deprecate
 
 |Recommendation|Agent|Supported resources|Deprecation date|Replacement recommendation|
 | -------- | -------- | -------- | -------- | -------- |
-|[System updates should be installed on your machines ](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SystemUpdatesRecommendationDetailsWithRulesBlade/assessmentKey/4ab6e3c5-74dd-8b35-9ab9-f61b30875b27)|MMA |Azure & non-Azure (Windows & Linux) |August 2024 |[New recommendation powered by Azure Update Manager ](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)|
-|[System updates on virtual machine scale sets should be installed ](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/bd20bd91-aaf1-7f14-b6e4-866de2f43146)|MMA |Azure Virtual Machine Scale Sets  |August 2024 |No replacement |
+|[System updates should be installed on your machines](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SystemUpdatesRecommendationDetailsWithRulesBlade/assessmentKey/4ab6e3c5-74dd-8b35-9ab9-f61b30875b27)|MMA |Azure & non-Azure (Windows & Linux) |August 2024 |[New recommendation powered by Azure Update Manager](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)|
+|[System updates on virtual machine scale sets should be installed](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/bd20bd91-aaf1-7f14-b6e4-866de2f43146)|MMA |Azure Virtual Machine Scale Sets |August 2024 |No replacement |
 
 #### How do I prepare for the new recommendations?
 
-- Connect your non-Azure machines to Arc 
+- Connect your non-Azure machines to Arc
 
-- Ensure that [periodic assessment](/azure/update-manager/assessment-options) update setting is enabled on your machines. You can do it in 2 ways: 
+- Ensure that [periodic assessment](/azure/update-manager/assessment-options) update setting is enabled on your machines. You can do it in 2 ways:
 
-1. Fix the recommendation: Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager). 
-2. Enable Periodic assessment [at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main). 
+1. Fix the recommendation: Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager).
+2. Enable Periodic assessment [at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main).
 
-- Once dome, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status. 
+- Once dome, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
 
 > [!NOTE]
-> Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 is not enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). **Arc enabled machines that Defender for Servers Plan 2 is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.** 
+> Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 is not enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). **Arc enabled machines that Defender for Servers Plan 2 is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.**
+>
 ### Endpoint protection recommendations experience - changes and migration guidance
 
 Endpoint discovery and recommendations were previously provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent in GA, or in preview via the AMA. These experience have been replaced by security recommendations that are gathered using agentless machine scanning.
@@ -239,8 +237,8 @@ Machine information is collected for assessment using the Log Analytics agent (a
 - Machine information will be collected using the [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration).
 
 - The following Azure policies are enabled with Azure Policy guest configuration:
-    - "Windows machines should meet requirements of the Azure compute security baseline"
-    - "Linux machines should meet requirements for the Azure compute security baseline"
+  - "Windows machines should meet requirements of the Azure compute security baseline"
+  - "Linux machines should meet requirements for the Azure compute security baseline"
 
     > [!NOTE]
     > If you remove these policies you won't be able to access the benefits of the Azure Policy guest configuration extension.
@@ -265,9 +263,9 @@ Depending on your environment, you may need to take the following steps:
 1. Install the Azure Policy guest configuration on your machines.
     - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
 
-    - (**Azure VMs only**) You must Assign managed Identity. 
+    - (**Azure VMs only**) You must Assign managed Identity.
         - In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
-    
+
     - (**Azure VMs only**) Optional: To autoprovision the Azure Policy guest configuration across your entire subscription, you can enable the Guest Configuration agent (preview).
         - To enable the Guest Configuration agent:
             1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -279,7 +277,7 @@ Depending on your environment, you may need to take the following steps:
             1. Select **Continue**.
 
     - **GCP and AWS**: Azure Policy guest configuration is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) with Azure Arc autoprovisioning enabled, to Defender for Cloud.
-    
+
     - **On-premises machines**: The Azure Policy guest configuration is enabled by default when you [onboard on-premises machines as Azure Arc enabled machine or VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
 
 Once you have completed the necessary steps to install the Azure Policy guest configuration, you will automatically gain access to the baseline features based on the Azure Policy guest configuration. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
@@ -292,6 +290,7 @@ With the deprecation of the MMA, the following MMA based recommendations are set
 - [Auto provisioning of the Log Analytics agent should be enabled on subscriptions](recommendations-reference-data.md)
 
 The deprecated recommendations will be replaced by the following Azure Policy guest configuration base recommendations:
+
 - [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
 - [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
 - [Guest Configuration extension should be installed on machines](recommendations-reference-compute.md)
@@ -300,7 +299,7 @@ The deprecated recommendations will be replaced by the following Azure Policy gu
 
 When you enable Defender for Cloud on an Azure subscription, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction), including compute security baselines that assess machine OS compliance, is enabled as a default compliance standard. Free foundational cloud security posture management (CSPM) in Defender for Cloud makes security recommendations based on the MCSB.
 
-If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
+If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score.
 
 As a work-around, you can disable the MMA recommendations, "Machines should be configured securely", and "Auto provisioning of the Log Analytics agent should be enabled on subscriptions", by navigating to the Regulatory compliance page in Defender for Cloud.
 
@@ -310,11 +309,11 @@ Once you have located the recommendation, you should select the relevant machine
 
 :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-regulatory.png" alt-text="Screenshot that shows you how to select machines and exempt them." lightbox="media/prepare-deprecation-log-analytics-mma-agent/exempt-regulatory.png":::
 
-Some of the baseline configuration rules powered by the Azure Policy guest configuration tool are more current and offer broader coverage. As a result, transition to Baselines feature power by Azure Policy guest configuration can affect your compliance status since they include checks that might not have been performed previously. 
+Some of the baseline configuration rules powered by the Azure Policy guest configuration tool are more current and offer broader coverage. As a result, transition to Baselines feature power by Azure Policy guest configuration can affect your compliance status since they include checks that might not have been performed previously.
 
 ### Query recommendations
 
-With the retirement of the MMA, Defender for Cloud no longer queries recommendations through the Log Analytic workspace information. Instead, Defender for Cloud now uses Azure Resource Graph for API, and portal queries, to query recommendation information. 
+With the retirement of the MMA, Defender for Cloud no longer queries recommendations through the Log Analytic workspace information. Instead, Defender for Cloud now uses Azure Resource Graph for API, and portal queries, to query recommendation information.
 
 Here are 2 sample queries you can use:
 
