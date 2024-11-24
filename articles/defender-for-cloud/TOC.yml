@@ -601,10 +601,6 @@
         - name: Protect network resources
           displayName: map, network map
           href: protect-network-resources.md
-        - name: Lock down logins with multifactor authentication
-          displayName: identity, access, AAD, active directory, multifactor,
-            authentication, multifactor, users, passwords
-          href: multi-factor-authentication-enforcement.md
         - name: Other threat protections
           displayName: network layer, display recommendations, stream, security, alerts,
             DDoS, Entra
