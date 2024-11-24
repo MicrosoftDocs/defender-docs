@@ -21,8 +21,9 @@ This article helps you to deploy a Defender for Servers plan.
 ## Prerequisites
 
 - **Plan your deployment**. Review the [Defender for Servers planning guide](plan-defender-for-servers.md).
-- **Review plans**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plans.
-- **Decide on deployment scope**: Decide where you want to enable Defender for Servers. [Learn more](defender-for-servers-overview.md#enabling-deployment-scope).
+- **Review data collection and storage** | Understand [how Defender for Servers collects data](plan-defender-for-servers-agents.md), and [where data is stored](plan-defender-for-servers-data-workspace.md).
+- **Get deployment considerations** | [Review deployment recommendations](plan-defender-for-servers-select-plan.md), and decide where you want to enable the plan.
+- **Compare plan features**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plan features.
 - **Review pricing**. Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
 - **Turn on Defender for Cloud**: Make sure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).

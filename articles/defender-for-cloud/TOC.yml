@@ -15,8 +15,6 @@
     - name: What's new in recommendations, alerts, and incidents
       displayName: what's new, recommendations, alerts, incidents
       href: release-notes-recommendations-alerts.md
-    - name: Prepare for retirement of the Log Analytics agent
-      href: prepare-deprecation-log-analytics-mma-agent.md
     - name: Common questions
       items:
         - name: Common questions about Defender for Cloud
@@ -740,7 +738,7 @@
           href: plan-defender-for-servers-select-plan.md
         - name: Understand data collection
           href: plan-defender-for-servers-agents.md
-        - name: Understand where data is stored
+        - name: Understand data storage and workspaces
           href: plan-defender-for-servers-data-workspace.md
         - name: Scale a Defender for Servers deployment
           href: plan-defender-for-servers-scale.md  

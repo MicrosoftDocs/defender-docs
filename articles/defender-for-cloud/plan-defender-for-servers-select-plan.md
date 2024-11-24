@@ -40,6 +40,31 @@ Defender for Servers offers two paid plans:
 
 For a full list, review [Defender for Servers plan features](defender-for-servers-overview.md#plan-protection-features).
 
+
+## Deciding on plan scope
+
+We recommend enabling Defender for Servers at subscription level, but you can enable and disable Defender for Servers at resource level if you need deployment granularity.
+
+You can enable and disable at the resource level as follows:
+
+**Scope** | **Plan 1** | **Plan 2**
+--- | --- | ---
+**Enable for Azure subscription** | Yes | Yes
+**Enable for resource** | Yes | No
+**Disable for resource** | Yes | Yes
+
+- Plan 1 can be enabled and disabled at resource level per server.
+- Plan 2 can't be enabled at the resource level, but you can disable the plan at resource level.
+
+Here are a couple of use case examples to help you decide.
+
+- **Use case 1**: Turn on Defender for Servers Plan 1 or Plan 2 for the entire subscription. This is the recommended option. [Learn about the features provided with each plan](defender-for-servers-overview.md#defender-for-servers-plans).
+- **Use case 2**: Enable Defender for Servers Plan 1 for specific resources in your subscription, and don't enable the plan in the entire subscription.
+- **Use case 3**: Enable Defender for Servers Plan 2 on the entire subscription, and then turn off the plan for specific resources, or downgrade specific resources to Plan 1. 
+
+[Learn more]() about how to deploy the plan for specific resources.
+
+
 ## Workspace considerations
 
 Defender for Servers needs a Log Analytics workspace when:
