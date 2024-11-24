@@ -70,6 +70,20 @@ For databases:
 - Databases are scanned on a weekly basis.
 - For newly enabled subscriptions, results appear within 24 hours.
 
+### Cloud Security Explorer
+
+We display all storage types, including Azure Storage Accounts, AWS Buckets, and GCP Buckets, regardless of their associated insights. For Azure Storage Accounts, which include Blob Containers and File Shares, the following rules apply:
+
+•__Blob Containers__ are displayed if they meet any of the following criteria: 
+
+- They have the “Contains Sensitive Data” insight. 
+
+- They have the “Public Access” insight.
+
+- They have a replication rule to/from another blob.
+
+ •__File Shares__ are displayed only if they have the “Contains Sensitive Data” insight. 
+
 ### Discovering and scanning Azure storage accounts
 
 To scan Azure storage accounts, Microsoft Defender for Cloud creates a new `storageDataScanner` resource and assigns it the [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-reader) role. This role grants the following permissions:
@@ -144,9 +158,9 @@ AWS:
 - RDS instance
 
 > [!NOTE]
->
 > - Exposure rules that include 0.0.0.0/0 are considered “excessively exposed”, meaning that they can be accessed from any public IP.
-> - Azure resources with the exposure rule “0.0.0.0” are accessible from any resource in Azure (regardless of tenant or subscription).
+- Azure resources with the exposure rule “0.0.0.0” are accessible from any resource in Azure (regardless of tenant or subscription).
+
 
 ## Next step
 
