@@ -70,7 +70,7 @@ Until today, Defender for Cloud pulled all sensitivity labels from Microsoft 365
 - Sensitivity labels that had the scope is set to `Items -> files`, or `Items -> emails`, under the `Define the scope of your label` section in `Information Protection`.
 - The sensitivity label has an automatic labeling rule configured.
 
-The names of the sensitivity label's scopes in the user interface, has changed in both the Microsoft M365 portal and the Purview portal. Defender for Cloud now only pulls sensitivity labels with the `Files and other data assets` scope applied to them. Defender for Cloud no longer pull labels with the `Emails` scope applied to them.
+The names of the sensitivity label's scopes in the user interface, has changed in both the Microsoft 365 Defender portal and the Purview portal. Defender for Cloud now only pulls sensitivity labels with the `Files and other data assets` scope applied to them. Defender for Cloud no longer pull labels with the `Emails` scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with `Items -> files` before this change took place automatically migrate to the new `Files and other data assets` scope.
