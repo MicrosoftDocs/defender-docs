@@ -4,17 +4,17 @@ description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 08/01/2024
+ms.date: 11/24/2024
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ---
 
 # Enable Microsoft Defender for SQL servers on machines at scale
 
-Microsoft Defender for Cloud's SQL servers on machines component of the Defender for Databases plan, protects SQL IaaS and Defender for SQL extensions. The SQL servers on machines component identifies and mitigates potential database vulnerabilities while detecting anomalous activity that could indicate threats to your databases.
+Microsoft Defender for Cloud's SQL servers on machines component of the Defender for Databases plan, protects SQL IaaS and Defender for SQL extensions. The SQL servers on machines component identify and mitigates potential database vulnerabilities while detecting anomalous activity that could indicate threats to your databases.
 
 When [you enable the SQL Server on a machines](tutorial-enable-databases-plan.md#enable-specific-plans-database-protections) component of the Defender for Databases plan, the auto-provision process is it automatically initiated. The auto-provision process installs and configures all the necessary components for the plan to function, including the Azure Monitor Agent (AMA), SQL IaaS extension, and Defender for SQL extensions. The auto-provision process also sets up the workspace configuration, Data Collection Rules, identity (if needed), and the SQL IaaS extension.
 
-This page explains how you can enable the auto-provision process for Defender for SQL across multiple subscriptions simultaneously using a PowerShell script. This process applies to SQL servers hosted on Azure VMs, on-premises environments, and Azure Arc-enabled SQL servers. This article also discusses how to utilize extra functionalities that can accommodate various configurations such as:
+This page explains how you can enable the auto-provision process for Defender for SQL across multiple subscriptions simultaneously using a PowerShell script. This process applies to SQL servers hosted on Azure Virtual Machine (VM), on-premises environments, and Azure Arc-enabled SQL servers. This article also discusses how to utilize extra functionalities that can accommodate various configurations such as:
 
 - Custom data collection rules
 
@@ -31,17 +31,17 @@ This page explains how you can enable the auto-provision process for Defender fo
     - [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview)
     - [How to migrate to Azure Monitor Agent from Log Analytics agent](/azure/azure-monitor/agents/azure-monitor-agent-migration)
 
-- [Connect AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md)
-- [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md)
+- [Connect Amazon Web Service (AWS) accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md)
+- [Connect your Google Cloud Project (GCP) to Microsoft Defender for Cloud](quickstart-onboard-gcp.md)
 
 - Install PowerShell on [Windows](/powershell/scripting/install/installing-powershell-on-windows), [Linux](/powershell/scripting/install/installing-powershell-on-linux), [macOS](/powershell/scripting/install/installing-powershell-on-macos), or [Azure Resource Manager (ARM)](/powershell/scripting/install/powershell-on-arm).
 - [Install the following PowerShell modules](/powershell/module/powershellget/install-module):
-    - Az.Resources
-    - Az.OperationalInsights
-    - Az.Accounts
-    - Az
-    - Az.PolicyInsights
-    - Az.Security
+    - `Az.Resources`
+    - `Az.OperationalInsights`
+    - `Az.Accounts`
+    - `Az`
+    - `Az.PolicyInsights`
+    - `Az.Security`
 
 - Permissions: requires VM contributor, contributor, or owner rules.
 
@@ -54,7 +54,7 @@ The PowerShell script that enables Microsoft Defender for SQL on Machines on a g
 | SubscriptionId: | Required | The Azure subscription ID that you want to enable Defender for SQL servers on machines for. |
 | RegisterSqlVmAgnet | Required | A flag indicating whether to register the SQL VM Agent in bulk. <br><br> Learn more about [registering multiple SQL VMs in Azure with the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk). |
 | WorkspaceResourceId | Optional | The resource ID of the Log Analytics workspace, if you want to use a custom workspace instead of the default one. |
-| DataCollectionRuleResourceId | Optional | The resource ID of the data collection rule, if you want to use a custom DCR instead of the default one. |
+| DataCollectionRuleResourceId | Optional | The resource ID of the data collection rule, if you want to use a custom data collection rule instead of the default one. |
 | UserAssignedIdentityResourceId | Optional | The resource ID of the user assigned identity, if you want to use a custom user assigned identity instead of the default one. |
 
 The following sample script is applicable when you use a default Log Analytics workspace, data collection rule, and managed identity.
