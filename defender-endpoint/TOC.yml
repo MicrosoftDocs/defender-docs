@@ -896,7 +896,7 @@
         - name: Troubleshooting mode scenarios
           href: troubleshooting-mode-scenarios.md
 
-      - name: Diagnostics and performance for Microsoft Defender Antivirus
+      - name: Diagnostics for Microsoft Defender Antivirus
         items:
         - name: Device health reports
           href: device-health-reports.md
@@ -907,18 +907,23 @@
             href: device-health-sensor-health-os.md
         - name: Microsoft Defender Core service overview
           href: microsoft-defender-core-service-overview.md
-          displayName: Microsoft Defender Core service overview
         - name: Microsoft Defender Core service configurations and experimentation 
           href: microsoft-defender-core-service-configurations-and-experimentation.md
-        - name: Troubleshoot performance issues related to real-time protection
-          href: troubleshoot-performance-issues.md
         - name: Collect diagnostic data of Microsoft Defender Antivirus
           href: collect-diagnostic-data.md
-        - name: Improve performance of Microsoft Defender Antivirus
-          href: tune-performance-defender-antivirus.md
 
       - name: Troubleshooting Microsoft Defender Antivirus
         items:
+        - name: Troubleshoot Microsoft Defender Antivirus performance issues
+          items:
+          - name: Performance analyzer for Microsoft Defender Antivirus
+            href: tune-performance-defender-antivirus.md
+          - name: Performance analyzer reference
+            href: performance-analyzer-reference.md
+            displayName: high cpu msmpeng.exe antimalware engine microsoft defender
+              antivirus windows defender antivirus
+          - name: Troubleshoot performance issues related to real-time protection
+            href: troubleshoot-performance-issues.md
         - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
           href: troubleshoot-microsoft-defender-antivirus.yml
         - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
