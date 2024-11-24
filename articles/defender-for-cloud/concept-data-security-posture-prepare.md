@@ -74,15 +74,15 @@ For databases:
 
 We display all storage types, including Azure Storage Accounts, AWS Buckets, and GCP Buckets, regardless of their associated insights. For Azure Storage Accounts, which include Blob Containers and File Shares, the following rules apply:
 
-•__Blob Containers__ are displayed if they meet any of the following criteria: 
+- **Blob Containers** are displayed if they meet any of the following criteria:
 
-- They have the “Contains Sensitive Data” insight. 
+  - They have the **Contains Sensitive Data** insight.
 
-- They have the “Public Access” insight.
+  - They have the **Public Access** insight.
 
-- They have a replication rule to/from another blob.
+  - They have a replication rule to or from another blob.
 
- •__File Shares__ are displayed only if they have the “Contains Sensitive Data” insight. 
+- **File Shares** are displayed only if they have the “Contains Sensitive Data” insight.
 
 ### Discovering and scanning Azure storage accounts
 
