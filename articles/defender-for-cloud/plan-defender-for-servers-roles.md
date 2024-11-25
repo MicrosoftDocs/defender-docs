@@ -14,21 +14,16 @@ This article helps you understand how to control access to Defender for Servers.
 
 This article is the *second* article in the Defender for Servers planning guide. Before you begin, review the earlier articles:
 
-1. [Start planning deployment](plan-defender-for-servers.md).
+1. [Start planning Defender for Servers deployment](plan-defender-for-servers.md).
 
 
 ## Determine ownership and access
 
+It's critical that you identify ownership for server and endpoint security in your organization.Ownership that's undefined or hidden increases security risk, making it more difficult for SecOps team to identity and follow threats across enterprise silos.
 
-It's critical that you identify ownership for server and endpoint security in your organization. 
-
-Ownership that's undefined or hidden increases security risk, making it more difficult for SecOps team to identity and follow threats across enterprise silos. 
-
-Security leadership should identify the teams, roles, and individuals that are responsible for making and implementing decisions about server security. [Review cloud security functions](/azure/cloud-adoption-framework/organize/cloud-security) to get started.
-
-Responsibility usually is shared between a [central IT team](/azure/cloud-adoption-framework/organize/central-it) and a [cloud infrastructure and endpoint security team](/azure/cloud-adoption-framework/organize/cloud-security-infrastructure-endpoint). Individuals on these teams need Azure access rights to manage and use Defender for Cloud. 
-- 
-As part of planning, determine the right level of access for individuals based on the Defender for Cloud role-based access control (RBAC) model.
+- Security leadership should identify the teams, roles, and individuals that are responsible for making and implementing decisions about server security. [Review cloud security functions](/azure/cloud-adoption-framework/organize/cloud-security) to get started.
+- Responsibility is usually is shared between a [central IT team](/azure/cloud-adoption-framework/organize/central-it) and a [cloud infrastructure and endpoint security team](/azure/cloud-adoption-framework/organize/cloud-security-infrastructure-endpoint). Individuals on these teams need Azure access rights to manage and use Defender for Cloud.
+- During planning, determine the right level of access for individuals based on the Defender for Cloud role-based access control (RBAC) model.
 
 ## Defender for Cloud roles
 
