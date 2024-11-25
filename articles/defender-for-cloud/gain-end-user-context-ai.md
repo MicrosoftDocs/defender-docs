@@ -18,7 +18,7 @@ By adding parameters to your Azure OpenAI API calls, you enable your Azure AI to
 
 - Read up on [Overview - AI threat protection](ai-threat-protection.md).
 
-- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure Open AI service. Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](https://learn.microsoft.com/en-us/azure/ai-studio/ai-services/model-inference).
+- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure Open AI service. Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
 ## Add security parameters to your Azure OpenAI call
 
