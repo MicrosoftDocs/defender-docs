@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#Defende-for-Storage-Malware-Scanning-for-Blobs-up-to-50GB-(Preview) ) |
+| November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](//azure/defender-for-cloud/release-notes?branch=pr-en-us-409) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
