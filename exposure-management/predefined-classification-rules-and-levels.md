@@ -100,7 +100,7 @@ Current asset types are:
 | Senior Executive (Technology)      | Identity | Very High | Identities with this classification belong to senior executives in the field of Technology. |
 | Senior Executive (Finance)         | Identity | Very High | Identities with this classification belong to senior executives in the field of Finance. |
 | Senior Executive (Operations)      | Identity | Very High | Identities with this classification belong to senior executives in the field of Operations. |
-| igh Level Executives (Marketing)   | Identity | Very High | Identities with this classification belong to senior executives in the field of Marketing. |
+| Senior Executive (Marketing)   | Identity | Very High | Identities with this classification belong to senior executives in the field of Marketing. |
 | Senior Executive (Information)     | Identity | Very High | Identities with this classification belong to senior executives in the field of Information. |
 | Senior Executive (Execution)       | Identity | Very High | Identities with this classification belong to senior executives in the field of Execution. |
 | Senior Executive (Human Resources) | Identity | Very High | Identities with this classification belong to senior executives in the field of Human Resources. |

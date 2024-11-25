@@ -35,7 +35,7 @@ The following predefined **Identity** classification rules were added to the cri
 | Senior Executive (Technology)      | This rule applies to identities classified as senior executives in the field of Technology. |
 | Senior Executive (Finance)         | This rule applies to identities classified as senior executives in the field of Finance. |
 | Senior Executive (Operations)      | This rule applies to identities classified as senior executives in the field of Operations. |
-| igh Level Executives (Marketing)   | This rule applies to identities classified as senior executives in the field of Marketing. |
+| Senior Executive (Marketing)   | This rule applies to identities classified as senior executives in the field of Marketing. |
 | Senior Executive (Information)     | This rule applies to identities classified as senior executives in the field of Information. |
 | Senior Executive (Execution)       | This rule applies to identities classified as senior executives in the field of Execution. |
 | Senior Executive (Human Resources) | This rule applies to identities classified as senior executives in the field of Resources. |
