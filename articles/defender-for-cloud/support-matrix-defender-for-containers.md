@@ -42,6 +42,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for images in ACR | ACR, Private ACR | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
 | Agentless/agent-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for running images in AKS | AKS | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless (Requires Agentless discovery for Kubernetes) **OR/AND** Defender sensor | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
+| Agentless machine scanning | Vulnerability assessment of node| AKS| GA | GA |Enable **Agentless machine scanning** | Agentless | Defender for Containers or Defender for Servers P2 or CSPM | Azure **??** |
 
 ### Runtime threat protection
 
@@ -49,6 +50,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | [Control plane](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | Agentless | Defender for Containers | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | Workload | Detection of suspicious activity for Kubernetes for cluster level, node level, and workload level | AKS | GA | - | Enable **Defender Sensor in Azure** toggle **OR** deploy Defender sensors on individual clusters | Defender sensor | Defender for Containers | Commercial clouds<br /><br />National clouds: Azure Government, Azure China 21Vianet |
+| Node | [Detect malware in node VM](kubernetes-nodes-malware.md) | AKS | GA | GA | Enable **Agentless machine scanning** option  | Agentless | Defender for Containers or Defender for Servers P2 | Azure **???** |
 
 ### Deployment & monitoring
 

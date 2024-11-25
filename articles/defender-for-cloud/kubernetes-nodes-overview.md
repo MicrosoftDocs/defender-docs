@@ -9,9 +9,6 @@ ms.topic: overview
 
 In addition to protecting the K8s cluster control plane and workloads, Defender for Containers also protects K8s nodes.
 
-> [!Note]
-> Protection of K8s nodes is presently offered for Microsoft Azure Kubernetes Services (AKS).
-
 ## K8s node VMs
 
 A K8s node is hosted on a VM supported by the K8s service. A cluster has ***node pools*** (or ***node groups***). A node pool is a set of nodes having the same supported VM type and version. The K8s service allows the customer to configure a cluster, including the VM type of its node pools, as necessary for the applications running in the cluster.
