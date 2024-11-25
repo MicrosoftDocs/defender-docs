@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |--|--|--|
 | November 27 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
 | November 27 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
+| November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](//azure/defender-for-cloud/release-notes?branch=pr-en-us-409) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
@@ -76,6 +77,14 @@ As of August 29, 2024 the names of the sensitivity label's scopes in the user in
 > Labels that were configured with "Items -> Files" before this change took place, are automatically migrated to the new "Files and other data assets" scope.
 
 Learn more about [how to configure sensitivity labels](data-sensitivity-settings.md).
+
+### Defender for Storage Malware Scanning for blobs up to 50GB (Preview)
+
+November 25, 2024
+**Estimated date for change:** December 31, 2024
+
+Starting on December 31, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges. To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 

@@ -366,7 +366,7 @@
           href: api-security-posture-overview.md
     - name: Improve AI security posture
       items:
-      - name: AI security posture management (Preview)
+      - name: AI security posture management
         displayName: AI, security, posture, management
         href: ai-security-posture.md
     - name: Microsoft Security Copilot in Defender for Cloud
