@@ -30,7 +30,18 @@ Security teams can correlate AI workloads alerts and incidents within the Defend
 
 To use threat protection for AI workloads, you must enroll in the limited public preview program by filling out the [registration form](https://aka.ms/D4AI/PublicPreviewAccess).
 
+## Availability
+
+|Aspect|Details|
+|----|:----|
+|Release state:| Limited preview (PP)|
+|Feature availability:|- Activity monitoring (security alerts) – Preview (PP) <br>- Prompt evidence (security alerts) – Preview (PP) |
+|Pricing:|N/A|
+|Supported AI services:|[Azure Open AI supported models](https://learn.microsoft.com/azure/ai-services/openai/overview) <br>[Azure AI Model Inference service supported models](https://learn.microsoft.com/azure/ai-studio/ai-services/model-inference) |
+|Required roles and permissions:|To enable threat detection at subscription level, you need Owner roles (subscription owner) or specific roles with corresponding data actions.|
+|Clouds:|:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Connected AWS accounts|
+
 ## Related content
 
-- [Enable threat protection for AI workloads (preview) (Preview)](ai-onboarding.md).
+- [Enable threat protection for AI workloads (preview)](ai-onboarding.md).
 - [Alerts for AI workloads](alerts-ai-workloads.md)
