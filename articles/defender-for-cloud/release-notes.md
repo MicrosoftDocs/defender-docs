@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](//azure/defender-for-cloud/release-notes?branch=pr-en-us-409) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
@@ -49,6 +50,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
+### Defender for Storage Malware Scanning for blobs up to 50GB (Preview)
+
+November 25, 2024
+**Estimated date for change:** December 31, 2024
+
+Starting on December 31, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges. To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 
