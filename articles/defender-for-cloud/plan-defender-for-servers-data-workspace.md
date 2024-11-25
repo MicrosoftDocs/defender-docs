@@ -15,11 +15,17 @@ Defender for Servers is one of the paid plans provided by [Microsoft Defender fo
 
 ## Before you begin
 
-This article is the *second* article in the Defender for Servers planning guide series. Begin by [planning your deployment](plan-defender-for-servers.md).
+This article is the *fifth* article in the Defender for Servers planning guide. Before you begin, review the earlier articles:
+
+1. Start [planning your deployment](plan-defender-for-servers.md).
+1. Review [Defender for Servers access roles](plan-defender-for-servers-roles.md).
+1. Select a [Defender for Servers plan](plan-defender-for-servers-select-plan.md)
+1. Understand how [Defender for Servers collects data for assessment and when you need a workspace](plan-defender-for-servers-agents.md).
+
 
 ## Understand data residency
 
-Before you deploy Defender for Servers, it's important for you to understand data residency.
+Before you deploy Defender for Servers, learn how Defender for Cloud stores data. 
 
 - Review [general Azure data residency considerations](https://azure.microsoft.com/blog/making-your-data-residency-choices-easier-with-azure/).
 - Posture data collected by Defender for Cloud is stored in the Defender for Cloud backend. Data is routed based on the tenant location. European tenants are stored in a Europe location.
@@ -32,4 +38,4 @@ Before you deploy Defender for Servers, it's important for you to understand dat
 
 ## Next steps
 
-After you understand how data is stored and when workspaces are needed, review [Defender for Server access roles](plan-defender-for-servers-roles.md).
+Learn how to [scale a Defender for Server deployment](plan-defender-for-servers-scale.md).

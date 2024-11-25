@@ -20,7 +20,7 @@ The guide answers these questions:
 
 - What does Defender for Servers do and how is it deployed?
 - Where is my data stored and when do I need a Log Analytics workspace?
-- How do I control acess my Defender for Servers resources?
+- How do I control access to Defender for Servers resources?
 - Which Defender for Servers plan should I choose, and where should I deploy the plan?
 - What agents and extensions are needed in my deployment?
 - How do I scale a deployment?

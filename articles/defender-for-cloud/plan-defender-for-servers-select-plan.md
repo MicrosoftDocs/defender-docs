@@ -10,24 +10,24 @@ ms.date: 06/25/2024
 
 # Select a Defender for Servers plan
 
-This article helps you to understand the requirements for data collection in the [Defender for Servers plan](defender-for-servers-overview.md) in Microsoft Defender for Cloud.
+This article helps you to understand which[Defender for Servers plan](defender-for-servers-overview.md) you want to deploy in Microsoft Defender for Cloud.
 
 
 ## Before you begin
 
 This article is the *third* article in the Defender for Servers planning guide. Before you begin, review the earlier articles:
 
-1. [Start planning your deployment](plan-defender-for-servers.md).
-1. [Review Defender for Servers access roles](plan-defender-for-servers-roles.md).
+1. Start [planning your deployment](plan-defender-for-servers.md).
+1. Review [Defender for Servers access roles](plan-defender-for-servers-roles.md).
 
 ## Review plans
 
 Defender for Servers offers two paid plans:
 
-
 - **Defender for Servers Plan 1** is entry-level, and focuses on the endpoint detection and response (EDR) capabilities provided by the Defender for Endpoint integration with Defender for Cloud.
 - **Defender for Servers Plan 2** provides the same features as Plan 1, and additional capabilities that include:
-    - [Agentless](concept-agentless-data-collection.md) posture assessment, threat protection, vulnerability scanning, malware scanning, and secrets scanning.
+
+    - [Agentless scanning](concept-agentless-data-collection.md) for(concept-agentless-data-collection.md) machine posture assessment, threat protection, vulnerability scanning, malware scanning, and secrets scanning.
     - [Compliance assessment](regulatory-compliance-dashboard.md) against a variety of regulatory standards. Available with Defender for Servers Plan 2 or any other paid plan.
     - Capabilities provided by [premium Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities).
     - [Free data ingestion benefit](data-ingestion-benefit.md) for specific data types.
@@ -41,7 +41,7 @@ Defender for Servers offers two paid plans:
 For a full list, review [Defender for Servers plan features](defender-for-servers-overview.md#plan-protection-features).
 
 
-## Deciding on plan scope
+## Decide on plan scope
 
 We recommend enabling Defender for Servers at subscription level, but you can enable and disable Defender for Servers at resource level if you need deployment granularity.
 
@@ -53,16 +53,24 @@ You can enable and disable at the resource level as follows:
 **Enable for resource** | Yes | No
 **Disable for resource** | Yes | Yes
 
-- Plan 1 can be enabled and disabled at resource level per server.
+- Plan 1 can be enabled and disabled at resource level.
 - Plan 2 can't be enabled at the resource level, but you can disable the plan at resource level.
 
 Here are a couple of use case examples to help you decide.
 
-- **Use case 1**: Turn on Defender for Servers Plan 1 or Plan 2 for the entire subscription. This is the recommended option. [Learn about the features provided with each plan](defender-for-servers-overview.md#defender-for-servers-plans).
-- **Use case 2**: Enable Defender for Servers Plan 1 for specific resources in your subscription, and don't enable the plan in the entire subscription.
-- **Use case 3**: Enable Defender for Servers Plan 2 on the entire subscription, and then turn off the plan for specific resources, or downgrade specific resources to Plan 1. 
+**Use case** | **Details** 
+--- | ---
+**Turn on Defender for Servers Plan 1 or Plan 2 for the entire subscription**| This is the recommended option. [Learn about plan features](defender-for-servers-overview.md#defender-for-servers-plans).
+**Turn off the Defender for Servers plan on individual machines in the subscription**. | Use the Azure Resource Manager [Pricings operation group](https://rest/api/defenderforcloud/pricings?view=rest-defenderforcloud-2024-01-01).<br/><br/>In [Update Pricings](/rest/api/defenderforcloud/pricings/update?view=rest-defenderforcloud-2024-01-01&tabs=HTTP), use a PUT request to set the requires a PUT request setting the pricingTier property to *free*.<br/><br/> The pricingTier property indicates whether the plan is enabled on the selected scope.
+**Turning off plan setting for individual machines** | If you've turned off the plan for a specific resource and you want to turn it on again, use the [**Delete**](/rest/api/defenderforcloud/pricings/delete?view=rest-defenderforcloud-2024-01-01&tabs=HTTP) property to delete the pricing configuration for the machine.
+**Enable Defender for Servers Plan 1 for multiple resources** | Defender for Servers provides a script for enabling Defender for Servers Plan 1 on multiple resources in the subscription.<br/><br/> This is useful if you want to enable Defender for Servers on a subset of resources without enabling it on the entire subscription.<br/><br/> In the script you specify machines to enable using a resource tag or resource group. The tag is customer-specific.
+**Enable Defender for Servers Plan 2 on the entire subscription. Turn off the plan for multiple resources.** | After enabling Plan 2 in a subscription, you can then use the script to disable Plan 2 on multiple resources.<br/><br/> You can then enable Plan 1 on those machines as needed using the script.
 
-[Learn more]() about how to deploy the plan for specific resources.
+In addition to these methods, you can use Defender for Cloud's built-in Azure Policy policies to configure the plan on resources based on a resource tag or resource group.
+
+In Azure Policy in the Azure portal, the relevant policies are in the **Security Center - Granular Pricing** category.
+
+[Learn more](tutorial-enable-servers-plan.md) about how to deploy the plan on a subscription and on specific resources.
 
 
 ## Workspace considerations

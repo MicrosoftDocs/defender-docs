@@ -21,10 +21,10 @@ The Defender for Servers plan in [Microsoft Defender for Cloud](defender-for-clo
 Defender for Servers provides a number of security benefits.
 
 - **Protect multicloud and on-premises machines**: Defender for Servers protects Windows and Linux machines in multicloud environments (Azure, AWS, GCP), and on-premises.
-- **Centralize management and reporting**: Defender for Cloud provides a single view of monitored resources, including machines protected by Defender for Servers. You can filter, sort, and cross-reference data to investigate and analyze asset security.
+- **Centralize management and reporting**: Defender for Cloud provides a single view of monitored resources, including machines protected by Defender for Servers. You can filter, sort, and cross-reference data to understand, investigate, and analyze machine security.
 - **Integrate with Defender services**: Defender for Servers integrates natively with security capabilities provided by Defender for Endpoint and Microsoft Defender Vulnerability Management.
 - **Improve posture and reduce risk**: Defender for Servers assesses the security posture of machines against compliance standards, and provides actionable security recommendations to remediate and improve security posture.
-- **Benefit from agentless scanning**: Defender for Servers Plan 2 provides agentless machine scanning. With no need for an agent on endpoints, you can scan software inventory, assess machines for vulnerabilities, scan for machine secrets, and detect malware threats.
+- **Benefit from agentless scanning**: Defender for Servers Plan 2 provides agentless machine scanning. Without the need for an agent on endpoints, you can scan software inventory, assess machines for vulnerabilities, scan for machine secrets, and detect malware threats.
 - **Protect against threats in near real-time**: Defender for Servers identifies and analyzes real-time threats, and issues security alerts as needed.
 - **Get intelligent threat detection**: Defender for Cloud evaluates events and detects threats using advanced security analytics and machine-learning technologies with multiple threat intelligence sources, including [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc).
 

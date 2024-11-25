@@ -14,7 +14,8 @@ This article helps you understand how to control access to Defender for Servers.
 
 This article is the *second* article in the Defender for Servers planning guide. Before you begin, review the earlier articles:
 
-1. [Start planning Defender for Servers deployment](plan-defender-for-servers.md).
+1. Start [planning your deployment](plan-defender-for-servers.md).
+
 
 
 ## Determine ownership and access

@@ -10,16 +10,16 @@ ms.date: 06/25/2024
 
 # Understand how data is collected in Defender for Servers
 
-This article helps you to understand the requirements for data collection in the [Defender for Servers plan](defender-for-servers-overview.md) in Microsoft Defender for Cloud.
+This article helps you to understand how [Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud collects data for assessment.
 
 
 ## Before you begin
 
 This article is the *fourth* article in the Defender for Servers planning guide. Before you begin, review the earlier articles:
 
-1. [Start planning your deployment](plan-defender-for-servers.md).
-1. [Review Defender for Servers access roles](plan-defender-for-servers-roles.md).
-1. [Select a Defender for Servers plan](plan-defender-for-servers-select-plan.md)
+1. Start [planning your deployment](plan-defender-for-servers.md).
+1. Review [Defender for Servers access roles](plan-defender-for-servers-roles.md).
+1. Select a [Defender for Servers plan](plan-defender-for-servers-select-plan.md)
 
 ## Data collection
 
@@ -41,5 +41,5 @@ Defender for Servers uses a number of methods to collect machine information, in
 
 ## Next steps
 
-[Scale a Defender for Servers deployment](plan-defender-for-servers-scale.md)
+[Understand how data is stored and when you need a Log Analytics workspace](plan-defender-for-servers-workspace.md)
 

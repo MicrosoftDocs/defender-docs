@@ -725,7 +725,7 @@
     items:
     - name: Overview
       href: defender-for-servers-overview.md
-    - name: Defender for Endpoint integration
+    - name: Defender integration
       href: integration-defender-for-endpoint.md
     - name: Plan 
       items:
@@ -734,7 +734,7 @@
           href: plan-defender-for-servers.md
         - name: Determine roles and access
           href: plan-defender-for-servers-roles.md
-        - name: Select a Defender for Servers plan
+        - name: Select a plan and deployment scope
           href: plan-defender-for-servers-select-plan.md
         - name: Understand data collection
           href: plan-defender-for-servers-agents.md

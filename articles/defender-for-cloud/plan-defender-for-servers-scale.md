@@ -14,12 +14,14 @@ Defender for Servers is one of the paid plans provided by [Microsoft Defender fo
 
 ## Before you begin
 
-This article is the *fifth* and final article in the Defender for Servers planning guide series. Before you begin, review the earlier articles:
+This article is the *sixth* and final article in the Defender for Servers planning guide series. Before you begin, review the earlier articles:
+Before you begin, review the earlier articles:
 
-1. [Start planning your deployment](plan-defender-for-servers.md)
-1. [Understand where your data is stored and Log Analytics workspace requirements](plan-defender-for-servers-data-workspace.md)
-1. [Review access and role requirements](plan-defender-for-servers-roles.md)
-1. [Review requirements for data collection](plan-defender-for-servers-agents.md)
+1. Start [planning your deployment](plan-defender-for-servers.md).
+1. Review [Defender for Servers access roles](plan-defender-for-servers-roles.md).
+1. Select a [Defender for Servers plan](plan-defender-for-servers-select-plan.md)
+1. Understand how [Defender for Servers collects data for assessment and when you need a workspace](plan-defender-for-servers-agents.md).
+1. Understand where [Defender for Servers stores data](plan-defender-for-servers-select-data-workspace.md).
 
 ## Scaling overview
 
