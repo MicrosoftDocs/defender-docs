@@ -4,7 +4,7 @@ description: Learn how to customize data sensitivity settings in Microsoft Defen
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 11/21/2024
+ms.date: 11/25/2024
 #customer intent: As a security administrator, I want to customize data sensitivity settings so that I can better manage and protect sensitive data in my organization.
 ---
 
@@ -15,7 +15,6 @@ This article describes how to customize data sensitivity settings in Microsoft D
 Data sensitivity settings are used to identify and focus on managing the critical sensitive data in your organization.
 
 - The sensitive info types and sensitivity labels that come from Microsoft Purview compliance portal and which you can select in Defender for Cloud. By default Defender for Cloud uses the [built-in sensitive information types](/microsoft-365/compliance/sensitive-information-type-learn-about) provided by Microsoft Purview compliance portal. Some of the information types and labels are enabled by default, Of these built-in sensitive information types, there's a subset supported by sensitive data discovery. You can view a [reference list](sensitive-info-types.md) of this subset, which also lists which information types are supported by default. The [sensitivity settings page](data-sensitivity-settings.md) allows you to modify the default settings.
-- You can optionally allow the import of custom sensitive info types and allow the import of [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) that you defined in Microsoft Purview.
 - If you import labels, you can set sensitivity thresholds that determine the minimum threshold sensitivity level for a label to be marked as sensitive in Defender for Cloud.
 
 This configuration helps you focus on your critical sensitive resources and improve the accuracy of the sensitivity insights.
@@ -31,10 +30,9 @@ Changes in sensitivity settings take effect the next time that resources are dis
 
 Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud if you have Enterprise Mobility and Security E5/A5/G5 licensing. Learn more about [sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-information-protection-sensitivity-labeling).
 
-> [!NOTE]
-> Only sensitivity labels with automatic labeling rules applied are imported into Defender for Cloud. Additionally, the "location" section within the automatic labeling rule is ignored, and the label is applied across all resource types and locations.
-> 
-> There is no need to manually provide consent in the Microsoft 365 Defender portal.
+Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud. If you have the Enterprise Mobility and Security E5/A5/G5 license, there is no need to manually provide consent in the Microsoft 365 Defender portal in order to import them. Learn more about [Microsoft Purview sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling).
+
+Defender for Cloud only imports sensitivity labels with automatic labeling rules. Defender for Cloud ignores the "location" section in the automatic labeling rule and applies the label to all resource types and locations.
 
 ## Customize sensitive data categories/types
 
@@ -58,9 +56,9 @@ You can set a threshold to determine the minimum sensitivity level for a label t
 
 If you're using Microsoft Purview sensitivity labels, make sure that:
 
-- You set the label scope is set to `Items`, and [configure the auto labeling for files and emails](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.) to "The label scope is set" > "File and other data assets".
+- You set the label scope is set to `File and other data assets`, under which you should [configure the auto labeling for files and emails](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.) to "The label scope is set" > "File and other data assets".
 
-- Your labels are [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with an automatic labeling rule, and a label policy that is in effect.
+- Labels must be [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with a label policy that is in effect.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
@@ -76,7 +74,7 @@ If you're using Microsoft Purview sensitivity labels, make sure that:
 > - When you turn on the threshold, you select a label with the lowest setting that should be considered sensitive in your organization.
 > - Any resources with this minimum label or higher are presumed to contain sensitive data.
 > - For example, if you select **Confidential** as minimum, then **Highly Confidential** is also considered sensitive. **General**, **Public**, and **Non-Business** aren't.
-> - You can’t select a sub label in the threshold. However, you can see the sublabel as the affected label on resources in attack path/Cloud Security Explorer, if the parent label is part of the threshold (part of the sensitive labels selected).
+> - You can't select a sub label in the threshold. However, you can see the sublabel as the affected label on resources in attack path/Cloud Security Explorer, if the parent label is part of the threshold (part of the sensitive labels selected).
 > - The same settings will apply to any supported resource (object storage and databases).
 
 ## Next step
