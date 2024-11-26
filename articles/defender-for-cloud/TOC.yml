@@ -758,9 +758,9 @@
         items:
           - name: Detecting EDR solutions
             href: detect-endpoint-detection-response-solutions.md
-          - name: Detection and response with Defender for Endpoint
+          - name: EDR with Defender for Endpoint
             href: endpoint-detection-response.md
-          - name: Enable Defender for Endpoint integration
+          - name: Enable Defender for Endpoint for EDR
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
             href: enable-defender-for-endpoint.md
       - name: Agentless machine scanning

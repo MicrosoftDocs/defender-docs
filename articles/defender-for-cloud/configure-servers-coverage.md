@@ -9,7 +9,7 @@ ms.date: 10/20/2024
 
 # Review and modify Defender for Servers settings
 
-After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check which machines are protected by the plan, configure plan settings, and turn plans on and off as needed.
+After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check which machines are protected by the plan, and configure plan settings as needed.
 
 ## Check machine protection
 
@@ -45,16 +45,6 @@ Some features are turned on by default when you enable Defender for Servers. You
 
 
 
-## Turn the plan on and off
 
-Enable and disable the Defender for Servers plan as follows:
-
-1. In Defender for Cloud, select **Environment settings**.
-1. Toggle the plan switch to **On** or **Off**.
-
-
-> [!Note]
-> If you enabled Defender for Servers Plan 2 on a Log Analytics workspace, you need to disable it explicitly.
-> To do that, navigate to the plans page for the workspace and toggle the switch to **Off**.
 
 

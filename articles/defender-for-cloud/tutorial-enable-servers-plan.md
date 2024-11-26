@@ -21,8 +21,7 @@ This article helps you to deploy a Defender for Servers plan.
 ## Prerequisites
 
 - **Plan your deployment**. Review the [Defender for Servers planning guide](plan-defender-for-servers.md).
-- **Review data collection and storage** | Understand [how Defender for Servers collects data](plan-defender-for-servers-agents.md), and [where data is stored](plan-defender-for-servers-data-workspace.md).
-- **Get deployment considerations** | [Review deployment recommendations](plan-defender-for-servers-select-plan.md), and decide where you want to enable the plan.
+- **Decide which plan you want to deploy and where you want to deploy it** | [Review deployment recommendations](plan-defender-for-servers-select-plan.md), and decide where you want to enable the plan.
 - **Compare plan features**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plan features.
 - **Review pricing**. Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
@@ -69,20 +68,59 @@ After enabling the plan, you have the ability to [configure the features of the 
 
 ## Enable Plan 1 at resource level
 
-Although we recommend that you enable the plan for an entire Azure subscription, you can enable Defender for Servers Plan 1 at resource level for specific machines.
+Although we recommend that you enable the plan for an entire Azure subscription, you can enable Defender for Servers Plan 1 at the resource level. Review [deployment scope options](plan-defender-for-servers-select-plan.md#decide-on-plan-scope) before you start.
 
-### Enable for a specific machine
 
-To turn Plan 1 on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
+### Enable Plan 1 for multiple machines
 
-### Enable for a resource group or based on resource tags
+You can enable Plan 1 for multiple machines based on a resource group or on a customizable resource tag. Use this option if you don't want to turn on a Defender for Servers plan for an entire subscription, or if Plan 2 is turned on for a subscription and you want some machines in the subscription to use Plan 1.
 
-Enable Plan 1 on a resource group or Azure resource tags as follows:
 
 1. [Download and save this file](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
 1. Run the downloaded file.
 1. Customize as needed. Set pricing by **tag** or by **resource group**.
 1. Follow the rest of the onscreen instructions.
+
+
+
+### Enable Plan 1 for a specific machine
+
+Use this option if you don't want to turn on a Defender for Servers plan for an entire subscription, or if Plan 2 is turned on for a subscription and you want a specific machine in the subscription to use Plan 1.
+
+Use the Azure Resource Manager API [Pricings operation group](/rest/api/defenderforcloud/pricings).
+
+1. If you need to turn off the current plan setting for the machine, use the [Delete](/rest/api/defenderforcloud/pricings/delete?view=rest-defenderforcloud-2024-01-01&tabs=HTTP#delete-a-pricing-on-resource) property to delete the pricing configuration for the machine.
+1. To turn on Plan 1 for the machine, in [Update Pricings](/rest/api/defenderforcloud/pricings/update?tabs=HTTP#update-pricing-on-resource-(example-for-virtualmachines-plan)), use a PUT request to set the pricingTier property to *standard* and the subPlan to **P1**.
+
+
+## Disable plans
+
+### Disable a plan in a subscription
+
+Disable the Defender for Servers plan for a subscription as follows:
+
+1. In Defender for Cloud, select **Environment settings**.
+1. Toggle the plan switch to **Off**.
+
+
+> [!Note]
+> If you enabled Defender for Servers Plan 2 on a Log Analytics workspace, you need to disable it explicitly.
+> To do that, navigate to the plans page for the workspace and toggle the switch to **Off**.
+
+### Disable a plan for a group of machines
+
+1. [Download and save this file](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
+1. Run the downloaded file.
+1. Customize as needed. Set pricing by **tag** or by **resource group**.
+1. Follow the rest of the onscreen instructions.
+
+### Disable a plan for a specific machine
+
+1. Use the [Delete](/rest/api/defenderforcloud/pricings/delete?view=rest-defenderforcloud-2024-01-01&tabs=HTTP#delete-a-pricing-on-resource) property to delete the current pricing configuration for the machine.
+1. In [Update Pricings](/rest/api/defenderforcloud/pricings/update?view=rest-defenderforcloud-2024-01-01&tabs=HTTP), use a PUT request to set the requires a PUT request setting the pricingTier property to *free*.
+
+
+
 
 ## Next steps
 
