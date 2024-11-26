@@ -740,7 +740,7 @@
           href: plan-defender-for-servers-agents.md
         - name: Understand data storage and workspaces
           href: plan-defender-for-servers-data-workspace.md
-        - name: Scale a Defender for Servers deployment
+        - name: Scale a deployment
           href: plan-defender-for-servers-scale.md  
     - name: Deploy
       displayName: hybrid, arc, Defender for Servers
