@@ -732,7 +732,7 @@
         - name: Get started
           displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, adaptive application controls, adaptive network hardening, docker, fileless attack detection, auditd, simulate alerts
           href: plan-defender-for-servers.md
-        - name: Determine roles and access
+        - name: Plan roles and permissions
           href: plan-defender-for-servers-roles.md
         - name: Select a plan and deployment scope
           href: plan-defender-for-servers-select-plan.md

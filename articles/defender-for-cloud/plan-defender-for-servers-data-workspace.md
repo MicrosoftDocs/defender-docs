@@ -7,7 +7,7 @@ author: dcurwin
 ms.date: 06/15/2023
 ms.custom: references_regions
 ---
-# Plan for data storage
+# Understand data storage and workspaces
 
 This article helps you understand how data is stored in Microsoft Defender for Cloud, and when you need a Log Analytics workspace.
 

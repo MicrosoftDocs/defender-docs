@@ -8,7 +8,7 @@ ms.date: 06/25/2024
 #customer intent: As a reader, I want to understand how to plan the deployment of Defender for Servers agents and extensions.
 ---
 
-# Understand how data is collected in Defender for Servers
+# Understand data collection in Defender for Servers
 
 This article helps you to understand how [Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud collects data for assessment.
 
