@@ -53,10 +53,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 ### Defender for Storage Malware Scanning for blobs up to 50GB (Preview)
 
 November 25, 2024
+
 **Estimated date for change:** December 31, 2024
 
 Starting on December 31, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
-Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges. To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
+
+Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
+
+To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 
