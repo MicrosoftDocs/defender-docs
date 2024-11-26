@@ -28,8 +28,6 @@ Changes in sensitivity settings take effect the next time that resources are dis
 
 ## Import custom sensitivity info types/labels
 
-Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud if you have Enterprise Mobility and Security E5/A5/G5 licensing. Learn more about [sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-information-protection-sensitivity-labeling).
-
 Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud. If you have the Enterprise Mobility and Security E5/A5/G5 license, there is no need to manually provide consent in the Microsoft 365 Defender portal in order to import them. Learn more about [Microsoft Purview sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling).
 
 Defender for Cloud only imports sensitivity labels with automatic labeling rules. Defender for Cloud ignores the "location" section in the automatic labeling rule and applies the label to all resource types and locations.
@@ -54,7 +52,7 @@ To customize data sensitivity settings that appear in Defender for Cloud, review
 
 If you're using Microsoft Purview sensitivity labels, make sure that:
 
-- You set the label scope to **files and other data assets**,under which you should [configure the auto labeling rule](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.).
+- You set the label scope to **files and other data assets**, under which you should [configure the auto labeling rule](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.).
 
 - Your labels are [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with a label policy that is in effect.
 
