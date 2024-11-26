@@ -71,7 +71,7 @@ Until recently, Defender for Cloud imported all sensitivity labels from the Micr
 - Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
 - The sensitivity label has an automatic labeling rule configured.
 
-As of August 29, 2024 the names of the sensitivity label's scopes in the user interface (UI), has been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+As of November 27, 2024 the names of the sensitivity label's scopes in the user interface (UI), has been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with "Items -> Files" before this change took place, are automatically migrated to the new "Files and other data assets" scope.

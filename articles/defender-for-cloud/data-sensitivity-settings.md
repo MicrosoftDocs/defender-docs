@@ -54,11 +54,9 @@ To customize data sensitivity settings that appear in Defender for Cloud, review
 
 If you're using Microsoft Purview sensitivity labels, make sure that:
 
-- You set the label scope is set to **File and other data assets**, under which you should [configure the auto labeling for files and emails](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.) to **The label scope is set** > **File and other data assets**.
+- You set the label scope to **files and other data assets**,under which you should [configure the auto labeling rule](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.).
 
-- You must set the label scope to **File and other data assets** by [configuring the auto labeling for files and emails](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps.) to **The label scope is set** > **File and other data assets**.
-
-- Labels must be [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with a label policy that is in effect.
+- Your labels are [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with a label policy that is in effect.
 
 You can set a threshold to determine the minimum sensitivity level for a label to be marked as sensitive in Defender for Cloud.
 
