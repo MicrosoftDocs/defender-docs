@@ -31,8 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| November 27 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
-| November 27 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
+| November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
+| November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
 | November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50gb-preview) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
@@ -54,7 +54,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Sensitivity label consent changes
 
-**Estimated date for change**: November 27, 2024
+**Estimated date for change**: November 26, 2024
 
 You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
 
@@ -64,14 +64,14 @@ Learn more about [data sensitivity settings](data-sensitivity-settings.md#import
 
 ### Sensitivity label changes
 
-November 27, 2024
+November 26, 2024
 
 Until recently, Defender for Cloud imported all sensitivity labels from the Microsoft 365 Defender portal that met the following two conditions:
 
 - Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
 - The sensitivity label has an automatic labeling rule configured.
 
-As of November 27, 2024 the names of the sensitivity label's scopes in the user interface (UI), has been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+As of November 26, 2024 the names of the sensitivity label's scopes in the user interface (UI), has been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with "Items -> Files" before this change took place, are automatically migrated to the new "Files and other data assets" scope.
