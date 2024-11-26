@@ -59,7 +59,8 @@ To create a new default workflow:
 1. Copy the full sample workflow and paste it in the workflow editor.
 
    > [!NOTE]
-   > This workflow assumes you have GitHub Code Scanning enabled, which is required for the security finding results to show in Defender for Cloud. Ensure the **upload-to-code-scanning** option is set to **true**.
+   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enabling-defender-for-cloud-integration-without-github-code-scanning).
+
 
    :::image type="content" source="media/onboarding-guide-42crunch/workflow-editor.png" alt-text="Screenshot showing GitHub workflow editor." lightbox="media/onboarding-guide-42crunch/workflow-editor.png":::
 
@@ -75,7 +76,28 @@ To create a new default workflow:
 
 You now verified that the Audit results are showing in GitHub Code Scanning. Next, we verify that these Audit results are available within Defender for Cloud. It might take up to 30 minutes for results to show in Defender for Cloud.
 
-**Navigate to Defender for Cloud**:
+#### Enabling Defender for Cloud integration without GitHub Code Scanning
+If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from 42Crunch into Defender for Cloud, you can follow these steps. After adding in the 42Crunch workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+```yml
+- name: save-sarif-report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 42Crunch_AuditReport_${{ github.run_id }}
+          path: 42Crunch_AuditReport_${{ github.run_id }}.SARIF
+          if-no-files-found: error
+- name: Upload results to MSDO
+        uses: microsoft/security-devops-action@v1
+        id: msdo
+        with:
+          existingFilename: 42Crunch_AuditReport_${{ github.run_id }}.SARIF
+ ```
+
+Next, add an additional permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
+
+After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud. 
+
+#### Navigate to Defender for Cloud
 
 1. Select **Recommendations**.
 1. Select **All recommendations**.

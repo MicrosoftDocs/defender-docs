@@ -163,7 +163,7 @@ This example shows you how to remove an assignment:
   https://management.azure.com/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01 
 ```
 
-::: zone-end
+
 
 ### Enhance custom recommendations (legacy)
 

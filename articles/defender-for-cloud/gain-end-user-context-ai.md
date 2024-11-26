@@ -2,7 +2,7 @@
 title: Gain end-user context for AI alerts
 description: Learn how to enhance AI security by adding user context for alerts with Microsoft Defender for Cloud threat protection.
 ms.topic: how-to
-ms.date: 07/25/2024
+ms.date: 11/25/2024
 #Customer intent: I want to learn how to enhance the security of my AI workloads by adding end-user context for AI alerts with Microsoft Defender for Cloud threat protection for AI workloads.
 ---
 
@@ -10,7 +10,7 @@ ms.date: 07/25/2024
 
 Microsoft Defender for Cloud's threat protection for AI workloads allows you to enhance the actionability and security value of the generated AI alerts by providing end-user context.
 
-By adding parameters to your Azure OpenAI API calls, you enable your Azure AI to pass critical end-user context to Defender for Cloud's AI alerts. This addition of end-user context provides greater visibility on end-users and leads to better investigations and results. For example, you can block a specific user or correlate incidents and alerts by end-user.
+Add parameters to your Azure OpenAI API calls to enable your Azure AI to pass critical end-user context to Defender for Cloud's AI alerts. This end-user context provides greater visibility into end-users, and leads to more effective investigations and results. For example, you can block a specific user or correlate incidents and alerts by end-user.
 
 :::image type="content" source="media/gain-end-user-context-ai/after-code.png" alt-text="Screenshot of the Defender XDR portal that shows all of the additional benefits gained by adding the code." lightbox="media/gain-end-user-context-ai/after-code.png":::
 
@@ -18,7 +18,7 @@ By adding parameters to your Azure OpenAI API calls, you enable your Azure AI to
 
 - Read up on [Overview - AI threat protection](ai-threat-protection.md).
 
-- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI as its underlying model.
+- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure Open AI service. Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
 ## Add security parameters to your Azure OpenAI call
 
@@ -72,8 +72,6 @@ We recommend adding all of the parameters provided in this document to your gene
 1. Save the changes.
 
 After following the procedure, you should ensure that a valid JSON is passed to the `user` field in every request made by the application to Azure OpenAI.
-
-
 
 ## Next step
 

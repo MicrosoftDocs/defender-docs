@@ -4,7 +4,7 @@ description: Learn how to connect ServiceNow with Microsoft Defender for Cloud t
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/11/2024
+ms.date: 10/13/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
@@ -30,7 +30,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select **ServiceNow**.
+1. Select **Integrations**.
 
    :::image type="content" border="true" source="./media/connect-servicenow/integrations.png" alt-text="Screenshot of environment settings page that shows where to select the ServiceNow option.":::
 
@@ -38,9 +38,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
    :::image type="content" border="true" source="./media/connect-servicenow/add-servicenow.png" alt-text="Screenshot that shows where the add integration button is and the ServiceNow option." lightbox="media/connect-servicenow/add-servicenow.png":::
 
-1. Enter a name and select the scope.
-
-1. In the ServiceNow connection details, enter the instance URL, name, password, client ID, and client secret that you [created for the application registry](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector) in the ServiceNow portal.
+1. Enter a name, select the scope, enter the instance URL, User name, Password, Client ID, and client secret that you [created for the application registry](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector) in the ServiceNow portal.
 
 1. Select **Next**.
 

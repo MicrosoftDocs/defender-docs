@@ -44,7 +44,6 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [Microsoft Cloud Security Benchmark recommendations for OS hardening](apply-security-baseline.md) | GA | GA | GA |
 | [VM vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | NA | NA |
 | [VM vulnerability scanning - Microsoft Defender for Endpoint sensor](deploy-vulnerability-assessment-defender-vulnerability-management.md) | GA | NA | NA |
-| [VM vulnerability scanning - Qualys](deploy-vulnerability-assessment-vm.md) | GA | NA | NA |
 | [Just-in-time VM access](./just-in-time-access-usage.yml) | GA | GA | GA |
 | [File integrity monitoring](./file-integrity-monitoring-overview.md)  | GA | GA | GA |
 | [Docker host hardening](./harden-docker-hosts.md)  | GA | GA | GA |
@@ -64,7 +63,6 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ | Yes |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
@@ -88,7 +86,6 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Fileless security alerts](alerts-windows-machines.md) | - | - | Yes |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
@@ -112,7 +109,6 @@ The following table shows feature support for AWS and GCP machines.
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
 | [Network map](protect-network-resources.md#network-map) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
@@ -128,26 +124,6 @@ The following table shows feature support for AWS and GCP machines.
 | [Agentless malware scanning](agentless-malware-scanning.md) | ✔ | ✔ |
 | [Endpoint detection and response](endpoint-detection-response.md) | ✔ | ✔ |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ <br> (With Azure Arc) | ✔ (With Azure Arc) |
-
-## Endpoint protection support
-
-The following table provides a matrix of supported endpoint protection solutions. The table indicates whether you can use Defender for Cloud to install each solution for you.
-
-| Solution | Supported platforms | Defender for Cloud installation |
-|--|--|--|
-| Microsoft Defender Antivirus | Windows Server 2016 or later | No (built into OS) |
-| System Center Endpoint Protection (Microsoft Antimalware) | Windows Server 2012 R2 | Via extension |
-| Trend Micro – Deep Security | Windows Server (all) | No |
-| Symantec v12.1.1100+ | Windows Server (all) | No |
-| McAfee v10+ | Windows Server (all) | No |
-| McAfee v10+ | Linux (GA) | No |
-| Microsoft Defender for Endpoint for Linux<sup>[1](#footnote1)</sup> | Linux (GA) | Via extension |
-| Microsoft Defender for Endpoint Unified Solution<sup>[2](#footnote2)</sup> | Windows Server 2012 R2 and Windows 2016 | Via extension |
-| Sophos V9+ | Linux (GA) | No |
-
-<sup><a name="footnote1"></a>1</sup> It's not enough to have Microsoft Defender for Endpoint on the Linux machine: the machine will only appear as healthy if the always-on scanning feature (also known as real-time protection (RTP)) is active. By default, the RTP feature is **disabled** to avoid clashes with other AV software.
-
-<sup><a name="footnote2"></a>2</sup> With the Defender for Endpoint unified solution on Server 2012 R2, it automatically installs Microsoft Defender Antivirus in Active mode. For Windows Server 2016, Microsoft Defender Antivirus is built into the OS.
 
 ## Next steps
 

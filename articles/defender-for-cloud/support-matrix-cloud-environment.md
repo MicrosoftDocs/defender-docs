@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 06/24/2024
+ms.date: 10/31/2024
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -26,7 +26,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Alert bi-directional synchronization with Microsoft Sentinel](/azure/sentinel/connect-azure-security-center) | GA | GA | NA|
 |[Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA|
 |[Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA|
-|[Copilot for Security in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | Preview | NA | NA |
+|[Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | Preview | NA | NA |
 |**FOUNDATIONAL CSPM FEATURES (FREE)** | | ||
 |[Asset inventory](asset-inventory.md) | GA | GA | GA|
 |[Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA|
@@ -36,7 +36,8 @@ In the support table, **NA** indicates that the feature isn't available.
 | **DEFENDER CSPM FEATURES** | | | |
 | [Data security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
-|**DEFENDER FOR CLOUD PLANS** | | | |
+| [AI security posture management](ai-security-posture.md) | GA | NA | NA |
+|**DEFENDER FOR CLOUD PLANS** | | ||
 |[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | NA|

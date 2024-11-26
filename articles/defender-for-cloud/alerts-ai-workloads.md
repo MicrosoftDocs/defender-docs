@@ -1,13 +1,13 @@
 ---
-title: Alerts for AI workloads
+title: Alerts for AI workloads (Preview)
 description: This article lists the security alerts for AI workloads visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 06/03/2024
+ms.date: 11/03/2024
 ai-usage: ai-assisted
 ---
 
-# Alerts for AI workloads
+# Alerts for AI workloads (Preview)
 
 This article lists the security alerts you might get for AI workloads from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration.  
 
@@ -23,7 +23,7 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 ## AI workload alerts
 
-### Detected credential theft attempts on an Azure OpenAI model deployment
+### Detected credential theft attempts on an Azure AI model deployment
 
 (AI.Azure_CredentialTheftAttempt)
 
@@ -33,27 +33,27 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: Medium
 
-### A Jailbreak attempt on an Azure OpenAI model deployment was blocked by Azure AI Content Safety Prompt Shields
+### A Jailbreak attempt on an Azure AI model deployment was blocked by Azure AI Content Safety Prompt Shields
 
 (AI.Azure_Jailbreak.ContentFiltering.BlockedAttempt)
 
-**Description**: The Jailbreak alert, carried out using a direct prompt injection technique, is designed to notify the SOC there was an attempt to manipulate the system prompt to bypass the generative AI’s safeguards, potentially accessing sensitive data or privileged functions. It indicated that such attempts were blocked by Azure Responsible AI Content Safety (AKA Prompt Shields), ensuring the integrity of the AI resources and the data security.
+**Description**: The Jailbreak alert, carried out using a direct prompt injection technique, is designed to notify the SOC there was an attempt to manipulate the system prompt to bypass the generative AI’s safeguards, potentially accessing sensitive data or privileged functions. It indicated that such attempts were blocked by Azure Responsible AI Content Safety (also known as Prompt Shields), ensuring the integrity of the AI resources and the data security.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Privilege Escalation, Defense Evasion
 
 **Severity**: Medium
 
-### A Jailbreak attempt on an Azure OpenAI model deployment was detected by Azure AI Content Safety Prompt Shields
+### A Jailbreak attempt on an Azure AI model deployment was detected by Azure AI Content Safety Prompt Shields
 
 (AI.Azure_Jailbreak.ContentFiltering.DetectedAttempt)
 
-**Description**: The Jailbreak alert, carried out using a direct prompt injection technique, is designed to notify the SOC there was an attempt to manipulate the system prompt to bypass the generative AI’s safeguards, potentially accessing sensitive data or privileged functions. It indicated that such attempts were detected by Azure Responsible AI Content Safety (AKA Prompt Shields), but were not blocked due to content filtering settings or due to low confidence.
+**Description**: The Jailbreak alert, carried out using a direct prompt injection technique, is designed to notify the SOC there was an attempt to manipulate the system prompt to bypass the generative AI’s safeguards, potentially accessing sensitive data or privileged functions. It indicated that such attempts were detected by Azure Responsible AI Content Safety (also known as Prompt Shields), but weren't blocked due to content filtering settings or due to low confidence.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Privilege Escalation, Defense Evasion
 
 **Severity**: Medium
 
-### Sensitive Data Exposure Detected in Azure OpenAI Model Deployment
+### Sensitive Data Exposure Detected in Azure AI Model Deployment
 
 (AI.Azure_DataLeakInModelResponse.Sensitive)
 
@@ -61,13 +61,13 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
 
-**Severity**: Medium
+**Severity**: Low
 
 ### Corrupted AI application\model\data directed a phishing attempt at a user
 
 (AI.Azure_PhishingContentInModelResponse)
 
-**Description**: This alert indicates a corruption of an AI application developed by the organization, as it has actively shared a known malicious URL used for phishing with a user. The URL originated within the application itself, the AI model or the data the application can access.
+**Description**: This alert indicates a corruption of an AI application developed by the organization, as it has actively shared a known malicious URL used for phishing with a user. The URL originated within the application itself, the AI model, or the data the application can access.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact (Defacement)
 
@@ -77,7 +77,7 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 (AI.Azure_PhishingContentInAIApplication)
 
-**Description**: This alert indicates a potential corruption of an AI application, or a phishing attempt by one of the end users. The alert determines that a malicious URL used for phishing was passed during a conversation through the AI application, however the origin of the URL (user or application) is unclear. 
+**Description**: This alert indicates a potential corruption of an AI application, or a phishing attempt by one of the end users. The alert determines that a malicious URL used for phishing was passed during a conversation through the AI application, however the origin of the URL (user or application) is unclear.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact (Defacement), Collection
 
@@ -87,9 +87,29 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 (AI.Azure_PhishingContentInUserPrompt)
 
-**Description**: This alert indicates a URL used for phishing attack was sent by a user to an AI application. The content typically lures visitors into entering their corporate credentials or financial information into a legitimate looking website. Sending this to an AI application may be for the purpose of corrupting it, poisoning the data sources it has access to, or gaining access to employees or other customers via the application's tools.
+**Description**: This alert indicates a URL used for phishing attack was sent by a user to an AI application. The content typically lures visitors into entering their corporate credentials or financial information into a legitimate looking website. Sending this to an AI application might be for the purpose of corrupting it, poisoning the data sources it has access to, or gaining access to employees or other customers via the application's tools.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
+
+**Severity**: High
+
+### Suspicious user agent detected
+
+(AI.Azure_AccessFromSuspiciousUserAgent)
+
+**Description**: The user agent of a request accessing one of your Azure AI resources contained anomalous values indicative of an attempt to abuse or manipulate the resource. The suspicious user agent in question has been mapped by Microsoft threat intelligence as suspected of malicious intent and hence your resources were likely compromised.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution, Reconnaissance, Initial access
+
+**Severity**: Medium
+
+### ASCII Smuggling prompt injection detected
+
+(AI.Azure_ASCIISmuggling)
+
+**Description**: ASCII smuggling technique allows an attacker to send invisible instructions to an AI model. These attacks are commonly attributed to indirect prompt injections, where the malicious threat actor is passing hidden instructions to bypass the application and model guardrails. These attacks are usually applied without the user's knowledge given their lack of visibility in the text and can compromise the application tools or connected data sets.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
 
 **Severity**: High
 
