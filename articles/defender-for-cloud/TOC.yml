@@ -366,7 +366,7 @@
           href: api-security-posture-overview.md
     - name: Improve AI security posture
       items:
-      - name: AI security posture management (Preview)
+      - name: AI security posture management
         displayName: AI, security, posture, management
         href: ai-security-posture.md
     - name: Microsoft Security Copilot in Defender for Cloud
@@ -601,10 +601,6 @@
         - name: Protect network resources
           displayName: map, network map
           href: protect-network-resources.md
-        - name: Lock down logins with multifactor authentication
-          displayName: identity, access, AAD, active directory, multifactor,
-            authentication, multifactor, users, passwords
-          href: multi-factor-authentication-enforcement.md
         - name: Other threat protections
           displayName: network layer, display recommendations, stream, security, alerts,
             DDoS, Entra

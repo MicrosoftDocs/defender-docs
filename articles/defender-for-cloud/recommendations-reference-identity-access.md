@@ -12,19 +12,17 @@ ai-usage: ai-assisted
 
 # Identity and access security recommendations
 
-This article lists all the identity and access security recommendations you might see in Microsoft Defender for Cloud. 
+This article lists all the identity and access security recommendations you might see in Microsoft Defender for Cloud.
 
 The recommendations that appear in your environment are based on the resources that you're protecting and on your customized configuration.
 
 To learn about actions that you can take in response to these recommendations, see [Remediate recommendations in Defender for Cloud](implement-security-recommendations.md).
-
 
 > [!TIP]
 > If a recommendation description says *No related policy*, usually it's because that recommendation is dependent on a different recommendation.
 >
 > For example, the recommendation *Endpoint protection health failures should be remediated* relies on the recommendation that checks whether an endpoint protection solution is installed (*Endpoint protection solution should be installed*). The underlying recommendation *does* have a policy.
 > Limiting policies to only foundational recommendations simplifies policy management.
-
 
 ## Azure identity and access recommendations
 
@@ -156,27 +154,6 @@ These accounts can be targets for attackers looking to find ways to access your 
 
 **Severity**: High
 
-### [MFA should be enabled on accounts with owner permissions on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/94290b00-4d0c-d7b4-7cea-064a9554e681)
-
-**Description**: Multifactor authentication (MFA) should be enabled for all subscription accounts with owner permissions to prevent a breach of accounts or resources.
-(Related policy: [MFA should be enabled on accounts with owner permissions on your subscription](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faa633080-8b72-40c4-a2d7-d00c03e80bed)).
-
-**Severity**: High
-
-### [MFA should be enabled on accounts with read permissions on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/151e82c5-5341-a74b-1eb0-bc38d2c84bb5)
-
-**Description**: Multifactor authentication (MFA) should be enabled for all subscription accounts with read privileges to prevent a breach of accounts or resources.
-(Related policy: [MFA should be enabled on accounts with read permissions on your subscription](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fe3576e28-8b17-4677-84c3-db2990658d64)).
-
-**Severity**: High
-
-### [MFA should be enabled on accounts with write permissions on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/57e98606-6b1e-6193-0e3d-fe621387c16b)
-
-**Description**: Multifactor authentication (MFA) should be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources.
-(Related policy: [MFA should be enabled accounts with write permissions on your subscription](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f9297c21d-2ed6-4474-b48f-163f75654ce3)).
-
-**Severity**: High
-
 ### [Microsoft Defender for Key Vault should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b1af52e4-e968-4e2b-b6d0-6736c9651f0a)
 
 **Description**: Microsoft Defender for Cloud includes Microsoft Defender for Key Vault, providing an additional layer of security intelligence.
@@ -239,7 +216,6 @@ Learn more in [Introduction to Microsoft Defender for Key Vault](defender-for-ke
 **Description**: Defender for Cloud identified Service Principals that are assigned with privileged roles at the resource group or subscription level. Privileged admin roles are roles that can perform sensitive operations on the resource, such as, Owner, Contributor or User Access Administrator. Service principals play a crucial role in managing Azure resources efficiently and securely, eliminating the need for human intervention. It is important to follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), grant only the minimum level of access necessary for a given service principal to perform their duties. Admins and privileged access are primary target of hackers. For best practices when using privileged administrator role assignments, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices?WT.mc_id=Portal-Microsoft_Azure_Security). [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices?WT.mc_id=Portal-Microsoft_Azure_Security). For a list of available roles in Azure RBAC, see [Azure's built-in roles](/azure/role-based-access-control/built-in-roles?WT.mc_id=Portal-Microsoft_Azure_Security).
 
 **Severity**: High
-
 
 ## AWS identity and access recommendations
 
@@ -676,7 +652,6 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
-
 ## GCP identity and access recommendations
 
 ### [Cryptographic keys should not have more than three users](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/24eb0365-d63d-43c0-b11f-8b0a1a0842f7)
@@ -819,8 +794,8 @@ There are three kinds of Data Access audit log information:
  It's recommended to have an effective default audit config configured in such a way that:
 
 - Log type is set to DATA_READ (to log user activity tracking) and DATA_WRITES (to log changes/tampering to user data).
- - Audit config is enabled for all the services supported by the Data Access audit logs feature.
- - Logs should be captured for all users, that is, there are no exempted users in any of the audit config sections. This will ensure overriding the audit config will not contradict the requirement.
+- Audit config is enabled for all the services supported by the Data Access audit logs feature.
+- Logs should be captured for all users, that is, there are no exempted users in any of the audit config sections. This will ensure overriding the audit config will not contradict the requirement.
 
 **Severity**: Medium
 

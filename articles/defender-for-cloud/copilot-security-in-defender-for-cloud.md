@@ -1,7 +1,7 @@
 ---
 title: Microsoft Security Copilot in Defender for Cloud (Preview)
 description: Learn about the benefits of copilot in Microsoft Defender for Cloud and how it applies to analyzing your security posture.
-ms.date: 11/17/2024
+ms.date: 11/26/2024
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
@@ -28,11 +28,11 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 ## Security Copilot integration in Defender for Cloud
 
-Defender for Cloud integrates Copilot directly in to the Defender for Cloud experience. This integration allows you to analyze, summarize, remediate, and delegate your recommendations with natural language prompts
+Defender for Cloud integrates Copilot directly into the Defender for Cloud experience. This integration allows you to analyze, summarize, remediate, and delegate your recommendations with natural language prompts.
 
-:::image type="content" source="media/copilot-security-in-defender-for-cloud/analyze-copilot.png" alt-text="Screenshot that shows where the Analyze with copilot button located on the recommendations page." lightbox="media/copilot-security-in-defender-for-cloud/analyze-copilot.png":::
+:::image type="content" source="media/copilot-security-in-defender-for-cloud/analyze-copilot.png" alt-text="Screenshot showing the location of the 'Analyze with Copilot' button on the recommendations page." lightbox="media/copilot-security-in-defender-for-cloud/analyze-copilot.png":::
 
-When you open Copilot, you can use natural language prompts to ask questions about the recommendations. Copilot provides you with a response in natural language that helps you understand the context of the recommendation. It also explains the effect of implementing the recommendation and provides steps to take for implementation.
+When you open Copilot, you can use natural language prompts to ask questions about the recommendations. Copilot provides responses in natural language, helping you understand the context of the recommendation. It also explains the effect of implementing the recommendation and provides steps for implementation.
 
 Some sample prompts include:
 
@@ -42,7 +42,7 @@ Some sample prompts include:
 
 Copilot can assist with refining recommendations, providing summaries, remediation steps, and delegation. It enhances your ability to analyze and act on recommendations. 
 
-:::image type="content" source="media/copilot-security-in-defender-for-cloud/summarize-copilot.png" alt-text="Screenshot of a recommendation that shows where the Summarize with Copilot button is located." lightbox="media/copilot-security-in-defender-for-cloud/summarize-copilot.png":::
+:::image type="content" source="media/copilot-security-in-defender-for-cloud/summarize-copilot.png" alt-text="Screenshot showing the location of the 'Summarize with Copilot' button on a recommendation." lightbox="media/copilot-security-in-defender-for-cloud/summarize-copilot.png":::
 
 ## Key features
 
@@ -58,13 +58,13 @@ When you use Security Copilot in Defender for Cloud, the following data processi
 1. If the prompt is security related and the skill is available, Security Copilot executes the skills and sends back a response to Copilot in Azure for presentation.
 1. If a security-related prompt is received but the skill is unavailable, Azure Copilot searches all of its available skills to find the most relevant skills to resolve the prompt. A response is then sent to the user.
 
-    :::image type="content" source="media/copilot-security-in-defender-for-cloud/data-process-workflow.png" alt-text="Diagram that shows the data process workflow of the Copilot experience in Defender for Cloud." lightbox="media/copilot-security-in-defender-for-cloud/data-process-workflow.png":::
+    :::image type="content" source="media/copilot-security-in-defender-for-cloud/data-process-workflow.png" alt-text="Diagram showing the data processing workflow of the Copilot experience in Defender for Cloud." lightbox="media/copilot-security-in-defender-for-cloud/data-process-workflow.png":::
 
 Check out the [Security Copilot FAQs](faq-copilot.yml).
 
 ## Enable the Security Copilot integration in Defender for Cloud
 
-Security Copilot in Defender for Cloud isn't reliant on any of the available plans in Defender for Cloud and is available for all users when you:
+Security Copilot in Defender for Cloud isn't reliant on any of the available plans in Defender for Cloud. Security Copilot is available for all users when you:
 
 1. [Enable Defender for Cloud on your environment](connect-azure-subscription.md).
 1. [Have access to Azure Copilot](/azure/copilot/overview).
@@ -74,18 +74,18 @@ However, in order to enjoy the full range of Security Copilot's capabilities in 
 
 ## Monitor your usage
 
-Security Copilot has a usage limit. When the usage in your organization is nearing its limit, you're notified when you submit a prompt. To avoid a disruption of service, you need to contact the Azure capacity owner or contributor to increase the Security Compute Units (SCU) or limit the number of prompts.
+Security Copilot has a usage limit. When the usage in your organization is nearing its limit, you're notified when you submit a prompt. To avoid a disruption of service, contact the Azure capacity owner or contributor to increase the Security Compute Units (SCU) or limit the number of prompts.
 
 Learn more about [usage limits](/copilot/security/manage-usage). 
 
 ## Provide feedback
 
-Your feedback on the Defender for Cloud integration with Security Copilot helps with development. To provide feedback, in Copilot, select **How's this response?** At the bottom of each completed prompt and choose any of the following options:
+Your feedback on the Defender for Cloud integration with Security Copilot helps with development. To provide feedback, in Copilot, select **How's this response?** At the bottom of each completed prompt and select any of the following options:
 - **Looks right** - Select this button if the results are accurate, based on your assessment. 
 - **Needs improvement** - Select this button if any detail in the results is incorrect or incomplete, based on your assessment. 
 - **Inappropriate** - Select this button if the results contain questionable, ambiguous, or potentially harmful information.
 
-For each feedback button, you can provide more information in the next dialog box that appears. Whenever possible, and when the result is **Needs improvement**, write a few words explaining what can be done to improve the outcome. If you entered prompts specific to Defender for Cloud and the results aren't related, then include that information.
+For each feedback button, you can provide more information in the next dialog box that appears. Whenever possible, and when the result is **Needs improvement**, write a few words explaining what can be done to improve the outcome. If you entered prompts specific to Defender for Cloud and the results aren't related, include that information.
 
 ## Privacy and data security in Security Copilot
 
