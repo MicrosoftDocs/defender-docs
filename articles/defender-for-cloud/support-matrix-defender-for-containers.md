@@ -42,7 +42,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for images in ACR | ACR, Private ACR | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
 | Agentless/agent-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for running images in AKS | AKS | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless (Requires Agentless discovery for Kubernetes) **OR/AND** Defender sensor | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
-| Agentless K8s node scanning | Vulnerability assessment of K8s nodes| AKS| Preview | Preview |Enable **Agentless scanning for machines** | Agentless | Defender for Containers or Defender for Servers P2 or CSPM | Commercial clouds |
+| Agentless K8s node scanning | [Vulnerability assessment of K8s nodes](kubernetes-nodes-va.md) | AKS| Preview | Preview |Enable **Agentless scanning for machines** | Agentless | Defender for Containers or Defender for Servers P2 or CSPM | Commercial clouds |
 
 ### Runtime threat protection
 
