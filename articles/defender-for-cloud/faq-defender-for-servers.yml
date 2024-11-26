@@ -109,7 +109,7 @@ sections:
           If the extension isn't showing, check that the machine meets the [prerequisites](enable-defender-for-endpoint.md#prerequisites), and that Defender for Servers is enabled.
 
           > [!IMPORTANT]
-          > If you delete the MDE.Windows/MDE.Linux extension, it won't remove Microsoft Defender for Endpoint. Learn about [offboard Windows servers from Defender for Endpoint.](/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
+          > If you delete the MDE.Windows/MDE.Linux extension, it won't remove Microsoft Defender for Endpoint. Learn about [offboard Windows servers from Defender for Endpoint](/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
 
   - name: Machine support and scanning
     questions:
