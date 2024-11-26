@@ -21,7 +21,7 @@ Before you begin, review the earlier articles:
 1. Review [Defender for Servers access roles](plan-defender-for-servers-roles.md).
 1. Select a [Defender for Servers plan](plan-defender-for-servers-select-plan.md)
 1. Understand how [Defender for Servers collects data for assessment and when you need a workspace](plan-defender-for-servers-agents.md).
-1. Understand where [Defender for Servers stores data](plan-defender-for-servers-select-data-workspace.md).
+1. Understand where [Defender for Servers stores data](plan-defender-for-servers-data-workspace.md).
 
 ## Scaling overview
 

@@ -41,5 +41,5 @@ Defender for Servers uses a number of methods to collect machine information, in
 
 ## Next steps
 
-[Understand how data is stored and when you need a Log Analytics workspace](plan-defender-for-servers-workspace.md)
+[Understand how data is stored and when you need a Log Analytics workspace](plan-defender-for-servers-data-workspace.md)
 
