@@ -875,7 +875,7 @@
           - name: Kubernetes node malware detection
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
-      - name: Image and container vulnerability assessments
+      - name: Container registry protection
         items:
           - name: Vulnerability assessments for Azure
             href: agentless-vulnerability-assessment-azure.md
