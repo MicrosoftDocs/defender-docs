@@ -56,8 +56,7 @@ We recommend enabling Defender for Servers at subscription level, but you can en
 
 Here are some use case examples to help you decide about Defender for Servers deployment scope.
 
-**Use case** | **Details**
---- | --- 
+
 
 **Use case** | **Enabled in subscription** | **Details** | **Method**
 --- | --- | --- | ---
