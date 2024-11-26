@@ -151,8 +151,6 @@ When automatic provisioning is enabled in the security policy, the [data collect
 
 If at some point you want to disable Data Collection, you can turn it off in the security policy. However, because the Log Analytics agent might be used by other Azure management and monitoring services, the agent won't be uninstalled automatically when you turn off data collection in Defender for Cloud. You can manually uninstall the agent if needed.
 
-> [!NOTE]
-> To find a list of supported VMs, read the [Defender for Cloud common questions](faq-vms.yml).
 
 ### Workspace
 

@@ -80,7 +80,6 @@ sections:
           Does Defender for Servers need a Log Analytics workspace?
         answer: |
           Defender for Servers Plan 1 doesn't depend on Log Analytics. In Defender for Servers Plan 2, you need a Log Analytics workspace to take advantage of the [free data ingestion benefit](data-ingestion-benefit.md). You also need a workspace to use [file integrity monitoring](file-integrity-monitoring-overview.md) in Plan 2.
-
           If you do set up a Log Analytics workspace for the free data ingestion benefit, you need to [enable Defender for Servers Plan 2](data-ingestion-benefit.md#configure-a-workspace) directly on it.
 
   - name: Defender for Endpoint integration
@@ -90,7 +89,6 @@ sections:
         answer: |
           Defender for Servers Plan 1 and Plan 2 provides the capabilities of [Microsoft Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint), including endpoint detection and response (EDR).
   
-
       - question: |
           Do I need to buy a separate anti-malware solution for my machines?
         answer: |
@@ -179,4 +177,4 @@ additionalContent: |
 
   ## Next steps
   
-  [Plan your Defender for Servers deployment](./plan-defender-for-servers.md)
+  [Plan your Defender for Servers deployment](plan-defender-for-servers.md)

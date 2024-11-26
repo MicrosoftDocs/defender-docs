@@ -89,7 +89,7 @@ Use this option if you don't want to turn on a Defender for Servers plan for an 
 
 Use the Azure Resource Manager API [Pricings operation group](/rest/api/defenderforcloud/pricings).
 
-1. If you need to turn off the current plan setting for the machine, use the [Delete](/rest/api/defenderforcloud/pricings/delete?view=rest-defenderforcloud-2024-01-01&tabs=HTTP#delete-a-pricing-on-resource) property to delete the pricing configuration for the machine.
+1. If you need to turn off the current plan setting for the machine, use the [Delete](/rest/api/defenderforcloud/pricings/delete?tabs=HTTP#delete-a-pricing-on-resource) property to delete the pricing configuration for the machine.
 1. To turn on Plan 1 for the machine, in [Update Pricings](/rest/api/defenderforcloud/pricings/update?tabs=HTTP#update-pricing-on-resource-(example-for-virtualmachines-plan)), use a PUT request to set the pricingTier property to *standard* and the subPlan to **P1**.
 
 
@@ -116,8 +116,8 @@ Disable the Defender for Servers plan for a subscription as follows:
 
 ### Disable a plan for a specific machine
 
-1. Use the [Delete](/rest/api/defenderforcloud/pricings/delete?view=rest-defenderforcloud-2024-01-01&tabs=HTTP#delete-a-pricing-on-resource) property to delete the current pricing configuration for the machine.
-1. In [Update Pricings](/rest/api/defenderforcloud/pricings/update?view=rest-defenderforcloud-2024-01-01&tabs=HTTP), use a PUT request to set the requires a PUT request setting the pricingTier property to *free*.
+1. Use the [Delete](/rest/api/defenderforcloud/pricings/delete?tabs=HTTP#delete-a-pricing-on-resource) property to delete the current pricing configuration for the machine.
+1. In [Update Pricings](/rest/api/defenderforcloud/pricings/update?tabs=HTTP), use a PUT request to set the requires a PUT request setting the pricingTier property to *free*.
 
 
 
