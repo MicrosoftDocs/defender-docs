@@ -12,7 +12,7 @@ summary: Get answers to common questions about Microsoft Defender for Servers.
 
 
 sections:
-  - name: Ignored
+  - name: Pricing
     questions:
       - question: |
           Can I enable Defender for Servers on a subset of machines in a subscription?
