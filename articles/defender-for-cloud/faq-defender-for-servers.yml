@@ -42,7 +42,7 @@ sections:
       - question: |
           Can I get a discount if I already have a Microsoft Defender for Endpoint license?
         answer: |
-          If you already have a license for **Microsoft Defender for Endpoint for Servers**, you won't have to pay for that part of your Microsoft Defender for Servers Plan 1 or 2 license.
+          If you already have a license for **Microsoft Defender for Endpoint for Servers**, you don't pay for that part of your Microsoft Defender for Servers Plan 1 or 2 license.
 
           1. To request your discount, in the Azure portal, select **Support and Troubleshooting** > **Help + support**.
           Select **Create a support request** and fill in the fields.
@@ -109,12 +109,12 @@ sections:
           If the extension isn't showing, check that the machine meets the [prerequisites](enable-defender-for-endpoint.md#prerequisites), and that Defender for Servers is enabled.
 
           > [!IMPORTANT]
-          > If you delete the MDE.Windows/MDE.Linux extension, it won't remove Microsoft Defender for Endpoint. Learn about [offboard Windows servers from Defender for Endpoint](/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
+          > If you delete the **MDE.Windows**/**MDE.Linux** extension, it won't remove Microsoft Defender for Endpoint. Learn about [offboard Windows servers from Defender for Endpoint](/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
 
   - name: Machine support and scanning
     questions:
       - question: |
-          What types of virtual machines does Defender for Servers support?
+          What types of virtual machines do Defender for Servers support?
         answer: |
           Review [Windows](support-matrix-defender-for-servers#windows-machine-support) and [Linux](/defender-endpoint/microsoft-defender-endpoint-linux) machines that are supported for Defender for Endpoint integration.
         
@@ -122,12 +122,12 @@ sections:
           How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?
         answer: |
           
-          - Operating system - data is updated within 48 hours
-          - System updates - data is updated within 24 hours
-          - Endpoint protection - data is updated within 8 hours
+          - Operating system: data is updated within 48 hours
+          - System updates: data is updated within 24 hours
+          - Endpoint protection: data is updated within 8 hours
           
-          Defender for Cloud typically scans for new data every hour, and refreshes the recommendations accordingly.
-          
+          Defender for Cloud typically scans for new data every hour, and refreshes security recommendations accordingly.
+
       - question: |
           How are VM snapshots collected by agentless scanning secured?
         answer: |
@@ -141,7 +141,7 @@ sections:
           - All operations are audited.
 
       - question: |
-          What is the auto-provisioning feature for vulnerability scanning with a bring your own license (BYOL) solution? Can it be applied on multiple solutions?
+          What is the auto-provisioning feature for vulnerability scanning with a "bring your own license" (BYOL) solution? Can it be applied on multiple solutions?
         answer: |
           Defender for Servers can scan machines to see if they have an EDR solution enabled. If they don't, you can use Microsoft Defender Vulnerability Management that's integrated by default into Defender for Cloud. As an alternative, Defender for Cloud can deploy a supported third-party BYOL vulnerability scanner. You can only use a single BYOL scanner. Multiple third-party scanners aren't supported.
 
@@ -168,13 +168,9 @@ sections:
           | **The recommendation is disabled in policy**                      | The policy definition that assesses the OS baseline is disabled on the scope that includes the 
 
     
-         
-
-      
-
-
+    
 additionalContent: |
 
   ## Next steps
   
-  [Plan your Defender for Servers deployment](plan-defender-for-servers.md)
+  [Plan Defender for Servers deployment](plan-defender-for-servers.md)
