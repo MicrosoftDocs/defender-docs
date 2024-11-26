@@ -83,7 +83,7 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 - Activity log entries from the abandoned incident are copied into the consolidated incident's activity log. The entries appear with an indication that they were merged from the old incident. You can filter the activity log to show entries from either original incident or from all merged incidents.
 
-## Related items
+## See also
 
 - [Alert correlation and incident merging in the Microsoft Defender portal](alerts-incidents-correlation.md)
 - [Manage incidents in Microsoft Defender](manage-incidents.md)
