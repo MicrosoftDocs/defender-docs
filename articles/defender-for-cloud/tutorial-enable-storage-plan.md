@@ -14,7 +14,7 @@ With Microsoft Defender for Storage, organizations can customize their protectio
    > [!TIP]
    > If you're currently using Microsoft Defender for Storage classic, consider [migrating to the new plan](defender-for-storage-classic-migrate.md), which offers several benefits over the classic plan.
 
-Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about pricing and reginal availability.
+Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about pricing and regional availability.
 
 ## Prerequisites
 

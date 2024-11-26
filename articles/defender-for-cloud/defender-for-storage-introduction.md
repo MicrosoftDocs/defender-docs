@@ -30,7 +30,7 @@ Defender for Storage includes:
 
 You can [enable Defender for Storage](tutorial-enable-storage-plan.md) agentlessly at the subscription level, resource levels, or at scale. 
 
-When You enable Defender for Storage at the subscription level, all existing and newly created storage accounts under that subscription are automatically included and protected. You can also exclude specific storage accounts from protected subscriptions.
+When you enable Defender for Storage at the subscription level, all existing and newly created storage accounts under that subscription are automatically included and protected. You can also exclude specific storage accounts from protected subscriptions.
 
 > [!NOTE]
 > If you have the Defender for Storage (classic) enabled and want access to the current security features and pricing, you'll need to [migrate to the new pricing plan](defender-for-storage-classic-migrate.md).
