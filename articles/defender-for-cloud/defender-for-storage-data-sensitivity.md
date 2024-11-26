@@ -24,8 +24,6 @@ Sensitive data threat detection is available for Blob storage accounts, includin
 - Azure Data Lake Storage Gen2
 - Premium block blobs 
 
-Learn more about the [availability of Defender for Storage features](defender-for-storage-introduction.md#availability).
-
 To enable sensitive data threat detection at subscription and storage account levels, you need to have the relevant data-related permissions from the **Subscription owner** or **Storage account owner** roles. 
 
 Learn more about the [roles and permissions required for sensitive data threat detection](support-matrix-defender-for-storage.md).
