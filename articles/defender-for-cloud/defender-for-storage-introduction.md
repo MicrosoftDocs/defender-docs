@@ -35,7 +35,7 @@ When You enable Defender for Storage at the subscription level, all existing and
 > [!NOTE]
 > If you have the Defender for Storage (classic) enabled and want access to the current security features and pricing, you'll need to [migrate to the new pricing plan](defender-for-storage-classic-migrate.md).
 
-## What are the benefits of Microsoft Defender for Storage?
+## Benefits
 
 :::image type="content" source="media/defender-for-storage-introduction/defender-for-storage-benefits.png" alt-text="Diagram showing the benefits of using Defender for Storage to protect your data.":::
 
@@ -53,7 +53,7 @@ Defender for Storage provides the following:
 
 - **Frictionless enablement at scale**: Microsoft Defender for Storage is an agentless solution, easy to deploy, and enables security protection at scale using a native Azure solution.
 
-## How does the service work?
+## How does Defender for Storage work?
 
 ### Activity monitoring
 
