@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 08/11/2023
+ms.date: 11/25/2024
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -67,7 +67,7 @@ If you've determined that a device or a file is not a threat, you can undo remed
 
 | Action source | Supported Actions |
 |:---|:---|
-| - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
+| - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Contain device <br/>- Contain user <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
 
 ### Undo one remediation action
 
