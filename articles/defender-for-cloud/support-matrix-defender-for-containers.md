@@ -20,9 +20,9 @@ This article summarizes support information for Container capabilities in Micros
 > - Specific features are in preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > - Only the versions of AKS, EKS and GKE supported by the cloud vendor are officially supported by Defender for Cloud.
 
-## Azure
+The following are the features provided by Defender for Containers, for the supported cloud environments and container registries.
 
-Following are the features for each of the domains in Defender for Containers:
+## Azure
 
 ### Security posture management
 
@@ -194,10 +194,10 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 
 | Domain | Feature | Supported Resources | Linux release state  | Windows release state  | Agentless/Sensor-based | Pricing tier |
 |--|--| -- | -- | -- | -- | --|
-| Security posture management  | Comprehensive inventory capabilities | Docker Hub , Jfrog Artifactory| Preview | Preview | Agentless| Foundational CSPM **OR** Defender for Containers **OR** Defender CSPM |
-| Security posture management  | Attack path analysis | Docker Hub , Jfrog Artifactory| Preview | Preview | Agentless| Defender CSPM |
+| Security posture management  | Comprehensive inventory capabilities | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Foundational CSPM **OR** Defender for Containers **OR** Defender CSPM |
+| Security posture management  | Attack path analysis | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Defender CSPM |
 | [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JfFrog Artifactory| Preview | Preview | Agentless | Defender for Containers **OR** Defender CSPM |
-| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , Jfrog Artifactory| Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
+| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JFrog Artifactory| Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
 
 
 ### Kubernetes distributions and configurations

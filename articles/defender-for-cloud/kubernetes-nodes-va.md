@@ -11,7 +11,7 @@ Defender for Containers can scan the [VMs that host K8s nodes](./kubernetes-node
 
 ## Prerequisite
 
-Vulnerability assessment of the nodes must be [enabled by turning on the **Agentless scanning for machines**](./kubernetes-nodes-overview.md#prerequisite---enable-agentless-scanning-for-machines) option in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
+Vulnerability assessment of the nodes must be [enabled by turning on the **Agentless scanning for machines**](./kubernetes-nodes-overview.md#enable-agentless-scanning-for-machines) option in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
 
 ## Review the K8s node vulnerability recommendations
 

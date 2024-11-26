@@ -30,7 +30,7 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 | Release state: | General availability (GA)<br> Certain features are in preview. For a full list, see the [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md)|
 | Feature availability | Refer to the [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) for additional information on feature release state and availability.|
 | Pricing: | **Microsoft Defender for Containers** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) |
-| Required roles and permissions: | • To deploy the required components, see the [permissions for each of the components](monitoring-components.md#defender-for-containers-extensions)<br> • **Security admin** can dismiss alerts<br> • **Security reader** can view vulnerability assessment findings<br> See also [Roles for remediation](permissions.md#roles-used-to-automatically-provision-agents-and-extensions) and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles) |
+| Required roles and permissions: | * To deploy the required components, see the [permissions for each of the components](monitoring-components.md#defender-for-containers-extensions)<br> * **Security admin** can dismiss alerts<br> * **Security reader** can view vulnerability assessment findings<br> See also [Roles for remediation](permissions.md#roles-used-to-automatically-provision-agents-and-extensions) and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles) |
 | Clouds: | View the [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) to see cloud availability. |
 
 ## Security posture management
@@ -39,11 +39,12 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 - **Agentless discovery for Kubernetes** - provides zero footprint, API-based discovery of your Kubernetes clusters, their configurations and deployments.
 
-- **[Agentless vulnerability assessment](agentless-vulnerability-assessment-azure.md)** - provides vulnerability assessment for all container images, including recommendations for registry and runtime, quick scans of new images, daily refresh of results, exploitability insights, and more. Vulnerability information is added to the security graph for contextual risk assessment and calculation of attack paths, and hunting capabilities.
+- **Agentless vulnerability assessment** - provides vulnerability assessment for [cluster nodes](kubernetes-nodes-va.md) and for [all container images](agentless-vulnerability-assessment-azure.md), including recommendations for registry and runtime, quick scans of new images, daily refresh of results, exploitability insights, and more. Vulnerability information is added to the security graph for contextual risk assessment and calculation of attack paths, and hunting capabilities.
 
 - **Comprehensive inventory capabilities**  - enables you to explore resources, pods, services, repositories, images and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets.
 
 - **[Enhanced risk-hunting](how-to-manage-cloud-security-explorer.md)** - enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md)
+
 - **Control plane hardening** - continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues.
 
   You can use the resource filter to review the outstanding recommendations for your container-related resources, whether in asset inventory or the recommendations page:
@@ -64,21 +65,25 @@ You can learn more about [Kubernetes data plane hardening](kubernetes-workload-p
 
 ## Vulnerability assessment
 
-Defender for Containers scans the container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), and Google Container Registry (GCR) to provide agentless vulnerability assessment for your container images, including registry and runtime recommendations, remediation guidance, quick scans of new images, real-world exploit insights, exploitability insights, and more.
+Defender for Containers scans the cluster node OS and application software, container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), Google Container Registry (GCR), and [supported external image registries](support-matrix-defender-for-containers.md#external-container-registries) to provide agentless vulnerability assessment.
 
 Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
-Learn more about:
+Learn more about vulnerability assessment for:
 
+Container registries -
 - [Vulnerability assessments for Azure with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md)
 - [Vulnerability assessments for AWS with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-aws.md)
 - [Vulnerability assessments for GCP with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-gcp.md)
+
+Cluster nodes -
+- [Cluster nodes vulnerability assessment](kubernetes-nodes-va.md)
 
 ## Run-time protection for Kubernetes nodes and clusters
 
 Defender for Containers provides real-time threat protection for [supported containerized environments](support-matrix-defender-for-containers.md) and generates alerts for suspicious activities. You can use this information to quickly remediate security issues and improve the security of your containers.
 
-Threat protection is provided for Kubernetes at cluster level, node level, and workload level and includes both sensor based coverage that requires the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor) and agentless coverage that is based on analysis of the Kubernetes audit logs. Security alerts are only triggered for actions and deployments that occur after you enabled Defender for Containers on your subscription.
+Threat protection is provided for Kubernetes at the cluster, node, and workload levels. Both sensor based coverage that requires the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor), and agentless coverage that is based on analysis of the Kubernetes audit logs, are used to detect threats. Security alerts are only triggered for actions and deployments that occur after you enabled Defender for Containers on your subscription.
 
 Examples of security events that Microsoft Defenders for Containers monitors include:
 
@@ -90,9 +95,9 @@ You can view security alerts by selecting the Security alerts tile at the top of
 
 Security alerts for runtime workload in the clusters can be recognized by the `K8S.NODE_` prefix of the alert type.  For a full list of the cluster level alerts, see the [reference table of alerts](alerts-containers.md).
 
-Defender for Containers also includes host-level threat detection with over 60 Kubernetes-aware analytics, AI, and anomaly detections based on your runtime workload.
+Defender for Containers includes threat detection with over 60 Kubernetes-aware analytics, AI, and anomaly detections based on your runtime workload.
 
-Defender for Cloud monitors the attack surface of multicloud Kubernetes deployments based on the [MITRE ATT&CK® matrix for Containers](https://www.microsoft.com/security/blog/2021/04/29/center-for-threat-informed-defense-teams-up-with-microsoft-partners-to-build-the-attck-for-containers-matrix/), a framework developed by the [Center for Threat-Informed Defense](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/) in close partnership with Microsoft.
+Defender for Cloud monitors the attack surface of multicloud Kubernetes deployments based on the [MITRE ATT&CK&reg; matrix for Containers](https://www.microsoft.com/security/blog/2021/04/29/center-for-threat-informed-defense-teams-up-with-microsoft-partners-to-build-the-attck-for-containers-matrix/), a framework developed by the [Center for Threat-Informed Defense](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/) in close partnership with Microsoft.
 
 ## Learn more
 

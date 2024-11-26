@@ -29,15 +29,15 @@ The following protections are provided for K8s nodes:
 - [Malware detection](kubernetes-nodes-malware.md) - K8s nodes are analyzed for malware. A security alert is generated for the customer to review and remediate.
 
 > [!Note]
-> Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments that have the **agentless scanning for machines** option turned on.
+> Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments that have **Agentless scanning for machines** enabled.
 
 The K8s nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
 
-## Prerequisite - Enable agentless scanning for machines
+## Enable agentless scanning for machines
 
-Protection for K8s nodes is enabled by turning on the **Agentless scanning for machines** option in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
+Protection for K8s nodes is enabled by enabling **Agentless scanning for machines** in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
 
-To enable the agentless scanning for machines option in Defender for Containers in the Azure portal:
+To enable agentless scanning for machines in the Defender for Containers plan in the Azure portal:
 
 1. Select the relevant subscription.
 2. Select **Environment Settings** from the **Defender for Cloud** menu.
@@ -45,8 +45,8 @@ To enable the agentless scanning for machines option in Defender for Containers 
 
 :::image type="content" source="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png":::
 
-1. In the settings pane, turn on **Agentless scanning for machines**.
+1. In the settings pane, turn on **Agentless scanning for machines** toggle.
 
-:::image type="content" source="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines option." lightbox="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png":::
+:::image type="content" source="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines toggle." lightbox="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png":::
 
 1. Select **Save**.
