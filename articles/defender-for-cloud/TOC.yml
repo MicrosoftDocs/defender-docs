@@ -926,7 +926,7 @@
         href: defender-for-container-registries-introduction.md
   - name: Database protection
     items:
-     - name: Protect databases with Defender for Databases
+     - name: Overview
        displayName: database, protections
        href: tutorial-enable-databases-plan.md
      - name: Defender for Azure SQL Databases
