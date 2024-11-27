@@ -116,7 +116,7 @@ sections:
       - question: |
           What types of virtual machines do Defender for Servers support?
         answer: |
-          Review [Windows](support-matrix-defender-for-servers#windows-machine-support) and [Linux](/defender-endpoint/microsoft-defender-endpoint-linux) machines that are supported for Defender for Endpoint integration.
+          Review [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](/defender-endpoint/microsoft-defender-endpoint-linux) machines that are supported for Defender for Endpoint integration.
         
       - question: |
           How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?

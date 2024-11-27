@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
 
-# Endpoint detection and response with Defender for Endpoint
+# Assessing Defender for Endpoint as an endpoint detection and response solution
 
 Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint as an endpoint detection and response (EDR) solution.
 

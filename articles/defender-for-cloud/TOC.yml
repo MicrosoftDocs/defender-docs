@@ -760,7 +760,7 @@
         items:
           - name: Detecting EDR solutions
             href: detect-endpoint-detection-response-solutions.md
-          - name: EDR with Defender for Endpoint
+          - name: Assessing Defender for Endpoint EDR
             href: endpoint-detection-response.md
           - name: Enable Defender for Endpoint for EDR
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
