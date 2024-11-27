@@ -40,6 +40,6 @@ Once selected, you can click on any of the **Non-Compliant** recommendations to 
 ## Additional Information
 
 - Each metric includes a list of associated app connectors, encouraging organizations to enable more connectors for enhanced visibility. If you're interested in recommendations for specific applications, navigate to the **Security Recommendations** tab and filter by the relevant application.
-- To learn more about Exposure Management initiatives visit [here](https://learn.microsoft.com/security-exposure-management/initiatives)
+- To learn more about Exposure Management initiatives visit [here](../exposure-management/initiatives.md).
 
 

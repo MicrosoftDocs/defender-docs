@@ -10,7 +10,7 @@ ms.date: 11/17/2024
 > [!NOTE]
 > Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High and DoD. For these environments, it is recommended to consume SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation).
 
-One of Microsoft Defender for Cloud Apps’ core pillars is SaaS Security Posture Management (SSPM), which offers detailed visibility into the security state of your SaaS applications and provides actionable guidance to help you strengthen your security posture efficiently. Your SaaS application environments might be configured with a risky posture, and Defender for Cloud Apps provides risk-based security configuration assessments to help you identify and mitigate potential risks. These recommendations are shown in [Microsoft Security Exposure Management](https://learn.microsoft.com/security-exposure-management/microsoft-security-exposure-management) once you have a connector to an application. For example:
+One of Microsoft Defender for Cloud Apps’ core pillars is SaaS Security Posture Management (SSPM), which offers detailed visibility into the security state of your SaaS applications and provides actionable guidance to help you strengthen your security posture efficiently. Your SaaS application environments might be configured with a risky posture, and Defender for Cloud Apps provides risk-based security configuration assessments to help you identify and mitigate potential risks. These recommendations are shown in [Microsoft Security Exposure Management](../exposure-management/microsoft-security-exposure-management.md) once you have a connector to an application. For example:
 
 ![Screenshot of the SalesForce recommendations in Secure Score.](media/security-saas-sspm-in-secure-score-salesforce-filter.png)
 
@@ -59,7 +59,7 @@ For more information, see [Assess your security posture with Microsoft Secure Sc
 
 To effectively manage your organization’s SaaS security posture, we recommend beginning with the SaaS Security initiative. This initiative consolidates best practices and measurable metrics specifically for securing SaaS applications, allowing you to prioritize and address the most impactful recommendations for SaaS environments. For more information, see:
 
-- [SaaS Security Initiative](https://learn.microsoft.com/defender-cloud-apps/saas-security-initiative)
+- [SaaS Security Initiative](/defender-cloud-apps/saas-security-initiative)
 
 In addition you can find a variety of SSPM recommendations under different initiatives. Key initiatives include:
 
