@@ -53,7 +53,7 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 ## Merge incidents from within the incident details panel or incident page
 
-1. Select an incident from the incident queue. This is the incident you want to close and merge into another incident.
+1. Select one of the two incidents you want to merge from the incident queue. This could be either the source or the target incident, as Microsoft Defender decides which is which. For more information, see [Details of the merge process](alerts-incidents-correlation.md#details-of-the-merge-process).
 
 1. The incident details panel appears. From the toolbar in the incident details panel, select **Merge incidents**.
 
