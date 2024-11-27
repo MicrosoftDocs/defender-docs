@@ -761,16 +761,6 @@
           - name: Enable Defender integration
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
             href: enable-defender-for-endpoint.md
-      - name: Endpoint detection and response (EDR)
-        items:
-          - name: Detecting EDR solutions
-            href: detect-endpoint-detection-response-solutions.md
-          - name: Assessing Defender for Endpoint EDR
-            href: endpoint-detection-response.md
-          - name: Enable agentless machine scanning
-            displayName: vulnerability, software inventory, agentless scanning
-            href: enable-agentless-scanning-vms.md
-          
       - name: Agentless machine scanning
         items:
           - name: Overview
@@ -781,6 +771,15 @@
             href: enable-agentless-scanning-vms.md
           - name: Exclude machines from agentless scanning
             href: exclude-machines-agentless-scanning.md
+      - name: Endpoint detection and response (EDR)
+        items:
+          - name: Detecting EDR solutions
+            href: detect-endpoint-detection-response-solutions.md
+          - name: Assessing Defender for Endpoint EDR
+            href: endpoint-detection-response.md
+          - name: Enable agentless machine scanning
+            displayName: vulnerability, software inventory, agentless scanning
+            href: enable-agentless-scanning-vms.md
       - name: Vulnerability scanning
         items:
           - name: Overview
