@@ -71,7 +71,7 @@ The contents of the incidents are handled in the following ways:
 - A **`Redirected`** tag is added to the source incident.
 - Entities (assets etc.) follow the alerts they're linked to.
 - Analytics rules recorded as involved in the creation of the source incident are added to the rules recorded in the target incident.
-- Currently, comments and activity log entries in the source incident are *not* moved to the target incident.
+- Comments and activity log entries in the source incident are moved to the target incident.
 
 To see the source incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
 
