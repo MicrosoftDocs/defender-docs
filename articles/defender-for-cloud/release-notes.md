@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/18/2024
+ms.date: 11/21/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,6 +31,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
+| November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
+| November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50gb-preview) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
@@ -43,12 +46,49 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
 | November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods (Preview)](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
-| November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
+| November 13| Preview | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes-preview)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced Support for API sensitive data classification](#enhanced-support-for-api-sensitive-data-classification) |
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
+### Sensitivity label consent changes
+
+**Estimated date for change**: November 26, 2024
+
+You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
+
+With this change, all custom information types and sensitivity labels are automatically imported into the Microsoft Defender for Cloud portal.
+
+Learn more about [data sensitivity settings](data-sensitivity-settings.md#import-custom-sensitivity-info-typeslabels).
+
+### Sensitivity label changes
+
+November 26, 2024
+
+Until recently, Defender for Cloud imported all sensitivity labels from the Microsoft 365 Defender portal that met the following two conditions:
+
+- Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
+- The sensitivity label has an automatic labeling rule configured.
+
+As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+
+> [!NOTE]
+> Labels that were configured with "Items -> Files" before this change took place are automatically migrated to the new "Files and other data assets" scope.
+
+Learn more about [how to configure sensitivity labels](data-sensitivity-settings.md).
+
+### Defender for Storage Malware Scanning for blobs up to 50GB (Preview)
+
+November 25, 2024
+
+**Estimated date for change:** December 31, 2024
+
+Starting on December 31, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+
+Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
+
+To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 
@@ -208,7 +248,7 @@ November 15, 2024
 
 API security posture management (Preview) capabilities are now included in the Defender CSPM plan and can be enabled through extensions within the plan under environment settings page. For more information, see [Improve your API security posture (Preview)](api-security-posture-overview.md).
 
-### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes
+### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes (Preview)
 
 November 13, 2024
 
