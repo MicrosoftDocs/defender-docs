@@ -725,8 +725,6 @@
     items:
     - name: Overview
       href: defender-for-servers-overview.md
-    - name: Defender integration
-      href: integration-defender-for-endpoint.md
     - name: Common questions
       href: faq-defender-for-servers.yml
     - name: Plan 
@@ -756,15 +754,20 @@
         href: configure-servers-coverage.md
     - name: Configure
       items:
+      - name: Defender integration
+        items:
+          - name: Overview
+            href: integration-defender-for-endpoint.md
+          - name: Enable Defender integration
+            displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
+            href: enable-defender-for-endpoint.md
       - name: Endpoint detection and response (EDR)
         items:
           - name: Detecting EDR solutions
             href: detect-endpoint-detection-response-solutions.md
           - name: Assessing Defender for Endpoint EDR
             href: endpoint-detection-response.md
-          - name: Enable Defender for Endpoint for EDR
-            displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
-            href: enable-defender-for-endpoint.md
+         
       - name: Agentless machine scanning
         items:
           - name: Overview

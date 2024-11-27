@@ -82,6 +82,14 @@ sections:
           Defender for Servers Plan 1 doesn't depend on Log Analytics. In Defender for Servers Plan 2, you need a Log Analytics workspace to take advantage of the [free data ingestion benefit](data-ingestion-benefit.md). You also need a workspace to use [file integrity monitoring](file-integrity-monitoring-overview.md) in Plan 2.
           If you do set up a Log Analytics workspace for the free data ingestion benefit, you need to [enable Defender for Servers Plan 2](data-ingestion-benefit.md#configure-a-workspace) directly on it.
 
+      - question: |
+          What if I have Defender for Servers enabled on a workspace but not on a subscription?
+        answer: |
+          The [legacy method for onboarding servers to Defender for Servers Plan 2](quickstart-onboard-machines.md) using a workspace and the Log Analytics agent is no longer supported or available in the portal. To ensure that machines that are currently connected to the workspace remain protected, do the following:
+
+          - **On-premises and multicloud machines**: If you previously onboarded on-premises and AWS/GCP machines using the legacy method, [connect these machines to Azure](/azure/azure-arc/servers/deployment-options) as Azure Arc-enabled servers to the subscription with Defender for Servers Plan 2 enabled.
+          - **Selected machines**: If you used the legacy method to enable Defender for Servers Plan 2 on individual machines, we recommend that you enable Defender for Server Plan 2 on the entire subscription. Then you can exclude specific machines using [resource-level configuration](plan-defender-for-servers-select-plan.md#decide-on-plan-scope).
+
   - name: Defender for Endpoint integration
     questions:
       - question: |
