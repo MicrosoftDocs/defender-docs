@@ -60,7 +60,7 @@ Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning cap
 
 Prior to this addition, when a customer enabled the Defender CSPM plan on a subscription, Defender for Cloud would automatically scan blob containers within storage accounts for sensitive data. This update allows Defender for CSPM's sensitivity scanning feature to scan file shares within those storage accounts. As a result, the risk assessment and protection of sensitive storage accounts are enhanced, and provide a more thorough analysis of potential risks.
 
-For scanning file shares StorageDataScanner assign a new role "Storage File Data Privileged Reader"
+to scan file shares `StorageDataScanner`, you must assign a new role `Storage File Data Privileged Reader`.
 
 Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
 
