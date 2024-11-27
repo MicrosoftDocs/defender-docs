@@ -194,8 +194,14 @@ items:
       href: discovered-app-queries.md
     - name: Discover and manage shadow IT
       href: tutorial-shadow-it.md
-- name: Security posture
-  href: security-saas.md
+    - name: Work with discovered apps via API
+      href: discovered-apps-api-graph.md
+- name: Posture management (SSPM)
+  items:
+    - name: Overview
+      href: posture-overview.md
+    - name: SaaS security initiative
+      href: saas-security-initiative.md
 - name: Threat protection
   items:
   - name: Control cloud apps with policies
@@ -430,98 +436,102 @@ items:
     href: ops-guide/ops-guide-monthly.md
   - name: Ad-hoc activities
     href: ops-guide/ops-guide-ad-hoc.md
-- name: REST API
+- name: Reference
   items:
-  - name: Introduction
-    href: api-introduction.md
-  - name: Authentication
+  - name: Microsoft Graph API reference
+    href: /graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta
+  - name: REST API reference
     items:
-    - name: Managing API tokens
-      href: api-authentication.md
-    - name: Application context
-      href: api-authentication-application.md
-    - name: User context
-      href: api-authentication-user.md
-    - name: Legacy method
-      href: api-tokens-legacy.md
-  - name: Activities
-    items:
-    - name: Overview
-      href: api-activities.md
-    - name: Investigate activities with APIs
-      href: api-activities-investigate-script.md
-    - name: List activities
-      href: api-activities-list.md
-    - name: Fetch activity
-      href: api-activities-fetch.md
-    - name: Feedback on activity
-      href: api-activities-feedback.md
-    - name: Alerts
+    - name: Introduction
+      href: api-introduction.md
+    - name: Authentication
+      items:
+      - name: Managing API tokens
+        href: api-authentication.md
+      - name: Application context
+        href: api-authentication-application.md
+      - name: User context
+        href: api-authentication-user.md
+      - name: Legacy method
+        href: api-tokens-legacy.md
+    - name: Activities
       items:
       - name: Overview
-        href: api-alerts.md
-      - name: List alerts
-        href: api-alerts-list.md
-      - name: Close benign
-        href: api-alerts-close-benign.md
-      - name: Close false positive
-        href: api-alerts-close-false-positive.md
-      - name: Close true positive
-        href: api-alerts-close-true-positive.md
-      - name: Fetch alert
-        href: api-alerts-fetch.md
-      - name: Mark alert as read
-        href: api-alerts-mark-read.md
-      - name: Mark alert as unread
-        href: api-alerts-mark-unread.md
-    - name: Cloud Discovery
-      items:
-      - name: Overview
-        href: api-discovery.md
-      - name: Initiate file upload
-        href: api-discovery-initiate.md
-      - name: Perform file upload
-        href: api-discovery-perform.md
-      - name: Finalize file upload
-        href: api-discovery-finalize.md
-      - name: List continuous reports
-        href: api-discovery-list-streams.md
-      - name: List continuous report categories
-        href: api-discovery-list-categories.md
-      - name: Generate block script
-        href: api-discovery-script.md
-    - name: Data Enrichment
-      items:
-      - name: Overview
-        href: api-data-enrichment.md
-      - name: Manage IP address ranges using the API
-        href: api-data-enrichment-manage-script.md
-      - name: List IP ranges
-        href: api-data-enrichment-list.md
-      - name: Create IP address range
-        href: api-data-enrichment-create.md
-      - name: Update IP address range
-        href: api-data-enrichment-update.md
-      - name: Delete IP address range
-        href: api-data-enrichment-delete.md
-    - name: Entities
-      items:
-      - name: Overview
-        href: api-entities.md
-      - name: List entities
-        href: api-entities-list.md
-      - name: Fetch entity
-        href: api-entities-fetch.md
-      - name: Fetch entity tree
-        href: api-entities-fetch-tree.md
-    - name: Files
-      items:
-      - name: Overview
-        href: api-files.md
-      - name: List Files
-        href: api-files-list.md
-      - name: Fetch File
-        href: api-files-fetch.md
+        href: api-activities.md
+      - name: Investigate activities with APIs
+        href: api-activities-investigate-script.md
+      - name: List activities
+        href: api-activities-list.md
+      - name: Fetch activity
+        href: api-activities-fetch.md
+      - name: Feedback on activity
+        href: api-activities-feedback.md
+      - name: Alerts
+        items:
+        - name: Overview
+          href: api-alerts.md
+        - name: List alerts
+          href: api-alerts-list.md
+        - name: Close benign
+          href: api-alerts-close-benign.md
+        - name: Close false positive
+          href: api-alerts-close-false-positive.md
+        - name: Close true positive
+          href: api-alerts-close-true-positive.md
+        - name: Fetch alert
+          href: api-alerts-fetch.md
+        - name: Mark alert as read
+          href: api-alerts-mark-read.md
+        - name: Mark alert as unread
+          href: api-alerts-mark-unread.md
+      - name: Cloud Discovery
+        items:
+        - name: Overview
+          href: api-discovery.md
+        - name: Initiate file upload
+          href: api-discovery-initiate.md
+        - name: Perform file upload
+          href: api-discovery-perform.md
+        - name: Finalize file upload
+          href: api-discovery-finalize.md
+        - name: List continuous reports
+          href: api-discovery-list-streams.md
+        - name: List continuous report categories
+          href: api-discovery-list-categories.md
+        - name: Generate block script
+          href: api-discovery-script.md
+      - name: Data Enrichment
+        items:
+        - name: Overview
+          href: api-data-enrichment.md
+        - name: Manage IP address ranges using the API
+          href: api-data-enrichment-manage-script.md
+        - name: List IP ranges
+          href: api-data-enrichment-list.md
+        - name: Create IP address range
+          href: api-data-enrichment-create.md
+        - name: Update IP address range
+          href: api-data-enrichment-update.md
+        - name: Delete IP address range
+          href: api-data-enrichment-delete.md
+      - name: Entities
+        items:
+        - name: Overview
+          href: api-entities.md
+        - name: List entities
+          href: api-entities-list.md
+        - name: Fetch entity
+          href: api-entities-fetch.md
+        - name: Fetch entity tree
+          href: api-entities-fetch-tree.md
+      - name: Files
+        items:
+        - name: Overview
+          href: api-files.md
+        - name: List Files
+          href: api-files-list.md
+        - name: Fetch File
+          href: api-files-fetch.md
 - name: Resources
   items:
   - name: Licensing datasheet

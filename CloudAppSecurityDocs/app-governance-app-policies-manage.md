@@ -7,14 +7,14 @@ description: Manage your app governance policies.
 
 # Manage app policies
 
-Use app governance to manage OAuth policies for Microsoft Entra ID, Google Workspace, and Salesforce.
+Use app governance to manage OAuth policies for Microsoft 365, Google Workspace, and Salesforce.
 
 You might need to manage your app policies as follows to keep up-to-date with your organization's apps, respond to new app-based attacks, and for ongoing changes to your app compliance needs:
 
 - Create new policies targeted at new apps
 - Change the status of an existing policy (active, inactive, audit mode)
 - Change the conditions of an existing policy
-- Change the actions of an existing policy for autoremediation of alerts
+- Change the actions of an existing policy for auto-remediation of alerts
 
 <a name='manage-oauth-app-policies-for-azure-ad'></a>
 

@@ -13,7 +13,7 @@ Along with a built-in set of capabilities to detect anomalous app behavior and g
 
 - Enforce the app compliance policies for your organization.
 
-Use app governance to create OAuth policies for apps connected to Microsoft Entra ID, Google Workspace, and Salesforce.
+Use app governance to create OAuth policies for apps connected to Microsoft 365, Google Workspace, and Salesforce.
 
 <br>
 
@@ -52,7 +52,7 @@ The following table lists the app governance templates supported to generate ale
 
 |Template name|Description|
 |---|---|
-|**New app with high data usage**|Find newly registered apps that have uploaded or downloaded large amounts of data using Graph API. This policy checks the following conditions:<br /><br /><li>Registration age: Seven days or less (customizable)<br /><li>Data usage: Greater than 1 GB in one day (customizable)|
+|**New app with high data usage**|Find newly registered apps that have uploaded or downloaded large amounts of data using Microsoft Graph and EWS APIs. This policy checks the following conditions:<br /><br /><li>Registration age: Seven days or less (customizable)<br /><li>Data usage: Greater than 1 GB in one day (customizable)|
 |**Increase in users**|Find apps with a sizable increase in the number of users. This policy checks the following conditions:<br /><br /> <li> Time range: Last 90 days<br /> <li> Increase in consenting users: At least 50% (customizable)|
 
 ### Permissions
@@ -61,8 +61,8 @@ The following table lists the app governance templates supported to generate ale
 
 |Template name|Description|
 |---|---|
-|**Overprivileged app**|Find apps that have unused Graph API permissions. These apps have been granted permissions that could be unnecessary for regular use.|
-|**New highly privileged app**|Find newly registered apps that have been granted write access and other powerful Graph API permissions. This policy checks the following conditions:<br /><br /><li>Registration age: Seven days or less (customizable)|
+|**Overprivileged app**|Find apps that have unused Microsoft Graph API permissions. These apps have been granted permissions that could be unnecessary for regular use.|
+|**New highly privileged app**|Find newly registered apps that have been granted write access and other powerful permissions to Microsoft Graph and other common Microsoft first-party APIs. This policy checks the following conditions:<br /><br /><li>Registration age: Seven days or less (customizable)|
 |**New app with non-Graph API permissions**|Find newly registered apps that have permissions to non-Graph APIs. These apps can expose you to risks if the APIs they access receive limited support and updates. <br />This policy checks the following conditions:<br /><br /><li>Registration age: Seven days or less (customizable)<br /><li> Non-Graph API permissions: Yes|
 
 ### Certification
@@ -77,7 +77,7 @@ The following table lists the app governance templates supported to generate ale
 
 Use a custom app policy when you need to do something not already done by one of the built-in templates.
 
-1. To create a new custom app policy, first select **Create new policy** on the **Policies** page. On the **Choose App policy template page**, select the **Custom** category, the **Custom policy** template, and then select **Next**.
+- To create a new custom app policy, first select **Create new policy** on the **Policies** page. On the **Choose App policy template page**, select the **Custom** category, the **Custom policy** template, and then select **Next**.
 
 1. On the **Name and description** page, configure the following:
 
@@ -88,56 +88,57 @@ Use a custom app policy when you need to do something not already done by one of
       - Medium
       - Low
 
-1. On the **Choose Policy settings and conditions** page, for **Choose which apps this policy is applicable for**, select:
+2. On the **Choose Policy settings and conditions** page, for **Choose which apps this policy is applicable for**, select:
 
     - All Apps
     - Choose specific apps
     - All apps except
 
-1. If you choose specific apps, or all apps except for this policy, select **Add apps** and select the desired apps from the list. In the **Choose apps** pane, you can select multiple apps to which this policy applies, and then select **Add**. Select **Next** when you're satisfied with the list.
+3. If you choose specific apps, or all apps except for this policy, select **Add apps** and select the desired apps from the list. In the **Choose apps** pane, you can select multiple apps to which this policy applies, and then select **Add**. Select **Next** when you're satisfied with the list.
 
-1. Select **Edit conditions**. Select **Add condition** and choose a condition from the list. Set the desired threshold for your selected condition. Repeat to add more conditions. Select **Save** to save the rule, and when you're finished adding rules, select **Next**.
+4. Select **Edit conditions**. Select **Add condition** and choose a condition from the list. Set the desired threshold for your selected condition. Repeat to add more conditions. Select **Save** to save the rule, and when you're finished adding rules, select **Next**.
 
     > [!NOTE]
     > Some policy conditions are only applicable to apps that access Graph API permissions. When evaluating apps that access only non-Graph APIs, app governance will skip these policy conditions and proceed to check only other policy conditions.
 
-1. Here are the available conditions for a custom app policy:
+5. Here are the available conditions for a custom app policy:
 
-    | Condition                            | Condition values accepted                                    | Description                                                  | More information                                             |
-    | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-    | **Registration age**                     | Within last X days                                           | Apps that were registered to Microsoft Entra ID within a specified period from the current date |                                                              |
-    | **Certification**                        | No certification, Publisher attested, Microsoft 365 Certified | Apps that are Microsoft 365 Certified, have a publisher attestation report, or neither | [Microsoft 365 Certification](/microsoft-365-app-certification/docs/enterprise-app-certification-guide) |
-    | **Publisher verified**                   | Yes or No                                                    | Apps that have verified publishers                           | [Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) |
-    | **Application permissions** (Graph only) | Select one or more API permissions from list                 | Apps with specific Graph API permissions that have been granted directly | [Microsoft Graph permissions reference](/graph/permissions-reference) |
-    | **Delegated permissions** (Graph only)   | Select one or more API permissions from list                 | Apps with specific Graph API permissions given by a user | [Microsoft Graph permissions reference](/graph/permissions-reference) |
-    | **Highly privileged** (Graph only)       | Yes or No                                                    | Apps with relatively powerful Graph API permissions          | An internal designation based on the same logic used by Defender for Cloud Apps. |
-    | **Overprivileged** (Graph only)          | Yes or No                                                    | Apps with unused Graph API permissions                       | Apps with more granted permissions than are being used by those apps. |
-    | **Non-Graph API permissions**            | Yes or No                                                    | Apps with permissions to non-Graph APIs. These apps can expose you to risks if the APIs they access receive limited support and updates. |                                                              |
-    | **Data usage** (Graph only)              | Greater than X GB of data downloaded and uploaded per day    | Apps that have read and written more than a specified amount of data using Graph API |                                                              |
-    | **Data usage trend** (Graph only)        | X % increase in data usage compared to previous day          | Apps whose data reads and writes using Graph API have increased by a specified percentage compared to the previous day |                                                              |
-    | **API access** (Graph only)              | Greater than X API calls per day                             | Apps that have made over a specified number of Graph API calls in a day |                                                              |
-    | **API access trend** (Graph only)        | X % increase in API calls compared to previous day           | Apps whose number of Graph API calls have increased by a specified percentage compared to the previous day |                                                              |
-    | **Number of consenting users**           | (Greater than or Less than) X consented users                | Apps that have been given consent by a greater or fewer number of users than specified |                                                              |
-    | **Increase in consenting users**         | X % increase in users in the last 90 days                    | Apps whose number of consenting users have increased by over a specified percentage in the last 90 days |                                                              |
-    | **Priority account consent given**       | Yes or No                                                    | Apps that have been given consent by priority users          | A user with a [priority account](/microsoft-365/admin/setup/priority-accounts). |
-    | **Names of consenting users**            | Select users from list                                       | Apps that have been given consent by specific users          |                                                              |
-    | **Roles of consenting users**            | Select roles from list                                       | Apps that have been given consent by users with specific roles | Multiple selections allowed. <p> Any Microsoft Entra role with assigned member should be made available in this list. |
-    | **Sensitivity labels accessed**          | Select one or more sensitivity labels from the list          | Apps that accessed data with specific sensitivity labels in the last 30 days. |                                                              |
-    | **Services accessed** (Graph only)       | Exchange and/or OneDrive and/or SharePoint and/or Teams      | Apps that have accessed OneDrive, SharePoint, or Exchange Online using Graph API | Multiple selections allowed.                                 |
-    | **Error rate** (Graph only)              | Error rate is greater than X% in the last seven days         | Apps whose Graph API error rates in the last seven days are greater than a specified percentage |                                                              |
+   | Condition                            | Condition values accepted                                    | Description                                                  | More information                                             |
+   | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | **Registration age**                     | Within last X days                                           | Apps that were registered to Microsoft Entra ID within a specified period from the current date |                                                              |
+   | **Certification**                        | No certification, Publisher attested, Microsoft 365 Certified | Apps that are Microsoft 365 Certified, have a publisher attestation report, or neither | [Microsoft 365 Certification](/microsoft-365-app-certification/docs/enterprise-app-certification-guide) |
+   | **Publisher verified**                   | Yes or No                                                    | Apps that have verified publishers                           | [Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) |
+   | **Application permissions** (Graph only) | Select one or more API permissions from list                 | Apps with specific Graph API permissions that have been granted directly | [Microsoft Graph permissions reference](/graph/permissions-reference) |
+   | **Delegated permissions** (Graph only)   | Select one or more API permissions from list                 | Apps with specific Graph API permissions given by a user | [Microsoft Graph permissions reference](/graph/permissions-reference) |
+   | **Highly privileged**       | Yes or No                                                    | Apps with relatively powerful permissions to Microsoft Graph and other common Microsoft first-party APIs          | An internal designation based on the same logic used by Defender for Cloud Apps. |
+   | **Overprivileged** (Graph only)          | Yes or No                                                    | Apps with unused Graph API permissions                       | Apps with more granted permissions than are being used by those apps. |
+   | **Non-Graph API permissions**            | Yes or No                                                    | Apps with permissions to non-Graph APIs. These apps can expose you to risks if the APIs they access receive limited support and updates. |                                                              |
+   | **Data usage**             | Greater than X GB of data downloaded and uploaded per day    | Apps that have read and written more than a specified amount of data using Microsoft Graph  and EWS APIs |                                                              |
+   | **Data usage trend**        | X % increase in data usage compared to previous day          | Apps whose data reads and writes using Microsoft Graph and EWS APIs have increased by a specified percentage compared to the previous day |                                                              |
+   | **API access** (Graph only)              | Greater than X API calls per day                             | Apps that have made over a specified number of Graph API calls in a day |                                                              |
+   | **API access trend** (Graph only)        | X % increase in API calls compared to previous day           | Apps whose number of Graph API calls have increased by a specified percentage compared to the previous day |                                                              |
+   | **Number of consenting users**           | (Greater than or Less than) X consented users                | Apps that have been given consent by a greater or fewer number of users than specified |                                                              |
+   | **Increase in consenting users**         | X % increase in users in the last 90 days                    | Apps whose number of consenting users have increased by over a specified percentage in the last 90 days |                                                              |
+   | **Priority account consent given**       | Yes or No                                                    | Apps that have been given consent by priority users          | A user with a [priority account](/microsoft-365/admin/setup/priority-accounts). |
+   | **Names of consenting users**            | Select users from list                                       | Apps that have been given consent by specific users          |                                                              |
+   | **Roles of consenting users**            | Select roles from list                                       | Apps that have been given consent by users with specific roles | Multiple selections allowed. <p> Any Microsoft Entra role with assigned member should be made available in this list. |
+   | **Sensitivity labels accessed**          | Select one or more sensitivity labels from the list          | Apps that accessed data with specific sensitivity labels in the last 30 days. |                                                              |
+   | **Services accessed** (Graph only)       | Exchange and/or OneDrive and/or SharePoint and/or Teams      | Apps that have accessed OneDrive, SharePoint, or Exchange Online using Microsoft Graph and EWS APIs | Multiple selections allowed.                                 |
+   | **Error rate** (Graph only)              | Error rate is greater than X% in the last seven days         | Apps whose Graph API error rates in the last seven days are greater than a specified percentage ||
+   | **App origin** (Preview)                          | External or Internal         | Apps that originated within the tenant or registered in an external tenant |                                                    |
+   
+     All of the specified conditions must be met for this app policy to generate an alert.
 
-    All of the specified conditions must be met for this app policy to generate an alert.
+6. When you're done specifying the conditions, select **Save**, and then select **Next**.
+7. On the **Define Policy Actions** page, select **Disable app** if you want app governance to disable the app when an alert based on this policy is generated, and then select **Next**. Use caution when applying actions because a policy may affect users and legitimate app use.
 
-1. When you're done specifying the conditions, select **Save**, and then select **Next**.
-1. On the **Define Policy Actions** page, select **Disable app** if you want app governance to disable the app when an alert based on this policy is generated, and then select **Next**. Use caution when applying actions because a policy may affect users and legitimate app use.
-
-1. On the **Define Policy Status** page, select one of these options:
+8. On the **Define Policy Status** page, select one of these options:
 
     - **Audit mode**: Policies are evaluated but configured actions won't occur. Audit mode policies appear with the status of **Audit** in the list of policies. You should use Audit mode for testing a new policy.
     - **Active**: Policies are evaluated and configured actions will occur.
     - **Inactive**: Policies aren't evaluated and configured actions won't occur.
 
-1. Carefully review all parameters of your custom policy. Select **Submit** when you're satisfied. You can also go back and change settings by selecting **Edit** beneath any of the settings.
+9. Carefully review all parameters of your custom policy. Select **Submit** when you're satisfied. You can also go back and change settings by selecting **Edit** beneath any of the settings.
 
 ## Test and monitor your new app policy
 
@@ -167,13 +168,13 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 1. Go to **Microsoft Defender XDR > App governance > Policies > Other apps**. For example:
 
     ![Other apps-policy creation](media/app-governance-app-policies-create/other-apps-policy-creation.jpg)
-
+   
 1. Filter the apps according to your needs. For example, you might want to view all apps that request **Permission** to **Modify calendars in your mailbox**.
 
-    > [!TIP]
-    > Use the **Community use** filter to get information on whether allowing permission to this app is common, uncommon, or rare. This filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
-    >
-
+   > [!TIP]
+   > Use the **Community use** filter to get information on whether allowing permission to this app is common, uncommon, or rare. This filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
+   
+   
 1. You might want to set the policy based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the Administrators group.
 
 For example:

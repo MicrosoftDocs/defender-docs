@@ -19,41 +19,41 @@ The **Overview** page shows the following details:
 For example:
 
 > [!div class="mx-imgBorder"]
->![Relative number of detected and policy-based incidents.](incidents-summary1.png)
->
+> ![Relative number of detected and policy-based incidents.](incidents-summary1.png)
+> 
 > [!div class="mx-imgBorder"]
->![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
+> ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
 
 ## Data usage cards
 
 Data usage cards show the following types of information:
 
-- **Total data accessed by apps** in the tenant through Graph API over the current month and previous three calendar months. (Currently includes emails, files, and chat and channel messages read and written by apps that access Microsoft 365 using Graph API)
+- **Total data accessed by apps** in the tenant through Microsoft Graph and EWS APIs over the current month and previous three calendar months. (Currently includes emails, files, and chat and channel messages read and written by apps that access Microsoft 365 using Microsoft Graph and EWS APIs)
 
-- **Data usage over the current month and previous three calendar months**, broken down by resource type. (Currently includes emails, files, and chat and channel messages read and written by apps that access Microsoft 365 using Graph API)
+- **Data usage over the current month and previous three calendar months**, broken down by resource type. (Currently includes emails, files, and chat and channel messages read and written by apps that access Microsoft 365 using Microsoft Graph and EWS APIs)
 
 For example:
 
 > [!div class="mx-imgBorder"]
->![Total data accessed by apps.](media/app-governance-visibility-insights-compliance-posture/data-usage-chart.png)
+> ![Total data accessed by apps.](media/app-governance-visibility-insights-compliance-posture/data-usage-chart.png)
 
 ## Apps that access data on Microsoft 365
 
-For apps that access data on Microsoft 365, cards show the number of apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days
+For apps that access data on Microsoft 365, cards show the number of apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams using Microsoft Graph and EWS APIs in the last 30 days.
 
 For example:
 
 > [!div class="mx-imgBorder"]
->![Apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days.](media/app-governance-visibility-insights-compliance-posture/apps-accessed-m365-services-chart.png)
+> ![Apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days.](media/app-governance-visibility-insights-compliance-posture/apps-accessed-m365-services-chart.png)
 
 ## Sensitivity labels accessed
 
-For sensitivity labeling data, cards show the number apps that have accessed content with sensitivity labels on SharePoint, OneDrive, Exchange Online or Teams in the last 30 days.
+For sensitivity labeling data, cards show the number apps that have accessed content with sensitivity labels on SharePoint, OneDrive, Exchange Online or Teams using Microsoft Graph and EWS APIs in the last 30 days.
 
 For example:
 
 > [!div class="mx-imgBorder"]
->![number apps that have accessed content with sensitivity labels.](sensitive-data-accessed-chart1.png)
+> ![number apps that have accessed content with sensitivity labels.](sensitive-data-accessed-chart1.png)
 
 ## Next steps
 

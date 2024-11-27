@@ -1,0 +1,78 @@
+### YamlMime:Landing
+
+title: Microsoft Defender for Identity documentation 
+summary: Microsoft Defender for Identity cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
+metadata:
+  title: Microsoft Defender for Identity documentation
+  description: Microsoft Defender for Identity cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
+  services: service
+  ms.service: azure-advanced-threat-protection
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: M365-security-compliance
+  author: batamig 
+  ms.author: bagol 
+  ms.date: 09/23/2019 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  - title: About Microsoft Defender for Identity
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Microsoft Defender for Identity?
+            url: what-is.md
+      - linkListType: architecture
+        links:
+          - text: Defender for Identity architecture
+            url: architecture.md
+      - linkListType: whats-new
+        links:
+          - text: Releases
+            url: whats-new.md
+  - title: Check out Defender for Identity alerts      
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Security alerts
+            url: alerts-overview.md
+          - text: Manage security alerts
+            url: manage-security-alerts.md
+          - text: Health issues
+            url: health-alerts.md
+  - title: Explore different ways to use Defender for Identity
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Security posture assessments
+            url: security-assessment.md  
+          - text: Configure detection exclusions
+            url: exclusions.md
+          - text: Search and filter monitored activities 
+            url: monitored-activities.md
+          - text: Set entity tags
+            url: entity-tags.md
+          - text: Advanced Threat Analytics (ATA) to Defender for Identity migration
+            url: migrate-from-ata-overview.md
+  - title: Investigate threats 
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Investigate assets
+            url: investigate-assets.md  
+          - text: Investigate lateral movement paths
+            url: understand-lateral-movement-paths.md
+          - text: Remediation actions
+            url: remediation-actions.md
+  - title: Resources and support
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Frequently asked questions
+            url: technical-faq.yml
+          - text: Support
+            url: support.md
+          - text: Defender for Identity data security and privacy 
+            url: privacy-compliance.md

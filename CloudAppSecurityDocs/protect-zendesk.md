@@ -31,6 +31,7 @@ Connecting Zendesk to Defender for Cloud Apps gives you improved insights into y
 ## Control Zendesk with policies
 
 | **Type**                           | **Name**                                                     |
+
 | ---------------------------------- | ------------------------------------------------------------ |
 | Built-in  anomaly detection policy | [Activity from   anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)  <br /> [Activity from   infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country) <br /> [Activity from   suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)  <br /> [Impossible travel](anomaly-detection-policy.md#impossible-travel)  <br /> [Activity   performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)   <br />[Multiple failed   login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts)  <br /> [Unusual   administrative activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />   [Unusual impersonated activities](anomaly-detection-policy.md#unusual-activities-by-user) |
 | Activity  policy                   | Built a customized policy by the Zendesk audit log |
@@ -92,6 +93,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     - Description: **Microsoft Defender for Cloud Apps API Connector** (you can also choose another description).
     - Company: **Microsoft Defender for Cloud Apps** (you can also choose another company).
     - Unique identifier: **microsoft_cloud_app_security** (you can also choose another unique identifier).
+    - Client Kind: **Confidential**
     - Redirect URL: `https://portal.cloudappsecurity.com/api/oauth/saga`
 
       > [!NOTE]

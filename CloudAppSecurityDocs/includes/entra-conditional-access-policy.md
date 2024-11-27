@@ -30,4 +30,7 @@ Microsoft Entra ID supports both browser-based and non browser-based policies. W
 
 Repeat this procedure to create a nonbrowser based Conditional Access policy. In the **Client apps** area, toggle the **Configure** option to **Yes**. Then, under **Modern authentication clients**, clear the **Browser** option. Leave all other default selections selected.
 
+Note: The Enterprise application “Microsoft Defender for Cloud Apps – Session Controls” is used internally by the Conditional Access App Control service. 
+Please ensure the CA policy does not restrict access to this application in the **Target resources**. 
+
 For more information, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).

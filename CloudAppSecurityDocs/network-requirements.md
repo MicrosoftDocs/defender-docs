@@ -17,9 +17,9 @@ Some of the requirements below depend on which data center you're connected to.
 
 To see which data center you're connecting to, do the following steps:
 
-1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **System**, select **About**.
+1. In the Microsoft Defender Portal, select **System > Settings > Cloud Apps > System > About**.
 
-2. In the **About** screen, you can see the region and the data center.
+1. In the **About** screen, you can see the region and the data center.
 
     ![View your data center.](media/data-center.png)
 
