@@ -734,7 +734,7 @@
           href: plan-defender-for-servers.md
         - name: Plan roles and permissions
           href: plan-defender-for-servers-roles.md
-        - name: Select a plan and deployment scope
+        - name: Choose a plan and deployment scope
           href: plan-defender-for-servers-select-plan.md
         - name: Understand data collection
           href: plan-defender-for-servers-agents.md
@@ -767,7 +767,10 @@
             href: detect-endpoint-detection-response-solutions.md
           - name: Assessing Defender for Endpoint EDR
             href: endpoint-detection-response.md
-         
+          - name: Enable agentless machine scanning
+            displayName: vulnerability, software inventory, agentless scanning
+            href: enable-agentless-scanning-vms.md
+          
       - name: Agentless machine scanning
         items:
           - name: Overview
