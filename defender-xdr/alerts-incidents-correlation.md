@@ -54,26 +54,35 @@ Defender's correlation engine merges incidents when it recognizes common element
 - Time frames
 - Sequences of events that point to multistage attacks&mdash;for example, a malicious email click event that follows closely on a phishing email detection.
 
-### Outcomes of the merge process
+### Details of the merge process
 
-When two or more incidents are merged, a new incident is not created to absorb them. Instead, the contents of one incident are migrated into the other incident, and the incident abandoned in the process is automatically closed. The abandoned incident is no longer visible or available in the Defender portal, and any reference to it is redirected to the consolidated incident. The abandoned, closed incident remains accessible in Microsoft Sentinel in the Azure portal. The contents of the incidents are handled in the following ways:
+When two or more incidents are merged, a new incident is *not* created to absorb them. Instead, the contents of one incident (the **"source incident"**) are migrated into the other incident (the **"target incident"**), and the source incident is automatically closed. The source incident is no longer visible or available in the Defender portal, and any reference to it is redirected to the target incident. The source incident, though closed, remains accessible in Microsoft Sentinel in the Azure portal.
 
-- Alerts contained in the abandoned incident are removed from it and added to the consolidated incident.
-- Any tags applied to the abandoned incident are removed from it and added to the consolidated incident.
-- A **`Redirected`** tag is added to the abandoned incident.
+#### Merge direction
+
+The direction of the incident merge refers to which incident is the source and which is the target. This direction is determined by Microsoft Defender, based on its own internal logic, with the goal of maximizing information retention and access. The user doesn't have any input into this decision, even when merging incidents manually.
+
+#### Incident contents
+
+The contents of the incidents are handled in the following ways:
+
+- All alerts contained in the source incident are removed from the source incident and added to the target incident.
+- Any tags applied to the source incident are removed from the source incident and added to the target incident.
+- A **`Redirected`** tag is added to the source incident.
 - Entities (assets etc.) follow the alerts they're linked to.
-- Analytics rules recorded as involved in the creation of the abandoned incident are added to the rules recorded in the consolidated incident.
-- Currently, comments and activity log entries in the abandoned incident are *not* moved to the consolidated incident.
+- Analytics rules recorded as involved in the creation of the source incident are added to the rules recorded in the target incident.
+- Currently, comments and activity log entries in the source incident are *not* moved to the target incident.
 
-To see the abandoned incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
+To see the source incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
 
 ### When incidents aren't merged
 
 Even when the correlation logic indicates that two incidents should be merged, Defender doesn't merge the incidents under the following circumstances:
 
 - One of the incidents has a status of "Closed". Incidents that are resolved don't get reopened.
-- The two incidents eligible for merging are assigned to two different people.
-- Merging the two incidents would raise the number of entities in the merged incident above the allowed maximum of 50 entities per incident.
+- The source and target incidents are assigned to two different people.
+- The source and target incidents have two different classifications (for example, true positive and false positive).
+- Merging the two incidents would raise the number of entities in the target incident above the allowed maximum.
 - The two incidents contain devices in different [device groups](/defender-endpoint/machine-groups) as defined by the organization. <br>(This condition is not in effect by default; it must be enabled.)
 
 ### Manual merging of incidents (Preview)
@@ -83,6 +92,8 @@ Over the course of investigating an incident, you might discover that other inci
 Merging incidents together is preferable to unlinking alerts from one incident and linking them to another, because all the incident information (for example, the activity log) is preserved.
 
 For now, only two incidents at a time can be merged manually.
+
+Other rules governing manual merging are the same as automatic merging. See [Details of the merge process](#details-of-the-merge-process) above.
 
 For instructions and more information on how to merge incidents manually, see [Merge incidents manually in the Microsoft Defender portal](merge-incidents-manually.md).
 

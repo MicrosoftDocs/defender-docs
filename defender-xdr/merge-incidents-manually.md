@@ -47,7 +47,7 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
     :::image type="content" source="media/merge-incidents-manually/merge-incidents-panel-from-queue.png" alt-text="Screenshot of merging incidents from queue.":::
 
-1. In the confirmation dialog that appears, select **Merge**. When the merge is complete, a "Success" notification appears, with a link to follow to go to the merged (consolidated) incident.
+1. In the confirmation dialog that appears, select **Merge**. When the merge is complete, a "Success" notification appears, with a link to follow to go to the merged (target) incident.
 
     If the merge fails, a dialog box appears with a message that the incidents failed to merge. For the merge to succeed, both incidents must have the same values for **Assigned to**, **Classification**, and **Determination**.
 
@@ -71,7 +71,7 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 1. Select **Merge incidents** at the bottom of the flyout to execute the merge.
 
-1. In the confirmation dialog that appears, select **Merge**. When the merge is complete, a "Success" notification appears, the open incident is closed, and you are redirected to the merged (consolidated) incident.
+1. In the confirmation dialog that appears, select **Merge**. When the merge is complete, a "Success" notification appears, the open incident is closed, and you are redirected to the merged (target) incident.
 
     If the merge fails, a dialog box appears with a message that the incidents failed to merge. For the merge to succeed, both incidents must have the same values for **Assigned to**, **Classification**, and **Determination**.
 
@@ -79,9 +79,9 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 - When the incidents are in the process of merging, you can't display or make any changes to either incident.
 
-- Incident merges are recorded in the consolidated incident's activity log. The log messages show the names and IDs of the incidents that were merged into the open incident.
+- Incident merges are recorded in the target incident's activity log. The log messages show the names and IDs of the source incidents that were merged into the open (target) incident.
 
-- Activity log entries from the abandoned incident are copied into the consolidated incident's activity log. The entries appear with an indication that they were merged from the old incident. You can filter the activity log to show entries from either original incident or from all merged incidents.
+- Activity log entries from the source incident are copied into the target incident's activity log. The entries appear with an indication that they were merged from the source incident. You can filter the activity log to show entries from either the source or target incidents, or from both.
 
 ## See also
 
