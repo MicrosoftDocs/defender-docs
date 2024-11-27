@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/21/2024
+ms.date: 11/27/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 27 | Preview | [Sensitivity scanning capabilities now include Azure file shares (Preview)](#sensitivity-scanning-capabilities-now-include-azure-file-shares-preview) |
 | November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
 | November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
 | November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50gb-preview) |
@@ -51,9 +52,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
+### Sensitivity scanning capabilities now include Azure file shares (Preview)
+
+November 27, 2024
+
+Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares (in preview) in addition to blob containers. 
+
+Prior to this addition, when a customer enabled the Defender CSPM plan on a subscription, Defender for Cloud would automatically scan blob containers within storage accounts for sensitive data. This update allows Defender for CSPM's sensitivity scanning feature to scan file shares within those storage accounts. As a result, the risk assessment and protection of sensitive storage accounts are enhanced, and provide a more thorough analysis of potential risks.
+
+For scanning file shares StorageDataScanner assign a new role "Storage File Data Privileged Reader"
+
+Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
+
 ### Sensitivity label consent changes
 
-**Estimated date for change**: November 26, 2024
+November 26, 2024
 
 You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
 
