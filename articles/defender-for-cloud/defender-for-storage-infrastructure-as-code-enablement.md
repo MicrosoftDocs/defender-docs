@@ -1,14 +1,14 @@
 ---
-title: Infrastructure as Code enablement | Microsoft Defender for Storage
-description: Learn how to enable and configure Microsoft Defender for Storage with IaC templates.
+title: Enable Defender for Storage with Infrastructure as Code
+description: Learn how to enable and configure Microsoft Defender for Storage with Infrastructure as Code (IaC) templates.
 ms.date: 08/08/2023
-
 ms.topic: how-to
+#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage using Infrastructure as Code templates so that I can ensure all storage accounts are protected.
 ---
 
 # Enable and configure with Infrastructure as Code templates
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription will be protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
+We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription are protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
 
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
@@ -40,7 +40,7 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value "-1". The default limit is set at 5,000 GB.
+To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 5,000 GB.
 
 **Disabling features**:
 
@@ -95,7 +95,7 @@ Learn more about the [Bicep template in the Microsoft security/pricings document
 
 ### Azure Resource Manager template
 
-To enable and configure Microsoft Defender for Storage at the subscription level using an ARM (Azure Resource Manager) template, add this JSON snippet to the resources section of your ARM template:
+To enable and configure Microsoft Defender for Storage at the subscription level using an Azure Resource Manager (ARM) template, add this JSON snippet to the resources section of your ARM template:
 
 ```json
 {
@@ -124,7 +124,7 @@ To enable and configure Microsoft Defender for Storage at the subscription level
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, simply adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
 
 **Disabling features**:
 
@@ -173,7 +173,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, simply adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value "-1". The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 5,000 GB.
 
 **Disabling features**:
 
@@ -231,7 +231,7 @@ resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettin
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, simply adjust the `capGBPerMonth parameter` to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth parameter` to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
 
 **Disabling features**:
 
@@ -276,7 +276,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, simply adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value "-1". The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 5,000 GB.
 
 **Disabling features**:
 
@@ -288,6 +288,6 @@ To disable the entire Defender plan for the storage account, set the `isEnabled`
 
 ---
 
-## Next steps
+## Next step
 
 Learn more about the [Microsoft.Security/DefenderForStorageSettings](/rest/api/defenderforcloud/defender-for-storage/create) API documentation.

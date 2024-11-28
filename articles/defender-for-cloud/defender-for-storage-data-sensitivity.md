@@ -10,21 +10,22 @@ ms.topic: how-to
 
 # Detect threats to sensitive data
 
-Sensitive data threat detection lets you efficiently prioritize and examine security alerts by considering the sensitivity of the data that could be at risk, leading to better detection and preventing data breaches. By quickly identifying and addressing the most significant risks, this capability helps security teams reduce the likelihood of data breaches and enhances sensitive data protection by detecting exposure events and suspicious activities on resources containing sensitive data.
+Sensitive data threat detection helps you prioritize and examine security alerts efficiently. It considers the sensitivity of the data at risk, leading to better detection and prevention of data breaches. This capability helps security teams reduce the likelihood of data breaches by quickly identifying and addressing the most significant risks. It also enhances sensitive data protection by detecting exposure events and suspicious activities on resources containing sensitive data.
 
-This is a configurable feature in the new Defender for Storage plan. You can choose to enable or disable it with no additional cost.
+This feature is configurable in the new Defender for Storage plan. You can choose to enable or disable it with no further cost.
 
 Learn more about [scope and limitations of sensitive data scanning](concept-data-security-posture-prepare.md).
 
 ## Prerequisites
 
-Sensitive data threat detection is available for Blob storage accounts, including: 
+Sensitive data threat detection is available for Blob storage accounts, including:
+
 - Standard general-purpose V1
 - Standard general-purpose V2
 - Azure Data Lake Storage Gen2
-- Premium block blobs 
+- Premium block blobs
 
-To enable sensitive data threat detection at subscription and storage account levels, you need to have the relevant data-related permissions from the **Subscription owner** or **Storage account owner** roles. 
+To enable sensitive data threat detection at subscription and storage account levels, you need to have the relevant data-related permissions from the **Subscription owner** or **Storage account owner** roles.
 
 Learn more about the [roles and permissions required for sensitive data threat detection](support-matrix-defender-for-storage.md).
 
@@ -44,7 +45,7 @@ Sensitive data threat detection is enabled by default when you enable Defender f
 
 ## Using the sensitivity context in the security alerts
 
-The sensitive data threat detection capability helps security teams identify and prioritize data security incidents for faster response times. Defender for Storage alerts include findings of sensitivity scanning and indications of operations that have been performed on resources containing sensitive data.
+The sensitive data threat detection capability helps security teams identify and prioritize data security incidents for faster response times. Defender for Storage alerts include findings of sensitivity scanning and indications of operations performed on resources containing sensitive data.
 
 In the alert’s extended properties, you can find sensitivity scanning findings for a **blob container**:
 
@@ -63,7 +64,7 @@ Of these built-in sensitive information types in the default list of Microsoft P
 
 To customize the Data Sensitivity Discovery for your organization, you can [create custom sensitive information types (SITs)](/microsoft-365/compliance/create-a-custom-sensitive-information-type) and connect to your organizational settings with a single step integration. Learn more [here](episode-two.md).
 
-You also can create and publish sensitivity labels for your tenant in Microsoft Purview with a scope that includes Items and Schematized data assets and Auto-labeling rules (recommended). Learn more about [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in Microsoft Purview.
+You also can create and publish sensitivity labels for your tenant in Microsoft Purview with a scope that includes Items and Schematized data assets and auto-labeling rules (recommended). Learn more about [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in Microsoft Purview.
 
 ## Next steps
 

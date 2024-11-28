@@ -1,5 +1,5 @@
 ---
-title: Enable and configure the Microsoft Defender for Storage plan using PowerShell
+title: Enable Microsoft Defender for Storage using PowerShell
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using PowerShell.
 ms.topic: install-set-up-deploy
 ms.date: 08/08/2023
