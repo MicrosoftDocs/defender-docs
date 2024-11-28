@@ -28,8 +28,8 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 ## Prerequisites
 
-- List required role and permissions here
-- List required role and permissions here
+- Users must have permissions to view the incidents queue.
+- Users must have read and write permissions on all the incidents they wish to merge. Incidents from different sources have different RBAC roles defined.
 
 ## Merge incidents from the incident queue page
 

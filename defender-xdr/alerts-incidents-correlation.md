@@ -41,6 +41,8 @@ The criteria used by the Defender portal to correlate alerts together in a singl
 
 While Microsoft Defender already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
 
+For more information on moving an alert from one incident to another, see [Unlink alerts from incidents in the Microsoft Defender portal](unlink-alert-from-incident.md)
+
 ## Incident correlation and merging
 
 The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents, and between alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
