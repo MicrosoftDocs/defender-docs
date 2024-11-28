@@ -50,7 +50,7 @@ The following are the features provided by Defender for Containers, for the supp
 |--|--|--|--|--|--|--|--|--|
 | [Control plane](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | Agentless | Defender for Containers | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | Workload | Detection of suspicious activity for Kubernetes for cluster level, node level, and workload level | AKS | GA | - | Enable **Defender Sensor in Azure** toggle **OR** deploy Defender sensors on individual clusters | Defender sensor | Defender for Containers | Commercial clouds<br /><br />National clouds: Azure Government, Azure China 21Vianet |
-| Node | [Detection of malware on K8s nodes](kubernetes-nodes-malware.md) | AKS | Preview | Preview | Enable **Agentless scanning for machines**  | Agentless | Defender for Containers or Defender for Servers P2 | Azure **???** |
+| Node | [Detection of malware on K8s nodes](kubernetes-nodes-malware.md) | AKS | Preview | Preview | Enable **Agentless scanning for machines**  | Agentless | Defender for Containers or Defender for Servers P2 | Commercial clouds |
 
 ### Deployment & monitoring
 
