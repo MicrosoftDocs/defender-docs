@@ -5,16 +5,16 @@ ms.topic: how-to
 ms.date: 05/07/2024
 ---
 
-# Microsoft Defender for Containers resources inventory and offboarding
+# Offboarding Microsoft Defender for Containers resources 
 
-When you enable Defender for Containers capabilities that use automatic provisioning, or use recommendations to manually deploy container capabilities on specific resources, Defender agents and other components are installed in your environment. To help you understand and keep track of these components, we provide tables in the subsequent sections of this article. These tables serve as an inventory, listing out all the installed components.
+When you enable Defender for Containers capabilities that use automatic provisioning, or use recommendations to manually deploy container capabilities on specific resources, Defender components and extensions are installed in your environment. To help you keep track of these components, we provide tables in the subsequent sections of this article. These tables show the Defender for Clouds feature and its installed Defender for Container components, extensions, and roles.
 
-If you decide to stop using those capabilities, you might also want to remove such components from your environment. Since installed components can't be automatically removed, this article assists you in understanding which components are installed and the actions that could be taken to remove them. Only nonactive Defenders for Cloud services are disabled.
+If you decide to stop using those capabilities, you might also want to remove such components from your environment. This article assists you in understanding the actions that can be taken to remove them.
 
-The resources for offboarding fall under two removal-type categories:
+The components and roles fall under two removal-type categories:
 
 - **Safe to remove** - Resources and settings exclusively used by Defender for Containers, and can be safely removed if you're no longer using the associated capability.
-- **Shared component** - Resources that may be used by other solutions in the target Cloud environment, and not exclusively by Defender for Containers. If a shared resource is disabled, the other solutions may be negatively affected. You should review in the target Cloud environment if other solutions need that resource before removing it.
+- **Shared component** - Resources that may be used by other Defender solutions in the target Cloud environment, and not exclusively by Defender for Containers. If a shared resource is disabled, the other solutions may be negatively affected. Before removing, you should review if other Defender solutions in that cloud environment need the resource before removing it.
 
 ## Azure scenarios for resources created automatically after enabling Defender for Containers on the subscription
 
