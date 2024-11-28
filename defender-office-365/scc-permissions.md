@@ -20,7 +20,7 @@ description: Admins can learn about the roles and role groups in Microsoft Defen
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 06/24/2024
+ms.date: 11/27/2024
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
@@ -30,6 +30,7 @@ ms.date: 06/24/2024
 The [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), [Microsoft Purview portal](/purview/purview-portal), and the classic Microsoft Purview [compliance](/purview/microsoft-365-compliance-center) and [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
 
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
+- [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)
 - [Permissions in the Microsoft Purview compliance portal](/purview/microsoft-365-compliance-center-permissions)
 - [Permissions in the Microsoft Purview governance portal](/purview/roles-permissions)
@@ -42,6 +43,8 @@ This article contains the inventory of Defender for Office 365 and Microsoft Pur
 
 > [!NOTE]
 > In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
+> 
+> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal**.
 
 ## Role groups in Microsoft Defender for Office 365 and Microsoft Purview
 

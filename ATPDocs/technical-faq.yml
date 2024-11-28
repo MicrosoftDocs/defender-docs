@@ -70,7 +70,7 @@ sections:
           
           - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
           
-          - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Azure AD Identity Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
+          - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Microsoft Entra ID Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
           
           - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. 
           

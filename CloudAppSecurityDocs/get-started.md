@@ -1,13 +1,11 @@
 ---
 title: Get started | Microsoft Defender for Cloud Apps
 description: This quickstart outlines the process for getting Defender for Cloud Apps up and running so you have cloud app use, insight, and control.
-ms.date: 05/15/2024
+ms.date: 11/28/2024
 ms.topic: quickstart
 ---
 
 # Get started with Microsoft Defender for Cloud Apps
-
-
 
 This quickstart describes how to start working with Microsoft Defender for Cloud Apps on the Microsoft Defender Portal. 
 
@@ -24,6 +22,11 @@ Users with admin roles have the same admin permissions across any cloud apps you
 
 Microsoft Defender for Cloud Apps is a security tool and therefore doesn't require Microsoft 365 productivity suite licenses. For Microsoft 365 Cloud App Security (Microsoft Defender for Cloud Apps only for Microsoft 365), see [What are the differences between Microsoft Defender for Cloud Apps and Microsoft 365 Cloud App Security?](editions-cloud-app-security-o365.md).
 
+Microsoft Defender for Cloud Apps depends on the following Microsoft Entra ID applications to function properly. Do not disable these applications in Microsoft Entra ID:
+
+- Microsoft Defender for Cloud Apps - APIs
+- Microsoft Defender for Cloud Apps - Customer Experience
+- Microsoft Defender for Cloud Apps - Information Protection
 
 ## Access Defender for Cloud Apps
 

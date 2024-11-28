@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Identity?
 description: This article describes the Microsoft Defender for Identity service and the sorts of suspicious activities Defender for Identity can detect.
-ms.date: 08/27/2023
+ms.date: 08/27/2024
 ms.topic: overview
 #customer intent: As a Microsoft Defender for Identity customer or potential customer, I want to understand the main use case scenarios for Defender for Identity so that I can best use my Microsoft Defender XDR deployment.
 ---
