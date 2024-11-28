@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/27/2024
+ms.date: 11/28/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| November 27 | Preview | [Sensitivity scanning capabilities now include Azure file shares (Preview)](#sensitivity-scanning-capabilities-now-include-azure-file-shares-preview) |
+| November 28 | Preview | [Sensitivity scanning capabilities now include Azure file shares (Preview)](#sensitivity-scanning-capabilities-now-include-azure-file-shares-preview) |
 | November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
 | November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
 | November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50gb-preview) |
@@ -54,13 +54,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Sensitivity scanning capabilities now include Azure file shares (Preview)
 
-November 27, 2024
+November 28, 2024
 
 Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares (in preview) in addition to blob containers. 
 
 Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
-
-To scan file shares `StorageDataScanner`, you must assign a new role `Storage File Data Privileged Reader`.
 
 Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
 
