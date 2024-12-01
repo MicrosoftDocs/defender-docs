@@ -2,7 +2,7 @@
 title: Enable threat protection for AI workloads (preview)
 description: Learn how to enable threat protection for AI workloads on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 09/08/2024
+ms.date: 11/25/2024
 ---
 
 # Enable threat protection for AI workloads (preview)
@@ -15,21 +15,21 @@ Threat protection for AI workloads in Microsoft Defender for Cloud protects AI w
 
 ## Prerequisites
 
-- Read up on [Overview - AI threat protection](ai-threat-protection.md).
+- Read the [Overview - AI threat protection](ai-threat-protection.md).
 
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
-- You must [enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+- [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- We recommend that you don't opt out of prompt based prompt-base triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). If you opt out of prompt-based trigger alerts and remove that capability, it can affect Defender for Cloud's ability to monitor and detect such attacks.
+- We recommend not opting out of prompt-based triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). Opting out and removing that capability can affect Defender for Cloud's ability to monitor and detect such attacks.
 
 ## Enroll in the limited preview
 
-To get started, you must [sign up](https://aka.ms/D4AI/PublicPreviewAccess) and be accepted to the limited preview, you can start onboarding threat protection for AI workloads.
+To get started, you must [sign up](https://aka.ms/D4AI/PublicPreviewAccess) and be accepted to the limited preview. Once accepted, you can start onboarding threat protection for AI workloads.
 
 1. Fill out the [registration form](https://aka.ms/D4AI/PublicPreviewAccess).
 
-1. Wait to receive an email that confirms your acceptance or rejection from the limited preview.
+1. Wait to receive an email confirming your acceptance or rejection from the limited preview.
 
 If you're accepted into the limited preview, you can enable threat protection for AI workloads on your Azure subscription.
 
@@ -51,9 +51,9 @@ Enable threat protection for AI workloads.
 
 ## Enable user prompt evidence
 
-With the AI workloads threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or resources. Enabling user prompt evidence helps you to triage and classifying alerts and your user's intentions.
+With the AI workloads threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or resources. Enabling user prompt evidence helps you to triage and classify alerts and your user's intentions.
 
-User prompt evidence consists of prompts and model responses. Both the prompts and model responses are considered your data. The evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
+User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
