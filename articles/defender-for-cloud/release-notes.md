@@ -92,9 +92,9 @@ Learn more about [how to configure sensitivity labels](data-sensitivity-settings
 
 November 25, 2024
 
-**Estimated date for change:** December 31, 2024
+**Estimated date for change:** December 1, 2024
 
-Starting on December 31, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+Starting on December 1, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
 
 Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
 
