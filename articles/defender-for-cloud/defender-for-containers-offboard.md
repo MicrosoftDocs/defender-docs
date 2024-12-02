@@ -20,7 +20,7 @@ The components and roles fall under two removal-type categories:
 
 | Offering | Resource |Manual offboarding | Removal information |
 |---|---|---|---|
-| Defender sensor | Defender sensor (per cluster inside project) + Arc for Kubernetes | [Defender sensor removal](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-arc&preserve-view=true#use-the-azure-cli-to-remove-the-defender-sensor) | Safe to remove |
+| Workload runtime thread protection | Defender sensor (per cluster inside project) + Arc for Kubernetes | [Defender sensor removal](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-arc&preserve-view=true#use-the-azure-cli-to-remove-the-defender-sensor) | Safe to remove |
 
 ## AWS scenarios
 
