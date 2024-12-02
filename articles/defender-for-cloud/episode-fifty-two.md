@@ -12,12 +12,12 @@ ms.date: 12/02/2024
 
 > [!VIDEO https://aka.ms/docs/player?id=aff3bfa4-2049-4480-8582-0789730c3c58]
 
-- [01:49](/shows/mdc-in-the-field/#time=01m49s) - What is binary drift?
-- [03:35](/shows/mdc-in-the-field/#time=03m35s) - What needs to be enable for this feature to work in Defender for Containers?
-- [04:32](/shows/mdc-in-the-field/#time=04m32s) - What configuration needs to be done?
-- [05:23](/shows/mdc-in-the-field/#time=05m23s) - How the settings are propagated in the backend?
-- [06:00](/shows/mdc-in-the-field/#time=06m00s) - What customers should do if they receive a binary drift alert?
-- [08:30](/shows/mdc-in-the-field/#time=08m30s) - Demonstration
+- [01:49](/shows/mdc-in-the-field/binarydrift#time=01m49s) - What is binary drift?
+- [03:35](/shows/mdc-in-the-field/binarydrift#time=03m35s) - What needs to be enable for this feature to work in Defender for Containers?
+- [04:32](/shows/mdc-in-the-field/binarydrift#time=04m32s) - What configuration needs to be done?
+- [05:23](/shows/mdc-in-the-field/binarydrift#time=05m23s) - How the settings are propagated in the backend?
+- [06:00](/shows/mdc-in-the-field/binarydrift#time=06m00s) - What customers should do if they receive a binary drift alert?
+- [08:30](/shows/mdc-in-the-field/binarydrift#time=08m30s) - Demonstration
 
 ## Recommended resources
 

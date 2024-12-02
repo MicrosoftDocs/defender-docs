@@ -2,7 +2,7 @@
 title: Defender for Open-Source Relational Databases multicloud
 description: Learn about Microsoft's Defender for Cloud Defender for Open-Source Relational Databases multicloud capabilities
 ms.topic: reference
-ms.date: 08/13/2024
+ms.date: 12/02/2024
 ---
 
 # Defender for Open-Source Relational Databases multicloud
@@ -33,4 +33,4 @@ ms.date: 08/13/2024
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Binary drift detection in Defender for Containers](episode-fifty-two.md)
