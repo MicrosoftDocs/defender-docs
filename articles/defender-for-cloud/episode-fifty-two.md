@@ -10,7 +10,7 @@ ms.date: 12/02/2024
 **Episode description**: In this episode of Defender for Cloud in the Field, Eyal Gur joins Yuri Diogenes to talk about Binary drift detection in Defender for Containers. Eyal explain what binary drift is, why this is an important event to monitor and how you can create policies in Defender for Container to manage drift detection alerts. Eyal also demonstrates how to create policies, the logic behind the policy and how to visualize the alerts in Defender for Cloud and in Microsoft XDR.
   
 
-> [!VIDEO https://aka.ms/docs/player?id=]
+> [!VIDEO https://aka.ms/docs/player?id=aff3bfa4-2049-4480-8582-0789730c3c58]
 
 - [01:49](/shows/mdc-in-the-field/#time=01m49s) - What is binary drift?
 - [03:35](/shows/mdc-in-the-field/#time=03m35s) - What needs to be enable for this feature to work in Defender for Containers?
