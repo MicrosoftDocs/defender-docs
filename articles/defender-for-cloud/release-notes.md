@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/21/2024
+ms.date: 11/28/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| November 28 | Preview | [Sensitivity scanning capabilities now include Azure file shares (Preview)](#sensitivity-scanning-capabilities-now-include-azure-file-shares-preview) |
 | November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
 | November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
 | November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50gb-preview) |
@@ -51,9 +52,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
+### Sensitivity scanning capabilities now include Azure file shares (Preview)
+
+November 28, 2024
+
+Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares (in preview) in addition to blob containers. 
+
+Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
+
+Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
+
 ### Sensitivity label consent changes
 
-**Estimated date for change**: November 26, 2024
+November 26, 2024
 
 You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
 
@@ -81,9 +92,9 @@ Learn more about [how to configure sensitivity labels](data-sensitivity-settings
 
 November 25, 2024
 
-**Estimated date for change:** December 31, 2024
+**Estimated date for change:** December 1, 2024
 
-Starting on December 31, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+Starting on December 1, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
 
 Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
 
