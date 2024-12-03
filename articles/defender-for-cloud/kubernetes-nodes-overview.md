@@ -5,13 +5,15 @@ ms.date: 11/15/2024
 ms.topic: overview
 ---
 
-# Overview of Defender for Containers protection of Kubernetes (K8s) nodes
+# Overview of Defender for Cloud protection of Kubernetes (K8s) nodes
 
-In addition to protecting the K8s cluster control plane and workloads, Defender for Containers also protects K8s nodes.
+In addition to protecting the K8s cluster control plane and workloads, Defender for Cloud also extends security and compliance over the K8s nodes in the customer's multicloud K8s services.
 
-## K8s node VMs
+## Protection for K8s nodes
 
-A K8s node is hosted on a VM supported by the K8s service. A cluster has ***node pools*** (or ***node groups***). A node pool is a set of nodes having the same supported VM type and version. The K8s service allows the customer to configure a cluster, including the VM type of its node pools, as necessary for the applications running in the cluster.
+K8s nodes are VMs created by the cloud environment's K8s service to run the K8s cluster's control plane and workload. A cluster's ***node pools*** (or ***node groups***) are a managed set of identical VM type and versions. The K8s service allows the customer to configure a cluster, including the configuration of node pools. A node pool configuration includes setting the number of nodes, and the identical VM type and version of the nodes. The customer determines the configuration of the cluster's node pools according to the requirements of the applications running in it. The customer also manages each node pool as a set - all nodes in the pool are configured and updated together. 
+
+The customer upgrades the node pool VM version to improve node security, as indicated by Defender for Cloud recommendations.
 
 ## Shared responsibility of K8s nodes
 
@@ -24,9 +26,9 @@ The responsibility for maintaining the K8s nodes is shared between the K8s servi
 
 The following protections are provided for K8s nodes:
 
-- [Vulnerability assessment](kubernetes-nodes-va.md) - An inventory of K8s node software is analyzed for known vulnerabilities. Recommendations are generated for the customer to review and remediate.
+- [Vulnerability assessment](kubernetes-nodes-va.md) - K8s node software is scanned for known vulnerabilities. Recommendations are generated for the customer to review and remediate.
 
-- [Malware detection](kubernetes-nodes-malware.md) - K8s nodes are analyzed for malware. A security alert is generated for the customer to review and remediate.
+- [Malware detection](kubernetes-nodes-malware.md) - K8s nodes are scanned for malware. A security alert is generated for the customer to review and remediate.
 
 > [!Note]
 > Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments that have **Agentless scanning for machines** enabled.
