@@ -124,23 +124,23 @@ After securely receiving the tokens, the developer must configure an environment
 
 1. Select + icon to add a new search criteria
 
-    :::image type="content" source="media/cli-cicd/cloud-security-explorer-search.png" alt-text="Screenshot of Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-search.png":::
+    :::image type="content" source="media/cli-cicd/cloud-security-explorer-search.png" alt-text="Screenshot of new search in Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-search.png":::
 
 1. Click **Select condition** dropdown, Select Data, Select Pushes
 
-    :::image type="content" source="media/cli-cicd/cloud-security-explorer-push.png" alt-text="Screenshot of Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-push.png":::
+    :::image type="content" source="media/cli-cicd/cloud-security-explorer-push.png" alt-text="Screenshot of selecting condition Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-push.png":::
 
 1. Click **Select resource types** dropdown, select Containers, Container Images and click **Done**
 
-    :::image type="content" source="media/cli-cicd/cloud-security-explorer-containers.png" alt-text="Screenshot of Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-containers.png":::
+    :::image type="content" source="media/cli-cicd/cloud-security-explorer-containers.png" alt-text="Screenshot of selecting containger images in Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-containers.png":::
 
 1. Select the scope selected during the creation of the integration in the Environment settings
 
-    :::image type="content" source="media/cli-cicd/cloud-security-explorer-scope.png" alt-text="Screenshot of Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-scope.png":::
+    :::image type="content" source="media/cli-cicd/cloud-security-explorer-scope.png" alt-text="Screenshot of selecting scope Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-scope.png":::
 
 1. Click Search
 
-    :::image type="content" source="media/cli-cicd/cloud-security-explorer.png" alt-text="Screenshot of Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer.png":::
+    :::image type="content" source="media/cli-cicd/cloud-security-explorer.png" alt-text="Screenshot of searching in Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer.png":::
 
 1. See results of Pipeline to images mapping 
 
@@ -152,4 +152,4 @@ After securely receiving the tokens, the developer must configure an environment
 
 1. Review the Resource names to see the container mapping.
 
-  :::image type="content" source="media/cli-cicd/container-images.png" alt-text="Screenshot of Cloud Security Explorer." lightbox="media/cli-cicd/container-images.png":::
+  :::image type="content" source="media/cli-cicd/container-images.png" alt-text="Screenshot of correlating Monitored Containers." lightbox="media/cli-cicd/container-images.png":::
