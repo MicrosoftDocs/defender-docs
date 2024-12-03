@@ -106,11 +106,11 @@ After securely receiving the tokens, the developer must configure an environment
 
 |Name|Value|
 |||
-|GDN_PUSH_TOKEN_CLIENT_ID|<Client id>|
-|GDN_PUSH_TOKEN_CLIENT_ID|<Client id>|
-|GDN_PUSH_TOKEN_CLIENT_SECRET|<Client Secret>|
+|GDN_PUSH_TOKEN_CLIENT_ID|&lt;Client id&gt;|
+|GDN_PUSH_TOKEN_CLIENT_ID|&lt;Client id&gt;|
+|GDN_PUSH_TOKEN_CLIENT_SECRET|&lt;Client Secret&gt;|
 |GDN_PIPELINENAME|bitbucket, jenkins, gcp, bamboo, circle, travis, teamcity, oci, aws|
-|GDN_PUSH_TOKEN_TENANT_ID|<Tenant id>|
+|GDN_PUSH_TOKEN_TENANT_ID|&lt;Tenant id&gt;|
 
 ## Review Results in Cloud Security Explorer
 
