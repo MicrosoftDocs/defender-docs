@@ -15,7 +15,7 @@ Defender for Cloud is natively integrated with App Service, eliminating the need
 
 To protect your Azure App Service plan with Microsoft Defender for App Service, you need:
 
-- A supported App Service plan associated with dedicated machines. Supported plans are listed in [Availability](#availability).
+- A supported App Service plan associated with dedicated machines.
 
 - Defender for Cloud's enhanced protections enabled on your subscription as described in [Enable enhanced security features](connect-azure-subscription.md).
 
