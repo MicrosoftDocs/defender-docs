@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Kubernetes (K8s) node vulnerability assessment
 
-Defender for Cloud can scan the [VMs that host K8s nodes](./kubernetes-nodes-overview.md#k8s-node-vms) to assess vulnerabilities to the OS and installed software. Recommendations for remediation are generated for the customer security team to review and remediate as part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility-of-k8s-nodes) to maintain the K8s nodes of a cluster.
+Defender for Cloud can scan the [VMs that host K8s nodes](./kubernetes-nodes-overview.md#protection-for-k8s-nodes) to assess vulnerabilities to the OS and installed software. Recommendations for remediation are generated for the customer security team to review and remediate as part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility-of-k8s-nodes) to maintain the K8s nodes of a cluster.
 
 ## Prerequisite
 
