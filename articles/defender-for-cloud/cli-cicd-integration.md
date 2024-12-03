@@ -128,7 +128,7 @@ After securely receiving the tokens, the developer must configure an environment
 
 1. Click **Select condition** dropdown, Select Data, Select Pushes
 
-    :::image type="content" source="media/cli-cicd/cloud-security-explorer-push.png" alt-text="Screenshot of selecting condition Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-push.png":::
+    :::image type="content" source="media/cli-cicd/cloud-security-explorer-push.png" alt-text="Screenshot of selecting condition Cloud Security Explorer." lightbox="media/cli-cicd/cloud-security-explorer-push.png":::
 
 1. Click **Select resource types** dropdown, select Containers, Container Images and click **Done**
 
