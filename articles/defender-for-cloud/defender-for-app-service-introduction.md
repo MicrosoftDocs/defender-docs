@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
-ms.date: 03/12/2024
+ms.date: 12/03/2024
 ms.topic: overview
 ms.author: dacurwin
 author: dcurwin
@@ -13,7 +13,7 @@ author: dcurwin
 
 Defender for Cloud is natively integrated with App Service, eliminating the need for deployment and onboarding - the integration is transparent.
 
-To protect your Azure App Service plan with Microsoft Defender for App Service, you'll need:
+To protect your Azure App Service plan with Microsoft Defender for App Service, you need:
 
 - A supported App Service plan associated with dedicated machines. Supported plans are listed in [Availability](#availability).
 
@@ -22,14 +22,18 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
     > [!TIP]
     > You can optionally enable individual Microsoft Defender plans, like Microsoft Defender for App Service.
 
-## Availability
+- Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). Billing is calculated according to the total compute instances in every plan.
+- [The supported App Service plans](https://azure.microsoft.com/pricing/details/app-service/plans/) are: 
+    - Free plan 
+    - Basic Service plan
+    - Standard Service plan
+    - Premium v2 Service Plan
+    - Premium v3 Service Plan
+    - App Service Environment v1
+    - App Service Environment v2
+    - App Service Environment v3
 
-| Aspect                       | Details                                                                                                                                                                                        |
-|------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Release state:               | General availability (GA)                                                                                                                                                                      |
-| Pricing:                     | Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)<br>Billing is according to total compute instances in all plans       |
-| Supported App Service plans: | [The supported App Service plans](https://azure.microsoft.com/pricing/details/app-service/plans/) are:<br>• Free plan<br>• Basic Service plan<br>• Standard Service plan<br>• Premium v2 Service Plan<br>• Premium v3 Service Plan<br>• App Service Environment v1<br>• App Service Environment v2<br>• App Service Environment v3|
-| Clouds:                      | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: National (Microsoft Azure operated by 21Vianet)                                                     |
+- Check out Defender for App Service's [cloud availability](support-matrix-cloud-environment.md).
 
 ## What are the benefits of Microsoft Defender for App Service?
 
@@ -42,7 +46,7 @@ When you enable Microsoft Defender for App Service, you immediately benefit from
 - **Secure** - Defender for App Service assesses the resources covered by your App Service plan and generates security recommendations based on its findings. To harden your App Service resources, use the detailed instructions in these recommendations.
 
 - **Detect** - Defender for App Service detects a multitude of threats to your App Service resources by monitoring:
-  - the VM instance in which your App Service is running, and its management interface
+  - the Virtual Machine (VM) instance in which your App Service is running, and its management interface
   - the requests and responses sent to and from your App Service apps
   - the underlying sandboxes and VMs
   - App Service internal logs - available thanks to the visibility that Azure has as a cloud provider
@@ -55,7 +59,7 @@ The log data and the infrastructure together can tell the story: from a new atta
 
 ### Threats by MITRE ATT&CK tactics
 
-Defender for Cloud monitors for many threats to your App Service resources. The alerts cover almost the complete list of MITRE ATT&CK tactics from pre-attack to command and control.
+Defender for Cloud monitors for many threats to your App Service resources. The alerts cover almost the complete list of MITRE ATT&CK tactics from preattack to command and control.
 
 - **Pre-attack threats** - Defender for Cloud can detect the execution of multiple types of vulnerability scanners that attackers frequently use to probe applications for weaknesses.
 
@@ -89,6 +93,6 @@ In this article, you learned about Microsoft Defender for App Service.
 
 For related material, see the following articles:
 
-- To export your alerts to Microsoft Sentinel, any third-party SIEM, or any other external tool, follow the instructions in [Stream alerts to monitoring solutions](export-to-siem.md).
+- To export your alerts to Microsoft Sentinel, any partner SIEM, or any other external tool, follow the instructions in [Stream alerts to monitoring solutions](export-to-siem.md).
 - For a list of the Microsoft Defender for App Service alerts, see the [Reference table of alerts](alerts-azure-app-service.md).
 - For more information on App Service plans, see [App Service plans](https://azure.microsoft.com/pricing/details/app-service/plans/).
