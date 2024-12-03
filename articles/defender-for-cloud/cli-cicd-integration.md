@@ -55,18 +55,29 @@ From there, the security admin must securely pass the token to developers to be 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment Settings > Integrations**
+1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment Settings** > **Integrations**
+
+:::image type="content" source="media/cli-cicd/env-settings-integrations.png" alt-text="Screenshot of Integration Enviornment Settings." lightbox="media/cli-cicd/env-settings-integrations.png":::
 
 1. Select **Add integration** and select **DevOps Ingestion**
 
+:::image type="content" source="media/cli-cicd/new-devops-ingestion.png" alt-text="Screenshot of New DevOps Ingestion." lightbox="media/cli-cicd/new-devops-ingestion.png":::
+
 1. Enter a descriptive name for the token, the selected tenant store the token information. The client secret will be generated when you enter a description for the secret and the expiration date.
+
+:::image type="content" source="media/cli-cicd/add-devops-ingestion.png" alt-text="Screenshot of adding DevOps Ingestion." lightbox="media/cli-cicd/add-devops-ingestion.png":::
 
 1. Enable the token in the Configuration and create the tokens.
 
+:::image type="content" source="media/cli-cicd/devops-ingestion-created.png" alt-text="Screenshot of creating DevOps Ingestion." lightbox="media/cli-cicd/devops-ingestion-created.png":::
+
 1. Copy each token, they cannot be edited or retrieved after you click OK
+
+:::image type="content" source="media/cli-cicd/devops-ingestion-created-success.png" alt-text="Screenshot of successful DevOps Ingestion created." lightbox="media/cli-cicd/devops-ingestion-created-success.png":::
 
 1. In the **Integrations** table, the new Ingestion will be displayed.
 
+:::image type="content" source="media/cli-cicd/devops-ingestion-table.png" alt-text="Screenshot of DevOps Ingestion Table." lightbox="media/cli-cicd/devops-ingestion-table.png"::
 
 ## Update the CI/CD pipeline script
 
