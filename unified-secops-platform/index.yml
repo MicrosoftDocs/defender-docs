@@ -1,18 +1,18 @@
 ### YamlMime:Landing
 
 title: Microsoft's unified security operations platform # < 60 chars
-summary: The unified security operations platform brings together the full capabilities of Microsoft Sentinel, Defender XDR, and generative AI. # < 160 chars
+summary: Bring together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Microsoft Defender portal. # < 160 chars
 
 metadata:
   title: Microsoft's unified security operations platform documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: The unified security operations platform brings together the full capabilities of Microsoft Sentinel, Defender XDR, and generative AI. # Required; article description that is displayed in search results. < 160 chars.
+  description: Bring together the full capabilities of Microsoft Sentinel, Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: unified-secops-platform #Required; use either service or product per approved list. 
   ms.subservice: usx
   ms.topic: landing-page # Required
   ms.collection: usx-security # Optional; Remove if no collection is used.
   author: cwatson-cat #Required; your GitHub user alias, with correct capitalization.
   ms.author: cwatson #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/13/2024 #Required; mm/dd/yyyy format.
+  ms.date: 12/03/2024 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
 

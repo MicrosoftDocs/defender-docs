@@ -27,6 +27,8 @@
        href: mail-flow-about.md
      - name: Microsoft Defender portal overview
        href: /defender-xdr/microsoft-365-defender-portal
+     - name: Integrate non-Microsoft security services with Microsoft 365
+       href: mdo-integrate-security-service.md
 
    - name: Evaluate
      items:

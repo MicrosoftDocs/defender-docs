@@ -57,7 +57,7 @@
           href: /defender-xdr/incidents-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
         - name: Correlation and merging
           href: /defender-xdr/alerts-incidents-correlation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
-        - name: Investigate incidents in Copilot for Security 
+        - name: Investigate incidents in Security Copilot
           href: /azure/sentinel/sentinel-security-copilot?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Investigate with Microsoft Copilot in Microsoft Defender
           href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json

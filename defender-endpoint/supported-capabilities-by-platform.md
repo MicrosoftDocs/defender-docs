@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/23/2024
+ms.date: 12/02/2024
 ---
 
 # Supported Microsoft Defender for Endpoint capabilities by platform
@@ -51,7 +51,7 @@ The following table gives information about the supported Microsoft Defender for
 |[Passive Mode](microsoft-defender-antivirus-compatibility.md)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
 |Sense detection sensor|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
 |Endpoint & network device discovery|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg) <sup>[5]</sup>|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
-|[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
+|[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg) <sup>[6]</sup>|
 ||||||
 |**Response**     |         |         |         ||
 |[Automated Investigation & Response (AIR)](automated-investigations.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)  |  ![No](media/svg/check-no.svg)       |  ![No](media/svg/check-no.svg)        |
@@ -71,6 +71,7 @@ The following table gives information about the supported Microsoft Defender for
 
 <sup>[5]</sup> Endpoint & network device discovery is supported on Windows Server 2019 or later, Windows 10, and Windows 11.
 
+<sup>[6]</sup>  Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
 > [!NOTE]
 > Windows 7, 8.1, Windows Server 2008 R2 include support for the EDR sensor, and antivirus using System Center Endpoint Protection (SCEP).
 

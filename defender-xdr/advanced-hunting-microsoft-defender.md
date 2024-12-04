@@ -90,12 +90,12 @@ In the unified portal, in addition to viewing the schema column names and descri
     - Near real-time detection frequency is not available for detections that include Microsoft Sentinel data. 
     - Custom functions that were created and saved in Microsoft Sentinel are not supported.
     - Defining entities from Sentinel data is not yet supported in custom detections.
-- Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. 
+- Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. Alternatively, you can use the [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature to link query results to new or existing incidents.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the`Timestamp` and `TimeGenerated` columns. In case the data arrives to Log Analytics after 48 hours, it's being overridden upon ingestion to `now()`. Therefore, to get the actual time the event happened, we recommend relying on the `Timestamp` column.
-- When prompting [Copilot for Security](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
+- When prompting [Security Copilot](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
 
 
 ## See also
 
 - [Use advanced hunting functions, saved queries, and custom rules](advanced-hunting-defender-use-custom-rules.md)
-- [Explore advanced hunting results with Microsoft Sentinel data](advanced-hunting-defender-results.md)
+- [Work with results containing Microsoft Sentinel data](advanced-hunting-defender-results.md)

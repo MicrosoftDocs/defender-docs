@@ -45,7 +45,9 @@ Find identity information in the following Microsoft Defender XDR areas:
 
 For example, the following image shows the details on an identity details page:
 
-:::image type="content" source="media/investigate-assets/identity-details.png" alt-text="Screenshot of an identity details page." lightbox="media/investigate-assets/identity-details.png":::
+![Screenshot of a specific user's page in the Microsoft Defender portal.](media/investigate-assets/image.png)
+
+
 
 ### Identity details
 
@@ -60,6 +62,10 @@ When you investigate a specific identity, you'll see the following details on an
 |[Identity timeline](/microsoft-365/security/defender/investigate-users#timeline)     | The timeline represents activities and alerts observed from a user's identity from the last 180 days, unifying identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint. <br><br>Use the timeline to focus on activities a user performed or were performed on them in specific timeframes. Select the default **30 days** to change the time range to another built-in value, or to a custom range.       |
 |[Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)      |     Respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the Microsoft Defender XDR **Action center.|
 
+> [!NOTE]
+> **Investigation Priority Score** has been deprecated on December 3, 2025. As a result, both the Investigation Priority Score breakdown and the scored activity timeline cards have been removed from the UI. 
+
+  
 For more information, see [Investigate users](/microsoft-365/security/defender/investigate-users) in the Microsoft Defender XDR documentation.
 
 ## Investigation steps for suspicious groups

@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 11/18/2024
+ms.date: 12/02/2024
 search.appverid: met150
 ---
 
@@ -527,9 +527,6 @@ Dependencies: Microsoft Defender Antivirus
 ### Block persistence through WMI event subscription
 
 This rule prevents malware from abusing WMI to attain persistence on a device.
-
-> [!IMPORTANT]
-> File and folder exclusions don't apply to this attack surface reduction rule.
 
 Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 

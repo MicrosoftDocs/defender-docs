@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 09/25/2024
+ms.date: 12/03/2024
 ---
 
 # How Microsoft names threat actors
@@ -121,12 +121,13 @@ Use the following reference table to understand how our previously publicly disc
 |Seashell Blizzard|IRIDIUM|Russia|APT44, Sandworm|
 |Secret Blizzard|KRYPTON|Russia|Venomous Bear, Turla, Snake|
 |Sefid Flood|Storm-1364|Iran, Influence operations||
+|Shadow Typhoon|Storm-0062|China|DarkShadow, Oro0lxy|
 |Silk Typhoon|HAFNIUM|China||
 |Smoke Sandstorm|BOHRIUM|Iran|UNC1549|
 |Spandex Tempest|CHIMBORAZO|Financially motivated|TA505|
 |[Star Blizzard](https://www.microsoft.com/en-us/security/blog/2023/12/07/star-blizzard-increases-sophistication-and-evasion-in-ongoing-attacks/)|SEABORGIUM|Russia|Callisto, Reuse Team|
-|Storm-0062||China|DarkShadow, Oro0lxy|
 |Storm-0133||Iran|LYCEUM, HEXANE|
+|Storm-0156||Pakistan||
 |Storm-0216||Financially motivated|Twisted Spider, UNC2198|
 |Storm-0257||Group in development|UNC1151|
 |Storm-0324||Financially motivated|TA543, Sagrid|
@@ -137,7 +138,7 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-0539||Financially motivated|Atlas Lion|
 |Storm-0569||Financially motivated||
 |Storm-0587||Russia|SaintBot, Saint Bear, TA471|
-|Storm-0744||Financially motivated||
+|Storm–0593||Group in development||
 |Storm-0784||Iran||
 |Storm-0829||Group in development|Nwgen Team|
 |Storm-0835||Group in development|EvilProxy|
@@ -145,6 +146,7 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-0844||Group in development||
 |Storm-0861||Iran||
 |Storm-0867||Egypt|Caffeine|
+|[Storm-0940](https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/)||China||
 |Storm-0971||Financially motivated|(Merged into Octo Tempest)|
 |[Storm-0978](https://www.microsoft.com/en-us/security/blog/2023/07/11/storm-0978-attacks-reveal-financial-and-espionage-motives/)||Group in development|RomCom, Underground Team|
 |Storm-1044||Financially motivated|Danabot|
@@ -167,10 +169,13 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-1804||Iran, Influence operations||
 |Storm-1805||Iran, Influence operations||
 |[Storm-1811](https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/)||Financially motivated||
-|Storm-1841||Russia, Influence operations||
+|Storm-1837||Russia||
 |Storm-1849||China|UAT4356|
 |Storm-1852||Group in development||
+|Storm-1919||Group in development||
 |Storm-2035||Iran, Influence operations||
+|Storm-2049||Group in development||
+|[Storm-2077](https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/#storm-2077)||China|TAG-100|
 |Strawberry Tempest||Financially motivated|LAPSUS$|
 |Sunglow Blizzard||Russia||
 |Taizi Flood|Storm-1376|China, Influence operations|Spamouflage, Dragonbridge|
@@ -178,6 +183,7 @@ Use the following reference table to understand how our previously publicly disc
 |[Vanilla Tempest](https://www.microsoft.com/en-us/security/blog/2022/10/25/dev-0832-vice-society-opportunistic-ransomware-campaigns-impacting-us-education-sector/)|DEV-0832|Financially motivated||
 |Velvet Tempest|DEV-0504|Financially motivated||
 |Violet Typhoon|ZIRCONIUM|China|APT31|
+|Volga Flood|Storm-1841|Russia, Influence operations||
 |[Volt Typhoon](https://www.microsoft.com/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques)||China|BRONZE SILHOUETTE, VANGUARD PANDA|
 |Wine Tempest|PARINACOTA|Financially motivated|Wadhrama|
 |Wisteria Tsunami|DEV-0605|Private sector offensive actor|CyberRoot|

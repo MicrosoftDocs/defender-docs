@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 11/13/2024
+ms.date: 12/02/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -56,7 +56,7 @@ Nov-2024 Build: 101.24092.0002 | Release version: 30.124092.0002.0
 <details>
 <summary> Oct-2024 (Build: 101.24082.0004 | Release version: 30.124082.0004.0)</summary>
 
-## Sept-2024 Build: 101.24082.0004 | Release version: 30.124082.0004.0
+## Oct-2024 Build: 101.24082.0004 | Release version: 30.124082.0004.0
 
 &ensp;Released: **October 15, 2024**<br/>
 &ensp;Published: **October 15, 2024**<br/>

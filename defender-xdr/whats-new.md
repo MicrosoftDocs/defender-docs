@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 11/18/2024
+ms.date: 12/03/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -29,6 +29,11 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## December 2024
+- (Preview) The [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature in Microsoft Defender advanced hunting now allows linking of Microsoft Sentinel query results. In both the Microsoft Defender unified experience and in [Defender XDR advanced hunting](advanced-hunting-link-to-incident.md), you can now specify whether an entity is an impacted asset or related evidence.
+- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries-preview), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
+-  New documentation library for Microsoft's unified security operations platform. Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
+
 ## November 2024
 
 - (Preview) **Attack paths** in the incident graph are now available in the Microsoft Defender portal. The attack story now includes potential attack paths that show the paths that attackers can potentially take after compromising a device. This feature helps you prioritize your response efforts. For more information, see [attack paths in the attack story](investigate-incidents.md#attack-paths).
@@ -36,13 +41,13 @@ You can also get product updates and important notifications through the [messag
 - (GA) The **last update time** column in the [incident queue](incident-queue.md#incident-queue) is now generally available.
 - (Preview) Cloud-native investigation and response actions are now available for container-related alerts in the Microsoft Defender portal. Security operations center (SOC) analysts can now investigate and respond to container-related alerts in near real-time with cloud-native response actions and investigation logs to hunt for related activities. For more information, see [Investigate and respond to container threats in the Microsoft Defender portal](investigate-respond-container-threats.md).
 - (GA) The `arg()` operator in [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-arg-operator-for-azure-resource-graph-queries) in Microsoft Defender portal is now generally available. Users can now use the *arg()* operator for Azure Resource Graph queries to search over Azure resources, and no longer need to go to Log Analytics in Microsoft Sentinel to use this operator if already in Microsoft Defender.
-- (Preview) The [CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md) table is now available for preview in advanced hunting. It contains information about process events in multicloud hosted environments. You can use it to discover threats that can be observed through process details, like malicious processes or command-line signatures. 
+- (Preview) The [CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md) table is now available for preview in advanced hunting. It contains information about process events in multicloud hosted environments. You can use it to discover threats that can be observed through process details, like malicious processes or command-line signatures.
 - (Preview) Migrating custom detection queries to **Continuous (near real-time or NRT) frequency** is now available for preview in advanced hunting. Using the Continuous (NRT) frequency increases your organization's ability to identify threats faster. It has minimal to no impact to your resource usage, and should thus be considered for any qualified custom detection rule in your organization. You can migrate compatible KQL queries by following the steps in [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
 
 ## October 2024
 
 - [Microsoft Unified RBAC roles](experts-on-demand.md#required-permissions-for-using-ask-defender-experts) are added with new permission levels for Microsoft Threat Experts customers to use Ask Defender experts capability.
-- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-arg-operator-for-azure-resource-graph-queries), Microsoft Defender portal users can now use the *arg()* operator for Azure Resource Graph queries to search over Azure resources. You no longer need to go to Log Analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
+- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-arg-operator-for-azure-resource-graph-queries), Microsoft Defender portal users can now use the `arg()` operator for Azure Resource Graph queries to search over Azure resources. You no longer need to go to Log Analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
 
 ## September 2024
 
