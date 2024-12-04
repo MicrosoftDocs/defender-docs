@@ -2,7 +2,7 @@
 title: Binary drift detection in Defender for Containers
 description: Learn about Microsoft's Defender for Cloud's binary drift detection capabilities, including how to create policies and manage alerts effectively.
 ms.topic: reference
-ms.date: 12/02/2024
+ms.date: 12/04/2024
 ---
 
 # Binary drift detection in Defender for Containers
@@ -12,12 +12,12 @@ ms.date: 12/02/2024
 
 > [!VIDEO https://aka.ms/docs/player?id=aff3bfa4-2049-4480-8582-0789730c3c58]
 
-- [01:49](/shows/mdc-in-the-field/binarydrift#time=01m49s) - What is binary drift?
-- [03:35](/shows/mdc-in-the-field/binarydrift#time=03m35s) - What needs to be enabled for this feature to work in Defender for Containers?
-- [04:32](/shows/mdc-in-the-field/binarydrift#time=04m32s) - What configuration needs to be done?
-- [05:23](/shows/mdc-in-the-field/binarydrift#time=05m23s) - How the settings are propagated in the backend?
-- [06:00](/shows/mdc-in-the-field/binarydrift#time=06m00s) - What customers should do if they receive a binary drift alert?
-- [08:30](/shows/mdc-in-the-field/binarydrift#time=08m30s) - Demonstration
+- [01:49](/shows/mdc-in-the-field/binary-drift#time=01m49s) - What is binary drift?
+- [03:35](/shows/mdc-in-the-field/binary-drift#time=03m35s) - What needs to be enabled for this feature to work in Defender for Containers?
+- [04:32](/shows/mdc-in-the-field/binary-drift#time=04m32s) - What configuration needs to be done?
+- [05:23](/shows/mdc-in-the-field/binary-drift#time=05m23s) - How the settings are propagated in the backend?
+- [06:00](/shows/mdc-in-the-field/binary-drift#time=06m00s) - What customers should do if they receive a binary drift alert?
+- [08:30](/shows/mdc-in-the-field/binary-drift#time=08m30s) - Demonstration
 
 ## Recommended resources
 
