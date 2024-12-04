@@ -1,11 +1,11 @@
 ---
-title: Updated FIM in Defender for Servers
+title: Updated File Integrity Monitoring in Defender for Servers
 description: Learn about Microsoft's Defender for Cloud's updates to file integrity monitoring capabilities, including new features and improvements.
 ms.topic: reference
 ms.date: 12/04/2024
 ---
 
-# Updated FIM in Defender for Servers
+# Updated File Integrity Monitoring in Defender for Servers
 
 **Episode description**: In this episode of Defender for Cloud in the Field, Gal Fenigshtein joins Yuri Diogenes to talk about the new File Integrity Monitoring (FIM) in Defender for Servers Plan 2. Gal explains the differences between the new FIM versus the previous FIM. Gal also talks about the native integration with Microsoft Defender for Endpoint, onboarding considerations and migration steps. Gal also demonstrates the new FIM experience in Defender for Cloud, and the core steps to migrate to the new FIM.
   
