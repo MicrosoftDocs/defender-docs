@@ -75,6 +75,8 @@ Also, on the details panel on an alert details page, the **Link alerts to anothe
 
     :::image type="content" source="media/merge-incidents-manually/link-alert-to-new-incident.png" alt-text="Screenshot of selecting a new incident to move an alert to.":::
 
+    When the process is completed, a new incident is created with the alert or alerts you moved to it. The incident is given a name automatically based on the name of the alert or alerts.
+
 ## Notes
 
 ## See also
