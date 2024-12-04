@@ -1,6 +1,6 @@
 ---
-title: Unlink alerts from incidents in the Microsoft Defender portal
-description: Learn how to unlink an alert from an incident in the Microsoft Defender portal, to correct false and/or missed correlations, so you can investigate incidents more accurately.
+title: Move alerts from one incident to another in the Microsoft Defender portal
+description: Learn how to detach an alert from an incident in the Microsoft Defender portal, to correct false and/or missed correlations, and attach the alert to another (new or existing) incident, so you can investigate and remediate security threats more effectively.
 ms.service: defender-xdr
 ms.author: yelevin
 author: yelevin
@@ -20,16 +20,16 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Unlink alerts from incidents in the Microsoft Defender portal
+# Move alerts from one incident to another in the Microsoft Defender portal
 
-While Microsoft Defender already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
+While Microsoft Defender already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can detach an alert from one incident and attach it to another. Every alert must belong to an incident, so you must attach the alert either to another existing incident, or to a new incident that you create on the spot.
 
 This article explains how to move alerts from one incident to another.
 
 ## Prerequisites
 
 - Users must have permissions to view the incidents queue.
-- Users must have read and write permissions on all the alerts they wish to correlate.
+- Users must have read and write permissions on all the alerts they wish to move between incidents.
 
 ## Access the panel to unlink alerts
 
@@ -43,21 +43,37 @@ In any of the following locations, select one or more alerts by marking the chec
 
 Also, on the details panel on an alert details page, the **Link alerts to another incident** button always appears.
 
-## Select the alert or alerts to unlink
+## Select the alert or alerts to move
 
 1. Open one of the locations mentioned in the previous section.
 
 1. Select the alert or alerts you want to move by marking the checkboxes at the beginning of their rows in the queue. When one or more alerts are marked, the **Link alerts to another incident** button appears on the toolbar.
 
-1. Select **Link alerts to another incident** from the toolbar. A flyout opens. If you selected only one alert, the flyout is labeled **Link alert to another incident**. If you selected two or more alerts, it's labeled **Link multiple alerts to another incident**. In all other respects, it's the same flyout.
+    :::image type="content" source="media/merge-incidents-manually/link-alert-to-another-incident-from-queue.png" alt-text="Screenshot of selecting alerts from the queue to move to another incident." lightbox="media/merge-incidents-manually/link-alert-to-another-incident-from-queue.png":::
+
+1. Select **Link alerts to another incident** from the toolbar. A flyout panel opens. If you selected only one alert, the panel is labeled **Link alert to another incident**. If you selected two or more alerts, it's labeled **Link multiple alerts to another incident**. In all other respects, it's the same panel.
 
 1. If the alert or alerts belong with another existing incident, select **Link to an existing incident**. Otherwise, select **Create a new incident**. Alerts must belong to an incident.
 
+### Move alert or alerts to an existing incident
+
 1. If you selected **Link to an existing incident**, a new text field, **Incident name or ID**, appears immediately following the selection. Begin typing the name or ID number of the incident you want to attach the alert or alerts to. As you type, the list of available incidents is dynamically displayed and filtered by what you type. When you see the one you want in the list, select it.
 
-1. In the **Comment** field, type a comment on why you want to move the alerts.
+    :::image type="content" source="media/merge-incidents-manually/link-alert-to-existing-incident-select.png" alt-text="Screenshot of selecting an existing incident to move an alert to.":::
 
-1. Select **Save** at the bottom of the flyout to execute the move.
+1. In the **Comment** field, type a comment explaining why you want to move the alerts.
+
+    :::image type="content" source="media/merge-incidents-manually/link-alert-to-existing-incident-save.png" alt-text="Screenshot of adding a comment explaining why moving an alert.":::
+
+1. Select **Save** at the bottom of the panel to execute the move.
+
+### Move alert or alerts to a new incident
+
+1. If you selected **Create a new incident**, all you need to do then is enter a comment explaining why you want to move the alerts.
+
+1. Select **Save** at the bottom of the panel to execute the move.
+
+    :::image type="content" source="media/merge-incidents-manually/link-alert-to-new-incident.png" alt-text="Screenshot of selecting a new incident to move an alert to.":::
 
 ## Notes
 

@@ -150,7 +150,7 @@
                 items:
                  - name: Incidents
                    href: investigate-incidents.md
-                 - name: Unlink alerts from incidents
+                 - name: Move alerts to another incident
                    href: unlink-alert-from-incident.md
                  - name: Merge incidents manually
                    href: merge-incidents-manually.md
