@@ -336,7 +336,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: Medium
 
-### **Suspicious external operation to an Azure storage account with overly permissive SAS token (Preview)**
+### **Suspicious external operation to an Azure storage account with overly permissive SAS token** 
 
 (Storage.Blob_AccountSas.UnusualOperationFromExternalIp 
 
@@ -377,7 +377,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: High
 
-### **Malicious blob was downloaded from a storage account (Preview)**
+### **Malicious blob was downloaded from a storage account**
 
 Storage.Blob_MalwareDownload
 

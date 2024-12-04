@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 10/31/2024
+ms.date: 12/03/2024
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -40,7 +40,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |**DEFENDER FOR CLOUD PLANS** | | ||
 |[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
-|[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | NA|
+|[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
 |[Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA|
 |[Defender for Azure SQL database servers](defender-for-sql-introduction.md) | GA | GA | GA<br/><br/>A subset of alerts/vulnerability assessments is available.<br/>Behavioral threat protection isn't available.|
 |[Defender for Containers](defender-for-containers-introduction.md)<br/>[Review detailed feature support](support-matrix-defender-for-containers.md) | GA | GA | GA|
