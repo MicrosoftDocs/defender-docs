@@ -13,8 +13,7 @@ ms.date: 10/20/2024
 The Defender for Servers plan in [Microsoft Defender for Cloud](defender-for-cloud-introduction.md) reduces security risk and exposure for machines in your organization by providing actionable recommendations to improve and remediate security posture. Defender for Servers also helps to protect machines against real-time security threats and attacks.
 
 > [!NOTE]
-> - Defender for Servers previously used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), or the Azure Monitoring Agent (AMA) (in preview) to collect information from machines.
-> - Support for using these agents in Defender for Servers has ended. For most plan features, the use of these agents is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
+> Support for using the Log Analytics agent and  Azure Monitoring Agent (AMA) in Defender for Servers has ended. For most plan features, the use of these agents is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
 
 ## Defender for Server benefits
 
