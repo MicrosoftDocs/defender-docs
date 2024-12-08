@@ -127,6 +127,14 @@ Secure your storage account with greater flexibility using customer-managed keys
 
 **Severity**: Low
 
+### Storage account public access should be disallowed
+
+**Description:** Anonymous public read access to containers and blobs in Azure Storage is a convenient way to share data, but might present security risks. To prevent data breaches caused by undesired anonymous access, Microsoft recommends preventing public access to a storage account unless your scenario requires it.
+
+Related policy: [Storage account public access should be disallowed](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F4fa4b6c0-31ca-4c0d-b10d-24b96f62a751)
+
+**Severity**: Medium
+
 ### [All advanced threat protection types should be enabled in SQL managed instance advanced data security settings](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ebe970fe-9c27-4dd7-a165-1e943d565e10)
 
 **Description**: It is recommended to enable all advanced threat protection types on your SQL managed instances. Enabling all types protects against SQL injection, database vulnerabilities, and any other anomalous activities.

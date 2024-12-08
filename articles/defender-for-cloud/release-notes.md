@@ -420,7 +420,7 @@ As of October 6, 2024 the following assessment IDs are replaced for these recomm
 
 October 6, 2024
 
-Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
+Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entities (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
 
 ### Kubernetes Identity and Access information-based attack paths (preview)
 
