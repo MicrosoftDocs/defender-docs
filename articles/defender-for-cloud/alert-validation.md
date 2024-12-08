@@ -91,81 +91,9 @@ After the Microsoft Defender for Endpoint agent is installed on your machine, as
 
 Defender for Containers provides security alerts for both your clusters and underlying cluster nodes. Defender for Containers accomplishes this by monitoring both the control plane (API server) and the containerized workload.
 
-You can tell if your alert is related to the control plan or the containerized workload based on its prefix. Control plane security alerts have a prefix of `K8S_`, while security alerts for runtime workload in the clusters have a prefix of `K8S.NODE_`.
+You can simulate alerts for both of the control plane and the workload using the [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
 
-You can simulate alerts for both of the control plane, and workload alerts with the following steps.
-
-### Simulate control plane alerts (K8S_ prefix)
-
-**Prerequisites**
-
-- Ensure the Defender for Containers plan is enabled.
-- **Arc only** - Ensure the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor) is installed.
-- **EKS or GKE only** - Ensure the default audit log collection autoprovisioning options are enabled.
-
-**To simulate a Kubernetes control plane security alert**:
-
-1. Run the following command from the cluster:
-
-    ```bash
-    kubectl get pods --namespace=asc-alerttest-662jfi039n
-    ```
-
-    You get the following response: `No resource found`.
-
-1. Wait 30 minutes.
-
-1. In the Azure portal, navigate to the Defender for Cloud's security alerts page.
-
-1. On the relevant Kubernetes cluster, locate the following alert `Microsoft Defender for Cloud test alert for K8S (not a threat)`
-
-### Simulate workload alerts (K8S.NODE_ prefix)
-
-**Prerequisites**
-
-- Ensure the Defender for Containers plan is enabled.
-- Ensure the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor) is installed.
-
-**To simulate a Kubernetes workload security alert**:
-
-1. Create a pod to run a test command on. This pod can be any of the existing pods in the cluster, or a new pod. You can create using this sample yaml configuration:
-
-    ```yaml
-    apiVersion: v1
-    kind: Pod
-    metadata:
-        name: mdc-test
-    spec:
-        containers:
-            - name: mdc-test
-              image: ubuntu:18.04
-              command: ["/bin/sh"]
-              args: ["-c", "while true; do echo sleeping; sleep 3600;done"]
-    ```
-
-    To create the pod run:
-
-    ```bash
-    kubectl apply -f <path_to_the_yaml_file>
-    ```
-
-1. Run the following command from the cluster:
-
-    ```bash
-    kubectl exec -it mdc-test -- bash
-    ```
-
-1. Copy the executable to a separate location and rename it to `./asc_alerttest_662jfi039n` with the following command `cp /bin/echo ./asc_alerttest_662jfi039n`.
-
-1. Execute the file `./asc_alerttest_662jfi039n testing eicar pipe`.
-
-1. Wait 10 minutes.
-
-1. In the Azure portal, navigate to the Defender for Cloud's security alerts page.
-
-1. On the relevant AKS cluster, locate the following alert `Microsoft Defender for Cloud test alert (not a threat)`.
-
-You can also learn more about defending your Kubernetes nodes and clusters with [Microsoft Defender for Containers](defender-for-containers-introduction.md).
+Learn more about defending your Kubernetes nodes and clusters with [Microsoft Defender for Containers](defender-for-containers-introduction.md).
 
 ## Simulate alerts for App Service
 
@@ -208,7 +136,7 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 
 ## Validate Azure Key Vault Threat Detection
 
-1. If you don’t have a Key Vault created yet, make sure to [create one](../key-vault/general/quick-create-portal.md).
+1. If you don't have a Key Vault created yet, make sure to [create one](../key-vault/general/quick-create-portal.md).
 1. After finishing creating the Key Vault and the secret, go to a VM that has Internet access and [download the TOR Browser](https://www.torproject.org/download/).
 1. Install the TOR Browser on your VM.
 1. Once you finished the installation, open your regular browser, sign-in to the Azure portal, and access the Key Vault page. Select the highlighted URL and copy the address.
