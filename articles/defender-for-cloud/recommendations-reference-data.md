@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud data security r
 author: dcurwin
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/13/2024
+ms.date: 12/08/2024
 ms.author: dacurwin
 ms.custom: generated
 ai-usage: ai-assisted
