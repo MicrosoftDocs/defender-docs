@@ -1127,7 +1127,7 @@
             href: azure-devops-extension.yml
           - name: Configure the Microsoft Security DevOps GitHub action
             href: github-action.md
-          - name: Integrate Defender for Cloud CLI with CI/CD Pipelines
+          - name: Integrate Defender for Cloud CLI with CI/CD pipelines
             href: cli-cicd-integration.md
             displayName: CLI Jenkins Pipeline
           - name: Configure pull request annotations
