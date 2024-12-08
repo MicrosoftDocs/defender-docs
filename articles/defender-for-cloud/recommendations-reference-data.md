@@ -127,7 +127,7 @@ Secure your storage account with greater flexibility using customer-managed keys
 
 **Severity**: Low
 
-### Storage account public access should be disallowed
+### [Storage account public access should be disallowed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4fa4b6c0-31ca-4c0d-b10d-24b96f62a751)
 
 **Description:** Anonymous public read access to containers and blobs in Azure Storage is a convenient way to share data, but might present security risks. To prevent data breaches caused by undesired anonymous access, Microsoft recommends preventing public access to a storage account unless your scenario requires it.
 
