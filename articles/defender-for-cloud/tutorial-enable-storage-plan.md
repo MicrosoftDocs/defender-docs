@@ -1,5 +1,5 @@
 ---
-title: Protect your storage accounts with the Microsoft Defender for Storage plan
+title: Deploy Microsoft Defender for Storage
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
 ms.date: 10/10/2024
@@ -18,18 +18,7 @@ Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pric
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
-
-- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
-
-- The following storage types are supported:
-  - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, malware scanning, sensitive Data Discovery.
-  - Azure Files (over REST API and SMB): Activity monitoring.
-
-- Required roles and permissions:
-  - For malware scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner), or specific roles with corresponding data actions.
-  - To enable Activity Monitoring, you need Security Admin permissions.
-  - Learn more about the [required permissions](support-matrix-defender-for-storage.md).
+Before you enable Microsoft Defender for Storage, ensure you have the necessary permissions and prerequisites in place. For more information, see [Prerequisites for Microsoft Defender for Storage](support-matrix-defender-for-storage.md).
 
 ## Set up and configure Microsoft Defender for Storage
 
@@ -49,7 +38,7 @@ To enable and configure Microsoft Defender for Storage and ensure maximum protec
 There are several ways to enable and configure Defender for Storage:
 
 - Using the [Azure built-in policy](defender-for-storage-policy-enablement.md) (the recommended method),
-- Programmatically using Infrastructure as Code templates, including 
+- Programmatically using Infrastructure as Code templates, including
   - [Terraform](defender-for-storage-infrastructure-as-code-enablement.md?tabs=enable-subscription#terraform-template)
   - [Bicep](defender-for-storage-infrastructure-as-code-enablement.md?tabs=enable-subscription#bicep-template)
   - [ARM](defender-for-storage-infrastructure-as-code-enablement.md?tabs=enable-subscription#azure-resource-manager-template) templates

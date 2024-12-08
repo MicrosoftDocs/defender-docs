@@ -8,7 +8,7 @@ ms.topic: how-to
 #customer intent: As a user, I want to learn how to test the Defender for Storage data security features so that I can validate its capabilities and ensure the security of my storage accounts.
 ---
 
-# Testing the Defender for Storage data security features
+# Test the Defender for Storage data security features
 
 After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept. This helps you familiarize yourself with its features and validate that its advanced security capabilities effectively protect your storage accounts by generating real security alerts. This guide walks you through testing various aspects of the security coverage offered by Defender for Storage.
 
