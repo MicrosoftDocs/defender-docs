@@ -10,7 +10,7 @@ author: dcurwin
 
 # Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
 
-You can use the Cloud Security Explorer to identify vulnerabilities in your Kubernetes clusters. The following examples demonstrate the building of a queries that you can modify for your specific needs.
+You can use the Cloud Security Explorer to identify vulnerabilities in your Kubernetes clusters. The following examples demonstrate the building of queries that you can modify for your specific needs.
 
 Read [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md) for an introduction to Cloud Security Explorer queries.
 
@@ -46,6 +46,6 @@ Read [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-e
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of cluster nodes with vulnerabilities." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png":::
 
-1. Select the View details link of the cluster node pool of interest to see the result details pane. In the Result details pane, select the virtual machine scale set icon above, to see the vulnerabilities below.
+2. Select the View details link of the cluster node pool of interest to see the result details pane. In the Result details pane, select the virtual machine scale set icon, to see the vulnerabilities.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png":::
