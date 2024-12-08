@@ -864,7 +864,18 @@
       - name: How does Defender for Containers work?
         displayName: containers
         href: defender-for-containers-architecture.md
-      - name: Vulnerability assessments (Defender Vulnerability Management)
+      - name: Kubernetes node protection
+        items:
+          - name: Overview
+            displayName: k8s, containers, aks, nodes
+            href: kubernetes-nodes-overview.md
+          - name: Kubernetes node vulnerability assessment
+            displayName: k8s, containers, aks, node, vulnerability, assessment
+            href: kubernetes-nodes-va.md
+          - name: Kubernetes node malware detection
+            displayName: k8s, containers, aks, node, malware
+            href: kubernetes-nodes-malware.md
+      - name: Container registry protection
         items:
           - name: Vulnerability assessments for Azure
             href: agentless-vulnerability-assessment-azure.md
