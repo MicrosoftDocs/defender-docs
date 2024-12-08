@@ -132,9 +132,9 @@ After securely receiving the tokens, the developer must configure an environment
 
 1. In Cloud Security Explorer, enter the following query: **CI/CD Pipeline** -> **Pipeline** + **Container Images** -> **Contained in** + **Container registers (group)**.
 
-1. Review the Resource names to see the container mapping.
+1. Review the **Resource names** to see the container mapping.
 
-  :::image type="content" source="media/cli-cicd/container-images.png" alt-text="Screenshot of correlating Monitored Containers." lightbox="media/cli-cicd/container-images.png":::
+    :::image type="content" source="media/cli-cicd/container-images.png" alt-text="Screenshot of correlating Monitored Containers." lightbox="media/cli-cicd/container-images.png":::
 
 ## Related content
 
