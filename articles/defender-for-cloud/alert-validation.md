@@ -122,7 +122,7 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
     :::image type="content" source="media/alert-validation/storage-atp-upload-image.png" alt-text="Screenshot showing where to upload a file to the container." lightbox="media/alert-validation/storage-atp-upload-image.png":::
 
 1. Right-select the uploaded file and select **Generate SAS**.
-1. Select the Generate SAS token and URL button (no need to change any options).
+1. Select the Generated SAS token and URL button (no need to change any options).
 1. Copy the generated SAS URL.
 1. Open the Tor browser, which you can [download here](https://www.torproject.org/download/).
 1. In the Tor browser, navigate to the SAS URL.  You should now see and can download the file that was uploaded.
