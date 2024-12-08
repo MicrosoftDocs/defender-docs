@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured Certificate Authority ACL (ESC7)  (Preview)
+# Security assessment: Edit misconfigured Certificate Authority ACL (ESC7)
 
 This article describes Microsoft Defender for Identity's **Misconfigured certificate authority ACL** security posture assessment report.
 

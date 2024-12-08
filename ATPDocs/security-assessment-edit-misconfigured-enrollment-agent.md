@@ -5,7 +5,7 @@ ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured enrollment agent certificate template (ESC3)  (Preview)
+# Security assessment: Edit misconfigured enrollment agent certificate template (ESC3)
 
 This article describes Microsoft Defender for Identity's **Misconfigured enrollment agent certificate template** security posture assessment report.
 

@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured certificate templates owner (ESC4) (Preview)
+# Security assessment: Edit misconfigured certificate templates owner (ESC4)
 
 This article provides an overview of Microsoft Defender for Identity's **Misconfigured certificate templates owner (ESC4)** security posture assessment report.
 

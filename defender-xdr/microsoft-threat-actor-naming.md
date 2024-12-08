@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/03/2024
+ms.date: 12/05/2024
 ---
 
 # How Microsoft names threat actors
@@ -42,7 +42,7 @@ In our new taxonomy, a weather event or *family name* represents one of the abov
 
 Threat actors within the same weather family are given an adjective to distinguish actor groups with distinct tactics, techniques, and procedures (TTPs), infrastructure, objectives, or other identified patterns. For groups in development, we use a temporary designation of Storm and a four-digit number where there is a newly discovered, unknown, emerging, or developing cluster of threat activity.
 
-The table shows how the new family names map to the threat actors that we track.
+The table below shows how the family names map to the threat actors that we track.
 
 |Actor category|Type|Family name|
 |:---:|:---:|:---:|
@@ -52,7 +52,7 @@ The table shows how the new family names map to the threat actors that we track.
 |Influence operations|Influence operations|Flood|
 |Groups in development|Groups in development|Storm|
 
-Use the following reference table to understand how our previously publicly disclosed old threat actor names translate to our new taxonomy.
+The table below lists publicly disclosed threat actor names with their previous names, origin or threat type, and corresponding names used by other security vendors.
 
 |Threat actor name|Previous name|Origin/Threat|Other names|
 |:---:|:---:|:---:|:---:|
@@ -119,7 +119,7 @@ Use the following reference table to understand how our previously publicly disc
 |Sangria Tempest|ELBRUS|Financially motivated|Carbon Spider, FIN7|
 |Sapphire Sleet|COPERNICIUM|North Korea|Genie Spider, BlueNoroff|
 |Seashell Blizzard|IRIDIUM|Russia|APT44, Sandworm|
-|Secret Blizzard|KRYPTON|Russia|Venomous Bear, Turla, Snake|
+|[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|KRYPTON|Russia|Venomous Bear, Turla, Snake|
 |Sefid Flood|Storm-1364|Iran, Influence operations||
 |Shadow Typhoon|Storm-0062|China|DarkShadow, Oro0lxy|
 |Silk Typhoon|HAFNIUM|China||
@@ -127,7 +127,7 @@ Use the following reference table to understand how our previously publicly disc
 |Spandex Tempest|CHIMBORAZO|Financially motivated|TA505|
 |[Star Blizzard](https://www.microsoft.com/en-us/security/blog/2023/12/07/star-blizzard-increases-sophistication-and-evasion-in-ongoing-attacks/)|SEABORGIUM|Russia|Callisto, Reuse Team|
 |Storm-0133||Iran|LYCEUM, HEXANE|
-|Storm-0156||Pakistan||
+|[Storm-0156](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)||Pakistan||
 |Storm-0216||Financially motivated|Twisted Spider, UNC2198|
 |Storm-0257||Group in development|UNC1151|
 |Storm-0324||Financially motivated|TA543, Sagrid|

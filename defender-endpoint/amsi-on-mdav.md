@@ -1,23 +1,29 @@
 ---
 title: "Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus"
 description: Describes fileless malware and how Microsoft Defender Antivirus uses AMSI to protect against hidden threats.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
-ms.date: 02/27/2024
+ms.reviewer: yongrhee
+ms.date: 12/05/2024
 ms.topic: conceptual
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.custom: QuickDraft
+ms.custom: 
+- QuickDraft
+- partner-contribution
 search.appverid: MET150
 f1.keywords:
-audience:
+audience: ITPro
+ms.collection: 
+- m365-security
+- tier2
 ai-usage: ai-assisted
 ---
 
 # Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus
 
-__Applies to:__
+**Applies to**:
 
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
@@ -25,14 +31,14 @@ __Applies to:__
 - Microsoft Defender for Business
 - Microsoft Defender for Individuals
 
-__Platforms:__
+**Platforms**:
 
 - Windows 10 and newer
 - Windows Server 2016 and newer
 
 Microsoft Defender for Endpoint utilizes the anti-malware Scan Interface (AMSI) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. This article describes the benefits of AMSI integration, the types of scripting languages it supports, and how to enable AMSI for improved security.
 
-## What is Fileless malware?
+## What is fileless malware?
 
 Fileless malware plays a critical role in modern cyberattacks, using stealthy techniques to avoid detection. Several major ransomware outbreaks used fileless methods as part of their kill chains.
 
@@ -42,22 +48,26 @@ Because memory is volatile, and fileless malware doesn't place files on disk, es
 
 Attackers use several fileless techniques that can make malware implants stealthy and evasive. These techniques include:
 
-- **Reflective DLL injection** Reflective DLL injection involves the manual loading of malicious DLLs into a process' memory without the need for said DLLs to be on disk. The malicious DLL can be hosted on a remote attacker-controlled machine and delivered through a staged network channel (for example, Transport Layer Security (TLS) protocol), or embedded in obfuscated form inside infection vectors like macros and scripts. This results in the evasion of the OS mechanism that monitors and keeps track of loading executable modules. An example of malware that uses Reflective DLL injection is HackTool:Win32/Mikatz!dha.
+- **Reflective DLL injection**: Reflective DLL injection involves the manual loading of malicious DLLs into a process memory without the need for said DLLs to be on disk. The malicious DLL can be hosted on a remote attacker-controlled machine and delivered through a staged network channel (for example, Transport Layer Security (TLS) protocol), or embedded in obfuscated form inside infection vectors, like macros and scripts. This configuration results in the evasion of the OS mechanism that monitors and keeps track of loading executable modules. An example of malware that uses Reflective DLL injection is `HackTool:Win32/Mikatz!dha`.
 
-- **Memory exploits** Adversaries use fileless memory exploits to run arbitrary code remotely on victim machines. For example, the UIWIX threat uses the EternalBlue exploit, which was used by both Petya and WannaCry, to install the DoublePulsar backdoor, which lives entirely in the kernel's memory (SMB Dispatch Table). Unlike Petya and Wannacry, UIWIX doesn't drop any files on disk.
+- **Memory exploits**: Adversaries use fileless memory exploits to run arbitrary code remotely on victim machines. For example, the UIWIX threat uses the EternalBlue exploit, which was used by both Petya and WannaCry, to install the DoublePulsar backdoor, and lives entirely in the kernel's memory (SMB Dispatch Table). Unlike Petya and Wannacry, UIWIX doesn't drop any files on disk.
 
-- **Script-based techniques** Scripting languages provide powerful means for delivering memory-only executable payloads. Script files can embed encoded shell codes or binaries that they can decrypt on the fly at run time and execute via .NET objects or directly with APIs without requiring them to be written to disk. The scripts themselves can be hidden in the registry, read from network streams, or run manually in the command-line by an attacker, without ever touching the disk.
+- **Script-based techniques**: Scripting languages provide powerful means for delivering memory-only executable payloads. Script files can embed encoded shell codes or binaries that they can decrypt on the fly at run time and execute via .NET objects or directly with APIs without requiring them to be written to disk. The scripts themselves can be hidden in the registry, read from network streams, or run manually in the command-line by an attacker, without ever touching the disk.
 
-> [!NOTE]
-> Do not disable PowerShell as a means to block fileless malware. PowerShell is a powerful and secure management tool and is important for many system and IT functions. Attackers use malicious PowerShell scripts as post-exploitation technique that can only take place after an initial compromise has already occurred. Its misuse is a symptom of an attack that begins with other malicious actions like software exploitation, social engineering, or credential theft. The key is to prevent an attacker from getting into the position where they can misuse PowerShell.
+   > [!NOTE]
+   > Do not disable PowerShell as a means to block fileless malware. PowerShell is a powerful and secure management tool and is important for many system and IT functions. Attackers use malicious PowerShell scripts as post-exploitation technique that can only take place after an initial compromise has already occurred. Its misuse is a symptom of an attack that begins with other malicious actions like software exploitation, social engineering, or credential theft. The key is to prevent an attacker from getting into the position where they can misuse PowerShell.
 
-- **WMI persistence** Some attackers use the Windows Management Instrumentation (WMI) repository to store malicious scripts that are then invoked periodically using WMI bindings.
+   > [!TIP]
+   > Reducing the number of unsigned Powershell scripts in your environment helps with increasing your security posture.
+   > Here are instructions on how you could add signing to the Powershell scripts used in your environment
+   > [Hey, Scripting Guy! How Can I Sign Windows PowerShell Scripts with an Enterprise Windows PKI? (Part 2 of 2) | Scripting Blog](https://devblogs.microsoft.com/scripting/hey-scripting-guy-how-can-i-sign-windows-powershell-scripts-with-an-enterprise-windows-pki-part-2-of-2/)
 
+- **WMI persistence**: Some attackers use the Windows Management Instrumentation (WMI) repository to store malicious scripts that are then invoked periodically using WMI bindings.
 Microsoft Defender Antivirus blocks most malware using generic, heuristic, and behavior-based detections, as well as local and cloud-based machine learning models. Microsoft Defender Antivirus protects against fileless malware through these capabilities:
 
-- Detecting script-based techniques by using AMSI, which provides the capability to inspect PowerShell and other script types, even with multiple layers of obfuscation
-- Detecting and remediating WMI persistence techniques by scanning the WMI repository, both periodically and whenever anomalous behavior is observed
-- Detecting reflective DLL injection through enhanced memory scanning techniques and behavioral monitoring
+   - Detecting script-based techniques by using AMSI, which provides the capability to inspect PowerShell and other script types, even with multiple layers of obfuscation
+   - Detecting and remediating WMI persistence techniques by scanning the WMI repository, both periodically and whenever anomalous behavior is observed
+   - Detecting reflective DLL injection through enhanced memory scanning techniques and behavioral monitoring
 
 ## Why AMSI?
 
@@ -72,15 +82,15 @@ AMSI provides a deeper level of inspection for malicious software that employs o
 - .NET Framework 4.8 or newer (scanning of all assemblies)
 - Windows Management Instrumentation (WMI)
 
-If you use Microsoft Office 365, AMSI also supports JavaScript, VBA, and XLM.
+If you use Microsoft 365 Apps, AMSI also supports JavaScript, VBA, and XLM.
 
 AMSI doesn't currently support Python or Perl.
 
 ### Enabling AMSI
 
-To enable AMSI, you need to enable Script scanning. See [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)
+To enable AMSI, you need to enable script scanning. See [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md).
 
-Also see [Defender Policy CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-defender)
+Also see [Defender Policy CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-defender).
 
 ### AMSI resources
 

@@ -5,7 +5,7 @@ ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured certificate templates ACL (ESC4)  (Preview)
+# Security assessment: Edit misconfigured certificate templates ACL (ESC4)
 
 This article describes Microsoft Defender for Identity's **Misconfigured certificate template ACL** security posture assessment report.
 

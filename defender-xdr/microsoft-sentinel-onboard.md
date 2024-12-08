@@ -22,7 +22,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 10/16/2024
+ms.date: 12/02/2024
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -52,7 +52,7 @@ The Microsoft Defender portal supports a single Microsoft Entra tenant and the c
 To onboard and use Microsoft Sentinel in the Defender portal, you must have the following resources and access:
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
-- The data connector for Microsoft Defender XDR enabled in Microsoft Sentinel for incidents and alerts. Install the Defender XDR solution and configure the data connector to connect Microsoft Sentinel to the Defender portal. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). <!--Question to Simaya about configuring the other options on this connector - would we still need that for unified SOC. Would they go  back and configure those settings? https://learn.microsoft.com/en-us/azure/sentinel/connect-microsoft-365-defender-->
+- The data connector for Microsoft Defender XDR enabled in Microsoft Sentinel for incidents and alerts. Install the Defender XDR solution and configure the data connector to connect Microsoft Sentinel to the Defender portal. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). Within the Defender XDR data connector, the configuration option to connect incident and alerts is turned off and disabled after you onboard Microsoft Sentinel to the Defender portal.
 - An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. The following table highlights some of the key roles needed.
 
   |Task |Microsoft Entra or Azure built-in role required |Scope  |

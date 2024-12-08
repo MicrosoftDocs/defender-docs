@@ -5,7 +5,7 @@ ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC11)  (Preview)
+# Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC11)
 
 This article describes Microsoft Defender for Identity's **Enforce encryption for RPC certificate enrollment** security posture assessment report.
 

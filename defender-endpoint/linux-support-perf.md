@@ -6,7 +6,7 @@ ms.author: deniseb
 author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-ms.date: 10/28/2024
+ms.date: 12/04/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -154,7 +154,7 @@ To run the client analyzer for troubleshooting performance issues, see [Run the 
 
 ## Configure Global Exclusions for better performance
 
-Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md). IF you still have performace issues, contact support for further instructions and mitigation.
+Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md). IF you still have performance issues, contact support for further instructions and mitigation.
 
 ## Troubleshoot AuditD performance issues
 

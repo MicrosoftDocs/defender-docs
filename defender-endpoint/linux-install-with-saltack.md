@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/11/2024
+ms.date: 12/04/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Saltstack
@@ -43,7 +43,7 @@ Here are a few important points:
 
 - Saltstack is installed on at least one computer (Saltstack calls the computer as the master).
 - The Saltstack master accepted the managed nodes (Saltstack calls the nodes as minions) connections.
-- The Saltstack minions are able to resolve communication to the Saltstack master (be default the minions try to communicate with a machine named 'salt').
+- The Saltstack minions are able to resolve communication to the Saltstack master (by default the minions try to communicate with a machine named *salt*).
 - Run the following ping test: `sudo salt '*' test.ping`
 - The Saltstack master has a file server location where the Microsoft Defender for Endpoint files can be distributed from (by default Saltstack uses the `/srv/salt` folder as the default distribution point)
 
