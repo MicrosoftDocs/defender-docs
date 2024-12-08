@@ -26,7 +26,7 @@ appliesto:
 
 # Alert correlation and incident merging in the Microsoft Defender portal
 
-This article explains how the Microsoft Defender portal aggregates and correlates the alerts that it collects from all the sources that produce them and send them to the portal. It explains how Defender creates incidents from these alerts, and how it continues to monitor their evolution, merging incidents together if the situation warrants. To learn more about alerts and their sources, and how incidents add value in the Microsoft Defender portal, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).
+This article explains how the correlation engine in the Microsoft Defender portal aggregates and correlates the alerts collected from all the sources that produce them and send them to the portal. It explains how Defender creates incidents from these alerts, and how it continues to monitor their evolution, merging incidents together if the situation warrants. To learn more about alerts and their sources, and how incidents add value in the Microsoft Defender portal, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).
 
 ## Incident creation and alert correlation
 
