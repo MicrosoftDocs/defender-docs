@@ -24,7 +24,7 @@ Defender for Storage includes:
 
 - **Sensitive data threat detection** - Identify and protect sensitive data within your storage accounts by detecting suspicious activities that might indicate a potential security threat. Defender for Storage enhances the security of your sensitive information stored in Azure by monitoring for actions such as unusual data access patterns or potential data exfiltration.
 
-- **Malware Scanning** - Scan your storage accounts for malware by analyzing files for known threats and suspicious content. This helps in identifying and mitigating potential security risks from malicious files that might be stored or uploaded to your Azure storage accounts. As a result, it enhances the overall security posture of your data storage.
+- **Malware scanning** - Scan your storage accounts for malware by analyzing files for known threats and suspicious content. This helps in identifying and mitigating potential security risks from malicious files that might be stored or uploaded to your Azure storage accounts. As a result, it enhances the overall security posture of your data storage.
 
 ## Getting started
 
@@ -41,7 +41,7 @@ When you enable Defender for Storage at the subscription level, all existing and
 
 Defender for Storage provides the following features:
 
-- **Better protection against malware**: Malware Scanning scans and detects in near real-time all file types, including archives of every uploaded blob. It provides fast and reliable results, helping you prevent your storage accounts from acting as an entry and distribution point for threats. Learn more about [Malware Scanning](defender-for-storage-malware-scan.md).
+- **Better protection against malware**: Malware scanning scans and detects in near real-time all file types, including archives of every uploaded blob. It provides fast and reliable results, helping you prevent your storage accounts from acting as an entry and distribution point for threats. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
 
 - **Improved threat detection and protection of sensitive data**: The sensitive data threat detection capability helps security professionals prioritize and examine security alerts efficiently. It considers the sensitivity of the data at risk, leading to better detection and protection against potential threats. This capability reduces the chance of data breaches by quickly identifying and addressing the most significant risks. It also improves sensitive data protection by detecting exposure events and suspicious activities on resources containing sensitive data. Learn more about [sensitive data threat detection](defender-for-storage-data-sensitivity.md).
 
@@ -61,11 +61,11 @@ Defender for Storage continuously analyzes data and control plane logs from prot
 
 :::image type="content" source="media/defender-for-storage-introduction/activity-monitoring.png" alt-text="Diagram showing how activity monitoring identifies threats to your data.":::
 
-### Malware Scanning (powered by Microsoft Defender Antivirus)
+### Malware scanning (powered by Microsoft Defender Antivirus)
 
-Malware Scanning in Defender for Storage helps protect storage accounts from malicious content by performing a full malware scan on uploaded content in near real time, applying Microsoft Defender Antivirus capabilities. It's designed to help fulfill security and compliance requirements to handle untrusted content. Every file type is scanned, and scan results are returned for every file. The Malware Scanning capability is an agentless SaaS solution that allows simple setup at scale, with zero maintenance, and supports automating response at scale.
+Malware scanning in Defender for Storage helps protect storage accounts from malicious content by performing a full malware scan on uploaded content in near real time, applying Microsoft Defender Antivirus capabilities. It's designed to help fulfill security and compliance requirements to handle untrusted content. Every file type is scanned, and scan results are returned for every file. The Malware scanning capability is an agentless SaaS solution that allows simple setup at scale, with zero maintenance, and supports automating response at scale.
 This is a configurable feature in the new Defender for Storage plan that is priced per GB scanned.
-Learn more about [Malware Scanning](defender-for-storage-malware-scan.md).
+Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
 
 ### Sensitive data threat detection (powered by Sensitive Data Discovery)
 
@@ -82,9 +82,9 @@ For more details, visit [Sensitive data threat detection](defender-for-storage-d
 
 The new Microsoft Defender for Storage plan has predictable pricing based on the number of storage accounts you protect. With the option to enable at the subscription or resource level and exclude specific storage accounts from protected subscriptions, you have increased flexibility to manage your security coverage. The pricing plan simplifies the cost calculation process, allowing you to scale easily as your needs change. Other charges might apply to storage accounts with high-volume transactions.
 
-### Malware Scanning - Billing per GB, monthly capping, and configuration
+### Malware scanning - billing per GB, monthly capping, and configuration
 
-Malware Scanning is charged on a per-gigabyte basis for scanned data. To ensure cost predictability, a monthly cap can be established for each storage account's scanned data volume, per-month basis. This cap can be set subscription-wide, affecting all storage accounts within the subscription, or applied to individual storage accounts. Under protected subscriptions, you can configure specific storage accounts with different limits.
+Malware scanning is charged on a per-gigabyte basis for scanned data. To ensure cost predictability, a monthly cap can be established for each storage account's scanned data volume, per-month basis. This cap can be set subscription-wide, affecting all storage accounts within the subscription, or applied to individual storage accounts. Under protected subscriptions, you can configure specific storage accounts with different limits.
 
 By default, the limit is set to 5,000 GB per month per storage account. Once this threshold is exceeded, scanning ceases for the remaining blobs, with a 20-GB confidence interval. For configuration details, refer to [configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
 
@@ -97,21 +97,21 @@ Microsoft Defender for Storage enables you to secure your data at scale with gra
 
 ### Monitoring your malware scanning cap
 
-To ensure uninterrupted protection while effectively managing costs, there are two informational security alerts related to malware scanning cap usage. The first alert, `Malware Scanning will stop soon: 75% of monthly gigabytes scan cap reached (Preview)`, is triggered as your usage approaches 75% of the set monthly cap, offering a heads-up to adjust your cap if needed. The second alert, `Malware Scanning stopped: monthly gigabytes scan cap reached (Preview)`, notifies you when the cap is reached and scanning is paused for the month, potentially leaving new uploads unscanned. Both alerts come with details on affected storage accounts to facilitate prompt and informed action, ensuring you can maintain your desired level of security without unexpected expenses.
+To ensure uninterrupted protection while effectively managing costs, there are two informational security alerts related to malware scanning cap usage. The first alert, `Malware scanning will stop soon: 75% of monthly gigabytes scan cap reached (Preview)`, is triggered as your usage approaches 75% of the set monthly cap, offering a heads-up to adjust your cap if needed. The second alert, `Malware scanning stopped: monthly gigabytes scan cap reached (Preview)`, notifies you when the cap is reached and scanning is paused for the month, potentially leaving new uploads unscanned. Both alerts come with details on affected storage accounts to facilitate prompt and informed action, ensuring you can maintain your desired level of security without unexpected expenses.
 
-## Understanding the differences between Malware Scanning and hash reputation analysis  
+## Understanding the differences between malware scanning and hash reputation analysis  
 
-Defender for Storage offers two capabilities to detect malicious content uploaded to storage accounts: **Malware Scanning** and **hash reputation analysis**.
+Defender for Storage offers two capabilities to detect malicious content uploaded to storage accounts: **Malware scanning** and **hash reputation analysis**.
 
-### Malware Scanning
+### Malware scanning
 
-Malware Scanning uses Microsoft Defender Antivirus (MDAV) to scan blobs uploaded to Blob storage, providing a comprehensive analysis that includes deep file scans and hash reputation analysis. This feature provides an enhanced level of detection against potential threats.
+Malware scanning uses Microsoft Defender Antivirus (MDAV) to scan blobs uploaded to Blob storage, providing a comprehensive analysis that includes deep file scans and hash reputation analysis. This feature provides an enhanced level of detection against potential threats.
 
 ### Hash reputation analysis
 
 Hash reputation analysis detects potential malware in Blob storage and Azure Files by comparing the hash values of newly uploaded blobs and files with those of known malware from [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/). Not all file protocols and operation types are supported with this capability, leading to some operations not being monitored for potential malware uploads. Unsupported use cases include SMB file shares and when a blob is created using [Put Block](/rest/api/storageservices/put-block) and [Put blocklist](/rest/api/storageservices/put-block-list).
 
-In summary, Malware Scanning, available exclusively on the new plan for Blob storage, provides a more comprehensive approach to malware detection. It achieves this by analyzing the full content of files and incorporating hash reputation analysis into its scanning methodology.
+In summary, malware scanning, available exclusively on the new plan for Blob storage, provides a more comprehensive approach to malware detection. It achieves this by analyzing the full content of files and incorporating hash reputation analysis into its scanning methodology.
 
 ## Related content
 

@@ -23,11 +23,11 @@ Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pric
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - The following storage types are supported:
-  - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, Malware Scanning, Sensitive Data Discovery.
+  - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, malware scanning, sensitive Data Discovery.
   - Azure Files (over REST API and SMB): Activity monitoring.
 
 - Required roles and permissions:
-  - For Malware Scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner), or specific roles with corresponding data actions.
+  - For malware scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner), or specific roles with corresponding data actions.
   - To enable Activity Monitoring, you need Security Admin permissions.
   - Learn more about the [required permissions](support-matrix-defender-for-storage.md).
 
@@ -42,7 +42,7 @@ To enable and configure Microsoft Defender for Storage and ensure maximum protec
 - Configure methods for saving malware scanning results logging.
 
 > [!TIP]
-> The Malware Scanning feature has advanced configurations to help security teams support different workflows and requirements.
+> The malware scanning feature has advanced configurations to help security teams support different workflows and requirements.
 
 - [Override subscription-level settings to configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level.
 

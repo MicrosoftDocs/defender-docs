@@ -1,6 +1,6 @@
 ---
 title: Test the Defender for Storage data security features
-description: Learn how to test the Malware Scanning, sensitive data threat detection, and activity monitoring provided by Defender for Storage.
+description: Learn how to test the malware scanning, sensitive data threat detection, and activity monitoring features provided by Defender for Storage.
 author: dcurwin
 ms.author: dacurwin
 ms.date: 05/16/2024
@@ -14,18 +14,18 @@ After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.m
 
 There are three main components to test:
 
-- Malware Scanning (if enabled)
+- Malware scanning (if enabled)
 - Sensitive data threat detection (if enabled)
 - Activity monitoring
 
 > [!TIP]
-> **A hands-on lab to try out Malware Scanning in Defender for Storage**
+> **A hands-on lab to try out malware scanning in Defender for Storage**
 >
-> We recommend you try the [Ninja training instructions](https://aka.ms/DfStorage/NinjaTrainingLab) for detailed step-by-step instructions on how to test Malware Scanning end-to-end with setting up responses to scanning results. This is part of the 'labs' project that helps customers get ramped up with Microsoft Defender for Cloud and provide hands-on practical experience with its capabilities.
+> We recommend you try the [Ninja training instructions](https://aka.ms/DfStorage/NinjaTrainingLab) for detailed step-by-step instructions on how to test malware scanning end-to-end with setting up responses to scanning results. This is part of the 'labs' project that helps customers get ramped up with Microsoft Defender for Cloud and provide hands-on practical experience with its capabilities.
 
-## Testing Malware Scanning
+## Test malware scanning
 
-Follow these steps to test Malware Scanning after enabling the feature:
+Follow these steps to test malware scanning after enabling the feature:
 
 1. To verify that the setup is successful, upload a file to the storage account. You can use the Azure portal to [upload a file](/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob)
 
@@ -33,7 +33,7 @@ Follow these steps to test Malware Scanning after enabling the feature:
 
     1. After uploading the file, view the blob and examine its blob index tags.
 
-    1. You should see two new tags: **Malware Scanning scan result** and **Malware Scanning scan time**.
+    1. You should see two new tags: **Malware scanning scan result** and **Malware scanning scan time**.
 
     1. The blob index tags serve as a helpful way to view the scan results.
 
@@ -62,9 +62,9 @@ To simulate a malware upload using an EICAR test file, follow these steps:
 
 1. Upload the EICAR test file to your storage account.
 
-1. Verify the **Malware Scanning scan result** index tag:
+1. Verify the **Malware scanning scan result** index tag:
 
-    1. Check for the **Malware Scanning scan result** index tag with the value **Malicious**.
+    1. Check for the **Malware scanning scan result** index tag with the value **Malicious**.
 
     1. If the tags aren't visible, select the **Refresh** button.
 
@@ -107,11 +107,11 @@ To test the sensitive data threat detection feature by uploading test data that 
 
     1. Add the following string to the file: `ASD 100-22-3333 SSN Text` - this string is a test US (United States) SSN (Social Security Number).
 
-        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-2.png" alt-text="Screenshot showing how to test a file in Malware Scanning for Social Security Number information.":::
+        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-2.png" alt-text="Screenshot showing how to test a file in malware scanning for Social Security Number information.":::
 
     1. Save and upload the file to the **test-container** in the storage account.
 
-        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-3.png" alt-text="Screenshot showing how to upload a file in Malware Scanning to test for Social Security Number information.":::
+        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-3.png" alt-text="Screenshot showing how to upload a file in malware scanning to test for Social Security Number information.":::
 
 1. Enable Defender for Storage:
 
@@ -129,7 +129,7 @@ To test the sensitive data threat detection feature by uploading test data that 
 
     1. Right-click on the **test-container** and select **Change the access level**.
 
-        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-1.png" alt-text="Screenshot showing how to change the access level for a test of Malware Scanning.":::
+        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-1.png" alt-text="Screenshot showing how to change the access level for a test of malware scanning.":::
 
     1. Choose the **Container (anonymous read access for containers and blobs)** option and select **OK**.
 
@@ -143,7 +143,7 @@ To test the sensitive data threat detection feature by uploading test data that 
 
     1. Select on the alert’s **View full details** button to see all the related details.
 
-        :::image type="content" source="media/defender-for-storage-test/sensitive-data-alert.png" alt-text="Screenshot showing how to see an alert for a test file in Malware Scanning.":::
+        :::image type="content" source="media/defender-for-storage-test/sensitive-data-alert.png" alt-text="Screenshot showing how to see an alert for a test file in malware scanning.":::
 
 Learn more about Defender for Storage security alerts in the [reference table for all security alerts in Microsoft Defender for Cloud](alerts-azure-storage.md).
 

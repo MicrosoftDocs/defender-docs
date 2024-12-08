@@ -1,6 +1,6 @@
 ---
 title: Permissions required to enable Defender for Storage
-description: Learn about the permissions required to enable Defender for Storage and its features - Malware Scanning and Sensitive data threat detection.
+description: Learn about the permissions required to enable Defender for Storage and its features - malware scanning and sensitive data threat detection.
 ms.topic: reference
 author: dcurwin
 ms.author: dacurwin
@@ -15,7 +15,7 @@ Microsoft Defender for Storage is an Azure-native layer of security intelligence
 
 - **Activity monitoring:** Detects suspicious activities in storage accounts by analyzing data plane and control plane activities and using Microsoft Threat Intelligence, behavioral modeling, and machine-learning.
 
-- **Malware Scanning:** Scans all uploaded blobs in near-real time using Microsoft Defender Antivirus to protect storage accounts from malicious content.
+- **Malware scanning:** Scans all uploaded blobs in near-real time using Microsoft Defender Antivirus to protect storage accounts from malicious content.
 
 - **Sensitive data threat detection:** Prioritizes security alerts based on data sensitivity discovered by the Sensitive Data Discovery Engine, detects exposure events and suspicious activities, enhancing protection against data breaches.
 

@@ -1020,7 +1020,7 @@
           Storage, storage, Azure-native security, automated response, alerts,
           security, hash reputation analysis
         href: defender-for-storage-introduction.md
-      - name: Malware Scanning
+      - name: Malware scanning
         items:
               - name: Introduction to malware scanning
                 href: introduction-malware-scanning.md
@@ -1290,6 +1290,12 @@
         - name: Defender for Open-Source Relational Databases multicloud
           displayName: Defender for Open-Source Relational Databases, multicloud, RDS, threat detection
           href: episode-fifty-one.md
+        - name: Binary drift detection in Defender for Containers
+          displayName: Defender for Containers, binary drift detection
+          href: episode-fifty-two.md
+        - name: Updated File Integrity Monitoring in Defender for Servers
+          displayName: Defender for Servers, FIM
+          href: episode-fifty-three.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation
