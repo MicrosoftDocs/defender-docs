@@ -913,9 +913,6 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
-      - name: Kubeaudit events in advanced hunting
-        displayName: k8s, containers
-        href: kubeaudit-events-advanced-hunting.md
       - name: Defender for Kubernetes (deprecated)
         displayName: clusters, k8s, aks
         href: defender-for-kubernetes-introduction.md
