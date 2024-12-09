@@ -15,6 +15,8 @@ Kubernetes nodes are VMs created by the cloud environment's Kubernetes service t
 
 The customer upgrades the node pool VM version to improve node security, as indicated by Defender for Cloud recommendations.
 
+The support for protecting Kubernetes nodes is detailed in the [support matrix of containers in Defender for Cloud](support-matrix-defender-for-containers.md) in the Vulnerability assessments and Runtime threat protection sections of each cloud environment.
+
 ## Shared responsibility of Kubernetes nodes
 
 The responsibility for maintaining the Kubernetes nodes is shared between the Kubernetes service and the customer.
@@ -30,9 +32,6 @@ The following protections are provided for Kubernetes nodes:
 
 - [Malware detection](kubernetes-nodes-malware.md) - Kubernetes nodes are scanned for malware. A security alert is generated for the customer to review and remediate.
 
-> [!Note]
-> Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments that have **Agentless scanning for machines** enabled.
-
 The Kubernetes nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
 
 ## Enable agentless scanning for machines
@@ -42,13 +41,13 @@ Protection for Kubernetes nodes is enabled by toggling on **Agentless scanning f
 To enable agentless scanning for machines in the Defender for Containers plan in the Azure portal:
 
 1. Select the relevant subscription.
-2. Select **Environment Settings** from the **Defender for Cloud** menu.
-3. Select **Settings** for the **Defender for Container** plan.
 
-:::image type="content" source="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png":::
+1. Select **Environment Settings** from the **Defender for Cloud** menu.
+
+1. Select **Settings** for the **Defender for Container** plan.
+    :::image type="content" source="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png":::
 
 1. In the settings pane, turn on **Agentless scanning for machines** toggle.
-
-:::image type="content" source="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines toggle." lightbox="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png":::
+    :::image type="content" source="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines toggle." lightbox="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png":::
 
 1. Select **Save**.
