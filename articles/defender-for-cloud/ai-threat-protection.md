@@ -16,7 +16,7 @@ Microsoft Defender for Cloud's threat protection for AI workloads identifies thr
 > Threat protection for AI workloads is currently in preview.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-Defender for Cloud's AI threat protection works with [Azure AI Content Safety Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) and Microsoft's threat intelligence to provide security alerts for threats like data leakage, data poisoning, jailbreak, and credential theft
+Defender for Cloud's AI threat protection works with [Azure AI Content Safety Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) and Microsoft's threat intelligence to provide security alerts for threats like data leakage, data poisoning, jailbreak, and credential theft.
 
 :::image type="content" source="media/ai-threat-protection/threat-protection-ai.png" alt-text="Diagram that shows how enabling, detection, and response works for threat protection." lightbox="media/ai-threat-protection/threat-protection-ai.png":::
 
