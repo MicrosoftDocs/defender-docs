@@ -931,7 +931,13 @@
           href: defender-for-sql-introduction.md
         - name: Overview of Defender for SQL servers on machines
           displayName: hybrid, arc, Azure Defender
-          href: 
+          items:
+          - name: Overview of vulnerability assessment
+            displayName: vulnerability, assessment
+            href: sql-azure-vulnerability-assessment-overview
+          - name: Overview of advanced threat protection
+            displayName: threat, detection
+            href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
         - name: Defender for open-source relational databases
           displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
           href: defender-for-databases-introduction.md
@@ -946,13 +952,6 @@
         - name: Deploy Defender for Azure SQL Databases
           displayName: database
           href: tutorial-enable-sql-database-plan.md
-          items:
-          - name: Overview of vulnerability assessment
-            displayName: vulnerability, assessment
-            href: sql-azure-vulnerability-assessment-overview
-          - name: Overview of advanced threat protection
-            displayName: threat, detection
-            href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
         - name: Deploy Defender for SQL servers on machines
           items:
           - name: Enable Microsoft Defender for SQL servers on machines
