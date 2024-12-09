@@ -48,3 +48,7 @@ Kubernetes node vulnerabilities are remediated by updating the node pool VM imag
 
 1. To upgrade the node pool VM image, select the **Update Image** button or select **Upgrade Kubernetes** to upgrade the cluster Kubernetes service version.
 :::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the Kubernetes node pool for updating its image." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
+
+## Next steps
+
+Learn how to use the [Cloud Security Explorer to investigate vulnerabilities in a cluster node](cloud-security-explorer-kubernetes-clusters.md#create-a-query-to-identify-vulnerabilities-in-cluster-nodes).
