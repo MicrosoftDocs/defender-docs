@@ -930,7 +930,6 @@
           displayName: database
           href: defender-for-sql-introduction.md
         - name: Overview of Defender for SQL servers on machines
-          displayName: hybrid, arc, Azure Defender
           items:
           - name: Overview of vulnerability assessment
             displayName: vulnerability, assessment
