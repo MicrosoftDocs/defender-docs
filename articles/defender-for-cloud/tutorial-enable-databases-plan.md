@@ -1,8 +1,9 @@
 ---
 title: Protect your databases with Defender for Databases
-description: Learn how to enable the Databases plan on your Azure subscription for Microsoft Defender for Cloud.
-ms.topic: install-set-up-deploy
-ms.date: 09/15/2024
+description: Learn how to enable the Databases plan on your Azure subscription for Microsoft Defender for Cloud to enhance your database security.
+ms.topic: how-to
+ms.date: 12/09/2024
+#customer intent: As a database administrator, I want to enable Defender for Databases so that I can enhance the security of my databases.
 ---
 
 # Protect your databases with Defender for Databases
