@@ -34,7 +34,7 @@ Read [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-e
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details-insights.png" alt-text="Screenshot shows Cloud Security Explorer query result details and insight results from the selected containers image." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details-insights.png":::
 
-## Create a query to identify vulnerabilities in cluster nodes:
+## Create a query to identify vulnerabilities in cluster nodes
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
