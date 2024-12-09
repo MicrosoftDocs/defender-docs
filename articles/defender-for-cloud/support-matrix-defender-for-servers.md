@@ -51,6 +51,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [Agentless malware scanning](agentless-malware-scanning.md) | GA | NA | NA |
 | [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | NA | NA |
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
+| [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | NA | NA |
 
 ## Windows machine support
 
