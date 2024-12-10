@@ -137,7 +137,7 @@ Get information on threat actors and the tactics, techniques, and procedures (TT
 
 ### Vulnerability data by CVE
 
-Get contextual information and threat intelligence on Common Vulnerabilities and Exposures (CVEs), which are derived from Defender TI articles, [threat analytics reports](/defender-xdr/threat-analytics), and data from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) and [Microsoft Defender Endpoint Attack Surface Management](/azure/external-attack-surface-management/overview).
+Get contextual information and threat intelligence on Common Vulnerabilities and Exposures (CVEs), which are derived from Defender TI articles, [threat analytics reports](/defender-xdr/threat-analytics), and data from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) and [Microsoft Defender External Attack Surface Management](/azure/external-attack-surface-management/overview).
 
 **Sample prompts**:
 

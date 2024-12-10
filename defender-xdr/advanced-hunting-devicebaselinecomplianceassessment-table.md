@@ -45,7 +45,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `OSVersion` | `string` | Version of the operating system running on the device |
 | `ConfigurationId` | `string` | Unique identifier for a specific configuration |
 | `ProfileId` | `string` | Unique identifier for the profile |
-| `IsCompliant` | `boolean` | Indicates whether the device that initiated the event is compliant or not |
+| `IsCompliant` | `nullable bool` | Indicates whether the device that initiated the event is compliant or not |
 | `IsApplicable` | `boolean` | Indicates whether the configuration or policy is applicable |
 | `Source` | `dynamic` | The registry path or other location used to determine the current device setting |
 | `RecommendedValue` | `dynamic` | Set of expected values for the current device setting to be compliant |

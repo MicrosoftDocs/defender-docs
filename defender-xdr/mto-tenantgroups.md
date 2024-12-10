@@ -1,6 +1,6 @@
 ---
-title: Content distribution in multitenant management
-description: Overview of multitenant management content distribution through tenant groups in Microsoft Defender XDR.
+title: Content distribution using tenant groups in multitenant management
+description: Overview of content distribution through tenant groups in multitenant management in Microsoft Defender XDR.
 ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
@@ -12,7 +12,7 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: conceptual
-ms.date: 06/05/2024
+ms.date: 11/20/2024
 appliesto: 
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -43,57 +43,62 @@ The following table lists the requirements for content distribution in multitena
 To create a new tenant group:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups) in multitenant management in Microsoft Defender XDR.
-2. Select **Create tenant group**:
+2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.:
 
-    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-add-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-add.png":::
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-add-tenants.png":::
 
-3. Enter in **Tenant group name** and **Description**, then select **Next**.
-4. Select **Add** to add custom detection rules.
+3. In the **Content selection** page, select the content to be distirbuted across all tenants in your tenant group, then select **Next**.
+    
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-add-content.png":::
 
 > [!NOTE]
-> Multitenant management currently only supports adding custom detection rules to a tenant group. Additional content types will be added in the future.
+> The content type selection is currently limited to adding custom detection rules to a tenant group. Adding other content types will be available in the future. 
 
-5. The **Source tenant** column displays the tenant the detection rule comes from. Choose the detection rules you want to add to the assignment.
+4. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
 
-    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-select-rules-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-select-rules.png":::
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-add-custom-small.png" alt-text="Screenshot of custom detection rules addition wizard." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-add-custom.png":::
 
-6. Select **Add to tenant group**.
-7. Select **Next** on the **Content** page.
-8. Select the target tenants for the assignment on the **Assign tenants** page, then select **Next**.
-9. For each target tenant, you can opt to select the devices or device groups to include in the scope of the assignment in the **Set scope** page.
+5. In the **Select detection rules** page, filter the source tenant of the content, then select **Apply**. Choose the content you want to add to your tenant group from the list.
 
-    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-scope-small.png" alt-text="Screenshot of the scope settings section." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-scope.png":::
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-select-content-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-select-content.png":::
 
-10. Select **Next**.
-11. Review the assignment details. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
-12. Select **Submit** then select **Done**.
+6. In the **Device groups** page, select the devices or specific device groups that need to be in your tenant's scope.
 
-If you chose to **Sync all authorized tenants**, all the tenants and scope within the tenants you have permission will now sync.
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-select-device-small.png" alt-text="Screenshot of the device selection pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-select-device.png":::
+
+7. Add a tenant group name and description about your tenant group in the Details page.
+8. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
+
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-summary-tenantgroups-small.png" alt-text="Screenshot of summary of tenant groups with the checkbox highlighted." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-summary-tenantgroups.png":::
+
+9. Select **Submit** to finish your tenant group creation.
+
+> [!TIP]
+> If you choose to **Sync all authorized tenants**, all the tenants and scope within the tenants you have permission automatically syncs.
+
+Your newly created tenant group appears in the Tenant groups page after creation. Select the tenant group from the list to add or remove content, add, edit, or remove tenants, or sync the tenant group.
+
+:::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-group-sample-small.png" alt-text="Screenshot of a tenant group page and the actions available within the page." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-group-sample.png":::
+
+Check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When selecting the result, a side pane containing the errors, recommendations, and impacted assets appears. Here’s an example.
+
+:::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-sync-results.png":::
 
 ## Syncing content among tenant groups
 
 To sync content across tenant groups for the tenants you have permission for:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups).
-2. Select the checkboxes next to the tenant group you want to sync, then select **Sync tenant group**.
+2. Select the checkbox next to the tenant group you want to sync, then select **Sync tenant group**.
 3. Select **Sync** on the prompt that appears.
-
-> [!NOTE]
-> It may take a few minutes to sync.
-
 4. Once the sync is completed, you see one of the following statuses:
+   - Success
+   - Partially successful
+   - Failure
 
-- Success
-- Partially successful
-- Failure
+5. If you experience a partial success or failure, select the value in the **Last sync result** column to investigate the cause.  
 
-    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-sync-results-small.png" alt-text="Screenshot of the sync results with status highlighted." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-sync-results.png":::
-
-5. If you experience a partial success or failure state, select on the value  in **Last Sync Results** column to investigate the cause.  
-
-    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-sync-partial.png" alt-text="Screenshot of the sync results details from the sync results pane.":::
-
-Sync results display the number of synced tenants and synced content. The number of synced tenants shows the number of tenants where all the custom detection rules applied successfully. For example, if you have 3 tenants in a tenant group and all 3 tenants have the same custom detection rules applied successfully, the number of synced tenants is 3. If only 2 out of 3 tenants have the custom detection rules applied successfully, the number of synced tenants is 2. The number of synced content shows the number of custom detection rules that are synced across all target tenants.
+Sync results show the number of synced tenants and content. Synced tenants indicate how many tenants had custom detection rules applied successfully. For example, if all rules are applied in 3 out of 3 tenants, the count is 3; if only 2 tenants succeed, the count is 2. Synced content represents the total custom detection rules synced across all target tenants.
 
 ## Edit tenant groups
 

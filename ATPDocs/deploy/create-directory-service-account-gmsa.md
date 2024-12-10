@@ -11,8 +11,10 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
 For more information, see [Directory Service Accounts for Microsoft Defender for Identity](../directory-service-accounts.md).
  
->[!TIP]
->In multi-forest, multi-domain environments, we recommend creating the gMSAs with a unique name for each forest or domain. Also, create a universal group in each domain, containing all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+>[!NOTE]
+>In multi-forest, multi-domain environments, the sensors that need to use the gMSA need to have their computer accounts trusted by the domain where the gMSA was created.
+>We recommend creating a universal group in each domain, containing all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+>We also recommend creating the gMSAs with a unique name for each forest or domain.
 
 ## Prerequisites: Grant permissions to retrieve the gMSA account's password
 
