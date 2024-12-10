@@ -53,7 +53,6 @@ The response object defines the following properties.
 | intent               | list   | A field that specifies the kill chain related intent behind the alert. Multiple values can be reported in this field. The **intent** enumeration values follow the [MITRE att@ck enterprise matrix model](https://attack.mitre.org/matrices/enterprise/). Further guidance on the different techniques that make up each intent can be found in MITRE's documentation.<br>  Possible values include:<br/><br>**0**: UNKNOWN<br />**1**: PREATTACK<br />**2**: INITIAL_ACCESS<br />**3**: PERSISTENCE<br />**4**: PRIVILEGE_ESCALATION<br />**5**: DEFENSE_EVASION<br />**6**: CREDENTIAL_ACCESS<br />**7**: DISCOVERY<br />**8**: LATERAL_MOVEMENT<br />**9**: EXECUTION<br />**10**: COLLECTION<br />**11**: EXFILTRATION<br />**12**: COMMAND_AND_CONTROL<br />**13**: IMPACT |
 | isPreview            | bool   | Alerts that have been recently released as GA                |
 | audits *(optional)*  | list   | List of event IDs that are related to the alert              |
-| threatScore          | int    | User investigation priority                                  |
 
 ## Filters
 

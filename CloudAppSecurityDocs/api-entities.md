@@ -37,6 +37,5 @@ The following table describes the supported filters:
 | domain | string | eq, neq, isset, isnotset | The entity's related domain |
 | organization | string | eq, neq, isset, isnotset | Filter entities with the specified organization unit |
 | status | string | eq, neq | Filter entities by status. Possible values include:<br /><br />**0**: N/A<br />**1**: Staged<br />**2**: Active<br />**3**: Suspended<br />**4**: Deleted |
-| score | integer | lt, gt, isset, isnotset | Filter entities by their Investigation Priority Score |
 
 [!INCLUDE [Open support ticket](includes/support.md)]
