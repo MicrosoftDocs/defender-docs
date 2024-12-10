@@ -923,15 +923,17 @@
     items:
       - name: Overview
         items:
-        - name: Overview of Defender for Databases
+        - name: Defender for Databases
           displayName: database, protections
           href: tutorial-enable-databases-plan.md
-        - name: Overview of Defender for Azure SQL Databases
+        - name: Defender for Azure SQL Databases
           displayName: database
           href: defender-for-sql-introduction.md
-        - name: Overview of Defender for SQL servers on machines
-          href: defender-for-sql-servers-introduction.md
+        - name: Defender for SQL servers on machines
           items:
+          - name: Overview of Defender for SQL servers on machines
+            displayName: SQL, SQL servers, defender, machines
+            href: defender-for-sql-servers-introduction.md
           - name: Overview of vulnerability assessment
             displayName: vulnerability, assessment
             href: sql-azure-vulnerability-assessment-overview.md
@@ -941,7 +943,7 @@
         - name: Defender for open-source relational databases
           displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
           href: defender-for-databases-introduction.md
-        - name: Overview of Defender for Azure Cosmos DB
+        - name: Defender for Azure Cosmos DB
           displayName: Cosmos, DB, Cosmos DB
           href: concept-defender-for-cosmos.md
       - name: Deploy
@@ -952,7 +954,7 @@
         - name: Deploy Defender for Azure SQL Databases (TO BE WRITTEN)
           displayName: database
           href: enable-sql-database-plan.md
-        - name: Deploy Defender for SQL servers on machinese Microsoft Defender for SQL servers on machines
+        - name: Deploy Defender for SQL servers on machines
           items:
           - name: Enable Microsoft Defender for SQL servers on machines
             displayName: hybrid, arc, Azure Defender
@@ -973,7 +975,12 @@
           href: defender-for-databases-enable-cosmos-protections.md
       - name: Configure
         items:
-        - name: 
+        - name: Configure vulnerability findings in your Azure SQL databases
+          items:
+          - name: Express configuration
+            displayName: vulnerability, assessment, findings, express
+            href: configure-vulnerability-findings-express.md
+
       - name: Investigate and remediate
         items:
         - name:   
