@@ -33,7 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |--|--|--|
 | December 10 | GA | [Revised interval options of Defender for Cloud scan of a cloud environment](#revised-interval-options-of-defender-for-cloud-scan-of-a-cloud-environment) |
 
-### Revised interval options of Defender for Cloud scan of a cloud environment
+### Revised interval options for Defender for Cloud scan of a cloud environment
 
 December 10, 2024
 
