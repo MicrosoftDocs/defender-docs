@@ -962,6 +962,10 @@
           - name: Enable Defender for SQL servers on machines at scale
             displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
             href: enable-defender-sql-at-scale.md
+          - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
+            href: sql-azure-vulnerability-assessment-enable.md
+          - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
+            href: sql-azure-vulnerability-assessment-enable-classic.md
         - name: Deploy Defender for open-source relational databases
           items:
           - name: Enable on Azure
