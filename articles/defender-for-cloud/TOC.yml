@@ -930,6 +930,7 @@
           displayName: database
           href: defender-for-sql-introduction.md
         - name: Overview of Defender for SQL servers on machines
+          href: defender-for-sql-servers-introduction.md
           items:
           - name: Overview of vulnerability assessment
             displayName: vulnerability, assessment
