@@ -77,7 +77,12 @@ Also, on the details panel on an alert details page, the **Link alerts to anothe
 
     When the process is completed, a new incident is created with the alert or alerts you moved to it. The incident is given a name automatically based on the name of the alert or alerts.
 
-## Notes
+## Activity log
+
+When an alert is correlated with an incident, a message is written to the incident's activity log, attesting that the alert was correlated with it. This message is written in either of the following circumstances:
+
+- An alert is created and automatically correlated with a new or existing incident.
+- An alert is moved from one incident to another. The message appears in the log of the destination incident.
 
 ## See also
 
