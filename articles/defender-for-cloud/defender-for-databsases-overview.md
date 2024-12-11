@@ -10,14 +10,17 @@ author: dcurwin
 
 # Overview of Defender for Databases
 
-Microsoft Defender for Cloud's Defender for Databases plan is a security solution designed to protect your database estate from potential threats and vulnerabilities. It is part of the Microsoft Defender for Cloud suite, which provides threat protection and security management across various cloud environments.
+Microsoft Defender for Cloud's Defender for Databases plan is a security solution designed to protect your database estate from potential threats and vulnerabilities. The Defender for Databases plan provides threat protection and security management across various cloud environments.
 
 Microsoft Defender for Databases consists of four main components, each designed to protect different types of databases:
 
 - [Microsoft Defender for Azure SQL databases](defender-for-sql-introduction.md) - Provides threat protection for Azure SQL databases, detecting and responding to potential security threats.
-- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md) (Can also be [enabled on a Log Analytics workspace](enable-plan-workspace.md)) - Offers security for SQL servers running on virtual machines or physical servers, and can also be enabled on a Log Analytics workspace for enhanced monitoring and threat detection.
+
+- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md) (can also be [enabled on a Log Analytics workspace](enable-plan-workspace.md)) - Offers security for SQL servers running on virtual machines or physical servers, and can also be enabled on a Log Analytics workspace for enhanced monitoring and threat detection.
+
 - [Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md) - Ensures the security of open-source relational databases such as PostgreSQL, MySQL, and MariaDB, providing continuous monitoring and threat detection.
-- [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) - Provides security for Azure Cosmos DB, offering threat protection and real-time alerts to safeguard your data.
+
+- [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) - Provides security for Azure Cosmos DB, offering threat protection, and real-time alerts to safeguard your data.
 
 These four database protection plans are priced separately. Get more info about Defender for Cloud's pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
@@ -29,7 +32,7 @@ The solution supports a wide range of database types, including Azure Database f
 
 ## Benefits
 
-By continuously monitoring database activities and providing real-time alerts, Defender for Databases helps ensure the security of your data. The solution is designed to be easy to use in order to help you manage and respond to multicloud security threats. 
+Defender for Databases continuously monitors database activities and provides real-time alerts, helping ensure the security of your data. The solution is designed to be easy to use to help you manage and respond to multicloud security threats.
 
 ## Related content
 
