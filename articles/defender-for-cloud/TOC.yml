@@ -969,6 +969,9 @@
             href: sql-azure-vulnerability-assessment-enable.md
           - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
             href: sql-azure-vulnerability-assessment-enable-classic.md
+          - name: Advanced Threat Protection for Azure SQL Database
+            displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
+            href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json
         - name: Deploy Defender for open-source relational databases
           items:
           - name: Enable on Azure
@@ -987,6 +990,9 @@
           - name: Express configuration
             displayName: vulnerability, assessment, findings, express
             href: configure-vulnerability-findings-express.md
+          - name: Classic configuration
+            displayName: vulnerability, assessment, findings, classic
+            href: configure-vulnerability-findings-classic.md
 
       - name: Investigate and remediate
         items:
