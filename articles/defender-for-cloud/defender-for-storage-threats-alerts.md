@@ -38,6 +38,8 @@ To minimize the risk of security breaches and configuration errors, security tea
 
 Microsoft security researchers analyzed the attack surface of storage services. The potential security risks are described in the [threat matrix for cloud-based storage services](https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/), which are based on the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/), a knowledge base for the tactics and techniques employed in cyber-attacks.
 
+For a comparison between malware scanning and hash reputation analysis, see [Understanding the differences between these methods](defender-for-storage-introduction.md#understanding-the-differences-between-malware-scanning-and-hash-reputation-analysis).
+
 ## What kind of security alerts does Microsoft Defender for Storage provide?
 
 > [!TIP]
@@ -61,23 +63,6 @@ Security alerts are triggered in the following scenarios:
 
 Security alerts include details of the suspicious activity, relevant investigation steps, remediation actions, and security recommendations. Alerts can be exported to Microsoft Sentinel or any other third-party SIEM/XDR tool. Learn more about [how to stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
 
-## Understand the differences between malware scanning and hash reputation analysis  
+## Related content
 
-Defender for Storage offers two capabilities to detect malicious content uploaded to storage accounts: **Malware scanning** (paid add-on feature available only on the new plan) and **hash reputation analysis** (available in all plans).
-
-### Malware scanning (paid add-on feature available only on the new plan)
-
-**Malware scanning** uses Microsoft Defender Antivirus (MDAV) to scan blobs uploaded to Blob storage, providing a comprehensive analysis that includes deep file scans and hash reputation analysis. This feature provides an enhanced level of detection against potential threats.
-
-### Hash reputation analysis (available in all plans)
-
-**Hash reputation analysis** detects potential malware in Blob storage and Azure Files by comparing the hash values of newly uploaded blobs/files against those of known malware by [Microsoft Threat Intelligence](https://go.microsoft.com/fwlink/?linkid=2128684). Not all file protocols and operation types are supported with this capability, leading to some operations not being monitored for potential malware uploads. Unsupported use cases include SMB file shares and when a blob is created using [Put Block](/rest/api/storageservices/put-block) and [Put Block List](/rest/api/storageservices/put-block-list).
-
-In summary, malware scanning, available exclusively on the new plan for Blob storage, provides a more comprehensive approach to malware detection. It achieves this by analyzing the full content of files and incorporating hash reputation analysis into its scanning methodology.
-
-## Next steps
-
-In this article, you learned about Microsoft Defender for Storage.
-
-> [!div class="nextstepaction"]
-> [Enable Defender for Storage](enable-enhanced-security.md)
+- [Understanding malware scanning results](understand-malware-scan-results.md)
