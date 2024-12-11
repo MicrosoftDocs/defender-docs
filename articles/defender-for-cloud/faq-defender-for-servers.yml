@@ -1,4 +1,3 @@
-  ### YamlMime:FAQ
 metadata:
   title: Common questions - Defender for Servers
   description: Get answers to frequently asked questions about Microsoft Defender for Servers.
@@ -185,6 +184,7 @@ sections:
           The inventory view lists your Defender for Cloud connected resources from a Cloud Security Posture Management (CSPM) perspective. The filters show only the resources with active recommendations.
 
           For example, if you have access to eight subscriptions but only seven currently have recommendations, filter by **Resource type = Subscriptions** shows only the seven subscriptions with active recommendations:
+
 
       - question: |
           When should I use a "Deny all traffic" rule?
