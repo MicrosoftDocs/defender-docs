@@ -4,15 +4,15 @@ description: Learn how to assign access to a workload owner of an Amazon Web Ser
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
-ms.date: 07/01/2024
+ms.date: 12/11/2024
 #customer intent: As a workload owner, I want to learn how to assign access to my AWS or GCP connector so that I can view the suggested recommendations provided by Defender for Cloud.
 ---
 
 # Assign access to workload owners
 
-When you onboard your AWS or GCP environments, Defender for Cloud automatically creates a security connector as an Azure resource inside the connected subscription and resource group. Defender for cloud also creates the identity provider as an IAM role it requires during the onboarding process.
+When you onboard your Amazon Web Service (AWS) or Google Cloud Project (GCP) environments, Defender for Cloud automatically creates a security connector as an Azure resource within the connected subscription and resource group. Defender for Cloud also creates the identity provider as an IAM role required during the onboarding process.
 
-Assign permission to users, on specific security connectors, below the parent connector? Yes, you can. You need to determine to which AWS accounts or GCP projects you want users to have access to. Meaning, you need to identify the security connectors that correspond to the AWS account or GCP project to which you want to assign users access.
+To assign permissions to users on a specific connector below the parent connector, you need to determine which AWS accounts or GCP projects you want users to access. You need to identify the security connectors that correspond to the AWS account or GCP project you want to assign users access to.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Assign permission to users, on specific security connectors, below the parent co
 
 ## Configure permissions on the security connector
 
-Permissions for security connectors are managed through Azure role-based access control (RBAC). You can assign roles to users, groups, and applications at a subscription, resource group, or resource level.
+Permissions for security connectors are managed through Azure Role-Based Access Control (RBAC). You can assign roles to users, groups, and applications at a subscription, resource group, or resource level.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -118,7 +118,7 @@ Permissions for security connectors are managed through Azure role-based access 
 
 1. Select **Review + assign**.
 
-After setting the permission for the security connector, the workload owners will be able to view recommendations in Defender for Cloud for the AWS and GCP resources that are associated with the security connector.
+After setting the permission for the security connector, workload owners will be able to view recommendations in Defender for Cloud for the AWS and GCP resources associated with the security connector.
 
 ## Next step
 
