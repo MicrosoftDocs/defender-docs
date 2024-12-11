@@ -48,8 +48,6 @@ procedureSection:
 
           - A name and description for the automation.
           - The triggers that will initiate this automatic workflow. For example, you might want your logic app to run when a security alert that contains "SQL" is generated.
-
-              If your trigger is a recommendation that has "sub-recommendations", for example **Vulnerability assessment findings on your SQL databases should be remediated**, the logic app will not trigger for every new security finding; only when the status of the parent recommendation changes.
       - |
         Specify the consumption logic app that will run when your trigger conditions are met.
       - |

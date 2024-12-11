@@ -27,6 +27,27 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## December 2024
+
+|Date | Category | Update|
+|--|--|--|
+| December 10 | GA | [Defender for Cloud Setup experience](#defender-for-cloud-setup-experience) |
+| December 10 | GA | [Revised interval options for Defender for Cloud scan of a cloud environment](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) |
+
+### Defender for Cloud Setup experience
+
+December 10, 2024
+
+The Setup experience allows you to start your initial steps with Microsoft Defender for Cloud by connecting cloud environments such as cloud infrastructure, code repositories, and external container registries.
+
+You're guided through the setup of your cloud environment, to protect your assets with advanced security plans, effortlessly perform quick actions to increase security coverage at scale, be aware of connectivity issues, and be notified of new security capabilities. You can navigate to the new experience from the [Defender for Cloud menu by selecting **Setup**](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SetupExperience).
+
+### Revised interval options for Defender for Cloud scan of a cloud environment
+
+December 10, 2024
+
+The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, and DockerHub have been revised. The scan interval feature allows you to control the frequency at which the Defender for Cloud initiates a scan of the cloud environment. You can set the scan interval to 4, 6, 12, or 24 hours, when adding or editing a cloud connector. The default scan interval for new connectors continues to be 12 hours.
+
 ## November 2024
 
 |Date | Category | Update|
