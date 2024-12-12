@@ -92,14 +92,14 @@ sections:
       - question: |
           What happens if I enabled the Defender for Servers plan at the workspace level only (not at subscription)?
         answer: |
-          You can enable Microsoft Defender for Servers at the Log Analytics workspace level, but only servers reporting to that workspace will be protected and billed, and those servers won't receive some benefits, such as Microsoft Defender for Endpoint, vulnerability assessment, and just-in-time VM access.       
+          You can enable Microsoft Defender for Servers at the Log Analytics workspace level, but only servers reporting to that workspace are protected and billed, and those servers don't receive some benefits, such as Microsoft Defender for Endpoint, vulnerability assessment, and just-in-time VM access.       
       
       - question: |
           Is the 500 MB of free data ingestion allowance applied per workspace or per machine?
         answer: |
-          When you have [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) enabled, you get 500 MB of free data ingestion per day. The allowance is specifically for the security data types that are directly collected by Defender for Cloud.
+          When you have [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) enabled, you get 500 MB of free data ingestion per day. The allowance is specifically for the security data types directly collected by Defender for Cloud.
           
-          This allowance is a daily rate that's averaged across all nodes. Your total daily free limit is equal to \[number of machines\] &times; 500 MB. You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
+          This allowance is a daily rate averaged across all nodes. Your total daily free limit is equal to \[number of machines\] &times; 500 MB. You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 
       - question: |
           What data types are included in the daily allowance?
@@ -124,20 +124,20 @@ sections:
           Yes. You're charged for all machines that are protected by Defender for Servers in Azure subscriptions, connected AWS accounts, or connected GCP projects. The term *machines* includes Azure virtual machines, instances of Azure Virtual Machine Scale Sets, and Azure Arc-enabled servers. Machines that don't have Log Analytics installed are covered by protections that don't depend on the Log Analytics agent.
 
       - question: |
-          What's this "MDE.Windows" / "MDE.Linux" extension running on my machine?
+          What's this "MDE. Windows" / "MDE.Linux" extension running on my machine?
         answer: |
-          In the past, Microsoft Defender for Endpoint was provisioned by the Log Analytics agent. When [we expanded support to include Windows Server 2019](release-notes-archive.md#microsoft-defender-for-endpoint-integration-with-azure-defender-now-supports-windows-server-2019-and-windows-10-on-windows-virtual-desktop-released-for-general-availability-ga) and Linux, we also added an extension to perform the automatic onboarding.
+          In the past, the Log Analytics agent provisioned Microsoft Defender for Endpoint. When [we expanded support to include Windows Server 2019](release-notes-archive.md#microsoft-defender-for-endpoint-integration-with-azure-defender-now-supports-windows-server-2019-and-windows-10-on-windows-virtual-desktop-released-for-general-availability-ga) and Linux, we also added an extension to perform the automatic onboarding.
 
           Defender for Cloud automatically deploys the extension to machines running:
 
           - Windows Server 2019 and Windows Server 2022
           - Windows Server 2012 R2 and 2016 if [MDE Unified Solution integration](enable-defender-for-endpoint.md) is enabled
           - Windows 10 on Azure Virtual Desktop.
-          - Other versions of Windows Server if Defender for Cloud doesn't recognize the OS version (for example, when a custom VM image is used). In this case, Microsoft Defender for Endpoint is still provisioned by the Log Analytics agent.
+          - Other versions of Windows Server if Defender for Cloud doesn't recognize the OS version (for example, when a custom VM image is used). In this case, the Log Analytics agent still provisions Microsoft Defender for Endpoint.
           - Linux.
 
           > [!IMPORTANT]
-          > If you delete the MDE.Windows/MDE.Linux extension, it won't remove Microsoft Defender for Endpoint. To offboard the machine, see [Offboard Windows servers.](/microsoft-365/security/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
+          > If you delete the MDE.Windows/MDE.Linux extension, it doesn't remove Microsoft Defender for Endpoint. To offboard the machine, see [Offboard Windows servers.](/microsoft-365/security/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
 
       - question: |
           I enabled the solution but the `MDE.Windows`/`MDE.Linux` extension isn't showing on my machine
@@ -145,9 +145,9 @@ sections:
           If you enabled the integration, but still don't see the extension running on your machines:
 
           1. You need to wait at least 12 hours to be sure there's an issue to investigate.
-          1. If after 12 hours you still don't see the extension running on your machines, check that you've met [Prerequisites](enable-defender-for-endpoint.md#prerequisites) for the integration.
-          1. Ensure you've enabled the [Microsoft Defender for Servers](defender-for-servers-introduction.md) plan for the subscriptions related to the machines you're investigating.
-          1. If you've moved your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+          1. If after 12 hours you still don't see the extension running on your machines, check that the [Prerequisites](enable-defender-for-endpoint.md#prerequisites) for the integration are met.
+          1. Ensure you enabled the [Microsoft Defender for Servers](defender-for-servers-introduction.md) plan for the subscriptions related to the machines you're investigating.
+          1. If you moved your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
           
       - question: |
           What are the licensing requirements for Microsoft Defender for Endpoint?
@@ -164,7 +164,7 @@ sections:
           - On Linux, Defender for Servers deploy Defender for Endpoint including the anti-malware component, and set the component in *passive mode*.
                       
       - question: |
-          How do I switch from a third-party EDR tool?
+          How do I switch from a non-Microsoft EDR tool?
         answer: |
           Full instructions for switching from a non-Microsoft endpoint solution are available in the Microsoft Defender for Endpoint documentation: [Migration overview](/windows/security/threat-protection/microsoft-defender-atp/switch-to-microsoft-defender-migration).
           
@@ -177,7 +177,7 @@ sections:
       - question: |
           Why do I see a Qualys app in my recommended applications?
         answer: |
-          [Microsoft Defender for Servers](defender-for-servers-introduction.md) includes vulnerability scanning for your machines. You don't need a Qualys license or even a Qualys account - everything's handled seamlessly inside Defender for Cloud. For details of this scanner and instructions for how to deploy it, see [Defender for Cloud's integrated Qualys vulnerability assessment solution](deploy-vulnerability-assessment-vm.md).
+          [Microsoft Defender for Servers](defender-for-servers-introduction.md) includes vulnerability scanning for your machines. You don't need a Qualys license or even a Qualys account - Defender for Cloud handles everything seamlessly. For details of this scanner and instructions for how to deploy it, see [Defender for Cloud's integrated Qualys vulnerability assessment solution](deploy-vulnerability-assessment-vm.md).
 
       - question: |
           Why aren't all of my resources shown, such as subscriptions, machines, storage accounts in my asset inventory?
@@ -190,7 +190,7 @@ sections:
       - question: |
           When should I use a "Deny all traffic" rule?
         answer: |
-          A **Deny all traffic** rule is recommended when, as a result of running the algorithm, Defender for Cloud doesn't identify traffic that should be allowed, based on the existing NSG configuration. Therefore, the recommended rule is to deny all traffic to the specified port. The name of this type of rule is displayed as "*System Generated*". After enforcing this rule, its actual name in the NSG will be a string comprised of the protocol, traffic direction, "DENY", and a random number.
+          A **Deny all traffic** rule is recommended when, as a result of running the algorithm, Defender for Cloud doesn't identify traffic that should be allowed, based on the existing NSG configuration. Therefore, the recommended rule is to deny all traffic to the specified port. The name of this type of rule is displayed as "*System Generated*". After enforcing this rule, its actual name in the NSG will be a string that comprises the protocol, traffic direction, "DENY", and a random number.
 
 
       - question: |
@@ -223,30 +223,30 @@ sections:
 
           :::image type="content" source="media/plan-defender-for-servers-data-workspace/connect-workspace.png" alt-text="Screenshot showing how to auto-provision Defender for Cloud to manage your workspaces.":::
 
-          However, if you're using a custom workspace in place of the default workspace, you need to enable the Servers plan on all of your custom workspaces that don't have it enabled.
+          However, if you're using a custom workspace in place of the default workspace, you need to enable the Servers plan on all of your custom workspaces that aren't enabled.
 
-          If you're using a custom workspace and enable the plan on the subscription level only, the `Microsoft Defender for servers should be enabled on workspaces` recommendation appears on the Recommendations page. This recommendation gives you the option to enable the servers plan on the workspace level with the Fix button. You're charged for all VMs in the subscription even if the Servers plan isn't enabled for the workspace. The VMs won't benefit from features that depend on the Log Analytics workspace, such as Microsoft Defender for Endpoint, VA solution (MDVM/Qualys), and Just-in-Time VM access.
+          If you're using a custom workspace and enable the plan on the subscription level only, the `Microsoft Defender for servers should be enabled on workspaces` recommendation appears on the Recommendations page. This recommendation gives you the option to enable the servers plan on the workspace level with the Fix button. You're charged for all VMs in the subscription even if the Servers plan isn't enabled for the workspace. The VMs don't benefit from features that depend on the Log Analytics workspace, such as Microsoft Defender for Endpoint, VA solution (MDVM/Qualys), and Just-in-Time VM access.
 
-          Enabling the Servers plan on both the subscription and its connected workspaces, won't incur a double charge. The system will identify each unique VM.
+          Enabling the Servers plan on both the subscription and its connected workspaces, won't incur a double charge. The system identifies each unique VM.
 
-          If you enable the Servers plan on cross-subscription workspaces, connected VMs from all subscriptions will be billed, including subscriptions that don't have the Servers plan enabled.
-
-      - question: |
-          Will I be charged for machines without the Log Analytics agent installed?
-        answer: |
-          Yes. When you enable [Microsoft Defender for Servers](defender-for-servers-introduction.md) on an Azure subscription or a connected AWS account, you'll be charged for all machines that are connected to your Azure subscription or AWS account. The term machines include Azure virtual machines, Azure Virtual Machine Scale Sets instances, and Azure Arc-enabled servers. Machines that don't have Log Analytics installed are covered by protections that don't depend on the Log Analytics agent.
-
+          If you enable the Servers plan on cross-subscription workspaces, connected VMs from all subscriptions are be billed, including subscriptions that don't have the Servers plan enabled.
 
       - question: |
-          If a Log Analytics agent reports to multiple workspaces, will I be charged twice?
+          Am I charged for machines without the Log Analytics agent installed?
         answer: |
-          If a machine, reports to multiple workspaces, and all of them have Defender for Servers enabled, the machines will be billed for each attached workspace.
+          Yes. When you enable [Microsoft Defender for Servers](defender-for-servers-introduction.md) on an Azure subscription or a connected AWS account, you are charged for all machines that are connected to your Azure subscription or AWS account. The term machines include Azure virtual machines, Azure Virtual Machine Scale Sets instances, and Azure Arc-enabled servers. Machines that don't have Log Analytics installed are covered by protections that don't depend on the Log Analytics agent.
+
+
+      - question: |
+          If a Log Analytics agent reports to multiple workspaces, am I charged twice?
+        answer: |
+          If a machine, reports to multiple workspaces, and all of them have Defender for Servers enabled, the machines are billed for each attached workspace.
 
 
       - question: |
           If a Log Analytics agent reports to multiple workspaces, is the 500-MB free data ingestion available on all of them?
         answer: |
-          Yes. If you configure your Log Analytics agent to send data to two or more different Log Analytics workspaces (multi-homing), you'll get 500-MB free data ingestion for each workspace. It's calculated per node, per reported workspace, per day, and available for every workspace that has a 'Security' or 'AntiMalware' solution installed. You'll be charged for any data ingested over the 500-MB limit.
+          Yes. If you configure your Log Analytics agent to send data to two or more different Log Analytics workspaces (multi-homing), you get 500-MB free data ingestion for each workspace. It's calculated per node, per reported workspace, per day, and available for every workspace that has a 'Security' or 'AntiMalware' solution installed. You are charged for any data ingested over the 500-MB limit.
 
 
       - question: |
@@ -271,7 +271,7 @@ sections:
           - [ProtectionStatus](/azure/azure-monitor/reference/tables/protectionstatus)
           - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 
-          If the workspace is in the legacy Per Node pricing tier, the Defender for Cloud and Log Analytics allocations are combined and applied jointly to all billable ingested data. To learn more on how Microsoft Sentinel customers can benefit, please see the [Microsoft Sentinel Pricing page](https://azure.microsoft.com/pricing/details/microsoft-sentinel/).
+          If the workspace is in the legacy Per Node pricing tier, the Defender for Cloud and Log Analytics allocations are combined and applied jointly to all billable ingested data. To learn more on how Microsoft Sentinel customers can benefit, see the [Microsoft Sentinel Pricing page](https://azure.microsoft.com/pricing/details/microsoft-sentinel/).
 
 
       - question: |
@@ -321,7 +321,7 @@ sections:
 
           You can learn how to [Analyze usage in Log Analytics workspace](/azure/azure-monitor/logs/analyze-usage).
 
-          Based on your usage, you won't be billed until you've used your daily allowance. If you're receiving a bill, it's only for the data used after the 500-MB limit is reached, or for other service that doesn't fall under the coverage of Defender for Cloud.
+          Based on your usage, you aren't billed until you've used your daily allowance. If you're receiving a bill, it's only for the data used after the 500-MB limit is reached, or for other service that doesn't fall under the coverage of Defender for Cloud.
                 
       - question: |
           How can I manage my costs?
