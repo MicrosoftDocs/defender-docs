@@ -18,7 +18,7 @@ Defender for Azure SQL Databases in Microsoft Defender for Cloud allows you to p
 
 - Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS account](quickstart-onboard-aws.md) or [GCP projects](quickstart-onboard-gcp.md).
 
-- You must [enable the Defender for Databses plan](tutorial-enable-databases-plan.md) on your Defender for Cloud subscription.
+- You must [enable the Defender for Databases plan](tutorial-enable-databases-plan.md) on your Defender for Cloud subscription.
 
 ## Enable Defender for Azure SQL Databases
 
@@ -32,4 +32,18 @@ When you enable the Defender for Azure SQL Databases plan, you enable protection
 
 1. Select the relevant Azure subscription, AWS account or GCP project.
 
-1. 
+1. Locate the Databases plan and select **Select types**.
+
+    :::image type="content" source="media/enable-sql-database-plan.md/select-type.png" alt-text="Screenshot of the environment settings page that shows you where the select types button is located." lightbox="media/enable-sql-database-plan.md/select-type.png":::
+
+1. Toggle Azure SQL Databases to **On**.
+
+    :::image type="content" source="media/enable-sql-database-plan.md/toggle-on.png" alt-text="Screenshot that shows you where to select, to enable the Azure SQL Databases plan." lightbox="media/enable-sql-database-plan.md/toggle-on.png":::
+
+1. Select **Continue**.
+
+1. Select **Save**.
+
+ ## Related content
+
+- [Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)

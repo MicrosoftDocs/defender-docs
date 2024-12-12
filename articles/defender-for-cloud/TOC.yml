@@ -954,7 +954,7 @@
         - name: Deploy Defender for Databases
           displayName: database
           href: tutorial-enable-databases-plan.md
-        - name: Deploy Defender for Azure SQL Databases (TO BE WRITTEN)
+        - name: Deploy Defender for Azure SQL Databases
           displayName: database
           href: enable-sql-database-plan.md
         - name: Deploy Defender for SQL servers on machines
