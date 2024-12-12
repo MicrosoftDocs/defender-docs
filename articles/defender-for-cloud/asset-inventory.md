@@ -8,7 +8,7 @@ author: dcurwin
 ---
 # Use asset inventory to manage your resources' security posture
 
-The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of the resources you've connected to Defender for Cloud. Defender for Cloud periodically analyzes the security state of resources connected to your subscriptions to identify potential security issues and provides you with active recommendations. Active recommendations are recommendations that can be resolved to improve your security posture.
+The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of the resources you connected to Defender for Cloud. Defender for Cloud periodically analyzes the security state of resources connected to your subscriptions to identify potential security issues and provides you with active recommendations. Active recommendations are recommendations that can be resolved to improve your security posture.
 
 Use this view and its filters to address such questions as:
 
@@ -32,7 +32,7 @@ The security recommendations on the asset inventory page are also shown in the *
 
 The inventory page provides the following tools:
 
-:::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
+:::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
 
 ### 1 - Summaries
 
@@ -47,7 +47,7 @@ Before you define any filters, a prominent strip of values at the top of the inv
 
 The multiple filters at the top of the page provide a way to quickly refine the list of resources according to the question you're trying to answer. For example, if you wanted to know which of your machines with the tag 'Production' are missing the Log Analytics agent, you can filter the list for **Agent monitoring**:"Not installed" and **Tags**:"Production".
 
-As soon as you've applied filters, the summary values are updated to relate to the query results.
+As soon as you apply filters, the summary values are updated to relate to the query results.
 
 ### 3 - Export tools
 
@@ -90,21 +90,21 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
     ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
 
-1. If you've defined some filters and left the page open, Defender for Cloud won't update the results automatically. Any changes to resources won't impact the displayed results unless you manually reload the page or select **Refresh**.
+1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't impact the displayed results unless you manually reload the page or select **Refresh**.
 
 ## Access a software inventory
 
-To access the software inventory, you'll need one of the following **paid** solutions:
+To access the software inventory, you need one of the following **paid** solutions:
 
 - [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
 - [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender for Servers P2](plan-defender-for-servers-select-plan.md#plan-features).
 - [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) from [Defender for Servers](defender-for-servers-introduction.md).
 
-### Examples of using Azure Resource Graph Explorer to access and explore software inventory data:
+### Examples using Azure Resource Graph Explorer to access and explore software inventory data
 
 1. Open **Azure Resource Graph Explorer**.
 
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Launching Azure Resource Graph Explorer** recommendation page" :::
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot shows how to launch Azure Resource Graph Explorer** recommendation page" :::
 
 1. Select the following subscription scope: **securityresources/softwareinventories**
 
