@@ -864,7 +864,18 @@
       - name: How does Defender for Containers work?
         displayName: containers
         href: defender-for-containers-architecture.md
-      - name: Vulnerability assessments (Defender Vulnerability Management)
+      - name: Kubernetes node protection
+        items:
+          - name: Overview
+            displayName: k8s, containers, aks, nodes
+            href: kubernetes-nodes-overview.md
+          - name: Kubernetes node vulnerability assessment
+            displayName: k8s, containers, aks, node, vulnerability, assessment
+            href: kubernetes-nodes-va.md
+          - name: Kubernetes node malware detection
+            displayName: k8s, containers, aks, node, malware
+            href: kubernetes-nodes-malware.md
+      - name: Container registry protection
         items:
           - name: Vulnerability assessments for Azure
             href: agentless-vulnerability-assessment-azure.md
@@ -905,9 +916,9 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
-      - name: Kubeaudit events in advanced hunting
+      - name: Investigate clusters with Cloud Security Explorer
         displayName: k8s, containers
-        href: kubeaudit-events-advanced-hunting.md
+        href: cloud-security-explorer-kubernetes-clusters.md
       - name: Defender for Kubernetes (deprecated)
         displayName: clusters, k8s, aks
         href: defender-for-kubernetes-introduction.md
@@ -1293,6 +1304,12 @@
         - name: Defender for Open-Source Relational Databases multicloud
           displayName: Defender for Open-Source Relational Databases, multicloud, RDS, threat detection
           href: episode-fifty-one.md
+        - name: Binary drift detection in Defender for Containers
+          displayName: Defender for Containers, binary drift detection
+          href: episode-fifty-two.md
+        - name: Updated File Integrity Monitoring in Defender for Servers
+          displayName: Defender for Servers, FIM
+          href: episode-fifty-three.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation
