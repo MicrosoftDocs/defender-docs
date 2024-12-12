@@ -23,8 +23,6 @@ This article provides information about Microsoft's unified security operations 
 - All features in Microsoft's SecOps platform that are in general availability are available in both commercial and GCC High and DoD clouds. 
 - Features still in preview are available only in the commercial cloud.
 
-While [automatic attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Defender XDR is generally available, [SAP support for attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft's unified SecOps platform is available only in the commercial cloud.
-
 For more information, see:
 
 - [Microsoft Defender XDR for US Government customers](/defender-xdr/usgov)
