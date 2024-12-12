@@ -229,7 +229,7 @@ sections:
 
           Enabling the Servers plan on both the subscription and its connected workspaces, won't incur a double charge. The system identifies each unique VM.
 
-          If you enable the Servers plan on cross-subscription workspaces, connected VMs from all subscriptions are be billed, including subscriptions that don't have the Servers plan enabled.
+          If you enable the Servers plan on cross-subscription workspaces, connected VMs from all subscriptions are billed, including subscriptions that don't have the Servers plan enabled.
 
       - question: |
           Am I charged for machines without the Log Analytics agent installed?

@@ -104,7 +104,7 @@ To access the software inventory, you need one of the following **paid** solutio
 
 1. Open **Azure Resource Graph Explorer**.
 
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot shows how to launch Azure Resource Graph Explorer** recommendation page" :::
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot shows how to launch Azure Resource Graph Explorer** recommendation page." :::
 
 1. Select the following subscription scope: **securityresources/softwareinventories**
 
