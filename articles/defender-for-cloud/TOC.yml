@@ -308,7 +308,7 @@
         href: concept-agentless-data-collection.md
       - name: Internet exposure analysis
         displayName: internet, exposure, analysis
-        href: concept-internet-exposure-analysis.md
+        href: internet-exposure-analysis.md
       - name: Supported resource types for multicloud in Foundational CSPM
         href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection

@@ -7,7 +7,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 12/15/2024
 ms.custom: template-concept
-#customer intent: As a user, I want to understand how Defender for Cloud detects and assesses internet exposure for my multicloud resources, so I can identify and mitigate potential security risks effectively.
+#customer intent: As a user, I want to understand how Defender for Cloud detects and assesses internet exposure for my multicloud resources. This knowledge will help me identify and mitigate potential security risks effectively.
 ---
 
 # Internet exposure analysis
