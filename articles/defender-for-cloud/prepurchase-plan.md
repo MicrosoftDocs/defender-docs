@@ -9,7 +9,7 @@ ms.date: 05/15/2024
 
 # Optimize Microsoft Defender for Cloud costs with a pre-purchase plan
 
-You can save on your Microsoft Defender for Cloud costs when you [prepurchase Microsoft Defender for Cloud commit units (DCU) for one year](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/#purchase-options). You can use the prepurchased DCUs at any time during the purchase term. Unlike VMs, the prepurchased units don't expire on an hourly basis and you can use them at any time during the term of the purchase.
+You can save on your Microsoft Defender for Cloud costs when you [prepurchase Microsoft Defender for Cloud commit units (DCU) for one year](https://azure.microsoft.com/pricing/details/defender-for-cloud/#purchase-options). You can use the prepurchased DCUs at any time during the purchase term. Unlike VMs, the prepurchased units don't expire on an hourly basis and you can use them at any time during the term of the purchase.
 
 Any eligible Microsoft Defender for Cloud usage deducts from the prepurchased DCUs automatically. You don't need to redeploy or assign a pre-purchased plan to your Microsoft Defender for Cloud workspaces for the DCU usage to get the prepurchase discounts.
 
