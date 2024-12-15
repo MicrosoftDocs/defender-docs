@@ -7,7 +7,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 12/15/2024
 ms.custom: template-concept
-#customer intent: As a user, I want to understand how internet exposure analysis works in Defender for Cloud so that I can effectively limit my risks.
+#customer intent: As a user, I want to understand how Defender for Cloud detects and assesses internet exposure for my multicloud resources, so I can identify and mitigate potential security risks effectively.
 ---
 
 # Internet exposure analysis
@@ -18,15 +18,15 @@ Understanding how you expose your resources to the internet is crucial for maint
 
 ## How Defender for Cloud detects internet exposure
 
-Detecting internet exposure can be as simple as checking to see if a virtual machine (VM) has been assigned a public IP address. However, the process can be much more complex. For example, a VM might not be directly exposed to the internet but could exist behind a load balancer. A load balancer is a device or service that distributes network traffic across multiple servers to ensure no single server becomes overwhelmed. 
+Detecting internet exposure can be as simple as checking to see if a virtual machine (VM) has a public IP address assigned to it. However, the process can be much more complex. For example, a VM might not be directly exposed to the internet but could exist behind a load balancer. A load balancer is a device or service that distributes network traffic across multiple servers to ensure no single server becomes overwhelmed. 
 
-The load balancer itself can be exposed to the internet and routes traffic to the machine. Therefore, even if the Azure resource appears not to be exposed, it is still receiving internet traffic indirectly. Defender for Cloud uses a combination of techniques to detect internet exposure. 
+The load balancer itself can be exposed to the internet and routes traffic to the machine. Therefore, even if the Azure resource appears not to be exposed, its still receiving internet traffic indirectly. Defender for Cloud uses a combination of techniques to detect internet exposure. 
 
-The following table presents a list of resources that Defender for Cloud assess for internet exposure:
+The following table presents a list of resources that Defender for Cloud assesses for internet exposure:
 
 | Category | Services/Resources |
 |--|--|
-| Virtual machines | Azure VM <br> AWS EC2 <br> GCP compute instance |
+| Virtual machines | Azure VM <br> Amazon Web Service (AWS) EC2 <br> Google Cloud Project (GCP) compute instance |
 | Virtual machine clusters | Azure Virtual Machine scale set <br> GCP instance groups |
 | Databases | Azure SQL <br> Azure PostgreSQL <br> Azure MySQL <br> Azure SQL managed instance <br> Azure MariaDB <br> Azure Cosmos DB <br> Azure Synapse Analytics <br> AWS RDS DB <br> GCP SQL admin instance |
 | Storage | Azure Storage <br> AWS S3 buckets <br> GCP storage buckets |
