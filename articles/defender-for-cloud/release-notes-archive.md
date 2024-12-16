@@ -3793,9 +3793,7 @@ Learn more about the [Assessments REST API](/rest/api/defenderforcloud/assessmen
 
 Security Center's asset inventory page offers many filters to quickly refine the list of resources displayed. Learn more in [Explore and manage your resources with asset inventory](asset-inventory.md).
 
-A new filter offers the option to refine the list according to the cloud accounts you've connected with Security Center's multicloud features:
-
-:::image type="content" source="media/asset-inventory/filter-environment.png" alt-text="Inventory's environment filter":::
+A new filter offers the option to refine the list according to the cloud accounts you've connected with Security Center's multicloud feature.
 
 Learn more about the multicloud capabilities:
 
