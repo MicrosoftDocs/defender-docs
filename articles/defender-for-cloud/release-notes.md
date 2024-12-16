@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |--|--|--|
 | December 10 | GA | [Defender for Cloud Setup experience](#defender-for-cloud-setup-experience) |
 | December 10 | GA | [Revised interval options for Defender for Cloud scan of a cloud environment](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) |
+| December 17 | GA | [Sensitivity scanning capabilities now include Azure file shares](#Sensitivity-scanning-capabilities-now-include-Azure-file-shares) |
 
 ### Sensitivity scanning capabilities now include Azure file shares 
 
