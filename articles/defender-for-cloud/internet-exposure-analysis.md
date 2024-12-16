@@ -12,9 +12,9 @@ ms.custom: template-concept
 
 # Internet exposure analysis
 
-Internet exposure analysis in Microsoft Defender for Cloud lets you understand which of your multicloud resources are exposed to the internet. Exposure can result from misconfigurations, vulnerabilities, or other issues from connected devices in your [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).
+Internet exposure analysis in Microsoft Defender for Cloud lets you understand which of your multicloud resources are exposed to the internet. Exposure can result from misconfigurations, vulnerabilities, or other issues from connected devices in your [Cloud Security Graph](concept-attack-path.md#what-is-cloud-security-graph).
 
-Understanding how you expose your resources to the internet is crucial for maintaining security and operational efficiency. Defender for Cloud can identify which resources are exposed to the internet and which aren't. Identifying these resources is crucial for maintaining a secure environment. This process is challenging because customers often use complex network architectures.
+Understanding how your resources are exposed to the Internet is essential for maintaining both security and operational efficiency. Defender for Cloud helps identify which resources are exposed and which aren't, ensuring a secure environment. This identification process can be challenging due to the complex network architectures often used by customers.
 
 ## How Defender for Cloud detects internet exposure
 
@@ -30,7 +30,7 @@ The following table lists the resources that Defender for Cloud assesses for Int
 |--|--|
 | Virtual machines | Azure VM <br> AWS EC2 <br> Google Cloud Project (GCP) compute instance |
 | Virtual machine clusters | Azure Virtual Machine scale set <br> GCP instance groups |
-| Databases | Azure SQL <br> Azure PostgreSQL <br> Azure MySQL <br> Azure SQL managed instance <br> Azure MariaDB <br> Azure Cosmos DB <br> Azure Synapse Analytics <br> AWS RDS DB <br> GCP SQL admin instance |
+| Databases (DB) | Azure SQL <br> Azure PostgreSQL <br> Azure MySQL <br> Azure SQL managed instance <br> Azure MariaDB <br> Azure Cosmos DB <br> Azure Synapse Analytics <br> AWS Relational Database Service (RDS) DB <br> GCP SQL admin instance |
 | Storage | Azure Storage <br> AWS S3 buckets <br> GCP storage buckets |
 | AI | Azure OpenAI <br> Azure AI services <br> Azure Search services |
 | Containers | Azure AKS <br> AWS EKS <br> GCP GKE |
