@@ -54,8 +54,8 @@ The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, 
 |--|--|--|
 | November 28 | Preview | [Sensitivity scanning capabilities now include Azure file shares (Preview)](#sensitivity-scanning-capabilities-now-include-azure-file-shares-preview) |
 | November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
-| November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) | 
-| November 25 | Preview | [Defender for Storage Malware Scanning for blobs up to 50GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50gb-preview) |
+| November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) |
+| November 25 | Preview | [Defender for Storage malware scanning for blobs up to 50 GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50-gb-preview) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
@@ -109,13 +109,13 @@ As of November 26, 2024 the names of the sensitivity label scopes in the user in
 
 Learn more about [how to configure sensitivity labels](data-sensitivity-settings.md).
 
-### Defender for Storage Malware Scanning for blobs up to 50GB (Preview)
+### Defender for Storage malware scanning for blobs up to 50 GB (Preview)
 
 November 25, 2024
 
 **Estimated date for change:** December 1, 2024
 
-Starting on December 1, 2024, Defender for Storage Malware Scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+Starting on December 1, 2024, Defender for Storage malware scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
 
 Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
 
