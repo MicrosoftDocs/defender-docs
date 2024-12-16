@@ -20,7 +20,7 @@ introduction: |
   This article describes how to add regulatory compliance standards as security standards in an Azure subscription, AWS account, or GCP project.
 prerequisites:
   summary: |  
-    - To add compliance standards, at least one Defender for Cloud plan must be enabled.
+    - To add compliance standards, at least one of the following plans must be enabled: **Defender for Cloud CSPM**, **Defender for Servers Plan 2**, **Defender for Containers**, or **Defender for App Service**.
     - You need `Owner` or `Policy Contributor` permissions to add a standard.
 procedureSection:
   - title: |
