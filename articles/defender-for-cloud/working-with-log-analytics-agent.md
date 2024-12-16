@@ -106,7 +106,7 @@ Here's a complete breakdown of the Security and App Locker event IDs for each se
 > - To collect Windows Filtering Platform [Event ID 5156](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=5156), you need to enable [Audit Filtering Platform Connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection) (Auditpol /set /subcategory:"Filtering Platform Connection" /Success:Enable)
 >
 
-### Setting the security event option at the workspace level
+### Set the security event option at the workspace level
 
 You can define the level of security event data to store at the workspace level.
 

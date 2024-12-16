@@ -61,7 +61,6 @@ To create a new default workflow:
    > [!NOTE]
    > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enabling-defender-for-cloud-integration-without-github-code-scanning).
 
-
    :::image type="content" source="media/onboarding-guide-42crunch/workflow-editor.png" alt-text="Screenshot showing GitHub workflow editor." lightbox="media/onboarding-guide-42crunch/workflow-editor.png":::
 
 1. Select **Commit changes**. You can either directly commit to the main branch or create a pull request. We would recommend following GitHub best practices by creating a PR, as the default workflow launches when a PR is opened against the main branch.
@@ -76,8 +75,10 @@ To create a new default workflow:
 
 You now verified that the Audit results are showing in GitHub Code Scanning. Next, we verify that these Audit results are available within Defender for Cloud. It might take up to 30 minutes for results to show in Defender for Cloud.
 
-#### Enabling Defender for Cloud integration without GitHub Code Scanning
+#### Enable Defender for Cloud integration without GitHub Code Scanning
+
 If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from 42Crunch into Defender for Cloud, you can follow these steps. After adding in the 42Crunch workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+
 ```yml
 - name: save-sarif-report
         if: always()
@@ -95,7 +96,7 @@ If you do not have GitHub Code Scanning for your environment and wish to integra
 
 Next, add an additional permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
 
-After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud. 
+After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud.
 
 #### Navigate to Defender for Cloud
 

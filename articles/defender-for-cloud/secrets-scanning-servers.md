@@ -1,14 +1,14 @@
 ---
-title: Protecting VM secrets with Microsoft Defender for Cloud
+title: Protect VM secrets with Microsoft Defender for Cloud
 description: Learn how to protect VM secrets with Defender for Server's agentless secrets scanning in Microsoft Defender for Cloud.
 ms.topic: overview
 ms.date: 04/16/2024
 ---
 
 
-# Protecting VM secrets
+# Protect VM secrets
 
-Defender for Cloud provides [agentless secrets scanning](secrets-scanning.md) for virtual machines. Scanning helps you to quickly detect, prioritizes, and remediate exposed secrets. Secrets detection can identify a wide range of secrets types, such as tokens, passwords, keys, or credentials, stored in different types of file on the OS file system. 
+Defender for Cloud provides [agentless secrets scanning](secrets-scanning.md) for virtual machines. Scanning helps you to quickly detect, prioritizes, and remediate exposed secrets. Secrets detection can identify a wide range of secrets types, such as tokens, passwords, keys, or credentials, stored in different types of file on the OS file system.
 
 Defender for Cloud's agentless secrets scanning for Virtual Machines (VM) locates plaintext secrets that exist in your environment. If secrets are detected, Defender for Cloud can assist your security team to prioritize and take actionable remediation steps to minimize the risk of lateral movement, all without affecting your machine's performance.
 
@@ -17,9 +17,9 @@ Defender for Cloud's agentless secrets scanning for Virtual Machines (VM) locate
 Secrets scanning for VMs is agentless and uses cloud APIs.
 
 1. Scanning captures disk snapshots and analyses them, with no impact on VM performance.
-1. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud. 
+1. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud.
 1. The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
-    - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud Recommendations page. 
+    - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud Recommendations page.
     - Directories recognized as containing test-related content are excluded from scanning.
 
 ## What’s supported?
@@ -43,7 +43,7 @@ There are a number of ways. Not every method is supported for every secret. Revi
 - Review secrets recommendations: When secrets are found on assets, a recommendation is triggered under the Remediate vulnerabilities security control on the Defender for Cloud Recommendations page. Recommendations are triggered as follows:
 - Review secrets with cloud security explorer. Use cloud security explorer to query the cloud security graph. You can build your own queries, or use one of the built-in templates to query for VM secrets across your environment.
 - Review attack paths: Attack path analysis scans the cloud security graph to expose exploitable paths that attacks might use to breach your environment and reach high-impact assets. VM secrets scanning supports a number of attack path scenarios.
-    
+
 ### Security recommendations
 
 The following VM secrets security recommendations are available:
@@ -51,7 +51,6 @@ The following VM secrets security recommendations are available:
 - Azure resources: Machines should have secrets findings resolved
 - AWS resources: EC2 instances should have secrets findings resolved
 - GCP resources: VM instances should have secrets findings resolved
-
 
 ### Attack path scenarios
 
@@ -70,7 +69,6 @@ Defender for Cloud provides these predefined queries for investigating secrets s
 - VM with plaintext secret that can authenticate to another VM - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access other VMs or EC2s.
 - VM with plaintext secret that can authenticate to a storage account - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access storage accounts
 - VM with plaintext secret that can authenticate to an SQL database - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access SQL databases.
-
 
 ## How do I mitigate secrets issues effectively?
 

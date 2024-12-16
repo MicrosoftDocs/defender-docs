@@ -41,7 +41,7 @@ For detailed information on the enablement method for each capability, see the [
 
 Learn more about the [roles for provisioning Defender for Containers extensions](../permissions.md#roles-used-to-automatically-provision-agents-and-extensions).
 
-### Assigning a custom workspace for the Defender sensor
+### Assign a custom workspace for the Defender sensor
 
 You can [assign a custom workspace](../defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) through Azure Policy.
 

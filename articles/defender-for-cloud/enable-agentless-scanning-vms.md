@@ -30,7 +30,7 @@ When you enable agentless vulnerability assessment:
 
     To change the default behavior to always display results from MDVM (regardless if a third-party agent solution), select the [Microsoft Defender Vulnerability Management](auto-deploy-vulnerability-assessment.md#automatically-enable-a-vulnerability-assessment-solution) setting in the vulnerability assessment solution.
 
-## Enabling agentless scanning for machines
+## Enable agentless scanning for machines
 
 When you enable [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) or [Defender for Servers P2](defender-for-servers-introduction.md), agentless scanning is enabled on by default.
 

@@ -29,7 +29,7 @@ As you start defining requirements, answer these questions:
 - How will the company respond to alerts and recommendations, and remediate non-compliant resources?
 - Will workload owners be expected to remediate issues?
 
-## Mapping Defender for Cloud to business requirements
+## Map Defender for Cloud to business requirements
 
 Defender for Cloud provides a single management point for protecting Azure, on-premises, and multicloud resources. Defender for Cloud can meet your business requirements by:
 
