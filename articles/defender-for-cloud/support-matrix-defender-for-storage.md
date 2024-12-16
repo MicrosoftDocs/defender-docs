@@ -21,11 +21,6 @@ This article lists the prerequisites and permissions required to [enable Defende
   - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, malware scanning, sensitive Data Discovery.
   - Azure Files (over REST API and SMB): Activity monitoring.
 
-- Required roles and permissions:
-  - For malware scanning and sensitive data threat detection at subscription and storage account levels, you need Owner roles (subscription owner/storage account owner), or specific roles with corresponding data actions.
-  - To enable Activity Monitoring, you need Security Admin permissions.
-  - Learn more about the [required permissions](support-matrix-defender-for-storage.md).
-
 ## Permissions required to enable Defender for Storage
 
 Depending on the scenario, you need different levels of permissions to enable Defender for Storage and its features. You can enable and configure Defender for Storage at the subscription level or at the storage account level. You can also use built-in Azure policies to enable Defender for Storage and enforce its enablement on a desired scope.

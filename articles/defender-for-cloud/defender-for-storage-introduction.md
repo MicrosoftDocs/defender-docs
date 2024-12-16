@@ -99,7 +99,7 @@ Microsoft Defender for Storage enables you to secure your data at scale with gra
 
 To ensure uninterrupted protection while effectively managing costs, there are two informational security alerts related to malware scanning cap usage. The first alert, `Malware scanning will stop soon: 75% of monthly gigabytes scan cap reached (Preview)`, is triggered as your usage approaches 75% of the set monthly cap, offering a heads-up to adjust your cap if needed. The second alert, `Malware scanning stopped: monthly gigabytes scan cap reached (Preview)`, notifies you when the cap is reached and scanning is paused for the month, potentially leaving new uploads unscanned. Both alerts come with details on affected storage accounts to facilitate prompt and informed action, ensuring you can maintain your desired level of security without unexpected expenses.
 
-## Understanding the differences between malware scanning and hash reputation analysis  
+## Understanding the differences between malware scanning and hash reputation analysis
 
 Defender for Storage offers two capabilities to detect malicious content uploaded to storage accounts: **Malware scanning** and **hash reputation analysis**.
 
@@ -107,9 +107,11 @@ Defender for Storage offers two capabilities to detect malicious content uploade
 
 Malware scanning uses Microsoft Defender Antivirus (MDAV) to scan blobs uploaded to Blob storage, providing a comprehensive analysis that includes deep file scans and hash reputation analysis. This feature provides an enhanced level of detection against potential threats.
 
+Malware scanning is a paid add-on feature available only on the new plan.
+
 ### Hash reputation analysis
 
-Hash reputation analysis detects potential malware in Blob storage and Azure Files by comparing the hash values of newly uploaded blobs and files with those of known malware from [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/). Not all file protocols and operation types are supported with this capability, leading to some operations not being monitored for potential malware uploads. Unsupported use cases include SMB file shares and when a blob is created using [Put Block](/rest/api/storageservices/put-block) and [Put blocklist](/rest/api/storageservices/put-block-list).
+Hash reputation analysis detects potential malware in Blob storage and Azure Files by comparing the hash values of newly uploaded blobs and files with those of known malware from [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/). Not all file protocols and operation types are supported with this capability, leading to some operations not being monitored for potential malware uploads. Unsupported use cases include SMB file shares and when a blob is created using [Put Block](/rest/api/storageservices/put-block) and [Put blocklist](/rest/api/storageservices/put-block-list). Hash reputation analysis is available in all plans.
 
 In summary, malware scanning, available exclusively on the new plan for Blob storage, provides a more comprehensive approach to malware detection. It achieves this by analyzing the full content of files and incorporating hash reputation analysis into its scanning methodology.
 
