@@ -50,7 +50,7 @@ Defender for Cloud offers a few different ways to view Internet-exposed resource
 
 - [Cloud Security Explorer](how-to-manage-cloud-security-explorer.md) - The Cloud Security Explorer lets you run graph-based queries on the Cloud Security Graph. On the Cloud Security Explorer page, you can run a query to find resources exposed to the Internet. This query returns all your attached resources exposed to the Internet and lets you view any associated details.
 
-- [Attack Path Analysis](how-to-manage-attack-path.md) -  The Attack Path Analysis page lets you view attack paths that an attacker could take to reach a specific resource. With the Attack Path Analysis, you can view a visual representation of the attack path and see which resources are exposed to the internet. Internet exposure often serves as an entry point for attack paths, especially when the resource has known vulnerabilities. Internet-exposed resources often lead to targets with sensitive data.
+- [Attack Path Analysis](how-to-manage-attack-path.md) -  The Attack Path Analysis page lets you view attack paths that an attacker could take to reach a specific resource. With the Attack Path Analysis, you can view a visual representation of the attack path and see which resources are exposed to the internet. Internet exposure often serves as an entry point for attack paths, especially when the resource has vulnerabilities. Internet-exposed resources often lead to targets with sensitive data.
 
 - [Recommendations](review-security-recommendations.md) - Defender for Cloud provides recommendations for Internet-exposed resources. These recommendations are based on the security posture of the resource and the potential risks associated with the exposure.
 
