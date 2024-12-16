@@ -59,8 +59,9 @@ You can choose from two paid plans:
 | **[Just-in-time virtual machine access](just-in-time-access-overview.md)** | Just-in-time virtual machine access locks down machine ports to reduce the attack surface. To use this feature, Defender for Cloud must be enabled on the subscription. | Not supported in Plan 1 | :::image type="icon" source="./media/icons/yes-icon.png"::: |
 | **[File integrity monitoring](file-integrity-monitoring-overview.md)** | File integrity monitoring examines files and registries for changes that might indicate an attack. A comparison method is used to determine whether suspicious modifications have been made to files. | Not supported in Plan 1 | :::image type="icon" source="./media/icons/yes-icon.png"::: |
 | **[Docker host hardening](harden-docker-hosts.md)** | Assesses containers hosted on Linux machines running Docker containers, and then compares them with the Center for Internet Security (CIS) Docker Benchmark. | Not supported in Plan 1 | :::image type="icon" source="./media/icons/yes-icon.png"::: |
-|[Network map](protect-network-resources.md) | Provides a geographical view of recommendations for hardening your network resources. | Not supported in Plan 1| :::image type="icon" source="./media/icons/yes-icon.png"::: |
-|[Agentless scanning](concept-agentless-data-collection.md) | Scans Azure virtual machines by using cloud APIs to collect data. | Not supported in Plan 1 | :::image type="icon" source="./media/icons/yes-icon.png":::|
+| **[Network map](protect-network-resources.md)** | Provides a geographical view of recommendations for hardening your network resources. | Not supported in Plan 1| :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| **[Agentless scanning](concept-agentless-data-collection.md)** | Scans Azure virtual machines by using cloud APIs to collect data. | Not supported in Plan 1 | :::image type="icon" source="./media/icons/yes-icon.png":::|
+| **[Kubernetes node protection](kubernetes-nodes-overview.md)** | Provides vulnerability assessment and malware detection for Kubernetes nodes | Not supported in Plan 1 | :::image type="icon" source="./media/icons/yes-icon.png":::|
 
 >[!NOTE]
 >Once a plan is enabled, a 30-day trial period begins. There is no way to stop, pause, or extend this trial period.

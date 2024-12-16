@@ -234,7 +234,7 @@ Applies to: Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2
 
 **Severity**: High/Medium
 
-### **Unusual unauthenticated public access to a sensitive blob container (Preview)**
+### **Unusual unauthenticated public access to a sensitive blob container**
 
 Storage.Blob_AnonymousAccessAnomaly.Sensitive
 
@@ -245,7 +245,7 @@ Storage.Blob_AnonymousAccessAnomaly.Sensitive
 
 **Severity**: High
 
-### **Unusual amount of data extracted from a sensitive blob container (Preview)**
+### **Unusual amount of data extracted from a sensitive blob container**
 
 Storage.Blob_DataExfiltration.AmountOfDataAnomaly.Sensitive
 
@@ -255,7 +255,7 @@ Storage.Blob_DataExfiltration.AmountOfDataAnomaly.Sensitive
 
 **Severity**: Medium
 
-### **Unusual number of blobs extracted from a sensitive blob container (Preview)**
+### **Unusual number of blobs extracted from a sensitive blob container**
 
 Storage.Blob_DataExfiltration.NumberOfBlobsAnomaly.Sensitive
 
@@ -263,7 +263,7 @@ Storage.Blob_DataExfiltration.NumberOfBlobsAnomaly.Sensitive
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Exfiltration
 
-### **Access from a known suspicious application to a sensitive blob container (Preview)**
+### **Access from a known suspicious application to a sensitive blob container**
 
 Storage.Blob_SuspiciousApp.Sensitive
 
@@ -275,7 +275,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: High
 
-### **Access from a known suspicious IP address to a sensitive blob container (Preview)**
+### **Access from a known suspicious IP address to a sensitive blob container**
 
 Storage.Blob_SuspiciousIp.Sensitive
 
@@ -287,7 +287,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: High
 
-### **Access from a Tor exit node to a sensitive blob container (Preview)**
+### **Access from a Tor exit node to a sensitive blob container** 
 
 Storage.Blob_TorAnomaly.Sensitive
 
@@ -298,7 +298,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: High
 
-### **Access from an unusual location to a sensitive blob container (Preview)**
+### **Access from an unusual location to a sensitive blob container**
 
 Storage.Blob_GeoAnomaly.Sensitive
 
@@ -321,9 +321,11 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: High
 
-### **Suspicious external access to an Azure storage account with overly permissive SAS token (Preview)**
+### **Suspicious external access to an Azure storage account with overly permissive SAS token** 
 
-Storage.Blob_AccountSas.InternalSasUsedExternally
+(Storage.Blob_AccountSas.InternalSasUsedExternally 
+
+Storage.Files_AccountSas.InternalSasUsedExternally)
 
 **Description**: The alert indicates that someone with an external (public) IP address accessed the storage account using an overly permissive SAS token with a long expiration date. This type of access is considered suspicious because the SAS token is typically only used in internal networks (from private IP addresses).
 The activity might indicate that a SAS token has been leaked by a malicious actor or leaked unintentionally from a legitimate source.
@@ -334,9 +336,11 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: Medium
 
-### **Suspicious external operation to an Azure storage account with overly permissive SAS token (Preview)**
+### **Suspicious external operation to an Azure storage account with overly permissive SAS token** 
 
-Storage.Blob_AccountSas.UnusualOperationFromExternalIp
+(Storage.Blob_AccountSas.UnusualOperationFromExternalIp 
+
+Storage.Files_AccountSas.UnusualOperationFromExternalIp)
 
 **Description**: The alert indicates that someone with an external (public) IP address accessed the storage account using an overly permissive SAS token with a long expiration date. The access is considered suspicious because operations invoked outside your network (not from private IP addresses) with this SAS token are typically used for a specific set of Read/Write/Delete operations, but other operations occurred, which makes this access suspicious.
 This activity might indicate that a SAS token has been leaked by a malicious actor or leaked unintentionally from a legitimate source.
@@ -347,9 +351,11 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: Medium
 
-### **Unusual SAS token was used to access an Azure storage account from a public IP address (Preview)**
+### **Unusual SAS token was used to access an Azure storage account from a public IP address** 
 
-Storage.Blob_AccountSas.UnusualExternalAccess
+(Storage.Blob_AccountSas.UnusualExternalAccess 
+
+ Storage.Files_AccountSas.UnusualExternalAccess) 
 
 **Description**: The alert indicates that someone with an external (public) IP address has accessed the storage account using an account SAS token. The access is highly unusual and considered suspicious, as access to the storage account using SAS tokens typically comes only from internal (private) IP addresses.
 It's possible that a SAS token was leaked or generated by a malicious actor either from within your organization or externally to gain access to this storage account.
@@ -371,7 +377,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 
 **Severity**: High
 
-### **Malicious blob was downloaded from a storage account (Preview)**
+### **Malicious blob was downloaded from a storage account**
 
 Storage.Blob_MalwareDownload
 
