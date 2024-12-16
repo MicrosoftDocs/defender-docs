@@ -34,6 +34,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | December 10 | GA | [Defender for Cloud Setup experience](#defender-for-cloud-setup-experience) |
 | December 10 | GA | [Revised interval options for Defender for Cloud scan of a cloud environment](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) |
 
+### Sensitivity scanning capabilities now include Azure file shares 
+
+December 17, 2024
+
+Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares in GA in addition to blob containers.
+
+Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
+
+Learn more about [sensitivity scanning](/azure/defender-for-cloud/concept-data-security-posture-prepare).
+
 ### Defender for Cloud Setup experience
 
 December 10, 2024
