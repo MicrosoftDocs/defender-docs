@@ -21,7 +21,7 @@ This article helps you to deploy a Defender for Servers plan.
 ## Prerequisites
 
 - **Plan your deployment**. Review the [Defender for Servers planning guide](plan-defender-for-servers.md).
-- **Decide which plan you want to deploy and where you want to deploy it**. [Review deployment recommendations](plan-defender-for-servers-select-plan.md), and decide where you want to enable the plan.
+- **Decide how you want to deploy**. [Review deployment recommendations](plan-defender-for-servers-select-plan.md), and decide where you want to enable the plan.
 - **Compare plan features**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plan features.
 - **Review pricing**. Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
@@ -131,15 +131,18 @@ Enable and disable the plan on specific machines.
 
 ### Remove the resource-level configuration with the REST API
 
-1. To remove the machine-level configuration using the REST API, create a PUT request with the endpoint.
-1. In the PUT request, replace the subscriptionId, resourceGroupName, and machineName in the endpoint URL with your own settings.
+1. To remove the machine-level configuration using the REST API, create a DELETE request with the endpoint.
+1. In the DELETE request, replace the subscriptionId, resourceGroupName, and machineName in the endpoint URL with your own settings.
 
     ```rest
-        PUT
+        DELETE
         https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{machineName}/providers/Microsoft.Security/pricings/virtualMachines?api-version=2024-01-01
     ```
 
-## Configure resources at scale
+
+
+
+## Configure multiple machines at scale
 
 ### Enable Plan 1 with a script
 
@@ -197,7 +200,7 @@ Enable and disable the plan on specific machines.
 
 1. Sign in to Azure portal and navigate to the **Policy** dashboard.
 1. In the Policy dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select [Configure Azure Defender for Servers to be enabled (with 'P1' subplan) for all resources with the selected tag](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F080fedce-9d4a-4d07-abf0-9f036afbc9c8). This policy enables Defender for Servers Plan 1 on all resources (Azure VMs, VMSS and Azure Arc-enabled servers) under the assignment scope based on the tag you defined.
+1. In the **Security Center – Granular Pricing** category, search for and then select [Configure Azure Defender for Servers to be disabled for resources (resource level) with the selected tag](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F080fedce-9d4a-4d07-abf0-9f036afbc9c8). This policy disables Defender for Servers on all resources (Azure VMs, VMSS and Azure Arc-enabled servers) under the assignment scope based on the tag you defined.
 1. Select the policy and review it.
 1. Select **Assign** and edit the assignment details according to your needs. 
 1. In the **Parameters** tab, clear **Only show parameters that need input or review**
@@ -212,12 +215,6 @@ Enable and disable the plan on specific machines.
 1. Run the downloaded file.
 1. Customize as needed. Select resources by **tag** or by **resource group**.
 1. Follow the rest of the onscreen instructions.
-
-
-
-
-
-
 
 
 ## Next steps
