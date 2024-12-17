@@ -35,10 +35,6 @@ The classic per-transaction plan will no longer be available for new storage acc
 
 If you have policies that enforce the classic per-transaction plan without specifying the per-transaction subplan, existing subscriptions will retain their current plan, while new subscriptions will default to the new plan. However, if you specify the per-transaction subplan, it will fail for new subscriptions. Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans at either the subscription or storage account level.
 
-### Impact in the Defender for Storage (Classic) per-storage account plan
-
-The classic per-storage-account plan will automatically transition to the Defender for Storage plan without enabling add-on features by default. Storage accounts previously excluded from protected subscriptions in the per-transaction plan won't remain excluded when upgraded to the new plan. If you wish to disable protection on these storage accounts, you can do so in the new plan.
-
 ## Identify active Defender for Storage plans
 
 We provide three options to find out your Defender for Storage plans enablement and configuration:
