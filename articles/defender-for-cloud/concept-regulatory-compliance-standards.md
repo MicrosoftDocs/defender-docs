@@ -23,7 +23,7 @@ Defender for Cloud continually assesses the environment-in-scope against any com
 > [!NOTE]
 > It's important to note that if standards have compliance controls that can't be automatically assessed, Defender for Cloud isn't able to decide whether a resource complies with the control. In this case, the control will show as greyed out. In addition, if a subscription has no relevant resources to a specific standard, the standard won't be shown in the regulatory compliance dashboard at all, even if it assigned.
 
-## Viewing compliance standards
+## View compliance standards
 
 The **Regulatory compliance** dashboard provides an interactive overview of compliance state.
 

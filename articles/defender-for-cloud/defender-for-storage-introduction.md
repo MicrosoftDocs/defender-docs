@@ -26,7 +26,7 @@ Defender for Storage includes:
 
 - **Malware scanning** - Scan your storage accounts for malware by analyzing files for known threats and suspicious content. This helps in identifying and mitigating potential security risks from malicious files that might be stored or uploaded to your Azure storage accounts. As a result, it enhances the overall security posture of your data storage.
 
-## Getting started
+## Get started
 
 You can [enable Defender for Storage](tutorial-enable-storage-plan.md) agentlessly at the subscription level, resource levels, or at scale.
 
@@ -95,11 +95,11 @@ By default, the limit is set to 5,000 GB per month per storage account. Once thi
 
 Microsoft Defender for Storage enables you to secure your data at scale with granular controls. You can apply consistent security policies across all your storage accounts within a subscription or customize them for specific accounts to suit your business needs. You can also control your costs by choosing the level of protection you need for each resource. To get started, visit [enable Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
 
-### Monitoring your malware scanning cap
+### Monitor your malware scanning cap
 
 To ensure uninterrupted protection while effectively managing costs, there are two informational security alerts related to malware scanning cap usage. The first alert, `Malware scanning will stop soon: 75% of monthly gigabytes scan cap reached (Preview)`, is triggered as your usage approaches 75% of the set monthly cap, offering a heads-up to adjust your cap if needed. The second alert, `Malware scanning stopped: monthly gigabytes scan cap reached (Preview)`, notifies you when the cap is reached and scanning is paused for the month, potentially leaving new uploads unscanned. Both alerts come with details on affected storage accounts to facilitate prompt and informed action, ensuring you can maintain your desired level of security without unexpected expenses.
 
-## Understanding the differences between malware scanning and hash reputation analysis
+## Understand the differences between malware scanning and hash reputation analysis
 
 Defender for Storage offers two capabilities to detect malicious content uploaded to storage accounts: **Malware scanning** and **hash reputation analysis**.
 

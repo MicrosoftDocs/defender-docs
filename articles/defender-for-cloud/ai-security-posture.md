@@ -32,7 +32,7 @@ The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender
 > 1. Ensure the permissions type is set to **Least privilege access**.
 > 1. [Follow steps 5 - 8](quickstart-onboard-aws.md#select-defender-plans) to finish the configuration.
 
-## Discovering generative AI apps
+## Discover generative AI apps
 
 Defender for Cloud discovers AI workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI applications from potential threats.
 
@@ -46,15 +46,15 @@ Defender for Cloud can also discover vulnerabilities within generative AI librar
 
 With these features, Defender for Cloud provides full visibility of AI workloads from code to cloud.
 
-## Reducing risks to generative AI apps
+## Reduce risks to generative AI apps
 
 Defender CSPM provides contextual insights into an organization's AI security posture. You can reduce risks within your AI workloads using security recommendations and attack path analysis.
 
-### Exploring risks using recommendations
+### Explore risks using recommendations
 
 Defender for Cloud assesses AI workloads and issues recommendations around identity, data security, and internet exposure to identify and prioritize critical security issues in AI workloads.
 
-#### Detecting IaC misconfigurations
+#### Detect IaC misconfigurations
 
 DevOps security detects IaC misconfigurations, which can expose generative AI applications to security vulnerabilities, such as over-exposed access controls or inadvertent publicly exposed services. These misconfigurations could lead to data breaches, unauthorized access, and compliance issues, especially when handling strict data privacy regulations.
 
@@ -69,7 +69,7 @@ Current IaC AI security checks include:
 - Use Managed Identity for Azure AI Service Accounts
 - Use identity-based authentication for Azure AI Service Accounts
 
-### Exploring risks with attack path analysis
+### Explore risks with attack path analysis
 
 Attack paths analysis detects and mitigates risks to AI workloads, particularly during grounding (linking AI models to specific data) and fine-tuning (adjusting a pretrained model on a specific dataset to improve its performance on a related task) stages, where data might be exposed.
 

@@ -28,7 +28,7 @@ DevOps security in Defender for Cloud allows you to manage your connected enviro
 
 Here, you can add [Azure DevOps](quickstart-onboard-devops.md), [GitHub](quickstart-onboard-github.md), and [GitLab](quickstart-onboard-gitlab.md) environments, customize the [DevOps workbook](custom-dashboards-azure-workbooks.md#use-the-devops-security-workbook) to show your desired metrics, [configure pull request annotations](enable-pull-request-annotations.md), and view our guides and give feedback.
 
-### Understanding your DevOps security
+### Understand your DevOps security
 
 |Page section| Description |
 |--|--|
