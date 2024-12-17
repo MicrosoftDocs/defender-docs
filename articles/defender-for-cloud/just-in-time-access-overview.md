@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.date: 06/29/2023
 ---
 
-# Understand just-in-time (JIT) VM access
+# Understanding just-in-time (JIT) VM access
 
 This page explains the principles behind Microsoft Defender for Cloud's just-in-time (JIT) VM access feature and the logic behind the recommendation.
 

@@ -31,7 +31,7 @@ The recommendations mentioned in this article are only available if you have the
   - [Defender for Servers plan 2](tutorial-enable-servers-plan.md)
   - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
 
-- You must enable [agentless scanning for virtual machines](enable-agentless-scanning-vms.md#enable-agentless-scanning-for-machines).
+- You must enable [agentless scanning for virtual machines](enable-agentless-scanning-vms.md#enabling-agentless-scanning-for-machines).
 
 > [!NOTE]
 > The feature described on this page is the replacement feature for the [MMA based feature](endpoint-protection-recommendations-technical.md), which is set to be retired along with the MMA retirement in August 2024.

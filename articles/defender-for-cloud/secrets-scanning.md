@@ -1,12 +1,12 @@
 ---
-title: Protect secrets in Microsoft Defender for Cloud
+title: Protecting secrets in Microsoft Defender for Cloud
 description: Learn how to protect secrets with Microsoft Defender for Server's agentless secrets scanning.
 ms.topic: overview
 ms.date: 04/16/2024
 ---
 
 
-# Protect secrets in Defender for Cloud
+# Protecting secrets in Defender for Cloud
 
 Microsoft Defender for Cloud helps security team to minimize the risk of attackers exploiting security secrets.
 
@@ -27,17 +27,17 @@ Defender for Cloud provides secrets scanning for virtual machines, and for cloud
 
 Required roles and permissions:
 
-- Security Reader
-
-  - Security Admin
-
-    - Reader
-
-      - Contributor
-
-        - Owner
-
-## Deploy secrets scanning
+   - Security Reader
+   
+      - Security Admin
+      
+         - Reader
+         
+            - Contributor
+            
+               - Owner
+               
+## Deploying secrets scanning
 
 Secrets scanning is provided as a feature in Defender for Cloud plans:
 
@@ -46,7 +46,7 @@ Secrets scanning is provided as a feature in Defender for Cloud plans:
 
 - **Code repository scanning**: Provided with Defender CSPM and Advanced Security for GitHub and Azure DevOps.
 
-## Review secrets findings
+## Reviewing secrets findings
 
 You can review and investigate the security findings for secrets in a couple of ways:
 
