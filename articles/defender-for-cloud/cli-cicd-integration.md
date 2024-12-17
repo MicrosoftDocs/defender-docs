@@ -28,7 +28,7 @@ Defender for Cloud Command Line Interface (CLI) is an application you can use in
 
 In the following sections, we explain how to retrieve the Client ID and Secrets, update the CI/CD pipeline script, and add environment variables to the CI/CD pipeline.
 
-## Retrieving the API Token
+## Retrieve the API Token
 
 To allow security data from the Defender for Cloud CLI to be passed to the Defender for Cloud backend, the security admin in Defender for Cloud must first generate an API key from Defender for Cloud for authentication.
 
@@ -133,8 +133,6 @@ After securely receiving the tokens, the developer must configure an environment
 1. In Cloud Security Explorer, enter the following query: **CI/CD Pipeline** -> **Pipeline** + **Container Images** -> **Contained in** + **Container registers (group)**.
 
 1. Review the **Resource names** to see the container mapping.
-
-    :::image type="content" source="media/cli-cicd/container-images.png" alt-text="Screenshot of correlating Monitored Containers." lightbox="media/cli-cicd/container-images.png":::
 
 ## Related content
 
