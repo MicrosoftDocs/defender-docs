@@ -1,5 +1,5 @@
 ---
-title: Enable and configure the Microsoft Defender for Storage plan at scale using REST API
+title: Enable Microsoft Defender for Storage using REST API
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using REST API.
 ms.topic: install-set-up-deploy
 ms.date: 08/08/2023
@@ -7,7 +7,7 @@ ms.date: 08/08/2023
 
 # Enable and configure with REST API
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription will be protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
+We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription are protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
 
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
@@ -52,11 +52,11 @@ If you want to turn off the on-upload malware scanning or Sensitive data threat 
 
 To disable the entire Defender plan, set the pricingTier property value to **Free** and remove the `subPlan` and extensions properties.
 
-Learn more about [updating Defender plans with the REST API](/rest/api/defenderforcloud/pricings/update) in HTTP, Java, Go and JavaScript.
+Learn more about [updating Defender plans with the REST API](/rest/api/defenderforcloud/pricings/update) in HTTP, Java, Go, and JavaScript.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
-To enable and configure Microsoft Defender for Storage at the storage account level using REST API, create a PUT request with this endpoint. Replace the `subscriptionId`, `resourceGroupName`, and `accountName` in the endpoint URL with your own Azure subscription ID, resource group and storage account names accordingly.
+To enable and configure Microsoft Defender for Storage at the storage account level using REST API, create a PUT request with this endpoint. Replace the `subscriptionId`, `resourceGroupName`, and `accountName` in the endpoint URL with your own Azure subscription ID, resource group, and storage account names accordingly.
 
 ```rest
 PUT
@@ -97,7 +97,7 @@ Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/a
 ---
 
 > [!TIP]
-> Malware Scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
+> Malware scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
 
 Learn more on how to [set up response for malware scanning](defender-for-storage-configure-malware-scan.md) results.
 

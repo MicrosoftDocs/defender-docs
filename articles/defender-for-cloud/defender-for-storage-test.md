@@ -1,6 +1,6 @@
 ---
 title: Test the Defender for Storage data security features
-description: Learn how to test the Malware Scanning, sensitive data threat detection, and activity monitoring provided by Defender for Storage.
+description: Learn how to test the malware scanning, sensitive data threat detection, and activity monitoring features provided by Defender for Storage.
 author: dcurwin
 ms.author: dacurwin
 ms.date: 05/16/2024
@@ -8,24 +8,24 @@ ms.topic: how-to
 #customer intent: As a user, I want to learn how to test the Defender for Storage data security features so that I can validate its capabilities and ensure the security of my storage accounts.
 ---
 
-# Testing the Defender for Storage data security features
+# Test the Defender for Storage data security features
 
-After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept to familiarize yourself with its features and validate the advanced security capabilities effectively protect your storage accounts by generating real security alerts. This guide will walk you through testing various aspects of the security coverage offered by Defender for Storage.
+After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept. This helps you familiarize yourself with its features and validate that its advanced security capabilities effectively protect your storage accounts by generating real security alerts. This guide walks you through testing various aspects of the security coverage offered by Defender for Storage.
 
 There are three main components to test:
 
-- Malware Scanning (if enabled)
+- Malware scanning (if enabled)
 - Sensitive data threat detection (if enabled)
 - Activity monitoring
 
 > [!TIP]
-> **A hands-on lab to try out Malware Scanning in Defender for Storage**
+> **A hands-on lab to try out malware scanning in Defender for Storage**
 >
-> We recommend you try the [Ninja training instructions](https://aka.ms/DfStorage/NinjaTrainingLab) for detailed step-by-step instructions on how to test Malware Scanning end-to-end with setting up responses to scanning results. This is part of the 'labs' project that helps customers get ramped up with Microsoft Defender for Cloud and provide hands-on practical experience with its capabilities.
+> We recommend you try the [Ninja training instructions](https://aka.ms/DfStorage/NinjaTrainingLab) for detailed step-by-step instructions on how to test malware scanning end-to-end with setting up responses to scanning results. This is part of the 'labs' project that helps customers get ramped up with Microsoft Defender for Cloud and provide hands-on practical experience with its capabilities.
 
-## Testing Malware Scanning
+## Test malware scanning
 
-Follow these steps to test Malware Scanning after enabling the feature:
+Follow these steps to test malware scanning after enabling the feature:
 
 1. To verify that the setup is successful, upload a file to the storage account. You can use the Azure portal to [upload a file](/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob)
 
@@ -33,7 +33,7 @@ Follow these steps to test Malware Scanning after enabling the feature:
 
     1. After uploading the file, view the blob and examine its blob index tags.
 
-    1. You should see two new tags: **Malware Scanning scan result** and **Malware Scanning scan time**.
+    1. You should see two new tags: **Malware scanning scan result** and **Malware scanning scan time**.
 
     1. The blob index tags serve as a helpful way to view the scan results.
 
@@ -50,7 +50,7 @@ To simulate a malware upload using an EICAR test file, follow these steps:
 
 1. Prepare for the EICAR test file:
 
-    1. Use an EICAR test file instead of real malware to avoid causing damage. Standardized antimalware software treats EICAR test files as malware.
+    1. To avoid causing damage, use an EICAR test file instead of real malware. Standardized antimalware software treats EICAR test files as malware.
 
     1. Exclude an empty folder to prevent your endpoint antivirus protection from deleting the file. For Microsoft Defender for Endpoint (MDE) users, refer to [add an exclusion to Windows Security](https://support.microsoft.com/windows/add-an-exclusion-to-windows-security-811816c0-4dfd-af4a-47e4-c301afe13b26#ID0EBF=Windows_11).
 
@@ -62,11 +62,11 @@ To simulate a malware upload using an EICAR test file, follow these steps:
 
 1. Upload the EICAR test file to your storage account.
 
-1. Verify the **Malware Scanning scan result** index tag:
+1. Verify the **Malware scanning scan result** index tag:
 
-    1. Check for the **Malware Scanning scan result** index tag with the value **Malicious**.
+    1. Check for the **Malware scanning scan result** index tag with the value **Malicious**.
 
-    1. If the tags are not visible, select the **Refresh** button.
+    1. If the tags aren't visible, select the **Refresh** button.
 
 1. Receive a Microsoft Defender for Cloud security alert:
 
@@ -93,7 +93,7 @@ To test the sensitive data threat detection feature by uploading test data that 
 
 1. Set up a test container:
 
-    1. Go to the **Containers** blade in the newly created storage account.
+    1. Go to the **Containers** pane in the newly created storage account.
 
     1. Select the **+ Container** button to create a new blob container.
 
@@ -105,13 +105,13 @@ To test the sensitive data threat detection feature by uploading test data that 
 
     1. Create a new file and save it in a format like TXT, CSV, or DOCX.
 
-    1. Add the following string to the file: `ASD 100-22-3333 SSN Text` - this is a test US (United States) SSN (Social Security Number).
+    1. Add the following string to the file: `ASD 100-22-3333 SSN Text` - this string is a test US (United States) SSN (Social Security Number).
 
-        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-2.png" alt-text="Screenshot showing how to test a file in Malware Scanning for Social Security Number information.":::
+        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-2.png" alt-text="Screenshot showing how to test a file in malware scanning for Social Security Number information.":::
 
     1. Save and upload the file to the **test-container** in the storage account.
 
-        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-3.png" alt-text="Screenshot showing how to upload a file in Malware Scanning to test for Social Security Number information.":::
+        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-3.png" alt-text="Screenshot showing how to upload a file in malware scanning to test for Social Security Number information.":::
 
 1. Enable Defender for Storage:
 
@@ -119,31 +119,31 @@ To test the sensitive data threat detection feature by uploading test data that 
 
     1. Enable Defender for Storage on the storage account with the Sensitivity Data Discovery feature enabled.
 
-    Sensitive data discovery scans for sensitive information within the first 24 hours when enabled at the storage account level or when a new storage account is created under a subscription protected by this feature at the subscription level. Following this initial scan, the service will scan for sensitive information every 7 days from the time of enablement.
+    Sensitive data discovery scans for sensitive information within the first 24 hours. This occurs when you enable it at the storage account level or create a new storage account under a subscription protected by this feature at the subscription level. Following this initial scan, the service scans for sensitive information every seven days from the time of enablement.
 
     > [!NOTE]
     > If you enable the feature and then add sensitive data on the days after enablement, the next scan for that newly added data will occur within the next 7-day scanning cycle, depending on the day of the week the data was added.
 1. Change access level:
 
-    1. Return to the Containers blade.
+    1. Return to the **Containers** pane.
 
     1. Right-click on the **test-container** and select **Change the access level**.
 
-        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-1.png" alt-text="Screenshot showing how to change the access level for a test of Malware Scanning.":::
+        :::image type="content" source="media/defender-for-storage-test/testing-sensitivity-1.png" alt-text="Screenshot showing how to change the access level for a test of malware scanning.":::
 
     1. Choose the **Container (anonymous read access for containers and blobs)** option and select **OK**.
 
-    The previous step exposes the blob container's content to the internet, which will trigger a security alert within 30-60 minutes.
+    The previous step exposes the blob container's content to the internet, which triggers a security alert within 30-60 minutes.
 
 1. Review the security alert:
 
-    1. Go to the **Security Alerts** blade.
+    1. Go to the **Security Alerts** pane.
 
     1. Look for the alert titled **The access level of a sensitive storage blob container was changed to allow unauthenticated public access**.
 
     1. Select on the alert’s **View full details** button to see all the related details.
 
-        :::image type="content" source="media/defender-for-storage-test/sensitive-data-alert.png" alt-text="Screenshot showing how to see an alert for a test file in Malware Scanning.":::
+        :::image type="content" source="media/defender-for-storage-test/sensitive-data-alert.png" alt-text="Screenshot showing how to see an alert for a test file in malware scanning.":::
 
 Learn more about Defender for Storage security alerts in the [reference table for all security alerts in Microsoft Defender for Cloud](alerts-azure-storage.md).
 
@@ -155,7 +155,7 @@ To test the activity monitoring feature by simulating access from a Tor exit nod
 
 1. Set up a test container:
 
-    1. Go to the **Containers** blade in the storage account.
+    1. Go to the **Containers** pane in the storage account.
 
     1. Select the **+ Container** button to create a new blob container.
 
@@ -179,11 +179,11 @@ To test the activity monitoring feature by simulating access from a Tor exit nod
 
     1. Download the file when prompted.
 
-    The previous step will trigger a Tor anomaly security alert within 1-3 hours.
+    The previous step triggers a Tor anomaly security alert within 1-3 hours.
 
 1. Review the security alert:
 
-    1. Go to the **Security Alerts** blade.
+    1. Go to the **Security Alerts** pane.
 
     1. Look for the alert titled **Access from a Tor exit node to a storage blob container**.
 
