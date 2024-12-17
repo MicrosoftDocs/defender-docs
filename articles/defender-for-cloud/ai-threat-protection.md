@@ -26,7 +26,7 @@ Threat protection for AI workloads integrates with the [Defender XDR](concept-in
 
 Security teams can correlate AI workload alerts and incidents in the Defender XDR portal to understand the full scope of an attack, including malicious activities related to their generative AI applications.
 
-## Signing up for the limited public preview
+## Sign up for the limited public preview
 
 To use threat protection for AI workloads, you must enroll in the limited public preview program by filling out the [registration form](https://aka.ms/D4AI/PublicPreviewAccess).
 

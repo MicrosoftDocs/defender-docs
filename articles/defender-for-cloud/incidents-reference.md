@@ -16,7 +16,7 @@ A [security incident](alerts-overview.md#what-are-security-incidents) is a corre
 
 You can select an incident to view all of the alerts that are related to the incident and get more information.
 
-Learn how to [manage security incidents](incidents.md#managing-security-incidents).
+Learn how to [manage security incidents](incidents.md#manage-security-incidents).
 
 > [!NOTE]
 > The same alert can exist as part of an incident, as well as to be visible as a standalone alert.

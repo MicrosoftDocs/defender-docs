@@ -38,7 +38,7 @@ To minimize the risk of security breaches and configuration errors, security tea
 
 Microsoft security researchers analyzed the attack surface of storage services. The potential security risks are described in the [threat matrix for cloud-based storage services](https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/), which are based on the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/), a knowledge base for the tactics and techniques employed in cyber-attacks.
 
-For a comparison between malware scanning and hash reputation analysis, see [Understanding the differences between these methods](defender-for-storage-introduction.md#understanding-the-differences-between-malware-scanning-and-hash-reputation-analysis).
+For a comparison between malware scanning and hash reputation analysis, see [Understanding the differences between these methods](defender-for-storage-introduction.md#understand-the-differences-between-malware-scanning-and-hash-reputation-analysis).
 
 ## What kind of security alerts does Microsoft Defender for Storage provide?
 

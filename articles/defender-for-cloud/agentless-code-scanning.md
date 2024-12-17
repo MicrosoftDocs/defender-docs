@@ -124,11 +124,11 @@ Once you enable the agentless code scanning feature within a connector, the scan
   - The system scans code and Infrastructure-as-Code (IaC) templates for vulnerabilities after you create the connector and then every 3-4 days.  
 - **Scan duration**: Scans typically finish within 15 to 60 minutes, depending on the size and complexity of the repository.
 
-## Viewing and managing scan results
+## View and manage scan results
 
 After the scans finish, you can access security findings within Microsoft Defender for Cloud.
 
-### Accessing findings
+### Access findings
 
 1. Navigate to the [Security recommendations](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5) tab in Microsoft Defender for Cloud.
 

@@ -80,7 +80,7 @@ Also ensure your Log Analytics agent is [properly configured to send data to Def
 
 <a name="preexisting"></a>
 
-#### Deploying the Log Analytics agent in cases of a pre-existing agent installation
+#### Deploy the Log Analytics agent in cases of a pre-existing agent installation
 
 The following use cases explain how deployment of the Log Analytics agent works in cases when there's already an agent or extension installed.
 

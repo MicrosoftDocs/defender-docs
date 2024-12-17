@@ -16,7 +16,7 @@ The MCSB issues recommendations based on assessment findings. Only built-in reco
 > [!NOTE]
 > Recommendations flagged as **Preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
 
-## Viewing the secure score
+## View the secure score
 
 When you view the Defender for Cloud **Overview** dashboard, you can view the secure score for all of your environments. The dashboard shows the secure score as a percentage value and includes the underlying values.
 
@@ -26,7 +26,7 @@ The Azure mobile app shows the secure score as a percentage value. Tap it to see
 
 :::image type="content" source="./media/secure-score-security-controls/single-secure-score-via-mobile.png" alt-text="Screenshot of the Azure mobile app that shows an overall secure score and details." lightbox="media/secure-score-security-controls/single-secure-score-via-mobile.png":::
 
-## Exploring your security posture
+## Explore your security posture
 
 The **Security posture** page in Defender for Cloud shows the secure score for your environments overall and for each environment separately.
 
@@ -108,7 +108,7 @@ When you view multiple subscriptions and connectors, the secure score evaluates 
 
 The combined score is *not* an average. Rather, it's the evaluated posture of the status of all resources across all subscriptions and connectors. If you go to the **Recommendations** page and add up the potential points available, you find that it's the difference between the current score (22) and the maximum score available (58).
 
-## Improving a secure score
+## Improve a secure score
 
 The MCSB consists of a series of compliance controls. Each control is a logical group of related security recommendations and reflects your vulnerable attack surfaces.
 
