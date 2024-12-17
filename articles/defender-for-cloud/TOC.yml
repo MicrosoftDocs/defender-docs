@@ -928,7 +928,7 @@
         items:
         - name: Overview of Defender for Databases
           displayName: database, protections
-          href: defender-for-databsases-overview.md
+          href: defender-for-databases-overview.md
         - name: Defender for Azure SQL Databases
           displayName: database
           href: defender-for-sql-introduction.md
@@ -971,7 +971,7 @@
             href: sql-azure-vulnerability-assessment-enable-classic.md
           - name: Advanced Threat Protection for Azure SQL Database
             displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
-            href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json
+            href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
         - name: Deploy Defender for open-source relational databases
           items:
           - name: Enable on Azure
@@ -992,12 +992,12 @@
             href: configure-vulnerability-findings-express.md
           - name: Classic configuration
             displayName: vulnerability, assessment, findings, classic
-            href: defender-for-sql-alerts.md
+            href: configure-vulnerability-findings-classic
           - name: Migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process
             displayName: vulnerability, assessment, findings, migrate
             href: defender-for-sql-autoprovisioning.md
           - name: Scan your SQL servers for vulnerabilities
-            href: defender-for-sql-on-machines-vulnerability-assessment
+            href: defender-for-sql-on-machines-vulnerability-assessment.md
           - name: Manage vulnerability assessments
             items:
             - name: Manage findings in Azure SQL databases
@@ -1029,7 +1029,9 @@
         items:
         - name: Investigate Defender for SQL security Alerts, reporting, and queries
           displayName: SQL, SQL servers, defender, machines
-          href: defender-for-sql-investigate.md  
+          href: defender-for-sql-alerts.md
+
+
   - name: Defender for App Service
     items:
       - name: Overview
