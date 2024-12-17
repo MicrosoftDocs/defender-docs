@@ -38,7 +38,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 ### For GitHub Actions CI/CD environments
 >
 > [!NOTE]
-> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enabling-defender-for-cloud-integration-without-github-code-scanning).
+> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
 1. To use the [StackHawk HawkScan Action](https://github.com/marketplace/actions/stackhawk-hawkscan-action), make sure you're logged into [GitHub](https://github.com/login), and have a [StackHawk account](http://auth.stackhawk.com/signup).
 1. From GitHub, you can use a GitHub repository with a defined GitHub Actions workflow process already in place, or create a new workflow. We scan this GitHub repository for API vulnerabilities as part of the GitHub Actions workflow.

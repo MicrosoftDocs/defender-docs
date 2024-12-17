@@ -28,8 +28,8 @@ Microsoft Defender for Cloud includes a bundle of recommendations that are avail
 You can enable the Azure Policy for Kubernetes by one of two ways:
 
 - Enable for all current and future clusters using plan/connector settings
-  - [Enabling for Azure subscriptions or on-premises](#enabling-for-azure-subscriptions-or-on-premises)
-  - [Enabling for GCP projects](#enabling-for-gcp-projects)
+  - [Enabling for Azure subscriptions or on-premises](#enable-for-azure-subscriptions-or-on-premises)
+  - [Enabling for GCP projects](#enable-for-gcp-projects)
 - [Deploy Azure Policy for Kubernetes on existing clusters](#deploy-azure-policy-for-kubernetes-on-existing-clusters)
 
 ### Enable Azure Policy for Kubernetes for all current and future clusters using plan/connector settings

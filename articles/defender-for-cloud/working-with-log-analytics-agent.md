@@ -54,7 +54,7 @@ To configure integration with the Log Analytics agent:
     - **All events** – For customers who want to make sure all events are stored.
 
     > [!TIP]
-    > To set these options at the workspace level, see [Setting the security event option at the workspace level](#setting-the-security-event-option-at-the-workspace-level).
+    > To set these options at the workspace level, see [Setting the security event option at the workspace level](#set-the-security-event-option-at-the-workspace-level).
     >
     > For more information of these options, see [Windows security event options for the Log Analytics agent](#data-collection-tier).
 
