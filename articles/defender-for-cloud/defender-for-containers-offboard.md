@@ -14,7 +14,7 @@ If you decide to stop using those capabilities, you might also want to remove su
 The components and roles fall under two removal-type categories:
 
 - **Safe to remove** - Resources and settings exclusively used by Defender for Containers, and can be safely removed if you're no longer using the associated capability.
-- **Shared component** - Resources that might be used by non-Defender for Cloud solutions or by other Defender for Cloud solutions in the target cloud environment. If a shared resource is disabled, the other solutions might be negatively affected. Before removing, you should review if other solutions in that cloud environment need the resource before removing it.
+- **Shared component** - Resources might be used by non-Defender for Cloud solutions or by other Defender for Cloud solutions in the target cloud environment. If a shared resource is disabled, the other solutions might be negatively affected. Before removing, you should review if other solutions in that cloud environment need the resource before removing it.
 
 ## Azure scenarios for resources created automatically after enabling Defender for Containers on the subscription
 
