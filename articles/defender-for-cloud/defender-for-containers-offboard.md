@@ -14,7 +14,7 @@ If you decide to stop using those capabilities, you might also want to remove su
 The components and roles fall under two removal-type categories:
 
 - **Safe to remove** - Resources and settings exclusively used by Defender for Containers, and can be safely removed if you're no longer using the associated capability.
-- **Shared component** - Resources that may be used by non-Defender for Cloud solutions or by other Defender for Cloud solutions in the target cloud environment. If a shared resource is disabled, the other solutions may be negatively affected. Before removing, you should review if other solutions in that cloud environment need the resource before removing it.
+- **Shared component** - Resources that might be used by non-Defender for Cloud solutions or by other Defender for Cloud solutions in the target cloud environment. If a shared resource is disabled, the other solutions might be negatively affected. Before removing, you should review if other solutions in that cloud environment need the resource before removing it.
 
 ## Azure scenarios for resources created automatically after enabling Defender for Containers on the subscription
 
@@ -54,7 +54,7 @@ The components and roles fall under two removal-type categories:
 
 | Offering                                                     | Resource                                                 | Manual offboarding                                           | Removal information |
 | ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------- |
-| Workload runtime threat protection                                  | **logging.googleapis.com** API                               | The GCP Logging API may be used by non-Defender for Cloud clients in your project. Use the [GCP Logging API](https://cloud.google.com/sdk/gcloud/reference/logging/logs/list) to see if it is in use by other clients. Use the [GCP Logging API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) to disable it. | Shared component  |
+| Workload runtime threat protection                                  | **logging.googleapis.com** API                               | The GCP Logging API might be used by non-Defender for Cloud clients in your project. Use the [GCP Logging API](https://cloud.google.com/sdk/gcloud/reference/logging/logs/list) to see if it is in use by other clients. Use the [GCP Logging API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) to disable it. | Shared component  |
 | Workload runtime threat protection                                  | Data Access audit logs configuration                     | [Disable data access audit logs](https://cloud.google.com/logging/docs/audit/configure-data-access#config-console-disable) for the Kubernetes Engine API | Shared component    |
 | Workload runtime threat protection  <br/><br/>  Kubernetes data plane hardening | **ms-defender-containers** (Service Account)                 | [Delete   gcloud IAM service-accounts](https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/delete) | Safe to remove      |
 | Workload runtime threat protection                                  | **ms-defender-containers-stream** (Service Account)          | [Delete gcloud IAM service-accounts](https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/delete) | Safe to remove      |
