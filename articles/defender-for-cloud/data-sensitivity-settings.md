@@ -21,7 +21,7 @@ This configuration helps you focus on your critical sensitive resources and impr
 
 ## Before you start
 
-- Make sure that you [review the prerequisites and requirements](concept-data-security-posture-prepare.md#configuring-data-sensitivity-settings) for customizing data sensitivity settings.
+- Make sure that you [review the prerequisites and requirements](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings) for customizing data sensitivity settings.
 - In Defender for Cloud, enable sensitive data discovery capabilities in the [Defender CSPM](data-security-posture-enable.md) and/or [Defender for Storage](defender-for-storage-data-sensitivity.md) plans.
 
 Changes in sensitivity settings take effect the next time that resources are discovered.
@@ -34,7 +34,7 @@ Defender for Cloud only imports sensitivity labels with automatic labeling rules
 
 ## Customize sensitive data categories/types
 
-To customize data sensitivity settings that appear in Defender for Cloud, review the [prerequisites](concept-data-security-posture-prepare.md#configuring-data-sensitivity-settings), and then do the following.
+To customize data sensitivity settings that appear in Defender for Cloud, review the [prerequisites](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings), and then do the following.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.

@@ -1,5 +1,5 @@
 ---
-title: Tracking your secure score
+title: Track your secure score
 description: Learn about the multiple ways to access and track your secure score in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 03/13/2024
@@ -75,7 +75,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
 
 1. Select **Run query**.
 
-## Tracking your secure score over time
+## Track your secure score over time
 
 ### Secure Score Over Time report in workbooks page
 
