@@ -993,6 +993,8 @@
           - name: Classic configuration
             displayName: vulnerability, assessment, findings, classic
             href: configure-vulnerability-findings-classic
+          - name: Troubleshoot express or classic configuration
+            href: troubleshoot-vulnerability-findings.md
           - name: Migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process
             displayName: vulnerability, assessment, findings, migrate
             href: defender-for-sql-autoprovisioning.md
