@@ -1,6 +1,6 @@
 ---
 title: Offboarding Defender for Containers resources
-description: Learn how offboard Microsoft Defender for Containers resources for the supported Cloud environments.
+description: Learn how to offboard Microsoft Defender for Containers resources for the supported Cloud environments.
 ms.topic: how-to
 ms.date: 05/07/2024
 ---
