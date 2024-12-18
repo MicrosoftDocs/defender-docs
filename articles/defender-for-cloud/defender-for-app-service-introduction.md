@@ -24,15 +24,13 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
 
 - Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). Billing is calculated according to the total compute instances in every plan.
 - [The supported App Service plans](https://azure.microsoft.com/pricing/details/app-service/plans/) are:
-  - Free plan
-  - Basic Service plan
   - Standard Service plan
   - Premium v2 Service Plan
   - Premium v3 Service Plan
   - App Service Environment v1
   - App Service Environment v2
   - App Service Environment v3
-
+    
 - Check out Defender for App Service's [cloud availability](support-matrix-cloud-environment.md).
 
 ## What are the benefits of Microsoft Defender for App Service?
