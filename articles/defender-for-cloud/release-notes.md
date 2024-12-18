@@ -31,8 +31,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| December 17 | Preview | [Integrate Defender for Cloud CLI with Popular CI/CD Tools](#integrate-defender-for-cloud-cli-with-popular-cicd-tools) |
 | December 10 | GA | [Defender for Cloud Setup experience](#defender-for-cloud-setup-experience) |
 | December 10 | GA | [Revised interval options for Defender for Cloud scan of a cloud environment](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) |
+
+### Integrate Defender for Cloud CLI with Popular CI/CD Tools
+
+Defender for Cloud CLI scanning integration with popular CI/CD tools in Microsoft Defender for Cloud is now available for public preview. The CLI can now be incorporated into CI/CD pipelines to scan and identify security vulnerabilities in containerized source code. This feature assists development teams in detecting and addressing code vulnerabilities during pipeline execution. It requires authentication to Microsoft Defender for Cloud and modifications to the pipeline script. Scan results will be uploaded to Microsoft Defender for Cloud, allowing security teams to view and correlate them with containers in the container registry. This solution delivers continuous and automated insights to expedite risk detection and response, ensuring security without disrupting workflows.
+
+Use cases:
+
+- Pipeline scanning within CI/CD tools: Securely monitor all pipelines that invoke the CLI.
+- Early vulnerability detection: Results are published in the pipeline and sent to Microsoft Defender for Cloud.
+- Continuous security insights: Maintain visibility and respond swiftly across development cycles without hindering productivity.
+
+For more information, see [Integrate Defender for Cloud CLI with Popular CI/CD Tools](cli-cicd-integration.md).
 
 ### Defender for Cloud Setup experience
 
