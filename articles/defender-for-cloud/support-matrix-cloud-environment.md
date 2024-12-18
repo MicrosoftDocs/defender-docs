@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 10/31/2024
+ms.date: 12/03/2024
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -40,7 +40,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |**DEFENDER FOR CLOUD PLANS** | | ||
 |[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
-|[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | NA|
+|[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
 |[Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA|
 |[Defender for Azure SQL database servers](defender-for-sql-introduction.md) | GA | GA | GA<br/><br/>A subset of alerts/vulnerability assessments is available.<br/>Behavioral threat protection isn't available.|
 |[Defender for Containers](defender-for-containers-introduction.md)<br/>[Review detailed feature support](support-matrix-defender-for-containers.md) | GA | GA | GA|
@@ -50,8 +50,14 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) | GA | GA | GA|
 |[Defender for Resource Manager](defender-for-resource-manager-introduction.md) | GA | GA | GA|
 |[Defender for Servers](plan-defender-for-servers.md)<br/>[Review detailed feature support](support-matrix-defender-for-servers.md). | GA | GA | GA|
-|[Defender for Storage](defender-for-storage-introduction.md) | GA | GA (activity monitoring) | NA|
 |[Defender for SQL Servers on Machines](defender-for-sql-introduction.md) | GA | GA | NA|
+|[Defender for Storage](defender-for-storage-introduction.md) | GA | GA (activity monitoring) | NA|
+| **DEFENDER FOR STORAGE FEATURES** | | | |
+| Activity monitoring (security alerts) | GA | GA for [classic plan](defender-for-storage-classic.md) only. | GA for [classic plan](defender-for-storage-classic.md) only. |
+| [Malware scanning](defender-for-storage-malware-scan.md) | GA<sup>[1](#footnote1)</sup> | NA | NA |
+| Sensitive data threat detection (Sensitive Data Discovery) | GA<sup>[1](#footnote1)</sup> | NA | NA |
+
+<sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 

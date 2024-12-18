@@ -9,11 +9,11 @@ ai-usage: ai-assisted
 
 # Alerts for Kubernetes Clusters
 
-Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes (K8s) control plane and workload runtime. Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence also detect threats relevant to K8s containers, and combined with the Defender sensor, give enriched context for comprehensive and actionable alerts to safeguard your K8s environment.
+Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes control plane and workload runtime. Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence also detect threats relevant to Kubernetes containers, and combined with the Defender sensor, give enriched context for comprehensive and actionable alerts to safeguard your Kubernetes environment.
 
 ## Control plane detection
 
-In Kubernetes, the control plane manages and orchestrates all the resources within the cluster. Defender for Containers identifies potential threats in the control plane that can compromise the security and integrity of the entire cluster by monitoring the activities of the K8s API server. Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
+In Kubernetes, the control plane manages and orchestrates all the resources within the cluster. Defender for Containers identifies potential threats in the control plane that can compromise the security and integrity of the entire cluster by monitoring the activities of the Kubernetes API server. Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
 
 Examples of suspicious operations captured by Defender for Containers include:
 
@@ -23,7 +23,7 @@ Examples of suspicious operations captured by Defender for Containers include:
 
 ## Workload runtime detection
 
-Defender for Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor the K8s workload runtime activity to detect suspicious operations, including workload process creation events.
+Defender for Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor the Kubernetes workload runtime activity to detect suspicious operations, including workload process creation events.
 
 Examples of suspicious workload runtime activity include:
 
@@ -32,9 +32,9 @@ Examples of suspicious workload runtime activity include:
 * **Network scanning tools** – Defender for Containers identifies usage of scanning tools that have been used for malicious activities.
 * **Binary drift detection** - Defender for Cloud identifies execution of workload binaries that have drifted from the original container image. For more information, read about [Binary drift detection](binary-drift-detection.md).
 
-## K8s alerts simulation tool
+## Kubernetes alerts simulation tool
 
-Defender for Containers provides a tool to simulate various attack scenarios within your K8s environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
+Defender for Containers provides a tool to simulate various attack scenarios within your Kubernetes environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
 
 > [!Note]
 > Although the simulation tool doesn't run any malicious components, it's recommended to run it on a dedicated cluster without production workloads.

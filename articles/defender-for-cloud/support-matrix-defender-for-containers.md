@@ -20,9 +20,9 @@ This article summarizes support information for Container capabilities in Micros
 > - Specific features are in preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > - Only the versions of AKS, EKS and GKE supported by the cloud vendor are officially supported by Defender for Cloud.
 
-## Azure
+The following are the features provided by Defender for Containers, for the supported cloud environments and container registries.
 
-Following are the features for each of the domains in Defender for Containers:
+## Azure
 
 ### Security posture management
 
@@ -42,6 +42,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for images in ACR | ACR, Private ACR | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
 | Agentless/agent-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for running images in AKS | AKS | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless (Requires Agentless discovery for Kubernetes) **OR/AND** Defender sensor | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
+| Agentless K8s node scanning | [Vulnerability assessment of K8s nodes](kubernetes-nodes-va.md) | AKS| Preview | Preview |Enable **Agentless scanning for machines** | Agentless | Defender for Containers or Defender for Servers P2 or CSPM | Commercial clouds |
 
 ### Runtime threat protection
 
@@ -49,6 +50,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | [Control plane](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | Agentless | Defender for Containers | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | Workload | Detection of suspicious activity for Kubernetes for cluster level, node level, and workload level | AKS | GA | - | Enable **Defender Sensor in Azure** toggle **OR** deploy Defender sensors on individual clusters | Defender sensor | Defender for Containers | Commercial clouds<br /><br />National clouds: Azure Government, Azure China 21Vianet |
+| Node | [Detection of malware on K8s nodes](kubernetes-nodes-malware.md) | AKS | Preview | Preview | Enable **Agentless scanning for machines**  | Agentless | Defender for Containers or Defender for Servers P2 | Commercial clouds |
 
 ### Deployment & monitoring
 
@@ -192,17 +194,17 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 
 | Domain | Feature | Supported Resources | Linux release state  | Windows release state  | Agentless/Sensor-based | Pricing tier |
 |--|--| -- | -- | -- | -- | --|
-| Security posture management  | Comprehensive inventory capabilities | Docker Hub , Jfrog Artifactory| Preview | Preview | Agentless| Foundational CSPM **OR** Defender for Containers **OR** Defender CSPM |
-| Security posture management  | Attack path analysis | Docker Hub , Jfrog Artifactory| Preview | Preview | Agentless| Defender CSPM |
+| Security posture management  | Comprehensive inventory capabilities | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Foundational CSPM **OR** Defender for Containers **OR** Defender CSPM |
+| Security posture management  | Attack path analysis | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Defender CSPM |
 | [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JfFrog Artifactory| Preview | Preview | Agentless | Defender for Containers **OR** Defender CSPM |
-| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , Jfrog Artifactory| Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
+| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JFrog Artifactory| Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
 
 
 ### Kubernetes distributions and configurations
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Kubernetes](https://kubernetes.io/docs/home/)<br> * [AKS Engine](https://github.com/Azure/aks-engine)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br> * [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer)<br> * [VMware Tanzu Kubernetes Grid](https://tanzu.vmware.com/kubernetes-grid)<br> * [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/)<br> |
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br> * [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
 
 <sup><a name="footnote1"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
 

@@ -113,6 +113,16 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: High
 
+### Access from a Tor IP
+
+(AI.Azure_AccessFromAnonymizedIP)
+
+**Description**: An IP address from the Tor network accessed one of the AI resources. Tor is a network that allows people to access the Internet while keeping their real IP hidden. Though there are legitimate uses, it is frequently used by attackers to hide their identity when they target people's systems online.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
+
+**Severity**: High
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 

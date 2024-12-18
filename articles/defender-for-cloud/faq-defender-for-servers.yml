@@ -105,7 +105,7 @@ sections:
           On new Windows Server operating systems, Microsoft Defender Antivirus is part of the operating system and will be enabled in *active mode*. For machines running Windows Server with the Defender for Endpoint unified solution integration enabled, Defender for Servers deploys [Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows) in *active mode*. On Linux, Defender for Servers deploys Defender for Endpoint including the anti-malware component, and set the component in *passive mode*.
                       
       - question: |
-          How do I switch from a third-party EDR tool?
+          How do I switch from a non-Microsoft EDR tool?
         answer: |
           Full instructions for switching from a non-Microsoft endpoint solution are available in the Microsoft Defender for Endpoint documentation: [Migration overview](/windows/security/threat-protection/microsoft-defender-atp/switch-to-microsoft-defender-migration).
 

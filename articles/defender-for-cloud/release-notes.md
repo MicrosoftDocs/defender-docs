@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/18/2024
+ms.date: 11/28/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -27,10 +27,35 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## December 2024
+
+|Date | Category | Update|
+|--|--|--|
+| December 10 | GA | [Defender for Cloud Setup experience](#defender-for-cloud-setup-experience) |
+| December 10 | GA | [Revised interval options for Defender for Cloud scan of a cloud environment](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) |
+
+### Defender for Cloud Setup experience
+
+December 10, 2024
+
+The Setup experience allows you to start your initial steps with Microsoft Defender for Cloud by connecting cloud environments such as cloud infrastructure, code repositories, and external container registries.
+
+You're guided through the setup of your cloud environment, to protect your assets with advanced security plans, effortlessly perform quick actions to increase security coverage at scale, be aware of connectivity issues, and be notified of new security capabilities. You can navigate to the new experience from the [Defender for Cloud menu by selecting **Setup**](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SetupExperience).
+
+### Revised interval options for Defender for Cloud scan of a cloud environment
+
+December 10, 2024
+
+The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, and DockerHub have been revised. The scan interval feature allows you to control the frequency at which the Defender for Cloud initiates a scan of the cloud environment. You can set the scan interval to 4, 6, 12, or 24 hours, when adding or editing a cloud connector. The default scan interval for new connectors continues to be 12 hours.
+
 ## November 2024
 
 |Date | Category | Update|
 |--|--|--|
+| November 28 | Preview | [Sensitivity scanning capabilities now include Azure file shares (Preview)](#sensitivity-scanning-capabilities-now-include-azure-file-shares-preview) |
+| November 26 | Change| [Sensitivity label consent changes](#sensitivity-label-consent-changes) |
+| November 26 | Change | [Sensitivity label changes](#sensitivity-label-changes) |
+| November 25 | Preview | [Defender for Storage malware scanning for blobs up to 50 GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50-gb-preview) |
 | November 19 | Preview | [Updated versions of CIS standards for managed Kubernetes environments and new recommendations](#updated-versions-of-cis-standards-for-managed-kubernetes-environments-and-new-recommendations) |
 | November 19 | Preview | [Public preview of Kubernetes cloud process events in advanced hunting](#public-preview-of-kubernetes-cloud-process-events-in-advanced-hunting) |
 | November 19 | Deprecation | [Deprecation of Bring your own License (BYOL) feature in vulnerability management](#deprecation-of-bring-your-own-license-byol-feature-in-vulnerability-management) |
@@ -41,14 +66,60 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 18 | GA | [Critical assets protection in Microsoft Defender for Cloud](#critical-assets-protection-in-microsoft-defender-for-cloud)|
 | November 18 | GA | [Enhanced critical asset protection for containers](#enhanced-critical-asset-protection-for-containers) |
 | November 18 | GA | [Enhancements to detect & respond to container threats](#enhancements-to-detect--respond-to-container-threats) |
-| November 18 | Preview | [Introducing cloud-native response actions for Kubernetes pods (Preview)](#introducing-cloud-native-response-actions-for-kubernetes-pods-preview) |
 | November 15 | Preview | [API Security Posture Management Native Integration within Defender CSPM plan now in public preview](#api-security-posture-management-native-integration-within-defender-cspm-plan-now-in-public-preview)|
-| November 13| GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes)|
+| November 13| Preview | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes-preview)|
 | November 7 | GA | [Enhanced Kubernetes (K8s) Alert Documentation and Simulation Tool](#enhanced-kubernetes-k8s-alert-documentation-and-simulation-tool) |
 | November 6 | GA | [Enhanced Support for API sensitive data classification](#enhanced-support-for-api-sensitive-data-classification) |
 | November 6 | Public Preview | [New support for mapping Azure API Management API endpoints to backend compute](#new-support-for-mapping-azure-api-management-api-endpoints-to-backend-compute) |
 | November 6 | GA | [Enhanced API security support for multi-regional Azure API Management deployments and managing API revisions](#enhanced-api-security-support-for-multi-regional-azure-api-management-deployments-and-managing-api-revisions) |
 
+### Sensitivity scanning capabilities now include Azure file shares (Preview)
+
+November 28, 2024
+
+Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares (in preview) in addition to blob containers. 
+
+Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
+
+Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
+
+### Sensitivity label consent changes
+
+November 26, 2024
+
+You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
+
+With this change, all custom information types and sensitivity labels are automatically imported into the Microsoft Defender for Cloud portal.
+
+Learn more about [data sensitivity settings](data-sensitivity-settings.md#import-custom-sensitivity-info-typeslabels).
+
+### Sensitivity label changes
+
+November 26, 2024
+
+Until recently, Defender for Cloud imported all sensitivity labels from the Microsoft 365 Defender portal that met the following two conditions:
+
+- Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
+- The sensitivity label has an automatic labeling rule configured.
+
+As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+
+> [!NOTE]
+> Labels that were configured with "Items -> Files" before this change took place are automatically migrated to the new "Files and other data assets" scope.
+
+Learn more about [how to configure sensitivity labels](data-sensitivity-settings.md).
+
+### Defender for Storage malware scanning for blobs up to 50 GB (Preview)
+
+November 25, 2024
+
+**Estimated date for change:** December 1, 2024
+
+Starting on December 1, 2024, Defender for Storage malware scanning will **support blobs up to 50GB in size** (previously limited to 2GB).
+
+Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
+
+To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 
@@ -161,9 +232,7 @@ November 18, 2024
 
 Defender for Cloud provides a suite of new features to empower SOC teams to [tackle container threats](/defender-xdr/investigate-respond-container-threats) in cloud-native environments with greater speed and precision. These enhancements include Threat Analytics, GoHunt capabilities, Microsoft Security Copilot guided response, and cloud-native response actions for Kubernetes pods.
 
-### Introducing cloud-native response actions for Kubernetes pods (Preview)
-
-November 18, 2024
+#### Introducing cloud-native response actions for Kubernetes pods (Preview)
 
 Defender for Cloud now offers multicloud response actions for Kubernetes pods, accessible exclusively from the Defender XDR portal. These capabilities enhance incident response for AKS, EKS, and GKE clusters.
 
@@ -208,7 +277,7 @@ November 15, 2024
 
 API security posture management (Preview) capabilities are now included in the Defender CSPM plan and can be enabled through extensions within the plan under environment settings page. For more information, see [Improve your API security posture (Preview)](api-security-posture-overview.md).
 
-### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes
+### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes (Preview)
 
 November 13, 2024
 
@@ -239,7 +308,7 @@ November 7, 2024
 
 - Scenario-based alert documentation: K8s alerts are now documented based on real-world scenarios, providing clearer guidance on potential threats and recommended actions.
 - Microsoft Defender for Endpoint (MDE) integration: Alerts are enriched with additional context and threat intelligence from MDE, improving you the ability to respond effectively.
-- [New Simulation Tool](alerts-containers.md#k8s-alerts-simulation-tool): A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
+- [New Simulation Tool](alerts-containers.md#kubernetes-alerts-simulation-tool): A powerful simulation tool is available to test your security posture by simulating various attack scenarios and generating corresponding alerts.
 
 #### Benefits
 
@@ -291,7 +360,7 @@ Rollout Details:
 | October 6 | Preview | [Updated containers runtime recommendations](#updated-containers-runtime-recommendations-preview)|
 | October 6 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph-preview) |
 | October 6 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths-preview) |
-| October 6 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
+| October 6 | GA | [Improved attack path analysis for containers](#improved-attack-path-analysis-for-containers) |
 | October 6 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | October 6 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer) |
   
@@ -372,7 +441,7 @@ As of October 6, 2024 the following assessment IDs are replaced for these recomm
 
 October 6, 2024
 
-Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
+Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entities (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
 
 ### Kubernetes Identity and Access information-based attack paths (preview)
 
@@ -380,7 +449,7 @@ October 6, 2024
 
 Using the Kubernetes RBAC data in the security graph, Defender for Cloud now detects Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and reports on other attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from, and within Kubernetes clusters.
 
-### Improved attack path analysis
+### Improved attack path analysis for containers
 
 October 6, 2024
 
