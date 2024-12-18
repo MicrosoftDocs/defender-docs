@@ -1,6 +1,6 @@
 ---
-title: Defender for Containers - inventory & offboarding resources
-description: Learn how to take inventory of resources and handle the offboarding process in Microsoft Defender for Containers for efficient management.
+title: Offboarding Defender for Containers resources
+description: Learn how offboard Microsoft Defender for Containers resources for the supported Cloud environments.
 ms.topic: how-to
 ms.date: 05/07/2024
 ---
@@ -54,7 +54,7 @@ The components and roles fall under two removal-type categories:
 
 | Offering                                                     | Resource                                                 | Manual offboarding                                           | Removal information |
 | ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------- |
-| Workload runtime threat protection                                  | **logging.googleapis.com** API                               | [Disable GCP API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) | Shared component  |
+| Workload runtime threat protection                                  | **logging.googleapis.com** API                               | The GCP Logging API may be used by non-Defender for Cloud clients in your project. You can use the [GCP Logging API](https://cloud.google.com/sdk/gcloud/reference/logging/logs/list) to see if it is in use by other clients, to determine if you want to [disable the GCP Logging API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) | Shared component  |
 | Workload runtime threat protection                                  | Data Access audit logs configuration                     | [Disable data access audit logs](https://cloud.google.com/logging/docs/audit/configure-data-access#config-console-disable) for the Kubernetes Engine API | Shared component    |
 | Workload runtime threat protection  <br/><br/>  Kubernetes data plane hardening | **ms-defender-containers** (Service Account)                 | [Delete   gcloud IAM service-accounts](https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/delete) | Safe to remove      |
 | Workload runtime threat protection                                  | **ms-defender-containers-stream** (Service Account)          | [Delete gcloud IAM service-accounts](https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/delete) | Safe to remove      |
@@ -65,7 +65,6 @@ The components and roles fall under two removal-type categories:
 | Agentless discovery for Kubernetes                           | **MDCGkeClusterWriteRole**                                   | [gcloud iam roles delete  \| Google Cloud CLI Documentation](https://cloud.google.com/sdk/gcloud/reference/iam/roles/delete) | Safe to remove      |
 | Shared between all five Containers  offerings               | **containers** OIDC workload identity pool  provider         | [Manage workload identity pools and providers](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#iam-workload-pools-delete-gcloud) | Safe to remove      |
 | Workload runtime threat protection                                 | **containers-streams** OIDC workload identity  pool provider | [Manage workload identity pools and providers](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#iam-workload-pools-delete-gcloud) | Safe to remove      |
-| Container runtime threat protection <br/><br/>Workload runtime threat protection  <br/><br/>Kubernetes data plane hardening <br/><br/>Agentless discovery for Kubernetes | **container.googleapis.com** API                                | [Disable GCP API](https://cloud.google.com/service-usage/docs/enable-disable#disabling) | Shared component   |
 
 ### Resources created automatically after connector creation - GCP
 
@@ -74,9 +73,8 @@ The components and roles fall under two removal-type categories:
 | Workload runtime threat protection                                  | Pub/Sub Topic                                                | [gcloud   pubsub articles delete](https://cloud.google.com/sdk/gcloud/reference/pubsub/topics/delete) - Each cluster in a project has a topic with the prefix: `MicrosoftDefender-` | Safe to remove      |
 | Workload runtime threat protection                                  | Pub/sub Subscription                                         | [gcloud   pubsub subscription delete](https://cloud.google.com/sdk/gcloud/reference/pubsub/subscriptions/delete) Each cluster in a project has a subscription with the prefix: `MicrosoftDefender-` | Safe to remove      |
 | Workload runtime threat protection                                  | SINK                                                         | [gcloud   logging sinks delete  \| Google Cloud CLI Documentation](https://cloud.google.com/sdk/gcloud/reference/logging/sinks/delete) | Safe to remove      |
-| Workload runtime threat protection  <br/><br/>Kubernetes data plane hardening                                              | Defender sensor (per cluster in a project)  + Arc for Kubernetes | [Defender sensor removal](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-arc&preserve-view=true#use-the-azure-cli-to-remove-the-defender-sensor) | Safe to remove     |
+| Workload runtime threat protection                                       | Defender sensor (per cluster in a project)  + Arc for Kubernetes | [Defender sensor removal](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-arc&preserve-view=true#use-the-azure-cli-to-remove-the-defender-sensor) | Safe to remove     |
 | Workload runtime threat protection  <br/><br/>Kubernetes data plane hardening | Azure    Arc enabled Kubernetes (Connects your GKE clusters to Azure) | You can remove Azure Arc-enabled Kubernetes per cluster via [Azure CLI or Azure PowerShell](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#clean-up-resources). Running this command deletes all arc related resources       including extensions | Safe to remove      |
-| Workload runtime threat protection  <br/><br/>Kubernetes data plane hardening              | Defender    Sensor                                           | You can remove Defender sensor per cluster using the [Azure portal, Azure CLI, or REST API](defender-for-containers-enable.md#remove-the-defender-sensor) | Safe to remove      |
 | Workload runtime threat protection  <br/><br/>Kubernetes data plane hardening         | Azure Policy extension                                       | You can remove Defender extensions per cluster using the [Azure portal, Azure CLI, or REST API](defender-for-containers-enable.md#remove-the-defender-sensor) | Safe to remove      |
 
 ## Related content
