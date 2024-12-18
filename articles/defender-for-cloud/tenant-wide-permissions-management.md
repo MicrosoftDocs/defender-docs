@@ -74,7 +74,7 @@ To request elevated permissions from your global administrator:
 
     After the global administrator selects **Review the request** and completes the process, the decision is emailed to the requesting user.
 
-## Removing permissions
+## Remove permissions
 
 To remove permissions from the root tenant group, follow these steps:
 

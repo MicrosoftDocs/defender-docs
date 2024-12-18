@@ -124,11 +124,11 @@ Once you enable the agentless code scanning feature within a connector, the scan
   - The system scans code and Infrastructure-as-Code (IaC) templates for vulnerabilities after you create the connector and then every 3-4 days.  
 - **Scan duration**: Scans typically finish within 15 to 60 minutes, depending on the size and complexity of the repository.
 
-## Viewing and managing scan results
+## View and manage scan results
 
 After the scans finish, you can access security findings within Microsoft Defender for Cloud.
 
-### Accessing findings
+### Access findings
 
 1. Navigate to the [Security recommendations](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5) tab in Microsoft Defender for Cloud.
 
@@ -161,8 +161,8 @@ Agentless code scanning and in-pipeline scanning using the Microsoft Security De
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |  
 | **Use case fit**               | Offers broad coverage with minimal disruption to developers  | Provides detailed, pipeline-integrated scans with customizable controls |  
 | **Scan scope and coverage**    | Focuses on Infrastructure-as-Code (IaC) and code vulnerability scanning, scheduled every 3-4 days | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |  
-| **Setup and configuration**    | Requires no further setup after creating the connector    | Requires manual installation and configuration in each Azure DevOps pipeline |  
-| **Pipeline integration**       | Runs independently of (CI/CD) pipelines without modifying workflows | Integrates within the CI/CD pipeline, requiring YAML configuration in each pipeline |  
+| **Setup and configuration**    | Requires no further setup after creating the connector    | Requires manual installation and configuration in each CI/CD pipeline |  
+| **Pipeline integration**       | Runs independently of (CI/CD) pipelines without modifying workflows | Integrates within the CI/CD pipeline, requiring configuration in each pipeline |  
 | **Scanner customization**      | Scanners can't be customized or selectively run             | Allows customization with specific scanners, categories, languages, sensitivity levels, and non-Microsoft tools |  
 | **Results and feedback**       | Provides access to findings within Defender for Cloud        | Offers near real-time feedback within the CI/CD pipeline, with results also visible in Defender for Cloud |  
 | **Break and fail criteria**    | Can't break builds                                          | Can be configured to break builds based on the severity of security findings |

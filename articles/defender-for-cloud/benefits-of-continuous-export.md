@@ -1,5 +1,5 @@
 ---
-title: Exporting alerts and recommendations with continuous export
+title: Export alerts and recommendations with continuous export
 description: Learn about the benefits of continuous export in Microsoft Defender for Cloud. Stream security data to Azure Monitor workspace for analysis and visualization.
 ms.date: 03/25/2024
 author: dcurwin
@@ -8,7 +8,7 @@ ms.topic: concept-article
 #customer intent: As a reader, I want to understand the benefits of continuous export in Microsoft Defender for Cloud so that I can make informed decisions about implementing it in my organization.
 ---
 
-# Exporting alerts and recommendations with continuous export
+# Export alerts and recommendations with continuous export
 
 Microsoft Defender for Cloud provides continuous export of security data. This feature allows you to stream security data to Log Analytics in Azure Monitor, to Azure Event Hubs, or to another Security Information and Event Management (SIEM), Security Orchestration Automated Response (SOAR), or IT classic [deployment model solution](export-to-siem.md). You can analyze and visualize the data using Azure Monitor logs and other Azure Monitor features.
 

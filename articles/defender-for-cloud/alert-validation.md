@@ -127,7 +127,7 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 1. Open the Tor browser, which you can [download here](https://www.torproject.org/download/).
 1. In the Tor browser, navigate to the SAS URL.  You should now see and can download the file that was uploaded.
 
-## Testing AppServices alerts
+## Test AppServices alerts
 
 **To simulate an app services EICAR alert:**
 

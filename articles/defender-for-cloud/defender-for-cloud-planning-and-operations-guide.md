@@ -190,7 +190,7 @@ When you first opt in to use Defender for Cloud for your current Azure environme
 
 Plan to visit the threat intelligence option as part of your daily security operations. There you can identify security threats against the environment, such as identify if a particular computer is part of a botnet.
 
-### Monitoring for new or changed resources
+### Monitor for new or changed resources
 
 Most Azure environments are dynamic, with resources regularly being created, spun up or down, reconfigured, and changed. Defender for Cloud helps ensure that you have visibility into the security state of these new resources.
 
@@ -198,10 +198,9 @@ When you add new resources (VMs, SQL DBs) to your Azure environment, Defender fo
 
 You should also regularly monitor existing resources for configuration changes that could have created security risks, drift from recommended baselines, and security alerts.
 
-### Hardening access and applications
+### Harden access and applications
 
 As part of your security operations, you should also adopt preventative measures to restrict access to VMs, and control the applications that are running on VMs. By locking down inbound traffic to your Azure VMs, you're reducing the exposure to attacks, and at the same time providing easy access to connect to VMs when needed. Use [just-in-time VM access](just-in-time-access-usage.yml) access feature to hardening access to your VMs.
-
 
 ## Incident response
 

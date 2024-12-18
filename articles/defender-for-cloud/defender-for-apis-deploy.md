@@ -58,7 +58,7 @@ To select the best plan for your subscription from the Microsoft Defender for Cl
 1. Select the plan that is suitable for your subscription.
 1. Select **Save**.
 
-## Selecting the optimal plan based on historical Azure API Management API traffic usage
+## Select the optimal plan based on historical Azure API Management API traffic usage
 
 You must select a plan that grants entitlement appropriate for the API traffic volume in your subscription to receive the most optimal pricing. By default, subscriptions are opted into **Plan 1**, which can lead to unexpected overages if your subscription has API traffic higher than the [one million API calls entitlement](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/18).
 

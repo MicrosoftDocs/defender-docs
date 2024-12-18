@@ -32,7 +32,7 @@ API security posture management in Defender for Cloud offers the following capab
 
 ## Unified inventory  
 
-Defender for Cloud continuously discovers APIs published within your Azure API Management Service. You can view all APIs with posture insights in the Defender for Cloud [asset inventory](asset-inventory.md) and [API Security dashboard](defender-for-apis-introduction.md#reviewing-api-security-findings). This helps you address API risks efficiently.  
+Defender for Cloud continuously discovers APIs published within your Azure API Management Service. You can view all APIs with posture insights in the Defender for Cloud [asset inventory](asset-inventory.md) and [API Security dashboard](defender-for-apis-introduction.md#review-api-security-findings). This helps you address API risks efficiently.  
 
 ## Prioritize and implement API security best practices
 

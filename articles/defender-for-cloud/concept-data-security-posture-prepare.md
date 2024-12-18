@@ -14,7 +14,7 @@ ms.custom: references_regions
 
 Review the requirements on this page before setting up [data security posture management](concept-data-security-posture.md) in Microsoft Defender for Cloud.
 
-## Enabling sensitive data discovery
+## Enable sensitive data discovery
 
 Sensitive data discovery is available in the Defender CSPM, Defender for Storage and Defender for Databases plans.
 
@@ -44,7 +44,7 @@ The table summarizes availability and supported scenarios for sensitive data dis
 |What permissions do I need to view/edit data sensitivity settings? | You need one of these Microsoft Entra roles:<br> <li>Compliance Data Administrator, Compliance Administrator, or higher <br> <li>Security Operator, Security Administrator, or higher|
 | What permissions do I need to perform onboarding? | You need one of these [Azure role-based access control (Azure RBAC) roles](/azure/role-based-access-control/role-assignments-portal): Security Admin, Contributor, Owner on the subscription level (where the GCP project/s reside). For consuming the security findings: Security Reader, Security Admin, Reader, Contributor, Owner on the subscription level (where the GCP project/s reside). |
 
-## Configuring data sensitivity settings
+## Configure data sensitivity settings
 
 The main steps for configuring data sensitivity settings include:
 
@@ -85,7 +85,7 @@ We display all storage types, including Azure Storage Accounts, AWS Buckets, and
 
 - **File Shares** are displayed only if they have the “Contains Sensitive Data” insight.
 
-### Discovering and scanning Azure storage accounts
+### Discover and scan Azure storage accounts
 
 To scan Azure storage accounts, Microsoft Defender for Cloud creates a new `storageDataScanner` resource and assigns it the [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-reader) role. This role grants the following permissions:
 
@@ -94,7 +94,7 @@ To scan Azure storage accounts, Microsoft Defender for Cloud creates a new `stor
 
 For storage accounts behind private networks, we include the `StorageDataScanner` in the list of allowed resource instances in the storage account's network rules configuration.
 
-### Discovering and scanning AWS S3 buckets
+### Discover and scan AWS S3 buckets
 
 In order to protect AWS resources in Defender for Cloud, you set up an AWS connector, using a CloudFormation template to onboard the AWS account.
 
@@ -103,7 +103,7 @@ In order to protect AWS resources in Defender for Cloud, you set up an AWS conne
 - To connect AWS accounts, you need Administrator permissions on the account.
 - The role allows these permissions: S3 read only; KMS decrypt.
 
-### Discovering and scanning AWS RDS instances
+### Discover and scan AWS RDS instances
 
 To protect AWS resources in Defender for Cloud, set up an AWS connector using a CloudFormation template to onboard the AWS account.
 
@@ -121,7 +121,7 @@ To protect AWS resources in Defender for Cloud, set up an AWS connector using a 
   - Create alias for KMS keys
 - KMS keys are created once for each region that contains RDS instances. The creation of a KMS key might incur a minimal extra cost, according to AWS KMS pricing.
 
-### Discovering and scanning GCP storage buckets
+### Discover and scan GCP storage buckets
 
 In order to protect GCP resources in Defender for Cloud, you can set up a Google connector using a script template to onboard the GCP account.
 
@@ -159,9 +159,10 @@ AWS:
 - RDS instance
 
 > [!NOTE]
+>
 > - Exposure rules that include 0.0.0.0/0 are considered “excessively exposed”, meaning that they can be accessed from any public IP.
+>
 - Azure resources with the exposure rule “0.0.0.0” are accessible from any resource in Azure (regardless of tenant or subscription).
-
 
 ## Related content
 

@@ -106,7 +106,7 @@ To manage and customize information types:
 
 1. To apply your changes, select **Save** in the main **Labels** page.
 
-## Exporting and importing a policy
+## Export and import a policy
 
 You can download a JSON file with your defined labels and information types, edit the file in the editor of your choice, and then import the updated file.
 

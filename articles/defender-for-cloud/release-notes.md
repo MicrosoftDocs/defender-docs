@@ -31,8 +31,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| December 17 | Preview | [Integrate Defender for Cloud CLI with Popular CI/CD Tools](#integrate-defender-for-cloud-cli-with-popular-cicd-tools) |
 | December 10 | GA | [Defender for Cloud Setup experience](#defender-for-cloud-setup-experience) |
 | December 10 | GA | [Revised interval options for Defender for Cloud scan of a cloud environment](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) |
+
+### Integrate Defender for Cloud CLI with Popular CI/CD Tools
+
+Defender for Cloud CLI scanning integration with popular CI/CD tools in Microsoft Defender for Cloud is now available for public preview. The CLI can now be incorporated into CI/CD pipelines to scan and identify security vulnerabilities in containerized source code. This feature assists development teams in detecting and addressing code vulnerabilities during pipeline execution. It requires authentication to Microsoft Defender for Cloud and modifications to the pipeline script. Scan results will be uploaded to Microsoft Defender for Cloud, allowing security teams to view and correlate them with containers in the container registry. This solution delivers continuous and automated insights to expedite risk detection and response, ensuring security without disrupting workflows.
+
+Use cases:
+
+- Pipeline scanning within CI/CD tools: Securely monitor all pipelines that invoke the CLI.
+- Early vulnerability detection: Results are published in the pipeline and sent to Microsoft Defender for Cloud.
+- Continuous security insights: Maintain visibility and respond swiftly across development cycles without hindering productivity.
+
+For more information, see [Integrate Defender for Cloud CLI with Popular CI/CD Tools](cli-cicd-integration.md).
 
 ### Defender for Cloud Setup experience
 
@@ -77,7 +90,7 @@ The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, 
 
 November 28, 2024
 
-Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares (in preview) in addition to blob containers. 
+Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning capabilities now include Azure file shares (in preview) in addition to blob containers.
 
 Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
 
@@ -135,8 +148,7 @@ From the dashboard, you can assign the following standards to your AWS/EKS/GKE K
 
 To ensure the best possible depth of coverage for these standards, we've enriched our coverage by also releasing 79 new Kubernetes-centric recommendations.
 
-To use these new recommendations, either assign the standards listed above or create a custom standard and include one or more of the new assessments in it. 
-
+To use these new recommendations, either assign the standards listed above or create a custom standard and include one or more of the new assessments in it.
 
 ### Public preview of Kubernetes cloud process events in advanced hunting
 
@@ -816,7 +828,7 @@ With DevOps security capabilities in Microsoft Defender Cloud Security Posture M
 
 June 27, 2024
 
-We're announcing the general availability of the Checkov integration for Infrastructure-as-Code (IaC) scanning through [MSDO](azure-devops-extension.yml). As part of this release, Checkov will replace TerraScan as a default IaC analyzer that runs as part of the MSDO CLI. TerraScan might still be configured manually through MSDO's [environment variables](https://github.com/microsoft/security-devops-azdevops/wiki) but won't run by default.
+We're announcing the general availability of the Checkov integration for Infrastructure-as-Code (IaC) scanning through Microsoft Security DevOps ([MSDO](azure-devops-extension.yml)). As part of this release, Checkov will replace TerraScan as a default IaC analyzer that runs as part of the MSDO Command-Line Interface (CLI). TerraScan might still be configured manually through MSDO's [environment variables](https://github.com/microsoft/security-devops-azdevops/wiki) but won't run by default.
 
 Security findings from Checkov present as recommendations for both Azure DevOps and GitHub repositories under the assessments *Azure DevOps repositories should have infrastructure as code findings resolved* and *GitHub repositories should have infrastructure as code findings resolved*.
 
@@ -960,7 +972,7 @@ May 2, 2024
 
 Security policy management across clouds (Azure, AWS, GCP) is now generally available. This enables security teams to manage their security policies in a consistent way and with new features
 
-Learn more about [security policies in Microsoft Defender for Cloud](security-policy-concept.md#working-with-security-standards).
+Learn more about [security policies in Microsoft Defender for Cloud](security-policy-concept.md#work-with-security-standards).
 
 ### Preview: Defender for open-source databases available in AWS
 
