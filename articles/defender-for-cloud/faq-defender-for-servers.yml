@@ -88,7 +88,7 @@ sections:
           The [legacy method for onboarding servers to Defender for Servers Plan 2](quickstart-onboard-machines.md) using a workspace and the Log Analytics agent is no longer supported or available in the portal. To ensure that machines that are currently connected to the workspace remain protected, do the following:
 
           - **On-premises and multicloud machines**: If you previously onboarded on-premises and AWS/GCP machines using the legacy method, [connect these machines to Azure](/azure/azure-arc/servers/deployment-options) as Azure Arc-enabled servers to the subscription with Defender for Servers Plan 2 enabled.
-          - **Selected machines**: If you used the legacy method to enable Defender for Servers Plan 2 on individual machines, we recommend that you enable Defender for Server Plan 2 on the entire subscription. Then you can exclude specific machines using [resource-level configuration](plan-defender-for-servers-select-plan.md#decide-on-plan-scope).
+          - **Selected machines**: If you used the legacy method to enable Defender for Servers Plan 2 on individual machines, we recommend that you enable Defender for Server Plan 2 on the entire subscription. Then you can exclude specific machines using [resource-level configuration](plan-defender-for-servers-select-plan.md).
 
   - name: Defender for Endpoint integration
     questions:

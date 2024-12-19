@@ -34,7 +34,7 @@ This article helps you to deploy a Defender for Servers plan.
 - **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
 - **Take advantage of 500 MB free data ingestion**: When Defender for Servers Plan 2 is enabled, a benefit of free 500 MB data ingestion is available for specific data types. To take advantage of this benefit. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
 - **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
-- **Enable at resource level**. [Enabling Defender for Servers at resource level](#enable-at-resource-level) is available for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.
+- **Enable at resource level**. [Enabling Defender for Servers at resource level](#enable-defender-for-servers-at-resource-level) is available for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.
     - You can enable Plan 1 at the resource level.
     - You can disable Plan 1 and Plan 2 at the resource level.
 
@@ -82,7 +82,7 @@ After enabling the plan, you have the ability to [configure the features of the 
 
 ## Enable Defender for Servers at resource level
 
-Although we recommend that you enable the plan for an entire Azure subscription, you might need to mix plans, exclude specific resources, or enable Defender for Servers on specific machines only. To do this, you can enable or disable Defender for Servers at the resource level.  Review [deployment scope options](plan-defender-for-servers-select-plan.md#decide-on-plan-scope) before you start.
+Although we recommend that you enable the plan for an entire Azure subscription, you might need to mix plans, exclude specific resources, or enable Defender for Servers on specific machines only. To do this, you can enable or disable Defender for Servers at the resource level.  Review [deployment scope options](plan-defender-for-servers-select-plan.md#decide-on-deployment-scope) before you start.
 
 ## Configure on individual machines
 

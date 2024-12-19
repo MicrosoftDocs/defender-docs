@@ -107,12 +107,12 @@ Follow these instructions to migrate from file integrity monitoring using the AM
 
 If you do want to keep using the AMA to consume file integrity monitoring events, you can manaully connect to the relevant workspace and view changes in the **Change Tracking** table with this query.
 
-    ```kusto    
-    ConfigurationChange  
-    | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType in ('Registry', 'Files')  
-    | summarize count() by Computer, ConfigChangeType
-    ```
+```kusto    
+ConfigurationChange  
+| where TimeGenerated > ago(14d)  
+| where ConfigChangeType in ('Registry', 'Files')  
+| summarize count() by Computer, ConfigChangeType
+```
 To continue onboarding new scope or configuring monitoring rules, you need to manually work with data collection rules and customize data collection.
 
 ## Next steps

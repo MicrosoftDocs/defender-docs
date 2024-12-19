@@ -98,10 +98,10 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
 ## Access a software inventory
 
-To access the software inventory, you need one of the following **paid** solutions:
+To access the software inventory, you need one of the following plans:
 
 - [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
-- [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender for Servers P2](plan-defender-for-servers-select-plan.md#plan-features).
+- [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender for Servers P2](plan-defender-for-servers-select-plan.md).
 - [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) from [Defender for Servers](defender-for-servers-introduction.md).
 
 ### Examples using Azure Resource Graph Explorer to access and explore software inventory data
