@@ -40,7 +40,7 @@
 
 - name: Plan
   items:
-    - name: Zero trust and Defender for Cloud
+    - name: Zero Trust and Defender for Cloud
       displayName: zero trust, zero, trust
       href: zero-trust.md
     - name: Plan multicloud protection
@@ -153,15 +153,15 @@
           href: connect-an-integration.md
         - name: Partner integrations
           items:
-          - name: Endor labs
+          - name: Endor Labs
             items:
-            - name: Overview Endor labs integration
+            - name: Overview 
               displayName: CSPM, cloud security, posture, management, Endor labs
               href: integration-endor-labs.md
-            - name: Connect Endor labs to Defender for Cloud
+            - name: Connect Endor Labs to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, Endor labs
               href: connect-endor-labs.md
-            - name: Common questions about Endor labs
+            - name: Common questions 
               displayName: FAQ, questions, endor labs
               href: faq-endor-labs.yml
           - name: ServiceNow
