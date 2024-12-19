@@ -20,7 +20,7 @@ Before you deploy AMA with Defender for Cloud, you must have the following prere
 - Make sure your multicloud and on-premises machines have Azure Arc installed.
   - AWS and GCP machines
     - [Onboard your AWS connector](quickstart-onboard-aws.md) and automatically provision Azure Arc.
-    - [Onboard your GCP connector](quickstart-onboard-gcp.md) and automaically provision Azure Arc.
+    - [Onboard your GCP connector](quickstart-onboard-gcp.md) and automatically provision Azure Arc.
   - On-premises machines
     - [Install Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 - Make sure the Defender plans that you want the Azure Monitor Agent to support are enabled:
@@ -69,7 +69,7 @@ Before you deploy AMA with Defender for Cloud, you must have the following prere
       - Publisher: Microsoft.Azure.Monitor
       - Type: AzureMonitorWindowsAgent
 
-### Naming conventions in the Deny policy allowlist
+### Naming conventions in the "Deny policy" allowlist
 
 - Defender for SQL uses the following naming convention when creating our resources:
 
@@ -211,7 +211,7 @@ Defender for SQL on SQL VMs and Arc-enabled SQL servers uses the Log Analytics W
 
 ### How does Defender for SQL collect logs from the SQL server?
 
-Defender for SQL uses Xevent, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL collects the logs using the SQL server audit logs.
+Defender for SQL uses **Xevent**, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL collects the logs using the SQL server audit logs.
 
 ### I see a parameter named enableCollectionOfSqlQueriesForSecurityResearch in the policy initiative. Does this mean that my data is collected for analysis?
 
