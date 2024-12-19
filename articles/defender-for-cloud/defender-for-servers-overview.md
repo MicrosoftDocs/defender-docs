@@ -86,7 +86,7 @@ You can enable and disable at the resource level as follows:
 
 ## After enabling
 
-After a plan is enabled.
+After a plan is enabled the following applies:
 
 - **Trial period**: 30-day trial period begins. There is no way to stop, pause, or extend this trial period. To enjoy the full 30-day trial, plan ahead to meet your evaluation goals.
 - **Endpoint protection**: The Defender for Endpoint extension is automatically installed on all supported machines connected to Defender for Cloud. You can disable automatic provisioning if you need to.

@@ -21,7 +21,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 ## Prerequisites
 
 - The benefit is available for every machine running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.
-- You need to specifically enable Defender for Servers Plan 2 on the workspace to which machines report.
+-  Defender for Servers Plan 2 must be specifically enabled on the workspace to which machines report.
 - If the machine reports to more than one workspace, the benefit is only granted to one of them.
 
 The following subset of [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:

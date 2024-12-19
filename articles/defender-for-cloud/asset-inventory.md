@@ -30,7 +30,7 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
     - In **Search**, you can use a free text search to find resources.
     - **Total resources** displays the number of resources connected to Defender for Cloud.
     - **Unhealthy resources** displays the number of resources with active security recommendations and alerts.
-    - **Resource count by environment**: The number of Azure, AWS, and GCP resources.
+    - **Resource count by environment**: Total of Azure, AWS, and GCP resources.
 1. Select a resource to drill down for details.
 1. On the **Resource Health** page for the resource, review information about the resource.
     - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
@@ -94,7 +94,7 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
     ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
 
-1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't impact the displayed results unless you manually reload the page or select **Refresh**.
+1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
 
 ## Access a software inventory
 
@@ -168,4 +168,4 @@ securityresources
 
     ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
 
-Changes made to resources won't impact the displayed results unless you manually reload the page or select **Refresh**.
+Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.

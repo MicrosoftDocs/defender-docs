@@ -1,5 +1,5 @@
 ---
-title: Deteting endpoint detection and response solution in Microsoft Defender for Cloud
+title: Detecting endpoint detection and response solution in Microsoft Defender for Cloud
 description: Learn about detection for endpoint detection and response solutions in Microsoft Defender for Cloud
 author: dcurwin
 ms.author: dacurwin

@@ -19,8 +19,8 @@ Before you deploy AMA with Defender for Cloud, you must have the following prere
 
 - Make sure your multicloud and on-premises machines have Azure Arc installed.
   - AWS and GCP machines
-    - [Onboard your AWS connector](quickstart-onboard-aws.md) and autoprovision Azure Arc.
-    - [Onboard your GCP connector](quickstart-onboard-gcp.md) and autoprovision Azure Arc.
+    - [Onboard your AWS connector](quickstart-onboard-aws.md) and automatically provision Azure Arc.
+    - [Onboard your GCP connector](quickstart-onboard-gcp.md) and automaically provision Azure Arc.
   - On-premises machines
     - [Install Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 - Make sure the Defender plans that you want the Azure Monitor Agent to support are enabled:
@@ -199,7 +199,7 @@ The managed identity is part of the Azure Policy, which pushes out the AMA. It's
 Yes, we allow you to bring your own identity or DCR using the following script only. For more information, see [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
 ### How many resource groups and Log analytics workspaces are created through the auto-provisioning process?
-By default, we create the resource group, workspace and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resource group and DCR is created in the same location as the workspace. 
+By default, we create the resource group, workspace and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resource group/DCR is created in the same location as the workspace. 
 
 ### How can I enable SQL servers on machines with AMA at scale?
 

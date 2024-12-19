@@ -36,13 +36,13 @@ Here's how agentless scanning works:
 1. Defender for Cloud takes snapshots of VM disks and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot.
 
     - The copied snapshot remains in the same region as the VM.
-    - The scan has no affect on the VM.
+    - The scan doesn't affect the VM.
 
 1. After Defender for Cloud gets the necessary metadata from the copied disk, it immediately deletes the copied snapshot of the disk and sends the metadata to relevant Microsoft engines to detect configuration gaps and potential threats. For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. 
 
-1. Scanning results are displayed in Defender for Cloud, which consolidates both the agent-based and agentless results on the Security alerts page.
+1. Defender for Cloud displays scanning results, which consolidates both the agent-based and agentless results on the Security alerts page.
 
-3. Disks are analyzed in a scanning environment that's regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
+3. Defender for Cloud analyses disks in a scanning environment that's regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
 
 :::image type="content" source="media/concept-agentless-data-collection/agentless-scanning-process.png" alt-text="Diagram of the process for collecting operating system data through agentless scanning.":::
 
@@ -56,7 +56,7 @@ Defender for Cloud used specific roles and permissions to perform agentless scan
 
 ### Azure permissions
 
-The built-in role “VM scanner operator” has read-only permissions for VM disks that are required for the snapshot process. The detailed list of permissions is:
+The built-in role **VM scanner operator** has read-only permissions for VM disks that are required for the snapshot process. The detailed list of permissions is:
 
 - `Microsoft.Compute/disks/read`
 - `Microsoft.Compute/disks/beginGetAccess/action`
