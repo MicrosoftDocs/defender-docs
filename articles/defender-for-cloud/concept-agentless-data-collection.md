@@ -76,13 +76,13 @@ When coverage for CMK encrypted disks is enabled, more permissions are used:
 
 ### AWS permissions
 
-The role “VmScanner” is assigned to the scanner when you enable agentless scanning. This role has the minimal permission set to create and clean up snapshots (scoped by tag) and to verify the current state of the VM. The detailed permissions are:
+The role **VmScanner** is assigned to the scanner when you enable agentless scanning. This role has the minimal permission set to create and clean up snapshots (scoped by tag) and to verify the current state of the VM. The detailed permissions are:
 
 | Attribute | Value |
 | ---------|---------|
 | SID | **VmScannerDeleteSnapshotAccess** |
 | Actions | ec2:DeleteSnapshot |
-| Conditions | "StringEquals":{"ec2:ResourceTag/CreatedBy”:<br>"Microsoft Defender for Cloud"} |
+| Conditions | ```"StringEquals":{"ec2:ResourceTag/CreatedBy”:<br>"Microsoft Defender for Cloud"}``` |
 | Resources | arn:aws:ec2:::snapshot/ |
 | Effect | Allow |
 
@@ -115,7 +115,7 @@ The role “VmScanner” is assigned to the scanner when you enable agentless sc
 | SID | **VmScannerEncryptionKeyManagement** |
 | Actions | kms:TagResource <br> kms:GetKeyRotationStatus <br> kms:PutKeyPolicy <br> kms:GetKeyPolicy <br> kms:CreateAlias <br> kms:ListResourceTags |
 | Conditions | None |
-| Resources | arn:aws:kms::${AWS::AccountId}:key/ <br> arn:aws:kms:*:${AWS::AccountId}:alias/DefenderForCloudKey |
+| Resources | ```arn:aws:kms::${AWS::AccountId}: key/ <br> arn:aws:kms:*:${AWS::AccountId}:alias/DefenderForCloudKey ```|
 | Effect | Allow |
 
 | Attribute | Value |
@@ -123,7 +123,7 @@ The role “VmScanner” is assigned to the scanner when you enable agentless sc
 | SID | **VmScannerEncryptionKeyUsage** |
 | Actions | kms:GenerateDataKeyWithoutPlaintext <br> kms:DescribeKey <br> kms:RetireGrant <br> kms:CreateGrant <br> kms:ReEncryptFrom |
 | Conditions | None |
-| Resources | arn:aws:kms::${AWS::AccountId}:key/ |
+| Resources | arn:aws:kms::${AWS::AccountId}: key/ |
 | Effect | Allow |
 
 ### GCP permissions
