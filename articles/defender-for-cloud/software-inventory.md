@@ -34,8 +34,6 @@ If software that isn't supported appears in the inventory, only limited data wil
 1. In **Value**, filter for a specific app.
 
     Resources connected to Defender for Cloud and running those apps are displayed. Blank options show machines where Defender for Servers/Defender for Endpoint isn't available.
-1. 
-    :::image type="content" source="media/asset-inventory/software-inventory-filters.gif" alt-text="If you've enabled the threat and vulnerability solution, Defender for Cloud's asset inventory offers a filter to select resources by their installed software.":::
 
 
 ## Query the software inventory
