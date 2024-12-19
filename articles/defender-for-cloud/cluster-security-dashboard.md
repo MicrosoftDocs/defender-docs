@@ -1,6 +1,6 @@
 ---
-title: #Required; "<verb> * <noun>"
-description: Show how to use the Cluster Security Dashboard #Required; Keep the description within 100- and 165-characters including spaces.
+title: Cluster Security Dashboard
+description: Show the capabilities of the Cluster Security Dashboard 
 author: ehorwitz-ms #Required; your GitHub user alias, with correct capitalization
 ms.author: dcurwin #Required; microsoft alias of author
 ms.service: #Required; use the name-string related to slug in ms.product/ms.service
@@ -10,13 +10,13 @@ ms.date: 12/19/2024 #Required; mm/dd/yyyy format
 CustomerIntent: As the person responsible for the security of a cluster, I want know what views and actions the cluster security dashboard provides, so I can remediate security issues in the cluster.
 ---
 
-# Cluster Security Dashboard views and actions
+# Cluster Security Dashboard views and actions (Preview)
 
 The Cluster Security Dashboard gives the user the ability to view and take action to remediate an individual cluster's security posture.
 
 The Cluster Security Dashboard allows the user to:
 - View the security posture of the cluster.
-- Enable Defender for Cloud plans for the specific cluster resource.
+- Enable Defender for Container plans for the specific cluster resource.
 - Review vulnerability assessment recommendations for containers and node pools.
 - Review cluster misconfigurations.
 - Remediate the vulnerabilities and misconfigurations.
@@ -24,31 +24,41 @@ The Cluster Security Dashboard allows the user to:
 
 ## Prerequisites
 
+The Cluster Security Dashboard only shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
+- Defender for Containers on the subscription or the individual cluster
+- Defender Cloud Security Posture Management (DCSPM) on the subscription
 
-<!-- 5. Next step/Related content------------------------------------------------------------------------
+In addition, the first cluster in a subscription must be onboarded to Defender for Cloud plans by a subscription owner. The Azure Policy extension can only enabled by a cluster contributor or higher role.
 
-Optional: You have two options for manually curated links in this pattern: Next step and Related content. You don't have to use either, but don't use both.
-  - For Next step, provide one link to the next step in a sequence. Use the blue box format
-  - For Related content provide 1-3 links. Include some context so the customer can determine why they would click the link. Add a context sentence for the following links.
+When enabling Defender for Containers for an individual cluster:
+- Only container image vulnerability assessment, data plane hardening, and control plane vulnerability recommendations. Runtime threat protection and node pool vulnerability assessment aren't performed.
+- Risk prioritization is only calculated by the recommendations available to the individual cluster. If the subscription of the individual cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
 
--->
+## Using the Cluster Security Dashboard 
 
-## Next step
+The Cluster Security Dashboard is accessed from a cluster resource pane by selecting the Microsoft Defender for Cloud in the menu list. The dashboard shows:
 
-TODO: Add your next step link(s)
+- The **Security findings for this cluster** summary. It shows the total vulnerabilities and misconfigurations by risk level.
+- The **Vulnerabilities** and **Misconfigurations** tabs. Each of the tabs shows a summary of the risk level and list of recommendations.
+- The **Microsoft Defender for Containers status** for the cluster and the option to configure its coverage
 
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
+### Vulnerabilities and Misconfigurations remediation
 
-<!-- OR -->
+In the **Vulnerabilities** and **Misconfiguration** tabs, selecting one of the recommendations opens a pane showing the full details of the recommendation. In the details pane, the user can:
+
+- View the full details of the recommendation and the steps for remediation.
+- Remediate the issue by selecting the **Quick Fix** option. Some recommendations might require the user to remediate the issue by selecting **Additional Details**.
+- Assign an owner that is responsible for remediation of the issue. Selecting **Assign Owner** opens a pane where the owner name, remediation time frame, periodic email reminders can be set.
+
+The user can select multiple recommendations using the checkbox beside each recommendation and assign a single owner to all of them, by selecting **Assign owner** in the dashboard ruler.
+
+### Setting the Defender for Containers extensions
+
+Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, the following extensions can be toggled:
+
+- **K8S API access** - Enable agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
+- **Registry access** - Enable agentless vulnerability assessment for registry images.
+- **Azure policy** - Enable the deployment of an agent on the cluster to harden the data plane.
 
 ## Related content
-
-TODO: Add your next step link(s)
-
-- [Write concepts](article-concept.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
--->
 
