@@ -1,6 +1,6 @@
 ---
 title: Cluster Security Dashboard
-description: Explain the views and action in the Cluster Security Dashboard.
+description: Explain the views and actions in the Cluster Security Dashboard to enable and protect an individual cluster with Defender for Containers.
 author: ehorwitz-ms
 ms.author: dacurwin
 ms.topic: conceptual

@@ -59,6 +59,7 @@ The following table summarizes each plan and their cloud availability.
 |[Custom Recommendations](create-custom-recommendations.md)|-|:::image type="icon" source="./media/icons/yes-icon.png":::|Azure, AWS, GCP|
 | [Agentless code-to-cloud containers vulnerability assessment](agentless-vulnerability-assessment-azure.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [API security posture management (Preview)](api-security-posture-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
+| [Cluster Security Dashboard (Preview)](cluster-security-dashboard.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 
 <sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
 
@@ -98,7 +99,7 @@ You can choose which ticketing system to integrate. For preview, only ServiceNow
     | GCP Service | Resource types | Exclusions |
     |---|---|---|
     | Compute |  1. Google Compute instances<br/> 2. Google Instance Group | Instances with non-running states |
-    | Storage | Storage buckets | - Buckets from classes: ‘nearline’, ‘coldline’, ‘archive’<br/>- Buckets from regions other than: europe-west1, us-east1, us-west1, us-central1, us-east4, asia-south1, northamerica-northeast1 |
+    | Storage | Storage buckets | - Buckets from classes: 'nearline', 'coldline', 'archive'<br/>- Buckets from regions other than: europe-west1, us-east1, us-west1, us-central1, us-east4, asia-south1, northamerica-northeast1 |
     | DBs | Cloud SQL Instances | --- |
 
 ## Azure cloud support
