@@ -59,4 +59,4 @@ Selecting **Settings** of **Microsoft Defender for Containers status** opens a p
 - **Registry access** - Enable agentless vulnerability assessment for registry images.
 - **Azure policy** - Enable the deployment of an agent on the cluster to harden the data plane.
 
-The Defender for Containers plan for the cluster can also be set using the [REST API commands](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-stable&tabs=HTTP).
+The Defender for Containers plan for the cluster can also be set using the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-stable).
