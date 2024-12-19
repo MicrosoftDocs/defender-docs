@@ -1,11 +1,10 @@
 ---
 title: Cluster Security Dashboard
-description: Show the capabilities of the Cluster Security Dashboard 
-author: ehorwitz-ms #Required; your GitHub user alias, with correct capitalization
-ms.author: dcurwin #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: concept #Required; leave this attribute/value as-is
-ms.date: 12/19/2024 #Required; mm/dd/yyyy format
+description: Explain the views and action in the Cluster Security Dashboard.
+author: ehorwitz-ms
+ms.author: dacurwin
+ms.topic: conceptual
+ms.date: 12/19/2024
 
 CustomerIntent: As the person responsible for the security of a cluster, I want know what views and actions the cluster security dashboard provides, so I can remediate security issues in the cluster.
 ---
