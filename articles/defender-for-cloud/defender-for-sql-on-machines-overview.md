@@ -10,11 +10,11 @@ ms.date: 02/28/2024
 # Overview - Defender for SQL Server on Machines
 
 
-The Defender for SQL on Machines plan in Microsoft Defender for Cloud protects your IaaS SQL Servers hosted on VMs in Azure, muticloud, and on-premises machines. 
+The Defender for SQL on Machines plan in Microsoft Defender for Cloud protects your IaaS SQL Servers hosted on VMs in Azure, multiclouds, and on-premises machines. 
 
 - Learn about [SQL Server on Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/).
-- To use the plan, on-premises SQL servers must be onboarded to Defender for Cloud as Azure Arc VMs. Learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview).
-- For multicloud SQL Server machines,  [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) must be connected to Defender for cloud.
+-To use the plan, on-premises SQL servers must be onboarded to Defender for Cloud as Azure Arc VMs. Learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview).
+- For multicloud SQL Server machines, [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) must be connected to Defender for cloud.
 
 Defender for SQL Server on Machines identifies and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate threats to your databases.
 
@@ -48,7 +48,7 @@ You can run both the Log Analytics and Azure Monitor Agents on the same machine,
 
 - Certain recommendations or alerts are reported by both agents and will appear twice in Defender for Cloud.
 - Each machine is billed once in Defender for Cloud, but make sure you track billing of other services connected to the Log Analytics and Azure Monitor, such as the Log Analytics workspace data ingestion.
-- Both agents have performance impact on the machine.
+- Both agents affect performance on the machine.
 
 ### Customizing the Log Analytics workspace
 
@@ -56,7 +56,7 @@ The AMA requires Log Analytics workspace solutions. These solutions are automati
 
 When you install the AMA with autoprovisioning, you can define the destination workspace of the installed extensions.
 
-By default, the destination is the “default workspace” that Defender for Cloud creates for each region in the subscription: `defaultWorkspace-<subscriptionId>-<regionShortName>`. Defender for Cloud automatically configures the data collection rules, workspace solution, and other extensions for that workspace.
+By default, the destination is the default workspace that Defender for Cloud creates for each region in the subscription: `defaultWorkspace-<subscriptionId>-<regionShortName>`. Defender for Cloud automatically configures the data collection rules, workspace solution, and other extensions for that workspace.
 
 If you configure a custom Log Analytics workspace:
 

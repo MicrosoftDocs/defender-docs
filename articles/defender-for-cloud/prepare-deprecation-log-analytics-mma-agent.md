@@ -50,7 +50,7 @@ As part of the MMA agent retirement, the auto provisioning capability that provi
 
 ### The 500-MB benefit for data ingestion
 
-To preserve the 500 MB of free data ingestion allowance for the [supported data types](data-ingestion-benefits.md), you need to migrate from MMA to AMA.
+To preserve the 500 MB of free data ingestion allowance for the [supported data types](data-ingestion-benefit.md), you need to migrate from MMA to AMA.
 
 > [!NOTE]
 >

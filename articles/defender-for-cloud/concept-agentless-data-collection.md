@@ -14,7 +14,7 @@ ms.custom: template-concept
 
 Agentless machine scanning in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. 
 
-Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance. Agentless machine scanning:
+Agentless scanning doesn't need any installed agents or network connectivity, and doesn't affect machine performance. Agentless machine scanning:
 
 - **Scans endpoint detection and response (EDR) settings**: Scan machines to assess whether they're running an EDR solution, and whether settings are correct if machines integrate with Microsoft Defender for Endpoint. [Learn more](endpoint-detection-response.md)
 - **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) with integrated Microsoft Defender Vulnerability Management.
@@ -36,13 +36,13 @@ Here's how agentless scanning works:
 1. Defender for Cloud takes snapshots of VM disks and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot.
 
     - The copied snapshot remains in the same region as the VM.
-    - The VM isn't affected by the scan.
+    - The scan has no affect on the VM.
 
-1. After acquiring the necessary metadata from the copied disk, Defender for Cloud immediately deletes the copied snapshot of the disk and sends the metadata to relevant Microsoft engines to detect configuration gaps and potential threats. For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. 
+1. After Defender for Cloud gets the necessary metadata from the copied disk, it immediately deletes the copied snapshot of the disk and sends the metadata to relevant Microsoft engines to detect configuration gaps and potential threats. For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. 
 
 1. Scanning results are displayed in Defender for Cloud, which consolidates both the agent-based and agentless results on the Security alerts page.
 
-3. Disks are analyzed in a a scanning environment that's regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
+3. Disks are analyzed in a scanning environment that's regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
 
 :::image type="content" source="media/concept-agentless-data-collection/agentless-scanning-process.png" alt-text="Diagram of the process for collecting operating system data through agentless scanning.":::
 
@@ -52,9 +52,9 @@ Defender for Cloud used specific roles and permissions to perform agentless scan
 
 - In Azure, these permissions are automatically added to your subscriptions when you enable agentless scanning.
 - In AWS, these permissions are [added to the CloudFormation stack in your AWS connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-aws).
-- In GCP permissions are [added to the onboarding script in your GCP connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-gcp).
+- In GCP, these permissions are [added to the onboarding script in your GCP connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-gcp).
 
-### Azure permisions
+### Azure permissions
 
 The built-in role “VM scanner operator” has read-only permissions for VM disks that are required for the snapshot process. The detailed list of permissions is:
 
@@ -68,7 +68,7 @@ The built-in role “VM scanner operator” has read-only permissions for VM dis
 - `Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read`
 - `Microsoft.Compute/virtualMachineScaleSets/virtualMachines/instanceView/read`
             
-When coverage for CMK encrypted disks is enabled, these additional permissions are used: 
+When coverage for CMK encrypted disks is enabled, more permissions are used: 
 
 - `Microsoft.KeyVault/vaults/keys/read`
 - `Microsoft.KeyVault/vaults/keys/wrap/action`

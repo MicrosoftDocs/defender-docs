@@ -1,5 +1,5 @@
 ---
-title: Remediate Defender for Endpoint misconfiguration isues
+title: Remediate Defender for Endpoint misconfiguration issues in Microsoft Defender for Cloud
 description: Identify and remediate Defender for Endpoint misconfigurations in Defender for Cloud
 author: dcurwin
 ms.author: dacurwin
@@ -19,7 +19,7 @@ As part of these [integrated EDR capabilities](integration-defender-for-endpoint
 - `Signature out of date`
 - `Anti-virus is off or partially configured`
 
-If misconfigurations are found Defender for Cloud makes recommendations to fix them. This article describes how to remediate those recommendations.
+When misconfigurations are found, Defender for Cloud makes recommendations to fix them. This article describes how to remediate those recommendations.
 
 > [!NOTE]
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
@@ -31,7 +31,7 @@ If misconfigurations are found Defender for Cloud makes recommendations to fix t
 **Requirement** | **Details**
 --- | ---
 **Plan** | [Defender for Cloud](connect-azure-subscription.md) must be available in the Azure subscription and one of these plans must be enabled:<br/><br/>- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)<br/>- [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-**AGentless scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+**Agentless scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 **Machines** | Defender for Endpoint must be running as the EDR solution on VMs.
 
 ## Investigate misconfiguration recommendations
@@ -56,7 +56,7 @@ If misconfigurations are found Defender for Cloud makes recommendations to fix t
 
      :::image type="content" source="media/endpoint-detection-response/affected-resources-section.png" alt-text="Screenshot that shows you where you need to select on screen to expand the affected resources section.":::
 
-1. Review the resource findngs.
+1. Review the resource findings.
     :::image type="content" source="media/endpoint-detection-response/resources-findings.png" alt-text="Screenshot that shows the findings of an affected unhealthy resource." lightbox="media/endpoint-detection-response/resources-findings.png":::
 
 1. Drill into the security check, and follow the remediation steps.

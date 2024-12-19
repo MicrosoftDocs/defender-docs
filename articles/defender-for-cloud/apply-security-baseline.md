@@ -12,7 +12,7 @@ ms.date: 07/31/2023
 
 Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening. 
 
-Defender for Cloud assessess operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment using the Azure Policy machine configuration extension (formerly known as the guest configuration) on the machine. [Learn more](operating-system-misconfiguration.md)
+Defender for Cloud assesses operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment using the Azure Policy machine configuration extension (formerly known as the guest configuration) on the machine. [Learn more](operating-system-misconfiguration.md)
 
 This article describes how to review recommendations made by the assessment.
 
@@ -25,7 +25,7 @@ This article describes how to review recommendations made by the assessment.
 **Extension** | The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
 
 
-If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
+This feature previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect information. If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
 
 
 ## Review and remediate OS baseline recommendations

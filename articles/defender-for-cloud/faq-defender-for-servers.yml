@@ -150,7 +150,7 @@ sections:
       - question: |
           What is the auto-provisioning feature for vulnerability scanning with a "bring your own license" (BYOL) solution? Can it be applied on multiple solutions?
         answer: |
-          Defender for Servers can scan machines to see if they have an EDR solution enabled. If they don't, you can use Microsoft Defender Vulnerability Management that's integrated by default into Defender for Cloud. As an alternative, Defender for Cloud can deploy a supported third-party BYOL vulnerability scanner. You can only use a single BYOL scanner. Multiple third-party scanners aren't supported.
+          Defender for Servers can scan machines to see if they have an EDR solution enabled. If they don't, you can use Microsoft Defender Vulnerability Management that's integrated by default into Defender for Cloud. As an alternative, Defender for Cloud can deploy a supported non-Microsoft BYOL vulnerability scanner. You can only use a single BYOL scanner. Multiple non-Microsoft scanners aren't supported.
 
       - question: | 
           Does the integrated Defender for Vulnerability Management scanner find network vulnerabilities?

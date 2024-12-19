@@ -35,7 +35,7 @@ These recommendations rely on [Azure Update Manager](/azure/update-manager/overv
 
 
 
-## Enable periodic assessement on machines
+## Enable periodic assessment on machines
 
 Defender for Cloud issues a recommendation that machines should be assessed periodically for system updates.
 

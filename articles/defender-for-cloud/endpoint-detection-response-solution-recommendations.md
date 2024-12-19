@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 
 - [Integrates natively with Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md) for machine protection. to provide EDR capabilities for protected machines.
-- Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](detect-endpoint-detection-response-solutions.md#supported-edr-solutions).
+- Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported non-Microsoft solution](detect-endpoint-detection-response-solutions.md#supported-edr-solutions).
 
 Based on EDR solution findings, Defender for Cloud provides [recommendations](detect-endpoint-detection-response-solutions.md) to ensure that EDR solutions are installed and running correctly on machines. This article describes how to remediate those recommendations.
 
@@ -28,7 +28,7 @@ Based on EDR solution findings, Defender for Cloud provides [recommendations](de
 **Requirement** | **Details**
 --- | ---
 **Plan** | [Defender for Cloud](connect-azure-subscription.md) must be available in the Azure subscription and one of these plans must be enabled:<br/><br/>- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)<br/>- [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-**AGentless scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+**Gentles scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 
 
 ## Investigate EDR solution recommendations
@@ -59,7 +59,7 @@ Based on EDR solution findings, Defender for Cloud provides [recommendations](de
 
 ## Enable Defender for Endpoint integration
 
-This recommended action is available when Defender for Endpoint can be installed on a machine, and a [supported third-party EDR solution](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
+This recommended action is available when Defender for Endpoint can be installed on a machine, and a [supported non-Microsoft EDR solution](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
 
 
 Enable Defender for Endpoint on the machine as follows:
@@ -81,7 +81,7 @@ Enable Defender for Endpoint on the machine as follows:
 
 This recommended action is available when:
 
-- A [supported third-party EDR solutions](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
+- A [supported non-Microsoft EDR solution](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
 - A required Defender for Cloud plan (Defender for Servers Plan 2 or Defender CSPM) isn't enabled for the machine.
 
 Fix the recommendation as follows:

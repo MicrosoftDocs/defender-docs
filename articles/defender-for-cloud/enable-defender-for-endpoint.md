@@ -32,7 +32,7 @@ This article describes how to enable Defender for Endpoint integration manually 
 
 ## Enable on a subscription
 
-Defender for Endpoint integration is enabled by default when you enable a Defender for Servers plan. If turn off the Defender for Endpoint integration on a subscription, you can turn it on again manually as needed using these instructions.
+Defender for Endpoint integration is enabled by default when you enable a Defender for Servers plan. If you turn off the Defender for Endpoint integration on a subscription, you can turn it on again manually as needed using these instructions.
 
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription containing the machines on which you want to deploy the Defender for Endpoint integration.
@@ -76,7 +76,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
     :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support.":::
 
-1. In **Missing components** > **Unified solution**, select enable to automatically provision the Defender for Endpoint sensor on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
+1. In **Missing components** > **Unified solution**, select **Enable** to automatically install the Defender for Endpoint agent on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
 
     :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines.":::
 
@@ -168,7 +168,7 @@ To enable endpoint protection on Linux machines and Windows machines running Win
 
 You can enable the Defender for Endpoint integration at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud/settings/update?tabs=HTTP).
 
-Here's an example request body for the PUT request to enable the Defender for Endpoint integratoin:
+Here's an example request body for the PUT request to enable the Defender for Endpoint integration:
 
 URI: `https://management.azure.com/subscriptions/<subscriptionId>/providers/Microsoft.Security/settings/WDATP?api-version=2022-05-01`
 
