@@ -1035,7 +1035,19 @@
         - name: Investigate Defender for SQL security Alerts, reporting, and queries
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
-
+        - name: Find and remediate vulnerabilities
+          href: sql-azure-vulnerability-assessment-find.md
+        - name: Vulnerability assessment rules
+          href: sql-azure-vulnerability-assessment-rules.md
+        - name: SQL vulnerability assessment rules changelog
+          href: sql-azure-vulnerability-assessment-rules-changelog.md
+        - name: Consume and export scan results
+          href: defender-for-sql-scan-results.md
+        - name: Investigate Defender for SQL security alerts
+          href: defender-for-sql-alerts.md
+      
+      - name: Common questions
+        href: faq-defender-for-databases.yml
 
   - name: Defender for App Service
     items:
