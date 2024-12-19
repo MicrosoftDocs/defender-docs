@@ -11,7 +11,7 @@ CustomerIntent: As the person responsible for the security of a cluster, I want 
 
 # Cluster Security Dashboard views and actions (Preview)
 
-The Cluster Security Dashboard gives the user the ability to view and take action to remediate an individual cluster's security posture.
+The Cluster Security Dashboard gives the user the ability to view an individual cluster's security posture and remediate any security issues.
 
 The Cluster Security Dashboard allows the user to:
 - View the security posture of the cluster.
@@ -24,14 +24,14 @@ The Cluster Security Dashboard allows the user to:
 ## Prerequisites
 
 The Cluster Security Dashboard only shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
-- Defender for Containers on the subscription or the individual cluster
-- Defender Cloud Security Posture Management (DCSPM) on the subscription
+- [Defender for Containers on the subscription](tutorial-enable-containers-azure.md) or [the individual cluster](#setting-the-defender-for-containers-plan)
+- [Defender Cloud Security Posture Management (DCSPM)](tutorial-enable-cspm-plan.md) on the subscription
 
 In addition, the first cluster in a subscription must be onboarded to Defender for Cloud plans by a subscription owner. The Azure Policy extension can only enabled by a cluster contributor or higher role.
 
-When enabling Defender for Containers for an individual cluster:
+When [enabling Defender for Containers for an individual cluster](#setting-the-defender-for-containers-plan):
 - Only container image vulnerability assessment, data plane hardening, and control plane vulnerability recommendations. Runtime threat protection and node pool vulnerability assessment aren't performed.
-- Risk prioritization is only calculated by the recommendations available to the individual cluster. If the subscription of the individual cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
+- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is only calculated by the recommendations available to the individual cluster. If the subscription of the individual cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
 
 ## Using the Cluster Security Dashboard 
 
@@ -51,13 +51,12 @@ In the **Vulnerabilities** and **Misconfiguration** tabs, selecting one of the r
 
 The user can select multiple recommendations using the checkbox beside each recommendation and assign a single owner to all of them, by selecting **Assign owner** in the dashboard ruler.
 
-### Setting the Defender for Containers extensions
+### Setting the Defender for Containers plan
 
-Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, the following extensions can be toggled:
+Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, the following extensions can then be toggled:
 
 - **K8S API access** - Enable agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
 - **Registry access** - Enable agentless vulnerability assessment for registry images.
 - **Azure policy** - Enable the deployment of an agent on the cluster to harden the data plane.
 
-## Related content
-
+The Defender for Containers plan for the cluster can also be set using the [REST API commands](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-stable&tabs=HTTP).
