@@ -41,7 +41,7 @@ In AWS, by enabling just-in-time access, the relevant rules in the attached EC2 
 > - Just-in-time access doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).
 > - The Azure Firewall must be configured with Rules (Classic) and can't use Firewall policies.
 
-## Identifying VMs for just-in-time access
+## Identify VMs for just-in-time access
 
 The following diagram shows the logic that Defender for Servers applies when deciding how to categorize your supported VMs:
 

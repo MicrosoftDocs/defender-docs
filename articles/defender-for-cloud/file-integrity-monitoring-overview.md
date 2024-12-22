@@ -13,7 +13,7 @@ The file integrity monitoring feature in Microsoft Defender for Cloud helps to k
 - Meet compliance requirements. File integrity monitoring is often required by regulatory compliance standards such as PCI-DSS and ISO 17799.
 - Improve posture and identify potential security issues by detecting suspicious changes to files.
 
-## Monitoring suspicious activity
+## Monitor suspicious activity
 
 File integrity monitoring examines operating system files, Windows registries, application software, and Linux system files to detect suspicious activity such as:
 
@@ -32,11 +32,11 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent to coll
 - Collected file integrity monitoring data is part of the the [500 MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
 - File integrity monitoring provides details about the file/resource change, including the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
-### Migrating to the new collection method
+### Migrate to the new collection method
 
 Follow the steps to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from using the MMA to using the Defender for Endpoint agent.
 
-## Configuring file integrity monitoring
+## Configure file integrity monitoring
 
 After enabling Defender for Servers Plan 2, you enable and configure file integrity monitoring. It isn't enabled by default.
 
@@ -44,7 +44,7 @@ After enabling Defender for Servers Plan 2, you enable and configure file integr
 - Defender for Cloud recommends resources to monitor with file integrity monitoring, and you can customize additional monitoring.
 - After selecting a workspace you review and customize what you want to monitor. Defender for Cloud recommends resources to include by default in the file integrity monitoring list, and you can define your own.
 
-## Choosing what to monitor
+## Choose what to monitor
 
 Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can define your own entities. When choosing which files to monitor:
 

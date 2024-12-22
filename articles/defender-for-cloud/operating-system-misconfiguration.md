@@ -7,7 +7,7 @@ author: dcurwin
 ms.date: 07/31/2023
 ---
 
-# Assessing operating system configuration
+# Operating system misconfigurations
 
 Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 

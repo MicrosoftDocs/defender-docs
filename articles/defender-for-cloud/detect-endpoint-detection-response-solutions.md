@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
 
-# Detecting endpoint detection and response solutions
+# Endpoint detection and response solution detection
 
 Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 
@@ -17,7 +17,7 @@ Microsoft Defender for Cloud includes endpoint detection and response (EDR) capa
 - [Integrates natively with Microsoft Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md).
 
 
-## Checking for an EDR solution
+## Check for an EDR solution
 
 Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess whether Azure VMs and AWS/GCP machines are connected to an EDR solution. 
 

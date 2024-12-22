@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
 
-# Assessing Defender for Endpoint as an endpoint detection and response solution
+# Defender for Endpoint endpoint detection and response assessment
 
 Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint as an endpoint detection and response (EDR) solution.
 
@@ -19,7 +19,7 @@ EDR capabilities in Defender for Endpoint [detect, investigate, and respond to a
 - Agentless scanning for EDR settings is available when Defender for Cloud is running in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled. 
 
 
-## Assessing Defender for Endpoint settings
+## Assess Defender for Endpoint settings
 
 When machines run Defender for Endpoint as an EDR solution, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
 

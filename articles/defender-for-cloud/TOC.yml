@@ -863,9 +863,6 @@
         href: remediate-server-secrets.md 
       - name: Review changes in file integrity monitoring
         href: file-integrity-monitoring-review-changes.md
-      - name: Review changes in file integrity monitoring (legacy MMA)
-        displayName: fim, change
-        href: file-integrity-monitoring-compare-baselines.md
   - name: Defender for Containers
     items:
       - name: Overview

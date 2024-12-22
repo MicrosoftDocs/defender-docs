@@ -23,7 +23,7 @@ Before you begin, review the earlier articles:
 1. Understand how [Defender for Servers collects data for assessment and when you need a workspace](plan-defender-for-servers-agents.md).
 1. Understand where [Defender for Servers stores data](plan-defender-for-servers-data-workspace.md).
 
-## Scaling overview
+## Enable overview
 
 When you enable a Defender for Cloud subscription, this process occurs:
 
