@@ -1,6 +1,6 @@
 ---
-title: Cluster Security Dashboard
-description: Explain the views and actions in the Cluster Security Dashboard to enable and protect an individual cluster with Defender for Containers.
+title: Azure Kubernetes Service security dashboard
+description: Explain the views and actions in the AKS security Dashboard to enable and protect an individual cluster with Defender for Containers.
 author: ehorwitz-ms
 ms.author: dacurwin
 ms.topic: conceptual
@@ -9,13 +9,13 @@ ms.date: 12/19/2024
 CustomerIntent: As the person responsible for the security of a cluster, I want know what views and actions the cluster security dashboard provides, so I can remediate security issues in the cluster.
 ---
 
-# Cluster Security Dashboard views and actions (Preview)
+# Azure Kubernetes Security Dashboard views and actions (Preview)
 
-The Cluster Security Dashboard gives the user the ability to view an individual cluster's security posture and to remediate any security issues.
+The dashboard consolidates operational and security information in one view, empowering platform engineering teams to understand the security risks in their Kubernetes environment, quickly remediate issues, and reduce the risk of overlooking security threats to the cluster.
 
 The Cluster Security Dashboard allows the user to:
 - View the security posture of the cluster.
-- Enable Defender for Container plans for the specific cluster resource.
+- Enable Defender for Container plans and configure extensions for the specific cluster resource.
 - Review vulnerability assessment recommendations for containers and node pools.
 - Review cluster misconfigurations.
 - Remediate the vulnerabilities and misconfigurations.
