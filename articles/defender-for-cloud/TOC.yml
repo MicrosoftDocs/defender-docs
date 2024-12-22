@@ -127,6 +127,9 @@
               displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
                 azure arc, multicloud
               href: defender-for-containers-enable.md
+            - name: Defender for Containers resources and offboarding
+              displayName: defender, containers, offboard, resources
+              href: defender-for-containers-offboard.md
         - name: Protect key vaults with Defender for Key Vault
           displayName: enable, key, vault, key vault
           href: tutorial-enable-key-vault-plan.md
