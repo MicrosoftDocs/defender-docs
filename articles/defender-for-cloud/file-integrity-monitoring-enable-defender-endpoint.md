@@ -44,6 +44,12 @@ To track changes to your files and registries on machines with Defender for Endp
 
 - Enable [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) on machines you want to monitor
 
+> [!IMPORTANT]
+> Starting at June 2025, File Integrity Monitoring (FIM) will require a minimum Defender for Endpoint (MDE) client version. Please ensure that you are at the minimum following client versions keep benefit from FIM experience in Microsoft Defender for Cloud: for Windows: 10.8760, for Linux: 30.124082.
+> - To update the Microsoft Defender for Endpoint client for Windows Servers 2012 R2 or 2016, install the standalone KB5005292 through [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292).
+> - To update Microsoft Defender for Endpoint client for Windows servers 2019 and above, please refer to the latest Windows update. Learn more about [updating all affected machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)
+> - Microsoft Defender for Endpoint client for Linux is updated automatically when deployed using Defender for Cloud. You can also run a manual update via command - [Deploy updates for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
+
 ## Enable File Integrity Monitoring
 
 ### Enable in the Azure portal
