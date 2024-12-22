@@ -20,7 +20,8 @@ Agentless scanning doesn't need any installed agents or network connectivity, an
 - **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) with integrated Microsoft Defender Vulnerability Management.
 -  **Scans for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
 - **Scans for secrets on machines**: Locate plain text secrets in your compute environment with agentless [secrets scanning](secrets-scanning.md).
-- **Scans for malware**: [Scan machines for malware and viruses](agentless-malware-scanning.md) using [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows). 
+- **Scans for malware**: [Scan machines for malware and viruses](agentless-malware-scanning.md) using [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows).
+- **Scans VMs runnng as Kubernetes nodes**: [Vulnerability assessment and malware scanning is available for VMs running as Kubernetes nodes](kubernetes-nodes-overview.md) when Defender for Servers Plan 2 or the Defender for Containers plan is enabled. Available in commercial clouds only.
 
 Agentless scanning is available in the following Defender for Cloud plans:
 
