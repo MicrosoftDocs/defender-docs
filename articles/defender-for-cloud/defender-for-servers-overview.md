@@ -66,20 +66,18 @@ Plan features are summarized in the table.
 **File integrity monitoring** | Supported in Plan 2 only | [File integrity monitoring](file-integrity-monitoring-overview.md) examines files and registries for changes that might indicate an attack. You configure file integrity monitoring after enabling Defender for Servers Plan 2.<br/><br/> File integrity monitoring uses the Defender for Endpoint extension to collect information. The previous collection method that used the MMA is now deprecated. [Learn more](migrate-file-integrity-monitoring.md) about migration to the Defender for Endpoint extension.
 **Just-in-time virtual machine access** | Supported in Plan 2 only | [Just-in-time virtual machine access](just-in-time-access-overview.md) locks down machine ports to reduce the attack surface.
 **Network map** | Supported in Plan 2 only | The [network map](protect-network-resources.md) provides a geographical view of recommendations for hardening your network resources.
-**Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for specific data types in Log Analytics workspaces. [Learn more](data-ingestion-benefit.md)
+**Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for specific data types in Log Analytics workspaces. [Learn more](data-ingestion-benefit.md).
 
 
 ## Deployment scope
 
-We recommend enabling Defender for Servers at subscription level, but you can enable and disable Defender for Servers at resource level if you need deployment granularity.
-
-You can enable and disable at the resource level as follows:
+We recommend enabling Defender for Servers at subscription level, but you can enable and disable Defender for Servers at resource level if you need deployment granularity, as follows:
 
 **Scope** | **Plan 1** | **Plan 2**
 --- | --- | ---
-**Enable for Azure subscription** | Yes | Yes
-**Enable for resource** | Yes | No
-**Disable for resource** | Yes | Yes
+**Enable for an Azure subscription** | Yes | Yes
+**Enable for a resource** | Yes | No
+**Disable for a resource** | Yes | Yes
 
 - Plan 1 can be enabled and disabled at resource level per server.
 - Plan 2 can't be enabled at the resource level, but you can disable the plan at resource level.
@@ -97,5 +95,5 @@ After a plan is enabled the following applies:
 
 ## Next steps
 
-- Learn how [Defender for Endpoint and Defender Vulnerability Management integrate into Defender for Cloud](integration-defender-for-endpoint.md). 
+- Review [common questions](faq-defender-for-servers.md) about Defender for Servers.
 - [Plan your Defender for Servers deployment](plan-defender-for-servers.md).

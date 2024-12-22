@@ -20,23 +20,19 @@ This article helps you to deploy a Defender for Servers plan.
 
 ## Prerequisites
 
-- **Plan your deployment**. Review the [Defender for Servers planning guide](plan-defender-for-servers.md).
-- **Decide how you want to deploy**. [Review deployment recommendations](plan-defender-for-servers-select-plan.md), and decide where you want to enable the plan.
-- **Compare plan features**. [Understand and compare](defender-for-servers-overview.md) Defender for Servers plan features.
-- **Review pricing**. Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
-- **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
-- **Turn on Defender for Cloud**: Make sure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
-- **Onboard AWS/GCP machines**. To protect AWS and GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud. By default the connection process onboards multicloud machines as Azure Arc-enabled VMs.
-- **Onboard on-premises machines**. For full Defender for Servers functionality, on-premises machines should be [onboarded to the subscription as Azure Arc VMs](quickstart-onboard-machines.md).
-
-    If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md) instead of onboarding machines with Azure Arc, Defender for Servers Plan functionality is available. For Defender for Servers Plan 2, in addition to Plan 1 features, only the premium Defender Vulnerability Management features are available.
-
-- **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-- **Take advantage of 500 MB free data ingestion**: When Defender for Servers Plan 2 is enabled, a benefit of free 500 MB data ingestion is available for specific data types. To take advantage of this benefit. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
-- **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
-- **Enable at resource level**. [Enabling Defender for Servers at resource level](#enable-defender-for-servers-at-resource-level) is available for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.
-    - You can enable Plan 1 at the resource level.
-    - You can disable Plan 1 and Plan 2 at the resource level.
+**Requirement** | **Details**
+--- | ---
+**Plan your deployment** | Review the [Defender for Servers planning guide](plan-defender-for-servers.md).<br/><br/>[Check permissions needed](plan-defender-for-servers-roles.md) to deploy and work with the plan, [choose a plan and deployment scope](plan-defender-for-servers-select-plan.md), and [understand how data is collected and stored](plan-defender-for-servers-data-workspace.md).
+**Compare plan features** | [Understand and compare](defender-for-servers-overview.md) Defender for Servers plan features.
+**Review pricing** | Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+**Get an Azure subscription** | You need a Microsoft Azure subscription. [Sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) if you need to.
+**Turn on Defender for Cloud** | Make sure Defender for Cloud is [available in the subscription](connect-azure-subscription.md).
+**Onboard AWS/GCP machines** | To protect AWS and GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.<br/><br/>By default the connection process onboards machines as Azure Arc-enabled VMs.
+**Onboard on-premises machines** | [Onboard on-premises machines as Azure Arc VMs](quickstart-onboard-machines.md) for full functionality in Defender for Servers.<br/><br> If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md) instead of onboarding Azure Arc, only Plan 1 functionality is available. In Defender for Servers Plan 2, you get only the premium Defender Vulnerability Management features in addition to Plan 1 functionality.
+**Review support requirements** | Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
+**Take advantage of 500 MB free data ingestion** | When Defender for Servers Plan 2 is enabled, a benefit of free 500 MB data ingestion is available for specific data types. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
+**Defender integration** | Defender for Endpoint and Defender for Vulnerability Management are integrated by default in Defender for Cloud.<br/><br/> When you enable Defender for Servers, you give consent for the Defender for Servers plan to access Defender for Endpoint data related to vulnerabilities, installed software, and endpoint alerts.
+**Enable at resource level** | Although we recommend enabling Defender for Servers for a subscription, you can [enable Defender for Servers at resource level](#enable-defender-for-servers-at-resource-level) if needed, for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.<br/><br/> You can enable Plan 1 at the resource level.<br/><br/> You can disable Plan 1 and Plan 2 at the resource level.
 
 ## Enable on Azure, AWS, or GCP
 
