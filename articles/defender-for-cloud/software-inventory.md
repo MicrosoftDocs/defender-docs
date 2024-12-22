@@ -42,7 +42,7 @@ In addition to the predefined filters, you can explore the software inventory da
 
 1. Select **Azure Resource Graph Explorer**.
 
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Launching Azure Resource Graph Explorer** recommendation page" :::
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot showing launch of Azure Resource Graph Explorer** recommendation page" :::
 
 1. Select the following subscription scope: securityresources/softwareinventories
 
