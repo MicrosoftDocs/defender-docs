@@ -78,7 +78,7 @@ The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, 
 ### Microsoft Defender for Endpoint client version update is required to receive File Integrity Monitoring (FIM) experience.
 June, 2025
 
-Starting at June 2025, File Integrity Monitoring (FIM) will require a minimum Defender for Endpoint (MDE) client version. Please ensure that you are at the minimum following client versions keep benefit from FIM experience in Microsoft Defender for Cloud: for Windows: 10.8760, for Linux: 30.124082. [Learn more ](/azure/defender-for-cloud/file-integrity-monitoring-enable-defender-endpoint)
+Starting at June 2025, File Integrity Monitoring (FIM) will require a minimum Defender for Endpoint (MDE) client version. Please ensure that you are at the minimum following client versions keep benefit from FIM experience in Microsoft Defender for Cloud: for Windows: 10.8760, for Linux: 30.124082. [Learn more](file-integrity-monitoring-enable-defender-endpoint.md)
 
 
 ## November 2024
