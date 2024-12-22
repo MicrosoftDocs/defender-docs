@@ -16,9 +16,8 @@ The dashboard consolidates operational and security information in one view, emp
 The AKS Security Dashboard allows the user to:
 - View the security posture of the cluster.
 - Enable Defender for Container plans and configure extensions for the specific cluster resource.
-- Review vulnerability assessment recommendations for containers and node pools.
-- Review cluster misconfigurations.
-- Remediate the vulnerabilities and misconfigurations.
+- Review vulnerability assessment recommendations.
+- Review security best practice misconfigurations with guided or automated remediations.
 - Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date.
 
 ## Prerequisites
