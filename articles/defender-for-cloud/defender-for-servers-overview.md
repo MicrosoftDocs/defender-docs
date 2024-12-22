@@ -95,5 +95,5 @@ After a plan is enabled the following applies:
 
 ## Next steps
 
-- Review [common questions](faq-defender-for-servers.md) about Defender for Servers.
+- Review [common questions](faq-defender-for-servers.yml) about Defender for Servers.
 - [Plan your Defender for Servers deployment](plan-defender-for-servers.md).
