@@ -15,22 +15,24 @@ The dashboard consolidates operational and security information in one view, emp
 
 The AKS Security Dashboard allows the user to:
 - View the security posture of the cluster.
-- Enable Defender for Container plans and configure extensions for the specific cluster resource.
+- Enable Defender for Container plan and configure extensions for the specific cluster resource.
 - Review vulnerability assessment recommendations.
-- Review misconfigurations according to security best practices, together with guided or automated remediation.
-- Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date.
+- Review configurations of the running cluster and containers that deviate from security best practices ("misconfigurations"), together with guided or automated remediation.
+- Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date. (Available with Defender Cloud Security Posture Management (DCSPM) enabled for the cluster.)
 
 ## Prerequisites
 
 The AKS Security Dashboard only shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
 - [Defender for Containers on the subscription](tutorial-enable-containers-azure.md) or [the individual cluster](#setting-the-defender-for-containers-plan)
-- [Defender Cloud Security Posture Management (DCSPM)](tutorial-enable-cspm-plan.md) on the subscription
+- [DCSPM](tutorial-enable-cspm-plan.md) on the subscription
 
-In addition, the first cluster in a subscription must be onboarded to Defender for Cloud plans by a subscription owner. The Azure Policy extension can only enabled by a cluster contributor or higher role.
+> !NOTE
+> When enabling Defender for Cloud for a single cluster in a subscription, a subscription owner must enable Defender for Cloud plans. A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
 
-When [enabling Defender for Containers for an individual cluster](#setting-the-defender-for-containers-plan):
-- Only container image vulnerability assessments, data plane hardening, and control plane vulnerability recommendations are performed. Runtime threat protection and node pool vulnerability assessment aren't performed.
-- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is only calculated by the recommendations available to the individual cluster. If the subscription of the individual cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
+When [enabling Defender for Containers for a single cluster](#setting-the-defender-for-containers-plan):
+- Security misconfigurations are shown.
+- Vulnerability assessment recommendations will be shown if Defender for Containers is enabled for the subscription.
+- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is only calculated by the recommendations available to the single cluster. If the subscription of the single cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
 
 ## Using the AKS Security Dashboard 
 
