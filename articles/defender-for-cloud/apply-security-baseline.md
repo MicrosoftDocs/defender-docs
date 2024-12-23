@@ -1,91 +1,46 @@
 ---
-title: Remediate guest configuration recommendations
-description: Learn how to enable Azure Policy guest configuration in Microsoft Defender for Cloud and ensure a secure computing environment.
+title: Review OS misconfiguration recommendations in Microsoft Defender for Cloud
+description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare machine OS settings with baselines in Microsoft Cloud Security Benchmark.
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 09/01/2024
-#customer intent: As a security administrator, I want to enable Azure Policy guest configuration in Microsoft Defender for Cloud so that I can compare my OS with the guidance from Microsoft cloud security benchmark and ensure a secure computing environment.
+ms.date: 07/31/2023
 ---
 
-# Remediate guest configuration recommendations
+# Remediate OS misconfigurations
 
-> [!NOTE]
-> As the Log Analytics agent (also known as MMA) is set to retire in [November 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
-Defender for Cloud evaluates baselines misconfiguration for virtual machines (VMs) connected to your subscription. The evaluation assesses your VMs against predefined security baselines, identifying any deviations or misconfigurations that could pose potential risks. By aligning your VMs with security best practices and organizational policies, you can maintain a robust and secure computing environment.
+Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening. 
 
-Machine information is collected through the [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration) and the evaluation is based on Microsoft benchmarks that cover various compliance benchmarks and regulations. For example, CIS, STIG, and more. Azure Policy guest configuration enables the following policies on your subscription: 
+Defender for Cloud assesses operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment using the Azure Policy machine configuration extension (formerly known as the guest configuration) on the machine. [Learn more](operating-system-misconfiguration.md)
 
-- [Azure Policy guest configuration baseline for Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows)
+This article describes how to review recommendations made by the assessment.
 
-- [Azure Policy guest configuration baseline for Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux)
-
-> [!NOTE]
-> If you remove these policies you won't be able to access the benefits of the Azure Policy guest configuration extension.
 
 ## Prerequisites
 
-- [Enable Defender for Servers Plan 2 on your subscription](tutorial-enable-servers-plan.md).
+**Requirements** | **Details**
+--- | ---
+**Plan** | [Defender for Servers Plan 2 must be enabled](tutorial-enable-servers-plan.md) 
+**Extension** | The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
 
-- Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information.
 
-> [!IMPORTANT]
-> Be aware that additional features provided by Azure Policy guest configuration that exist outside of the Defender for Cloud portal aren't included with Defender for Cloud, and are subject to Azure Policy guest configurations pricing policies. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). For more information, see the [Azure Policy guest configuration pricing page](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).
+This feature previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect information. If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
 
-- Review the [support matrix for the Azure Policy guest configuration](/azure/governance/machine-configuration/overview).
 
-- Install the Azure Policy guest configuration on your machines:
+## Review and remediate OS baseline recommendations
 
-    - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
-
-    - **Azure VMs only** You must Assign managed Identity in the Defender for Cloud portal. Navigate to the recommendations page. Search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755). Then [remediate the recommendation](implement-security-recommendations.md).
+1. In Defender for Cloud, open the **Recommendations** page.
+1. Select the relevant recommendation.
+    - For **Windows** machines, [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda).
+    - For **Linux** machines, [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f655fb7-63ca-4980-91a3-56dbc2b715c6)  
     
-    - (Optional) **Azure VMs only**: Enable [Azure Policy guest configuration across your entire subscription](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
+        :::image type="content" source="media/apply-security-baseline/recommendations-baseline.png" alt-text="The two recommendations for comparing the OS configuration of machines with the relevant Azure security baseline." lightbox="media/apply-security-baseline/recommendations-baseline.png":::
 
-    - Enable Azure Policy guest configuration extension on your Azure machines across your entire subscription:
-        
-        1. Sign in to the [Azure portal](https://portal.azure.com).
-        
-        1. Search for and select **Microsoft Defender for Cloud**.
-        
-        1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
-                       
-            :::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
-                    
-        1. Toggle the Guest Configuration agent (preview) to **On**.
-                       
-            :::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
-                    
-        1. Select **Continue**.
+1. On the recommendation details page you can see the affected resources, and specific security findings. [Remediate](implement-security-recommendations.md) the recommendation.
 
-    - **GCP and AWS**: Azure Policy guest configuration is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) with Azure Arc autoprovisioning enabled, to Defender for Cloud.
-    
-    - **On-premises machines**: Azure Policy guest configuration is enabled by default when you [onboard on-premises machines as Azure Arc enabled machine or VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
 
-## Review and remediate guest configuration recommendations
-
-Once the Azure Policy guest configuration is onboarded to your subscription, Defender for Cloud starts evaluating your VMs against the security baselines. Based on your environments, if misconfigurations are found, the following recommendations might appear on your recommendations page:
-
-- [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
-- [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
-
-**To review and remediate these**: 
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Navigate to **Defender for Cloud** > Recommendations**.
-
-1. Search for and select one of the recommendations.
-    
-1. Review the recommendation.
- 
-1. [Remediate the recommendation](implement-security-recommendations.md).
-
-> [!NOTE]
-> During the deprecation process of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), you may receive duplicate recommendations for the same machine. This is due to the fact that the MMA and the Azure Policy guest configuration are both evaluating the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
-
-### Query recommendations with API
+## Query recommendations
 
 Defender for Cloud uses [Azure Resource Graph](/azure/governance/resource-graph/overview?branch=main) for API, and portal queries, to query recommendation information. You can utilize these resources to create your own queries to retrieve information.
 
@@ -117,12 +72,7 @@ Here are two sample queries you can use:
     | summarize count() by subAssessmentId, status
     ```
 
-You can learn how to create more in depth queries by learning more about [Azure Resource Graph's query language](/azure/governance/resource-graph/concepts/query-language?branch=main).
+## Next steps
 
-> [!NOTE]
-> During the deprecation process of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), you may receive duplicate recommendations for the same machine. This is due to the fact that the MMA and the Azure Policy guest configuration are both evaluating the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
+Learn more about [Azure Resource Graph's query language](/azure/governance/resource-graph/concepts/query-language?branch=main).
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Review Docker host hardening recommendations](harden-docker-hosts.md)

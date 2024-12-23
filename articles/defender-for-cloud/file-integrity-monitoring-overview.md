@@ -1,31 +1,62 @@
 ---
-title: Track changes to system files and registry keys
-description: Learn about tracking changes to system files and registry keys with file integrity monitoring in Microsoft Defender for Cloud.
+title: Overview of file integrity monitoring in Microsoft Defender for Cloud
+description: Learn about tracking file change with file integrity monitoring in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/11/2024
+ms.date: 08/28/2024
 ---
-# File Integrity Monitoring in Microsoft Defender for Cloud
+# File integrity monitoring
 
-File Integrity Monitoring (FIM) examines operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
+The file integrity monitoring feature in Microsoft Defender for Cloud helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. File integrity monitoring helps you to:
 
-Defender for Cloud recommends entities to monitor with FIM, and you can also define your own FIM policies or entities to monitor. FIM informs you about suspicious activity such as:
+- Meet compliance requirements. File integrity monitoring is often required by regulatory compliance standards such as PCI-DSS and ISO 17799.
+- Improve posture and identify potential security issues by detecting suspicious changes to files.
 
-- File and registry key creation or removal
-- File modifications (changes in file size, access control lists, and hash of the content)
-- Registry modifications (changes in size, access control lists, type, and content)
+## Monitor suspicious activity
 
-Many regulatory compliance standards require implementing FIM controls, such as PCI-DSS and ISO 17799.
+File integrity monitoring examines operating system files, Windows registries, application software, and Linux system files to detect suspicious activity such as:
 
-## Which files should I monitor?
+- File and registry key creation or deletion.
+- File modifications, such as changes in file size, access control lists, and hash of the content.
+- Registry modifications such as changes in size, access control lists, type, and content.
 
-When choosing which files to monitor, consider the files that are critical for your system and applications. Monitor files that you don’t expect to change without planning. If you choose files that are frequently changed by applications or operating system (such as log files and text files) it will create noise, making it difficult to identify an attack.
 
-Defender for Cloud provides the following list of recommended items to monitor based on known attack patterns:
+## Data collection
 
-> [!NOTE]
-> This table applies to [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md). For the recommended items to monitor in FIM over Log Analytics, see [Recommended items to monitor](file-integrity-monitoring-enable-log-analytics.md#recommended-items-to-monitor).
+File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines.
+
+
+- The Defender for Endpoint agent collects data from machines in accordance with the files and resources defined for file integrity monitoring.
+- Data collected by the Defender for Endpoint agent is stored for access and analysis in a Log Analytics workspace.
+- Collected file integrity monitoring data is part of the the [500 MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
+- File integrity monitoring provides details about the file/resource change, including the source of the change, account details, indication of who made the changes, and information about the initiating process.
+
+### Migrate to the new collection method
+
+Follow the steps to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from using the MMA to using the Defender for Endpoint agent.
+
+## Configure file integrity monitoring
+
+After enabling Defender for Servers Plan 2, you enable and configure file integrity monitoring. It isn't enabled by default.
+
+- You select a Log Analytics workspace in which to store change events for monitored files/resources. You can use an existing workspace, or define a new one.
+- Defender for Cloud recommends resources to monitor with file integrity monitoring, and you can customize additional monitoring.
+- After selecting a workspace you review and customize what you want to monitor. Defender for Cloud recommends resources to include by default in the file integrity monitoring list, and you can define your own.
+
+## Choose what to monitor
+
+Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can define your own entities. When choosing which files to monitor:
+
+- Consider the files that are critical for your system and applications.
+- Monitor files that you don’t expect to change without planning. 
+- If you choose files that are frequently changed by applications or operating system (such as log files and text files) it will create noise, making it difficult to identify an attack.
+
+
+### Recommended items to monitor
+
+When using file integrity monitoring with the Defender for Endpoing agent, we recommend monitoring these items with based on known attack patterns.
+
 
 | Linux Files       | Windows files                    | Windows registry keys (HKLM = HKEY_LOCAL_MACHINE)            |
 | ----------------- | -------------------------------- | ------------------------------------------------------------ |
@@ -51,8 +82,4 @@ Defender for Cloud provides the following list of recommended items to monitor b
 
 ## Next steps
 
-In this article, you learned about File Integrity Monitoring (FIM) in Defender for Cloud.
-
-Next, you can:
-
-- [Enable File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md)
+[Enable file integrity monitoring with Defender for Endpoint)](file-integrity-monitoring-enable-defender-endpoint.md)

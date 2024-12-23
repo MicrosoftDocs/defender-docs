@@ -6,54 +6,45 @@ ms.date: 04/16/2024
 ---
 
 
-# Protecting VM secrets
+# Machine secrets scanning
 
-Defender for Cloud provides [agentless secrets scanning](secrets-scanning.md) for virtual machines. Scanning helps you to quickly detect, prioritizes, and remediate exposed secrets. Secrets detection can identify a wide range of secrets types, such as tokens, passwords, keys, or credentials, stored in different types of file on the OS file system. 
+Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) in a number of scenarios, including scanning for machine secrets.
 
-Defender for Cloud's agentless secrets scanning for Virtual Machines (VM) locates plaintext secrets that exist in your environment. If secrets are detected, Defender for Cloud can assist your security team to prioritize and take actionable remediation steps to minimize the risk of lateral movement, all without affecting your machine's performance.
+Machine secrets scanning is provided as one of Defender for Cloud's [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-## How does VM secrets scanning work?
+- Agentless machine secrets scanning for helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
+- If secrets are detected, findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
+- Scanning machines for [supported secrets](secrets-scanning.md#secrets-support) is available when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is enabled.
+- Machine secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
 
-Secrets scanning for VMs is agentless and uses cloud APIs.
+## Reducing security risk
 
-1. Scanning captures disk snapshots and analyses them, with no impact on VM performance.
-1. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud. 
-1. The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
-    - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud Recommendations page. 
-    - Directories recognized as containing test-related content are excluded from scanning.
-
-## What’s supported?
-
-VM secrets scanning is available when you’re using either Defender for Servers Plan 2 or Defender Cloud Security Posture Management (CSPM). VM secrets scanning is able to scan Azure VMs, and AWS/GCP instances onboarded to Defender for Cloud. Review the secrets that can be discovered by Defender for Cloud.
-
-## How does VM secrets scanning mitigate risk?
-
-Secrets scanning helps reduce risk with the following mitigations:
+Secrets scanning helps reduce risk by:
 
 - Eliminating secrets that aren’t needed.
 - Applying the principle of least privilege.
 - Strengthening secrets security by using secrets management systems such as Azure Key Vault.
 - Using short-lived secrets such as substituting Azure Storage connection strings with SAS tokens that possess shorter validity periods.
 
-## How do I identity and remediate secrets issues?
+## How machine secrets scanning works
 
-There are a number of ways. Not every method is supported for every secret. Review the supported secrets list for more details.
+Secrets scanning for VMs is agentless and uses cloud APIs. Here's how it works:
 
-- Review secrets in the asset inventory: The inventory shows the security state of resources connected to Defender for Cloud. From the inventory you can view the secrets discovered on a specific machine.
-- Review secrets recommendations: When secrets are found on assets, a recommendation is triggered under the Remediate vulnerabilities security control on the Defender for Cloud Recommendations page. Recommendations are triggered as follows:
-- Review secrets with cloud security explorer. Use cloud security explorer to query the cloud security graph. You can build your own queries, or use one of the built-in templates to query for VM secrets across your environment.
-- Review attack paths: Attack path analysis scans the cloud security graph to expose exploitable paths that attacks might use to breach your environment and reach high-impact assets. VM secrets scanning supports a number of attack path scenarios.
-    
-### Security recommendations
+1. Secrets scanning captures disk snapshots and analyses them, with no impact on VM performance.
+2. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud. 
+3. The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
+    - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud **Recommendations** page.
+    - Directories recognized as containing test-related content are excluded from scanning.
 
-The following VM secrets security recommendations are available:
+## Machine secrets recommendations
+
+The following machine secrets security recommendations are available:
 
 - Azure resources: Machines should have secrets findings resolved
 - AWS resources: EC2 instances should have secrets findings resolved
 - GCP resources: VM instances should have secrets findings resolved
 
-
-### Attack path scenarios
+## Machine secrets attack paths
 
 The table summarizes supported attack paths.
 
@@ -63,7 +54,7 @@ Azure | Exposed Vulnerable VM has an insecure SSH private key that is used to au
 AWS | Exposed Vulnerable EC2 instance has an insecure SSH private key that is used to authenticate to an EC2 instance.<br/>Exposed Vulnerable EC2 instance has an insecure secret that is used to authenticate to a storage account.<br/>Exposed Vulnerable EC2 instance has insecure secrets that are used to authenticate to an AWS RDS server.<br/>Vulnerable EC2 instance has insecure secrets that are used to authenticate to an AWS RDS server.
 GCP | Exposed Vulnerable GCP VM instance has an insecure SSH private key that is used to authenticate to a GCP VM instance.
 
-### Predefined cloud security explorer queries
+## Predefined cloud security explorer queries
 
 Defender for Cloud provides these predefined queries for investigating secrets security issues:
 
@@ -71,15 +62,11 @@ Defender for Cloud provides these predefined queries for investigating secrets s
 - VM with plaintext secret that can authenticate to a storage account - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access storage accounts
 - VM with plaintext secret that can authenticate to an SQL database - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access SQL databases.
 
+## Investigating and remediating machine secrets
 
-## How do I mitigate secrets issues effectively?
+You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#secrets-support) for different types of secrets.
 
-It’s important to be able to prioritize secrets and identify which ones need immediate attention. To help you do this, Defender for Cloud provides:
-
-- Providing rich metadata for every secret, such as last access time for a file, a token expiration date, an indication whether the target resource that the secrets provide access to exists, and more.
-- Combining secrets metadata with cloud assets context. This helps you to start with assets that are exposed to the internet, or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization.
-- Providing multiple views to help you pinpoint the mostly commonly found secrets, or assets containing secrets.
 
 ## Related content
 
-[Cloud deployment secrets scanning](secrets-scanning-cloud-deployment.md)
+[Investigate and remediate machine secrets](remediate-server-secrets.md).
