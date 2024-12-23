@@ -1516,7 +1516,7 @@ Learn more at [Agentless Container Posture (Preview)](concept-agentless-containe
 
 There are new unified disk encryption recommendations in preview.
 
-- `Wndows virtual machines should enable Azure Disk Encryption or EncryptionAtHost`
+- `Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost`
 - `Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost`.
 
 These recommendations replace `Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources`, which detected Azure Disk Encryption and the policy `Virtual machines and virtual machine scale sets should have encryption at host enabled`, which detected EncryptionAtHost. ADE and EncryptionAtHost provide comparable encryption at rest coverage, and we recommend enabling one of them on every virtual machine. The new recommendations detect whether either ADE or EncryptionAtHost are enabled and only warn if neither are enabled. We also warn if ADE is enabled on some, but not all disks of a VM (this condition isn't applicable to EncryptionAtHost).
@@ -2139,7 +2139,7 @@ The following APIs are deprecated:
 - Security Statuses
 - Security Summaries
 
-These three APIs exposed old formats of assessments and are replaced by the [Assessments APIs](/rest/api/defenderforcloud/assessments) and [SubAssessments APIs](/rest/api/defenderforcloud/sub-assessments). All data that is exposed by these legacy APIs are also available in the new APIs.
+These three APIs exposed old formats of assessments and are replaced by the [Assessments APIs](/rest/api/defenderforcloud-composite/assessments?view=rest-defenderforcloud-composite-latest&preserve-view=true) and [SubAssessments APIs](/rest/api/defenderforcloud-composite/sub-assessments?view=rest-defenderforcloud-composite-latest&preserve-view=true). All data that is exposed by these legacy APIs are also available in the new APIs.
 
 ### Extra recommendations added to identity
 
@@ -3771,7 +3771,7 @@ Learn how Security Center can protect your containerized environments in [Contai
 
 ### Assessments API expanded with two new fields
 
-We've added the following two fields to the [Assessments REST API](/rest/api/defenderforcloud/assessments):
+We've added the following two fields to the [Assessments REST API](/rest/api/defenderforcloud-composite/assessments?view=rest-defenderforcloud-composite-latest&preserve-view=true):
 
 - **FirstEvaluationDate** – The time that the recommendation was created and first evaluated. Returned as UTC time in ISO 8601 format.
 - **StatusChangeDate** – The time that the status of the recommendation last changed. Returned as UTC time in ISO 8601 format.
@@ -3787,7 +3787,7 @@ To access this information, you can use any of the methods in the table below.
 | Continuous export    | The two dedicated fields will be available the Log Analytics workspace data                                                                                            |
 | [CSV export](export-alerts-to-csv.md) | The two fields are included in the CSV files                                                        |
 
-Learn more about the [Assessments REST API](/rest/api/defenderforcloud/assessments).
+Learn more about the [Assessments REST API](/rest/api/defenderforcloud-composite/assessments?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 ### Asset inventory gets a cloud environment filter
 
@@ -4275,7 +4275,7 @@ Learn more about [secure score and security controls in Azure Security Center](s
 
 ### Secure score API is released for general availability (GA)
 
-You can now access your score via the [secure score API](/rest/api/defenderforcloud/secure-scores). The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example:
+You can now access your score via the [secure score API](/rest/api/defenderforcloud-composite/secure-scores?view=rest-defenderforcloud-composite-latest&preserve-view=true). The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example:
 
 - use the **Secure Scores** API to get the score for a specific subscription
 - use the **Secure Score Controls** API to list the security controls and the current score of your subscriptions
@@ -5221,7 +5221,7 @@ Updates in June include:
 
 ### Secure score API (preview)
 
-You can now access your score via the [secure score API](/rest/api/defenderforcloud/secure-scores) (currently in preview). The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example, you can use the **Secure Scores** API to get the score for a specific subscription. In addition, you can use the **Secure Score Controls** API to list the security controls and the current score of your subscriptions.
+You can now access your score via the [secure score API](/rest/api/defenderforcloud-composite/secure-scores?view=rest-defenderforcloud-composite-latest&preserve-view=true) (currently in preview). The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example, you can use the **Secure Scores** API to get the score for a specific subscription. In addition, you can use the **Secure Score Controls** API to list the security controls and the current score of your subscriptions.
 
 For examples of external tools made possible with the secure score API, see [the secure score area of our GitHub community](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score).
 

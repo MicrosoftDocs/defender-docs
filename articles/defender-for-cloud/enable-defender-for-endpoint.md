@@ -215,7 +215,7 @@ This configuration is supported for Azure VMs and Azure Arc machines, where the 
 
 ## Enable the Microsoft Defender for Endpoint unified solution at scale
 
-You can also enable the Defender for Endpoint unified solution at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud/settings/update?tabs=HTTP).
+You can also enable the Defender for Endpoint unified solution at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud-composite/settings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
 
 Here's an example request body for the PUT request to enable the Defender for Endpoint unified solution:
 

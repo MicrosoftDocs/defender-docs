@@ -114,7 +114,7 @@ The supported resource types include:
 
 ### Enable Defender for Servers at the resource level with REST API
 
-The ability to enable or disable Defender for Servers at the resource level is available exclusively via REST API. Learn how to [interact with the API](/rest/api/defenderforcloud/pricings) to manage your Defender for Servers at the resource or subscription level.
+The ability to enable or disable Defender for Servers at the resource level is available exclusively via REST API. Learn how to [interact with the API](/rest/api/defenderforcloud-composite/pricings?view=rest-defenderforcloud-composite-latest&preserve-view=true) to manage your Defender for Servers at the resource or subscription level.
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
 

@@ -18,7 +18,7 @@ Connect AWS accounts and/or GCP projects programmatically.
 ## Get started
 
 As an alternative to creating connectors in the Defender for Cloud portal, you can create them programmatically by using the Defender for Cloud REST API.
-Review the [Security Connectors - REST API](/rest/api/defenderforcloud/security-connectors).
+Review the [Security Connectors - REST API](/rest/api/defenderforcloud-composite/security-connectors?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 :::image type="content" source="media/planning-multicloud-security/security-connectors.png" alt-text="screenshot that shows a table of security connector operations." lightbox="media/planning-multicloud-security/security-connectors.png":::
 
 - When you use REST API to create the connector, you also need the CloudFormation template, or Cloud Shell script, depending on the environment that you’re onboarding to Defender for Cloud.

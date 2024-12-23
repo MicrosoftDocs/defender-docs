@@ -201,7 +201,7 @@ resource "azapi_resource_action" "disable_defender_for_Storage" {
 ```
 
 You can change the value of `overrideSubscriptionLevelSettings` to **True** to disable Defender for Storage plan for the storage account under subscriptions with Defender for Storage enabled at the subscription level. If you want to keep some features enabled, you can modify the properties accordingly.
-Learn more about the [Microsoft.Security/defenderForStorageSettings](/rest/api/defenderforcloud/defender-for-storage/create) API documentation for further customization and control over your storage account's security settings. Additionally, you can find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM Provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+Learn more about the [Microsoft.Security/defenderForStorageSettings](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) API documentation for further customization and control over your storage account's security settings. Additionally, you can find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM Provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
 ### Bicep template - storage account
 
@@ -241,7 +241,7 @@ If you want to turn off the On-upload malware scanning or sensitive data threat 
 
 To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
-Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud/defender-for-storage/create) documentation.
+Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) documentation.
 
 > [!TIP]
 > Malware scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
@@ -290,4 +290,4 @@ To disable the entire Defender plan for the storage account, set the `isEnabled`
 
 ## Next step
 
-Learn more about the [Microsoft.Security/DefenderForStorageSettings](/rest/api/defenderforcloud/defender-for-storage/create) API documentation.
+Learn more about the [Microsoft.Security/DefenderForStorageSettings](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) API documentation.
