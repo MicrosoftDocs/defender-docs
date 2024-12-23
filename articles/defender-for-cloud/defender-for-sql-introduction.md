@@ -1,11 +1,12 @@
 ---
-title: Microsoft Defender for Azure SQL - the benefits and features
-description: Learn how Microsoft Defender for Azure SQL protects your Azure SQL databases.
+title: Benefits and features of Microsoft Defender for Azure SQL
+description: Learn how Microsoft Defender for Azure SQL helps you discover, track, and mitigate vulnerabilities, and alerts you to potential threats.
 ms.date: 03/12/2024
 ms.topic: overview
 ms.custom: references_regions
 ms.author: dacurwin
 author: dcurwin
+#customer intent: As a database administrator, I want to understand the benefits and features of Microsoft Defender for Azure SQL so that I can protect my databases effectively.
 ---
 
 # Overview of Microsoft Defender for Azure SQL
