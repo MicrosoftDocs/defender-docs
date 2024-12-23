@@ -6,11 +6,11 @@ ms.date: 05/11/2023
 author: dcurwin
 ms.author: dacurwin
 ---
-# Plan your Defender for Servers deployment
+# Plan Defender for Servers deployment
 
-Microsoft Defender for Servers extends protection to your Windows and Linux machines that run in Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises. Defender for Servers integrates with Microsoft Defender for Endpoint to provide endpoint detection and response (EDR) and other threat protection features.
+The Defender for Servers plan in Microsoft Defender for Cloud reduces security risk by providing actionable recommendations to improve and remediate machine security posture. Defender for Servers also helps to protect machines against real-time security threats and attacks.
 
-This guide helps you design and plan an effective Defender for Servers deployment. [Microsoft Defender for Cloud](defender-for-cloud-introduction.md) offers two paid plans for Defender for Servers.
+This guide helps you design and plan an effective Defender for Servers deployment.
 
 ## About this guide
 
@@ -19,36 +19,35 @@ The intended audience of this guide is cloud solution and infrastructure archite
 The guide answers these questions:
 
 - What does Defender for Servers do and how is it deployed?
-- Where is my data stored and what Log Analytics workspaces do I need?
-- Who needs access to my Defender for Servers resources?
-- Which Defender for Servers plan should I choose and which vulnerability assessment solution should I use?
-- When do I need to use Azure Arc and which agents and extensions are required?
+- Where is my data stored and when do I need a Log Analytics workspace?
+- How do I control access to Defender for Servers resources?
+- Which Defender for Servers plan should I choose, and where should I deploy the plan?
+- What agents and extensions are needed in my deployment?
 - How do I scale a deployment?
 
 ## Before you begin
 
-Before you review the series of articles in the Defender for Servers planning guide:
+Before you begin deployment planning:
 
-- Review Defender for Servers [pricing details](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+- Learn more about [Defender for Cloud](defender-for-cloud-introduction.md) capabilities, and [review pricing details](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+- [Get an overview](defender-for-servers-overview.md) of Defender for Servers.
 - If you're deploying for AWS machines or GCP projects, review the [multicloud planning guide](plan-multicloud-security-get-started.md).
+- Onboarding AWS/GCP and on-premises machines as Azure Arc VMs ensures that you can use all features in Defender for Servers. Before you begin planning, learn more about [Azure Arc](/azure/azure-arc/overview).
 
-## Deployment overview
 
-The following table shows an overview of the Defender for Servers deployment process:
+## Deployment steps
 
-| Stage                       | Details                                                      |
-| --------------------------- | ------------------------------------------------------------ |
-| Start protecting resources  | • When you open Defender for Cloud in the portal, it starts protecting resources with free foundational CSPM assessments and recommendations.<br /><br />• Defender for Cloud creates a default Log Analytics workspace with the *SecurityCenterFree* solution enabled.<br /><br />• Recommendations start appearing in the portal. |
-| Enable Defender for Servers | • When you enable a paid plan, Defender for Cloud enables the *Security* solution on its default workspace.<br /><br />• Enable Defender for Servers Plan 1 (subscription only) or Plan 2 (subscription and workspace).<br /><br />• After enabling a plan, decide how you want to install agents and extensions on Azure VMs in the subscription or workgroup.<br /><br />•By default, auto-provisioning is enabled for some extensions. |
-| Protect AWS/GCP machines    | • For a Defender for Servers deployment, you set up a connector, turn off plans you don't need, configure auto-provisioning settings, authenticate to AWS/GCP, and deploy the settings.<br /><br />• Auto-provisioning includes the agents used by Defender for Cloud and the Azure Connected Machine agent for onboarding to Azure with Azure Arc.<br /><br />• AWS uses a CloudFormation template.<br /><br />• GCP uses a Cloud Shell template.<br /><br />• Recommendations start appearing in the portal. |
-| Protect on-premises servers | • Onboard them as Azure Arc machines and deploy agents with automation provisioning. |
-| Foundational CSPM           | • There are no charges when you use foundational CSPM with no plans enabled.<br /><br />• AWS/GCP machines don't need to be set up with Azure Arc for foundational CSPM. On-premises machines do.<br /><br />• Some foundational recommendations rely only agents: Antimalware / endpoint protection (Log Analytics agent or Azure Monitor agent) \| OS baselines recommendations (Log Analytics agent or Azure Monitor agent and Guest Configuration extension) \||
+The following table summarizes Defender for Servers deployment steps.
 
-- Learn more about [foundational cloud security posture management (CSPM)](concept-cloud-security-posture-management.md).
-- Learn more about [Azure Arc](/azure/azure-arc/) onboarding.
-
-When you enable [Microsoft Defender for Servers](defender-for-servers-introduction.md) on an Azure subscription or a connected AWS account, all of the connected machines are protected by Defender for Servers. You can enable Microsoft Defender for Servers at the Log Analytics workspace level, but only servers reporting to that workspace will be protected and billed and those servers won't receive some benefits, such as Microsoft Defender for Endpoint, vulnerability assessment, and just-in-time VM access.
+**Step** | **Details** | **Outcome**
+--- | --- | ---                      | 
+**Connect AWS/GCP machines**   | To protect AWS and GCP machines with Defender for Servers, [connect AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.<br/><br/> You can enable Defender for Cloud plans, including Defender for Servers, as part of the connection process.<br/><br/> To take full advantage of Defender for Servers features, we recommend onboarding AWS and GCP machines as Azure Arc VMs. Installation of the Azure Arc agent is available as part of the connection process. | AWS and GCP machines are successfully onboarded to Defender for Cloud. 
+**Connect on-premises machines** | To protect on-premises machines, we recommend [onboarding on-premises machines as Azure Arc VMs](quickstart-onboard-machines.md).<br/><br/> You can [directly onboard on-premises machines to Defender for Cloud](onboard-machines-with-defender-for-endpoint.md). However, with direct onboarding you won't have full access to Defender for Servers Plan 2 features. | On-premises machines are successfully onboarded to Defender for Cloud 
+**Enable Defender for Servers** | [Deploy a Defender for Servers plan](tutorial-enable-servers-plan.md). | Defender for Cloud starts protecting supported machines within the deployment scope.
+**Take advantage of free data ingestion** | To take advantage of 500 MB of free daily ingestion for specific data types, machines must be running the Azure Monitor Agent (AMA), and be connected to a Log Analytics workspace. [Learn more](data-ingestion-benefit.md).<br/><br/> The benefit is granted for the supported data types on the Log Analytics workspace to which machines report. | Free daily ingestion is configured for supported data types.
+**Prepare for OS assessment** | For Defender for Servers Plan 2 to [assesses operation system configuration settings](operating-system-misconfiguration.md) against compute security baselines in Microsoft Cloud Security Benchmark, machines must be running the Azure Policy machine configuration extension. [Learn more](security-baseline-guest-configuration.md) about setting up the extension. | Defender for Servers Plan 2 collects OS configuration information for assessment.
+**Set up file integrity monitoring** | After enabling Defender for Servers Plan 2, you [set up file integrity monitoring after enabling the plan](file-integrity-monitoring-overview.md).<br/><br/> You need a Log Analytics workspace for file integrity monitoring. You can use an existing workspace, or create a new workspace when you configure the feature. | Defender for Servers monitors critical file changes. 
 
 ## Next steps
 
-After kicking off the planning process, review the [second article in this planning series](plan-defender-for-servers-data-workspace.md) to understand how your data is stored, and Log Analytics workspace requirements.
+After kicking off the planning process, review the [second article in this planning series](plan-defender-for-servers-roles.md) to understand how to control access to Defender for Servers.

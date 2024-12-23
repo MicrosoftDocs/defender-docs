@@ -32,7 +32,7 @@ The following protections are provided for Kubernetes nodes:
 
 - [Malware detection](kubernetes-nodes-malware.md) - Kubernetes nodes are scanned for malware. A security alert is generated for the customer to review and remediate.
 
-The Kubernetes nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
+The Kubernetes nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md) for details.
 
 ## Enable agentless scanning for machines
 

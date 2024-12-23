@@ -517,7 +517,7 @@ Customers are now able to get a [list of software installed in their containers 
 | September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-|September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+|September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
 
 ### Cloud security explorer experience improvements
 
@@ -632,9 +632,9 @@ September 1, 2024
 
 Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
 
-Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
+Learn how to [enable Azure Policy machine configuration on your environment](security-baseline-guest-configuration.md).
 
-### Public Preview for Docker Hub container registry support by Defender for Containers
+### Preview for Docker Hub container registry support by Defender for Containers
 
 September 1, 2024
 
@@ -659,7 +659,7 @@ The new version of File Integrity Monitoring based on Microsoft Defender for End
 - Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
 - Identify potential security issues by detecting suspicious file content changes.
 
-As part of this release, the [FIM experience over AMA](file-integrity-monitoring-enable-ama.md) will no longer be available in the Defender for Cloud portal.
+As part of this release, the FIM experience over AMA will no longer be available in the Defender for Cloud portal.
 The [FIM experience over MMA](file-integrity-monitoring-enable-log-analytics.md) will remain supported until the end of November 2024.
 In the beginning of September, an in-product experience will be released which allows you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
 
@@ -764,9 +764,9 @@ As we approach the agent's retirement in August 2024, the following MMA-related 
 - [The capability](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal) to onboard new non-Azure servers to Defender for Servers via Log Analytics workspaces will be removed from both the **Inventory** and **Getting Started** blades.  
 
 > [!NOTE]
-> We recommend that current customers, who have onboarded on-premises servers using the [legacy approach](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal), should now connect these machines via Azure Arc-enabled servers.  We  also recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions to which these servers are connected.
+> We recommend that current customers, who have onboarded on-premises servers using the [legacy approach](quickstart-onboard-machines.md), should now connect these machines via Azure Arc-enabled servers.  We  also recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions to which these servers are connected.
 >
->For those customers who have selectively enabled Defender for Servers Plan 2 on specific Azure VMs through the [legacy approach](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal), we recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions of these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md#enable-defender-for-servers-at-the-resource-level).
+>For those customers who have selectively enabled Defender for Servers Plan 2 on specific Azure VMs through the [legacy approach](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal), we recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions of these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
 >
 > These steps will ensure there is no loss of security coverage due to the retirement of the Log Analytics agent.
 
@@ -937,7 +937,7 @@ Will be applied to the following recommendations:
 
 May 30, 2024
 
-Defender for Cloud's agentless malware detection for Azure VMs, AWS EC2 instances, and GCP VM instances is now generally available as a new feature in [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features).
+Defender for Cloud's agentless malware detection for Azure VMs, AWS EC2 instances, and GCP VM instances is now generally available as a new feature in [Defender for Servers Plan 2](defender-for-servers-overview.md).
 
 Agentless malware detection uses the [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows) anti-malware engine to scan and detect malicious files. Detected threats trigger security alerts directly into Defender for Cloud and Defender XDR, where they can be investigated and remediated. Learn more about [agentless malware scanning](agentless-malware-scanning.md) for servers and [agentless scanning for VMs](concept-agentless-data-collection.md).
 
