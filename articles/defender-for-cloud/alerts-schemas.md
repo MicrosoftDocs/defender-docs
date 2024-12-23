@@ -138,7 +138,7 @@ For the alerts schema when using workflow automation, see the [connectors docume
 
 Defender for Cloud's continuous export feature passes alert data to:
 
-- Azure Event Hubs using the same schema as [the alerts API](/rest/api/defenderforcloud-composite/alertsalerts?view=rest-defenderforcloud-composite-latest&preserve-view=true).
+- Azure Event Hubs using the same schema as [the alerts API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 - Log Analytics workspaces according to the [SecurityAlert schema](/azure/azure-monitor/reference/tables/SecurityAlert) in the Azure Monitor data documentation.
 
 ### [MS Graph API](#tab/schema-graphapi)

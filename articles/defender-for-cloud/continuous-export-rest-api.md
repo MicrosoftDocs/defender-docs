@@ -35,7 +35,7 @@ Required roles and permissions:
 
 ### Set up continuous export by using the REST API
 
-You can set up and manage continuous export by using the Microsoft Defender for Cloud [automations API](automations?view=rest-defenderforcloud-composite-latest&preserve-view=true). Use this API to create or update rules for exporting to any of the following destinations:
+You can set up and manage continuous export by using the Microsoft Defender for Cloud [automations API](/rest/api/defenderforcloud-composite/automations?view=rest-defenderforcloud-composite-latest&preserve-view=true). Use this API to create or update rules for exporting to any of the following destinations:
 
 - Azure Event Hubs
 - Log Analytics workspace
