@@ -59,12 +59,12 @@ Note that:
 1. In the banner message, select **Click here to migrate your environments**.
 
 
-    :::image type="content" source="./media/migrate-file-integrity-monitoring/migrate-banner.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/migrate-banner.png":::
+    :::image type="content" source="./media/migrate-file-integrity-monitoring/migrate-banner.png" alt-text="Screenshot showing the migrate button in the Defender for Cloud banner." lightbox="./media/migrate-file-integrity-monitoring/migrate-banner.png":::
 
 1. In the **Prepare your environments to MMA deprecation** page, start the migration.
 1. In the **Migrate to the new FIM** tab, under **Migrate to FIM's new version over MDE** select **Take action**.
 
-    :::image type="content" source="./media/migrate-file-integrity-monitoring/take-action.png" alt-text="Screenshot showing the take action button in the Defender for Cloud banner" lightbox="./media/migrate-file-integrity-monitoring/take-action.png":::
+    :::image type="content" source="./media/migrate-file-integrity-monitoring/take-action.png" alt-text="Screenshot showing the take action button in the Defender for Cloud banner." lightbox="./media/migrate-file-integrity-monitoring/take-action.png":::
 
 1. In **Migrate to the new FIM** tab, you can see all the subscriptions that host machines with legacy file integrity monitoring enabled.
     - **Total machines on subscription** shows all of the Azure VMs, and Azure Arc-enabled VMs in the subscription.
