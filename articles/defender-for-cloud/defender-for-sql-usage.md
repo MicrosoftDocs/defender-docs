@@ -9,8 +9,6 @@ ms.date: 09/21/2023
 
 # Enable Microsoft Defender for SQL servers on machines
 
-
-
 Defender for SQL servers on machines protects your 
 
 ## Prerequisites
@@ -37,14 +35,6 @@ Before you deploy AMA with Defender for Cloud, you must have the following prere
     > [!NOTE]
     > You must enable database protection for your multicloud SQL servers through the [AWS connector](quickstart-onboard-aws.md#connect-your-aws-account) or the [GCP connector](quickstart-onboard-gcp.md#configure-the-defender-for-databases-plan).
 
-## Availability
-
-|Aspect|Details|
-|----|----|
-|Release state:|General availability (GA)|
-|Pricing:|**Microsoft Defender for SQL servers on machines** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)|
-|Protected SQL versions:|SQL Server version: 2012, 2014, 2016, 2017, 2019, 2022 <br>- [SQL on Azure virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)<br>- [SQL Server on Azure Arc-enabled servers](/sql/sql-server/azure-arc/overview)<br><br>|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Microsoft Azure operated by 21Vianet|
 
 ## Enable Defender for SQL on non-Azure machines using the AMA agent
 
