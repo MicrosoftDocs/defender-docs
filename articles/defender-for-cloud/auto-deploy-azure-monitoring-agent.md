@@ -10,12 +10,10 @@ ms.custom: template-how-to
 
 # Azure Monitor Agent (AMA) in Defender for Cloud
 
-
 Microsoft Defender for Cloud uses the Azure Monitor Agent (AMA) to:
 
-- Protect databases in the Defender for SQL Server on Machines plan. 
+- Protect databases in the Defender for SQL Server on Machines plan.
 - Take advantage of the [free data ingestion](data-ingestion-benefit.md) benefit provided in Defender for Servers Plan 2.
-
 
 ## AMA in Defender for SQL Server on Machines
 
@@ -28,7 +26,6 @@ Autoprovisioning for the AMA is turned on by default when you enable the databas
 
 The AMA is implemented as a virtual machine extension, but you can deploy it using other options. [Learn more](/azure/azure-monitor/vm/monitor-virtual-machine-agent) in Azure Monitor.
 
-
 ## Log Analytics workspace
 
 The AMA requires a Log Analytics workspace solution. These solutions are automatically installed when you turn on the Defender for SQL Server on Machines plan with automatic AMA provisioning.  [Learn more](defender-for-sql-usage.md)
@@ -37,7 +34,6 @@ The [Log Analytics workspace solutions](/previous-versions/azure/azure-monitor/i
 
 - Cloud security posture management (CSPM) – **SecurityCenterFree solution**
 - Defender for Servers Plan 2 – **Security solution**
-
 
 ### Customizing the workspace
 
@@ -48,11 +44,8 @@ By default, the destination is the “default workspace” that Defender for Clo
 If you configure a custom Log Analytics workspace:
 
 - Defender for Cloud only configures the data collection rules and other extensions for the custom workspace. You have to configure the workspace solution on the custom workspace.
-- Machines with the MMA that reports to a Log Analytics workspace with the security solution are billed even when the Defender for Servers plan isn't enabled. Machines with the AMA are billed only when the plan is enabled on the subscription. 
-
+- Machines with the MMA that reports to a Log Analytics workspace with the security solution are billed even when the Defender for Servers plan isn't enabled. Machines with the AMA are billed only when the plan is enabled on the subscription.
 
 ## Next steps
 
 [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md)
-
-

@@ -15,15 +15,13 @@ This article helps you to identify and remediate [machine secrets scan](secrets-
 - You can review and remediate findings using [machine secrets recommendations](secrets-scanning-servers.md#machine-secrets-recommendations).
 - View secrets discovered on a specific machine in the [Defender for Cloud inventory](asset-inventory.md)
 - Drill down into machine secrets findings using [cloud security explorer queries](secrets-scanning-servers.md#predefined-cloud-security-explorer-queries) and [machine secrets attack paths](secrets-scanning-servers.md#machine-secrets-attack-paths)
-- Not every method is supported for every secret. Review the [supported methods](secrets-scanning.md#reviewing-secrets-findings) for different types of secrets. 
+- Not every method is supported for every secret. Review the [supported methods](secrets-scanning.md#reviewing-secrets-findings) for different types of secrets.
 
 It’s important to be able to prioritize secrets and identify which ones need immediate attention. To help you do this, Defender for Cloud provides:
 
 - Providing rich metadata for every secret, such as last access time for a file, a token expiration date, an indication whether the target resource that the secrets provide access to exists, and more.
 - Combining secrets metadata with cloud assets context. This helps you to start with assets that are exposed to the internet, or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization.
 - Providing multiple views to help you pinpoint the mostly commonly found secrets, or assets containing secrets.
-    
-
 
 ## Prerequisites
 
@@ -92,7 +90,6 @@ Secrets that don't have a known attack path are referred to as `secrets without 
 
 1. Follow the remediation steps to remediate the attack path.
 
-
 ## Remediate secrets with cloud security explorer
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -106,5 +103,3 @@ Secrets that don't have a known attack path are referred to as `secrets without 
     - **VM with plaintext secret that can authenticate to an SQL database** - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access SQL databases.
 
 If you don't want to use any of the available templates, you can also [build your own query](how-to-manage-cloud-security-explorer.md) in the cloud security explorer.
-
-

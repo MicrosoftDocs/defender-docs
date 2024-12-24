@@ -11,7 +11,6 @@ ms.date: 01/16/2024
 
 [Agentless machine scanning](concept-agentless-data-collection.md) in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. Agentless machine scanning includes a number of capabilities, including scanning for software inventory, vulnerabilities, secrets, and malware.
 
-
 - Agentless scanning doesn't need any installed agents or network connectivity, and doesn't affect machine performance.
 - You can turn agentless machine scanning on or off, but you can't turn off individual capabilities.
 
@@ -38,7 +37,6 @@ When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Pos
 
     :::image type="content" source="media/enable-vulnerability-assessment-agentless/defender-plan-settings-azure.png" alt-text="Screenshot of link for the settings of the Defender plans for Azure accounts." lightbox="media/enable-vulnerability-assessment-agentless/defender-plan-settings-azure.png":::
 
-
 1. In **Settings and monitoring**, turn on **Agentless scanning for machines**.
 
    :::image type="content" source="media/enable-vulnerability-assessment-agentless/turn-on-agentless-scanning-azure.png" alt-text="Screenshot of settings and monitoring screen to turn on agentless scanning." lightbox="media/enable-vulnerability-assessment-agentless/turn-on-agentless-scanning-azure.png":::
@@ -55,7 +53,6 @@ For agentless scanning of Azure VMs with CMK encrypted disks, you need to grant 
     - **Key vaults using RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider” (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) the [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide?preserve-view=true&tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations) built-in role.
 
 1. To assign these permissions at scale for multiple Key Vaults, use [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Agentless%20Scanning%20CMK%20support).
-
 
 ## Enable agentless scanning on AWS
 
@@ -100,7 +97,6 @@ After you enable agentless scanning, software inventory and vulnerability inform
 1. Run the onboarding script in the GCP organization/project scope (GCP portal or gcloud CLI).
 1. Select  **Next: Review and generate**.
 1. Select  **Update**.
-
 
 ## Related content
 

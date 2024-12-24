@@ -13,17 +13,15 @@ In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integr
 
 File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules. [Defender for Endpoint is integrated by default](integration-defender-for-endpoint.md) with Defender for Cloud.
 
-> [!Note]
+> [!NOTE]
 > The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
 
 This article shows you how to review file changes.
-
 
 ## Prerequisites
 
 - Defender for Servers Plan 2 must be enabled.
 - [File integrity monitoring with the Defender for Endpoint agent](file-integrity-monitoring-enable-defender-endpoint.md) must be enabled. If it isn't enabled this message appears - **File Integrity Monitoring is not enabled**. To enable select **Onboard subscriptions**, and then enable the feature.
-
 
 ## Monitor entities and files
 
@@ -73,4 +71,3 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     ```
 
 1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
-

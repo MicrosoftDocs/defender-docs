@@ -16,8 +16,6 @@ This article is the *second* article in the Defender for Servers planning guide.
 
 1. Start [planning your deployment](plan-defender-for-servers.md).
 
-
-
 ## Determine ownership and access
 
 It's critical that you identify ownership for server and endpoint security in your organization. Ownership that's undefined or hidden increases security risk, making it more difficult for SecOps team to identity and follow threats across enterprise silos.

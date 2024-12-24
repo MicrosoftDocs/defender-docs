@@ -34,4 +34,3 @@ In some circumstances, you might want to exclude machines from agentless scannin
     :::image type="content" source="media/enable-vulnerability-assessment-agentless/agentless-scanning-exclude-tags.png" alt-text="Screenshot of the tag and value fields for excluding machines from agentless scanning.":::
 
 1. Select **Save**.
-

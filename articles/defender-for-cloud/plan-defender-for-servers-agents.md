@@ -12,7 +12,6 @@ ms.date: 06/25/2024
 
 This article helps you to understand how [Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud collects data for assessment.
 
-
 ## Before you begin
 
 This article is the *fourth* article in the Defender for Servers planning guide. Before you begin, review the earlier articles:
@@ -38,8 +37,6 @@ Defender for Servers uses a number of methods to collect machine information, in
 [Scan for system and patch updates](enable-periodic-system-updates.md) | Relies on [Azure Update Manager VM extension](/azure/update-manager/workflow-update-manager).
 [Use free data ingestion benefit](data-ingestion-benefit.md) | Azure Monitor agent (AMA).
 
-
 ## Next steps
 
 [Understand how data is stored and when you need a Log Analytics workspace](plan-defender-for-servers-data-workspace.md)
-

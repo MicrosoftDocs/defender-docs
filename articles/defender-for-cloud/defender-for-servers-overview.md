@@ -44,7 +44,7 @@ Defender for Servers offers two plans:
 
 ## Plan protection features
 
-Plan features are summarized in the table. 
+Plan features are summarized in the table.
 
 **Feature** | **Plan support** | **Details**
 --- | --- | ---
@@ -67,7 +67,6 @@ Plan features are summarized in the table.
 **Just-in-time virtual machine access** | Supported in Plan 2 only | [Just-in-time virtual machine access](just-in-time-access-overview.md) locks down machine ports to reduce the attack surface.
 **Network map** | Supported in Plan 2 only | The [network map](protect-network-resources.md) provides a geographical view of recommendations for hardening your network resources.
 **Free data ingestion (500 MB)** | Supported in Plan 2 only | Free data ingestion is available for specific data types in Log Analytics workspaces. [Learn more](data-ingestion-benefit.md).
-
 
 ## Deployment scope
 

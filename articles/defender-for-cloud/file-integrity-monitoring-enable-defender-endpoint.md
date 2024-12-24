@@ -7,20 +7,18 @@ ms.topic: how-to
 ms.date: 09/09/2024
 ---
 
-# Enable file integrity monitoring 
+# Enable file integrity monitoring
 
 In Defender for Servers Plan 1 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-
 After enabling Defender for Servers Plan 2, this article describes how to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
-> [!Note]
-> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
+> [!NOTE]
+>
 > - If you are using the older deprecated method of data collection using the Log Analytics agent, [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md) that uses the Defender for Endpoint agent.
-> - From June 2025 onwards, file integrity monitoring requires a minimum version of the Defender for Endpoint agent. 
+> - From June 2025 onwards, file integrity monitoring requires a minimum version of the Defender for Endpoint client.
 >   - Windows: 10.8760
 >   - Linux: 30.124082
-
 
 ## Prerequisites
 
@@ -30,15 +28,14 @@ After enabling Defender for Servers Plan 2, this article describes how to config
 - File integrity monitoring with Defender for Endpoint is supported for Azure VMs, Azure Arc-enabled VMs, connected AWS accounts and GCP projects.
 - For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#choose-what-to-monitor).
 
-## Verify Defender for Endpoint agent
+## Verify Defender for Endpoint client
 
-1.Check that machines are running this version or later:
+Machine should be running Defender for Endpoint client version:
     - Windows: 10.8760
     - Linux: 30.124082
 
-1. To ensure you have the latest version, on machines running Windows Servers 2019 or later, install the latest Windows updates. The Defender for Endpoint agent is deployed by default on this operating system.
+1. To ensure you have the latest version on machines running Windows Servers 2019 or later, refer to the latest Windows updates. Learn more about using the [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 1. To update the Microsoft Defender for Endpoint agent on Windows Servers 2016 and Windows Server 2012 R2 or 2016, install using [KB 5005292 in the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292).
-1. To update Microsoft Defender for Endpoint client for Windows servers 2019 and above, please refer to the latest Windows update. Use [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)
 1. Linux machines are updated automatically when Defender for Endpoint automatic provisioning is enabled in Defender for Cloud. You can also [update manually](/defender-endpoint/linux-updates).
 
 ## Enable File Integrity Monitoring
@@ -61,7 +58,7 @@ After enabling Defender for Servers Plan 2, this article describes how to config
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the file integrity monitoring configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
     > [!IMPORTANT]
-    > Events collected for file integrity monitoring are included in the data types eligible for the [500 MB benefit for Defender for Servers Plan 2 customers](data-ingestion-benefit.md). 
+    > Events collected for file integrity monitoring are included in the data types eligible for the [500 MB benefit for Defender for Servers Plan 2 customers](data-ingestion-benefit.md).
 
 1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
 

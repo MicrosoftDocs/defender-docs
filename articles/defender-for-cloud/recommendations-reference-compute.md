@@ -340,7 +340,7 @@ Estimated deprecation: July 2024
 **Description**: Remediate vulnerabilities in security configuration on your machines to protect them from attacks.
 (Related policy: [Vulnerabilities in security configuration on your machines should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fe1e5fd5d-3e4c-4ce1-8661-7d1873ae6b15)).
 
-This recommendation helps you to improve server security posture. Defender for Cloud enhances the Center for Internet Security (CIS) benchmarks by providing security baselines that are powered by Microsoft Defender Vulnerability Management. 
+This recommendation helps you to improve server security posture. Defender for Cloud enhances the Center for Internet Security (CIS) benchmarks by providing security baselines that are powered by Microsoft Defender Vulnerability Management.
 
 **Severity**: Low
 

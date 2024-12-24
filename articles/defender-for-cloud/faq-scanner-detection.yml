@@ -22,7 +22,7 @@ sections:
 
 
       - question: |
-          What operating systems are compatible with the Defender Vulnerability Management scannng? 
+          What operating systems are compatible with the Defender Vulnerability Management scanning? 
         answer: |
           Review [compatible operating systems](/microsoft-365/security/defender-vulnerability-management/tvm-supported-os) that are compatible with the MDVM scanner.
 
