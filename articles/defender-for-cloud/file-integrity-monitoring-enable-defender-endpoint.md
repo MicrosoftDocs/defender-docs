@@ -7,19 +7,18 @@ ms.topic: how-to
 ms.date: 09/09/2024
 ---
 
-# Enable file integrity monitoring 
+# Enable file integrity monitoring
 
 In Defender for Servers Plan 1 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-
 After enabling Defender for Servers Plan 2, this article describes how to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
-> [!Note]
+> [!NOTE]
+>
 > - If you are using the older deprecated method of data collection using the Log Analytics agent, [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md) that uses the Defender for Endpoint agent.
-> - From June 2025 onwards, file integrity monitoring requires a minimum version of the Defender for Endpoint client. 
+> - From June 2025 onwards, file integrity monitoring requires a minimum version of the Defender for Endpoint client.
 >   - Windows: 10.8760
 >   - Linux: 30.124082
-
 
 ## Prerequisites
 
@@ -59,7 +58,7 @@ Machine should be running Defender for Endpoint client version:
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the file integrity monitoring configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
     > [!IMPORTANT]
-    > Events collected for file integrity monitoring are included in the data types eligible for the [500 MB benefit for Defender for Servers Plan 2 customers](data-ingestion-benefit.md). 
+    > Events collected for file integrity monitoring are included in the data types eligible for the [500 MB benefit for Defender for Servers Plan 2 customers](data-ingestion-benefit.md).
 
 1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
 

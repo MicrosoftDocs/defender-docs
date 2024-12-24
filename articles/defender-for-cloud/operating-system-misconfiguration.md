@@ -15,16 +15,15 @@ Microsoft Defender for Cloud provides security recommendations to improve organi
 
 Defender for Cloud assesses and enforces best-practice security configurations using [built-in Azure policy initiatives](policy-reference.md). The [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) is Defender for Cloud's default initiative.
 
-MSCB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems. 
+MSCB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
 Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features)
-
 
 - The recommendations are available when Defender for Servers Plan 2 is enabled.
 - When Defender for Servers Plan 2 is enabled, relevant Azure policies are enabled on the subscription:
 
-    - "Windows machines should meet requirements of the Azure compute security baseline" 
-    - "Linux machines should meet requirements for the Azure compute security baseline"
+  - "Windows machines should meet requirements of the Azure compute security baseline"
+  - "Linux machines should meet requirements for the Azure compute security baseline"
 
 - Make sure you don't remove these policies or you won't be able to leverage the machine configuration extension that's used to collect machine data.
 
@@ -43,19 +42,18 @@ The machine configuration extension is installed as follows:
 
 ### What's not included
 
-Additional features provided by the extension machine outside Defender for Cloud aren't included, and are subject to Azure Policy machine configuration pricing. 
+Additional features provided by the extension machine outside Defender for Cloud aren't included, and are subject to Azure Policy machine configuration pricing.
 
 - For example, [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition).
 - [Review details](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1) on the Azure Policy machine configuration pricing page.
 
-
-## Assessment ( Defender Vulnerability Management)
+## Assessment (Defender Vulnerability Management)
 
 Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management to provide machines with vulnerability protection, and endpoint detection and response (EDR) capabilities.
 
-As part of that integration, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided by Defender Vulnerability Management. 
+As part of that integration, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided by Defender Vulnerability Management.
 
-- Security baselines assessment uses customised security baseline profiles.
+- Security baselines assessment uses customized security baseline profiles.
 - Profiles are basically a template that consists of device configuration settings, and benchmarks against which to compare them.
 
 ### Support
@@ -64,10 +62,10 @@ As part of that integration, [security baselines assessment](/defender-vulnerabi
 - Defender for Servers Plan 2 must be enabled, and the Defender for Endpoint agent must be running on machines you want to assess.
 - Assessment is supported for machines running security baseline profiles:
 
-    - windows_server_2008_r2
-    - windows_server_2016
-    - windows_server_2019
-    - windows_server_2022
+  - windows_server_2008_r2
+  - windows_server_2016
+  - windows_server_2019
+  - windows_server_2022
 
 ### Reviewing recommendations
 
@@ -77,4 +75,3 @@ To review recommendations made by security baseline assessments, search for the 
 
 - [Install the Azure Policy machine configuration](security-baseline-guest-configuration.md).
 - [Remediate](apply-security-baseline.md) OS baseline misconfigurations.
-

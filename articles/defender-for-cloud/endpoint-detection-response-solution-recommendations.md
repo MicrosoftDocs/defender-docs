@@ -19,9 +19,10 @@ Microsoft Defender for Cloud includes endpoint detection and response (EDR) capa
 Based on EDR solution findings, Defender for Cloud provides [recommendations](detect-endpoint-detection-response-solutions.md) to ensure that EDR solutions are installed and running correctly on machines. This article describes how to remediate those recommendations.
 
 > [!NOTE]
+>
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
-> - Scanning using the MMA will be deprecated in November 2024. 
+> - Scanning using the MMA will be deprecated in November 2024.
 
 ## Prerequisites
 
@@ -30,9 +31,7 @@ Based on EDR solution findings, Defender for Cloud provides [recommendations](de
 **Plan** | [Defender for Cloud](connect-azure-subscription.md) must be available in the Azure subscription and one of these plans must be enabled:<br/><br/>- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)<br/>- [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
 **Gentles scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 
-
 ## Investigate EDR solution recommendations
-.
 
 1. In  **Defender for Cloud** > **Recommendations**.
 
@@ -56,11 +55,9 @@ Based on EDR solution findings, Defender for Cloud provides [recommendations](de
 
 1. Select the relevant action to see the remediation steps.
 
-
 ## Enable Defender for Endpoint integration
 
 This recommended action is available when Defender for Endpoint can be installed on a machine, and a [supported non-Microsoft EDR solution](detect-endpoint-detection-response-solutions.md) isn't detected on the machine.
-
 
 Enable Defender for Endpoint on the machine as follows:
 
@@ -72,10 +69,9 @@ Enable Defender for Endpoint on the machine as follows:
 
 1. In **Enable EDR solution**, select **Enable**. With this setting enabled, the Defender for Endpoint sensor is automatically installed on all Windows and Linux servers in the subscription.
 
-    After the process is completed, it can take up to 24 hours until your machine appears in the **Healthy resources** tab. 
+    After the process is completed, it can take up to 24 hours until your machine appears in the **Healthy resources** tab.
 
     :::image type="content" source="media/endpoint-detection-response/enable-endpoint.png" alt-text="Screenshot that shows the pop-up window from which to enable the Defender for Endpoint integration on.":::
-
 
 ## Turn on a plan
 
@@ -104,7 +100,6 @@ After the process is completed, it can take up to 24 hours until your machine ap
 
 This recommended action is available when Defender for Endpoint is detected on a machine but wasn't onboarded properly.
 
-
 1. Select the affected VM.
 
 1. Select **Remediation steps**.
@@ -114,5 +109,3 @@ This recommended action is available when Defender for Endpoint is detected on a
 1. Follow the instructions to troubleshoot onboarding issues for [Windows](/defender-endpoint/troubleshoot-onboarding) or [Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
 
 After the process is completed, it can take up to 24 hours until your machine appears in the Healthy resources tab.
-
-

@@ -185,7 +185,7 @@ Replace `{subscriptionId}` with your subscription ID.
 
 To disable the plan, set the `-pricingTier` property value to `Free` and remove the `subPlan` parameter.
 
-Learn more about the [updating Defender plans with the REST API](/rest/api/defenderforcloud/pricings/update) in HTTP, Java, Go and JavaScript.
+Learn more about the [updating Defender plans with the REST API](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) in HTTP, Java, Go and JavaScript.
 
 ### Set up per-transaction pricing for a storage account
 

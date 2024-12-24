@@ -37,7 +37,7 @@ To investigate security alerts from Defender for Resource Manager:
 
 1. Filter the events to:
     - The subscription mentioned in the alert
-    - The timeframe of the detected activity
+    - The time frame of the detected activity
     - The related user account (if relevant)
 
 1. Look for suspicious activities.

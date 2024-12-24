@@ -21,11 +21,9 @@ File integrity monitoring examines operating system files, Windows registries, a
 - File modifications, such as changes in file size, access control lists, and hash of the content.
 - Registry modifications such as changes in size, access control lists, type, and content.
 
-
 ## Data collection
 
 File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines.
-
 
 - The Defender for Endpoint agent collects data from machines in accordance with the files and resources defined for file integrity monitoring.
 - Data collected by the Defender for Endpoint agent is stored for access and analysis in a Log Analytics workspace.
@@ -49,14 +47,12 @@ After enabling Defender for Servers Plan 2, you enable and configure file integr
 Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can define your own entities. When choosing which files to monitor:
 
 - Consider the files that are critical for your system and applications.
-- Monitor files that you don’t expect to change without planning. 
+- Monitor files that you don’t expect to change without planning.
 - If you choose files that are frequently changed by applications or operating system (such as log files and text files) it will create noise, making it difficult to identify an attack.
-
 
 ### Recommended items to monitor
 
 When using file integrity monitoring with the Defender for Endpoing agent, we recommend monitoring these items with based on known attack patterns.
-
 
 | Linux Files       | Windows files                    | Windows registry keys (HKLM = HKEY_LOCAL_MACHINE)            |
 | ----------------- | -------------------------------- | ------------------------------------------------------------ |
@@ -78,7 +74,6 @@ When using file integrity monitoring with the Defender for Endpoing agent, we re
 | /usr/sbin         |                                  |                                                              |
 | /bin/login        |                                  |                                                              |
 | /opt/bin          |                                  |                                                              |
-
 
 ## Next steps
 

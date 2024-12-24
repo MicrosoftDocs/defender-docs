@@ -37,9 +37,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | December 17 | GA | [Sensitivity scanning capabilities now include Azure file shares](#sensitivity-scanning-capabilities-now-include-azure-file-shares) |
 | December 22| GA | [Microsoft Defender for Endpoint client version update is required to receive File Integrity Monitoring (FIM) experience](#microsoft-defender-for-endpoint-client-version-update-is-required-to-receive-file-integrity-monitoring-fim-experience) |
 
-
-
-### Sensitivity scanning capabilities now include Azure file shares 
+### Sensitivity scanning capabilities now include Azure file shares
 
 December 17, 2024
 
@@ -75,11 +73,11 @@ December 10, 2024
 
 The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, and DockerHub have been revised. The scan interval feature allows you to control the frequency at which the Defender for Cloud initiates a scan of the cloud environment. You can set the scan interval to 4, 6, 12, or 24 hours, when adding or editing a cloud connector. The default scan interval for new connectors continues to be 12 hours.
 
-### Microsoft Defender for Endpoint client version update is required to receive File Integrity Monitoring (FIM) experience.
+### Microsoft Defender for Endpoint client version update is required to receive File Integrity Monitoring (FIM) experience
+
 June, 2025
 
 Starting at June 2025, File Integrity Monitoring (FIM) will require a minimum Defender for Endpoint (MDE) client version. Please ensure that you are at the minimum following client versions keep benefit from FIM experience in Microsoft Defender for Cloud: for Windows: 10.8760, for Linux: 30.124082. [Learn more](file-integrity-monitoring-enable-defender-endpoint.md)
-
 
 ## November 2024
 
@@ -1014,7 +1012,7 @@ The new version of File Integrity Monitoring (FIM) over Microsoft Defender for E
 
 As part of this release, FIM experience over AMA will no longer be available through the Defender for Cloud portal beginning August 2024. For more information, see [File Integrity Monitoring experience - changes and migration guidance](prepare-deprecation-log-analytics-mma-agent.md#file-integrity-monitoring-experience---changes-and-migration-guidance).
 
-For details on the new API version, see [Microsoft Defender for Cloud REST APIs](/rest/api/defenderforcloud/operation-groups).
+For details on the new API version, see [Microsoft Defender for Cloud REST APIs](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 ## Next steps
 

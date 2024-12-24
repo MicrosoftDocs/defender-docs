@@ -27,7 +27,6 @@ Find machines protected by the plan.
 
 You can also check protection coverage for all subscriptions and resources using the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook).
 
-
 ## Modify plan settings
 
 Some features are turned on by default when you enable Defender for Servers. You can modify plan features manually as follows:
@@ -42,9 +41,3 @@ Some features are turned on by default when you enable Defender for Servers. You
     **Endpoint protection**. | When you enable Defender for Servers Plan 1 or 2, Defender for Endpoint is integrated by default. Protection features from Defender for Endpoint are available. Automatic provisioning of the Defender for Endpoint agent on connected machines is enabled. | [Turn endpoint protection on and off](enable-defender-for-endpoint.md) in a plan.
     **Agentless scanning** |  [Agentless scanning](concept-agentless-data-collection.md) provides a number of scanning capabilities. It's enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](exclude-machines-agentless-scanning.md).
     **File integrity monitoring** | When you enable Defender for Servers Plan 2, you can turn on file integrity monitoring. It's not turned on by default |  [Learn about](file-integrity-monitoring-compare-baselines.md) and [enable](file-integrity-monitoring-enable-defender-endpoint.md) file integrity monitoring
-
-
-
-
-
-

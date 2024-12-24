@@ -22,19 +22,15 @@ This article is the *fifth* article in the Defender for Servers planning guide. 
 1. Select a [Defender for Servers plan](plan-defender-for-servers-select-plan.md)
 1. Understand how [Defender for Servers collects data for assessment and when you need a workspace](plan-defender-for-servers-agents.md).
 
-
 ## Understand data residency
 
-Before you deploy Defender for Servers, learn how Defender for Cloud stores data. 
+Before you deploy Defender for Servers, learn how Defender for Cloud stores data.
 
 - Review [general Azure data residency considerations](https://azure.microsoft.com/blog/making-your-data-residency-choices-easier-with-azure/).
 - Posture data collected by Defender for Cloud is stored in the Defender for Cloud backend. Data is routed based on the tenant location. European tenants are stored in a Europe location.
 - Defender for Cloud's threat protection data including security alerts might be processed in the same region as the cloud resource, and later routed to the MDC backend.
 - Data collected by the Defender for Endpoint agent for [file integrity monitoring](file-integrity-monitoring-overview.md) is stored for access and analysis in a Log Analytics workspace.
 - You can export data to a Log Analytics workspace using [continuous export](continuous-export.md).
-
-
-
 
 ## Next steps
 

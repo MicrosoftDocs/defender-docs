@@ -34,12 +34,11 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 1. Select a resource to drill down for details.
 1. On the **Resource Health** page for the resource, review information about the resource.
     - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
-    - The **Alerts** tab shows any relevant security alerts. 
+    - The **Alerts** tab shows any relevant security alerts.
 
 ## Review software inventory
 
 :::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
-
 
 1. Select **Installed application**
 1. In **Value**, select the apps to filter on.
@@ -60,7 +59,6 @@ As soon as you apply filters, the summary values are updated to relate to the qu
 **Download CSV report** - Export the results of your selected filter options to a CSV file.
 
 **Open query** - Export the query itself to [Azure Resource Graph (ARG)](/azure/governance/resource-graph/) to further refine, save, or modify the Kusto Query Language (KQL) query.
-
 
 ## How does asset inventory work?
 
@@ -112,7 +110,7 @@ To access the software inventory, you need one of the following plans:
 
 1. Select the following subscription scope: **securityresources/softwareinventories**
 
-3. Enter any of the following queries (or customize them or write your own!) and select **Run query**.
+1. Enter any of the following queries (or customize them or write your own!) and select **Run query**.
 
 ### Query examples
 

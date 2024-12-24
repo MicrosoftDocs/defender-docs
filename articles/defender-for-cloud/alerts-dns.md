@@ -25,7 +25,6 @@ This article lists the security alerts you might get for DNS from Microsoft Defe
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 
-
 ### **Anomalous network protocol usage**
 
 (AzureDNS_ProtocolAnomaly)
