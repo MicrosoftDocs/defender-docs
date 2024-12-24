@@ -154,7 +154,7 @@ To enable endpoint protection on Linux machines and Windows machines running Win
 
 ## Enable integration at scale
 
-You can enable the Defender for Endpoint integration at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](//rest/api/defenderforcloud-composite/settings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
+You can enable the Defender for Endpoint integration at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud-composite/settings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
 
 Here's an example request body for the PUT request to enable the Defender for Endpoint integration:
 
