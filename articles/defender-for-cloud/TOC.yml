@@ -15,8 +15,6 @@
     - name: What's new in recommendations, alerts, and incidents
       displayName: what's new, recommendations, alerts, incidents
       href: release-notes-recommendations-alerts.md
-    - name: Prepare for retirement of the Log Analytics agent
-      href: prepare-deprecation-log-analytics-mma-agent.md
     - name: Common questions
       items:
         - name: Common questions about Defender for Cloud
@@ -42,36 +40,38 @@
 
 - name: Plan
   items:
-    - name: Zero trust and Defender for Cloud
+    - name: Zero Trust and Defender for Cloud
       displayName: zero trust, zero, trust
       href: zero-trust.md
-    - name: Start planning multicloud protection
-      displayName: begin, get started,
-      href: plan-multicloud-security-get-started.md
-    - name: Determine business needs
-      displayName: needs, goals, business, requirements
-      href: plan-multicloud-security-determine-business-needs.md
-    - name: Define an adoption strategy
-      displayName: strategy, adoption, ownership
-      href: plan-multicloud-security-define-adoption-strategy.md
-    - name: Determine plan and agents requirements
-      displayName: data, residency, cspm, cwp, plan, agent, requirements
-      href: plan-multicloud-security-determine-data-residency-requirements.md
-    - name: Determine compliance requirements
-      displayName: compliance, standards
-      href: plan-multicloud-security-determine-compliance-requirements.md
-    - name: Determine ownership requirements
-      displayName: ownership, team, alignment, best practices,
-      href: plan-multicloud-security-determine-ownership-requirements.md
-    - name: Determine access control requirements
-      displayName: access, control
-      href: plan-multicloud-security-determine-access-control-requirements.md
-    - name: Determine multicloud dependencies
-      displayName: dependencies, cspm, cwpp, agents, multicloud
-      href: plan-multicloud-security-determine-multicloud-dependencies.md
-    - name: Automate connector deployment
-      displayName: rest api
-      href: plan-multicloud-security-automate-connector-deployment.md
+    - name: Plan multicloud protection
+      items:
+        - name: Start planning multicloud protection
+          displayName: begin, get started,
+          href: plan-multicloud-security-get-started.md
+        - name: Determine business needs
+          displayName: needs, goals, business, requirements
+          href: plan-multicloud-security-determine-business-needs.md
+        - name: Define an adoption strategy
+          displayName: strategy, adoption, ownership
+          href: plan-multicloud-security-define-adoption-strategy.md
+        - name: Determine plan and agents requirements
+          displayName: data, residency, cspm, cwp, plan
+          href: plan-multicloud-security-determine-data-residency-requirements.md
+        - name: Determine compliance requirements
+          displayName: compliance, standards
+          href: plan-multicloud-security-determine-compliance-requirements.md
+        - name: Determine ownership requirements
+          displayName: ownership, team, alignment, best practices,
+          href: plan-multicloud-security-determine-ownership-requirements.md
+        - name: Determine access control requirements
+          displayName: access, control
+          href: plan-multicloud-security-determine-access-control-requirements.md
+        - name: Determine multicloud dependencies
+          displayName: dependencies, cspm, cwpp, agents, multicloud
+          href: plan-multicloud-security-determine-multicloud-dependencies.md
+        - name: Automate connector deployment
+          displayName: rest api
+          href: plan-multicloud-security-automate-connector-deployment.md
 - name: Deploy
   items:
     - name: Connect environments and enable all plans
@@ -156,15 +156,15 @@
           href: connect-an-integration.md
         - name: Partner integrations
           items:
-          - name: Endor labs
+          - name: Endor Labs
             items:
-            - name: Overview Endor labs integration
+            - name: Overview 
               displayName: CSPM, cloud security, posture, management, Endor labs
               href: integration-endor-labs.md
-            - name: Connect Endor labs to Defender for Cloud
+            - name: Connect Endor Labs to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, Endor labs
               href: connect-endor-labs.md
-            - name: Common questions about Endor labs
+            - name: Common questions 
               displayName: FAQ, questions, endor labs
               href: faq-endor-labs.yml
           - name: ServiceNow
@@ -250,7 +250,7 @@
 
 - name: Samples
   items:
-    - name: Azure Resource Graph queries
+    - name: Queries - Azure Resource Graph
       displayName: sample, query, queries, resource, graph
       href: ./resource-graph-samples.md
     - name: Cloud Security Explorer software queries
@@ -722,141 +722,147 @@
   - name: Defender for Servers
     displayName: hybrid, arc, Defender for Servers
     items:
+    - name: Overview
+      href: defender-for-servers-overview.md
+    - name: Common questions
+      href: faq-defender-for-servers.yml
+    - name: Plan 
+      items:
+        - name: Get started
+          displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, adaptive application controls, adaptive network hardening, docker, fileless attack detection, auditd, simulate alerts
+          href: plan-defender-for-servers.md
+        - name: Plan roles and permissions
+          href: plan-defender-for-servers-roles.md
+        - name: Choose a plan and deployment scope
+          href: plan-defender-for-servers-select-plan.md
+        - name: Understand data collection
+          href: plan-defender-for-servers-agents.md
+        - name: Understand data storage and workspaces
+          href: plan-defender-for-servers-data-workspace.md
+        - name: Scale a deployment
+          href: plan-defender-for-servers-scale.md  
     - name: Deploy
       displayName: hybrid, arc, Defender for Servers
       items:
       - name: Deploy Defender for Servers
         href: tutorial-enable-servers-plan.md
-      - name: Configure Defender for Servers features
+      - name: Set up the free data ingestion benefit
+        href: data-ingestion-benefit.md
+      - name: Modify plan settings
         displayName: Defender for Servers, monitoring coverage, Log analytics, agentless scanning, Vulnerability assessment, Endpoint protection
         href: configure-servers-coverage.md
-      - name: Plan Defender for Servers deployment
+    - name: Configure
+      items:
+      - name: Defender integration
         items:
-          - name: Get started
-            displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, docker, fileless attack detection, auditd, simulate alerts
-            href: plan-defender-for-servers.md
-          - name: Review data residency and workspace design
-            href: plan-defender-for-servers-data-workspace.md
-          - name: Determine roles and access
-            href: plan-defender-for-servers-roles.md
-          - name: Select a plan
-            href: plan-defender-for-servers-select-plan.md
-          - name: Review agents and extensions
-            href: plan-defender-for-servers-agents.md
-          - name: Scale a Defender for Servers deployment
-            href: plan-defender-for-servers-scale.md
-    - name: Agentless scanning
-      items:
+          - name: Overview
+            href: integration-defender-for-endpoint.md
+          - name: Enable Defender integration
+            displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
+            href: enable-defender-for-endpoint.md
       - name: Agentless machine scanning
-        displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots
-        href: concept-agentless-data-collection.md
-      - name: Protect secrets
-        displayName: secrets, secret scanning, agentless
-        items: 
-        - name: Overview
-          href: secrets-scanning-servers.md
-        - name: Remediate VM secrets
-          href: remediate-server-secrets.md
-      - name: Protect servers with agentless malware scanning
-        displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
-        href: agentless-malware-scanning.md
-      - name: Enable agentless scanning for VMs
-        displayName: vulnerability, software inventory, agentless scanning
-        href: enable-agentless-scanning-vms.md
-    - name: Vulnerability scanning
+        items:
+          - name: Overview
+            displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots
+            href: concept-agentless-data-collection.md
+          - name: Enable agentless machine scanning
+            displayName: vulnerability, software inventory, agentless scanning
+            href: enable-agentless-scanning-vms.md
+          - name: Exclude machines from agentless scanning
+            href: exclude-machines-agentless-scanning.md
+      - name: Endpoint detection and response (EDR)
+        items:
+          - name: Detecting EDR solutions
+            href: detect-endpoint-detection-response-solutions.md
+          - name: Assessing Defender for Endpoint EDR
+            href: endpoint-detection-response.md
+          - name: Enable agentless machine scanning
+            displayName: vulnerability, software inventory, agentless scanning
+            href: enable-agentless-scanning-vms.md
+      - name: Vulnerability scanning
+        items:
+          - name: Overview
+            displayName: qualys, rapid7, vulnerability, auto provision
+            href: auto-deploy-vulnerability-assessment.md
+          - name: Enable vulnerability scanning
+            displayName: mde, tvm, vulnerability, va, arc, hybrid, defender vulnerability management
+            href: deploy-vulnerability-assessment-defender-vulnerability-management.md
+          - name: Enable vulnerability scanning with a BYOL solution
+            displayName: qualys, rapid7, vulnerability
+            href: deploy-vulnerability-assessment-byol-vm.md
+          - name: Move to scanning with Defender Vulnerability Management
+            displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
+            href: how-to-transition-to-built-in.yml
+      - name: Machine secrets scanning
+        items:
+          - name: Overview
+            displayName: secrets, secret scanning, agentless
+            href: secrets-scanning-servers.md
+          - name: Enable agentless machine scanning
+            href: enable-agentless-scanning-vms.md
+      - name: Malware scanning
+        items:
+          - name: Overview
+            displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
+            href: agentless-malware-scanning.md
+          - name: Enable agentless machine scanning
+            href: enable-agentless-scanning-vms.md
+          - name: Test agentless malware scanning alerts
+            href: test-agentless-malware-scanning.md
+      - name: OS misconfigurations
+        items:
+         - name: Overview
+           href: operating-system-misconfiguration.md
+         - name: Deploy the Azure machine configuration extension
+           href: security-baseline-guest-configuration.md
+      - name: File integrity monitoring
+        items:
+          - name: Overview
+            displayName: fim, change
+            href: file-integrity-monitoring-overview.md
+          - name: Migrate from previous version
+            href: migrate-file-integrity-monitoring.md
+          - name: Enable file integrity monitoring
+            href: file-integrity-monitoring-enable-defender-endpoint.md
+          - name: Enable file integrity monitoring (legacy MMA)
+            displayName: fim, change, log analytics, mma
+            href: file-integrity-monitoring-enable-log-analytics.md
+      - name: Just-in-time machine access
+        items:
+          - name: Overview
+            displayName: jit, management
+            href: just-in-time-access-overview.md
+          - name: Enable just-in-time access 
+            displayName: jit, management, ports
+            href: just-in-time-access-usage.yml
+    - name: Investigate and remediate 
       items:
-      - name: Enable vulnerability scanning with Microsoft Defender Vulnerability Management
-        displayName: mde, tvm, vulnerability, va, arc, hybrid, defender vulnerability management
-        href: deploy-vulnerability-assessment-defender-vulnerability-management.md
-      - name: Enable vulnerability scanning with a BYOL solution
-        displayName: qualys, rapid7, vulnerability
-        href: deploy-vulnerability-assessment-byol-vm.md
-      - name: Automatically enable a vulnerability assessment solution
-        displayName: qualys, rapid7, vulnerability, auto provision
-        href: auto-deploy-vulnerability-assessment.md
-      - name: Transition to Microsoft Defender Vulnerability Management for servers
-        displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-        href: how-to-transition-to-built-in.yml
-      - name: Common questions 
-        displayName: questions, common, MDVM, Qualys, BYOL, bring your own license, agent, consolidated, vulnerability, management, faq, frequently asked questions
-        href: faq-scanner-detection.yml
-      - name: Enable vulnerability scanning with the integrated Qualys scanner (deprecated)
-        displayName: qualys, va, vulnerability, arc, hybrid
-        href: deploy-vulnerability-assessment-vm.md
-    - name: File integrity monitoring
-      items:
-      - name: Understand File Integrity Monitoring
-        displayName: fim, change
-        href: file-integrity-monitoring-overview.md
-      - name: File Integrity Monitoring over Defender for Endpoint
-        displayName: fim, change, defender for endpoint, mde
-        href:  file-integrity-monitoring-enable-defender-endpoint.md
-      - name: Migrate from previous versions
-        href:  migrate-file-integrity-monitoring.md
-      - name: File Integrity Monitoring over AMA (Deprecated)
-        displayName: fim, change, azure monitor agent
-        href: file-integrity-monitoring-enable-ama.md
-      - name: File Integrity Monitoring over Log Analytics
-        displayName: fim, change, log analytics, mma
-        href: file-integrity-monitoring-enable-log-analytics.md
-    - name: Just-in-time access
-      items:
-      - name: Understand just-in-time VM access
-        displayName: jit, management
-        href: just-in-time-access-overview.md
-      - name: Enable just-in-time access on VMs
-        displayName: jit, management, ports
-        href: just-in-time-access-usage.yml
-    - name: Endpoint detection and response
-      items:
-      - name: Understand endpoint detection and response
-        displayName: mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
-        href: integration-defender-for-endpoint.md
-      - name: Enable the Defender for Endpoint integration
-        displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
-        href: enable-defender-for-endpoint.md
-      - name: Review and remediate endpoint detection and response recommendations (agentless)
+      - name: Remediate EDR solutions (agentless)
         displayName: defender for endpoint, endpoint, edr
-        href: endpoint-detection-response.md
-      - name: Review and remediate endpoint detection and response recommendations (MMA)
-        href: endpoint-protection-recommendations-technical.md
-    - name: Review server protection
-      items:
-        - name: Remediate security baseline recommendations (Defender Vulnerability Management)
-          displayName: security, baseline, remediate, mdvm, vulnerability, assessment, va
-          href: remediate-security-baseline.md
-        - name: Remediate guest configuration recommendations
-          displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
-          href: apply-security-baseline.md
-        - name: Review Docker host hardening recommendations
-          displayName: containers
-          href: harden-docker-hosts.md
-        - name: Review and remediate vulnerabilities
-          displayName: qualys, va, rapid7, vulnerability
-          href: remediate-vulnerability-findings-vm.md
-        - name: Disable specific vulnerability findings
-          displayName: qualys, rapid7, va
-          href: remediate-vulnerability-findings-vm.md#disable-specific-findings
-        - name: Compare baselines using file integrity monitoring
-          displayName: fim, change
-          href: file-integrity-monitoring-usage.md
-        - name: Review applications and software installed on machines
-          displayName: inventory, apps, software inventory, mde, tvm
-          href: asset-inventory.md#access-a-software-inventory
-        - name: Remediate system updates and patches recommendations
-          displayName: update, system, updates, patches
-          href: enable-periodic-system-updates.md
-    - name: Common questions (FAQ)
-      items:
-        - name: Common questions about Defender for Servers
-          displayName: common questions, faq, frequently asked questions
-          href: faq-defender-for-servers.yml
-        - name: Common questions about Azure Virtual Machines
-          displayName: common questions, faq, frequently asked questions
-          href: faq-vms.yml
-        - name: Common questions about vulnerability assessments
-          displayName: common questions, VA, vulnerability, assessment, faq, frequently asked questions
-          href: faq-vulnerability-assessments.yml
+        href: endpoint-detection-response-solution-recommendations.md   
+      - name: Remediate EDR solutions (MMA)
+        href: endpoint-protection-recommendations-technical.md 
+      - name: Remediate Defender for Endpoint misconfigurations
+        href: endpoint-detection-misconfiguration.md
+      - name: Remediate machine vulnerabilities
+        displayName: qualys, va, rapid7, vulnerability
+        href: remediate-vulnerability-findings-vm.md
+      - name: Disable vulnerability findings
+        displayName: qualys, rapid7, va
+        href: disable-vulnerability-findings.md
+      - name: Remediate OS misconfigurations (Cloud Security Benchmark)
+        displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
+        href: apply-security-baseline.md
+      - name: Remediate system updates
+        displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
+        href: enable-periodic-system-updates.md
+      - name: Review the software inventory
+        displayName: inventory, apps, software inventory, mde, tvm
+        href: software-inventory.md
+      - name: Remediate machine secrets
+        href: remediate-server-secrets.md 
+      - name: Review changes in file integrity monitoring
+        href: file-integrity-monitoring-review-changes.md
   - name: Defender for Containers
     items:
       - name: Overview
@@ -930,7 +936,7 @@
         href: defender-for-container-registries-introduction.md
   - name: Database protection
     items:
-     - name: Protect databases with Defender for Databases
+     - name: Overview
        displayName: database, protections
        href: tutorial-enable-databases-plan.md
      - name: Defender for Azure SQL Databases
@@ -979,15 +985,12 @@
              href: /azure/azure-sql/database/threat-detection-configure?toc=/azure/defender-for-cloud/toc.json
      - name: Defender for SQL servers on machines
        items:
-          - name: Enable Defender for SQL servers on machines
+          - name: Overview
+            href: defender-for-sql-on-machines-overview.md
+          - name: Enable Defender for SQL Server on Machines
             href: defender-for-sql-usage.md
             displayName: hybrid, arc, Azure Defender
-          - name: Enable Defender for SQL servers on machines at scale
-            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-            href: enable-defender-sql-at-scale.md        
-          - name: Investigate Defender for SQL security alerts
-            href: defender-for-sql-alerts.md
-          - name: Migrate to SQL server-targeted Azure Monitoring Agent's autoprovisioning
+          - name: Migrate to Azure Monitor Agent autoprovisioning
               process
             href: defender-for-sql-autoprovisioning.md
             displayName: defender for sql, autoprovisioning, auto provisioning,
@@ -1188,7 +1191,7 @@
     - name: How Microsoft secures customer data
       href: data-security.md
     - name: REST APIs documentation
-      href: /rest/api/defenderforcloud/operation-groups?view=rest-defenderforcloud-2020-01-01&preserve-view=true
+      href: /rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true
     - name: Security baseline
       href: /security/benchmark/azure/baselines/security-center-security-baseline?toc=/azure/defender-for-cloud/TOC.json
     - name: Azure Policy built-ins
@@ -1310,7 +1313,7 @@
         - name: Microsoft Security Copilot integration
           displayName: Copilot, security
           href: episode-forty-nine.md
-        - name: Secure your AI applications from code to runtime
+        - name: Secure AI applications from code to runtime
           displayName: AI, applications, code, runtime
           href: episode-fifty.md
         - name: Defender for Open-Source Relational Databases multicloud

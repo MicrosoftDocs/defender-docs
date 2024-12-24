@@ -16,7 +16,7 @@ This article addresses recommendations that apply to your Azure resources from a
 
 The **Networking** features of Defender for Cloud include:
 
-- Network map (requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features))
+- Network map requires Microsoft Defender for Servers Plan 2.
 - Networking security recommendations
 
 ## View your networking resources and their recommendations

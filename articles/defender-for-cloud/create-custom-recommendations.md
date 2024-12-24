@@ -71,7 +71,7 @@ If you prevalidated KQL queries and want to automate creating custom recommendat
 - **Advantages**: You can automate and scale the deployment of custom recommendations.  
 - **When to use**: This method is ideal for large-scale implementations where you need to apply recommendations consistently across multiple environments.  
 
-For more information about using the API to manage custom recommendations, see the [API documentation](/rest/api/defenderforcloud/operation-groups).
+For more information about using the API to manage custom recommendations, see the [API documentation](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 ## Create a custom standard
 
@@ -243,7 +243,7 @@ Here's another example of a custom policy including the metadata/securityCenter 
 }
   ```
 
-For another example for using the securityCenter property, see [this section of the REST API documentation](/rest/api/defenderforcloud/assessments-metadata/create-in-subscription#examples).
+For another example for using the securityCenter property, see [this section of the REST API documentation](/rest/api/defenderforcloud-composite/assessments-metadata/create-in-subscription?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#examples).
 
 ## Related content
 
