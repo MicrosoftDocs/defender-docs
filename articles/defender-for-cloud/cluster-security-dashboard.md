@@ -31,7 +31,7 @@ The AKS Security Dashboard only shows security vulnerabilities and misconfigurat
 
 When [enabling Defender for Containers for a single cluster](#setting-the-defender-for-containers-plan):
 - Security misconfigurations are shown.
-- Vulnerability assessment recommendations will be shown if Defender for Containers is enabled for the subscription.
+- Vulnerability assessment recommendations are shown if Defender for Containers is enabled for the subscription.
 - [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is only calculated by the recommendations available to the single cluster. If the subscription of the single cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
 
 ## Using the AKS Security Dashboard 
@@ -52,11 +52,13 @@ In both the **Vulnerabilities** and **Misconfiguration** tabs, selecting one of 
 
 The user can select multiple recommendations using the checkbox beside each recommendation and then select **Assign owner** in the dashboard ruler, to assign a single owner to all of them.
 
+Selecting **Download CSV report** downloads the cluster vulnerabilities and misconfigurations as a CSV file. The cluster vulnerabilities and misconfigurations can also be retrieved using the [Defender for Cloud REST API](/rest/api/defenderforcloud-composite/assessments?view=rest-defenderforcloud-composite-stable).
+
 ### Setting the Defender for Containers plan
 
 Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, the following extensions can then be toggled:
 
-- **K8S API access** - Enable agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
+- **Kubernetes API access** - Enable agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
 - **Registry access** - Enable agentless vulnerability assessment for registry images.
 - **Azure policy** - Enable the deployment of an agent on the cluster to harden the data plane.
 
