@@ -7,7 +7,7 @@ ms.date: 06/29/2023
 
 # Just-in-time machine access
 
-Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time machine access feature. 
+Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time machine access feature.
 
 Threat actors actively hunt accessible machines with open management ports, like RDP or SSH. All of your machines are potential targets for an attack. When a machine is successfully compromised, it's used as the entry point to attack further resources in the environment.
 
@@ -15,12 +15,11 @@ To reduce attack surfaces, we want fewer open ports, especially management ports
 
 To solve this dilemma, Defender for Cloud offers just-in-time machine access so that you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed. Just-in-time access is available when Defender for Servers Plan 2 is enabled.
 
-
-## Just-in-time access and network resources 
+## Just-in-time access and network resources
 
 ### Azure
 
-In Azure, you can block inbound traffic on specific ports, by enabling just-in-time access. 
+In Azure, you can block inbound traffic on specific ports, by enabling just-in-time access.
 
 - Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview#security-rules) and [Azure Firewall rules](/azure/firewall/rule-processing).
 - These rules restrict access to your Azure VMs’ management ports and defend them from attack.
@@ -38,6 +37,7 @@ In AWS, by enabling just-in-time access, the relevant rules in the attached EC2 
 - Connections that are already established aren't interrupted.
 
 > [!NOTE]
+>
 > - Just-in-time access doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).
 > - The Azure Firewall must be configured with Rules (Classic) and can't use Firewall policies.
 
@@ -62,4 +62,3 @@ When Defender for Cloud finds a machine that can benefit from just-in-time acces
 ## Next steps
 
 [Enable just-in-time access on VMs](just-in-time-access-usage.yml).
-

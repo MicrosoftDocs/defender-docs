@@ -29,16 +29,14 @@ When you enable a Defender for Cloud subscription, this process occurs:
 
 1. The *microsoft.security* resource provider is automatically registered on the subscription.
 1. At the same time, the Cloud Security Benchmark initiative that's responsible for creating security recommendations and calculating the secure score is assigned to the subscription.
-1. After you enable Defender for Cloud on the subscription, you turn on Defender for Servers Plan 1 or Defender for Servers Plan 2. 
+1. After you enable Defender for Cloud on the subscription, you turn on Defender for Servers Plan 1 or Defender for Servers Plan 2.
 
 In the next sections, review considerations for specific steps as you scale your deployment:
 
 - Scale a Microsoft Cloud Security Benchmark deployment
 - Scale a Defender for Servers plan
 
-
 ## Scale a MCSB deployment
-
 
 Defender for Cloud assesses and enforces best-practice security configurations using [built-in Azure policy initiatives](policy-reference.md). The [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) is Defender for Cloud's default initiative.
 
@@ -61,8 +59,6 @@ You can use a policy definition to enable Defender for Servers at scale:
 - Alternatively, you can use a [custom policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Enable%20Defender%20for%20Servers%20plans) to enable Defender for Servers and select the plan at the same time.
 - You can enable only one Defender for Servers plan on each subscription. You can't enable both Defender for Servers Plan 1 and Plan 2 at the same subscription.
 - If you want to use both plans in your environment, divide your subscriptions into two management groups. On each management group, assign a policy to enable the respective plan on each underlying subscription.
-
-
 
 ## Next steps
 

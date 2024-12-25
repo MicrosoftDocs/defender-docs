@@ -31,7 +31,7 @@ Secrets scanning helps reduce risk by:
 Secrets scanning for VMs is agentless and uses cloud APIs. Here's how it works:
 
 1. Secrets scanning captures disk snapshots and analyses them, with no impact on VM performance.
-2. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud. 
+2. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud.
 3. The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
     - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud **Recommendations** page.
     - Directories recognized as containing test-related content are excluded from scanning.
@@ -65,7 +65,6 @@ Defender for Cloud provides these predefined queries for investigating secrets s
 ## Investigating and remediating machine secrets
 
 You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#secrets-support) for different types of secrets.
-
 
 ## Related content
 

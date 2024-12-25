@@ -11,20 +11,18 @@ ms.date: 06/29/2023
 The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanaged containers hosted on IaaS Linux VMs, or other Linux machines running Docker containers. Defender for Servers continuously assesses the configuration of these Docker hosts, and compares them with the [Center for Internet Security (CIS) Docker Benchmark](https://www.cisecurity.org/benchmark/docker/).
 
 - Defender for Cloud includes the entire ruleset of the CIS Docker Benchmark and alerts you if your containers don't satisfy any of the controls.
-- When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.- 
+- When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.-
 When vulnerabilities are found, they're grouped inside a single recommendation.
 
 > [!NOTE]
-> Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect host information for assessment. 
+> Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect host information for assessment.
 > The MMA is retiring, and the Docker host hardening feature will be deprecated in November 2024.
-
 
 ## Prerequisites
 
 - You need [Defender for Servers Plan 2](defender-for-servers-overview.md) to use this feature.
 - These CIS benchmark checks will not run on AKS-managed instances or Databricks-managed VMs.
 - You need Reader permissions on the workspace to which the host connects.
-
 
 ## Identify Docker configuration issues
 

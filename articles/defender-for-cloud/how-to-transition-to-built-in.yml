@@ -13,7 +13,7 @@ title: |
 introduction: |
 
   Vulnerability scanning in Microsoft Defender for Cloud uses integrated Microsoft Defender Vulnerability Management, to scan machines for software inventory and vulnerabilities, and provide findings and insights in Defender for Cloud. 
-  If you're currently using a different vulnerability assessement solution, you can move to Defender Vulnerability Management using the instructions in this article. 
+  If you're currently using a different vulnerability assessment solution, you can move to Defender Vulnerability Management using the instructions in this article. 
 
 prerequisites:
   summary: |

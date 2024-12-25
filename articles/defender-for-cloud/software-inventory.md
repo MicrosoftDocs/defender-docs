@@ -8,12 +8,11 @@ author: dcurwin
 ---
 # Review the software inventory
 
-
 The Defender for Servers plan in Microsoft Defender for Cloud provides vulnerability scanning using Microsoft Defender Vulnerability Management. Microsoft Defender for Endpoint and Defender Vulnerability Management are integrated natively into Defender for Cloud.
 
 The software inventory feature, provided by Defender Vulnerability Management, shows a list of known software in your organization, with security information about discovered applications.
 
-- Defender for Cloud shows the integrated software inventory on the **Inventory** page, summarizing software running on resources connected to Defender for Cloud. 
+- Defender for Cloud shows the integrated software inventory on the **Inventory** page, summarizing software running on resources connected to Defender for Cloud.
 - You can query the Defender for Cloud inventory using [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use also use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
 
 This article explains how to review the software inventory.
@@ -21,11 +20,11 @@ This article explains how to review the software inventory.
 ## Prerequisites
 
 To see the software inventory, one of these paid plans must be enabled.
+
 - [Defender CSPM plan](concept-cloud-security-posture-management.md) with [agentless machine scanning](concept-agentless-data-collection.md) enabled.
 - [Defender for Server Plan 1 or Plan 2](defender-for-servers-introduction.md) with [Defender for Endpoint integration](integration-defender-for-endpoint.md) enabled, or Defender for Servers Plan 2 with agentless machine scanning enabled.
 
-If software that isn't supported appears in the inventory, only limited data will be available. 
-
+If software that isn't supported appears in the inventory, only limited data will be available.
 
 ## Review the software inventory
 
@@ -34,7 +33,6 @@ If software that isn't supported appears in the inventory, only limited data wil
 1. In **Value**, filter for a specific app.
 
     Resources connected to Defender for Cloud and running those apps are displayed. Blank options show machines where Defender for Servers/Defender for Endpoint isn't available.
-
 
 ## Query the software inventory
 
@@ -46,7 +44,7 @@ In addition to the predefined filters, you can explore the software inventory da
 
 1. Select the following subscription scope: securityresources/softwareinventories
 
-1. Use one of the following query examples, or customize/write your own. 
+1. Use one of the following query examples, or customize/write your own.
 1. Select **Run query**.
 
 ### Query examples
@@ -100,5 +98,3 @@ securityresources
 
 1. To save filtered inventory in CSV form, select **Download CSV report**.
 1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specific a query name and description, and whether the query is private or shared.
-
-

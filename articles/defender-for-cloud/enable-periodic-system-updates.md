@@ -8,9 +8,9 @@ ms.date: 09/08/2024
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.
 ---
 
-# Remediate system update and patch recommendations 
+# Remediate system update and patch recommendations
 
-Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment. 
+Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 
 As part of the hardening strategy, Defender for Cloud assesses machines to check that the latest system updates and patches are installed, and issues security recommendations if they're not. System updates and patches are crucial for keeping machines secure and healthy. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
 
@@ -31,9 +31,6 @@ These recommendations rely on [Azure Update Manager](/azure/update-manager/overv
 - Multicloud (AWS/GCP machines) must be onboarded with Azure Arc when you connect [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md).
 - If you're using Defender for Servers Plan 2, there's no additional cost for assessing, remediating, and patching system updates on supported Azure VMs and Azure Arc VMs.
 - If Defender for Servers Plan 2 isn't enabled on your subscription or multicloud connector, assessments for Azure Arc-enabled machines VMs in the subscription are subject to [Azure Update Manager charges](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
-
-
-
 
 ## Enable periodic assessment on machines
 
@@ -59,11 +56,9 @@ Periodic assessment can also be [enabled at scale with Azure Policy](/azure/upda
 
     :::image type="content" source="media/enable-periodic-system-updates/fix-updates.png" alt-text="Screenshot that shows where the fix button is located." lightbox="media/enable-periodic-system-updates/fix-updates.png":::
 
-
 ## Remediate recommendations at scale
 
 You can remediate recommendations on multiple machines.
-
 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation ``System updates should be installed on your machines (powered by Azure Update Manager)``.
@@ -76,5 +71,3 @@ You can remediate recommendations on multiple machines.
 1. Select all machines you want to fix.
 
 1. Select **Fix**.
-
-

@@ -52,7 +52,7 @@ If you want to turn off the on-upload malware scanning or Sensitive data threat 
 
 To disable the entire Defender plan, set the pricingTier property value to **Free** and remove the `subPlan` and extensions properties.
 
-Learn more about [updating Defender plans with the REST API](/rest/api/defenderforcloud/pricings/update) in HTTP, Java, Go, and JavaScript.
+Learn more about [updating Defender plans with the REST API](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) in HTTP, Java, Go, and JavaScript.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
@@ -92,7 +92,7 @@ If you want to turn off the on-upload malware scanning or sensitive data threat 
 
 To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
-Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud/defender-for-storage/create) documentation.
+Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) documentation.
 
 ---
 

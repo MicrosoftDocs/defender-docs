@@ -9,7 +9,6 @@ ms.date: 07/31/2023
 
 # Install the Azure machine configuration extension
 
-
 Defender for Cloud assesses operating system configuration against the [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) compute security baselines in the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
 
 The information needed for assessment is collected by the Azure machine configuration extension (formerly known as the Azure Policy guest configuration).
@@ -28,12 +27,11 @@ This article describes how to deploy the extension.
 > [!NOTE]
 > Collection with the machine configuration extension replaces the older method of data collection that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)). Use of the MMA will be supported until November 2024.
 
-
 ## Install on AWS/GCP
 
 For AWS/GCP machines, the machine configuration is installed by default when you select Arc provisioning in the [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md) connector.
 
-## Install on on-premises machines 
+## Install on on-premises machines
 
 For on-premises machines, the machine configuration is enabled by default when you [onboard on-premises VMs as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
@@ -62,11 +60,8 @@ For Azure VMs, you can autoprovision installation of guest configuration extensi
 
 1. Select **Continue**.
 
-
 With the machine configuration extension enabled on machine, the machine can then be assessed against [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems baselines.
-
 
 ## Next step
 
 [Review](apply-security-baseline.md) OS misconfiguration recommendations.
-

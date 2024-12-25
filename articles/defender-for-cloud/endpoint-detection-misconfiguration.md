@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Remediate Defender for Endpoint misconfigurations (agentless)
 
-Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
+Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud.
 
 As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution. In addition, for machines using Defender for Endpoint as an EDR, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
 
@@ -22,6 +22,7 @@ As part of these [integrated EDR capabilities](integration-defender-for-endpoint
 When misconfigurations are found, Defender for Cloud makes recommendations to fix them. This article describes how to remediate those recommendations.
 
 > [!NOTE]
+>
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
@@ -43,8 +44,8 @@ When misconfigurations are found, Defender for Cloud makes recommendations to fi
     - `EDR configuration issues should be resolved on virtual machines`
     - `EDR configuration issues should be resolved on EC2s`
     - `EDR configuration issues should be resolved on GCP virtual machines`
-    - 
-    - 
+    -
+    -
 
     :::image type="content" source="media/endpoint-detection-response/configurable-solutions.png" alt-text="Screenshot that shows the recommendations that configure your endpoint detection and solution and remediate misconfigurations." lightbox="media/endpoint-detection-response/configurable-solutions.png":::
 
@@ -62,7 +63,6 @@ When misconfigurations are found, Defender for Cloud makes recommendations to fi
 1. Drill into the security check, and follow the remediation steps.
 
     :::image type="content" source="media/endpoint-detection-response/security-check-remediation.png" alt-text="Screenshot that shows the additional details section.":::
-
 
 After the process is completed, it can take up to 24 hours until your machine appears in the **Healthy resources** tab.
 

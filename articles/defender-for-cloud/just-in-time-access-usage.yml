@@ -277,13 +277,13 @@ procedureSection:
 
       The just-in-time VM access feature can be used via the Microsoft Defender for Cloud API. Use this API to get information about configured VMs, add new ones, request access to a VM, and more.
 
-      Learn more at [JIT network access policies](/rest/api/defenderforcloud/jit-network-access-policies).
+      Learn more at [JIT network access policies](/rest/api/defenderforcloud-composite/jit-network-access-policies?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
       #### Request access to a JIT-enabled VM using the REST API
 
       The just-in-time VM access feature can be used via the Microsoft Defender for Cloud API. Use this API to get information about configured VMs, add new ones, request access to a VM, and more.
 
-      Learn more at [JIT network access policies](/rest/api/defenderforcloud/jit-network-access-policies).
+      Learn more at [JIT network access policies](/rest/api/defenderforcloud-composite/jit-network-access-policies?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
       ## Audit JIT access activity in Defender for Cloud
 

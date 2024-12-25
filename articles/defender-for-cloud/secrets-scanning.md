@@ -20,7 +20,6 @@ Secrets are often found across multicloud deployments in files, on VM disks, or 
 - **Complexity and speed**: Complex environments that might include multiple cloud platforms, open-source software, and third-party code. Developers might use secrets to access and integrate resources and services, and store secrets in source code repositories for convenience and reuse. This can lead to accidental exposure of secrets in public or private repositories, or during data transfer or processing.
 - **Trade-off between security and usability**: Organizations might keep secrets exposed in cloud environments for ease-of-use, to avoid the complexity and latency of encrypting and decrypting data at-rest and in-transit. This can compromise the security and privacy of data and credentials.
 
-
 ## Scanning types and plans
 
 Defender for Cloud provides different types of secrets scanning.
@@ -31,22 +30,19 @@ Defender for Cloud provides different types of secrets scanning.
 **Cloud deployment resource scanning** | Agentless secrets scanning across multicloud infrastructure-as-code deployment resources. | Defender CSPM plan.
 **Code repository scanning** | [Scanning to discover exposed secrets in Azure DevOps](defender-for-devops-introduction.md). | Defender CSPM plan.
 
-
 ## Scanning permissions
 
 To use secrets scanning, the following permissions are needed:
 
-   - Security Reader
-   
-      - Security Admin
-      
-         - Reader
-         
-            - Contributor
-            
-               - Owner
-               
+- Security Reader
 
+  - Security Admin
+
+    - Reader
+
+      - Contributor
+
+        - Owner
 
 ## Reviewing secrets findings
 
@@ -56,8 +52,6 @@ There are a number of methods available to identify and mitigate secrets issues.
 - **Review secrets recommendations**: When secrets are found on assets, a recommendation is triggered under the Remediate vulnerabilities security control on the Defender for Cloud Recommendations page. Recommendations are triggered as follows:
 - **Review secrets with cloud security explorer**. Use cloud security explorer to query the cloud security graph for secrets insights. You can build your own queries, or use one of the built-in templates to query for VM secrets across your environment.
 - **Review attack paths**: Attack path analysis scans the cloud security graph to expose exploitable paths that attacks might use to breach your environment and reach high-impact assets. VM secrets scanning supports a number of attack path scenarios.
-
-
 
 ## Secrets support
 

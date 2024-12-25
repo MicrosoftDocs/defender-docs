@@ -22,19 +22,20 @@ Continuous export of Microsoft Defender for Cloud security alerts and recommenda
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 Required roles and permissions:
+
 - Security Admin or Owner for the resource group
 - Write permissions for the target resource.
 - If you use the [Azure Policy DeployIfNotExist policies](continuous-export-azure-policy.md), you must have permissions that let you assign policies.
 - To export data to Event Hubs, you must have Write permissions on the Event Hubs policy.
-- To export to a Log Analytics workspace: 
-    - If it *has the SecurityCenterFree solution*, you must have a minimum of Read permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/read`.
-    - If it *doesn't have the SecurityCenterFree solution*, you must have write permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/action`.
-    
+- To export to a Log Analytics workspace:
+  - If it *has the SecurityCenterFree solution*, you must have a minimum of Read permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/read`.
+  - If it *doesn't have the SecurityCenterFree solution*, you must have write permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/action`.
+
     Learn more about [Azure Monitor and Log Analytics workspace solutions](/previous-versions/azure/azure-monitor/insights/solutions).
 
 ### Set up continuous export by using the REST API
 
-You can set up and manage continuous export by using the Microsoft Defender for Cloud [automations API](/rest/api/defenderforcloud/automations). Use this API to create or update rules for exporting to any of the following destinations:
+You can set up and manage continuous export by using the Microsoft Defender for Cloud [automations API](/rest/api/defenderforcloud-composite/automations?view=rest-defenderforcloud-composite-latest&preserve-view=true). Use this API to create or update rules for exporting to any of the following destinations:
 
 - Azure Event Hubs
 - Log Analytics workspace

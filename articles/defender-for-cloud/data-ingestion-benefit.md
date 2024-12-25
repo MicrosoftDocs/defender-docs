@@ -21,7 +21,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 ## Prerequisites
 
 - The benefit is available for every machine running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.
--  Defender for Servers Plan 2 must be specifically enabled on the workspace to which machines report.
+- Defender for Servers Plan 2 must be specifically enabled on the workspace to which machines report.
 - If the machine reports to more than one workspace, the benefit is only granted to one of them.
 
 The following subset of [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:
@@ -36,14 +36,11 @@ The following subset of [security data types](/azure/azure-monitor/reference/tab
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
 
-
 ## Configure a workspace
 
 Follow the instructions in the Azure Monitor documentation to [create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace).
 
-
 ## Enable Defender for Servers Plan 2 on the workspace
-
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
 
@@ -55,8 +52,5 @@ Follow the instructions in the Azure Monitor documentation to [create a Log Anal
 
     :::image type="content" source="media/tutorial-enable-servers-plan/enable-workspace-servers.png" alt-text="Screenshot that shows the plan enablement page at the Log Analytics workspace level." lightbox="media/tutorial-enable-servers-plan/enable-workspace-servers.png":::
 
-
-> [!Note]
+> [!NOTE]
 > If you want to disable Defender for Servers Plan 2 in the future, you need to explicitly disable the plan on any Log Analytics workspace that has it enabled.
-
-
