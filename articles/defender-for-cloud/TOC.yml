@@ -958,6 +958,8 @@
         - name: Defender for Azure Cosmos DB
           displayName: Cosmos, DB, Cosmos DB
           href: concept-defender-for-cosmos.md
+        - name: Common questions
+          href: faq-defender-for-databases.yml
       - name: Deploy
         items:
         - name: Deploy Defender for Databases
@@ -1051,9 +1053,6 @@
           href: defender-for-sql-scan-results.md
         - name: Investigate Defender for SQL security alerts
           href: defender-for-sql-alerts.md
-      
-      - name: Common questions
-        href: faq-defender-for-databases.yml
 
   - name: Defender for App Service
     items:
