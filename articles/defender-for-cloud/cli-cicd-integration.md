@@ -54,7 +54,7 @@ From there, the security admin must securely pass the token to developers to be 
 
       :::image type="content" source="media/cli-cicd/devops-ingestion-created.png" alt-text="Screenshot of creating DevOps Ingestion and creation of tokens." lightbox="media/cli-cicd/devops-ingestion-created.png":::
 
-1. Copy each token. They can't be edited or retrieved after you select **OK**/
+1. Copy each token. They can't be edited or retrieved after you select **OK**.
 
       :::image type="content" source="media/cli-cicd/devops-ingestion-created-success.png" alt-text="Screenshot of successful DevOps Ingestion created." lightbox="media/cli-cicd/devops-ingestion-created-success.png":::
 
