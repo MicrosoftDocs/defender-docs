@@ -63,7 +63,7 @@ Before deploying AMA with Defender for Cloud, ensure you have the following prer
 
 - Defender for SQL uses the following naming convention when creating our resources:
 
-  - DCR: `MicrosoftDefenderForSQL--dcr`
+  - Data Collection Rule: `MicrosoftDefenderForSQL--dcr`
   - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation`
   - Resource group: `DefaultResourceGroup-`
   - Log analytics workspace: `D4SQL--`
@@ -101,16 +101,16 @@ Before deploying AMA with Defender for Cloud, ensure you have the following prer
 
 1. Select **Save**.
 
-1. Once enabled we use one of the following policy initiatives:
-   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a Log analytics workspace (LAW) for a default LAW. This creates resources groups with data collection rules and a default Log analytics workspace. For more information about the Log analytics workspace, see [Log Analytics workspace overview](/azure/azure-monitor/logs/log-analytics-workspace-overview).
+1. Once enabled, use one of the following policy initiatives:
+   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a Log Analytics Workspace for a default Log Analytics Workspace. This creates resource groups with data collection rules and a default Log Analytics Workspace. For more information about the Log Analytics Workspace, see [Log Analytics workspace overview](/azure/azure-monitor/logs/log-analytics-workspace-overview).
 
     :::image type="content" source="media/defender-for-sql-usage/default-log-analytics-workspace.png" alt-text="Screenshot of how to configure default log analytics workspace." lightbox="media/defender-for-sql-usage/default-log-analytics-workspace.png":::
 
-   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a user-defined LAW. This creates a resource group with data collection rules and a custom Log analytics workspace in the predefined region. During this process, we install the Azure monitoring agent. For more information about the options to install the AMA agent, see [Azure Monitor Agent prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
+   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a user-defined Log Analytics Workspace. This creates a resource group with data collection rules and a custom Log Analytics Workspace in the predefined region. During this process, install the Azure Monitoring Agent. For more information about the options to install the AMA agent, see [Azure Monitor Agent prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
 
     :::image type="content" source="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png" alt-text="Screenshot of how to configure user-defined log analytics workspace." lightbox="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png":::
 
-1. To complete the installation process, a restart of the SQL server (instance) is necessary for versions 2017 and older.
+1. To complete the installation process, restart the SQL server (instance) for versions 2017 and older.
 
 ## Enable Defender for SQL on Azure virtual machines using the AMA agent
 
@@ -155,16 +155,16 @@ Before deploying AMA with Defender for Cloud, ensure you have the following prer
 
 1. Select **Save**.
 
-1. Once enabled we use one of the following policy initiatives:
-   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a Log analytics workspace (LAW) for a default LAW. This creates a resources group in *East US*, and managed identity. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent). It also creates a resource group that includes a Data Collection Rules (DCR) and a default LAW. All resources are consolidated under this single resource group. The DCR and LAW are created to align with the region of the virtual machine (VM).
+1. Once enabled, use one of the following policy initiatives:
+   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a Log Analytics Workspace for a default Log Analytics Workspace. This creates a resource group in East US and a managed identity. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent). It also creates a resource group that includes Data Collection Rules and a default Log Analytics Workspace. All resources are consolidated under this single resource group. The Data Collection Rule and Log Analytics Workspace are created to align with the region of the virtual machine (VM).
 
     :::image type="content" source="media/defender-for-sql-usage/default-log-analytics-workspace.png" alt-text="Screenshot of how to configure default log analytics workspace." lightbox="media/defender-for-sql-usage/default-log-analytics-workspace.png":::
 
-   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a user-defined LAW. This creates a resources group in *East US*, and managed identity. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent). It also creates a resources group with a DCR and a custom LAW in the predefined region.
+   - Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a user-defined Log Analytics Workspace. This creates a resource group in East US and a managed identity. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent). It also creates a resource group with DCR and a custom Log Analytics Workspace in the predefined region.
 
     :::image type="content" source="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png" alt-text="Screenshot of how to configure user-defined log analytics workspace." lightbox="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png":::
 
-1. To complete the installation process, a restart of the SQL server (instance) is necessary for versions 2017 and older.
+1. To complete the installation process, restart the SQL server (instance) for versions 2017 and older.
 
 ## Related content
 
