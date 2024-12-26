@@ -4,7 +4,7 @@ description: Learn about endpoint detection and response capabilities in Microso
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/18/2024
+ms.date: 12/26/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
@@ -26,8 +26,16 @@ When machines run Defender for Endpoint as an EDR solution, Defender for Servers
 - Signature out of date
 - Anti-virus is off or partially configured
 
-If misconfigurations are found Defender for Cloud makes recommendations to fix them.
+If misconfigurations are found, Defender for Cloud presents recommendations such as:
 
-## Next steps
+- `EDR configuration issues should be resolved on virtual machines`
+- `EDR configuration issues should be resolved on EC2s`
+- `Anti-Virus component in your EDR is off or partially configured`
+- `Anti-Virus component of your EDR uses outdated signatures`
 
-[Detect EDR misconfigurations in Defender for Endpoint](endpoint-detection-misconfiguration.md).
+Once you locate these recommendations, you can [remediate them](implement-security-recommendations.md).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Detect EDR misconfigurations in Defender for Endpoint](endpoint-detection-misconfiguration.md).
