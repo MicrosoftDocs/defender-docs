@@ -110,6 +110,8 @@
             href: secure-score-data-storage-privacy.md
       - name: Protect your endpoints
         href: /defender-endpoint
+      - name: Protect your IoT/OT assets
+        href: protect-against-iot-ot-threats.md
       - name: Protect your identities
         items:
           - name: Sensor settings and health
