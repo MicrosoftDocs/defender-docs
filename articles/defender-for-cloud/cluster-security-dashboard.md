@@ -47,7 +47,7 @@ The AKS Security Dashboard is accessed from a cluster resource pane by selecting
 In both the **Vulnerabilities** and **Misconfiguration** tabs, selecting one of the recommendations opens a pane showing the full details of the recommendation. In the details pane, the user can:
 
 - View the full details of the recommendation and the steps for remediation.
-- Remediate the issue by selecting the **Quick Fix** option. Some recommendations might require the user to remediate the issue by selecting **Additional Details**.
+- Remediate the issue by selecting the **Quick Fix** option.
 - Assign an owner that is responsible for remediation of the issue. Selecting **Assign Owner** opens a pane where the owner name, remediation time frame, periodic email reminders can be set.
 
 The user can select multiple recommendations using the checkbox beside each recommendation and then select **Assign owner** in the dashboard ruler, to assign a single owner to all of them.
