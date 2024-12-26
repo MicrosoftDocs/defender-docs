@@ -33,7 +33,7 @@ If misconfigurations are found, Defender for Cloud presents recommendations such
 - `Anti-Virus component in your EDR is off or partially configured`
 - `Anti-Virus component of your EDR uses outdated signatures`
 
-Once you locate these recommendations, you can [remediate them](implement-security-recommendations.md).
+Once you [locate these recommendations](review-security-recommendations.md), you can [remediate them](implement-security-recommendations.md).
 
 ## Next step
 
