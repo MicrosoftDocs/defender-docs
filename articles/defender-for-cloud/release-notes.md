@@ -42,9 +42,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 December 31, 2024
 
-Earlier this month, an [update was published](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) regarding the revised Defender for Cloud interval options for scanning a cloud environment. The scan interval setting determines how often Defender for Cloud's discovery services scan your cloud resources. This change ensures a more balanced scanning process, optimizing performance and minimizing the risk of reaching API limits.
+Earlier this month, an [update was published](#revised-interval-options-for-defender-for-cloud-scan-of-a-cloud-environment) regarding the revised Defender for Cloud interval options for scanning a cloud environment. The scan interval setting determines how often Defender for Cloud's discovery services scan your cloud resources. This change ensures a more balanced scanning process, optimizing performance, and minimizing the risk of reaching API limits.
 
-Scan interval settings for existing AWS and GCP cloud connectors will be updated to ensure Defender for Cloud's ability to scan your cloud environments. The following adjustments will be made:
+Scan interval settings for existing AWS and GCP cloud connectors will be updated to ensure Defender for Cloud's ability to scan your cloud environments.
+
+The following adjustments will be made:
+
 - Intervals currently set between 1–3 hours will be updated to 4 hours.
 - Intervals set to 5 hours will be updated to 6 hours.
 - Intervals set between 7–11 hours will be updated to 12 hours.
