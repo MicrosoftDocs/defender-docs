@@ -71,8 +71,8 @@ If there are no entries in the list of attack paths, you can still test this fea
 1. Verify success by doing the following steps:
 
    - Look for an entry with **mdc-dcspm-demo** as namespace
-   - In the **Workloads-> Deployments** tab, verify "pod1" and "pod2" created 3/3 and **ingress-controller-nginx-ingress-controller** created 1/1.
-   - In services and ingresses look for-> services **service1**, **service2**, and **ingress-controller-nginx-ingress-controller**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
+   - In the **Workloads-> Deployments** tab, verify "pod1" and "pod2" are created 3/3 and **ingress-controller-nginx-ingress-controller** is created 1/1.
+   - In services and ingresses look for-> service **service1** and **ingress-controller-nginx-ingress-controller**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
 
 > [!NOTE]
 > After completing the above flow, it can take up to 24 hours to see results in the cloud security explorer and attack path.
