@@ -9,13 +9,13 @@ ms.date: 09/09/2024
 
 # Enable file integrity monitoring
 
-In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. File integrity monitoring helps you to meet compliance standards, improve security posture, and detect potential security issues.  
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
 
-After enabling Defender for Servers Plan 2, this article describes how to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
+After you Defender for Servers Plan 2, follow the instructions in this article to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
 > [!NOTE]
 >
-> - If you are using the older deprecated method of data collection using the Log Analytics agent, [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md) that uses the Defender for Endpoint agent.
+> - If you are using a previous version of file integrity monitoring that used the Log Analytics agent (also known as the Microsoft Monitoring agent(MMA)), or the Azure Monitor agent (AMA) you can [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md).
 > - From June 2025 onwards, file integrity monitoring requires a minimum version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
 >   - Windows: 10.8760 or later.
 >   - Linux: 30.124082 or later.
