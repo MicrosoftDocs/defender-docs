@@ -8,7 +8,7 @@ ms.date: 08/28/2024
 ---
 # File integrity monitoring
 
-The file integrity monitoring feature in Microsoft Defender for Cloud helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. File integrity monitoring helps you to:
+The file integrity monitoring feature in [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) in Microsoft Defender for Cloud helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. File integrity monitoring helps you to:
 
 - Meet compliance requirements. File integrity monitoring is often required by regulatory compliance standards such as PCI-DSS and ISO 17799.
 - Improve posture and identify potential security issues by detecting suspicious changes to files.
