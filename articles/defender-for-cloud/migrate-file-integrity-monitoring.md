@@ -4,7 +4,7 @@ description: Learn how to migrate File Integrity Monitor (FIM) from previous ver
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 30/12/2024
+ms.date: 12/30/2024
 ---
 
 # Migrate to file integrity monitoring with Defender for Endpoint
