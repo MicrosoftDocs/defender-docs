@@ -57,7 +57,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Defender for SQL servers on machines](defender-for-sql-servers-introduction.md) | GA | GA | GA |
 | [Defender for SQL Servers on Machines](defender-for-sql-introduction.md) | GA | GA | NA|
 | [Vulnerability assessment](sql-azure-vulnerability-assessment-overview.md) Express and Classic configurations | GA | GA | GA |
-| [Advanced threat protection](/azure/azure-sql/database/threat-detection-overview?branch=main&branchFallbackFrom=pr-en-us-608&view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json) | GA | GA | GA |
+| [Advanced threat protection](/azure/azure-sql/database/threat-detection-overview?branch=main&branchFallbackFrom=pr-en-us-608&view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true) | GA | GA | GA |
 | [Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) | GA | GA | GA |
 | [Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA|
 
