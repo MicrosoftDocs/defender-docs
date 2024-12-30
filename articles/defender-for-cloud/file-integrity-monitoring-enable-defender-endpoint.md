@@ -9,7 +9,7 @@ ms.date: 09/09/2024
 
 # Enable file integrity monitoring
 
-In Defender for Servers Plan 1 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
 After enabling Defender for Servers Plan 2, this article describes how to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
