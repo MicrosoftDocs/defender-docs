@@ -9,7 +9,7 @@ ms.date: 12/30/2024
 
 # Migrate to file integrity monitoring with Defender for Endpoint
 
-In Defender for Servers Plan 2 in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules.
+[File integrity monitoring](file-integrity-monitoring-overview.md) in Defender for Servers Plan 2 uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules.
 
 The previous version of file integrity monitoring used the Log Analytics agent (also known as the Microsoft monitoring agent (MMA)) or the Azure Monitor agent (AMA) for data collection. This article describes how to migrate previous MMA and AMA versions to the new version.
 
@@ -39,11 +39,11 @@ Note that:
 - The migration tool lists all the machines in a subscription, and not all machines that were actually onboarded to file integrity monitoring with MMA.
   - The legacy version required MMA connected to the Log Analytics workspace. This meant that machines that were protected by Defender for Servers Plan 2 but weren't running the MMA didn't benefit from file integrity monitoring.
   - With the new experience, all machines in the enable scope benefit from file integrity monitoring.
-- Although the new experience doesn't need an MMA agent, you will need to specify a source and target workspace in the migration tool.
+- Although the new experience doesn't need an MMA agent, you need to specify a source and target workspace in the migration tool.
   - The source is the workspace from which you want to transfer existing rules into the new experience.
-  - The target is the workspace to which change logs will be written when monitored files and registries change.
+  - The target is the workspace to which change logs are written when monitored files and registries change.
 - After the new experience is enabled on a subscription, machines in the enabled scope are all covered by the same file integrity monitoring rules.
-- If you want to exempt individual machines from file integrity monitoring, you can you can downgrade some of them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](/azure/defender-for-cloud/tutorial-enable-servers-plan#enable-plan-1-for-specific-resources).
+- If you want to exempt individual machines from file integrity monitoring, you can downgrade them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](/azure/defender-for-cloud/tutorial-enable-servers-plan#enable-plan-1-for-specific-resources).
 
 ### Migrate with the in-product experience
 

@@ -11,7 +11,7 @@ ms.date: 09/09/2024
 
 In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
 
-After you Defender for Servers Plan 2, follow the instructions in this article to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
+After you enable Defender for Servers Plan 2, follow the instructions in this article to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
 > [!NOTE]
 >
