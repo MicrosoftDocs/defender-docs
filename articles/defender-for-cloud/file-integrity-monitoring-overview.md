@@ -30,21 +30,21 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent to coll
 - Collected file integrity monitoring data is part of the the [500 MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
 - File integrity monitoring provides information about file and resource changes, including the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
-### Migrate to the new collection method
+### Migrate to the new version
 
-File integrity monitoring previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect data. Follow the steps to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from using the MMA to using the Defender for Endpoint agent.
+File integrity monitoring previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA) to collect data. If you're using file integrity monitoring with one of these legacy methods, you can [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) to use Defender for Endpoint.
 
 ## Configure file integrity monitoring
 
 After enabling Defender for Servers Plan 2, you enable and configure file integrity monitoring. It isn't enabled by default.
 
 - You select a Log Analytics workspace in which to store change events for monitored files/resources. You can use an existing workspace, or define a new one.
-- Defender for Cloud recommends resources to monitor with file integrity monitoring, and you can customize additional monitoring.
+- Defender for Cloud recommends resources to monitor with file integrity monitoring.
 
 
 ## Choose what to monitor
 
-Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can define your own entities. When choosing which files to monitor:
+Defender for Cloud recommends entities to monitor with file integrity monitoring. You can choose items from the recommendations. When choosing which files to monitor:
 
 - Consider the files that are critical for your system and applications.
 - Monitor files that you don’t expect to change without planning.
@@ -77,4 +77,4 @@ When using file integrity monitoring with the Defender for Endpoint agent, we re
 
 ## Next steps
 
-[Enable file integrity monitoring with Defender for Endpoint)](file-integrity-monitoring-enable-defender-endpoint.md)
+[Enable file integrity monitoring with Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md)
