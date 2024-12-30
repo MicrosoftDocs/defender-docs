@@ -16,10 +16,10 @@ After enabling Defender for Servers Plan 2, this article describes how to config
 > [!NOTE]
 >
 > - If you are using the older deprecated method of data collection using the Log Analytics agent, [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md) that uses the Defender for Endpoint agent.
-> - From June 2025 onwards, file integrity monitoring requires a minimum version:
+> - From June 2025 onwards, file integrity monitoring requires a minimum version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
 >   - Windows: 10.8760 or later.
 >   - Linux: 30.124082 or later.
->        [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
+
 
 ## Prerequisites
 
