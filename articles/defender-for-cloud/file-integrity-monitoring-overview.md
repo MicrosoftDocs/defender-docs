@@ -32,7 +32,7 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent to coll
 
 ### Migrate to the new collection method
 
-Follow the steps to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from using the MMA to using the Defender for Endpoint agent.
+File integrity monitoring previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect data. Follow the steps to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from using the MMA to using the Defender for Endpoint agent.
 
 ## Configure file integrity monitoring
 
