@@ -30,9 +30,9 @@ After you Defender for Servers Plan 2, follow the instructions in this article t
 
 ## Verify Defender for Endpoint client version
 
-1. To ensure you have the latest version on machines running Windows Servers 2019 or later, refer to the latest Windows updates. Learn more about using the [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
-1. To update the Microsoft Defender for Endpoint agent on Windows Servers 2016 and Windows Server 2012 R2 or 2016, install using [KB 5005292 in the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292).
-1. Linux machines are updated automatically when Defender for Endpoint automatic provisioning is enabled in Defender for Cloud. You can also [update manually](/defender-endpoint/linux-updates).
+1. For machines running Windows Server 2019 or later, the Defender for Endpoint agent is updated as part of continuous operating system updates. Make sure Windows machines have the latest update installed. Learn more about using the [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+1. For machines running Windows Servers 2016 and Windows Server 2012 R2, [update machines manually to the latest agent version](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac). You can install [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB 5005292 is periodically updated with the latest agent version.
+1. For Linux machines, the Defender for Endpoint agent is automatically updated if autoprovisioning is turned on for the machines in Defender for Cloud. After the MDE.Linux extension is installed on a Linux machine, it attempts to update the agent version each time the VM reboots. You can also [update the agent version manually](/defender-endpoint/linux-updates).
 
 ## Enable File Integrity Monitoring
 
@@ -52,9 +52,6 @@ After you Defender for Servers Plan 2, follow the instructions in this article t
 1. The **FIM configuration** pane opens. In the **Workspace selection** dropdown, select the workspace where you want to store the file integrity monitoring data. If you want to create a new workspace, select **Create new**.
 
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the file integrity monitoring configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
-
-    > [!IMPORTANT]
-    > Events collected for file integrity monitoring are included in the data types eligible for the [500 MB benefit for Defender for Servers Plan 2 customers](data-ingestion-benefit.md).
 
 1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
 
@@ -89,4 +86,5 @@ Disable as follows:
 
 ## Next steps
 
-[Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.
+-  Events collected for file integrity monitoring are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
+- [Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.
