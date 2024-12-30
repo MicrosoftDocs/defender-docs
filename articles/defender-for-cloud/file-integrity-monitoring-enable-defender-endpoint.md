@@ -34,7 +34,7 @@ After you Defender for Servers Plan 2, follow the instructions in this article t
 1. For machines running Windows Servers 2016 and Windows Server 2012 R2, [update machines manually to the latest agent version](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac). You can install [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB 5005292 is periodically updated with the latest agent version.
 1. For Linux machines, the Defender for Endpoint agent is automatically updated if autoprovisioning is turned on for the machines in Defender for Cloud. After the MDE.Linux extension is installed on a Linux machine, it attempts to update the agent version each time the VM reboots. You can also [update the agent version manually](/defender-endpoint/linux-updates).
 
-## Enable File Integrity Monitoring
+## Enable file integrity monitoring
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
