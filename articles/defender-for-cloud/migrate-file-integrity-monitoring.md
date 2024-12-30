@@ -9,7 +9,7 @@ ms.date: 12/30/2024
 
 # Migrate to file integrity monitoring with Defender for Endpoint
 
-In Defender for Servers Plan 2 in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md), uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules.
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules.
 
 The previous version of file integrity monitoring used the Log Analytics agent (also known as the Microsoft monitoring agent (MMA)) or the Azure Monitor agent (AMA) for data collection. This article describes how to migrate previous MMA and AMA versions to the new version.
 
