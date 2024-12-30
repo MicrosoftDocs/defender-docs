@@ -1,5 +1,5 @@
 ---
-title: Migrate File Integrity Monitoring from previous versions
+title: Migrate file integrity monitoring from previous versions
 description: Learn how to migrate File Integrity Monitor (FIM) from previous versions.
 author: dcurwin
 ms.author: dacurwin

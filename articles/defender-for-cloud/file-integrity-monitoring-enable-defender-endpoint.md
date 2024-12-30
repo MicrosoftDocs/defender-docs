@@ -1,6 +1,6 @@
 ---
-title: File Integrity Monitoring with Microsoft Defender for Endpoint
-description: Learn how to enable File Integrity Monitor when you collect data with Microsoft Defender for Endpoint.
+title: Enable file integrity monitoring 
+description: Learn how to enable file integrity monitoring when you collect data with Microsoft Defender for Endpoint.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
