@@ -40,7 +40,7 @@ After enabling Defender for Servers Plan 2, you enable and configure file integr
 
 - You select a Log Analytics workspace in which to store change events for monitored files/resources. You can use an existing workspace, or define a new one.
 - Defender for Cloud recommends resources to monitor with file integrity monitoring, and you can customize additional monitoring.
-- After selecting a workspace you review and customize what you want to monitor. Defender for Cloud recommends resources to include by default in the file integrity monitoring list, and you can define your own.
+
 
 ## Choose what to monitor
 
