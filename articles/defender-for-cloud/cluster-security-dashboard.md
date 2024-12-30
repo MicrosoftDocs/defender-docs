@@ -11,13 +11,15 @@ CustomerIntent: As the person responsible for the security of a cluster, I want 
 
 # Azure Kubernetes Service (AKS) Security Dashboard (Preview)
 
-The dashboard consolidates operational and security information in one view, empowering platform engineering teams to understand the security risks in their Kubernetes environment, quickly remediate issues, and reduce the risk of overlooking security threats to the cluster.
+The AKS security dashboard provides comprehensive visibility and automated remediation capabilities for security issues, empowering platform engineering teams to easily, and more effectively, secure their Kubernetes environment.
+
+Consolidating security and operational data in one place directly within the AKS portal allows engineers to benefit from a unified view of their Kubernetes environment. The view enables more efficient detection and remediation of security issues, with minimal disruption to their workflows - thereby reducing the risk of overlooking security issues and improving remediation cycles.
 
 The AKS Security Dashboard allows the user to:
 - View the security posture of the cluster.
 - Enable Defender for Container plan and configure extensions for the specific cluster resource.
 - Review vulnerability assessment recommendations.
-- Review configurations of the running cluster and containers that deviate from security best practices ("misconfigurations"), together with guided or automated remediation.
+- Review configurations of the cluster and running containers that deviate from security best practices ("misconfigurations"), together with guided or automated remediation.
 - Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date. (Available with Defender Cloud Security Posture Management (DCSPM) enabled for the cluster.)
 
 ## Prerequisites
@@ -27,7 +29,7 @@ The AKS Security Dashboard only shows security vulnerabilities and misconfigurat
 - [DCSPM](tutorial-enable-cspm-plan.md) on the subscription
 
 > !NOTE
-> When enabling Defender for Cloud for a single cluster in a subscription, a subscription owner must enable Defender for Cloud plans. A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
+> To enable Defender for Containers for a single cluster in a subscription, the Defender for Cloud plan must already be enabled for the subscription . A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
 
 When [enabling Defender for Containers for a single cluster](#setting-the-defender-for-containers-plan):
 - Security misconfigurations are shown.
@@ -56,10 +58,13 @@ Selecting **Download CSV report** downloads the cluster vulnerabilities and misc
 
 ### Setting the Defender for Containers plan
 
-Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, the following extensions can then be toggled:
+Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, or if Defender for Containers was already enabled for the subscription, the following extensions can then be toggled to enable or disable:
 
-- **Kubernetes API access** - Enable agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
-- **Registry access** - Enable agentless vulnerability assessment for registry images.
-- **Azure policy** - Enable the deployment of an agent on the cluster to harden the data plane.
+- **Kubernetes API access** - Agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
+- **Registry access** - Agentless vulnerability assessment for registry images.
+- **Azure policy** - Deployment of an agent on the cluster to generate recommendations for hardening the cluster control and data planes.
 
+> !NOTE
+> When Defender for Containers is activated for a subscription, it can be set to [enforce all the subscription clusters to have the same settings](/rest/api/defenderforcloud-composite/pricings/update). In that case, it is not possible to change the cluster's Defender for Container plan settings from the dashboard.
+  
 The Defender for Containers plan for the cluster can also be set using the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
