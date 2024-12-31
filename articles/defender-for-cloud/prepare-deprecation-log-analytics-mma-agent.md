@@ -114,7 +114,7 @@ The following table summarizes the timetable for recommendations being deprecate
 1. Fix the recommendation: Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager).
 2. Enable Periodic assessment [at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main).
 
-- Once dome, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
+- Once done, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
 
 > [!NOTE]
 > Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 is not enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). **Arc enabled machines that Defender for Servers Plan 2 is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.**

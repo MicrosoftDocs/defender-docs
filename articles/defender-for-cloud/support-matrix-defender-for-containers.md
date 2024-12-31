@@ -183,9 +183,9 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 |--|--| -- | -- | -- | -- | --|
 | Security posture management | Docker CIS | Arc enabled VMs | Preview | - | Log Analytics agent | Defender for Servers Plan 2 |
 | Security posture management | Control plane hardening | - | - | - | - | - |
-| Security posture management | Kubernetes data plane hardening | Arc enabled K8s clusters | GA| - | Azure Policy for Kubernetes | Defender for Containers |
-| Runtime protection| Threat protection (control plane)| Arc enabled OpenShift clusters | Preview | Preview | Defender sensor | Defender for Containers |
-| Runtime protection | Threat protection (workload)| Arc enabled OpenShift clusters | Preview | - | Defender sensor | Defender for Containers |
+| Security posture management | Kubernetes data plane hardening |Arc enabled K8s clusters | GA| - | Azure Policy for Kubernetes | Defender for Containers |
+| Runtime protection| Threat protection (control plane)|Arc enabled K8s clusters| Preview | Preview | Defender sensor | Defender for Containers |
+| Runtime protection | Threat protection (workload)| Arc enabled K8s clusters| Preview | - | Defender sensor | Defender for Containers |
 | Deployment & monitoring | Discovery of unprotected clusters | Arc enabled K8s clusters | Preview | - | Agentless | Free |
 | Deployment & monitoring | Auto provisioning of Defender sensor | Arc enabled K8s clusters | Preview | Preview | Agentless | Defender for Containers |
 | Deployment & monitoring | Auto provisioning of Azure Policy for Kubernetes | Arc enabled K8s clusters | Preview | - | Agentless | Defender for Containers |
