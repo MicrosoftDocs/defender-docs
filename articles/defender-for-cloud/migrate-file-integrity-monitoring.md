@@ -19,8 +19,7 @@ The previous version of file integrity monitoring used the Log Analytics agent (
 - Migration is relevant when file integrity monitoring is currently enabled using the MMA or AMA.
 - Machines protected by Defender for Servers Plan 2 should be running the Defender for Endpoint agent. If you want to check agent status on machines in your environment, [use this workbook](https://aka.ms/DfServersDashboard) to do that.
 
-
-## Migrate from MMA 
+## Migrate from MMA
 
 If you have a previous version of file integrity monitoring using the MMA, you can migrate using the in-product migration experience. Using the in-product experience you can:
 
@@ -43,7 +42,7 @@ Note that:
   - The source is the workspace from which you want to transfer existing rules into the new experience.
   - The target is the workspace to which change logs are written when monitored files and registries change.
 - After the new experience is enabled on a subscription, machines in the enabled scope are all covered by the same file integrity monitoring rules.
-- If you want to exempt individual machines from file integrity monitoring, you can downgrade them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](/azure/defender-for-cloud/tutorial-enable-servers-plan#enable-plan-1-for-specific-resources).
+- If you want to exempt individual machines from file integrity monitoring, you can downgrade them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md#enable-plan-1-for-specific-resources).
 
 ### Migrate with the in-product experience
 
