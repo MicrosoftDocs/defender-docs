@@ -15,7 +15,7 @@ After onboarding your Azure DevOps, GitHub, or GitLab environments to Microsoft 
 - An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - [Azure DevOps](quickstart-onboard-devops.md), [GitHub](quickstart-onboard-github.md), or [GitLab](quickstart-onboard-gitlab.md) environment onboarded to Microsoft Defender for Cloud.
 
-## Making edits to your DevOps connector
+## Make edits to your DevOps connector
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 

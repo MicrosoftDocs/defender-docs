@@ -13,7 +13,7 @@ This article provides information about how you can manage the user data in Micr
 
 A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access customer data within the tool. To learn more about the Account Administrator role, see [Built-in roles for Azure role-based access control](/azure/role-based-access-control/built-in-roles) to learn more about the Reader, Owner, and Contributor roles. See [Azure subscription administrators](/azure/cost-management-billing/manage/add-change-subscription-administrator).
 
-## Searching for and identifying personal data
+## Search for and identify personal data
 
 A Defender for Cloud user can view their personal data through the Azure portal. Defender for Cloud only stores security contact details such as email addresses and phone numbers. For more information, see [Provide security contact details in Microsoft Defender for Cloud](configure-email-notifications.md).
 
@@ -21,7 +21,7 @@ In the Azure portal, a user can view allowed IP configurations using Defender fo
 
 In the Azure portal, a user can view security alerts provided by Defender for Cloud including IP addresses and attacker details. For more information, see [Managing and responding to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml).
 
-## Classifying personal data
+## Classify personal data
 
 You don't need to classify personal data found in Defender for Cloud's security contact feature. The data saved is an email address (or multiple email addresses) and a phone number. [Contact data](configure-email-notifications.md) is validated by Defender for Cloud.
 
@@ -29,7 +29,7 @@ You don't need to classify the IP addresses and port numbers saved by Defender f
 
 Only a user assigned the role of Administrator can classify personal data by [viewing alerts](managing-and-responding-alerts.yml) in Defender for Cloud.
 
-## Securing and controlling access to personal data
+## Secure and control access to personal data
 
 A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access [security contact data](configure-email-notifications.md).
 
@@ -37,7 +37,7 @@ A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Ac
 
 A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can view their [alerts](managing-and-responding-alerts.yml).
 
-## Updating personal data
+## Update personal data
 
 A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can update [security contact data](configure-email-notifications.md) via the Azure portal.
 
@@ -45,7 +45,7 @@ A Defender for Cloud user assigned the role of Owner, Contributor, or Account Ad
 
 An Account Administrator can't edit alert incidents. An [alert incident](managing-and-responding-alerts.yml) is considered security data and is read only.
 
-## Deleting personal data
+## Delete personal data
 
 A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can delete [security contact data](configure-email-notifications.md) via the Azure portal.
 
@@ -53,7 +53,7 @@ A Defender for Cloud user assigned the role of Owner, Contributor, or Account Ad
 
 A Defender for Cloud user can't delete alert incidents. For security reasons, an [alert incident](managing-and-responding-alerts.yml) is considered read-only data.
 
-## Exporting personal data
+## Export personal data
 
 A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can export [security contact data](configure-email-notifications.md) by:
 
@@ -84,7 +84,7 @@ An Account Administrator can export the alert details by:
 
 For more information, see [Get Security Alerts (GET Collection)](/previous-versions/azure/reference/mt704050(v=azure.100)).
 
-## Restricting the use of personal data for profiling or marketing without consent
+## Restrict the use of personal data for profiling or marketing without consent
 
 A Defender for Cloud user can choose to opt out by deleting their [security contact data](configure-email-notifications.md).
 

@@ -1,16 +1,16 @@
 ---
-title: Summarize recommendations with Copilot for Security
+title: Summarize recommendations with Microsoft Security Copilot
 author: Elazark
 ms.author: elkrieger
-description: Learn how to summarize recommendations with Copilot for Security in Microsoft Defender for Cloud and improve your security posture.
+description: Learn how to summarize recommendations with Microsoft Security Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
 ms.date: 06/05/2024
 #customer intent: As a security professional, I want to understand how to use Copilot to summarize recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
-# Summarize recommendations with Copilot for Security
+# Summarize recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Copilot for Security allows you to summarize a recommendation to get a better understanding of the risks and vulnerabilities that are present in your environment.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to summarize a recommendation to get a better understanding of the risks and vulnerabilities that are present in your environment.
 
 By summarizing a recommendation, you can get a quick overview of the recommendation in natural language. Summarizing the recommendation helps you understand the information presented in a recommendation and allows you to prioritize your remediation efforts.
 
@@ -20,7 +20,7 @@ By summarizing a recommendation, you can get a quick overview of the recommendat
 
 - [Have access to Azure Copilot](/azure/copilot/overview).
 
-- [Have Security Compute Units assigned for Copilot for Security](/copilot/security/get-started-security-copilot).
+- [Have Security Compute Units assigned for Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
 ## Summarize with Copilot
 
@@ -49,4 +49,4 @@ Once you have a better understanding of the recommendation, you can decide how b
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Remediate recommendations with Copilot for Security](remediate-with-copilot.md)
+> [Remediate recommendations with Microsoft Security Copilot](remediate-with-copilot.md)

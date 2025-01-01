@@ -173,7 +173,7 @@ To connect your AWS to Defender for Cloud by using a native connector:
 
     The **AWS regions** dropdown allows you to select the regions to which Defender for Cloud makes API calls. Every region that is deselected from the dropdown, implies that Defender for Cloud won’t make API calls to those regions.
 
-1. Select a scan interval between 1 to 24 hours.
+1. Select an interval to scan the AWS environment every 4, 6, 12, or 24 hours.
 
     Some data collectors run with fixed scan intervals and are not affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
 

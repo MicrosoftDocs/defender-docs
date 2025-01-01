@@ -44,6 +44,9 @@ sections:
       
       - question: Why do security insights within the API collection details page show as "Awaiting Data"?
         answer: API endpoints that have received no traffic since onboarding to Defender for APIs display the message 'Awaiting data' under security insights. Until the API endpoint receives traffic, the security insight assessment can't be made.
+
+      - question: Why did the API endpoint insights and security recommendations reset back to "Awaiting Data" and "Not Applicable"?
+        answer: Logic is in place to reset the API endpoint's status for the authentication/allows anonymous access, sensitive data classification, and external traffic observed/internet exposed assessments to "Awaiting Data" in the Defender for Cloud API Security dashboard, and "Not Applicable" in related security recommendations (where applicable), if no traffic is received for a certain period. This period is typically 30 days, but may be reset sooner if the API endpoint's [Azure API management policies](/azure/api-management/api-management-howto-policies) are modified within Azure API Management.
     
       - question: I have a self-hosted Azure API Management gateway. Can I use Defender for APIs for securing my APIs?
         answer: Currently Defender for APIs support is limited to the cloud hosted instances of Azure API Management gateways only.

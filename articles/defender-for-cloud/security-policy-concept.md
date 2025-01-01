@@ -23,7 +23,7 @@ Security standards in Defender for Cloud come from these sources:
 
 Security standards in Defender for Cloud are based on [Azure Policy](/azure/governance/policy/overview) [initiatives](/azure/governance/policy/concepts/initiative-definition-structure) or on the Defender for Cloud native platform. Currently, Azure standards are based on Azure Policy. AWS and GCP standards are based on Defender for Cloud.
 
-### Working with security standards
+### Work with security standards
 
 Here's what you can do with security standards in Defender for Cloud:
 

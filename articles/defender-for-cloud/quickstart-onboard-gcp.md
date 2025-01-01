@@ -69,7 +69,7 @@ Here you name your connector, select a subscription and resource group, which is
 
 You also select a location and add the organization ID for your project.
 
-You can also set a scan interval between 1 to 24 hours.
+You can also set an interval to scan the GCP environment every 4, 6, 12, or 24 hours.
 
 Some data collectors run with fixed scan intervals and are not affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
 
@@ -128,7 +128,7 @@ Similar to onboarding a single project, When onboarding a GCP organization, Defe
 
 In the first section, you need to add the basic properties of the connection between your GCP organization and Defender for Cloud.
 
-:::image type="content" source="media/quickstart-onboard-gcp/organization-details.png" alt-text="Screenshot of the organization details page of the GCP organization onboarding process." lightbox="media/quickstart-onboard-gcp/organization-details.png":::
+:::image type="content" source="media/quickstart-onboard-gcp/add-gcp-organization-details.png" alt-text="Screenshot of the organization details page of the GCP organization onboarding process." lightbox="media/quickstart-onboard-gcp/add-gcp-organization-details.png":::
 
 Here you name your connector, select a subscription and resource group that is used to create an ARM template resource that is called security connector. The security connector represents a configuration resource that holds the projects settings.
 

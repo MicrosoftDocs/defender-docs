@@ -34,7 +34,7 @@ You can learn more about Defender for Clouds pricing on [the pricing page](https
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- You must have a supported App Service plan associated with dedicated machines. See the list of [supported plans](defender-for-app-service-introduction.md#availability).
+- You must have a supported App Service plan associated with dedicated machines. See the list of [supported plans](defender-for-app-service-introduction.md#prerequisites).
 
 ## Enable the Defender for App Service plan
 

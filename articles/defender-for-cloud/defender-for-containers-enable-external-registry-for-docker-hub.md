@@ -35,7 +35,7 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 ## Create an access token for the dedicated Docker Hub user
 
-Sign in to Docker Hub as the dedicated user and generate an access token with "Read-Only" permissions. The access token is used to enable the Defender for Cloud to securely connect to your organization's Docker Hub account. Save this access token and the Docker Hub user name to [configure the Defender for Cloud Docker Hub connector](agentless-vulnerability-assessment-docker-hub.md#onboarding-the-docker-hub-environment).
+Sign in to Docker Hub as the dedicated user and generate an access token with "Read-Only" permissions. The access token is used to enable the Defender for Cloud to securely connect to your organization's Docker Hub account. Save this access token and the Docker Hub user name to [configure the Defender for Cloud Docker Hub connector](agentless-vulnerability-assessment-docker-hub.md#onboard-the-docker-hub-environment).
 
 :::image type="content" source="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-create-access-token.png" alt-text="Screenshot of create an access token." lightbox="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-create-access-token.png":::
 

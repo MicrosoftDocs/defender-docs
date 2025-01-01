@@ -60,7 +60,7 @@ After this initial scan, the service continues to periodically scan your environ
 
 If you connected your CloudTrail to GuardDuty, you're also responsible for associated costs. You can find these costs in the [GuardDuty documentation](https://docs.aws.amazon.com/guardduty/latest/ug/monitoring_costs.html) on the Amazon AWS site.
 
-#### Getting the number of native API calls
+#### Get the number of native API calls
 
 There are two ways to get the number of calls that Defender for Cloud made:
 

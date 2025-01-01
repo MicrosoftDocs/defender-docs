@@ -11,7 +11,7 @@ ms.custom: mode-other
 
 # Configure email notifications for alerts and attack paths
 
-Microsoft Defender for Cloud allows you to configure email notifications for alerts and attack paths. Configuring email notifications allows for the delivery of timely notifications to the appropriate recipients. By modifying the email notification settings, preferences can be defined for the severity levels of alerts and the risk level of attack paths that trigger notifications. By default, subscription owners receive email notifications for high-severity alerts and attack paths. 
+Microsoft Defender for Cloud allows you to configure email notifications for alerts and attack paths. Configuring email notifications allows for the delivery of timely notifications to the appropriate recipients. By modifying the email notification settings, preferences can be defined for the severity levels of alerts and the risk level of attack paths that trigger notifications. By default, subscription owners receive email notifications for high-severity alerts and attack paths.
 
 Defender for Cloud's **Email notifications** settings page allows you to define preferences for notification emails including:
 
@@ -27,7 +27,7 @@ To avoid alert fatigue, Defender for Cloud limits the volume of outgoing emails.
 |Alert type | Severity/Risk level | Email volume |
 |--|--|--|
 | Alert | High | Four emails per day |
-| Alert | Medium | Two emails per day | 
+| Alert | Medium | Two emails per day |
 | Alert | Low | One email per day |
 | Attack path | Critical | One email per 30 minutes |
 | Attack path | High | One email per hour |
@@ -64,7 +64,7 @@ You can send email notifications to individuals or to all users with specific Az
 
 ## Customize the email notifications with an API
 
-You can also manage your email notifications through the supplied REST API. For full details, see the [SecurityContacts API documentation](/rest/api/defenderforcloud/security-contacts).
+You can also manage your email notifications through the supplied REST API. For full details, see the [SecurityContacts API documentation](/rest/api/defenderforcloud-composite/security-contacts?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 This is an example request body for the PUT request when creating a security contact configuration:
 

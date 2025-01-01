@@ -54,24 +54,11 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
 
       For more information, see [Grant IAM users access to Kubernetes with EKS access entries](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html) in the Amazon EKS user guide.
 
-1. Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernetes should be installed and running on your EKS clusters. There's a dedicated Defender for Cloud recommendation to install these extensions (and Azure Arc, if necessary): **EKS clusters should have Microsoft Defender's extension for Azure Arc installed**.
-
-    Use the following steps to install the required extensions:
-
-    1. On the Defender for Cloud **Recommendations** page, search for and select the **EKS clusters should have Microsoft Defender's extension for Azure Arc installed** recommendation.
-    1. Select an unhealthy cluster.
-
-        > [!IMPORTANT]
-        > You must select clusters one at a time.
-        >
-        > Don't select the clusters by their hyperlinked names. Select anywhere else in the relevant row.
-
-    1. Select **Fix**.
-    1. Defender for Cloud generates a script in the language of your choice: select **Bash** (for Linux) or **PowerShell** (for Windows).
-    1. Select **Download remediation logic**.
-    1. Run the generated script on your cluster.
-
-    :::image type="content" source="../media/defender-for-kubernetes-intro/generate-script-defender-extension-kubernetes.gif" alt-text="Animated screenshot of how to use the Defender for Cloud recommendation to generate a script for EKS clusters that enables the Azure Arc extension.":::
+1. Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernetes should be installed and running on your EKS clusters. There's a dedicated Defender for Cloud recommendation to install these extensions (and Azure Arc, if necessary): **EKS clusters should have Microsoft Defender's extension for Azure Arc installed.**
+ 
+    Follow the remediation steps provided by the recommendation:
+    
+    :::image type="content" source="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png" alt-text="Screenshot explaining how to remediate the EKS clusters recommendation by installing the required Defender for Containers components.":::
 
 ### View recommendations and alerts for your EKS clusters
 

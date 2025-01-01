@@ -1,12 +1,12 @@
 ---
-title: Integrate security solutions in Defender for Cloud
+title: Security solutions integrations (legacy)
 description: Learn about how Microsoft Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 05/16/2024
+ms.date: 10/01/2024
 #customer intent: As a reader, I want to learn how security solutions integrate into Defender for Cloud.
 ---
 
-# Integrated solutions in Defender for Cloud
+# Security solutions integrations (legacy)
 
 This article provides information about security solutions that integrate with Microsoft Defender for Cloud.
 
@@ -16,9 +16,8 @@ Defender for Cloud integrates with both Microsoft services and partner solutions
 - **Integrate detection**: Security events from partner solutions are automatically collected, aggregated, and displayed as part of Defender for Cloud alerts and incidents. These events are also fused with detections from other sources to provide advanced threat-detection capabilities.
 - **Unify monitoring and management**: Integrated events in Defender for Cloud help you to monitor partner solutions at a glance. Basic management is available, with easy access to advanced setup by using the partner solution.
 - **Extend capabilities**: Some integrations extend Defender for Cloud capabilities. For example:
-    - Defender for Cloud supports [third-party integrations](defender-partner-applications.md) to help enhance runtime security capabilities provided by Defender for APIs.
-    - Defender for Cloud [integrates with ServiceNow](integration-servicenow.md) to help prioritize remediation of security recommendations, and to create and monitor tickets.
-
+  - Defender for Cloud supports [third-party integrations](defender-partner-applications.md) to help enhance runtime security capabilities provided by Defender for APIs.
+  - Defender for Cloud [integrates with ServiceNow](integration-servicenow.md) to help prioritize remediation of security recommendations, and to create and monitor tickets.
 
 ## Integrations
 
@@ -54,11 +53,6 @@ Defender for Cloud automatically discovers security solutions that are running i
 The **Add data sources** section includes other available data sources that can be connected. For instructions on adding data from any of these sources, select **ADD**.
 
 :::image type="content" source="media/partner-integration/add-data-sources.png" alt-text="Screenshot that shows the available additional data sources.":::
-
-
-
-
-
 
 ## Related content
 

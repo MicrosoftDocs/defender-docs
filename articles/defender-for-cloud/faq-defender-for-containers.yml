@@ -114,7 +114,7 @@ sections:
       - question: |
           Can I get the scan results via REST API?
         answer: |
-          Yes. The results are under [Sub-Assessments REST API](/rest/api/defenderforcloud/sub-assessments/list). Also, you can use Azure Resource Graph (ARG), the Kusto-like API for all of your resources: a query can fetch a specific scan.
+          Yes. The results are under [Sub-Assessments REST API](/rest/api/defenderforcloud-composite/sub-assessments/list?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true). Also, you can use Azure Resource Graph (ARG), the Kusto-like API for all of your resources: a query can fetch a specific scan.
 
       - question: |
           How do I check which media type my containers are using?
