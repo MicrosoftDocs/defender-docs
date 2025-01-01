@@ -240,20 +240,20 @@ sections:
         answer: |
           AgentlessThe analysis of the snapshots takes place in secure environments managed by Defender for Cloud.
           
-          The environments are regional across multicloud, such that snapshots remain at the same cloud region as the VM they originated from (for example – a snapshot of an EC2 instance in US west will be analysed at the same region, without being copied to another region or cloud).
+          The environments are regional across multicloud, such that snapshots remain at the same cloud region as the VM they originated from (for example - a snapshot of an EC2 instance in US west will be analyzed at the same region, without being copied to another region or cloud).
           
           The scanning environment where disks are analyzed is volatile, isolated, and highly secure.
       
       - question: |
           How is the Disk snapshot handled in Microsoft Account? Can Microsoft share Agentless scanning platform security & privacy principles?
         answer: |
-          Agentless scanning platform is audited & compliant with Microsoft’s strict security and privacy standards.
+          Agentless scanning platform is audited & compliant with Microsoft's strict security and privacy standards.
           Some of the measures taken are (not a comprehensive list): 
-          - Physical isolation per region, additional isolation per customer and subscription​ 
-          - E2E encryption at rest and transit​ 
-          - Disk snapshots immediately purged after scan​ 
-          - Only metadata (i.e. security findings) leaves the isolated scanning environment​ 
-          - The scanning environment is autonomous​ 
+          - Physical isolation per region, additional isolation per customer and subscription
+          - E2E encryption at rest and transit
+          - Disk snapshots immediately purged after scan
+          - Only metadata (i.e., security findings) leaves the isolated scanning environment
+          - The scanning environment is autonomous
           - All operations are internally audited 
 
       - question: |
