@@ -63,7 +63,7 @@ Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning cap
 
 Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
 
-Learn more about [sensitivity scanning](/azure/defender-for-cloud/concept-data-security-posture-prepare).
+Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
 
 ### Integrate Defender for Cloud CLI with Popular CI/CD Tools
 
@@ -168,7 +168,7 @@ Starting on December 1, 2024, Defender for Storage malware scanning will **suppo
 
 Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
 
-To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
+To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](on-upload-malware-scanning.md).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 
