@@ -24,17 +24,14 @@ The AKS Security Dashboard allows the user to:
 
 ## Prerequisites
 
-The AKS Security Dashboard only shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
+The AKS Security Dashboard shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
 - [Defender for Containers on the subscription](tutorial-enable-containers-azure.md) or [the individual cluster](#setting-the-defender-for-containers-plan)
 - [DCSPM](tutorial-enable-cspm-plan.md) on the subscription
-
-> !NOTE
-> To enable Defender for Containers for a single cluster in a subscription, the Defender for Cloud plan must already be enabled for the subscription . A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
 
 When [enabling Defender for Containers for a single cluster](#setting-the-defender-for-containers-plan):
 - Security misconfigurations are shown.
 - Vulnerability assessment recommendations are shown if Defender for Containers is enabled for the subscription.
-- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is only calculated by the recommendations available to the single cluster. If the subscription of the single cluster has DCSPM enabled, risk prioritization is based on multiple resource risk factors, including attack path analysis.
+- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is shown if DCSPM is enabled for the subscription of the single cluster.
 
 ## Using the AKS Security Dashboard 
 
@@ -58,13 +55,13 @@ Selecting **Download CSV report** downloads the cluster vulnerabilities and misc
 
 ### Setting the Defender for Containers plan
 
-Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. After the user toggles the Defender for Containers plan to **on**, or if Defender for Containers was already enabled for the subscription, the following extensions can then be toggled to enable or disable:
+Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. If Defender for Containers was not enabled for the subscription, the user can toggle the Defender for Containers plan to **on** and the following extensions can then be toggled to enable or disable:
 
 - **Kubernetes API access** - Agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
 - **Registry access** - Agentless vulnerability assessment for registry images.
 - **Azure policy** - Deployment of an agent on the cluster to generate recommendations for hardening the cluster control and data planes.
 
 > !NOTE
-> When Defender for Containers is activated for a subscription, it can be set to [enforce all the subscription clusters to have the same settings](/rest/api/defenderforcloud-composite/pricings/update). In that case, it is not possible to change the cluster's Defender for Container plan settings from the dashboard.
-  
+> Defender for Containers for a single cluster in a subscription must be enabled by a subscription owner. A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
+
 The Defender for Containers plan for the cluster can also be set using the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
