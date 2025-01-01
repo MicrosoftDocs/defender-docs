@@ -28,10 +28,11 @@ The AKS Security Dashboard shows security vulnerabilities and misconfigurations 
 - [Defender for Containers on the subscription](tutorial-enable-containers-azure.md) or [the individual cluster](#setting-the-defender-for-containers-plan)
 - [DCSPM](tutorial-enable-cspm-plan.md) on the subscription
 
-When [enabling Defender for Containers for a single cluster](#setting-the-defender-for-containers-plan):
+When [enabling Defender for Containers for an individual cluster](#setting-the-defender-for-containers-plan):
 - Security misconfigurations are shown.
 - Vulnerability assessment recommendations are shown if Defender for Containers is enabled for the subscription.
-- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) is shown if DCSPM is enabled for the subscription of the single cluster.
+- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) based on multiple resource risk factors is available if DCSPM is enabled on the subscription.
+- Owner assignment is available if DCSPM is enabled on the subscription.
 
 ## Using the AKS Security Dashboard 
 
@@ -39,7 +40,7 @@ The AKS Security Dashboard is accessed from a cluster resource pane by selecting
 
 - The **Security findings for this cluster** summary. It shows the total vulnerabilities and misconfigurations by risk level.
 - The **Vulnerabilities** and **Misconfigurations** tabs. Each of the tabs shows a summary of the risk level and list of recommendations.
-- The **Microsoft Defender for Containers status** for the cluster and the option to configure its coverage
+- The **Microsoft Defender for Containers status** for the cluster and the option to configure its coverage.
 
 ### Remediation of vulnerabilities and misconfigurations
 
@@ -51,7 +52,7 @@ In both the **Vulnerabilities** and **Misconfiguration** tabs, selecting one of 
 
 The user can select multiple recommendations using the checkbox beside each recommendation and then select **Assign owner** in the dashboard ruler, to assign a single owner to all of them.
 
-Selecting **Download CSV report** downloads the cluster vulnerabilities and misconfigurations as a CSV file. The cluster vulnerabilities and misconfigurations can also be retrieved using the [Defender for Cloud REST API](/rest/api/defenderforcloud-composite/assessments?view=rest-defenderforcloud-composite-stable).
+Selecting **Download CSV report** downloads the cluster vulnerabilities and misconfigurations as a CSV file. The cluster vulnerabilities and misconfigurations can also be retrieved using the [Defender for Cloud REST API](/rest/api/defenderforcloud-composite/assessments).
 
 ### Setting the Defender for Containers plan
 
@@ -61,7 +62,7 @@ Selecting **Settings** of **Microsoft Defender for Containers status** opens a p
 - **Registry access** - Agentless vulnerability assessment for registry images.
 - **Azure policy** - Deployment of an agent on the cluster to generate recommendations for hardening the cluster control and data planes.
 
-> !NOTE
-> Defender for Containers for a single cluster in a subscription must be enabled by a subscription owner. A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
+> [!NOTE]
+> Defender for Containers for an individual cluster in a subscription must be enabled by a subscription owner. A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
 
 The Defender for Containers plan for the cluster can also be set using the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
