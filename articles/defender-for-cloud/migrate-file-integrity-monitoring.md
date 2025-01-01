@@ -42,7 +42,7 @@ Note that:
   - The source is the workspace from which you want to transfer existing rules into the new experience.
   - The target is the workspace to which change logs are written when monitored files and registries change.
 - After the new experience is enabled on a subscription, machines in the enabled scope are all covered by the same file integrity monitoring rules.
-- If you want to exempt individual machines from file integrity monitoring, you can downgrade them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md#enable-plan-1-for-specific-resources).
+- If you want to exempt individual machines from file integrity monitoring, you can downgrade them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md#enable-defender-for-servers-at-resource-level).
 
 ### Migrate with the in-product experience
 
