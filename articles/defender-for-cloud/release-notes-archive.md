@@ -3960,7 +3960,7 @@ The eleven Azure Defender alerts listed below have been deprecated.
     | AADAI               | Azure AD AI                   |
 
     > [!TIP]
-    > These nine IPC alerts were never Security Center alerts. They're part of the Azure Active Directory (AAD) Identity Protection connector (IPC) that was sending them to Security Center. For the last two years, the only customers who've been seeing those alerts are organizations who configured the export (from the connector to ASC) in 2019 or earlier. AAD IPC has continued to show them in its own alerts systems and they've continued to be available in Microsoft Sentinel. The only change is that they're no longer appearing in Security Center.
+    > These nine IPC alerts were never Security Center alerts. They're part of the Azure Active Directory Identity Protection connector (IPC) that was sending them to Security Center. For the last two years, the only customers who've been seeing those alerts are organizations who configured the export (from the connector to ASC) in 2019 or earlier. Azure Active Directory IPC has continued to show them in its own alerts systems and they've continued to be available in Microsoft Sentinel. The only change is that they're no longer appearing in Security Center.
 
 ### Two recommendations from "Apply system updates" security control were deprecated
 
@@ -5113,7 +5113,7 @@ You can safely ignore these policies and there will be no impact on your environ
 Private Community](https://aka.ms/SecurityPrP) and select from the following options:
 
 1. **Single Preview** – To join only this preview. Explicitly mention "ASC Continuous Scan" as the preview you would like to join.
-1. **Ongoing Program** – To be added to this and future private previews. You'll need to complete a profile and privacy agreement.
+1. **Ongoing Program** – To be added to this and future previews. You'll need to complete a profile and privacy agreement.
 
 ## July 2020
 
