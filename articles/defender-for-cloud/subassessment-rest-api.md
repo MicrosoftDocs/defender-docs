@@ -699,4 +699,4 @@ List of security subassessments
 | **Name** | **Type**                                                     | **Description**                       |
 | -------- | ------------------------------------------------------------ | ------------------------------------- |
 | nextLink | string                                                       | The URI to fetch the next page.       |
-| value    | [SecuritySubAssessment](/rest/api/defenderforcloud/sub-assessments/list?tabs=HTTP#securitysubassessment) | Security subassessment on a resource |
+| value    | [SecuritySubAssessment](/rest/api/defenderforcloud-composite/sub-assessments/list?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#securitysubassessment) | Security subassessment on a resource |

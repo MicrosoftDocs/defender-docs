@@ -25,9 +25,9 @@ Defender for Cloud analyzes data from the following sources to provide visibilit
 
 ## Data sharing
 
-When you enable Defender for Storage Malware Scanning, it might share metadata, including metadata classified as customer data (e.g. SHA-256 hash), with Microsoft Defender for Endpoint.
+When you enable Defender for Storage malware scanning, it might share metadata, including metadata classified as customer data (e.g. SHA-256 hash), with Microsoft Defender for Endpoint.
 
-Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management)
+Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](concept-cloud-security-posture-management.md)
 shares data that is integrated into Microsoft Security Exposure Management recommendations.
 
 > [!NOTE]
@@ -84,13 +84,14 @@ Customers can access Defender for Cloud related data from the following data str
 | [Azure Activity log](/azure/azure-monitor/essentials/activity-log)                       | All security alerts, approved Defender for Cloud [just-in-time](just-in-time-access-usage.yml) access requests.|
 | [Azure Monitor logs](/azure/azure-monitor/data-platform)                      | All security alerts.                                                                                                                                                                                                |
 | [Azure Resource Graph](/azure/governance/resource-graph/overview)                      | Security alerts, security recommendations, vulnerability assessment results, secure score information, status of compliance checks, and more.                                                                       |
-| [Microsoft Defender for Cloud REST API](/rest/api/defenderforcloud/operation-groups?view=rest-defenderforcloud-2020-01-01&preserve-view=true) | Security alerts, security recommendations, and more.                                                                                                                                                                |
+| [Microsoft Defender for Cloud REST API](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true) | Security alerts, security recommendations, and more.                                                                                                                                                                |
+
 > [!NOTE]
 > If there are no Defender plans enabled on the subscription, data will be removed from Azure Resource Graph after 30 days of inactivity in the Microsoft Defender for Cloud portal. After interaction with artifacts in the portal related to the subscription, the data should be visible again within 24 hours.
 
 ## Data retention
 
-When the cloud security graph collects data from Azure and multicloud environments and other data source, it retains the data for a 14 day period. After 14 days, the data is deleted. 
+When the cloud security graph collects data from Azure and multicloud environments and other data source, it retains the data for a 14 day period. After 14 days, the data is deleted.
 
 Calculated data, such as attack paths, might be kept for an additional 14 days. Calculated data consist of data that is derived from the raw data collected from the environment. For example, the attack path is derived from the raw data collected from the environment.
 

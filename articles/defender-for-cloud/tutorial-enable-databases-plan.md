@@ -2,7 +2,7 @@
 title: Protect your databases with Defender for Databases
 description: Learn how to enable the Databases plan on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 06/29/2023
+ms.date: 09/15/2024
 ---
 
 # Protect your databases with Defender for Databases
@@ -12,7 +12,7 @@ Defender for Databases in Microsoft Defender for Cloud allows you to protect you
 Database protection includes:
 
 - [Microsoft Defender for Azure SQL databases](defender-for-sql-introduction.md)
-- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
+- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md) (Can also be [enabled on a Log Analytics workspace](enable-plan-workspace.md))
 - [Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md)
 - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md)
 
@@ -49,7 +49,7 @@ When you enable database protection, you enable all four of the Defender plans a
 When you enable database protection, you enable the following four Defender plans:
 
 - Defender for Azure SQL databases
-- Defender for SQL server on machines
+- Defender for SQL server on machines (Can also be [enabled on a Log Analytics workspace](enable-plan-workspace.md))
 - Defender for open-source relational databases
 - Defender for Azure Cosmos DB
 

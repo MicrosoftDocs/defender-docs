@@ -156,60 +156,6 @@ sections:
           - Usage of host networking and ports should be restricted
           - Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers
 
-
-      - question: |
-          We're already using conditional access (CA) policy to enforce MFA. Why do we still get the Defender for Cloud recommendations?
-        answer: |
-          To investigate why the recommendations are still being generated, verify the following configuration options in your MFA CA policy:
-
-          - You included the accounts in the **Users** section of your MFA CA policy (or one of the groups in the **Groups** section)
-          - The Azure Management app ID (797f4846-ba00-4fd7-ba43-dac1f8f63013), or all apps, are included in the **Apps** section of your MFA CA policy
-          - The Azure Management app ID isn't excluded in the **Apps** section of your MFA CA policy
-          - OR condition is used with only MFA, or AND condition is used with MFA 
-          - A Conditional Access policy enforcing MFA through [Authentication Strengths](/entra/identity/authentication/concept-authentication-strengths) is currently not supported in our evaluation.
- 
-      - question: |
-          We're using a third-party MFA tool to enforce MFA. Why do we still get the Defender for Cloud recommendations?
-        answer: |
-          Defender for Cloud's MFA recommendations doesn't support third-party MFA tools (for example, DUO).
-
-          If the recommendations are irrelevant for your organization, consider marking them as "mitigated" as described in [Exempting resources and recommendations from your secure score](exempt-resource.md). You can also [disable a recommendation](tutorial-security-policy.md#disable-a-security-recommendation).
-
- 
-      - question: |
-          Why does Defender for Cloud show user accounts without permissions on the subscription as "requiring MFA"?
-        answer: |
-          Defender for Cloud's MFA recommendations refers to [Azure RBAC](/azure/role-based-access-control/role-definitions-list) roles and the [Azure classic subscription administrators](/azure/role-based-access-control/classic-administrators) role. Verify that none of the accounts have such roles.
-
- 
-      - question: |
-          We're enforcing MFA with PIM. Why are PIM accounts shown as noncompliant?
-        answer: |
-          Defender for Cloud's MFA recommendations currently doesn't support PIM accounts. You can add these accounts to a CA Policy in the Users/Group section.
-
- 
-      - question: |
-          Can I exempt or dismiss some of the accounts?
-        answer: |
-          The capability to exempt some accounts that don't use MFA is available on the new recommendations in preview:
-
-          - Accounts with owner permissions on Azure resources should be MFA enabled
-          - Accounts with write permissions on Azure resources should be MFA enabled
-          - Accounts with read permissions on Azure resources should be MFA enabled
-
-          To exempt account(s), follow these steps:
-
-          1. Select an MFA recommendation associated with an unhealthy account.
-          1. In the Accounts tab, select an account to exempt.
-          1. Select the three dots button, then select **Exempt account**.
-          1. Select a scope and exemption reason.
-
-          If you would like to see which accounts are exempt, navigate to **Exempted accounts** for each recommendation.
-
-          > [!TIP]
-          > When you exempt an account, it won't be shown as unhealthy and won't cause a subscription to appear unhealthy.
-
-  
       - question: |
           Are there any limitations to Defender for Cloud's identity and access protections?
         answer: |
@@ -282,7 +228,7 @@ sections:
       - question: |
           Is there an API for connecting my GCP resources to Defender for Cloud?
         answer: |
-          Yes. To create, edit, or delete Defender for Cloud cloud connectors with a REST API, see the details of the [Connectors API](/rest/api/defenderforcloud/security-connectors).
+          Yes. To create, edit, or delete Defender for Cloud cloud connectors with a REST API, see the details of the [Connectors API](/rest/api/defenderforcloud-composite/security-connectors?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
     
       - question: |
@@ -348,12 +294,12 @@ sections:
       - question: |
           Can I programmatically update multiple plans on a single subscription simultaneously?
         answer: |
-          We don't recommend programmatically updating multiple plans on a single subscription simultaneously (via REST API, ARM templates, scripts, etc.). When using the [Microsoft.Security/pricings API](/rest/api/defenderforcloud/pricings), or any other programmatic solution, you should insert a delay of 10-15 seconds between each request.
+          We don't recommend programmatically updating multiple plans on a single subscription simultaneously (via REST API, ARM templates, scripts, etc.). When using the [Microsoft.Security/pricings API](/rest/api/defenderforcloud-composite/pricings?view=rest-defenderforcloud-composite-latest&preserve-view=true), or any other programmatic solution, you should insert a delay of 10-15 seconds between each request.
 
       - question: |
           When I enable default access, in which situations do I need to re-run the Cloud Formation template, Cloud Shell script, or Terraform template?
         answer: |
-          Modifications to Defender for Cloud plans or their options, including features within those plans, necessitate running the deployment template. This applies regardless of the permission type selected during the creation of the security connector. If regions have been changed, as in this screenshot, you don’t need to re-run the Cloud Formation template or Cloud Shell script.
+          Modifications to Defender for Cloud plans or their options, including features within those plans, necessitate running the deployment template. This applies regardless of the permission type selected during the creation of the security connector. If regions have been changed, as in this screenshot, you don't need to re-run the Cloud Formation template or Cloud Shell script.
 
           :::image type="content" source="media/faq-general/change-region.png" alt-text="Screenshot that shows a change in region.":::
         

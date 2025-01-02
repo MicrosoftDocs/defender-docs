@@ -4,23 +4,23 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 06/05/2024
+ms.date: 09/30/2024
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
 # Identify and remediate attack paths
 
-Defender for Cloud's contextual security capabilities assists security teams in the reduction of the risk of impactful breaches. Defender for Cloud uses environment context to perform a risk assessment of your security issues. Defender for Cloud identifies the biggest security risk issues, while distinguishing them from less risky issues.
+Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. Instead of looking for preset attack paths, Defender for Cloud uses its algorithm to detect potential attack paths based on your multicloud security graph. Attack path analysis helps you focus on the most critical security issues that could lead to a breach.
 
-Attack path analysis helps you to address the security issues that pose immediate threats with the greatest potential of being exploited in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations that need to be resolved in order to mitigate it.
+You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
 
-By default attack paths are organized by their risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
+By default attack paths are organized by risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
 
 ## Prerequisites
 
 - You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md) and have [agentless scanning](enable-vulnerability-assessment-agentless.md) enabled.
 
-- **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor or Owner.
+- **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
 **To view attack paths that are related to containers**:
 
@@ -28,7 +28,7 @@ By default attack paths are organized by their risk level. The risk level is det
     or
 - You can [enable Defender for Containers](defender-for-containers-enable.md), and install the relevant agents in order to view attack paths that are related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) containers data plane workloads in security explorer.
 
-- **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor or Owner.
+- **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
 ## Identify attack paths
 
@@ -66,7 +66,7 @@ You can use Attack path analysis  to locate the biggest risks to your environmen
 
 ## Remediate attack paths
 
-Once you have investigated an attack path and reviewed all of the associated findings and recommendations, you can start to remediate the attack path.
+Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
 
 **To remediate an attack path**:
 

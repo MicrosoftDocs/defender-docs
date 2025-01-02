@@ -26,7 +26,7 @@ Defender for APIs currently provides security for APIs published in Azure API Ma
 - **Azure API Management integration**: With the Defender for APIs plan enabled, you can receive API security recommendations and alerts in the Azure API Management portal.
 - **SIEM integration**: Integrate with security information and event management (SIEM) systems, making it easier for security teams to investigate with existing threat response workflows. [Learn more](managing-and-responding-alerts.yml).
 
-## Reviewing API security findings
+## Review API security findings
 
 Review the inventory and security findings for onboarded APIs in the Defender for Cloud API Security dashboard. The dashboard shows the number of onboarded devices, broken down by API collections, endpoints, and Azure API Management services:
 
@@ -49,24 +49,23 @@ Last called data (UTC): The date when API traffic was last observed going to/fro
 > [!NOTE]
 > API endpoints that haven't received any traffic since onboarding to Defender for APIs display the status **Awaiting data** in the API dashboard.
 
-## Investigating API recommendations
+## Investigate API recommendations
 
 Use recommendations to improve your security posture, harden API configurations, identify critical API risks, and mitigate issues by risk priority.
 
 Defender for API provides a [number of recommendations](recommendations-reference-api.md), including recommendations to onboard APIs to the Defender for API plan, disable and remove unused APIs, and best practice recommendations for security, authentication, and access control.
 
-
-## Detecting threats
+## Detect threats
 
 Defender for APIs monitors runtime traffic and threat intelligence feeds, and issues threat detection alerts. API alerts detect the top 10 OWASP API threats, data exfiltration, volumetric attacks, anomalous and suspicious API parameters, traffic and IP access anomalies, and usage patterns.
 
 [Review the security alerts reference](alerts-reference.md).
 
-## Responding to threats
+## Respond to threats
 
 Act on alerts to mitigate threats and risk. Defender for Cloud alerts and recommendations can be exported into SIEM systems such as Microsoft Sentinel, for investigation within existing threat response workflows for fast and efficient remediation. [Learn more here](export-to-siem.md).
 
-## Investigating Cloud Security Graph insights
+## Investigate Cloud Security Graph insights
 
 [Cloud Security Graph](concept-attack-path.md) in the Defender CSPM plan analyses assets and connections across your organization, to expose risks, vulnerabilities, and possible lateral movement paths.
 

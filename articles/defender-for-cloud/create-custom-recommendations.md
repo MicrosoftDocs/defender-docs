@@ -60,6 +60,19 @@ We recommend using the query editor to create a recommendation query.
 1. Select **Run query** to test the query you created.
 1. When the query is ready, cut and paste it from the editor into the **Recommendations query** pane.
 
+## Use custom recommendations at scale
+
+Creating custom recommendations through the Azure portal user interface is best for most users. The interface provides a convenient Kusto Query Language (KQL) editor and built-in validation tools. However, automating the creation of recommendations with a programmatic approach can be helpful. This method is especially useful when you need to deploy recommendations across many environments or subscriptions.  
+
+### Automate via the API  
+
+If you prevalidated KQL queries and want to automate creating custom recommendations, you can use the Azure Defender for Cloud application programming interface (API). This method lets you deploy recommendations quickly, ensuring they're consistent and scalable across your cloud environments.  
+
+- **Advantages**: You can automate and scale the deployment of custom recommendations.  
+- **When to use**: This method is ideal for large-scale implementations where you need to apply recommendations consistently across multiple environments.  
+
+For more information about using the API to manage custom recommendations, see the [API documentation](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
+
 ## Create a custom standard
 
 Custom recommendations can be assigned to one or more custom standards.
@@ -163,8 +176,6 @@ This example shows you how to remove an assignment:
   https://management.azure.com/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01 
 ```
 
-::: zone-end
-
 ### Enhance custom recommendations (legacy)
 
 The built-in recommendations supplied with Microsoft Defender for Cloud include details such as severity levels and remediation instructions. If you want to add this type of information to custom recommendations for Azure, use the REST API.
@@ -232,7 +243,7 @@ Here's another example of a custom policy including the metadata/securityCenter 
 }
   ```
 
-For another example for using the securityCenter property, see [this section of the REST API documentation](/rest/api/defenderforcloud/assessments-metadata/create-in-subscription#examples).
+For another example for using the securityCenter property, see [this section of the REST API documentation](/rest/api/defenderforcloud-composite/assessments-metadata/create-in-subscription?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#examples).
 
 ## Related content
 

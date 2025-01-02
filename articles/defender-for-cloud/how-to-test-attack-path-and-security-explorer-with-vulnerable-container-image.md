@@ -25,13 +25,20 @@ If there are no entries in the list of attack paths, you can still test this fea
 
 1. Import a mock vulnerable image to your Azure Container Registry:
 
-    1. Run the following command in Cloud Shell:
+    1. First, pull a base image (for example, alpine) to your local environment by running:
 
         ```azurecli
-        az acr import --name $MYACR --source DCSPMtesting.azurecr.io/mdc-mock-0001 --image mdc-mock-0001
+        docker pull alpine
+        ```
+    
+    1. Tag the image with the following label and push it to your ACR. Replace `<MYACR>` with your Azure Container Registry name:
+    
+        ```azurecli
+        docker tag alpine <MYACR>.azurecr.io/mdc-mock-0001
+        docker push <MYACR>.azurecr.io/mdc-mock-0001
         ```
 
-    1. If you don't have an AKS cluster, use the following command to create a new AKS cluster:
+    1. If you don't have an AKS (Azure Kubernetes Service) cluster, use the following command to create a new AKS cluster:
 
         ```azurecli
         az aks create -n myAKSCluster -g myResourceGroup --generate-ssh-keys --attach-acr $MYACR
@@ -64,8 +71,8 @@ If there are no entries in the list of attack paths, you can still test this fea
 1. Verify success by doing the following steps:
 
    - Look for an entry with **mdc-dcspm-demo** as namespace
-   - In the **Workloads-> Deployments** tab, verify “pod” created 3/3 and **dcspmcharts-ingress-nginx-controller** 1/1.
-   - In services and ingresses look for-> services **service**, **dcspmcharts-ingress-nginx-controller and dcspmcharts-ingress-nginx-controller-admission**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
+   - In the **Workloads-> Deployments** tab, verify "pod1" and "pod2" are created 3/3 and **ingress-controller-nginx-ingress-controller** is created 1/1.
+   - In services and ingresses look for-> service **service1** and **ingress-controller-nginx-ingress-controller**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
 
 > [!NOTE]
 > After completing the above flow, it can take up to 24 hours to see results in the cloud security explorer and attack path.

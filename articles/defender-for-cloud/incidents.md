@@ -18,7 +18,7 @@ This page provides an overview of incidents in Defender for Cloud.
 
 In Defender for Cloud, a security incident is an aggregation of all alerts for a resource that align with [kill chain](alerts-reference.md#mitre-attck-tactics) patterns. Incidents appear in the [Security alerts](managing-and-responding-alerts.yml) page. Select an incident to view the related alerts and get more information.
 
-## Managing security incidents
+## Manage security incidents
 
 1. On Defender for Cloud's security alerts page, use the **Add filter** button to filter by alert name to the alert name **Security incident detected on multiple resources**.
 

@@ -141,6 +141,11 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Severity** Medium
 
+### [AWS Bedrock agents should use guardrails when allowing access to generative AI applications](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/7c0c3e91-b674-40d1-8fc4-1bc3c70533e4)
+
+**Description** Guardrails for Amazon Bedrock enhance the safety of generative AI applications by evaluating both user inputs and model-generated responses. These guardrails include content filters, which help detect and filter harmful content. Specifically, the "Prompt Attacks" category that includes safeguards on user prompts to prevent jailbreaks and prompt injections.
+
+**Severity** Medium
 
 ## Related content
 

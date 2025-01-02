@@ -12,6 +12,9 @@ ms.date: 09/08/2024
 
 This article summarizes support information for the Defender for Servers plan in Microsoft Defender for Cloud.
 
+> [!NOTE]
+> This article references CentOS, a Linux distribution that is end of life (EOL) as of June 30, 2024. See [EOL guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 ## Network requirements
 
 Validate the following endpoints are configured for outbound access so that Azure Arc extension can connect to Microsoft Defender for Cloud to send security data and events:
@@ -41,10 +44,9 @@ This table summarizes Azure cloud support for Defender for Servers features.
 |--- | --- | --- | --- |
 | [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA | NA |
 | [Compliance standards](./regulatory-compliance-dashboard.md)<br/>Compliance standards might differ depending on the cloud type.| GA | GA | GA |
-| [Microsoft Cloud Security Benchmark recommendations for OS hardening](apply-security-baseline.md) | GA | GA | GA |
+| [Machine OS misconfiguration](apply-security-baseline.md) | GA | GA | GA |
 | [VM vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | NA | NA |
 | [VM vulnerability scanning - Microsoft Defender for Endpoint sensor](deploy-vulnerability-assessment-defender-vulnerability-management.md) | GA | NA | NA |
-| [VM vulnerability scanning - Qualys](deploy-vulnerability-assessment-vm.md) | GA | NA | NA |
 | [Just-in-time VM access](./just-in-time-access-usage.yml) | GA | GA | GA |
 | [File integrity monitoring](./file-integrity-monitoring-overview.md)  | GA | GA | GA |
 | [Docker host hardening](./harden-docker-hosts.md)  | GA | GA | GA |
@@ -52,6 +54,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [Agentless malware scanning](agentless-malware-scanning.md) | GA | NA | NA |
 | [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | NA | NA |
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
+| [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | NA | NA |
 
 ## Windows machine support
 
@@ -59,12 +62,11 @@ The following table shows feature support for Windows machines in Azure, Azure A
 
 | **Feature** | **Azure VMs*<br/> **[VM Scale Sets (Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)** | **Azure Arc-enabled machines** | **Defender for Servers required** |
 |--|:-:|:-:|:-:|
-| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) (formerly Enterprise for Virtual Desktops)<br>Not available on: Azure VMs running Windows 10 or Windows 11 (except if running Windows 10/11 Enterprise multi-session) | ✔ | Yes |
+| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ | Yes |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ | Yes |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
@@ -72,7 +74,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
-| Disk encryption assessment | ✔</br>([supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
+| Disk encryption assessment | ✔</br>[supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
@@ -88,7 +90,6 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Fileless security alerts](alerts-windows-machines.md) | - | - | Yes |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
@@ -96,7 +97,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | - | - | No |
-| Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
+| Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
@@ -112,7 +113,6 @@ The following table shows feature support for AWS and GCP machines.
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
 | [Network map](protect-network-resources.md#network-map) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
@@ -120,7 +120,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |
 | Security misconfigurations assessment | ✔ | ✔ |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ |
-| Disk encryption assessment | ✔</br>(for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | ✔</br>(for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) |
+| Disk encryption assessment | ✔</br>for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | ✔</br>for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) |
 | Third-party vulnerability assessment | - | - |
 | [Network security assessment](protect-network-resources.md) | - | - |
 | [Cloud security explorer](how-to-manage-cloud-security-explorer.md) | ✔ | - |
@@ -128,26 +128,6 @@ The following table shows feature support for AWS and GCP machines.
 | [Agentless malware scanning](agentless-malware-scanning.md) | ✔ | ✔ |
 | [Endpoint detection and response](endpoint-detection-response.md) | ✔ | ✔ |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ <br> (With Azure Arc) | ✔ (With Azure Arc) |
-
-## Endpoint protection support
-
-The following table provides a matrix of supported endpoint protection solutions. The table indicates whether you can use Defender for Cloud to install each solution for you.
-
-| Solution | Supported platforms | Defender for Cloud installation |
-|--|--|--|
-| Microsoft Defender Antivirus | Windows Server 2016 or later | No (built into OS) |
-| System Center Endpoint Protection (Microsoft Antimalware) | Windows Server 2012 R2 | Via extension |
-| Trend Micro – Deep Security | Windows Server (all) | No |
-| Symantec v12.1.1100+ | Windows Server (all) | No |
-| McAfee v10+ | Windows Server (all) | No |
-| McAfee v10+ | Linux (GA) | No |
-| Microsoft Defender for Endpoint for Linux<sup>[1](#footnote1)</sup> | Linux (GA) | Via extension |
-| Microsoft Defender for Endpoint Unified Solution<sup>[2](#footnote2)</sup> | Windows Server 2012 R2 and Windows 2016 | Via extension |
-| Sophos V9+ | Linux (GA) | No |
-
-<sup><a name="footnote1"></a>1</sup> It's not enough to have Microsoft Defender for Endpoint on the Linux machine: the machine will only appear as healthy if the always-on scanning feature (also known as real-time protection (RTP)) is active. By default, the RTP feature is **disabled** to avoid clashes with other AV software.
-
-<sup><a name="footnote2"></a>2</sup> With the Defender for Endpoint unified solution on Server 2012 R2, it automatically installs Microsoft Defender Antivirus in Active mode. For Windows Server 2016, Microsoft Defender Antivirus is built into the OS.
 
 ## Next steps
 

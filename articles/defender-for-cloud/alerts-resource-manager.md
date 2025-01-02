@@ -106,7 +106,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
 
-**Severity**: High
+**Severity**: Low
 
 ### **MicroBurst exploitation toolkit used to extract secrets from your Azure key vaults**
 

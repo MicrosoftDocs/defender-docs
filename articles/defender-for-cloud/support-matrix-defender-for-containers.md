@@ -20,12 +20,9 @@ This article summarizes support information for Container capabilities in Micros
 > - Specific features are in preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > - Only the versions of AKS, EKS and GKE supported by the cloud vendor are officially supported by Defender for Cloud.
 
-> [!IMPORTANT]
-> The Defender for Cloud Containers Vulnerability Assessment powered by Qualys is being retired. The retirement will be completed by March 6, and until that time partial results might still appear both in the Qualys recommendations, and Qualys results in the security graph. Any customers who were previously using this assessment should upgrade to to [Vulnerability assessments for Azure with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md). For information about transitioning to the container vulnerability assessment offering powered by Microsoft Defender Vulnerability Management, see [Transition from Qualys to Microsoft Defender Vulnerability Management](transition-to-defender-vulnerability-management.md).
+The following are the features provided by Defender for Containers, for the supported cloud environments and container registries.
 
 ## Azure
-
-Following are the features for each of the domains in Defender for Containers:
 
 ### Security posture management
 
@@ -45,6 +42,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for images in ACR | ACR, Private ACR | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
 | Agentless/agent-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-azure---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Vulnerability assessment for running images in AKS | AKS | GA | GA | Enable **Agentless container vulnerability assessment** toggle | Agentless (Requires Agentless discovery for Kubernetes) **OR/AND** Defender sensor | Defender for Containers or Defender CSPM | Commercial clouds<br/><br/> National clouds: Azure Government, Azure operated by 21Vianet |
+| Agentless K8s node scanning | [Vulnerability assessment of K8s nodes](kubernetes-nodes-va.md) | AKS| Preview | Preview |Enable **Agentless scanning for machines** | Agentless | Defender for Containers or Defender for Servers P2 or CSPM | Commercial clouds |
 
 ### Runtime threat protection
 
@@ -52,6 +50,7 @@ Following are the features for each of the domains in Defender for Containers:
 |--|--|--|--|--|--|--|--|--|
 | [Control plane](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | Agentless | Defender for Containers | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | Workload | Detection of suspicious activity for Kubernetes for cluster level, node level, and workload level | AKS | GA | - | Enable **Defender Sensor in Azure** toggle **OR** deploy Defender sensors on individual clusters | Defender sensor | Defender for Containers | Commercial clouds<br /><br />National clouds: Azure Government, Azure China 21Vianet |
+| Node | [Detection of malware on K8s nodes](kubernetes-nodes-malware.md) | AKS | Preview | Preview | Enable **Agentless scanning for machines**  | Agentless | Defender for Containers or Defender for Servers P2 | Commercial clouds |
 
 ### Deployment & monitoring
 
@@ -65,15 +64,15 @@ Following are the features for each of the domains in Defender for Containers:
 
 | Aspect | Details |
 |--|--|
-| Registries and images | **Supported**<br> • ACR registries <br> • [ACR registries protected with Azure Private Link](/azure/container-registry/container-registry-private-link) (Private registries requires access to Trusted Services) <br> • Container images in Docker V2 format <br> • Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br>   • Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images<br> is currently unsupported <br> |
-| Operating systems | **Supported** <br> • Alpine Linux 3.12-3.19 <br> • Red Hat Enterprise Linux 6-9 <br> • CentOS 6-9. (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> • Oracle Linux 6-9 <br> • Amazon Linux 1, 2 <br> • openSUSE Leap, openSUSE Tumbleweed <br> • SUSE Enterprise Linux 11-15 <br> • Debian GNU/Linux 7-12 <br> • Google Distroless (based on Debian GNU/Linux 7-12) <br> • Ubuntu 12.04-22.04 <br>  • Fedora 31-37<br> • Mariner 1-2<br> • Windows Server 2016, 2019, 2022 |
-| Language specific packages <br><br>  | **Supported** <br> • Python <br> • Node.js <br> • .NET <br> • JAVA <br> • Go |
+| Registries and images | **Supported**<br> * ACR registries <br> * [ACR registries protected with Azure Private Link](/azure/container-registry/container-registry-private-link) (Private registries requires access to Trusted Services) <br> * Container images in Docker V2 format <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images<br> is currently unsupported <br> |
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9. (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12) <br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows Server 2016, 2019, 2022 |
+| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * .NET <br> * Java<br> * Go |
 
 ### Kubernetes distributions and configurations for Azure - Runtime threat protection
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported**<br> • [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) with [Kubernetes RBAC](/azure/aks/concepts-identity#kubernetes-rbac) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br> • [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> • [Kubernetes](https://kubernetes.io/docs/home/)<br> • [AKS Engine](https://github.com/Azure/aks-engine)<br> • [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br /> |
+| Kubernetes distributions and configurations | **Supported**<br> * [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) with [Kubernetes RBAC](/azure/aks/concepts-identity#kubernetes-rbac) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br> * [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Kubernetes](https://kubernetes.io/docs/home/)<br> * [AKS Engine](https://github.com/Azure/aks-engine)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br /> |
 
 <sup><a name="footnote1"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested on Azure.
 
@@ -105,15 +104,15 @@ Following are the features for each of the domains in Defender for Containers:
 
 | Aspect | Details |
 |--|--|
-| Registries and images | **Supported**<br> • ECR registries <br> • Container images in Docker V2 format  <br> • Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br>   • Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> • Public repositories <br> • Manifest lists <br>|
-| Operating systems | **Supported** <br> • Alpine Linux 3.12-3.19 <br> • Red Hat Enterprise Linux 6-9 <br> • CentOS 6-9 (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> • Oracle Linux 6-9 <br> • Amazon Linux 1, 2 <br> • openSUSE Leap, openSUSE Tumbleweed <br> • SUSE Enterprise Linux 11-15 <br> • Debian GNU/Linux 7-12 <br> • Google Distroless (based on Debian GNU/Linux 7-12)<br> • Ubuntu 12.04-22.04 <br>  • Fedora 31-37<br> • Mariner 1-2<br> • Windows server 2016, 2019, 2022 |
-| Language specific packages <br><br>  | **Supported** <br> • Python <br> • Node.js <br> • .NET <br> • JAVA <br> • Go |
+| Registries and images | **Supported**<br> * ECR registries <br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows server 2016, 2019, 2022 |
+| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * .NET <br> * Java<br> * Go |
 
 ### Kubernetes distributions/configurations support for AWS - Runtime threat protection
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported**<br>•  [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)<br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br> • [Kubernetes](https://kubernetes.io/docs/home/)<br />**Unsupported**<br /> • EKS private clusters |
+| Kubernetes distributions and configurations | **Supported**<br>*  [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)<br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br> * [Kubernetes](https://kubernetes.io/docs/home/)<br />**Unsupported**<br /> * EKS private clusters |
 
 <sup><a name="footnote1"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
 
@@ -128,7 +127,7 @@ Outbound proxy without authentication and outbound proxy with basic authenticati
 
 ### Clusters with IP restrictions - AWS
 
-If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see  [Amazon EKS cluster endpoint access control - Amazon EKS,](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) ), the control plane’s IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud.
+If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see  [Amazon EKS cluster endpoint access control - Amazon EKS,](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) ), the control plane's IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud.
 
 ## GCP
 
@@ -153,15 +152,15 @@ If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see
 
 | Aspect | Details |
 |--|--|
-| Registries and images | **Supported**<br> • Google Registries (GAR, GCR) <br> • Container images in Docker V2 format  <br> • Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br> • Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> • Public repositories <br> • Manifest lists <br>|
-| Operating systems | **Supported** <br> • Alpine Linux 3.12-3.19 <br> • Red Hat Enterprise Linux 6-9 <br> • CentOS 6-9 (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> • Oracle Linux 6-9 <br> • Amazon Linux 1, 2 <br> • openSUSE Leap, openSUSE Tumbleweed <br> • SUSE Enterprise Linux 11-15 <br> • Debian GNU/Linux 7-12 <br> • Google Distroless (based on Debian GNU/Linux 7-12)<br> • Ubuntu 12.04-22.04 <br>  • Fedora 31-37<br> • Mariner 1-2<br> • Windows server 2016, 2019, 2022 |
-| Language specific packages <br><br>  | **Supported** <br> • Python <br> • Node.js <br> • .NET <br> • JAVA <br> • Go |
+| Registries and images | **Supported**<br> * Google Registries (GAR, GCR) <br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows server 2016, 2019, 2022 |
+| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * .NET <br> * Java<br> * Go |
 
 ### Kubernetes distributions/configurations support for GCP - Runtime threat protection
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported**<br>  • [Google Kubernetes Engine (GKE) Standard](https://cloud.google.com/kubernetes-engine/) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br> • [Kubernetes](https://kubernetes.io/docs/home/)<br><br />**Unsupported**<br /> • Private network clusters<br /> • GKE autopilot<br /> • GKE AuthorizedNetworksConfig |
+| Kubernetes distributions and configurations | **Supported**<br>  * [Google Kubernetes Engine (GKE) Standard](https://cloud.google.com/kubernetes-engine/) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br> * [Kubernetes](https://kubernetes.io/docs/home/)<br><br />**Unsupported**<br /> * Private network clusters<br /> * GKE autopilot<br /> * GKE AuthorizedNetworksConfig |
 
 <sup><a name="footnote1"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
 
@@ -176,7 +175,7 @@ Outbound proxy without authentication and outbound proxy with basic authenticati
 
 ### Clusters with IP restrictions - GCP
 
-If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see [Add authorized networks for control plane access  |  Google Kubernetes Engine (GKE)  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks) ), the control plane’s IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud.
+If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see [Add authorized networks for control plane access  |  Google Kubernetes Engine (GKE)  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks) ), the control plane's IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud.
 
 ## On-premises, Arc-enabled Kubernetes clusters
 
@@ -184,9 +183,9 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 |--|--| -- | -- | -- | -- | --|
 | Security posture management | Docker CIS | Arc enabled VMs | Preview | - | Log Analytics agent | Defender for Servers Plan 2 |
 | Security posture management | Control plane hardening | - | - | - | - | - |
-| Security posture management | Kubernetes data plane hardening | Arc enabled K8s clusters | GA| - | Azure Policy for Kubernetes | Defender for Containers |
-| Runtime protection| Threat protection (control plane)| Arc enabled K8s clusters | Preview | Preview | Defender sensor | Defender for Containers |
-| Runtime protection | Threat protection (workload)| Arc enabled K8s clusters | Preview | - | Defender sensor | Defender for Containers |
+| Security posture management | Kubernetes data plane hardening |Arc enabled K8s clusters | GA| - | Azure Policy for Kubernetes | Defender for Containers |
+| Runtime protection| Threat protection (control plane)|Arc enabled K8s clusters| Preview | Preview | Defender sensor | Defender for Containers |
+| Runtime protection | Threat protection (workload)| Arc enabled K8s clusters| Preview | - | Defender sensor | Defender for Containers |
 | Deployment & monitoring | Discovery of unprotected clusters | Arc enabled K8s clusters | Preview | - | Agentless | Free |
 | Deployment & monitoring | Auto provisioning of Defender sensor | Arc enabled K8s clusters | Preview | Preview | Agentless | Defender for Containers |
 | Deployment & monitoring | Auto provisioning of Azure Policy for Kubernetes | Arc enabled K8s clusters | Preview | - | Agentless | Defender for Containers |
@@ -195,17 +194,17 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 
 | Domain | Feature | Supported Resources | Linux release state  | Windows release state  | Agentless/Sensor-based | Pricing tier |
 |--|--| -- | -- | -- | -- | --|
-| Security posture management  | Comprehensive inventory capabilities | Docker Hub | Preview | Preview | Agentless| Foundational CSPM **OR** Defender for Containers **OR** Defender CSPM |
-| Security posture management  | Attack path analysis | Docker Hub | Preview | Preview | Agentless| Defender CSPM |
-| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub | Preview | Preview | Agentless | Defender for Containers **OR** Defender CSPM |
-| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub | Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
+| Security posture management  | Comprehensive inventory capabilities | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Foundational CSPM **OR** Defender for Containers **OR** Defender CSPM |
+| Security posture management  | Attack path analysis | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Defender CSPM |
+| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JfFrog Artifactory| Preview | Preview | Agentless | Defender for Containers **OR** Defender CSPM |
+| [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JFrog Artifactory| Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
 
 
 ### Kubernetes distributions and configurations
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br>• [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> • [Kubernetes](https://kubernetes.io/docs/home/)<br> • [AKS Engine](https://github.com/Azure/aks-engine)<br> • [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br> • [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer)<br> • [VMware Tanzu Kubernetes Grid](https://tanzu.vmware.com/kubernetes-grid)<br> • [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/)<br> |
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1)</sup> <sup>[2](#footnote2)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br> * [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
 
 <sup><a name="footnote1"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
 
@@ -216,7 +215,7 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 
 ### Supported host operating systems
 
-Defender for Containers relies on the **Defender sensor** for several features. The Defender sensor is supported on the following host operating systems:
+Defender for Containers relies on the Defender sensor for several features. The Defender sensor is supported only with Linux Kernel 5.4 and above, on the following host operating systems:
 
 - Amazon Linux 2
 - CentOS 8  (CentOS is End Of Life (EOL) as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)
@@ -231,7 +230,7 @@ Defender for Containers relies on the **Defender sensor** for several features. 
 - Ubuntu 20.04
 - Ubuntu 22.04
 
-Ensure your Kubernetes node is running on one of the verified supported operating systems. Clusters with different host operating systems, only get partial coverage.
+Ensure your Kubernetes node is running on one of these verified operating systems. Clusters with unsupported host operating systems don't get the benefits of features relying on Defender sensor.
 
 ### Defender sensor limitations
 

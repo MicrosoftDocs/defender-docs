@@ -16,7 +16,7 @@ You can view these security alerts in Microsoft Defender for Cloud's pages - [ov
 
 - [Microsoft Sentinel](/azure/sentinel/) - Microsoft's cloud-native SIEM. The Sentinel Connector gets alerts from Microsoft Defender for Cloud and sends them to the [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) for Microsoft Sentinel.
 - Third-party SIEMs - Send data to [Azure Event Hubs](/azure/event-hubs/). Then integrate your Event Hubs data with a third-party SIEM. Learn more in [Stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
-- [The REST API](/rest/api/defenderforcloud/operation-groups?view=rest-defenderforcloud-2020-01-01&preserve-view=true) - If you're using the REST API to access alerts, see the [online Alerts API documentation](/rest/api/defenderforcloud/alerts).
+- [The REST API](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true) - If you're using the REST API to access alerts, see the [online Alerts API documentation](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 If you're using any programmatic methods to consume the alerts, you need the correct schema to find the fields that are relevant to you. Also, if you're exporting to an Event Hubs or trying to trigger Workflow Automation with generic HTTP connectors, schemas should be utilized to properly parse the JSON objects.
 
@@ -138,7 +138,7 @@ For the alerts schema when using workflow automation, see the [connectors docume
 
 Defender for Cloud's continuous export feature passes alert data to:
 
-- Azure Event Hubs using the same schema as [the alerts API](/rest/api/defenderforcloud/alerts).
+- Azure Event Hubs using the same schema as [the alerts API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 - Log Analytics workspaces according to the [SecurityAlert schema](/azure/azure-monitor/reference/tables/SecurityAlert) in the Azure Monitor data documentation.
 
 ### [MS Graph API](#tab/schema-graphapi)

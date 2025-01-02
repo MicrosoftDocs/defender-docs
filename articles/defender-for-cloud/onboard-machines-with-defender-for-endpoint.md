@@ -31,7 +31,7 @@ This tenant-level setting allows you to automatically and natively onboard any n
 
 Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn’t require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. To enable server management capabilities, refer to the deployment of Azure Arc.
 
-## Enabling direct onboarding
+## Enable direct onboarding
 
 Enabling direct onboarding is an opt-in setting at the tenant level. It affects both existing and new servers onboarded to Defender for Endpoint in the same Microsoft Entra tenant. Shortly after you enable this setting, your server devices will show under the designated subscription. Alerts, software inventory, and vulnerability data are integrated with Defender for Cloud, in a similar way to how it works with Azure VMs.
 
@@ -41,7 +41,7 @@ Before you begin:
 - If you have a Microsoft Defender for Endpoint for Servers license on your tenant, [make sure to indicate it](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-) in Defender for Cloud
 - Review the [limitations section](#current-limitations)
 
-### Enabling in the Defender for Cloud portal
+### Enable in the Defender for Cloud portal
 
 1. Go to **Defender for Cloud** > **Environment Settings** > **Direct onboarding**.
 1. Switch the **Direct onboarding** toggle to **On**.
@@ -50,11 +50,9 @@ Before you begin:
 
 :::image type="content" source="media/onboard-machines-with-defender-for-endpoint/direct-onboarding-subscription.png" alt-text="Screenshot of Onboard non-Azure servers with Defender for Endpoint.":::
 
-
-
 You now successfully enabled direct onboarding on your tenant. After you enable it for the first time, it might take up to 24 hours to see your non-Azure servers in your designated subscription.
 
-### Deploying Defender for Endpoint on your servers
+### Deploy Defender for Endpoint on your servers
 
 Deploying the Defender for Endpoint agent on your on-premises Windows and Linux servers is the same whether you use direct onboarding or not. Refer to the [Defender for Endpoint onboarding guide](/microsoft-365/security/defender-endpoint/onboarding) for further instructions.
 
