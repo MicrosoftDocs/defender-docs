@@ -19,7 +19,7 @@ When a vulnerability is identified in a container image stored in a container re
     
   - Ensure that the Microsoft Defender for DevOps Extension is shared and installed in all connected Azure DevOps organizations. For newly onboarded connectors, this will be done automatically. This extension automatically injects tasks into all Azure Pipelines to collect data for container mapping. 
     
-  - Must use [YAML Pipelines](/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops) as Classic Pipelines are no longer supported. 
+  - Must use [YAML Pipelines](/azure/devops/pipelines/get-started/pipelines-get-started) as Classic Pipelines are no longer supported. 
     
 - For GitHub:
 
