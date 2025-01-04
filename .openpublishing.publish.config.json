@@ -6,7 +6,19 @@
       "build_output_subfolder": "ATA-Docs",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "ATP-Docs",
+      "build_source_folder": "ATPDocs",
+      "build_output_subfolder": "ATP-Docs",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -43,7 +55,7 @@
       "build_output_subfolder": "defender-cloud-apps",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -143,7 +155,7 @@
       "build_output_subfolder": "unified-secops-platform",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -173,8 +185,12 @@
   "branch_target_mapping": {},
   "targets": {},
   "redirection_files": [
+    ".openpublishing.redirection.ata-atp.json",
     ".openpublishing.redirection.defender.json",
+    ".openpublishing.redirection-defender-business.json",
     ".openpublishing.redirection.defender-cloud-apps.json",
+    ".openpublishing.redirection.defender-endpoint.json",
+    ".openpublishing.redirection.defender-office-365.json",
     ".openpublishing.redirection.defender-xdr.json"
   ]
 }

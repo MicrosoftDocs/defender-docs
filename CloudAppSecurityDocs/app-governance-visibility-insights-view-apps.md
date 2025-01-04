@@ -17,21 +17,21 @@ For a summary of apps in your tenant, in Microsoft 365, go to **Cloud app > App 
 
 For example:
 
-:::image type="content" source="media/app-governance-visibility-insights-view-apps/appg-cc-apps.png" alt-text="Screenshot of the Azure AD apps tab on the App governance page.":::
-
+:::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-list-view-new.png" alt-text="Screenshot of the Azure AD apps tab on the App governance page.":::
 
 >[!NOTE]
 > Your sign-in account must have one of [these roles](app-governance-get-started.md#roles) to view any app governance data.
 >
 
-On the **Azure AD apps** tab, the apps in your tenant are listed with the following details:
+On the **Microsoft 365** tab, the apps in your tenant are listed with the following details:
 
 |Column name  |Description  |
 |---------|---------|
-|**App name** | The display name of the app as registered on Microsoft Entra ID |
-|**App status** | Shows whether the app is enabled or disabled, and if disabled by whom |
+| **App name** | The display name of the app as registered on Microsoft Entra ID |
+| **App status** | Shows whether the app is enabled or disabled, and if disabled by whom |
 | **Graph API access**| Shows whether the app has at least one Graph API permission |
 | **Permission type**| Shows whether the app has application (app only), delegated, or mixed permissions |
+| **App origin** (Preview)| Shows whether the app originated within the tenant or was registered in an external tenant |
 | **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app |
 | **Publisher**| Publisher of the app and their verification status |
 | **Last modified**| Date and time when registration information was last updated on Microsoft Entra ID |
@@ -55,13 +55,13 @@ You can also select **Search** to search for an app by name.
 
 Select a specific app in the grid to view more details on an apps details pane on the right. For example:
 
-:::image type="content" source="media/app-governance-visibility-insights-view-apps/image2.png" alt-text="Screenshot of an app details pane on the Azure AD tab.":::
+:::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-list-view.png" alt-text="Screenshot of an app details pane on the Azure AD tab.":::
 
-The **Summary** tab also shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View app in Azure AD**.
+The **Summary** tab also shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View in Microsoft Entra ID**.
 
 In the details pane, select any of the following tabs to view more details:
 
-- Select the **Data usage** tab to view a graph of data usage over time, for Exchange, SharePoint, OneDrive, and Teams resources. For example:
+- Select the **Data usage** tab to view a graph of data usage over time, for Exchange, SharePoint, OneDrive, and Teams resources via Microsoft Graph and EWS APIs. For example:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/data-usage.png" alt-text="Screenshot of the Data usage tab.":::
 
@@ -73,7 +73,7 @@ In the details pane, select any of the following tabs to view more details:
 
     If an app is *admin consented*, the **Total consented users** are all users in the tenant.
 
-- Select the **Permissions** tab to see a summary and list of the Graph API and legacy permissions granted to the app, consent type, and whether they are in use. For example:
+- Select the **Permissions** tab to see a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level and whether they are in use. For example:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/permissions.png" alt-text="Screenshot of the Permissions tab.":::
 
@@ -83,13 +83,8 @@ In the details pane, select any of the following tabs to view more details:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/sensitive-labels-details.png" alt-text="Screenshot of the Sensitivity labels tab.":::
 
-For an enabled app, there's also a **Disable app** control to disable the use of the selected app and an **Enable app** control to enable the use of the disabled app. These actions require at least the following administrator roles:
+For an enabled app, there's also a **Disable app** control to disable the use of the selected app and an **Enable app** control to enable the use of the disabled app. These actions require a *Company Administrator* administrator role.
 
-
-- *Compliance Administrator*
-- *Company Administrator*
-- *Security Administrator*
-- *Security Operator*
 
 ## Managing Google Workspace and Salesforce OAuth apps
 

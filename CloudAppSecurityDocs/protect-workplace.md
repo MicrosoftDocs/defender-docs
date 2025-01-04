@@ -2,14 +2,14 @@
 title:       Protect your Workplace environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Workplace app to Defender for Cloud Apps using the API connector.
 ms.topic:    how-to
-ms.date: 12/06/2023
+ms.date: 12/08/2024
 ---
 
 # How Defender for Cloud Apps helps protect your Workplace environment (Preview)
 
 
 
-Workplace by Meta is an online collaboration software tool developed by Meta that facilitates online groupwork, instant messaging, video conferencing, and news sharing in one place. Along with the benefits of effective collaboration in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include messages, posts, and files with potentially sensitive information, collaboration, partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
+Workplace by Meta is an online collaboration software tool developed by Meta that facilitates online group work, instant messaging, video conferencing, and news sharing in one place. Along with the benefits of effective collaboration in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include messages, posts, and files with potentially sensitive information, collaboration, partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
 
 Connecting Workplace by Meta to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior.
 
@@ -96,6 +96,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
    > - The first connection can take up to 4 hours to get all users and their activities.
    > - The activities that will show are the activities that were generated from the moment the connector is connected.
    > - After the connector's **Status** is marked as **Connected**, the connector is live and works.
+   > - Before deleting the app in Workplace, make sure to disconnect the connector in the Defender for Cloud Apps portal.
 
 ## Next steps
 

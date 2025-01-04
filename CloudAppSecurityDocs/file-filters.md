@@ -11,6 +11,15 @@ To provide data protection, Microsoft Defender for Cloud Apps gives you visibili
 
 > [!IMPORTANT]
 > Starting **September 1, 2024**, we'll be phasing out the **Files** **page** from Microsoft Defender for Cloud Apps. Core functionalities of the Files page will be available on the **Cloud apps > Policies > Policy Management** page. We recommend using the Policy Management page to investigate files and to create, modify, and filter Information Protection policies and Malware files. For more information, see [File policies in Microsoft Defender for Cloud Apps](data-protection-policies.md).
+>
+
+>[!NOTE]
+> **Query Size Limitation in Files Policy Filters and "Edit and Preview Results"**
+>
+> - When creating or editing a file policy, or when using the "Edit and preview results" option, there is a query size limitation. This limitation ensures optimal performance and prevents system overload.
+> - If your query exceeds the allowed size, you may need to refine your criteria or use other filters to fit within the acceptable limits. For example, if the policy involves "collaborators" criteria that includes the group "everyone" or "everyone except external users" it may cause a failure due to  query size limitation.
+> - Please note that if the query exceeds the size limitation, the system will not specify which filter caused the failure.
+
 ## Enable file monitoring
 
 To enable file monitoring for Defender for Cloud Apps, first turn on file monitoring in the **Settings** area. In the Microsoft Defender portal, select **Settings** > **Cloud Apps** > **Information Protection** > **Files** > **Enable file monitoring** > **Save**.

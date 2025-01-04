@@ -6,7 +6,7 @@ ms.author: deniseb
 author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-ms.date: 10/28/2024
+ms.date: 12/04/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -21,6 +21,11 @@ search.appverid: met150
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+**Applies to**:
+
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
@@ -46,7 +51,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    mdatp config real-time-protection --value disabled
    ```
 
-   ```Output
+   ```console
    Configuration property updated
    ```
 
@@ -78,7 +83,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    mdatp config real-time-protection --value enabled
    ```
 
-   ```Output
+   ```console
    Configuration property updated
    ```
 
@@ -101,7 +106,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
 
    The output of this command should be similar to the following:
 
-   ```Output
+   ```console
    --2020-11-14 11:27:27-- https://raw.githubusercontent.com/microsoft.mdatp-xplat/master/linus/diagnostic/high_cpu_parser.py
    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.xxx.xxx
    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)| 151.101.xxx.xxx| :443... connected.
@@ -119,7 +124,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
 
    The output of the above is a list of the top contributors to performance issues. The first column is the process identifier (PID), the second column is the process name, and the last column is the number of scanned files, sorted by impact. For example, the output of the command will be something like the below:
 
-   ```Output
+   ```console
    ... > mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py | head
    27432 None 76703
    73467 actool    1249
@@ -154,7 +159,7 @@ To run the client analyzer for troubleshooting performance issues, see [Run the 
 
 ## Configure Global Exclusions for better performance
 
-Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md). IF you still have performace issues, contact support for further instructions and mitigation.
+Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md). IF you still have performance issues, contact support for further instructions and mitigation.
 
 ## Troubleshoot AuditD performance issues
 
@@ -222,7 +227,7 @@ The XMDEClientAnalyzer support tool contains syntax that can be used to add Audi
 
 AuditD exclusion – support tool syntax help:
 
-:::image type="content" source="media/auditd-exclusion-support-tool-syntax-help.png" alt-text="syntax that can be used to add AuditD exclusion configuration rules" lightbox="media/auditd-exclusion-support-tool-syntax-help.png":::
+:::image type="content" source="media/auditd-exclusion-support-tool-syntax-help.png" alt-text="Screenshot of the syntax that can be used to add AuditD exclusion configuration rules.":::
 
 **By initiator**
 

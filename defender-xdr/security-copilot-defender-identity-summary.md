@@ -21,14 +21,14 @@ search.appverid:
 ms.date: 10/14/2024
 appliesto:
 - Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
 ---
 
 # Summarize identity information with Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Security operations teams investigating users can easily understand identity information with the identity summary capability in [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) in Microsoft Defender. Through generative AI and harnessing the power of Microsoft Defender for Identity, Copilot creates contextual insights about an identity in an organization, helping analysts quickly understand important data to speed up their investigation.
+Security operations teams investigating users can easily understand identity information with the identity summary capability in [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in Microsoft Defender. Through generative AI and harnessing the power of Microsoft Defender for Identity, Copilot creates contextual insights about an identity in an organization, helping analysts quickly understand important data to speed up their investigation.
 
 With the identity summary capability, analysts can immediately identify suspicious or risky identity-related changes and actions that can negatively impact an organization. The summary also includes potential misconfigurations that affect an identity. Using natural language, Copilot delivers clear and actionable user information that analysts can use in their incident investigation activities. The capability currently focuses on users and will include service accounts in its next iteration.
 
@@ -36,19 +36,21 @@ This guide describes what the identity summary capability is and how it works, i
 
 ## Know before you begin
 
-If you're new to Copilot for Security, you should familiarize yourself with it by reading the following articles:
+If you're new to Security Copilot, you should familiarize yourself with it by reading the following articles:
 
-- [What is Copilot for Security?](/security-copilot/microsoft-security-copilot)
-- [Copilot for Security experiences](/security-copilot/experiences-security-copilot)
-- [Get started with Copilot for Security](/security-copilot/get-started-security-copilot)
-- [Understand authentication in Copilot for Security](/security-copilot/authentication)
-- [Prompting in Copilot for Security](/security-copilot/prompting-security-copilot)
+- [What is Security Copilot?](/security-copilot/microsoft-security-copilot)
+- [Security Copilot experiences](/security-copilot/experiences-security-copilot)
+- [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
+- [Understand authentication in Security Copilot](/security-copilot/authentication)
+- [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
 
-## Copilot for Security integration in Microsoft Defender
+With the identity summary capability, analysts can immediately identify suspicious or risky identity-related changes and actions that can negatively impact an organization. The summary also includes potential misconfigurations that affects an identity. Using natural language, Copilot delivers clear and actionable user information that analysts can use in their incident investigation activities. The capability currently focuses on users and will include service accounts in its next iteration.
 
-The identity summary capability is available in the Microsoft Defender portal for customers who have provisioned access to Copilot for Security. 
+## Security Copilot integration in Microsoft Defender
 
-Users who access the Copilot for Security standalone portal can use this capability through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins).
+The identity summary capability is available in the Microsoft Defender portal for customers who have provisioned access to Security Copilot. 
+
+Users who access the Security Copilot standalone portal can use this capability through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
 ## Key features
 
@@ -84,16 +86,16 @@ You can access the identity summary capability in the following ways:
 
 - Type a username in the Microsoft Defender portal’s **search box** then select the username from the search results. In the user details side panel, select **Summarize** to generate the identity summary.
 
-Review the identity summary results. You can copy the results to clipboard, regenerate the results, or open Security Copilot by selecting the More actions ellipsis (...) on top of the identity summary card. You can extend your investigation of identity using prompts and other plugins in the Copilot for Security portal.
+Review the identity summary results. You can copy the results to clipboard, regenerate the results, or open Security Copilot by selecting the More actions ellipsis (...) on top of the identity summary card. You can extend your investigation of identity using prompts and other plugins in the Security Copilot portal.
 
 ## Sample identity summary prompt
 
-In the Copilot for Security standalone portal, you can use the following prompt to generate an identity summary:
+In the Security Copilot standalone portal, you can use the following prompt to generate an identity summary:
 
 - *Show the Defender summary of this user in the last {time frame}.*
 
 > [!TIP]
-> When investigating users in the Copilot for Security portal, Microsoft recommends including the word ***Defender*** in your prompts to ensure that the identity summary capability delivers the results. You can specify up to 120 days on the investigation time frame, with the default being 30 days when you don’t indicate one.
+> When investigating users in the Security Copilot portal, Microsoft recommends including the word ***Defender*** in your prompts to ensure that the identity summary capability delivers the results. You can specify up to 120 days on the investigation time frame, with the default being 30 days when you don’t indicate one.
 
 ## Provide feedback
 
@@ -105,7 +107,7 @@ Fill in the dedicated text box to share your thoughts, experiences, and requests
 
 ## See also
 
-- [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
-- [Privacy and data security in Copilot for Security](/copilot/security/privacy-data-security)
+- [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
+- [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

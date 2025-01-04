@@ -1,0 +1,54 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "feedback_system": "Standard",
+      "feedback_github_repo": "MicrosoftDocs/atadocs",
+      "feedback_product_url": "https://aka.ms/MDIcommunity",
+      "breadcrumb_path": "/azure-advanced-threat-protection/bread/toc.json",
+      "searchScope": ["Defender for Identity"],
+      "titleSuffix": "Microsoft Defender for Identity",
+      "author": "batamig",
+      "manager": "batamig",
+      "ms.author": "bagol",
+      "ms.collection": "M365-security-compliance",
+      "ms.service": "microsoft-defender-for-identity",
+      "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
+      "ms.suite": "ems"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "ATPDocs",
+    "markdownEngineName": "markdig"
+  }
+}

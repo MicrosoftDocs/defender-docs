@@ -7,7 +7,7 @@ manager: dolmont
 ms.service: threat-intelligence 
 ms.collection: essentials-overview
 ms.topic: overview
-ms.date: 10/18/2024
+ms.date: 11/18/2024
 ms.custom: 
 - template-overview
 - cx-ti
@@ -17,7 +17,7 @@ ms.custom:
 # What is Microsoft Defender Threat Intelligence (Defender TI)?
 
 >[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Defender Threat Intelligence (Defender TI) is a platform that streamlines triage, incident response, threat hunting, vulnerability management, and threat intelligence analyst workflows when conducting threat infrastructure analysis and gathering threat intelligence. With security organizations actioning an ever-increasing amount of intelligence and alerts within their environment, having a threat analysis an intelligence platform that allows for accurate and timely assessments of alerting is important.
 

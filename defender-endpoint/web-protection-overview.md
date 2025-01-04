@@ -7,7 +7,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: tdoucette
 ms.localizationpriority: medium
-ms.date: 10/23/2024
+ms.date: 12/18/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -53,6 +53,8 @@ Web threat protection includes:
 > - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
 > - Encrypted URLs (full path) can only be blocked on first party browsers (Internet Explorer, Edge).
 > - Encrypted URLs (FQDN only) can be blocked in third party browsers (i.e. other than Internet Explorer, Edge).
+> - URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
+> - Network Protection will block connections on both standard and non-standard ports.
 > - Full URL path blocks can be applied for unencrypted URLs.
 
 There might be up to two hours of latency (usually less) between the time the action is taken, and the URL and IP being blocked. For more information, see [Web threat protection](web-threat-protection.md).

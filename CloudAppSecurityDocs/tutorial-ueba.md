@@ -6,6 +6,10 @@ ms.topic: tutorial
 ---
 # Tutorial: Investigate risky users
 
+> [!IMPORTANT]
+> Starting November 2024, **Investigate risky users** support for Microsoft Defender for Cloud Apps is retired. As such, the legacy procedure presented in this article is provided for informational purposes only.
+> 
+
 Security operations teams are challenged to monitor user activity, suspicious or otherwise, across all dimensions of the identity attack surface, using multiple security solutions that often aren't connected. While many companies now have hunting teams to proactively identify threats in their environments, knowing what to look for across the vast amount of data can be a challenge. Microsoft Defender for Cloud Apps removes the need to create complex correlation rules, and lets you look for attacks that span across your cloud and on-premises network.
 
 To help you focus on user identity, Microsoft Defender for Cloud Apps provides user entity behavioral analytics (UEBA) in the cloud. UEBA can be extended to your on-premises environment by integrating with Microsoft Defender for Identity, after which you'll also gain context around user identity from its native integration with Active Directory.

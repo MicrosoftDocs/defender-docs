@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 10/10/2024
+ms.date: 12/12/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -27,7 +27,7 @@ search.appverid: met150
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-minreqs-abovefoldlink)
 
-There are some minimum requirements for onboarding devices to the Defender for Endpoint service. Learn about the licensing, hardware and software requirements, and other configuration settings to onboard devices to the service.
+There are some minimum requirements for onboarding devices to the Defender for Endpoint service. Learn about the licensing, hardware, and software requirements, and other configuration settings to onboard devices to the service.
 
 > [!TIP]
 >
@@ -44,7 +44,7 @@ There are some minimum requirements for onboarding devices to the Defender for E
 - To [onboard servers](onboard-windows-server.md) to the standalone versions of Defender for Endpoint, server licenses are required. You can choose from:   
 
    - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering
-   - Microsoft Defender for Endpoint for Servers
+   - Microsoft Defender for Endpoint Server
    - [Microsoft Defender for Business servers](/defender-business/get-defender-business) (for small and medium-sized businesses only)
  
 For more detailed information about licensing requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint licensing information](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
@@ -70,7 +70,7 @@ Devices on your network must be running one of these editions. New features or c
 > [!IMPORTANT]
 > Windows 11 Home devices that have been upgraded to one of the below supported editions might require you to run the following command before onboarding: 
 > `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`. 
-> For more information about edition upgrades and features, see [Features](/windows-hardware/manufacture/desktop/windows-features?view=windows-11&preserve-view=true))
+> For more information about edition upgrades and features, see ([Features](/windows-hardware/manufacture/desktop/windows-features?view=windows-11&preserve-view=true))
 
 - Windows 11 Enterprise
 - Windows 11 IoT Enterprise
@@ -110,8 +110,8 @@ To add antimalware protection to these older operating systems, you can use [Sys
 
 ### Other supported operating systems
 
-- [macOS](microsoft-defender-endpoint-mac.md)
-- [Linux](microsoft-defender-endpoint-linux.md)
+- [Mac](microsoft-defender-endpoint-mac.md) (client devices)
+- [Linux Server](microsoft-defender-endpoint-linux.md)
 - [Windows Subsystem for Linux](mde-plugin-wsl.md)
 - [Android](microsoft-defender-endpoint-android.md)
 - [iOS](microsoft-defender-endpoint-ios.md)
@@ -149,7 +149,7 @@ Alternatively, if you must use an IPv6-only configuration, consider adding dynam
 
 #### Internet connectivity
 
-Internet connectivity on devices is required either directly or through proxy.
+Internet connectivity on devices is required either directly or through a proxy.
 
 For more information on other proxy configuration settings, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 

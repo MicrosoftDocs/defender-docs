@@ -17,7 +17,7 @@ Before you start, verify that you satisfy the following prerequisites:
 
 - Microsoft Defender for Cloud Apps must be present in your account as either a standalone product or as part of the various [license](#licensing) packages.
 
-    If you aren't already a Defender for Cloud Apps customer, you can [sign up for a free trial](https://www.microsoft.com/security/business/cloud-apps-defender).
+  If you aren't already a Defender for Cloud Apps customer, you can [sign up for a free trial](https://www.microsoft.com/security/business/cloud-apps-defender).
 
 - You must have [one of the appropriate roles](#roles) to turn on app governance and access it.
 

@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 11/10/2024
+ms.date: 12/02/2024
 search.appverid: met150
 ---
 
@@ -330,6 +330,11 @@ By default the state of this rule is set to block. In most cases, many processes
 
 Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection cannot be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
+> [!TIP]
+> 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
+> 2. The rule is designed to suppress block reports/toasts for friendly processes. It is also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled. 
+> 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode is not advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
+
 > [!NOTE]
 > In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal. 
 > The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support WARN mode.
@@ -522,9 +527,6 @@ Dependencies: Microsoft Defender Antivirus
 ### Block persistence through WMI event subscription
 
 This rule prevents malware from abusing WMI to attain persistence on a device.
-
-> [!IMPORTANT]
-> File and folder exclusions don't apply to this attack surface reduction rule.
 
 Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 

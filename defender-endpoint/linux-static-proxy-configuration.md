@@ -22,6 +22,11 @@ ms.date: 10/11/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**Applies to**:
+
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 Microsoft Defender for Endpoint can discover a proxy server using the `HTTPS_PROXY` environment variable. This setting must be configured **both** at installation time and after the product has been installed.
@@ -64,7 +69,8 @@ After installation, configure Defender for Endpoint with a static proxy. This ca
 
 ### 1. Using mdatp command-line tool
 
-Run  the following command on the endpoint to configure proxy for Defender for Endpoint
+Run the following command on the endpoint to configure proxy for Defender for Endpoint.
+
 ```bash
 mdatp config proxy set --value http://address:port
 ```
@@ -72,7 +78,8 @@ mdatp config proxy set --value http://address:port
 ### 2. Using managed configuration
 
 Set the proxy in the managed configuration at `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`. This is an example of the json schema:
-```
+
+```json
 {
   "cloudService":{
     "proxy": "http://proxy.server:port/"

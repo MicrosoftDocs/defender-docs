@@ -173,7 +173,7 @@ To test streamlined connectivity for devices not yet onboarded to Defender for E
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: https://aka.ms/BetaMDEAnalyzer
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: https://aka.ms/MDEClientAnalyzerPreview
  
 
 > [!NOTE]

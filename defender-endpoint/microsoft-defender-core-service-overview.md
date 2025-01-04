@@ -7,7 +7,7 @@ manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 06/21/2024
+ms.date: 11/25/2024
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
@@ -31,6 +31,8 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
    - November 2023 to prerelease customers.
    - Mid April 2024 to Enterprise customers running Windows clients.
    - Beginning of July 2024 to U.S. Government customers running Windows clients.
+      
+   - Mid January 2025 to Enterprise customers running Windows Server.
       
 3. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 

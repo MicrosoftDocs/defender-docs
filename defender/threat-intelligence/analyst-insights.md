@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence
 ms.topic: overview
-ms.date: 10/18/2024
+ms.date: 11/18/2024
 ms.custom: 
 - template-overview
 - cx-ti
@@ -16,7 +16,7 @@ ms.custom:
 # Analyst insights
 
 >[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 In Microsoft Defender Threat Intelligence (Defender TI), the **Analyst insights** section provides you with quick insights about an artifact that might help determine your next step in an investigation. This section lists any insights that apply to the artifact, and insights that don't apply for extra visibility. 
 

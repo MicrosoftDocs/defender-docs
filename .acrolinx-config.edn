@@ -1,6 +1,6 @@
 {:changed-files-limit 60
  :allowed-branchname-matches ["main" "release-.*"]
- :allowed-filename-matches ["ATADocs/" "CloudAppSecurityDocs/" "defender/" "defender-business/" "defender-endpoint/" "defender-for-cloud/" "defender-for-iot/" "defender-office-365/" "defender-vulnerability-management/" "defender-xdr/" "exposure-management/" "unified-secops-platform/"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
+ :allowed-filename-matches ["ATADocs/" "ATPDocs/" "CloudAppSecurityDocs/" "defender/" "defender-business/" "defender-endpoint/" "defender-for-cloud/" "defender-for-iot/" "defender-office-365/" "defender-vulnerability-management/" "defender-xdr/" "exposure-management/" "unified-secops-platform/"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
  
 :use-gh-statuses true
  

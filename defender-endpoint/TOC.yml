@@ -137,9 +137,10 @@
             - name: Migrating devices to streamlined method
               href: migrate-devices-streamlined.md
 
-        - name: Onboarding Windows Client
+        - name: Onboard client devices
+          href: onboard-client.md
           items:
-          - name: Onboarding Windows Client overview
+          - name: Onboarding Windows client overview
             href: onboard-windows-client.md
           - name: Defender for Endpoint plug-in for WSL
             href: mde-plugin-wsl.md
@@ -158,7 +159,8 @@
           - name: Onboard previous versions of Windows
             href: onboard-downlevel.md
 
-        - name: Onboarding Windows Server
+        - name: Onboard server devices
+          href: onboard-server.md
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
@@ -255,6 +257,8 @@
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
+            - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
+              href: mde-linux-arm.md
             - name: Puppet based deployment
               href: linux-install-with-puppet.md
             - name: Ansible based deployment
@@ -283,7 +287,7 @@
               href: linux-schedule-scan-mde.md
             - name: Schedule antivirus scan in Defender for Endpoint on Linux
               href: schedule-antivirus-scan-in-mde.md
-            - name: Schedule an update of the Microsoft Defender for Endpoint (Linux)
+            - name: Schedule an update for Microsoft Defender for Endpoint on Linux
               href: linux-update-MDE-Linux.md
             - name: Configure eBPF-based sensor
               href: linux-support-ebpf.md 
@@ -787,6 +791,12 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Microsoft Defender Antivirus and third-party antivirus solutions without
+          Defender for Endpoint
+        href: defender-antivirus-compatibility-without-mde.md
+        displayName: Microsoft Defender Antivirus and non-Microsoft
+          antivirus/antimalware solutions, Antivirus protection without Defender for
+          Endpoint
       - name: Find malware detection names for Microsoft Defender for Endpoint
         href: find-defender-malware-name.md
 
@@ -896,7 +906,7 @@
         - name: Troubleshooting mode scenarios
           href: troubleshooting-mode-scenarios.md
 
-      - name: Diagnostics and performance for Microsoft Defender Antivirus
+      - name: Diagnostics for Microsoft Defender Antivirus
         items:
         - name: Device health reports
           href: device-health-reports.md
@@ -907,18 +917,23 @@
             href: device-health-sensor-health-os.md
         - name: Microsoft Defender Core service overview
           href: microsoft-defender-core-service-overview.md
-          displayName: Microsoft Defender Core service overview
         - name: Microsoft Defender Core service configurations and experimentation 
           href: microsoft-defender-core-service-configurations-and-experimentation.md
-        - name: Troubleshoot performance issues related to real-time protection
-          href: troubleshoot-performance-issues.md
         - name: Collect diagnostic data of Microsoft Defender Antivirus
           href: collect-diagnostic-data.md
-        - name: Improve performance of Microsoft Defender Antivirus
-          href: tune-performance-defender-antivirus.md
 
       - name: Troubleshooting Microsoft Defender Antivirus
         items:
+        - name: Troubleshoot Microsoft Defender Antivirus performance issues
+          items:
+          - name: Performance analyzer for Microsoft Defender Antivirus
+            href: tune-performance-defender-antivirus.md
+          - name: Performance analyzer reference
+            href: performance-analyzer-reference.md
+            displayName: high cpu msmpeng.exe antimalware engine microsoft defender
+              antivirus windows defender antivirus
+          - name: Troubleshoot performance issues related to real-time protection
+            href: troubleshoot-performance-issues.md
         - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
           href: troubleshoot-microsoft-defender-antivirus.yml
         - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution

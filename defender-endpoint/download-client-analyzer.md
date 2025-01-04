@@ -29,7 +29,7 @@ Learn how to download the Microsoft Defender for Endpoint client analyzer on sup
 ## Download client analyzer for Windows OS
 
 1. The latest stable edition is available for download from following URL: <https://aka.ms/MDEAnalyzer>
-2. The latest preview edition is available for download from following URL: <https://aka.ms/BetaMDEAnalyzer>
+2. The latest preview edition is available for download from following URL: <https://aka.ms/MDEClientAnalyzerPreview>
 
 ## Download client analyzer for macOS or Linux
 

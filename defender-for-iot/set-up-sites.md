@@ -45,21 +45,24 @@ To set up a site and associate the OT devices in your network to it:
 
 ## Associate devices
 
-In this stage, you configure Defender for IoT to associate OT devices to the site, so it can correctly identify and associate all types of devices at the same site.
+In this stage, you configure Defender for IoT to associate devices to the site, so it can correctly identify and associate all types of devices at the same site.
 
-1. In the search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site.
+1. In the search bar, type either:
+    - A public IP address
+    - The IP/MAC address for a specific device located at this site
+    - The name of a specific device located at this site (can be an OT, IT, network, enterprise IoT device, and so on)
 
     A list of suggested sites appears in the table.
 
-1. If you don't know any of the OT device addresses:
+1. If you don't know any of the site's device addresses:
 
-    1. Select **Show all suggested sites**.
+    1. Select **Show all suggestions**.
 
-        A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the OT devices in that location.
+        A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the devices in that location.
 
     1. Open the location and check that at least one of these devices exists at your site.
 
-        Check each location, because Defender for IoT might list your OT devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified OT device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
+        Check each location, because Defender for IoT might list your devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
 
 1. Review the devices and select the suggested sites to associate with the site. You might need to select more than one suggested site.
 

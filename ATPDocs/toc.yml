@@ -1,0 +1,283 @@
+items:
+- name: Microsoft Defender for Identity Documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: Welcome to Defender for Identity
+    href: what-is.md
+  - name: What's new?
+    href: whats-new.md
+  - name: Deploy and monitor for Zero Trust
+    href: zero-trust.md
+  - name: System architecture
+    href: architecture.md
+  - name: Defender for Identity in Microsoft Defender XDR
+    href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/bread/toc.json&toc=/defender-for-identity/TOC.json
+  - name: Defender for Identity for US Government
+    href: us-govt-gcc-high.md
+- name: Deploy
+  expanded: true
+  items:
+  - name: Quick installation guide
+    href: deploy/quick-installation-guide.md
+  - name: Deployment overview
+    href: deploy/deploy-defender-identity.md
+  - name: Plan and prepare
+    items:
+    - name: Defender for Identity prerequisites
+      href: deploy/prerequisites.md
+    - name: Plan your Defender for Identity capacity
+      href: deploy/capacity-planning.md
+  - name: Deploy Defender for Identity
+    items:
+    - name: Configure connectivity settings
+      href: deploy/configure-proxy.md
+      displayName: proxy
+    - name: Test connectivity settings
+      href: deploy/test-connectivity.md
+    - name: Download the Defender for Identity sensor
+      href: deploy/download-sensor.md
+    - name: Install the Defender for Identity sensor
+      href: deploy/install-sensor.md
+    - name: Configure the Defender for Identity sensor
+      href: deploy/configure-sensor-settings.md
+  - name: Post-deployment configuration
+    items:
+    - name: Configure event collection
+      items:
+      - name: Event collection overview 
+        href: deploy/event-collection-overview.md
+      - name: Configure audit policies for Windows event logs
+        href: deploy/configure-windows-event-collection.md
+    - name: Roles and permissions
+      href: role-groups.md
+    - name: Configure a Directory Service account
+      items:
+      - name: Overview
+        href: deploy/directory-service-accounts.md
+        displayName: Directory Service Account, DSA
+      - name: Configure a DSA with a gMSA
+        href: deploy/create-directory-service-account-gmsa.md
+    - name: Configure remote calls to SAM
+      href: deploy/remote-calls-sam.md
+  - name: Extra deployment scenarios
+    items:
+    - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
+      href: deploy/active-directory-federation-services.md
+    - name: Configure action accounts
+      href: deploy/manage-action-accounts.md
+    - name: Deploy for multiple Active Directory forests
+      href: deploy/multi-forest.md
+    - name: Configure a standalone sensor
+      items:
+      - name: Prerequisites for a standalone sensor
+        href: deploy/prerequisites-standalone.md
+      - name: Configure port mirroring
+        href: deploy/configure-port-mirroring.md
+        displayName: standalone
+      - name: Configure Windows Event Forwarding
+        href: deploy/configure-event-forwarding.md
+        displayName: standalone
+      - name: Listen for SIEM events
+        href: deploy/configure-event-collection.md
+        displayName: standalone
+    - name: Activate Defender for Identity capabilities on your domain controller
+      href: deploy/activate-capabilities.md
+- name: Manage
+  items:
+  - name: View the ITDR dashboard
+    href: dashboard.md
+  - name: View and manage health issues
+    href: health-alerts.md
+  - name: Defender for Identity reports
+    href: reports.md
+  - name: Settings
+    items:
+    - name: About page
+      href: settings-about.md
+    - name: Manage and update sensors
+      href: sensor-settings.md
+    - name: Uninstall a sensor
+      href: uninstall-sensor.md
+    - name: VPN integration
+      href: vpn-integration.md
+    - name: Set entity tags
+      href: entity-tags.md
+    - name: Configure detection exclusions
+      href: exclusions.md
+    - name: Automated response exclusions
+      href: automated-response-exclusions.md
+    - name: Email and syslog notifications
+      href: notifications.md
+    - name: Adjust alert thresholds
+      href: advanced-settings.md
+      displayName: advanced settings
+  - name: Troubleshooting
+    items:
+    - name: Troubleshooting known issues
+      href: troubleshooting-known-issues.md
+    - name: Troubleshoot using logs
+      href: troubleshooting-using-logs.md
+- name: Investigate and respond
+  items:
+  - name: Assets
+    items:
+    - name: Investigate assets
+      href: investigate-assets.md
+  - name: Lateral movement paths
+    items:
+    - name: Understand and investigate lateral movement paths
+      href: understand-lateral-movement-paths.md
+  - name: Alerts
+    items:
+    - name: Alerts overview
+      href: alerts-overview.md
+    - name: Understanding security alerts
+      href: understanding-security-alerts.md
+    - name: Investigate security alerts
+      href: manage-security-alerts.md
+    - name: Monitored activities
+      href: monitored-activities.md
+    - name: Understanding Network Name Resolution (NNR)
+      href: nnr-policy.md
+    - name: Reconnaissance and discovery alerts
+      href: reconnaissance-discovery-alerts.md
+    - name: Persistence and privilege escalation alerts
+      href: persistence-privilege-escalation-alerts.md
+    - name: Credential access alerts
+      href: credential-access-alerts.md
+    - name: Lateral movement alerts
+      href: lateral-movement-alerts.md
+    - name: Other alerts
+      href: other-alerts.md
+  - name: Remediation
+    items:
+    - name: Remediation actions
+      href: remediation-actions.md
+  - name: Security posture
+    items:
+    - name: Accounts with non-default Primary Group ID
+      href: accounts-with-non-default-pgid.md
+    - name: Built-in Active Directory Guest account is enabled
+      href: built-in-active-directory-guest-account-is-enabled.md
+    - name: Ensure privileged accounts are not delegated
+      href: ensure-privileged-accounts-with-sensitive-flag.md
+    - name: Change Domain Controller computer account old password
+      href: domain-controller-account-password-change.md
+    - name: Change password of built-in domain Administrator account
+      href: change-password-domain-administrator-account.md
+    - name: GPO assigns unprivileged identities to local groups with elevated privileges
+      href: gpo-assigns-unprivileged-identities.md
+    - name: Overview
+      href: security-assessment.md
+      displayName: security posture, security assessment
+    - name: Reversible passwords found in GPOs
+      href: reversible-passwords-group-policy.md
+    - name: GPO can be modified by unprivileged accounts
+      href: modified-unprivileged-accounts-gpo.md
+    - name: Change password for krbtgt account
+      href: change-password-krbtgt-account.md
+    - name: Unsafe permissions on the DnsAdmins group
+      href: unsafe-permissions-dns-admins-group.md
+    - name: Change password for Microsoft Entra seamless SSO account
+      href: change-password-microsoft-entra-seamless-single-sign-on.md
+      displayName: Microsoft Entra connect
+    - name: "Rotate password for Microsoft Entra Connect connector account "
+      href: rotate-password-microsoft-entra-connect.md
+      displayName: Microsoft Entra Connect
+    - name: Admin SDHolder permissions
+      href: security-assessment-remove-suspicious-access-rights.md
+    - name: DCSync permissions
+      href: security-assessment-non-admin-accounts-dcsync.md
+    - name: Deploy Defender for Identity
+      href: security-assessment-deploy-defender-for-identity.md
+    - name: Domain controllers with Print spooler service available assessment
+      href: security-assessment-print-spooler.md
+    - name: Dormant entities in sensitive groups assessment
+      href: security-assessment-dormant-entities.md
+    - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
+      href: security-assessment-enforce-encryption-rpc.md
+    - name: Entities exposing credentials in clear text assessment
+      href: security-assessment-clear-text.md
+    - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
+      href: remove-replication-permissions-microsoft-entra-connect.md
+      displayName: Microsoft Entra Connect
+    - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
+      href: security-assessment-insecure-adcs-certificate-enrollment.md
+    - name: LAPS usage assessment
+      href: security-assessment-laps.md
+    - name: Misconfigured Certificate Authority ACL  (ESC7)
+      href: security-assessment-edit-misconfigured-ca-acl.md
+    - name: Misconfigured certificate templates ACL (ESC4)
+      href: security-assessment-edit-misconfigured-acl.md
+    - name: Misconfigured certificate templates owner  (ESC4)
+      href: security-assessment-edit-misconfigured-owner.md
+    - name: Misconfigured enrollment agent certificate template  (ESC3)
+      href: security-assessment-edit-misconfigured-enrollment-agent.md
+    - name: Overly permissive certificate template with privileged EKU (ESC2)
+      href: security-assessment-edit-overly-permissive-template.md
+    - name: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
+      href: prevent-certificate-enrollment-esc15.md
+    - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
+      href: security-assessment-prevent-users-request-certificate.md
+    - name: Remove local admins on identity assets
+      href: security-assessment-remove-local-admins.md      
+    - name: Riskiest lateral movement paths
+      href: security-assessment-riskiest-lmp.md
+    - name: Unmonitored domain controllers
+      href: security-assessment-unmonitored-domain-controller.md
+    - name: Unsecure account attributes
+      href: security-assessment-unsecure-account-attributes.md
+    - name: Unsecure domain configurations
+      href: security-assessment-unsecure-domain-configurations.md
+    - name: Unsecure Kerberos delegation assessment
+      href: security-assessment-unconstrained-kerberos.md
+    - name: Unsecure SID History attributes
+      href: security-assessment-unsecure-sid-history-attribute.md
+    - name: Vulnerable Certificate Authority setting (ESC6)
+      href: security-assessment-edit-vulnerable-ca-setting.md
+    - name: Weak cipher usage assessment
+      href: security-assessment-weak-cipher.md
+- name: Reference
+  items:
+  - name: Operations guide
+    items:
+    - name: Overview
+      displayName: operations guide
+      href: ops-guide/ops-guide.md
+    - name: Daily activities
+      href: ops-guide/ops-guide-daily.md
+    - name: Weekly activities
+      href: ops-guide/ops-guide-weekly.md
+    - name: Monthly activities
+      href: ops-guide/ops-guide-monthly.md
+    - name: Quarterly / Ad-hoc activities
+      href: ops-guide/ops-guide-quarterly.md
+  - name: Frequently asked questions
+    href: technical-faq.yml
+  - name: SIEM log reference
+    href: cef-format-sa.md
+  - name: PowerShell
+    href: /powershell/defenderforidentity/overview-defenderforidentity
+  - name: Support
+    href: support.md
+  - name: Defender for Identity data security and privacy
+    href: privacy-compliance.md
+  - name: Security baseline
+    href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
+  - name: What's new archive
+    href: whats-new-archive.md
+  - name: Migrate from Advanced Threat Analytics (ATA)
+    href: migrate-from-ata-overview.md
+- name: Microsoft Defender XDR Docs
+  items:
+  - name: Microsoft Defender XDR
+    href: /microsoft-365/security/defender/
+  - name: Microsoft Defender for Office 365
+    href: /microsoft-365/security/office-365-security/
+  - name: Microsoft Defender for Endpoint
+    href: /microsoft-365/security/defender-endpoint/
+  - name: Microsoft Defender for Cloud Apps
+    href: /cloud-app-security/
+  - name: Microsoft Defender Vulnerability Management
+    href: /microsoft-365/security/defender-vulnerability-management/

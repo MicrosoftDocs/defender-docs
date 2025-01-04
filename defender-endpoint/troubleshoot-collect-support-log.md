@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 11/07/2024
+ms.date: 11/18/2024
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -31,13 +31,13 @@ This article provides instructions on how to run the tool via Live Response on W
 
 ## Windows
 
-1. Download and fetch the required scripts available from within the **Tools** subdirectory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer). 
+1. Download and fetch the required scripts available from within the **Tools** subdirectory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/MDEClientAnalyzerPreview). 
 
    For example, to get the basic sensor and device health logs, fetch `..\Tools\MDELiveAnalyzer.ps1`.
    - If you require additional logs related to Microsoft Defender Antivirus, then use `..\Tools\MDELiveAnalyzerAV.ps1`.
    - If you require [Microsoft Endpoint Data Loss Prevention](/purview/endpoint-dlp-learn-about) related logs, then use `..\Tools\MDELiveAnalyzerDLP.ps1`.
    - If you require network and [Windows Filter Platform](/windows-hardware/drivers/network/windows-filtering-platform-architecture-overview) related logs, then use `..\Tools\MDELiveAnalyzerNet.ps1`.
-   - If you require [Process Monitor](/sysinternals/downloads/procmon) logs, then use `..\Tools\MDELiveAnalyzerDLP.ps1`.
+   - If you require [Process Monitor](/sysinternals/downloads/procmon) logs, then use `..\Tools\MDELiveAnalyzerAppCompat.ps1`.
 
 2. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
@@ -67,7 +67,7 @@ This article provides instructions on how to run the tool via Live Response on W
    
 ### Additional information
 
-- The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/Betamdeanalyzer>.
+- The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/MDEClientAnalyzerPreview>.
 
 - If you can't allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
 

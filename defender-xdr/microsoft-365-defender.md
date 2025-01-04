@@ -43,6 +43,9 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 
 With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 
+> [!NOTE]
+> Microsoft Defender XDR correlates signals from Microsoft security products that you have licensed and provisioned access to.
+
 <a name='microsoft-365-defender-protection'></a>
 
 ## Microsoft Defender XDR protection

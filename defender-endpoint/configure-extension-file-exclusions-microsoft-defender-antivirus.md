@@ -4,7 +4,7 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 09/10/2024
+ms.date: 11/21/2024
 author: denisebmsft
 ms.author: deniseb
 ms.topic: conceptual
@@ -57,7 +57,7 @@ The following table lists some examples of exclusions based on file extension an
 |Exclusion|Examples|Exclusion list|
 |---|---|---|
 |Any file with a specific extension|All files with the specified extension, anywhere on the machine. <br/><br/> Valid syntax: `.test` and `test`|Extension exclusions|
-|Any file under a specific folder|All files under the `c:\test\sample` folder|File and folder exclusions|
+|Any file or folder under a specific folder|All files and folders under the `c:\test\sample` folder|File and folder exclusions|
 |A specific file in a specific folder|The file `c:\sample\sample.test` only|File and folder exclusions|
 |A specific process|The executable file `c:\test\process.exe`|File and folder exclusions|
 

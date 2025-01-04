@@ -100,7 +100,7 @@ We currently ingest and process supported data from first-party Microsoft produc
 
 Microsoft product data is retained for no less than 14 days in the enterprise exposure graph and/or Microsoft Security Exposure Management. Only the latest data snapshot received from Microsoft products is retained; we do not store historical data.
 
-Some enterprise exposure graph and/or Microsoft Security Exposure Management experiences data is available for querying via Advanced Hunting and is subject to [Advanced Hunting service limitations](../../defender-xdr/advanced-hunting-limits.md).
+Some enterprise exposure graph and/or Microsoft Security Exposure Management experiences data is available for querying via Advanced Hunting and is subject to Advanced Hunting service limitations.
 
 We reserve the right to modify some or all of these parameters in the future, including:
 

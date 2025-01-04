@@ -1,7 +1,7 @@
 ---
 title: Protect your Egnyte environment (Preview) | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Egnyte app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 12/12/2024
 ms.topic: how-to
 ---
 # How Defender for Cloud Apps helps protect your Egnyte environment
@@ -77,9 +77,9 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 >[!NOTE]
->Microsoft recommends using a short lived access token. Egnyte doesn't currently support short lived tokens. We recommend our customers to refresh the access token every 6 months as a security best practice.
->To refresh the access token, revoke the old token by following [Revoking an oAuth token](https://developers.egnyte.com/docs/read/Public_API_Authentication#Revoking-an-OAuth-Token).
->Once the old token is revoked, reconnect the Egnyte connector by following the process documented above.
+>- Microsoft recommends using a short lived access token. Egnyte doesn't currently support short lived tokens. We recommend our customers to refresh the access token every 6 months as a security best practice. To refresh the access token, revoke the old token by following [Revoking an oAuth token](https://developers.egnyte.com/docs/read/Public_API_Authentication#Revoking-an-OAuth-Token). Once the old token is revoked, reconnect the Egnyte connector by following the process documented above.
+>
+>- Defender for Cloud Apps intentionally provides a lower rate limit than Egnyte's maximum to avoid exceeding the API constraints. For more infomration, see the relevant Egnyte documentation: [Rate limiting](https://developers.egnyte.com/docs/read/Best_Practices) | [Audit Reporting API v2](https://developers.egnyte.com/docs/read/Audit_Reporting_API_V2)
 
 ## Next steps
 

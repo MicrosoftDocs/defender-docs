@@ -1,18 +1,18 @@
 ### YamlMime:Landing
 
 title: Microsoft's unified security operations platform # < 60 chars
-summary: The unified security operations platform brings together the full capabilities of Microsoft Sentinel, Defender XDR, and generative AI. # < 160 chars
+summary: Bring together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Microsoft Defender portal. # < 160 chars
 
 metadata:
   title: Microsoft's unified security operations platform documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: The unified security operations platform brings together the full capabilities of Microsoft Sentinel, Defender XDR, and generative AI. # Required; article description that is displayed in search results. < 160 chars.
+  description: Bring together the full capabilities of Microsoft Sentinel, Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: unified-secops-platform #Required; use either service or product per approved list. 
   ms.subservice: usx
   ms.topic: landing-page # Required
   ms.collection: usx-security # Optional; Remove if no collection is used.
   author: cwatson-cat #Required; your GitHub user alias, with correct capitalization.
   ms.author: cwatson #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/30/2024 #Required; mm/dd/yyyy format.
+  ms.date: 12/03/2024 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -24,9 +24,62 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is the Microsoft security operations platform?
-            url: /defender-xdr/microsoft-365-defender
+          - text: "What is Microsoft's unified SecOps platform?"
+            url: overview-unified-security.md
+          - text: "Microsoft Defender portal overview"
+            url: overview-defender-portal.md
       - linkListType: whats-new
         links:
-          - text: What's new in the Microsoft security operations platform
-            url: /defender-xdr/unified-secops-platform/whats-new
+          - text: "What's new in Microsoft's unified SecOps platform"
+            url: whats-new.md
+
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: "Plan your deployment"
+            url: overview-plan.md
+          - text: "Deploy Microsoft's unified SecOps platform"
+            url: overview-deploy.md
+
+    # Card 
+  - title: Prevent, detect, and hunt for threats
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: "Security posture management and risk reduction"
+            url: reduce-risk-overview.md
+          - text: "Threat detection in Microsoft's unified SecOps platform"
+            url: detect-threats-overview.md
+          - text: "Hunting in Microsoft's unified SecOps platform"
+            url: hunting-overview.md
+          - text: "Advanced hunting"
+            url: /defender-xdr/advanced-hunting-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+  
+  # Card          
+  - title: Investigate and respond
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: "Incidents and alerts"
+            url: /defender-xdr/incidents-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json   
+          - text: "Alert correlation and incident merging"
+            url: /defender-xdr/alerts-incidents-correlation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - text: "Microsoft Copilot in Microsoft Defender"
+            url: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - text: "Automatic attack disruption"
+            url: /defender-xdr/automatic-attack-disruption?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+
+# Card 
+  - title: Optimize and manage security operations
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: "Optimize your SOC"
+            url: /azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal&branch=main?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json   
+          - text: "Manage multiple tenants"
+            url: /defender-xdr/mto-overview?branch=main?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+
+
+

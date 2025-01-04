@@ -68,7 +68,8 @@ There are two major factors that determine which policy is applied to a message:
 
   <sup>\*</sup> Defender for Office 365 only.
 
-  The priority order matters if you have the same recipient intentionally or unintentionally included in multiple policies, because *only* the first policy of that type (anti-spam, anti-malware, anti-phishing, etc.) is applied to that recipient, regardless of how many other policies that the recipient is included in. There's never a merging or combining of the settings in multiple policies for the recipient. The recipient is unaffected by the settings of the remaining policies of that type.
+  > [!IMPORTANT]
+  > The priority order matters if you have the same recipient intentionally or unintentionally included in multiple policies, because *only* the first policy of that type (anti-spam, anti-malware, anti-phishing, etc.) is applied to that recipient, regardless of how many other policies that the recipient is included in. There's never a merging or combining of the settings in multiple policies for the recipient. The recipient is unaffected by the settings of the remaining policies of that type.
 
 For example, the group named "Contoso Executives" is included in the following policies:
 

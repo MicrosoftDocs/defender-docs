@@ -72,6 +72,7 @@ In the following applications, we encountered scenarios where browsing to a link
 - Workplace from Meta
 - ServiceNow
 - Workday
+- Box
 
 ### File upload limitations
 

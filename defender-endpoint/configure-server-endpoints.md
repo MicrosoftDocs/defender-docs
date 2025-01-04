@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 05/20/2024
+ms.date: 12/13/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -23,12 +23,8 @@ ms.subservice: onboard
 
 **Applies to:**
 
-- Windows Server 2016 and Windows Server 2012 R2
-- Windows Server Semi-Annual Enterprise Channel
-- Windows Server 2019 and later
-- Windows Server 2019 core edition
-- Windows Server 2022
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configserver-abovefoldlink)
 
@@ -44,7 +40,7 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 You'll need to complete the following general steps to successfully onboard servers.
 
-:::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices" lightbox="media/server-onboarding-tools-methods.png":::
+:::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
 
 > [!NOTE]
 > Windows Hyper-V Server editions are not supported.
@@ -56,7 +52,7 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 > [!NOTE]
 > For Windows Server 2016 and Windows Server 2012 R2, you can either manually install/upgrade the modern, unified solution on these machines, or use the integration to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. More information about making the switch at [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
 > 
-- When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
+> - When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
 > 
 > - If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
 > - Once configured, you cannot change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
@@ -235,7 +231,7 @@ This script can be used in various scenarios, including those scenarios describe
 8. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. The [installer script](server-migration.md#installer-script) handles the installation, and immediately perform the onboarding step after installation completes. Select *C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe* then provide the arguments:
 
     ```powershell
-     -ExecutionPolicy RemoteSigned \\servername-or-dfs-space\share-name\install.ps1 -OnboardingScript \\servername-or-dfs-space\share-name\windowsdefenderatponboardingscript.cmd
+    -ExecutionPolicy RemoteSigned \\servername-or-dfs-space\share-name\install.ps1 -OnboardingScript \\servername-or-dfs-space\share-name\windowsdefenderatponboardingscript.cmd
     ```
 
     > [!NOTE]
@@ -261,7 +257,7 @@ The following steps are only applicable if you're using a third-party anti-malwa
     - Type: `REG_DWORD`
     - Value: `1`
 
-   :::image type="content" source="media/atp-verify-passive-mode.png" alt-text="The passive mode verification result" lightbox="media/atp-verify-passive-mode.png":::
+   :::image type="content" source="media/atp-verify-passive-mode.png" alt-text="Screenshot of the passive mode verification result.":::
 
 #### Known issues and limitations in the new, unified solution package for Windows Server 2016 and Windows Server 2012 R2
 

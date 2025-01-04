@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/18/2024
+ms.date: 12/03/2024
 
 ---
 
@@ -23,6 +23,25 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## December 2024
+
+### New predefined classifications
+
+The following predefined classification rules were added to the critical assets list:
+
+| Classification                                       | Description                                                  |
+| :--------------------------------------------------- | :----------------------------------------------------------- |
+| Locked Azure Kubernetes Service cluster              | This rule applies to Azure Kubernetes Service clusters that are safeguarded by a lock. |
+| Premium tier Azure Kubernetes Service cluster        | This rule applies to premium tier Azure Kubernetes Service clusters. |
+| Azure Kubernetes Service cluster with multiple nodes | This rule applies to Azure Kubernetes Service clusters with multiple nodes. |
+| Azure Arc Kubernetes cluster with multiple nodes     | This rule applies to Azure Arc clusters with multiple nodes. |
+
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
+
+### New documentation library for Microsoft's unified security operations platform
+
+Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
 
 ## November 2024
 
@@ -48,6 +67,29 @@ For more information, see, [Predefined classifications](predefined-classificatio
 We are excited to announce the general availability of Microsoft Security Exposure Management. This powerful tool helps organizations focus on their most critical exposures and act swiftly. By integrating security insights across the entire digital estate, it provides a comprehensive view of risk posture, enabling faster, more informed decisions to reduce exposure before attackers can exploit it.
 
 With this GA release, you can now build and enhance a Continuous Threat Exposure Management (CTEM) program, continuously identifying, prioritizing, and mitigating risks across your digital landscape.
+
+### Attack path enhancements
+
+##### **Hybrid attack paths: On-Prem to Cloud**
+
+We now support the discovery and visualization of hybrid attack paths that originate from on-premises environments and traverse into cloud infrastructures. We have introduced a new **Type column** for the attack paths to display the support for hybrid paths that transition between
+on-premises and cloud environments, or vice versa. This feature equips security teams to:
+
+- **Identify cross-environment attack vectors:** See how vulnerabilities in on-prem environments can be leveraged to target assets in the cloud.
+- **Prioritize remediation effectively:** Gain clarity on the potential risks to critical cloud assets stemming from your hybrid infrastructure.
+- **Enhance hybrid defense strategies:** Use these insights to strengthen both on-prem and cloud security postures.
+
+This capability bridges a critical gap in securing hybrid environments by offering end-to-end visibility into interconnected attack paths.
+
+##### **DACL-based path analysis**
+
+Our attack path calculations now include support for **Discretionary Access Control Lists (DACLs)**, providing a more accurate representation of potential attack paths by incorporating group-based permissions. This enhancement enables defenders to:
+
+- Make more informed decisions when addressing risks related to permission structures.
+- View risks in the environment the same way attackers do
+- Identify low hanging fruit chokepoints that significantly expose the environment to risk
+ 
+For more information, see, [Review attack paths](review-attack-paths.md)
 
 ### External data connectors
 
@@ -125,6 +167,8 @@ The following predefined classification rule was added to the critical assets li
 | Classification                                               | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Hyper-V Server**                                                 | This rule applies to devices identified as Hyper-V servers within a domain. These servers are essential for running and managing virtual machines within your infrastructure, serving as the core platform for their creation and management. |
+
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
 ### Enhanced visibility for scoped users
 

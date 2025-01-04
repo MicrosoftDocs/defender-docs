@@ -3,7 +3,7 @@ title: Protect important folders from ransomware from encrypting your files with
 description: Files in default folders can be protected from being changed by malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 11/06/2024
+ms.date: 11/19/2024
 author: denisebmsft
 ms.author: deniseb
 audience: ITPro
@@ -40,7 +40,7 @@ search.appverid: met150
 Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using the Windows Security App, Microsoft Endpoint Configuration Manager, or Intune (for managed devices). Controlled folder access is supported on Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11, 
 
 > [!NOTE]
-> Scripting engines are not trusted and you cannot allow them access to controlled protected folders. For example, PowerShell is not trusted by controlled folder access, even if you allow with [certificate and file indicators](indicator-certificates.md).
+> Scripting engines like PowerShell are not trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](/defender-endpoint/customize-controlled-folders).  
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 

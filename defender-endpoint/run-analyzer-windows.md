@@ -32,7 +32,7 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
 ## Option 2: Run MDE Client Analyzer locally
 
-1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [Beta MDE Client Analyzer tool](https://aka.ms/BetaMDEAnalyzer) to the Windows device you want to investigate.
+1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [Beta MDE Client Analyzer tool](https://aka.ms/MDEClientAnalyzerPreview) to the Windows device you want to investigate.
 
    The file is saved to your Downloads folder by default.
 

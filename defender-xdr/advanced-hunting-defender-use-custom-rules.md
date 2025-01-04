@@ -43,8 +43,23 @@ For editable functions, more options are available when you select the vertical 
 - **Edit details** – opens the function side pane to allow you to edit details about the function (except folder names for Sentinel functions)
 - **Delete** – deletes the function
 
+### Use adx() operator for Azure Data Explorer queries (Preview)
+Use the `adx()` operator to query tables stored in Azure Data Explorer. Read [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview) for more details.
+
+This feature was previously only available in log analytics in Microsoft Sentinel. Users can now use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
+
+In the query editor, enter the query in the following format:
+```Kusto
+adx('<Cluster URI>/<Database Name>').<Table Name>
+```
+
+For example, to get the first 10 rows of data from the `StormEvents` table stored in a certain URI:
+
+:::image type="content" source="/defender-xdr/media/adx-sample.png" alt-text="Screenshot of adx operator in advanced hunting." lightbox="/defender-xdr/media/adx-sample.png":::
+
+
 ### Use arg() operator for Azure Resource Graph queries
-The *arg()* operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like. 
+The `arg()` operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like. 
 
 This feature was previously only available in log analytics in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works over Microsoft Sentinel data (that is, Defender XDR tables are not supported). This allows users to use the operator in advanced hunting without needing to manually open a Microsoft Sentinel window. 
 

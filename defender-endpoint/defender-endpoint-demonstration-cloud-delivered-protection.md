@@ -14,17 +14,15 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: ngp
-ms.date: 10/21/2022
+ms.date: 11/22/2024
 ---
 
 # Cloud-delivered protection demonstration
 
 **Applies to:**
 
-- 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
@@ -39,7 +37,10 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
 ### Scenario
 
-1. Download the [test file](https://aka.ms/ioavtest). Important: The test file isn't malicious, it's just a harmless file simulating a virus.
+1. Download and extract the [zipped folder that contains the test file](https://go.microsoft.com/fwlink/?linkid=2298135). The password is *infected*.
+
+   > [!IMPORTANT]
+   > The test file isn't malicious, it's just a harmless file simulating a virus.
 
 2. If you see file blocked by Microsoft Defender SmartScreen, select on "View downloads" button.
 

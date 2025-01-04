@@ -2,8 +2,7 @@
 title: Key infrastructure requirements before enrolling in the Microsoft Defender Experts for Hunting service
 ms.reviewer:
 description: This section outlines the key infrastructure requirements you must meet and important information on data access and compliance
-ms.service: defender-experts
-ms.subservice: dex-hunting
+ms.service: defender-experts-for-hunting
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium

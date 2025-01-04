@@ -129,12 +129,12 @@ The available device properties to use as filters vary based on the device inven
 
 |Property|Tabs|Description|
 |---|---|---|
-|**Antivirus status**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The antivirus status of the device. The available values are: <ul><li>**Disabled**</li><li>**Not updated**</li><li>**Unknown**</li></ul>|
 |**Cloud platforms**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The cloud platform that the device belongs to. The available values are: <ul><li>**Azure**</li><li>**AWS**</li><li>**GCP**</li><li>**Arc**</li><li>**None**</li></ul>|
 |**Criticality level**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The assigned criticality level of the device (how critical a device is for your organization). The available values are: <ul><li>**Very high**: The device is considered a business critical asset</li><li>**High**</li><li>**Medium**</li><li>**Low**</li><li>**None**</li></ul> <br/> For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management).|
 |**Device category**|**All devices**|The category value assigned to the device. Enter a value or select from the available values: <ul><li>**BMS**</li><li>**Computers and Mobile**</li><li>**IoT**</li><li>**Medical**</li><li>**Network Device**</li><li>**OT**</li><li>**Unknown**</li></ul>|
 |**Device subtype**|<ul><li>**All devices**</li><li>**IoT/OT**</li></ul>|The subtype value assigned to the device. Enter a value or select an available value (for example, **Video conference**).|
 |**Device type**|<ul><li>**All devices**</li><li>**IoT/OT**</li></ul>|The type value assigned to the device. Enter a value or select an available value (for example, **Audio and Video**).|
+|**Device role**|All|The specific role of the device within the organization. For detailed descriptions of each role, see [Predefined classifications](/security-exposure-management/predefined-classification-rules-and-levels).|
 |**Device value**|All|The assigned value of the device. The available values are **High** and **Low**.|
 |**Discovery sources**|All|The source reporting on the device.|
 |**Exclusion state**|All|The available values are **Not excluded** and **Excluded**. For more information, see [Exclude devices](exclude-devices.md).|
@@ -158,115 +158,117 @@ The available device properties to use as filters vary based on the device inven
 
 ## Use columns to customize the device inventory views
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (*):
 
 - **All devices** tab:
-  - **Name**<sup\*</sup>
-  - **IP**<sup\*</sup>
+  - **Name***
+  - **IP***
   - **MAC address**
-  - **Criticality level**<sup\*</sup>
-  - **Device category**<sup\*</sup>
-  - **Device type**<sup\*</sup>
+  - **Criticality level***
+  - **Device category***
+  - **Device role**
+  - **Device type***
   - **Device subtype**
   - **Vendor**
   - **Model**
-  - **Domain**<sup\*</sup>
-  - **Device AAD id**<sup\*</sup>
-  - **Risk level**<sup\*</sup>
-  - **Exposure level**<sup\*</sup>
-  - **OS platform**<sup\*</sup>
+  - **Domain***
+  - **Device AAD id***
+  - **Risk level***
+  - **Exposure level***
+  - **OS platform***
   - **OS distribution**
-  - **OS version**<sup\*</sup>
-  - **Sensor health state**<sup\*</sup>
-  - **Onboarding status**<sup\*</sup>
+  - **OS version***
+  - **Sensor health state***
+  - **Onboarding status***
   - **Discovery sources**
   - **First seen**
-  - **Last device update**<sup\*</sup>
-  - **Tags**<sup\*</sup>
+  - **Last device update***
+  - **Tags***
   - **Exclusion state**
-  - **Managed by**<sup\*</sup>
-  - **Managed by status**<sup\*</sup>
-  - **Mitigation status**<sup\*</sup>
-  - **Cloud platforms**<sup\*</sup>
+  - **Managed by***
+  - **Managed by status***
+  - **Mitigation status***
+  - **Cloud platforms***
 
   Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
 
 - **Computers & mobile** tab:
-  - **Name**<sup\*</sup>
-  - **Domain**<sup\*</sup>
-  - **Device AAD id**<sup\*</sup>
+  - **Name***
+  - **Domain***
+  - **Device AAD id***
+  - **Device role**
   - **Device type**
   - **Device subtype**
-  - **Risk level**<sup\*</sup>
-  - **Exposure level**<sup\*</sup>
-  - **OS platform**<sup\*</sup>
+  - **Risk level***
+  - **Exposure level***
+  - **OS platform***
   - **OS distribution**
-  - **Windows version**<sup\*</sup>
+  - **Windows version***
   - **MAC address**
-  - **Criticality level**<sup\*</sup>
-  - **Sensor health state**<sup\*</sup>
-  - **Onboarding status**<sup\*</sup>
+  - **Criticality level***
+  - **Sensor health state***
+  - **Onboarding status***
   - **Discovery sources**
-  - **Last device update**<sup\*</sup>
+  - **Last device update***
   - **First seen**
-  - **Tags**<sup\*</sup>
+  - **Tags***
   - **Exclusion state**
-  - **Managed by**<sup\*</sup>
-  - **Managed by status**<sup\*</sup>
-  - **Mitigation status**<sup\*</sup>
-  - **Cloud platforms**<sup\*</sup>
+  - **Managed by***
+  - **Managed by status***
+  - **Mitigation status***
+  - **Cloud platforms***
 
 - **Network devices** tab
-  - **IP**<sup>\*</sup>
+  - **IP***
   - **MAC address**
-  - **Vendor**<sup>\*</sup>
-  - **Model**<sup>\*</sup>
-  - **Name**<sup>\*</sup>
+  - **Vendor***
+  - **Model***
+  - **Name***
   - **Discovery sources**
   - **Domain**
   - **Device type**
   - **Device subtype**
-  - **Risk level**<sup>\*</sup>
-  - **Exposure level**<sup>\*</sup>
-  - **OS distribution**<sup>\*</sup>
-  - **OS version**<sup>\*</sup>
-  - **Last device update**<sup>\*</sup>
+  - **Risk level***
+  - **Exposure level***
+  - **OS distribution***
+  - **OS version***
+  - **Last device update***
   - **First seen**
-  - **Tags**<sup>\*</sup>
+  - **Tags***
   - **Exclusion state**
 
 - **IoT/OT devices** tab
-  - **IP**<sup>\*</sup>
-  - **MAC address**<sup>\*</sup>
-  - **Name**<sup>\*</sup>
-  - **Device type**<sup>\*</sup>
-  - **Device subtype**<sup>\*</sup>
-  - **Vendor**<sup>\*</sup>
-  - **Model**<sup>\*</sup>
-  - **Risk level**<sup>\*</sup>
-  - **Exposure level**<sup>\*</sup>
+  - **IP***
+  - **MAC address***
+  - **Name***
+  - **Device type***
+  - **Device subtype***
+  - **Vendor***
+  - **Model***
+  - **Risk level***
+  - **Exposure level***
   - **Discovery sources**
-  - **OS distribution**<sup>\*</sup>
-  - **OS version**<sup>\*</sup>
+  - **OS distribution***
+  - **OS version***
   - **First seen**
-  - **Last device update**<sup>\*</sup>
+  - **Last device update***
   - **Domain**
-  - **Tags**<sup>\*</sup>
+  - **Tags***
   - **Exclusion state**
 
 - **Uncategorized devices** tab:
-  - **Name**<sup>\*</sup>
-  - **Vendor**<sup>\*</sup>
-  - **IP**<sup>\*</sup>
+  - **Name***
+  - **Vendor***
+  - **IP***
   - **Discovery sources**
   - **MAC address**
   - **Risk level**
   - **Exposure level**
-  - **OS distribution**<sup>\*</sup>
-  - **OS version**<sup>\*</sup>
-  - **Last device update**<sup>\*</sup>
+  - **OS distribution***
+  - **OS version***
+  - **Last device update***
   - **First seen**
-  - **Tags**<sup>\*</sup>
+  - **Tags***
   - **Exclusion state**
 
 > [!TIP]

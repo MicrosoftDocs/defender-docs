@@ -1,11 +1,11 @@
 ---
 title: Take response actions on a device in Microsoft Defender for Endpoint
-description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an av scan, and restricting app execution.
+description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 09/09/2024
+ms.date: 12/03/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -33,8 +33,8 @@ Quickly respond to detected attacks by isolating devices or collecting an invest
 Response actions run along the top of a specific device page and include:
 
 - Manage tags
-- Initiate Automated Investigation
-- Initiate Live Response Session
+- Initiate automated investigation
+- Initiate live response Session
 - Collect investigation package
 - Run antivirus scan
 - Restrict app execution
@@ -43,11 +43,10 @@ Response actions run along the top of a specific device page and include:
 - Consult a threat expert
 - Action center
 
-[![Image of response actions.](media/response-actions.png)](media/response-actions.png#lightbox)
+[![Screenshot that shows response actions across the top of a device page in the Microsoft Defender portal.](media/response-actions.png)](media/response-actions.png#lightbox)
 
-> [!IMPORTANT]
+> [!NOTE]
 > [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) includes only the following manual response actions:
->
 > - Run antivirus scan
 > - Isolate device
 > - Stop and quarantine a file
@@ -59,12 +58,12 @@ Response actions run along the top of a specific device page and include:
 
  You can find device pages from any of the following views:
 
-- **Alerts queue** - Select the device name beside the device icon from the alerts queue.
-- **Devices list** - Select the heading of the device name from the devices list.
-- **Search box** - Select Device from the drop-down menu and enter the device name.
+- **Alerts queue**: Select the device name beside the device icon from the alerts queue.
+- **Devices list**: Select the heading of the device name from the devices list.
+- **Search box**: Select **Device** from the drop-down menu and enter the device name.
 
 > [!IMPORTANT]
-> For information on availability and support for each response action, please refer to the supported/minimum operating system requirements found under each feature.
+> For information on availability and support for each response action, see the supported minimum operating system requirements for each feature.
 
 ## Manage tags
 
@@ -72,9 +71,9 @@ Add or manage tags to create a logical group affiliation. Device tags support pr
 
 For more information on device tagging, see [Create and manage device tags](machine-tags.md).
 
-## Initiate Automated Investigation
+## Initiate automated investigation
 
-You can start a new general purpose automated investigation on the device if needed. While an investigation is running, any other alert generated from the device will be added to an ongoing Automated investigation until that investigation is completed. In addition, if the same threat is seen on other devices, those devices are added to the investigation.
+You can start a new, general-purpose automated investigation on the device if needed. While an investigation is running, any other alert generated from the device is added to an ongoing automated investigation until that investigation completes. In addition, if the same threat is seen on other devices, those devices are added to the investigation.
 
 For more information on automated investigations, see [Overview of Automated investigations](automated-investigations.md).
 
@@ -90,7 +89,7 @@ For more information on live response, see [Investigate entities on devices usin
 
 As part of the investigation or response process, you can collect an investigation package from a device. By collecting the investigation package, you can identify the current state of the device and further understand the tools and techniques used by the attacker.
 
-To download the package (Zip file) and investigate the events that occurred on a device:
+To download the package (zipped folder) and investigate the events that occurred on a device, follow these steps:
 
 1. Select **Collect investigation package** from the row of response actions at the top of the device page.
 
@@ -98,57 +97,61 @@ To download the package (Zip file) and investigate the events that occurred on a
 
 3. The zip file downloads.
 
-Alternate steps:
+Or, use this alternate procedure:
 
 1. Select **Collect Investigation Package** from the response actions section of the device page.
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
-
-1. Add comments and select **Confirm**.
+   
+2. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
-
-1. Select **Action center** from the response actions section of the device page.
+   
+3. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
-
-1. Click the **Package collection package available** to download the collection package.
+   
+4. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
+   
+### Investigation package contents for Windows devices
 
-   For Windows devices, the package contains the following folders:
+For Windows devices, the package contains the folders described in the following table:
 
-   |Folder|Description|
-   |---|---|
-   |Autoruns|Contains a set of files that each represent the content of the registry of a known auto start entry point (ASEP) to help identify attacker's persistency on the device. <p> <div class="alert"><b>NOTE:</b> If the registry key is not found, the file will contain the following message: "ERROR: The system was unable to find the specified registry key or value."<div>|
-   |Installed programs|This .CSV file contains the list of installed programs that can help identify what is currently installed on the device. For more information, see [Win32_Product class](https://go.microsoft.com/fwlink/?linkid=841509).|
-   |Network connections|This folder contains a set of data points related to the connectivity information that can help in identifying connectivity to suspicious URLs, attacker's command and control (C&C) infrastructure, any lateral movement, or remote connections. <ul><li>ActiveNetConnections.txt: Displays protocol statistics and current TCP/IP network connections. Provides the ability to look for suspicious connectivity made by a process.</li><li>Arp.txt: Displays the current address resolution protocol (ARP) cache tables for all interfaces. ARP cache can reveal other hosts on a network that have been compromised or suspicious systems on the network that might have been used to run an internal attack.</il><li>DnsCache.txt: Displays the contents of the DNS client resolver cache, which includes both entries preloaded from the local Hosts file and any recently obtained resource records for name queries resolved by the computer. This can help in identifying suspicious connections.</li><li>IpConfig.txt: Displays the full TCP/IP configuration for all adapters. Adapters can represent physical interfaces, such as installed network adapters, or logical interfaces, such as dial-up connections.</li><li>FirewallExecutionLog.txt and pfirewall.log</li></ul><p><div class="alert"><b>NOTE:</b> The pfirewall.log file must exist in %windir%\system32\logfiles\firewall\pfirewall.log, so it will be included in the investigation package. For more information on creating the firewall log file, see [Configure the Windows Defender Firewall with Advanced Security Log](/windows/security/threat-protection/windows-firewall/configure-the-windows-firewall-log)<div>|
-   |Prefetch files|Windows Prefetch files are designed to speed up the application startup process. It can be used to track all the files recently used in the system and find traces for applications that might have been deleted but can still be found in the prefetch file list. <ul><li>Prefetch folder: Contains a copy of the prefetch files from `%SystemRoot%\Prefetch`. NOTE: It is suggested to download a prefetch file viewer to view the prefetch files.</li><li>PrefetchFilesList.txt: Contains the list of all the copied files that can be used to track if there were any copy failures to the prefetch folder.</li></ul>|
-   |Processes|Contains a .CSV file listing the running processes and provides the ability to identify current processes running on the device. This can be useful when identifying a suspicious process and its state.|
-   |Scheduled tasks|Contains a .CSV file listing the scheduled tasks, which can be used to identify routines performed automatically on a chosen device to look for suspicious code that was set to run automatically.|
-   |Security event log|Contains the security event log, which contains records of login or logout activity, or other security-related events specified by the system's audit policy. <p><div class="alert"><b>NOTE:</b> Open the event log file using Event viewer.</div>|
-   |Services|Contains a .CSV file that lists services and their states.|
-   |Windows Server Message Block (SMB) sessions|Lists shared access to files, printers, and serial ports and miscellaneous communications between nodes on a network. This can help identify data exfiltration or lateral movement. <p> Contains files for SMBInboundSessions and SMBOutboundSession. <p> <div class="alert"><b>NOTE:</b> If there are no sessions (inbound or outbound), you'll get a text file that tells you that there are no SMB sessions found.</div>|
-   |System Information|Contains a SystemInformation.txt file that lists system information such as OS version and network cards.|
-   |Temp Directories|Contains a set of text files that lists the files located in %Temp% for every user in the system. <p> This can help to track suspicious files that an attacker may have dropped on the system. <p> <div class="alert"><b>NOTE:</b> If the file contains the following message: "The system cannot find the path specified", it means that there is no temp directory for this user, and might be because the user didn't log in to the system.</div>|
-   |Users and Groups|Provides a list of files that each represent a group and its members.|
-   |WdSupportLogs|Provides the MpCmdRunLog.txt and MPSupportFiles.cab  <p> <div class="alert"><b>NOTE:</b> This folder will only be created on Windows 10, version 1709 or later with February 2020 update rollup or more recent installed: <ul><li>Win10 1709 (RS3) Build 16299.1717: [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)</li><li>Win10 1803 (RS4) Build 17134.1345: [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)</li><li>Win10 1809 (RS5) Build 17763.1075: [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)</li><li>Win10 1903/1909 (19h1/19h2) Builds 18362.693 and 18363.693: [KB4535996](https://support.microsoft.com/help/4535996/windows-10-update-kb4535996)</li></ul> </div>|
-   |CollectionSummaryReport.xls|This file is a summary of the investigation package collection, it contains the list of data points, the command used to extract the data, the execution status, and the error code if there is failure. You can use this report to track if the package includes all the expected data and identify if there were any errors.|
+|Folder|Description|
+|---|---|
+|Autoruns|Contains a set of files that each represent the content of the registry of a known auto start entry point (ASEP) to help identify attacker's persistency on the device. <br/><br/>If the registry key isn't found, the file contains the following message: "ERROR: The system was unable to find the specified registry key or value." |
+|Installed programs|This .CSV file contains the list of installed programs that can help identify what is currently installed on the device. For more information, see [Win32_Product class](https://go.microsoft.com/fwlink/?linkid=841509).|
+|Network connections|This folder contains a set of data points related to the connectivity information that can help in identifying connectivity to suspicious URLs, attacker's command and control (C&C) infrastructure, any lateral movement, or remote connections. <br/><br/>- `ActiveNetConnections.txt`: Displays protocol statistics and current TCP/IP network connections. Enables you to look for suspicious connectivity made by a process.<br/><br/>- `Arp.txt`: Displays the current address resolution protocol (ARP) cache tables for all interfaces. ARP cache can reveal other hosts on a network that were compromised or suspicious systems on the network that might be used to run an internal attack.<br/><br/>- `DnsCache.txt`: Displays the contents of the DNS client resolver cache, which includes both entries preloaded from the local Hosts file and any recently obtained resource records for name queries resolved by the computer. This can help in identifying suspicious connections.<br/><br/>- `IpConfig.txt`: Displays the full TCP/IP configuration for all adapters. Adapters can represent physical interfaces, such as installed network adapters, or logical interfaces, such as dial-up connections.<br/><br/>- `FirewallExecutionLog.txt` and `pfirewall.log`<br/><br/>The `pfirewall.log` file must exist in `%windir%\system32\logfiles\firewall\pfirewall.log`, so it's included in the investigation package. For more information on creating the firewall log file, see [Configure the Windows Firewall with Advanced Security Log](/windows/security/threat-protection/windows-firewall/configure-the-windows-firewall-log).|
+|Prefetch files|Windows Prefetch files are designed to speed up the application startup process. It can be used to track all the files recently used in the system and find traces for applications that might be deleted but can still be found in the prefetch file list. <br/><br/>- `Prefetch folder`: Contains a copy of the prefetch files from `%SystemRoot%\Prefetch`. We recommend downloading a prefetch file viewer to view the prefetch files.<br/><br/>- `PrefetchFilesList.txt`: Contains the list of all the copied files that can be used to track if there were any copy failures to the prefetch folder.|
+|Processes|Contains a .CSV file listing the running processes and provides the ability to identify current processes running on the device. This can be useful when identifying a suspicious process and its state.|
+|Scheduled tasks|Contains a .CSV file listing the scheduled tasks, which can be used to identify routines performed automatically on a chosen device to look for suspicious code that was set to run automatically.|
+|Security event log|Contains the security event log, which contains records of sign-in or sign-out activity, or other security-related events specified by the system's audit policy. <br/><br/>Open the event log file using Event viewer.|
+|Services|Contains a .CSV file that lists services and their states.|
+|Windows Server Message Block (SMB) sessions|Lists shared access to files, printers, and serial ports and miscellaneous communications between nodes on a network. This can help identify data exfiltration or lateral movement.<br/><br/>Contains files for `SMBInboundSessions` and `SMBOutboundSession`. If there are no sessions (inbound or outbound), you get a text file that tells you that there are no SMB sessions found.|
+|System Information|Contains a `SystemInformation.txt` file that lists system information such as OS version and network cards.|
+|Temp Directories|Contains a set of text files that lists the files located in `%Temp%` for every user in the system. This can help to track suspicious files that an attacker might have dropped on the system. <br/><br/>If the file contains the following message: "The system cannot find the path specified", it means that there's no temp directory for this user, and might be because the user didn't sign in to the system.|
+|Users and Groups|Provides a list of files that each represent a group and its members.|
+|WdSupportLogs|Provides the `MpCmdRunLog.txt` and `MPSupportFiles.cab`. This folder is only created on Windows 10, version 1709 or later with February 2020 update rollup or more recent versions installed: <br/><br/>- Win10 1709 (RS3) Build 16299.1717: [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)<br/><br/>- Win10 1803 (RS4) Build 17134.1345: [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)<br/><br/>- Win10 1809 (RS5) Build 17763.1075: [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)<br/><br/>- Win10 1903/1909 (19h1/19h2) Builds 18362.693 and 18363.693: [KB4535996](https://support.microsoft.com/help/4535996/windows-10-update-kb4535996)|
+|CollectionSummaryReport.xls|This file is a summary of the investigation package collection, it contains the list of data points, the command used to extract the data, the execution status, and the error code if there's failure. You can use this report to track if the package includes all the expected data and identify if there were any errors.|
 
-   The collection packages for macOS and Linux devices contain the following:
+### Investigation package contents for Mac and Linux devices
 
-   |Object|macOS|Linux|
-   |---|---|---|
-   |Applications|A list of all installed applications|Not applicable|
-   |Disk volume|<ul><li>Amount of free space</li><li>List of all mounted disk volumes</li><li>List of all partitions</li>|<ul><li>Amount of free space</li><li>List of all mounted disk volumes</li><li>List of all partitions</li>|
-   |File|A list of all open files with the corresponding processes using these files|A list of all open files with the corresponding processes using these files|
-   |History|Shell history|Not applicable|
-   |Kernel modules|All loaded modules|Not applicable|
-   |Network connections|<ul><li>Active connections</li><li>Active listening connections</li><li>ARP table</li><li>Firewall rules</li><li>Interface configuration</li><li>Proxy settings</li><li>VPN settings</li></ul>|<ul><li>Active connections</li><li>Active listening connections</li><li>ARP table</li><li>Firewall rules</li><li>IP list</li><li>Proxy settings</li></ul>|
-   |Processes|A list of all running processes|A list of all running processes|
-   |Services and scheduled tasks|<ul><li>Certificates</li><li>Configuration profiles</li><li>Hardware information|<ul><li>CPU details</li><li>Hardware information</li><li>Operating system information</li>|
-   |System security information|<ul><li>Extensible Firmware Interface (EFI) integrity information</li><li>Firewall status</li><li>Malware Removal Tool (MRT) information</li><li>System Integrity Protection (SIP) status</li>|Not applicable|
-   |Users and groups|<ul><li>Login history</li><li>Sudoers</li></ul>|<ul><li>Login history</li><li>Sudoers</li></ul>|
+The following table lists the contents of the collection packages for Mac and Linux devices:
+
+|Object|macOS|Linux|
+|---|---|---|
+|Applications|A list of all installed applications|Not applicable|
+|Disk volume|- Amount of free space<br/>- List of all mounted disk volumes<br/>- List of all partitions</li>|- Amount of free space<br/>- List of all mounted disk volumes<br/>- List of all partitions|
+|File|A list of all open files with the corresponding processes using these files|A list of all open files with the corresponding processes using these files|
+|History|Shell history|Not applicable|
+|Kernel modules|All loaded modules|Not applicable|
+|Network connections|- Active connections<br/>- Active listening connections<br/>- ARP table<br/>- Firewall rules<br/>- Interface configuration<br/>- Proxy settings<br/>- VPN settings|- Active connections<br/>- Active listening connections<br/>- ARP table<br/>- Firewall rules<br/>- IP list<br/>- Proxy settings|
+|Processes|A list of all running processes|A list of all running processes|
+|Services and scheduled tasks|- Certificates<br/>- Configuration profiles<br/>- Hardware information|- CPU details<br/>- Hardware information<br/>- Operating system information</li>|
+|System security information|- Extensible Firmware Interface (EFI) integrity information<br/>- Firewall status<br/>- Malware Removal Tool (MRT) information<br/>- System Integrity Protection (SIP) status</li>|Not applicable|
+|Users and groups|- Sign-in history<br/>- Sudoers|- Sign-in history<br/>- Sudoers|
 
 ## Run Microsoft Defender Antivirus scan on devices
 
@@ -163,11 +166,11 @@ One you have selected **Run antivirus scan**, select the scan type that you'd li
 
 :::image type="content" source="media/run-antivirus.png" alt-text="The notification to select quick scan or full scan and add comment" lightbox="media/run-antivirus.png":::
 
-The Action center will show the scan information and the device timeline will include a new event, reflecting that a scan action was submitted on the device. Microsoft Defender Antivirus alerts will reflect any detections that surfaced during the scan.
+The Action center shows the scan information and the device timeline include a new event, reflecting that a scan action was submitted on the device. Microsoft Defender Antivirus alerts reflect any detections that surfaced during the scan.
 
 > [!NOTE]
-> When triggering a scan using Defender for Endpoint response action, Microsoft Defender antivirus 'ScanAvgCPULoadFactor' value still applies and limits the CPU impact of the scan.
-> If ScanAvgCPULoadFactor is not configured, the default value is a limit of 50% maximum CPU load during a scan.
+> When triggering a scan using Defender for Endpoint response action, Microsoft Defender antivirus `ScanAvgCPULoadFactor` value applies and limits the CPU impact of the scan.
+> If `ScanAvgCPULoadFactor` is not configured, the default value is a limit of 50% maximum CPU load during a scan.
 > For more information, see [configure-advanced-scan-types-microsoft-defender-antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-advanced-scan-types-microsoft-defender-antivirus).
 
 ## Restrict app execution
@@ -180,12 +183,12 @@ In addition to containing an attack by stopping malicious processes, you can als
 > - This feature is available if your organization uses Microsoft Defender Antivirus.
 > - This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)).
 
-To restrict an application from running, a code integrity policy is applied that only allows files to run if they are signed by a Microsoft issued certificate. This method of restriction can help prevent an attacker from controlling compromised devices and performing further malicious activities.
+To restrict an application from running, a code integrity policy is applied that only allows files to run if they're signed by a Microsoft issued certificate. This method of restriction can help prevent an attacker from controlling compromised devices and performing further malicious activities.
 
 > [!NOTE]
 > You'll be able to reverse the restriction of applications from running at any time. The button on the device page will change to say **Remove app restrictions**, and then you take the same steps as restricting app execution.
 
-Once you have selected **Restrict app execution** on the device page, type a comment and select **Confirm**. The Action center will show the scan information and the device timeline will include a new event.
+Once you have selected **Restrict app execution** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
 
 :::image type="content" source="media/restrict-app-execution.png" alt-text="The application restriction notification" lightbox="media/restrict-app-execution.png":::
 
@@ -202,28 +205,29 @@ When an app is restricted, the following notification is displayed to inform the
 
 Depending on the severity of the attack and the sensitivity of the device, you might want to isolate the device from the network. This action can help prevent the attacker from controlling the compromised device and performing further activities such as data exfiltration and lateral movement.
 
-> [!IMPORTANT]
->
-> - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
-> - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012 R2.
-> - You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](microsoft-defender-endpoint-linux.md#system-requirements). Ensure that the following prerequisites are enabled: iptables, ip6tables, and Linux kernel with CONFIG_NETFILTER, CONFID_IP_NF_IPTABLES, and CONFIG_IP_NF_MATCH_OWNER.
-> - Selective isolation is available for devices running Windows 10, version 1709 or later, and Windows 11.
-> - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
-> - The feature supports VPN connection.
-> - You must have at least one the following role permissions: 'Active remediation actions'. For more information, see [Create and manage roles](user-roles.md).
-> - You must have access to the device based on the device group settings. For more information, see [Create and manage device groups](machine-groups.md).
-> - Exclusion for both macOS and Linux isolation is not supported.
-> - An isolated device is removed from isolation when an administrator modifies or adds a new iptable rule to the isolated device.
-> - Isolating a server running on Microsoft Hyper-V blocks network traffic to all child virtual machines of the server.
+**Important points to keep in mind**: 
 
-This device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device.
+- Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
+- Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012 R2.
+- You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](microsoft-defender-endpoint-linux.md#system-requirements). Ensure that the following prerequisites are enabled:
+   - `iptables`
+   - `ip6tables`
+   - Linux kernel with `CONFIG_NETFILTER`, `CONFID_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER`
+- Selective isolation is available for devices running Windows 10, version 1709 or later, and Windows 11.
+- When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
+- The feature supports VPN connection.
+- You must have at least the `Active remediation actions` role assigned. For more information, see [Create and manage roles](user-roles.md).
+- You must have access to the device based on the device group settings. For more information, see [Create and manage device groups](machine-groups.md).
+- Exclusions, such as e-mail, messaging application and other applications for both macOS and Linux isolation aren't supported.
+- An isolated device is removed from isolation when an administrator modifies or adds a new `iptable` rule to the isolated device.
+- Isolating a server running on Microsoft Hyper-V blocks network traffic to all child virtual machines of the server.
 
-On Windows 10, version 1709 or later, you'll have more control over the network isolation level. You can also choose to enable Outlook, Microsoft Teams, and Skype for Business connectivity (a.k.a 'Selective Isolation').
+The device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device. On Windows 10, version 1709 or later, you can use selective isolation for more control over the network isolation level. You can also choose to enable Outlook and Microsoft Teams connectivity.
 
 > [!NOTE]
 > You'll be able to reconnect the device back to the network at any time. The button on the device page will change to say **Release from isolation**, and then you take the same steps as isolating the device.
 
-Once you have selected **Isolate device** on the device page, type a comment and select **Confirm**. The Action center will show the scan information and the device timeline will include a new event.
+Once you have selected **Isolate device** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
 
 :::image type="content" source="media/isolate-device.png" alt-text="An isolated device details page" lightbox="media/isolate-device.png":::
 
@@ -245,16 +249,16 @@ There's a downloadable script for these instances that you can run to forcibly r
 To forcibly release device from isolation:
 
 1. On the device page, select **Download script to force-release a device from isolation** from the action menu.
-1. On the right-hand side wizard, select **Download script**.
 
-#### Minimum requirements
+1. In the pane on the right, select **Download script**.
 
-The minimum requirements for 'forcibly release device from isolation' feature are:
+#### Minimum requirements for forcible device release
 
-- Windows only. The following versions are supported:
-  - Windows 10 21H2 and 22H2 with KB KB5023773.
-  - Windows 11 version 21H2, all editions with KB5023774.
-  - Windows 11 version 22H2, all editions with KB5023778.
+To forcibly release a device from isolation, the device must be running Windows. The following versions are supported:
+
+- Windows 10 21H2 and 22H2 with KB KB5023773.
+- Windows 11 version 21H2, all editions with KB5023774.
+- Windows 11 version 22H2, all editions with KB5023778.
 
 ### Notification on device user
 
@@ -267,7 +271,7 @@ When a device is being isolated, the following notification is displayed to info
 
 ## Contain devices from the network
 
-When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device will block incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
+When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device blocks incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
 
 > [!NOTE]
 > Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Microsoft Defender for Endpoint Windows 10 and Windows Server 2019+ devices.
@@ -316,7 +320,7 @@ You'll be able to stop containing a device at any time.
 
 ## Contain user from the network
 
-When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can "contain" an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (termination the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity.
+When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (termination the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity.
 
 > [!NOTE]
 > Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
@@ -342,20 +346,21 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 You can release the blocks and containment on a user at any time:
 
-1. Select the **Contain User** action in the **Action Center**. In the side pane select **Undo**
-2. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**
+1. Select the **Contain User** action in the **Action Center**. In the side pane select **Undo**.
 
-This action will restore this user's connection to the network.
+2. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**.
+
+This action restores the user's connection to the network.
 
 :::image type="content" source="/defender/media/defender-endpoint/undo-user-contain-action.png" alt-text="Shows user contain undo option in the action center" lightbox="/defender/media/defender-endpoint/undo-user-contain-action.png":::
 
 ### Investigation capabilities with Contain User
 
-After a user is contained, you can investigate the potential threat by viewing the blocked actions by the compromised user. In the Device timeline view, you can see information about specific events, including protocol and interface granularity, and the relevant MITRE Technique associated it.
+After a user is contained, you can investigate the potential threat by viewing the blocked actions by the compromised user. In the device timeline view, you can see information about specific events, including protocol and interface granularity, and the relevant MITRE Technique associated it.
 
 :::image type="content" source="/defender/media/defender-endpoint/event-blocked by-contained-user.png" alt-text="Shows blocked event details for a contained users" lightbox="/defender/media/defender-endpoint/event-blocked by-contained-user.png":::
 
-In addition, you can expand the investigation by using Advanced Hunting. Look for any "Action Type" starting with "Contain" in the "DeviceEvents" table. Then, you can view all the different singular blocking events in relation to Contain User in your tenant, dive deeper into the context of each block, and extract the different entities and techniques associated with those events.
+In addition, you can expand the investigation by using advanced hunting. Look for any action type starting with *contain* in the `DeviceEvents` table. Then, you can view all the different singular blocking events in relation to Contain User in your tenant, dive deeper into the context of each block, and extract the different entities and techniques associated with those events.
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
@@ -367,7 +372,7 @@ See [Configure and manage Endpoint Attack Notifications](configure-microsoft-thr
 
 ## Check activity details in Action center
 
-The **Action center** provides information on actions that were taken on a device or file. You'll be able to view the following details:
+The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You'll be able to view the following details:
 
 - Investigation package collection
 - Antivirus scan

@@ -131,6 +131,9 @@ If you find a new app in your environment that hasn't been scored by Defender fo
    
 3. We recommend selecting the checkbox to enable Defender for Cloud Apps analysts to contact you in case additional information about the app is needed.
 
+> [!NOTE]
+> If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators will be created in Defender for Endpoint for all unsanctioned cloud applications. While Microsoft does its best to keep the list of urls or indicators for an app up to date, however it is beyond control that the app vendors could add, change, use different urls for different types of their app such as web, desktop or mobile and so on resulting in inconsistent unsanctioned behavior for an app or app type due to missing url or an indicator in the catalog. In such case we suggest to propose a change to the cloud app catalog for such urls to be added.
+
 ## Supported filters and categories
 
 The **Cloud app catalog** page supports basic filters available from the dropdowns listed across the top of the page. To use advanced filters, toggle on the **Advanced filters** option at the top right.

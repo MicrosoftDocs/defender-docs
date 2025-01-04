@@ -22,6 +22,11 @@ ms.date: 10/11/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**Applies to**:
+
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 ## Collect diagnostic information
@@ -34,7 +39,7 @@ If you can reproduce a problem, first increase the logging level, run the system
    mdatp log level set --level debug
    ```
 
-   ```Output
+   ```console
    Log level configured successfully
    ```
 
@@ -48,7 +53,7 @@ If you can reproduce a problem, first increase the logging level, run the system
 
     This command will also print out the file path to the backup after the operation succeeds:
 
-   ```Output
+   ```console
    Diagnostic file created: <path to file>
    ```
 
@@ -58,7 +63,7 @@ If you can reproduce a problem, first increase the logging level, run the system
    mdatp log level set --level info
    ```
 
-   ```Output
+   ```console
    Log level configured successfully
    ```
 
