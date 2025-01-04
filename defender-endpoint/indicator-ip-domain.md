@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: 
 search.appverid: met150
-ms.date: 12/11/2024
+ms.date: 01/03/2025
 ---
 
 # Create indicators for IPs and URLs/domains
@@ -32,7 +32,7 @@ ms.date: 12/11/2024
 
 ## Overview
 
-By creating indicators for IPs and URLs or domains, you can now allow or block IPs, URLs, or domains based on your own threat intelligence. You can also warn users with a prompt if they open a risky app. The prompt won't stop them from using the app but you can provide a custom message and links to a company page that describes appropriate usage of the app. Users can still bypass the warning and continue to use the app if they need.
+By creating indicators for IPs and URLs or domains, you can now allow or block IPs, URLs, or domains based on your own threat intelligence. You can also warn users if they open a risky app. The prompt doesn't stop them from using the app; users can bypass the warning and continue to use the app if needed.
 
 To block malicious IPs/URLs (as determined by Microsoft), Defender for Endpoint can use:
 
@@ -61,11 +61,11 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 
 ## Before you begin
 
-It's important to understand the following prerequisites prior to creating indicators for IPS, URLs, or domains.
+It's important to understand the following prerequisites before creating indicators for IPS, URLs, or domains.
 
 ### Microsoft Defender Antivirus version requirements
 
-- Your organization uses [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows). Microsoft Defender Antivirus must be in active mode for non-Microsoft browsers. With Microsoft browsers, like Edge, Microsoft Defender Antivirus can be in active or passive mode.
+- Your organization uses [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows). Microsoft Defender Antivirus must be in active mode for non-Microsoft browsers. With Microsoft browsers, like Microsoft Edge, Microsoft Defender Antivirus can be in active or passive mode.
 
 - [Behavior Monitoring](/defender-endpoint/behavior-monitor) is enabled.
 
@@ -73,7 +73,7 @@ It's important to understand the following prerequisites prior to creating indic
 
 - [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is turned on.
 
-- The antimalware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
+- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
 
 ### Network Protection requirements
 
@@ -89,23 +89,23 @@ For support of indicators on Android, see [Microsoft Defender for Endpoint on An
 
 ### IoC indicator list limitations
 
-Only external IPs can be added to the indicator list. Indicators can't be created for internal IPs. For web protection scenarios, we recommend using the built-in capabilities in Microsoft Edge. Microsoft Edge leverages [Network Protection](network-protection.md) to inspect network traffic and allows blocks for TCP, HTTP, and HTTPS (TLS).
+Only external IPs can be added to the indicator list. Indicators can't be created for internal IPs. For web protection scenarios, we recommend using the built-in capabilities in Microsoft Edge. Microsoft Edge uses [Network Protection](network-protection.md) to inspect network traffic and allows blocks for TCP, HTTP, and HTTPS (TLS).
 
 ### Non Microsoft Edge and Internet Explorer processes
 
-For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage Network Protection for inspection and enforcement:
+For processes other than Microsoft Edge and Internet Explorer, web protection scenarios use Network Protection for inspection and enforcement:
 
 - IP is supported for all three protocols (TCP, HTTP, and HTTPS (TLS))
 - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators
-- Encrypted URLs (full path) can only be blocked on first party browsers (Internet Explorer, Edge)
-- Encrypted URLs (FQDN only) can be blocked in third party browsers (that is, other than Internet Explorer, Edge)
-- URLs loaded via HTTP connection coalescing, such as content loaded by modern CDN's, can only be blocked on first party browsers (Internet Explorer, Edge), unless the CDN URL itself is added to the indicator list.
+- Encrypted URLs (full path) can only be blocked on first party browsers (Internet Explorer or Microsoft Edge)
+- Encrypted URLs (FQDN only) can be blocked in non-Microsoft browsers (that is, other than Internet Explorer or Microsoft Edge)
+- URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, can only be blocked on first party browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
 - Full URL path blocks can be applied for unencrypted URLs
 - If there are conflicting URL indicator policies, the longer path is applied. For example, the URL indicator policy `https://support.microsoft.com/office` takes precedence over the URL indicator policy `https://support.microsoft.com`.
-- In the case of URL indicator policy conflicts, the longer path may not be applied due to redirection. In such cases, register a non-redirected URL.
+- If URL indicator policy conflicts occur, the longer path might not be applied due to redirection. In such cases, register a non-redirected URL.
 
 > [!NOTE]
-> Custom Indicators of Compromise and Web Content Filtering features are currently not supported in Application Guard sessions of Microsoft Edge. These containerized browser sessions can only enforce web threat blocks via the built-in SmartScreen protection. They cannot enforce any enterprise web protection policies.
+> Custom Indicators of Compromise and Web Content Filtering features are currently not supported in Application Guard sessions of Microsoft Edge. These containerized browser sessions can only enforce web threat blocks via the built-in SmartScreen protection. They can't enforce any enterprise web protection policies.
 
 ## Network protection and the TCP three-way handshake
 
@@ -124,14 +124,14 @@ Here's an example of how that works:
 When using warn mode, you can configure the following controls:
 
 - **Bypass ability**
-  - Allow button in Edge
+  - Allow button in Microsoft Edge
   - Allow button on toast (Non-Microsoft browsers)
   - Bypass duration parameter on the indicator
   - Bypass enforcement across Microsoft and Non-Microsoft browsers
 
 - **Redirect URL**
   - Redirect URL parameter on the indicator
-  - Redirect URL in Edge
+  - Redirect URL in Microsoft Edge
   - Redirect URL on toast (Non-Microsoft browsers)
 
 For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/cloud-app-security/mde-govern).
@@ -152,7 +152,7 @@ In the case where multiple different action types are set on the same indicator 
 
 ### Defender for Cloud Apps Indicators
 
-If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators will be created in Defender for Endpoint for all unsanctioned cloud applications. If an application is put in monitor mode, warn indicators (bypassable block) will be created for the URLs associated with the application. Allow indicators cannot be created for sanctioned applications at this time. Indicators created by Defender for Cloud Apps follow the same policy conflict handling described in the previous section.
+If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. If an application is put in monitor mode, warn indicators (bypassable block) are created for the URLs associated with the application. Allow indicators can't be created for sanctioned applications at this time. Indicators created by Defender for Cloud Apps follow the same policy conflict handling described in the previous section.
 
 ## Policy precedence
 
@@ -160,12 +160,12 @@ Microsoft Defender for Endpoint policy has precedence over Microsoft Defender An
 
 ### Precedence for multiple active policies
 
-Applying multiple different web content filtering policies to the same device will result in the more restrictive policy applying for each category. Consider the following scenario:
+Applying multiple different web content filtering policies to the same device result in the more restrictive policy applying for each category. Consider the following scenario:
 
 - **Policy 1** blocks categories 1 and 2 and audits the rest
 - **Policy 2** blocks categories 3 and 4 and audits the rest
 
-The result is that categories 1-4 are all blocked. This is illustrated in the following image.
+The result is that categories 1-4 are all blocked. This scenario is illustrated in the following image.
 
 :::image type="content" source="media/web-content-filtering-policies-mode-precedence.png" alt-text="Diagram that shows the precedence of web content filtering policy block mode over audit mode.":::
 
@@ -179,9 +179,9 @@ The result is that categories 1-4 are all blocked. This is illustrated in the fo
 
 4. Specify the following details:
 
-   - Indicator - Specify the entity details and define the expiration of the indicator.
-   - Action - Specify the action to be taken and provide a description.
-   - Scope - Define the scope of the machine group.
+   - **Indicator**: Specify the entity details and define the expiration of the indicator.
+   - **Action**: Specify the action to be taken and provide a description.
+   - **Scope**: Define the scope of the machine group.
 
 5. Review the details in the **Summary** tab, then select **Save**.
 

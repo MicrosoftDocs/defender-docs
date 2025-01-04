@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/24/2024
+ms.date: 01/02/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -59,7 +59,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   > [!NOTE]
   > Performance tuning might be needed based on workloads. See [Troubleshoot performance issues for Microsoft Defender for Endpoint on  Linux](linux-support-perf.md).
 
-- The following Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions are supported:
+- The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
   - Red Hat Enterprise Linux 7.2 or higher
   - Red Hat Enterprise Linux 8.x
   - Red Hat Enterprise Linux 9.x

@@ -152,6 +152,8 @@
                 items:
                  - name: Incidents
                    href: investigate-incidents.md
+                 - name: Unlink alerts from incidents
+                   href: unlink-alert-from-incident.md
                  - name: Investigate data loss prevention alerts with Microsoft Defender XDR
                    href: dlp-investigate-alerts-defender.md
                  - name: Investigate data loss prevention alerts with Microsoft Sentinel

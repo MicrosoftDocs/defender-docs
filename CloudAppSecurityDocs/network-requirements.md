@@ -28,6 +28,8 @@ To see which data center you're connecting to, do the following steps:
 To use Defender for Cloud Apps in the Microsoft Defender Portal, add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
 
 ```ini
+cdn.cloudappsecurity.com
+cdn-discovery.cloudappsecurity.com
 adaproddiscovery.azureedge.net
 *.s-microsoft.com
 *.msecnd.net

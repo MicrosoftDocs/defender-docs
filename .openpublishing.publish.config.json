@@ -187,7 +187,10 @@
   "redirection_files": [
     ".openpublishing.redirection.ata-atp.json",
     ".openpublishing.redirection.defender.json",
+    ".openpublishing.redirection-defender-business.json",
     ".openpublishing.redirection.defender-cloud-apps.json",
+    ".openpublishing.redirection.defender-endpoint.json",
+    ".openpublishing.redirection.defender-office-365.json",
     ".openpublishing.redirection.defender-xdr.json"
   ]
 }

@@ -791,6 +791,12 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Microsoft Defender Antivirus and third-party antivirus solutions without
+          Defender for Endpoint
+        href: defender-antivirus-compatibility-without-mde.md
+        displayName: Microsoft Defender Antivirus and non-Microsoft
+          antivirus/antimalware solutions, Antivirus protection without Defender for
+          Endpoint
       - name: Find malware detection names for Microsoft Defender for Endpoint
         href: find-defender-malware-name.md
 
