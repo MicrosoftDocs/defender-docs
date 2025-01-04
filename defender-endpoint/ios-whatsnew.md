@@ -32,7 +32,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## Defender for Endpoint on iOS now supports iOS/iPadOS 16.x as the minimum version
 
-Defender for Endpoint on iOS is ending support for iOS/iPadOS 15, as iOS/iPadOS 18 became available in September 2024. Microsoft typically supports the current version and two previous versions (n-2). This change takes effect beginning on January 31, 2025.
+Defender for Endpoint is ending support for iOS/iPadOS 15 on January 31, 2025. Moving forward, only devices running iOS/iPadOS 16 and later are supported.
 
 **How does this affect you or your users?**
 

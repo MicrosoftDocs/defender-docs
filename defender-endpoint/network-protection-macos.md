@@ -64,26 +64,39 @@ To roll out Network Protection for macOS, we recommend the following actions:
 ## Current capabilities
 
 - Custom Indicators of Compromise on Domains and IPs.
-- Web Content Filtering support:
-  - Block website categories scoped to device groups through policies created in the Microsoft Defender portal.
-  - Policies are applied to browsers, including Chromium Microsoft Edge for macOS. 
+
+- Web Content Filtering supports the following actions:
+
+   - Block website categories scoped to device groups through policies created in the Microsoft Defender portal.
+   
+   - Policies are applied to browsers, including Chromium Microsoft Edge for macOS. 
+
 - Advanced Hunting - Network Events are reflected in the Machine Timeline, and queryable in Advanced Hunting to aid security investigations.
+
 - Microsoft Defender for Cloud Apps:
-  - Shadow IT discovery - Identify which apps are being used in your organization.
-  - Block applications - Block entire applications (such as Slack and Facebook) from being used in your organization.
+   
+   - Shadow IT discovery - Identify which apps are being used in your organization.
+   
+   - Block applications - Block entire applications (such as Slack and Facebook) from being used in your organization.
+
 - Corporate VPN in tandem or side-by-side with Network Protection: 
-  - Currently, no VPN conflicts are identified. 
-  - If you do experience conflicts, you can provide feedback through the feedback channel listed at the bottom of this page.
+   
+   - Currently, no VPN conflicts are identified. 
+   
+   - If you do experience conflicts, you can provide feedback through the feedback channel listed at the bottom of this page.
 
 ### Known issues
 
 - Block/Warn UX isn't customizable and might require other look and feel changes. (Customer feedback is being collected to drive further design improvements)
+
 - There's a known application incompatibility issue with VMware's "Per-App Tunnel" feature. (This incompatibility might result in an inability to block traffic that goes through the "Per-App Tunnel.")
+
 - There's a known application incompatibility issue with Blue Coat Proxy. (This incompatibility might result in network layer crashes in unrelated applications when both Blue Coat Proxy and Network Protection are enabled.)
 
 ### Important notes
 
 - We don't recommend controlling network protection from System Preferences by using the **Disconnect** button. Instead, use the mdatp command-line tool or JamF/Intune to control network protection for macOS.
+
 - To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection (Microsoft Defender Browser Protection extension which provides Smartscreen capabilities) that is enabled regardless of whether the Mac network protection feature you're evaluating, is turned on or not.
 
 ## Deployment instructions

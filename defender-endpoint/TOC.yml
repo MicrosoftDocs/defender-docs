@@ -137,9 +137,10 @@
             - name: Migrating devices to streamlined method
               href: migrate-devices-streamlined.md
 
-        - name: Onboarding Windows Client
+        - name: Onboard client devices
+          href: onboard-client.md
           items:
-          - name: Onboarding Windows Client overview
+          - name: Onboarding Windows client overview
             href: onboard-windows-client.md
           - name: Defender for Endpoint plug-in for WSL
             href: mde-plugin-wsl.md
@@ -158,7 +159,8 @@
           - name: Onboard previous versions of Windows
             href: onboard-downlevel.md
 
-        - name: Onboarding Windows Server
+        - name: Onboard server devices
+          href: onboard-server.md
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
@@ -285,7 +287,7 @@
               href: linux-schedule-scan-mde.md
             - name: Schedule antivirus scan in Defender for Endpoint on Linux
               href: schedule-antivirus-scan-in-mde.md
-            - name: Schedule an update of the Microsoft Defender for Endpoint (Linux)
+            - name: Schedule an update for Microsoft Defender for Endpoint on Linux
               href: linux-update-MDE-Linux.md
             - name: Configure eBPF-based sensor
               href: linux-support-ebpf.md 
@@ -789,6 +791,12 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Microsoft Defender Antivirus and third-party antivirus solutions without
+          Defender for Endpoint
+        href: defender-antivirus-compatibility-without-mde.md
+        displayName: Microsoft Defender Antivirus and non-Microsoft
+          antivirus/antimalware solutions, Antivirus protection without Defender for
+          Endpoint
       - name: Find malware detection names for Microsoft Defender for Endpoint
         href: find-defender-malware-name.md
 

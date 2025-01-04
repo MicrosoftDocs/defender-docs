@@ -2,8 +2,7 @@
 title: How Microsoft Defender Experts for XDR permissions work
 ms.reviewer:
 description: Configuring permissions in customer's XDR tenants
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium

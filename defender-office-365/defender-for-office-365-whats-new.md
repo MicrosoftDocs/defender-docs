@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 10/09/2024
+ms.date: 12/17/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -38,6 +38,14 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## December 2024
+
+ - [Considerations for integrating non-Microsoft security services with Microsoft 365](mdo-integrate-security-service.md): Considerations and recommendations for deploying a defense-in-depth email security strategy using third-party security services.
+
+## November 2024
+
+ - **Introducing LLM-based BEC detection and classification**: Microsoft Defender for Office 365 now detects BEC attacks using large language model (LLM)-based filters to analyze an email's language and infer intent. To learn more, see our blog post [Microsoft Ignite: Redefining email security with LLMs to tackle a new era of social engineering](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/microsoft-ignite-redefining-email-security-with-llms-to-tackle-a-new-era-of-soci/4302421). 
 
 ## October 2024
 

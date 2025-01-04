@@ -2,8 +2,7 @@
 title: Accessing incident notifications and DENs using Graph security API
 ms.reviewer:
 description: The method to access Defender Experts Notifications using Graph security API
-ms.service: defender-experts
-ms.subservice: dex-hunting
+ms.service: defender-experts-for-hunting
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium

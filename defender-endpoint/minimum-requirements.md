@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 12/10/2024
+ms.date: 12/12/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -110,8 +110,8 @@ To add antimalware protection to these older operating systems, you can use [Sys
 
 ### Other supported operating systems
 
-- [macOS](microsoft-defender-endpoint-mac.md)
-- [Linux](microsoft-defender-endpoint-linux.md)
+- [Mac](microsoft-defender-endpoint-mac.md) (client devices)
+- [Linux Server](microsoft-defender-endpoint-linux.md)
 - [Windows Subsystem for Linux](mde-plugin-wsl.md)
 - [Android](microsoft-defender-endpoint-android.md)
 - [iOS](microsoft-defender-endpoint-ios.md)

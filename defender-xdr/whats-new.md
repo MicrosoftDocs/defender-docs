@@ -21,6 +21,7 @@ Lists the new features and functionality in Microsoft Defender XDR.
 
 For more information on what's new with other Microsoft Defender security products and Microsoft Sentinel, see:
 
+- [What's new in Microsoft's unified security operations platform](/unified-secops-platform/whats-new)
 - [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
@@ -31,10 +32,12 @@ You can also get product updates and important notifications through the [messag
 
 ## December 2024
 
-- If you're using Microsoft's unified security operations (SecOps) platform, with both Microsoft Sentinel and Microsoft Defender XDR, Microsoft Sentinel workbooks are now available to view directly in the Microsoft Defender portal. Continue tabbing out to the Azure portal only to edit your workbooks. For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data?tabs=azure-portal).
+- (GA) [Content distribution via tenant groups in multitenant management](mto-tenantgroups.md) is now generally available. Create tenant groups to manage content across tenants in multitenant management in Microsoft Defender XDR.
+- Microsoft Defender Experts for XDR now offers [scoped coverage](defender-experts-scoped-coverage.md) for customers who wish to define a specific set of devices and/or users, based on geography, subsidiary, or function, for which they'd like Defender Experts to provide support.
 - (Preview) The [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature in Microsoft Defender advanced hunting now allows linking of Microsoft Sentinel query results. In both the Microsoft Defender unified experience and in [Defender XDR advanced hunting](advanced-hunting-link-to-incident.md), you can now specify whether an entity is an impacted asset or related evidence.
 - (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries-preview), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
--  New documentation library for Microsoft's unified security operations platform. Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
+- New documentation library for Microsoft's unified security operations platform. Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
+- (GA) In advanced hunting, you can now add your frequently used schema tables, functions, queries, and detection rules in the **[Favorites](advanced-hunting-query-results.md#add-items-to-favorites)** sections under each tab for quicker access.
 
 ## November 2024
 

@@ -103,7 +103,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|There has been no communication from the Defender for Identity sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Defender for Identity sensor. This affects Defender for Identity's ability to detect suspicious activities, since network traffic isn't able to reach the Defender for Identity cloud service.|Check that the port used for the communication between the Defender for Identity sensor and Defender for Identity cloud service isn't blocked by any routers or firewalls.|Medium|Sensors health issues tab|
+|There has been no communication from the Defender for Identity sensor. The default time span for this alert is 5 minutes.|This indicates that the sensor failed to send data or a keep-alive signal to the Defender for Identity services for a period exceeding the allowed time. This typically suggests either a network issue in the environment that prevented data transmission or a server restart that took longer than the acceptable time frame, impacting Defender for Identity's ability to detect suspicious activities.|Check the communication between the Defender for Identity sensor and Defender for Identity cloud service isn't blocked by any routers or firewalls.|Medium|Sensors health issues tab|
 
 ### Some Windows events are not being analyzed
 

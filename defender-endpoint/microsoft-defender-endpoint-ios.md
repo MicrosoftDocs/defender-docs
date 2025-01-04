@@ -78,7 +78,7 @@ ms.date: 12/11/2024
 - The device is either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account.
 
 > [!IMPORTANT]
-> Microsoft Defender for Endpoint is ending support for devices running iOS/iPadOS 15 and previous versions on January 31, 2025. Moving forward, only devices running iOS/iPadOS 16 and later are supported.
+> Microsoft Defender for Endpoint is ending support for devices running iOS/iPadOS 15 on January 31, 2025. Moving forward, only devices running iOS/iPadOS 16 and later are supported.
 
 > [!NOTE]
 > - Microsoft Defender for Endpoint on iOS isn't supported on user-less or shared devices.

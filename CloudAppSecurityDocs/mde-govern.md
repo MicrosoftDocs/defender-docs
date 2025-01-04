@@ -20,7 +20,7 @@ Apps marked as **Unsanctioned** in Defender for Cloud Apps are automatically syn
 
 - One of the following licenses:
 
-  - Defender for Cloud Apps (E5, AAD-P1m CAS-D) and Microsoft Defender for Endpoint [Plan 2](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2), with endpoints onboarded to Defender for Endpoint
+  - Defender for Cloud Apps + Endpoint
   - Microsoft 365 E5
 
 - Microsoft Defender Antivirus. For more information, see:

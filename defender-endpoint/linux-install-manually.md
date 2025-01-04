@@ -22,6 +22,11 @@ ms.date: 12/02/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**Applies to**:
+
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 > [!TIP]
@@ -33,12 +38,12 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux ma
 - [Configure the Linux software repository](#configure-the-linux-software-repository)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma-1)
   - [SLES and variants](#sles-and-variants-1)
-  - [Ubuntu and Debian systems](#ubuntu-and-debian-systems-1)
+  - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
-  - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
+  - [Ubuntu and Debian systems](#ubuntu-and-debian-systems-1)
   - [Mariner](#mariner-1)
 - [Download the onboarding package](#download-the-onboarding-package)
 - [Client configuration](#client-configuration)
@@ -223,14 +228,16 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
 - Install the Microsoft GPG public key:
   - For Debian 11 and earlier, run the following command.
  
-  ```bash
-  curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
-  ```
-For Debian 12 and later, run the following command.
+    ```bash
+    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+    ```
 
-```bash
-curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
-```
+  - For Debian 12 and later, run the following command.
+
+    ```bash
+    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+    ```
+
 - Install the HTTPS driver if not already installed:
 
   ```bash
@@ -374,7 +381,7 @@ Download the onboarding package from Microsoft Defender portal.
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Local Script** as the deployment method.
 3. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
 
-   :::image type="content" source="media/portal-onboarding-linux.png" alt-text="Downloading an onboarding package in the Microsoft Defender portal" lightbox="media/portal-onboarding-linux.png":::
+   :::image type="content" source="media/portal-onboarding-linux.png" alt-text="Downloading an onboarding package in the Microsoft Defender portal":::
 
 4. From a command prompt, verify that you have the file, and extract the contents of the archive:
 
@@ -483,7 +490,7 @@ Download the onboarding package from Microsoft Defender portal.
      
 1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-- Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
+   - Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
 
    - Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server and run the following command: `./mde_linux_edr_diy.sh`
 

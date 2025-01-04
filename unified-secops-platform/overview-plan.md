@@ -86,18 +86,43 @@ For more information, see:
 
 Microsoft's unified SecOps platform ingests data from first-party Microsoft services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud. We recommend expanding your coverage to other data sources in your environment by adding Microsoft Sentinel data connectors.
 
-- **Determine the full set of data sources you'll be ingesting data from, and the data size requirements** to help you accurately project your deployment's budget and timeline.
+### Determine your data sources
 
-  You might determine this information during your business use case review, or by evaluating a current SIEM that you already have in place. If you already have a SIEM in place, analyze your data to understand which data sources provide the most value and should be ingested into Microsoft Sentinel.
+Determine the full set of data sources you'll be ingesting data from, and the data size requirements to help you accurately project your deployment's budget and timeline. You might determine this information during your business use case review, or by evaluating a current SIEM that you already have in place. If you already have a SIEM in place, analyze your data to understand which data sources provide the most value and should be ingested into Microsoft Sentinel.
 
-  For more information, see [Prioritize data connectors](/azure/sentinel/prioritize-data-connectors).
+For example, you might want to use any of the following recommended data sources:
 
-- **Plan your Microsoft Sentinel budget, considering cost implications for each planned scenario**.
+- **Azure services**: If any of the following services are deployed in Azure, use the following connectors to send these resources' Diagnostic Logs to Microsoft Sentinel:
 
-  Make sure that your budget covers the cost of data ingestion for both Microsoft Sentinel and Azure Log Analytics, any playbooks that will be deployed, and so on.  For more information, see:
+    - **Azure Firewall**
+    - **Azure Application Gateway**
+    - **Keyvault**
+    - **Azure Kubernetes Service**
+    - **Azure SQL**
+    - **Network Security Groups**
+    - **Azure-Arc Servers**
+  
+  We recommend that you set up Azure Policy to require that their logs be forwarded to the underlying Log Analytics workspace. For more information, see [Create diagnostic settings at scale using Azure Policy](/azure/azure-monitor/essentials/diagnostic-settings-policy).
 
-  - [Log retention plans in Microsoft Sentinel](/azure/sentinel/log-plans)
-  - [Plan costs and understand Microsoft Sentinel pricing and billing](/azure/sentinel/billing?tabs=simplified%2Ccommitment-tiers)
+- **Virtual machines**: For virtual machines hosted on-premises or in other clouds that require their logs collected, use the following data connectors:
+  
+    - **Windows Security Events using AMA**
+    - Events via **Defender for Endpoint** (for server)
+    - **Syslog**
+
+- **Network virtual appliances / on-premises sources**: For network virtual appliances or other on-premises sources that generate [Common Event Format (CEF) or SYSLOG logs](/azure/sentinel/connect-cef-syslog-ama?branch=main&tabs=single%2Ccef%2Cportal), use the following data connectors:
+
+    - **Syslog via AMA**
+    - **Common Event Format (CEF) via AMA**
+  
+For more information, see [Prioritize data connectors](/azure/sentinel/prioritize-data-connectors).
+
+### Plan your budget
+
+Plan your Microsoft Sentinel budget, considering cost implications for each planned scenario. Make sure that your budget covers the cost of data ingestion for both Microsoft Sentinel and Azure Log Analytics, any playbooks that will be deployed, and so on.  For more information, see:
+
+- [Log retention plans in Microsoft Sentinel](/azure/sentinel/log-plans)
+- [Plan costs and understand Microsoft Sentinel pricing and billing](/azure/sentinel/billing?tabs=simplified%2Ccommitment-tiers)
 
 ## Plan roles and permissions
 

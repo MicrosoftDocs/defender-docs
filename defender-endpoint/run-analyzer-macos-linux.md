@@ -158,37 +158,168 @@ If you're using a terminal, download the tool by entering the following command:
 
 ## Command line options
 
-### Primary command lines
-
-Use the following command to get the machine diagnostic.
+### All command line options
 
 ```console
--h, --help            show this help message and exit
---output OUTPUT, -o OUTPUT
-                      Output path to export report
---outdir OUTDIR       Directory where diagnostics file will be generated
---no-zip, -nz         If set a directory will be created instead of an archive file
---force, -f           Will overwrite if output directory exists
---diagnostic, -d      Collect extensive machine diagnostic information
---bypass-disclaimer   Do not display disclaimer banner
---interactive, -i     Interactive diagnostic
---delay DELAY, -dd DELAY
-                      Set MDATP log level. If you use interactive or delay mode, the log level will set to debug automatically, and reset after 48h.
---mdatp-log {info,debug,verbose,error,trace,warning}
-                      Set MDATP log level
---max-log-size MAX_LOG_SIZE
-                      Maximum log file size in MB before rotating(Will restart mdatp)
+usage: MDESupportTool [-h] [--output OUTPUT] [--outdir OUTDIR] [--no-zip]
+                      [--force] [--diagnostic] [--skip-mdatp]
+                      [--bypass-disclaimer] [--interactive] [--delay DELAY]
+                      [--mdatp-log {trace,info,warning,error,debug,verbose}]
+                      [--max-log-size MAX_LOG_SIZE]
+                      {certinfocollection,performance,installation,exclude,ratelimit,skipfaultyrules,trace,observespikes,connectivitytest}
+                      ...
+
+MDE Diagnostics Tool
+
+positional arguments:
+  {certinfocollection,performance,installation,exclude,ratelimit,skipfaultyrules,trace,observespikes,connectivitytest}
+    certinfocollection  Collect cert information: Subject name and Hashes
+    performance         Collect extensive machine performance tracing for
+                        analysis of a performance scenario that can be
+                        reproduced on demand
+    installation        Collect different installation/onboarding reports
+    exclude             Exclude specific process(es) from audit-d monitoring.
+    ratelimit           Set the rate limit for auditd events. Rate limit will
+                        update the limits for auditd events for all the
+                        applications using auditd, which could impact
+                        applications other than MDE.
+    skipfaultyrules     Continue loading rules in spite of an error. This
+                        summarizes the results of loading the rules. The exit
+                        code will not be success if any rule fails to load.
+    trace               Use OS tracing facilities to record Defender
+                        performance traces.
+    observespikes       Collect the process logs in case of spike or mdatp
+                        crash
+    connectivitytest    Perform connectivity test for MDE
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --output OUTPUT, -o OUTPUT
+                        Output path to export report
+  --outdir OUTDIR       Directory where diagnostics file will be generated.
+  --no-zip, -nz         If set a directory will be created instead of an
+                        archive file.
+  --force, -f           Will overwrite if output directory exists.
+  --diagnostic, -d      Collect extensive machine diagnostic information.
+  --skip-mdatp          Skip any mdatp command. Use this when the mdatp
+                        command is unresponsive.
+  --bypass-disclaimer   Do not display disclaimer banner.
+  --interactive, -i     Interactive diagnostic,
+  --delay DELAY, -dd DELAY
+                        Delay diagnostic by how many minutes (0~2880), use
+                        this to wait for more debug logs before it collects.
+  --mdatp-log {trace,info,warning,error,debug,verbose}
+                        Set MDATP log level. If you use interactive or delay
+                        mode, the log level will set to debug automatically,
+                        and reset after 48h.
+  --max-log-size MAX_LOG_SIZE
+                        Maximum log file size in MB before rotating(Will
+                        restart mdatp).
 ```
 
+### Diagnostics mode
+
+This is used to collected etensive set of machine information, such as memory, disk, MDATP logs, etc.
+These set of files give us primary set of information required to debug any issue related to MDE.
+
+The options supported for this is:
+```console
+optional arguments:
+  -h, --help            show this help message and exit
+  --output OUTPUT, -o OUTPUT
+                        Output path to export report
+  --outdir OUTDIR       Directory where diagnostics file will be generated.
+  --no-zip, -nz         If set a directory will be created instead of an
+                        archive file.
+  --force, -f           Will overwrite if output directory exists.
+  --diagnostic, -d      Collect extensive machine diagnostic information.
+  --skip-mdatp          Skip any mdatp command. Use this when the mdatp
+                        command is unresponsive.
+  --bypass-disclaimer   Do not display disclaimer banner.
+  --interactive, -i     Interactive diagnostic,
+  --delay DELAY, -dd DELAY
+                        Delay diagnostic by how many minutes (0~2880), use
+                        this to wait for more debug logs before it collects.
+  --mdatp-log {trace,info,warning,error,debug,verbose}
+                        Set MDATP log level. If you use interactive or delay
+                        mode, the log level will set to debug automatically,
+                        and reset after 48h.
+  --max-log-size MAX_LOG_SIZE
+                        Maximum log file size in MB before rotating(Will
+                        restart mdatp).
+```
 Usage example: `sudo ./MDESupportTool -d`
 
 NOTE: The log level auto-reset feature only available in 2405 or newer client version.
+
+The files generated when using this mode:
+| File  | Remarks |
+| ------------- | ------------- |
+| mde_diagnostic.zip  | MDE logs and configs  |
+| health.txt  | The health status of MDE [^1]  |
+| health_details_features.txt  | The health status of additional MDE features [^1]   |
+| permissions.txt  | Permission issues with the folders owned/used by MDE [^1]   |
+| crashes  | Crash dumps generated by MDE |
+| process_information.txt  | Process running in the machine when the tool was run |
+| proc_directory_info.txt  | Mapping of the virtual memory of MDE processes [^1]   |
+| auditd_info.txt  | Auditd health, rules, logs |
+| auditd_log_analysis.txt  | Summary of events processed by auditd  |
+| auditd_logs.zip  | Auditd log files  |
+| ebpf_kernel_config.txt  | Currently loaded Linux Kernel config  |
+| ebpf_enabled_func.txt  | List of ---------  |
+| ebpf_syscalls.zip | Information about system call tracing  |
+| ebpf_raw_syscalls.zip  | Tracing events related to raw system calls  |
+| ebpf_maps_info.txt  | eBPF maps' id and size info  |
+| syslog.zip  | The files usder /var/log/syslog  |
+| messages.zip  | The files under /var/log/messages  |
+| conflicting_processes_information.txt  | MDE Conflicting Processes |
+| exclusions.txt  | List of AV exclusions |
+| definitions.txt  | AV defintion info  |
+| mde_directories.txt | List of files in the MDE directories |
+| disk_usage.txt  | Disk usage details |
+| mde_user.txt | MDE User Info |
+|  mde_definitions_mount.txt |  MDE Definitions Mount Point |
+| service_status.txt | MDE Service Status |
+| service_file.txt | MDE Service File |
+| hardware_info.txt | Hardware Information |
+| mount.txt | Mount point information |
+| uname.txt | Kernel info |
+| memory.txt | System memory info |
+| meminfo.txt | Detailed information about the system's memory usage |
+| cpuinfo.txt | CPU Information |
+| lsns_info.txt | Linux namespace information |
+| lsof.txt | MDE Open File Descriptors Information [^1]  |
+| sestatus.txt | MDE Open File Descriptors Information |
+| lsmod.txt | Status of modules in the Linux kernel |
+| dmesg.txt | Messages from the kernel ring buffer |
+| kernel_lockdown.txt | kernel lockdown Info |
+| rtp_statistics.txt | MDE Real Time Protection(RTP) statistics [^1]   |
+| libc_info.txt | libc library information |
+| uptime_info.txt | Time since last restart |
+| last_info.txt | Listing of last logged in users |
+| locale_info.txt | Show current locale |
+| tmp_files_owned_by_mdatp.txt | /tmp files owned by group:mdatp [^1]  |
+| mdatp_config.txt | All the MDE configurations [^1]  |
+| mpenginedb.db, mpenginedb.db-wal, mpenginedb.db-shm | AV definations file [^1]  |
+| iptables_rules.txt | Linux iptables rules |
+| network_info.txt | Network information |
+| sysctl_info.txt | kernel settings info |
+| hostname_diagnostics.txt | Hostname diagnostics information |
+| mde_event_statistics.txt | MDE Event statistics [^1]  |
+| mde_ebpf_statistics.txt | MDE eBPF statistics [^1]  |
+| kernel_logs.zip | Kernel logs |
+| mdc_log.zip | Microsoft Defender for Cloud logs |
+| netext_config.txt |  |
+| threat_list.txt | List of threats detected by MDE [^1]  |
+| top_output.txt | Process running in the machine when the tool was run |
+| top_summary.txt | Memeory and CPU usage analytics of the process running |
+[^1]: Only when MDE is installed.
 
 ### Positional arguments
 
 #### Collect performance info
 
-Collect extensive machine performance tracing for analysis of a performance scenario that can be reproduced on demand.
+Collect extensive machine performance tracing of MDE processes for analysis of a performance scenario that can be reproduced on demand.
 
 ```console
 -h, --help            show this help message and exit
@@ -197,7 +328,51 @@ Collect extensive machine performance tracing for analysis of a performance scen
 --length LENGTH       length of time to collect (in seconds)
 ```
 
-Usage example: `sudo ./MDESupportTool performance --frequency 2`
+Usage example: `sudo ./MDESupportTool performance --frequency 500`
+
+The files generated when using this mode:
+| File  | Remarks |
+| ------------- | ------------- |
+| perf_benchmark.tar.gz  | MDE processes performance data  |
+> [!NOTE]
+> The files corresponding to diagnostic mode will also be generated.
+
+The tar files contains files on the format `<pid of a MDE process>.data`.
+The data file can be read using the command:
+
+`perf report -i <pid>.data`
+
+#### Run connectivity test
+This modes test if the cloud resources needed by MDE is reachable or not.
+
+```console
+  -h, --help            show this help message and exit
+  -o ONBOARDING_SCRIPT, --onboarding-script ONBOARDING_SCRIPT
+                        Path to onboarding script
+  -g GEO, --geo GEO     Geo string to test <US|UK|EU|AU|CH|IN>
+```
+Usage example: `sudo ./MDESupportTool connectivitytest -o ~/MicrosoftDefenderATPOnboardingLinuxServer.py`
+
+The result will be printed in the screen.
+
+
+#### Collect different installation/onboarding reports
+This mode collects installation related info like disto info, system requirements, etc.
+
+```console
+  -h, --help    show this help message and exit
+  -d, --distro  Check for distro support
+  -a, --all     Run all checks
+```
+
+Usage example: `sudo ./MDESupportTool installation --all`
+
+A single report `installation_report.json` will be generated. The keys in the file are as:
+| Key  | Remarks |
+| ------------- | ------------- |
+| agent_version  | Version of MDE installed  |
+| onboarding_status | The onboarding and ring info |
+
 
 #### Use OS trace (for macOS only)
 

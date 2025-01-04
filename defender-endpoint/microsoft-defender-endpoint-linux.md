@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/10/2024
+ms.date: 01/02/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -39,26 +39,27 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
 ### Prerequisites
 
 - Access to the Microsoft Defender portal
-- Linux distribution using the [systemd](https://systemd.io/)system manager
-
-  > [!NOTE]
-  > Linux distribution using system manager, support both SystemV and Upstart.
-
+- Linux distribution using the [systemd](https://systemd.io)system manager
 - Beginner-level experience in Linux and BASH scripting
 - Administrative privileges on the device (for manual deployment)
 
 > [!NOTE]
-> Microsoft Defender for Endpoint on Linux agent is independent from [OMS agent](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
+> Linux distribution using system manager supports both SystemV and Upstart.
+> Microsoft Defender for Endpoint on Linux agent is independent from [OMS agent](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). 
+> Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
 ### System requirements
 
-- 1 CPU core minimum. For high-performance workloads, more cores are recommended.
+- CPU: 1 CPU core minimum. For high-performance workloads, more cores are recommended.
 
-- Memory: At least 1 GB of RAM. For high-performance workloads, more memory might be needed.
+- Disk Space: 2 GB minimum. For high-performance workloads, more disk space might be needed.
 
-- Performance tuning might be needed based on workloads. See [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md).
+- Memory: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
 
-- The following Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions are supported:
+  > [!NOTE]
+  > Performance tuning might be needed based on workloads. See [Troubleshoot performance issues for Microsoft Defender for Endpoint on  Linux](linux-support-perf.md).
+
+- The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
   - Red Hat Enterprise Linux 7.2 or higher
   - Red Hat Enterprise Linux 8.x
   - Red Hat Enterprise Linux 9.x
@@ -84,6 +85,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   - Mariner 2
 
 - The following Linux server distributions on ARM64 are now supported in preview:
+
   - Ubuntu 20.04 ARM64
   - Ubuntu 22.04 ARM64
   - Amazon Linux 2 ARM64

@@ -2,8 +2,7 @@
 title: Before you begin using Defender Experts for XDR
 ms.reviewer:
 description: To enable us to get started with this managed service, we require the following licensing prerequisites
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium

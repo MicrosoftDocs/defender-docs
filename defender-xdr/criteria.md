@@ -55,7 +55,7 @@ Microsoft classifies most malicious software into one of the following categorie
 
 - **Dropper:** A type of malware that installs other malware files onto your device. Unlike a downloader, a dropper doesn't have to connect to the internet to drop malicious files. The dropped files are typically embedded in the dropper itself.
 
-- **Exploit:** A piece of code that uses software vulnerabilities to gain access to your device and perform other tasks, such as installing malware..
+- **Exploit:** A piece of code that uses software vulnerabilities to gain access to your device and perform other tasks, such as installing malware.
 
 - **Hacktool:** A type of tool that can be used to gain unauthorized access to your device.
 
@@ -69,7 +69,7 @@ Microsoft classifies most malicious software into one of the following categorie
 
 - **Rogue security software:** Malware that pretends to be security software but doesn't provide any protection. This type of malware usually displays alerts about nonexistent threats on your device. It also tries to convince you to pay for its services.
 
-- **Trojan:** A type of malware that attempts to appear harmless. Unlike a virus or a worm, a trojan doesn't spread by itself. Instead, it tries to look legitimate to tricks users into downloading and installing it. Once installed, trojans perform various malicious activities such as stealing personal information, downloading other malware, or giving attackers access to your device.
+- **Trojan:** A type of malware that attempts to appear harmless. Unlike a virus or a worm, a trojan doesn't spread by itself. Instead, it tries to look legitimate to trick users into downloading and installing it. Once installed, trojans perform various malicious activities such as stealing personal information, downloading other malware, or giving attackers access to your device.
 
 - **Trojan clicker:** A type of trojan that automatically clicks buttons or similar controls on websites or applications. Attackers can use this trojan to click on online advertisements. These clicks can skew online polls or other tracking systems and can even install applications on your device.
 

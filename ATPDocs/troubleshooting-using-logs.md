@@ -9,7 +9,7 @@ ms.topic: how-to
 
 The Defender for Identity logs provide insight into what each component of Microsoft Defender for Identity sensor is doing at any given point in time.
 
-The Defender for Identity logs are located in a subfolder called **Logs** where Defender for Identity is installed; the default location is: **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. In the default installation location, it can be found at: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
+The Defender for Identity logs are located in a subfolder called **Logs** where Defender for Identity is installed; the default location is: `C:\Program Files\Azure Advanced Threat Protection Sensor`. In the default installation location, it can be found at: `C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs`.
 
 ## Defender for Identity sensor logs
 
@@ -28,7 +28,7 @@ The Defender for Identity sensor has the following logs:
 
 ## Defender for Identity deployment logs
 
-The Defender for Identity deployment logs are located in the temp directory of the user who installed the product. It will usually be found at **%USERPROFILE%\AppData\Local\Temp**. If it was deployed by a service, it might be found at **C:\Windows\Temp**.
+The Defender for Identity deployment logs are located in the temp directory of the user who installed the product. Typically, you can find these logs at `%USERPROFILE%\AppData\Local\Temp`. If the deployment was performed by a service, the logs might be located in `C:\Windows\Temp` or `C:\Windows\SystemTemp`, depending on your Windows version and patch level.
 
 Defender for Identity sensor deployment logs:
 

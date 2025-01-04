@@ -22,6 +22,22 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## December 2024
+
+### New security posture assessment: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
+
+Defender for Identity has added the new **Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)** recommendation in Microsoft Secure Score.
+
+This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
+
+The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that post risks to the entire organization, together with related detections.
+
+For more information, see:
+
+- [Security assessment: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)](https://go.microsoft.com/fwlink/?linkid=2296922)
+
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
+
 ## October 2024
 
 ### MDI is expanding coverage with new 10 Identity posture recommendations (preview)
@@ -532,6 +548,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 - [What is Microsoft Defender for Identity?](what-is.md)
 - [Frequently asked questions](technical-faq.yml)
+
 - [Defender for Identity prerequisites](prerequisites.md)
 - [Defender for Identity capacity planning](capacity-planning.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

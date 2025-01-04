@@ -6,6 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
+ms.reviewer: denishdonga
 audience: ITPro
 ms.collection:
 - m365-security
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/06/2024
+ms.date: 01/03/2025
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
@@ -26,6 +27,42 @@ ms.date: 12/06/2024
 - [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+### Upgrading your experience: Upcoming enhancements you should know about
+
+January 2025
+
+**Key changes**
+
+We are pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+
+Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation. 
+
+The following screenshot is an example of what the user sees in their dashboard:
+
+:::image type="content" source="media/android-whatsnew/android-dashboard-screen.png" alt-text="Screenshot showing what the user sees on the device.":::
+
+**Recommendation cards for alerts**
+
+The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert will bring forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table:
+
+| Card | Description |
+|---|---|
+| :::image type="content" source="media/android-whatsnew/android-connection-unsecured.png" alt-text="Screenshot of recommendation to connect to a secure network."::: | **Network protection** <br/>The user is advised to switch to a secure network. |
+| :::image type="content" source="media/android-whatsnew/android-allow-vpn.png" alt-text="Screenshot showing a recommendation to set up a VPN connection."::: | **VPN option** <br/>The user is prompted to set up a VPN connection on their device. |
+| :::image type="content" source="media/android-whatsnew/android-threat-found.png" alt-text="Screenshot showing a recommendation to take action on a detected threat."::: | **Malware detection** <br/>The user is prompted to take action on a detected threat. |
+
+      
+**Feature tiles**
+
+The current enterprise dashboard experience now features a tile view for your security team. The following table describes tiles your security team might see.
+
+| Tile | Description |
+|---|---|
+| :::image type="content" source="media/android-whatsnew/android-tile-networkprotection.png" alt-text="Screenshot showing the network protection tile for security administrators."::: | **Network protection** <br/>Your security team can see whether a connection is secured or unsecured. |
+| :::image type="content" source="media/android-whatsnew/android-tile-webprotection.png" alt-text="Screenshot of a tile that shows whether web protection is enabled on a device."::: | **Web protection** <br/>Your security team can see whether web protection is enabled on a user's device. |
+| :::image type="content" source="media/android-whatsnew/android-tile-appsecurity.png" alt-text="Screenshot showing the app security tile."::: | **App security** <br/>Your security team can see whether any threats were found in apps installed on a user's device. |
+| :::image type="content" source="media/android-whatsnew/android-tile-globalsecureaccess.png" alt-text="Screenshot showing Global Secure Access status."::: | **Global secure access** <br/>Your security team can see current connection status. |
 
 ## Android low-touch onboarding is now GA
 
@@ -50,13 +87,12 @@ Although low-touch onboarding is disabled by default, security administrators ca
 > 
 > **For devices with access to GMS**
 > 
-> After support ends for device administrator enrolled devices, devices with access to GMS will be afffected in the following ways: 
+> After support ends for device administrator enrolled devices, devices with access to GMS will be affected in the following ways: 
 > 
 > - Intune and Defender for Endpoint won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.
 > - Intune and Defender for Endpoint technical support will no longer support devices with access to GMS.
 > 
 > For more information, see [Tech Community blog: Intune ending support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443).
-
 
 ## Network protection
 
@@ -64,19 +100,19 @@ Although low-touch onboarding is disabled by default, security administrators ca
 
 - Network Protection feature is enabled by default for all users
 
-Network protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices, and rogue certificates. It notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an unsecure connection.
+Network protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices, and rogue certificates. It notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an insecure connection.
 
 > [!IMPORTANT]
 > **This feature is now enabled by default for all users.** As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the set up. Administrators can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. 
 There are also several administrator controls to offer flexibility, including privacy controls to configure the data that's sent by Defender for Endpoint from Android devices. For more information, see [network protection](android-configure.md).
 
-## Device Tagging
+## Device tagging
 
 Mobile Device Tagging is now generally available. This feature enables bulk tagging the mobile devices by allowing the administrators to set up tags via Intune. Administrators can configure the device tags through Intune via configuration policies and push them to user's devices. Once the user installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory.
 
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For more information, see [Device Tagging (MDM)](android-configure.md#device-tagging) and [Device Tagging (MAM)](android-configure-mam.md#device-tagging).
 
-## Microsoft Defender for Endpoint on Company-owned personally enabled devices
+## Microsoft Defender for Endpoint on company-owned personally enabled devices
 
 Defender for Endpoint is now generally available on AE COPE devices. Enterprises can onboard devices on COPE mode and push Defender for Endpoint to user's devices through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With this support, Android Enterprise COPE devices get the full capabilities of our offering on Android, including:
 
@@ -85,15 +121,15 @@ Defender for Endpoint is now generally available on AE COPE devices. Enterprises
 - Network protection (preview).
 - More breach prevention through integration with Microsoft Intune and Conditional Access.
 
-Read the announcement [here](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-is-now-available-on-android/ba-p/3626100).
+Read the announcement [Tech Community Blog: Defender for Endpoint is now available on Android corporate-owned personally enabled devices](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-is-now-available-on-android/ba-p/3626100).
 
-## Privacy Controls
+## Privacy controls
 
 Microsoft Defender for Endpoint on Android enables privacy controls for both administrators and end users, and includes controls for enrolled (MDM) and unenrolled (MAM) devices. Administrators can configure the privacy in the alert report while End Users can configure the information shared to their organization. For more information, see [privacy controls(MDM)](android-configure.md#privacy-controls) and [privacy controls (MAM)](android-configure-mam.md#configure-privacy-controls).
 
-## Optional Permissions and Disable Web Protection
+## Optional permissions and the ability to disable web protection
 
-Microsoft Defender for Endpoint on Android enables **Optional Permissions** in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, administrators can deploy Defender for Endpoint on devices without enforcing the mandatory **VPN** and **Accessibility** permissions during onboarding. End Users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for unenrolled devices (MAM). For more information, see [optional permissions](android-configure-mam.md#optional-permissions).
+Microsoft Defender for Endpoint on Android enables **optional permissions** in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, administrators can deploy Defender for Endpoint on devices without enforcing the mandatory **VPN** and **Accessibility** permissions during onboarding. End Users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for unenrolled devices (MAM). For more information, see [optional permissions](android-configure-mam.md#optional-permissions).
 
 ## Microsoft Defender on Android enterprise BYOD personal profile
 
@@ -113,11 +149,11 @@ To update, users can use the following steps:
 
 If you encounter any issues, [submit in-app feedback](android-support-signin.md#send-in-app-feedback).
 
-## Microsoft Defender for Endpoint is now Microsoft Defender in the Play store
+## The Microsoft Defender for Endpoint app is now Microsoft Defender in the Play store
 
 Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
 
-## Vulnerability Management
+## Vulnerability management
 
 On January 25, 2022, we announced the general availability of Vulnerability management on Android and iOS. For more information, see [the techcommunity post here](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
 
@@ -143,7 +179,7 @@ Notify your users and help desk (as applicable) that end users must accept the n
 
 1. Tap on the Defender for Endpoint in-app notification or open the Defender for Endpoint app. Users see a screen that lists the permissions needed. A green check mark is missing next to **Storage permission**.
 
-2. Tap **Begin**.
+1. Tap **Begin**.
 
 3. Tap the toggle for **Allow access to manage all files.** 
 
@@ -153,3 +189,7 @@ Notify your users and help desk (as applicable) that end users must accept the n
    > This permission allows Microsoft Defender for Endpoint to access storage on user's device, which helps detect and remove malicious and unwanted apps. Microsoft Defender for Endpoint accesses/scans Android app package file (.apk) only. On devices with a Work Profile, Defender for Endpoint only scans work-related files.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+## See also
+
+[What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)

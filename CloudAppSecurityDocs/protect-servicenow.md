@@ -1,7 +1,7 @@
 ---
 title: Protect your ServiceNow environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your ServiceNow app to Defender for Cloud Apps using the API connector.
-ms.date: 12/11/2024
+ms.date: 12/12/2024
 ms.topic: how-to
 ---
 
@@ -45,7 +45,8 @@ In Secure Score, select **Recommended actions** and filter by **Product** = **Se
 
 For more information, see:
 -	[Security posture management for SaaS apps](security-saas.md)
--	[Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+-	[Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score
+)
 
 ## Control ServiceNow with built-in policies and policy templates
 
@@ -181,7 +182,7 @@ Revoke to the old refresh token. We don't recommend keeping old keys for securit
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
-After connecting ServiceNow, you'll receive events for seven days prior to connection.
+After connecting ServiceNow, you'll receive events for 1 hour prior to connection.
 
 ### Legacy ServiceNow connection
 
