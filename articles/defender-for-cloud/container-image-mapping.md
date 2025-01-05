@@ -13,11 +13,19 @@ When a vulnerability is identified in a container image stored in a container re
 ## Prerequisites
 
 - An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- [Azure DevOps](quickstart-onboard-devops.md) or [GitHub](quickstart-onboard-github.md) environment onboarded to Microsoft Defender is automatically shared and installed in all connected Azure DevOps organizations. This automatically injects tasks into all Azure Pipelines to collect data for container mapping.
+- For Azure DevOps:
 
-- For Azure DevOps, [Microsoft Security DevOps (MSDO) Extension](azure-devops-extension.yml) installed on the Azure DevOps organization.
+  - [Microsoft Security DevOps (MSDO) Extension](azure-devops-extension.yml) must be installed on the Azure DevOps organization. 
+    
+  - Ensure that the Microsoft Defender for DevOps Extension is shared and installed in all connected Azure DevOps organizations. For newly onboarded connectors, this will be done automatically. This extension automatically injects tasks into all Azure Pipelines to collect data for container mapping. 
+    
+  - Must use [YAML Pipelines](/azure/devops/pipelines/get-started/pipelines-get-started) as Classic Pipelines are no longer supported. 
+    
+- For GitHub:
 
-- For GitHub, [Microsoft Security DevOps (MSDO) Action](github-action.md) configured in your GitHub repositories. Additionally, the GitHub Workflow must have "**id-token: write"** permissions for federation with Defender for Cloud. For an example, see [this YAML](https://github.com/microsoft/security-devops-action/blob/7e3060ae1e6a9347dd7de6b28195099f39852fe2/.github/workflows/on-push-verification.yml).
+  - [Microsoft Security DevOps (MSDO) Action](github-action.md) must be configured in your GitHub workflows. 
+    
+  - The GitHub Workflow must have "**id-token: write"** permissions for federation with Defender for Cloud. For an example, see [this YAML](https://github.com/microsoft/security-devops-action/blob/7e3060ae1e6a9347dd7de6b28195099f39852fe2/.github/workflows/on-push-verification.yml).
 - [Defender CSPM](tutorial-enable-cspm-plan.md) enabled.
 - The container images must be built using [Docker](https://www.docker.com/) and the Docker client must be able to access the Docker server during the build.
 
