@@ -20,19 +20,13 @@ The AKS Security Dashboard allows the user to:
 - Enable Defender for Container plan and configure extensions for the specific cluster resource.
 - Review vulnerability assessment recommendations.
 - Review configurations of the cluster and running containers that deviate from security best practices ("misconfigurations"), together with guided or automated remediation.
-- Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date. (Available with Defender Cloud Security Posture Management (DCSPM) enabled for the cluster.)
+- Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date. (Available with Defender Cloud Security Posture Management (DCSPM) enabled for the subscription.)
 
 ## Prerequisites
 
 The AKS Security Dashboard shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
 - [Defender for Containers on the subscription](tutorial-enable-containers-azure.md) or [the individual cluster](#setting-the-defender-for-containers-plan)
 - [DCSPM](tutorial-enable-cspm-plan.md) on the subscription
-
-When [enabling Defender for Containers for an individual cluster](#setting-the-defender-for-containers-plan):
-- Security misconfigurations are shown.
-- Vulnerability assessment recommendations are shown if Defender for Containers is enabled for the subscription.
-- [Risk prioritization](risk-prioritization.md#how-is-risk-calculated) based on multiple resource risk factors is available if DCSPM is enabled on the subscription.
-- Owner assignment is available if DCSPM is enabled on the subscription.
 
 ## Using the AKS Security Dashboard 
 
@@ -61,8 +55,5 @@ Selecting **Settings** of **Microsoft Defender for Containers status** opens a p
 - **Kubernetes API access** - Agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
 - **Registry access** - Agentless vulnerability assessment for registry images.
 - **Azure policy** - Deployment of an agent on the cluster to generate recommendations for hardening the cluster control and data planes.
-
-> [!NOTE]
-> Defender for Containers for an individual cluster in a subscription must be enabled by a subscription owner. A resource group contributor or higher role can enable or disable the Azure Policy extension for Defender for Containers.
 
 The Defender for Containers plan for the cluster can also be set using the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
