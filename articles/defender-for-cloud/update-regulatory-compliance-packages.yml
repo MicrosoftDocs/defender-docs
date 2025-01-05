@@ -3,7 +3,7 @@
 metadata:
   title: Assign regulatory compliance standards in Microsoft Defender for Cloud
   description: Learn how to assign regulatory compliance standards in Microsoft Defender for Cloud.
-  ms.date: 02/26/2024
+  ms.date: 12/26/2024
   ms.topic: how-to
   ms.custom:
     - ignite-2023
@@ -26,7 +26,7 @@ procedureSection:
   - title: |
       Assign a standard
     summary: |
-      **To assign regulatory compliance standards on cloud environment**:
+      If you assign a regulatory standard but don't have any relevant assessed resources in that standard, the standard won't appear on your regulatory compliance dashboard.
     steps: 
       - |
         Sign in to the [Azure portal](https://portal.azure.com/).

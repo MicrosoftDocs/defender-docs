@@ -33,4 +33,4 @@ ms.date: 04/11/2024
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Vulnerability anagement in Defender CSPM](episode-forty-seven.md)
+> [Vulnerability management in Defender CSPM](episode-forty-seven.md)
