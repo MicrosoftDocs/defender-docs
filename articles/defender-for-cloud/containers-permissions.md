@@ -13,10 +13,10 @@ This article lists the permissions required to use Defender for Containers.
 
 | Capabilities                                                 | Component                                                    | Required Permissions                                         | Allocated Resources                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Runtime threat protection, Runtime vulnerability assessment (optional), Kubernetes data plane hardening | GKE Arc Auto provisioning (for Defender agent and Azure policy agent) | Kubernetes Engine Admin <br/><br />Kubernetes Engine Viewer - if only Agentless threat protection and/or Kubernetes API access extension are enabled | K8s Arc Workspace                                            |
-| Runtime threat protection, Runtime vulnerability assessment (optional), Kubernetes data plane hardening | AWS Arc Auto provisioning (for Defender agent and Azure policy agent) | Azure - Azure Lighthouse request subscription <br/>Contributor permissions <br /><br />AWS - TBD-P1 | Kubernetes Arc Workspace                                     |
-| Agentless threat protection (control plane)                  | GKE AuditLogs autoprovisioning                               | Custom roles  <br />Containers Data Collection Role <br />Microsoft Defender Containers Custom Role<br />Microsoft organization custom role for onboarding <br />Microsoft Defender for Cloud CSPM custom role  <br /><br />Built-in roles: <br />roles/pubsub.publisher <br />role=roles/iam.workloadIdentityUser \ - links between identity provider to our role <br />--role="roles/container.viewer" <br />roles/pubsub.admin <br />roles/viewer | PubSub, Logging subscriptions, Logging Sinks, sink (Pub/Sub), topic (Pub/Sub) |
-| Agentless threat protection (control plane)                  | AWS AuditLogs autoprovisioning                               | See [AWS Agentless threat protection permissions](#aws-agentless-threat-protection-permissions)    | S3, SQS, Kinesis Data Firehose, CloudWatch Log groups Routing |
+| GKE Runtime threat protection, Runtime vulnerability assessment (optional), Kubernetes data plane hardening | GKE Arc Auto provisioning (for Defender agent and Azure policy agent) | Kubernetes Engine Admin <br/>OR<br/>Kubernetes Engine Viewer (if only Agentless threat protection and/or Kubernetes API access extension are enabled) | K8s Arc Workspace                                            |
+| EKS Runtime threat protection, Runtime vulnerability assessment (optional), Kubernetes data plane hardening | AWS Arc Auto provisioning (for Defender agent and Azure policy agent) | Contributor permissions | Kubernetes Arc Workspace                                     |
+| GKE Agentless threat protection (control plane)                  | GKE AuditLogs autoprovisioning                               | Custom roles:  <br /><li>Containers Data Collection Role <li>Microsoft Defender Containers Custom Role<li>Microsoft organization custom role for onboarding<li>Microsoft Defender for Cloud CSPM custom role | PubSub, Logging subscriptions, Logging Sinks, sink (Pub/Sub), topic (Pub/Sub) |
+| EKS Agentless threat protection (control plane)                  | AWS AuditLogs autoprovisioning                               | See [AWS Agentless threat protection permissions](#aws-agentless-threat-protection-permissions)    | S3, SQS, Kinesis Data Firehose, CloudWatch Log groups Routing |
 
 ## AWS Agentless threat protection permissions
 
@@ -94,12 +94,15 @@ This article lists the permissions required to use Defender for Containers.
   - serviceusage.services.enable
   - iam.roles.create
   - iam.roles.list
+  - compute.projects.get
+  - compute.projects.setCommonInstanceMetadata
   
 - Microsoft Defender for Cloud CSPM custom role
   - resourcemanager.folders.getIamPolicy
   - resourcemanager.folders.list
   - resourcemanager.organizations.get
   - resourcemanager.organizations.getIamPolicy
+  - storage.buckets.getIamPolicy
 
 ## Permissions granted in cloud environments
 
