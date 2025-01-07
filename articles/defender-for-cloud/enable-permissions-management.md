@@ -16,9 +16,9 @@ Microsoft Defender for Cloud's integration with Microsoft Entra Permissions Mana
 
 - You must [enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
 
-- You must have the following Azure roles and permissions for the subscription, depending on the cloud environment, to enable the **Permissions Management (CIEM)** extension of Defender CSPM:
-    - **AWS and GCP**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall)
-    - **Azure**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Microsoft.Authorization/roleAssignments/write](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization)
+- You must have the following Azure roles and permissions, depending on the cloud environment, to enable the **Permissions Management (CIEM)** extension of Defender CSPM:
+    - **AWS and GCP**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) for your tenant.
+    - **Azure**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Microsoft.Authorization/roleAssignments/write](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) for the subscription.
 
 - **AWS Only**: [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).
 
@@ -28,7 +28,7 @@ Microsoft Defender for Cloud's integration with Microsoft Entra Permissions Mana
 
 When you enabled the Defender CSPM plan on your Azure account, the **Azure CSPM** [standard is automatically assigned to your subscription](concept-regulatory-compliance-standards.md). The Azure CSPM standard provides Cloud Infrastructure Entitlement Management (CIEM) recommendations.
  
-When Permissions Management (CIEM) is disabled, the CIEM recommendations within the Azure CSPM standard won't be calculated.
+When Permissions Management (CIEM) is disabled, the CIEM recommendations within the Azure CSPM standard are not calculated.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -59,29 +59,29 @@ List of Azure recommendations:
 ## Enable Permissions Management (CIEM) for AWS
 
 When you enabled the Defender CSPM plan on your AWS account, the **AWS CSPM** [standard is automatically assigned to your subscription](concept-regulatory-compliance-standards.md). The AWS CSPM standard provides Cloud Infrastructure Entitlement Management (CIEM) recommendations. 
-When Permission Management is disabled, the CIEM recommendations within the AWS CSPM standard won't be calculated.
+When Permission Management is disabled, the CIEM recommendations within the AWS CSPM standard are not calculated.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select  **Microsoft Defender for Cloud**.
+2. Search for and select  **Microsoft Defender for Cloud**.
 
-1. Navigate to **Environment settings**.
+3. Navigate to **Environment settings**.
 
-1. Select relevant AWS account.
+4. Select relevant AWS account.
 
-1. Locate the Defender CSPM plan and select **Settings**.
+5. Locate the Defender CSPM plan and select **Settings**.
 
     :::image type="content" source="media/enable-permissions-management/settings.png" alt-text="Screenshot that shows an AWS account and the Defender CSPM plan enabled and where the settings button is located." lightbox="media/enable-permissions-management/settings.png":::
 
-1. Enable **Permissions Management (CIEM)**.
+6. Enable **Permissions Management (CIEM)**.
 
-1. Select **Configure access**.
+7. Select **Configure access**.
 
-1. Select the relevant permissions type.
+8. Select the relevant permissions type.
 
 1. Select a deployment method.
 
-1. Run the updated script on your AWS environment using the onscreen instructions.
+2. Run the updated script on your AWS environment using the onscreen instructions.
 
 1. Check the **CloudFormation template has been updated on AWS environment (Stack)** checkbox.
 
@@ -103,7 +103,7 @@ List of AWS recommendations:
 
 When you enabled the Defender CSPM plan on your GCP project, the **GCP CSPM** [standard is automatically assigned to your subscription](concept-regulatory-compliance-standards.md). The GCP CSPM standard provides Cloud Infrastructure Entitlement Management (CIEM) recommendations. 
 
-When Permissions Management (CIEM) is disabled, the CIEM recommendations within the GCP CSPM standard won't be calculated.
+When Permissions Management (CIEM) is disabled, the CIEM recommendations within the GCP CSPM standard are not calculated.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
