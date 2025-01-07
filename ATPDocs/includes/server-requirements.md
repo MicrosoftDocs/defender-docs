@@ -16,4 +16,4 @@ For all operating systems:
 
 - Both servers with desktop experience and server cores are supported.
 - Nano servers aren't supported.
-- Installations are supported for domain controllers, AD FS, AD CS, Entra Connect servers.
+- Installations are supported for domain controllers, AD FS, AD CS, and Entra Connect servers.
