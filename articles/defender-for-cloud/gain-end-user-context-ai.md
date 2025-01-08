@@ -18,7 +18,7 @@ Add parameters to your Azure OpenAI API calls to enable your Azure AI to pass cr
 
 - Read up on [Overview - AI threat protection](ai-threat-protection.md).
 
-- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure Open AI service. Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
+- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure OpenAI Service. Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
 ## Add security parameters to your Azure OpenAI call
 
