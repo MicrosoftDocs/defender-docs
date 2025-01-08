@@ -82,6 +82,17 @@ Advanced hunting results are converted to the [timezone](m365d-time-zone.md) set
 
 
 
+## To extend the 30 days retention for Advanced Hunting, you can use Streaming API's
+
+In order to extend the 30 days retention for Advanced Hunting are:
+
+- Microsoft Defender XDR [Streaming API](/defender-xdr/streaming-api)
+
+- Microsoft Defender for Endpoint [Raw Data Streaming API](/defender-endpoint/api/raw-data-export)
+
+> [!NOTE]
+> The data retained is from the first (1st) day that you implement and enable the streaming api.
+
 ## Related topics
 - [Choose between guided and advanced hunting modes](advanced-hunting-modes.md)
 - [Build hunting queries using guided mode](advanced-hunting-query-builder.md)
