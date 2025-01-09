@@ -13,31 +13,46 @@ ms.collection:
   - m365-security
   - tier1
   - security-copilot
+  - magic-ai-copilot
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 04/01/2024
+ms.date: 11/20/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Script analysis with Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
-
-Through AI-powered investigation capabilities from [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal, security teams can speed up their analysis of malicious or suspicious scripts and command lines.
-
-Most complex and sophisticated attacks like [ransomware](/security/ransomware) evade detection through numerous ways, including the use of scripts and PowerShell command lines. Moreover, these scripts are often obfuscated, which adds to the complexity of detection and analysis. Security operations teams need to quickly analyze scripts to understand capabilities and apply appropriate mitigation, immediately stopping attacks from progressing further within a network.
-
-The script analysis capability provides security teams added capacity to inspect scripts without using external tools. This capability also reduces complexity of analysis, minimizing challenges and allowing security teams to quickly assess and identify a script as malicious or benign. Script analysis is also available in the Copilot for Security standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins).
+Through AI-powered investigation capabilities from [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal, security teams can speed up their analysis of malicious or suspicious scripts and command lines.
 
 This guide describes what the script analysis capability is and how it works, including how you can provide feedback on the results generated.
 
-## Analyze a script
+## Know before you begin
+
+If you're new to Security Copilot, you should familiarize yourself with it by reading the following articles:
+
+- [What is Security Copilot?](/security-copilot/microsoft-security-copilot)
+- [Security Copilot experiences](/security-copilot/experiences-security-copilot)
+- [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
+- [Understand authentication in Security Copilot](/security-copilot/authentication)
+- [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
+
+Most complex and sophisticated attacks like [ransomware](/security/ransomware) evade detection through numerous ways, including the use of scripts and PowerShell command lines. Moreover, these scripts are often obfuscated, which adds to the complexity of detection and analysis. Security operations teams need to quickly analyze scripts to understand capabilities and apply appropriate mitigation, immediately stopping attacks from progressing further within a network.
+
+The script analysis capability provides security teams added capacity to inspect scripts without using external tools. This capability also reduces complexity of analysis, minimizing challenges and allowing security teams to quickly assess and identify a script as malicious or benign.
+
+## Security Copilot integration in Microsoft Defender
+
+The script analysis capability is available in the Microsoft Defender portal for customers who have provisioned access to Security Copilot.
+
+Script analysis is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+
+## Key features
 
 You can access the script analysis capability within the attack story below the incident graph on an incident page and in the [device timeline](/defender-endpoint/device-timeline-event-flag).
 
@@ -53,22 +68,34 @@ To begin analysis, perform the following steps:
   
 2. Copilot runs script analysis and displays the results in the Copilot pane. Select **Show code** to expand the script, or **Hide code** to close the expansion.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results-small.png" alt-text="Screenshot that shows the Copilot pane with script analysis results in the Microsoft Defender XDR incident page." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/show-code-script-small.png" alt-text="Screenshot highlighting the show or hide code option within the script analysis results." lightbox="/defender/media/copilot-in-defender/script-analyzer/show-code-script.png":::
 
-3. Select the **More actions** ellipsis (...) on the upper right of the script analysis card to copy or regenerate the results, or view the results in the Copilot for Security standalone experience. Selecting **Open in Copilot for Security** opens a new tab to the Copilot standalone portal where you can input prompts and access other plugins.
+3. Select **Show MITRE techniques** to view the MITRE ATT&CK techniques associated with the script. This information helps you understand the techniques used by the script and how it can impact your environment. Select **Hide MITRE techniques** to close the expansion.
+
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/hide-mitre-script-small.png" alt-text="Screenshot highlighting the show or hide MITRE techniques option within the script analysis results." lightbox="/defender/media/copilot-in-defender/script-analyzer/hide-mitre-script.png":::
+
+4. Select the **More actions** ellipsis (...) on the upper right of the script analysis card to copy or regenerate the results, or view the results in the Security Copilot standalone experience. Selecting **Open in Security Copilot** opens a new tab to the Copilot standalone portal where you can input prompts and access other plugins.
   
-    ![Screenshot that shows the More actions option in the Copilot script analysis card.](/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-more-actions.png)
+    ![Screenshot that shows the More actions option in the Copilot script analysis card.](/defender/media/copilot-in-defender/script-analyzer/script-analysis-options.png)
 
-4. Review the results. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
+5. Review the results an use the information to guide your investigation and response to the incident.
+
+## Sample script analysis prompt
+
+In the Security Copilot standalone portal, you can use the following prompt identify and analyze scripts:
+
+- *Identify the scripts in Defender incident {incident ID}. Are these malicious scripts?*
+
+> [!TIP]
+> When analyzing scripts in the Security Copilot portal, Microsoft recommends including the word ***Defender*** in your prompts to ensure that the script analysis capability delivers the results.
+
+## Provide feedback
+
+Microsoft highly encourages you to provide feedback to Copilot, as it’s crucial for a capability’s continuous improvement. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
 
 ## See also
 
-- [Analyze files](copilot-in-defender-file-analysis.md)
-- [Generate device summary](copilot-in-defender-device-summary.md)
-- [Respond to incidents using guided responses](security-copilot-m365d-guided-response.md)
-- [Generate KQL queries](advanced-hunting-security-copilot.md)
-- [Create an incident report](security-copilot-m365d-create-incident-report.md)
-- [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
-- [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
+- [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
+- [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

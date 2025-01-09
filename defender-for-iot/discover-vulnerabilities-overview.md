@@ -1,6 +1,6 @@
 ---
-title: Overview of vulnerability management with Microsoft Defender for IoT in the Defender portal
-description: This article describes the features and benefits of Microsoft Defender for IoT vulnerability management.
+title: Overview of vulnerability management and weaknesses with Microsoft Defender for IoT in the Defender portal
+description: This article describes the vulnerability management and weaknesses features of Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein

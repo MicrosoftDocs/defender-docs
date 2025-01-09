@@ -14,6 +14,9 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
+ms.custom: 
+- cx-ti
+- cx-ah
 ms.topic: reference
 ms.date: 01/16/2024
 ---
@@ -43,8 +46,8 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `ConfigurationCategory` | `string` | Category or grouping to which the configuration belongs: Application, OS, Network, Accounts, Security controls |
 | `ConfigurationSubcategory` | `string` | Subcategory or subgrouping to which the configuration belongs. In many cases,  string describes specific capabilities or features. |
 | `ConfigurationImpact` | `real` | Rated impact of the configuration to the overall configuration score (1-10) |
-| `IsCompliant` | `boolean` | Indicates whether the configuration or policy is properly configured |
-| `IsApplicable` | `boolean` | Indicates whether the configuration or policy applies to the device |
+| `IsCompliant` | `boolean` | Indicates whether the configuration or policy is properly configured <br /> * A value of 1 is Compliant<br /> * A value of 0 is Not Compliant|
+| `IsApplicable` | `boolean` | Indicates whether the configuration or policy applies to the device <br /> * A value of 1 is Applicable<br /> * A value of 0 is Not Applicable |
 | `Context` | `dynamic` | Additional contextual information about the configuration or policy |
 | `IsExpectedUserImpact` | `boolean` | Indicates whether there will be user impact if the configuration or policy is applied |
 

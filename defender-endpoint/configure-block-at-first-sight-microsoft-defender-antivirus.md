@@ -3,8 +3,8 @@ title: Enable block at first sight to detect malware in seconds
 description: Turn on the block at first sight feature to detect and block malware within seconds.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: marcmcc
 manager: deniseb
 ms.custom: nextgen
@@ -32,7 +32,7 @@ search.appverid: met150
 This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization.
 
 > [!TIP]
-> This article is intended for enterprise admins and IT Pros who manage security settings for organizations. If you are not an enterprise admin or IT Pro but you have questions about block at first sight, see the [Not an enterprise admin or IT Pro?](#not-an-enterprise-admin-or-it-pro) section.
+> This article is intended for enterprise admins and IT Pros who manage security settings for organizations. If you aren't an enterprise admin or IT Pro but you have questions about block at first sight, see the [Not an enterprise admin or IT Pro?](#not-an-enterprise-admin-or-it-pro) section.
 
 ## What is "block at first sight"?
 
@@ -57,9 +57,9 @@ Microsoft Defender Antivirus uses multiple detection and prevention technologies
 
 ## A few things to know about block at first sight
 
-- Block at first sight can block non-portable executable files (such as JS, VBS, or macros) and executable files, running the [latest Defender antimalware platform](microsoft-defender-antivirus-updates.md) on Windows or Windows Server.
+- Block at first sight can block nonportable executable files (such as JS, VBS, or macros) and executable files, running the [latest Defender antimalware platform](microsoft-defender-antivirus-updates.md) on Windows or Windows Server.
 
-- Block at first sight only uses the cloud protection backend for executable files and non-portable executable files that are downloaded from the Internet, or that originate from the Internet zone. A hash value of the `.exe` file is checked via the cloud backend to determine if the file is a previously undetected file.
+- Block at first sight only uses the cloud protection backend for executable files and nonportable executable files that are downloaded from the Internet, or that originate from the Internet zone. A hash value of the `.exe` file is checked via the cloud backend to determine if the file is a previously undetected file.
 
 - If the cloud backend is unable to make a determination, Microsoft Defender Antivirus locks the file and uploads a copy to the cloud. The cloud performs more analysis to reach a determination before it either allows the file to run or blocks it in all future encounters, depending on whether it determines the file to be malicious or not a threat.
 
@@ -98,7 +98,7 @@ Microsoft Defender Antivirus uses multiple detection and prevention technologies
 3. In the MAPS section, double-click **Configure the 'Block at First Sight' feature**, and set it to **Enabled**, and then select **OK**.
 
     > [!IMPORTANT]
-    > Setting to **Always prompt (0)** will lower the protection state of the device. Setting to **Never send (2)** means block at first sight will not function.
+    > Setting to **Always prompt (0)** lowers the protection state of the device. Setting to **Never send (2)** means block at first sight won't function.
 
 4. In the MAPS section, double-click **Send file samples when further analysis is required**, and set it to **Enabled**. Under **Send file samples when further analysis is required**, select **Send all samples**, and then select **OK**.
 
@@ -118,13 +118,13 @@ You can confirm that block at first sight is enabled on individual client device
 
 > [!NOTE]
 >
-> - If the prerequisite settings are configured and deployed using Group Policy, the settings described in this section will be greyed-out and unavailable for use on individual endpoints.
-> - Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting will be updated in Windows Settings.
+> - If the prerequisite settings are configured and deployed using Group Policy, the settings described in this section are greyed-out and unavailable for use on individual endpoints.
+> - Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting gets updated in Windows Settings.
 
 ## Turn off block at first sight
 
 > [!CAUTION]
-> Turning off block at first sight will lower the protection state of your device(s) and your network. We do not recommend disabling block at first sight protection permanently.
+> Turning off block at first sight lowers the protection state of your devices and your network. We don't recommend disabling block at first sight protection permanently.
 
 ### Turn off block at first sight with Microsoft Intune
 
@@ -144,22 +144,22 @@ You can confirm that block at first sight is enabled on individual client device
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
+2. Using the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
 3. Expand the tree through **Windows components** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
 4. Double-click **Configure the 'Block at First Sight' feature** and set the option to **Disabled**.
 
     > [!NOTE]
-    > Disabling block at first sight does not disable or alter the prerequisite group policies.
+    > Disabling block at first sight doesn't disable or alter the prerequisite group policies.
 
 ## Not an enterprise admin or IT Pro?
 
-If you are not an enterprise admin or an IT Pro, but you have questions about block at first sight, this section is for you. Block at first sight is a threat protection feature that detects and blocks malware within seconds. Although there isn't a specific setting called "Block at first sight," the feature is enabled when certain settings are configured on your device.
+If you aren't an enterprise admin or an IT Pro, but you have questions about block at first sight, this section is for you. Block at first sight is a threat protection feature that detects and blocks malware within seconds. Although there isn't a specific setting called "Block at first sight," the feature is enabled when certain settings are configured on your device.
 
 ### How to manage block at first sight on or off on your own device
 
-If you have a personal device that is not managed by an organization, you might be wondering how to turn block at first sight on or off. You can use the Windows Security app to manage block at first sight.
+If you have a personal device that isn't managed by an organization, you might be wondering how to turn block at first sight on or off. You can use the Windows Security app to manage block at first sight.
 
 1. On your Windows 10 or Windows 11 computer, open the Windows Security app.
 
@@ -174,7 +174,7 @@ If you have a personal device that is not managed by an organization, you might 
    - To disable block at first sight, turn off **Cloud-delivered protection** or **Automatic sample submission**.
 
      > [!CAUTION]
-     > Turning off block at first sight lowers the level of protection for your device. We do not recommend permanently disabling block at first sight.
+     > Turning off block at first sight lowers the level of protection for your device. We don't recommend permanently disabling block at first sight.
 
 ## See also
 

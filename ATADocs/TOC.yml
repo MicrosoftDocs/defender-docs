@@ -1,0 +1,148 @@
+- name: Understand and Explore
+  items:
+  - name: What is Microsoft Advanced Threat Analytics?
+    href: what-is-ata.md
+  - name: What threats does ATA detect?
+    href: ata-threats.md
+  - name: What's new in ATA?
+    items:
+    - name: What's new in ATA version 1.9
+      href: whats-new-version-1.9.md
+      items:
+      - name: Update to ATA 1.9.3 - migration guide
+        href: ata-update-1.9.3-migration-guide.md
+      - name: Update to ATA 1.9.2 - migration guide
+        href: ata-update-1.9.2-migration-guide.md
+      - name: Update to ATA 1.9.1 - migration guide
+        href: ata-update-1.9.1-migration-guide.md
+      - name: Update to ATA 1.9 - migration guide
+        href: ata-update-1.9-migration-guide.md
+    - name: What's new in ATA version 1.8
+      href: whats-new-version-1.8.md
+      items:
+      - name: Update to ATA 1.8 - migration guide
+        href: ata-update-1.8-migration-guide.md
+    - name: What's new in ATA version 1.7
+      href: whats-new-version-1.7.md
+      items:
+      - name: Update to ATA 1.7 - migration guide
+        href: ata-update-1.7-migration-guide.md
+    - name: What's new in ATA version 1.6
+      href: whats-new-version-1.6.md
+      items:
+      - name: Update to ATA 1.6 - migration guide
+        href: ata-update-1.6-migration-guide.md
+    - name: What's new in ATA version 1.5
+      href: whats-new-version-1.5.md
+      items:
+      - name: Update to ATA 1.5 - migration guide
+        href: ata-update-1.5-migration-guide.md
+    - name: What's new in ATA version 1.4
+      href: whats-new-version-1.4.md
+  - name: Frequently asked questions
+    href: ata-technical-faq.yml
+  - name: ATA data security and privacy
+    href: ata-privacy-compliance.md
+- name: Plan and Design
+  items:
+  - name: ATA Architecture
+    href: ata-architecture.md
+  - name: Plan your ATA capacity
+    href: ata-capacity-planning.md
+  - name: ATA Prerequisites
+    href: ata-prerequisites.md
+  - name: Recommended upgrade path
+    href: upgrade-path.md
+- name: Deploy
+  items:
+  - name: 1 Download & install Center
+    href: install-ata-step1.md
+  - name: 2 Connect to AD
+    href: install-ata-step2.md
+  - name: 3 Download the ATA Gateway package
+    href: install-ata-step3.md
+  - name: 4 Install the ATA Gateway
+    href: install-ata-step4.md
+  - name: 5 Configure the ATA Gateway
+    href: install-ata-step5.md
+  - name: 6 Event collection
+    href: install-ata-step6.md
+  - name: 7 VPN integration
+    href: vpn-integration-install-step.md
+  - name: 8 Exclusions and Honeytoken
+    href: install-ata-step7.md
+  - name: 9 Configure SAM-R
+    href: install-ata-step9-samr.md
+  - name: Silent installation
+    href: ata-silent-installation.md
+  - name: ATA Gateway additional steps
+    items:
+    - name: 1. Configure port mirroring
+      href: configure-port-mirroring.md
+    - name: 2. Validate port mirroring
+      href: validate-port-mirroring.md
+    - name: 3. Configure Windows Event Forwarding
+      href: configure-event-collection.md
+- name: Use
+  items:
+  - name: ATA database management
+    href: ata-database-management.md
+  - name: ATA Health Center
+    href: ata-health-center.md
+  - name: ATA reports
+    href: reports.md
+  - name: ATA role groups
+    href: ata-role-groups.md
+  - name: Change ATA Center configuration
+    href: modifying-ata-center-configuration.md
+  - name: Change domain connectivity password
+    href: modifying-ata-config-dcpassword.md
+  - name: Excluding entities from detections
+    href: excluding-entities-from-detections.md
+  - name: Export/Import ATA configuration
+    href: ata-configuration-file.md
+  - name: Manage system-generated logs
+    href: manage-telemetry-settings.md
+  - name: Set ATA notifications
+    href: setting-ata-alerts.md
+  - name: Set syslog and email server settings
+    href: setting-syslog-email-server-settings.md
+  - name: Tag sensitive accounts
+    href: tag-sensitive-accounts.md
+  - name: Working with suspicious activities
+    href: working-with-suspicious-activities.md
+  - name: Working with the ATA Console
+    href: working-with-ata-console.md
+    items:
+    - name: Entity profiles
+      href: entity-profiles.md
+  - name: Preventing lateral movement paths
+    href: use-case-lateral-movement-path.md
+  - name: ATA reference information
+    items:
+    - name: SIEM log reference
+      href: cef-format-sa.md
+    - name: Event ID reference
+      href: event-id-reference.md
+- name: Investigate
+  items:
+  - name: Suspicious activity guide
+    href: suspicious-activity-guide.md
+- name: Troubleshoot
+  items:
+  - name: Working with audit logs
+    href: troubleshoot-audit.md
+  - name: Troubleshooting known issues
+    href: troubleshooting-ata-known-errors.md
+  - name: Troubleshooting using the logs
+    href: troubleshooting-ata-using-logs.md
+  - name: Troubleshooting using the performance counters
+    href: troubleshooting-ata-using-perf-counters.md
+  - name: Troubleshooting using the database
+    href: troubleshooting-ata-using-ata-database.md
+  - name: Troubleshooting service startup
+    href: troubleshooting-service-startup.md
+  - name: Disaster recovery
+    href: disaster-recovery.md
+- name: ATA readiness roadmap
+  href: ata-resources.md

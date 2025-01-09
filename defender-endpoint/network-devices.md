@@ -3,8 +3,8 @@ title: Network device discovery and vulnerability management
 description: Security recommendations and vulnerability detection are now available for operating systems of switches, routers, WLAN controllers, and firewalls.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/02/2025
 ---
 
 # Network device discovery and vulnerability management
@@ -85,7 +85,6 @@ Your first step is to select a device that performs the authenticated network sc
 
 8. To allow the scanner to be authenticated and work properly, it's essential that you add the following domains/URLs:
 
-    - login.windows.net
     - \*.security.microsoft.com
     - login.microsoftonline.com
     - \*.blob.core.windows.net/networkscannerstable/\*

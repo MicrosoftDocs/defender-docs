@@ -16,7 +16,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 11/28/2023
+ms.date: 12/08/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -31,11 +31,11 @@ In Microsoft 365 organizations with mailboxes in Exchange Online, organizational
 
 But, there are also specific anti-spam settings that admins can configure on individual mailboxes in Exchange Online:
 
-- **Move messages to the Junk Email folder based on anti-spam policies**: When an anti-spam policy is configured with the action **Move message to Junk Email folder** for a spam filtering verdict, the message is moved to the Junk Email folder _after_ the message is delivered to the mailbox. For more information about spam filtering verdicts in anti-spam policies, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md). Similarly, if zero-hour auto purge (ZAP) determines that a delivered message is spam or phish, the message is moved to the Junk Email folder for **Move message to Junk Email folder** spam filtering verdict actions. For more information about ZAP, see [Zero-hour auto purge (ZAP) in Exchange Online](zero-hour-auto-purge.md).
+- **Deliver messages to the Junk Email folder based on anti-spam policies**: When an anti-spam policy is configured with the action **Move message to Junk Email folder** for a spam filtering verdict, the message is delivered to the Junk Email folder of the mailbox. For more information about spam filtering verdicts in anti-spam policies, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md). Similarly, if zero-hour auto purge (ZAP) determines that a delivered message is spam or phishing, the message is moved to the Junk Email folder for **Move message to Junk Email folder** spam filtering verdict actions. For more information about ZAP, see [Zero-hour auto purge (ZAP) in Exchange Online](zero-hour-auto-purge.md).
 
 - **Junk email settings that users configure for themselves in Outlook or Outlook on the web**: The _safelist collection_ is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list on each mailbox. The entries in these lists determine whether the message is moved to the Inbox or the Junk Email folder. Users can configure the safelist collection for their own mailboxes in Outlook or Outlook on the web (formerly known as Outlook Web App). Admins can configure the safelist collection on any user's mailbox.
 
-EOP is able to move messages to the Junk Email folder based on the spam filtering verdict action **Move message to Junk Email folder** or the Blocked Senders list on the mailbox, and prevent messages from being delivered to the Junk Email folder (based on the Safe Senders list on the mailbox).
+EOP is able to deliver messages to the Junk Email folder based on the spam filtering verdict action **Move message to Junk Email folder** and the Blocked Senders list in the mailbox, and prevent messages from being delivered to the Junk Email folder based on the Safe Senders list on the mailbox.
 
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
@@ -70,18 +70,16 @@ The safelist collection on a mailbox includes the Safe Senders list, the Safe Re
 
 <sup>\*</sup> You can't directly modify the **Safe Recipients** list by using the **Set-MailboxJunkEmailConfiguration** cmdlet (the _TrustedRecipientsAndDomains_ parameter doesn't work). You modify the Safe Senders list, and those changes are synchronized to the Safe Recipients list.
 
-**Notes**:
-
 - In Exchange Online, whether entries in the Safe Senders list or _TrustedSendersAndDomains_ parameter work or don't work depends on the verdict and action in the policy that identified the message:
   - **Move messages to Junk Email folder**: Domain entries and sender email address entries are honored. Messages from those senders aren't moved to the Junk Email folder.
   - **Quarantine**: Domain entries aren't honored (messages from those senders are quarantined). Email address entries are honored (messages from those senders aren't quarantined) if either of the following statements is true:
     - The message isn't identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
-    - The email address isn't in a block entry in the [Tenant Allow/Block](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses).
+    - The email address, URL, or file in the email message isn't in a block entry in the [Tenant Allow/Block](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
 - In standalone EOP with directory synchronization, domain entries aren't synchronized by default, but you can enable synchronization for domains. For more information, see [Configure Content Filtering to Use Safe Domain Data: Exchange 2013 Help | Microsoft Learn](/exchange/configure-content-filtering-to-use-safe-domain-data-exchange-2013-help).
 
 To configure the safelist collection on a mailbox, use the following syntax:
 
-```PowerShell
+```powershell
 Set-MailboxJunkEmailConfiguration <MailboxIdentity> -BlockedSendersAndDomains <EmailAddressesOrDomains | $null> -ContactsTrusted <$true | $false> -TrustedListsOnly <$true | $false> -TrustedSendersAndDomains  <EmailAddresses | $null>
 ```
 
@@ -154,7 +152,7 @@ The safelist collection (the Safe Senders list, the Safe Recipients list, and th
 
 - The synchronized safelist collection in EOP has the following synchronization limits:
   - 1024 total entries in the Safe Senders list, the Safe Recipients list, and external contacts if **Trust email from my contacts** is enabled.
-  - 500 total entries in the Blocked Senders list and the Blocked Domains list.
+  - 65535 total entries in the Blocked Senders list and the Blocked Domains list.
 
   When the 1024 entry limit is reached, the following things happen:
 

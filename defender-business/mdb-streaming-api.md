@@ -1,22 +1,22 @@
 ---
-title: Use the streaming API with Microsoft Defender for Business            
-description:  The Defender for Endpoint streaming API is available for Defender for Business and Microsoft 365 Business Premium. Stream of device file, registry, network, sign-in events, and other data to Azure Event Hub, Azure Storage, and Microsoft Sentinel to support advanced hunting and attack detection.       
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+title: Use the streaming API with Microsoft Defender for Business
+description:  The Defender for Endpoint streaming API is available for Defender for Business and Microsoft 365 Business Premium. Stream of device file, registry, network, sign-in events, and other data to Azure Event Hub, Azure Storage, and Microsoft Sentinel to support advanced hunting and attack detection.
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 ms.date: 06/07/2024
 ms.topic: how-to
 ms.service:  microsoft-365-security
-ms.localizationpriority: medium 
-ms.collection: 
+ms.localizationpriority: medium
+ms.collection:
 - SMB
 - m365-security
 - m365solution-mdb-setup
 - highpri
 - tier1
 ms.reviewer: davidb, nehabha, efratka
-search.appverid: MET150 
-f1.keywords: NOCSH 
+search.appverid: MET150
+f1.keywords: NOCSH
 audience: ITPro
 ---
 
@@ -24,9 +24,9 @@ audience: ITPro
 
 If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](/defender-endpoint/api/raw-data-export) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
 
-- [Microsoft Sentinel](#use-the-streaming-api-with-microsoft-sentinel), a scalable, cloud-native solution that provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities. 
+- [Microsoft Sentinel](#use-the-streaming-api-with-microsoft-sentinel), a scalable, cloud-native solution that provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities.
 - [Azure Event Hubs](#use-the-streaming-api-with-event-hubs), a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
-- [Azure Storage](/azure/storage/common/storage-introduction), Microsoft's cloud storage solution for modern data storage scenarios, with highly available, massively scalable, durable, and secure storage for a variety of data objects in the cloud. 
+- [Azure Storage](/azure/storage/common/storage-introduction), Microsoft's cloud storage solution for modern data storage scenarios, with highly available, massively scalable, durable, and secure storage for a variety of data objects in the cloud.
 
 With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hunting-overview) and [attack detection](/defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables SOCs to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
 
@@ -43,12 +43,11 @@ With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hu
 
 4. Enable the Microsoft Defender XDR connector. See [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
 
-
 ## Use the streaming API with Event Hubs
 
 > [!NOTE]
 > [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your tenant. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.insights**.
-> 
+>
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
@@ -127,4 +126,3 @@ Each blob contains multiple rows. Each row contains the event name, the time Def
 ## See also
 
 - [Raw Data Streaming API](/defender-endpoint/api/raw-data-export) in Defender for Endpoint
-

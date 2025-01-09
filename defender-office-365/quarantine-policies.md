@@ -467,7 +467,7 @@ You can use the procedures in this section to customize the **Sender display nam
 
 - The **Subject** field of quarantine notification messages.
 
-- The **Disclaimer** text that's added to the bottom of quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
+- The **Disclaimer** text that's added to the bottom of quarantine notifications (max. 200 characters). The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
 
 :::image type="content" source="media/quarantine-tags-esn-customization-disclaimer.png" alt-text="A custom disclaimer at the bottom of a quarantine notification." lightbox="media/quarantine-tags-esn-customization-disclaimer.png":::
 

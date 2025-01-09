@@ -1,13 +1,14 @@
 ---
 title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
+ms.reviewer: yongrhee 
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 06/21/2024
+ms.date: 11/25/2024
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
@@ -31,6 +32,8 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
    - November 2023 to prerelease customers.
    - Mid April 2024 to Enterprise customers running Windows clients.
    - Beginning of July 2024 to U.S. Government customers running Windows clients.
+      
+   - Mid January 2025 to Enterprise customers running Windows Server.
       
 3. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 
@@ -159,7 +162,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
    > [!NOTE]
    > Copy the .admx, and separately the .adml to the En-US folder.
 
-3. Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc   
+3. Start, GPMC.msc (e.g. Domain Controller or) or GPEdit.msc   
 4. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
   
 5. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service

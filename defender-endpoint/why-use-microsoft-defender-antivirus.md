@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb
@@ -47,7 +47,7 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 |4|Details about blocked malware|More details and actions for blocked malware are available with Microsoft Defender Antivirus and Microsoft Defender for Endpoint. [Understand malware & other threats](malware/understanding-malware.md).|
 |5|Attack surface reduction|Your organization's security team can reduce your vulnerabilities (attack surfaces), giving  attackers fewer ways to perform attacks. Attack surface reduction uses cloud protection for a number of rules. [Get an overview of attack surface reduction](overview-attack-surface-reduction.md).|
 |6|Network protection|Your organization's security team can protect your network by blocking specific URLs and IP addresses. [Protect your network](network-protection.md).|
-|7|Indicators, such as file, IP address, URL, and/or certificate allow or block indicators |Your organization's security team can import threat intel, which blocks known Indicators of Compromise (IoC's) [Get an overview of Indicator of compromise (IoC)](manage-indicators.md).|
+|7|Indicators, such as file, IP address, URL, and/or certificate allow or block indicators |Your organization's security team can import threat intel, which blocks known Indicators of Compromise (IoC's) [Get an overview of Indicator of compromise (IoC)](indicators-overview.md).|
 |8|File blocking|Your organization's security team can block specific files. [Stop and quarantine files in your network](respond-file-alerts.md#stop-and-quarantine-files-in-your-network).|
 |9|Auditing events|Auditing event signals are available in [endpoint detection and response capabilities](overview-endpoint-detection-response.md). (These signals are not available with non-Microsoft antivirus solutions.)|
 |10|File recovery via OneDrive|If you are using Microsoft Defender Antivirus together with [Office 365](/Office365/Enterprise), and your device is attacked by ransomware, your files are protected and recoverable. [OneDrive Files Restore and Windows Defender take ransomware protection one step further](https://techcommunity.microsoft.com/t5/Microsoft-OneDrive-Blog/OneDrive-Files-Restore-and-Windows-Defender-takes-ransomware/ba-p/188001).|

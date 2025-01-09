@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 07/31/2024
+ms.date: 09/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -38,8 +38,8 @@ However, security needs to be balanced with productivity. This can include balan
 
 Microsoft 365 organizations with mailboxes in Exchange Online are protected by Exchange Online Protection (EOP). This protection includes:
 
-- Email with suspected malware will automatically be quarantined. Whether recipients are notified about quarantined malware messages is controlled by the quarantine policy and the settings in the anti-malware policy. For more information, see [Configure anti-malware policies in EOP](anti-malware-policies-configure.md).
-- Email identified as high confidence phishing will be handled according to the anti-spam policy action. See [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+- Email with suspected malware is automatically quarantined. Whether recipients are notified about quarantined malware messages is controlled by the quarantine policy and the settings in the anti-malware policy. For more information, see [Configure anti-malware policies in EOP](anti-malware-policies-configure.md).
+- Email identified as high confidence phishing is handled according to the anti-spam policy action. See [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
 
 For more information about EOP, see [Exchange Online Protection overview](eop-about.md).
 
@@ -55,7 +55,7 @@ If you want to temporarily allow certain messages that are still being blocked b
 More information on these overrides can be found in [Create safe sender lists](create-safe-sender-lists-in-office-365.md).
 
 > [!NOTE]
-> We have deprecated the **Move message to Junk Email folder** action for a **High confidence phishing email** verdict in EOP anti-spam policies. Anti-spam policies that use this action for high confidence phishing messages will be converted to **Quarantine message**. The **Redirect message to email address** action for high confidence phishing messages is unaffected.
+> The **Move message to Junk Email folder** action for a **High confidence phishing email** verdict in EOP anti-spam policies has been deprecated. Anti-spam policies that use this action for high confidence phishing messages are converted to **Quarantine message**. The **Redirect message to email address** action for high confidence phishing messages is unaffected.
 
 Secure by default isn't a setting that can be turned on or off, but is the way our filtering works out of the box to keep potentially dangerous or unwanted messages out of your mailboxes. Malware and high confidence phishing messages should be quarantined. By default, only admins can manage messages that are quarantined as malware or high confidence phishing, and they can also report false positives to Microsoft from there. For more information, see [Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md).
 
@@ -79,4 +79,5 @@ You should only consider using overrides in the following scenarios:
   - [Exchange mail flow rules to bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
   - Senders identified in the [Safe Senders list](configure-junk-email-settings-on-exo-mailboxes.md) in user mailboxes.
   - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list).
+  - Senders identified in the [allowed senders list and allowed domains list in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
 - False positives: To temporarily allow certain messages that are still being blocked by Microsoft, use [admin submissions](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days. During those 30 days, Microsoft learns from the allow entries and [removes them or automatically extends them](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/automatic-tenant-allow-block-list-expiration-management-is-now/ba-p/3723447). By default, allow entries for spoofed senders never expire.

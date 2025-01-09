@@ -7,7 +7,7 @@ ms.author: yelevin
 author: yelevin
 manager: dansimp
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - usx-security
@@ -31,7 +31,7 @@ The device entity page in the Microsoft Defender portal helps you in your invest
 > The content set displayed on the device entity page may differ slightly, depending on the device's enrollment in Microsoft Defender for Endpoint and Microsoft Defender for Identity.
 >
 > If your organization onboarded Microsoft Sentinel to the Defender portal, additional information will appear.
-> 
+>
 > In Microsoft Sentinel, device entities are also known as **host** entities. [Learn more](/azure/sentinel/entities-reference).
 >
 > [!INCLUDE [unified-soc-preview-no-alert](../includes/unified-soc-preview-no-alert.md)]
@@ -85,15 +85,15 @@ The **Overview** tab contains the [device details](#device-details) sidebar and 
 
 The sidebar lists the device's full name and exposure level. It also provides some important basic information in small subsections, which can be expanded or collapsed, such as:
 
-| Section | Included information |
-| ------- | -------------------- |
-| **VM details** | Machine and domain names and IDs, health and onboarding statuses, timestamps for first and last seen, IP addresses, and more |
-| **DLP policy sync details** | If relevant |
-| **Configuration status** | Details regarding Microsoft Defender for Endpoint configuration |
-| **Cloud resource details** | Cloud platform, resource ID, subscription information, and more |
-| **Hardware and firmware** | VM, processor, and BIOS information, and more |
-| **Device management** | Microsoft Defender for Endpoint enrollment status and management info |
-| **Directory data** |  [UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview) flags, [SPNs](/windows/win32/ad/service-principal-names), and group memberships. |
+|Section|Included information|
+|---|---|
+|**VM details**|Machine and domain names and IDs, health and onboarding statuses, timestamps for first and last seen, IP addresses, and more|
+|**DLP policy sync details**|If relevant|
+|**Configuration status**|Details regarding Microsoft Defender for Endpoint configuration|
+|**Cloud resource details**|Cloud platform, resource ID, subscription information, and more|
+|**Hardware and firmware**|VM, processor, and BIOS information, and more|
+|**Device management**|Microsoft Defender for Endpoint enrollment status and management info|
+|**Directory data**|[UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview) flags, [SPNs](/windows/win32/ad/service-principal-names), and group memberships.|
 
 ### Dashboard
 
@@ -282,30 +282,31 @@ Response actions offer shortcuts to analyze, investigate, and defend against thr
 :::image type="content" source="/defender/media/entity-page-device/entity-device-response-actions.png" alt-text="Screenshot of the Action bar for the device entity page in the Microsoft Defender portal.":::
 
 > [!IMPORTANT]
+>
 > - [Response actions](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts) are only available if the device is enrolled in Microsoft Defender for Endpoint.
 > - Devices that are enrolled in Microsoft Defender for Endpoint may display different numbers of response actions, based on the device's OS and version number.
 
 Response actions run along the top of a specific device page and include:
 
-| Action | Description |
-| ------ | ----------- |
-| **Device value** |  |
-| **Set criticality** |  |
-| **Manage tags** | Updates custom tags you've applied to this device. |
-| **Report device inaccuracy** |  |
-| **Run Antivirus Scan** | Updates Microsoft Defender Antivirus definitions and immediately runs an antivirus scan. Choose between Quick scan or Full scan. |
-| **Collect Investigation Package** | Gathers information about the device. When the investigation is completed, you can download it. |
-| **Restrict app execution** | Prevents applications that aren't signed by Microsoft from running. |
-| **Initiate automated investigation** | Automatically [investigates and remediates threats](/defender-office-365/air-about). Although you can manually trigger automated investigations to run from this page, [certain alert policies](/Microsoft-365/compliance/alert-policies#default-alert-policies) trigger automatic investigations on their own. |
-| **Initiate Live Response Session** | Loads a remote shell on the device for [in-depth security investigations](/defender-endpoint/live-response). |
-| **Isolate device** | Isolates the device from your organization's network while keeping it connected to Microsoft Defender. You can choose to allow Outlook, Teams, and Skype for Business to run while the device is isolated, for communication purposes. |
-| **Ask Defender Experts** |  |
-| **Action Center** | Displays information about any response actions that are currently running. Only available if another action has already been selected. |
-| **Download force release from isolation script** |  |
-| **Exclude** |  |
-| **Go hunt** |  |
-| **Turn on troubleshooting mode** |  |
-| **Policy sync** |  |
+|Action|Description|
+|---|---|
+|**Device value**||
+|**Set criticality**||
+|**Manage tags**|Updates custom tags you've applied to this device.|
+|**Report device inaccuracy**||
+|**Run Antivirus Scan**|Updates Microsoft Defender Antivirus definitions and immediately runs an antivirus scan. Choose between Quick scan or Full scan.|
+|**Collect Investigation Package**|Gathers information about the device. When the investigation is completed, you can download it.|
+|**Restrict app execution**|Prevents applications that aren't signed by Microsoft from running.|
+|**Initiate automated investigation**|Automatically [investigates and remediates threats](/defender-office-365/air-about). Although you can manually trigger automated investigations to run from this page, [certain alert policies](/Microsoft-365/compliance/alert-policies#default-alert-policies) trigger automatic investigations on their own.|
+|**Initiate Live Response Session**|Loads a remote shell on the device for [in-depth security investigations](/defender-endpoint/live-response).|
+|**Isolate device**|Isolates the device from your organization's network while keeping it connected to Microsoft Defender. You can choose to allow Outlook, Teams, and Skype for Business to run while the device is isolated, for communication purposes.|
+|**Ask Defender Experts**||
+|**Action Center**|Displays information about any response actions that are currently running. Only available if another action has already been selected.|
+|**Download force release from isolation script**||
+|**Exclude**||
+|**Go hunt**||
+|**Turn on troubleshooting mode**||
+|**Policy sync**||
 
 ## Related topics
 

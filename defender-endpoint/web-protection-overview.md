@@ -3,10 +3,11 @@ title: Web protection
 description: Learn about the web protection in Microsoft Defender for Endpoint and how it can protect your organization.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
+ms.reviewer: tdoucette
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 12/18/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -32,7 +33,7 @@ ms.subservice: asr
 
 ## About web protection
 
-Web protection in Microsoft Defender for Endpoint is a capability made up of [Web threat protection](web-threat-protection.md), [Web content filtering](web-content-filtering.md), and [Custom indicators](manage-indicators.md). Web protection lets you secure your devices against web threats and helps you regulate unwanted content. You can find Web protection reports in the Microsoft Defender portal by going to **Reports > Web protection**.
+Web protection in Microsoft Defender for Endpoint is a capability made up of [Web threat protection](web-threat-protection.md), [Web content filtering](web-content-filtering.md), and [Custom indicators](indicators-overview.md). Web protection lets you secure your devices against web threats and helps you regulate unwanted content. You can find Web protection reports in the Microsoft Defender portal by going to **Reports > Web protection**.
 
 :::image type="content" source="media/web-protection.png" alt-text="The web protection cards" lightbox="media/web-protection.png":::
 
@@ -48,16 +49,15 @@ Web threat protection includes:
 
 > [!NOTE]
 > For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage Network Protection for inspection and enforcement:
->
 > - IP is supported for all three protocols (TCP, HTTP, and HTTPS (TLS)).
 > - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
 > - Encrypted URLs (full path) can only be blocked on first party browsers (Internet Explorer, Edge).
 > - Encrypted URLs (FQDN only) can be blocked in third party browsers (i.e. other than Internet Explorer, Edge).
+> - URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
+> - Network Protection will block connections on both standard and non-standard ports.
 > - Full URL path blocks can be applied for unencrypted URLs.
->
-> There may be up to 2 hours of latency (usually less) between the time the action is taken, and the URL and IP being blocked.
 
-For more information, see [Web threat protection](web-threat-protection.md).
+There might be up to two hours of latency (usually less) between the time the action is taken, and the URL and IP being blocked. For more information, see [Web threat protection](web-threat-protection.md).
 
 ### Custom indicators
 
@@ -121,7 +121,9 @@ Internal IP addresses aren't supported by custom indicators. For a warn policy w
 
 In all web protection scenarios, SmartScreen and Network Protection can be used together to ensure protection across both Microsoft and non-Microsoft browsers and processes. SmartScreen is built directly into Microsoft Edge, while Network Protection monitors traffic in non-Microsoft browsers and processes. The following diagram illustrates this concept. This diagram of the two clients working together to provide multiple browser/app coverages is accurate for all features of Web Protection (Indicators, Web Threats, Content Filtering).
 
-:::image type="content" source="/defender/media/web-protection-protect-browsers.png" alt-text="The usage of smartScreen and Network Protection together" lightbox="/defender/media/web-protection-protect-browsers.png":::
+> [!NOTE]
+> Custom Indicators of Compromise and Web Content Filtering features are currently not supported in Application Guard sessions of Microsoft Edge. These containerized browser sessions can only enforce web threat blocks via the built-in SmartScreen protection. They cannot enforce any enterprise web protection policies.
+> :::image type="content" source="/defender/media/web-protection-protect-browsers.png" alt-text="The usage of smartScreen and Network Protection together" lightbox="/defender/media/web-protection-protect-browsers.png":::
 
 ## Troubleshoot endpoint blocks
 
@@ -183,7 +185,7 @@ For WCF, you can dispute the category of a domain. Navigate to the **Domains** t
 
 For more information on how to submit false positives/negatives, see [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
-## Related information
+## Related articles
 
 |Article|Description|
 |---|---|

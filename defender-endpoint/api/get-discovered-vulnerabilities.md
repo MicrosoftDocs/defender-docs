@@ -2,8 +2,8 @@
 title: Get discovered vulnerabilities
 description: Retrieves a collection of discovered vulnerabilities related to a given device ID.
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

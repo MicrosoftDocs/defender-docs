@@ -1,8 +1,8 @@
 ---
 title: UEFI scanning in Defender for Endpoint
 description: Learn how Microsoft Defender for Endpoint is extending its protection capabilities to the firmware level with a new Unified Extensible Firmware Interface (UEFI) scanner.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.reviewer: yongrhee
 audience: ITPro
@@ -35,7 +35,7 @@ The UEFI scanner is a new component of the [built-in antivirus](microsoft-defend
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) as the primary antivirus product and in active mode. UEFI scanner doesn't work with [EDR in block mode](edr-in-block-mode.md) (with Microsoft Defender Antivirus in passive mode).
 - [Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) is turned on
 - [Behavior monitoring](behavior-monitor.md) is turned on
-- Devices are running a current [Microsoft Defender Antivirus platform version](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions)
+- Devices are running a current [Microsoft Defender Antivirus platform version](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
 - Devices are running one of the following versions of Windows:
   - Windows 10, Windows 11 or newer on client devices
   - Windows Server 2019, Windows Server 2022, or newer versions

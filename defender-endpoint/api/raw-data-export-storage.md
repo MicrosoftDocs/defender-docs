@@ -2,8 +2,8 @@
 title: Stream Microsoft Defender for Endpoint events to your Storage account
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Storage account.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -43,7 +43,7 @@ ms.date: 06/28/2024
 
 ## Enable raw data streaming
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a Security Administrator.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 2. Go to [Data export settings page](https://security.microsoft.com/settings/mtp_settings/raw_data_export) in Microsoft Defender XDR.
 

@@ -3,10 +3,10 @@ title: Create an app to access Microsoft Defender for Endpoint without a user
 ms.reviewer: 
 description: Learn how to design a web app to get programmatic access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 06/28/2024
+ms.date: 08/29/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -56,7 +56,7 @@ This article explains how to create a Microsoft Entra application, get an access
 
 ## Create an app
 
-1. Sign in to the [Azure portal](https://portal.azure.com) with a user that has the Global Administrator role.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**. 
 

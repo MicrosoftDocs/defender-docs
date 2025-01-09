@@ -4,9 +4,10 @@ description: Set your level of cloud protection for Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: siosulli
-ms.author: siosulli
-ms.date: 07/25/2024
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
+ms.date: 11/10/2024
 manager: deniseb
 ms.custom: nextgen
 ms.subservice: ngp
@@ -36,18 +37,18 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 
 2. Choose **Endpoint security** \> **Antivirus**.
 
-3. Select an antivirus profile. If you don't have one yet, or if you want to create a new profile, see [Configure device restriction settings in Microsoft Intune](/intune/device-restrictions-configure).
+3. Select an antivirus profile. If you don't have one yet, or if you want to create a new profile, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure).
 
-4. Select **Properties**. Then, next to **Configuration settings**, choose **Edit**.
+4. Next to **Configuration settings**, choose **Edit**.
 
-5. Expand **Cloud protection**, and then in the **Cloud-delivered protection level** list, select one of the following:
+5. Scroll down to **Cloud Block Level**, and select one of the following:
 
     - **Not configured**: Default state.
     - **High**: Applies a strong level of detection.
-    - **High plus**: Uses the **High** level and applies extra protection measures (might affect client performance).
-    - **Zero tolerance**: Blocks all unknown executables.
+    - **High Plus**: Uses the **High** level and applies extra protection measures (might affect client performance).
+    - **Zero Tolerance**: Blocks all unknown executables.
 
-6. Choose **Review + save**, and then choose **Save**.
+6. Choose **Next**, and then choose **Save**.
 
 > [!TIP]
 > Need some help? See the following resources:

@@ -2,17 +2,17 @@
 title: Device groups in Microsoft Defender for Business
 description: Security policies are applied to devices through device groups in Defender for Business.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
 ms.date: 06/19/2024
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
@@ -21,11 +21,11 @@ ms.collection:
 
 # Device groups in Microsoft Defender for Business
 
-In Defender for Business, policies are applied to devices through certain collections that are called device groups. 
+In Defender for Business, policies are applied to devices through certain collections that are called device groups.
 
-**This article describes**:  
+**This article describes**:
 
-- [What device groups are](#what-is-a-device-group)   
+- [What device groups are](#what-is-a-device-group)
 - [How to create device groups in Defender for Business](#create-a-new-device-group)
 - [How to view an existing device group](#view-an-existing-device-group)
 - [What the Add All Devices option does](#what-does-the-add-all-devices-option-do)
@@ -45,11 +45,11 @@ All device groups, including your default device groups and any custom device gr
 
 ## Create a new device group
 
-Currently, in Defender for Business, you can create a new device group while you are in the process of creating or editing a policy, as described in the following procedure: 
+Currently, in Defender for Business, you can create a new device group while you are in the process of creating or editing a policy, as described in the following procedure:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. In the navigation pane, choose **Configuration management** and select **Device configuration**. 
+2. In the navigation pane, choose **Configuration management** and select **Device configuration**.
 
 3. Take one of the following actions:
 
@@ -61,7 +61,7 @@ Currently, in Defender for Business, you can create a new device group while you
 
 4. On the **General information** step, review the information, edit if necessary, and then choose **Next**.
 
-5. Choose **+ Create new group**. 
+5. Choose **+ Create new group**.
 
 6. Specify a name and description for the device group, and then choose **Next**.
 
@@ -75,11 +75,11 @@ Currently, in Defender for Business, you can create a new device group while you
 
 ## View an existing device group
 
-Currently, in Defender for Business, you can view your existing device groups while you are in the process of creating or editing a policy, as described in the following procedure: 
+Currently, in Defender for Business, you can view your existing device groups while you are in the process of creating or editing a policy, as described in the following procedure:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. In the navigation pane, choose **Device configuration**. 
+2. In the navigation pane, choose **Device configuration**.
 
 3. Take one of the following actions:
 
@@ -99,7 +99,7 @@ When you are creating or editing a policy, you might see the **Add all devices**
 
 :::image type="content" source="media/add-all-devices-option.png" alt-text="Screenshot of the Add All Devices option.":::
 
-If you select this option, all devices that are enrolled in Microsoft Intune will receive the policy that you are creating or editing by default. 
+If you select this option, all devices that are enrolled in Microsoft Intune will receive the policy that you are creating or editing by default.
 
 ## Next steps
 
@@ -110,4 +110,3 @@ Choose one or more of the following tasks:
 - [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Review remediation actions in the Action center](mdb-review-remediation-actions.md)
-

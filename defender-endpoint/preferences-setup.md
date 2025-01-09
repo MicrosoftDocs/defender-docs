@@ -1,9 +1,9 @@
 ---
 title: Configure general Defender for Endpoint settings 
-description: Use the settings page to configure general settings, permissions, apis, and rules.
+description: Use the settings page to configure general settings, permissions, APIs, and rules.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -35,7 +35,7 @@ Use the **Settings > Endpoints** menu to modify general settings, advanced featu
 Topic | Description
 :---|:---
 General settings | Modify your general settings that were previously defined as part of the onboarding process.
-Permissions | Manage portal access using RBAC as well as device groups.
+Permissions | Manage portal access using RBAC and device groups.
 APIs | Enable the threat intel and SIEM integration.
 Rules | Configure suppressions rules and automation settings.
 Device management | Onboard and offboard devices.

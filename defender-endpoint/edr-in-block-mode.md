@@ -1,8 +1,8 @@
 ---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 ms.reviewer: pahuijbr, kausd
 audience: ITPro
@@ -105,7 +105,7 @@ The following table lists requirements for EDR in block mode:
 |Microsoft Defender Antivirus engine|Devices must be up to date. To confirm, using PowerShell, run the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) cmdlet as an administrator. In the **AMEngineVersion** line, you should see **1.1.16700.2** or above. <br/><br/> To learn more, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).|
 
 > [!IMPORTANT]
-> To get the best protection value, make sure your antivirus solution is configured to receive regular updates and essential features, and that your [exclusions are configured](configure-exclusions-microsoft-defender-antivirus.md). EDR in block mode respects exclusions that are defined for Microsoft Defender Antivirus, but not [indicators](manage-indicators.md) that are defined for Microsoft Defender for Endpoint.
+> To get the best protection value, make sure your antivirus solution is configured to receive regular updates and essential features, and that your [exclusions are configured](configure-exclusions-microsoft-defender-antivirus.md). EDR in block mode respects exclusions that are defined for Microsoft Defender Antivirus, but not [indicators](indicators-overview.md) that are defined for Microsoft Defender for Endpoint.
 > 
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 

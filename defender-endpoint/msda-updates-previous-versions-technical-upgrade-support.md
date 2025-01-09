@@ -2,11 +2,11 @@
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 07/25/2024
+ms.date: 10/25/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -29,6 +29,57 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ## Engine and platform updates
 
+### June-2024 (Platform: 4.18.24060.7 | Engine: 1.1.24060.5)
+
+- Security intelligence update version: **1.415.1.0**
+- Release date: **July 9, 2024** (Engine) / **July 15, 2024** (Platform)
+- Platform: **4.18.24060.7**
+- Engine: **1.1.24060.5**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Fixed issue where Microsoft Defender Antivirus was not properly changing state when non-Microsoft antivirus/antimalware software was installed and [Windows Defender Application Control](/windows/security/application-security/application-control/windows-defender-application-control/wdac) (WDAC) with [Intelligent Security Graph](/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) were enabled.
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Custom scans started with [Start-MpScan](/powershell/module/defender/start-mpscan) are now reported in the event log.
+- Fixed potential deadlock that occurred on volume mount scanning.
+- Fixed issue where Microsoft Defender Antivirus did not allow applications to clean up temporary files.
+- Fixed potentially packet loss due to [network protection](network-protection.md) shutdown that could lead to deadlock.
+- Implemented performance improvements for scenarios where WDAC is enabled with Intelligent Security Graph.
+- Fixed an issue where an Outlook exclusion for the ASR rule [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes) was not honored.
+- Fixed a race condition during the startup of [endpoint data loss prevention](/purview/endpoint-dlp-getting-started) such that, in certain environments, some system files could be corrupted.
+
+### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
+
+- Security intelligence update version: **1.413.1.0**
+- Release date: **May 30, 2024** (Engine) / **June 4, 2024** (Platform)
+- Engine: **1.1.24050.5**
+- Platform: **4.18.24050.7**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved performance when running configuration queries.
+- Optimized how scans are prioritized.
+- Fixed a crash caused by a race condition with a device control driver.
+- Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
+
+### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
+
+- Security intelligence update version: **1.411.7.0**
+- Release date: **May 07, 2024** (Engine) / **May 16, 2024** (Platform)
+- Engine: **1.1.24040.1**
+- Platform: **4.18.24040.4**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
+- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
+- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
+- Improved health monitoring and telemetry for [attack surface rules](overview-attack-surface-reduction.md) exclusions.
+- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
+
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
 - Security intelligence update version: **1.409.1.0**
@@ -46,7 +97,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Fixed an issue with Security Intelligence Update disk cleanup.
 - Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
 - Introduced performance improvements when processing paths for exclusions.
-- Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](manage-indicators.md).
+- Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](indicators-overview.md).
 - Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
 - Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.
 - A possible deadlock when receiving a [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) configuration change from the [Microsoft Defender portal](https://security.microsoft.com) no longer occurs.
@@ -65,7 +116,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
 - Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
 - Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
-- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
+- Extended the toast notification support for [Indicators of Compromise](indicators-overview.md#indicator-of-compromise-ioc-overview) (IoC) detections
 
 #### Known issues
 
@@ -1084,11 +1135,41 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 #### Known issues
 
-- When this update is installed, the device needs the jump package 4.18.2001.10 to be able to update to the latest platform version.
+- When this update is installed, the device needs the jump package `4.18.2001.10` to be able to update to the latest platform version.
 
 ## Previous DISM updates (no longer supported)
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
+
+### 1.411.111.0
+
+- Defender package version: `1.411.111.0`
+- Security intelligence version: `1.411.111.0`
+- Engine version: `1.24050.2`
+- Platform version: `4.18.24050.7`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.411.9.0
+
+- Defender package version: `1.411.9.0`
+- Security intelligence version: `1.411.9.0`
+- Engine version: `1.24040.1`
+- Platform version: `4.18.24040.4`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 20230809.1
 

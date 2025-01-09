@@ -2,8 +2,8 @@
 title: Certificate assessment methods and properties per device
 description: Provides information about the certificates APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

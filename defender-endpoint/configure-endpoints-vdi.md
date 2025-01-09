@@ -1,11 +1,11 @@
 ---
 title: Onboard non-persistent virtual desktop infrastructure (VDI) devices
-description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they are onboarded to Microsoft Defender for Endpoint service.
+description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they're onboarded to Microsoft Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
-ms.reviewer: pahuijbr
+ms.author: deniseb
+author: denisebmsft
+ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,18 +14,11 @@ ms.collection:
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 09/21/2023
+ms.date: 12/30/2024
 ms.subservice: onboard
 ---
 
 # Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR
-
-Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets end users access enterprise virtual desktops instances from almost any device (such as your personal computer, smartphone, or tablet), eliminating the need for organization to provide users with physical machines. Using VDI devices reduce cost as IT departments are no longer responsible for managing, repairing, and replacing physical endpoints. Authorized users can access the same company servers, files, apps, and services from any approved device through a secure desktop client or browser.
-
-Like any other system in an IT environment, these too should have an Endpoint Detection and Response (EDR) and Antivirus solution to protect against advanced threats and attacks.
-
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -38,26 +31,26 @@ Like any other system in an IT environment, these too should have an Endpoint De
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
 
- > [!NOTE]
-  > **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information see [Onboarding Windows client](onboard-windows-client.md).
+Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets end users access enterprise virtual desktops instances from almost any device (such as your personal computer, smartphone, or tablet), eliminating the need for organization to provide users with physical machines. Using VDI devices reduces costs, as IT departments are no longer responsible for managing, repairing, and replacing physical endpoints. Authorized users can access the same company servers, files, apps, and services from any approved device through a secure desktop client or browser. 
+
+Like any other system in an IT environment, VDI devices should have an endpoint detection and response (EDR) and antivirus solution to protect against advanced threats and attacks.
+
+> [!NOTE]
+> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-windows-client.md).
 
 ## Onboarding non-persistent virtual desktop infrastructure (VDI) devices
 
-Defender for Endpoint supports non-persistent VDI session onboarding.
+Defender for Endpoint supports non-persistent VDI session onboarding. There might be associated challenges when onboarding VDI instances. The following are typical challenges for this scenario:
 
-There might be associated challenges when onboarding VDI instances. The following are typical challenges for this scenario:
+- Instant early onboarding of a short-lived session, which must be onboarded to Defender for Endpoint before actual provisioning.
 
-- Instant early onboarding of a short-lived session, which must be onboarded to Defender for Endpoint prior to the actual provisioning.
 - The device name is typically reused for new sessions.
 
-In a VDI environment, VDI instances can have short lifespans. VDI devices can appear in the Microsoft Defender portal as either single entries for each VDI instance or multiple entries for each device. 
+- In a VDI environment, VDI instances can have short lifespans. VDI devices can appear in the Microsoft Defender portal as either single entries for each VDI instance or multiple entries for each device. 
 
-- Single entry for each VDI instance. If the VDI instance was already onboarded to Microsoft Defender for Endpoint, and at some point deleted, and then recreated with the same host name, a new object representing this VDI instance is NOT be created in the portal. 
+   - Single entry for each VDI instance. If the VDI instance was already onboarded to Microsoft Defender for Endpoint, and at some point deleted, and then recreated with the same host name, a new object representing this VDI instance is NOT be created in the portal. In this case, the *same* device name must be configured when the session is created, for example using an unattended answer file.
 
-  > [!NOTE]
-  > In this case, the *same* device name must be configured when the session is created, for example using an unattended answer file.
-
-- Multiple entries for each device - one for each VDI instance.
+   - Multiple entries for each device - one for each VDI instance.
 
 > [!IMPORTANT]
 > If you're deploying non-persistent VDIs through cloning technology, make sure that your internal template VMs are not onboarded to Defender for Endpoint. This recommendation is to avoid cloned VMs from being onboarded with the same senseGuid as your template VMs, which could prevent VMs from showing up as new entries in the Devices list. 
@@ -72,7 +65,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
 > [!NOTE]
 > Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2) for this feature to work.
 
-1. Open the VDI configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Open the VDI configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
     1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
@@ -80,16 +73,16 @@ The following steps guide you through onboarding VDI devices and highlight steps
 
     3.  In the **Deployment method** field, select **VDI onboarding scripts for non-persistent endpoints**.
 
-    4. Click **Download package** and save the .zip file.
+    4. Select **Download package** and save the file.
 
-2. Copy the files from the WindowsDefenderATPOnboardingPackage folder extracted from the .zip file into the golden/primary image under the path `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
+2. Copy the files from the `WindowsDefenderATPOnboardingPackage` folder extracted from the zipped folder into the golden/primary image under the path `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
 
-    1. If you are implementing multiple entries for each device - one for each session, copy WindowsDefenderATPOnboardingScript.cmd.
+    - If you're implementing multiple entries for each device - one for each session, copy `WindowsDefenderATPOnboardingScript.cmd`.
 
-    2. If you're implementing a single entry for each device, copy both Onboard-NonPersistentMachine.ps1 and WindowsDefenderATPOnboardingScript.cmd.
+    - If you're implementing a single entry for each device, copy both `Onboard-NonPersistentMachine.ps1` and `WindowsDefenderATPOnboardingScript.cmd`.
 
-    > [!NOTE]
-    > If you don't see the `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` folder, it might be hidden. You'll need to choose the **Show hidden files and folders** option from File Explorer.
+   > [!NOTE]
+   > If you don't see the `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` folder, it might be hidden. You'll need to choose the **Show hidden files and folders** option from File Explorer.
 
 3. Open a Local Group Policy Editor window and navigate to **Computer Configuration** \> **Windows Settings** \> **Scripts** \> **Startup**.
 
@@ -98,30 +91,27 @@ The following steps guide you through onboarding VDI devices and highlight steps
 
 4. Depending on the method you'd like to implement, follow the appropriate steps:
 
-    - For single entry for each device:
+   | Method | Steps |
+   |---|---|
+   | Single entry for each device | 1. Select the **PowerShell Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to onboarding PowerShell script `Onboard-NonPersistentMachine.ps1`. There's no need to specify the other file, as it's triggered automatically. |
+   | Multiple entries for each device | 1. Select the **Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to the onboarding bash script `WindowsDefenderATPOnboardingScript.cmd`. |
 
-         Select the **PowerShell Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). Navigate to onboarding PowerShell script `Onboard-NonPersistentMachine.ps1`. There's no need to specify the other file, as it is triggered automatically.
-
-    - For multiple entries for each device:
-
-         Select the **Scripts** tab, then click **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). Navigate to the onboarding bash script `WindowsDefenderATPOnboardingScript.cmd`.
-
-5. Test your solution:
+5. Test your solution by following these steps:
 
    1. Create a pool with one device.
 
-   2. Log on to device.
+   2. Sign into device.
    
-   3. Log off from device.
+   3. Sign out on the device.
    
-   4. Log on to device with another user.
+   4. Sign into the device using another account.
    
    5. Depending on the method you'd like to implement, follow the appropriate steps:
    
-      - For single entry for each device: Check only one entry in Microsoft Defender portal.
-      - For multiple entries for each device: Check multiple entries in Microsoft Defender portal.
+      - For single entry for each device: Check for only one entry in the [Microsoft Defender portal](https://security.microsoft.com).
+      - For multiple entries for each device: Check multiple entries in the [Microsoft Defender portal](https://security.microsoft.com).
 
-6. Click **Devices list** on the Navigation pane.
+6. In the navigation pane, select **Devices list**.
 
 7. Use the search function by entering the device name and select **Device** as search type.
 
@@ -130,20 +120,24 @@ The following steps guide you through onboarding VDI devices and highlight steps
 > [!NOTE]
 > These instructions for other Windows server versions also apply if you are running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
-The following registry is relevant only when the aim is to achieve a 'Single entry for each device'.
+The following registry is relevant only when the aim is to achieve a single entry for each device.
 
-1. Set registry value to:
+1. Set the registry value as follows:
 
-    ```console
+   ```console
+
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging]
     "VDI"="NonPersistent"
-    ```
 
-    or using command line:
+   ```
 
-    ```console
-    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging" /v VDI /t REG_SZ /d "NonPersistent" /f
-    ```
+   Or, you can use command line as follows:
+
+   ```console
+
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging" /v VDI /t REG_SZ /d "NonPersistent" /f
+
+   ```
 
 2. Follow the [server onboarding process](configure-server-endpoints.md). 
 
@@ -154,27 +148,32 @@ With the ability to easily deploy updates to VMs running in VDIs, we've shortene
 If you have onboarded the primary image of your VDI environment (SENSE service is running), then you must offboard and clear some data before putting the image back into production.
 
 1. [Offboard the machine](offboard-machines.md).
+
 2. Ensure the sensor is stopped by running the following command in a CMD window:
 
    ```console
+
    sc query sense
+
    ```
 
 3. Run the following commands in a CMD window::
 
    ```console
+
    del "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Cyber\*.*" /f /s /q
    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v senseGuid /f
    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v 7DC0B629-D7F6-4DB3-9BF7-64D5AAF50F1A /f
    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\48A68F11-7A16-4180-B32C-7F974C7BD783" /f
    exit
+
    ```
 
 ### Are you using a third party for VDIs?
 
-If you're deploying non-persistent VDIs through VMware instant cloning or similar technologies, make sure that your internal template VMs and replica VMs are not onboarded to Defender for Endpoint. If you onboard devices using the single entry method, instant clones that are provisioned from onboarded VMs might have the same senseGuid, and that can stop a new entry from being listed in the Device Inventory view (in the [Microsoft Defender portal](https://security.microsoft.com), choose **Assets** > **Devices**).
+If you're deploying non-persistent VDIs through VMware instant cloning or similar technologies, make sure that your internal template VMs and replica VMs aren't onboarded to Defender for Endpoint. If you onboard devices using the single entry method, instant clones that are provisioned from onboarded VMs might have the same senseGuid, and that can stop a new entry from being listed in the Device Inventory view (in the [Microsoft Defender portal](https://security.microsoft.com), choose **Assets** > **Devices**).
 
-If either the primary image, template VM, or replica VM are onboarded to Defender for Endpoint using the single entry method, it will stop Defender from creating entries for new non-persistent VDIs in the Microsoft Defender portal.
+If either the primary image, template VM, or replica VM are onboarded to Defender for Endpoint using the single entry method, it stops Defender for Endpoint from creating entries for new non-persistent VDIs in the Microsoft Defender portal.
 
 Reach out to your third-party vendors for further assistance.
 
@@ -184,73 +183,9 @@ After onboarding devices to the service, it's important to take advantage of the
 
 ### Next generation protection configuration
 
-The following configuration settings are recommended:
+The configuration settings in this link are recommended: [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
 
-#### Cloud Protection Service
-
-- Turn on cloud-delivered protection: Yes
-- Cloud-delivered protection level: Not configured
-- Defender Cloud Extended Timeout In Seconds: 20
-
-#### Exclusions
-
-- Please review the FXLogix antivirus exclusion recommendations here: [Prerequisites for FSLogix](/fslogix/overview-prerequisites#file--folder-exclusions).
-
-#### Real-time Protection
-
-- Turn on all settings and set to monitor all files
-
-#### Remediation
-
-- Number of days to keep quarantined malware: 30
-- Submit samples consent: Send all samples automatically
-- Action to take on potentially unwanted apps: Enable
-- Actions for detected threats:
-  - Low threat: Clean
-  - Moderate threat, High threat, Severe threat: Quarantine
-
-#### Scan
-
-- Scan archived files: Yes
-- Use low CPU priority for scheduled scans: Not configured
-- Disable catch-up full scan: Not configured
-- Disable catchup quick scan: Not configured
-- CPU usage limit per scan: 50
-- Scan mapped network drives during full scan: Not configured
-- Run daily quick scan at: 12 PM
-- Scan type: Not configured
-- Day of week to run scheduled scan: Not configured
-- Time of day to run a scheduled scan: Not configured
-- Check for signature updates before running scan: Yes
-
-#### Updates
-
-- Enter how often to check for security intelligence updates: 8
-- Leave other settings in default state
-
-#### User experience
-
-- Allow user access to Microsoft Defender app: Not configured
-
-#### Enable Tamper protection
-
-- Enable tamper protection to prevent Microsoft Defender being disabled: Enable
-
-#### Attack surface reduction
-
-- Enable network protection: Test mode
-- Require SmartScreen for Microsoft Edge: Yes
-- Block malicious site access: Yes
-- Block unverified file download: Yes
-
-#### Attack surface reduction rules
-
-- Configure all available rules to Audit.
-
-> [!NOTE]
-> Blocking these activities may interrupt legitimate business processes. The best approach is setting everything to audit, identifying which ones are safe to turn on, and then enabling those settings on endpoints which do not have false positive detections.
-
-## Related topics
+## Related articles
 
 - [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
 - [Onboard Windows devices using Microsoft Configuration Manager](configure-endpoints-sccm.md)

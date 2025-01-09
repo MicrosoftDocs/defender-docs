@@ -2,8 +2,8 @@
 title: Import Indicators API
 description: Learn how to use the Import batch of Indicator API in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -148,5 +148,5 @@ Here's an example of the response.
 
 ## Related article
 
-- [Manage indicators](../manage-indicators.md)
+- [Manage indicators](../indicators-overview.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

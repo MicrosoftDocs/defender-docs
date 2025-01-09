@@ -60,13 +60,13 @@ Contain actions triggered by attack disruption are found in the [DeviceEvents ta
 - Device contain actions:
 ```Kusto
 DeviceEvents
-| where ActionType contains "ContainDevice"
+| where ActionType contains "ContainedDevice"
 ```
 
 - User contain actions:
 ```Kusto
 DeviceEvents
-| where ActionType contains "ContainUser"
+| where ActionType contains "ContainedUser"
 ```
 
 ### Hunt for disable user account actions

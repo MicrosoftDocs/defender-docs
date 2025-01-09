@@ -12,9 +12,12 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
+ms.custom: 
+- cx-ti
+- cx-ean
 ms.subservice: edr
 search.appverid: met150
-ms.date: 09/23/2022
+ms.date: 10/30/2024
 ---
 
 # Endpoint Attack Notifications
@@ -31,7 +34,7 @@ ms.date: 09/23/2022
 > This covers threat hunting on your Microsoft Defender for Endpoint service. However, if you're interested to explore the service beyond your current license, and proactively hunt threats not just on endpoints but also across Office 365, cloud applications, and identity, refer to [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting).
 
 > [!NOTE]
-> Customers who signed up for Experts on Demand prior to sunset will have access to Ask Defender Experts until the expiration of their current contract.
+> The intake of new customers to the Endpoint Attack Notifications service is currently on pause. For customers interested in a managed service, sign up the [Defender Experts service request form](https://aka.ms/IWantDefenderExperts).
 
 Endpoint Attack Notifications (previously referred to as Microsoft Threat Experts - Targeted Attack Notification) provides proactive hunting for the most important threats to your network, including human adversary intrusions, hands-on-keyboard attacks, or advanced attacks like cyber-espionage. These notifications show up as a new alert. The managed hunting service includes:
 

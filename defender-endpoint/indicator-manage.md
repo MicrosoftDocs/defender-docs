@@ -3,8 +3,8 @@ title: Manage indicators
 ms.reviewer:
 description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,19 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 10/28/2024
 ---
 
 # Manage indicators
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
-
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
@@ -55,38 +53,39 @@ Download the sample CSV to know the supported column attributes.
 
 > [!NOTE]
 > Only 500 indicators can be uploaded for each batch. 
->
 > Attempting to import indicators with specific categories requires the string to be written in Pascal case convention and only accepts the category list available at the portal.
 
 The following table shows the supported parameters.
 
 | Parameter|Type|Description |
 | ---| ---| --- |
-| indicatorType|Enum|Type of the indicator. Possible values are: *FileSha1*, *FileSha256*, *IpAddress*, *DomainName*, and *Url*. **Required** |
-| indicatorValue|String|Identity of the [Indicator](api/ti-indicator.md) entity. **Required** |
-| action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: *Allowed*, *Audit*, *BlockAndRemediate*, *Warn*, and *Block*. **Required** |
-| title|String|Indicator alert title. **Required** |
-| description|String| Description of the indicator. **Required** |
-| expirationTime|DateTimeOffset|The expiration time of the indicator in the following format YYYY-MM-DDTHH:MM:SS.0Z. The indicator gets deleted if the expiration time passes and whatever happens at the expiration time occurs at the seconds (SS) value. **Optional** |
-| severity|Enum|The severity of the indicator. Possible values are: *Informational*, *Low*, *Medium*, and *High*. **Optional** |
-| recommendedActions|String|TI indicator alert recommended actions. **Optional** |
-| rbacGroups|String|Comma-separated list of RBAC groups the indicator would be applied to. **Optional** |
-| category|String|Category of the alert. Examples include: Execution and credential access. **Optional** |
-| mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). **Optional** It's recommended to add a value in category when a MITRE technique. |
-| GenerateAlert|String|Whether the alert should be generated. Possible Values are: True or False. **Optional** |
+| indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `IpAddress`, `DomainName`, and `Url`. <br/> **Required** |
+| indicatorValue|String|Identity of the [Indicator](api/ti-indicator.md) entity. <br/> **Required** |
+| action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Allowed`, `Audit`, `BlockAndRemediate`, `Warn`, and `Block`. <br/> **Required** |
+| title|String|Indicator alert title.<br/> **Required** |
+| description|String| Description of the indicator.<br/> **Required** |
+| expirationTime|DateTimeOffset|The expiration time of the indicator in the following format `YYYY-MM-DDTHH:MM:SS.0Z`. The indicator gets deleted if the expiration time passes and whatever happens at the expiration time occurs at the seconds (SS) value. <br/>**Optional** |
+| severity|Enum|The severity of the indicator. Possible values are: `Informational`, `Low`, `Medium`, and `High`. <br/>**Optional** |
+| recommendedActions|String|TI indicator alert recommended actions. <br/>**Optional** |
+| rbacGroups|String|Comma-separated list of RBAC groups the indicator would be applied to. <br/>**Optional** |
+| category|String|Category of the alert. Examples include: Execution and credential access. <br/>**Optional** |
+| mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to add a value in category when a MITRE technique. |
+| GenerateAlert|String|Whether the alert should be generated. Possible Values are: `True` or `False`. <br/>**Optional** |
 
 > [!NOTE]
-> Classless Inter-Domain Routing (CIDR) notation for IP addresses is not supported.
-For more information, see [Microsoft Defender for Endpoint alert categories are now aligned with MITRE ATT&CK!](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-atp-alert-categories-are-now-aligned-with/ba-p/732748).
+> Classless Inter-Domain Routing (CIDR) notation for IP addresses is not supported. For more information, see [Microsoft Defender for Endpoint alert categories are now aligned with MITRE ATT&CK!](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-atp-alert-categories-are-now-aligned-with/ba-p/732748).
+>
+> Network indicators do not support the action type, `BlockAndRemediate`. If a network indicator is set to `BlockAndRemediate`, it won't import. 
 
 Watch this video to learn how Microsoft Defender for Endpoint provides multiple ways to add and manage Indicators of compromise (IoCs). 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qLVw]
 
 ## See also
 
-- [Create indicators](manage-indicators.md)
+- [Create indicators](indicators-overview.md)
 - [Create indicators for files](indicator-file.md)
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

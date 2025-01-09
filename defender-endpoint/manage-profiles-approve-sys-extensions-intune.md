@@ -2,8 +2,8 @@
 title: Manage profiles and approve extensions using Intune
 description: Manage profiles and approve extensions using Intune for Microsoft Defender for Endpoint to work properly on macOS.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

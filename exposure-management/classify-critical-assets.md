@@ -1,21 +1,17 @@
 ---
 title: Review and classify critical assets in Microsoft Security Exposure Management
 description: Learn how to manage critical assets in Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 11/04/2024
 ---
 
 # Review and classify critical assets
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 
@@ -117,6 +113,14 @@ You can change the criticality levels and turn off all assets. You can also edit
 1. Sort by **Criticality level** to view business critical assets with a "very high" level of criticality.
 
 :::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/classify-critical-assets/device-inventory.png":::
+
+## Prioritize recommendations for critical assets
+
+To help prioritize security recommendations, and remediation steps to focus on critical assets, the sum of exposed critical assets for a recommendation can be viewed from the [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation) page in the Microsoft Defender portal.
+
+To see the sum of exposed critical assets go to the [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation) page:
+
+   :::image type="content" source=" ./media/critical-asset-management/security-recommendations-critical-assets.png" alt-text="Screenshot of the critical assets column on the security recommendations page." lightbox="./media/critical-asset-management/security-recommendations-critical-assets.png":::
 
 ## Next steps
 

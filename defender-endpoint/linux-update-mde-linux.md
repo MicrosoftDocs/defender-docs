@@ -1,9 +1,9 @@
 ---
-title: How to schedule an update of the Microsoft Defender for Endpoint (Linux)
-description: Learn how to schedule an update of the Microsoft Defender for Endpoint (Linux) to better protect your organization's assets.
+title: How to schedule an update for Microsoft Defender for Endpoint on Linux
+description: Learn how to schedule an update for Microsoft Defender for Endpoint on Linux to better protect your organization's assets.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,15 +15,15 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/26/2024
+ms.date: 12/16/2024
 ---
 
-# Schedule an update of the Microsoft Defender for Endpoint (Linux)
+# Schedule an update for Microsoft Defender for Endpoint on Linux
 
-**Applies to:**
+**Applies to**:
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
@@ -69,13 +69,13 @@ sudo crontab -e
 
 You might see:
 
-```output
+```console
 0 * * * * /etc/opt/microsoft/mdatp/logrorate.sh
 ```
 
 And
 
-```output
+```console
 0 2 * * sat /bin/mdatp scan quick>~/mdatp_cron_job.log
 ```
 

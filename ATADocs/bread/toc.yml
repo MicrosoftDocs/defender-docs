@@ -1,0 +1,11 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Enterprise Mobility + Security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security
+    items:
+    - name: Advanced Threat Analytics
+      tocHref: /advanced-threat-analytics/
+      topicHref: /advanced-threat-analytics

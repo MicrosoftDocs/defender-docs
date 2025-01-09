@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: overview
-ms.date: 07/23/2024
+ms.date: 08/14/2024
 search.appverid: met150
 ---
 
@@ -24,7 +24,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-The audit log can help you investigate specific activities across Microsoft 365 services. In the Microsoft Defender XDR portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
+The audit log can help you investigate specific activities across Microsoft 365 services. In the Microsoft Defender portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
 
 - Changes to data retention settings
 - Changes to advanced features

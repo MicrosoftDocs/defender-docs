@@ -3,14 +3,14 @@ title: Configure the Microsoft Defender Antivirus cloud block timeout period
 description: You can configure how long Microsoft Defender Antivirus will block a file from running while waiting for a cloud determination.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 07/25/2024
+ms.date: 11/10/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -64,7 +64,7 @@ You can specify the cloud block timeout period with an [endpoint security policy
 
 3. Select (or create) an antivirus policy.
 
-4. In the **Configuration settings** section, expand **Cloud protection**. Then, in the **Microsoft Defender Antivirus Extended Timeout In Seconds** box, specify the more time, in seconds, from 1 second to 50 seconds. Whatever you specify is added to the default 10 seconds.
+4. In the **Configuration settings** section, scroll down to **Cloud Extended Timeout** and specify the timeout, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
 
 5. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows).)
 

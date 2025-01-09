@@ -33,7 +33,7 @@ The Event Streaming API is constantly being expanded to support more event types
 
 ## Hunting tables support status in Event Streaming API
 
-The following table only includes the list of the tables supported in the streaming API, and is not inclusive of all AH schema. For a full list of the API see, [Learn the schema tables](advanced-hunting-schema-tables.md#learn-the-schema-tables).
+The following table includes that status of support for tables in the streaming API, and is not inclusive of all AH schema. For a full list of the API see, [Learn the schema tables](advanced-hunting-schema-tables.md#learn-the-schema-tables).
 
 
 > [!NOTE]
@@ -43,6 +43,9 @@ The following table only includes the list of the tables supported in the stream
 |----|----|----|----|----|
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | GA | GA | GA | GA |
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | GA | GA | GA | GA |
+| **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)**|Not available |Not available |Not available  |Not available  |
+| **[BehaviorInfo](advanced-hunting-behaviorinfo-table.md)**|Not available |Not available |Not available  |Not available |
+| **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)**|GA |GA |GA |GA |
 | **[DeviceEvents](advanced-hunting-deviceevents-table.md)** |GA | GA | GA | GA |
 | **[DeviceFileCertificateInfo](advanced-hunting-DeviceFileCertificateInfo-table.md)** |GA | GA | GA | GA |
 | **[DeviceFileEvents](advanced-hunting-devicefileevents-table.md)** | GA | GA | GA | GA |
@@ -60,8 +63,7 @@ The following table only includes the list of the tables supported in the stream
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)**|GA |GA |GA |GA |
 | **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)**|GA |GA |GA |GA |
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)**|GA |GA |GA |GA |
-| **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)**|GA |GA |GA |GA |
-| **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)**|Public preview |Not available |Not available |Not available |
+| **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)**|GA |GA |GA| GA  |
 
 ## Related topics
 

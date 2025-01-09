@@ -1,0 +1,566 @@
+items:
+- name: Microsoft Defender for Cloud Apps documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: What is Microsoft Defender for Cloud Apps?
+    href: what-is-defender-for-cloud-apps.md
+  - name: What's new in Defender for Cloud Apps
+    href: release-notes.md
+  - name: Defender for Cloud Apps in the Microsoft Defender portal
+    href: microsoft-365-security-center-defender-cloud-apps.md
+  - name: Privacy with Defender for Cloud Apps
+    href: cas-compliance-trust.md
+  - name: Preview features
+    href: /microsoft-365/security/defender/preview?toc=/cloud-app-security/toc.json&bc=/cloud-app-security/breadcrumb/toc.json
+  - name: Compare
+    items:
+    - name: Microsoft 365 Cloud App Security
+      href: editions-cloud-app-security-o365.md
+    - name: Microsoft Entra Cloud App Discovery
+      href: editions-cloud-app-security-aad.md
+  - name: US Government offerings
+    items:
+    - name: Defender for Cloud Apps for US Government
+      href: editions-cloud-app-security-gcc.md
+    - name: Encrypt Defender for Cloud Apps data at rest with your own key (BYOK)
+      href: ems-cloud-app-security-govt-service-byok.md
+    - name: Troubleshooting data encryption with your own key
+      href: ems-cloud-app-security-govt-service-byok-troubleshoot.md
+  - name: Zero Trust monitoring with Defender for Cloud Apps
+    href: zero-trust.md
+  - name: Best practices
+    href: best-practices.md
+- name: Deploy Defender for Cloud Apps
+  items:
+  - name: Pilot and deploy Microsoft Defender XDR
+    href: /defender-xdr/pilot-deploy-overview?toc=/cloud-app-security/toc.json&bc=/cloud-app-security/breadcrumb/toc.json
+  - name: Network requirements
+    href: network-requirements.md
+  - name: Getting started
+    href: ./get-started.md
+  - name: Configuration
+    items:
+    - name: Basic setup
+      href: general-setup.md
+    - name: Configure admin access
+      href: manage-admins.md
+    - name: Configure admin notifications
+      href: admin-settings.md
+    - name: Configure user notifications
+      href: mail-settings.md
+    - name: Import user groups from connected apps
+      href: user-groups.md
+    - name: Scope your deployment
+      href: scoped-deployment.md
+    - name: Configure activity monitoring to protect user privacy
+      href: activity-privacy.md
+    - name: Work with IP ranges and tags
+      href: ip-tags.md
+- name: Cloud app discovery
+  items:
+  - name: Overview
+    displayName: cloud discovery, best practices
+    href: set-up-cloud-discovery.md
+  - name: Govern discovered apps
+    href: governance-discovery.md
+  - name: Enrich cloud discovery
+    href: cloud-discovery-aad-enrichment.md
+  - name: Anonymize cloud discovery data
+    href: cloud-discovery-anonymizer.md
+  - name: Configure cloud discovery
+    items:
+    - name: Find your cloud app and calculate risk scores
+      href: risk-score.md
+    - name: Add custom apps to cloud discovery
+      href: cloud-discovery-custom-apps.md
+    - name: Attest your app
+      href: attest-your-app.md
+    - name: Collect logs
+      items:
+      - name: Configure automatic log upload for continuous reports
+        href: discovery-docker.md
+      - name: Podman on Linux on-premises
+        href: discovery-linux-podman.md
+      - name: Docker on Linux on-premises
+        href: discovery-docker-ubuntu.md
+      - name: Docker on Linux in Azure
+        href: discovery-docker-ubuntu-azure.md
+      - name: Docker on Azure Kubernetes Service
+        href: discovery-kubernetes.md
+      - name: Docker on Windows on-premises
+        href: discovery-docker-windows.md
+      - name: Advanced log collector management
+        href: log-collector-advanced-management.md
+      - name: Use the custom log parser
+        href: custom-log-parser.md
+    - name: Connect apps for visibility and protection
+      items:
+      - name: Overview
+        displayName: connect apps
+        href: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
+      - name: Custom connectors with the open app connector platform
+        href: ./connector-platform.md
+      - name: Asana
+        href: protect-asana.md
+      - name: Atlassian
+        href: protect-atlassian.md
+      - name: AWS
+        href: protect-aws.md
+      - name: Azure
+        href: protect-azure.md
+      - name: Box
+        href: protect-box.md
+      - name: Citrix ShareFile
+        href: ./protect-citrix-sharefile.md
+      - name: DocuSign
+        href: protect-docusign.md
+      - name: Dropbox
+        href: protect-dropbox.md
+      - name: Egnyte
+        href: protect-egnyte.md
+      - name: GitHub
+        href: protect-github.md
+      - name: GCP
+        href: protect-gcp.md
+      - name: Google Workspace
+        href: protect-google-workspace.md
+      - name: Microsoft 365
+        href: protect-office-365.md
+      - name: Miro
+        href: protect-miro.md
+      - name: Mural
+        href: protect-mural.md
+      - name: NetDocuments
+        href: protect-netdocuments.md
+      - name: Okta
+        href: protect-okta.md
+      - name: OneLogin
+        href: protect-onelogin.md
+      - name: Salesforce
+        href: protect-salesforce.md
+      - name: ServiceNow
+        href: protect-servicenow.md
+      - name: Slack
+        href: protect-slack.md
+      - name: Smartsheet
+        href: protect-smartsheet.md
+      - name: Webex
+        href: protect-webex.md
+      - name: Workday
+        href: protect-workday.md
+      - name: Workplace (Preview)
+        href: protect-workplace.md
+      - name: Zendesk
+        href: protect-zendesk.md
+      - name: Zoom
+        href: protect-zoom.md
+      - name: Troubleshooting API connectors using error messages
+        href: troubleshooting-api-connectors-using-error-messages.md
+    - name: Integrate with Microsoft Defender for Endpoint
+      items:
+      - name: Overview
+        displayName: mde-integration
+        href: mde-integration.md
+      - name: Govern apps discovered by Microsoft Defender for Endpoint
+        href: mde-govern.md
+    - name: Integrate with secure web gateways (SWG)
+      items:
+      - name: Integrate with Zscaler
+        href: zscaler-integration.md
+      - name: Integrate with iboss
+        href: iboss-integration.md
+      - name: Integrate with Corrata
+        href: corrata-integration.md
+      - name: Integrate with Menlo
+        href: menlo-integration.md
+      - name: Integrate with Open Systems
+        href: open-systems-integration.md
+      - name: Work with discovery data
+        href: working-with-cloud-discovery-data.md
+      - name: Create snapshot Cloud Discovery reports
+        href: create-snapshot-cloud-discovery-reports.md
+    - name: Create app discovery policies
+      href: cloud-discovery-policies.md
+    - name: Create cloud discovery anomaly detection policies
+      href: cloud-discovery-anomaly-detection-policy.md
+    - name: Common cloud discovery policies
+      href: policies-cloud-discovery.md
+    - name: Troubleshooting cloud discovery
+      href: troubleshooting-cloud-discovery.md
+  - name: Investigate shadow IT
+    items:
+    - name: Cloud discovery dashboard
+      href: discovered-apps.md
+    - name: View app details
+      href: working-with-app-page.md
+    - name: Filter and query discovered apps
+      href: discovered-app-queries.md
+    - name: Discover and manage shadow IT
+      href: tutorial-shadow-it.md
+    - name: Work with discovered apps via API
+      href: discovered-apps-api-graph.md
+- name: Posture management (SSPM)
+  items:
+    - name: Overview
+      href: posture-overview.md
+    - name: SaaS security initiative
+      href: saas-security-initiative.md
+- name: Threat protection
+  items:
+  - name: Control cloud apps with policies
+    items:
+    - name: Overview
+      displayName: control, policies
+      href: control-cloud-apps-with-policies.md
+    - name: Supported policy templates
+      href: policy-template-reference.md
+    - name: Troubleshoot policies
+      href: troubleshoot-policies.md
+  - name: Configure threat protection
+    items:
+    - name: Detect suspicious user activity with UEBA
+      href: tutorial-suspicious-activity.md
+    - name: Create activity policies
+      href: user-activity-policies.md
+    - name: Create anomaly detection policies
+      href: anomaly-detection-policy.md
+    - name: Create OAuth policies
+      href: app-permission-policy.md
+    - name: Common threat protection policies
+      href: policies-threat-protection.md
+  - name: Configure access and session protection
+    items:
+    - name: Conditional access app control
+      href: proxy-intro-aad.md
+      displayName: conditional access app control, conditional access, conditional access policies
+    - name: Recommended usage flow
+      displayName: Conditional access app control, caac
+      href: conditional-access-app-control-how-to-overview.md
+    - name: Create access policies
+      displayName: Conditional Access app control, caac
+      href: access-policy-aad.md
+    - name: Create session policies
+      displayName: Conditional Access app control, caac
+      href: session-policy-aad.md
+    - name: Identity-managed devices with conditional access app control
+      displayName: Conditional Access app control, caac
+      href: conditional-access-app-control-identity.md
+    - name: App onboarding
+      items:
+      - name: Automatic onboarding for Microsoft IdP
+        href: app-onboarding.md
+      - name: Manual onboarding for Microsoft IdP
+        href: apps-manual-onboarding-with-microsoft-entra-id.md
+      - name: Onboard catalog and custom apps with a non-Microsoft IdP
+        items:
+        - name: Onboard non-Microsoft IdP catalog apps 
+          displayName: Conditional Access app control, caac
+          href: proxy-deployment-featured-idp.md
+        - name: Onboard non-Microsoft IdP custom apps
+          displayName: Conditional Access app control, caac
+          href: proxy-deployment-any-app-idp.md
+        - name: Deploy for any web app with PingOne
+          href: proxy-idp-pingone.md
+        - name: Deploy for any web app using AD FS
+          href: proxy-idp-adfs.md
+        - name: Deploy for any web app using Okta
+          href: proxy-idp-okta.md     
+    - name: Use in-browser protection (Microsoft Edge for Business)
+      href: in-browser-protection.md    
+    - name: Require step-up authentication upon risky action
+      href: tutorial-step-up-authentication.md
+    - name: Known limitations
+      href: caac-known-issues.md
+      displayName: Conditional Access app control, caac
+    - name: Troubleshooting access and session controls
+      items:
+      - name: Admin issues
+        displayName: Troubleshooting access and session controls
+        href: troubleshooting-proxy.md
+      - name: End-user issues
+        displayName: Troubleshooting access and session controls
+        href: troubleshooting-proxy-end-users.md
+    - name: Troubleshooting - What is cas.ms?
+      href: troubleshooting-proxy-url.md
+  - name: Investigate threats
+    items:
+    - name: Investigate cloud app risks and suspicious activity
+      displayName: investigate
+      href: investigate.md
+    - name: Investigate behaviors with advanced hunting
+      href: behaviors.md
+    - name: Investigate activities
+      href: activity-filters.md
+    - name: Filter and query activities
+      href: activity-filters-queries.md
+    - name: Investigate apps discovered by Microsoft Defender for Endpoint
+      href: mde-investigation.md
+    - name: Investigate files
+      href: file-filters.md
+    - name: Investigate accounts from connected apps
+      href: accounts.md
+    - name: Investigate OAuth apps
+      items:
+      - name: Manage OAuth apps
+        href: manage-app-permissions.md
+      - name: Investigate OAuth apps
+        href: investigate-risky-oauth.md
+    - name: CloudAppEvents schema for advanced hunting
+      href: /defender-xdr/advanced-hunting-cloudappevents-table?toc=/cloud-app-security/toc.json&bc=/cloud-app-security/breadcrumb/toc.json
+  - name: Investigate alerts
+    items:
+    - name: Investigate anomaly detection alerts
+      href: investigate-anomaly-alerts.md
+    - name: Investigate risky users
+      href: tutorial-ueba.md
+  - name: Respond to threats
+    items:
+    - name: Governing connected apps
+      href: governance-actions.md
+      displayName: governance actions
+    - name: Manage events with SIEM solutions
+      items:
+      - name: Integrate with Microsoft Sentinel
+        href: siem-sentinel.md
+      - name: Integrate with generic SIEM solutions
+        href: siem.md
+      - name: Troubleshooting SIEM solutions
+        href: troubleshooting-siem.md
+    - name: Customize alert automation with Power Automate
+      items:
+      - name: Customize alert automation with Power Automate
+        href: flow-integration.md
+      - name: Extend governance to endpoint remediation
+        href: tutorial-flow.md
+- name: Information protection
+  items:
+  - name: Discover and protect sensitive information
+    href: tutorial-dlp.md
+  - name: Protect your data at rest
+    items:
+    - name: Protecting your files with admin quarantine
+      href: use-case-admin-quarantine.md
+    - name: Apply Microsoft Information Protection labels automatically
+      href: use-case-information-protection.md
+  - name: Protect your data in motion
+    items:
+    - name: Protect apps in real time
+      href: tutorial-proxy.md
+    - name: Block downloads of sensitive information
+      href: use-case-proxy-block-session-aad.md
+  - name: Implement information protection policies
+    items:
+    - name: File policies
+      href: data-protection-policies.md
+    - name: Content inspection policies
+      items:
+      - name: DLP content inspection
+        displayName: Content inspection policies
+        href: content-inspection.md
+      - name: Integrate with Microsoft Data Classification Service
+        href: dcs-inspection.md
+      - name: RegEx pattern matching for Defender for Cloud Apps policies
+        href: working-with-the-regex-engine.md
+      - name: Troubleshoot content inspection
+        href: troubleshooting-content-inspection.md
+    - name: Common information protection policies
+      href: policies-information-protection.md
+  - name: Integrate with Microsoft Purview
+    href: azip-integration.md
+- name: App governance
+  items:
+  - name: Overview
+    displayName: app governance
+    href: app-governance-manage-app-governance.md
+  - name: Turn on app governance
+    href: app-governance-get-started.md
+  - name: Get started with app governance
+    href: app-governance-trial-user-guide.md
+  - name: Investigate app governance threat detection alerts
+    href: app-governance-anomaly-detection-alerts.md
+  - name: Get visibility and insights
+    items:
+    - name: Overview
+      displayName: visibility, insights
+      href: app-governance-visibility-insights-overview.md
+    - name: Get started with app governance visibility and insights
+      href: app-governance-visibility-insights-get-started.md
+    - name: View your apps with app governance
+      href: app-governance-visibility-insights-view-apps.md
+    - name: Determine compliance posture with app governance
+      href: app-governance-visibility-insights-compliance-posture.md
+    - name: View and regulate access with app governance
+      href: app-governance-visibility-insights-sensitive-content.md
+  - name: Implement app policies
+    items:
+    - name: Overview
+      displayName: app governance, app policies
+      href: app-governance-app-policies-overview.md
+    - name: Get started with app governance app policies
+      href: app-governance-app-policies-get-started.md
+    - name: Predefined app policies
+      href: app-governance-predefined-policies.md
+    - name: Create app policies
+      href: app-governance-app-policies-create.md
+    - name: Manage app policies
+      href: app-governance-app-policies-manage.md
+    - name: Investigate predefined app policy alerts
+      href: app-governance-investigate-predefined-policies.md
+  - name: Detect and remediate app threats
+    items:
+    - name: Overview
+      displayName: app governance, detect, remediate
+      href: app-governance-detect-remediate-overview.md
+    - name: Get started with app governance detection and remediation
+      href: app-governance-detect-remediate-get-started.md
+    - name: Monitor and respond to apps with unusual data usage
+      href: app-governance-monitor-apps-unusual-data-usage.md
+    - name: Remediate app threats with app governance alerts
+      href: app-governance-manage-alerts.md
+  - name: Secure apps and other assets
+    items:
+    - name: Secure apps accessing non-Graph APIs
+      href: app-governance-secure-apps-access-non-graph-api.md
+    - name: Secure apps with app hygiene features
+      href: app-governance-secure-apps-app-hygiene-features.md
+    - name: Hunt for threats in app activities
+      href: app-activity-threat-hunting.md
+  - name: App governance FAQ
+    href: app-governance-faq.yml
+- name: Operations guide
+  items:
+  - name: Operations guide overview
+    href: ops-guide/ops-guide.md
+  - name: Daily activities
+    href: ops-guide/ops-guide-daily.md
+  - name: Weekly activities
+    href: ops-guide/ops-guide-weekly.md
+  - name: Monthly activities
+    href: ops-guide/ops-guide-monthly.md
+  - name: Ad-hoc activities
+    href: ops-guide/ops-guide-ad-hoc.md
+- name: Reference
+  items:
+  - name: Microsoft Graph API reference
+    href: /graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta
+  - name: REST API reference
+    items:
+    - name: Introduction
+      href: api-introduction.md
+    - name: Authentication
+      items:
+      - name: Managing API tokens
+        href: api-authentication.md
+      - name: Application context
+        href: api-authentication-application.md
+      - name: User context
+        href: api-authentication-user.md
+      - name: Legacy method
+        href: api-tokens-legacy.md
+    - name: Activities
+      items:
+      - name: Overview
+        href: api-activities.md
+      - name: Investigate activities with APIs
+        href: api-activities-investigate-script.md
+      - name: List activities
+        href: api-activities-list.md
+      - name: Fetch activity
+        href: api-activities-fetch.md
+      - name: Feedback on activity
+        href: api-activities-feedback.md
+      - name: Alerts
+        items:
+        - name: Overview
+          href: api-alerts.md
+        - name: List alerts
+          href: api-alerts-list.md
+        - name: Close benign
+          href: api-alerts-close-benign.md
+        - name: Close false positive
+          href: api-alerts-close-false-positive.md
+        - name: Close true positive
+          href: api-alerts-close-true-positive.md
+        - name: Fetch alert
+          href: api-alerts-fetch.md
+        - name: Mark alert as read
+          href: api-alerts-mark-read.md
+        - name: Mark alert as unread
+          href: api-alerts-mark-unread.md
+      - name: Cloud Discovery
+        items:
+        - name: Overview
+          href: api-discovery.md
+        - name: Initiate file upload
+          href: api-discovery-initiate.md
+        - name: Perform file upload
+          href: api-discovery-perform.md
+        - name: Finalize file upload
+          href: api-discovery-finalize.md
+        - name: List continuous reports
+          href: api-discovery-list-streams.md
+        - name: List continuous report categories
+          href: api-discovery-list-categories.md
+        - name: Generate block script
+          href: api-discovery-script.md
+      - name: Data Enrichment
+        items:
+        - name: Overview
+          href: api-data-enrichment.md
+        - name: Manage IP address ranges using the API
+          href: api-data-enrichment-manage-script.md
+        - name: List IP ranges
+          href: api-data-enrichment-list.md
+        - name: Create IP address range
+          href: api-data-enrichment-create.md
+        - name: Update IP address range
+          href: api-data-enrichment-update.md
+        - name: Delete IP address range
+          href: api-data-enrichment-delete.md
+      - name: Entities
+        items:
+        - name: Overview
+          href: api-entities.md
+        - name: List entities
+          href: api-entities-list.md
+        - name: Fetch entity
+          href: api-entities-fetch.md
+        - name: Fetch entity tree
+          href: api-entities-fetch-tree.md
+      - name: Files
+        items:
+        - name: Overview
+          href: api-files.md
+        - name: List Files
+          href: api-files-list.md
+        - name: Fetch File
+          href: api-files-fetch.md
+- name: Resources
+  items:
+  - name: Licensing datasheet
+    href: https://aka.ms/M365EnterprisePlans
+  - name: Microsoft Defender Portal
+    href: https://security.microsoft.com
+  - name: How to buy Defender for Cloud Apps
+    href: https://www.microsoft.com/security/business/cloud-apps-defender
+  - name: Support and troubleshooting
+    href: support-and-ts.md
+  - name: External integrations
+    href: additional-integrations.md
+  - name: Watch our webinars
+    href: webinars.md
+  - name: Release note archive
+    href: release-note-archive.md
+- name: Microsoft Defender XDR Docs
+  items:
+  - name: Microsoft Defender XDR
+    href: /microsoft-365/security/defender/
+  - name: Microsoft Defender for Microsoft 365
+    href: /microsoft-365/security/office-365-security/
+  - name: Microsoft Defender for Endpoint
+    href: /microsoft-365/security/defender-endpoint/
+  - name: Microsoft Defender for Identity
+    href: /defender-for-identity/
+  - name: Microsoft Defender Vulnerability Management
+    href: /microsoft-365/security/defender-vulnerability-management/

@@ -14,6 +14,9 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
+ms.custom:
+- cx-ti
+- cx-ah
 ms.topic: reference
 ms.date: 04/03/2024
 ---
@@ -80,6 +83,7 @@ Use this reference to construct queries that return information from the table. 
 |`NetworkLocationDetails`|`string`|Network location details of the authentication processor of the sign-in event|
 |`RequestId`|`string`|Unique identifier of the request|
 |`ReportId`|`string`|Unique identifier for the event|
+|`EndpointCall`|`string`|Information about the Microsoft Entra ID endpoint that the request was sent to and the type of request sent during sign in.|
 
 ## Related articles
 

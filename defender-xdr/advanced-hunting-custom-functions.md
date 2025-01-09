@@ -14,8 +14,11 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: reference
-ms.date: 05/16/2023
+ms.custom: 
+- cx-ti
+- cx-ah
+ms.topic: how-to
+ms.date: 04/22/2024
 ---
 
 # Use custom functions

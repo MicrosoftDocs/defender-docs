@@ -29,6 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Security Exposure Management](/security-exposure-management/)
 
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
@@ -48,7 +49,7 @@ Centralized permissions management is supported for the following solutions:
 |Microsoft Defender for Office 365|Full support for all data and actions. </br></br> **Note**: <ul><li>Initially, the Microsoft Defender XDR RBAC model is available only for organizations with Microsoft Defender for Office 365 Plan 2 licenses (trial licenses aren't supported).</li><li>Granular delegated admin privileges (GDAP) aren't supported.</li><li>Exchange Online PowerShell and Security & Compliance PowerShell continue to use [Exchange Online roles](/exchange/permissions-exo/permissions-exo) and [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions). Microsoft Defender XDR Unified RBAC doesn't affect Exchange Online PowerShell or Security & Compliance PowerShell.</li><li>Azure B2B invited guests aren't supported by all experiences that were previously under Exchange Online RBAC.</li></ul>|
 |Microsoft Defender for Identity|Full support for all identity data and actions. </br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
 |Microsoft Defender for Cloud|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
-|Microsoft Secure Score|Full support for all Secure Score data from the [Products included in Secure Score](microsoft-secure-score.md#products-included-in-secure-score).|
+|Microsoft Security Exposure Management|Full support for all Exposure Management data and actions, including Microsoft Secure Score data.|
 
 > [!NOTE]
 > Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview compliance portal.

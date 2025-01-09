@@ -20,7 +20,7 @@ ms.custom:
 description: Users can learn how to view and manage quarantined messages in Exchange Online Protection (EOP) that should have been delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 05/21/2024
+ms.date: 09/11/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -97,6 +97,10 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **None**
   - **Message sender is blocked by recipient settings**
   - **Message sender is blocked by administrator settings**
+
+  > [!TIP]
+  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+
 - **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
@@ -130,6 +134,10 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Blocked sender**: One of the following values:
   - **Don't show blocked senders** (default)
   - **Show all senders**
+
+  > [!TIP]
+  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+
 - **Release status**: Any of the following values:
   - **Needs review**
   - **Approved**
@@ -185,8 +193,10 @@ In the details flyout that opens, the following information is available:
   - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
   - **Sender override reason**
   - **Released by**:
-    - If the user released the message themselves, the user's email address is shown.
+    - If the user released their message, the user's email address is shown.
     - If the message was released by an admin, the value **Admin** is shown.
+    - if the release is carried out by the system, the value **System** is shown
+    - if the release is not carried out by user, Admin, or system, it defaults to **Admin**.
 - **Email details** section:
   - **Sender address**
   - **Time received**

@@ -14,8 +14,11 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
-ms.date: 02/16/2024
+ms.custom:
+- cx-ti
+- cx-ah
+ms.topic: how-to
+ms.date: 04/22/2024
 ---
 
 # Extend advanced hunting coverage with the right settings

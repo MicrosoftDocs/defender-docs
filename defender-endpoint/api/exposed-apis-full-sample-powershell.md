@@ -3,8 +3,8 @@ title: Advanced Hunting with PowerShell API Guide
 ms.reviewer: 
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -13,6 +13,9 @@ ms.collection:
   - m365-security
   - highpri
   - tier3
+ms.custom:
+- cx-ti
+- cx-ta
 ms.topic: conceptual
 ms.date: 03/28/2024
 ---

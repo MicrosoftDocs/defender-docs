@@ -15,8 +15,11 @@ ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier2
-ms.topic: conceptual
-ms.date: 03/28/2024
+ms.custom:
+- cx-ti
+- cx-ah
+ms.topic: how-to
+ms.date: 07/18/2024
 ---
 
 # Create and manage custom detections rules
@@ -35,11 +38,11 @@ Custom detection rules are rules you can design and tweak using [advanced huntin
 
 To manage custom detections, you need to be assigned one of these roles:
 
-- **Security settings (manage)** — Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
+- **Security settings (manage)** - Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
 
-- **Security Administrator** — Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-administrator) can manage security settings in the Microsoft Defender portal and other portals and services.
+- **Security Administrator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-administrator) can manage security settings in the Microsoft Defender portal and other portals and services.
 
-- **Security Operator** — Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the *Manage Security Settings permission for Defender for Endpoint.
+- **Security Operator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the *Manage Security Settings permission for Defender for Endpoint.
 
 You can manage custom detections that apply to data from specific Microsoft Defender XDR solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
 
@@ -55,7 +58,7 @@ To manage required permissions, a Global Administrator can:
 - Check RBAC settings for Microsoft Defender for Endpoint in [Microsoft Defender XDR](https://security.microsoft.com/) under **Settings** \> **Permissions** > **Roles**. Select the corresponding role to assign the **manage security settings** permission.
 
 > [!NOTE]
-> A user also needs to have the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they are creating or editing before they can proceed. A user can't edit a custom detection rule that is scoped to run on all devices, if the same user does not permissions for all devices. 
+> A user also needs to have the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they are creating or editing before they can proceed. A user can't edit a custom detection rule that is scoped to run on all devices, if the same user does not have permissions for all devices. 
 
 ## Create a custom detection rule
 
@@ -70,8 +73,8 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 To create a custom detection rule, the query must return the following columns:
 
-- `Timestamp`—used to set the timestamp for generated alerts
-- `ReportId`—enables lookups for the original records
+- `Timestamp`- Used to set the timestamp for generated alerts
+- `ReportId`- Enables lookups for the original records
 - One of the following columns that identify specific devices, users, or mailboxes:
   - `DeviceId`
   - `DeviceName`
@@ -114,24 +117,24 @@ DeviceEvents
 
 With the query in the query editor, select **Create detection rule** and specify the following alert details:
 
-- **Detection name** — name of the detection rule; should be unique
-- **Frequency** — interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
-- **Alert title** — title displayed with alerts triggered by the rule; should be unique
-- **Severity** — potential risk of the component or activity identified by the rule
-- **Category** — threat component or activity identified by the rule
-- **MITRE ATT&CK techniques** — one or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software
-- **Description** — more information about the component or activity identified by the rule
-- **Recommended actions** — additional actions that responders might take in response to an alert
+- **Detection name** - Name of the detection rule; should be unique
+- **Frequency** -Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
+- **Alert title** - Title displayed with alerts triggered by the rule; should be unique.
+- **Severity** - Potential risk of the component or activity identified by the rule.
+- **Category** - Threat component or activity identified by the rule.
+- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
+- **Description** - More information about the component or activity identified by the rule.
+- **Recommended actions** - Additional actions that responders might take in response to an alert.
 
 #### Rule frequency
 
 When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback duration based on the frequency you choose:
 
-- **Every 24 hours** — runs every 24 hours, checking data from the past 30 days
-- **Every 12 hours** — runs every 12 hours, checking data from the past 48 hours
-- **Every 3 hours** — runs every 3 hours, checking data from the past 12 hours
-- **Every hour** — runs hourly, checking data from the past 4 hours
-- **Continuous (NRT)** — runs continuously, checking data from events as they're collected and processed in near real-time (NRT), see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency)
+- **Every 24 hours** - Runs every 24 hours, checking data from the past 30 days.
+- **Every 12 hours** - Runs every 12 hours, checking data from the past 48 hours.
+- **Every 3 hours** - Runs every 3 hours, checking data from the past 12 hours.
+- **Every hour** - Runs hourly, checking data from the past 4 hours.
+- **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT), see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
 
 > [!TIP]
 > Match the time filters in your query with the lookback duration. Results outside of the lookback duration are ignored.
@@ -140,14 +143,23 @@ When you edit a rule, it will run with the applied changes in the next run time 
 
 ##### Continuous (NRT) frequency
 
-Setting a custom detection to run in Continuous (NRT) frequency allows you to increase your organization's ability to identify threats faster.
+Setting a custom detection to run in Continuous (NRT) frequency allows you to increase your organization's ability to identify threats faster. Using the Continuous (NRT) frequency has minimal to no impact to your resource usage and should thus be considered for any qualified custom detection rule in your organization.
 
-> [!NOTE]
->  Using the Continuous (NRT) frequency has minimal to no impact to your resource usage and should thus be considered for any qualified custom detection rule in your organization.
+From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency with a single button, **Migrate now**:
+
+:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
+
+
+Selecting **Migrate now** gives you a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only according to your preferences:
+
+:::image type="content" source="media/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-compatible-queries.png":::
+
+Once you click **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
 
 ###### Queries you can run continuously
 
 You can run a query continuously as long as:
+
 - The query references one table only.
 - The query uses an operator from the list of supported KQL operators. **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**
 - The query doesn't use joins, unions, or the `externaldata` operator.
@@ -178,7 +190,6 @@ Near real-time detections are supported for the following tables:
 - `IdentityQueryEvents`
 - `UrlClickEvents`
 
-
 > [!NOTE]
 > Only columns that are generally available can support **Continuous (NRT)** frequency.
 
@@ -198,11 +209,11 @@ Your custom detection rule can automatically take actions on devices, files, use
 
 These actions are applied to devices in the `DeviceId` column of the query results:
 
-- **Isolate device** — uses Microsoft Defender for Endpoint to apply full network isolation, preventing the device from connecting to any application or service. [Learn more about Microsoft Defender for Endpoint machine isolation](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#isolate-devices-from-the-network)
-- **Collect investigation package** — collects device information in a ZIP file. [Learn more about the Microsoft Defender for Endpoint investigation package](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices)
-- **Run antivirus scan** — performs a full Microsoft Defender Antivirus scan on the device
-- **Initiate investigation** — initiates an [automated investigation](m365d-autoir.md) on the device
-- **Restrict app execution** — sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution)
+- **Isolate device** - Uses Microsoft Defender for Endpoint to apply full network isolation, preventing the device from connecting to any application or service. [Learn more about Microsoft Defender for Endpoint machine isolation](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#isolate-devices-from-the-network).
+- **Collect investigation package** - Collects device information in a ZIP file. [Learn more about the Microsoft Defender for Endpoint investigation package](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices).
+- **Run antivirus scan** - Performs a full Microsoft Defender Antivirus scan on the device.
+- **Initiate investigation** - Initiates an [automated investigation](m365d-autoir.md) on the device.
+- **Restrict app execution** - Sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution).
 
 #### Actions on files
 
@@ -216,8 +227,7 @@ These actions are applied to devices in the `DeviceId` column of the query resul
 
 - Select **Disable user** to temporarily prevent a user from logging in.
 - Select **Force password reset** to prompt the user to change their password on the next sign in session.
-
-Both the `Disable user` and `Force password reset` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
+- Both the `Disable user` and `Force password reset` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
 
 For more details on user actions, read [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
 
@@ -226,6 +236,7 @@ For more details on user actions, read [Remediation actions in Microsoft Defende
 - If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to  a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
    :::image type="content" source="media/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/advanced-hunting-custom-quarantine-results.png":::
+  :::image type="content" source="media/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/advanced-hunting-custom-quarantine-results.png":::
 
 - Alternatively, you can select **Delete email** and then choose to either move the emails to Deleted Items (**Soft delete**) or delete the selected emails permanently (**Hard delete**).
 
@@ -250,7 +261,7 @@ Only data from devices in the scope will be queried. Also, actions are taken onl
 After reviewing the rule, select **Create** to save it. The custom detection rule immediately runs. It runs again based on configured frequency to check for matches, generate alerts, and take response actions.
 
 > [!IMPORTANT]
-> Custom detections should be regularly reviewed for efficiency and effectiveness. To make sure you are creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in [Manage existing custom detect ion rules](#manage-existing-custom-detection-rules).
+> Custom detections should be regularly reviewed for efficiency and effectiveness. To make sure you are creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in [Manage existing custom detection rules](#manage-existing-custom-detection-rules).
 >
 > You maintain control over the broadness or specificity of your custom detections so any false alerts generated by custom detections might indicate a need to modify certain parameters of the rules.
 
@@ -265,24 +276,24 @@ You can view the list of existing custom detection rules, check their previous r
 
 To view all existing custom detection rules, navigate to **Hunting** > **Custom detection rules**. The page lists all the rules with the following run information:
 
-- **Last run** — when a rule was last run to check for query matches and generate alerts
-- **Last run status** — whether a rule ran successfully
-- **Next run** — the next scheduled run
-- **Status** — whether a rule has been turned on or off
+- **Last run** - When a rule was last run to check for query matches and generate alerts
+- **Last run status** - Whether a rule ran successfully
+- **Next run** - The next scheduled run
+- **Status** - Whether a rule has been turned on or off
 
 ### View rule details, modify rule, and run rule
 
 To view comprehensive information about a custom detection rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
 
-:::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="The Custom detection rule details page in the Microsoft Defender portal" lightbox="/defender/media/custom-detect-rules-view.png":::
+:::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="/defender/media/custom-detect-rules-view.png":::
 
 You can also take the following actions on the rule from this page:
 
-- **Run** — run the rule immediately. This also resets the interval for the next run.
-- **Edit** — modify the rule without changing the query
-- **Modify query** — edit the query in advanced hunting
-- **Turn on** / **Turn off** — enable the rule or stop it from running
-- **Delete** — turn off the rule and remove it
+- **Run** - Run the rule immediately. This also resets the interval for the next run.
+- **Edit** - Modify the rule without changing the query.
+- **Modify query** - Edit the query in advanced hunting.
+- **Turn on** / **Turn off** - Enable the rule or stop it from running.
+- **Delete** - Turn off the rule and remove it.
 
 ### View and manage triggered alerts
 

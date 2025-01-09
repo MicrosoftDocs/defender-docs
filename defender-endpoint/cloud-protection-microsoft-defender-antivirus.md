@@ -3,8 +3,8 @@ title: Cloud protection and Microsoft Defender Antivirus
 description: Learn about cloud protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: mkaminska
 manager: deniseb
 ms.custom: nextgen

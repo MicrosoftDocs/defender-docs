@@ -1,8 +1,8 @@
 ---
 title: Behavioral blocking and containment
 description: Learn about behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 ms.reviewer: shwetaj
 audience: ITPro
@@ -62,7 +62,7 @@ The following image shows an example of an alert that was triggered by behaviora
 
 - **[Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md)** Malicious artifacts or behaviors that are observed through post-breach protection are blocked and contained. EDR in block mode works even if Microsoft Defender Antivirus isn't the primary antivirus solution. (EDR in block mode isn't enabled by default; you turn it on at Microsoft Defender XDR.)
 
-Expect more to come in the area of behavioral blocking and containment, as Microsoft continues to improve threat protection features and capabilities. To see what's planned and rolling out now, visit the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap).
+Expect more to come in the area of behavioral blocking and containment, as Microsoft continues to improve threat protection features and capabilities. To see what's planned and rolling out now, visit the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20365).
 
 ## Examples of behavioral blocking and containment in action
 

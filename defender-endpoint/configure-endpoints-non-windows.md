@@ -3,8 +3,8 @@ title: Onboard non-Windows devices to the Microsoft Defender for Endpoint servic
 description: Configure non-Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -55,7 +55,7 @@ You can choose to onboard non-Windows devices through Microsoft Defender for End
       
    3. Select **View** to open the partner's page. Follow the instructions provided on the page.
       
-   4. After creating an account or subscribing to the partner solution, you should get to a stage where a tenant admin (or Global Administrator) is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
+   4. After creating an account or subscribing to the partner solution, you should get to a stage where an administrator (such as a tenant administrator) is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
 
       > [!IMPORTANT]
       > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.

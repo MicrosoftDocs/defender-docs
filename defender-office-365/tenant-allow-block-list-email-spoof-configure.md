@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/18/2024
+ms.date: 11/27/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -58,7 +58,7 @@ This article describes how admins can manage entries for email senders in the Mi
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
-      - **Security Operator** (Tenant AllowBlockList Manager).
+      - **Security Operator** (Tenant AllowBlockList Manager role): This permission works only when assigned directly in the **Exchange admin center** at <https://admin.exchange.microsoft.com> \> **Roles** \> **Admin Roles**.
     - *Read-only access to the Tenant Allow/Block List*: Membership in one of the following role groups:
       - **Global Reader**
       - **Security Reader**
@@ -92,7 +92,7 @@ To create block entries for *spoofed senders*, see [this section](#create-block-
 Email from these blocked senders is marked as *high confidence phishing* and quarantined.
 
 > [!NOTE]
-> Currently, subdomains of the specified domain aren't blocked. For example, if you create a block entry for email from contoso.com, mail from marketing.contoso.com isn't also blocked. You need to create a separate block entry for marketing.contoso.com.
+> Currently, if the block entry doesn't use the syntax \*.TLD, subdomains of the specified domain aren't blocked. For example, if you create a block entry for contoso.com, mail from marketing.contoso.com isn't also blocked. You need to create a separate block entry for marketing.contoso.com or use the \*.TLD syntax, where TLD can be any top-level domain, internal domain, or email address domain.
 >
 > Users in the organization also can't *send* email to these blocked domains and addresses. The message is returned in the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
@@ -543,3 +543,4 @@ For submission instructions for impersonation false positives, see [Report good 
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block files in the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - [Allow or block URLs in the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md)
+- [Allow or block IPv6 addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)

@@ -4,8 +4,9 @@ description: Businesses of all sizes can use this guide to evaluate and test the
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
 ms.date: 10/18/2018

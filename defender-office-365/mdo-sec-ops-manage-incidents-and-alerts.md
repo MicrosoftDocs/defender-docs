@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-An [incident](/defender-xdr/incidents-overview) in Microsoft Defender XDR is a collection of correlated alerts and associated data that define the complete story of an attack. Defender for Office 365 [alerts](/purview/alert-policies#default-alert-policies), [automated investigation and response (AIR)](air-about.md#the-overall-flow-of-air), and the outcome of the investigations are natively integrated and correlated on the **Incidents** page in Microsoft Defender XDR at <https://security.microsoft.com/incidents-queue>. We refer to this page as the _Incidents queue_.
+An [incident](/defender-xdr/incidents-overview) in Microsoft Defender XDR is a collection of correlated alerts and associated data that define the complete story of an attack. Defender for Office 365 [alerts](/purview/alert-policies#default-alert-policies), [automated investigation and response (AIR)](air-about.md#the-overall-flow-of-air), and the outcome of the investigations are natively integrated and correlated on the **Incidents** page in Microsoft Defender XDR at <https://security.microsoft.com/incidents>. We refer to this page as the _Incidents_ queue.
 
 Alerts are created when malicious or suspicious activity affects an entity (for example, email, users, or mailboxes). Alerts provide valuable insights about in-progress or completed attacks. However, an ongoing attack can affect multiple entities, which results in multiple alerts from different sources. Some built-in alerts automatically trigger AIR playbooks. These playbooks do a series of investigation steps to look for other impacted entities or suspicious activity.
 
@@ -36,7 +36,7 @@ Watch this short video on how to manage Microsoft Defender for Office 365 alerts
 
 Defender for Office 365 alerts, investigations, and their data are automatically correlated. When a relationship is determined, the system creates an incident to give security teams visibility for the entire attack.
 
-We strongly recommend that SecOps teams manage incidents and alerts from Defender for Office 365 in the Incidents queue at <https://security.microsoft.com/incidents-queue>. This approach has the following benefits:
+We strongly recommend that SecOps teams manage incidents and alerts from Defender for Office 365 in the Incidents queue at <https://security.microsoft.com/incidents>. This approach has the following benefits:
 
 - Multiple options for [management](/defender-xdr/manage-incidents):
   - Prioritization
@@ -75,7 +75,7 @@ We strongly recommend that SecOps teams manage incidents and alerts from Defende
 > [!NOTE]
 > Incidents don't just represent static events. They also represent attack stories that happen over time. As the attack progresses, new Defender for Office 365 alerts, AIR investigations, and their data are continuously added to the existing incident.
 
-Manage incidents on the **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents-queue>:
+Manage incidents on the **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents>:
 
 :::image type="content" source="media/mdo-sec-ops-incidents.png" alt-text="Incidents page in the Microsoft Defender portal." lightbox="media/mdo-sec-ops-incidents.png":::
 
@@ -106,7 +106,7 @@ Security teams can take wide variety of response actions on email using Defender
 
   You can take these actions from the following locations:
 
-  - The **Evidence and response** tab from the details of the incident on the **Incidents** page** at <https://security.microsoft.com/incidents-queue> (recommended).
+  - The **Evidence and response** tab from the details of the incident on the **Incidents** page at <https://security.microsoft.com/incidents> (recommended).
   - **Threat Explorer** at <https://security.microsoft.com/threatexplorer>.
   - The unified **Action center** at  <https://security.microsoft.com/action-center/pending>.
 

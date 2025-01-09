@@ -2,8 +2,8 @@
 title: Get all vulnerabilities by machine and software
 description: Retrieves a list of all the vulnerabilities affecting the organization by Machine and Software
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

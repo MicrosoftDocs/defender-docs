@@ -3,8 +3,7 @@ title: Understand the Defender Experts for Hunting report in Microsoft Defender 
 ms.reviewer: 
 description: The Defender Experts for Hunting service publishes reports to help you understand all the threats the hunting service surfaced in your environment
 search.appverid: met150
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-hunting
 f1.keywords:
 - NOCSH
 ms.author: vpattnaik
@@ -12,12 +11,15 @@ author: vpattnai
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
+ms.custom: 
+- cx-ti
+- cx-dex
 ms.collection: 
 - m365-security 
 - tier1
 - essentials-manage
 ms.topic: conceptual
-ms.date: 10/17/2023
+ms.date: 10/30/2024
 ---
 
 # Understand the Defender Experts for Hunting report in Microsoft Defender XDR

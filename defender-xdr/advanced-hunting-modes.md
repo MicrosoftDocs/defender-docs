@@ -14,10 +14,13 @@ ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier2
-ms.topic: conceptual
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- cx-ti
+- cx-ah
+- seo-marvel-apr2020
+ms.topic: how-to
 search.appverid: met150
-ms.date: 04/02/2024
+ms.date: 10/18/2024
 ---
 
 # Choose between guided and advanced modes to hunt in Microsoft Defender XDR
@@ -27,7 +30,7 @@ ms.date: 04/02/2024
 **Applies to:**
 - Microsoft Defender XDR
 
-You can find the **advanced hunting** page by going to the left navigation bar in Microsoft Defender XDR and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](/defender/media/guided-hunting/hunting-icon.png).
+You can find the **advanced hunting** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](/defender/media/guided-hunting/hunting-icon.png).
 
 In the **advanced hunting** page, two modes are supported:
 

@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/18/2024
+ms.date: 01/06/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -60,6 +60,33 @@ For example: *Multi-stage incident on multiple endpoints reported by multiple so
 If you onboarded Microsoft Sentinel to the unified security operations platform, then any alerts and incidents coming from Microsoft Sentinel are likely to have their names changed (regardless of whether they were created before or since the onboarding).
 
 We recommend that you avoid using the incident name as a condition for triggering [automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules). If the incident name is a condition, and the incident name changes, the rule will not be triggered.
+
+### Defender Boxed
+
+For a limited time during January and July of each year, **Defender Boxed** automatically appears when you first open the incident queue. Defender Boxed highlights your organization's security success, improvements, and response actions during the previous six months or calendar year.
+
+:::image type="content" source="/defender/media/defender-boxed/defender-boxed-recording.gif" alt-text="Defender Boxed as shown in the incident queue.":::
+
+> [!NOTE]
+> Defender Boxed is only available to users who performed applicable activities in the Microsoft Defender portal.
+
+You can do the following actions in the series of cards that appear in Defender Boxed:
+
+- Download a detailed summary of your achievements that can be shared with others in your organization.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-summary-small.png" alt-text="Screenshot of Defender Boxed slide with the download summary option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-summary.png":::
+
+- Change the frequency of how often Defender Boxed will appear. You can choose between once (every January) or twice (every January and July) per year.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-frequency-small.png" alt-text="Screenshot of Defender Boxed slide with the frequency highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-frequency.png":::
+
+- Share your achievement to your social media networks, email, and other forums by saving the slide as an image.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-save-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-save.png":::
+
+To reopen Defender Boxed, go to the Incidents queue and then select **Your Defender Boxed** on the right side of the pane.
+
+:::image type="content" source="/defender/media/defender-boxed/defender-boxed-incident-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-incident.png":::
 
 ## Filters <a name="available-filters"></a>
 

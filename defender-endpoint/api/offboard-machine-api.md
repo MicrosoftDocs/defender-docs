@@ -2,8 +2,8 @@
 title: Offboard machine API
 description: Learn how to use an API to offboard a device from Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/28/2024
+ms.date: 08/29/2024
 ---
 
 # Offboard machine API
@@ -60,13 +60,13 @@ One of the following permissions is required to call this API. To learn more, in
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user must have a Global Administrator role.
-> - The user must have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+When obtaining a token using user credentials:
+
+- The user must have an appropriate role assigned (see [Permission options](../user-roles.md#permission-options)).
+
+- The user must have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
+Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
 ## HTTP request
 

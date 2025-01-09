@@ -3,8 +3,8 @@ title: Troubleshoot Microsoft Defender for Endpoint service issues
 description: Find solutions and workarounds to known issues such as server errors when trying to access the service.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

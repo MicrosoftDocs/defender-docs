@@ -16,7 +16,7 @@ ms.topic: conceptual
 ms.date: 06/21/2024
 ---
 
-# Configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account
+# Stream Microsoft Defender XDR events to your storage account
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -30,41 +30,47 @@ ms.date: 06/21/2024
 
 ## Before you begin
 
-1. Create a [Storage account](/azure/storage/common/storage-account-overview) in your tenant.
-
-2. Log in to your [Azure tenant](https://ms.portal.azure.com/), go to **Subscriptions > Your subscription > Resource Providers > Register to Microsoft.Insights**.
+- Create a [Storage account](/azure/storage/common/storage-account-overview) in your tenant.
+- Sign in to your [Azure tenant](https://ms.portal.azure.com/), and go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.Insights**.
 
 ### Add contributor permissions
 
-Once the Storage account is created, you'll need to:
+Once the storage account is created, you need to define the user who is signing in as a contributor.
 
-1. Define the user who is logging into Microsoft Defender XDR as Contributor.
+1. Go to **Storage Account** > **Access control (IAM)**, and then select **Add**.
 
-    Go to **Storage Account > Access control (IAM) > Add** and verify under **Role assignments**.
+2. Verify the user is listed under **Role assignments**.
 
 ## Enable raw data streaming
 
-1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as a ***Security Administrator*** at a minimum.
+> [!NOTE]
+> When using the Streaming API to an Azure Storage account, ensure the option `Allow trusted Microsoft services to access this storage account` is enabled in the storage account settings to allow for data to be streamed from Microsoft Defender for Endpoint.
 
-  >[!IMPORTANT]
-  >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in using an account with at least Security Administrator permissions.
 
-2. Go to **Settings** \> **Microsoft Defender XDR** \> **Streaming API**. To go directly to the **Streaming API** page, use <https://security.microsoft.com/settings/mtp_settings/raw_data_export>.
+   > [!IMPORTANT]
+   > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+2. Go to **Settings** > **Microsoft Defender XDR** > **Streaming API**. To go directly to the **Streaming API** page, use [https://security.microsoft.com/settings/mtp_settings/raw_data_export](https://security.microsoft.com/settings/mtp_settings/raw_data_export).
 
 3. Select **Add**.
 
 4. In the **Add new Streaming API settings** flyout that appears, configure the following settings:
-   1. **Name**: Choose a name for your new settings.
-   2. Select **Forward events to Azure Storage**.
-4. To display the Azure Resource Manager resource ID for a storage account in the Azure portal, follow these steps:
 
-   1. Navigate to your storage account in the Azure portal.
-   2. On the **Overview** page, in the **Essentials** section, select the **JSON View** link.
-   3. The resource ID for the storage account is displayed at the top of the page, copy the text under **Storage Account Resource ID**.
+   - **Name**: Choose a name for your new settings.
+   - Select **Forward events to Azure Storage**.
 
-   4. Back on the **Add new Streaming API settings** flyout, choose the **Event types** that you want to stream.
+5. To display the Azure Resource Manager resource ID for a storage account in the Azure portal, follow these steps:
 
-   When you're finished, select **Submit**.
+   1. Navigate to your storage account in the [Azure portal](https://portal.azure.com).
+
+   2. In the **Overview** page, in the **Essentials** section, select the **JSON View** link.
+
+   3. The resource ID for the storage account is displayed at the top of the page. Copy the text under **Storage Account Resource ID**.
+
+   4. In the **Add new Streaming API settings** flyout, choose the **Event types** that you want to stream.
+
+   5. When you're finished, select **Submit**.
 
 ## The schema of the events in the Storage account
 
@@ -74,14 +80,14 @@ Once the Storage account is created, you'll need to:
 
 - The schema of each row in a blob is the following JSON:
 
-  ```JSON
-  {
+   ```JSON
+   {
           "time": "<The time Microsoft Defender XDR received the event>"
           "tenantId": "<Your tenant ID>"
           "category": "<The Advanced Hunting table name with 'AdvancedHunting-' prefix>"
           "properties": { <Microsoft Defender XDR Advanced Hunting event as Json> }
-  }
-  ```
+   }
+   ```
 
 - Each blob contains multiple rows.
 
@@ -91,9 +97,11 @@ Once the Storage account is created, you'll need to:
 
 ## Data types mapping
 
-In order to get the data types for our events properties do the following:
+To get the data types for events properties, follow these steps:
 
-1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and go to **Hunting** \> **Advanced hunting**. To go directly to the **Advanced hunting** page, use <security.microsoft.com/advanced-hunting>.
+1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in.
+
+2. Go to **Hunting** \> **Advanced hunting**. To go directly to the **Advanced hunting** page, use [https://security.microsoft.com/advanced-hunting](https://security.microsoft.com/advanced-hunting).
 
 2. On the **Query** tab, run the following query to get the data types mapping for each event:
 
@@ -103,21 +111,20 @@ In order to get the data types for our events properties do the following:
    | project ColumnName, ColumnType
    ```
 
-- Here's an example for Device Info event:
+   Here's an example for Device Info event:
 
-  :::image type="content" source="/defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example device info query" lightbox="/defender-endpoint/media/machine-info-datatype-example.png":::
+   :::image type="content" source="/defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example device info query" lightbox="/defender-endpoint/media/machine-info-datatype-example.png":::
 
 ## Monitoring created resources
 
-You can monitor the resources created by the streaming API using **Azure Monitor**. 
-For more information, see [Monitor destinations - Azure Monitor | Microsoft Docs](/azure/azure-monitor/logs/logs-data-export?tabs=portal#monitor-destinations).
+You can monitor the resources created by the streaming API using **Azure Monitor**. For more information, see [Monitor destinations - Azure Monitor](/azure/azure-monitor/logs/logs-data-export?tabs=portal#monitor-destinations).
 
-## Related topics
+## Related articles
 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
-
 - [Overview of Advanced Hunting](advanced-hunting-overview.md)
 - [Microsoft Defender XDR Streaming API](streaming-api.md)
 - [Stream Microsoft Defender XDR events to your Azure storage account](streaming-api-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

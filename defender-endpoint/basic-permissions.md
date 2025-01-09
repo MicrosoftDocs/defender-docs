@@ -3,8 +3,8 @@ title: Use basic permissions to access the portal
 description: Learn how to use basic permissions to access the Microsoft Defender for Endpoint portal.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref
@@ -49,7 +49,7 @@ You can assign users with one of the following levels of permissions:
 
 - Connect to your Microsoft Entra ID. For more information, see [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands).
 
-  - **Full access**: Users with full access can log in, view all system information and resolve alerts, submit files for deep analysis, and download the onboarding package. Assigning full access rights requires adding the users to the "Security Administrator" or "Global Administrator" Microsoft Entra built-in roles.
+  - **Full access**: Users with full access can log in, view all system information and resolve alerts, submit files for deep analysis, and download the onboarding package. Assigning full access rights requires adding the users to a role, such as Security Administrator, using Microsoft Entra built-in roles.
 
   - **Read-only access**: Users with read-only access can log in, view all alerts, and related information.
 

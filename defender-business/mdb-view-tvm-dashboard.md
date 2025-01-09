@@ -2,17 +2,17 @@
 title: View your Microsoft Defender Vulnerability Management dashboard in Microsoft Defender for Business
 description: Use your Microsoft Defender Vulnerability Management dashboard to see important items to address in Defender for Business.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 06/19/2024
 ms.reviewer: nehabha
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - tier1
@@ -37,7 +37,7 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 
 - **Recommendations**: Lists current security recommendations and related threat information to review and consider. When you select an item in the list, a flyout panel opens with more details about threats and actions you can take.
 
-- **Remediation**: Lists any remediation actions and their status. Remediation activities can include sending a file to quarantine, stopping a process from running, and blocking a detected threat from running. Remediation activities can also include updating a device, running an antivirus scan, and more. 
+- **Remediation**: Lists any remediation actions and their status. Remediation activities can include sending a file to quarantine, stopping a process from running, and blocking a detected threat from running. Remediation activities can also include updating a device, running an antivirus scan, and more.
 
     :::image type="content" source="media/mdb-mdvm-remediation.png" alt-text="Screenshot of Microsoft Defender Vulnerability Management-Remediation." lightbox="media/mdb-mdvm-remediation.png":::
 
@@ -47,7 +47,7 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 
     :::image type="content" source="media/mdb-mdvm-weakness-details.png" alt-text="Screenshot of Microsoft Defender Vulnerability Management-Weaknesses." lightbox="media/mdb-mdvm-weakness-details.png":::
 
-- **Event timeline**: Lists vulnerabilities that affect your organization in a timeline view.   
+- **Event timeline**: Lists vulnerabilities that affect your organization in a timeline view.
 
 [Learn more about Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
 
@@ -56,4 +56,3 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 - [Try training and learning resources for Defender for Business](mdb-tutorials.md)
 - [Onboard devices to Defender for Business](mdb-onboard-devices.md)
 - [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md)
-

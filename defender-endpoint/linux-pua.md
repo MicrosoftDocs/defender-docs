@@ -2,8 +2,8 @@
 title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 description: Detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,19 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 10/11/2024
 ---
 
 # Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**Applies to**:
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
@@ -66,7 +64,7 @@ mdatp threat policy set --type potentially_unwanted_application --action [off|au
 
 ### Use the management console to configure PUA protection:
 
-In your enterprise, you can configure PUA protection from a management console, such as Puppet or Ansible, similarly to how other product settings are configured. For more information, see the [Threat type settings](linux-preferences.md#threat-type-settings) section of the [Set preferences for Defender for Endpoint on Linux](linux-preferences.md) article.
+In your enterprise, you can configure PUA protection from a management console, such as Puppet or Ansible, similarly to how other product settings are configured. For more information, see [Threat type settings](linux-preferences.md#threat-type-settings) in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
 ## Related articles
 

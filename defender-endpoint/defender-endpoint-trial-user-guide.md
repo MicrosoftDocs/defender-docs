@@ -2,12 +2,12 @@
 title: Trial user guide - Microsoft Defender for Endpoint
 description: Use this guide to get the most of your 90-day free trial. See how Defender for Endpoint can help prevent, detect, investigate, and respond to advanced threats.
 search.appverid: MET150 
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb 
 audience: ITPro
 ms.topic: how-to
-ms.date: 06/25/2024
+ms.date: 11/11/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -49,7 +49,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 <a href="microsoft-defender-endpoint.md#apis"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
 </tr>
 <tr>
-<td colspan="7"><a href="microsoft-defender-endpoint.md#mtp"><center><b>Microsoft Defender XDR</a></center></b></td>
+<td colspan="7"><a href="microsoft-defender-endpoint.md#mtp"><center><b>Microsoft Defender portal</a></center></b></td>
 </tr>
 </table>
 <br>
@@ -63,7 +63,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 3. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
 4. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
 5. [Configure capabilities](#step-5-configure-capabilities).
-6. [Set up the Microsoft Defender for Endpoint evaluation lab](#step-6-set-up-the-microsoft-defender-for-endpoint-evaluation-lab).
+6. [Visit the Microsoft Defender portal](#step-6-visit-the-microsoft-defender-portal).
 
 ## Step 1: Confirm your license state
 
@@ -109,15 +109,16 @@ This section outlines the general steps you to onboard devices (endpoints).
 
 After onboarding devices (endpoints), you'll configure the various capabilities, such as endpoint detection and response, next-generation protection, and attack surface reduction.
 
-Use [this table](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
+Use [the device onboarding table](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
 
-## Step 6: Set up the Microsoft Defender for Endpoint evaluation lab   
+After you have onboarded devices, [run a detection test](run-detection-test.md). 
 
-The Microsoft Defender for Endpoint evaluation lab is designed to eliminate the complexities of device and environment configuration so that you can focus on evaluating the capabilities of the platform, running simulations, and seeing the prevention, detection, and remediation features in action. Using the simplified set-up experience in evaluation lab, you can focus on running your own test scenarios and the pre-made simulations to see how Defender for Endpoint performs.
+## Step 6: Visit the Microsoft Defender portal
 
-- [Watch the video overview](https://www.microsoft.com/videoplayer/embed/RE4qLUM) of the evaluation lab
-- [Get started with the lab](evaluate-microsoft-defender-antivirus.md) 
+The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).   
 
+> [!IMPORTANT]
+> If you decide not to renew your trial or purchase a subscription, make sure to offboard devices before your trial expires.
 
 ## See also
 

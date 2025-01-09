@@ -3,8 +3,8 @@ title: Protect your organization against web threats
 description: Learn about web protection in Microsoft Defender for Endpoint and how it can protect your organization.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 07/25/2024
 manager: deniseb
@@ -28,7 +28,7 @@ ms.subservice: asr
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
-Web threat protection is part of [Web protection](web-protection-overview.md) in Defender for Endpoint. It uses [network protection](network-protection.md) to secure your devices against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web threat protection stops web threats without a web proxy and can protect devices while they're away or on premises. Web threat protection stops access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that you are blocked because they're in your [custom indicator list](manage-indicators.md).
+Web threat protection is part of [Web protection](web-protection-overview.md) in Defender for Endpoint. It uses [network protection](network-protection.md) to secure your devices against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web threat protection stops web threats without a web proxy and can protect devices while they're away or on premises. Web threat protection stops access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that you are blocked because they're in your [custom indicator list](indicators-overview.md).
 
 > [!NOTE]
 > It might take up to two hours for devices to receive new custom indicators.

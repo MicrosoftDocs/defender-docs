@@ -2,8 +2,8 @@
 title: Get machine by ID API
 description: Learn how to use the Get machine by ID API to retrieve a machine by its device ID or computer name in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -17,7 +17,7 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 adobe-target: true
-ms.date: 07/18/2024
+ms.date: 08/19/2024
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 manager: deniseb
@@ -43,6 +43,9 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 
 With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 
+> [!NOTE]
+> Microsoft Defender XDR correlates signals from Microsoft security products that you have licensed and provisioned access to.
+
 <a name='microsoft-365-defender-protection'></a>
 
 ## Microsoft Defender XDR protection
@@ -58,8 +61,6 @@ Microsoft Defender XDR services protect:
 - **Identities with  Defender for Identity and Microsoft Entra ID Protection** - Microsoft Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. Microsoft Entra ID Protection uses the learnings Microsoft acquired from their position in organizations with Microsoft Entra ID, the consumer space with Microsoft Accounts, and in gaming with Xbox to protect your users.
 
 - **Applications with Defender for Cloud Apps** - Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
-
-- **Cloud workloads and applications** **with Defender for Cloud** - Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) combining capabilities of a development security operations (DevSecOps), a cloud security posture (CPSM), and a cloud workload protection platform (CWPP) to protect cloud-based applications from threats and vulnerabilities.
 
 Microsoft Defender XDR's unique cross-product layer augments the individual service components to:
 

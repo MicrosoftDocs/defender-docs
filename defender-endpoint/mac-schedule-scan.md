@@ -2,11 +2,12 @@
 title: How to schedule scans with Microsoft Defender for Endpoint on macOS
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint in macOS to better protect your organization's assets.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
+ms.reviewer: yonghree
 ms.localizationpriority: medium
-ms.date: 05/06/2024
+ms.date: 10/23/2024
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -28,21 +29,21 @@ search.appverid: met150
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-## Schedule a scan *built-in to* Microsoft Defender for Endpoint on macOS
+## Schedule a scan built into Microsoft Defender for Endpoint on macOS
 
 While you can start a threat scan at any time with Microsoft Defender for Endpoint, your enterprise might benefit from scheduled or timed scans. For example, you can schedule a scan to run at the beginning of every workday or week. 
 
-There are three types of scheduled scans that are configurable: hourly, daily, and weekly scans. Hourly and daily scheduled scans are always run as quick scans, weekly scans can be configured to be either quick or full scans. It is possible to have all three types of scheduled scans at the same time. See the samples below. 
+There are three types of scheduled scans that are configurable: hourly, daily, and weekly scans. Hourly and daily scheduled scans are always run as quick scans, weekly scans can be configured to be either quick or full scans. It's possible to have all three types of scheduled scans at the same time. See the samples in this article. 
 
 **Prerequisites**:
 
 - Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer
 
-## Schedule a scan with *Microsoft Defender for Endpoint on macOS*
+## Schedule a scan with Microsoft Defender for Endpoint on macOS
 
 You can create a scheduled scan for your macOS, which is built in to *Microsoft Defender for Endpoint on macOS*.
 
-For more information on the _.plist_ file format used here, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) at the official Apple developer website.
+For more information on the `.plist` file format used here, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) at the official Apple developer website.
 
 The following sample shows the daily and/or weekly configuration for the scheduled scan on macOS.
 
@@ -51,73 +52,112 @@ The following sample shows the daily and/or weekly configuration for the schedul
 
 | Parameter | The acceptable values for this parameter are: |
 | --- | --- |
-| scheduledScan | enabled or disabled |
-| scanType | quick or full |
-| ignoreExclusions | true or false |
-| lowPriorityScheduledScan | true or false |
-| dayOfWeek | The range is between 0 and 8. <br>- 0: Everyday <br>- 1: Sunday <br>- 2: Monday <br>- 3: Tuesday <br>- 4: Wednesday <br>- 5: Thursday <br>- 6: Friday <br>- 7: Saturday <br>- 8: Never |
-| timeOfDay | Specifies the time of day, as the number of _minutes after midnight_, to perform a scheduled scan. The time refers to the local time on the computer. If you don't specify a value for this parameter, a scheduled scan runs at a default time of two hours after midnight. |
-| interval | 0 (never), every 1 (hour) to 24 (hours, 1 scan per day) |
-| randomizeScanStartTime | Only applicable for daily quick scans or weekly quick/full scans. Randomize the start time of the scan by up to specified number of hours. <br> For example, if a scan is scheduled for 2 p.m and randomizeScanStartTime is set to 2, the scan commences at a random time between 2 p.m and 4 p.m. |
+| `scheduledScan` | `enabled` or `disabled` |
+| `scanType` | `quick` or `full` |
+| `ignoreExclusions` | `true` or `false` |
+| lowPriorityScheduledScan | `true` or `false` |
+| `dayOfWeek` | The range is between `0` and `8`. <br>- `0`: Everyday <br>- `1`: Sunday <br>- `2`: Monday <br>- `3`: Tuesday <br>- `4`: Wednesday <br>- `5`: Thursday <br>- `6`: Friday <br>- `7`: Saturday <br>- `8`: Never |
+| `timeOfDay` | Specifies the time of day, as the number of `minutes after midnight`, to perform a scheduled scan. The time refers to the local time on the computer. If you don't specify a value for this parameter, a scheduled scan runs at a default time of two hours after midnight. |
+| `interval` | `0` (never), `every 1` (hour) to `every 24` (hours, one scan per day) |
+| `randomizeScanStartTime` | Only applicable for daily quick scans or weekly quick/full scans. Randomize the start time of the scan by up to specified number of hours. <br> For example, if a scan is scheduled for 2 p.m and `randomizeScanStartTime` is set to 2, the scan commences at a random time between 2 p.m and 4 p.m. |
 
-Your scheduled scan runs at the date, time, and frequency you defined in your _plist_.
+Your scheduled scan runs at the date, time, and frequency you defined in your `plist`.
 
-### Example 1: Schedule a daily quick scan and weekly full scan using a _plist_
+### Example 1: Schedule a daily quick scan and weekly full scan using a plist
 
-In the following example, the daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.).<br>
-The weekly configuration is set to run a full scan on Wednesday at 880 minutes after midnight (2:40 p.m.).
-And it's set to ignore exclusions and run a low priority scan.
+In the following example, the daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.). The weekly configuration is set to run a full scan on Wednesday at 880 minutes after midnight (2:40 p.m.). And it's set to ignore exclusions and run a low-priority scan.
 
-The following code shows the schema you need to use to schedule scans according to the requirements above.
+The following code shows the schema you need to use to schedule scans according to the requirements mentioned earlier.
 
 1. Open a text editor and use this example as a guide for your own scheduled scan file.
 
-#### For Intune:
+#### For Intune
 
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
 <plist version="1.0"> 
 <dict> 
-     <key>PayloadUUID</key>
-     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-     <key>PayloadType</key>
-     <string>Configuration</string>
-     <key>PayloadOrganization</key>
-     <string>Microsoft</string>
-     <key>PayloadIdentifier</key>
-     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-     <key>PayloadDisplayName</key>
-     <string>Microsoft Defender for Endpoint settings</string>
-     <key>PayloadDescription</key>
-     <string>Microsoft Defender for Endpoint configuration settings</string>
-     <key>PayloadVersion</key>
-     <integer>1</integer>
-     <key>PayloadEnabled</key>
-     <true/>
-     <key>PayloadRemovalDisallowed</key>
-     <true/>
-     <key>PayloadScope</key>
-     <string>System</string>
-     <key>PayloadContent</key>
-     <array>
-       <dict>
-           <key>PayloadUUID</key>
-           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-           <key>PayloadType</key>
-           <string>com.microsoft.wdav</string>
-           <key>PayloadOrganization</key>
-           <string>Microsoft</string>
-           <key>PayloadIdentifier</key>
-           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-           <key>PayloadDisplayName</key>
-           <string>Microsoft Defender for Endpoint configuration settings</string>
-           <key>PayloadDescription</key>
-           <string/>
-           <key>PayloadVersion</key>
-           <integer>1</integer>
-           <key>PayloadEnabled</key>
-           <true/>
+    <key>PayloadUUID</key>
+    <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadOrganization</key>
+    <string>Microsoft</string>
+    <key>PayloadIdentifier</key>
+    <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+    <key>PayloadDisplayName</key>
+    <string>Microsoft Defender for Endpoint settings</string>
+    <key>PayloadDescription</key>
+    <string>Microsoft Defender for Endpoint configuration settings</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadEnabled</key>
+    <true/>
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadUUID</key>
+            <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+            <key>PayloadType</key>
+            <string>com.microsoft.wdav</string>
+            <key>PayloadOrganization</key>
+            <string>Microsoft</string>
+            <key>PayloadIdentifier</key>
+            <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+            <key>PayloadDisplayName</key>
+            <string>Microsoft Defender for Endpoint configuration settings</string>
+            <key>PayloadDescription</key>
+            <string/>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadEnabled</key>
+            <true/>
+            <key>features</key> 
+            <dict>
+                <key>scheduledScan</key> 
+                <string>enabled</string> 
+            </dict> 
+            <key>scheduledScan</key> 
+            <dict> 
+                <key>ignoreExclusions</key> 
+                <true/> 
+                <key>lowPriorityScheduledScan</key> 
+                <true/> 
+                <key>dailyConfiguration</key> 
+                <dict> 
+                    <key>timeOfDay</key> 
+                    <integer>880</integer> 
+                </dict> 
+                <key>weeklyConfiguration</key> 
+                <dict> 
+                    <key>dayOfWeek</key> 
+                    <integer>4</integer> 
+                    <key>timeOfDay</key> 
+                    <integer>885</integer> 
+                    <key>scanType</key> 
+                    <string>full</string>
+                </dict>
+            </dict> 
+        </dict>
+    </array>
+</dict> 
+</plist>
+```
+
+2. Save the file as `com.microsoft.wdav.mobileconfig`.
+
+#### For JamF and other 3rd-party MDMs
+
+``` XML
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
+<plist version="1.0"> 
+<dict> 
     <key>features</key> 
     <dict> 
         <key>scheduledScan</key> 
@@ -148,45 +188,8 @@ The following code shows the schema you need to use to schedule scans according 
 </plist> 
 ```
 
-2. Save the file as _com.microsoft.wdav.mobileconfig_.
+2. Save the file as `com.microsoft.wdav.plist`.
 
-#### For JamF and other 3rd-party MDMs:
-``` XML
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
-<plist version="1.0"> 
-<dict> 
-    <key>features</key> 
-    <dict> 
-        <key>scheduledScan</key> 
-        <string>enabled</string> 
-    </dict> 
-    <key>scheduledScan</key> 
-    <dict> 
-        <key>ignoreExclusions</key> 
-        <true/> 
-        <key>lowPriorityScheduledScan</key> 
-        <true/> 
-        <key>dailyConfiguration</key> 
-        <dict> 
-            <key>timeOfDay</key> 
-            <integer>885</integer> 
-        </dict> 
-        <key>weeklyConfiguration</key> 
-        <dict> 
-            <key>dayOfWeek</key> 
-            <integer>4</integer> 
-            <key>timeOfDay</key> 
-            <integer>880</integer> 
-            <key>scanType</key> 
-            <string>full</string> 
-        </dict> 
-    </dict> 
-</dict> 
-</plist> 
-```
-
-2. Save the file as _com.microsoft.wdav.plist_.
 3. Check that the scheduled scan is configured via a "Set Preference"
      
      ```
@@ -195,7 +198,7 @@ The following code shows the schema you need to use to schedule scans according 
 
      In the results, you should be able to see [managed].
 
-### Example 2: Schedule an hourly quick scan, a daily quick scan, and weekly full scan using a _plist_
+### Example 2: Schedule an hourly quick scan, a daily quick scan, and weekly full scan using a plist
 
 In the following example, an hourly quick scan will run every 6 hours, a daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.), and a weekly full scan will run on Wednesdays at 880 minutes after midnight (2:40 p.m).
 
@@ -277,9 +280,11 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </dict>
 </plist> 
 ```
-2. Save the file as _com.microsoft.wdav.mobileconfig_.
 
-#### For JamF and other 3rd-party MDMs:
+2. Save the file as `com.microsoft.wdav.mobileconfig`.
+
+#### For JamF and other 3rd-party MDMs
+
 1. Open a text editor and use this example.
 
 ```XML
@@ -319,7 +324,7 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </plist> 
 ```
 
-2. Save the file as _com.microsoft.wdav.plist_.
+2. Save the file as `com.microsoft.wdav.plist`.
 
 3. Check that the scheduled scan is configured via a "Set Preference"
      
@@ -335,13 +340,13 @@ To enable scheduled scan feature:
 
 |Version|Command|
 |---|---|
-| Version 101.23122.\* or higher | `sudo mdatp config scheduled-scan settings feature --value enabled` |
+| Version 101.23122.x or later | `sudo mdatp config scheduled-scan settings feature --value enabled` |
 
 To schedule hourly quick scans:
 
 |Version|Command|
 |---|---|
-| Version 101.23122.\* or higher | `sudo mdatp config scheduled-scan quick-scan hourly-interval --value \<arg\>` |
+| Version 101.23122.x or later | `sudo mdatp config scheduled-scan quick-scan hourly-interval --value \<arg\>` |
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic1.png" alt-text="Screenshot of schedule hourly scan.":::
 
@@ -349,7 +354,7 @@ To schedule daily quick scans:
 
 |Version|Command|
 |---|---|
-| Version 101.23122.\* or higher | `sudo mdatp config scheduled-scan quick-scan time-of-day --value \<arg\>` |
+| Version 101.23122.x or later | `sudo mdatp config scheduled-scan quick-scan time-of-day --value \<arg\>` |
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic2.png" alt-text="Screenshot of schedule daily quick scan.":::
 
@@ -357,7 +362,7 @@ To schedule weekly scans:
 
 |Version|Command|
 |---|---|
-| Version 101.23122.\* or higher | `sudo mdatp config scheduled-scan weekly-scan --day-of-week \<arg\> --time-of-day \<arg\>--scan-type \<arg\>` |
+| Version 101.23122.x or later | `sudo mdatp config scheduled-scan weekly-scan --day-of-week \<arg\> --time-of-day \<arg\>--scan-type \<arg\>` |
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic3.png" alt-text="Screenshot of schedule weekly scan.":::
 

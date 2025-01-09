@@ -3,8 +3,8 @@ title: What's new in Microsoft Defender XDR Unified role-based access control (R
 description: See what features are available in the latest release of Microsoft Defender XDR Unified role-based access control (RBAC)
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,12 +12,18 @@ ms.collection:
   - m365-security-compliance
   - tier2
 ms.topic: conceptual
-ms.date: 11/8/2023
+ms.date: 11/17/2024
 ---
 
 # What's new in Microsoft Defender XDR Unified role-based access control (RBAC)
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
+
+## November 2024
+
+### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified role-based access control (RBAC)
+
+You can control access and grant granular permissions for Microsoft Defender for Cloud Apps as part of the Microsoft Defender XDR Unified RBAC model. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions). To activate the Defender for Cloud Apps workload, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
 
 ## May 2024
 

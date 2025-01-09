@@ -3,8 +3,8 @@ title: Schedule antivirus scans using PowerShell
 description: Schedule antivirus scans using PowerShell
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.date: 10/18/2021
 ms.reviewer: pauhijbr, ksarens
@@ -47,7 +47,7 @@ Set-MpPreference -RandomizeScheduleTaskTimes
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/) for more information on how to use PowerShell with Microsoft Defender Antivirus.
 
-## PowerShell cmdlets for scheduling scans when an endpoint is not in use
+## PowerShell cmdlets for scheduling scans when an endpoint isn't in use
 
 Use the following cmdlets:
 
@@ -58,7 +58,7 @@ Set-MpPreference -ScanOnlyIfIdleEnabled
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
 
 > [!NOTE]
-> When you schedule scans for times when endpoints are not in use, scans do not honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
+> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
 
 ## PowerShell cmdlets for scheduling scans to complete remediation
 

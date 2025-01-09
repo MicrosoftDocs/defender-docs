@@ -14,8 +14,11 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
+ms.custom:
+- cx-ti
+- cx-ah
 ms.topic: conceptual
-ms.date: 08/31/2023
+ms.date: 04/22/2024
 ---
 
 # Quickly hunt for entity or event information with go hunt

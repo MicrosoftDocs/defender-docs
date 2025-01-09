@@ -3,9 +3,9 @@ title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 01/02/2024
-author: siosulli
-ms.author: siosulli
+ms.date: 09/13/2024
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: deniseb
@@ -59,9 +59,11 @@ If you're using another tool, such as Configuration Manager or Group Policy, or 
 
 3. Expand **Microsoft Defender Antivirus Exclusions** and then specify your exclusions.
 
-   - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list must be separated with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
-   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
-   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
+   - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list, with one file type per line. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
+
+   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list, with one path per line. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
+
+   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list, with one file type per line. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
 4. Choose **Review + save**, and then choose **Save**.
 
@@ -78,8 +80,10 @@ If you're using another tool, such as Configuration Manager or Group Policy, or 
 5. On the **Configuration settings** tab, specify your antivirus exclusions, and then choose **Next**.
 
    - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
-   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
-   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
+
+   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list, with one path per line. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
+   
+   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list, with one file type per line. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
 6. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/mem/intune/fundamentals/scope-tags).)
 
@@ -91,9 +95,9 @@ If you're using another tool, such as Configuration Manager or Group Policy, or 
 
 Defining exclusions lowers the protection offered by Microsoft Defender Antivirus. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
 
-Exclusions directly affect the ability for Microsoft Defender Antivirus to block, remediate, or inspect events related to the files, folders, or processes that are added to the exclusion list. Custom exclusions can affect features that are directly dependent on the antivirus engine (such as protection against malware, [file IOCs](indicator-file.md), and [certificate IOCs](indicator-certificates.md)). Process exclusions also affect [network protection](network-protection.md) and [attack surface reduction rules](attack-surface-reduction.md). Specifically, a process exclusion on any platform causes network protection and ASR to be unable to inspect traffic or enforce rules for that specific process.
+Exclusions directly affect the ability for Microsoft Defender Antivirus to block, remediate, or inspect events related to the files, folders, or processes that are added to the exclusion list. Custom exclusions can affect features that are directly dependent on the antivirus engine (such as protection against malware, [file IOCs](indicator-file.md), and [certificate IOCs](indicator-certificates.md)). Process exclusions also affect [network protection](network-protection.md) and [attack surface reduction rules](attack-surface-reduction.md). Specifically, a process exclusion on any platform causes network protection and attack surface reduction capabilities to be unable to inspect traffic or enforce rules for that specific process.
 
-Keep the following points in mind when you're defining exclusions:
+Remember these important points:
 
 - Exclusions are technically a protection gap. Consider all your options when defining exclusions. See [Submissions, suppressions, and exclusions](defender-endpoint-antivirus-exclusions.md#submissions-suppressions-and-exclusions).
 

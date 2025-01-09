@@ -1,21 +1,17 @@
 ---
 title: Overview of attack surface management in Microsoft Security Exposure Management
 description: Learn about attack surface management in Microsoft Security Exposure Management. s
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 11/04/2024
 ---
 
 # Overview of attack surface management
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Enterprise exposure graph
 

@@ -2,8 +2,8 @@
 title: Export non product code software inventory assessment per device
 description: Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion for software that doesn't have a Common Platform Enumeration (CPE)
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 05/27/2022
+ms.date: 01/08/2025
 ---
 
 # Export non product code software inventory assessment per device
@@ -31,16 +31,16 @@ ms.date: 05/27/2022
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE, gives you full visibility into the software installed across your organization and the devices it's installed on.
+This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
 > [!NOTE]
-> Software products without a CPE are not supported by vulnerability management. They will be shown in the software inventory page, but because CPEs are used by vulnerability management to identify the software and any vulnerabilities, information like, exploits, number of exposed devices, and weaknesses won't be available for them. For more information, see [Software inventory](/defender-vulnerability-management/tvm-software-inventory).
+> Vulnerability management doesn't support software products without a CPE. While these products are shown in the software inventory page, but because CPEs are used by vulnerability management to identify the software and any vulnerabilities, information like exploits, number of exposed devices, and weaknesses aren't available. For more information, see [Software inventory](/defender-vulnerability-management/tvm-software-inventory).
 
 Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
 - [Export non product code software inventory assessment **JSON response**](#1-export-non-product-code-software-inventory-assessment-json-response) The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- [Export non product code software inventory assessment **via files**](#2-export-non-product-code-software-inventory-assessment-via-files)  This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
+- [Export non product code software inventory assessment **via files**](#2-export-non-product-code-software-inventory-assessment-via-files)  This API solution enables pulling larger amounts of data faster and more reliably and is recommended for large organizations with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
   - Call the API to get a list of download URLs with all your organization data.
   - Download all the files using the download URLs and process the data as you like.
 
@@ -58,7 +58,7 @@ This API response contains all the data of installed software that does not have
 #### Limitations
 
 - Maximum page size is 200,000.
-- Rate limitations for this API are 30 calls per minute and 1000 calls per hour.
+- Rate limitations for this API are 30 calls per minute and 1,000 calls per hour.
 
 ### 1.2 Permissions
 
@@ -84,18 +84,18 @@ GET /api/machines/SoftwareInventoryNoProductCodeByMachine
 
 > [!NOTE]
 >
-> - Each record is approximately 0.5KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+> - Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
-<br>
+</br>
 
 Property (ID)|Data type|Description
 :---|:---|:---
 DeviceId|string|Unique identifier for the device in the service.
 DeviceName|string|Fully qualified domain name (FQDN) of the device.
-OSPlatform|string|Platform of the operating system running on the device. These are specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
-RbacGroupName|string|The role-based access control (RBAC) group. If this device is not assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
+OSPlatform|string|Platform of the operating system running on the device. These are specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms, and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
+RbacGroupName|string|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."
 RbacGroupId|string|The role-based access control (RBAC) group ID.
 SoftwareLastSeenTimestamp|string|The last time this software was seen on the device.
 SoftwareName|string|Name of the software product.
@@ -159,7 +159,7 @@ https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNoProduct
 
 ### 2.1 API method description
 
-This API response contains all the data of installed software that does not have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe) per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
+This API response contains all the data of installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe) per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
 
 #### 2.1.1 Limitations
 
@@ -180,17 +180,13 @@ Delegated (work or school account)|Software.Read|\'Read Threat and Vulnerability
 GET /api/machines/SoftwareInventoryNonCpeExport
 ```
 
-### Parameters
-
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours)
-
-### 2.5 Properties
+### 2.4 Properties
 
 > [!NOTE]
 >
 > - The files are gzip compressed & in multiline JSON format.
-> - The download URLs are only valid for 3 hours. Otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region that your data resides.
+> - The download URLs are only valid for 1 hour.
+> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
 
@@ -202,15 +198,15 @@ Export files|array\[string\]|A list of download URLs for files holding the curre
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
-### 2.6 Examples
+### 2.5 Examples
 
-#### 2.6.1 Request example
+#### 2.5.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCpeExport
 ```
 
-#### 2.6.2 Response example
+#### 2.5.2 Response example
 
 ```json
 {

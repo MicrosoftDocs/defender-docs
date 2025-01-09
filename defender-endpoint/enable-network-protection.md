@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 07/25/2024
+ms.date: 10/14/2024
 ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
@@ -19,20 +19,19 @@ search.appverid: met150
 
 # Turn on network protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Servers
 - Microsoft Defender Antivirus
 
 **Platforms**
 
 - Windows
-- Linux \(See [Network protection for Linux](network-protection-linux.md)\)
-- macOS \(See [Network protection for macOS](network-protection-macos.md)\)
+- Linux (See [Network protection for Linux](network-protection-linux.md))
+- macOS (See [Network protection for macOS](network-protection-macos.md))
 
 > [!TIP]
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -43,27 +42,27 @@ search.appverid: met150
 
 ## Check if network protection is enabled
 
-Check to see if network protection is enabled on a local device by using Registry editor.
+You can use Registry Editor to check the status of network protection.
 
-1. Select the **Start** button in the task bar and type **regedit** to open Registry editor.
+1. Select the **Start** button in the task bar and type `regedit`. In the list of results, select Registry editor to open it.
 
 2. Choose **HKEY_LOCAL_MACHINE** from the side menu.
 
 3. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Policy Manager**.
 
-If the Key is missing,  Navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
+   If the key is missing, navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
 4. Select **EnableNetworkProtection** to see the current state of network protection on the device:
 
-   - 0, or **Off**
-   - 1, or **On**
-   - 2, or **Audit** mode
+   - **0**, or **Off**
+   - **1**, or **On**
+   - **2**, or **Audit** mode
 
-    :::image type="content" source="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Network Protection registry key" lightbox="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
+   :::image type="content" source="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Network Protection registry key" lightbox="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
 
 ## Enable network protection
 
-Enable network protection by using any of these methods:
+To enable network protection, you can use one of the following methods:
 
 - [PowerShell](#powershell)
 - [Mobile Device Management (MDM)](#mobile-device-management-mdm)
@@ -73,27 +72,34 @@ Enable network protection by using any of these methods:
 
 ### PowerShell
 
-1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
+1. On your Windows device, select Start, type `powershell`, right-click **Windows PowerShell**, and then select **Run as administrator**.
 
-2. Enter the following cmdlet:
+2. Run the following cmdlet:
 
-    ```PowerShell
-    Set-MpPreference -EnableNetworkProtection Enabled
-    ```
+   ```PowerShell
+   Set-MpPreference -EnableNetworkProtection Enabled
+   ```
 
-3. Optional: Enable the feature in audit mode using the following cmdlet:
+3. For Windows Server, use the additional commands that listed in the following table:
 
-    ```PowerShell
-    Set-MpPreference -EnableNetworkProtection AuditMode
-    ```
+   | Windows Server version | Commands |
+   |---|---|
+   | Windows Server 2022 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
+   | Windows Server 2016 <br/>Windows Server 2012 R2 | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
 
-    To turn off the feature, use `Disabled` instead of `AuditMode` or `Enabled`.
+4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
+
+   ```PowerShell
+   Set-MpPreference -EnableNetworkProtection AuditMode
+   ```
+
+   To turn off network protection, use the `Disabled` parameter instead of `AuditMode` or `Enabled`.
 
 ### Mobile device management (MDM)
 
-Use the [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender) configuration service provider (CSP) to enable or disable network protection or enable audit mode.
+1. Use the [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection) configuration service provider (CSP) to enable or disable network protection or enable audit mode.
 
-[Update Microsoft Defender antimalware platform to the latest version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) before you enable or disable network protection or enable audit mode.
+2. [Update Microsoft Defender antimalware platform to the latest version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) before you enable or disable network protection or enable audit mode.
 
 ### Microsoft Intune
 
@@ -141,13 +147,13 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/
 
 4. In the **Template name**, Choose **Endpoint protection** from the list of templates, and then select **Create**.
 
-4. Go to **Endpoint protection** > **Basics**, provide a name for your profile, and then select **Next**.
+5. Go to **Endpoint protection** > **Basics**, provide a name for your profile, and then select **Next**.
 
-5. In the **Configuration settings** section, go to **Microsoft Defender Exploit Guard** > **Network filtering** > **Network protection** > **Enable** or **Audit**. Select **Next**.
+6. In the **Configuration settings** section, go to **Microsoft Defender Exploit Guard** > **Network filtering** > **Network protection** > **Enable** or **Audit**. Select **Next**.
 
-6. Select the appropriate **Scope tags**, **Assignments**, and **Applicability rules** as required by your organization. Admins can set more requirements.
+7. Select the appropriate **Scope tags**, **Assignments**, and **Applicability rules** as required by your organization. Admins can set more requirements.
 
-7. Review all the information, and then select **Create**.
+8. Review all the information, and then select **Create**.
 
 ### Group Policy
 
@@ -163,8 +169,7 @@ Use the following procedure to enable network protection on domain-joined comput
 
 3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Network protection**.
 
-   > [!NOTE]
-   > On older versions of Windows, the group policy path may say "Windows Defender Antivirus" instead of "Microsoft Defender Antivirus."
+   Note that on older versions of Windows, the Group Policy path might have *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*.
 
 4. Double-click the **Prevent users and apps from accessing dangerous websites** setting and set the option to **Enabled**. In the options section, you must specify one of the following options:
 
@@ -175,8 +180,7 @@ Use the following procedure to enable network protection on domain-joined comput
    > [!IMPORTANT]
    > To fully enable network protection, you must set the Group Policy option to **Enabled** and also select **Block** in the options drop-down menu.
 
-   > [!NOTE]
-   > Optional: Follow the steps in [Check if network protection is enabled](#check-if-network-protection-is-enabled) to verify that your Group Policy settings are correct.
+5. (This step is optional.) Follow the steps in [Check if network protection is enabled](#check-if-network-protection-is-enabled) to verify that your Group Policy settings are correct.
 
 ### Microsoft Configuration Manager
 
@@ -199,38 +203,34 @@ Use the following procedure to enable network protection on domain-joined comput
 
 7. From the ribbon, select **Deploy** to deploy the policy to a collection.
 
-> [!IMPORTANT]
-> Once you deploy an Exploit Guard policy from Configuration Manager, the Exploit Guard settings will not be removed from the clients if you remove the deployment. `Delete not supported` is recorded in the Configuration Manager client's ExploitGuardHandler.log if you remove the client's Exploit Guard deployment. <!--CMADO8538577-->
-> The following PowerShell script can be run under SYSTEM context to remove these settings:<!--CMADO9907132-->
->
-> ```powershell
-> $defenderObject = Get-WmiObject -Namespace "root/cimv2/mdm/dmmap" -Class "MDM_Policy_Config01_Defender02" -Filter "InstanceID='Defender' and ParentID='./Vendor/MSFT/Policy/Config'"
-> $defenderObject.AttackSurfaceReductionRules = $null
-> $defenderObject.AttackSurfaceReductionOnlyExclusions = $null
-> $defenderObject.EnableControlledFolderAccess = $null
-> $defenderObject.ControlledFolderAccessAllowedApplications = $null
-> $defenderObject.ControlledFolderAccessProtectedFolders = $null
-> $defenderObject.EnableNetworkProtection = $null
-> $defenderObject.Put()
->
-> $exploitGuardObject = Get-WmiObject -Namespace "root/cimv2/mdm/dmmap" -Class "MDM_Policy_Config01_ExploitGuard02" -Filter "InstanceID='ExploitGuard' and ParentID='./Vendor/MSFT/Policy/Config'"
-> $exploitGuardObject.ExploitProtectionSettings = $null
-> $exploitGuardObject.Put()
->```  
+#### Important information about removing Exploit Guard settings from a device
+
+Once an Exploit Guard policy is deployed using Configuration Manager, Exploit Guard settings aren't removed from the clients if you remove the deployment. Furthermore, if you remove the client's Exploit Guard deployment, `Delete not supported` is recorded in the client's `ExploitGuardHandler.log` in Configuration Manager.  <!--CMADO8538577-->
+
+Use the following PowerShell script in the SYSTEM context to remove Exploit Guard settings correctly:<!--CMADO9907132-->
+
+```powershell
+$defenderObject = Get-WmiObject -Namespace "root/cimv2/mdm/dmmap" -Class "MDM_Policy_Config01_Defender02" -Filter "InstanceID='Defender' and ParentID='./Vendor/MSFT/Policy/Config'"
+$defenderObject.AttackSurfaceReductionRules = $null
+$defenderObject.AttackSurfaceReductionOnlyExclusions = $null
+$defenderObject.EnableControlledFolderAccess = $null
+$defenderObject.ControlledFolderAccessAllowedApplications = $null
+$defenderObject.ControlledFolderAccessProtectedFolders = $null
+$defenderObject.EnableNetworkProtection = $null
+$defenderObject.Put()
+
+$exploitGuardObject = Get-WmiObject -Namespace "root/cimv2/mdm/dmmap" -Class "MDM_Policy_Config01_ExploitGuard02" -Filter "InstanceID='ExploitGuard' and ParentID='./Vendor/MSFT/Policy/Config'"
+$exploitGuardObject.ExploitProtectionSettings = $null
+$exploitGuardObject.Put()
+```  
 
 ## See also
 
 - [Network protection](network-protection.md)
-
 - [Network protection for Linux](network-protection-linux.md)
-
 - [Network protection for macOS](network-protection-macos.md)
-
 - [Network protection and the TCP three-way handshake](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
-
 - [Evaluate network protection](evaluate-network-protection.md)
-
 - [Troubleshoot network protection](troubleshoot-np.md)
-
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

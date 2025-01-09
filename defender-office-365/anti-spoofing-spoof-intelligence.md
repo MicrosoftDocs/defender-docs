@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the spoof intelligence insight in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 11/2/2023
+ms.date: 11/02/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -94,7 +94,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 3. On the **Spoofed senders** tab, the spoof intelligence insight looks like this:
 
-   :::image type="content" source="media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page" lightbox="media/m365-sc-spoof-intelligence-insight.png":::
+   :::image type="content" source="media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page":::
 
    The insight has two modes:
 

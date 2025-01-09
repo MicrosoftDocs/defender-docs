@@ -2,11 +2,11 @@
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-ms.date: 05/01/2024
+ms.date: 12/04/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -22,12 +22,10 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
+**Applies to**:
 
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
@@ -41,116 +39,110 @@ Depending on the applications that you are running and your device characteristi
 ## Troubleshoot performance issues using Real-time Protection Statistics
 
 **Applies to:**
-- Only performance issues related to AV
+- Only performance issues related to antivirus
 
 Real-time protection (RTP) is a feature of Defender for Endpoint on Linux that continuously monitors and protects your device against threats. It consists of file and process monitoring and other heuristics.
 
 The following steps can be used to troubleshoot and mitigate these issues:
 
-1. Disable real-time protection using one of the following methods and observe whether the performance improves. This approach helps narrow down whether Defender for Endpoint on Linux is contributing to the performance issues.
+1. Disable real-time protection using one of the following methods and observe whether the performance improves. This approach helps narrow down whether Defender for Endpoint on Linux is contributing to the performance issues. If your device is not managed by your organization, real-time protection can be disabled from the command line:
 
-    If your device is not managed by your organization, real-time protection can be disabled from the command line:
+   ```bash
+   mdatp config real-time-protection --value disabled
+   ```
 
-    ```bash
-    mdatp config real-time-protection --value disabled
-    ```
+   ```console
+   Configuration property updated
+   ```
 
-    ```Output
-    Configuration property updated
-    ```
+   If your device is managed by your organization, real-time protection can be disabled by your administrator using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
-    If your device is managed by your organization, real-time protection can be disabled by your administrator using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
-
-    > [!NOTE]
-    > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component. In this case please follow the steps from the **Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer** section of this article.
+   > [!NOTE]
+   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component. In this case please follow the steps from the **Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer** section of this article.
 
 2. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
 
-    > [!NOTE]
-    > This feature is available in version 100.90.70 or newer.
+   > [!NOTE]
+   > This feature is available in version 100.90.70 or newer.
 
-    This feature is enabled by default on the `Dogfood` and `InsiderFast` channels. If you're using a different update channel, this feature can be enabled from the command line:
+   This feature is enabled by default on the `Dogfood` and `InsiderFast` channels. If you're using a different update channel, this feature can be enabled from the command line:
 
-    ```bash
-    mdatp config real-time-protection-statistics --value enabled
-    ```
+   ```bash
+   mdatp config real-time-protection-statistics --value enabled
+   ```
 
-    This feature requires real-time protection to be enabled. To check the status of real-time protection, run the following command:
+   This feature requires real-time protection to be enabled. To check the status of real-time protection, run the following command:
 
-    ```bash
-    mdatp health --field real_time_protection_enabled
-    ```
+   ```bash
+   mdatp health --field real_time_protection_enabled
+   ```
 
-    Verify that the `real_time_protection_enabled` entry is `true`. Otherwise, run the following command to enable it:
+   Verify that the `real_time_protection_enabled` entry is `true`. Otherwise, run the following command to enable it:
 
-    ```bash
-    mdatp config real-time-protection --value enabled
-    ```
+   ```bash
+   mdatp config real-time-protection --value enabled
+   ```
 
-    ```Output
-    Configuration property updated
-    ```
+   ```console
+   Configuration property updated
+   ```
 
-    To collect current statistics, run:
+   To collect current statistics, run:
 
-    ```bash
-    mdatp diagnostic real-time-protection-statistics --output json
-    ```
+   ```bash
+   mdatp diagnostic real-time-protection-statistics --output json
+   ```
 
-    > [!NOTE]
-    > Using `--output json` (note the double dash) ensures that the output format is ready for parsing.
+   > [!NOTE]
+   > Using `--output json` (note the double dash) ensures that the output format is ready for parsing.
 
-    The output of this command will show all processes and their associated scan activity.
+   The output of this command shows all processes and their associated scan activity.
 
 3. On your Linux system, download the sample Python parser **high_cpu_parser.py** using the command:
 
-    ```bash
-    wget -c https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/linux/diagnostic/high_cpu_parser.py
-    ```
+   ```bash
+   wget -c https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/linux/diagnostic/high_cpu_parser.py
+   ```
 
-    The output of this command should be similar to the following:
+   The output of this command should be similar to the following:
 
-    ```Output
-    --2020-11-14 11:27:27-- https://raw.githubusercontent.com/microsoft.mdatp-xplat/master/linus/diagnostic/high_cpu_parser.py
-    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.xxx.xxx
-    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)| 151.101.xxx.xxx| :443... connected.
-    HTTP request sent, awaiting response... 200 OK
-    Length: 1020 [text/plain]
-    Saving to: 'high_cpu_parser.py'
-    100%[===========================================>] 1,020    --.-K/s   in 0s
-    ```
+   ```console
+   --2020-11-14 11:27:27-- https://raw.githubusercontent.com/microsoft.mdatp-xplat/master/linus/diagnostic/high_cpu_parser.py
+   Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.xxx.xxx
+   Connecting to raw.githubusercontent.com (raw.githubusercontent.com)| 151.101.xxx.xxx| :443... connected.
+   HTTP request sent, awaiting response... 200 OK
+   Length: 1020 [text/plain]
+   Saving to: 'high_cpu_parser.py'
+   100%[===========================================>] 1,020    --.-K/s   in 0s
+   ```
 
-4. Next, type the following commands:
+4. Type the following commands:
 
-    ```bash
-    mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py
-    ```
+   ```bash
+   mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py
+   ```
 
-      The output of the above is a list of the top contributors to performance issues. The first column is the process identifier (PID), the second column is the process name, and the last column is the number of scanned files, sorted by impact.
-    For example, the output of the command will be something like the below:
+   The output of the above is a list of the top contributors to performance issues. The first column is the process identifier (PID), the second column is the process name, and the last column is the number of scanned files, sorted by impact. For example, the output of the command will be something like the below:
 
-    ```Output
-    ... > mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py | head
-    27432 None 76703
-    73467 actool    1249
-    73914 xcodebuild 1081
-    73873 bash 1050
-    27475 None 836
-    1    launchd     407
-    73468 ibtool     344
-    549  telemetryd_v1   325
-    4764 None 228
-    125  CrashPlanService 164
-    ```
+   ```console
+   ... > mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py | head
+   27432 None 76703
+   73467 actool    1249
+   73914 xcodebuild 1081
+   73873 bash 1050
+   27475 None 836
+   1    launchd     407
+   73468 ibtool     344
+   549  telemetryd_v1   325
+   4764 None 228
+   125  CrashPlanService 164
+   ```
 
-    To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
-    > [!NOTE]
-    > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off are not counted. Additionally, only events which triggered scans are counted.
+   > [!NOTE]
+   > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off are not counted. Additionally, only events which triggered scans are counted.
 
-5. Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues and re-enable real-time protection.
-
-    For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
@@ -160,14 +152,14 @@ The following steps can be used to troubleshoot and mitigate these issues:
 The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on Linux.
 
 > [!NOTE]
->
 > - The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited to) IP addresses, PC names that will help troubleshoot issues you may be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
 > - As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](mac-whatsnew.md) and confirming that the issue still persists before investigating further.
 
 To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](run-analyzer-macos-linux.md).
 
-> [!NOTE]
-> In case after following the above steps, the performance problem persists, please contact customer support for further instructions and mitigation.
+## Configure Global Exclusions for better performance
+
+Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md). IF you still have performance issues, contact support for further instructions and mitigation.
 
 ## Troubleshoot AuditD performance issues
 
@@ -183,54 +175,33 @@ To run the client analyzer for troubleshooting performance issues, see [Run the 
 
 In certain server workloads, two issues might be observed:
 
-- **High CPU** resource consumption from ***mdatp_audisp_plugin*** process.
+- `High CPU` resource consumption from `mdatp_audisp_plugin` process.
 
-- ***/var/log/audit/audit.log*** becoming large or frequently rotating.
+- `/var/log/audit/audit.log` becoming large or frequently rotating.
 
-These issues may occur on servers with many events flooding AuditD.
+These issues may occur on servers with many events flooding AuditD. Such issues can arise if there are multiple consumers for AuditD, or too many rules with the combination of Microsoft Defender for Endpoint and third party consumers, or high workload that generates a lot of events. To troubleshoot such issues, begin by [collecting MDEClientAnalyzer logs](run-analyzer-macos-linux.md) on the sample affected server.
 
-> [!NOTE]
-> As a best practice, we recommend to configure AuditD logs to rotate when the maximum file size limit is reached.
->
-> This will prevent AuditD logs accumulating in a single file and the rotated log files can be moved out to save disk space.
->
-> To achieve this, you can set the value for **max_log_file_action** to **rotate** in the [auditd.conf](https://linux.die.net/man/8/auditd.conf) file.
+As a best practice, we recommend to configure AuditD logs to rotate when the maximum file size limit is reached. This configuration prevents AuditD logs from accumulating in a single file, and the rotated log files can be moved out to save disk space. To achieve this, you can set the value for `max_log_file_action` to `rotate` in the [auditd.conf](https://linux.die.net/man/8/auditd.conf) file.
  
-This can happen if there are multiple consumers for AuditD, or too many rules with the combination of Microsoft Defender for Endpoint and third party consumers, or high workload that generates a lot of events.
-
-To troubleshoot such issues, begin by [collecting MDEClientAnalyzer logs](run-analyzer-macos-linux.md) on the sample affected server.
-
 > [!NOTE]
-> As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming issue still persists before investigating further.
->
-> That there are additional configurations that can affect AuditD subsystem CPU strain.
->
-> Specifically, in [auditd.conf](https://linux.die.net/man/8/auditd.conf), the value for **disp_qos** can be set to "lossy" to reduce the high CPU consumption.
->
-> However, this means that some events may be dropped during peak CPU consumption.
+> As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming issue still persists before investigating further. That there are additional configurations that can affect AuditD subsystem CPU strain. Specifically, in [auditd.conf](https://linux.die.net/man/8/auditd.conf), the value for `disp_qos` can be set to `lossy` to reduce the high CPU consumption. However, this means that some events may be dropped during peak CPU consumption.
 
 ### XMDEClientAnalyzer
 
 When you use [XMDEClientAnalyzer](run-analyzer-macos-linux.md), the following files will display output that provides insights to help you troubleshoot issues.
 
-- auditd_info.txt
-- auditd_log_analysis.txt
+- `auditd_info.txt`
+- `auditd_log_analysis.txt`
 
 #### auditd_info.txt
 
-Contains general AuditD configuration and will display:
+Contains general AuditD configuration and displays the following information:
 
 - What processes are registered as AuditD consumers.
 
-- **Auditctl -s** output with **enabled=2**
+- `Auditctl -s` output with `enabled=2` (Suggests auditd is in immutable mode (requires restart for any config changes to take effect.)
 
-  - Suggests auditd is in immutable mode (requires restart for any config changes to take effect).
-
-- **Auditctl -l** output
-
-  - Will show what rules are currently loaded into the kernel (which may be different that what exists on disk in "/etc/auditd/rules.d/mdatp.rules").
-
-  - Will show which rules are related to Microsoft Defender for Endpoint.
+- `Auditctl -l` output (Shows what rules are currently loaded into the kernel, which might differ from what exists on disk in `/etc/auditd/rules.d/mdatp.rules`. Also shows which rules are related to Microsoft Defender for Endpoint.)
 
 #### auditd_log_analysis.txt
 
@@ -252,23 +223,23 @@ Contains important aggregated information that is useful when investigating Audi
 
 ### Exclusion Types
 
-The XMDEClientAnalyzer support tool contains syntax that can be used to add AuditD exclusion configuration rules:
+The XMDEClientAnalyzer support tool contains syntax that can be used to add AuditD exclusion configuration rules.
 
 AuditD exclusion – support tool syntax help:
 
-:::image type="content" source="media/auditd-exclusion-support-tool-syntax-help.png" alt-text="syntax that can be used to add AuditD exclusion configuration rules" lightbox="media/auditd-exclusion-support-tool-syntax-help.png":::
+:::image type="content" source="media/auditd-exclusion-support-tool-syntax-help.png" alt-text="Screenshot of the syntax that can be used to add AuditD exclusion configuration rules.":::
 
 **By initiator**
 
-- **-e/ -exe** full binary path > Removes all events by this initiator
+- `-e/ -exe` full binary path > Removes all events by this initiator
 
 **By path**
 
-- **-d / -dir** full path to a directory > Removes filesystem events targeting this directory
+- `-d / -dir` full path to a directory > Removes filesystem events targeting this directory
 
 Examples:
 
-If "`/opt/app/bin/app`" writes to "`/opt/app/cfg/logs/1234.log`", then you can use the support tool to exclude with various options:
+If `/opt/app/bin/app` writes to `/opt/app/cfg/logs/1234.log`, then you can use the support tool to exclude with various options:
 
 `-e /opt/app/bin/app`
 
@@ -315,4 +286,5 @@ When the ratelimit is enabled a rule will be added in AuditD to handle 2500 even
 ## See also
 
 - [Investigate agent health issues](health-status.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

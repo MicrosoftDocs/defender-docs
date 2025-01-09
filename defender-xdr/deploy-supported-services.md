@@ -27,6 +27,7 @@ ms.date: 02/16/2024
 
 
 **Applies to:**
+
 - Microsoft Defender XDR
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]

@@ -3,8 +3,8 @@ title: Resources for Microsoft Defender for Endpoint for mobile devices
 description: Learn about the configurations and privacy settings for all the features in Defender for Endpoint on mobile devices.
 ms.service: defender-endpoint
 ms.reviewer: priyankagill
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 02/09/2024
+ms.date: 10/18/2024
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices
 
@@ -24,8 +24,8 @@ Microsoft Defender for Endpoint provides multiple capabilities on mobile devices
 
 | Configuration| Description | Android AE config key | Android MAM | iOS |
 |--------------|-------------|-----------------------|-------------|-----|
-|Web Protection|Admins can use this setting to change the web protection feature. When disabled, end users aren't asked for VPN permissions|Antiphishing = 0/1 (default), VPN = 0/1(default)|Antiphishing=0/1(default), VPN = 0/1(default)| WebProtection = true (default) / false|
-|Network Protection| Network protection is disabled by default. Admins can enable it to include rogue WiFi and certificate detection (only available on android) on mobile.|Enable Network protection in Microsoft Defender = 0(default)/1| DefenderNetworkProtectionEnable = 0(default)/1|DefenderNetworkProtectionEnable = 0(default)/1|
+|Web Protection|Admins can use this setting to change the web protection feature. When disabled, end users aren't asked for VPN permissions|Antiphishing = 0/1 (default), VPN = 0 or 1(default)|Antiphishing = 0 or 1(default), VPN = 0 or 1(default)| WebProtection = true (default) or false|
+|Network Protection| Network protection is disabled by default. Admins can enable it to include rogue WiFi and certificate detection (only available on android) on mobile.|Enable Network protection in Microsoft Defender = 0 or 1 (default)| DefenderNetworkProtectionEnable = 0 or 1 (default)|DefenderNetworkProtectionEnable = 0 or 1(default)|
 
 ## Privacy configuration
 

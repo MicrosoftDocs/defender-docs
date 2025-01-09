@@ -2,8 +2,8 @@
 title: Manage automation folder exclusions
 description: Add automation folder exclusions to control the files that are excluded from an automated investigation.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -81,7 +81,7 @@ You can control the following attributes about the folder that you'd like to be 
 
 ## Related articles
 
-- [Manage automation allowed/blocked lists](manage-indicators.md)
+- [Manage automation allowed/blocked lists](indicators-overview.md)
 - [Manage automation file uploads](manage-automation-file-uploads.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 

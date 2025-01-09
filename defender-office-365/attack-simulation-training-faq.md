@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 06/14/2024
+ms.date: 10/22/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -96,13 +96,24 @@ Either way, it's important to use different payloads to avoid discussion and ide
 
 By default, Outlook is configured to block automatic image downloads in messages from the internet. Although you can [configure Outlook to automatically download images](https://support.microsoft.com/office/15e08854-6808-49b1-9a0a-50b81f2d617a), we don't recommend it due to the security implications (potential automatic download of malicious code or web bugs, also known as web beacons or tracking pixels).
 
-### I see clicks or compromise events from users who insist they didn't click the link in the simulation message
+### I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?
 
-Third-party filtering services might be to blame. For any non-Microsoft filtering systems that you use, you need to allow or exempt the following items:
+These events can occur when additional security devices or applications inspect simulation messages. For example (but not limited to): 
+
+- Applications or plugins within Outlook that inspect or intercept the message.
+- Email security applications.
+- Endpoint security or anti-virus software.
+- Security orchestration, automation and response (SOAR) playbooks that automatically triage or automatically respond to reported messages.
+
+These types of applications can look at web content to detecting phishing, so you need to define exclusions for simulation messages in these applications.
+
+EmailLinkClicked_IP and EmailLinkClicked_TimeStamp data might give more details about the event. For example, if a click occured a few seconds after delivery, and the IP address doesn't belong to Microsoft, your company, or the user, then it's likely that a third-party filtering system or another service intercepted the message.
+
+For any non-Microsoft filtering systems or services, you need to allow or exempt the following items:
 
 - All [Attack simulation training URLs](attack-simulation-training-get-started.md#simulations) and the corresponding domains. Currently, we don't send simulation messages from a static list of IP addresses.
 - Any other domains that you use in custom payloads.
-
+	
 ### Can I add the External tag or safety tips to simulation messages?
 
 Custom payloads have the option to add the External tag to messages. For more information, see Step 5 in [Create payloads](attack-simulation-training-payloads.md#create-payloads).
@@ -245,13 +256,23 @@ A: Several options are available to target users:
 - Include all users (currently available to organizations with less than 40,000 users).
 - Choose specific users.
 - Select users from a CSV file (one email address per line).
-- Microsoft Entra group-based targeting.
+- Microsoft Entra group-based targeting. The following group types are supported:
+  - Microsoft 365 Groups (static and dynamic)
+  - Distribution groups (static only)
+  - Mail-enabled security groups (static only)
 
 We find that campaigns where the targeted users are identified by Microsoft Entra groups are easier to manage.
 
 ### Q: How many training modules are there?
 
 Currently, there are 94 built-in trainings on the [Training modules](attack-simulation-training-training-modules.md) page.
+
+### Q: How are languages used for experiences like training modules and notifications?
+
+- **Training modules**: The browser locale settings are used. But once the training has been assigned to a user, the language selection persists, and future trainings are assigned in that language.
+- **End user notifications**: The mailbox locale/language settings are used.
+- **Simulation playloads**: The language selected by the admin during creation is used.
+- **Landing pages**: The Microsoft 365 account language settings are used. User can also change languages from the drop down present in the landing page.
 
 ### Q: Are there any limits in targeting users while importing from a CSV or adding users?
 
@@ -264,7 +285,7 @@ Managing a large CSV file or adding many individual recipients can be cumbersome
 > [!TIP]
 > Currently, shared mailboxes aren't supported in Attack simulation training. Simulations should target user mailboxes or groups containing user mailboxes.
 >
-> Distribution groups are expanded and the list of users is generated at the time of saving the simulation or simulation automation.
+> Groups are expanded and the list of users is generated at the time of saving the simulation, simulation automation, or training campaign.
 
 ### Q: Are the limits for the number of simulations that can be deployed during a specific time interval?
 
@@ -361,4 +382,16 @@ A: Yes. First you archive the payload, then you delete the archived payload. For
 
 ### Q: Can I modify the built-in payloads?
 
-A: Not directly. You can copy the payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
+A: Not directly. You can copy the built-in payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
+
+### Q: I'm trying to run a QR code simulation, but scanning the QR code shows me 'ping successful' instead of the landing page?
+
+A: When you insert a QR code in the payload editor, it maps to the base phishing URL that you selected in the **Phishing link** section \> **Select URL**. The QR code is inserted in the email message as an image. If you switch from the **Text** tab to the **Code** tab, you see the inserted image in Base64 format. The beginning of the image contains `<div id="QRcode"...>`. Make sure to verify that the finished payload contains `<div id="QRcode"...>` before you use it in a simulation.
+
+During simulation creation, if you scan the QR code or you use **Send a Test** to review the payload, the QR code points to the base phishing URL that you selected.
+
+When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload. Scanning the QR code during an actual simulation takes you to the configured landing page.
+
+### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design?
+
+A: Currently, the following HTML tags aren't supported in the payload editor: `applet, base, basefont, command, embed, frame, frameset, iframe, keygen, link, meta, noframes, noscript, param, script, object, title`.

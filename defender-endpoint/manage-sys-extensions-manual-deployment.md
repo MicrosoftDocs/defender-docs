@@ -2,8 +2,8 @@
 title: Manage system extensions using the manual methods of deployment
 description: Manage system extensions using the manual methods of deployment.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

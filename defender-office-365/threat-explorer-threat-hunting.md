@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 06/12/2024
+ms.date: 10/01/2024
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -163,7 +163,7 @@ After you determine that an email message is a threat, the next step is remediat
   >
   > If you select 101 to 200,000 entries, only the following actions are available in the **Take action** wizard:
   >
-  > - **Threat Explorer**: **Move to mailbox** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
+  > - **Threat Explorer**: **Move or delete** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
   > - **Real-time detections**: Only **Submit to Microsoft for review** and creating corresponding allow/block entries in the Tenant Allow/Block list are available.
 
 - Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
@@ -176,7 +176,7 @@ Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" b
 
 |Action|Defender for<br/>Office 365 Plan 2|Defender for<br/>Office 365 Plan 1|
 |---|:---:|:---:|
-|**Move to mailbox folder**|✔¹||
+|**Move or delete**|✔¹||
 |&nbsp;&nbsp;Release quarantined messages to some or all original recipients²|✔||
 |**Submit to Microsoft for review**|✔|✔|
 |&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**³|✔|✔|
@@ -197,11 +197,11 @@ The **Take action** wizard is described in the following list:
 
      By default, some actions are unavailable/grayed out based on the **Latest delivery location** value of the message. To show all available response actions, slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
-   - **Move to mailbox folder**: Select one of the available values that appear:
+   - **Move or delete**: Select one of the available values that appear:
      - **Junk**: Move the message to the Junk Email folder.
      - **Inbox**: Move the message to the Inbox. Selecting this value might also reveal the following options:
 
-       - **Move back to Sent Items folder**: If the message was sent by an internal sender and the message was soft deleted (moved to the Recoverable Items\Deletions folder), selecting this option tries to move the message back to the Sent Items folder. This option is an undo action if you previously selected **Move to mailbox folder** \> **Soft deleted items** and also selected **Delete sender's copy** on a message.
+       - **Move back to Sent Items folder**: If the message was sent by an internal sender and the message was soft deleted (moved to the Recoverable Items\Deletions folder), selecting this option tries to move the message back to the Sent Items folder. This option is an undo action if you previously selected **Move or delete** \> **Soft deleted items** and also selected **Delete sender's copy** on a message.
 
        - For messages with the value **Quarantine** for the **Latest delivery location** property, selecting **Inbox** releases the message from quarantine, so the following options are also available:
          - **Release to one or more of the original recipients of the e-mail**: If you select this value, a box appears where you can select or deselect the original recipients of the quarantined message.

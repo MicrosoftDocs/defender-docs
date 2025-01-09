@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/16/2024
+ms.date: 12/03/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -21,6 +21,7 @@ Lists the new features and functionality in Microsoft Defender XDR.
 
 For more information on what's new with other Microsoft Defender security products and Microsoft Sentinel, see:
 
+- [What's new in Microsoft's unified security operations platform](/unified-secops-platform/whats-new)
 - [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
@@ -28,6 +29,55 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Sentinel](/azure/sentinel/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## January 2025
+
+- **Defender Boxed** is available for a limited time in January and July of each year. This series of slides highlights your organization’s security successes, improvements, and response actions in the Microsoft Defender portal for the past six months/year. To learn how you can share your security operations team’s achievements, see [Defender Boxed](incident-queue.md#defender-boxed).
+
+## December 2024
+
+- (GA) [Content distribution via tenant groups in multitenant management](mto-tenantgroups.md) is now generally available. Create tenant groups to manage content across tenants in multitenant management in Microsoft Defender XDR.
+- Microsoft Defender Experts for XDR now offers [scoped coverage](defender-experts-scoped-coverage.md) for customers who wish to define a specific set of devices and/or users, based on geography, subsidiary, or function, for which they'd like Defender Experts to provide support.
+- (Preview) The [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature in Microsoft Defender advanced hunting now allows linking of Microsoft Sentinel query results. In both the Microsoft Defender unified experience and in [Defender XDR advanced hunting](advanced-hunting-link-to-incident.md), you can now specify whether an entity is an impacted asset or related evidence.
+- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries-preview), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
+- New documentation library for Microsoft's unified security operations platform. Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
+- (GA) In advanced hunting, you can now add your frequently used schema tables, functions, queries, and detection rules in the **[Favorites](advanced-hunting-query-results.md#add-items-to-favorites)** sections under each tab for quicker access.
+
+## November 2024
+
+- We've updated the steps to create tenant groups in multitenant management. Learn the new steps in the [content distribution using tenant groups in multitenant management](mto-tenantgroups.md).
+- (Preview) **Attack paths** in the incident graph are now available in the Microsoft Defender portal. The attack story now includes potential attack paths that show the paths that attackers can potentially take after compromising a device. This feature helps you prioritize your response efforts. For more information, see [attack paths in the attack story](investigate-incidents.md#attack-paths).
+- (Preview) Microsoft Defender XDR customers can now export incident data to PDF. Use the exported data to easily capture and share incident data to other stakeholders. For details, see **[Export incident data to PDF](manage-incidents.md#export-incident-data-to-pdf)**.
+- (GA) The **last update time** column in the [incident queue](incident-queue.md#incident-queue) is now generally available.
+- (Preview) Cloud-native investigation and response actions are now available for container-related alerts in the Microsoft Defender portal. Security operations center (SOC) analysts can now investigate and respond to container-related alerts in near real-time with cloud-native response actions and investigation logs to hunt for related activities. For more information, see [Investigate and respond to container threats in the Microsoft Defender portal](investigate-respond-container-threats.md).
+- (GA) The `arg()` operator in [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-arg-operator-for-azure-resource-graph-queries) in Microsoft Defender portal is now generally available. Users can now use the *arg()* operator for Azure Resource Graph queries to search over Azure resources, and no longer need to go to Log Analytics in Microsoft Sentinel to use this operator if already in Microsoft Defender.
+- (Preview) The [CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md) table is now available for preview in advanced hunting. It contains information about process events in multicloud hosted environments. You can use it to discover threats that can be observed through process details, like malicious processes or command-line signatures.
+- (Preview) Migrating custom detection queries to **Continuous (near real-time or NRT) frequency** is now available for preview in advanced hunting. Using the Continuous (NRT) frequency increases your organization's ability to identify threats faster. It has minimal to no impact to your resource usage, and should thus be considered for any qualified custom detection rule in your organization. You can migrate compatible KQL queries by following the steps in [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
+
+## October 2024
+
+- [Microsoft Unified RBAC roles](experts-on-demand.md#required-permissions-for-using-ask-defender-experts) are added with new permission levels for Microsoft Threat Experts customers to use Ask Defender experts capability.
+- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-arg-operator-for-azure-resource-graph-queries), Microsoft Defender portal users can now use the `arg()` operator for Azure Resource Graph queries to search over Azure resources. You no longer need to go to Log Analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
+
+## September 2024
+
+- (GA) The global search for entities in the Microsoft Defender portal is now generally available. The enhanced search results page centralizes the results from all entities. For more information, see [Global search in the Microsoft Defender portal](microsoft-365-defender-portal.md#global-search).
+- (GA) Copilot in Defender now includes the identity summary capability, providing instant insights into a user's risk level, sign in activity, and more. For more information, see [Summarize identity information with Copilot in Defender](security-copilot-defender-identity-summary.md).
+- [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers can now view the [latest featured threat intelligence articles](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal#featured-threat-intelligence-articles-widget) in the Microsoft Defender portal home page. The **Intel explorer** page now also has an [article digest](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal#article-digest) that notifies them of the number of new Defender TI articles that were published since they last accessed the Defender portal.
+- [Microsoft Defender XDR Unified RBAC permissions](experts-on-demand.md#required-permissions-for-using-ask-defender-experts) are added to submit inquiries and view responses from [Microsoft Defender Experts](experts-on-demand.md). You can also [view responses](experts-on-demand.md#where-to-view-responses-from-defender-experts) to inquires submitted to Ask Defender Experts through your listed email addresses when submitting your inquiry or in the Defender portal by navigating to **Reports** > **Defender Experts messages**.
+- (GA) **Advanced hunting context panes** are now available in more experiences. This allows you to access the advanced hunting feature without leaving your current workflow. 
+    - For incidents and alerts generated by analytics rules, you can select **Run query** to explore the results of the related analytics rule. 
+    - In the analytics rule wizard's *Set rule logic* step, you can select **View query results** to verify the results of the query you are about to set. 
+    - In the [query resources report](advanced-hunting-limits.md#find-resource-heavy-queries), you can view any of the queries by selecting the three dots on the query row and selecting **Open in query editor**. 
+    - For device entities involved in incidents or alerts, **Go hunt** is also available as one of the options after selecting the three dots on the device side panel.
+
+
+
+
+## August 2024
+
+- (Preview) Microsoft Sentinel data is now available with Defender XDR data in Microsoft Defender multitenant management. Only one Microsoft Sentinel workspace per tenant is currently supported in the Microsoft unified security operations platform. So, Microsoft Defender multitenant management shows security information and event management (SIEM) data from one Microsoft Sentinel workspace per tenant. For more information, see [Microsoft Defender multitenant management](mto-overview.md) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
+- To ensure a smooth experience while navigating the Microsoft Defender portal, configure your network firewall by adding the appropriate addresses to your allow list. For more information, see [Network firewall configuration for Microsoft Defender XDR](m365d-enable.md#configure-your-network-firewall).
 
 ## July 2024
 
@@ -54,18 +104,17 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) You can now **release or move email messages from quarantine** back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
 
-
-
 ## June 2024
 
 - (Preview) **[Content distribution through tenant groups in multitenant management](mto-tenantgroups.md)** is now available. Content distribution helps you manage content at scale across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
-
-
+- (GA) You can now **[filter your results](advanced-hunting-query-results.md#filter-results)** in advanced hunting so you can narrow down your investigation on specific data you want to focus on.
 
 ## May 2024
+
+- (Preview) Security analysts can now investigate a user's insider risk in the Microsoft Defender portal with **insider risk severity and insights** available for Microsoft Defender XDR users with provisioned access to Microsoft Purview Insider Risk Management. See the [entity details in the user page](investigate-users.md#entity-details) for more information.
 
 - (GA) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 
@@ -84,7 +133,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) You can now query Microsoft Sentinel data using the [advanced hunting query API](/graph/api/security-security-runhuntingquery?view=graph-rest-1.0&tabs=http&preserve-view=true). You can use the `timespan` parameter to query Defender XDR and Microsoft Sentinel data that have longer data retention than the Defender XDR default of 30 days.
 
-- (Preview) In the unified Microsoft Defender portal, you can now create custom detections in querying data that spans Microsoft Sentinel and Defender XDR tables. Read [Create custom analytics and detection rules](advanced-hunting-microsoft-defender.md#create-custom-analytics-and-detection-rules) for more information.
+- (Preview) In the unified Microsoft Defender portal, you can now create custom detections in querying data that spans Microsoft Sentinel and Defender XDR tables. Read [Create custom analytics and detection rules](advanced-hunting-defender-use-custom-rules.md) for more information.
 
 - Updated [troubleshooting steps for Microsoft Defender Experts app permissions in Microsoft Teams](teams-restrictions-dexapp.md).
  
@@ -106,7 +155,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) **Dark mode** is now available in the Microsoft Defender portal. In the Defender portal, on the top right-hand side of the homepage, select **Dark mode**. Select **Light mode** to change the color mode back to the default.
 
-- (GA) **Assigning severity to incidents**, **assigning an incident to a group**, and the ***go hunt*** option from the attack story graph are now generally available. Guides to learn how to [assign or change incident severity](manage-incidents.md#assign-or-change-incident-severity) and [assign an incident to a group](manage-incidents.md#assign-an-incident) are in the [Manage incidents](manage-incidents.md) page. Learn how you can use the *go hunt* option by exploring [attack story](investigate-incidents.md#attack-story).
+- (GA) **Assigning severity to incidents**, **assigning an incident to a group**, and the ***go hunt*** option from the attack story graph are now generally available. Guides to learn how to [assign or change incident severity](manage-incidents.md#assign-or-change-incident-severity) and [assign an incident to a group](manage-incidents.md#assign-an-owner) are in the [Manage incidents](manage-incidents.md) page. Learn how you can use the *go hunt* option by exploring [attack story](investigate-incidents.md#attack-story).
 
 - (Preview) **[Custom detection rules in Microsoft Graph security API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections)** are now available. Create advanced hunting custom detection rules specific to your org to proactively monitor for threats and take action.
 
@@ -128,7 +177,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) Microsoft Defender for Cloud alerts integration with Microsoft Defender XDR is now generally available. Learn more about the integration in [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
-- (GA) **Activity log** is now available within an incident page. Use the activity log to view all audits and comments, and add comments to the log of an incident. For details, see [Activity log](manage-incidents.md#activity-log).
+- (GA) **Activity log** is now available within an incident page. Use the activity log to view all audits and comments, and add comments to the log of an incident. For details, see [Activity log](manage-incidents.md#view-the-activity-log-of-an-incident).
 
 - (Preview) **[Query history](advanced-hunting-query-history.md) in advanced hunting** is now available. You can now rerun or refine queries you have run recently. Up to 30 queries in the past 28 days can be loaded in the query history pane.
 
@@ -142,7 +191,7 @@ You can also get product updates and important notifications through the [messag
 
 - The Microsoft Defender portal's incident queue has updated filters, search, and added a new function where you can create your own filter sets. For details, see [Available filters](incident-queue.md#available-filters).
 
-- You can now assign incidents to a user group or another user. For details, see [Assign an incident](manage-incidents.md#assign-an-incident).
+- You can now assign incidents to a user group or another user. For details, see [Assign an incident](manage-incidents.md#assign-an-owner).
 
 ## November 2023
 
@@ -202,7 +251,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) Microsoft Defender Threat Intelligence (Defender TI) is now available in the Microsoft Defender portal.
 
-This change introduces a new navigation menu within the Microsoft Defender portal named **Threat Intelligence**. [Learn more](defender-threat-intelligence.md)
+This change introduces a new navigation menu within the Microsoft Defender portal named **Threat Intelligence**. [Learn more](defender-threat-intelligence.md).
 
 - (Preview) Complete device reports for the [`DeviceInfo` table](advanced-hunting-deviceinfo-table.md) in advanced hunting are now sent *every hour* (instead of the previous daily cadence). In addition, complete device reports are also sent whenever there's a change to any previous report. New columns were also added to the `DeviceInfo` table, along with several improvements to existing data in `DeviceInfo` and [DeviceNetworkInfo](advanced-hunting-devicenetworkinfo-table.md) tables.
 
@@ -314,7 +363,7 @@ The security operations team can view all actions pending approval, and the stip
 
 ## June 2021
 
-- (Preview) [View reports per threat tags](threat-analytics.md#view- reports-by-category)
+- (Preview) [View reports per threat tags](threat-analytics.md#view-reports-by-category)
 
   Threat tags help you focus on specific threat categories and review the most relevant reports.
 

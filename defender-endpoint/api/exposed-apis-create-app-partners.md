@@ -3,10 +3,10 @@ title: Partner access through Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a web app to get programmatic access to  Microsoft Defender for Endpoint on behalf of your users.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 06/28/2024
+ms.date: 08/29/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -61,7 +61,7 @@ The following steps guide you how to create a Microsoft Entra application, get a
 
 ## Create the multitenant app
 
-1. Sign in to your [Azure tenant](https://portal.azure.com) with user that has **Global Administrator** role.
+1. Sign in to your [Azure tenant](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**.
 
@@ -122,9 +122,9 @@ In the following example we use **Read all alerts** permission:
 
    You need your application to be approved in each customer tenant where you intend to use it. This approval is necessary because your application interacts with Microsoft Defender for Endpoint application on behalf of your customer.
 
-   A user with **Global Administrator** from your customer's tenant need to select the consent link and approve your application.
+   A user account with appropriate permissions for your customer's tenant must select the consent link and approve your application.
 
-   Consent link is of the form:
+   The consent link is of the form:
 
    ```http
    https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_id=00000000-0000-0000-0000-000000000000&response_type=code&sso_reload=true
@@ -132,7 +132,7 @@ In the following example we use **Read all alerts** permission:
 
    Where `00000000-0000-0000-0000-000000000000` should be replaced with your Application ID.
 
-   After selecting the consent link, sign in as the Global Administrator of the customer's tenant and consent the application.
+   After selecting the consent link, sign into the customer's tenant, and then grant consent for the application.
 
    :::image type="content" source="../media/app-consent-partner.png" alt-text="The Accept button" lightbox="../media/app-consent-partner.png":::
 

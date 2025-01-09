@@ -2,8 +2,8 @@
 title: Configure Microsoft Defender for Endpoint on iOS features
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS features.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 07/22/2024
+ms.date: 08/29/2024
 ---
 
 # Configure Microsoft Defender for Endpoint on iOS features
@@ -102,7 +102,7 @@ Use the following steps to disable web protection for unenrolled devices.
 
 ## Configure network protection
 
-Network protection in Microsoft Defender for endpoint is disabled by default. Admins can use the following steps to configure network protection. This configuration is available for both enrolled devices through MDM config and unenrolled devices through MAM config.
+Network protection in Microsoft Defender for endpoint is enabled by default. Admins can use the following steps to configure network protection. This configuration is available for both enrolled devices through MDM config and unenrolled devices through MAM config.
 
 > [!NOTE]
 > Only one policy should be created for network Protection, either through MDM or MAM. Network protection initialization requires the end user to open the app once.
@@ -310,7 +310,7 @@ Follow the steps below to create a compliance policy against jailbroken devices.
 
 ## Configure custom indicators
 
-Defender for Endpoint on iOS enables admins to configure custom indicators on iOS devices as well. For more information on how to configure custom indicators, see [Manage indicators](manage-indicators.md).
+Defender for Endpoint on iOS enables admins to configure custom indicators on iOS devices as well. For more information on how to configure custom indicators, see [Overview of indicators](indicators-overview.md).
 
 > [!NOTE]
 > Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators is not supported on iOS.

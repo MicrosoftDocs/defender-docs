@@ -4,11 +4,11 @@ description: You can exclude files from scans if they've been opened by a specif
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.topic: conceptual
 ms.custom: nextgen
-ms.reviewer:
+ms.reviewer: yongrhee
 manager: deniseb
 ms.collection: 
 - m365-security
@@ -31,7 +31,7 @@ ms.date: 03/19/2024
 **Platforms**
 - Windows 
 
-You can exclude files that are opened by specific processes from Microsoft Defender Antivirus scans. Note that these types of exclusions are for files that are opened by processes and not the processes themselves. To exclude a process, add a file exclusion (see [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)).
+You can exclude files that are opened by specific processes from Microsoft Defender Antivirus scans. These types of exclusions are for files that are opened by processes and not the processes themselves. To exclude a process, add a file exclusion (see [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)).
 
 See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md) before defining your exclusion lists.
 
@@ -68,11 +68,11 @@ Two different types of process exclusions may be set. A process may be excluded 
 
 For example, given the process `MyProcess.exe` running from `C:\MyFolder\` the full path to this process would be `C:\MyFolder\MyProcess.exe` and the image name is `MyProcess.exe`. 
 
-Image name exclusions are much more broad - an exclusion on `MyProcess.exe` will exclude any processes with this image name, regardless of the path they are run from. So for example, if the process `MyProcess.exe` is excluded by image name, it will also be excluded if it is run from `C:\MyOtherFolder`, from removable media, et cetera. As such it is recommended that whenever possible, the full path is used. 
+Image name exclusions are much more broad - an exclusion on `MyProcess.exe` excludes any processes with this image name, regardless of the path they're run from. So for example, if the process `MyProcess.exe` is excluded by image name, it will also be excluded if it is run from `C:\MyOtherFolder`, from removable media, et cetera. As such it's recommended that whenever possible, the full path is used. 
 
 ### Use wildcards in the process exclusion list
 
-The use of wildcards in the process exclusion list is different from their use in other exclusion lists. When the process exclusion is defined as an image name only, wildcard usage is not allowed. However when a full path is used, wildcards are supported and the wildcard behavior behaves as described in [File and Folder Exclusions](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+The use of wildcards in the process exclusion list is different from their use in other exclusion lists. When the process exclusion is defined as an image name only, wildcard usage isn't allowed. However when a full path is used, wildcards are supported and the wildcard behavior behaves as described in [File and Folder Exclusions](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 
 The use of environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the process exclusion list is also supported. Details and a full list of supported environment variables are described in [File and Folder Exclusions](configure-extension-file-exclusions-microsoft-defender-antivirus.md). 
 
@@ -88,13 +88,13 @@ The following table describes how the wildcards can be used in the process exclu
 
 ### Contextual Process Exclusions
 
-Note that a process exclusion may also be defined via a [Contextual exclusion](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) allowing for example a specific file to be excluded only if it is opened by a specific process. 
+A process exclusion may also be defined via a [Contextual exclusion](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) allowing, for example, a specific file to be excluded only if it's opened by a specific process. 
 
 ## Configure the list of exclusions for files opened by specified processes
 
 ### Use Microsoft Intune to exclude files that have been opened by specified processes from scans
 
-For more information, see [Configure device restriction settings in Microsoft Intune](/intune/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
+For more information, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 ### Use Microsoft Configuration Manager to exclude files that have been opened by specified processes from scans
 
@@ -134,7 +134,7 @@ The following are allowed as the \<cmdlet\>:
 |Remove items from the list|`Remove-MpPreference`|
 
 > [!IMPORTANT]
-> If you have created a list, either with `Set-MpPreference` or `Add-MpPreference`, using the `Set-MpPreference` cmdlet again will overwrite the existing list.
+> If you have created a list, either with `Set-MpPreference` or `Add-MpPreference`, using the `Set-MpPreference` cmdlet again overwrites the existing list.
 
 For example, the following code snippet would cause Microsoft Defender Antivirus scans to exclude any file that is opened by the specified process:
 
@@ -162,11 +162,11 @@ Follow the instructions in [Add exclusions in the Windows Security app](microsof
 
 ## Review the list of exclusions
 
-You can retrieve the items in the exclusion list with MpCmdRun, PowerShell, [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/intune/device-restrictions-configure), or the [Windows Security app](microsoft-defender-security-center-antivirus.md).
+You can retrieve the items in the exclusion list with MpCmdRun, PowerShell, [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/mem/intune/configuration/device-restrictions-configure), or the [Windows Security app](microsoft-defender-security-center-antivirus.md).
 
 If you use PowerShell, you can retrieve the list in two ways:
 
-- Retrieve the status of all Microsoft Defender Antivirus preferences. Each of the lists are displayed on separate lines, but the items within each list are combined into the same line.
+- Retrieve the status of all Microsoft Defender Antivirus preferences. Each of the lists is displayed on separate lines, but the items within each list are combined into the same line.
 - Write the status of all preferences to a variable, and use that variable to only call the specific list you're interested in. Each use of `Add-MpPreference` is written to a new line.
 
 ### Validate the exclusion list by using MpCmdRun

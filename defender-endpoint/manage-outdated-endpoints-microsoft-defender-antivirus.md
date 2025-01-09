@@ -4,10 +4,10 @@ description: Define when and how updates should be applied for endpoints that ha
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.reviewer:
+ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.collection: 

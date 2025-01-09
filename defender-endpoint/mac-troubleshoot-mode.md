@@ -169,7 +169,7 @@ DeviceEvents
 - [Protect your network](network-protection.md)
 - [Turn on network protection](enable-network-protection.md)
 - [Web protection](web-protection-overview.md)
-- [Create indicators](manage-indicators.md)
+- [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

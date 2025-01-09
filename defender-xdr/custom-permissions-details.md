@@ -2,8 +2,8 @@
 title: Details of custom permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Learn about the custom permissions available in Microsoft Defender XDR Security role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -31,6 +31,7 @@ In Microsoft Defender XDR Unified role-based access control (RBAC) you can selec
 - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Security Exposure Management](/security-exposure-management/)
 
 <a name='microsoft-365-defender-unified-rbac-permission-details'></a>
 
@@ -74,7 +75,7 @@ Permissions for managing the organization's security posture and performing vuln
 |Remediation handling|Manage|Create remediation tickets, submit new requests, and manage remediation activities in Defender Vulnerability Management.|
 |Application handling|Manage|Manage vulnerable applications and software, including blocking and unblocking them in Defender Vulnerability Management.|
 |Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply to security industry baselines.|
-|Secure Score|Read / Manage|Manage permissions to Secure Score data including which users have access to the data and the products for which they will see Secure Score data.|
+|Exposure Management|Read / Manage|View or manage Exposure Management insights, including Microsoft Secure Score recommendations from all products that are covered by Secure Score.|
 
 ### Authorization and settings
 

@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/18/2024
+ms.date: 10/09/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -60,7 +60,7 @@ This article describes how admins can manage entries for URLs in the Microsoft D
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
-      - **Security Operator** (Tenant AllowBlockList Manager).
+      - **Security Operator** (Tenant AllowBlockList Manager role): This permission works only when assigned directly in the **Exchange admin center** at <https://admin.exchange.microsoft.com> \> **Roles** \> **Admin Roles**.
     - *Read-only access to the Tenant Allow/Block List*: Membership in one of the following role groups:
       - **Global Reader**
       - **Security Reader**
@@ -333,6 +333,8 @@ Valid URL entries and their results are described in the following subsections.
   - b.abcd.TLD
   - TLD/contoso.com
   - TLD/q=contoso.com
+  - `www.abcd.com\xyz.TLD`
+  - `www.abcd.com\xyz.TLD?q=1234`
   - `www.abcd.TLD`
   - `www.abcd.TLD/q=a@contoso.com`
 
@@ -345,6 +347,7 @@ Valid URL entries and their results are described in the following subsections.
 - **Allow not matched**:
   - abc-contoso.com
   - contoso.com/a
+  - abc.xyz.contoso.com/a/b/c
   - payroll.contoso.com
   - test.com/contoso.com
   - test.com/q=contoso.com
@@ -354,6 +357,7 @@ Valid URL entries and their results are described in the following subsections.
 - **Block match**:
   - contoso.com
   - contoso.com/a
+  - abc.xyz.contoso.com/a/b/c
   - payroll.contoso.com
   - test.com/contoso.com
   - test.com/q=contoso.com
@@ -523,3 +527,4 @@ The following entries are invalid:
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block files in the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - [Allow or block emails in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
+- [Allow or block IPv6 addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)

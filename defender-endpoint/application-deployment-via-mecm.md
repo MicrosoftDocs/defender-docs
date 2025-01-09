@@ -4,8 +4,8 @@ description: Learn how to migrate down-level servers from Microsoft Monitoring A
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

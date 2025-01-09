@@ -51,7 +51,7 @@ This means there's suspicious user activity originating from an IP address that 
 
 ### 2. Investigate the IP address
 
-- Look at the [activities](microsoft-365-security-center-defender-cloud-apps.md) that originated from the IP:
+- Look at the [activities](/defender-cloud-apps/activity-filters) that originated from the IP:
 
   - **Is it mostly failed attempts to sign in?**
 

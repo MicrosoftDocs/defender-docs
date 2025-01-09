@@ -3,8 +3,8 @@ title: Access the Microsoft Defender XDR MSSP customer portal
 description: Access the Microsoft Defender XDR MSSP customer portal
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

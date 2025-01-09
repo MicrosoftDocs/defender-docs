@@ -3,12 +3,12 @@ title: Microsoft Defender Offline scan in Windows
 description: You can use Microsoft Defender Offline Scan straight from the Microsoft Defender Antivirus app. You can also manage how it's deployed in your network.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/30/2024
-author: YongRhee-MSFT
-ms.author: yongrhee
+ms.date: 09/18/2024
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.custom: nextgen
-ms.reviewer:
+ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: conceptual
 ms.collection: 
@@ -34,7 +34,7 @@ search.appverid: met150
 |**Protection type** | Hardware|
 |**Firmware/ Rootkit**|  Operating system <br/> Driver <br/> Memory (Heap) <br/> Application <br/> Identity <br/> Cloud|
 
-> [NOTE]
+> [!NOTE]
 > The protection for this feature focuses on the Firmware/Rootkit.
 
 Microsoft Defender Offline is an anti-malware scanning tool that lets you boot and run a scan from a trusted environment. The scan runs from outside the normal Windows kernel so it can target malware that attempts to bypass the Windows shell, such as viruses and rootkits that infect or overwrite the master boot record (MBR).
@@ -50,7 +50,7 @@ The following are the hardware requirements for Microsoft Defender Offline Scan 
 - x64/x86 Windows 8.1 
 - x64/x86 Windows 7 Service Pack 1
 
->[!CAUTION]
+> [!CAUTION]
 > Microsoft Defender Offline Scan does not apply to:
 >
 > - ARM Windows 11 

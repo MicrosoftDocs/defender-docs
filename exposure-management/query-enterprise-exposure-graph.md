@@ -1,12 +1,12 @@
 ---
 title: Query the enterprise exposure graph in Microsoft Security Exposure Management
 description: Learn how to query the enterprise exposure graph to understand security risk in Microsoft Security Exposure Management.
-author: mjosephym
-ms.author: v-mjosephy
+author: dlanger
+ms.author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 11/04/2024
 ---
 
 # Query the enterprise exposure graph
@@ -14,10 +14,6 @@ ms.date: 03/11/2024
 Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting)  in the Microsoft Defender portal.
 
 This article provides some examples, tips, and hints for constructing queries in the enterprise exposure graph.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 

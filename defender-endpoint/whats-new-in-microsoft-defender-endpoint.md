@@ -3,11 +3,11 @@ title: What's new in Microsoft Defender for Endpoint
 description: See what features are generally available (GA) in the latest release of Microsoft Defender for Endpoint, and security features in Windows 10 and Windows Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 07/09/2024
+ms.date: 08/26/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -51,10 +51,19 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+## August 2024
+
+- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+    
 ## July 2024
 
-- (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
-
+- (Preview) **Monitor OT devices in the device inventory**: You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery). As part of this integration:
+    - We've added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.
+    - We've added the **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some of these filters are only visible on specific tabs, and only for customers with a Defender for IoT license. [Learn more](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views).
+    - We've added the ability to search Mac devices and Mac addresses.
+    - We've added a system tag that shows the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature, as part of the [device group](/defender-for-iot/set-up-sites#add-device-group).
+    - If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data on the OT/IoT devices, and a message that indicates the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view).
+- (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject.     
 
 ## June 2024
 

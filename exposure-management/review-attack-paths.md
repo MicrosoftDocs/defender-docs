@@ -1,21 +1,17 @@
 ---
 title: Review attack paths in Microsoft Security Exposure Management
 description: Learn about to review and explore attack paths in Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2023
+ms.date: 11/04/2024
 ---
 
 # Review attack paths
 
 Attack paths in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) help you to proactively identify and visualize potential routes that attackers can exploit using vulnerabilities, gaps, and misconfigurations. Simulated attack paths allow you to proactively investigate and remediate potential threats.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes/prerelease.md)]
 
 ## Prerequisites
 
@@ -25,23 +21,42 @@ Security Exposure Management is currently in public preview.
   - If you don't have licenses defined for workloads integrated and represented in the attack path.
   - If you don't fully define critical assets.
 
-## View attack paths
+### Attack path dashboard
 
-1. To access [attack paths](https://security.microsoft.com/attack-paths), select  **Attack surface -> Attack path**.
+The dashboard provides a high-level overview of all identified attack paths within the environment. It enables security teams to gain valuable insights into the types of paths identified, top entry points, target assets, and more, helping to prioritize risk mitigation efforts effectively. The overview includes:
 
-    :::image type="content" source="./media/review-attack-paths/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window" lightbox="media/review-attack-paths/attack-paths.png":::
+- Graph of attack paths over time
+- Top choke points
+- Top attack path scenarios
+- Top targets
+- Top entry points
+
+:::image type="content" source="media/work-attack-paths-overview/attack-paths-dashboard.png" alt-text="Screenshot of attack path dashboard" lightbox="media/work-attack-paths-overview/attack-paths-dashboard.png":::
+
+### View attack paths
+
+1. You can access [attack paths](https://security.microsoft.com/attack-paths) from the attack path dashboard, or by selecting  **Attack surface -> Attack path**.
+
+   :::image type="content" source="media/review-attack-paths/attack-path-list.png" alt-text="Screenshot of attack path list" lightbox="media/review-attack-paths/attack-path-list.png":::
 
 1. To change how attack paths are displayed, you can select a heading name to sort by a specific column heading.
 
-## Group by choke points
+### Group attack paths
 
-To group by choke point:
+To group attack paths by specific criteria:
 
-1. Select **Attack surface -> Attack path**.
+Select **Group** to group by **Attack path name**, **Entry point**,**Entry point type**, **Target type**, **Risk level**, **Status**, **Target criticality**, **Target**.
 
-1. Select **Group** to group by **Name**, **Entry point type**, **Target type**, **Target criticality**, **Status**, or **choke point**.
+### View choke points and blast radius
 
-## Examine an attack path
+1. Go the choke points tab to view a list of choke points on the attack path dashboard. By focusing on these choke points, you can reduce risk by addressing high-impact assets, thus preventing attackers from progressing through various paths.
+1. Select a choke point to open the side panel, select **View blast radius** and explore the attack paths from a choke point. The blast radius provides a detailed visualization showing how the compromise of one asset could affect others. This enables security teams to assess the broader implications of an attack and prioritize mitigation strategies more effectively.
+ 
+:::image type="content" source="media/review-attack-paths/choke points and blast radius.png" alt-text="Screenshot of choke point and blast radius " lightbox="media/review-attack-paths/choke points and blast radius.png":::
+
+:::image type="content" source="media/review-attack-paths/choke-points on map.png" alt-text="Screenshot of choke point on attack map" lightbox="media/review-attack-paths/choke-points on map.png":::
+
+### Examine an attack path
 
 1. Select a specific attack path to examine it further for potential exploitable vulnerabilities.
 

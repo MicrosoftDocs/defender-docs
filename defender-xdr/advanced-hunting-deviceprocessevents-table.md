@@ -14,8 +14,11 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
+ms.custom: 
+- cx-ti
+- cx-ah
 ms.topic: reference
-ms.date: 04/11/2024
+ms.date: 09/06/2024
 ---
 
 # DeviceProcessEvents
@@ -76,7 +79,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `InitiatingProcessSHA1` | `string` | SHA-1 hash of the process (image file) that initiated the event |
 | `InitiatingProcessSHA256` | `string` | SHA-256 of the process (image file) that initiated the event. This field is usually not populated — use the SHA1 column when available. |
 | `InitiatingProcessMD5` | `string` | MD5 hash of the process (image file) that initiated the event |
-| `InitiatingProcessFileName` | `string` | Name of the process that initiated the event |
+| `InitiatingProcessFileName` | `string` | Name of the process file that initiated the event; if unavailable, the name of the process that initiated the event might be shown instead |
 | `InitiatingProcessFileSize` | `long` | Size of the file that ran the process responsible for the event |
 | `InitiatingProcessVersionInfoCompanyName` | `string` | Company name from the version information of the process (image file) responsible for the event |
 | `InitiatingProcessVersionInfoProductName` | `string` | Product name from the version information of the process (image file) responsible for the event |
@@ -96,6 +99,14 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ReportId` | `long` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
 | `AppGuardContainerId` | `string` | Identifier for the virtualized container used by Application Guard to isolate browser activity |
 | `AdditionalFields` | `string` | Additional information about the event in JSON array format |
+| `InitiatingProcessSessionId` | `long` |  Windows session ID of the initiating process  |
+| `IsInitiatingProcessRemoteSession` | `bool` |   Indicates whether the initiating process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
+| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process’s RDP session was initiated |
+| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process’s RDP session was initiated |
+| `CreatedProcessSessionId` | `long` | Windows session ID of the created process |
+|`IsProcessRemoteSession` | `bool` | Indicates whether the created process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
+| `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process’s RDP session was initiated |
+| `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process’s RDP session was initiated |
 
 
 ## Related topics

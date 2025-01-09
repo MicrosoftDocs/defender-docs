@@ -2,8 +2,7 @@
 title: Configuring Microsoft Defender Experts app in Teams
 ms.reviewer:
 description: The Microsoft Defender Experts app might have restrictions that affect its permissions in Teams
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
@@ -14,8 +13,11 @@ ms.collection:
   - tier1
   - essentials-manage
 ms.topic: conceptual
+ms.custom: 
+- cx-ti
+- cx-dex
 search.appverid: met150
-ms.date: 06/27/2024
+ms.date: 10/31/2024
 ---
 
 # Troubleshooting issues with Microsoft Defender Experts app in Microsoft Teams

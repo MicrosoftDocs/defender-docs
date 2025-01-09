@@ -3,8 +3,8 @@ title: Troubleshoot installation issues for Microsoft Defender for Endpoint on L
 ms.reviewer: gopkr
 description: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,18 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 10/11/2024
 ---
 
 # Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
+**Applies to**:
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
@@ -35,15 +34,15 @@ ms.date: 05/01/2024
 An error in installation might or might not result in a meaningful error message by the package manager. To verify if the installation succeeded, obtain and check the installation logs using:
 
 ```bash
- sudo journalctl --no-pager|grep 'microsoft-mdatp' > installation.log
+sudo journalctl --no-pager|grep 'microsoft-mdatp' > installation.log
 ```
 
 ```bash
- grep 'postinstall end' installation.log
+grep 'postinstall end' installation.log
 ```
 
-```Output
- microsoft-mdatp-installer[102243]: postinstall end [2020-03-26 07:04:43OURCE +0000] 102216
+```console
+microsoft-mdatp-installer[102243]: postinstall end [2020-03-26 07:04:43OURCE +0000] 102216
 ```
 
 An output from the previous command with correct date and time of installation indicates success.
@@ -69,6 +68,9 @@ Verify that the package you're installing matches the host distribution and vers
 
 For [manual deployment](linux-install-manually.md), make sure the correct distro and version are selected.
 
+> [!NOTE]
+> MDE Linux no longer ships a solution for RHEL 6.
+
 ## Installation failed due to dependency error
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. 
@@ -76,7 +78,6 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 The following external package dependencies exist for the mdatp package:
 
 - The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage`, `selinux-policy-targeted`, `mde-netfilter` 
-- For RHEL6 the mdatp RPM package requires `audit`, `policycoreutils`, `libselinux`, `mde-netfilter` 
 - For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter` 
 
 The mde-netfilter package also has the following package dependencies:
@@ -92,7 +93,7 @@ Check if the Defender for Endpoint service is running:
 service mdatp status
 ```
 
-```Output
+```console
  ● mdatp.service - Microsoft Defender for Endpoint
    Loaded: loaded (/lib/systemd/system/mdatp.service; enabled; vendor preset: enabled)
    Active: active (running) since Thu 2020-03-26 10:37:30 IST; 23h ago
@@ -137,7 +138,8 @@ service mdatp status
     where `<systemd_path>` is `/lib/systemd/system` for Ubuntu and Debian distributions and /usr/lib/systemd/system` for Rhel, CentOS, Oracle, and SLES. Then rerun step 2.
 
 4. If the above steps don't work, check if SELinux is installed and in enforcing mode. If so, try setting it to permissive (preferably) or disabled mode. It can be done by setting the parameter `SELINUX` to `permissive` or `disabled` in `/etc/selinux/config` file, followed by reboot. Check the man-page of selinux for more details.
-Now try restarting the mdatp service using step 2. Revert the configuration change immediately though for security reasons after trying it and reboot.
+
+   Now try restarting the mdatp service using step 2. Revert the configuration change immediately though for security reasons after trying it and reboot.
 
 5. If `/opt` directory is a symbolic link, create a bind mount for `/opt/microsoft`.
 
@@ -147,7 +149,7 @@ Now try restarting the mdatp service using step 2. Revert the configuration chan
     ls -l /opt/microsoft/mdatp/sbin/wdavdaemon
     ```
 
-    ```Output
+    ```console
     -rwxr-xr-x 2 root root 15502160 Mar  3 04:47 /opt/microsoft/mdatp/sbin/wdavdaemon
     ```
 
@@ -187,9 +189,10 @@ Now try restarting the mdatp service using step 2. Revert the configuration chan
     sudo mdatp diagnostic create
     ```
 
-    ```Output
+    ```console
     Diagnostic file created: <path to file>
     ```
 
     Path to a zip file that contains the logs are displayed as an output. Reach out to our customer support with these logs.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

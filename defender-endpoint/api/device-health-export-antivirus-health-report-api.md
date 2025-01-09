@@ -2,8 +2,8 @@
 title: Microsoft Defender Antivirus Device Health export device antivirus health reporting
 description: Presents methods to retrieve Microsoft Defender Antivirus device health details.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 06/25/2024
 manager: deniseb

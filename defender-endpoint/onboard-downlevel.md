@@ -2,8 +2,8 @@
 title: Onboard previous versions of Windows on Microsoft Defender for Endpoint
 description: Onboard supported previous versions of Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint sensor
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 ms.reviewer: pahuijbr
@@ -180,7 +180,7 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
 1. Download the following and place them in the MMA folder:
 
     - Update for customer experience and diagnostic telemetry:
-      - [For Windows Server 2008 R2 x64](https://www.microsoft.com/download/details.aspx?familyid=1bd1d18d-4631-4d8e-a897-327925765f71)
+      - [For Windows Server 2008 R2 x64](https://www.microsoft.com/download/details.aspx?id=48641)
 
     For Windows Server 2008 R2 SP1, following updates are also required:
 

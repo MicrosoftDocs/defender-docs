@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.reviewer: sugamar
 manager: deniseb
 ms.custom: asr
@@ -39,7 +39,7 @@ In this section of the attack surface reduction rules deployment guide, you'll l
 - use Event Viewer for attack surface reduction rules events
 
 > [!NOTE]
-> Before you begin testing attack surface reduction rules, it is recommended that you first disable all rules that you have previously set to either **audit** or **enable** (if applicable). See [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md) for information about using the attack surface reduction rules report to disable attack surface reduction rules.
+> Before you begin testing attack surface reduction rules, it's recommended that you first disable all rules that you have previously set to either **audit** or **enable** (if applicable). See [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md) for information about using the attack surface reduction rules report disabling attack surface reduction rules.
 
 Begin your attack surface reduction rules deployment with ring 1.
 
@@ -47,7 +47,9 @@ Begin your attack surface reduction rules deployment with ring 1.
 
 ## Step 1: Test attack surface reduction rules using Audit
 
-Begin the testing phase by turning on the attack surface reduction rules with the rules set to Audit, starting with your champion users or devices in ring 1. Typically, the recommendation is that you enable all the rules (in Audit) so that you can determine which rules are triggered during the testing phase. Rules that are set to Audit don't generally impact functionality of the entity or entities to which the rule is applied but do generate logged events for the evaluation; there is no effect on end users.
+Begin the testing phase by turning on the attack surface reduction rules with the rules set to Audit, starting with your champion users or devices in ring 1. Typically, the recommendation is that you enable all the rules (in Audit) so that you can determine which rules are triggered during the testing phase.
+
+ Rules that are set to Audit don't generally impact functionality of the entity or entities to which the rule is applied but do generate logged events for the evaluation; there's no effect on end users.
 
 ### Configure attack surface reduction rules using Intune
 
@@ -77,14 +79,14 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
     > [!NOTE]
     > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
-10. Review your settings in the **Review + create** pane. Click **Create** to apply the rules.
+10. Review your settings in the **Review + create** pane. Select **Create** to apply the rules.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/asr-mem-review-create.png" alt-text="The Create profile page" lightbox="media/asr-mem-review-create.png":::
 
 Your new attack surface reduction policy for attack surface reduction rules is listed in **Endpoint security | Attack surface reduction**.
 
-   > [!div class="mx-imgBorder"]
+> [!div class="mx-imgBorder"]
    > :::image type="content" source="media/asr-mem-my-asr-rules.png" alt-text=" The Attack surface reduction page" lightbox="media/asr-mem-my-asr-rules.png":::
 
 <a name='step-2-understand-the-asr-rules-reporting-page-in-the-microsoft-365-defender-portal'></a>
@@ -131,7 +133,7 @@ The **GroupBy** returns results set to the following groups:
 > [!NOTE]
 > When filtering by rule, the number of individual _detected_ items listed in the lower half of the report is currently limited to 200 rules. You can use **Export** to save the full list of detections to Excel.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png" alt-text="Screenshot that shows the ASR rules report search feature on the configuration tab." lightbox="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png" alt-text="Screenshot that shows the Azure Site Recovery rules report search feature on the configuration tab." lightbox="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png":::
 
 **Filter** opens the **Filter on rules** page, which enables you to scope the results to only the selected attack surface reduction rules:
 
@@ -139,7 +141,7 @@ The **GroupBy** returns results set to the following groups:
 > :::image type="content" source="media/asr-defender365-filter.png" alt-text="The Attack surface reduction rules detections filter on rules" lightbox="media/asr-defender365-filter.png":::
 
 > [!NOTE]
-> If you have a Microsoft Microsoft 365 Security E5 or A5, Windows E5 or A5 license, the following link opens the Microsoft Defender 365  Reports > [Attack surface reductions](https://security.microsoft.com/asr?viewid=detections) > Detections tab.
+> If you have a Microsoft 365 Security E5 or A5, Windows E5 or A5 license, the following link opens the Microsoft Defender 365  Reports > [Attack surface reductions](https://security.microsoft.com/asr?viewid=detections) > Detections tab.
 
 ### Configuration tab
 
@@ -147,7 +149,7 @@ Lists—on a per-computer basis—the aggregate state of attack surface reductio
 
 >:::image type="content" source="media/attack-surface-reduction-rules-report-main-configuration-tab.png" alt-text="Screenshot that shows the attack surface reduction rules report main configuration tab." lightbox="media/attack-surface-reduction-rules-report-main-configuration-tab.png":::
 
-On the Configurations tab, you can check, on a per-device basis, which attack surface reduction rules are enabled, and in which mode, by selecting the device for which you want to review attack surface reduction rules.
+On the Configurations tab, you can see which attack surface reduction rules are enabled and their mode for each device by selecting the device you want to review.
 
 >:::image type="content" source="media/attack-surface-reduction-rules-report-configuration-add-to-policy.png" alt-text="Screenshot that shows the ASR rules fly-out to add ASR rules to devices." lightbox="media/attack-surface-reduction-rules-report-configuration-add-to-policy.png":::
 
@@ -167,20 +169,20 @@ The Endpoint Security | Attack surface reduction pane opens:
 > :::image type="content" source="media/asr-defender365-05b-mem3.png" alt-text="The Endpoint security Attack surface reduction pane" lightbox="media/asr-defender365-05b-mem3.png":::
 
 > [!NOTE]
-> If you have a Microsoft Defender 365 E5 (or Windows E5?) license, this link will open the Microsoft Defender 365  Reports > Attack surface reductions > [Configurations](https://security.microsoft.com/asr?viewid=configuration) tab.
+> If you have a Microsoft Defender 365 E5 (or Windows E5?) License, this link opens the Microsoft Defender 365  Reports > Attack surface reductions > [Configurations](https://security.microsoft.com/asr?viewid=configuration) tab.
 
 ### Add exclusions
 
 This tab provides a method to select detected entities (for example, false positives) for exclusion. When exclusions are added, the report provides a summary of the expected impact.
 
 > [!NOTE]
-> Microsoft Defender Antivirus AV exclusions are honored by attack surface reduction rules.  See [Configure and validate exclusions based on extension, name, or location](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
+> Attack surface reduction rules honor Microsoft Defender Antivirus (AV) exclusion. See [Configure and validate exclusions based on extension, name, or location](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/asr-defender365-06d.png" alt-text="The pane for exclusion of the detected file" lightbox="media/asr-defender365-06d.png":::
 
 > [!NOTE]
-> If you have a Microsoft Defender 365 E5 (or Windows E5?) license, this link will open the Microsoft Defender 365  Reports > Attack surface reductions > [Exclusions](https://security.microsoft.com/asr?viewid=exclusions) tab.
+> If you have a Microsoft Defender 365 E5 (or Windows E5?) License, this link will open the Microsoft Defender 365  Reports > Attack surface reductions > [Exclusions](https://security.microsoft.com/asr?viewid=exclusions) tab.
 
 For more information about using the attack surface reduction rules report, see [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md).
 
@@ -188,10 +190,9 @@ For more information about using the attack surface reduction rules report, see 
 
 Attack surface reduction rules now provide the capability to configure rule-specific exclusions, known as "Per Rule Exclusions."
 
-> [!NOTE]
-> Per-rule exclusions cannot currently be configured by using PowerShell or Group Policy.
+To configure specific rule exclusions, you have the choices of using the MDE Security Settings Management, Intune, and Group Policy.
 
-To configure specific rule exclusions:
+#### Via Intune:
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and navigate to **Home** > **Endpoint security** > **Attack surface reduction**.
 
@@ -208,9 +209,40 @@ To configure specific rule exclusions:
 > [!TIP]
 > Use the checkboxes next to your list of exclusion entries to select items to **Delete**, **Sort**, **Import**, or **Export**.
 
+### Via Group Policy
+
+
+
+Use Group Policy to set the per-user ASR rule exclusions
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+1. In the **Group Policy Management Editor** go to **Computer configuration**.
+
+1. Select **Administrative templates**.
+
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard > Attack Surface Reduction**.
+
+1. Double-click **Apply a list of exclusions to specific attack surface reduction (ASR) rules**, and set the option to **Enabled**. 
+
+1. Then click on **Show...**
+
+1. Under "**Value Name**", enter "GUID for the ASR Rule" without the double quotes
+
+1. Under "**Value**", enter the <drive_letter:\Path\ProcessName>.  In order to add multiple processes, it's separated by a greater than sign (>)
+
+   e.g.,  "C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe" without the double quotes
+   
+1. select **OK**. This setting allows the processes that are being blocked by the particular ASR Rule to continue running.
+
+> [!NOTE]
+> "If policies aren't applying, review [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
-You can use PowerShell - as an alternative to Intune - to enable attack surface reduction rules in audit mode to view a record of apps that would have been blocked if the feature was fully enabled. You can also get an idea of how often the rules fire during normal use.
+Use PowerShell, as an alternative to Intune, to enable attack surface reduction rules in audit mode. This allows you to view a record of apps that would have been blocked if the feature was fully enabled. You can also see how often the rules fire during normal use.
 
 To enable an attack surface reduction rule in audit mode, use the following PowerShell cmdlet:
 
@@ -227,7 +259,7 @@ To enable all the added attack surface reduction rules in audit mode, use the fo
 ```
 
 > [!TIP]
-> If you want to fully audit how attack surface reduction rules will work in your organization, you'll need to use a management tool to deploy this setting to devices in your network(s).
+> If you want to fully audit how attack surface reduction rules work in your organization, you'll need to use a management tool to deploy this setting to devices in your network.
 
 You can also use Group Policy, Intune, or mobile device management (MDM) configuration service providers (CSPs) to configure and deploy the setting. Learn more in the main [Attack surface reduction rules](attack-surface-reduction.md) article.
 
@@ -254,5 +286,7 @@ Event ID | Description
 [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+
+[Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

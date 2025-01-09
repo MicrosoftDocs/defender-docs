@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 5/2/2024
+ms.date: 10/23/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -25,9 +25,9 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
-To see any existing simulation automations that you created, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> and then select **Simulation automations**. To go directly to the **Automations** tab where you can select **Simulation automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
+To see any existing simulation automations that you created, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> and then select **Simulation automations**. To go directly to the **Automations** tab where you can select **Simulation automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>. You can also see automated simulations in the **Simulations** tab, having a prefix **AutomatedSimulation_** and the automation name available under the column **Created by**.
 
-The following information is shown for each simulation automation. You can sort the simulation automations by clicking on an available column header.
+The following information is shown for each simulation automation in the automation tab. You can sort the simulation automations by clicking on an available column header.
 
 - **Name campaign**
 - **Status**: **Active**, **Inactive**, or **Draft**.
@@ -75,7 +75,7 @@ On the **Select social engineering techniques** page, select one or more of the 
 
 If you select the **View details** link in the description, a details flyout opens that describes the technique and the simulation steps that result from the technique.
 
-:::image type="content" source="media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="The Details flyout for the credential harvest technique on the Select social engineering techniques page" lightbox="media/attack-sim-training-simulations-select-technique-sim-steps.png":::
+:::image type="content" source="media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="The Details flyout for the credential harvest technique on the Select social engineering techniques page":::
 
 When you're finished on the **Select social engineering techniques** page, select **Next**.
 
@@ -83,18 +83,18 @@ When you're finished on the **Select social engineering techniques** page, selec
 
 On the **Select payloads and login page** page, you need to select at least one existing payload for each social engineering technique you selected, or you can create new payloads to use.
 
-For the **Credential Harvest** or **Link in Attachment** social engineering techniques, you can also view the login page that's used in the payload, select a different login page to use, or create a new login page to use.
+For the **Credential Harvest** or **Link in Attachment** social engineering techniques, you can also view the login page that's used in the payload, select a different login page to use, or create a new login page to use. The selected login page will be used across the various selected payloads.
 
 ### Select payloads
 
 On the **Select payloads and login page** page, select one of the following options:
 
-- **Randomize**: There's nothing else to configure on this page, so select **Next** to continue.
+- **Randomize**: Payloads will be selected at random from the available global and tenant payloads. There's nothing else to configure on this page, so select **Next** to continue.
 - **Manually select**: The following details are shown for each payload. Select a column header to sort by that column:
   - **Payload name**
   - **Source**: For built-in payloads, the value is **Global**. For custom payloads, the value is **Tenant**.
   - **Technique**: You need to select at least one payload per technique that you selected on the **Select social engineering techniques** page.
-  - **Language**: The language of the payload content. Microsoft's payload catalog (global) provides payloads in 29+ languages as described in :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**.
+  - **Language**: The language of the payload content. Microsoft's payload catalog (global) provides payloads in 29+ languages.
   - **Predicted compromise rate (%)**: Historical data across Microsoft 365 that predicts the percentage of people who will be compromised by this payload (users compromised / total number of users who receive the payload). For more information, see [Predicted compromise rate](attack-simulation-training-get-started.md#predicted-compromise-rate).
 
   Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to search for the name of an existing payload.
@@ -187,11 +187,16 @@ When you're finished on  the **Configure OAuth payload** page, select **Next**.
 
 On the **Target users** page, select who receives the simulation. Use the following options to select users:
 
-- **Include all users in your organization**: **Include all users in your organization**: The unmodifiable list of users is show in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
+- **Include all users in your organization**: **Include all users in your organization**: The unmodifiable list of users is shown in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
 
 - **Include only specific users and groups**: At first, no users or groups are shown on the **Targeted users** page. To add users or groups to the simulation, choose one of the following options:
 
-  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to receive the simulation. **Dynamic distribution groups are not supported**. The following search tools are available:
+  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to receive the simulation. The following group types are supported:
+    - Microsoft 365 Groups (static and dynamic)
+    - Distribution groups (static only)
+    - Mail-enabled Security groups (static only)
+
+    The following search tools are available:
 
     - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
       - Type three or more characters and then press the ENTER key. Any users or group names that contain those characters are shown in the **User list** section by **Name** and **Email**.
@@ -238,7 +243,7 @@ On the **Target users** page, select who receives the simulation. Use the follow
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
-      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal.":::
 
       You can use some or all of the search categories to find users and groups. If you select multiple categories, the AND operator is used. Any users or groups must match both values to be returned in the results (which is virtually impossible if you use the value **All** in multiple categories).
 
@@ -306,7 +311,7 @@ In the **Add training** flyout that opens, use the following tabs to select trai
 - **Recommended** tab: Shows the recommended built-in trainings based on the simulation configuration. These trainings are the same trainings that would have been assigned if you selected **Assign training for me (Recommended)** on the previous page.
 - **All trainings** tab: Shows all built-in trainings that are available.
 
-:::image type="content" source="media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="The option to add the recommended training on the Training assignment page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
+:::image type="content" source="media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="The option to add the recommended training on the Training assignment page in Attack simulation training in the Microsoft Defender portal":::
 
 On either tab, the following information is shown for each training:
 
@@ -560,7 +565,7 @@ When you're finished on the **Positive reinforcement notification** page, select
 On the **Simulation schedule** page, select one of the following values:
 
 - **Randomized**: You still need to select the schedule on the next page, but the simulations will launch at random times within the schedule.
-- **Fixed**
+- **Fixed**: Simulations will be launched on a given day as per the chosen schedule.
 
 When you're finished, select **Next**.
 
@@ -569,24 +574,28 @@ When you're finished, select **Next**.
 What you see on the **Schedule details** page depends on whether you selected **Randomized** or **Fixed** for the simulation schedule on the previous page.
 
 - **Randomized** simulation schedule: The following settings are available:
-  - **Automation start** section: Use **Select the date you want the automation to start from** to select the start date for the simulations.
+  - **Automation start** section: Use **Select the date you want the automation to start from** to select the start date for the simulations. You can select any future date of up to a year. 
 
   - **Automation scoping** section: Configure the following settings:
     - **Select the days of the week that simulations are allowed to start on**: Select one or more days of the week.
-    - **Enter the maximum number of simulations that can be started between the start and end dates**: Enter a value from 1 to 10.
-    - **Randomize the time of day that simulation emails can be sent for delivery**: Select **Randomize send times** to randomize the send times.
+    - **Enter the maximum number of simulations that can be started between the start and end dates**: Enter a value from 1 to 10. This number will also determine the number of payloads to be used. If you choose more payloads than simulations, e.g., 12 payloads for 10 simulations, any 10 of the 12 payloads will be used. If you choose fewer payloads than simulations, e.g., 5 payloads for 8 simulations, some payloads will repeat to cover all the simulations, unless you have chosen **Use unique payloads across simulations within an automation** in the **Launch details**.
+    - **Randomize the time of day that simulation emails can be sent for delivery**: Select **Randomize send times** to randomize the send times. This will stagger email delivery over a 12 hour window. 
 
-  - **Automation end** section: Use **Select the date you want the automations to end** to select the end date for the simulations.
+  - **Automation end** section: Use **Select the date you want the automations to end** to select the end date for the simulations. You can select any future date of upto a year.
+
+    > [!TIP]
+    > Only one simulation is launched in a day, so we recommend selecting at least as many days as you'd like the simulations to run.
 
 - **Fixed** simulation schedule: The following settings are available:
-  - **Automation start** section: Use **Select the date you want the simulations to start from** to select the start date for the simulations.
+  - **Automation start** section: Use **Select the date you want the simulations to start from** to select the start date for the simulations. You can select any future date of upto a year.
 
   - **Automation recurrence** section: Configure the following settings:
     - **Select if you want simulations to launch weekly or monthly**: Select **Weekly** (default) or **Monthly**.
-    - **Enter interval you want between automation runs**: Enter a value from 1 to 99 weeks.
-    - **Select the day of the week you want the simulations to start from**: Select the day of the week that simulations start.
+    - **Enter interval you want between automation runs**: Enter a value from 1 to 99. For example, if you want to run simulations every week then enter 1. If you want to run alternate weeks then enter 2 and so on. Similarly, if you want to run simulations quarterly then enter 3.
+    - **Select the day of the week you want the simulations to start from**: For weekly simulations, select the day of the week that simulations start.
+    - **Enter the day of the month you want the simulations to start from**: For monthly simulations, enter the day in a month when simulations start. Enter a value from 1 to 31.
 
-  - **Automation end** section: Selection one of the following values:
+  - **Automation end** section: Select one of the following values:
     - Use **Select the date you want the automation to end** to select the end date for the simulations.
     - Use **Enter the number of occurrences of the simulations to run before ending** to enter a value from 1 to 10.
 
@@ -596,11 +605,11 @@ When you're finished on the **Schedule details** page, select **Next**.
 
 On the **Launch details** page, configure the following additional settings for the automation:
 
-- **Use unique payloads across simulations within an automation** section: By default, **Unique payloads** isn't selected.
+- **Use unique payloads across simulations within an automation** section: By default, **Unique payloads** isn't selected. Make sure you have chosen enough payloads for the number of simulations you want to run. If you have fewer payloads than simulations you want to run, only a fraction of users will be targeted (calculated as ratio of number of payloads by the number of simulations). 
 
-- **Target all selected users in every simulation run** section: By default, **Target all selected users in every simulation run** isn't selected.
+- **Target all selected users in every simulation run** section: By default, the target users are divided across different simulations. If you select this option, all chosen target users will be included in every simulation run. Make sure you have chosen as many payloads as the number of simulations you want to run; otherwise, the payloads will start repeating.
 
-- **Target repeat offenders** section: By default, **Target repeat offenders**is not selected. If you select it, use **Enter the maximum number of times a user can be targeted within this automation** that appears to enter a value from 1 to 10.
+- **Target repeat offenders** section: By default, **Target repeat offenders** is not selected. If you select it, use **Enter the maximum number of times a user can be targeted within this automation** that appears to enter a value from 1 to 10.
 
 - **Send simulation email based upon the user's current time zone setting from Outlook web app** section: By default, **Enable region aware delivery** isn't selected.
 
@@ -652,6 +661,10 @@ For simulation automations with the **Status** value **Active** or **Inactive**,
 
 > [!TIP]
 > To see details about other simulation automations without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+
+## View reports of automated simulations
+
+You can view the simulation reports for automated campaigns in the **Simulations** tab. Click on the name of the simulation, having a prefix of **AutomatedSimulation_** and automation name available under the column **Created by**. To view the report click anywhere in the simulation row other than the check box next to the name. 
 
 ## Frequently asked questions (FAQ) for simulations automations
 

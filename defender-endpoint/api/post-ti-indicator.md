@@ -2,8 +2,8 @@
 title: Submit or Update Indicator API
 description: Learn how to use the Submit or Update Indicator API to submit or update a new Indicator entity in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -118,5 +118,5 @@ POST https://api.securitycenter.microsoft.com/api/indicators
 
 ## Related article
 
-- [Manage indicators](../manage-indicators.md)
+- [Manage indicators](../indicators-overview.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -2,8 +2,8 @@
 title: Security, privacy, and compliance
 description: "Learn about security, privacy, and compliance in Defender for Business."
 search.appverid: MET150
-ms.author: siosulli
-author: siosulli
+ms.author: chrisda
+author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.reviewer: nehabha
 f1.keywords: NOCSH
-ms.collection: 
+ms.collection:
  - essentials-security
  - essentials-privacy
  - essentials-compliance
@@ -49,7 +49,6 @@ For information about privacy in Defender for Business, see:
 ## Compliance
 
 For information about compliance in Defender for Business, see the [Microsoft Trust Center - Compliance](https://www.microsoft.com/trust-center/compliance/compliance-overview).
-
 
 ## Related resources
 

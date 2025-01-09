@@ -14,8 +14,11 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
+ms.custom:
+- cx-ti
+- cx-ah
 ms.topic: reference
-ms.date: 02/16/2024
+ms.date: 11/20/2024
 ---
 
 # Understand the advanced hunting schema
@@ -55,9 +58,14 @@ The following reference lists all the tables in the schema. Each table name link
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | Files, IP addresses, URLs, users, or devices associated with alerts |
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |
-| **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** | Behavior data types in Microsoft Defender for Cloud Apps |
-| **[BehaviorInfo](advanced-hunting-behaviorinfo-table.md)** | Alerts from Microsoft Defender for Cloud Apps |
+| **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Behavior data types in Microsoft Defender for Cloud Apps (not available for GCC) |
+| **[BehaviorInfo](advanced-hunting-behaviorinfo-table.md)** (Preview) | Alerts from Microsoft Defender for Cloud Apps (not available for GCC) |
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |
+| **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |
+| **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |
+| **[DeviceBaselineComplianceAssessment](advanced-hunting-devicebaselinecomplianceassessment-table.md)** (Preview) | Baseline compliance assessment snapshot, which indicates the status of various security configurations related to baseline profiles on devices |
+| **[DeviceBaselineComplianceAssessmentKB](advanced-hunting-devicebaselinecomplianceassessmentkb-table.md)** (Preview) | Information about various security configurations used by baseline compliance to assess devices |
+| **[DeviceBaselineComplianceProfiles](advanced-hunting-devicebaselinecomplianceprofiles-table.md)** (Preview) | Baseline profiles used for monitoring device baseline compliance |
 | **[DeviceEvents](advanced-hunting-deviceevents-table.md)** | Multiple event types, including events triggered by security controls such as Microsoft Defender Antivirus and exploit protection |
 | **[DeviceFileCertificateInfo](advanced-hunting-DeviceFileCertificateInfo-table.md)** | Certificate information of signed files obtained from certificate verification events on endpoints |
 | **[DeviceFileEvents](advanced-hunting-devicefileevents-table.md)** | File creation, modification, and other file system events |
@@ -68,6 +76,9 @@ The following reference lists all the tables in the schema. Each table name link
 | **[DeviceNetworkInfo](advanced-hunting-devicenetworkinfo-table.md)** | Network properties of devices, including physical adapters, IP and MAC addresses, as well as connected networks and domains |
 | **[DeviceProcessEvents](advanced-hunting-deviceprocessevents-table.md)** | Process creation and related events |
 | **[DeviceRegistryEvents](advanced-hunting-deviceregistryevents-table.md)** | Creation and modification of registry entries |
+| **[DeviceTvmBrowserExtensions](advanced-hunting-devicetvmbrowserextensions-table.md)** (Preview)| Browser extension installations found on devices from Microsoft Defender Vulnerability Management |
+| **[DeviceTvmBrowserExtensionsKB](advanced-hunting-devicetvmbrowserextensionskb-table.md)** (Preview)| Browser extension details and permission information used in the Microsoft Defender Vulnerability Management browser extensions page|
+| **[DeviceTvmCertificateInfo](advanced-hunting-devicetvmcertificateinfo-table.md)** (Preview)| Certificate information for devices in the organization from Microsoft Defender Vulnerability Management |
 | **[DeviceTvmHardwareFirmware](advanced-hunting-devicetvmhardwarefirmware-table.md)** | Hardware and firmware information of devices as checked by Defender Vulnerability Management |
 | **[DeviceTvmInfoGathering](advanced-hunting-devicetvminfogathering-table.md)** | Defender Vulnerability Management assessment events including configuration and attack surface area states |
 | **[DeviceTvmInfoGatheringKB](advanced-hunting-devicetvminfogatheringkb-table.md)** | Metadata for assessment events collected in the `DeviceTvmInfogathering` table|

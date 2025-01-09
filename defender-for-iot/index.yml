@@ -51,6 +51,8 @@ landingContent:
         links: 
         - text: Set up sites
           url: set-up-sites.md
+        - text: Enterprise IoT
+          url: enterprise-iot.md
 
 # Card
   - title: How-to

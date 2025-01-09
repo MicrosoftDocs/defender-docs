@@ -1,0 +1,84 @@
+{
+  "redirections": [
+    {
+      "source_path": "defender-endpoint/configure-microsoft-threat-experts.md",
+      "redirect_url": "/defender-xdr/defender-experts-for-hunting",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
+      "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/preview.md",
+      "redirect_url": "/defender-xdr/preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/preview-settings.md",
+      "redirect_url": "/defender-xdr/preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/evaluation-lab.md",
+      "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/collect-diagnostic-data-update-compliance.md",
+      "redirect_url": "/defender-endpoint/collect-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/attack-simulations.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-demonstrations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/mssp-support.md",
+      "redirect_url": "/defender-endpoint/configure-mssp-support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/evaluate-mde.md",
+      "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/defender-endpoint-antivirus-exclusions.md",
+      "redirect_url": "/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/defender-endpoint-demonstration-amsi.md",
+      "redirect_url": "/defender-endpoint/mde-demonstration-amsi",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/manage-indicators.md",
+      "redirect_url": "/defender-endpoint/indicators-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/techniques-device-timeline.md",
+      "redirect_url": "/defender-endpoint/device-timeline-event-flag#techniques-in-the-device-timeline",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/submissions-suppressions-exclusions.md",
+      "redirect_url": "/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/linux-support-rhel.md",
+      "redirect_url": "/defender-endpoint/comprehensive-guidance-on-linux-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/pilot-deploy-defender-endpoint.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
+      "redirect_document_id": false
+    }
+  ]
+}

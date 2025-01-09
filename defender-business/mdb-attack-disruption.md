@@ -1,19 +1,19 @@
 ---
-title: Automatic attack disruption in Microsoft Defender for Business           
-description: Learn about automatic attack disruption in Microsoft Defender for Business            
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+title: Automatic attack disruption in Microsoft Defender for Business
+description: Learn about automatic attack disruption in Microsoft Defender for Business
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 ms.date: 06/07/2024
 ms.topic: conceptual
 ms.service: defender-business
-ms.localizationpriority: medium 
-ms.collection: 
+ms.localizationpriority: medium
+ms.collection:
 - m365-security
 - tier1
-ms.reviewer: efratka 
+ms.reviewer: efratka
 search.appverid: MET150
-f1.keywords: NOCSH 
+f1.keywords: NOCSH
 audience: Admin
 ---
 
@@ -29,11 +29,11 @@ Automatic attack disruption is designed to:
 
 - Contain advanced attacks that are in progress;
 - Limit the impact and progression of attacks on your business assets (like devices); and
-- Provide more time for your IT/security team to remediate an attack fully. 
+- Provide more time for your IT/security team to remediate an attack fully.
 
 Automatic attack disruption uses insights from Microsoft security researchers and advanced AI models to counteract the complexities of advanced attacks. It limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity. See some examples at the [Microsoft Security Blog](https://aka.ms/ContainUserSecBlog).
 
-With automatic attack disruption, as soon as a human-operated attack is detected on a device, steps are taken immediately to contain the affected device and user accounts on the device. An incident is created in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). There, your IT/security team can view details about the risk and containment status of compromised assets during and after the process. An **Incident** page provides details about the attack and up-to-date status of affected assets. 
+With automatic attack disruption, as soon as a human-operated attack is detected on a device, steps are taken immediately to contain the affected device and user accounts on the device. An incident is created in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). There, your IT/security team can view details about the risk and containment status of compromised assets during and after the process. An **Incident** page provides details about the attack and up-to-date status of affected assets.
 
 Automated response actions include:
 
@@ -41,6 +41,7 @@ Automated response actions include:
 - Containing a user account by disconnecting current user connections at the device level
 
 > [!IMPORTANT]
+>
 > - To view information about a detected advanced attack, you must have an appropriate role, such as Security Reader or Security Administrator assigned.
 > - To take remediation actions, release a contained device/user, or re-enable a user account, you must have the Security Administrator role assigned.
 > - See [Security roles and permissions in Defender for Business](mdb-roles-permissions.md).
@@ -62,7 +63,7 @@ Automated response actions include:
 
 Disrupted incidents include a tag for `Attack Disruption` and the specific threat type identified (such as ransomware). If your IT/security team receives [incident email notifications](mdb-email-notifications.md), these tags also appear in the emails.
 
-When an incident is disrupted, highlighted text appears below the incident title. Contained devices or user accounts are listed with a label that indicates their status. 
+When an incident is disrupted, highlighted text appears below the incident title. Contained devices or user accounts are listed with a label that indicates their status.
 
 ## Track attack disruption actions in the Action center
 
@@ -78,6 +79,6 @@ For more information, see [Review remediation actions in the Action center](mdb-
 
 ## How to get automatic attack disruption
 
-Automatic attack disruption is built into Defender for Business; you don't have to explicitly turn on these capabilities. It's important to [onboard all your organization's devices](mdb-onboard-devices.md) (computers, phones, and tablets) to Defender for Business so that they're protected as soon as possible. 
+Automatic attack disruption is built into Defender for Business; you don't have to explicitly turn on these capabilities. It's important to [onboard all your organization's devices](mdb-onboard-devices.md) (computers, phones, and tablets) to Defender for Business so that they're protected as soon as possible.
 
-Additionally, sign up to receive [preview features](/defender-xdr/preview) so that you get the latest and greatest capabilities as soon as they're available. 
+Additionally, sign up to receive [preview features](/defender-xdr/preview) so that you get the latest and greatest capabilities as soon as they're available.

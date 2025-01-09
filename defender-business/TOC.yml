@@ -1,6 +1,6 @@
 - name: Microsoft Defender for Business
   href: index.yml
-  items: 
+  items:
   - name: Overview
     items:
     - name: What is Microsoft Defender for Business?
@@ -42,7 +42,7 @@
     - name: Step 5 - Onboard devices
       href: mdb-onboard-devices.md
     - name: Step 6 - Set up and review your security policies
-      items: 
+      items:
       - name: Security policies and settings
         href: mdb-configure-security-settings.md
       - name: Next-generation protection
@@ -60,7 +60,7 @@
       - name: Change your endpoint security subscription
         href: mdb-manage-subscription.md
   - name: Monitor or manage devices
-    items: 
+    items:
     - name: Get an overview of mobile threat defense
       href: mdb-mtd.md
     - name: View and manage devices
@@ -70,7 +70,7 @@
     - name: Offboard devices
       href: mdb-offboard-devices.md
   - name: View and respond to detected threats
-    items: 
+    items:
     - name: Use your vulnerability management dashboard
       href: mdb-view-tvm-dashboard.md
     - name: View and manage incidents
@@ -92,7 +92,7 @@
   - name: Maintain your environment
     href: /Microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2defender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
   - name: Reference information
-    items: 
+    items:
     - name: Security, privacy, and compliance
       href: mdb-security-privacy-compliance.md
     - name: Top 10 ways to secure your business data

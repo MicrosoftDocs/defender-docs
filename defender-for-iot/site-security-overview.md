@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for IoT in the Defender portal - Site security 
-description: Read this article to learn about site security in Microsoft Defender for IoT in the Defender portal.
+title: Site security features and capabilities in Microsoft Defender for IoT in the Defender portal 
+description: Read this article to learn about site security features, capabilities, scenarios and users of Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein

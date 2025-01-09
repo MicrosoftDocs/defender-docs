@@ -3,8 +3,8 @@ title: Troubleshoot SIEM tool integration issues in Microsoft Defender for Endpo
 description: Troubleshoot issues that might arise when using SIEM tools with Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

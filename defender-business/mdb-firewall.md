@@ -2,17 +2,17 @@
 title: Firewall in Microsoft Defender for Business
 description: Learn about Windows Defender Firewall settings in Defender for Business. Firewall can help prevent unwanted network traffic from flowing to your company devices.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 06/19/2024
 ms.reviewer: nehabha
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - tier1
@@ -45,11 +45,11 @@ Depending on whether you're using the Microsoft Defender portal or Intune to man
 4. Expand **Firewall** to view your list of policies.
 
 5. Select a policy to view the details. To make changes or to learn more about policy settings, see the following articles:
-   
+
    - [View or edit device policies](mdb-view-edit-create-policies.md)
    - [Firewall settings](mdb-firewall.md)
    - [Manage your custom rules for firewall policies](mdb-firewall.md)
-   
+
 ### Use the Intune admin center to view or edit firewall policies
 
 1. Go to [https://intune.microsoft.com](https://intune.microsoft.com) and sign in. You're now in the Intune admin center.
@@ -72,7 +72,7 @@ You can use custom rules to define exceptions for your firewall policies. That i
 
 4. On the **Configuration settings** step, review the settings. Make any needed changes to **Domain network**, **Public network**, and **Private network**.
 
-5. To create a custom rule, follow these steps: 
+5. To create a custom rule, follow these steps:
 
    1. Under **Custom rules**, choose **+ Add rule**. (You can have up to 150 custom rules.)
 
@@ -84,7 +84,7 @@ You can use custom rules to define exceptions for your firewall policies. That i
 
    5. In the **Value** box, specify an appropriate value. Depending on what you selected in step 6d, you might specify an IP address, an IP address range, or an application file path. (See [Firewall settings](mdb-firewall.md).)
 
-   6. On the **Create new rule** flyout, select **Create rule**. 
+   6. On the **Create new rule** flyout, select **Create rule**.
 
 6. On the **Configuration settings** screen, choose **Next**.
 
@@ -107,14 +107,14 @@ You can use custom rules to define exceptions for your firewall policies. That i
    1. On the **Edit rule** flyout, review and edit the rule's name and description.
 
    2. Review and if necessary, edit the rule's profile. (Your options include **Domain network**, **Public network**, or **Private network**.)
-   
+
    3. In the **Remote address type** list, select either **IP** or **Application file path**.
-   
+
    4. In the **Value** box, specify an appropriate value. Depending on what you selected in step 6c, you might specify an IP address, an IP address range, or an application file path. (See [Firewall settings](mdb-firewall.md).)
-   
+
    5. Set **Enable rule** to **On** to make the rule active. Or, to disable the rule, set the switch to **Off**.
-   
-   6. On the **Edit rule** flyout, select **Update rule**. 
+
+   6. On the **Edit rule** flyout, select **Update rule**.
 
 7. On the **Configuration settings** screen, choose **Next**.
 
@@ -132,7 +132,7 @@ You can use custom rules to define exceptions for your firewall policies. That i
 
 5. Select a rule, and then choose **Delete**. Its flyout opens.
 
-6. On the confirmation screen, choose **Delete**. 
+6. On the confirmation screen, choose **Delete**.
 
 ## Default firewall settings in Defender for Business
 
@@ -142,7 +142,7 @@ Defender for Business includes default firewall policies and settings to help pr
 - When devices are connected to your company's network, all inbound connections are blocked by default.
 - When devices are connected to a public network or a private network, all inbound connections are blocked by default.
 
-In Defender for Business, you can define exceptions to block or allow incoming connections. You define these exceptions by creating [custom rules](#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business). 
+In Defender for Business, you can define exceptions to block or allow incoming connections. You define these exceptions by creating [custom rules](#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business).
 
 ## Firewall settings you can configure in Defender for Business
 

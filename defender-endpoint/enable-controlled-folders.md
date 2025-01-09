@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.topic: conceptual
 ms.localizationpriority: medium
 audience: ITPro
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.reviewer: sugamar; moeghasemi
 manager: deniseb
 ms.subservice: asr

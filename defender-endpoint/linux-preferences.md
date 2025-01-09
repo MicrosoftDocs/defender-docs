@@ -1,12 +1,12 @@
 ---
 title: Set preferences for Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr
+ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 07/23/2024
+ms.date: 10/14/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -22,12 +22,10 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**Applies to**:
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
@@ -63,12 +61,14 @@ Specifies the enforcement preference of antivirus engine. There are three values
 - Real-time (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 - On-demand (`on_demand`): Files are scanned only on demand. In this:
   - Real-time protection is turned off.
-- Passive (`passive`): Runs the antivirus engine in passive mode. In this:
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
+- Passive (`passive`): Runs the antivirus engine in passive mode. In this case, all of the following apply:
   - Real-time protection is turned off: Threats are not remediated by Microsoft Defender Antivirus.
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
-  - Automatic threat remediation is turned off: No files will be moved and security admin is expected to take required action.
-  - Security intelligence updates are turned on: Alerts will be available on security admins tenant.
-
+  - Automatic threat remediation is turned off: No files are moved and your security administrator is expected to take required action.
+  - Security intelligence updates are turned on: Alerts are available in the security administrator's tenant.
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
+    
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|enforcementLevel|Enforcement Level|
@@ -79,7 +79,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 > Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
-#### Enable/disable behavior-monitoring 
+#### Enable/disable behavior monitoring 
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
 
@@ -136,9 +136,6 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 #### Exclusion merge policy
 
-> [!NOTE]
-> ExclusionSetting - you can use
-
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
 |Description|JSON Value|Defender Portal Value|
@@ -149,6 +146,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
+> Can also configure exclusions under [exclusionSettings](#exclusion-setting-preferences)
 
 #### Scan exclusions
 
@@ -215,15 +213,15 @@ Specifies a process for which all file activity is excluded from scanning. The p
 |**Possible values**|any string|any string|
 |**Comments**|Applicable only if *$type* is *excludedFileName*|Accessed in *Configure instance* popup|
 
-#### Muting Non Exec mounts 
+#### Muting non-exec mounts 
  
 Specifies the behavior of RTP on mount point marked as noexec. There are two values for setting are:
 
 - Unmuted (`unmute`): The default value, all mount points are scanned as part of RTP.
 - Muted (`mute`): Mount points marked as noexec aren't scanned as part of RTP, these mount point can be created for:
-  - Database files on Database servers for keeping data base files.
+  - Database files on Database servers for keeping database files.
   - File server can keep data files mountpoints with noexec option.
-  - Back up can keep data files mountpoints with noexec option.
+  - Backup can keep data files mountpoints with noexec option.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -234,7 +232,7 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.85.27` or later.
 
-#### Unmonitor Filesystems
+#### Unmonitor filesystems
 
 Configure filesystems to be unmonitored/excluded from real-time protection (RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Filesystems can only be monitored after successful validation. These configured unmonitored filesystems are still scanned by Quick, Full, and custom scans in Microsoft Defender Antivirus.
 
@@ -266,7 +264,7 @@ To remove both NFS and Fuse from unmonitored list of filesystems, do the followi
 ```
 
 > [!NOTE]
-> Here;s the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
+> Here's the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
 >
 > If any monitored filesystem needs to be added to the list of unmonitored filesystems,then it needs to be evaluated and enabled by Microsoft via cloud config. Following which customers can update managed_mdatp.json to unmonitor that filesystem.
 
@@ -380,12 +378,14 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.04.76` or later.
 
-### Exclusion Setting preferences [**PREVIEW**]
+### Exclusion setting preferences
+
+**Exlusion setting preferences are currently in preview**.
 
 > [!NOTE] 
-> Available in Defender for Endpoint version `101.23092.0012` or later.
+> Global exclusions are currently in public preview, and are available in Defender for Endpoint beginning with version `101.23092.0012` or later in the Insiders Slow and Production rings.
 
-The *exclusionSettings* section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
+The `exclusionSettings` section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
 
 |Description|JSON Value|
 |---|---|
@@ -444,6 +444,7 @@ If nothing is specified in for an exclusion under *exclusionSettings* in managed
 
 > [!NOTE]
 > Previously applied exclusions using (`mdatp_managed.json`) or by CLI will remain unaffected. The scope for those exclusions will be (`epp`) since they were added under (`antivirusEngine`).
+
 ##### Path to excluded content
 
 Used to exclude content from the scan by full file path.
@@ -457,7 +458,10 @@ Used to exclude content from the scan by full file path.
 
 ##### Path type (file / directory)
 
-Indicates if the *path* property refers to a file or directory.
+Indicates if the *path* property refers to a file or directory. 
+
+> [!NOTE]
+> File path must already exist if adding file exclusion with global scope.
 
 |Description|JSON Value|
 |---|---|
@@ -622,6 +626,7 @@ Determines whether security intelligence updates are installed automatically:
 |**Data type**|Boolean|Drop down|
 |**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
+Depending on the enforcement level, the automatic security intelligence updates are installed differently. In RTP mode, updates are installed periodically. In Passive/ On-Demand mode updates are installed before every scan.
 
 ### Advanced optional features
 
@@ -856,40 +861,15 @@ The following configuration profile contains entries for all settings described 
 
 ```JSON
 {
-   "antivirusEngine":{
-      "enforcementLevel":"real_time",
-      "behaviorMonitoring": "enabled",
+"antivirusEngine":{
+      "enforcementLevel":"passive",
+      "behaviorMonitoring": "disabled",
       "scanAfterDefinitionUpdate":true,
       "scanArchives":true,
       "scanHistoryMaximumItems": 10000,
       "scanResultsRetentionDays": 90,
       "maximumOnDemandScanThreads":2,
       "exclusionsMergePolicy":"merge",
-      "exclusions":[
-         {
-            "$type":"excludedPath",
-            "isDirectory":false,
-            "path":"/var/log/system.log<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedPath",
-            "isDirectory":true,
-            "path":"/run<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedPath",
-            "isDirectory":true,
-            "path":"/home/*/git<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedFileExtension",
-            "extension":".pdf<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedFileName",
-            "name":"cat<EXAMPLE DO NOT USE>"
-         }
-      ],
       "allowedThreats":[
          "<EXAMPLE DO NOT USE>EICAR-Test-File (not a virus)"
       ],
@@ -899,6 +879,7 @@ The following configuration profile contains entries for all settings described 
       ],
       "nonExecMountPolicy":"unmute",
       "unmonitoredFilesystems": ["nfs,fuse"],
+      "enableFileHashComputation": false,
       "threatTypeSettingsMergePolicy":"merge",
       "threatTypeSettings":[
          {
@@ -909,14 +890,49 @@ The following configuration profile contains entries for all settings described 
             "key":"archive_bomb",
             "value":"audit"
          }
-      ]
+      ],
+      "scanFileModifyPermissions":false,
+      "scanFileModifyOwnership":false,
+      "scanNetworkSocketEvent":false,
+      "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
+      "offlineDefintionUpdateFallbackToCloud":false,
+      "offlineDefinitionUpdate":"disabled"
    },
    "cloudService":{
       "enabled":true,
       "diagnosticLevel":"optional",
       "automaticSampleSubmissionConsent":"safe",
       "automaticDefinitionUpdateEnabled":true,
-      "proxy": "<EXAMPLE DO NOT USE> http://proxy.server:port/"
+      "proxy": "<EXAMPLE DO NOT USE> http://proxy.server:port/",
+      "definitionUpdatesInterval":28800
+   },
+   "features":{
+      "moduleLoad":"disabled",
+      "supplementarySensorConfigurations":{
+        "enableFilePermissionEvents":"disabled",
+        "enableFileOwnershipEvents":"disabled",
+        "enableRawSocketEvent":"disabled",
+        "enableBootLoaderCalls":"disabled",
+        "enableProcessCalls":"disabled",
+        "enablePseudofsCalls":"diabled",
+        "enableEbpfModuleLoadEvents":"disabled",
+        "sendLowfiEvents":"disabled"
+      },
+      "ebpfSupplementaryEventProvider":"enabled",
+      "offlineDefinitionUpdateVerifySig": "disabled"
+   },
+   "networkProtection":{
+      "enforcementLevel":"disabled",
+      "disableIcmpInspection":true
+   },
+   "edr":{
+      "groupIds":"GroupIdExample",
+      "tags": [
+         {
+         "key": "GROUP",
+         "value": "Tag"
+         }
+       ]
    },
 "exclusionSettings":{
   "exclusions":[
@@ -992,8 +1008,8 @@ When you run the `mdatp health` command for the first time, the value for the ta
    }
    ```
 
-> [!NOTE]
-> Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
+   > [!NOTE]
+   > Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
  
 ## Configuration profile validation
 
@@ -1023,6 +1039,6 @@ To verify that your /etc/opt/microsoft/mdatp/managed/mdatp_managed.json is worki
 
 ## Configuration profile deployment
 
-Once you've built the configuration profile for your enterprise, you can deploy it through the management tool that your enterprise is using. Defender for Endpoint on Linux reads the managed configuration from the `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json` file.
+Once you've built the configuration profile for your enterprise, you can deploy it through the management tool that your enterprise is using. Defender for Endpoint on Linux reads the managed configuration from `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

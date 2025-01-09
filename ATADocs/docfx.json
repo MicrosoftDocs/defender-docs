@@ -1,0 +1,56 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "Understand/**",
+          "DeployUse/**",
+          "PlanDesign/**",
+          "Troubleshoot/**",
+          "**/Token/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/images/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp",
+          "**/*.html"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "_themes/**",
+          "Understand/**",
+          "DeployUse/**",
+          "PlanDesign/**",
+          "Troubleshoot/**"
+        ]
+      }
+    ],
+    "dest": "ATADocs",
+    "template": "docs.html",
+    "globalMetadata": {
+      "feedback_system": "Standard",
+      "feedback_github_repo": "MicrosoftDocs/atadocs",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection",
+      "layout": "Conceptual",
+      "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["ATA"],
+      "contributors_to_exclude": [
+        "beccarobins"
+      ]
+    },
+    "markdownEngineName": "markdig"
+  }
+}

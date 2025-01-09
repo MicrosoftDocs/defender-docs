@@ -79,7 +79,7 @@ The following communication channels are available for issues and new features i
 
 - If you're affected by a Service Level Event, you should see a communication alert (typically accompanied by a bell icon) in the Microsoft 365 admin center at <https://admin.microsoft.com>. We recommend that you read and act on any items as appropriate.
 - The Microsoft 365 Message center at <https://admin.microsoft.com/Adminportal/Home?#/MessageCenter> also contains information about new and updated features. For more information, see [Track new and changed features in the Microsoft 365 Message center](/microsoft-365/admin/manage/message-center).
-- The [Microsoft 365 for business roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) is a good resource for finding out information about upcoming new features.
+- The [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=exchange%2Conline%2Cprotection) is a good resource for finding out information about upcoming new features.
 - We also posting blog articles about new features to the [Microsoft 365 Blogs](https://www.microsoft.com/microsoft-365/blog/) website.
 
 ### EOP features

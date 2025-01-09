@@ -36,10 +36,10 @@ This article describes how admins can manage entries for files in the Microsoft 
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- You specify files by using the SHA256 hash value of the file. To find the SHA256 hash value of a file in Windows, run the following command in a Command Prompt:
+- You specify files by using the SHA256 hash value of the file. To find the SHA256 hash value of a file in Windows, run the following command in Powershell:
 
-  ```DOS
-  certutil.exe -hashfile "<Path>\<Filename>" SHA256
+  ```powershell
+  Get-FileHash -Path "<Path>\<Filename>" -Algorithm SHA256
   ```
 
   An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3a`. Perceptual hash (pHash) values aren't supported.
@@ -58,7 +58,7 @@ This article describes how admins can manage entries for files in the Microsoft 
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Add and remove entries from the Tenant Allow/Block List_: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
-      - **Security Operator** (Tenant AllowBlockList Manager).
+      - **Security Operator** (Tenant AllowBlockList Manager role): This permission works only when assigned directly in the **Exchange admin center** at <https://admin.exchange.microsoft.com> \> **Roles** \> **Admin Roles**.
     - _Read-only access to the Tenant Allow/Block List_: Membership in one of the following role groups:
       - **Global Reader**
       - **Security Reader**
@@ -283,3 +283,4 @@ For detailed syntax and parameter information, see [Remove-TenantAllowBlockListI
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block emails in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
 - [Allow or block URLs in the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md)
+- [Allow or block IPv6 addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)

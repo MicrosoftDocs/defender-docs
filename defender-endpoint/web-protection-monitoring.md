@@ -3,8 +3,8 @@ title: Monitoring web browsing security in Microsoft Defender for Endpoint
 description: Use web protection in Microsoft Defender for Endpoint to monitor web browsing security
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -47,7 +47,7 @@ Web protection categorizes malicious and unwanted websites as:
 
 - **Phishing** - websites that contain spoofed web forms and other phishing mechanisms designed to trick users into divulging credentials and other sensitive information
 - **Malicious** - websites that host malware and exploit code
-- **Custom indicator** - websites whose URLs or domains you've added to your [custom indicator list](manage-indicators.md) for blocking
+- **Custom indicator** - websites whose URLs or domains you've added to your [custom indicator list](indicators-overview.md) for blocking
 
 ## View the domain list
 

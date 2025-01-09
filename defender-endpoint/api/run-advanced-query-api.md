@@ -3,8 +3,8 @@ title: Advanced Hunting API
 ms.reviewer:
 description: Learn to use the advanced hunting API to run advanced queries on Microsoft Defender for Endpoint. Find out about limitations and see an example.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

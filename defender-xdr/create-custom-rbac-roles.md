@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 06/13/2024
+ms.date: 10/31/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -29,6 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Security Exposure Management](/security-exposure-management/)
 
 ## Create a custom role
 
@@ -40,7 +41,7 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. In the navigation pane, select **Permissions**.
+2. In the navigation pane, go to **System > Permissions**.
 
 3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
 
@@ -69,16 +70,16 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 
 8. Once you have selected your permissions, select **Apply** and then **Next** to assign users and data sources.
 
-9. Select **Add assignments** and Enter the Assignment name.
+9. Select **Add assignments** and add the Assignment name.
 
 10. Under **data sources**, choose if the assigned users will have the selected permissions across all the available products, or only for specific data sources:
 
-     :::image type="content" source="/defender/media/defender/m365-defender-rbac-assignments.png" alt-text="Screenshot of the assignments screen" lightbox="/defender/media/defender/m365-defender-rbac-assignments.png":::
+     :::image type="content" source="/defender/media/defender/defender-rbac-add-assignments-small.png" alt-text="Screenshot of the assignments screen" lightbox="/defender/media/defender/defender-rbac-add-assignments.png":::
 
     If a user selects all read-only permissions for a single data source, for example, Microsoft Defender for Endpoint, they will not be able to read alerts for Microsoft Defender for Office 365 or Microsoft Defender for Identity.
 
     > [!NOTE]
-    > By selecting **Choose all data sources** all supported data sources within Microsoft Defender XDR Unified RBAC and any future data sources that are added are automatically assigned to this assignment.
+    > By selecting **Include future data sources automatically** all supported data sources within Microsoft Defender XDR Unified RBAC and any future data sources that are added are automatically assigned to this assignment.
 
 11. In **Assigned users and groups** choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
 

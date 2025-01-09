@@ -3,8 +3,8 @@ title: Advanced Hunting with PowerShell API Basics
 ms.reviewer: 
 description: Learn the basics of querying the Microsoft Defender for Endpoint API, using PowerShell.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

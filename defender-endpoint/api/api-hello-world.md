@@ -3,8 +3,8 @@ title: Hello World for Microsoft Defender for Endpoint API
 ms.reviewer:
 description: Create a practice 'Hello world'-style API call to the Microsoft Defender for Endpoint API.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/24/2024
+ms.date: 08/29/2024
 ---
 
 # Microsoft Defender for Endpoint API - Hello World
@@ -47,7 +47,7 @@ It only takes 5 minutes done in two steps:
 
 ### Do I need a permission to connect?
 
-For the Application registration stage, you must have the **Global administrator** role assigned in your Microsoft Entra tenant.
+For the Application registration stage, you must have an appropriate role assigned in your Microsoft Entra tenant. For more details about roles, see [Permission options](../user-roles.md#permission-options).
 
 <a name='step-1---create-an-app-in-azure-active-directory'></a>
 

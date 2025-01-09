@@ -6,15 +6,18 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence
 ms.topic: tutorial
-ms.date: 08/02/2022
-ms.custom: template-tutorial
+ms.date: 11/18/2024
+ms.custom: 
+- template-overview
+- cx-ti
+- cx-mdti
 ---
 
 
 # Tutorial: Gathering threat intelligence and infrastructure chaining
 
->[!IMPORTANT]
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+>[!IMPORTANT] 
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 
 This tutorial walks you through how to perform several types of indicator searches and gather threat and adversary intelligence using Microsoft Defender Threat Intelligence (Defender TI) in the Microsoft Defender portal.

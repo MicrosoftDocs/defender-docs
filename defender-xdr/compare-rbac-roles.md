@@ -2,8 +2,8 @@
 title: Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
 description: Compare permissions and access to Microsoft Defender XDR Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom:
 ms.topic: reference
-ms.date: 06/27/2024
+ms.date: 11/17/2024
 ms.reviewer:
 search.appverid: met150
 ---
@@ -33,6 +33,7 @@ This article describes how existing roles and permissions in Microsoft Defender 
 - [Microsoft Defender for Office 365 Plan 2](https://go.microsoft.com/fwlink/p/?LinkID=2158212)
 - [Microsoft Defender Vulnerability Management](https://go.microsoft.com/fwlink/p/?linkid=2229011)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -123,6 +124,21 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 > [!NOTE]
 > Defender for Identity experiences will also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).
 > Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in the Microsoft Defender for Cloud Apps portal, these permissions do not carry over. You need to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
+
+<a name='map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-365-defender-unified-rbac-permissions'></a>
+
+### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions
+
+> [!IMPORTANT]
+> App Governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and does not support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.</br></br>
+> Once you activate the Defender for Cloud Apps integration with Microsoft Defender XDR Unified RBAC, the following roles, configured through [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in the Defender for Cloud Apps portal, will no longer be supported: **App/instance admin**, **User group admin**, **Cloud Discovery global admin**, and **Cloud Discovery report admin**.
+
+|Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
+|---|-----|
+|Local Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Security operations \ Security data \ Response (manage)</br>Security operations \ Posture management \ Secure Score (read)</br>Security operations \ Posture management \ Secure Score (manage)</br>Authorization and settings \ Authorization (all permissions) </br>Authorization and settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (all permissions)|
+|Local Security operator|Security operations \ Security data \ Security data basics (read) </br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security setting (all permissions) </br>Authorization and settings \ System setting (read)|
+|Local Security reader|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
+|Local Compliance administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</brAuthorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
 
 <a name='azure-active-directory-global-roles-access'></a>
 
