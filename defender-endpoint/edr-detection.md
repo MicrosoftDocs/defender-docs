@@ -2,8 +2,8 @@
 title: EDR detection test for verifying device's onboarding and reporting service
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 01/15/2024
+ms.date: 09/04/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -33,7 +33,7 @@ ms.date: 01/15/2024
 - macOS
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Endpoint on Linux
-- Microsoft Defender for Endpoint on macOS
+<!---- Microsoft Defender for Endpoint on macOS--->
 
 Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
@@ -43,40 +43,42 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 1. Open a Command Prompt window
 
-2. At the prompt, copy and run the command below. The Command Prompt window will close automatically.
+2. At the prompt, copy and run the following command. The Command Prompt window closes automatically.
 
+   ```powershell
+   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
+   ```
 
-```powershell
-powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
-```
-
-3. If successful, the detection test will be marked as completed and a new alert will appear in few minutes.
+3. If successful, the detection test is marked as completed and a new alert appears within a few minutes.
 
 ### Linux
 
-1. Download [script file](https://aka.ms/LinuxDIY) to an onboarded Linux server 
+1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server 
 
 
 ```bash
-curl -o ~/Downloads/MDE Linux DIY.zip https://aka.ms/LinuxDIY
+curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
 ```
 
-1. Extract the zip 
+2. Extract the zip 
 
 ```bash
-unzip ~/Downloads/MDE Linux DIY.zip
+unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
 ```
 
-1. And run the following command: 
+3. And run the following command to give the script executable permission: 
 
 ```bash
-./mde_linux_edr_diy.sh
+chmod +x ./mde_linux_edr_diy.sh
 ```
 
-After a few minutes, a detection should be raised in Microsoft Defender XDR.
+4. Run the following command to execute the script:
+```bash
+ ./mde_linux_edr_diy.sh
+```
 
-3. Look at the alert details, machine timeline, and perform your typical investigation steps.
-
+5. After a few minutes, a detection should be raised in Microsoft Defender XDR. Look at the alert details, machine timeline, and perform your typical investigation steps.
+ 
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
@@ -129,12 +131,15 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
     Look at the alert details and the device timeline, and perform the regular investigation steps.
 
- Next steps that you can consider performing are to add AV exclusions as needed for application compatibility or performance:
+
+## Next steps
+
+If you're experiencing issues with application compatibility or performance, you might consider adding exclusions. See the following articles for more information:
 
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Manage suppression rules](manage-suppression-rules.md)
-- [Create indicators of compromise (IoC)](manage-indicators.md)
+- [Create indicators of compromise (IoC)](indicators-overview.md)
 - [Create and manage custom detections rules](/defender-xdr/custom-detection-rules)
 
-Read through [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).
+Also, see the [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).

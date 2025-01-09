@@ -5,10 +5,10 @@ metadata:
   ms.service: defender-endpoint
   ms.localizationpriority: medium
   ms.topic: faq
-  author: siosulli
-  ms.author: siosulli
+  author: emmwalshh
+  ms.author: ewalsh
   ms.custom: nextgen
-  ms.reviewer:
+  ms.reviewer: yongrhee
   manager: deniseb
   ms.subservice: ngp
   ms.collection: 
@@ -27,7 +27,7 @@ sections:
       - question: |
           Tamper protection is preventing my security team from managing a device. What should we do?
         answer: |
-         If tamper protection prevents your IT or security team from performing a necessary task on a device, consider using [troubleshooting mode](enable-troubleshooting-mode.md). After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+         If your IT or security team is prevented from performing a necessary task on a device, consider using [troubleshooting mode](enable-troubleshooting-mode.md). After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
 
       - question: |
           Changes to Microsoft Defender Antivirus settings using Group Policy are ignored. Why is this happening, and what can we do about it?
@@ -45,7 +45,7 @@ sections:
         answer: |
           1. Ensure that all of the following requirements are met:
 
-             - Devices are running Windows Defender platform `4.18.2211.5` or later. (See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions).)
+             - Devices are running Windows Defender platform `4.18.2211.5` or later. (See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).)
 
              - `DisableLocalAdminMerge` is enabled. (See [DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp).)
 
@@ -57,7 +57,7 @@ sections:
 
              - If **ManagedDefenderProductType** has a value of `6`, then the device is managed by Intune only (*this value is required to protect Microsoft Defender Antivirus exclusions*).
 
-             - If **ManagedDefenderProductType** has a value of `7`, then the device is comanaged, such as by Intune and Configuration Manager (*this value indicates that exclusions aren't currently tamper protected*).
+             - If **ManagedDefenderProductType** has a value of `7`, then the device is co-managed, such as by Intune and Configuration Manager (*this value indicates that exclusions aren't currently tamper protected*).
 
           3. Confirm that tamper protection is deployed and that Microsoft Defender Antivirus exclusions are protected. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features` (or `HKLM\SOFTWARE\Microsoft\Windows Defender\Features`), and look for a `REG_DWORD` entry called **TPExclusions**.
 

@@ -8,7 +8,7 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 05/29/2024
 ms.subservice: macos
-manager: dansimp
+manager: deniseb
 ms.custom: partner-contribution
 ---
 

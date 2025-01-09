@@ -1,10 +1,10 @@
 ---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Group Policy           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Group Policy
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb 
-ms.date: 02/14/2024
+ms.date: 08/27/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -34,7 +34,7 @@ If you're using Group Policy to manage Defender for Endpoint settings, you can u
 
 :::image type="content" source="media/deploy-dc-gpo/enable-disable-rsac.png" alt-text="Screenshot of enable disable rsac." lightbox="media/deploy-dc-gpo/enable-disable-rsac.png":::
 
-1. On a device running Windows, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Features** \> **Device Control**.
+1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Features** > **Device Control**.
 
 2. In the **Device Control** window, select **Enabled**.
 
@@ -49,7 +49,7 @@ You can set default access such as, `Deny` or `Allow` for all device control fea
 
 For example, you can have either a `Deny` or an `Allow` policy for `RemovableMediaDevices`, but not for `CdRomDevices` or `WpdDevices`. If you set `Default Deny` through this policy, then Read/Write/Execute access to `CdRomDevices` or `WpdDevices` is blocked. If you only want to manage storage, make sure to create `Allow` policy for printers. Otherwise, default enforcement (Deny) is applied to printers, too.
 
-1. On a device running Windows, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Features** \> **Device Control** \> **Select Device Control Default Enforcement Policy**.
+1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Features** > **Device Control** > **Select Device Control Default Enforcement Policy**.
 
 2. In the **Select Device Control Default Enforcement Policy** window, select **Default Deny**.
 
@@ -59,9 +59,9 @@ For example, you can have either a `Deny` or an `Allow` policy for `RemovableMed
 
 To configure the device types that a device control policy is applied, follow these steps:
 
-1. On a computer running Windows, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Device Control** \> **Turn on device control for specific device types**.
+1. On a computer running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Turn on device control for specific device types**.
 
-2. In the **Turn on device control for specific types** window, specify the product family IDs, separate by a pipe (`|`). Product family IDs include `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, or `PrinterDevices`.
+1. In the **Turn on device control for specific types** window, specify the product family IDs, separate by a pipe (`|`). This setting must be a single string with no spaces or it will be parsed incorrectly by the device control engine causing unexpected behaviors. Product family IDs include `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, or `PrinterDevices`.
 
 ## Define groups
 
@@ -75,7 +75,7 @@ To configure the device types that a device control policy is applied, follow th
 
 4. Define the settings as follows:
 
-   1. On a device running Windows, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Device Control** \> **Define device control policy groups**.
+   1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Define device control policy groups**.
 
    2. In the **Define device control policy groups** window, specify the network share file path containing the XML groups data.
 
@@ -97,32 +97,14 @@ You can create different group types. Here's one group example XML file for any 
 
 4. Define the settings as follows:
 
-   1. On a device running Windows, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Device Control** \> **Define device control policy rules**.
+   1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Define device control policy rules**.
 
    2. In the **Define device control policy rules** window, select **Enabled**, and then specify the network share file path containing the XML rules data.
 
 > [!NOTE]
+> To capture evidence of files being copied or printed, use [Endpoint DLP.](/purview/dlp-copy-matched-items-get-started?tabs=purview-portal%2Cpurview)
+> [!NOTE]
 > Comments using XML comment notation `<!-- COMMENT -->` can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the first line of the XML file.
-
-## Set location for a copy of the file (evidence)
-
-:::image type="content" source="media/deploy-dc-gpo/set-loc-copy-file.png" alt-text="Screenshot of set location for a copy of the file." lightbox="media/deploy-dc-gpo/set-loc-copy-file.png":::
-
-If you want to have a copy of the file (evidence) having Write access, set right **Options** in your removable storage access policy rule in the XML file, and then specify the location where system can save the copy.
-
-1. On a device running Windows, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Device Control** \> **Define Device Control evidence data remote location**.
-
-2. In the **Define Device Control evidence data remote location** window, select **Enabled**, and then specify the local or network share folder path.
-
-## Retention period for local evidence cache
-
-:::image type="content" source="media/deploy-dc-gpo/retention-loc-cache.png" alt-text="Screenshot of retention period for local cache." lightbox="media/deploy-dc-gpo/retention-loc-cache.png":::
-
-If you want to change the default value of 60 days for persisting the local cache for file evidence, follow these steps:
-
-1. Go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Device Control** \> **Set the retention period for files in the local device control cache**.
-
-2. In the **Set the retention period for files in the local device control cache** window, select  **Enabled**, and then enter the number of days to retain the local cache (default 60).
 
 ## See also
 

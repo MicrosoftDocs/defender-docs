@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/08/2023
+ms.date: 06/25/2024
 ---
 
 # Manage automation file uploads
@@ -37,18 +37,23 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 > [!NOTE]
 > Microsoft securely stores the files submitted for a six-month period. Files are promptly deleted after six months.
 
-## Add file extension names and attachment extension names.
+## Add file extension names and attachment extension names
 
-1. Log in to [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+1. Sign in to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation uploads**.
 
 2. Toggle the content analysis setting between **On** and **Off**.
 
 3. Configure the following extension names and separate extension names with a comma:
+
    - **File extension names** - Suspicious files except email attachments will be submitted for additional inspection
 
 ## Related topics
 
 - [Manage automation folder exclusions](manage-automation-folder-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

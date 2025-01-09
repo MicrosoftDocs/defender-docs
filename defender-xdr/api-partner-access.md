@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/16/2024
+ms.date: 08/29/2024
 ---
 
 # Create an app with partner access to Microsoft Defender XDR APIs
@@ -66,7 +66,7 @@ The following steps with guide you how to create a multi-tenant Microsoft Entra 
 
 ## Create the multi-tenant app
 
-1. Sign in to [Azure](https://portal.azure.com) as a user with the **Global Administrator** role.
+1. Sign in to [Azure](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** > **App registrations** > **New registration**.
 
@@ -117,7 +117,7 @@ The following steps with guide you how to create a multi-tenant Microsoft Entra 
 
    Since your application interacts with Microsoft Defender XDR on behalf of your users, it needs be approved for every tenant on which you intend to use it.
 
-   A **Global Administrator** from your user's tenant needs to view the consent link and approve your application.
+   An administrator from your user's tenant needs to view the consent link and approve your application.
 
    Consent link is of the form:
 
@@ -127,7 +127,7 @@ The following steps with guide you how to create a multi-tenant Microsoft Entra 
 
    The digits `00000000-0000-0000-0000-000000000000` should be replaced with your Application ID.
 
-   After clicking on the consent link, sign in with the Global Administrator of the user's tenant and consent the application.
+   After clicking on the consent link, sign in as an administrator of the user's tenant and grant consent for the application.
 
    :::image type="content" source="/defender/media/app-consent-partner.png" alt-text="The consent application page in the Microsoft Defender portal" lightbox="/defender/media/app-consent-partner.png":::
 

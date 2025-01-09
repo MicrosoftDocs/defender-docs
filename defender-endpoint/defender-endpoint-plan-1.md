@@ -2,8 +2,8 @@
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
 search.appverid: MET150 
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb 
 audience: ITPro
 ms.topic: overview
@@ -190,7 +190,7 @@ Most organizations use various devices and operating systems. Defender for Endpo
 Servers require an additional license, such as:
 
 - **Microsoft Defender for Servers Plan 1 or Plan 2** (*recommended for enterprise customers*) as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering. To learn more. see [Overview of Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
-- **Microsoft Defender for Endpoint for Servers** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
+- **Microsoft Defender for Endpoint Server** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
 - **Microsoft Defender for Business servers** (*for small and medium-sized businesses who have [Microsoft Defender for Business](/defender-business/mdb-overview)*). To learn more, see [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers).
 
 See [Microsoft licensing and product terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).

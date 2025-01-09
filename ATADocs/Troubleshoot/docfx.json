@@ -1,0 +1,38 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/Token/**"
+        ]
+      }
+    ],
+    "resource": [
+        {
+          "files": [
+          "**/images/**", 
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp",
+          "**/*.html",
+          "**/*.css"
+          ],
+        "exclude": [
+          "**/obj/**",
+          "_themes/**"
+        ]
+      }
+    ],
+    "dest": "ATADocs/Troubleshoot",
+    "template": "docs.html",
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "/enterprise-mobility-security/toc.json"
+    }
+  }
+}

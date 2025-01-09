@@ -3,8 +3,9 @@ title: Microsoft Defender for Cloud Apps integration overview
 ms.reviewer:
 description: Microsoft Defender for Endpoint integrates with Defender for Cloud Apps by forwarding all cloud app networking activities.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.subservice: onboard
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -3,8 +3,8 @@ title: Get started with troubleshooting mode in Microsoft Defender for Endpoint
 description: Turn on the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 ms.reviewer: pricci
@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: conceptual
 ms.subservice: ngp
-ms.date: 09/25/2023
+ms.date: 08/27/2024
 ---
 
 # Get started with troubleshooting mode in Microsoft Defender for Endpoint 
@@ -62,7 +62,9 @@ During troubleshooting mode, you can use the PowerShell command `Set-MPPreferenc
 
   - Logs and snapshots are collected and are available for an admin to collect using the [Collect investigation package](respond-machine-alerts.md#collect-investigation-package-from-devices) feature on the device page. Microsoft doesn't remove this data from the device until an admin has collected it.
 
-- Admins can also review the changes in settings that take place during Troubleshooting mode in **Event Viewer** on the device page.
+- Admins can also review the changes in settings that take place during troubleshooting mode in **Event Viewer** on the device itself. 
+  - Open Event Viewer, and then expand **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender**, and then select **Operational**.
+  - Potential events can include events with IDs 5000, 5001, 5004, 5007 and others. See more details at [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml#event-id-5000).
 
 - Troubleshooting mode automatically turns off after reaching the expiration time (it lasts for 4 hours). After expiration, all policy-managed configurations become read-only again and revert back to how the device was configured before enabling troubleshooting mode.
 
@@ -81,19 +83,17 @@ During troubleshooting mode, you can use the PowerShell command `Set-MPPreferenc
 
 - A device running Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, or Windows Server 2022.
 
-  Semester/Redstone|OS version|Release
-  :---|:---|:---
-  21H2/SV1|>=22000.593|[KB5011563: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5019275)
-  20H1/20H2/21H1|>=19042.1620<br/> >=19041.1620<br/> >=19043.1620|[KB5011543: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011543)
-  Windows Server 2022|>=20348.617|[KB5011558: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011558)
-  Windows Server 2019 (RS5)|>=17763.2746|[KB5011551: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011551)
+     |Semester/Redstone|OS version|Release|
+     |:---|:---|:---|
+     | 21H2/SV1|>=22000.593|[KB5011563: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5019275) |
+     | 20H1/20H2/21H1|>=19042.1620<br/> >=19041.1620<br/> >=19043.1620|[KB5011543: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011543) |
+     | Windows Server 2022|>=20348.617|[KB5011558: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011558) |
+     | Windows Server 2019 (RS5)|>=17763.2746|[KB5011551: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011551) |
 
 - Troubleshooting mode is also available for machines running the modern, unified solution for Windows Server 2012 R2 and Windows Server 2016. Before you use troubleshooting mode, make sure all of the following components are up to date:
 
   - Sense version `10.8049.22439.1084` or later ([KB5005292: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292))
-
   - Microsoft Defender Antivirus - Platform: `4.18.2207.7` or later ([KB4052623: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623))
-
   - Microsoft Defender Antivirus - Engine: `1.1.19500.2` or later ([KB2267602: Microsoft Update Catalog](https://www.microsoft.com/en-us/wdsi/defenderupdates))
 
 - For troubleshooting mode to be applied, Microsoft Defender for Endpoint must be tenant-enrolled and active on the device.

@@ -2,8 +2,8 @@
 title: Asset rule management - Dynamic rules 
 description: You can use Microsoft Defender for Endpoint to configure dynamic tagging 
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 07/11/2023
+ms.date: 01/02/2025
 ---
 
 # Asset rule management - Dynamic rules for devices
@@ -37,39 +37,51 @@ Dynamic rules can help manage device context by assigning tags and device values
 
 A rule can be based on device name, domain, OS platform, internet facing status, onboarding status and manual device tags. You can select or create a tag that will be applied based on the conditions you've set.
 
+> [!IMPORTANT]
+> Use of [dynamic device tagging](/defender-xdr/configure-asset-rules) capabilities in Defender for Endpoint to tag devices with `MDE-Management` isn't currently supported with security settings management. Devices tagged through this capability don't successfully enroll. This is currently under investigation.
+
 The following steps guide you on how to create a new dynamic rule in Microsoft Defender XDR:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a user who can view and perform actions on all devices.
+
 2. In the navigation pane, select **Settings** \> **Microsoft Defender XDR** \> **Asset Rule Management**.
+
 3. Select **Create a new rule**.
+
 4. Enter a **Rule name** and **Description***.
+
 5. Select **Next** to choose the conditions you want to assign:
 
-:::image type="content" source="/defender/media/defender/rule-conditions.png" alt-text="Screenshot of the Rule conditions page" lightbox="/defender/media/defender/rule-conditions.png":::
+   :::image type="content" source="/defender/media/defender/rule-conditions.png" alt-text="Screenshot of the Rule conditions page" lightbox="/defender/media/defender/rule-conditions.png":::
 
 6. Select **Next** and choose the tag to apply to this rule.
 
-:::image type="content" source="/defender/media/defender/actions-to-apply.png" alt-text="Screenshot of the actions page" lightbox="/defender/media/defender/actions-to-apply.png":::
+   :::image type="content" source="/defender/media/defender/actions-to-apply.png" alt-text="Screenshot of the actions page" lightbox="/defender/media/defender/actions-to-apply.png":::
 
 7. Select **Next** to review and finish creating the rule and then select **Submit**.
 
->[!Note]
-> It may take up to 1 hour for changes to be reflected in the portal.
+   >[!NOTE]
+   > It may take up to 1 hour for changes to be reflected in the portal.
 
 ### Dynamic tags in the Device Inventory
 
 You can see the dynamic tags assigned in the Device Inventory view.
 
+> [!NOTE]
+> Dynamic tags are not supported by [security baseline assessments](/defender-vulnerability-management/tvm-security-baselines).
+
 To see tags on individual devices:
 
 1. Select **Devices** from the **Assets** navigation menu in the [Microsoft Defender portal](https://security.microsoft.com).
+
 2. In the **Device Inventory** page, select the device name that you want to view.
+
 3. Select **Manage tags**.
 
-:::image type="content" source="/defender/media/defender/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="/defender/media/defender/manage-machine-tags.png":::
+   :::image type="content" source="/defender/media/defender/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="/defender/media/defender/manage-machine-tags.png":::
 
 ### Updating rules
 
-Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete or turn off a rule, in the **Asset Rule Management** page select the rule and choose the action you wish to take:
+Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete or turn off a rule, in the **Asset Rule Management** page select the rule and choose an action.
 
 :::image type="content" source="/defender/media/defender/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="/defender/media/defender/update-rule.png":::

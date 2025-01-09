@@ -2,8 +2,8 @@
 title: Hardware and firmware assessment methods and properties per device
 description: Provides information about the Firmware and Hardware APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 11/24/2022
+ms.date: 01/08/2025
 ---
 
 # Export Hardware and firmware assessment inventory per device
@@ -153,22 +153,15 @@ Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability 
 GET /api/machines/HardwareFirmwareInventoryExport
 ```
 
-### 2.4 Parameters
-
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours).
-
-### 2.5 Properties (JSON response)
+### 2.4 Properties (JSON response)
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
 >
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> - The files are gzip compressed & in multiline Json format.
+> - The download URLs are only valid for 1 hour.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
@@ -176,24 +169,23 @@ Property (ID)|Data type|Description
 |GeneratedTime|DateTime|The time the export was generated.
 
 
+## 2.5 Examples
 
-## 2.6 Example
-
-### 2.6.1 Request example
+### 2.5.1 Request example
 
 ```http
 GET https://api.security.microsoft.com/api/machines/HardwareFirmwareInventoryExport
 ```
 
-### 2.6.2 Response example
+### 2.5.2 Response example
 
 ```json
     {
         "@odata.context":"https://api-df.securitycenter.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
     "exportFiles": [
-        "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=d7c7c745-195f-4223-9c7a-99fb420fd000/_RbacGroupId=39/part-00999-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=muN8Sq6rVN6bFMtR0u3S5Wzh3D9qNPgN5vpU7lWvULg%3D",
-        "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=d7c7c745-195f-4223-9c7a-99fb420fd000/_RbacGroupId=9/part-00968-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=%2BA0%2B4qOOBCS5E4UenJPbMdLM%2FkbXHnz%2F1pvfSOCq%2F2s%3D",
-        "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=d7c7c745-195f-4223-9c7a-99fb420fd000/_RbacGroupId=9/part-00969-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=sZUgYMwSr5zk6BZvS%2BoYIWlHJWk2oJ7YjiC8R26S1X4%3D"
+        "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=3837d1f5-0d51-40cb-a99d-69ebedc9dcc8/_RbacGroupId=39/part-00999-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=muN8Sq6rVN6bFMtR0u3S5Wzh3D9qNPgN5vpU7lWvULg%3D",
+        "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=3837d1f5-0d51-40cb-a99d-69ebedc9dcc8/_RbacGroupId=9/part-00968-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=%2BA0%2B4qOOBCS5E4UenJPbMdLM%2FkbXHnz%2F1pvfSOCq%2F2s%3D",
+        "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=3837d1f5-0d51-40cb-a99d-69ebedc9dcc8/_RbacGroupId=9/part-00969-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=sZUgYMwSr5zk6BZvS%2BoYIWlHJWk2oJ7YjiC8R26S1X4%3D"
     ],
     "generatedTime": "2022-07-11T11:01:00Z"
 

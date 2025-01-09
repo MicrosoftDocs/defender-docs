@@ -2,8 +2,8 @@
 title: Indicator resource type
 description: Specify the entity details and define the expiration of the indicator using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -78,7 +78,7 @@ The indicator action types supported by the API are:
 - BlockAndRemediate
 - Warn (Defender for Cloud Apps only)
 
-For more information on the description of the response action types, see [Create indicators](../manage-indicators.md).
+For more information on the description of the response action types, see [Create indicators](../indicators-overview.md).
 
 > [!NOTE]
 >

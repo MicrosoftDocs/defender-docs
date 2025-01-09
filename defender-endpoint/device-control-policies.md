@@ -1,10 +1,10 @@
 ---
 title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
-ms.date: 05/16/2024
+ms.date: 10/11/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -73,7 +73,7 @@ Device control policies can be applied to users and/or user groups.
 > [!NOTE]
 > In the articles related to device control, groups of users are referred to as <i>user groups</i>.  The term <i>groups</i> refer to [groups](#groups) defined in the device control policy.
 
- Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
+Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
 
 On Windows, a user or user group can be a condition on an [entry](#entries) in a policy.
 
@@ -136,7 +136,7 @@ The following code snippet shows the syntax for a device control policy rule in 
   </IncludedIdList>
   <ExcludedIdList>
       <GroupId>{3f5253e4-0e73-4587-bb9e-bb29a2171695}</GroupId>
-  <ExcludedIdList>
+  </ExcludedIdList>
   <Entry Id="{e3837e60-5e56-43ce-8095-043ccd793eac}">
    ...
   </Entry>
@@ -194,19 +194,33 @@ Device control policies define access (called an entry) for a set of devices. En
 
 | Entry setting | Options |
 |---|---|
-| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>  1 - Device Read<br>2 - Device Write<br>4 - Device Execute<br>8 - File Read<br>16 - File Write<br>32 - File Execute<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>
+| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>  1 - Device Read<br>2 - Device Write<br>4 - Device Execute<br>8 - File Read<br>16 - File Write<br>32 - File Execute<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>|
 | Action | Allow <br/> Deny <br/> AuditAllow <br/> AuditDeny |
-| Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> File evidence is captured |
+| Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> |
 
-If device control is configured, and a user attempts to use a device that's not allowed, the user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.
+### Entry evaluation
+
+There are two types of entries: enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
+
+Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
+
+### Audit entries
+
+Audit events control the behavior when device control enforces a rule (allow/deny). Device control can display a notification to the end-user. The user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.  
+
+Device control can also create an event that is available in Advanced Hunting.
+
+> [!IMPORTANT]
+> There is a limit of 300 events per device per day. Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
+
+### Conditions
 
 An entry supports the following optional conditions:
 
 - User/User Group Condition: Applies the action only to the user/user group identified by the SID
 
 > [!NOTE]
-> For user groups and users that are stored in Microsoft Entra Id, use the object id in the condition.  For user groups and users that are stored localy, use the Security Identifier (SID)
-
+> For user groups and users that are stored in Microsoft Entra Id, use the object id in the condition.  For user groups and users that are stored locally, use the Security Identifier (SID)
 > [!NOTE]
 > On Windows, The SID of the user who's signed in can be retrieved by running the PowerShell command `whoami /user`.
 
@@ -254,7 +268,7 @@ The following table provides more context for the XML code snippet:
 |---|---|---|
 | `Entry Id` | GUID, a unique ID, represents the entry and is used in reporting and troubleshooting. | You can generate the GUID by using PowerShell. |
 | `Type` | Defines the action for the removable storage groups in `IncludedIDList`. <br/>- `Allow` <br/>- `Deny` <br/>- `AuditAllowed`: Defines notification and event when access is allowed <br/>- `AuditDenied`: Defines notification and event when access is denied; works together with a `Deny` entry. <br/><br/>When there are conflict types for the same media, the system applies the first one in the policy. An example of a conflict type is `Allow` and `Deny`. | - `Allow` <br/>- `Deny` <br/>- `AuditAllowed` <br/>- `AuditDenied` |
-| `Option` | If type is `Allow` | - `0`: nothing <br/>- `4`: disable `AuditAllowed` and `AuditDenied` for this entry. If `Allow` occurs and the `AuditAllowed` setting is configured, events aren't generated.<br/>- `8`: create a copy of the file as evidence, and generate a `RemovableStorageFileEvent` event. This setting must be used together with the **Set location for a copy of the file** setting in [Intune](device-control-deploy-manage-intune.md) or [Group Policy](device-control-deploy-manage-gpo.md). |
+| `Option` | If type is `Allow` | - `0`: nothing <br/>- `4`: disable `AuditAllowed` and `AuditDenied` for this entry. If `Allow` occurs and the `AuditAllowed` setting is configured, events aren't generated. |
 | `Option` | If type is `Deny` | - `0`: nothing <br/>- `4`: disable `AuditDenied` for this Entry. If Block occurs and the `AuditDenied` is setting configured, the system doesn't show notifications. |
 | `Option` | If type is `AuditAllowed` | - `0`: nothing<br/>- `1`: nothing <br/>- `2`: send event |
 | `Option` | If type is `AuditDenied` | - `0`: nothing <br/>- `1`: show notification <br/>- `2`: send event <br/>- `3`: show notification and send event |
@@ -382,7 +396,7 @@ The devices that are in scope for the policy determined by a list of included gr
 | `FriendlyNameId`  | The friendly name in Windows Device Manager | Y | N | Y |
 | `PrimaryId` | The type of the device | Y | Y | Y |
 | `VID_PID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. Product ID is the four-digit product code that the vendor assigns to the device. Wildcards are supported. For example, `0751_55E0` | Y | N | Y |
-|`PrinterConnectionId` | The type of printer connection: <br/>- USB<br/>- Corporate<br/>- Network<br/>- Universal<br/>- File<br/>- Custom<br/>- Local | N | N | Y |
+|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premise Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that is not connecting through Microsoft print port<br/>- `Local`: printer not any of above type, e.g. print through RDP or redirect printers | N | N | Y |
 | `BusId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `DeviceId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `HardwareId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
@@ -486,6 +500,7 @@ The properties described in the following table can be included in the `Descript
 | `BusId` | For example, `USB`, `SCSI` |
 | `SerialNumberId` | You can find `SerialNumberId` from Device instance path in Device Manager in Windows. For example, `03003324080520232521` is `SerialNumberId` in `USBSTOR\DISK&VEN__USB&PROD__SANDISK_3.2GEN1&REV_1.00\03003324080520232521&0` |
 | `VID_PID` | - Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. <br/>- Product ID is the four-digit product code that the vendor assigns to the device. It supports wildcards.<br/>- To transform Device instance path to Vendor ID and Product ID format, use Standard USB Identifiers. Here are some examples: <br/>`0751_55E0`: match this exact VID/PID pair <br/>`_55E0`: match any media with `PID=55E0` <br/>`0751_`: match any media with `VID=0751` |
+| `DeviceEncryptionStateId` | The BitLocker encryption state - `Plain` or `BitlockerEncrpted`|
 
 Here are some examples of device group definitions in the device control samples repository:
 
@@ -659,26 +674,6 @@ Then the group is then referenced as parameters in an entry, as illustrated in t
        </Entry>
 ```
 
-### File Conditions
-
-The following table describes file group properties:
-
-| Name | Description |
-|---|---|
-| `PathId` | String, value of file path or name. <br/>Wildcards are supported. <br/>Only applicable for file type groups. |
-
-The following table illustrates how properties are added to the `DescriptorIdList` of a file group:
-
-```xml
-
-<Group Id="{e5f619a7-5c58-4927-90cd-75da2348a30f}" Type="File" MatchType="MatchAny">
-    <DescriptorIdList>
-        <PathId>*.exe</PathId>
-        <PathId>*.dll</PathId>
-    </DescriptorIdList>
-</Group>
-```
-
 The group is then referenced as parameters in an entry, as illustrated in the following snippet:
 
 ```xml
@@ -732,53 +727,6 @@ The group is then referenced as parameters in an entry, as illustrated in the fo
       </Parameters>
    </Entry>
 ```
-
-## File evidence
-
-With device control, you can store evidence of files that were copied to removable devices or were printed. When file evidence is enabled, a `RemovableStorageFileEvent` is created. The behavior of file evidence is controlled by options on the Allow action, as described in the following table:
-
-| Option | Description |
-|---|---|
-| `8` | Create a `RemovableStorageFileEvent` event with `FileEvidenceLocation` |
-| `16` | Create a `RemovableStorageFileEvent` without `FileEvidenceLocation` |
-
-The `FileEvidenceLocation` field of has the location of the evidence file, if one is created. The evidence file has a name which ends in `.dup`, and its location is controlled by the `DataDuplicationFolder` setting.
-
-### Storing file evidence in Azure Blob Storage
-
-1. Create an Azure Blob Storage account and container.
-
-2. Create a custom role called `Device Control Evidence Data Provider` for accessing the container.  The role should have the following permissions:
-
-   ```json
-   "permissions": [
-               {
-                   "actions": [
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/read",
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/write",
-                       "Microsoft.Storage/storageAccounts/blobServices/read"
-                   ],
-                   "notActions": [],
-                   "dataActions": [
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
-                   ],
-                   "notDataActions": []
-               }
-           ]
-   ```
-
-   Custom roles can be created via [CLI](/azure/role-based-access-control/custom-roles-cli) or [PowerShell](/azure/role-based-access-control/custom-roles-powershell)
-
-   > [!TIP]
-   > The built-in role, [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles/storage) has delete permissions for the container, which is not required to store device control feature evidence. The built-in role, [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage) lacks the write permissions that are required. This is why a custom role is recommended.
-
-   > [!IMPORTANT]
-   > To ensure that the integrity of the file evidence use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
-
-3. Assign the users of device control to the `Device Control Evidence Data Provider` role.
-
-4. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 
 ## Next steps
 

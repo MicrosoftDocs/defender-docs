@@ -1,5 +1,5 @@
 ---
-title: Learn the advanced hunting query language in Microsoft Defender XDR
+title: Learn the advanced hunting query language in Microsoft Defender
 description: Create your first threat hunting query and learn about common operators and other aspects of the advanced hunting query language
 search.appverid: met150
 ms.service: defender-xdr
@@ -15,17 +15,19 @@ ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier1
-ms.topic: conceptual
-ms.date: 03/28/2024
+ms.custom:
+- cx-ti
+- cx-ah
+ms.topic: how-to
+ms.date: 10/18/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Learn the advanced hunting query language
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 Advanced hunting is based on the [Kusto query language](/azure/kusto/query/). You can use Kusto operators and statements to construct queries that locate information in a specialized [schema](advanced-hunting-schema-tables.md).
 
@@ -163,9 +165,9 @@ To learn more about these data types, [read about Kusto scalar data types](/azur
 
 Take advantage of the following functionality to write queries faster:
 
-- **Autosuggest**—as you write queries, advanced hunting provides suggestions from IntelliSense.
-- **Schema tree**—a schema representation that includes the list of tables and their columns is provided next to your working area. For more information, hover over an item. Double-click an item to insert it to the query editor.
-- **[Schema reference](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)**—in-portal reference with table and column descriptions as well as supported event types (`ActionType` values) and sample queries
+- **Autosuggest** - as you write queries, advanced hunting provides suggestions from IntelliSense.
+- **Schema tree** - a schema representation that includes the list of tables and their columns is provided next to your working area. For more information, hover over an item. Double-click an item to insert it to the query editor.
+- **[Schema reference](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)** - in-portal reference with table and column descriptions as well as supported event types (`ActionType` values) and sample queries
 
 ## Work with multiple queries in the editor
 
@@ -174,15 +176,15 @@ You can use the query editor to experiment with multiple queries. To use multipl
 - Separate each query with an empty line.
 - Place the cursor on any part of a query to select that query before running it. This will run only the selected query. To run another query, move the cursor accordingly and select **Run query**.
 
-:::image type="content" source="/defender/media/multiple-queries.png" alt-text="An example of multiple queries execution in the **New query** page in the Microsoft Defender portal" lightbox="/defender/media/multiple-queries.png":::
+  :::image type="content" source="/defender/media/multiple-queries.png" alt-text="An example of multiple queries execution in the **New query** page in the Microsoft Defender portal" lightbox="/defender/media/multiple-queries.png":::
 
-For a more efficient workspace, you can also use multiple tabs in the same hunting page. Select **New query** to open a tab for your new query.
+  For a more efficient workspace, you can also use multiple tabs in the same hunting page. Select **New query** to open a tab for your new query.
 
-:::image type="content" source="/defender/media/multitab.png" alt-text="Opening a new tab by selecting Create new in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/multitab.png":::
+  :::image type="content" source="/defender/media/multitab.png" alt-text="Opening a new tab by selecting Create new in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/multitab.png":::
 
-You can then run different queries without ever opening a new browser tab.
+  You can then run different queries without ever opening a new browser tab.
 
-:::image type="content" source="/defender/media/multitab-examples.png" alt-text="Run different queries without ever leaving the advanced hunting page in the Microsoft Defender portal" lightbox="/defender/media/multitab-examples.png":::
+  :::image type="content" source="/defender/media/multitab-examples.png" alt-text="Run different queries without ever leaving the advanced hunting page in the Microsoft Defender portal" lightbox="/defender/media/multitab-examples.png":::
 
 > [!NOTE]
 > Using multiple browser tabs with advanced hunting might cause you to lose your unsaved queries. To prevent this from happening, use the tab feature within advanced hunting instead of separate browser tabs.

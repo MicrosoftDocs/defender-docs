@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 06/09/2023
+ms.date: 10/22/2024
 ms.localizationpriority: medium
 search.appverid:
 - MET150
@@ -79,7 +79,9 @@ In addition, make sure to review your organization's [alert policies](alert-poli
 
 ## Which alert policies trigger automated investigations?
 
-Microsoft 365 provides many built-in alert policies that help identify Exchange admin permissions abuse, malware activity, potential external and internal threats, and information governance risks. Several of the [default alert policies](/purview/alert-policies#default-alert-policies) can trigger automated investigations. The following table describes the alerts that trigger automated investigations, their severity in the Microsoft Defender portal, and how they're generated:
+Microsoft 365 provides many built-in alert policies that help identify Exchange admin permissions abuse, malware activity, potential external and internal threats, and information governance risks. Several of the [default alert policies](/purview/alert-policies#default-alert-policies) can trigger automated investigations. If these alerts are disabled or replaced by custom alerts, AIR isn't triggered. 
+
+The following table describes the alerts that trigger automated investigations, their severity in the Microsoft Defender portal, and how they're generated:
 
 |Alert|Severity|How the alert is generated|
 |---|---|---|

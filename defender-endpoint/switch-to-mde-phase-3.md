@@ -3,8 +3,8 @@ title: Migrate to Microsoft Defender for Endpoint - Onboard
 description: Move to Microsoft Defender for Endpoint. Onboard devices and then uninstall your non-Microsoft solution.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -17,7 +17,7 @@ ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
 ms.topic: how-to
-ms.date: 10/24/2023
+ms.date: 08/15/2024
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 search.appverid: met150
 ---
@@ -82,7 +82,7 @@ To verify that your onboarded devices are properly connected to Defender for End
 |Operating system|Guidance|
 |---|---|
 |Windows 10 or later<br/><br/>Windows Server 2022<br/><br/>Windows Server 2019<br/><br/>Windows Server, version 1803, or later<br/><br/>Windows Server 2016<br/><br/>Windows Server 2012 R2|See [Run a detection test](run-detection-test.md).|
-|macOS (see [System requirements](microsoft-defender-endpoint-mac.md)|Download and use the DIY app at <https://aka.ms/mdatpmacosdiy>. <br/><br/> For more information, see [Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md).|
+|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))| Download and use the DIY app at [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
 |Linux (see [System requirements](microsoft-defender-endpoint-linux.md#system-requirements))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
 
 ## Step 3: Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints

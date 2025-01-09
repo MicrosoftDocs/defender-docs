@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/16/2024
+ms.date: 08/29/2024
 ---
 
 # Create an app to access Microsoft Defender XDR without a user
@@ -52,7 +52,7 @@ This article explains how to:
 
 ## Create an app
 
-1. Sign in to [Azure](https://portal.azure.com) as a user with the **Global Administrator** role.
+1. Sign in to [Azure](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** > **App registrations** > **New registration**.
 
@@ -99,7 +99,7 @@ This article explains how to:
 
     Since your application interacts with Microsoft Defender XDR on behalf of your users, it needs be approved for every tenant on which you intend to use it.
 
-    The Active Directory global admin for each tenant needs to select the consent link and approve your app.
+    The Active Directory administrator for each tenant needs to select the consent link and approve your app.
 
     The consent link has the following structure:
 

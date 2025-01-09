@@ -2,8 +2,8 @@
 title: Update machine entity API
 description: Learn how to update machine tags by using this API. You can update the tags and devicevalue properties.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

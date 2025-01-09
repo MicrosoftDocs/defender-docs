@@ -1,8 +1,8 @@
 ---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 ms.reviewer: pahuijbr, kausd
 audience: ITPro
@@ -14,7 +14,7 @@ ms.custom:
 - next-gen
 - mde-edr
 - admindeeplinkDEFENDER
-ms.date: 04/26/2024
+ms.date: 06/25/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -44,7 +44,6 @@ This article describes EDR in block mode, which helps protect devices that are r
 
 > [!IMPORTANT]
 > EDR in block mode cannot provide all available protection when Microsoft Defender Antivirus real-time protection is in passive mode. Some capabilities that depend on Microsoft Defender Antivirus to be the active antivirus solution will not work, such as the following examples:
-> 
 > - Real-time protection, including on-access scanning, and scheduled scan is not available when Microsoft Defender Antivirus is in passive mode. To learn more about real-time protection policy settings, see **[Enable and configure Microsoft Defender Antivirus always-on protection](configure-real-time-protection-microsoft-defender-antivirus.md)**.
 > - Features like **[network protection](network-protection.md)** and **[attack surface reduction rules](attack-surface-reduction.md)** and indicators (file hash, ip address, URL, and certificates) are only available when Microsoft Defender Antivirus is running in active mode.
 > It is expected that your non-Microsoft antivirus solution includes these capabilities.
@@ -106,7 +105,10 @@ The following table lists requirements for EDR in block mode:
 |Microsoft Defender Antivirus engine|Devices must be up to date. To confirm, using PowerShell, run the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) cmdlet as an administrator. In the **AMEngineVersion** line, you should see **1.1.16700.2** or above. <br/><br/> To learn more, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).|
 
 > [!IMPORTANT]
-> To get the best protection value, make sure your antivirus solution is configured to receive regular updates and essential features, and that your [exclusions are configured](configure-exclusions-microsoft-defender-antivirus.md). EDR in block mode respects exclusions that are defined for Microsoft Defender Antivirus, but not [indicators](manage-indicators.md) that are defined for Microsoft Defender for Endpoint.
+> To get the best protection value, make sure your antivirus solution is configured to receive regular updates and essential features, and that your [exclusions are configured](configure-exclusions-microsoft-defender-antivirus.md). EDR in block mode respects exclusions that are defined for Microsoft Defender Antivirus, but not [indicators](indicators-overview.md) that are defined for Microsoft Defender for Endpoint.
+> 
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 
 ## See also
 

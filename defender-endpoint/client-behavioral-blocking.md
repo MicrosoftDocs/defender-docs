@@ -1,13 +1,14 @@
 ---
 title: Client behavioral blocking
 description: Client behavioral blocking is part of behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.reviewer: shwetaj
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-endpoint
+ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom:
   - next-gen
@@ -16,7 +17,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 07/22/2024
 ---
 
 # Client behavioral blocking
@@ -45,7 +46,7 @@ Antivirus protection works best when paired with cloud protection.
 
 [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) can detect suspicious behavior, malicious code, fileless and in-memory attacks, and more on a device. When suspicious behaviors are detected, Microsoft Defender Antivirus monitors and sends those suspicious behaviors and their process trees to the cloud protection service. Machine learning differentiates between malicious applications and good behaviors within milliseconds, and classifies each artifact. In almost real time, as soon as an artifact is found to be malicious, it's blocked on the device.
 
-Whenever a suspicious behavior is detected, an [alert](alerts-queue.md) is generated and is visible while the attack was detected and stopped; alerts, such as an "initial access alert," are triggered and appear in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender) (formerly Microsoft Defender XDR).
+Whenever a suspicious behavior is detected, an [alert](alerts-queue.md) is generated and is visible while the attack was detected and stopped; alerts, such as an "initial access alert," are triggered and appear in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).
 
 Client behavioral blocking is effective because it not only helps prevent an attack from starting, it can help stop an attack that has begun executing. And, with [feedback-loop blocking](feedback-loop-blocking.md) (another capability of behavioral blocking and containment), attacks are prevented on other devices in your organization.
 

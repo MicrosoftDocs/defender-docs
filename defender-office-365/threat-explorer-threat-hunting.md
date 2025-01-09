@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 05/20/2024
+ms.date: 10/01/2024
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -163,53 +163,54 @@ After you determine that an email message is a threat, the next step is remediat
   >
   > If you select 101 to 200,000 entries, only the following actions are available in the **Take action** wizard:
   >
-  > - **Threat Explorer**: **Move to mailbox** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
+  > - **Threat Explorer**: **Move or delete** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
   > - **Real-time detections**: Only **Submit to Microsoft for review** and creating corresponding allow/block entries in the Tenant Allow/Block list are available.
 
 - Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
 
   :::image type="content" source="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="The actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
-Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Threat Explorer (Defender for Office 365 Plan 2) and Real-time detections (Defender for Office 365 Plan 1) are listed in the following table:
+#### The Take action wizard
 
-|Action|Threat<br/>Explorer|Real-time<br/>Detections|
+Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Defender for Office 365 Plan 2 and Defender for Office 365 Plan 1 are listed in the following table:
+
+|Action|Defender for<br/>Office 365 Plan 2|Defender for<br/>Office 365 Plan 1|
 |---|:---:|:---:|
-|**Move to mailbox folder**|✔¹||
+|**Move or delete**|✔¹||
+|&nbsp;&nbsp;Release quarantined messages to some or all original recipients²|✔||
 |**Submit to Microsoft for review**|✔|✔|
-|&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**²|✔|✔|
+|&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**³|✔|✔|
 |**Initiate automated investigation**|✔||
 |**Propose remediation**|✔||
 
 ¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² This action is available under **Submit to Microsoft for review**.
+² This option is available for quarantined messages when you select **Inbox** as the move location.
+
+³ This action is available under **Submit to Microsoft for review**.
 
 The **Take action** wizard is described in the following list:
 
-1. On the **Choose response actions** page, make the following selections:
+1. On the **Choose response actions** page, the following options are available:
 
    - **Show all response actions**: This option is available only in Threat Explorer.
 
-     By default, some actions are unavailable/grayed out based on the latest delivery location of the message. To show all available response actions, slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+     By default, some actions are unavailable/grayed out based on the **Latest delivery location** value of the message. To show all available response actions, slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
-   - **Email message actions** section:
-
-     You can select multiple actions if you selected 100 or less messages from the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views when you selected :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
-
-     You can also select multiple actions if you selected :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in the details flyout after you clicked on the **Subject** value of an entry.
-
-     Select one or more of the available options:
-
-   - **Move to mailbox folder**: Select one of the available values that appear:
+   - **Move or delete**: Select one of the available values that appear:
      - **Junk**: Move the message to the Junk Email folder.
-     - **Inbox**: Move the message to the Inbox.
+     - **Inbox**: Move the message to the Inbox. Selecting this value might also reveal the following options:
 
-       **Move back to Sent Items folder**: Also try to move the message from the sender's Recoverable Items\Deletions folder to the Sent Items folder if the sender is the organization.
+       - **Move back to Sent Items folder**: If the message was sent by an internal sender and the message was soft deleted (moved to the Recoverable Items\Deletions folder), selecting this option tries to move the message back to the Sent Items folder. This option is an undo action if you previously selected **Move or delete** \> **Soft deleted items** and also selected **Delete sender's copy** on a message.
+
+       - For messages with the value **Quarantine** for the **Latest delivery location** property, selecting **Inbox** releases the message from quarantine, so the following options are also available:
+         - **Release to one or more of the original recipients of the e-mail**: If you select this value, a box appears where you can select or deselect the original recipients of the quarantined message.
+         - **Release to all recipients**
 
      - **Deleted items**: Move the message to the Deleted items folder.
-     - **Soft deleted items**: Delete the message from the Deleted items folder (move to the Recoverable Items\Deletions folder). The message is recoverable by the user and admins.
+     - **Soft deleted items**: Move the message to the Recoverable Items\Deletions folder, which is equivalent to deleting the message from the Deleted items folder. The message is recoverable by the user and admins.
 
-       **Delete sender's copy**: Also try to soft delete the message from the sender's Sent Items folder if the sender is the organization.
+       **Delete sender's copy**: If the message was sent by an internal sender, also try to soft delete the message from the sender's Sent Items folder.
 
      - **Hard deleted items**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items).
 
@@ -246,7 +247,7 @@ The **Take action** wizard is described in the following list:
      - **Add to existing**: Use this value to apply actions to this email message from an existing remediation. In the **Submit email to the following remediations** box, select the existing remediation.
 
        > [!TIP]
-       > SecOps personnel who don't have enough permsissions can use this option to create a remediation, but someone with permissions needs to approve the action in the Action center.
+       > SecOps personnel who don't have enough permissions can use this option to create a remediation, but someone with permissions needs to approve the action in the Action center.
 
    When you're finished on the **Choose response actions** page, select **Next**.
 

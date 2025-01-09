@@ -16,7 +16,7 @@ ms.collection:
 - tier3
 description: Get the latest in hardware-based isolation. Prevent current and emerging attacks like exploits or malicious links from disrupting employee productivity and enterprise security.
 ms.service: defender-office-365
-ms.date: 11/27/2023
+ms.date: 04/29/2024
 ---
 
 # Application Guard for Office for admins

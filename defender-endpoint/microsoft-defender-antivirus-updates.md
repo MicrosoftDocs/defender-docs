@@ -3,11 +3,11 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/20/2024
+ms.date: 10/30/2024
 audience: ITPro
 ms.topic: reference
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: pahuijbr, tudobril, yongrhee
 manager: deniseb
@@ -42,8 +42,7 @@ This article also includes:
 - [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)
 - [Updates for Deployment Image Servicing and Management (DISM)](#updates-for-deployment-image-servicing-and-management-dism)
 
-> [!TIP]
-> To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+To see the most current engine, platform, and signature date, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
@@ -89,73 +88,73 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md) are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
 
-- In the **Microsoft Endpoint Configuration Manager / Windows Server Update Services** (MECM/WSUS) catalog, the _category_ **Microsoft Defender for Endpoint** includes updates for the MSSense service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md).
+- In the **Microsoft Endpoint Configuration Manager / Windows Server Update Services** (MECM/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md).
 
-## Monthly platform and engine versions
+## Platform and engine releases
 
-All our updates contain
+Updates contain:
 
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
+### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
 
-- Security intelligence update version: **1.411.7.0**
-- Release date: **May 07, 2024** (Engine) / **May 16, 2024** (Platform)
-- Engine: **1.1.24040.1**
-- Platform: **4.18.24040.4**
+- Security intelligence update version: **1.421.12.0**
+- Release date: **October 30, 2024** (Engine and Platform)
+- Platform: **4.18.24090.11**
+- Engine: **1.1.24090.11**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
-- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
-- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
-- Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
-- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
+- Improved detection logic to reduce false positives related to the ASR rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
+- Resolved an issue that could lead to a Windows device to be marked as [non-compliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
+- Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting was not honored.
+- Fixed `SharedSignatureRoot` processing when an empty value was set.
+- Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
+- Improved performance in specific scenarios where network files were accessed.
+- Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy was not being honored.
+- Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
+- Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) were not being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
+- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) were not honored
 
-### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
+> [!IMPORTANT]
+> On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
 
-- Security intelligence update version: **1.409.1.0**
-- Release date: **April 2, 2024** (Engine) / **April 9, 2024** (Platform)
-- Engine: **1.1.24030.4**
-- Platform: **4.18.24030.9**
+
+### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
+
+- Security intelligence update version: **1.419.1.0**
+- Release date: **September 17, 2024** (Engine and Platform)
+- Platform: **4.18.24080.9**
+- Engine: **1.1.24080.9**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
-- Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
-- The known issue in [4.18.24020.7](#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
-- Fixed high CPU issue caused by redetection done during Sense originating scans.
-- Fixed an issue with Security Intelligence Update disk cleanup.
-- Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
-- Introduced performance improvements when processing paths for exclusions.
-- Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](manage-indicators.md).
-- Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
-- Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.
-- A possible deadlock when receiving a [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) configuration change from the [Microsoft Defender portal](https://security.microsoft.com) no longer occurs.
+- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
+- Fixed an issue with device control regarding printer security checks.
+- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
+- Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
+- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and have reached their end-of-servicing date.
 
-### February-2024 (Engine: 1.1.24020.9 | Platform: 4.18.24020.7)
+### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
 
-- Security intelligence update version: **1.407.46.0**
-- Release date: **March 6, 2024** (Engine) / **March 12, 2024** (Platform)
-- Engine: **1.1.24020.9**
-- Platform: **4.18.24020.7**
+- Security intelligence update version: **1.417.14.0**
+- Release date: **August 7, 2024** (Engine and Platform)
+- Platform: **4.18.24070.5**
+- Engine: **1.1.24070.3**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Improved support for virtualizing while compressing or decompressing zip files
-- Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
-- Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
-- Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
-- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
-
-#### Known issues
-
-- For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
+- False positive detections are no longer reported as `ThreatNotFound` in the Microsoft Defender portal. 
+- Optimized [network protection](network-protection.md) calls to the backend that occur as a result of suspicious connection checks.
+- Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in the [Defender CSP](/windows/client-management/mdm/defender-csp) so that changing this value in the console takes effect on the endpoint. 
+- Resolved an issue where file evidence location was not always captured in scenarios where the remote location is inaccessible. 
+- New event log added (`5016`) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
+- Fixed a prioritization issue with [full scans](mdav-scan-best-practices.md) initiated from the portal that resulted in longer than expected full scan duration.
 
 ### Previous version updates: Technical upgrade support only
 
@@ -219,49 +218,13 @@ Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
-### 1.411.9.0
+After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
-- Defender package version: **1.411.9.0**
-- Security intelligence version: **1.411.9.0**
-- Engine version: **1.24040.1**
-- Platform version: **4.18.24040.4**
+### 1.417.472.0
 
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20230809.1
-
-- Defender package version: **20230809.1**
-- Security intelligence version: **1.395.68.0**
-- Engine version: **1.1.23070.1005**
-- Platform version: **4.18.23070.1004**
-
-#### Fixes
-
-- None
-
-### 20230604.1
-
-- Defender package version: **20230604.1**
-- Security intelligence version: **1.391.476.0**
-- Engine version: **1.1.23050.3**
-- Platform version: **4.18.23050.3**
-
-#### Fixes
-
-- None
-
-### 20230503.1
-
-- Defender package version: **20230503.1**
-- Security intelligence version: **1.389.44.0**
-- Engine version: **1.1.20300.3**
-- Platform version: **4.18.2304.8**
+- Defender package version: `1.417.472.0`
+- Security intelligence version: `1.417.472.0`
+- Engine version: `1.24080.9`
 
 #### Fixes
 
@@ -271,27 +234,12 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 - None
 
-### 20230330.2
+### 1.415.295.0
 
-- Defender package version: **20230330.2**
-- Security intelligence version: **1.385.1537.0**
-- Engine version: **1.1.20100.6**
-- Platform version: **4.18.2302.7**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20230308.1
-
-- Defender package version: **20230308.1**
-- Security intelligence version: **1.383.1321.0**
-- Engine version: **1.1.20000.2**
-- Platform version: **4.18.2301.6**
+- Defender package version: `1.415.295.0`
+- Security intelligence version: `1.415.295.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
 
 #### Fixes
 
@@ -301,27 +249,12 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 - None
 
-### 20230215.1
+### 1.415.235.0
 
-- Defender package version: **20230215.1**
-- Security intelligence version: **1.383.51.0**
-- Engine version: **1.1.20000.2**
-- Platform version: **4.18.2301.6**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20230118.1
-
-- Defender package version: **20230118.1**
-- Security intelligence version: **1.381.2404.0**
-- Engine version: **1.1.19900.2**
-- Platform version: **4.18.2211.5**
+- Defender package version: `1.415.235.0`
+- Security intelligence version: `1.415.235.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
 
 #### Fixes
 
@@ -330,458 +263,6 @@ For more information, see [Microsoft Defender update for Windows operating syste
 #### Additional information
 
 - None
-
-### 20221209.1
-
-- Defender package version: **20221209.1**
-- Security intelligence version: **1.381.144.0**
-- Engine version: **1.1.19900.2**
-- Platform version: **4.18.2211.5**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20221102.3
-
-- Defender package version: **20221102.3**
-- Security intelligence version: **1.377.1180.0**
-- Engine version: **1.1.19700.3**
-- Platform version: **4.18.2210.4**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20221014.1
-
-- Package version: **20221014.1**
-- Platform version: **4.18.2209.7**
-- Engine version: **1.1.19700.3**
-- Signature version: **1.373.208.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220929.1
-
-- Package version: **20220929.1**
-- Platform version: **4.18.2207.7**
-- Engine version: **1.1.19600.3**
-- Signature version: **1.373.1243.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220925.2
-
-- Package version: **20220925.2**
-- Platform version: **4.18.2207.7**
-- Engine version: **1.1.19600.3**
-- Signature version: **1.373.1371.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220901.4
-
-- Package version: **20220901.4**
-- Platform version: **4.18.2205.7**
-- Engine version: **1.1.19500.2**
-- Signature version: **1.373.1371.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220802.1
-
-- Package version: **20220802.1**
-- Platform version: **4.18.2205.7**
-- Engine version: **1.1.19400.3**
-- Signature version: **1.371.1205.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220629.5
-
-- Package version: **20220629.5**
-- Platform version: **4.18.2205.7**
-- Engine version: **1.1.19300.2**
-- Signature version: **1.369.220.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220603.3
-
-- Package version: **20220603.3**
-- Platform version: **4.18.2203.5**
-- Engine version: **1.1.19200.6**
-- Signature version: **1.367.1009.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220506.6
-
-- Package version: **20220506.6**
-- Platform version: **4.18.2203.5**
-- Engine version: **1.1.19200.5**
-- Signature version: **1.363.1436.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220321.1
-
-- Package version: **20220321.1**
-- Platform version: **4.18.2202.4**
-- Engine version: **1.1.19000.8**
-- Signature version: **1.351.337.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220305.1
-
-- Package version: **20220305.1**
-- Platform version: **4.18.2201.10**
-- Engine version: **1.1.18900.3**
-- Signature version: **1.359.1405.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220203.1
-
-- Package version: **20220203.1**
-- Platform version: **4.18.2111.5**
-- Engine version: **1.1.18900.2**
-- Signature version: **1.357.32.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 20220105.1
-
-- Package version: **20220105.1**
-- Platform version: **4.18.2111.5**
-- Engine version: **1.1.18800.4**
-- Signature version: **1.355.1482.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-
-### 1.1.2112.01
-
-- Package version: **1.1.2112.01**
-- Platform version: **4.18.2110.6**
-- Engine version: **1.1.18700.4**
-- Signature version: **1.353.2283.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2111.02
-
-- Package version: **1.1.2111.02**
-- Platform version: **4.18.2110.6**
-- Engine version: **1.1.18700.4**
-- Signature version: **1.353.613.0**
-
-#### Fixes
-
-- Fixed an issue pertaining to localization files
-
-#### Additional information
-
-- None
-
-### 1.1.2110.01
-
-- Package version: **1.1.2110.01**
-- Platform version: **4.18.2109.6**
-- Engine version: **1.1.18500.10**
-- Signature version: **1.349.2103.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2109.01
-
-- Package version: **1.1.2109.01**
-- Platform version: **4.18.2107.4**
-- Engine version: **1.1.18400.5**
-- Signature version: **1.347.891.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2108.01
-
-- Package version: **1.1.2108.01**
-- Platform version: **4.18.2107.4**
-- Engine version: **1.1.18300.4**
-- Signature version: **1.343.2244.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2107.02
-
-- Package version: **1.1.2107.02**
-- Platform version: **4.18.2105.5**
-- Engine version: **1.1.18300.4**
-- Signature version: **1.343.658.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2106.01
-
-- Package version: **1.1.2106.01**
-- Platform version: **4.18.2104.14**
-- Engine version: **1.1.18100.6**
-- Signature version: **1.339.1923.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2105.01
-
-- Package version: **1.1.2105.01**
-- Platform version: **4.18.2103.7**
-- Engine version: **1.1.18100.6**
-- Signature version: **1.339.42.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-
-### 1.1.2104.01
-
-- Package version: **1.1.2104.01**
-- Platform version: **4.18.2102.4**
-- Engine version: **1.1.18000.5**
-- Signature version: **1.335.232.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2103.01
-
-- Package version: **1.1.2103.01**
-- Platform version: **4.18.2101.9**
-- Engine version: **1.1.17800.5**
-- Signature version: **1.331.2302.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2102.03
-
-- Package version: **1.1.2102.03**
-- Platform version: **4.18.2011.6**
-- Engine version: **1.1.17800.5**
-- Signature version: **1.331.174.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2101.02
-
-- Package version: **1.1.2101.02**
-- Platform version: **4.18.2011.6**
-- Engine version: **1.1.17700.4**
-- Signature version: **1.329.1796.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2012.01
-
-- Package version: **1.1.2012.01**
-- Platform version: **4.18.2010.7**
-- Engine version: **1.1.17600.5**
-- Signature version: **1.327.1991.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2011.02
-
-- Package version: **1.1.2011.02**
-- Platform version: **4.18.2010.7**
-- Engine version: **1.1.17600.5**
-- Signature version: **1.327.658.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- Refreshed Microsoft Defender Antivirus signatures
-
-### 1.1.2011.01
-
-- Package version: **1.1.2011.01**
-- Platform version: **4.18.2009.7**
-- Engine version: **1.1.17600.5**
-- Signature version: **1.327.344.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.1.2009.10
-
-- Package version: **1.1.2011.01**
-- Platform version: **4.18.2008.9**
-- Engine version: **1.1.17400.5**
-- Signature version: **1.327.2216.0**
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- Added support for Windows 10 RS1 or later OS install images.
 
 ## More resources
 

@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn about the anti-phishing policies that are available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 5/10/2024
+ms.date: 01/07/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -33,11 +33,23 @@ Policies to configure anti-phishing protection settings are available in Microso
 Examples of Microsoft Defender for Office 365 organizations include:
 
 - Microsoft 365 Enterprise E5, Microsoft 365 Education A5, etc.
-- [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home)
+- [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/microsoft-365-enterprise)
 - [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft Defender for Office 365 as an add-on](https://products.office.com/exchange/advance-threat-protection)
 
 [!INCLUDE [Security Analyzer setup guide](../includes/security-analyzer-setup-guide.md)]
+
+Anti-phishing policies in EOP and Defender for Office 365 are both available on the **Anti-phishing** page at <https://security.microsoft.com/antiphishing> in the Microsoft Defender portal. However, the key difference lies in the extra layers of protection provided by Defender for Office 365 licenses. While EOP offers essential anti-phishing protection features, Defender for Office 365 enhances these capabilities by including the following advanced protections:
+
+- **Impersonation protection**:
+  - Protection against user, domain, and sender impersonation.
+  - Ability to define trusted senders and domains to reduce false positives.
+- **Advanced phishing detection**:
+  - Customizable phishing thresholds to fine-tune detection.
+- **AI and machine learning-based detection**:
+  - Improved detection of sophisticated phishing attacks through advanced algorithms.
+- **Additional reporting and insights**:
+  - Advanced reporting features and visibility into phishing attempts beyond basic logging.
 
 The high-level differences between anti-phishing policies in EOP and anti-phishing policies in Defender for Office 365 are described in the following table:
 
@@ -99,6 +111,9 @@ The following policy settings are available in anti-phishing policies in EOP and
 ## Spoof settings
 
 Spoofing is when the From address in an email message (the sender address that's shown in email clients) doesn't match the domain of the email source. For more information about spoofing, see [Anti-spoofing protection in Microsoft 365](anti-phishing-protection-spoofing-about.md).
+
+> [!TIP]
+> For a comparison of spoofing versus impersonation, see the [Spoofing vs. impersonation](#spoofing-vs-impersonation) section later in this article.
 
 The following spoof settings are available in anti-phishing policies in EOP and Defender for Office 365:
 
@@ -201,30 +216,35 @@ Depending on the number of recipients in the message, the first contact safety t
   :::image type="content" source="media/safety-tip-first-contact-multiple-recipients.png" alt-text="The First contact safety tip for messages with multiple recipients" lightbox="media/safety-tip-first-contact-multiple-recipients.png":::
 
 > [!NOTE]
-> If the message has multiple recipients, whether the tip is shown and to whom is based on a majority model. If the majority of recipients have never or don't often receive messages from the sender, then the affected recipients will receive the **Some people who received this message...** tip. If you're concerned that this behavior exposes the communication habits of one recipient to another, you should not enable the first contact safety tip and continue to use mail flow rules and the **X-MS-Exchange-EnableFirstContactSafetyTip** header instead.
+> If the message has multiple recipients, whether the tip is shown and to whom is based on a majority model. If the majority of recipients have never or don't often receive messages from the sender, the affected recipients receive the **Some people who received this message...** tip. If you're concerned that this behavior exposes the communication habits of one recipient to another, you shouldn't enable the first contact safety tip and continue to use mail flow rules and the **X-MS-Exchange-EnableFirstContactSafetyTip** header instead.
 >
-> The first contact safety tip is not stamped in S/MIME signed messages.
+> The first contact safety tip isn't stamped in S/MIME signed messages.
 
 ## Exclusive settings in anti-phishing policies in Microsoft Defender for Office 365
 
 This section describes the policy settings that are only available in anti-phishing policies in Defender for Office 365.
 
 > [!NOTE]
-> The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) are not configured or enabled in the default policy. To enable all protection features, modify the default anti-phishing policy or create additional anti-phishing policies.
+> The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured or enabled in the default policy. To enable all protection features, modify the default anti-phishing policy or create other anti-phishing policies.
 
 ### Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365
 
 Impersonation is where the sender or the sender's email domain in a message looks similar to a real sender or domain:
 
-- An example impersonation of the domain contoso.com is ćóntoso.com.
+- An example impersonation of the domain `contoso.com` is `ćóntoso.com`.
 - User impersonation is the combination of the user's display name and email address. For example, Valeria Barrios (vbarrios@contoso.com) might be impersonated as Valeria Barrios, but with a different email address.
 
 > [!NOTE]
-> Impersonation protection looks for domains that are similar. For example, if your domain is contoso.com, we check for different top-level domains (.com, .biz, etc.), but also domains that are even somewhat similar. For example, contosososo.com or contoabcdef.com might be seen as impersonation attempts of contoso.com.
+> Impersonation protection looks for domains that are similar. For example, if your domain is contoso.com, we check for different top-level domains (.com, .biz, etc.), but also domains that are even somewhat similar. For example, `contosososo.com` or `contoabcdef.com` might be seen as impersonation attempts of `contoso.com`.
 
 An impersonated domain might otherwise be considered legitimate (the domain is registered, email authentication DNS records are configured, etc.), except the intent of the domain is to deceive recipients.
 
 The impersonation settings described in the following sections are available only in anti-phishing policies in Defender for Office 365.
+
+> [!TIP]
+> Details about detected impersonation attempts are available in the impersonation insight. For more information, see [Impersonation insight in Defender for Office 365](anti-phishing-mdo-impersonation-insight.md).
+>
+> For a comparison of impersonation versus spoofing, see the [Spoofing vs. impersonation](#spoofing-vs-impersonation) section later in this article.
 
 #### User impersonation protection
 
@@ -235,9 +255,9 @@ You can use protected users to add internal and external sender email addresses 
 > [!NOTE]
 > You can specify a maximum of 350 users for user impersonation protection in each anti-phishing policy.
 >
-> User impersonation protection does not work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt.
+> User impersonation protection doesn't work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt.
 >
-> You might get the error "The email address already exists" if you try to add a user to user impersonation protection when that email address is already specified for user impersonation protection in another anti-phishing policy. This error occurs only in the Defender portal. You won't get the error if you use the corresponding _TargetedUsersToProtect_ parameter in the **New-AntiPhishPolicy** or **Set-AntiPhishPolicy** cmdlets in Exchange Online PowerShell.
+> You might get the error "The email address already exists" if you try to add a user to user impersonation protection when that email address is already specified for user impersonation protection in another anti-phishing policy. This error occurs only in the Defender portal. You don't get the error if you use the corresponding _TargetedUsersToProtect_ parameter in the **New-AntiPhishPolicy** or **Set-AntiPhishPolicy** cmdlets in Exchange Online PowerShell.
 
 By default, no sender email addresses are configured for impersonation protection, either in the default policy or in custom policies.
 
@@ -289,10 +309,10 @@ For detected domain impersonation attempts, the following actions are available:
 
 Mailbox intelligence uses artificial intelligence (AI) to determine user email patterns with their frequent contacts.
 
-For example, Gabriela Laureano (glaureano@contoso.com) is the CEO of your company, so you add her as a protected sender in the **Enable users to protect** settings of the policy. But, some of the recipients in the policy communicate regularly with a vendor who is also named Gabriela Laureano (glaureano@fabrikam.com). Because those recipients have a communication history with glaureano@fabrikam.com, mailbox intelligence doesn't identify messages from glaureano@fabrikam.com as an impersonation attempt of glaureano@contoso.com for those recipients.
+For example, Gabriela Laureano (`glaureano@contoso.com`) is the CEO of your company, so you add her as a protected sender in the **Enable users to protect** settings of the policy. But, some of the recipients in the policy communicate regularly with a vendor who is also named Gabriela Laureano (`glaureano@fabrikam.com`). Because those recipients have a communication history with `glaureano@fabrikam.com`, mailbox intelligence doesn't identify messages from `glaureano@fabrikam.com` as an impersonation attempt of `glaureano@contoso.com` for those recipients.
 
 > [!NOTE]
-> Mailbox intelligence protection does not work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt by mailbox intelligence.
+> Mailbox intelligence protection doesn't work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt by mailbox intelligence.
 
 Mailbox intelligence has two specific settings:
 
@@ -329,14 +349,14 @@ Impersonation safety tips appear to users when messages are identified as impers
   > The email address `<email address>` includes unexpected letters or numbers. We recommend you don't interact with this message.
 
 > [!NOTE]
-> Safety tips are not stamped in the following messages:
+> Safety tips aren't stamped in the following messages:
 >
 > - S/MIME signed messages.
 > - Messages that are allowed by your organizational settings.
 
 #### Trusted senders and domains
 
-Trusted senders and domain are exceptions to the impersonation protection settings. Messages from the specified senders and sender domains are never classified as impersonation-based attacks by the policy. In other words, the action for protected senders, protected domains, or mailbox intelligence protection aren't applied to these trusted senders or sender domains. The maximum limit for these lists is 1024 entries.
+Trusted senders and domain are exceptions to the impersonation protection settings. Messages from the specified senders and sender domains are never classified as impersonation-based attacks by the policy. In other words, the action for protected senders, protected domains, or mailbox intelligence protection aren't applied to these trusted senders or sender domains. The maximum limit for these lists is 1,024 entries.
 
 > [!NOTE]
 > Trusted domain entries don't include subdomains of the specified domain. You need to add an entry for each subdomain.
@@ -357,3 +377,19 @@ The following advanced phishing thresholds are only available in anti-phishing p
 - **4 - Most aggressive**: Messages that are identified as phishing with a low, medium, or high degree of confidence are treated as if they were identified with a very high degree of confidence.
 
 The chance of false positives (good messages marked as bad) increases as you increase this setting. For information about the recommended settings, see [anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+
+### Spoofing vs. impersonation
+
+Spoofing occurs when an attacker forges the sender's email address or domain to make it look like a trusted source. The attacker manipulates the sender's email address in the message header (also known as the From address, `5322.From` address, or P2 sender) to deceive the recipient.
+
+- EOP includes basic spoofing detection via SPF, DKIM, and DMARC validation.
+- Defender for Office 365 includes enhanced spoof intelligence for better detection and mitigation of sophisticated spoofing attacks.
+
+Impersonation occurs when an attacker mimics a trusted user, domain, or brand to trick the recipient into believing the email is genuine. The attacker often uses subtle variations of the actual user or domain name (for example, `mithun@ćóntoso.com` instead of `mithun@contoso.com`).
+
+- EOP doesn't include impersonation protection.
+- Defender for Office 365 includes impersonation protection for users, domains, and brands, allowing admins to define trusted entities and thresholds for detection.
+
+Impersonation can pass email authentication checks (SPF, DKIM, and DMARC) if the attacker created a lookalike domain and published valid DNS records. Despite passing authentication, the attacker is still impersonating a trusted domain or user to deceive recipients. This behavior highlights the importance of the advanced impersonation protection provided by Defender for Office 365.
+
+To understand the order of processing for the email protection types and the priority order of policies, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).

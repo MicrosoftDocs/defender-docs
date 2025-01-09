@@ -1,0 +1,69 @@
+### YamlMime:Landing
+
+title: Microsoft Defender for IoT in the Defender portal (Preview) documentation # < 60 chars
+summary: Microsoft Defender for IoT in the Defender portal (Preview) provides visibility and threat protection for IoT/OT environments while reducing cyber risk through continuous vulnerability discovery, risk-based prioritization, and remediation. # < 160 chars
+
+metadata:
+  title: Microsoft Defender for IoT in the Defender portal (Preview) documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about Microsoft Defender for IoT in the Defender portal, and maximize the built-in security capabilities to protect devices, detect malicious activity, and remediate threats# Required; article description that is displayed in search results. < 160 chars.
+  services: office-365-security-compliance
+  ms.service: defender-for-iot
+  ms.topic: landing-page # Required
+  ms.custom: intro-hub-or-landing
+  author: limwainstein #Required; your GitHub user alias, with correct capitalization.
+  ms.author: lwainstein #Required; microsoft alias of author; optional team alias.
+  ms.date: 06/23/2024
+  ms.localizationpriority: high
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Defender for IoT
+    linkLists:
+      - linkListType: overview
+        links:
+        - text: What is Microsoft Defender for IoT in the Defender portal?
+          url: microsoft-defender-iot.md
+      - linkListType: concept
+        links:        
+        - text: Site security
+          url: site-security-overview.md
+      - linkListType: how-to-guide
+        links:
+          - text: Manage sites
+            url: manage-sites.md
+
+# Card
+  - title: Get started
+    linkLists:
+      - linkListType: get-started
+        links:
+        - text: Prerequisites
+          url: prerequisites.md
+      - linkListType: get-started
+        links: 
+        - text: Get started
+          url: get-started.md
+      - linkListType: quickstart
+        links: 
+        - text: Set up sites
+          url: set-up-sites.md
+        - text: Enterprise IoT
+          url: enterprise-iot.md
+
+# Card
+  - title: How-to
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Monitor site security
+          url: monitor-site-security.md
+        - text: Prioritize and remediate vulnerabilities
+          url: prioritize-vulnerabilities.md
+        - text: Investigate incidents and alerts
+          url: investigate-threats.md
+        - text: Manage sites
+          url: manage-sites.md

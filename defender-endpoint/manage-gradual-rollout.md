@@ -4,8 +4,9 @@ description: Learn about the gradual update process and controls.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 01/12/2024
+ms.date: 10/07/2024
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
@@ -90,13 +91,13 @@ The following update channels are available:
 
 ### Update channels for security intelligence updates
 
-You can also assign a machine to a channel to define the cadence in which it receives SIUs (formerly referred to as signature, definition, or daily updates). Unlike the monthly process, there's no Beta channel and this gradual release cycle occurs multiple times a day.
+You can also assign a machine to a channel to define the cadence in which it receives SIUs (formerly referred to as signature, definition, or daily updates). Unlike the monthly process, this gradual release cycle occurs multiple times a day.
 
 |Channel name|Description|Application|
 |---|---|---|
-|Current Channel (Staged)|Get Current Channel updates later during gradual release|Devices are offered updates later during the gradual release cycle. Suggested to apply to a small, representative part of your device population (~10%).|
-|Current Channel (Broad)|Get updates at the end of gradual release|Devices will be offered updates after the gradual release cycle. Best for datacenter machines that only receive limited updates. Note: this setting applies to all Defender updates.|
-|(default)||If you disable or don't configure this policy, the device remains in Current Channel (Default): Stay up to date automatically during the gradual release cycle. This means Microsoft assigns a channel to the device. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which isn't suitable for devices in a production or critical environment.|
+|Current Channel (Staged)|Same as Current Channel (Broad)|Same as Current Channel (Broad).|
+|Current Channel (Broad)|Get updates at the end of gradual release|Devices will be offered updates after the gradual release cycle. Suggested to apply to a broad set of devices in all populations, including production. Note: this setting applies to all Defender updates.|
+|(default)||If you disable or don't configure this policy, Microsoft will either assign the device to Current Channel (Broad) or a beta channel early in the gradual release cycle. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which may not be suitable for devices in a production or critical environment.|
 
 > [!NOTE]
 > In case you wish to force an update to the newest signature instead of leveraging the time delay, you will need to remove this policy first.
@@ -109,7 +110,7 @@ For environments where there's a need for a more controlled gradual rollout of a
 
 1. Participate in the Windows Insider program or assign a group of devices to the Beta Channel.
 
-2. Designate a pilot group that opts-in to Preview Channel, typically validation environments, to receive new updates early.
+2. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
 
 3. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
 

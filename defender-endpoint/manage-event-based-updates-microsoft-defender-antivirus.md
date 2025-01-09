@@ -4,8 +4,8 @@ description: Manage how Microsoft Defender Antivirus applies security intelligen
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.date: 02/27/2024
 ms.reviewer: pahuijbr

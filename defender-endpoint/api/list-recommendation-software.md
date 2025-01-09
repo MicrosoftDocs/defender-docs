@@ -2,8 +2,8 @@
 title: List software by recommendation
 description: Retrieves a security recommendation related to a specific software.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

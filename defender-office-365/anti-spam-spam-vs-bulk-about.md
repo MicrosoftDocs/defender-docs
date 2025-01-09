@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the differences between junk email (spam) and bulk email (gray mail) in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 3/22/2024
+ms.date: 07/25/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -55,25 +55,34 @@ Another option that's easy to overlook: if a user complains about receiving bulk
 
 ## How to tune bulk email
 
-As of September 2022, Microsoft Defender for Office 365 Plan 2 customers can access BCL from [advanced hunting](/defender-xdr/advanced-hunting-overview). This feature allows admins to look at all bulk senders who sent mail to their organization, their corresponding BCL values, and the amount of email that was received. You can drill down into the bulk senders by using other columns in **EmailEvents** table in the **Email & collaboration** schema. For more information, see [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table).
+Admins can follow the [recommended bulk threshold values](recommended-settings-for-eop-and-office365.md#anti-spam-anti-malware-and-anti-phishing-protection-in-eop) or choose a bulk threshold value that suits the needs of their organization.
 
-For example, if Contoso has set their current bulk threshold to 7 in anti-spam policies, Contoso recipients receive email from all senders in their Inbox if the BCL value is 6 or less. Admins can run the following query to get a list of all bulk senders in the organization:
+### Tune bulk email in organizations with Exchange Online Protection
 
-```console
-EmailEvents
-| where BulkComplaintLevel >= 1 and Timestamp > datetime(2022-09-XXT00:00:00Z)
-| summarize count() by SenderMailFromAddress, BulkComplaintLevel
-```
+> [!TIP]
+> The bulk senders insight is currently in Preview, isn't available in all organizations, and is subject to change.
 
-This query allows admins to identify wanted and unwanted senders. If a bulk sender has a BCL score that's more than the bulk threshold, admins can [report the sender's messages to Microsoft for analysis](submissions-admin.md#report-good-email-to-microsoft). This action also adds the sender as an allow entry in the Tenant Allow/Block List.
+In organizations with EOP, if you select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section in the details flyout of the default anti-spam policy or a custom anti-spam policy that you select from the **Anti-spam policies** page at <https://security.microsoft.com/antispam>, the **Bulk email threshold** section contains the bulk senders insight: information about the number of messages that were detected as bulk at all BCL levels by all anti-spam policies over the last 60 days.
 
-Organizations without Defender for Office 365 Plan 2 can try the features in Microsoft Defender XDR for Office 365 Plan 2 for free. Use the 90-day Defender for Office 365 evaluation at <https://security.microsoft.com/atpEvaluation>. Learn about who can sign up and trial terms [here](try-microsoft-defender-for-office-365.md).
+- By default, the bulk senders insight shows the number of messages that were delivered and identified as bulk at the current BCL threshold of the anti-spam policy.
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-default.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk at the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-default.png":::
+
+- If you decrease the bulk email threshold value, the bulk senders insight changes to show how many fewer messages would be delivered and how many more messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false positives (good email identified as bad).
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you decrease the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png":::
+
+- If you increase the bulk email threshold value, the bulk senders insight changes to show how many more messages would be delivered and how many fewer messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false negatives (bad email delivered).
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you increase the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png":::
+
+Selecting **View bulk senders insight** takes you to the main **Bulk sender insights** page. For more information, see [Bulk senders insight in Exchange Online Protection](anti-spam-bulk-senders-insight.md).
+
+### Tune bulk email in organizations with Defender for Office 365 Plan 1 or Plan 2
 
 If you have Defender for Office 365 Plan 1 or Plan 2, you can use the [Threat protection status report](reports-email-security.md#threat-protection-status-report) to identify wanted and unwanted bulk senders:
 
-1. Open the **Threat protection status** report at one of the following URLs:
-   - **EOP**: <https://security.microsoft.com/reports/TPSAggregateReport>
-   - **Defender for Office 365**: <https://security.microsoft.com/reports/TPSAggregateReportATP>
+1. Open the **Threat protection status** report at <https://security.microsoft.com/reports/TPSAggregateReportATP>.
 
 2. Select **View data by Email \> Spam** and **Chart breakdown by Detection Technology**.
 
@@ -89,4 +98,18 @@ If you have Defender for Office 365 Plan 1 or Plan 2, you can use the [Threat pr
 
 5. After you identify wanted and unwanted bulk senders, adjust the bulk threshold in the default anti-spam policy and in custom anti-spam policies. If some bulk senders don't fit within your bulk threshold, [report the messages to Microsoft for analysis](submissions-admin.md#report-good-email-to-microsoft).
 
-Admins can follow the [recommended bulk threshold values](recommended-settings-for-eop-and-office365.md#anti-spam-anti-malware-and-anti-phishing-protection-in-eop) or choose a bulk threshold value that suits the needs of their organization.
+### Tune bulk email in organizations with Defender for Office 365 Plan 2
+
+As of September 2022, Microsoft Defender for Office 365 Plan 2 customers can access BCL from [advanced hunting](/defender-xdr/advanced-hunting-overview). This feature allows admins to look at all bulk senders who sent mail to their organization, their corresponding BCL values, and the amount of email that was received. You can drill down into the bulk senders by using other columns in **EmailEvents** table in the **Email & collaboration** schema. For more information, see [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table).
+
+For example, if Contoso sets their bulk threshold to 7 in anti-spam policies, Contoso recipients receive email from all senders in their Inbox if the BCL value is 6 or less. Admins can run the following query to get a list of all bulk senders in the organization:
+
+```console
+EmailEvents
+| where BulkComplaintLevel >= 1 and Timestamp > datetime(2022-09-XXT00:00:00Z)
+| summarize count() by SenderMailFromAddress, BulkComplaintLevel
+```
+
+This query allows admins to identify wanted and unwanted senders. If a bulk sender has a BCL score that's more than the bulk threshold, admins can [report the sender's messages to Microsoft for analysis](submissions-admin.md#report-good-email-to-microsoft). This action also adds the sender as an allow entry in the Tenant Allow/Block List.
+
+Organizations without Defender for Office 365 Plan 2 can try the features in Microsoft Defender XDR for Office 365 Plan 2 for free. Use the 90-day Defender for Office 365 evaluation at <https://security.microsoft.com/atpEvaluation>. Learn about who can sign up and trial terms [here](try-microsoft-defender-for-office-365.md).

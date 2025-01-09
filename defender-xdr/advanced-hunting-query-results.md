@@ -1,6 +1,6 @@
 ---
-title: Work with advanced hunting query results in Microsoft Defender XDR
-description: Make the most of the query results returned by advanced hunting in Microsoft Defender XDR
+title: Work with advanced hunting query results in Microsoft Defender
+description: Make the most of the query results returned by advanced hunting in Microsoft Defender
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -14,16 +14,19 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-ms.topic: conceptual
-ms.date: 02/16/2024
+ms.custom:
+- cx-ti
+- cx-ah
+ms.topic: how-to
+ms.date: 10/18/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Work with advanced hunting query results
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -111,6 +114,28 @@ After running a query, select **Export** to save the results to local file. Your
 - **Table view**—The query results are exported in tabular form as a Microsoft Excel workbook
 - **Any chart**—The query results are exported as a JPEG image of the rendered chart
 
+## Filter results
+
+After running a query, select **Filter** to narrow down the results. 
+
+:::image type="content" source="/defender/media/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="/defender/media/add-filter1.png":::
+
+To add a filter, select the data you want to filter for by selecting one or more of the check boxes. Then select **Add**.
+
+:::image type="content" source="/defender/media/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="/defender/media/add-filter2.png":::
+
+You can narrow the results down even further to specific data by selecting the newly added filter. 
+
+:::image type="content" source="/defender/media/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="/defender/media/add-filter3.png":::
+
+This opens a dropdown showing the possible filters you can use further. Select one or more of the check boxes, then select **Apply**.
+
+:::image type="content" source="/defender/media/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="/defender/media/add-filter4.png":::
+
+Confirm that you have added the filters that you wanted by checking the Filters section. 
+
+:::image type="content" source="/defender/media/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="/defender/media/add-filter5.png":::
+
 ## Drill down from query results
 
 You can also explore the results in-line with the following features:
@@ -148,7 +173,24 @@ Select the three dots to the right of any column in the **Inspect record** panel
 - Exclude the selected value from the query (`!=`)
 - Get more advanced operators for adding the value to your query, such as `contains`, `starts with`, and `ends with`
 
-:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="The Action Type pane on the Inspect record page in the Microsoft Defender portal " lightbox="/defender/media/work-with-query-tweak-query.png":::
+:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="/defender/media/work-with-query-tweak-query.png":::
+
+
+
+## Add items to Favorites
+You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
+
+:::image type="content" source="media/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/faves-1.png":::
+
+For instance, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, and select the three dots to the right of the table and select **Add to favorites**. 
+
+:::image type="content" source="media/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/faves-2.png":::
+
+A notification appears to inform you that the item was successfully added to Favorites.
+
+![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/faves-3.png)
+
+You can do the same for your saved functions, queries, and custom detections in their respective Favorites sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
 > [!NOTE]
 > Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).

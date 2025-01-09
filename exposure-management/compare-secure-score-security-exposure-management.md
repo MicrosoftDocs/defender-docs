@@ -1,21 +1,17 @@
 ---
 title: Compare Microsoft Secure Score and Microsoft Security Exposure Management 
 description: Compare Microsoft secure score and Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/12/2024
+ms.date: 11/04/2024
 ---
 
 # Compare Microsoft Security Exposure Management with secure score
 
 This article discusses the differences between Microsoft [Secure Score](/defender-xdr/microsoft-secure-score) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Comparison
 

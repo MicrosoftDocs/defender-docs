@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create and manage login pages for simulated phishing attacks in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/11/2024
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -116,7 +116,17 @@ When you select a login page from the list by clicking anywhere in the row other
 
        - **Add Next button**: Available only on **Page 1** of two-page logins. Select this link to add the 'Next' button to the login page. The default text on the button is **Next**, but you can change it.
 
+       > [!TIP]
+       > To add images, copy (CTRL+C) and paste (CTRL+V) the image into the editor on the **Text** tab. The editor automatically converts the image to Base64 as part of the HTML code.
+
      - **Code** tab: You can view and modify the HTML code directly.
+
+       > [!TIP]
+       > To avoid sending passwords in plain text from custom login pages, avoid using the variable **name** in HTML code. Instead, use **type**, **id**, or **class**. For example:
+       >
+       > ```html
+       > <input id="input-field-loginPage" type="password" placeholder="Password">
+       > ```
 
    You can preview the results by clicking the **Preview email** button at the top of the page.
 

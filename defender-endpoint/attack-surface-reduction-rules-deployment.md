@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.reviewer: sugamar
 manager: deniseb
 ms.custom: asr
@@ -17,7 +17,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 07/13/2023
+ms.date: 07/25/2024
 search.appverid: met150
 ---
 
@@ -199,7 +199,7 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 ### Management sites
 
-[Microsoft Intune admin center](https://endpoint.microsoft.com/#home)
+[Microsoft Intune admin center](https://intune.microsoft.com/#home)
 
 [Attack surface reduction](https://security.microsoft.com/asr?viewid=detections)
 

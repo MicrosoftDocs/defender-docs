@@ -1,0 +1,999 @@
+{
+  "redirections": [
+    {
+      "source_path": "CloudAppSecurityDocs/lifecycle-management.md",
+      "redirect_url": "/defender-cloud-apps/ops-guide/ops-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/app-governance-whats-new.md",
+      "redirect_url": "/defender-cloud-apps/release-note-archive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/content-inspection-built-in.md",
+      "redirect_url": "/defender-cloud-apps/dcs-inspection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-cas-compliance-trust.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-cas-compliance-trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-preview-features.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-preview-features",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-get-started.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-tutorial-shadow-it.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-tutorial-shadow-it",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-tutorial-ueba.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-tutorial-ueba",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-investigate-risky-oauth.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-investigate-risky-oauth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-tutorial-dlp.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-tutorial-dlp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-use-case-proxy-block-session-aad.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-use-case-proxy-block-session-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-tutorial-cloud-platform-security.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-tutorial-cloud-platform-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-use-case-admin-quarantine.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-use-case-admin-quarantine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-use-case-information-protection.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-use-case-information-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-tutorial-flow.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-tutorial-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-tutorial-step-up-authentication.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-tutorial-step-up-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-daily-activities-to-protect-your-cloud-environment.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-daily-activities-to-protect-your-cloud-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-working-with-app-page.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-working-with-app-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-risk-score.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-risk-score",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-discovered-apps.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-discovered-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-general-setup.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-general-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-network-requirements.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-manage-admins.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-manage-admins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-admin-settings.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-admin-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-mail-settings.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-mail-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-user-groups.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-user-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-scoped-deployment.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-scoped-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-activity-privacy.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-activity-privacy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-ip-tags.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-ip-tags",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-mde-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-mde-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-zscaler-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-zscaler-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-iboss-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-iboss-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-corrata-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-corrata-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-create-snapshot-cloud-discovery-reports.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-create-snapshot-cloud-discovery-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-discovery-docker-windows.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-discovery-docker-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-discovery-docker-ubuntu.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-discovery-docker-ubuntu",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-discovery-docker-ubuntu-azure.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-discovery-docker-ubuntu-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-log-collector-advanced-management.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-log-collector-advanced-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-custom-log-parser.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-custom-log-parser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-cloud-discovery-aad-enrichment.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-cloud-discovery-aad-enrichment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-cloud-discovery-anonymizer.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-cloud-discovery-anonymizer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-cloud-discovery-custom-apps.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-cloud-discovery-custom-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-discovered-app-queries.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-discovered-app-queries",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-enable-instant-visibility-protection-and-governance-actions-for-your-apps.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-enable-instant-visibility-protection-and-governance-actions-for-your-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-atlassian.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-atlassian",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-aws.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-aws",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-box.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-box",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-docusign.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-docusign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-dropbox.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-dropbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-egnyte.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-egnyte",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-github-ec.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-github-ec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-google-gcp.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-google-gcp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-google-workspace.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-google-workspace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-netdocuments-to-microsoft-defender-for-cloud-apps.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-netdocuments-to-microsoft-defender-for-cloud-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-office-365.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-office-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-okta.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-okta",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-onelogin.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-onelogin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-salesforce.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-salesforce",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-servicenow.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-servicenow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-slack.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-slack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-smartsheet.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-smartsheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-webex.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-webex",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-workday.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-workday",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-workplace.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-workplace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-zendesk.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-zendesk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-connect-zoom.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-connect-zoom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-intro-aad.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-intro-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-deployment-aad.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-deployment-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-deployment-featured-idp.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-deployment-featured-idp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-deployment-any-app.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-deployment-any-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-deployment-any-app-idp.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-deployment-any-app-idp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-idp-pingone.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-idp-pingone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-idp-adfs.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-idp-adfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-proxy-idp-okta.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-proxy-idp-okta",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-investigate.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-investigate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-activity-filters.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-activity-filters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-activity-filters-queries.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-activity-filters-queries",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-mde-investigation.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-mde-investigation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-file-filters.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-file-filters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-accounts.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-manage-app-permissions.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-manage-app-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-security-config.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-security-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-security-saas.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-security-saas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-monitor-alerts.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-monitor-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-managing-alerts.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-managing-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-control.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-control-cloud-apps-with-policies.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-control-cloud-apps-with-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-user-activity-policies.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-user-activity-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-anomaly-detection-policy.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-anomaly-detection-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-app-permission-policy.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-app-permission-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-data-protection-policies.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-data-protection-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-content-inspection.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-content-inspection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-dcs-inspection.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-dcs-inspection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-access-policy-aad.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-access-policy-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-session-policy-aad.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-session-policy-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-cloud-discovery-policies.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-cloud-discovery-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-cloud-discovery-anomaly-detection-policy.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-cloud-discovery-anomaly-detection-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-policy-template-reference.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-policy-template-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-governance-actions.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-governance-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-governance-discovery.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-governance-discovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-mde-govern.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-mde-govern",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-mdi-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-mdi-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-aadip-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-aadip-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-azip-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-azip-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-siem-sentinel.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-siem-sentinel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-siem.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-siem",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-icap-stunnel.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-icap-stunnel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-flow-integration.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-flow-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-policies-cloud-discovery.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-policies-cloud-discovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-policies-threat-protection.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-policies-threat-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-policies-information-protection.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-policies-information-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-api-introduction.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-api-introduction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-api-tokens-legacy.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-api-tokens-legacy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-troubleshooting-proxy.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-troubleshooting-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-troubleshooting-siem.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-troubleshooting-siem",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-support-and-ts.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-support-and-ts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/e-books.md",
+      "redirect_url": "/defender-cloud-apps/what-is-defender-for-cloud-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/proxy-deployment-any-app.md",
+      "redirect_url": "/defender-cloud-apps/proxy-intro-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/proxy-deployment-aad.md",
+      "redirect_url": "/defender-cloud-apps/proxy-intro-aad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/preview-features.md",
+      "redirect_url": "/microsoft-365/security/defender/preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/working-with-cloud-discovery-data.md",
+      "redirect_url": "/defender-cloud-apps/discovered-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/use-case-ransomware.md",
+      "redirect_url": "/defender-cloud-apps/best-practices#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/protect-connected-apps.md",
+      "redirect_url": "/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-zoom.md",
+      "redirect_url": "/defender-cloud-apps/protect-zoom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-citrix-sharefile.md",
+      "redirect_url": "/defender-cloud-apps/protect-citrix-sharefile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-asana.md",
+      "redirect_url": "/defender-cloud-apps/protect-asana#connect-asana-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-atlassian.md",
+      "redirect_url": "/defender-cloud-apps/protect-atlassian#connect-atlassian-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-aws.md",
+      "redirect_url": "/defender-cloud-apps/protect-aws#connect-aws-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-azure.md",
+      "redirect_url": "/defender-cloud-apps/protect-azure#connect-azure-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-box.md",
+      "redirect_url": "/defender-cloud-apps/protect-box#connect-box-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-docusign.md",
+      "redirect_url": "/defender-cloud-apps/protect-docusign#connect-docusign-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-dropbox.md",
+      "redirect_url": "/defender-cloud-apps/protect-dropbox#connect-dropbox-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-egnyte.md",
+      "redirect_url": "/defender-cloud-apps/protect-egnyte#connect-egnyte-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-github-ec.md",
+      "redirect_url": "/defender-cloud-apps/protect-github#connect-github-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-google-gcp.md",
+      "redirect_url": "/defender-cloud-apps/protect-gcp#connect-gcp-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-google-workspace.md",
+      "redirect_url": "/defender-cloud-apps/protect-google-workspace#connect-google-workspace-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-miro.md",
+      "redirect_url": "/defender-cloud-apps/protect-miro#connect-miro-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-netdocuments-to-microsoft-defender-for-cloud-apps.md",
+      "redirect_url": "/defender-cloud-apps/protect-netdocuments#connect-netdocuments-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-office-365.md",
+      "redirect_url": "/defender-cloud-apps/protect-office-365#connect-office-365-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-okta.md",
+      "redirect_url": "/defender-cloud-apps/protect-okta#connect-okta-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-onelogin.md",
+      "redirect_url": "/defender-cloud-apps/protect-onelogin#connect-onelogin-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-salesforce.md",
+      "redirect_url": "/defender-cloud-apps/protect-salesforce#connect-salesforce-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-servicenow.md",
+      "redirect_url": "/defender-cloud-apps/protect-servicenow#connect-servicenow-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-slack.md",
+      "redirect_url": "/defender-cloud-apps/protect-slack#connect-slack-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-smartsheet.md",
+      "redirect_url": "/defender-cloud-apps/protect-smartsheet#connect-smartsheet-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-webex.md",
+      "redirect_url": "/defender-cloud-apps/protect-webex#connect-webex-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-workday.md",
+      "redirect_url": "/defender-cloud-apps/protect-workday#connect-workday-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-workplace.md",
+      "redirect_url": "/defender-cloud-apps/protect-workplace#connect-workplace-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-zendesk.md",
+      "redirect_url": "/defender-cloud-apps/protect-zendesk#connect-zendesk-to-microsoft-cloud-app-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-security-config-aws.md",
+      "redirect_url": "/defender-cloud-apps/classic-security-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-security-config-azure.md",
+      "redirect_url": "/defender-cloud-apps/classic-security-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/classic-security-config-gcp.md",
+      "redirect_url": "/defender-cloud-apps/classic-security-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/icap-stunnel.md",
+      "redirect_url": "/defender-cloud-apps/dcs-inspection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/app-governance-feedback.md",
+      "redirect_url": "/microsoft-365/security/defender/feedback",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/security-baseline.md",
+      "redirect_url": "/security/benchmark/azure/baselines/cloud-app-security-security-baseline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/api-alerts-bulk-dismiss.md",
+      "redirect_url": "/defender-cloud-apps/api-alerts-close-false-positive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/api-alerts-bulk-resolve.md",
+      "redirect_url": "/defender-cloud-apps/api-alerts-close-true-positive",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/api-alerts-dismiss.md",
+      "redirect_url": "/defender-cloud-apps/api-alerts-close-false-positive",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/proxy-idp-examples.md",
+      "redirect_url": "/defender-cloud-apps/proxy-idp-pingone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-google-apps-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-google-workspace-to-microsoft-cloud-app-security",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/protect-gsuite.md",
+      "redirect_url": "/defender-cloud-apps/protect-google-workspace",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/api-tokens.md",
+      "redirect_url": "/defender-cloud-apps/api-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/investigate-activities-api.md",
+      "redirect_url": "/defender-cloud-apps/api-activities-investigate-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/aatp-integration.md",
+      "redirect_url": "/defender-cloud-apps/mdi-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-aws-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-aws",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-azure-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-azure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-box-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-box",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-dropbox-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-dropbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-github-ec-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/protect-github##connect-github-enterprise-cloud-to-microsoft-defender-for-cloud-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-google-gcp-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/protect-gcp#connect-google-cloud-platform-to-microsoft-defender-for-cloud-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-google-workspace-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-google-workspace",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-office-365-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-office-365",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-okta-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-okta",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-onelogin-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-onelogin",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-salesforce-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-salesforce",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-servicenow-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-servicenow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-slack-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-slack",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-smartsheet-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-smartsheet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-webex-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-webex",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-workday-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-workday",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connect-zendesk-to-microsoft-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/connect-zendesk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/getting-started-with-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/get-started",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/wdatp-integration.md",
+      "redirect_url": "/defender-cloud-apps/mde-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/app-governance-trial-playbook.md",
+      "redirect_url": "/defender-cloud-apps/app-governance-trial-user-guide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/built-in-reports.md",
+      "redirect_url": "/defender-cloud-apps/file-filters",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/daily-activities-to-protect-your-cloud-environment.md",
+      "redirect_url": "/defender-cloud-apps/best-practices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/tutorial-cloud-platform-security.md",
+      "redirect_url": "/azure/defender-for-cloud/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/control.md",
+      "redirect_url": "/defender-cloud-apps/governance-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/app-governance-detect-remediate-detect-threats.md",
+      "redirect_url": "/defender-cloud-apps/app-governance-manage-alerts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/monitor-alerts.md",
+      "redirect_url": "/microsoft-365/security/defender/investigate-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/managing-alerts.md",
+      "redirect_url": "/microsoft-365/security/defender/investigate-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/aadip-integration.md",
+      "redirect_url": "/defender-cloud-apps/tutorial-ueba",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/configure-automatic-log-upload-for-continuous-reports.md",
+      "redirect_url": "/defender-cloud-apps/discovery-docker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/security-config.md",
+      "redirect_url": "/azure/defender-for-cloud/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/security-config-azure.md",
+      "redirect_url": "/azure/defender-for-cloud/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/security-config-aws.md",
+      "redirect_url": "/azure/defender-for-cloud/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/security-config-gcp.md",
+      "redirect_url": "/azure/defender-for-cloud/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/mdi-integration.md",
+      "redirect_url": "/microsoft-365/security/defender/microsoft-365-security-center-mdi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/what-is-cloud-app-security.md",
+      "redirect_url": "/defender-cloud-apps/what-is-defender-for-cloud-apps",
+      "redirect_document_id": true
+    }
+  ]
+}

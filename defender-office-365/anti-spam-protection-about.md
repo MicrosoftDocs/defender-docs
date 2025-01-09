@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the anti-spam settings and filters that help prevent spam in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 10/18/2023
+ms.date: 12/08/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -43,7 +43,7 @@ EOP uses the following spam filtering verdicts to classify messages:
 - **High confidence spam**: The message received an SCL of 7, 8, or 9.
 - **Phishing**
 - **High confidence phishing**: As part of [secure by default](secure-by-default.md), messages that are identified as high confidence phishing are always quarantined, and users can't release their own quarantined high confidence phishing messages, regardless of any available settings that admins configure.
-- **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md). threshold.
+- **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) threshold.
 
 For more information about anti-spam protection, see the [Anti-spam protection FAQ](anti-spam-protection-faq.yml)
 
@@ -121,7 +121,7 @@ For complete information about ASF settings, see [Advanced Spam Filter (ASF) set
 The other settings that are available in this category are:
 
 - **Contains specific languages**: Messages in the specified languages are automatically identified as spam.
-- **From these countries***: Messages from the specified countries are automatically identified as spam.
+- **From these countries**: Messages from the specified countries are automatically identified as spam.
 
 These settings aren't configured in the default anti-spam policy by default, or in the Standard or Strict [preset security policies](preset-security-policies.md).
 
@@ -133,7 +133,7 @@ These settings aren't configured in the default anti-spam policy by default, or 
 
   |Action|Spam|High<br>confidence<br>spam|Phishing|High<br>confidence<br>phishing|Bulk|
   |---|:---:|:---:|:---:|:---:|:---:|
-  |**Move message to Junk Email folder**: The message is delivered to the mailbox and moved to the Junk Email folder.¹|✔<sup>\*</sup>|✔<sup>\*</sup>|✔|²|✔<sup>\*</sup>|
+  |**Move message to Junk Email folder**: The message is delivered to the Junk Email folder in the mailbox.¹|✔<sup>\*</sup>|✔<sup>\*</sup>|✔|²|✔<sup>\*</sup>|
   |**Add X-header**: Adds an X-header to the message header and delivers the message to the mailbox. <br/><br/> You enter the X-header field name (not the value) in the available **Add this X-header text** box. <br/><br/> For **Spam** and **High confidence spam** verdicts, the message is moved to the Junk Email folder.¹ ³|✔|✔|✔||✔|
   |**Prepend subject line with text**: Adds text to the beginning of the message's subject line. The message is delivered to the mailbox and moved to the Junk email folder.¹ ³ <br/><br/> You enter the text in the available **Prefix subject line with this text** box.|✔|✔|✔||✔|
   |**Redirect message to email address**: Sends the message to other recipients instead of the intended recipients. <br/><br/> You specify the recipients in the **Redirect to this email address** box.|✔|✔|✔|✔|✔|
@@ -141,7 +141,7 @@ These settings aren't configured in the default anti-spam policy by default, or 
   |**Quarantine message**: Sends the message to quarantine instead of the intended recipients. <br/><br/> You select or use the default _quarantine policy_ for the spam filtering verdict in the **Select quarantine policy** box that appears.⁴ Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy). <br/><br/> You specify how long the messages are held in quarantine in the available **Retain spam in quarantine for this many days** box.|✔|✔|✔<sup>\*</sup>|✔<sup>\*</sup> ⁵|✔|
   |**No action**|||||✔|
 
-  ¹ EOP uses its own mail flow delivery agent to route messages to the Junk Email folder instead of using the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has effect on mail flow in cloud mailboxes. For more information, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
+  ¹ EOP uses its own mail flow delivery agent to route messages to the Junk Email folder instead of using the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has no effect on mail flow in cloud mailboxes. For more information, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
   ² For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
 

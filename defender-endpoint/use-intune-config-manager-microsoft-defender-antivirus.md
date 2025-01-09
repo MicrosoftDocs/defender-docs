@@ -3,10 +3,10 @@ title: Configure Microsoft Defender Antivirus using Microsoft Intune
 description: Use Microsoft Intune to configure Microsoft Defender Antivirus and Endpoint Protection
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 12/16/2021
+ms.date: 07/25/2024
 ms.reviewer: phuijbr, yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -37,7 +37,7 @@ You can use the Microsoft Intune family of products to configure Microsoft Defen
 
 ## Configure Microsoft Defender Antivirus scans in Intune
 
-1. Go to the Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), and sign in.
+1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), and sign in.
 
 2. Navigate to **Endpoint Security**.
 

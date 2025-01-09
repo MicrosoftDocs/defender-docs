@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 01/22/2024
+ms.date: 07/01/2024
 ---
 
 # Responding to your first incident in Microsoft Defender XDR
@@ -45,9 +45,6 @@ This guide has three main sections:
 ## Understanding incidents
 
 An [incident](incidents-overview.md) is a chain of processes created, commands, and actions that might not have coincided. An incident provides a holistic picture and context of suspicious or malicious activity. A single incident gives you an attack's complete context instead of triaging hundreds of alerts from multiple services.
-
-> [!TIP]
-> For a limited time during January 2024, when you visit the **Incidents** page, Defender Boxed appears. Defender Boxed highlights your organization's security successes, improvements, and response actions during 2023. To reopen Defender Boxed, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
 
 Microsoft Defender XDR has many features that you can use to respond to an incident. You can navigate the incidents by selecting **View all incidents** in the Active incidents card on the Home page or through **Incidents & alerts** on the left navigation pane.
 
@@ -82,7 +79,7 @@ You might assign a high priority to the incident using the information above. Yo
 
 You can contribute to [incident management](manage-incidents.md) efficiency by providing essential information in incidents and alerts. When you add information to the following filters from when you triage and analyze each incident, you provide further context to that incident that other responders can take advantage of:
 
-- [Classifying incidents and alerts](manage-incidents.md#specify-the-classification)
+- [Classifying incidents and alerts](manage-incidents.md#specify-the-incidents-classification)
 - Naming incidents
 - Adding tags
 - Providing comments
@@ -90,6 +87,9 @@ You can contribute to [incident management](manage-incidents.md) efficiency by p
 Learn how to classify incidents and alerts through this video:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4LHJq]
+
+> [!TIP]
+> **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
 
 ## Next steps
 

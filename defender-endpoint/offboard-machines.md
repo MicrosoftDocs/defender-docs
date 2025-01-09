@@ -2,8 +2,8 @@
 title: Offboard devices
 description: Onboard Windows devices, servers, non-Windows devices from the Microsoft Defender for Endpoint service
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 08/23/2024
 ---
 
 # Offboard devices
@@ -36,17 +36,10 @@ ms.date: 04/03/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-offboarddevices-abovefoldlink)
 
-Follow the corresponding instructions depending on your preferred deployment method.
+When you offboard a device from Defender for Endpoint, no new detections, vulnerability, or security data are sent to the Microsoft Defender portal. Seven days after offboarding a device, its status changes to [inactive](/defender-endpoint/fix-unhealthy-sensors#inactive-devices). Devices that weren't active within the past 30 days are not factored into your organization's [exposure score](/defender-vulnerability-management/tvm-exposure-score).
 
-The status of a device switches to [Inactive](fix-unhealthy-sensors.md#inactive-devices) seven (7) days after offboarding.
+Past data, such as alerts, vulnerablities, and the device timeline, for an offboarded device is displayed in the Microsoft Defender portal until the [configured retention period](/defender-endpoint/data-storage-privacy#how-long-will-microsoft-store-my-data-what-is-microsofts-data-retention-policy) expires. You also see the device profile (without data) in the device inventory for up to 180 days. To view data for active devices only, you can use filters, such as [sensor health state](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views), [device tags](/defender-endpoint/machine-tags), or [device groups](/defender-endpoint/machine-groups).
 
-Data, such as Timeline, Alerts, Vulnerabilities, etc., from devices that were offboarded remains in the Microsoft Defender portal until the configured [retention period](data-storage-privacy.md#how-long-will-microsoft-store-my-data-what-is-microsofts-data-retention-policy) expires.
-
-The device's profile (without data) remains in the [Device inventory](machines-view-overview.md) for no longer than 180 days.
-
-Devices that weren't active in the last 30 days aren't factored in on the data that reflects your organization's Defender Vulnerability Management [exposure score](/defender-vulnerability-management/tvm-exposure-score) and Microsoft Secure Score for Devices.
-
-To view only active devices, you can filter by [sensor health state](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views), [device tags](machine-tags.md), or [machine groups](machine-groups.md).
 
 ## Offboard Windows devices
 
@@ -62,4 +55,11 @@ To view only active devices, you can filter by [sensor health state](machines-vi
 
 - [Offboard non-Windows devices](configure-endpoints-non-windows.md#offboard-non-windows-devices)
 
+## Offboard Android or iOS devices
+
+To offboard an Android or iOS device, uninstall the Microsoft Defender app on the device.
+
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

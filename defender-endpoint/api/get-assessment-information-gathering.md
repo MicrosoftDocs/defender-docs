@@ -2,8 +2,8 @@
 title: Export information gathering assessment
 description: Returns a table with an entry for every unique combination of DeviceId, DeviceName, Additional fields.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,8 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-
-ms.date: 07/26/2022
+ms.date: 01/08/2025
 ---
 
 # Information gathering assessment per device
@@ -70,35 +69,29 @@ Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerab
 GET /api/Machines/InfoGatheringExport
 ```
 
-### 1.4 Parameters
-
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours)
-
-### 1.5 Properties
+### 1.4 Properties
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> 
+> - The files are gzip compressed & in multiline Json format.
+> - The download URLs are only valid for 1 hour.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
 |Export files|String[array]|A list of download URLs for files holding the current snapshot of the organization.
 |GeneratedTime|DateTime|The time the export was generated.
 
-### 1.6 Examples
+### 1.5 Examples
 
-#### 1.6.1 Request example
+#### 1.5.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$sasValidHours=1
 ```
 
-#### 1.6.2 Response example
+#### 1.5.2 Response example
 
 ```json
 {

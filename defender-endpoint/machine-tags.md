@@ -2,12 +2,12 @@
 title: Create and manage device tags
 description: Use device tags to group devices to capture context and enable dynamic list creation as part of an incident
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.topic: reference
@@ -32,7 +32,7 @@ ms.date: 02/27/2023
 Add tags on devices to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident. Tags can be used as a filter in the **Device inventory** view, or to group devices. For more information on device grouping, see [Create and manage device groups](machine-groups.md).
 
 > [!NOTE]
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 You can add tags on devices using the following ways:
 
@@ -62,7 +62,6 @@ To add device tags using API, see [Add or remove device tags API](api/add-or-rem
 2. Select **Manage tags** from the row of Response actions.
 
     :::image type="content" source="media/manage-tags-option.png" alt-text="Image of manage tags button" lightbox="media/manage-tags-option.png":::
-    
 
 3. Type to find or create tags
 
@@ -81,7 +80,7 @@ You can also delete tags from this view.
 
 ## Add device tags using dynamic rules for device tagging
 
-You can create and manage rules that automatically assign and remove tags from devices based on user-defined criteria directly in the Microsoft Defender portal. Please refer to following documents for details 
+You can create and manage rules that automatically assign and remove tags from devices based on user-defined criteria directly in the Microsoft Defender portal. Please refer to following documents for details:
 
 - [Manage your devices with ease using dynamic rules for device tagging in Microsoft Defender](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-your-devices-with-ease-using-dynamic-rules-for-device/ba-p/4024988)
 - [Asset rule management - Dynamic rules for devices](/defender-xdr/configure-asset-rules)
@@ -156,8 +155,6 @@ You can use Microsoft Intune to define and apply device tags. You can perform th
 - In the [Create the profile](/mem/intune/configuration/custom-settings-configure) procedure, for step 3, choose [Windows 10 and later](/mem/intune/configuration/custom-settings-windows-10).
 
 - In the [OMA-IRU settings](/mem/intune/configuration/custom-settings-windows-10) section, for **Data type**, choose **String**. For **OMA-URI**, type (or paste) `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group`.
-
-
 
 ## Add device tags by creating app configuration policy in Microsoft Intune
 

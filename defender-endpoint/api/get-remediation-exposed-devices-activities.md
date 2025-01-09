@@ -2,8 +2,8 @@
 title: List exposed devices of one remediation activity
 description: Returns information about exposed devices for the specified remediation task.
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

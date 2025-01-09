@@ -43,7 +43,7 @@ For a video about this information, see <https://youtu.be/eQanpq9N1Ps>.
 
 ### Monitor the Microsoft Defender XDR Incidents queue
 
-The **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents-queue> (also known as the _Incidents queue_) allows you to manage and monitor events from the following sources in Defender for Office 365:
+The **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents> (also known as the _Incidents_ queue) allows you to manage and monitor events from the following sources in Defender for Office 365:
 
 - [Alerts](/purview/alert-policies#default-alert-policies).
 - [Automated investigation and response (AIR)](air-about.md).
@@ -64,7 +64,7 @@ Incident queue management and the responsible personas are described in the foll
 
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
-|Triage incidents in the Incidents queue at <https://security.microsoft.com/incidents-queue>.|Daily|Verify that all **Medium** and **High** severity incidents from Defender for Office 365 are triaged.|Security Operations Team|
+|Triage incidents in the Incidents queue at <https://security.microsoft.com/incidents>.|Daily|Verify that all **Medium** and **High** severity incidents from Defender for Office 365 are triaged.|Security Operations Team|
 |Investigate and take Response actions on incidents.|Daily|Investigate all incidents and actively take the recommended or manual response actions.|Security Operations Team|
 |Resolve incidents.|Daily|If the incident has been remediated, resolve the incident. Resolving the incident resolves all linked and related active alerts.|Security Operations Team|
 |Classify incidents.|Daily|Classify incidents as true or false. For true alerts, specify the threat type. This classification helps your security team see threat patterns and defend your organization from them.|Security Operations Team|

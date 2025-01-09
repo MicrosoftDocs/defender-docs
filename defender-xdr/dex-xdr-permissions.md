@@ -2,8 +2,7 @@
 title: How Microsoft Defender Experts for XDR permissions work
 ms.reviewer:
 description: Configuring permissions in customer's XDR tenants
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
@@ -13,8 +12,11 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: conceptual
+ms.custom: 
+- cx-ti
+- cx-dex
 search.appverid: met150
-ms.date: 05/29/2023
+ms.date: 10/30/2024
 ---
 
 # How Microsoft Defender Experts for XDR permissions work
@@ -32,6 +34,9 @@ For Microsoft Defender Experts for XDR incident investigations, when our experts
 
 ## Configuring permissions in customer tenants
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 Once you select the permissions you'd like to grant to our experts, we create the following policies in your tenant using the Security Administrator or Global Administrator context:
 
 - **Configure Microsoft Experts as a service provider** – This setting lets our experts access the tenant environment as external collaborators without requiring you to create accounts for them.
@@ -44,4 +49,5 @@ These policies are configured during the onboarding process and require the rele
 ### See also
 
 [Important considerations for Microsoft Defender Experts for XDR](additional-information-xdr.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

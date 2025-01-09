@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: overview
-ms.date: 2/21/2024
+ms.date: 08/14/2024
 search.appverid: met150
 ---
 
@@ -24,7 +24,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-The audit log can help you investigate specific activities across Microsoft 365 services. In the Microsoft Defender XDR portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
+The audit log can help you investigate specific activities across Microsoft 365 services. In the Microsoft Defender portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
 
 - Changes to data retention settings
 - Changes to advanced features
@@ -40,7 +40,7 @@ For a complete list of Microsoft Defender XDR activities that are audited, see [
 
 To access the audit log, you need to have the **View-Only Audit Logs** or **Audit Logs** role in Exchange Online. By default, those roles are assigned to the Compliance Management and Organization Management role groups.
 
->[!Note]
+> [!NOTE]
 > Global administrators in Office 365 and Microsoft 365 are automatically added as members of the Organization Management role group in Exchange Online.
 
 ## Turn on auditing in Microsoft Defender XDR
@@ -56,6 +56,9 @@ Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/a
 
    :::image type="content" source="/defender/media/defender/unified-audit-log.png" alt-text="Screenshot of the unified audit log toggle in Microsoft Defender XDR advanced settings" lightbox="/defender/media/defender/unified-audit-log.png":::
     4. Select **Save preferences**.
+
+> [!IMPORTANT]
+> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization.
 
 ## Using the audit search in Microsoft Defender XDR
 
@@ -102,7 +105,7 @@ Import-PSSession $s
 Search-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID>
 ```
 
->[!Note]
+>[!NOTE]
 > See the API column in Audit activities included for the record type values.
 
 ## Additional resources

@@ -2,17 +2,17 @@
 title: Review remediation actions in Microsoft Defender for Business
 description: View remediations that were taken on detected threats or suspected attacks with Defender for Business.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 12/02/2022
 ms.reviewer: efratka
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
@@ -32,7 +32,6 @@ All remediation actions are tracked in the Action center.
 - [How to use the Action center](#how-to-use-the-action-center)
 - [Remediation actions](#remediation-actions)
 
-
 ## How to use the Action center
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
@@ -49,15 +48,14 @@ Defender for Business includes several remediation actions. These actions includ
 
 The following table lists remediation actions that are available.
 
-| Source  | Actions  |
-|---------|---------|
-| [Automatic attack disruption](mdb-attack-disruption.md) | - Contain a device <br/>- Contain a user <br/>- Disable a user account |
-| [Automated investigations](/defender-endpoint/automated-investigations)      |- Quarantine a file<br/> - Remove a registry key<br/> - Kill a process<br/> - Stop a service<br/> - Disable a driver<br/> - Remove a scheduled task  |
-| [Manual response actions](/defender-endpoint/respond-machine-alerts)   |- Run antivirus scan<br/> - Isolate a device<br/> - Add an indicator to block or allow a file |
-| [Live response](/defender-endpoint/live-response)   |- Collect forensic data<br/> - Analyze a file<br/> - Run a script<br/> - Send a suspicious entity to Microsoft for analysis<br/> - Remediate a file <br/> - Proactively hunt for threats|
+|Source|Actions|
+|---|---|
+|[Automatic attack disruption](mdb-attack-disruption.md)|- Contain a device <br/>- Contain a user <br/>- Disable a user account|
+|[Automated investigations](/defender-endpoint/automated-investigations)|- Quarantine a file<br/> - Remove a registry key<br/> - Kill a process<br/> - Stop a service<br/> - Disable a driver<br/> - Remove a scheduled task|
+|[Manual response actions](/defender-endpoint/respond-machine-alerts)|- Run antivirus scan<br/> - Isolate a device<br/> - Add an indicator to block or allow a file|
+|[Live response](/defender-endpoint/live-response)|- Collect forensic data<br/> - Analyze a file<br/> - Run a script<br/> - Send a suspicious entity to Microsoft for analysis<br/> - Remediate a file <br/> - Proactively hunt for threats|
 
 ## Next steps
 
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Manage devices in Defender for Business](mdb-manage-devices.md)
-

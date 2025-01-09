@@ -1,4 +1,4 @@
-- name: Microsoft Security Exposure Management (preview)
+- name: Microsoft Security Exposure Management
   href: index.yml
   expanded: true
   items: 
@@ -6,6 +6,8 @@
       items:
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
+      - name: What's new 
+        href: whats-new.md      
       - name: Compare Secure Score and Security Exposure Management
         href: compare-secure-score-security-exposure-management.md      
     - name: Get started
@@ -29,7 +31,29 @@
       - name: Overview
         href: critical-asset-management.md
       - name: Review and classify critical assets
-        href: classify-critical-assets.md  
+        href: classify-critical-assets.md
+      - name: Predefined classifications
+        href: predefined-classification-rules-and-levels.md
+    -  name: Data connectors (preview)
+       items:
+       - name: Overview
+         href: overview-data-connectors.md
+       - name: Configure your data connectors
+         href: configure-data-connectors.md
+       - name: CMDB data connectors
+         items:
+           - name: ServiceNow
+             href: ServiceNow-data-connector.md
+       - name: Vulnerability Management data connectors
+         items:
+           - name: Qualys
+             href: qualys-data-connector.md
+           - name: Rapid7
+             href: rapid7-data-connector.md
+           - name: Tenable
+             href: tenable-data-connector.md
+       - name: Getting value from your data connectors
+         href: value-data-connectors.md
     - name: Work with attack paths
       items:      
         - name: Overview
@@ -42,7 +66,9 @@
           href: exposure-insights-overview.md
         - name: Review security initiatives
           href: initiatives.md
-        - name: Investigate initiative metrics
+        - name: Security initiatives catalog
+          href: initiatives-list.md
+        - name: Investigate security initiative metrics
           href: security-metrics.md
         - name: Review security recommendations
           href: security-recommendations.md
@@ -70,3 +96,5 @@
         href: /azure/defender-for-cloud
       - name: Entra
         href: /entra/
+      - name: Defender EASM
+        href: /azure/external-attack-surface-management/

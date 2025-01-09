@@ -3,8 +3,8 @@ title: API Explorer in Microsoft Defender for Endpoint
 ms.reviewer:
 description: Use the API Explorer to construct and do API queries, test, and send requests for any available API
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

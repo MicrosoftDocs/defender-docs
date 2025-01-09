@@ -5,12 +5,12 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
-ms.reviewer: 
+ms.reviewer: yonghree 
 manager: deniseb
 ms.subservice: ngp
 ms.collection: 

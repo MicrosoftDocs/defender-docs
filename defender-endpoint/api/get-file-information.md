@@ -2,8 +2,8 @@
 title: Get file information API
 description: Learn how to use the Get file information API to get a file by Sha1, Sha256, or MD5 identifier in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

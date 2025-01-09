@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/16/2024
+ms.date: 08/29/2024
 ---
 
 # Hello World for Microsoft Defender XDR REST API
@@ -40,7 +40,7 @@ It should take 5 to 10 minutes to complete this project. This time estimate incl
 
 ### Register an app in Microsoft Entra ID
 
-1. Sign in to [Azure](https://portal.azure.com) as a user with the **Global administrator** role.
+1. Sign in to [Azure](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** > **App registrations** > **New registration**.
 

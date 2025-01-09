@@ -1,21 +1,17 @@
 ---
 title: Review security initiatives in Microsoft Security Exposure Management
 description: Learn how to work with security Initiatives in Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 11/04/2024
 ---
 
 # Review security initiatives
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to work with initiatives.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 
@@ -77,8 +73,9 @@ The changes in your score provide you with useful feedback about how well you're
     1. If needed, filter for specific time points.
     1. Choose the time point and select to examine the percent effect on the initiative score and the reason for the change.
     1. Select a metric to explore the change's effect further, if applicable.
+    1. Open the **Changes to exposed assets** dropdown to view up to the top 100 changed assets. The status will indicate whether the asset exposure has been added or removed.
 
-:::image type="content" source="media/initiatives/history-details.png" alt-text="Screenshot of the history metric change details side panel.":::
+:::image type="content" source="media/exposure-insights-overview/initiatives-history-details-redcued.jpg" alt-text="Screenshot of history side panel" lightbox="media/initiatives/initiatives-history-details.png":::
 
 ## Review metrics and recommendations
 

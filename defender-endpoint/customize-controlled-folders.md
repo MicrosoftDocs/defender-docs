@@ -4,8 +4,8 @@ description: Add other folders that should be protected by controlled folder acc
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
 manager: deniseb
 ms.subservice: asr
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 10/27/2023
+ms.date: 10/17/2024
 ---
 
 # Customize controlled folder access
@@ -33,8 +33,12 @@ ms.date: 10/27/2023
 > [!TIP]
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11 clients. This article describes how to customize controlled folder access capabilities, and includes the following sections:
+Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11 clients.
 
+> [!IMPORTANT]
+> Controlled folder access is not supported on Linux servers.
+
+This article describes how to customize controlled folder access capabilities, and includes the following sections:
 - [Protect additional folders](#protect-additional-folders)
 - [Add apps that should be allowed to access protected folders](#allow-specific-apps-to-make-changes-to-controlled-folders)
 - [Allow signed executable files to access protected folders](#allow-signed-executable-files-to-access-protected-folders)

@@ -4,13 +4,13 @@ description: Learn how to use the unified submissions feature in Microsoft Defen
 search.appverid: met150
 ms.date: 05/06/2024
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.custom: FPFN
@@ -35,13 +35,15 @@ The new unified submissions experience is available only in subscriptions that i
 You need to assign permissions before you can perform the procedures in this article. Use one of the following options:
 
 **Microsoft Defender for Endpoint** permissions:
- - Submit files / file hashes: _"Alerts investigation" or "Manage security settings in Security Center"_
- - View submissions: "_View Data - Security operations"_
-                  
-**Microsoft Defender XDR** unified RBAC permissions:
- - Submit files / file hashes: *"Alerts (Manage)" or "Core security settings (manage)"*
- - View submissions: _"Security data basics (read)"_
-                        
+
+- Submit files / file hashes: _"Alerts investigation" or "Manage security settings in Security Center"_
+- View submissions: "_View Data - Security operations"_
+
+**Microsoft Defender XDR Unified RBAC** permissions:
+
+- Submit files / file hashes: _"Alerts (Manage)" or "Core security settings (manage)"_
+- View submissions: _"Security data basics (read)"_
+
 For more information about how you can submit spam, phish, URLs, and email attachments to Microsoft, see [Use the Submissions page to submit suspected spam, phish, URLs, legitimate email getting blocked, and email attachments to Microsoft](/defender-office-365/submissions-admin).
 
 ## Submit a file or file hash to Microsoft from the Defender portal
@@ -54,7 +56,7 @@ For more information about how you can submit spam, phish, URLs, and email attac
 
    :::image type="content" source="/defender/media/unified-admin-submission-new.png" alt-text="Screenshot showing how to add a new submission.":::
 
-2. In the **Submit items to Microsoft for review** flyout that opens, select **Files** or **File hash** from the **Select the submission type** dropdown list.
+4. In the **Submit items to Microsoft for review** flyout that opens, select **Files** or **File hash** from the **Select the submission type** dropdown list.
 
    - If you selected **Files**, configure the following options:
      - Select **Browse files**. In the dialog that opens, find and select the file, and then select **Open**. Repeat this step as many times as necessary. To remove an entry from the flyout, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.

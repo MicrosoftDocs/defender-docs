@@ -27,6 +27,8 @@
        href: mail-flow-about.md
      - name: Microsoft Defender portal overview
        href: /defender-xdr/microsoft-365-defender-portal
+     - name: Integrate non-Microsoft security services with Microsoft 365
+       href: mdo-integrate-security-service.md
 
    - name: Evaluate
      items:
@@ -36,7 +38,9 @@
        href: trial-user-guide-defender-for-office-365.md
 
    - name: Deploy
-     items:
+     items: 
+     - name: Pilot and deploy Defender for Office 365
+       href: /defender-xdr/pilot-deploy-defender-office-365?toc=/defender-office-365/TOC.json&bc=/defender-office-365/breadcrumb/toc.json
      - name: Get started with Microsoft Defender for Office 365
        href: mdo-deployment-guide.md
      - name: Step 1 - Configure email authentication
@@ -150,6 +154,8 @@
              href: anti-spam-spam-confidence-level-scl-about.md
            - name: Bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
+           - name: Bulk senders insight
+             href: anti-spam-bulk-senders-insight.md
            - name: Backscatter in EOP
              href: anti-spam-backscatter-about.md
            - name: Configure junk email settings on Exchange Online mailboxes
@@ -238,6 +244,8 @@
              href: tenant-allow-block-list-files-configure.md
            - name: Allow or block URLs using the Tenant Allow/Block List
              href: tenant-allow-block-list-urls-configure.md
+           - name: Allow or block IPv6 addresses using the Tenant Allow/Block List
+             href: tenant-allow-block-list-ip-addresses-configure.md
          - name: Admin submissions
            href: submissions-admin.md
          - name: Create block sender lists
@@ -339,6 +347,7 @@
          - name: Email security reports
            href: reports-email-security.md
          - name: Defender for Office 365 reports
+           href: reports-defender-for-office-365.md
        - name: Safe Documents in Microsoft 365 A5 or E5 Security
          items:
          - name: Safe Documents in A5 or E5 Security
@@ -376,6 +385,8 @@
            href: submissions-admin-review-user-reported-messages.md
          - name: Errors during submissions
            href: submissions-error-messages.md
+         - name: Submission result definitions
+           href: submissions-result-definitions.md
        - name: Threat Explorer and real-time detections
          items:
          - name: About Threat Explorer and Real-time detections
@@ -392,6 +403,8 @@
            href: teams-message-entity-panel.md
        - name: Insights
          items:
+         - name: Bulk senders insight
+           href: anti-spam-bulk-senders-insight.md
          - name: Spoof intelligence insight
            href: anti-spoofing-spoof-intelligence.md
          - name: Impersonation insight
@@ -466,6 +479,8 @@
        href: app-guard-for-office-install.md
      - name: Data retention in Defender for Office 365
        href: mdo-data-retention.md
+     - name: Privacy in Defender for Office 365
+       href: mdo-privacy.md
      - name: External email senders - Microsoft 365 resources
        items:
        - name: Microsoft 365 services for external email senders

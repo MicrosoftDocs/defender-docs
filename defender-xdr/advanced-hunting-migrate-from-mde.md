@@ -14,9 +14,12 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier2
-ms.topic: conceptual
-ms.custom: seo-marvel-apr2020
-ms.date: 02/17/2024
+ms.custom:
+- cx-ti
+- cx-ah
+- seo-marvel-apr2020
+ms.topic: how-to
+ms.date: 04/22/2024
 ---
 
 # Migrate advanced hunting queries from Microsoft Defender for Endpoint

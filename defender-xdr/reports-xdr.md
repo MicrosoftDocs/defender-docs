@@ -2,12 +2,7 @@
 title: Defender experts for XDR report 
 ms.reviewer:
 description: Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
-keywords: XDR, extended detection and response, managed detection and response in defender experts for XDR, Defender xdr reports, XDR report, impacted assets, avergae time to resolve incidents, view incidents, resolved directly
-ms.service: defender-experts
-ms.subservice: dex-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
@@ -18,8 +13,11 @@ ms.collection:
   - tier1
   - essentials-manage
 ms.topic: conceptual
+ms.custom: 
+- cx-ti
+- cx-dex
 search.appverid: met150
-ms.date: 05/28/2024
+ms.date: 10/30/2024
 ---
 
 # Get real-time visibility with Defender Experts for XDR reports

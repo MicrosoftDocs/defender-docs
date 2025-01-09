@@ -1,0 +1,113 @@
+- name: "Microsoft's unified SecOps platform"
+  href: index.yml
+  expanded: true
+  items:
+    - name: Overview
+      items:
+      - name: What is Microsoft's unified SecOps platform?
+        href: overview-unified-security.md
+      - name: What's new
+        href: whats-new.md
+      - name: Service integration
+        items:
+        - name: Overview
+          href: overview-defender-portal.md
+        - name: Microsoft Defender XDR
+          href: defender-xdr-portal.md
+        - name: Microsoft Sentinel
+          items:
+          - name: Integration overview
+            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+          - name: Experience in the Defender portal
+            href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Microsoft Copilot
+          href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Microsoft Security Exposure Management
+          href: /security-exposure-management/microsoft-security-exposure-management?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Microsoft Defender for Cloud
+          href: /defender-xdr/microsoft-365-security-center-defender-cloud?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Microsoft Defender for IoT
+          href: /defender-for-iot/microsoft-defender-iot?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+    - name: Plan
+      items:
+        - name: Plan your deployment
+          href: overview-plan.md
+          displayName: plan, zero trust
+        - name: US Government customers
+          href: gov-support.md
+    - name: Deploy
+      items:
+      - name: Overview
+        href: overview-deploy.md
+      - name: Connect Microsoft Sentinel to Microsoft Defender
+        href: /defender-xdr/microsoft-sentinel-onboard?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+    - name: Reduce security risk
+      href: reduce-risk-overview.md
+    - name: Detect threats
+      href: detect-threats-overview.md
+    - name: Hunt for threats
+      items:
+      - name: Overview
+        href: hunting-overview.md
+      - name: Advanced hunting 
+        href: /defender-xdr/advanced-hunting-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json 
+    - name: Investigate incidents
+      items:
+        - name: Overview
+          href: /defender-xdr/incidents-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+        - name: Correlation and merging
+          href: /defender-xdr/alerts-incidents-correlation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+        - name: Investigate incidents in Security Copilot
+          href: /azure/sentinel/sentinel-security-copilot?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Investigate with Microsoft Copilot in Microsoft Defender
+          href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+    - name: Respond to threats automatically
+      items:
+        - name: Automatic attack disruption 
+          href: /defender-xdr/automatic-attack-disruption?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Automation in Microsoft Sentinel (SOAR)
+          href: /azure/sentinel/automation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Automated investigation and response in Microsoft Defender XDR
+          href: /defender-xdr/m365d-autoir?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+    - name: Optimize your security operations 
+      href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+    - name: Manage your unified SOC
+      items:
+        - name: Manage multiple tenants
+          items: 
+            - name: Overview
+              href: /defender-xdr/mto-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Set up multi-tenant management
+              href: /defender-xdr/mto-requirements?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Manage incidents and alerts
+              href: /defender-xdr/mto-incidents-alerts?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Advanced hunting
+              href: /defender-xdr/mto-advanced-hunting?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Multitenant devices
+              href: /defender-xdr/mto-tenant-devices?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Vulnerability management
+              href: /defender-xdr/mto-dashboard?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Manage tenants
+              href: /defender-xdr/mto-tenants?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Manage endpoint security policies
+              href: /defender-xdr/mto-endpoint-security-policy?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            - name: Manage content distribution with tenant groups
+              href: /defender-xdr/mto-tenantgroups?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Configure notifications
+          items:
+          - name: Get incident notifications
+            href: /defender-xdr/m365d-notifications-incidents?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - name: Configure alert notifications
+            href: /defender-xdr/configure-email-notifications?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+    - name: Resources
+      items:
+        - name: Threat actor naming
+          href: /defender-xdr/microsoft-threat-actor-naming?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Identification of malware and unwanted apps
+          href: /defender-xdr/criteria?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Submit files for analysis
+          href: /defender-xdr/submission-guide?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Microsoft virus initiative
+          href: /defender-xdr/virus-initiative-criteria?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+        - name: Microsoft security portals
+          href: /defender-xdr/portals?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json

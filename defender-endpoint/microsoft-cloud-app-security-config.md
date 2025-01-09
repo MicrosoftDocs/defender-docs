@@ -3,8 +3,9 @@ title: Configure Microsoft Defender for Cloud Apps integration
 ms.reviewer:
 description: Learn how to turn on the settings to enable the Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud Apps.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.subservice: onboard
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

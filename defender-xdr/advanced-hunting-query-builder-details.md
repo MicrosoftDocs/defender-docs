@@ -15,8 +15,11 @@ ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier2
+ms.custom:
+- cx-ti
+- cx-ah
 ms.topic: conceptual
-ms.date: 04/01/2024
+ms.date: 04/22/2024
 ---
 
 # Refine your query in guided mode 

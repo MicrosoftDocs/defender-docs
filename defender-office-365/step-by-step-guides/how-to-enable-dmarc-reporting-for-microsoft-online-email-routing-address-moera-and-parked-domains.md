@@ -7,7 +7,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-guidance-templates
@@ -30,8 +30,11 @@ This guide is designed to help you configure DMARC for domains not covered by th
 ## What you need
 
 - Microsoft 365 admin center and access to your DNS provider hosting your domains.
-- Sufficient permissions as Global Admin to make the appropriate changes in the Microsoft 365 admin center.
+- Sufficient permissions as a Global Administrator<sup>\*</sup> to make the appropriate changes in the Microsoft 365 admin center.
 - 10 minutes to complete the steps in this article.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Activate DMARC for MOERA Domain
 

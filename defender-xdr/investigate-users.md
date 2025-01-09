@@ -1,5 +1,5 @@
 ---
-title: Investigate users in Microsoft Defender XDR
+title: User entity page in the Microsoft Defender portal
 description: Investigate users for an incident in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
@@ -10,16 +10,16 @@ author: diannegali
 manager: dansimp
 audience: ITPro
 ms.collection:
-  - m365-security
-  - tier2
-  - usx-security
+- m365-security
+- tier2
+- usx-security
 ms.topic: conceptual
 search.appverid: met150
 ms.custom: seo-marvel-jun2020
-ms.date: 03/29/2024
+ms.date: 09/30/2024
 appliesto:
-    - Microsoft Defender XDR
-    - Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # User entity page in Microsoft Defender
@@ -43,7 +43,8 @@ Wherever user entities appear in these views, select the entity to view the **Us
 
 When you investigate a specific user entity, you see the following tabs on its entity page:
 
-- [Overview](#overview), including entity details, incidents and alerts visual view, investigation priority, and scored timeline
+- [Overview](#overview), including entity details, incidents and alerts visual view, user account control flags and so on.
+
 - [Incidents and alerts](#incidents-and-alerts) tab
 - [Observed in organization](#observed-in-organization) tab
 - [Timeline](#timeline) tab
@@ -56,25 +57,22 @@ The user page shows the Microsoft Entra organization as well as groups, helping 
 
 ### Entity details
 
-The **Entity details** panel on the left side of the page provides information about the user, such as the Microsoft Entra identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts, groups that the user belongs to, contact information, and more. You see other details depending on the integration features you enabled.
+The **Entity details** panel on the left side of the page provides information about the user, such as the Microsoft Entra identity risk level, the insider risk severity level (Preview), the number of devices the user is signed in to, when the user was first and last seen, the user's accounts, groups that the user belongs to, contact information, and more. You see other details depending on the integration features you enabled.
 
+> [!NOTE]
+> **Investigation Priority Score** has been deprecated on December 3, 2025. As a result, both the Investigation Priority Score breakdown and the Scored activities cards have been removed from the UI. 
+
+> [!NOTE]
+> (Preview) Microsoft Defender XDR users with access to [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can now see a user's insider risk severity and gain insights on a user's suspicious activities in the user page. Select the **insider risk severity** under Entity details to see the risk insights about the user.
 ### Visual view of incidents and alerts
 
 This card includes all incidents and alerts associated with the user entity, grouped by severity.
-
-### Investigation priority
-
-This card includes the user entity's calculated investigation priority score breakdown, and a two-week trend for that score, including the percentile of the score in relation to the tenant.
 
 ### Active directory account controls
 
 This card surfaces Microsoft Defender for Identity security settings that may need your attention. You can see important flags about the user's account settings, such as if the user can press enter to bypass the password, and if the user has a password that never expires, etc.
 
 For more information, see [User Account Control flags](/windows/win32/adschema/a-useraccountcontrol).
-
-### Scored activities
-
-This card includes all activities and alerts contributing to the entity's investigation priority score over the last seven days.
 
 ### Organization tree
 
@@ -88,7 +86,7 @@ Microsoft Defender for Identity pulls tags out of Active Directory to give you a
 |-----|-------------|
 | **New** | Indicates that the entity was created less than 30 days ago. |
 | **Deleted** | Indicates that the entity was permanently deleted from Active Directory. |
-| **Disabled** |  Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object is not currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
+| **Disabled** | Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object is not currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
 | **Enabled** | Indicates that the entity is currently enabled in Active Directory, indicating that the entity is currently in use, and can be used to sign in or perform actions in the domain.  |
 | **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is essentially treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access may also be affected, depending on how they are configured. |
 | **Honeytoken** |   Indicates that the entity is manually tagged as a honeytoken. |
@@ -102,7 +100,7 @@ For more information, see [Defender for Identity entity tags in Microsoft Defend
 > [!NOTE]
 > The organization tree section and the account tags are available when a Microsoft Defender for Identity license is available.
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-overview.png" alt-text="Screenshot of a specific user's page in the Microsoft Defender portal" lightbox="/defender/media/investigate-users/user-incident-overview.png":::
+![Screenshot of a specific user's page in the Microsoft Defender portal.](media/investigate-users/image.png)
 
 ## Incidents and alerts
 
@@ -141,13 +139,14 @@ The lateral movement path report, which can be viewed by date, is always availab
 
 ## Timeline
 
-The timeline displays user activities and alerts observed from a user's identity in the last 30 days. It unifies the user's identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint workloads. By using the timeline, you can focus on activities a user performed or were performed on them in specific timeframes.
+The timeline displays user activities and alerts observed from a user's identity in the last 180 days. It unifies the user's identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint workloads. By using the timeline, you can focus on activities a user performed or were performed on them in specific timeframes.
 
 For users of the unified SOC platform to see alerts from Microsoft Sentinel based on data sources other than the ones in the previous paragraph, they can find these alerts and other information in the **Sentinel events** tab, [described below](#sentinel-events).
 
-- **Custom time range picker:** You can choose a timeframe to focus your investigation on the last 24 hours, the last 3 days and so on. Or you can choose a specific timeframe by clicking on **Custom range**. For example:
+- **Custom time range picker:** You can choose a timeframe to focus your investigation on the last 24 hours, the last 3 days and so on. Or you can choose a specific timeframe by clicking on **Custom range**. Filtered data older than 30 days is displayed in seven-day intervals.  
+For example:
 
-  :::image type="content" source="/defender/media/image.png" alt-text="Screenshot that shows how to choose time frame." lightbox="/defender/media/image.png":::
+    :::image type="content" source="/defender/media/image.png" alt-text="Screenshot that shows how to choose time frame." lightbox="/defender/media/image.png":::
 
 - **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that is relevant for the specific user.
 
@@ -244,10 +243,11 @@ From the Overview page, you can do these additional actions:
 
 - Enable, disable, or suspend the user in Microsoft Entra ID
 - Direct user to do certain actions such as require the user to sign in again or force password reset
-- Reset investigation priority score for the user
 - View Microsoft Entra account settings, related governance, the user's owned files, or the user's shared files
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-actions.png" alt-text="Screenshot of the actions for remediation for a user in the Microsoft Defender portal" lightbox="/defender/media/investigate-users/user-incident-actions.png":::
+![Screenshot of the actions for remediation for a user in the Microsoft Defender portal.](media/investigate-users/picture1111.png)
+
+
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
 

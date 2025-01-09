@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstrat
 description: Demonstrates how Controlled Folder Access protects valuable data from malicious apps and threats, such as ransomware.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: asr
-ms.date: 02/16/2024
+ms.date: 10/11/2024
 ---
 
 # Controlled folder access (CFA) demonstrations (block ransomware)
@@ -44,10 +44,10 @@ Set-MpPreference -ControlledFolderAccessProtectedFolders C:\demo\
 ## Rule states
 
 |State | Mode| Numeric value |
-|:---|:---|:---|
-| Disabled | = Off | 0 |
-| Enabled | = Block mode | 1 |
-| Audit | = Audit mode | 2 |
+|---|---|---|
+| Disabled | Off | 0 |
+| Enabled | Block mode | 1 |
+| Audit | Audit mode | 2 |
 
 ## Verify configuration
 
@@ -63,65 +63,86 @@ Get-MpPreference
 
 ### Setup
 
-Download and run this [setup script](https://demo.wd.microsoft.com/Content/CFA_SetupScript.zip). Before running the script set execution policy to Unrestricted using this PowerShell command: 
+Download and run this [setup script](https://demo.wd.microsoft.com/Content/CFA_SetupScript.zip). Before running the script, set execution policy to `Unrestricted` by using this PowerShell command: 
 
 ```powershell
 Set-ExecutionPolicy Unrestricted
 ```
 
-You can perform these manual steps instead:
+Or, you can perform these manual steps instead:
 
-1. Create a folder under c: named demo, "c:\demo".
+1. Create a folder under `c:` named `demo`, as in `c:\demo`.
 
-2. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) into c:\demo (we need something to encrypt).
+2. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) into `c:\demo` (we need something to encrypt).
 
-3. Execute PowerShell commands listed earlier in this article.
+3. Run the PowerShell commands listed earlier in this article.
+
+Next, check that status of the *Aggressive Ransomware Prevention* ASR rule and disable it for the duration of this test if it's enabled:
+
+
+```powershell
+$idx = $(Get-MpPreference).AttackSurfaceReductionRules_Ids.IndexOf("C1DB55AB-C21A-4637-BB3F-A12568109D35")
+if ($idx -ge 0) {Write-Host "Rule Status: " $(Get-MpPreference).AttackSurfaceReductionRules_Actions[$idx]} else {Write-Host "Rule does not exist on this machine"}
+```
+
+If the rule exists and the status is `1 (Enabled)` or `6 (Warn)`, it must be disabled to run this test:
+
+```powershell
+Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568109D35 -AttackSurfaceReductionRules_Actions Disabled
+```
 
 ### Scenario 1: CFA blocks ransomware test file
 
 1. Turn on CFA using PowerShell command:
-  
-```powershell
-Set-MpPreference -EnableControlledFolderAccess Enabled
-```
+
+   ```powershell
+   Set-MpPreference -EnableControlledFolderAccess Enabled
+   ```
 
 2. Add the demo folder to protected folders list using PowerShell command:
 
-```powershell
-Set-MpPreference -ControlledFolderAccessProtectedFolders C:\demo\
-```
+   ```powershell
+   Set-MpPreference -ControlledFolderAccessProtectedFolders C:\demo\
+   ```
 
-3. Download the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe)
-4. Execute the ransomware test file *this isn't ransomware, it simple tries to encrypt c:\demo
+3. Download the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe).
+
+4. Execute the ransomware test file. Note that it isn't ransomware; it simply tries to encrypt `c:\demo`.
 
 #### Scenario 1 expected results
 
-5 seconds after executing the ransomware test file you should see a notification CFA blocked the encryption attempt.
+About five seconds after executing the ransomware test file, you should see a notification that CFA blocked the encryption attempt.
 
 ### Scenario 2: What would happen without CFA
 
 1. Turn off CFA using this PowerShell command:
 
-```powershell
-Set-MpPreference -EnableControlledFolderAccess Disabled
-```
+   ```powershell
+   Set-MpPreference -EnableControlledFolderAccess Disabled
+   ```
 
-2. Execute the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe)
+2. Execute the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe).
 
 #### Scenario 2 expected results
 
-- The files in c:\demo are encrypted and you should get a warning message
+- The files in `c:\demo` are encrypted and you should get a warning message
 - Execute the ransomware test file again to decrypt the files
 
 ## Clean-up
 
-Download and run this [cleanup script](https://demo.wd.microsoft.com/Content/ASR_CFA_CleanupScript.zip). You can perform these manual steps instead:
+1. Download and run this [cleanup script](https://demo.wd.microsoft.com/Content/ASR_CFA_CleanupScript.zip). You can perform these manual steps instead:
 
-```powershell
-Set-MpPreference -EnableControlledFolderAccess Disabled
-```
+   ```powershell
+   Set-MpPreference -EnableControlledFolderAccess Disabled
+   ```
 
-Clean up c:\demo encryption by using the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
+2. Clean up `c:\demo` encryption by using the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
+
+3. If the *Aggressive Ransomware Prevention* ASR rule was enabled and you disabled it at the beginning of this test, enable it again:
+
+   ```powershell
+   Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568109D35 -AttackSurfaceReductionRules_Actions Enabled
+   ```
 
 ## See also
 

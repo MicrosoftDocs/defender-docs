@@ -3,8 +3,9 @@ title: Antivirus solution compatibility with Defender for Endpoint
 description: Learn about how Windows Defender works with Microsoft Defender for Endpoint. Also learn how Defender for Endpoint works when a third-party anti-malware client is used.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -36,7 +37,7 @@ The Microsoft Defender for Endpoint agent depends on Microsoft Defender Antiviru
 For optimal protection, configure the following settings for devices that are onboarded to Defender for Endpoint, whether Microsoft Defender Antivirus is the active antimalware solution or not:
 
 - [Security intelligence updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates) (which also updates the scan engine)
-- [Platform updates](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions)
+- [Platform updates](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
 
 For more information, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
 

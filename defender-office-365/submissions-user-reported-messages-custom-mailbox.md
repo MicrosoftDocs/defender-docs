@@ -31,7 +31,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, you can identify 
 
 User reported settings and the reporting mailbox work with the following message reporting tools:
 
-- [The built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web)
+- [The built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)
 - [The Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md)
 - [Supported third-party reporting tools](#options-for-third-party-reporting-tools)
 
@@ -66,7 +66,10 @@ After you verify that the reporting mailbox meets all of these requirements, use
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Exchange Online permissions** is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Security data basics (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Security Administrator** or **Hygiene Management** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: *Specify an email address in your domain*. For more information about enabling or disabling access to Exchange Online PowerShell, see the following articles:
   - [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell)
@@ -82,7 +85,7 @@ On the **User reported settings** page, the available settings for reporting mes
 
 - **Monitor reported messages in Outlook** is selected: The following configurations are supported:
 
-  - Use the built-in **Report** button in Outlook on the web or the Microsoft Report Message or Report Phishing add-ins in virtually all Outlook platforms to report email messages.
+  - Use the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the Microsoft Report Message or Report Phishing add-ins in virtually all Outlook platforms to report email messages.
     - Configure user reported messages to go to the reporting mailbox, to Microsoft, or both.
     - Decide whether users receive default or customized pre-reporting and post-reporting pop-ups in supported version of Outlook.
     - Decide whether to customize the feedback email that's sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
@@ -113,7 +116,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   Notification pop-ups contain default English text that's automatically localized for users based on their client language. To customize the pop-up text, you can create custom versions of the five reporting pop-ups in up to seven different languages.
 
   > [!NOTE]
-  > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in Outlook on the web.
+  > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
   >
   > The Microsoft Report Message add-in supports only customized **Title** and **Description** values, and only for pre-reporting pop-ups (**Report phishing**, **Report junk**, and **Report not junk**).
   >
@@ -164,7 +167,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
   > [!NOTE]
   >
-  > - When you select **Use the built-in Report button in Outlook** and users report messages using the built-in **Report** button in Outlook on the web or the Microsoft Report Message or Report Phishing add-ins in Outlook, user reported messages are available to admins on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, regardless of the value you select for **Send the reported messages to**. For more information, see [Admin options for user reported messages](submissions-admin.md#admin-options-for-user-reported-messages).
+  > - When you select **Use the built-in Report button in Outlook** and users report messages using the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the Microsoft Report Message or Report Phishing add-ins in virtually all versions of Outlook, user reported messages are available to admins on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, regardless of the value you select for **Send the reported messages to**. For more information, see [Admin options for user reported messages](submissions-admin.md#admin-options-for-user-reported-messages).
   >
   > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the only available value for **Send the reported messages to** is **My reporting mailbox only**. The other two options are unavailable for compliance reasons (data isn't allowed to leave the organization boundary).
 
@@ -188,7 +191,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     For more information, see [Automatic user notifications for user reported phishing results in AIR](air-user-automatic-feedback-response.md).
 
   - **Customize sender and branding** section:
-    - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is submissions@messaging.microsoft.com.
+    - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
 - **Report from quarantine** section \> **Allow reporting for quarantined messages**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
@@ -366,7 +369,7 @@ This example creates the report submission policy with the default settings:
 Other settings:
 
 - **Outlook** section \> **Select an Outlook report button configuration** section:
-  - ***When the user reports an email** section:
+  - **When the user reports an email** section:
     - **Ask the user to confirm before reporting**:
       - When you go to the **User reported settings** page in the Defender portal for the first time (which creates the report submission policy), this setting is not selected (equivalent to `-PreSubmitMessageEnabled -$false`).
       - When you use PowerShell to create the policy, the default value is `-PreSubmitMessageEnabled $true`.
@@ -413,7 +416,7 @@ Other settings:
       - For the number of language codes that you specify, you need to provide the same number of blank values for **all** of the _MultiLanguage\*SubmitMessage\*_ parameters that you aren't using. For example, if you're using three languages, but you aren't using the _MultiLanguagePostSubmitMessageButtonTextForJunk_ and _MultiLanguagePostSubmitMessageButtonLinkForJunk_ parameters, you need to use the value `"","",""` for those parameters. You might need to add these blank values for up to 18 of the _MultiLanguage\*SubmitMessage\*_ parameters.
 
     > [!NOTE]
-    > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in Outlook on the web.
+    > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
     >
     > The Microsoft Report Message add-in supports only customized **Title** and **Description** values, and only for pre-reporting pop-ups (**Report phishing**, **Report junk**, and **Report not junk**).
     >
@@ -537,7 +540,7 @@ New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPoli
 
 Turning off reporting in Outlook has the following consequences:
 
-- The **Report** button in Outlook on the web and the Microsoft Report Message and Report Phishing add-ins are unavailable in all Outlook platforms.
+- The built-in **Report** button and the Microsoft Report Message and Report Phishing add-ins are unavailable in all Outlook platforms.
 - Third-party reporting tools still work, but reported messages don't appear on the **User reported** tab on the **Submissions** page in the Defender portal.
 - **Allow reporting for quarantined messages** (_DisableQuarantineReportingOption_) is unaffected, and can be enabled or disabled when reporting in Outlook is turned off.
 
@@ -562,7 +565,7 @@ For detailed syntax and parameter information, see [Set-ReportSubmissionPolicy](
 
 The following examples show how to change the user reporting experience without concern for the existing settings or values:
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **Microsoft and my reporting mailbox*** with reportedmessages@contoso.com as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **Microsoft and my reporting mailbox** with `reportedmessages@contoso.com` as the reporting mailbox:
 
   ```powershell
   $usersub = "reportedmessages@contoso.com"
@@ -584,7 +587,7 @@ The following examples show how to change the user reporting experience without 
     New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
     ```
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **My reporting mailbox only** with userreportedmessages@fabrikam.com as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **My reporting mailbox only** with `userreportedmessages@fabrikam.com` as the reporting mailbox:
 
   ```powershell
   $usersub = "userreportedmessages@fabrikam.com"

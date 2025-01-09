@@ -3,13 +3,13 @@ title: Cloud protection and sample submission at Microsoft Defender Antivirus
 description: Learn about cloud-delivered protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: mkaminska, yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 02/18/2024
+ms.date: 08/20/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -54,37 +54,25 @@ Microsoft Defender Antivirus and cloud protection automatically block most new, 
 
 3. High-precision antivirus, detecting common malware through generic and heuristic techniques.
 
-1. Advanced cloud-based protection is provided for cases when Microsoft Defender Antivirus running on the endpoint needs more intelligence to verify the intent of a suspicious file.
+4. Advanced cloud-based protection is provided for cases when Microsoft Defender Antivirus running on the endpoint needs more intelligence to verify the intent of a suspicious file.
 
    1. In the event Microsoft Defender Antivirus can't make a clear determination, file metadata is sent to the cloud protection service. Often within milliseconds, the cloud protection service can determine based on the metadata as to whether the file is malicious or not a threat.  
 
       - The cloud query of file metadata can be a result of behavior, mark of the web, or other characteristics where a clear verdict isn't determined.
-      - A small metadata payload is sent, with the goal of reaching a verdict of malware or not a threat. The metadata doesn't include personally identifiable information (PII). Information such as filenames, are hashed.
+      - A small metadata payload is sent, with the goal of reaching a verdict of malware or not a threat. The metadata doesn't include personal data, such as personally identifiable information (PII). Information such as filenames, are hashed.
       - Can be synchronous or asynchronous. For synchronous, the file won't open until the cloud renders a verdict. For asynchronous, the file opens while cloud protection performs its analysis.
       - Metadata can include PE attributes, static file attributes, dynamic and contextual attributes, and more (see [Examples of metadata sent to the cloud protection service](#examples-of-metadata-sent-to-the-cloud-protection-service)).
 
-   1. After examining the metadata, if Microsoft Defender Antivirus cloud protection can't reach a conclusive verdict, it can request a sample of the file for further inspection. This request honors the settings configuration for sample submission:
-   
-      1. **Send safe samples automatically** 
-         - Safe samples are samples considered to not commonly contain PII data like: .bat, .scr, .dll, .exe.
-         - If file is likely to contain PII, the user gets a request to allow file sample submission.
-         - This option is the default on Windows, macOS, and Linux.
+   2. After examining the metadata, if Microsoft Defender Antivirus cloud protection can't reach a conclusive verdict, it can request a sample of the file for further inspection. This request honors the setting configuration for sample submission, as described in the following table:
 
-      1. **Always Prompt**
-         - If configured, the user is always prompted for consent before file submission
-         - This setting isn't available in macOS and Linux cloud protection
-                  
-      3. **Send all samples automatically**
-         - If configured, all samples are sent automatically
-         - If you would like sample submission to include macros embedded in Word docs, you must choose "Send all samples automatically"
-         - This setting isn't available on macOS cloud protection
+      | Setting | Description |
+      |---|---|
+      | **Send safe samples automatically** | - Safe samples are samples considered to not commonly contain PII data. Examples include `.bat`, `.scr`, `.dll`, and `.exe`. <br/>- If file is likely to contain PII, the user gets a request to allow file sample submission.<br/>- This option is the default configuration on Windows, macOS, and Linux. |
+      | **Always Prompt** | - If configured, the user is always prompted for consent before file submission<br/>- This setting isn't available in macOS and Linux cloud protection |
+      | **Send all samples automatically** | - If configured, all samples are sent automatically<br/>- If you would like sample submission to include macros embedded in Word docs, you must choose **Send all samples automatically**<br/>- This setting isn't available on macOS cloud protection |
+      | **Do not send** | - Prevents "block at first sight" based on file sample analysis<br/>- "Don't send" is the equivalent to the "Disabled" setting in macOS policy and "None" setting in Linux policy.<br/>- Metadata is sent for detections even when sample submission is disabled |
 
-      1. **Do not send**
-         - Prevents "block at first sight" based on file sample analysis
-         - "Don't send" is the equivalent to the "Disabled" setting in macOS policy and "None" setting in Linux policy.
-         - Metadata is sent for detections even when sample submission is disabled
-
-   1. After files are submitted to cloud protection, the submitted files can be **scanned**, **detonated**, and processed through **big data analysis** **machine-learning** models to reach a verdict. Turning off cloud-delivered protection limits analysis to only what the client can provide through local machine-learning models, and similar functions.
+   3. After files are submitted to cloud protection, the submitted files can be **scanned**, **detonated**, and processed through **big data analysis** **machine-learning** models to reach a verdict. Turning off cloud-delivered protection limits analysis to only what the client can provide through local machine-learning models, and similar functions.
       
 > [!IMPORTANT]
 > [Block at first sight (BAFS)](configure-block-at-first-sight-microsoft-defender-antivirus.md) provides detonation and analysis to determine whether a file or process is safe. BAFS can delay the opening of a file momentarily until a verdict is reached. If you disable sample submission, BAFS is also disabled, and file analysis is limited to metadata only. We recommend keeping sample submission and BAFS enabled. To learn more, see [What is "block at first sight"?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)
@@ -132,7 +120,7 @@ For more information, see the following resources:
 
 - [Azure Compliance Offerings](/azure/storage/common/storage-compliance-offerings) 
 - [Service Trust Portal](https://servicetrust.microsoft.com)
-- [Microsoft Defender for Endpoint data storage and privacy](data-storage-privacy.md#data-storage-location)
+- [Microsoft Defender for Endpoint data storage and privacy](data-storage-privacy.md)
 
 ## Other file sample submission scenarios
 

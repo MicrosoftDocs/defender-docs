@@ -52,3 +52,20 @@ Messages that meet or exceed the configured BCL threshold have the following def
 - **Strict preset security policy**: [Quarantine the message](quarantine-end-user.md).
 
 The [View data by Email \> Spam and Chart breakdown by Detection Technology](reports-email-security.md#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) view in the Threat protection status report has a **Bulk complaint level** slider. This slider is available in :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** when you also select the **Detection** value **Bulk**. Using this slider shows you the results of increasing or decreasing the BCL value in the report.
+
+
+If you select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section in the details flyout of the default anti-spam policy or a custom anti-spam policy that you select from the **Anti-spam policies** page at <https://security.microsoft.com/antispam>, the **Bulk email threshold** section contains the bulk senders insight: information about the number of messages that were detected as bulk at all BCL levels by all anti-spam policies over the last 60 days.
+
+- By default, the bulk senders insight shows the number of messages that were delivered and identified as bulk at the current BCL threshold of the anti-spam policy.
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-default.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk at the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-default.png":::
+
+- If you decrease the bulk email threshold value, the bulk senders insight changes to show how many fewer messages would be delivered and how many more messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false positives (good email identified as bad).
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you decrease the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png":::
+
+- If you increase the bulk email threshold value, the bulk senders insight changes to show how many more messages would be delivered and how many fewer messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false negatives (bad email delivered).
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you increase the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png":::
+
+Selecting **View bulk senders insight** takes you to the main **Bulk sender insights** page. For more information, see [Bulk senders insight in Exchange Online Protection](anti-spam-bulk-senders-insight.md).

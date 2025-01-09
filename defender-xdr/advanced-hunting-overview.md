@@ -1,6 +1,6 @@
 ---
 title: Overview - Advanced hunting
-description: Learn about advanced hunting queries in Microsoft 365 and how to use them to proactively find threats and weaknesses in your network
+description: Learn about advanced hunting queries in Microsoft Defender and how to use them to proactively find threats and weaknesses in your network
 ms.service: defender-xdr
 ms.pagetype: security
 f1.keywords: 
@@ -14,25 +14,28 @@ ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier1
-ms.topic: conceptual
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- cx-ti
+- cx-ah
+- seo-marvel-apr2020
+ms.topic: overview
 search.appverid: met150
-ms.date: 03/28/2024
+ms.date: 10/18/2024
+appliesto: 
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Proactively hunt for threats with advanced hunting in Microsoft Defender XDR
+# Proactively hunt for threats with advanced hunting in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Advanced hunting is a query-based threat hunting tool that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. The flexible access to data enables unconstrained hunting for both known and potential threats.
 
 Advanced hunting supports two modes, guided and advanced. Use [guided mode](advanced-hunting-query-builder.md) if you are not yet familiar with Kusto Query Language (KQL) or prefer the convenience of a query builder. Use [advanced mode](advanced-hunting-query-language.md) if you are comfortable using KQL to create queries from scratch. 
 
-**To start hunting, read [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md).**
+**To start hunting, read [Choose between guided and advanced modes to hunt in the Microsoft Defender portal](advanced-hunting-modes.md).**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4G6DO]
 
@@ -44,8 +47,9 @@ Advanced hunting supports queries that check a broader data set coming from:
 - Microsoft Defender for Office 365
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Identity
+- Microsoft Sentinel
 
-To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md).
+To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md). Or to use advanced hunting with Microsoft Sentinel, [connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md). 
 
 
 For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://www.microsoft.com/en-us/videoplayer/embed/RWFISa). 

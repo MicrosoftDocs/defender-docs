@@ -52,7 +52,10 @@ The rest of this article how to configure preset security policies.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Configure preset security policies_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Read-only access to preset security policies_: Membership in the **Global Reader** role group.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users
 
@@ -572,11 +575,11 @@ When a recipient is defined in multiple policies, the policies are applied in th
 
 1. The Strict preset security policy.
 2. The Standard preset security policy.
-3. Custom policies based on the priority of the policy (a lower number indicates a higher priority).
-4. [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365)
+3. [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365)
+4. Custom policies based on the priority of the policy (a lower number indicates a higher priority).
 5. The Built-in protection preset security policy for Safe Links and Safe Attachments; the default policies for anti-malware, anti-spam, and anti-phishing.
 
-In other words, the settings of the Strict preset security policy override the settings of the Standard preset security policy, which override the settings from any custom policies, which override the settings from any anti-phishing, Safe Links, or Safe Attachments evaluation policies, which override the settings of the Built-in protection preset security policy for Safe Links and Safe Attachments, and the default policies for anti-spam, anti-malware, and anti-phishing.
+In other words, the settings of the Strict preset security policy override the settings of the Standard preset security policy, which overrides the settings from any anti-phishing, Safe Links, or Safe Attachments evaluation policies, which override the settings from any custom policies, which override the settings of the Built-in protection preset security policy for Safe Links and Safe Attachments, and the default policies for anti-spam, anti-malware, and anti-phishing.
 
 This order is shown on the pages of the individual security policies in the Defender portal (the policies are applied in the order they're shown on the page).
 

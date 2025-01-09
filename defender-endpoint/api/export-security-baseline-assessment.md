@@ -2,8 +2,8 @@
 title: Security baseline assessment methods and properties per device
 description: Provides information about the security baselines APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 05/02/2022
+ms.date: 01/08/2025
 ---
 
 # Export security baselines assessment per device
@@ -158,35 +158,29 @@ Returns all security baselines assessments for all devices, on a per-device basi
 GET /api/machines/BaselineComplianceAssessmentExport
 ```
 
-### 2.4 Parameters
-
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours).
-
-### 2.5 Properties (via files)
+### 2.4 Properties (via files)
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> 
+> - The files are gzip compressed & in multiline Json format.
+> - The download URLs are only valid for 1 hours.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
 |Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.
 |GeneratedTime|String|The time that the export was generated.
 
-## 2.6 Example
+## 2.5 Examples
 
-### 2.6.1 Request example
+### 2.5.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentExport
 ```
 
-### 2.6.2 Response example
+### 2.5.2 Response example
 
 ```json
 {

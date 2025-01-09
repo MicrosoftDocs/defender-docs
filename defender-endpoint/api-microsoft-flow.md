@@ -3,8 +3,9 @@ title: How to use Power Automate Connector to set up a Flow for events
 ms.reviewer: 
 description: Use Microsoft Defender for Endpoint Flow connector to create a flow that will be triggered anytime a new event occurs on your tenant.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.subservice: reference
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

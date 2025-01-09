@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 9/7/2023
 audience: ITPro
 ms.topic: conceptual
@@ -120,7 +120,10 @@ The simplest way to verify a rules or custom forms attack is to run the [Get-All
 
 #### Prerequisites
 
-You need to be a member of the Global Administrator role in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal) or the Organization Management role group in [Exchange Online](/exchange/permissions-exo/permissions-exo), because the script connects to every mailbox in the organization to read rules and forms.
+You need to be a member of the Global Administrator<sup>\*</sup> role in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal) or the Organization Management role group in [Exchange Online](/exchange/permissions-exo/permissions-exo), because the script connects to every mailbox in the organization to read rules and forms.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Use an account with local administrator rights to sign in to the computer where you intend to run the script.
 

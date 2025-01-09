@@ -1,6 +1,6 @@
 ---
-title: Advanced hunting in Microsoft Defender
-description: Advanced hunting in the portal unifying Defender XDR and Sentinel data
+title: Advanced hunting with Microsoft Sentinel data in Microsoft Defender
+description: Learn how to use advanced hunting in the portal unifying Defender XDR and Sentinel data
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -16,16 +16,19 @@ ms.collection:
   - m365initiative-m365-defender
   - tier1
   - usx-security
+ms.custom:
+- cx-ti
+- cx-ah
 ms.topic: conceptual
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 04/12/2024
+ms.date: 10/18/2024
 ---
 
-# Advanced hunting in the Microsoft Defender portal
+# Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
 
-Advanced hunting in the unified portal allows you to view and query all data from Microsoft Defender XDR. This includes data from various Microsoft security services and Microsoft Sentinel, which includes data from non-Microsoft products, in a single platform. You can also access and use all your existing Microsoft Sentinel workspace content, including queries and functions. 
+Advanced hunting allows you to view and query all the data sources available within the [unified Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal). The data sources might include Microsoft Defender XDR and various Microsoft security services. If you onboard Microsoft Sentinel to the Defender portal, access and use all your existing Microsoft Sentinel workspace content, including queries and functions.
 
 Querying from a single portal across different data sets makes hunting more efficient and removes the need for context-switching.
 
@@ -34,9 +37,10 @@ Querying from a single portal across different data sets makes hunting more effi
 ## How to access
 
 ### Required roles and permissions
-To query across Microsoft Sentinel and Microsoft Defender XDR data in the unified advanced hunting page, you must have access to Microsoft Defender XDR advanced hunting (see [Required roles and permissions](custom-roles.md#required-roles-and-permissions)) and at least Microsoft Sentinel Reader (see [Microsoft Sentinel-specific roles](/azure/sentinel/roles#microsoft-sentinel-specific-roles)).
 
-In the unified portal, you can query any data in any workload that you can currently access based on the roles and permissions you have. 
+You can query data in any workload that you can currently access based on your roles and permissions.
+
+To query across Microsoft Sentinel and Microsoft Defender XDR data in the unified advanced hunting page, you'll also need at least the Microsoft Sentinel Reader role. For more information, see [Microsoft Sentinel-specific roles](/azure/sentinel/roles#microsoft-sentinel-specific-roles).
 
 ### Connect a workspace
 
@@ -76,86 +80,22 @@ In the unified portal, in addition to viewing the schema column names and descri
 
 :::image type="content" source="/defender/media/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-schema.png":::
 
-## Use functions
-
-To use a function from Microsoft Sentinel, go to the **Functions** tab and scroll until you find the function that you want. Double-click the function name to insert the function in the query editor. 
-
-You can also select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
-
-Other options include:
-- **View details** – opens the function side pane containing its details
-- **Load function code** – opens a new tab containing the function code
-
-For editable functions, more options are available when you select the vertical ellipses:
-- **Edit details** – opens the function side pane to allow you to edit details about the function (except folder names for Sentinel functions)
-- **Delete** – deletes the function
-
-
-## Use saved queries
-
-To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
-
-- **Run query** – loads the query in the query editor and runs it automatically
-- **Open in query editor** – loads the query in the query editor
-- **View details** – opens the query details side pane where you can inspect the query, run the query, or open the query in the editor
-
-   :::image type="content" source="/defender/media/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-details.png":::
-
-
-For editable queries, more options are available:
-
-- **Edit details** – opens the query details side pane with the option to edit the details like description (if applicable) and the query itself; only the folder names (location) of Microsoft Sentinel queries can't be edited
-- **Delete** – deletes the query
-- **Rename** – allows you to modify the query name
-
-## Create custom analytics and detection rules
-
-To help discover threats and anomalous behaviors in your environment, you can create custom detection policies. 
-
-For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
-
-:::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
-
-The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
-
-You can also create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. 
-
-If your Defender XDR data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
-
-
-## Explore results
-
-Results of queries that were run appear in the **Results** tab. You can export the results to a CSV file by selecting **Export**. 
-
-:::image type="content" source="/defender/media/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-results.png":::
-
-You can also explore the results in-line with the following features:
-
-- Expand a result by selecting the dropdown arrow at the left of each result
-- Where applicable, expand details for results that are in JSON or array format by selecting the dropdown arrow at the left of applicable result row for added readability
-- Open the side pane to see a record's details (concurrent with expanded rows)
-
-You can also right-click on any result value in a row so that you can use it to:
-- Add more filters to the existing query
-- Copy the value for use in further investigation
-- Update the query to extend a JSON field to a new column
-
-For Microsoft Defender XDR data, you can take further action by selecting the checkboxes to the left of each result row. Select **Link to incident** to link the selected results to an incident (read [Link query results to an incident](advanced-hunting-link-to-incident.md)) or **Take actions** to open the Take actions wizard (read [Take action on advanced hunting query results](advanced-hunting-take-action.md)).
-
 ## Known issues
 
 - The `IdentityInfo table` from [Microsoft Sentinel](/azure/sentinel/ueba-reference#identityinfo-table) isn't available, as the `IdentityInfo` table remains as is in Defender XDR. Microsoft Sentinel features like analytics rules that query this table aren't impacted as they're querying the Log Analytics workspace directly.
 - The Microsoft Sentinel `SecurityAlert` table is replaced by `AlertInfo` and `AlertEvidence` tables, which both contain all the data on alerts. While SecurityAlert isn't available in the schema tab, you can still use it in queries using the advanced hunting editor. This provision is made so as not to break existing queries from Microsoft Sentinel that use this table. 
-- Guided hunting mode, links to incidents, and take actions capabilities are supported for Defender XDR data only.
+- Guided hunting mode and take actions capabilities are supported for Defender XDR data only.
 - Custom detections have the following limitations:
     - Custom detections are not available for KQL queries that do not include Defender XDR data.
     - Near real-time detection frequency is not available for detections that include Microsoft Sentinel data. 
     - Custom functions that were created and saved in Microsoft Sentinel are not supported.
     - Defining entities from Sentinel data is not yet supported in custom detections.
-- Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature.
+- Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. Alternatively, you can use the [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature to link query results to new or existing incidents.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the`Timestamp` and `TimeGenerated` columns. In case the data arrives to Log Analytics after 48 hours, it's being overridden upon ingestion to `now()`. Therefore, to get the actual time the event happened, we recommend relying on the `Timestamp` column.
-- When prompting [Copilot for Security](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
+- When prompting [Security Copilot](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
 
 
+## See also
 
-
+- [Use advanced hunting functions, saved queries, and custom rules](advanced-hunting-defender-use-custom-rules.md)
+- [Work with results containing Microsoft Sentinel data](advanced-hunting-defender-results.md)

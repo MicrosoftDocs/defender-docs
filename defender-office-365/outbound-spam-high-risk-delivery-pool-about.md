@@ -72,8 +72,6 @@ The forwarded or relayed message should meet one of the following criteria to av
 - SPF passes when the message comes to Microsoft 365.
 - DKIM on the sender domain passes when the message comes to Microsoft 365.
 
-You can tell that a message was sent via the relay pool by looking at the outbound server IP (the relay pool is in the 40.95.0.0/16 range).
-
 In cases where we can authenticate the sender, we use Sender Rewriting Scheme (SRS) to help the recipient email system know that the forwarded message is from a trusted source. You can read more about how that works and what you can do to help make sure the sending domain passes authentication in [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme).
 
 For DKIM to work, make sure you enable DKIM for sending domain. For example, fabrikam.com is part of contoso.com and is defined in the accepted domains of the organization. If the message sender is sender@fabrikam.com, DKIM needs to be enabled for fabrikam.com. you can read on how to enable at [Use DKIM to validate outbound email sent from your custom domain](email-authentication-dkim-configure.md).
@@ -84,6 +82,9 @@ If the MX record for your domain points to a third party service or an on-premis
 
 ### Find out which outbound pool was used
 
-As an Exchange Service Administrator or Global Administrator, you might want to find out which outbound pool was used to send a message from Microsoft 365 to an external recipient.
+As an Exchange Service Administrator or Global Administrator<sup>\*</sup>, you might want to find out which outbound pool was used to send a message from Microsoft 365 to an external recipient.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To do so, you can [use Message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac) and look for the `OutboundIpPoolName` property in the output. This property contains a friendly name value for the outbound pool that was used.

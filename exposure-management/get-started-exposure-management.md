@@ -1,21 +1,17 @@
 ---
 title: Start using Microsoft Security Exposure Management
 description: This article describes how to start using the Microsoft Security Exposure Management dashboard
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 11/04/2024
 ---
 
 # Start using Microsoft Security Exposure Management
 
 This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard.
-
-Security Exposure Management is currently in public preview. Initially, your data uses default settings in Security Exposure Management.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Reviewing security exposure state
 
@@ -24,6 +20,12 @@ On the Exposure Management > **Overview** dashboard, you can review the overall 
 Use the dashboard as a starting point for a snapshot of organizational posture and exposure, and drill down to details as needed.
 
 :::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
+
+## Connecting your external security and asset management products
+
+To get the most out of Security Exposure Management, connect your external security and asset management products.
+
+By integrating these products, you can enhance visibility and gain deeper insights into your security posture. Data connectors allow for seamless data flow and aggregation, providing a more comprehensive view of potential vulnerabilities and threats.
 
 ## Review assets
 
@@ -55,7 +57,7 @@ Drilling down into an individual security metric takes you to its metric page. Y
 
 The **Attack surface map** displays your tenant's total and critical device, identity, and cloud assets.
 
-You can select and search on a specific asset type, and open it in the map. 
+You can select and search on a specific asset type, and open it in the map.
 
 :::image type="content" source="./media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
 

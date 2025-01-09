@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 5/2/2024
+ms.date: 10/23/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -24,6 +24,9 @@ appliesto:
 In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, Training campaigns are a faster, more direct way to provide security training to users. Instead of creating and launching [simulated phishing attacks](attack-simulation-training-simulations.md) that eventually lead to training, you can create and assign Training campaigns directly to users.
 
 A Training campaign contains one or more built-in Training modules that you select. Currently, there are over 70 Training modules to select from. For more information about Training modules, see [Training modules for Training campaigns in Attack simulation training](attack-simulation-training-training-modules.md).
+
+> [!TIP]
+> You can also use Training modules when you [assign training](attack-simulation-training-simulations.md#assign-training) in regular simulations.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
@@ -102,27 +105,31 @@ On the **Target users** page, select who receives the Training campaign. Use the
 
 - **Include only specific users and groups**: At first, no users or groups are shown on the **Targeted users** page. To add users or groups to the Training campaign, choose one of the following options:
 
-  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to include in the Training campaign. **Dynamic distribution groups are not supported**. The following search tools are available:
+  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to include in the Training campaign. The following group types are supported:
+    - Microsoft 365 Groups (static and dynamic)
+    - Distribution groups (static only)
+    - Mail-enabled security groups (static only) 
 
-    - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
+  The following search tools are available:
 
-      - Type three or more characters and then press the ENTER key. Any users or group names that contain those characters are shown in the **User list** section by **Name**, **Email**, **Job title**, and **Type**.
-      - Type less than three characters or no characters and then press the ENTER key. No users are shown in the **User list** section, but you can type three or more characters in the **Search** box to search for users and groups.
+  - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
+    - Type three or more characters and then press the ENTER key. Any users or group names that contain those characters are shown in the **User list** section by **Name**, **Email**, **Job title**, and **Type**.
+    - Type less than three characters or no characters and then press the ENTER key. No users are shown in the **User list** section, but you can type three or more characters in the **Search** box to search for users and groups.
 
-      The number of results appears in the **Selected (0/x) users** label.
+    The number of results appears in the **Selected (0/x) users** label.
 
-      > [!TIP]
-      > Selecting **Add filters** clears and replaces any results the **User list** section with the **Filter users by categories**.
+    > [!TIP]
+    > Selecting **Add filters** clears and replaces any results the **User list** section with the **Filter users by categories**.
 
-      When you have a list of users or groups in the **User list** section, select some or all of the results by selecting the check box next to the **Name** column. The number of selected results appears in the **Selected (y/x) users** label.
+    When you have a list of users or groups in the **User list** section, select some or all of the results by selecting the check box next to the **Name** column. The number of selected results appears in the **Selected (y/x) users** label.
 
-      Select **Add x users** to add the selected users or groups on the **Target users** page and to return to the **Target users** page.
+    Select **Add x users** to add the selected users or groups on the **Target users** page and to return to the **Target users** page.
 
     - **Filter users by categories**: Use the following options:
 
       - **Suggested user groups**: Select from the following values:
         - **All suggested user groups**: The same result as selecting **Users not targeted by a simulation in the last three months** and **Repeat offenders**.
-        - **Users not targeted by a simulation in the last three months**
+        - **Users not targeted by a simulation in the last three months**.
         - **Repeat offenders**: For more information, see [Configure the repeat offender threshold](attack-simulation-training-settings.md#configure-the-repeat-offender-threshold).
 
       - **User tags**: User tags are identifiers for specific groups of users (for example, Priority accounts). For more information, see [User tags in Microsoft Defender for Office 365](user-tags-about.md). Use the following options:
@@ -150,7 +157,7 @@ On the **Target users** page, select who receives the Training campaign. Use the
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
-      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal":::
 
       You can use some or all of the search categories to find users and groups. If you select multiple categories, the AND operator is used. Any users or groups must match both values to be returned in the results (which is virtually impossible if you use the value **All** in multiple categories).
 
@@ -413,7 +420,7 @@ To set the training threshold on the **Settings** tab, do the following steps:
 
 ## View Training campaign reports
 
-For Training campaigns with the **Status** value **In progress** or **Completed**, you can view the report for the Training campaign by using either of the following methods on the **Training campaigns** tab at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>
+For Training campaigns with the **Status** value **In progress** or **Completed**, you can view the report for the Training campaign by using either of the following methods on the **Training campaigns** tab at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>.
 
 - Select the campaign by clicking anywhere in the row other than the check box next to the name.
 - Select the campaign by selecting the check box next to the name, and then select :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
@@ -430,7 +437,7 @@ To close the Training campaign report, select :::image type="icon" source="media
 
 ### Report tab
 
-For a description of what's on the **Report** tab for Training campaigns, see [Simulation report for Training campaigns](attack-simulation-training-insights.md#simulation-report-for-training-campaigns)
+For a description of what's on the **Report** tab for Training campaigns, see [Simulation report for Training campaigns](attack-simulation-training-insights.md#simulation-report-for-training-campaigns).
 
 ### Users tab
 

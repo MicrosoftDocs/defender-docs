@@ -1,0 +1,151 @@
+### YamlMime:Landing
+
+title: Microsoft Defender for Cloud Apps documentation
+summary: Microsoft Defender for Cloud Apps delivers full protection for SaaS applications, helping you monitor and protect your cloud app data, using fundamental cloud access security broker (CASB) functionality, SaaS Security Posture Management (SSPM) features, advanced threat protection, and app-to-app protection.
+
+metadata:
+  title: Microsoft Defender for Cloud Apps documentation
+  description: Microsoft Defender for Cloud Apps delivers full protection for SaaS applications, helping you monitor and protect your cloud app data, using fundamental cloud access security broker (CASB) functionality, SaaS Security Posture Management (SSPM) features, advanced threat protection, and app-to-app protection.
+  services: na
+  ms.service: defender-for-cloud-apps
+  ms.subservice: na
+  ms.topic: landing-page
+  ms.collection: na
+  author: batamig
+  ms.author: bagol
+  ms.date: 11/09/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Defender for Cloud Apps
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Defender for Cloud Apps?
+            url: ./what-is-defender-for-cloud-apps.md
+          - text: Defender for Cloud Apps and zero trust monitoring
+            url: zero-trust.md
+      - linkListType: whats-new
+        links:
+          - text: What's new in Defender for Cloud Apps
+            url: release-notes.md
+      - linkListType: concept
+        links:
+          - text: Data security and privacy
+            url: cas-compliance-trust.md
+
+  # Card (optional)
+  - title: Get started
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Get started with Defender for Cloud Apps
+            url: ./get-started.md
+      - linkListType: how-to-guide
+        links:
+          - text: Basic setup
+            url: general-setup.md
+          - text: View and manage security posture
+            url: security-saas.md
+      - linkListType: concept
+        links:
+          - text: Best practices for protecting your organizations
+            url: best-practices.md
+          - text: Operations guide
+            url: ops-guide/ops-guide.md
+
+  # Card (optional)
+  - title: Cloud discovery and security posture
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Cloud discovery overview
+            url: set-up-cloud-discovery.md
+          - text: Cloud discovery dashboard
+            url: discovered-apps.md
+      - linkListType: how-to-guide
+        links:
+          - text: Calculate risk scores
+            url: risk-score.md
+          - text: Connect cloud apps
+            url: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
+          - text: Collect logs
+            url: discovery-docker.md
+          - text: Discover and manage shadow IT
+            url: tutorial-shadow-it.md
+          - text: Manage SaaS security posture
+            url: security-saas.md
+
+  # Card (optional)
+  - title: Threat protection
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App control with policies
+            url: control-cloud-apps-with-policies.md
+          - text: Access and session protection
+            url: proxy-intro-aad.md
+          - text: Cloud app risk and suspicious activity investigation
+            url: investigate.md
+          - text: Threat response governance actions
+            url: governance-actions.md
+
+      - linkListType: how-to-guide
+        links:
+          - text: Use in-browser protection with Microsoft Edge
+            url: in-browser-protection.md
+          - text: Investigate behaviors by hunting
+            url: behaviors.md
+          - text: Investigate anomaly detection alerts
+            url: investigate-anomaly-alerts.md
+          - text: Investigate risky users
+            url: tutorial-ueba.md
+
+  # Card (optional)
+  - title: Information protection
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Common information protection policies
+            url: policies-information-protection.md
+          - text: DLP content inspection
+            url: content-inspection.md
+
+      - linkListType: how-to-guide
+        links:
+          - text: Integrate with Microsoft Information Protection
+            url: azip-integration.md
+          - text: Discover and protect sensitive information
+            url: tutorial-dlp.md
+          - text: Protect files with admin quarantine
+            url: use-case-admin-quarantine.md
+          - text: Protect data in motion
+            url: tutorial-proxy.md
+          - text: Block sensitive information download
+            url: use-case-proxy-block-session-aad.md
+
+  # Card (optional)
+  - title: App governance for OAuth apps
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App governance overview
+            url: app-governance-manage-app-governance.md
+      - linkListType: how-to-guide
+        links:
+          - text: Turn on app governance
+            url: app-governance-get-started.md
+          - text: Get started
+            url: app-governance-trial-user-guide.md
+          - text: Investigate app governance threat detections
+            url: app-governance-anomaly-detection-alerts.md
+          - text: Create app governance app policies
+            url: app-governance-app-policies-get-started.md
+          - text: Monitor and respond to unusual data usage
+            url: app-governance-monitor-apps-unusual-data-usage.md
+          - text: Secure apps with app hygiene
+            url: app-governance-secure-apps-app-hygiene-features.md

@@ -14,8 +14,11 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
+ms.custom: 
+- cx-ti
+- cx-ah
 ms.topic: reference
-ms.date: 04/11/2024
+ms.date: 09/06/2024
 ---
 
 # DeviceFileEvents
@@ -60,7 +63,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `InitiatingProcessSHA1` | `string` | SHA-1 of the process (image file) that initiated the event |
 | `InitiatingProcessSHA256` | `string` | SHA-256 of the process (image file) that initiated the event. This field is usually not populated — use the SHA1 column when available. |
 | `InitiatingProcessFolderPath` | `string` | Folder containing the process (image file) that initiated the event |
-| `InitiatingProcessFileName` | `string` | Name of the process that initiated the event |
+| `InitiatingProcessFileName` | `string` | Name of the process file that initiated the event; if unavailable, the name of the process that initiated the event might be shown instead |
 | `InitiatingProcessFileSize` | `long` | Size of the process (image file) that initiated the event |
 | `InitiatingProcessVersionInfoCompanyName` | `string` | Company name from the version information of the process (image file) responsible for the event |
 | `InitiatingProcessVersionInfoProductName` | `string` | Product name from the version information of the process (image file) responsible for the event |
@@ -89,6 +92,11 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ReportId` | `long` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
 | `AppGuardContainerId` | `string` | Identifier for the virtualized container used by Application Guard to isolate browser activity |
 | `AdditionalFields` | `string` | Additional information about the entity or event |
+| `InitiatingProcessSessionId` | `long` |  Windows session ID of the initiating process  |
+| `IsInitiatingProcessRemoteSession` | `bool` |   Indicates whether the initiating process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
+| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process’s RDP session was initiated |
+| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process’s RDP session was initiated |
+
 
 > [!NOTE]
 > File hash information will always be shown when it is available. However, there are several possible reasons why a SHA1, SHA256, or MD5 cannot be calculated. For instance, the file might be located in remote storage, locked by another process, compressed, or marked as virtual. In these scenarios, the file hash information appears empty.

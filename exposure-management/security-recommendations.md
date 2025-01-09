@@ -1,21 +1,17 @@
 ---
 title: Review security recommendations in Microsoft Security Exposure Management
 description: Learn how to review security recommendations in Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 11/04/2024
 ---
 
 # Review security recommendations
 
 This article describes how to work with security recommendations in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 

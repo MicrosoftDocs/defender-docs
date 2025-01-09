@@ -3,8 +3,8 @@ title: Configure your devices to connect to the Defender for Endpoint service us
 description: Learn how to configure your devices to enable communication with the cloud service using a proxy.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 ms.subservice: onboard
-ms.date: 10/25/2023
+ms.date: 07/01/2024
 ---
 
 # STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
@@ -31,24 +31,29 @@ ms.date: 10/25/2023
 > [!IMPORTANT]
 > Devices that are configured for IPv6-only traffic are not supported.
 
-Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically, typically by using autodiscovery or an autoconfig file, or statically specific to Defender for Endpoint services running on the device.
+> [!NOTE]
+> To use the proxy correctly, configure these two different proxy settings in Defender for Endpoint:
+> - [Endpoint Detection and Response (EDR)](/defender-endpoint/configure-proxy-internet)
+> - [Microsoft Defender Antivirus](/defender-endpoint/configure-proxy-internet)
 
-- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (this article)
-- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
-- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections)
+Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically. You can use autodiscovery, an autoconfig file, or a method statically specific to Defender for Endpoint services running on the device.
 
-The Defender for Endpoint sensor requires Microsoft Windows HTTP (WinHTTP) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the LocalSystem account.
+- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article).
+- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).
+- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections).
+
+The Defender for Endpoint sensor requires Microsoft Windows HTTP (`WinHTTP`) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the `LocalSystem` account.
 
 > [!TIP]
-> For organizations that use forward proxies as a gateway to the Internet, you can use network protection to [investigate connection events that occur behind forward proxies](investigate-behind-proxy.md).
+> If you use forward proxies as a gateway to the Internet, you can use network protection to [investigate connection events that occur behind forward proxies](investigate-behind-proxy.md).
 
-The WinHTTP configuration setting is independent of the Windows Internet (WinINet) browsing proxy settings (see, [WinINet vs. WinHTTP](/windows/win32/wininet/wininet-vs-winhttp)). It can only discover a proxy server by using the following discovery methods:
+The `WinHTTP` configuration setting is independent of the Windows Internet (`WinINet`) browsing proxy settings (see [WinINet vs. WinHTTP](/windows/win32/wininet/wininet-vs-winhttp)). It can only discover a proxy server by using the following discovery methods:
 
 - Autodiscovery methods:
 
   - Transparent proxy
   
-  - Web Proxy Auto-discovery Protocol (WPAD)
+  - Web Proxy Autodiscovery Protocol (WPAD)
 
     > [!NOTE]
     > If you're using Transparent proxy or WPAD in your network topology, you don't need special configuration settings. 
@@ -60,7 +65,7 @@ The WinHTTP configuration setting is independent of the Windows Internet (WinINe
   - WinHTTP configured using netsh command: Suitable only for desktops in a stable topology (for example: a desktop in a corporate network behind the same proxy)
 
 > [!NOTE]
-> Defender antivirus and EDR proxies can be set independently. In the sections that follow, be aware of those distinctions.
+> Microsoft Defender Antivirus and EDR proxies can be set independently. In the sections that follow, be aware of those distinctions.
 
 ## Configure the proxy server manually using a registry-based static proxy setting
 
@@ -90,9 +95,9 @@ The static proxy settings are configurable through group policy (GP), both setti
 | Configure connected user experiences and telemetry | `HKLM\Software\Policies\Microsoft\Windows\DataCollection` | `TelemetryProxyServer` | ```servername:port or ip:port``` <br> <br> For example: ```10.0.0.6:8080``` (REG_SZ) |
 
 > [!NOTE]
-> If you are using 'TelemetryProxyServer' setting on devices that are otherwise **completely offline**, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `PreferStaticProxyForHttpRequest` with a value of `1`.
+> If you are using `TelemetryProxyServer` setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then you must add the additional registry setting `PreferStaticProxyForHttpRequest` with a value of `1`.
 >
-> Parent registry path location for "PreferStaticProxyForHttpRequest" is "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection"
+> Parent registry path location for `PreferStaticProxyForHttpRequest` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 >
 > The following command can be used to insert the registry value in the correct location:
 >
@@ -100,61 +105,49 @@ The static proxy settings are configurable through group policy (GP), both setti
 > reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection" /v PreferStaticProxyForHttpRequest /t REG_DWORD /d 1 /f
 > ```
 >
-> The above registry value is applicable only starting with MsSense.exe version 10.8210.* and later, or version 10.8049.* and later.
-
-
+> The registry value mentioned earlier is applicable only starting with MsSense.exe version `10.8210.*` and later, or version `10.8049.*` and later.
 
 ## Configure a static proxy for Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Note, the connectivity is required for [custom indicators](manage-indicators.md) when Defender Antivirus is your active anti-malware solution as well as [EDR in block mode](edr-in-block-mode.md) which provides a fallback option when a non-Microsoft solution did not perform a block.
+Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Connectivity is required for [custom indicators](indicators-overview.md) when Microsoft Defender Antivirus is your active anti-malware solution and [EDR in block mode](edr-in-block-mode.md), which provides a fallback option when a non-Microsoft solution didn't perform a block.
 
 Configure the static proxy using the Group Policy available in Administrative Templates:
 
 1. **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy server for connecting to the network**. 
 
-2. Set it to **Enabled** and define the proxy server. Note, the URL must have either http:// or https://. For supported versions for https://, see [Manage Microsoft Defender Antivirus updates](microsoft-defender-antivirus-updates.md).
+2. Set it to **Enabled** and define the proxy server. The URL must have either `http://` or `https://`. For supported versions for `https://`, see [Manage Microsoft Defender Antivirus updates](microsoft-defender-antivirus-updates.md).
 
    :::image type="content" source="media/proxy-server-mdav.png" alt-text="The proxy server for Microsoft Defender Antivirus" lightbox="media/proxy-server-mdav.png":::
 
-3. Under the registry key `HKLM\Software\Policies\Microsoft\Windows Defender`, the policy sets the registry value `ProxyServer` as REG_SZ. 
+3. Under the registry key `HKLM\Software\Policies\Microsoft\Windows Defender`, the policy sets the registry value `ProxyServer` as `REG_SZ`. 
 
    The registry value `ProxyServer` takes the following string format:
 
     `<server name or ip>:<port>`
 
-    For example: http://10.0.0.6:8080
-
->[!NOTE]
->If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting SSLOptions with a dword value of 0. Parent registry path location for "SSLOptions" is "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" <br>
->For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus will cache the last known working proxy. Ensure your proxy solution does not perform SSL inspection. This will break the secure cloud connection.
->
->Microsoft Defender Antivirus will not use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it will use a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md). 
->
->If required, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses** to bypass proxy server and prevent Microsoft Defender Antivirus from using a proxy server for those destinations. 
->
->You can use PowerShell with the `Set-MpPreference` cmdlet to configure these options: 
->
->- ProxyBypass 
->- ProxyPacUrl 
->- ProxyServer 
-
->[!NOTE]
->To use the proxy correctly, configure these three different proxy settings:
-> - Microsoft Defender for Endpoint (MDE)
-> - AV (Antivirus)
-> - Endpoint Detection and Response (EDR)
-
-
-## Configure the proxy server manually using netsh command
-
-Use netsh to configure a system-wide static proxy.
+    For example, `http://10.0.0.6:8080`
 
 > [!NOTE]
+> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of `2`. The parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 >
-> - This will affect all applications including Windows services which use WinHTTP with default proxy.</br>
+> For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection, as that breaks the secure cloud connection.
+>
+> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md). If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses to bypass proxy server** and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
+> 
+> You can use PowerShell with the `Set-MpPreference` cmdlet to configure these options: 
+>    - `ProxyBypass`
+>    - `ProxyPacUrl` 
+>    - `ProxyServer` 
+
+## Configure the proxy server manually using `netsh` command
+
+Use `netsh` to configure a system-wide static proxy.
+
+> [!NOTE]
+> This configuration affects all applications, including Windows services which use `WinHTTP` with default proxy.
 
 1. Open an elevated command line:
-   1. Go to **Start** and type **cmd**.
+   1. Go to **Start** and type `cmd`.
    1. Right-click **Command prompt** and select **Run as administrator**.
 
 2. Enter the following command and press **Enter**:
@@ -165,21 +158,19 @@ Use netsh to configure a system-wide static proxy.
 
    For example: `netsh winhttp set proxy 10.0.0.6:8080`
 
-To reset the winhttp proxy, enter the following command and press **Enter**:
+3. To reset the `winhttp` proxy, enter the following command and press **Enter**:
 
-```cmd
-netsh winhttp reset proxy
-```
+   ```cmd
+   netsh winhttp reset proxy
+   ```
 
 See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
 
 ### Windows devices running the previous MMA-based solution
-Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2, and servers not upgraded to Unified Agent leverage the Microsoft Monitoring Agent / also known as Log Analytics Agent to connect to the Defender for Endpoint service.
 
-You can either leverage a system-wide proxy setting, configure the agent to connect through a proxy or a log analytics gateway.
+For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers that aren't upgraded to Unified Agent and use the Microsoft Monitoring Agent (also known as Log Analytics Agent) to connect to the Defender for Endpoint service, you can either use a system-wide proxy setting, or configure the agent to connect through a proxy or a log analytics gateway.
 
 - Configure the agent to use a proxy: [Proxy configuration](/azure/azure-monitor/agents/log-analytics-agent#proxy-configuration)
-
 - Set up Azure Log Analytics (formerly known as OMS Gateway) to act as proxy or hub: [Azure Log Analytics Agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
 
 [Onboard previous versions of Windows](onboard-downlevel.md)
@@ -188,10 +179,9 @@ You can either leverage a system-wide proxy setting, configure the agent to conn
 
 [STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md)
 
-
 ## Related articles
 
-- [Disconnected environments, proxies and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
+- [Disconnected environments, proxies, and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
 - [Onboard Windows devices](onboard-windows-client.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)

@@ -2,8 +2,8 @@
 title: Get recommendation by Id
 description: Retrieves a security recommendation by its ID.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -102,7 +102,11 @@ Here's an example of the response.
     "totalMachineCount": 6,
     "exposedMachinesCount": 5,
     "nonProductivityImpactedAssets": 0,
-    "relatedComponent": "Chrome"
+    "relatedComponent": "Chrome",
+    "tags": [
+    "internetFacing"
+    ],
+    "exposedCriticalDevices": 116
 }
 ```
 

@@ -1,20 +1,23 @@
 --- 
 title: 'What is Microsoft Defender Threat Intelligence (Defender TI)?'
-description: 'In this overview article, learn about the main features that come with Microsoft Defender Threat Intelligence (Defender TI).'
+description: 'Learn about the main features that come with Microsoft Defender Threat Intelligence (Defender TI).'
 author: alexroland24
 ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.collection: essentials-overview
 ms.topic: overview
-ms.date: 08/02/2022
-ms.custom: template-overview
+ms.date: 11/18/2024
+ms.custom: 
+- template-overview
+- cx-ti
+- cx-mdti
 ---
 
 # What is Microsoft Defender Threat Intelligence (Defender TI)?
 
 >[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Defender Threat Intelligence (Defender TI) is a platform that streamlines triage, incident response, threat hunting, vulnerability management, and threat intelligence analyst workflows when conducting threat infrastructure analysis and gathering threat intelligence. With security organizations actioning an ever-increasing amount of intelligence and alerts within their environment, having a threat analysis an intelligence platform that allows for accurate and timely assessments of alerting is important.
 
@@ -39,9 +42,14 @@ The **Featured articles** section of the Intel explorer page (right below the se
 
 ![TI Overview Featured Articles](media/tiOverviewFeaturedArticles.png)
 
+Featured articles also appear in the [**Featured threat intelligence articles** widget](learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal.md#featured-threat-intelligence-articles-widget) in the Defender portal home page: 
+
+:::image type="content" source="/defender/threat-intelligence/media/mdti-featured-articles-widget.png" alt-text="Screenshot of Featured threat intelligence articles widget in the Defender portal home page." lightbox="/defender/threat-intelligence/media/mdti-featured-articles-widget.png":::
+
 Selecting a featured article banner loads it full article content. The article's **Snapshot** gives you a quick understanding of the article. The **Indicators** call-out shows how many public and Defender TI indicators are associated with the article.
 
 ![TI Overview Featured Article](media/tiOverviewFeaturedArticle.png)
+
 
 ### Articles
 

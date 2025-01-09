@@ -2,10 +2,11 @@
 title: Contextual file and folder exclusions
 description: Describes the contextual file and folder exclusions capability for Microsoft Defender Antivirus on Windows. This capability allows you to be more specific when you define under which context Microsoft Defender Antivirus shouldn't scan a file or folder, by applying restrictions
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
-ms.date: 02/18/2024
+ms.date: 10/25/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -19,31 +20,23 @@ search.appverid: met150
 
 # Contextual file and folder exclusions
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-- Microsoft Defender for Business
-
-- Microsoft Defender Antivirus
-
-- Microsoft Defender for individuals
-
 This article/section describes the contextual file and folder exclusions capability for Microsoft Defender Antivirus on Windows. This capability allows you to be more specific when you define under which context Microsoft Defender Antivirus shouldn't scan a file or folder, by applying restrictions.
 
 ## Overview
 
-Exclusions are primarily intended to mitigate affects on performance. They come at the penalty of reduced protection value. These restrictions allow you to limit this protection reduction by specifying circumstances under which the exclusion should apply. Contextual exclusions aren't suitable for addressing false positives in a reliable way. If you encounter a false positive, you can submit files for analysis through the [Microsoft Defender XDR](https://security.microsoft.com/) portal (subscription required) or through the [Microsoft Security Intelligence](https://www.microsoft.com/wdsi/filesubmission) website. For a temporary suppression method, consider creating a custom _allow_ indicator in [Microsoft Defender for Endpoint](indicator-file.md).
+Exclusions are primarily intended to mitigate affects on performance. They come at the penalty of reduced protection value. These restrictions allow you to limit this protection reduction by specifying circumstances under which the exclusion should apply. Contextual exclusions aren't suitable for addressing false positives in a reliable way. If you encounter a false positive, you can submit files for analysis through the [Microsoft Defender portal](https://security.microsoft.com/) (subscription required) or through the [Microsoft Security Intelligence](https://www.microsoft.com/wdsi/filesubmission) website. For a temporary suppression method, consider creating a custom _allow_ indicator in [Microsoft Defender for Endpoint](indicator-file.md).
 
 There are four restrictions you can apply to limit the applicability of an exclusion:
 
-- **File/folder path type restriction**. You can restrict exclusions to only apply if the target is a file, or a folder by making the intent specific. If the target is a file but the exclusion is specified to be a folder, it will not apply. Conversely, if the target is folder but the exclusion is specified to be a file, the exclusion will apply.
+- **File/folder path type restriction**. You can restrict exclusions to only apply if the target is a file, or a folder by making the intent specific. If the target is a file but the exclusion is specified to be a folder, the exclusion doesn't apply. Conversely, if the target is folder but the exclusion is specified to be a file, the exclusion applies.
+
 - **Scan type restriction**. Enables you to define the required scan type for an exclusion to apply. For example, you only want to exclude a certain folder from Full scans but not from a "resource" scan (targeted scan).
-- **Scan trigger type restriction**. You can use this restriction to specify that the exclusion should only apply when the scan was initiated by a specific event:
-  - on demand
-  - on access
-  - or originating from behavioral monitoring
+
+- **Scan trigger type restriction**. You can use this restriction to specify that the exclusion should only apply when the scan is initiated by a specific event, such as:
+  - on demand;
+  - on access; or 
+  - originating from behavioral monitoring.
+
 - **Process restriction**. Enables you to define that an exclusion should only apply when a file or folder is being accessed by a specific process.
 
 ## Configuring restrictions
@@ -52,21 +45,23 @@ Restrictions are typically applied by adding the restriction type to the file or
 
 | Restriction | TypeName | value |
 |:---|:---|:---|
-| File/folder  | PathType  | file <br> folder |
-| Scan type | ScanType | quick <br> full |
-| Scan trigger | ScanTrigger | OnDemand <br> OnAccess <br> BM |
-| Process | Process | "<image_path>" |
+| File/folder  | `PathType`  | `file` <br/> `folder` |
+| Scan type | `ScanType` | `quick` <br/> `full` |
+| Scan trigger | `ScanTrigger` | `OnDemand` <br/> `OnAccess` <br/> Behavior monitoring |
+| Process | `Process` | `<path>` |
 
 ### Requirements
 
-This capability requires Microsoft Defender Antivirus:
+This capability requires Microsoft Defender Antivirus. 
 
-- Platform: **4.18.2205.7** or later
-- Engine: **1.1.19300.2** or later
+- Platform version: **4.18.2205.7** or later
+- Engine version: **1.1.19300.2** or later
+
+See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
 ### Syntax
 
-As a starting point, you may already have exclusions in place that you wish to make more specific. To form the exclusion string, first define the path to the file or folder to be excluded, then add the type name and associated value, as shown in the following example.
+As a starting point, you might already have exclusions in place that you wish to make more specific. To form the exclusion string, first define the path to the file or folder to be excluded, then add the type name and associated value, as shown in the following example.
 
 `<PATH>\:{TypeName:value,TypeName:value}`
 
@@ -75,28 +70,27 @@ Keep in mind that _all_ **types** and **values** are case sensitive.
 > [!NOTE]  
 > Conditions inside `{}` MUST be true for the restriction to match. For example, if you specify two scan triggers this cannot be true, and the exclusion will not apply. To specify two restrictions of the same type, create two separate exclusions.
 
-
 ### Examples
 
-The following string excludes "c:\documents\design.doc" only if it's a file and only in on-access scans:
+The following string excludes `c:\documents\design.doc` only if it's a file and only in on-access scans:
 
 `c:\documents\design.doc\:{PathType:file,ScanTrigger:OnAccess}`
 
-The following string excludes "c:\documents\design.doc" only if it's scanned (on-access) due to it being accessed by a process having the image name "winword.exe":
+The following string excludes `c:\documents\design.doc` only if it's scanned (on-access), due to it being accessed by a process having the image name `winword.exe`:
 
 `c:\documents\design.doc\:{Process:"winword.exe"}`
 
-File and folder paths may contain wildcards, as in the following example:
+File and folder paths can contain wildcards, as in the following example:
 
 `c:\*\*.doc\:{PathType:file,ScanTrigger:OnDemand}`
 
-The process image path may contain wildcards, as in the following example:
+The process image path can contain wildcards, as in the following example:
 
 `c:\documents\design.doc\:{Process:"C:\Program Files*\Microsoft Office\root\Office??\winword.exe"}`
 
 ### File/folder restriction
 
-You can restrict exclusions to only apply if the target is a file or a folder by making the intent specific. If the target is a file but the exclusion is specified to be a folder, the exclusion won't apply. Conversely, if the target is folder but the exclusion is specified to be a file, the exclusion will apply.
+You can restrict exclusions to only apply if the target is a file or a folder by making the intent specific. If the target is a file but the exclusion is specified to be a folder, the exclusion doesn't apply. Conversely, if the target is folder but the exclusion is specified to be a file, the exclusion applies.
 
 #### File/folder exclusions default behavior
 
@@ -113,9 +107,7 @@ To ensure an exclusion only applies if the target is a folder, not a file you ca
 
 #### Files
 
-To make sure an exclusion only applies if the target is a file, not a folder you can use the PathType: file restriction.
-
-Example:
+To make sure an exclusion only applies if the target is a file, not a folder you can use the PathType: file restriction. For example:
 
 `C:\documents\*.mdb\:{PathType:file}`
 
@@ -124,7 +116,7 @@ Example:
 By default, exclusions apply to all scan types:  
 
 - **resource**: a single file or folder is scanned in a targeted way (for example, right-click, Scan)
-- **quick**: common startup locations utilized by malware, memory and certain registry keys
+- **quick**: common startup locations utilized by malware, memory, and certain registry keys
 - **full**: includes quick scan locations and complete file system (all files and folders)
 
 To mitigate performance issues, you can exclude a folder or a set of files from being scanned by a specific scan type. You can also define the required scan type for an exclusion to apply.  
@@ -133,19 +125,19 @@ To exclude a folder from being scanned only during a full scan, specify a restri
 
 `C:\documents\:{ScanType:full}`
 
-To exclude a folder from being scanned only during a quick scan, specify a restriction type together with the file or folder exclusion:
+To exclude a folder from being scanned only during a quick scan, specify a restriction type together with the file or folder exclusion, as in the following example:
 
 `C:\program.exe\:{ScanType:quick}`
 
-If you want to make sure this exclusion only applies to a specific file and not a folder (c:\foo.exe could be a folder), also apply the PathType restriction:
+If you want to make sure this exclusion only applies to a specific file and not a folder (c:\foo.exe could be a folder), also apply the `PathType` restriction, as in the following example:
 
 `C:\program.exe\:{ScanType:quick,PathType:file}`
 
 ### Scan trigger restriction
 
-By default, basic exclusions apply to all scan triggers. ScanTrigger restriction enables you to specify that the exclusion should only apply when the scan was initiated by a specific event; on demand (including quick, full and targeted scans), on access or originating from behavioral monitoring (including memory scans).
+By default, basic exclusions apply to all scan triggers. ScanTrigger restriction enables you to specify that the exclusion should only apply when the scan was initiated by a specific event; on demand (including quick, full, and targeted scans), on access or originating from behavioral monitoring (including memory scans).
 
-- **OnDemand**: a scan was triggered by a command or admin action. Remember that scheduled quick and full scans also fall under this category.
+- **OnDemand**: a scan that's triggered by a command or admin action. Remember that scheduled quick and full scans also fall under this category.
 - **OnAccess**: a file or folder is opened/written/read/modified (typically considered real-time protection)
 - **BM**: a behavioral trigger causes the behavioral monitoring to scan a specific file
 
@@ -158,7 +150,6 @@ To exclude a file or folder and its contents from being scanned only when the fi
 This restriction allows you to define that an exclusion should only apply when a file or folder is being accessed by a specific process. A common scenario is when you want to avoid excluding the process as that avoidance would cause Defender Antivirus to ignore other operations by that process. Wildcards are supported in the process name/path.
 
 > [!NOTE]  
->
 > Using a large amount of process exclusion restrictions on a machine can adversely affect performance. In addition, if an exclusion is restricted to a certain process or processes, other active processes (such as indexing, backup, updates) can still trigger file scans.
 
 To exclude a file or folder only when accessed by a specific process, create a normal file or folder exclusion and add the process to restrict the exclusion to. For example:  
@@ -169,5 +160,11 @@ To exclude a file or folder only when accessed by a specific process, create a n
 
 After constructing your desired contextual exclusions, you can use your existing management tool to configure file and folder exclusions using the string you created.
 
-See: [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
+See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
+
+## See also
+
+- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

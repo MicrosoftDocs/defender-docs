@@ -2,17 +2,17 @@
 title: Respond to and mitigate threats in Microsoft Defender for Business
 description: As threats are detected in Defender for Business, you can take actions to respond to those threats. See how to use the device inventory view.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
+author: chrisda
+ms.author: chrisda
+manager: deniseb
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 10/10/2023
 ms.reviewer: nehabha
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
@@ -37,11 +37,11 @@ The Microsoft Defender portal enables your security team to respond to and mitig
 
    The **Devices** page lists company devices, along with their risk level and exposure level.
 
-4. Select an item, such as a device. A flyout pane opens and displays more information about alerts and incidents generated for that item, as shown in the following image:  
+4. Select an item, such as a device. A flyout pane opens and displays more information about alerts and incidents generated for that item, as shown in the following image:
 
    :::image type="content" source="/defender/media/defender-business/mdb-deviceinventory-selecteddeviceflyout.png" alt-text="Screenshot of the flyout pane for a selected device":::
 
-5. On the flyout, view the information that is displayed. Select the ellipsis (...) to open a menu that lists available actions, as shown in the following image: 
+5. On the flyout, view the information that is displayed. Select the ellipsis (...) to open a menu that lists available actions, as shown in the following image:
 
    :::image type="content" source="/defender/media/defender-business/mdb-deviceinventory-selecteddeviceflyout-menu.png" alt-text="Screenshot of available actions for a selected device":::
 
@@ -53,4 +53,3 @@ The Microsoft Defender portal enables your security team to respond to and mitig
 - [Review remediation actions in the Action center](mdb-review-remediation-actions.md)
 - [Manage devices in Defender for Business](mdb-manage-devices.md)
 - [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md)
-

@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 9/18/2023
+ms.date: 07/08/2024
 ms.collection:
 - m365-security
 - tier2
@@ -46,6 +46,9 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 |Protection for email content and Office files|<ul><li>[Microsoft Defender for Office 365 is configured](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies)</li><li>[Automated investigation and remediation capabilities in Defender for Endpoint are configured](/defender-endpoint/configure-automated-investigations-remediation) (required for manual response actions, such as deleting email messages on devices)</li></ul>|
 |Permissions|To configure automated investigation and response capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+
 ## Review or change the automation level for device groups
 
 Whether automated investigations run, and whether remediation actions are taken automatically or only upon approval for your devices depend on certain settings, such as your organization's device group policies. Review the configured automation level for your device group policies. You must be a global administrator or security administrator to perform the following procedure:
@@ -54,7 +57,7 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
-3. Review your device group policies. In particular, look at the **Automation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
+3. Review your device group policies. In particular, look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
 
    - [How threats are remediated](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations#how-threats-are-remediated)
    - [Create and manage device groups](/windows/security/threat-protection/microsoft-defender-atp/machine-groups)

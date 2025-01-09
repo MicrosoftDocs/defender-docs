@@ -7,7 +7,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-guidance-templates
@@ -49,8 +49,6 @@ Priority account protection helps IT and security teams ensure a high quality of
 To learn what priority account tags are see [Manage and monitor priority accounts - Microsoft 365 admin | Microsoft Docs](/Microsoft-365/admin/setup/priority-accounts).
 
 ## Next Steps
-
-[Review differentiated protection from priority account protection].
 
 [Review the differentiated protection for users tagged as Priority accounts](../priority-accounts-turn-on-priority-account-protection.md#review-differentiated-protection-from-priority-account-protection).
 

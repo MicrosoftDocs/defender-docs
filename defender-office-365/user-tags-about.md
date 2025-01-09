@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 5/16/2024
+ms.date: 09/16/2024
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -38,7 +38,7 @@ If your organization has Defender for Office 365 Plan 2 (included in your subscr
 >
 > Your organization can tag a maximum of 250 users using the Priority account system tag.
 >
-> Each custom tag has a maximum of 10,000 users per tag and your organization can create up to 500 custom tags.
+> Each custom tag has a maximum of 999 users per tag and your organization can create up to 500 custom tags.
 
 This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchange/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
 
@@ -54,10 +54,14 @@ To see how user tags are part of the strategy to help protect high-impact user a
     - _Create, modify, and delete custom user tags_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Apply and remove the Priority account tag from users_: Membership in the **Security Administrator** and **Exchange Admin** role groups.
     - _Apply and remove existing custom user tags from users_: Membership in the **Organization Management** or **Security Administrator** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** and **Security Administrator** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
-  > [!NOTE]
-  > User tag management is controlled by the **Tag Reader** and **Tag Manager** roles.
+    > [!TIP]
+    > User tag management is controlled by the **Tag Reader** and **Tag Manager** roles in Email & collaboration permissions.
+
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> and **Security Administrator** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - You can also manage and monitor the Priority account tag in the Microsoft 365 admin center. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 

@@ -7,13 +7,13 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
   - m365-security
   - tier2
 ms.custom:
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/15/2024
+ms.date: 10/22/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -26,6 +26,9 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
+> [!TIP]
+> To assign training to users without putting them through a simulation, see [Training campaigns in Attack simulation training](attack-simulation-training-training-campaigns.md).
+
 To launch a simulated phishing attack, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Simulations** tab. Or, to go directly to the **Simulations** tab, use <https://security.microsoft.com/attacksimulator?viewid=simulations>.
@@ -34,28 +37,30 @@ To launch a simulated phishing attack, do the following steps:
 
    :::image type="content" source="media/attack-sim-training-simulations-launch.png" alt-text="The Launch a simulation button on the Simulations tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-launch.png":::
 
-   The following sections describe the steps and configuration options to create a simulation.
+The following sections describe the steps and configuration options to create a simulation.
 
-   > [!NOTE]
-   > At any point after you name the simulation during the new simulation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation and then selecting the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit simulation** action that appears.
+> [!NOTE]
+> At any point after you name the simulation during the new simulation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation and then selecting the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit simulation** action that appears.
 
 ## Select a social engineering technique
 
 On the **Select technique** page, select an available social engineering technique:
 
-- **Credential Harvest**
+- **Credential Harvest**<sup>\*</sup>
 - **Malware Attachment**
 - **Link in Attachment**
-- **Link to Malware**
+- **Link to Malware**<sup>\*</sup>
 - **Drive-by URL**
-- **OAuth Consent Grant**
-- **How-to Guide**
+- **OAuth Consent Grant**<sup>\*</sup>
+- **How-to Guide**<sup>\*</sup>
+
+<sup>\*</sup> This social engineering technique allows you to use QR codes. For more information, see the [QR code simulations and training](#qr-code-simulations-and-training) section later in this article.
 
 If you select the **View details** link in the description, a details flyout opens that describes the technique and the simulation steps that result from the technique.
 
 For more information about the different social engineering techniques, see [Simulations](attack-simulation-training-get-started.md#simulations).
 
-:::image type="content" source="media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="The Details flyout for the credential harvest technique on the Select technique page" lightbox="media/attack-sim-training-simulations-select-technique-sim-steps.png":::
+:::image type="content" source="media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="The Details flyout for the credential harvest technique on the Select technique page":::
 
 When you're finished on the **Select technique** page, select **Next**.
 
@@ -113,7 +118,7 @@ When you're finished configuring filters, select **Apply**, **Cancel**, or :::im
 
 If you select a payload by selecting the check box next to the name, a :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Send a test** action appears above the list of payloads. Use this action to send a copy of the payload email to yourself (the currently logged in user) for inspection.
 
-:::image type="content" source="media/attack-sim-training-simulations-select-payload-global-tab.png" alt-text="The Global payloads tab on the Select payload page with a payload selected and the Send a test action in Attack simulation training." lightbox="media/attack-sim-training-simulations-select-payload-global-tab.png":::
+:::image type="content" source="media/attack-sim-training-simulations-select-payload-global-tab.png" alt-text="The Global payloads tab on the Select payload page with a payload selected and the Send a test action in Attack simulation training.":::
 
 On the **Tenant payloads** tab, if no payloads are available or if you want to create your own payload, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create a payload**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Payloads** \> **Tenant payloads** tab. For more information, see [Create custom payloads for Attack simulation training](attack-simulation-training-payloads.md#create-payloads).
 
@@ -194,14 +199,19 @@ When you're finished on  the **Configure OAuth payload** page, select **Next**.
 
 On the **Target users** page, select who receives the simulation. Use the following options to select users:
 
-- **Include all users in your organization**: The unmodifiable list of users is show in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
+- **Include all users in your organization**: The unmodifiable list of users is shown in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
 
   > [!TIP]
   > Although you can't remove users from the list on this page, you can use the next **Exclude users** page to exclude specific users.
 
 - **Include only specific users and groups**: At first, no users or groups are shown on the **Targeted users** page. To add users or groups to the simulation, choose one of the following options:
 
-  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to receive the simulation. **Dynamic distribution groups are not supported**. The following search tools are available:
+  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to receive the simulation. The following group types are supported:
+    - Microsoft 365 Groups (static and dynamic)
+    - Distribution groups (static only)
+    - Mail-enabled Security group (static only)
+
+    The following search tools are available:
 
     - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
 
@@ -249,7 +259,7 @@ On the **Target users** page, select who receives the simulation. Use the follow
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
-      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal":::
 
       You can use some or all of the search categories to find users and groups. If you select multiple categories, the AND operator is used. Any users or groups must match both values to be returned in the results (which is virtually impossible if you use the value **All** in multiple categories).
 
@@ -328,7 +338,7 @@ In the **Add training** flyout that opens, use the following tabs to select trai
 - **Recommended** tab: Shows the recommended built-in trainings based on the simulation configuration. These trainings are the same trainings that would have been assigned if you selected **Assign training for me (Recommended)** on the previous page.
 - **All trainings** tab: Shows all built-in trainings that are available.
 
-:::image type="content" source="media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="The option to add the recommended training on the Training assignment page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
+:::image type="content" source="media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="The option to add the recommended training on the Training assignment page in Attack simulation training in the Microsoft Defender portal":::
 
 On either tab, the following information is shown for each training:
 
@@ -371,7 +381,7 @@ Select one of the following options:
 
   - **Global landing pages** tab: Contains the built-in landing pages. When you select a built-in landing page to use by selecting the check box next to name, an **Edit layout** section appears with the following options:
     - **Add logo**: Select **Browse logo image** to find and select a .png, .jpeg, or .gif file. The logo size should be a maximum of 210 x 70 to avoid distortion. To remove the logo, select **Remove uploaded logo image**.
-    - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese, or **Russian**.
+    - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese**, or **Russian**.
 
   - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Phish landing pages** \> **Tenant landing pages** tab. For instructions, see [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
 
@@ -620,6 +630,20 @@ Back on the **Simulations** tab, the simulation that you created is now listed. 
 - **In progress** if you selected **Launch this simulation as soon as I'm done**.
 - **Scheduled** if you selected **Schedule this simulation to be launched later**.
 
+## QR code simulations and training
+
+You can select payloads with QR codes to use in simulations. The QR code replaces the phishing URL as the payload that's used in the simulation email message in the following social engineering techniques:
+
+- **Credential Harvest**
+- **Link to Malware**
+- **Drive-by URL**
+- **OAuth Consent Grant**
+- **How-to Guide**
+
+For more information about QR code payloads and configuring a custom QR code payload, see [QR code payloads](attack-simulation-training-payloads.md#qr-code-payloads).
+
+For more information about reporting for simulations with QR code payloads, see [Reporting for QR code simulations](attack-simulation-training-insights.md#reporting-for-qr-code-simulations).
+
 ## View simulations
 
 The **Simulations** tab in Attack simulation training at <https://security.microsoft.com/attacksimulator> shows any simulations that you created.
@@ -772,7 +796,7 @@ All actions on existing simulations start on the **Simulations** tab. To go ther
 
 You can copy an existing simulation and modify it to suit your needs. This action saves time and effort when you create new simulations based on previous ones.
 
-You can copy any simulation that's available in the **Simulations** tab, regardless of the **Status** value. When you copy the simulation, you can change the setting in the new copy of the simulation . For example, change the simulation name, description, technique, payload, and target users.
+You can copy any simulation that's available in the **Simulations** tab, regardless of the **Status** value. When you copy the simulation, you can change the setting in the new copy of the simulation. For example, change the simulation name, description, technique, payload, and target users.
 
 - We don't recommend copying **Failed** simulations, because the reasons for failure could recur in the copied simulation.
 - When you copy a simulation, the most recent settings are used in the copy (for example, the payload, landing page, and end-user notifications). If any content is deleted, you're prompted to select the respective content again.
@@ -786,7 +810,7 @@ To copy a simulation, do the following steps:
 
 1. On the **Simulations** tab at <https://security.microsoft.com/attacksimulator?viewid=simulations>, find and select the simulation to copy by selecting the check box next to the name.
 2. Select the :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy simulation** action that appears on the tab.
-3. The simulation wizard opens with all the settings from the original simulation. The default simulation name on the **Name simulation** page is the original name plus the the suffix **_Copy**.
+3. The simulation wizard opens with all the settings from the original simulation. The default simulation name on the **Name simulation** page is the original name plus the suffix **_Copy**.
 4. Review and modify the simulation configuration as needed. Select **Submit** to launch it or **Save and close** to review it later. If you select **Cancel**, the copied simulation isn't saved.
 
 ### Cancel simulations
@@ -799,6 +823,19 @@ To cancel a simulation, do the following steps:
 2. Select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Cancel simulation**, and then select **Confirm** in the confirmation dialog.
 
 After you cancel the simulation, the **Status** value changes to **Canceled**.
+
+- Cancelling a simulation with the **Status** value **Scheduled** results in 100% cancellation. No training assignment messages or notifications are sent, and the campaign is fully ended.
+- Cancelling a simulation with the **Status** value **In progress** has the following results:
+  - Simulation delivery continues to the target users.
+  - If you cancel the simulation after a training assignment, the training assignments are still shown as due, but subsequent training reminders are canceled.
+  - If you cancel the simulation before a training assignment, the trainings aren't assigned and no training assignment notifications are sent.
+  - Users who already received the simulated phishing message experience the following results:
+    - For social engineering techniques that use phishing links (all except **Malware Attachment**), the links are deactivated. Selecting the link displays the following message:
+
+      > This URL was part of a simulated phishing exercise provided by Microsoft and is no longer active.
+
+    - For the **Malware Attachment** social engineering technique, the landing page remains visible.
+    - Positive reinforcement messages are delivered if the user reports the simulated phishing message.
 
 ### Remove simulations
 

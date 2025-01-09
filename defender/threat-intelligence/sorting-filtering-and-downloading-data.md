@@ -6,14 +6,17 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: how-to 
-ms.date: 08/02/2022
-ms.custom: template-how-to 
+ms.date: 11/18/2024
+ms.custom: 
+- template-overview
+- cx-ti
+- cx-mdti
 ---
 
 # Sorting, filtering, and downloading data
 
 >[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Defender Threat Intelligence (Defender TI) lets you access our vast collection of crawling data in an indexed and pivot table format. These data sets can be large, returning expansive amounts of historic and recent data. By letting you appropriately sort and filter the data, we help you surface the connections of interest easily.
 
@@ -222,7 +225,7 @@ When you download data from the **Cookies** tab, the following headers are expor
 | **firstSeen**              | Date and time (in *mm/dd/yyyy hh:mm* format) when the cookie name was first observed to the hostname originating from the cookie domain |
 | **lastSeen**               | Date and time (in *mm/dd/yyyy hh:mm* format) when the cookie name was last observed to the hostname originating from the cookie domain |
 | **cookieName**             | Cookie name |
-| **cookieDomain**           | The domain name’s server the cookie name originated from |
+| **cookieDomain**           | The domain name's server the cookie name originated from |
 | **Tags**                   | System or custom tags associated with the artifact |
 
 When you download project lists from **Intel projects** (**My projects**, **Team projects**, and **Shared projects**), the following headers are exported:

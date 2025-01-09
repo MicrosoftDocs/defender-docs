@@ -2,8 +2,8 @@
 title: List devices by recommendation
 description: Retrieves a list of devices associated with the security recommendation. 
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

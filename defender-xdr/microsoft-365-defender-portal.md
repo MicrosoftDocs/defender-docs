@@ -19,7 +19,7 @@ ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
 ms.topic: conceptual
-ms.date: 05/14/2024
+ms.date: 07/09/2024
 ---
 
 # Microsoft Defender portal
@@ -47,14 +47,13 @@ The Microsoft Defender portal helps security teams investigate and respond to at
 - Actions & submissions
 - Threat analytics
 - Secure score
-- Learning hub
 - Trials
 - Partner catalog
 
 The Microsoft Defender portal emphasizes *unity, clarity, and common goals*.
 
 > [!NOTE]
-> In the Microsoft Defender portal, customers see only the security features their subscription includes. For example, if you have Defender for Office 365 but not Defender for Endpoint, you see features and capabilities for Defender for Office 365, but not device protection. 
+> In the Microsoft Defender portal, customers see only the security features their subscription includes. For example, if you have Defender for Office 365 but not Defender for Endpoint, you see features and capabilities for Defender for Office 365, but not for device protection. 
 
 ## Incident and alert investigations
 
@@ -111,7 +110,6 @@ For Microsoft Sentinel, after you connect Microsoft Sentinel to the Defender por
 - [Roles and permissions in Microsoft Sentinel | Microsoft Learn](/azure/sentinel/roles)
 - [Manage access to Microsoft Sentinel data by resource | Microsoft Learn](/azure/sentinel/resource-context-rbac)
 
-
 ### Integrated reports
 
 Reports are also unified in Microsoft Defender XDR. Admins can start with a general security report, and branch into specific reports about endpoints, email & collaboration. The links here are dynamically generated based upon workload configuration.
@@ -126,23 +124,22 @@ You can add and remove different cards depending on your needs.
 
 ### Global search
 
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. The search bar is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
-
 The Microsoft Defender portal's search function is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
 
 :::image type="content" source="/defender/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/search-panel.png":::
 
 Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
 
-- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel (Preview).
-- **Users** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, and Microsoft Sentinel (Preview).
+- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel.
+
+- **Users** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, and Microsoft Sentinel.
+
 - **Files, IPs, and URLs** - same capabilities as in Defender for Endpoint.
 
   > [!NOTE]
   > IP and URL searches are exact match and don't appear in the search results page – they lead directly to the entity page.
 
-- **MDVM** - same capabilities as in Defender for Endpoint (vulnerabilities, software, and recommendations).
+- **Microsoft Defender Vulnerability Management** - same capabilities as in Defender for Endpoint (vulnerabilities, software, and recommendations).
 
 Search also provides results from relevant links in the Microsoft Tech Community portal, relevant documentation in Microsoft Learn, navigation items within the portal, and a link where you can provide feedback. Search history is stored in your browser and is accessible for the next 30 days.
 
@@ -222,8 +219,6 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 - [What's new in Microsoft Defender XDR](whats-new.md)
 - [Microsoft Defender for Office 365 in the Microsoft Defender portal](microsoft-365-security-center-mdo.md)
 - [Microsoft Defender for Endpoint in Microsoft Defender portal](microsoft-365-security-center-mde.md)
-- [Microsoft Defender for Identity in the Microsoft Defender portal](microsoft-365-security-center-mdi.md)
-- [Microsoft Defender for Cloud Apps in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud-apps.md)
 - [Microsoft Defender for Cloud in the Microsoft Defender portal](microsoft-365-security-center-defender-cloud.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 

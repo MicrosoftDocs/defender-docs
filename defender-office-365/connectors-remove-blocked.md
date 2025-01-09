@@ -55,7 +55,10 @@ For more information about compromised _user accounts_ and how to remove them fr
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Remove connectors from the Restricted entities page_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Read-only access to the Restricted entities page_: Membership in the **Global Reader**, **Security Reader**, or **View-Only Organization Management** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - Before you follow the procedures in this article to remove a connector from the **Restricted entities** page, be sure to follow the required steps to regain control of the connector as described in [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
 
@@ -101,7 +104,7 @@ The default alert policy named **Suspicious connector activity** automatically n
 
      - On the **Decide if you want to notify people when this alert is triggered** page of the wizard that opens, verify or change the following settings:
        - Verify **Opt-in for email notifications** is selected.
-       - **Email recipients**: The default value is **TenantAdmins** (meaning, **Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
+       - **Email recipients**: The default value is **TenantAdmins** (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
        - **Daily notification limit**: The default value is **No limit**.
 
        When you're finished on the **Decide if you want to notify people when this alert is triggered** page, select **Next**.

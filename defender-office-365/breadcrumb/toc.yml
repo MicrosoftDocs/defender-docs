@@ -5,3 +5,7 @@
    - name: 'Microsoft Defender for Office 365'
      tocHref: /defender-office-365/
      topicHref: /defender-office-365/index
+   - name: 'Microsoft Defender for Office 365'
+     tocHref: /defender-xdr/
+     topicHref: /defender-xdr/pilot-deploy-defender-endpoint
+    
