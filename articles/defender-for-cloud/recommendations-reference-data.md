@@ -30,14 +30,14 @@ To learn about actions that you can take in response to these recommendations, s
 
 ## Azure data recommendations
 
-### [Azure Cosmos DB should disable public network access](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/334a182c-7c2c-41bc-ae1e-55327891ab50)
+### Azure Cosmos DB should disable public network access
 
 **Description**: Disabling public network access improves security by ensuring that your Cosmos DB account isn't exposed on the public internet. Creating private endpoints can limit exposure of your Cosmos DB account. [Learn more](/azure/cosmos-db/how-to-configure-private-endpoints#blocking-public-network-access-during-account-creation).
 (Related policy: [Azure Cosmos DB should disable public network access](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f797b37f7-06b8-444c-b1ad-fc62867f335a)).
 
 **Severity**: Medium
 
-### [(Enable if required) Azure Cosmos DB accounts should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/814df446-7128-eff0-9177-fa52ac035b74)
+### (Enable if required) Azure Cosmos DB accounts should use customer-managed keys to encrypt data at rest
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -50,7 +50,7 @@ Use customer-managed keys to manage the encryption at rest of your Azure Cosmos 
 
 
 
-### [(Enable if required) Azure Machine Learning workspaces should be encrypted with a customer-managed key (CMK)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/bbd14f11-6228-4588-82a4-517b8d77b23f)
+### (Enable if required) Azure Machine Learning workspaces should be encrypted with a customer-managed key (CMK)
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -60,21 +60,21 @@ Manage encryption at rest of your Azure Machine Learning workspace data with cus
 **Severity**: Low
 
 
-### [Azure SQL Database should be running TLS version 1.2 or newer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/8e9a37b9-2828-4c8f-a24e-7b0ab0e89c78)
+### Azure SQL Database should be running TLS version 1.2 or newer
 
 **Description**: Setting TLS version to 1.2 or newer improves security by ensuring your Azure SQL Database can only be accessed from clients using TLS 1.2 or newer. Using versions of TLS less than 1.2 is not recommended since they have well documented security vulnerabilities.
 (Related policy: [Azure SQL Database should be running TLS version 1.2 or newer](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f32e6bbec-16b6-44c2-be37-c5b672d103cf)).
 
 **Severity**: Medium
 
-### [Azure SQL Managed Instances should disable public network access](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/a2624c52-2937-400c-af9d-3bf2d97382bf)
+### Azure SQL Managed Instances should disable public network access
 
 **Description**: Disabling public network access (public endpoint) on Azure SQL Managed Instances improves security by ensuring that they can only be accessed from inside their virtual networks or via Private Endpoints. Learn more about [public network access](https://aka.ms/mi-public-endpoint).
 (Related policy: [Azure SQL Managed Instances should disable public network access](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f9dfea752-dd46-4766-aed1-c355fa93fb91)).
 
 **Severity**: Medium
 
-### [Cosmos DB accounts should use private link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/80dc29d6-9887-4071-a66c-e763376c2de3)
+### Cosmos DB accounts should use private link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform handles the connectivity between the consumer and services over the Azure backbone network. When private endpoints are mapped to your Cosmos DB account, data leakage risks are reduced. Learn more about [private links](/azure/cosmos-db/how-to-configure-private-endpoints).
 (Related policy: [Cosmos DB accounts should use private link](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f58440f8a-10c5-4151-bdce-dfbaad4a20b7)).
@@ -82,7 +82,7 @@ Manage encryption at rest of your Azure Machine Learning workspace data with cus
 **Severity**: Medium
 
 
-### [(Enable if required) MySQL servers should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6b51b7f7-cbed-75bf-8a02-43384bf47562)
+### (Enable if required) MySQL servers should use customer-managed keys to encrypt data at rest
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -91,7 +91,7 @@ Use customer-managed keys to manage the encryption at rest of your MySQL servers
 
 **Severity**: Low
 
-### [(Enable if required) PostgreSQL servers should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/19d45f8f-245c-852e-dbf9-d4aab4758b1f)
+### (Enable if required) PostgreSQL servers should use customer-managed keys to encrypt data at rest
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -100,7 +100,7 @@ Use customer-managed keys to manage the encryption at rest of your PostgreSQL se
 
 **Severity**: Low
 
-### [(Enable if required) SQL managed instances should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/06ac6ef4-1e66-1334-5418-6e79ab444ce0)
+### (Enable if required) SQL managed instances should use customer-managed keys to encrypt data at rest
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -109,7 +109,7 @@ Implementing Transparent Data Encryption (TDE) with your own key provides you wi
 
 **Severity**: Low
 
-### [(Enable if required) SQL servers should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1a93e945-3675-aef6-075d-c661498e1046)
+### (Enable if required) SQL servers should use customer-managed keys to encrypt data at rest
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -118,7 +118,7 @@ Implementing Transparent Data Encryption (TDE) with your own key provides increa
 
 **Severity**: Low
 
-### [(Enable if required) Storage accounts should use customer-managed key (CMK) for encryption](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ca98bba7-719e-48ee-e193-0b76766cdb07)
+### (Enable if required) Storage accounts should use customer-managed key (CMK) for encryption
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
 To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
@@ -127,7 +127,7 @@ Secure your storage account with greater flexibility using customer-managed keys
 
 **Severity**: Low
 
-### [Storage account public access should be disallowed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4fa4b6c0-31ca-4c0d-b10d-24b96f62a751)
+### Storage account public access should be disallowed
 
 **Description:** Anonymous public read access to containers and blobs in Azure Storage is a convenient way to share data, but might present security risks. To prevent data breaches caused by undesired anonymous access, Microsoft recommends preventing public access to a storage account unless your scenario requires it.
 
@@ -135,132 +135,132 @@ Related policy: [Storage account public access should be disallowed](https://por
 
 **Severity**: Medium
 
-### [All advanced threat protection types should be enabled in SQL managed instance advanced data security settings](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ebe970fe-9c27-4dd7-a165-1e943d565e10)
+### All advanced threat protection types should be enabled in SQL managed instance advanced data security settings
 
 **Description**: It is recommended to enable all advanced threat protection types on your SQL managed instances. Enabling all types protects against SQL injection, database vulnerabilities, and any other anomalous activities.
 (No related policy)
 
 **Severity**: Medium
 
-### [All advanced threat protection types should be enabled in SQL server advanced data security settings](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f7010359-8d21-4598-a9f2-c3e81a17141e)
+### All advanced threat protection types should be enabled in SQL server advanced data security settings
 
 **Description**: It is recommended to enable all advanced threat protection types on your SQL servers. Enabling all types protects against SQL injection, database vulnerabilities, and any other anomalous activities.
 (No related policy)
 
 **Severity**: Medium
 
-### [API Management services should use a virtual network](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/74e7dcff-317f-9635-41d2-ead5019acc99)
+### API Management services should use a virtual network
 
 **Description**: Azure Virtual Network deployment provides enhanced security, isolation, and allows you to place your API Management service in a non-internet routable network that you control access to. These networks can then be connected to your on-premises networks using various VPN technologies, which enable access to your backend services within the network and/or on-premises. The developer portal and API gateway can be configured to be accessible either from the Internet or only within the virtual network.
 (Related policy: [API Management services should use a virtual network](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fef619a2c-cc4d-4d03-b2ba-8c94a834d85b)).
 
 **Severity**: Medium
 
-### [App Configuration should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8318c3a1-fcac-2e1d-9582-50912e5578e5)
+### App Configuration should use private link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your app configuration instances instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/appconfig/private-endpoint>.
 (Related policy: [App Configuration should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fca610c1d-041c-4332-9d88-7ed3094967c7)).
 
 **Severity**: Medium
 
-### [Audit retention for SQL servers should be set to at least 90 days](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/620671b8-6661-273a-38ac-4574967750ec)
+### Audit retention for SQL servers should be set to at least 90 days
 
 **Description**: Audit SQL servers configured with an auditing retention period of less than 90 days.
 (Related policy: [SQL servers should be configured with 90 days auditing retention or higher.](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f89099bee-89e0-4b26-a5f4-165451757743))
 
 **Severity**: Low
 
-### [Auditing on SQL server should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/94208a8b-16e8-4e5b-abbd-4e81c9d02bee)
+### Auditing on SQL server should be enabled
 
 **Description**: Enable auditing on your SQL Server to track database activities across all databases on the server and save them in an audit log.
 (Related policy: [Auditing on SQL server should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fa6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9)).
 
 **Severity**: Low
 
-### [Auto provisioning of the Log Analytics agent should be enabled on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/af849052-4299-0692-acc0-bffcbe9e440c)
+### Auto provisioning of the Log Analytics agent should be enabled on subscriptions
 
 **Description**: To monitor for security vulnerabilities and threats, Microsoft Defender for Cloud collects data from your Azure virtual machines. Data is collected by the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. We recommend enabling auto provisioning to automatically deploy the agent to all supported Azure VMs and any new ones that are created.
 (Related policy: [Auto provisioning of the Log Analytics agent should be enabled on your subscription](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f475aae12-b88a-4572-8b36-9b712b2b3a17)).
 
 **Severity**: Low
 
-### [Azure Cache for Redis should reside within a virtual network](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/be264018-593c-1162-bd5e-b74a39396652)
+### Azure Cache for Redis should reside within a virtual network
 
 **Description**: Azure Virtual Network (VNet) deployment provides enhanced security and isolation for your Azure Cache for Redis, as well as subnets, access control policies, and other features to further restrict access. When an Azure Cache for Redis instance is configured with a VNet, it is not publicly addressable and can only be accessed from virtual machines and applications within the VNet.
 (Related policy: [Azure Cache for Redis should reside within a virtual network](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7d092e0a-7acd-40d2-a975-dca21cae48c4)).
 
 **Severity**: Medium
 
-### [Azure Database for MySQL should have an Azure Active Directory administrator provisioned](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/8af8a87b-7aa6-4c83-b22b-36801896177b/)
+### Azure Database for MySQL should have an Azure Active Directory administrator provisioned
 
 **Description**: Provision an Azure AD administrator for your Azure Database for MySQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services
 (Related policy: [An Azure Active Directory administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e)).
 
 **Severity**: Medium
 
-### [Azure Database for PostgreSQL should have an Azure Active Directory administrator provisioned](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b20d1b00-11a8-4ce7-b477-4ea6e147c345)
+### Azure Database for PostgreSQL should have an Azure Active Directory administrator provisioned
 
 **Description**: Provision an Azure AD administrator for your Azure Database for PostgreSQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services  
 (Related policy: [An Azure Active Directory administrator should be provisioned for PostgreSQL servers](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4)).
 
 **Severity**: Medium
 
-### [Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/5d19e32c-489d-407c-9549-15d9ea36a8e0)
+### Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled
 
 **Description**: Disabling local authentication methods and requiring Microsoft Entra authentication improves security by ensuring that Azure Database for PostgreSQL flexible server can be accessed by Microsoft Entra identities only (Related policy: [Azure PostgreSQL flexible server should have Microsoft Entra Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffa498b91-8a7e-4710-9578-da944c68d1fe)).
 
 **Severity**: Medium
 
-### [Azure Cosmos DB accounts should have firewall rules](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/276b1952-c364-852b-11e5-657f0fa34dc6)
+### Azure Cosmos DB accounts should have firewall rules
 
 **Description**: Firewall rules should be defined on your Azure Cosmos DB accounts to prevent traffic from unauthorized sources. Accounts that have at least one IP rule defined with the virtual network filter enabled are deemed compliant. Accounts disabling public access are also deemed compliant.
 (Related policy: [Azure Cosmos DB accounts should have firewall rules](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f862e97cf-49fc-4a5c-9de4-40d4e2e7c8eb)).
 
 **Severity**: Medium
 
-### [Azure Event Grid domains should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/bef092f5-bea7-3df3-1ee8-4376dd9c111e)
+### Azure Event Grid domains should use private link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your Event Grid domains instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/privateendpoints>.
 (Related policy: [Azure Event Grid domains should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f9830b652-8523-49cc-b1b3-e17dce1127ca)).
 
 **Severity**: Medium
 
-### [Azure Event Grid topics should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/bdac9c7b-b9b8-f572-0450-f161c430861c)
+### Azure Event Grid topics should use private link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your topics instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/privateendpoints>.
 (Related policy: [Azure Event Grid topics should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f4b90e17e-8448-49db-875e-bd83fb6f804f)).
 
 **Severity**: Medium
 
-### [Azure Machine Learning workspaces should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/692343df-7e70-b082-7b0e-67f97146cea3)
+### Azure Machine Learning workspaces should use private link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your Azure Machine Learning workspaces instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/azureml-workspaces-privatelink>.
 (Related policy: [Azure Machine Learning workspaces should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f40cec1dd-a100-4920-b15b-3024fe8901ab)).
 
 **Severity**: Medium
 
-### [Azure SignalR Service should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b6f84d18-0137-3176-6aa1-f4d9ac95155c)
+### Azure SignalR Service should use private link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your  SignalR resources instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/asrs/privatelink>.
 (Related policy: [Azure SignalR Service should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f53503636-bcc9-4748-9663-5348217f160f)).
 
 **Severity**: Medium
 
-### [Azure Spring Cloud should use network injection](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4c768356-5ad2-e3cc-c799-252b27d3865a)
+### Azure Spring Cloud should use network injection
 
 **Description**: Azure Spring Cloud instances should use virtual network injection for the following purposes: 1. Isolate Azure Spring Cloud from Internet. 2. Enable Azure Spring Cloud to interact with systems in either on premises data centers or Azure service in other virtual networks. 3. Empower customers to control inbound and outbound network communications for Azure Spring Cloud.
 (Related policy: [Azure Spring Cloud should use network injection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faf35e2a4-ef96-44e7-a9ae-853dd97032c4)).
 
 **Severity**: Medium
 
-### [SQL servers should have an Azure Active Directory administrator provisioned](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f0553104-cfdb-65e6-759c-002812e38500)
+### SQL servers should have an Azure Active Directory administrator provisioned
 
 **Description**: Provision an Azure AD administrator for your SQL server to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
 (Related policy: [An Azure Active Directory administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
 
 **Severity**: High
 
-### [Azure Synapse Workspace authentication mode should be Azure Active Directory Only](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3320d1ac-0ebe-41ab-b96c-96fb91214c5c)
+### Azure Synapse Workspace authentication mode should be Azure Active Directory Only
 
 **Description**: Azure Synapse Workspace authentication mode should be Azure Active Directory Only
  Azure Active Directory only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Azure AD identities for authentication. [Learn more](https://aka.ms/Synapse).
@@ -268,77 +268,77 @@ Related policy: [Storage account public access should be disallowed](https://por
 
 **Severity**: Medium
 
-### [Code repositories should have code scanning findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c68a8c2a-6ed4-454b-9e37-4b7654f2165f)
+### Code repositories should have code scanning findings resolved
 
 **Description**: Defender for DevOps has found vulnerabilities in code repositories. To improve the security posture of the repositories, it is highly recommended to remediate these vulnerabilities.
 (No related policy)
 
 **Severity**: Medium
 
-### [Code repositories should have Dependabot scanning findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/822425e3-827f-4f35-bc33-33749257f851)
+### Code repositories should have Dependabot scanning findings resolved
 
 **Description**: Defender for DevOps has found vulnerabilities in code repositories. To improve the security posture of the repositories, it is highly recommended to remediate these vulnerabilities.
 (No related policy)
 
 **Severity**: Medium
 
-### [Code repositories should have infrastructure as code scanning findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2ebc815f-7bc7-4573-994d-e1cc46fb4a35)
+### Code repositories should have infrastructure as code scanning findings resolved
 
 **Description**: Defender for DevOps has found infrastructure as code security configuration issues in repositories. The issues shown below have been detected in template files. To improve the security posture of the related cloud resources, it is highly recommended to remediate these issues.
 (No related policy)
 
 **Severity**: Medium
 
-### [Code repositories should have secret scanning findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4e07c7d0-e06c-47d7-a4a9-8c7b748d1b27)
+### Code repositories should have secret scanning findings resolved
 
 **Description**: Defender for DevOps has found a secret in code repositories. This should be remediated immediately to prevent a security breach. Secrets found in repositories can be leaked or discovered by adversaries, leading to compromise of an application or service. For Azure DevOps, the Microsoft Security DevOps CredScan tool only scans builds on which it has been configured to run. Therefore, results might not reflect the complete status of secrets in your repositories.
 (No related policy)
 
 **Severity**: High
 
-### [Cognitive Services accounts should enable data encryption](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/cdcf4f71-60d3-540b-91e3-aa19792da364)
+### Cognitive Services accounts should enable data encryption
 
 **Description**: This policy audits any Cognitive Services accounts that are not using data encryption. For each account with storage, you should enable data encryption with either customer managed or Microsoft managed key.
 (Related policy: [Cognitive Services accounts should enable data encryption](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2bdd0062-9d75-436e-89df-487dd8e4b3c7)).
 
 **Severity**: Low
 
-### [Cognitive Services accounts should use customer owned storage or enable data encryption](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/aa395469-1687-78a7-bf76-f4614ef72977)
+### Cognitive Services accounts should use customer owned storage or enable data encryption
 
 **Description**: This policy audits any Cognitive Services account not using customer owned storage nor data encryption. For each Cognitive Services account with storage, use either customer owned storage or enable data encryption. Aligns with Microsoft Cloud Security Benchmark.
 (Related policy: [Cognitive Services accounts should use customer owned storage or enable data encryption.](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f11566b39-f7f7-4b82-ab06-68d8700eb0a4))
 
 **Severity**: Low
 
-### [Diagnostic logs in Azure Data Lake Store should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ad5bbaeb-7632-5edf-f1c2-752075831ce8)
+### Diagnostic logs in Azure Data Lake Store should be enabled
 
 **Description**: Enable logs and retain them for up to a year. This enables you to recreate activity trails for investigation purposes when a security incident occurs or your network is compromised.
 (Related policy: [Diagnostic logs in Azure Data Lake Store should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f057ef27e-665e-4328-8ea3-04b3122bd9fb)).
 
 **Severity**: Low
 
-### [Diagnostic logs in Data Lake Analytics should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c6dad669-efd7-cd72-61c5-289935607791)
+### Diagnostic logs in Data Lake Analytics should be enabled
 
 **Description**: Enable logs and retain them for up to a year. This enables you to recreate activity trails for investigation purposes when a security incident occurs or your network is compromised.
 (Related policy: [Diagnostic logs in Data Lake Analytics should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fc95c74d9-38fe-4f0d-af86-0c7d626a315c)).
 
 **Severity**: Low
 
-### [Email notification for high severity alerts should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3869fbd7-5d90-84e4-37bd-d9a7f4ce9a24)
+### Email notification for high severity alerts should be enabled
 
 **Description**: To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, enable email notifications for high severity alerts in Defender for Cloud.
 (Related policy: [Email notification for high severity alerts should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f6e2593d9-add6-4083-9c9b-4b7d2188c899)).
 
 **Severity**: Low
 
-### [Email notification to subscription owner for high severity alerts should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9f97e78d-88ee-a48d-abe2-5ef12954e7ea)
+### Email notification to subscription owner for high severity alerts should be enabled
 
 **Description**: To ensure your subscription owners are notified when there is a potential security breach in their subscription, set email notifications to subscription owners for high severity alerts in Defender for Cloud.
 (Related policy: [Email notification to subscription owner for high severity alerts should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0b15565f-aa9e-48ba-8619-45960f2c314d)).
 
 **Severity**: Medium
 
-### [Enforce SSL connection should be enabled for MySQL database servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f6d29f6-4edb-ea39-042b-de8f123ddd39)
+### Enforce SSL connection should be enabled for MySQL database servers
 
 **Description**: Azure Database for MySQL supports connecting your Azure Database for MySQL server to client applications using Secure Sockets Layer (SSL).
 Enforcing SSL connections between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application.
@@ -347,7 +347,7 @@ This configuration enforces that SSL is always enabled for accessing your databa
 
 **Severity**: Medium
 
-### [Enforce SSL connection should be enabled for PostgreSQL database servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1fde2073-a488-17e9-9534-5a3b23379b4b)
+### Enforce SSL connection should be enabled for PostgreSQL database servers
 
 **Description**: Azure Database for PostgreSQL supports connecting your Azure Database for PostgreSQL server to client applications using Secure Sockets Layer (SSL).
 Enforcing SSL connections between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application.
@@ -356,14 +356,14 @@ This configuration enforces that SSL is always enabled for accessing your databa
 
 **Severity**: Medium
 
-### [Function apps should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/afd071f0-ebaa-422b-bb2f-8a772a31db75)
+### Function apps should have vulnerability findings resolved
 
 **Description**: Runtime vulnerability scanning for functions scans your function apps for security vulnerabilities and exposes detailed findings. Resolving the vulnerabilities can greatly improve your serverless applications security posture and protect them from attacks.
 (No related policy)
 
 **Severity**: High
 
-### [Geo-redundant backup should be enabled for Azure Database for MariaDB](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2ce368b5-7882-89fd-6645-885b071a2409)
+### Geo-redundant backup should be enabled for Azure Database for MariaDB
 
 **Description**: Azure Database for MariaDB allows you to choose the redundancy option for your database server.
 It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
@@ -372,7 +372,7 @@ Configuring geo-redundant storage for backup is only allowed when creating a ser
 
 **Severity**: Low
 
-### [Geo-redundant backup should be enabled for Azure Database for MySQL](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8ad68a2f-c6b1-97b5-41b5-174359a33688)
+### Geo-redundant backup should be enabled for Azure Database for MySQL
 
 **Description**: Azure Database for MySQL allows you to choose the redundancy option for your database server.
 It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
@@ -381,7 +381,7 @@ Configuring geo-redundant storage for backup is only allowed when creating a ser
 
 **Severity**: Low
 
-### [Geo-redundant backup should be enabled for Azure Database for PostgreSQL](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/95592ab0-ddc8-660d-67f3-6df1fadfe7ec)
+### Geo-redundant backup should be enabled for Azure Database for PostgreSQL
 
 **Description**: Azure Database for PostgreSQL allows you to choose the redundancy option for your database server.
 It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
@@ -390,28 +390,28 @@ Configuring geo-redundant storage for backup is only allowed when creating a ser
 
 **Severity**: Low
 
-### [GitHub repositories should have Code scanning enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6672df26-ff2e-4282-83c3-e2f20571bd11)
+### GitHub repositories should have Code scanning enabled
 
 **Description**: GitHub uses code scanning to analyze code in order to find security vulnerabilities and errors in code. Code scanning can be used to find, triage, and prioritize fixes for existing problems in your code. Code scanning can also prevent developers from introducing new problems. Scans can be scheduled for specific days and times, or scans can be triggered when a specific event occurs in the repository, such as a push. If code scanning finds a potential vulnerability or error in code, GitHub displays an alert in the repository.   A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project.
 (No related policy)
 
 **Severity**: Medium
 
-### [GitHub repositories should have Dependabot scanning enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/92643c1f-1a95-4b68-bbd2-5117f92d6e35)
+### GitHub repositories should have Dependabot scanning enabled
 
 **Description**: GitHub sends Dependabot alerts when it detects vulnerabilities in code dependencies that affect repositories. A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project or other projects that use its code. Vulnerabilities vary in type, severity, and method of attack. When code depends on a package that has a security vulnerability, this vulnerable dependency can cause a range of problems.
 (No related policy)
 
 **Severity**: Medium
 
-### [GitHub repositories should have Secret scanning enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1a600c61-6443-4ab4-bd28-7a6b6fb4691d)
+### GitHub repositories should have Secret scanning enabled
 
 **Description**: GitHub scans repositories for known types of secrets, to prevent fraudulent use of secrets that were accidentally committed to repositories. Secret scanning will scan the entire Git history on all branches present in the GitHub repository for any secrets. Examples of secrets are tokens and private keys that a service provider can issue for authentication. If a secret is checked into a repository, anyone who has read access to the repository can use the secret to access the external service with those privileges. Secrets should be stored in a dedicated, secure location outside the repository for the project.
 (No related policy)
 
 **Severity**: High
 
-### [Microsoft Defender for Azure SQL Database servers should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/58d72d9d-0310-4792-9a3b-6dd111093cdb)
+### Microsoft Defender for Azure SQL Database servers should be enabled
 
 **Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities.
 It includes functionality for surfacing and mitigating potential database vulnerabilities, detecting anomalous activities that could indicate a threat to your database, and discovering and classifying sensitive data.
@@ -423,14 +423,14 @@ Learn more in [Introduction to Microsoft Defender for SQL](defender-for-sql-intr
 
 **Severity**: High
 
-### [Microsoft Defender for DNS should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/aae10e53-8403-3576-5d97-3b00f97332b2)
+### Microsoft Defender for DNS should be enabled
 
 **Description**: Microsoft Defender for DNS provides an additional layer of protection for your cloud resources by continuously monitoring all DNS queries from your Azure resources. Defender for DNS alerts you about suspicious activity at the DNS layer. Learn more in [Introduction to Microsoft Defender for DNS](defender-for-dns-introduction.md). Enabling this Defender plan results in charges. Learn about the pricing details per region on Defender for Cloud's pricing page: [Defender for Cloud Pricing](https://azure.microsoft.com/services/defender-for-cloud/#pricing).
 (No related policy)
 
 **Severity**: High
 
-### [Microsoft Defender for open-source relational databases should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b6a28450-dd5d-4ba4-8806-245e20ef6632)
+### Microsoft Defender for open-source relational databases should be enabled
 
 **Description**: Microsoft Defender for open-source relational databases detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases. Learn more in [Introduction to Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
@@ -439,14 +439,14 @@ Enabling this plan will result in charges for protecting your open-source relati
 
 **Severity**: High
 
-### [Microsoft Defender for Resource Manager should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f0fb2a7e-16d5-849f-be57-86db712e9bd0)
+### Microsoft Defender for Resource Manager should be enabled
 
 **Description**: Microsoft Defender for Resource Manager automatically monitors the resource management operations in your organization. Defender for Cloud detects threats and alerts you about suspicious activity. Learn more in [Introduction to Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md). Enabling this Defender plan results in charges. Learn about the pricing details per region on Defender for Cloud's pricing page: [Defender for Cloud Pricing](https://azure.microsoft.com/services/defender-for-cloud/#pricing).
 (No related policy)
 
 **Severity**: High
 
-### [Microsoft Defender for SQL on machines should be enabled on workspaces](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e9c320f1-03a0-4d2b-9a37-84b3bdc2e281)
+### Microsoft Defender for SQL on machines should be enabled on workspaces
 
 **Description**: Microsoft Defender for servers brings threat detection and advanced defenses for your Windows and Linux machines.
 With this Defender plan enabled on your subscriptions but not on your workspaces, you're paying for the full capability of Microsoft Defender for servers but missing out on some of the benefits.
@@ -456,7 +456,7 @@ Learn more in [Introduction to Microsoft Defender for servers](defender-for-serv
 
 **Severity**: Medium
 
-### [Microsoft Defender for SQL servers on machines should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6ac66a74-761f-4a59-928a-d373eea3f028)
+### Microsoft Defender for SQL servers on machines should be enabled
 
 **Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities.
 It includes functionality for surfacing and mitigating potential database vulnerabilities, detecting anomalous activities that could indicate a threat to your database, and discovering and classifying sensitive data.
@@ -468,21 +468,21 @@ If you create any SQL servers on machines on this subscription in the future, th
 
 **Severity**: High
 
-### [Microsoft Defender for SQL should be enabled for unprotected Azure SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/400a6682-992c-4726-9549-629fbc3b988f)
+### Microsoft Defender for SQL should be enabled for unprotected Azure SQL servers
 
 **Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities. It surfaces and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL is billed as shown on [pricing details per region](https://aka.ms/pricing-security-center).
 (Related policy: [Advanced data security should be enabled on your SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2fabfb4388-5bf4-4ad7-ba82-2cd2f41ceae9)).
 
 **Severity**: High
 
-### [Microsoft Defender for SQL should be enabled for unprotected SQL Managed Instances](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ff6dbca8-d93c-49fc-92af-dc25da7faccd)
+### Microsoft Defender for SQL should be enabled for unprotected SQL Managed Instances
 
 **Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities. It surfaces and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL is billed as shown on [pricing details per region](https://aka.ms/pricing-security-center).
 (Related policy: [Advanced data security should be enabled on SQL Managed Instance](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabfb7388-5bf4-4ad7-ba99-2cd2f41cebb9)).
 
 **Severity**: High
 
-### [Microsoft Defender for Storage should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1be22853-8ed1-4005-9907-ddad64cb1417)
+### Microsoft Defender for Storage should be enabled
 
 **Description**: Microsoft Defender for storage detects unusual and potentially harmful attempts to access or exploit storage accounts.
 
@@ -492,21 +492,21 @@ Learn more in [Introduction to Microsoft Defender for Storage](defender-for-stor
 
 **Severity**: High
 
-### [Network Watcher should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f1f2f7dc-7bd5-18bf-c403-cbbdb7ec3d68)
+### Network Watcher should be enabled
 
 **Description**: Network Watcher is a regional service that enables you to monitor and diagnose conditions at a network scenario level in, to, and from Azure. Scenario level monitoring enables you to diagnose problems at an end-to-end network level view. Network diagnostic and visualization tools available with Network Watcher help you understand, diagnose, and gain insights to your network in Azure.
 (Related policy: [Network Watcher should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb6e2945c-0b7b-40f5-9233-7a5323b5cdc6)).
 
 **Severity**: Low
 
-### [Private endpoint connections on Azure SQL Database should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/75396512-3323-9be4-059d-32ecb113c3de)
+### Private endpoint connections on Azure SQL Database should be enabled
 
 **Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure SQL Database.
 (Related policy: [Private endpoint connections on Azure SQL Database should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7698e800-9299-47a6-b3b6-5a0fee576eed)).
 
 **Severity**: Medium
 
-### [Private endpoint should be enabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ca9b93fe-6f1f-676c-2f31-d20f88fdbe56)
+### Private endpoint should be enabled for MariaDB servers
 
 **Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MariaDB.
 Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
@@ -514,7 +514,7 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
-### [Private endpoint should be enabled for MySQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/cec4922b-1eb3-cb74-660b-ffad9b9ac642)
+### Private endpoint should be enabled for MySQL servers
 
 **Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MySQL.
 Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
@@ -522,7 +522,7 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
-### [Private endpoint should be enabled for PostgreSQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c5b83aed-f53d-5201-8ffb-1f9938de410a)
+### Private endpoint should be enabled for PostgreSQL servers
 
 **Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for PostgreSQL.
 Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
@@ -530,140 +530,140 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
-### [Public network access on Azure SQL Database should be disabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/22e93e92-4a31-b4cd-d640-3ef908430aa6)
+### Public network access on Azure SQL Database should be disabled
 
 **Description**: Disabling the public network access property improves security by ensuring your Azure SQL Database can only be accessed from a private endpoint. This configuration denies all logins that match IP or virtual network based firewall rules.
 (Related policy: [Public network access on Azure SQL Database should be disabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1b8ca024-1d5c-4dec-8995-b1a932b41780)).
 
 **Severity**: Medium
 
-### [Public network access should be disabled for Cognitive Services accounts](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/684a5b6d-a270-61ce-306e-5cea400dc3a7)
+### Public network access should be disabled for Cognitive Services accounts
 
 **Description**: This policy audits any Cognitive Services account in your environment with public network access enabled. Public network access should be disabled so that only connections from private endpoints are allowed.
 (Related policy: [Public network access should be disabled for Cognitive Services accounts](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0725b4dd-7e76-479c-a735-68e7ee23d5ca)).
 
 **Severity**: Medium
 
-### [Public network access should be disabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ab153e43-2fb5-0670-2117-70340851ea9b)
+### Public network access should be disabled for MariaDB servers
 
 **Description**: Disable the public network access property to improve security and ensure your Azure Database for MariaDB can only be accessed from a private endpoint. This configuration strictly disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
 (Related policy: [Public network access should be disabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffdccbe47-f3e3-4213-ad5d-ea459b2fa077)).
 
 **Severity**: Medium
 
-### [Public network access should be disabled for MySQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/d5d090f1-7d5c-9b38-7344-0ede8343276d)
+### Public network access should be disabled for MySQL servers
 
 **Description**: Disable the public network access property to improve security and ensure your Azure Database for MySQL can only be accessed from a private endpoint. This configuration strictly disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
 (Related policy: [Public network access should be disabled for MySQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fd9844e8a-1437-4aeb-a32c-0c992f056095)).
 
 **Severity**: Medium
 
-### [Public network access should be disabled for PostgreSQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b34f9fe7-80cd-6fb3-2c5b-951993746ca8)
+### Public network access should be disabled for PostgreSQL servers
 
 **Description**: Disable the public network access property to improve security and ensure your Azure Database for PostgreSQL can only be accessed from a private endpoint. This configuration disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
 (Related policy: [Public network access should be disabled for PostgreSQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb52376f7-9612-48a1-81cd-1ffe4b61032c)).
 
 **Severity**: Medium
 
-### [Redis Cache should allow access only via SSL](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/35b25be2-d08a-e340-45ed-f08a95d804fc)
+### Redis Cache should allow access only via SSL
 
 **Description**: Enable only connections via SSL to Redis Cache. Use of secure connections ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking.
 (Related policy: [Only secure connections to your Azure Cache for Redis should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f22bee202-a82f-4305-9a2a-6d7f44d4dedb)).
 
 **Severity**: High
 
-### [SQL databases should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/82e20e14-edc5-4373-bfc4-f13121257c37)
+### SQL databases should have vulnerability findings resolved
 
 **Description**: SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture. [Learn more](https://aka.ms/SQL-Vulnerability-Assessment/)
 (Related policy: [Vulnerabilities on your SQL databases should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2ffeedbf84-6b99-488c-acc2-71c829aa5ffc)).
 
 **Severity**: High
 
-### [SQL managed instances should have vulnerability assessment configured](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c42fc28d-1703-45fc-aaa5-39797f570513)
+### SQL managed instances should have vulnerability assessment configured
 
 **Description**: Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities.
 (Related policy: [Vulnerability assessment should be enabled on SQL Managed Instance](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1b7aa243-30e4-4c9e-bca8-d0d3022b634a)).
 
 **Severity**: High
 
-### [SQL servers on machines should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f97aa83c-9b63-4f9a-99f6-b22c4398f936)
+### SQL servers on machines should have vulnerability findings resolved
 
 **Description**: SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture. [Learn more](https://aka.ms/explore-vulnerability-assessment-reports/)
 (Related policy: [Vulnerabilities on your SQL servers on machine should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2f6ba6d016-e7c3-4842-b8f2-4992ebc0d72d)).
 
 **Severity**: High
 
-### [SQL servers should have an Azure Active Directory administrator provisioned](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f0553104-cfdb-65e6-759c-002812e38500)
+### SQL servers should have an Azure Active Directory administrator provisioned
 
 **Description**: Provision an Azure AD administrator for your SQL server to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
 (Related policy: [An Azure Active Directory administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
 
 **Severity**: High
 
-### [SQL servers should have vulnerability assessment configured](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1db4f204-cb5a-4c9c-9254-7556403ce51c)
+### SQL servers should have vulnerability assessment configured
 
 **Description**: Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities.
 (Related policy: [Vulnerability assessment should be enabled on your SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fef2a8f2a-b3d9-49cd-a8a8-9a3aaaf647d9)).
 
 **Severity**: High
 
-### [Storage account should use a private link connection](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/cdc78c07-02b0-4af0-1cb2-cb7c672a8b0a)
+### Storage account should use a private link connection
 
 **Description**: Private links enforce secure communication, by providing private connectivity to the storage account
 (Related policy: [Storage account should use a private link connection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f6edd7eda-6dd8-40f7-810d-67160c639cd9)).
 
 **Severity**: Medium
 
-### [Storage accounts should be migrated to new Azure Resource Manager resources](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/47bb383c-8e25-95f0-c2aa-437add1d87d3)
+### Storage accounts should be migrated to new Azure Resource Manager resources
 
 **Description**: To benefit from new capabilities in Azure Resource Manager, you can migrate existing deployments from the Classic deployment model. Resource Manager enables security enhancements such as: stronger access control (RBAC), better auditing, ARM-based deployment and governance, access to managed identities, access to key vault for secrets, Azure AD-based authentication, and support for tags and resource groups for easier security management. [Learn more](/azure/virtual-machines/windows/migration-classic-resource-manager-overview)
 (Related policy: [Storage accounts should be migrated to new Azure Resource Manager resources](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f37e0d2fe-28a5-43d6-a273-67d37d1f5606)).
 
 **Severity**: Low
 
-### [Storage accounts should prevent shared key access](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/3b363842-30f5-4056-980d-3a40fa5de8b3)
+### Storage accounts should prevent shared key access
 
 **Description**: Audit requirement of Azure Active Directory (Azure AD) to authorize requests for your storage account. By default, requests can be authorized with either Azure Active Directory credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Azure AD provides superior security and ease of use over shared Key, and is recommended by Microsoft.
 (Related policy: [policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54))
 
 **Severity**: Medium
 
-### [Storage accounts should restrict network access using virtual network rules](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ad4f3ff1-30eb-5042-16ed-27198f640b8d)
+### Storage accounts should restrict network access using virtual network rules
 
 **Description**: Protect your storage accounts from potential threats using virtual network rules as a preferred method instead of IP-based filtering. Disabling IP-based filtering prevents public IPs from accessing your storage accounts.
 (Related policy: [Storage accounts should restrict network access using virtual network rules](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2a1a9cdf-e04d-429a-8416-3bfb72a1b26f)).
 
 **Severity**: Medium
 
-### [Subscriptions should have a contact email address for security issues](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/77758c9d-8a56-5f54-6ff7-69a762ca6004)
+### Subscriptions should have a contact email address for security issues
 
 **Description**: To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, set a security contact to receive email notifications from Defender for Cloud.
 (Related policy: [Subscriptions should have a contact email address for security issues](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7))
 
 **Severity**: Low
 
-### [Transparent Data Encryption on SQL databases should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/651967bf-044e-4bde-8376-3e08e0600105)
+### Transparent Data Encryption on SQL databases should be enabled
 
 **Description**: Enable transparent data encryption to protect data-at-rest and meet compliance requirements
 (Related policy: [Transparent Data Encryption on SQL databases should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f17k78e20-9358-41c9-923c-fb736d382a12)).
 
 **Severity**: Low
 
-### [VM Image Builder templates should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f6b0e473-eb23-c3be-fe61-2ae3e8309530)
+### VM Image Builder templates should use private link
 
 **Description**: Audit VM Image Builder templates that do not have a virtual network configured. When a virtual network is not configured, a public IP is created and used instead, which might directly expose resources to the internet and increase the potential attack surface.
 (Related policy: [VM Image Builder templates should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2154edb9-244f-4741-9970-660785bccdaa)).
 
 **Severity**: Medium
 
-### [Web Application Firewall (WAF) should be enabled for Application Gateway](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/efe75f01-6fff-5d9d-08e6-092b98d3fb3f)
+### Web Application Firewall (WAF) should be enabled for Application Gateway
 
 **Description**: Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries/regions, IP address ranges, and other http(s) parameters via custom rules.
 (Related policy: [Web Application Firewall (WAF) should be enabled for Application Gateway](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f564feb30-bf6a-4854-b4bb-0d2d2d1e6c66)).
 
 **Severity**: Low
 
-### [Web Application Firewall (WAF) should be enabled for Azure Front Door Service service](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0c02a769-03f1-c4d7-85a5-db5dca505c49)
+### Web Application Firewall (WAF) should be enabled for Azure Front Door Service service
 
 **Description**: Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries/regions, IP address ranges, and other http(s) parameters via custom rules.
 (Related policy: [Web Application Firewall (WAF) should be enabled for Azure Front Door Service?service](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f055aa869-bc98-4af8-bafc-23f1ab6ffe2c))
@@ -673,7 +673,7 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 ## AWS data recommendations
 
-### [Amazon Aurora clusters should have backtracking enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/d0ef47dc-95aa-4765-a075-72c07df8acff)
+### Amazon Aurora clusters should have backtracking enabled
 
 **Description**: This control checks whether Amazon Aurora clusters have backtracking enabled.
 Backups help you to recover more quickly from a security incident. They also strengthen the resilience of your systems. Aurora backtracking reduces the time to recover a database to a point in time. It doesn't require a database restore to do so.
@@ -681,13 +681,13 @@ For more information about backtracking in Aurora, see [Backtracking an Aurora D
 
 **Severity**: Medium
 
-### [Amazon EBS snapshots shouldn't be publicly restorable](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/02e8de17-1a01-45cb-b906-6d07a78f4b3c)
+### Amazon EBS snapshots shouldn't be publicly restorable
 
 **Description**: Amazon EBS snapshots shouldn't be publicly restorable by everyone unless explicitly allowed, to avoid accidental exposure of data. Additionally, permission to change Amazon EBS configurations should be restricted to authorized AWS accounts only.
 
 **Severity**: High
 
-### [Amazon ECS task definitions should have secure networking modes and user definitions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0dc124a8-2a69-47c5-a4e1-678d725a33ab)
+### Amazon ECS task definitions should have secure networking modes and user definitions
 
 **Description**: This control checks whether an active Amazon ECS task definition that has host networking mode also has privileged or user container definitions.
  The control fails for task definitions that have host network mode and container definitions where privileged=false or is empty and user=root or is empty.
@@ -696,51 +696,51 @@ If a task definition has elevated privileges, it is because the customer specifi
 
 **Severity**: High
 
-### [Amazon Elasticsearch Service domains should encrypt data sent between nodes](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9b63a099-6c0c-4354-848b-17de1f3c8ae3)
+### Amazon Elasticsearch Service domains should encrypt data sent between nodes
 
 **Description**: This control checks whether Amazon ES domains have node-to-node encryption enabled. HTTPS (TLS) can be used to help prevent potential attackers from eavesdropping on or manipulating network traffic using person-in-the-middle or similar attacks. Only encrypted connections over HTTPS (TLS) should be allowed. Enabling node-to-node encryption for Amazon ES domains ensures that intra-cluster communications are encrypted in transit. There can be a performance penalty associated with this configuration. You should be aware of and test the performance trade-off before enabling this option.
 
 **Severity**: Medium
 
-### [Amazon Elasticsearch Service domains should have encryption at rest enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/cf747c91-14f3-4b30-aafe-eb12c18fd030)
+### Amazon Elasticsearch Service domains should have encryption at rest enabled
 
 **Description**: It's important to enable encryptions rest of Amazon ES domains to protect sensitive data
 
 **Severity**: Medium
 
-### [Amazon RDS database should be encrypted using customer managed key](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9137f5de-aac8-4cee-a22f-8d81f19be67f)
+### Amazon RDS database should be encrypted using customer managed key
 
 **Description**: This check identifies RDS databases that are encrypted with default KMS keys and not with customer managed keys. As a leading practice, use customer managed keys to encrypt the data on your RDS databases and maintain control of your keys and data on sensitive workloads.
 
 **Severity**: Medium
 
-### [Amazon RDS instance should be configured with automatic backup settings](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/894259c2-c1d5-47dc-b5c6-b242d5c76fdf)
+### Amazon RDS instance should be configured with automatic backup settings
 
 **Description**: This check identifies RDS instances, which aren't set with the automatic backup setting. If Automatic Backup is set, RDS creates a storage volume snapshot of your DB instance, backing up the entire DB instance and not just individual databases, which provide for point-in-time recovery. The automatic backup happens during the specified backup window time and keeps the backups for a limited period of time as defined in the retention period. It's recommended to set automatic backups for your critical RDS servers that help in the data restoration process.
 
 **Severity**: Medium
 
-### [Amazon Redshift clusters should have audit logging enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e2a0ec17-447b-44b6-8646-c0b5584b6b0a)
+### Amazon Redshift clusters should have audit logging enabled
 
 **Description**: This control checks whether an Amazon Redshift cluster has audit logging enabled.
 Amazon Redshift audit logging provides additional information about connections and user activities in your cluster. This data can be stored and secured in Amazon S3 and can be helpful in security audits and investigations. For more information, see [Database audit logging](https://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html) in the *Amazon Redshift Cluster Management Guide*.
 
 **Severity**: Medium
 
-### [Amazon Redshift clusters should have automatic snapshots enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/7a152832-6600-49d1-89be-82e474190e13)
+### Amazon Redshift clusters should have automatic snapshots enabled
 
 **Description**: This control checks whether Amazon Redshift clusters have automated snapshots enabled. It also checks whether the snapshot retention period is greater than or equal to seven.
 Backups help you to recover more quickly from a security incident. They strengthen the resilience of your systems. Amazon Redshift takes periodic snapshots by default. This control checks whether automatic snapshots are enabled and retained for at least seven days. For more information about Amazon Redshift automated snapshots, see [Automated snapshots](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html#about-automated-snapshots) in the *Amazon Redshift Cluster Management Guide*.
 
 **Severity**: Medium
 
-### [Amazon Redshift clusters should prohibit public access](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/7f5ac036-11e1-4cda-89b5-a115b9ae4f72)
+### Amazon Redshift clusters should prohibit public access
 
 **Description**: We recommend Amazon Redshift clusters to avoid public accessibility by evaluating the 'publiclyAccessible' field in the cluster configuration item.
 
 **Severity**: High
 
-### [Amazon Redshift should have automatic upgrades to major versions enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/176f9062-64d0-4edd-bb0f-915012a6ef16)
+### Amazon Redshift should have automatic upgrades to major versions enabled
 
 **Description**: This control checks whether automatic major version upgrades are enabled for the Amazon Redshift cluster.
 Enabling automatic major version upgrades ensures that the latest major version updates to Amazon Redshift clusters are installed during the maintenance window.
@@ -748,7 +748,7 @@ Enabling automatic major version upgrades ensures that the latest major version 
 
 **Severity**: Medium
 
-### [Amazon SQS queues should be encrypted at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/340a07a1-7d68-4562-ac25-df77c214fe13)
+### Amazon SQS queues should be encrypted at rest
 
 **Description**: This control checks whether Amazon SQS queues are encrypted at rest.
 Server-side encryption (SSE) allows you to transmit sensitive data in encrypted queues. To protect the content of messages in queues, SSE uses keys managed in AWS KMS.
@@ -756,7 +756,7 @@ For more information, see [Encryption at rest](https://docs.aws.amazon.com/AWSSi
 
 **Severity**: Medium
 
-### [An RDS event notifications subscription should be configured for critical cluster events](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/65659c22-6588-405b-b118-614c2b4ead5b)
+### An RDS event notifications subscription should be configured for critical cluster events
 
 **Description**: This control checks whether an Amazon RDS event subscription exists that has notifications enabled for the following source type:
  Event category key-value pairs. DBCluster: [Maintenance and failure].
@@ -765,7 +765,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Low
 
-### [An RDS event notifications subscription should be configured for critical database instance events](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ff4f3ab3-8ed7-4b4f-a721-4c3b66a59140)
+### An RDS event notifications subscription should be configured for critical database instance events
 
 **Description**: This control checks whether an Amazon RDS event subscription exists with notifications enabled for the following source type:
  Event category key-value pairs. ```DBInstance```: [Maintenance, configuration change and failure].
@@ -774,7 +774,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Low
 
-### [An RDS event notifications subscription should be configured for critical database parameter group events](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c6f24bb0-b696-451c-a26e-0cc9ea8e97e3)
+### An RDS event notifications subscription should be configured for critical database parameter group events
 
 **Description**: This control checks whether an Amazon RDS event subscription exists with notifications enabled for the following source type:
  Event category key-value pairs. DBParameterGroup: ["configuration","change"].
@@ -783,7 +783,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Low
 
-### [An RDS event notifications subscription should be configured for critical database security group events](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ab5c51fb-ecdb-46de-b8df-c28ae46ce5bc)
+### An RDS event notifications subscription should be configured for critical database security group events
 
 **Description**: This control checks whether an Amazon RDS event subscription exists with notifications enabled for the following source type: Event category key-value pairs.DBSecurityGroup: [Configuration, change, failure].
  RDS event notifications use Amazon SNS to make you aware of changes in the availability or configuration of your RDS resources. These notifications allow for a rapid response.
@@ -791,7 +791,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Low
 
-### [API Gateway REST and WebSocket API logging should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2cac0072-6f56-46f0-9518-ddec3660ee56)
+### API Gateway REST and WebSocket API logging should be enabled
 
 **Description**: This control checks whether all stages of an Amazon API Gateway REST or WebSocket API have logging enabled.
  The control fails if logging isn't enabled for all methods of a stage or if logging Level is neither ERROR nor INFO.
@@ -800,7 +800,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Medium
 
-### [API Gateway REST API cache data should be encrypted at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1a0ce4e0-b61e-4ec7-ab65-aeaff3893bd3)
+### API Gateway REST API cache data should be encrypted at rest
 
 **Description**: This control checks whether all methods in API Gateway REST API stages that have cache enabled are encrypted. The control fails if any method in an API Gateway REST API stage is configured to cache and the cache isn't encrypted.
  Encrypting data at rest reduces the risk of data stored on disk being accessed by a user not authenticated to AWS. It adds another set of access controls to limit unauthorized users ability access the data. For example, API permissions are required to decrypt the data before it can be read.
@@ -808,7 +808,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Medium
 
-### [API Gateway REST API stages should be configured to use SSL certificates for backend authentication](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/ec268d38-c94b-4df3-8b4e-5248fcaaf3fc)
+### API Gateway REST API stages should be configured to use SSL certificates for backend authentication
 
 **Description**: This control checks whether Amazon API Gateway REST API stages have SSL certificates configured.
  Backend systems use these certificates to authenticate that incoming requests are from API Gateway.
@@ -816,7 +816,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Medium
 
-### [API Gateway REST API stages should have AWS X-Ray tracing enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/5cbaff4f-f8d5-49fe-9fdc-63c4507ac670)
+### API Gateway REST API stages should have AWS X-Ray tracing enabled
 
 **Description**: This control checks whether AWS X-Ray active tracing is enabled for your Amazon API Gateway REST API stages.
  X-Ray active tracing enables a more rapid response to performance changes in the underlying infrastructure. Changes in performance could result in a lack of availability of the API.
@@ -824,7 +824,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Low
 
-### [API Gateway should be associated with an AWS WAF web ACL](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/d69eb8b0-79ba-4963-a683-a96a8ea787e2)
+### API Gateway should be associated with an AWS WAF web ACL
 
 **Description**: This control checks whether an API Gateway stage uses an AWS WAF web access control list (ACL).
  This control fails if an AWS WAF web ACL isn't attached to a REST API Gateway stage.
@@ -833,7 +833,7 @@ For more information about RDS event notifications, see [Using Amazon RDS event 
 
 **Severity**: Medium
 
-### [Application and Classic Load Balancers logging should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4ba5c359-495f-4ba6-9897-7fdbc0aed675)
+### Application and Classic Load Balancers logging should be enabled
 
 **Description**: This control checks whether the Application Load Balancer and the Classic Load Balancer have logging enabled. The control fails if `access_logs.s3.enabled` is false.
 Elastic Load Balancing provides access logs that capture detailed information about requests sent to your load balancer. Each log contains information such as the time the request was received, the client's IP address, latencies, request paths, and server responses. You can use access logs to analyze traffic patterns and to troubleshoot issues.
@@ -841,7 +841,7 @@ To learn more, see [Access logs for your Classic Load Balancer](https://docs.aws
 
 **Severity**: Medium
 
-### [Attached EBS volumes should be encrypted at-rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0bde343a-0681-4ee2-883a-027cc1e655b8)
+### Attached EBS volumes should be encrypted at-rest
 
 **Description**: This control checks whether the EBS volumes that are in an attached state are encrypted. To pass this check, EBS volumes must be in use and encrypted. If the EBS volume isn't attached, then it isn't subject to this check.
 For an added layer of security of your sensitive data in EBS volumes, you should enable EBS encryption at rest. Amazon EBS encryption offers a straightforward encryption solution for your EBS resources that doesn't require you to build, maintain, and secure your own key management infrastructure. It uses AWS KMS customer master keys (CMK) when creating encrypted volumes and snapshots.
@@ -849,7 +849,7 @@ To learn more about Amazon EBS encryption, see [Amazon EBS encryption](https://d
 
 **Severity**: Medium
 
-### [AWS Database Migration Service replication instances shouldn't be public](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/132a70b8-ffda-457a-b7a3-e6f2e01fc0af)
+### AWS Database Migration Service replication instances shouldn't be public
 
 **Description**: To protect your replicated instances from threats. A private replication instance should have a private IP address that you can't access outside of the replication network.
  A replication instance should have a private IP address when the source and target databases are in the same network, and the network is connected to the replication instance's VPC using a VPN, AWS Direct Connect, or VPC peering.
@@ -858,7 +858,7 @@ To learn more about Amazon EBS encryption, see [Amazon EBS encryption](https://d
 
 **Severity**: High
 
-### [Classic Load Balancer listeners should be configured with HTTPS or TLS termination](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/773667f7-6511-4aec-ae9c-e3286c56a254)
+### Classic Load Balancer listeners should be configured with HTTPS or TLS termination
 
 **Description**: This control checks whether your Classic Load Balancer listeners are configured with HTTPS or TLS protocol for front-end (client to load balancer) connections. The control is applicable if a Classic Load Balancer has listeners. If your Classic Load Balancer doesn't have a listener configured, then the control doesn't report any findings.
 The control passes if the Classic Load Balancer listeners are configured with TLS or HTTPS for front-end connections.
@@ -867,21 +867,21 @@ Before you start to use a load balancer, you must add one or more listeners. A l
 
 **Severity**: Medium
 
-### [Classic Load Balancers should have connection draining enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/dd60e31e-073a-42b6-9b23-db7ca86fd5e0)
+### Classic Load Balancers should have connection draining enabled
 
 **Description**: This control checks whether Classic Load Balancers have connection draining enabled.
 Enabling connection draining on Classic Load Balancers ensures that the load balancer stops sending requests to instances that are deregistering or unhealthy. It keeps the existing connections open. This is useful for instances in Auto Scaling groups, to ensure that connections aren't severed abruptly.
 
 **Severity**: Medium
 
-### [CloudFront distributions should have AWS WAF enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0e0d5964-2895-45b1-b646-fcded8d567be)
+### CloudFront distributions should have AWS WAF enabled
 
 **Description**: This control checks whether CloudFront distributions are associated with either AWS WAF or AWS WAFv2 web ACLs. The control fails if the distribution isn't associated with a web ACL.
 AWS WAF is a web application firewall that helps protect web applications and APIs from attacks. It allows you to configure a set of rules, called a web access control list (web ACL), that allow, block, or count web requests based on customizable web security rules and conditions that you define. Ensure your CloudFront distribution is associated with an AWS WAF web ACL to help protect it from malicious attacks.
 
 **Severity**: Medium
 
-### [CloudFront distributions should have logging enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/88114970-36db-42b3-9549-20608b1ab8ad)
+### CloudFront distributions should have logging enabled
 
 **Description**: This control checks whether server access logging is enabled on CloudFront distributions. The control fails if access logging isn't enabled for a distribution.
  CloudFront access logs provide detailed information about every user request that CloudFront receives. Each log contains information such as the date and time the request was received, the IP address of the viewer that made the request, the source of the request, and the port number of the request from the viewer.
@@ -889,35 +889,35 @@ These logs are useful for applications such as security and access audits and fo
 
 **Severity**: Medium
 
-### [CloudFront distributions should require encryption in transit](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/a67adff8-625f-4891-9f61-43f837d18ad2)
+### CloudFront distributions should require encryption in transit
 
 **Description**: This control checks whether an Amazon CloudFront distribution requires viewers to use HTTPS directly or whether it uses redirection. The control fails if ViewerProtocolPolicy is set to allow-all for defaultCacheBehavior or for cacheBehaviors.
 HTTPS (TLS) can be used to help prevent potential attackers from using person-in-the-middle or similar attacks to eavesdrop on or manipulate network traffic. Only encrypted connections over HTTPS (TLS) should be allowed. Encrypting data in transit can affect performance. You should test your application with this feature to understand the performance profile and the impact of TLS.
 
 **Severity**: Medium
 
-### [CloudTrail logs should be encrypted at rest using KMS CMKs](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/190f732b-c68e-4816-9961-aba074272627)
+### CloudTrail logs should be encrypted at rest using KMS CMKs
 
 **Description**: We recommended configuring CloudTrail to use SSE-KMS.
 Configuring CloudTrail to use SSE-KMS provides more confidentiality controls on log data as a given user must have S3 read permission on the corresponding log bucket and must be granted decrypt permission by the CMK policy.
 
 **Severity**: Medium
 
-### [Connections to Amazon Redshift clusters should be encrypted in transit](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/036bb56b-c442-4352-bb4c-5bd0353ad314)
+### Connections to Amazon Redshift clusters should be encrypted in transit
 
 **Description**: This control checks whether connections to Amazon Redshift clusters are required to use encryption in transit. The check fails if the Amazon Redshift cluster parameter require_SSL isn't set to *1*.
 TLS can be used to help prevent potential attackers from using person-in-the-middle or similar attacks to eavesdrop on or manipulate network traffic. Only encrypted connections over TLS should be allowed. Encrypting data in transit can affect performance. You should test your application with this feature to understand the performance profile and the impact of TLS.
 
 **Severity**: Medium
 
-### [Connections to Elasticsearch domains should be encrypted using TLS 1.2](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/effb5011-f8db-45ac-b981-b5bdfd7beb88)
+### Connections to Elasticsearch domains should be encrypted using TLS 1.2
 
 **Description**: This control checks whether connections to Elasticsearch domains are required to use TLS 1.2. The check fails if the Elasticsearch domain TLSSecurityPolicy isn't Policy-Min-TLS-1-2-2019-07.
 HTTPS (TLS) can be used to help prevent potential attackers from using person-in-the-middle or similar attacks to eavesdrop on or manipulate network traffic. Only encrypted connections over HTTPS (TLS) should be allowed. Encrypting data in transit can affect performance. You should test your application with this feature to understand the performance profile and the impact of TLS. TLS 1.2 provides several security enhancements over previous versions of TLS.
 
 **Severity**: Medium
 
-### [DynamoDB tables should have point-in-time recovery enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/cc873508-40c1-41b6-8507-8a431d74f831)
+### DynamoDB tables should have point-in-time recovery enabled
 
 **Description**: This control checks whether point-in-time recovery (PITR) is enabled for an Amazon DynamoDB table.
  Backups help you to recover more quickly from a security incident. They also strengthen the resilience of your systems. DynamoDB point-in-time recovery automates backups for DynamoDB tables. It reduces the time to recover from accidental delete or write operations.
@@ -925,7 +925,7 @@ HTTPS (TLS) can be used to help prevent potential attackers from using person-in
 
 **Severity**: Medium
 
-### [EBS default encryption should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/56406d4c-87b4-4aeb-b1cc-7f6312d78e0a)
+### EBS default encryption should be enabled
 
 **Description**: This control checks whether account-level encryption is enabled by default for Amazon Elastic Block Store(Amazon EBS).
  The control fails if the account level encryption isn't enabled.
@@ -936,7 +936,7 @@ The following instance types don't support encryption: R1, C1, and M1.
 
 **Severity**: Medium
 
-### [Elastic Beanstalk environments should have enhanced health reporting enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4170067b-345d-47ed-ab4a-c6b6046881f1)
+### Elastic Beanstalk environments should have enhanced health reporting enabled
 
 **Description**: This control checks whether enhanced health reporting is enabled for your AWS Elastic Beanstalk environments.
 Elastic Beanstalk enhanced health reporting enables a more rapid response to changes in the health of the underlying infrastructure. These changes could result in a lack of availability of the application.
@@ -944,48 +944,48 @@ Elastic Beanstalk enhanced health reporting provides a status descriptor to gaug
 
 **Severity**: Low
 
-### [Elastic Beanstalk managed platform updates should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/820f6c6e-f73f-432c-8c60-cae1794ea150)
+### Elastic Beanstalk managed platform updates should be enabled
 
 **Description**: This control checks whether managed platform updates are enabled for the Elastic Beanstalk environment.
 Enabling managed platform updates ensures that the latest available platform fixes, updates, and features for the environment are installed. Keeping up to date with patch installation is an important step in securing systems.
 
 **Severity**: High
 
-### [Elastic Load Balancer shouldn't have ACM certificate expired or expiring in 90 days.](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/a5e0d700-3de1-469a-96d2-6536d9a92604)
+### Elastic Load Balancer shouldn't have ACM certificate expired or expiring in 90 days.
 
 **Description**: This check identifies Elastic Load Balancers (ELB) which are using ACM certificates expired or expiring in 90 days. AWS Certificate Manager (ACM) is the preferred tool to provision, manage, and deploy your server certificates. With ACM. You can request a certificate or deploy an existing ACM or external certificate to AWS resources. As a best practice, it's recommended to reimport expiring/expired certificates while preserving the ELB associations of the original certificate.
 
 **Severity**: High
 
-### [Elasticsearch domain error logging to CloudWatch Logs should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f48af569-2e67-464b-9a62-b8df0f85bc5e)
+### Elasticsearch domain error logging to CloudWatch Logs should be enabled
 
 **Description**: This control checks whether Elasticsearch domains are configured to send error logs to CloudWatch Logs.
 You should enable error logs for Elasticsearch domains and send those logs to CloudWatch Logs for retention and response. Domain error logs can assist with security and access audits, and can help to diagnose availability issues.
 
 **Severity**: Medium
 
-### [Elasticsearch domains should be configured with at least three dedicated master nodes](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b4b9a67c-c315-4f9b-b06b-04867a453aab)
+### Elasticsearch domains should be configured with at least three dedicated master nodes
 
 **Description**: This control checks whether Elasticsearch domains are configured with at least three dedicated master nodes. This control fails if the domain doesn't use dedicated master nodes. This control passes if Elasticsearch domains have five dedicated master nodes. However, using more than three master nodes might be unnecessary to mitigate the availability risk, and will result in more cost.
 An Elasticsearch domain requires at least three dedicated master nodes for high availability and fault-tolerance. Dedicated master node resources can be strained during data node blue/green deployments because there are more nodes to manage. Deploying an Elasticsearch domain with at least three dedicated master nodes ensures sufficient master node resource capacity and cluster operations if a node fails.
 
 **Severity**: Medium
 
-### [Elasticsearch domains should have at least three data nodes](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/994cbcb3-43d4-419d-b5c4-9adc558f3ca2)
+### Elasticsearch domains should have at least three data nodes
 
 **Description**: This control checks whether Elasticsearch domains are configured with at least three data nodes and zoneAwarenessEnabled is true.
 An Elasticsearch domain requires at least three data nodes for high availability and fault-tolerance. Deploying an Elasticsearch domain with at least three data nodes ensures cluster operations if a node fails.
 
 **Severity**: Medium
 
-### [Elasticsearch domains should have audit logging enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/12ebb4cd-34b6-4c3a-bee9-7e35f4f6caff)
+### Elasticsearch domains should have audit logging enabled
 
 **Description**: This control checks whether Elasticsearch domains have audit logging enabled. This control fails if an Elasticsearch domain doesn't have audit logging enabled.
 Audit logs are highly customizable. They allow you to track user activity on your Elasticsearch clusters, including authentication successes and failures, requests to OpenSearch, index changes, and incoming search queries.
 
 **Severity**: Medium
 
-### [Enhanced monitoring should be configured for RDS DB instances and clusters](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/93e5a579-dd2f-4a56-b827-ebbfe7376b16)
+### Enhanced monitoring should be configured for RDS DB instances and clusters
 
 **Description**: This control checks whether enhanced monitoring is enabled for your RDS DB instances.
 In Amazon RDS, Enhanced Monitoring enables a more rapid response to performance changes in underlying infrastructure. These performance changes could result in a lack of availability of the data. Enhanced Monitoring provides real-time metrics of the operating system that your RDS DB instance runs on. An agent is installed on the instance. The agent can obtain metrics more accurately than is possible from the hypervisor layer.
@@ -993,7 +993,7 @@ Enhanced Monitoring metrics are useful when you want to see how different proces
 
 **Severity**: Low
 
-### [Ensure rotation for customer created CMKs is enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/66748314-d51c-4d9c-b789-eebef29a7039)
+### Ensure rotation for customer created CMKs is enabled
 
 **Description**: AWS Key Management Service (KMS) allows customers to rotate the backing key, which is key material stored within the KMS that is tied to the key ID of the Customer Created customer master key (CMK).
  It's the backing key that is used to perform cryptographic operations such as encryption and decryption.
@@ -1002,7 +1002,7 @@ Enhanced Monitoring metrics are useful when you want to see how different proces
 
 **Severity**: Medium
 
-### [Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/759e80dc-92c2-4afd-afa3-c01294999363)
+### Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
 
 **Description**: S3 Bucket Access Logging generates a log that contains access records Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket for each request made to your S3 bucket.
  An access log record contains details about the request, such as the request type, the resources specified in the request worked, and the time and date the request was processed.
@@ -1011,7 +1011,7 @@ By enabling S3 bucket logging on target S3 buckets, it's possible to capture all
 
 **Severity**: Low
 
-### [Ensure the S3 bucket used to store CloudTrail logs isn't publicly accessible](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/a41f2846-4a59-44e9-89bb-1f62d4b03a85)
+### Ensure the S3 bucket used to store CloudTrail logs isn't publicly accessible
 
 **Description**: CloudTrail logs a record of every API call made in your AWS account. These log files are stored in an S3 bucket.
  It's recommended that the bucket policy, or access control list (ACL), applied to the S3 bucket that CloudTrail logs to prevent public access to the CloudTrail logs.
@@ -1019,13 +1019,13 @@ Allowing public access to CloudTrail log content might aid an adversary in ident
 
 **Severity**: High
 
-### [IAM shouldn't have expired SSL/TLS certificates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/03a8f33c-b01c-4dfc-b627-f98114715ae0)
+### IAM shouldn't have expired SSL/TLS certificates
 
 **Description**: This check identifies expired SSL/TLS certificates. To enable HTTPS connections to your website or application in AWS, you need an SSL/TLS server certificate. You can use ACM or IAM to store and deploy server certificates. Removing expired SSL/TLS certificates eliminates the risk that an invalid certificate will be deployed accidentally to a resource such as AWS Elastic Load Balancer (ELB), which can damage the credibility of the application/website behind the ELB. This check generates alerts if there are any expired SSL/TLS certificates stored in AWS IAM. As a best practice, it's recommended to delete expired certificates.
 
 **Severity**: High
 
-### [Imported ACM certificates should be renewed after a specified time period](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0e68b4d8-1a5e-47fc-a3eb-b3542fea43f1)
+### Imported ACM certificates should be renewed after a specified time period
 
 **Description**: This control checks whether ACM certificates in your account are marked for expiration within 30 days. It checks both imported certificates and certificates provided by AWS Certificate Manager.
 ACM can automatically renew certificates that use DNS validation. For certificates that use email validation, you must respond to a domain validation email.
@@ -1034,20 +1034,20 @@ For more information about managed renewal for ACM certificates, see [Managed re
 
 **Severity**: Medium
 
-### [Over-provisioned identities in accounts should be investigated to reduce the Permission Creep Index (PCI)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2482620f-f324-4add-af68-2e01e27485e9)
+### Over-provisioned identities in accounts should be investigated to reduce the Permission Creep Index (PCI)
 
 **Description**: Over-provisioned identities in accounts should be investigated to reduce the Permission Creep Index (PCI) and to safeguard your infrastructure. Reduce the PCI by removing the unused high risk permission assignments. High PCI reflects risk associated with the identities with permissions that exceed their normal or required usage.
 
 **Severity**: Medium
 
-### [RDS automatic minor version upgrades should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/d352afac-cebc-4e02-b474-7ef402fb1d65)
+### RDS automatic minor version upgrades should be enabled
 
 **Description**: This control checks whether automatic minor version upgrades are enabled for the RDS database instance.
 Enabling automatic minor version upgrades ensures that the latest minor version updates to the relational database management system (RDBMS) are installed. These upgrades might include security patches and bug fixes. Keeping up to date with patch installation is an important step in securing systems.
 
 **Severity**: High
 
-### [RDS cluster snapshots and database snapshots should be encrypted at rest](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4f4fbc5e-0b10-4208-b52f-1f47f1c73b6a)
+### RDS cluster snapshots and database snapshots should be encrypted at rest
 
 **Description**: This control checks whether RDS DB snapshots are encrypted.
 This control is intended for RDS DB instances. However, it can also generate findings for snapshots of Aurora DB instances, Neptune DB instances, and Amazon DocumentDB clusters. If these findings aren't useful, then you can suppress them.
@@ -1055,7 +1055,7 @@ Encrypting data at rest reduces the risk that an unauthenticated user gets acces
 
 **Severity**: Medium
 
-### [RDS clusters should have deletion protection enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9e769650-868c-46f5-b8c0-1a8ba12a4c92)
+### RDS clusters should have deletion protection enabled
 
 **Description**: This control checks whether RDS clusters have deletion protection enabled.
 This control is intended for RDS DB instances. However, it can also generate findings for Aurora DB instances, Neptune DB instances, and Amazon DocumentDB clusters. If these findings aren't useful, then you can suppress them.
@@ -1064,14 +1064,14 @@ When deletion protection is enabled, an RDS cluster can't be deleted. Before a d
 
 **Severity**: Low
 
-### [RDS DB clusters should be configured for multiple Availability Zones](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/cdf441dd-0ab7-4ef2-a643-de12725e5d5d)
+### RDS DB clusters should be configured for multiple Availability Zones
 
 **Description**: RDS DB clusters should be configured for multiple the data that is stored.
  Deployment to multiple Availability Zones allows for automate Availability Zones to ensure availability of ed failover in the event of an Availability Zone availability issue and during regular RDS maintenance events.
 
 **Severity**: Medium
 
-### [RDS DB clusters should be configured to copy tags to snapshots](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/b9ed02d0-afca-4bed-838d-70bf31ecf19a)
+### RDS DB clusters should be configured to copy tags to snapshots
 
 **Description**: Identification and inventory of your IT assets is a crucial aspect of governance and security.
  You need to have visibility of all your RDS DB clusters so that you can assess their security posture and act on potential areas of weakness.
@@ -1080,7 +1080,7 @@ When deletion protection is enabled, an RDS cluster can't be deleted. Before a d
 
 **Severity**: Low
 
-### [RDS DB instances should be configured to copy tags to snapshots](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/fcd891e5-c6a2-41ce-bca6-f49ec582f3ce)
+### RDS DB instances should be configured to copy tags to snapshots
 
 **Description**: This control checks whether RDS DB instances are configured to copy all tags to snapshots when the snapshots are created.
 Identification and inventory of your IT assets is a crucial aspect of governance and security.
@@ -1089,14 +1089,14 @@ Identification and inventory of your IT assets is a crucial aspect of governance
 
 **Severity**: Low
 
-### [RDS DB instances should be configured with multiple Availability Zones](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/70ebbd01-cd79-4bc8-ae85-49f47ccdd5ad)
+### RDS DB instances should be configured with multiple Availability Zones
 
 **Description**: This control checks whether high availability is enabled for your RDS DB instances.
  RDS DB instances should be configured for multiple Availability Zones (AZs). This ensures the availability of the data stored. Multi-AZ deployments allow for automated failover if there's an issue with Availability Zone availability and during regular RDS maintenance.
 
 **Severity**: Medium
 
-### [RDS DB instances should have deletion protection enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8e1f7933-faa9-4379-a9bd-697740dedac8)
+### RDS DB instances should have deletion protection enabled
 
 **Description**: This control checks whether your RDS DB instances that use one of the listed database engines have deletion protection enabled.
 Enabling instance deletion protection is another layer of protection against accidental database deletion or deletion by an unauthorized entity.
@@ -1104,7 +1104,7 @@ While deletion protection is enabled, an RDS DB instance can't be deleted. Befor
 
 **Severity**: Low
 
-### [RDS DB instances should have encryption at rest enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/bfa7d2aa-f362-11eb-9a03-0242ac130003)
+### RDS DB instances should have encryption at rest enabled
 
 **Description**: This control checks whether storage encryption is enabled for your Amazon RDS DB instances.
 This control is intended for RDS DB instances. However, it can also generate findings for Aurora DB instances, Neptune DB instances, and Amazon DocumentDB clusters. If these findings aren't useful, then you can suppress them.
@@ -1114,40 +1114,40 @@ Amazon RDS encryption is currently available for all database engines and storag
 
 **Severity**: Medium
 
-### [RDS DB Instances should prohibit public access](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/72f3b7f1-76b8-4cf5-8da5-4ba5745b512c)
+### RDS DB Instances should prohibit public access
 
 **Description**: We recommend that you also ensure that access to your RDS instance's configuration is limited to authorized users only, by restricting users' IAM permissions to modify RDS instances' settings and resources.
 
 **Severity**: High
 
-### [RDS snapshots should prohibit public access](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f64521fc-a9f1-4d43-b667-8d94b4a202af)
+### RDS snapshots should prohibit public access
 
 **Description**: We recommend only allowing authorized principals to access the snapshot and change Amazon RDS configuration.
 
 **Severity**: High
 
-### [Remove unused Secrets Manager secrets](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/bfa82db5-c112-44f0-89e6-a9adfb9a4028)
+### Remove unused Secrets Manager secrets
 
 **Description**: This control checks whether your secrets have been accessed within a specified number of days. The default value is 90 days. If a secret wasn't accessed within the defined number of days, this control fails.
 Deleting unused secrets is as important as rotating secrets. Unused secrets can be abused by their former users, who no longer need access to these secrets. Also, as more users get access to a secret, someone might have mishandled and leaked it to an unauthorized entity, which increases the risk of abuse. Deleting unused secrets helps revoke secret access from users who no longer need it. It also helps to reduce the cost of using Secrets Manager. Therefore, it's essential to routinely delete unused secrets.
 
 **Severity**: Medium
 
-### [S3 buckets should have cross-region replication enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/35713036-bd12-4646-9b92-4c56a761a710)
+### S3 buckets should have cross-region replication enabled
 
 **Description**: Enabling S3 cross-region replication ensures that multiple versions of the data are available in different distinct Regions.
  This allows you to protect your S3 bucket against DDoS attacks and data corruption events.
 
 **Severity**: Low
 
-### [S3 buckets should have server-side encryption enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3cb793ab-20d3-4677-9723-024c8fed0c23)
+### S3 buckets should have server-side encryption enabled
 
 **Description**: Enable server-side encryption to protect data in your S3 buckets.
  Encrypting the data can prevent access to sensitive data in the event of a data breach.
 
 **Severity**: Medium
 
-### [Secrets Manager secrets configured with automatic rotation should rotate successfully](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/bec42e2d-956b-4940-a37d-7c1b1e8c525f)
+### Secrets Manager secrets configured with automatic rotation should rotate successfully
 
 **Description**: This control checks whether an AWS Secrets Manager secret rotated successfully based on the rotation schedule. The control fails if **RotationOccurringAsScheduled** is **false**. The control doesn't evaluate secrets that don't have rotation configured.
 Secrets Manager helps you improve the security posture of your organization. Secrets include database credentials, passwords, and third-party API keys. You can use Secrets Manager to store secrets centrally, encrypt secrets automatically, control access to secrets, and rotate secrets safely and automatically.
@@ -1157,7 +1157,7 @@ To learn more about rotation, see [Rotating your AWS Secrets Manager secrets](ht
 
 **Severity**: Medium
 
-### [Secrets Manager secrets should be rotated within a specified number of days](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/323f0eb4-ea19-4b55-83e9-d104009616b4)
+### Secrets Manager secrets should be rotated within a specified number of days
 
 **Description**: This control checks whether your secrets have been rotated at least once within 90 days.
 Rotating secrets can help you to reduce the risk of an unauthorized use of your secrets in your AWS account. Examples include database credentials, passwords, third-party API keys, and even arbitrary text. If you don't change your secrets for a long period of time, the secrets are more likely to be compromised.
@@ -1167,7 +1167,7 @@ Security Hub recommends that you enable rotation for your Secrets Manager secret
 
 **Severity**: Medium
 
-### [SNS topics should be encrypted at rest using AWS KMS](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/90917e06-2781-4857-9d74-9043c6475d03)
+### SNS topics should be encrypted at rest using AWS KMS
 
 **Description**: This control checks whether an SNS topic is encrypted at rest using AWS KMS.
 Encrypting data at rest reduces the risk of data stored on disk being accessed by a user not authenticated to AWS. It also adds another set of access controls to limit the ability of unauthorized users to access the data.
@@ -1175,7 +1175,7 @@ For example, API permissions are required to decrypt the data before it can be r
 
 **Severity**: Medium
 
-### [VPC flow logging should be enabled in all VPCs](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3428e584-0fa6-48c0-817e-6d689d7bb879)
+### VPC flow logging should be enabled in all VPCs
 
 **Description**: VPC Flow Logs provide visibility into network traffic that passes through the VPC and can be used to detect anomalous traffic or insight during security events.
 
@@ -1186,7 +1186,7 @@ For example, API permissions are required to decrypt the data before it can be r
 
 ## GCP data recommendations
 
-### [Ensure '3625 (trace flag)' database flag for Cloud SQL SQL Server instance is set to 'off'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/631246fb-7192-4709-a0b3-b83e65e6b550)
+### Ensure '3625 (trace flag)' database flag for Cloud SQL SQL Server instance is set to 'off'
 
 **Description**: It's recommended to set "3625 (trace flag)" database flag for Cloud SQL SQL Server instance to "off."
  Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they might also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload.
@@ -1197,7 +1197,7 @@ For example, API permissions are required to decrypt the data before it can be r
 
 **Severity**: Medium
 
-### [Ensure 'external scripts enabled' database flag for Cloud SQL SQL Server instance is set to 'off'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/98b8908a-18b9-46ea-8c52-3f8db1da996f)
+### Ensure 'external scripts enabled' database flag for Cloud SQL SQL Server instance is set to 'off'
 
 **Description**: It's recommended to set "external scripts enabled" database flag for Cloud SQL SQL Server instance to off.
  "external scripts enabled" enable the execution of scripts with certain remote language extensions.
@@ -1208,7 +1208,7 @@ For example, API permissions are required to decrypt the data before it can be r
 
 **Severity**: High
 
-### [Ensure 'remote access' database flag for Cloud SQL SQL Server instance is set to 'off'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/dddbbe7d-7e32-47d8-b319-39cbb70b8f88)
+### Ensure 'remote access' database flag for Cloud SQL SQL Server instance is set to 'off'
 
 **Description**: It's recommended to set "remote access" database flag for Cloud SQL SQL Server instance to "off."
  The "remote access" option controls the execution of stored procedures from local or remote servers on which instances of SQL Server are running.
@@ -1221,7 +1221,7 @@ For example, API permissions are required to decrypt the data before it can be r
 
 **Severity**: High
 
-### [Ensure 'skip_show_database' database flag for Cloud SQL Mysql instance is set to 'on'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9e5b33de-bcfa-4044-93ce-4937bf8f0bbd)
+### Ensure 'skip_show_database' database flag for Cloud SQL Mysql instance is set to 'on'
 
 **Description**: It's recommended to set "skip_show_database" database flag for Cloud SQL Mysql instance to "on."
  'skip_show_database' database flag prevents people from using the SHOW DATABASES statement if they don't have the SHOW DATABASES privilege.
@@ -1232,7 +1232,7 @@ For example, API permissions are required to decrypt the data before it can be r
 
 **Severity**: Low
 
-### [Ensure that a Default Customer-managed encryption key (CMEK) is specified for all BigQuery Data Sets](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f024ea22-7e48-4b3b-a824-d61794c14bb4)
+### Ensure that a Default Customer-managed encryption key (CMEK) is specified for all BigQuery Data Sets
 
 **Description**: BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
  The data is encrypted using the data encryption keys and data encryption keys themselves are further encrypted using key encryption keys.
@@ -1249,7 +1249,7 @@ This also means that if you forget or lose your key, there's no way for Google t
 
 **Severity**: Medium
 
-### [Ensure that all BigQuery Tables are encrypted with Customer-managed encryption key (CMEK)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f4cfc689-cac8-4f45-8355-652dcda3ec55)
+### Ensure that all BigQuery Tables are encrypted with Customer-managed encryption key (CMEK)
 
 **Description**: BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
  The data is encrypted using the data encryption keys and data encryption keys themselves are further encrypted using key encryption keys.
@@ -1268,7 +1268,7 @@ Google doesn't store your keys on its servers and can't access your protected da
 
 **Severity**: Medium
 
-### [Ensure that BigQuery datasets are not anonymously or publicly accessible](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/dab1eea3-7693-4da3-af1b-2f73832655fa)
+### Ensure that BigQuery datasets are not anonymously or publicly accessible
 
 **Description**: It's recommended that the IAM policy on BigQuery datasets doesn't allow anonymous and/or public access.
   Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
@@ -1277,7 +1277,7 @@ Such access might not be desirable if sensitive data is being stored in the data
 
 **Severity**: High
 
-### [Ensure that Cloud SQL database instances are configured with automated backups](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/afaac6e6-6240-48a2-9f62-4e257b851311)
+### Ensure that Cloud SQL database instances are configured with automated backups
 
 **Description**: It's recommended to have all SQL database instances set to enable automated backups.
  Backups provide a way to restore a Cloud SQL instance to recover lost data or recover from a problem with that instance.
@@ -1286,7 +1286,7 @@ Such access might not be desirable if sensitive data is being stored in the data
 
 **Severity**: High
 
-### [Ensure that Cloud SQL database instances are not opened to the world](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/de78ebca-1ec6-4872-8061-8fcfb27752fc)
+### Ensure that Cloud SQL database instances are not opened to the world
 
 **Description**: Database Server should accept connections only from trusted Network(s)/IP(s) and restrict access from the world.
  To minimize attack surface on a Database server instance, only trusted/known and required IP(s) should be approved to connect to it.
@@ -1294,7 +1294,7 @@ Such access might not be desirable if sensitive data is being stored in the data
 
 **Severity**: High
 
-### [Ensure that Cloud SQL database instances do not have public IPs](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1658239d-caf7-471d-83c5-2e4c44afdcff)
+### Ensure that Cloud SQL database instances do not have public IPs
 
 **Description**: It's recommended to configure Second Generation Sql instance to use private IPs instead of public IPs.
  To lower the organization's attack surface, Cloud SQL databases shouldn't have public IPs.
@@ -1302,7 +1302,7 @@ Such access might not be desirable if sensitive data is being stored in the data
 
 **Severity**: High
 
-### [Ensure that Cloud Storage bucket is not anonymously or publicly accessible](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/d8305d96-2aa5-458d-92b7-f8418f5f3328)
+### Ensure that Cloud Storage bucket is not anonymously or publicly accessible
 
 **Description**: It's recommended that IAM policy on Cloud Storage bucket doesn't allows anonymous or public access.
 Allowing anonymous or public access grants permissions to anyone to access bucket content.
@@ -1311,7 +1311,7 @@ Allowing anonymous or public access grants permissions to anyone to access bucke
 
 **Severity**: High
 
-### [Ensure that Cloud Storage buckets have uniform bucket-level access enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/64b5cdbc-0633-49af-b63d-a9dc90560196)
+### Ensure that Cloud Storage buckets have uniform bucket-level access enabled
 
 **Description**: It's recommended that uniform bucket-level access is enabled on Cloud Storage buckets.
  It's recommended to use uniform bucket-level access to unify and simplify how you grant access to your Cloud Storage resources.
@@ -1329,7 +1329,7 @@ no object in the bucket is publicly accessible either.
 
 **Severity**: Medium
 
-### [Ensure that Compute instances have Confidential Computing enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/171e9492-73a7-43de-adce-6bd0a3cf6045)
+### Ensure that Compute instances have Confidential Computing enabled
 
 **Description**: Google Cloud encrypts data at-rest and in-transit, but customer data must be decrypted for processing. Confidential Computing is a breakthrough technology that encrypts data in-use-while it's being processed.
  Confidential Computing environments keep data encrypted in memory and elsewhere outside the central processing unit (CPU).
@@ -1341,7 +1341,7 @@ Confidential VM can help alleviate concerns about risk related to either depende
 
 **Severity**: High
 
-### [Ensure that retention policies on log buckets are configured using Bucket Lock](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/07ca1398-d477-400a-a9fc-4cfc78f723f9)
+### Ensure that retention policies on log buckets are configured using Bucket Lock
 
 **Description**: Enabling retention policies on log buckets will protect logs stored in cloud storage buckets from being overwritten or accidentally deleted.
  It's recommended to set up retention policies and configure Bucket Lock on all storage buckets that are used as log sinks.
@@ -1353,7 +1353,7 @@ Confidential VM can help alleviate concerns about risk related to either depende
 
 **Severity**: Low
 
-### [Ensure that the Cloud SQL database instance requires all incoming connections to use SSL](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/13872d43-aac6-4018-9c89-507b8fe9be54)
+### Ensure that the Cloud SQL database instance requires all incoming connections to use SSL
 
 **Description**: It's recommended to enforce all incoming connections to SQL database instance to use SSL.
  SQL database connections if successfully trapped (MITM); can reveal sensitive data like credentials, database queries, query outputs etc.
@@ -1362,7 +1362,7 @@ Confidential VM can help alleviate concerns about risk related to either depende
 
 **Severity**: High
 
-### [Ensure that the 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'off'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/658ce98f-ecf1-4c14-967f-3c4faf130fbf)
+### Ensure that the 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'off'
 
 **Description**: It's recommended to set "contained database authentication" database flag for Cloud SQL on the SQL Server instance is set to "off."
  A contained database includes all database settings and metadata required to define the database and has no configuration dependencies on the instance of the Database Engine where the database is installed.
@@ -1374,7 +1374,7 @@ Confidential VM can help alleviate concerns about risk related to either depende
 
 **Severity**: Medium
 
-### [Ensure that the 'cross db ownership chaining' database flag for Cloud SQL SQL Server instance is set to 'off'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/26973a34-79a6-46a0-874f-358c8c00af05)
+### Ensure that the 'cross db ownership chaining' database flag for Cloud SQL SQL Server instance is set to 'off'
 
 **Description**: It's recommended to set "cross db ownership chaining" database flag for Cloud SQL SQL Server instance to "off."
  Use the "cross db ownership" for chaining option to configure cross-database ownership chaining for an instance of Microsoft SQL Server.
@@ -1384,7 +1384,7 @@ Confidential VM can help alleviate concerns about risk related to either depende
 
 **Severity**: Medium
 
-### [Ensure that the 'local_infile' database flag for a Cloud SQL Mysql instance is set to 'off'](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/633a87f4-bd71-45ce-9eca-c6bb8cbe8b21)
+### Ensure that the 'local_infile' database flag for a Cloud SQL Mysql instance is set to 'off'
 
 **Description**: It's recommended to set the local_infile database flag for a Cloud SQL MySQL instance to off.
 The local_infile flag controls the server-side LOCAL capability for LOAD DATA statements. Depending on the local_infile setting, the server refuses or permits local data loading by clients that have LOCAL enabled on the client side.
@@ -1393,14 +1393,14 @@ Due to security issues associated with the local_infile flag, it's recommended t
 
 **Severity**: Medium
 
-### [Ensure that the log metric filter and alerts exist for Cloud Storage IAM permission changes](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2e14266c-76ea-4479-915e-4edaae7d78ec)
+### Ensure that the log metric filter and alerts exist for Cloud Storage IAM permission changes
 
 **Description**: It's recommended that a metric filter and alarm be established for Cloud Storage Bucket IAM changes.
 Monitoring changes to cloud storage bucket permissions might reduce the time needed to detect and correct permissions on sensitive cloud storage buckets and objects inside the bucket.
 
 **Severity**: Low
 
-### [Ensure that the log metric filter and alerts exist for SQL instance configuration changes](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9dce022e-f7f9-4725-8a63-c0d4a868b4d3)
+### Ensure that the log metric filter and alerts exist for SQL instance configuration changes
 
 **Description**: It's recommended that a metric filter and alarm be established for SQL instance configuration changes.
 Monitoring changes to SQL instance configuration changes might reduce the time needed to detect and correct misconfigurations done on the SQL server.
@@ -1411,7 +1411,7 @@ Below are a few of the configurable options that might impact the security postu
 
 **Severity**: Low
 
-### [Ensure that there are only GCP-managed service account keys for each service account](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6991b2e9-ae9e-4e99-acb6-037c4b575215)
+### Ensure that there are only GCP-managed service account keys for each service account
 
 **Description**: User managed service accounts shouldn't have user-managed keys.
  Anyone who has access to the keys will be able to access resources through the service account. GCP-managed keys are used by Cloud Platform services such as App Engine and Compute Engine. These keys can't be downloaded. Google will keep the keys and automatically rotate them on an approximately weekly basis.
@@ -1429,7 +1429,7 @@ Even with key owner precautions, keys can be easily leaked by less than optimum 
 
 **Severity**: Low
 
-### [Ensure 'user connections' database flag for Cloud SQL SQL Server instance is set as appropriate](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/91f55b07-083c-4ec5-a2be-4b52bbc2e2df)
+### Ensure 'user connections' database flag for Cloud SQL SQL Server instance is set as appropriate
 
 **Description**: It's recommended to set "user connections" database flag for Cloud SQL SQL Server instance according to organization-defined value.
  The "user connections" option specifies the maximum number of simultaneous user connections that are allowed on an instance of SQL Server.
@@ -1443,7 +1443,7 @@ Even with key owner precautions, keys can be easily leaked by less than optimum 
 
 **Severity**: Low
 
-### [Ensure 'user options' database flag for Cloud SQL SQL Server instance is not configured](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/fab1e680-86f0-4616-bee9-1b7394e49ade)
+### Ensure 'user options' database flag for Cloud SQL SQL Server instance is not configured
 
 **Description**: It's recommended that, "user options" database flag for Cloud SQL SQL Server instance shouldn't be configured.
  The "user options" option specifies global defaults for all users.
@@ -1456,31 +1456,31 @@ Even with key owner precautions, keys can be easily leaked by less than optimum 
 
 **Severity**: Low
 
-### [Logging for GKE clusters should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/fa160a2c-e976-41cb-acff-1e1e3f1ed032)
+### Logging for GKE clusters should be enabled
 
 **Description**: This recommendation evaluates whether the loggingService property of a cluster contains the location Cloud Logging should use to write logs.
 
 **Severity**: High
 
-### [Object versioning should be enabled on storage buckets where sinks are configured](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e836b239-c7dc-476a-9a85-829b565cbc59)
+### Object versioning should be enabled on storage buckets where sinks are configured
 
 **Description**: This recommendation evaluates whether the enabled field in the bucket's versioning property is set to true.
 
 **Severity**: High
 
-### [Over-provisioned identities in projects should be investigated to reduce the Permission Creep Index (PCI)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/a6cd9b98-3b29-4213-b880-43f0b0897b83)
+### Over-provisioned identities in projects should be investigated to reduce the Permission Creep Index (PCI)
 
 **Description**: Over-provisioned identities in projects should be investigated to reduce the Permission Creep Index (PCI) and to safeguard your infrastructure. Reduce the PCI by removing the unused high risk permission assignments. High PCI reflects risk associated with the identities with permissions that exceed their normal or required usage.
 
 **Severity**: Medium
 
-### [Projects that have cryptographic keys should not have users with Owner permissions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/986fe72e-466a-462d-a06e-c77b439c53c0)
+### Projects that have cryptographic keys should not have users with Owner permissions
 
 **Description**: This recommendation evaluates the IAM allow policy in project metadata for principals assigned roles/Owner.
 
 **Severity**: Medium
 
-### [Storage buckets used as a log sink should not be publicly accessible](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/76261631-76ea-4bd4-b064-34a619be1de0)
+### Storage buckets used as a log sink should not be publicly accessible
 
 **Description**: This recommendation evaluates the IAM policy of a bucket for the principals allUsers or allAuthenticatedUsers, which grant public access.
 

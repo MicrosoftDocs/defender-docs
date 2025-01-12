@@ -21,7 +21,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 ## Azure recommendations
 
-### [Azure AI Services resources should have key access disabled (disable local authentication)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/13b10b36-aa99-4db6-b00c-dcf87c4761e6)
+### Azure AI Services resources should have key access disabled (disable local authentication)
 
 **Description**: Key access (local authentication) is recommended to be disabled for security. Azure OpenAI Studio, typically used in development/testing, requires key access and will not function if key access is disabled. After the setting is disabled, Microsoft Entra ID becomes the only access method, which allows maintaining minimum privilege principle and granular control. [Learn more](/azure/ai-services/authentication).
 
@@ -29,7 +29,7 @@ This recommendation replaces the old recommendation *Cognitive Services accounts
 
 **Severity**: Medium
 
-### [Azure AI Services resources should restrict network access](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f738efb8-005f-680d-3d43-b3db762d6243)
+### Azure AI Services resources should restrict network access
 
 **Description**: By restricting network access, you can ensure that only allowed networks can access the service. This can be achieved by configuring network rules so that only applications from allowed networks can access the Azure AI service resource.
 
@@ -38,7 +38,7 @@ This recommendation replaces the old recommendation *Cognitive Services accounts
 **Severity**: Medium
 
 
-### [Azure AI Services resources should use Azure Private Link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/67279c29-fa4c-4f09-ae59-cb1491565995)
+### Azure AI Services resources should use Azure Private Link
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform reduces data leakage risks by handling the connectivity between the consumer and services over the Azure backbone network.
 
@@ -49,7 +49,7 @@ This recommendation replaces the old recommendation *Cognitive Services should u
 **Severity**: Medium
 
 
-### [(Enable if required) Azure AI Services resources should encrypt data at rest with a customer-managed key (CMK)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/18bf29b3-a844-e170-2826-4e95d0ba4dc9/showSecurityCenterCommandBar~/false)
+### (Enable if required) Azure AI Services resources should encrypt data at rest with a customer-managed key (CMK)
 
 **Description**: Using customer-managed keys to encrypt data at rest provides more control over the key lifecycle, including rotation and management. This is particularly relevant for organizations with related compliance requirements.
 
@@ -59,7 +59,7 @@ This recommendation replaces the old recommendation *Cognitive services accounts
 
 **Severity**: Low
 
-### [Diagnostic logs in Azure AI services resources should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/dea5192e-1bb3-101b-b70c-4646546f5e1e)
+### Diagnostic logs in Azure AI services resources should be enabled
 
 **Description**: Enable logs for Azure AI services resources. This enables you to recreate activity trails for investigation purposes, when a security incident occurs or your network is compromised. 
 
@@ -129,19 +129,19 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 ## AWS AI recommendations
 
-### [AWS Bedrock should have model invocation logging enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/Recommendation.ReactView/assessedResourceId/%2Fsubscriptions%2Fd1d8779d-38d7-4f06-91db-9cbc8de0176f%2Fresourcegroups%2Fsoc-asc%2Fproviders%2Fmicrosoft.security%2Fsecurityconnectors%2Fawsdspm%2Fsecurityentitydata%2Faws-account-in-region-323104580785-us-west-2%2Fproviders%2Fmicrosoft.security%2Fassessments%2F1a202dce-e13f-43ba-8a97-2f9235c5c834/recommendationDisplayName/AWS%20Bedrock%20should%20have%20model%20invocation%20logging%20enabled)
+### AWS Bedrock should have model invocation logging enabled
 
 **Description:** With invocation logging, you can collect the full request data, response data, and metadata associated with all calls performed in your account. This enables you to recreate activity trails for investigation purposes when a security incident occurs.
 
 **Severity:** Low
 
-### [AWS Bedrock should use AWS PrivateLink](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/dd55620f-09f2-4d4b-9d6b-adcee7479a64)
+### AWS Bedrock should use AWS PrivateLink
 
 **Description** Amazon Bedrock VPC endpoint powered by AWS PrivateLink, allows you to establish a private connection between the VPC in your account and the Amazon Bedrock service account. AWS PrivateLink enables VPC instances to communicate with Bedrock service resources, without the need for public IP addresses, ensuring your data is not exposed to the public internet and thereby helping with your compliance requirements.
 
 **Severity** Medium
 
-### [AWS Bedrock agents should use guardrails when allowing access to generative AI applications](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/7c0c3e91-b674-40d1-8fc4-1bc3c70533e4)
+### AWS Bedrock agents should use guardrails when allowing access to generative AI applications
 
 **Description** Guardrails for Amazon Bedrock enhance the safety of generative AI applications by evaluating both user inputs and model-generated responses. These guardrails include content filters, which help detect and filter harmful content. Specifically, the "Prompt Attacks" category that includes safeguards on user prompts to prevent jailbreaks and prompt injections.
 
