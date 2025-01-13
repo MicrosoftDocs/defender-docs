@@ -283,7 +283,9 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 ---
 
 > [!NOTE]
-> The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
+> The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title.
+>  [!NOTE]
+> Hide Alet Feature is available only for MDE alert
 
 <!--what does this mean?-->
 
