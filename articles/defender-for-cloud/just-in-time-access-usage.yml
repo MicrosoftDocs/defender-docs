@@ -36,7 +36,7 @@ prerequisites:
 
     - You need **Reader** and **SecurityReader** permissions, or a custom role can view the JIT status and parameters.
 
-    - For a custom role, assign the permissions summarized in the table. tTo create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
+    - For a custom role, assign the permissions summarized in the table. To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
       | User action | Permissions to set|
         | --- | --- |
