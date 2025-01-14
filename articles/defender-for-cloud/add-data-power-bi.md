@@ -23,8 +23,6 @@ By connecting Microsoft Defender for Cloud's data with Microsoft Power BI, you c
 
 Before you can connect Defender for Cloud's data to Power BI, you must first connect Power BI to Azure Resource Graph.
 
-:::image type="content" source="media/add-data-power-bi/get-data-more.png" alt-text="Screenshot of the page and shows everything and anything.":::
-
 1. On your desktop open Power BI Desktop.
 
 1. Select **Blank report**.
@@ -198,7 +196,7 @@ The queries provided on this page are examples that provide results. Azure Resou
     :::image type="content" source="media/add-data-power-bi/select-ok.png" alt-text="Screenshot that shows where to enter the Azure Resource Graph query and where the Ok button is located." lightbox="media/add-data-power-bi/select-ok.png":::
 
     > [!NOTE]
-    > By default, Resource Graph limits any query to returning only 1000 records. This control protects both you and the service from unintentional queries that would result in large data sets. If you want query results not to be truncated by the 1000 records limit, set the value of the "Advanced Option - $resultTruncated (optional)" to FALSE.
+    > By default, Resource Graph limits any query to returning only 1,000 records. This control protects both you and the service from unintentional queries that would result in large data sets. If you want query results not to be truncated by the 1,000 records limit, set the value of the "Advanced Option - $resultTruncated (optional)" to FALSE.
     >
     > :::image type="content" source="media/add-data-power-bi/advanced-options-false.png" alt-text="Screenshot that shows where the advanced options are located and how to set it to false." lightbox="media/add-data-power-bi/advanced-options-false.png":::
 
