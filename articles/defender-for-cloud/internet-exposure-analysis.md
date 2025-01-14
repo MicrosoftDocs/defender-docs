@@ -5,30 +5,24 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 12/16/2024
+ms.date: 01/14/2025
 ms.custom: template-concept
 #customer intent: As a user, I want to understand how Defender for Cloud detects and assesses internet exposure for my multicloud resources. This knowledge will help me identify and mitigate potential security risks effectively.
 ---
 
 # Internet exposure analysis
 
-Internet exposure analysis in Microsoft Defender for Cloud lets you understand which of your multicloud resources are exposed to the internet. Exposure can result from misconfigurations, vulnerabilities, or other issues from connected devices in your [Cloud Security Graph](concept-attack-path.md#what-is-cloud-security-graph).
-
-Understanding how your resources are exposed to the Internet is essential for maintaining both security and operational efficiency. Defender for Cloud helps identify which resources are exposed and which aren't, ensuring a secure environment. This identification process can be challenging due to the complex network architectures often used by customers.
+Internet exposure analysis in Microsoft Defender for Cloud lets you understand which of your multicloud resources are exposed to the internet. Defender for Cloud uses internet exposure to determine the risk level of your misconfigurations, vulnerabilities, or other issues.
 
 ## How Defender for Cloud detects internet exposure
 
-Detecting internet exposure can be as simple as checking if a virtual machine (VM) has a public  Internet Protocol (IP) address. However, the process can be much more complex. For example, a VM might not be directly exposed to the internet but could be behind a load balancer. A load balancer is a device or service that distributes network traffic across multiple servers to ensure that no single server becomes overwhelmed. 
-
-The load balancer itself can be exposed to the internet and route traffic to the machine. Therefore, even if the Azure resource appears not to be exposed, it still receives Internet traffic indirectly. Defender for Cloud uses a combination of techniques to detect Internet exposure.
-
-Another example is an Amazon Web Services (AWS) VM that receives traffic from the internet through an IP address. Complex architectures can indirectly expose these types of VMs. 
+To detect if a resource is exposed to the internet, Defender for Cloud assesses the cloud resource to see if it's configured for internet exposure. Detecting internet exposure can be as simple as checking if a virtual machine (VM) has a public Internet Protocol (IP) address. However, the process can be much more complex. Defender for Cloud attempts to located internet exposed resources in complex multicloud architectures. For example, a VM might not be directly exposed to the internet but could be behind a load balancer. A load balancer is a device or service that distributes network traffic across multiple servers to ensure that no single server becomes overwhelmed. 
 
 The following table lists the resources that Defender for Cloud assesses for Internet exposure:
 
 | Category | Services/Resources |
 |--|--|
-| Virtual machines | Azure VM <br> AWS EC2 <br> Google Cloud Project (GCP) compute instance |
+| Virtual machines | Azure VM <br> Amazon Web Service (AWS() EC2 <br> Google Cloud Project (GCP) compute instance |
 | Virtual machine clusters | Azure Virtual Machine scale set <br> GCP instance groups |
 | Databases (DB) | Azure SQL <br> Azure PostgreSQL <br> Azure MySQL <br> Azure SQL managed instance <br> Azure MariaDB <br> Azure Cosmos DB <br> Azure Synapse Analytics <br> AWS Relational Database Service (RDS) DB <br> GCP SQL admin instance |
 | Storage | Azure Storage <br> AWS S3 buckets <br> GCP storage buckets |
@@ -52,9 +46,13 @@ Defender for Cloud offers a few different ways to view Internet-exposed resource
 
 - [Attack Path Analysis](how-to-manage-attack-path.md) -  The Attack Path Analysis page lets you view attack paths that an attacker could take to reach a specific resource. With the Attack Path Analysis, you can view a visual representation of the attack path and see which resources are exposed to the internet. Internet exposure often serves as an entry point for attack paths, especially when the resource has vulnerabilities. Internet-exposed resources often lead to targets with sensitive data.
 
-- [Recommendations](review-security-recommendations.md) - Defender for Cloud provides recommendations for Internet-exposed resources. These recommendations are based on the security posture of the resource and the potential risks associated with the exposure.
+- [Recommendations](review-security-recommendations.md) - Defender for Cloud prioritizes recommendations based on their exposure to the internet.
 
-Defender for Cloud uses its [risk prioritization](risk-prioritization.md) feature to show you the recommendations and attack paths that pose the highest level of risk first.
+## Defender External Attack Surface Management integration
+
+Defender for Cloud also has an integration with Defender External Attack Surface Management to assess resources for internet exposure by attempting to contact them from an external source and seeing if they respond.  
+
+Learn more about the [Defender External Attack Surface Management integration](concept-easm.md).
 
 ## Related content
 
