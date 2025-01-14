@@ -49,7 +49,7 @@ In the cloud, attacks can occur across different tenants, Defender for Cloud can
 
 During an investigation of an incident, analysts often need extra context to reach a verdict about the nature of the threat and how to mitigate it. For example, even when a network anomaly is detected, without understanding what else is happening on the network or with regard to the targeted resource, it's difficult to understand what actions to take next. To help, a security incident can include artifacts, related events, and information. The additional information available for security incidents varies, depending on the type of threat detected and the configuration of your environment.
 
-### Correlating alerts into incidents
+### Correlate alerts into incidents
 
 Defender for Cloud correlates alerts and contextual signals into incidents.
 
@@ -99,7 +99,7 @@ Behavioral analytics is a technique that analyzes and compares data to a collect
 
 Defender for Cloud also uses anomaly detection to identify threats. In contrast to behavioral analytics that depends on known patterns derived from large data sets, anomaly detection is more "personalized" and focuses on baselines that are specific to your deployments. Machine learning is applied to determine normal activity for your deployments and then rules are generated to define outlier conditions that could represent a security event.
 
-## Exporting alerts
+## Export alerts
 
 You have a range of options for viewing your alerts outside of Defender for Cloud, including:
 

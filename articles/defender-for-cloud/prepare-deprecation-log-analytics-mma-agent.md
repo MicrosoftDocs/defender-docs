@@ -12,7 +12,7 @@ The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [is
 
 This article summarizes plans for agent retirement.
 
-## Preparing Defender for Servers
+## Prepare Defender for Servers
 
 The Defender for Servers plan uses the Log Analytics agent in general availability (GA) and in AMA for [some features](plan-defender-for-servers-agents.md) (in preview). Here's what's happening with these features going forward:
 
@@ -50,7 +50,7 @@ As part of the MMA agent retirement, the auto provisioning capability that provi
 
 ### The 500-MB benefit for data ingestion
 
-To preserve the 500 MB of free data ingestion allowance for the [supported data types](faq-defender-for-servers.yml#is-the-500-mb-of-free-data-ingestion-allowance-applied-per-workspace-or-per-machine-), you need to migrate from MMA to AMA.
+To preserve the 500 MB of free data ingestion allowance for the [supported data types](data-ingestion-benefit.md), you need to migrate from MMA to AMA.
 
 > [!NOTE]
 >
@@ -114,7 +114,7 @@ The following table summarizes the timetable for recommendations being deprecate
 1. Fix the recommendation: Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager).
 2. Enable Periodic assessment [at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main).
 
-- Once dome, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
+- Once done, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
 
 > [!NOTE]
 > Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 is not enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). **Arc enabled machines that Defender for Servers Plan 2 is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.**
@@ -200,7 +200,7 @@ If you currently use FIM over AMA:
 - If you want to continue onboarding new scopes or configure monitoring rules, you can manually use [Data Connection Rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure or customize various aspects of data collection.
 - Microsoft Defender for Cloud recommends disabling FIM over AMA, and onboarding your environment to the new FIM version based on Defender for Endpoint upon release.
 
-#### Disabling FIM over AMA
+#### Disable FIM over AMA
 
 To disable FIM over AMA, remove the Azure Change Tracking solution. For more information, see [Remove ChangeTracking solution](/azure/automation/change-tracking/remove-feature#remove-changetracking-solution).
 
@@ -211,7 +211,7 @@ After you disable the file events collection using one of the methods above:
 - New events will stop being collected on the selected scope.
 - The historical events that already were collected remain stored in the relevant workspace under the *ConfigurationChange* table in the **Change Tracking** section. These events will remain available in the relevant workspace according to the retention period defined in this workspace. For more information, see [How retention and archiving work](/azure/azure-monitor/logs/data-retention-archive#how-retention-and-archiving-work).
 
-#### Migration from FIM over Log Analytics Agent (MMA)
+#### Migrate from FIM over Log Analytics Agent (MMA)
 
 If you currently use FIM over the Log Analytics Agent (MMA):
 
@@ -219,7 +219,7 @@ If you currently use FIM over the Log Analytics Agent (MMA):
 
 - Microsoft Defender for Cloud recommends disabling FIM over MMA, and onboarding your environment to the new FIM version based on Defender for Endpoint upon release.
 
-#### Disabling FIM over MMA
+#### Disable FIM over MMA
 
 To disable FIM over MMA, remove the Azure Change Tracking solution. For more information, see [Remove ChangeTracking solution](/azure/automation/change-tracking/remove-feature#remove-changetracking-solution).
 
@@ -341,7 +341,7 @@ Here are 2 sample queries you can use:
     | summarize count() by subAssessmentId, status
     ```
 
-## Preparing Defender for SQL on Machines
+## Prepare Defender for SQL on Machines
 
 You can learn more about the [Defender for SQL Server on machines Log Analytics agent's deprecation plan](upcoming-changes.md#defender-for-sql-server-on-machines).
 
@@ -388,7 +388,7 @@ We recommend you plan agent migration in accordance with your business requireme
 | Yes | Yes | No | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. Wait for GA of all features with the alternative's platform (you can use preview version earlier).<br/>3. Once features are GA, disable the [Log Analytics agent](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent).|
 | No | --- | No | You can remove the Log Analytics agent now. |
 | No | --- | Yes | 1. You can [migrate to SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) now.<br/>2. [Disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) Log Analytics/Azure Monitor Agent. |
-| Yes | Yes | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can use the Log Analytics agent and AMA side-by-side to get all features in GA. [Learn more](auto-deploy-azure-monitoring-agent.md#impact-of-running-with-both-the-log-analytics-and-azure-monitor-agents) about running agents side-by-side.<br>3. Migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines. Alternatively, start the migration from Log Analytics agent to AMA in April 2024.<br/>4. Once the migration is finished, [disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
+| Yes | Yes | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can use the Log Analytics agent and AMA side-by-side to get all features in GA. [Learn more](auto-deploy-azure-monitoring-agent.md) about running agents side-by-side.<br>3. Migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines. Alternatively, start the migration from Log Analytics agent to AMA in April 2024.<br/>4. Once the migration is finished, [disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 | Yes | No | Yes | 1. Enable [Defender for Endpoint integration](enable-defender-for-endpoint.md) and [agentless machine scanning](enable-agentless-scanning-vms.md).<br/>2. You can migrate to [SQL autoprovisioning for AMA](defender-for-sql-autoprovisioning.md) in Defender for SQL on machines now.<br/>3. [Disable](defender-for-sql-autoprovisioning.md#disable-the-log-analytics-agentazure-monitor-agent) the Log Analytics agent. |
 
 ### MMA migration experience

@@ -16,7 +16,7 @@ This article addresses recommendations that apply to your Azure resources from a
 
 The **Networking** features of Defender for Cloud include:
 
-- Network map (requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features))
+- Network map requires Microsoft Defender for Servers Plan 2.
 - Networking security recommendations
 
 ## View your networking resources and their recommendations
@@ -49,7 +49,7 @@ The default view of the topology map displays:
 
 :::image type="content" source="./media/protect-network-resources/network-map-info.png" alt-text="Screenshot of the Defender for Cloud networking topology map." lightbox="./media/protect-network-resources/network-map-info.png":::
 
-## Understanding the network map
+## Understand the network map
 
 The network map can show you your Azure resources in a **Topology** view and a **Traffic** view.
 

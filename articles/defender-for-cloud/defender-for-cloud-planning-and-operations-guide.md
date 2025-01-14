@@ -151,9 +151,6 @@ When automatic provisioning is enabled in the security policy, the [data collect
 
 If at some point you want to disable Data Collection, you can turn it off in the security policy. However, because the Log Analytics agent might be used by other Azure management and monitoring services, the agent won't be uninstalled automatically when you turn off data collection in Defender for Cloud. You can manually uninstall the agent if needed.
 
-> [!NOTE]
-> To find a list of supported VMs, read the [Defender for Cloud common questions](faq-vms.yml).
-
 ### Workspace
 
 A workspace is an Azure resource that serves as a container for data. You or other members of your organization might use multiple workspaces to manage different sets of data that is collected from all or portions of your IT infrastructure.
@@ -192,7 +189,7 @@ When you first opt in to use Defender for Cloud for your current Azure environme
 
 Plan to visit the threat intelligence option as part of your daily security operations. There you can identify security threats against the environment, such as identify if a particular computer is part of a botnet.
 
-### Monitoring for new or changed resources
+### Monitor for new or changed resources
 
 Most Azure environments are dynamic, with resources regularly being created, spun up or down, reconfigured, and changed. Defender for Cloud helps ensure that you have visibility into the security state of these new resources.
 
@@ -200,10 +197,9 @@ When you add new resources (VMs, SQL DBs) to your Azure environment, Defender fo
 
 You should also regularly monitor existing resources for configuration changes that could have created security risks, drift from recommended baselines, and security alerts.
 
-### Hardening access and applications
+### Harden access and applications
 
 As part of your security operations, you should also adopt preventative measures to restrict access to VMs, and control the applications that are running on VMs. By locking down inbound traffic to your Azure VMs, you're reducing the exposure to attacks, and at the same time providing easy access to connect to VMs when needed. Use [just-in-time VM access](just-in-time-access-usage.yml) access feature to hardening access to your VMs.
-
 
 ## Incident response
 
@@ -228,7 +224,7 @@ Each Security Alert provides information that can be used to better understand t
 
 The following example shows a suspicious RDP activity taking place:
 
-:::image type="content" source="./media/defender-for-cloud-planning-and-operations-guide/defender-for-cloud-planning-and-operations-guide-fig5-ga.png" alt-text="Screenshot of a suspicious activity report while it is taking place..":::
+:::image type="content" source="./media/defender-for-cloud-planning-and-operations-guide/defender-for-cloud-planning-and-operations-guide-fig5-ga.png" alt-text="Screenshot of a suspicious activity report while it is taking place.":::
 
 This page shows the details regarding the time that the attack took place, the source hostname, the target VM and also gives recommendation steps. In some circumstances, the source information of the attack might be empty. Read [Missing Source Information in Defender for Cloud alerts](/archive/blogs/azuresecurity/missing-source-information-in-azure-security-center-alerts) for more information about this type of behavior.
 

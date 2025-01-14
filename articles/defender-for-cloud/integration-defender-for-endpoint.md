@@ -1,65 +1,51 @@
 ---
-title: Understand endpoint detection and response
-description: Learn about deploying Microsoft Defender for Endpoint from Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
-author: dcurwin
-ms.author: dacurwin
+title: Overview of Microsoft Defender for Endpoint integration in Microsoft Defender for Cloud
+description: Learn about Defender for Endpoint integration in Microsoft Defender for Cloud.
+author: elazark
+ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 06/23/2024
-#customer intent: As a reader, I want to understand how to deploy Microsoft Defender for Endpoint from Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
+ms.date: 10/20/2024
+#customer intent: I want to understand how Defender for Endpoint integrates with Defender for Cloud.
 ---
 
-# Understand endpoint detection and response
+# Defender for Endpoint/Defender for Vulnerability Management integration
 
-With Microsoft Defender for Servers, you gain access to and can deploy [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) to your server resources. Microsoft Defender for Endpoint is a holistic, cloud-delivered, endpoint security solution. The main features include:
+Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management integrate natively with Microsoft Defender for Cloud to provide:
 
-- Risk-based vulnerability management and assessment
-- Attack surface reduction
-- Behavioral based and cloud-powered protection
-- Endpoint detection and response (EDR)
-- Automatic investigation and remediation
-- Managed hunting services
+- **Integrated security capabilities**: Security capabilities provided by Defender for Endpoint, Defender Vulnerability Management, and Defender for Cloud come together to provide end-to-end protection for machines protected by the Defender for Servers plan in Defender for Cloud.
+- **Licensing**: Defender for Servers covers licensing for [Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint). Licensing is charged per hour instead of per seat, lowering costs by protecting VMs only when they're in use.
+- **Agent provisioning**: Defender for Cloud can automatically provision the Defender for Endpoint sensor on supported machines that are connected to Defender for Cloud.
+- **Unified alerts**: Alerts and vulnerability data from Defender for Endpoint appear in Defender for Cloud in the Azure portal. You can move to the Defender portal to drill down for detailed alert information and context.
 
-You can learn about Defender for Cloud's integration with Microsoft Defender for Endpoint by watching this video from the Defender for Cloud in the Field video series: [Defender for Servers integration with Microsoft Defender for Endpoint](episode-sixteen.md)
+## Security capabilities
 
-For more information about migrating servers from Defender for Endpoint to Defender for Cloud, see the [Microsoft Defender for Endpoint to Microsoft Defender for Cloud Migration Guide](/microsoft-365/security/defender-endpoint/migrating-mde-server-to-cloud).
+Defender for Cloud integrates these security capabilities provided by Defender for Endpoint and Defender Vulnerability Management.
 
-## Benefits of integrating Microsoft Defender for Endpoint with Defender for Cloud
+- **Vulnerability management**: Provided by [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
 
-[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) protects your Windows and Linux machines whether they're hosted in Azure, hybrid clouds (on-premises), or multicloud environments.
+  - Features include an [inventory of known software](/defender-vulnerability-management/tvm-software-inventory), [continuous vulnerability assessment and insights](/defender-vulnerability-management/tvm-weaknesses), [secure score for devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices), [prioritized security recommendations](/defender-vulnerability-management/tvm-security-recommendation), and [vulnerability remediation](/defender-vulnerability-management/tvm-remediation).
+  - Integration with Defender Vulnerability Management also provides [premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) in Defender for Servers Plan 2.
 
-The protections include:
+- **Attack surface reduction**: Use of [attack surface reduction rules](/defender-endpoint/attack-surface-reduction) to reduce security exposure.
+- **Next-generation protection** providing [antimalware and antivirus protection](/defender-endpoint/next-generation-protection).
+- **Endpoint detection and response (EDR)**: EDR [detects, investigates, and responds to advanced threats](/defender-endpoint/overview-endpoint-detection-response), including [advanced threat hunting](/defender-xdr/advanced-hunting-overview), and [automatic investigation and remediation capabilities](/defender-xdr/m365d-autoir).
+- **Threat analytics**. [Get threat intelligence data](/defender-xdr/threat-analytics) provided by Microsoft threat hunters and security teams, augmented by intelligence provided by partners. Security alerts are generated when Defender for Endpoint identifies attacker tools, techniques, and procedures.
 
-- **Advanced post-breach detection sensors**. Defenders for Endpoint's sensors collect a vast array of behavioral signals from your machines.
+## Integration architecture
 
-- **Vulnerability assessment from Microsoft Defender Vulnerability Management**. With Microsoft Defender for Endpoint installed, Defender for Cloud can show vulnerabilities discovered by Defender Vulnerability Management and also offer this module as a supported vulnerability assessment solution. Learn more in [Investigate weaknesses with Microsoft Defender Vulnerability Management](deploy-vulnerability-assessment-defender-vulnerability-management.md).
+A Defender for Endpoint tenant is automatically created when you use Defender for Cloud to monitor your machines.
 
-    This module also brings the software inventory features described in [Access a software inventory](asset-inventory.md#access-a-software-inventory) and can be automatically enabled for supported machines with [the auto deploy settings](auto-deploy-vulnerability-assessment.md).
+Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
 
-- **Analytics-based, cloud-powered, post-breach detection**. Defender for Endpoint quickly adapts to changing threats. It uses advanced analytics and big data. It's amplified by the power of the Intelligent Security Graph with signals across Windows, Azure, and Office to detect unknown threats. It provides actionable alerts and enables you to respond quickly.
+- Customer data, in pseudonymized form, might also be stored in the central storage and processing systems in the United States.
+- After you configure the location, you can't change it.
+- If you have your own license for Defender for Endpoint and need to move your data to another location, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to reset the tenant.
 
-- **Threat intelligence**. Defender for Endpoint generates alerts when it identifies attacker tools, techniques, and procedures. It uses data generated by Microsoft threat hunters and security teams, augmented by intelligence provided by partners.
+## Move between subscriptions
 
-When you integrate Defender for Endpoint with Defender for Cloud, you gain access to the benefits from the following extra capabilities:
+- **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
+- **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
-- **Automated onboarding**. Defender for Cloud automatically enables the Defender for Endpoint sensor on all supported machines connected to Defender for Cloud.
+## Next steps
 
-- **Single pane of glass**. The Defender for Cloud portal pages displays Defender for Endpoint alerts. To investigate further, use Microsoft Defender for Endpoint's own portal pages where you see additional information such as the alert process tree and the incident graph. You can also see a detailed machine timeline that shows every behavior for a historical period of up to six months.
-
-    :::image type="content" source="./media/integration-defender-for-endpoint/microsoft-defender-security-center.png" alt-text="Microsoft Defender for Endpoint's own Security Center" lightbox="./media/integration-defender-for-endpoint/microsoft-defender-security-center.png":::
-
-## What are the requirements for the Microsoft Defender for Endpoint tenant?
-
-A Defender for Endpoint tenant is automatically created, when you use Defender for Cloud to monitor your machines.
-
-- **Location:** Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning. Customer data - in pseudonymized form - might also be stored in the central storage and processing systems in the United States. After you configure the location, you can't change it. If you have your own license for Microsoft Defender for Endpoint and need to move your data to another location, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to reset the tenant.
-
-- **Moving subscriptions:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
-
-> [!NOTE]
-> To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
-
-Check out the [minimum requirements for Defender for Endpoint](/defender-endpoint/minimum-requirements), to see what the licensing, browser, hardware, software requirements are and more.
-
-## Related content
-
-- [Enable the Microsoft Defender for Endpoint integration](enable-defender-for-endpoint.md)
+[Learn more](endpoint-detection-response.md) about EDR recommendations in Defender for Servers.

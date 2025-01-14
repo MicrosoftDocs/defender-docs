@@ -28,8 +28,8 @@ Microsoft Defender for Cloud includes a bundle of recommendations that are avail
 You can enable the Azure Policy for Kubernetes by one of two ways:
 
 - Enable for all current and future clusters using plan/connector settings
-  - [Enabling for Azure subscriptions or on-premises](#enabling-for-azure-subscriptions-or-on-premises)
-  - [Enabling for GCP projects](#enabling-for-gcp-projects)
+  - [Enabling for Azure subscriptions or on-premises](#enable-for-azure-subscriptions-or-on-premises)
+  - [Enabling for GCP projects](#enable-for-gcp-projects)
 - [Deploy Azure Policy for Kubernetes on existing clusters](#deploy-azure-policy-for-kubernetes-on-existing-clusters)
 
 ### Enable Azure Policy for Kubernetes for all current and future clusters using plan/connector settings
@@ -40,7 +40,7 @@ You can enable the Azure Policy for Kubernetes by one of two ways:
 > [!NOTE]
 > Enablement for AWS via the connector is not supported due to a limitation in EKS that requires the cluster admin to add permissions for a new IAM role on the cluster itself.
 
-#### Enabling for Azure subscriptions or on-premises
+#### Enable for Azure subscriptions or on-premises
 
 When you enable Microsoft Defender for Containers, the "Azure Policy for Kubernetes" setting is enabled by default for the Azure Kubernetes Service, and for Azure Arc-enabled Kubernetes clusters in the relevant subscription. If you disable the setting on initial configuration, you can enable it afterwards manually.
 
@@ -62,7 +62,7 @@ If you disabled the "Azure Policy for Kubernetes" settings under the containers 
 
       :::image type="content" source="media/kubernetes-workload-protections/toggle-on-extensions.png" alt-text="Screenshot showing the toggles used to enable or disable the extensions." lightbox="media/kubernetes-workload-protections/toggle-on-extensions.png":::
 
-#### Enabling for GCP projects
+#### Enable for GCP projects
 
 When you enable Microsoft Defender for Containers on a GCP connector, the "Azure Policy Extension for Azure Arc" setting is enabled by default for the Google Kubernetes Engine in the relevant project. If you disable the setting on initial configuration, you can enable it afterwards manually.
 

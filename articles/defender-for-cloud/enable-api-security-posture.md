@@ -68,7 +68,7 @@ Review API security posture findings along with your API inventory in the Micros
 
    :::image type="content" source="media/enable-api-security-posture/inventory-api-assets.png" alt-text="Screenshot of API Management resources in the inventory." lightbox="media/enable-api-security-posture/inventory-api-assets.png":::
 
-## Investigating API security recommendations
+## Investigate API security recommendations
 
 API endpoints are continuously assessed for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. Security recommendations are generated with associated risk factors like external exposure and data sensitivity risks. The importance of the security recommendations is calculated based on these risk factors. Learn more about [risk-based security recommendations](risk-prioritization.md#recommendations).  
 
@@ -105,7 +105,7 @@ Attack path analysis in Defender for Cloud addresses security issues that pose i
 
    :::image type="content" source="media/enable-api-security-posture/attack-path.png" alt-text="Screenshot of API security recommendations in Attack path analysis." lightbox="media/enable-api-security-posture/attack-path.png":::
 
-## Offboarding API security posture protection
+## Offboard API security posture protection
 
 APIs that are part of the Defender CSPM plan can't be offboarded individually. If you want to offboard all APIs from the Defender CSPM plan, go to the Defender CSPM Plan Settings page and disable the API posture extension.  
 

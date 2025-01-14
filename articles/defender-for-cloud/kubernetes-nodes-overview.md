@@ -11,7 +11,7 @@ In addition to protecting the Kubernetes cluster control plane and workloads, De
 
 ## Protection for Kubernetes nodes
 
-Kubernetes nodes are VMs created by the cloud environment's Kubernetes service to run the Kubernetes cluster's control plane and workload. A cluster's ***node pools*** (or ***node groups***) are a managed set of identical VM type and versions. The Kubernetes service allows the customer to configure a cluster, including the configuration of node pools. A node pool configuration includes setting the number of nodes, and the identical VM type and version of the nodes. The customer determines the configuration of the cluster's node pools according to the requirements of the applications running in it. The customer also manages each node pool as a set - all nodes in the pool are configured and updated together. 
+Kubernetes nodes are VMs created by the cloud environment's Kubernetes service to run the Kubernetes cluster's control plane and workload. A cluster's ***node pools*** (or ***node groups***) are a managed set of identical VM type and versions. The Kubernetes service allows the customer to configure a cluster, including the configuration of node pools. A node pool configuration includes setting the number of nodes, and the identical VM type and version of the nodes. The customer determines the configuration of the cluster's node pools according to the requirements of the applications running in it. The customer also manages each node pool as a set - all nodes in the pool are configured and updated together.
 
 The customer upgrades the node pool VM version to improve node security, as indicated by Defender for Cloud recommendations.
 
@@ -32,7 +32,7 @@ The following protections are provided for Kubernetes nodes:
 
 - [Malware detection](kubernetes-nodes-malware.md) - Kubernetes nodes are scanned for malware. A security alert is generated for the customer to review and remediate.
 
-The Kubernetes nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md#how-agentless-scanning-works) for details.
+The Kubernetes nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md) for details.
 
 ## Enable agentless scanning for machines
 

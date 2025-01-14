@@ -1,54 +1,40 @@
 ---
-title: File Integrity Monitoring with Microsoft Defender for Endpoint
-description: Learn how to enable File Integrity Monitor when you collect data with Microsoft Defender for Endpoint.
+title: Enable file integrity monitoring 
+description: Learn how to enable file integrity monitoring when you collect data with Microsoft Defender for Endpoint.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
 ms.date: 09/09/2024
 ---
 
-# File Integrity Monitoring using Microsoft Defender for Endpoint
+# Enable file integrity monitoring
 
-To provide [File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md), Microsoft Defender for Endpoint collects data from machines according to collection rules. When the current state of your system files is compared with the state during the previous scan, FIM notifies you about suspicious modifications.
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
 
-Using FIM you can:
+After you enable Defender for Servers Plan 2, follow the instructions in this article to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
-- Monitor changes made to critical files and Windows registries from a predefined list in real-time.
-- Access and analyze the audited changes in a designated Workspace.
-- Take advantage of the 500-MB benefit included in the Defender for Servers Plan 2.
-- Maintain compliance: FIM offers built-in support for relevant security regulatory compliance standards, such as PCI-DSS, CIS, NIST, and others
+> [!NOTE]
+>
+> - If you are using a previous version of file integrity monitoring that used the Log Analytics agent (also known as the Microsoft Monitoring agent(MMA)), or the Azure Monitor agent (AMA) you can [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md).
+> - From June 2025 onwards, file integrity monitoring requires a minimum version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
+>   - Windows: 10.8760 or later.
+>   - Linux: 30.124082 or later.
 
-FIM alerts you to any potentially suspicious activities. These activities include:
-
-- The creation or deletion of files and registry keys
-- Modifications to files, such as changes in the file's size, name, location, or the hash of its content
-- Alterations to the registry, including changes in its size, type, and content
-- Details about the change, including the source of the change. These include account details, which indicate who made the changes, and information about the initiating process.
-
-For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#which-files-should-i-monitor).
-
-## Availability
-
-|Aspect|Details|
-|----|:----|
-|Release state:|Preview|
-|Pricing:|Requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features)|
-|Required roles and permissions:|**Workspace owner** or **Security admin** can enable and disable FIM. For more information, see [Azure Roles for Log Analytics](/services-hub/health/azure-roles#azure-roles).<br />**Reader** can view results.|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br />:::image type="icon" source="./media/icons/yes-icon.png"::: [Azure Arc](/azure/azure-arc/servers/overview) enabled devices.<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected AWS accounts<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected GCP accounts|
 
 ## Prerequisites
 
-To track changes to your files and registries on machines with Defender for Endpoint, you need to:
+- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) should be enabled.
+- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent should be installed on machines you want to monitor.
+- You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
 
-- Enable [Defender for Servers Plan 2](defender-for-servers-introduction.md).
 
-- Enable [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) on machines you want to monitor
+## Verify Defender for Endpoint client version
 
-## Enable File Integrity Monitoring
+1. For machines running Windows Server 2019 or later, the Defender for Endpoint agent is updated as part of continuous operating system updates. Make sure Windows machines have the latest update installed. Learn more about using the [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+1. For machines running Windows Servers 2016 and Windows Server 2012 R2, [update machines manually to the latest agent version](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac). You can install [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB 5005292 is periodically updated with the latest agent version.
+1. For Linux machines, the Defender for Endpoint agent is automatically updated if autoprovisioning is turned on for the machines in Defender for Cloud. After the MDE.Linux extension is installed on a Linux machine, it attempts to update the agent version each time the VM reboots. You can also [update the agent version manually](/defender-endpoint/linux-updates).
 
-### Enable in the Azure portal
-
-To enable FIM in the Azure portal, follow these steps:
+## Enable file integrity monitoring
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -63,28 +49,23 @@ To enable FIM in the Azure portal, follow these steps:
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/defender-servers-file-integrity-monitoring.png" alt-text="Screenshot of how to enable File Integrity Monitoring." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/defender-servers-file-integrity-monitoring.png":::
 
-1. The **FIM configuration** pane opens. In the **Workspace selection** dropdown, select the workspace where you want to store the FIM data. If you want to create a new workspace, select **Create new**.
+1. The **FIM configuration** pane opens. In the **Workspace selection** dropdown, select the workspace where you want to store the file integrity monitoring data. If you want to create a new workspace, select **Create new**.
 
-   :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the FIM configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
-
-    > [!IMPORTANT]
-    > Events collected for FIM powered by Defender for Endpoint are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. For more information, see [What data types are included in the daily allowance?](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-).
+   :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the file integrity monitoring configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
 1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
 
-   :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png" alt-text="Screenshot of the FIM configuration tabs." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png":::
+   :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png" alt-text="Screenshot of the file integrity monitoring configuration tabs." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png":::
 
 1. Select **Continue**.
 
 1. Select **Save**.
 
-## Disable File Integrity Monitoring
+## Disable file integrity monitoring
 
-After FIM is disabled, no new events are collected. However, the data collected before the disabling the feature remain in the workspace, according to the workspace's retention policy. For more information, see [Manage data retention in a Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure).
+If you disable file integrity monitoring, no new events are collected. However, the data collected before you disabled the feature remains in the Log Analytics workspace, in accordance with the workspace retention policy.
 
-### Disable in the Azure portal
-
-To disable FIM in the Azure portal, follow these steps:
+Disable as follows:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Search for and select **Microsoft Defender for Cloud**.
@@ -103,62 +84,7 @@ To disable FIM in the Azure portal, follow these steps:
 
 1. Select **Save**.
 
-## Monitor entities and files
+## Next steps
 
-To monitor entities and files, follow these steps:
-
-> [!NOTE]
-> If you haven't enabled FIM yet, you'll see a message that says **File Integrity Monitoring is not enabled**. To enable FIM, select **Onboard subscriptions** and then follow the directions in [Enable File Integrity Monitoring](#enable-file-integrity-monitoring).
-
-1. From Defender for Cloud's sidebar, go to **Workload protections** > **File integrity monitoring**.
-
-    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/workload-protections-file-integrity-monitoring.png" alt-text="Screenshot of how to access File Integrity Monitoring in Workload protections." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/workload-protections-file-integrity-monitoring.png":::
-
-1. A window opens with all resources that contain tracked changed files and registries.
-
-    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-results.png" alt-text="Screenshot of the File Integrity Monitoring results." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-results.png":::
-
-1. If you select a resource, a window opens with a query showing the changes made to the tracked files and registries on that resource.
-
-    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png" alt-text="Screenshot of the File Integrity Monitoring query." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png":::
-
-1. If you select the subscription of the resource (under the column **Subscription name**), a query opens with all the tracked files and registries in that subscription.
-
-> [!NOTE]
-> If you previously used [File Integrity Monitoring over MMA](file-integrity-monitoring-enable-log-analytics.md), you can return to that method by selecting **Change to previous experience**. This will be available until the FIM over MMA feature is deprecated. For information on the deprecation plan, see [Prepare for retirement of the Log Analytics agent](prepare-deprecation-log-analytics-mma-agent.md).
-
-## Retrieve and analyze FIM data  
-
-The file integrity monitoring data resides within the Azure Log Analytics workspace in the `MDCFileIntegrityMonitoringEvents` table. The table appears in the Log Analytics Workspace under the `LogManagment` table.
-
-1. Set a time range to retrieve a summary of changes by resource. In the following example, we retrieve all changes in the last 14 days in the categories of registry and files:  
-
-    ```kusto  
-    MDCFileIntegrityMonitoringEvents  
-    | where TimeGenerated > ago(14d)
-    | where MonitoredEntityType in ('Registry', 'File')
-    | summarize count() by Computer, MonitoredEntityType
-    ```
-
-1. To view detailed information about registry changes:  
-  
-    1. Remove `Files` from the `where` clause.  
-
-    1. Replace the summarization line with an ordering clause:  
-
-    ```kusto  
-    MDCFileIntegrityMonitoringEvents 
-    | where TimeGenerated > ago(14d)
-    | where MonitoredEntityType == 'Registry'
-    | order by Computer, RegistryKey
-    ```
-
-1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
-
-## Related content
-
-Learn more about Defender for Cloud in:
-
-- [Setting security policies](tutorial-security-policy.md) - Learn how to configure security policies for your Azure subscriptions and resource groups.
-- [Managing security recommendations](review-security-recommendations.md) - Learn how recommendations help you protect your Azure resources.
-- [Azure Security blog](https://azure.microsoft.com/blog/topics/security/) - Get the latest Azure security news and information.
+-  Events collected for file integrity monitoring are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
+- [Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.

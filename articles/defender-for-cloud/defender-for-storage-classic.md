@@ -10,7 +10,7 @@ ms.topic: overview
 # Overview of Microsoft Defender for Storage (classic)
 
 > [!NOTE]
-> Upgrade to the new [Microsoft Defender for Storage plan](defender-for-storage-introduction.md). It includes new features like Malware Scanning and Sensitive Data Threat Detection. This plan also provides a more predictable pricing structure for better control over coverage and costs. Additionally, all new Defender for Storage features will only be released in the new plan.
+> Upgrade to the new [Microsoft Defender for Storage plan](defender-for-storage-introduction.md). It includes new features like **Malware scanning** and **Sensitive data threat detection**. This plan also provides a more predictable pricing structure for better control over coverage and costs. Additionally, all new Defender for Storage features will only be released in the new plan.
 Migrating to the new plan is a simple process, read here about [how to migrate from the classic plan](defender-for-storage-classic-migrate.md).
 > If you're using Defender for Storage (classic) with per-transaction or per-storage account pricing, you'll need to migrate to the new Defender for Storage (classic) plan to access these features and pricing. Learn about the benefits of [migrating to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
 
@@ -80,7 +80,7 @@ Alerts include details of the incident that triggered them, and recommendations 
 ## Limitations of hash reputation analysis
 
 > [!TIP]
-> If you're looking to have your uploaded blobs scanned for malware in near real-time, we recommend that you upgrade to the new Defender for Storage plan. Learn more about [Malware Scanning](defender-for-storage-malware-scan.md).
+> If you're looking to have your uploaded blobs scanned for malware in near real-time, we recommend that you upgrade to the new Defender for Storage plan. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
 
 - **Hash reputation isn't deep file inspection** - Microsoft Defender for Storage (classic) uses hash reputation analysis supported by [Microsoft Threat Intelligence](https://go.microsoft.com/fwlink/?linkid=2128684) to determine whether an uploaded file is suspicious. The threat protection tools don’t scan the uploaded files; rather they analyze the data generated from the Blobs Storage and Files services. Defender for Storage (classic) then compares the hashes of newly uploaded files with hashes of known viruses, trojans, spyware, and ransomware.
 
