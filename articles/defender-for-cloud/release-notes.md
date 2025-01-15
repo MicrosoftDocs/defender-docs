@@ -38,20 +38,35 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 January 16
 
 The [GCP connector now has additional permissions](permissions.md) to support the GCP AI Platform (Vertex AI):
+
 aiplatform.batchPredictionJobs.list
+
 aiplatform.customJobs.list
+
 aiplatform.datasets.list
+
 aiplatform.endpoints.getIamPolicy
+
 aiplatform.endpoints.list
+
 aiplatform.indexEndpoints.list
+
 aiplatform.indexes.list
+
 aiplatform.models.list
+
 aiplatform.models.get
+
 aiplatform.pipelineJobs.list
+
 aiplatform.schedules.list
+
 aiplatform.tuningJobs.list
+
 discoveryengine.dataStores.list
+
 discoveryengine.documents.list
+
 notebooks.instances.list
 
 ## December 2024
