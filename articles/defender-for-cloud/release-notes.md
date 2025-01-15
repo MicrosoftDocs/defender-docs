@@ -27,6 +27,33 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## January 2025
+
+|Date | Category | Update|
+|--|--|--|
+| January 16 | GA | [Permissions added to GCP connector to support AI platforms](#permissions-added-to-gcp-connector-to-support-ai-platforms) |
+
+### Permissions added to GCP connector to support AI platforms
+
+January 16
+
+The [GCP connector now has additional permissions](permissions.md) to support the GCP AI Platform (Vertex AI):
+aiplatform.batchPredictionJobs.list
+aiplatform.customJobs.list
+aiplatform.datasets.list
+aiplatform.endpoints.getIamPolicy
+aiplatform.endpoints.list
+aiplatform.indexEndpoints.list
+aiplatform.indexes.list
+aiplatform.models.list
+aiplatform.models.get
+aiplatform.pipelineJobs.list
+aiplatform.schedules.list
+aiplatform.tuningJobs.list
+discoveryengine.dataStores.list
+discoveryengine.documents.list
+notebooks.instances.list
+
 ## December 2024
 
 |Date | Category | Update|
