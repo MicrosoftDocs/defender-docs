@@ -46,7 +46,7 @@ Data collected by Defender for Endpoint is stored in the geo-location of the ten
 - **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
 - **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
-##  Move between subscriptions
+## Health status for Microsoft Defender for Endpoint
 
 Microsoft Defender for Servers provides visibility to the Microsoft Defender for Endpoint agents installed on your VMs.
 
