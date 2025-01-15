@@ -150,7 +150,7 @@ When you restore from a recovery point, you can restore the whole VM or specific
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines (preview)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439) and [Endpoint protection health issues should be resolved on your machines (preview).
+- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: Low
@@ -166,7 +166,7 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines (preview)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439) and [Endpoint protection health issues should be resolved on your machines (preview).
+- These new agentless endpoint recommendations replace existing recommendations [Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -264,7 +264,7 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 ### Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost
 
 **Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys; temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources. Use Azure Disk Encryption or EncryptionAtHost to encrypt all this data. Visit [Overview of managed disk encryption options](/azure/virtual-machines/disk-encryption-overview#comparison) to compare encryption offerings. This policy requires two prerequisites to be deployed to the policy assignment scope. For details, visit [Understanding Azure Machine Configuration](/azure/governance/machine-configuration/overview).
-(Related policy: [[Preview]: Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2fca88aadc-6e2b-416c-9de2-5a0f01d1693f)).
+(Related policy: [Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2fca88aadc-6e2b-416c-9de2-5a0f01d1693f)).
 
 Replaces the older recommendation *Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources*. The recommendation enables you to audit VM encryption compliance.
 
@@ -542,7 +542,7 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 ### Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost
 
 **Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys; temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources. Use Azure Disk Encryption or EncryptionAtHost to encrypt all this data. Visit [Overview of managed disk encryption options](/azure/virtual-machines/disk-encryption-overview#comparison) to compare encryption offerings. This policy requires two prerequisites to be deployed to the policy assignment scope. For details, visit [Understanding Azure Machine Configuration](/azure/governance/machine-configuration/overview).
-(Related policy: [[Preview]: Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f3dc5edcd-002d-444c-b216-e123bbfa37c0)).
+(Related policy: [Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f3dc5edcd-002d-444c-b216-e123bbfa37c0)).
 
 Replaces the older recommendation Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources. The recommendation enables you to audit VM encryption compliance.
 
@@ -662,7 +662,7 @@ Authentication credentials `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` shoul
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines (preview)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439) and [Endpoint protection health issues should be resolved on your machines (preview).
+- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -674,7 +674,7 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines (preview)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439) and [Endpoint protection health issues should be resolved on your machines (preview).
+- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -736,7 +736,7 @@ To learn more about the supported runtimes that this control checks for the supp
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines (preview)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439) and [Endpoint protection health issues should be resolved on your machines (preview).
+- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -748,7 +748,7 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines (preview)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439) and [Endpoint protection health issues should be resolved on your machines (preview).
+- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
