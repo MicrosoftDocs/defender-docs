@@ -3,26 +3,23 @@ title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
 keywords: incidents, alerts, investigate, analyze, response, correlation, attack, machines, devices, users, identities, identity, mailbox, email, 365, microsoft, m365
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection:
-  - m365-security
-  - m365initiative-m365-defender
-  - tier1
+- m365-security
+- m365initiative-m365-defender
+- tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - met150
-ms.date: 07/18/2024
+- MOE150
+- met150
+ms.date: 01/16/2025
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -117,7 +114,6 @@ Throughout an alert page, you can select the ellipses (**...**) beside any entit
 Microsoft Defender XDR alerts come from solutions like Microsoft Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You might notice alerts with prepended characters in the alert. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
 
 > [!NOTE]
->
 > - The prepended GUIDs are specific only to unified experiences such as unified alerts queue, unified alerts page, unified investigation, and unified incident.
 > - The prepended character does not change the GUID of the alert. The only change to the GUID is the prepended component.
 
@@ -188,12 +184,11 @@ The **Manage alert** pane allows you to view or specify:
 - A comment on the alert.
 
 > [!NOTE]
-> Around August 29th, 2022, previously supported alert determination values ('Apt' and 'SecurityPersonnel') will be deprecated and no longer available via the API.
-
-> [!NOTE]
-> One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is incrementally being rolled out and is currently in preview.
+> - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
 >
-> Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification will not reflect the updated tag name.
+> - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
+>
+> - Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification don't reflect the updated tag name.
 
 To manage a *set of alerts similar to a specific alert*, select **View similar alerts** in the **INSIGHT** box in the summary details section of the alert page.
 
