@@ -24,7 +24,7 @@ Security Exposure Management is aimed at:
 - Security and compliance admins responsible for maintaining and improving organizational security posture.
 - Security operations (SecOps) and partner teams who need visibility into data and workloads across organizational silos to effectively detect, investigate, and mitigate security threats.
 - Security architects responsible for solving systematic issues in overall security posture.
-- Chief Security Information Officers (CISOs) and security decision makers who need insights into organizational attack surfaces and exposure in order to understand security risk within organizational risk frameworks.
+- Chief Information Security Officers (CISOs) and security decision makers who need insights into organizational attack surfaces and exposure in order to understand security risk within organizational risk frameworks.
 
 ## What can I do with Security Exposure Management?
 

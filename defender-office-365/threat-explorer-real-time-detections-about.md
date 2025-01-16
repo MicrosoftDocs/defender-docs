@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 10/07/2024
+ms.date: 01/15/2025
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -181,6 +181,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**: The message was retroactively identified as good.</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|
 |Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|
+|Threat classification|Select one or more values: <ul><li>**Business inteligence**</li><li>**Contact establishment**</li><li>**Gift card**</li><li>**Invoice**</li><li>**Payroll**</li><li><**PII gathering**/li><li>**Task**</li></ul> For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|
 |Latest delivery location¹|Same values as **Original delivery location**</li></ul>|
 |Phish confidence level|Select one or more values: <ul><li>**High**</li><li>**Normal**</li></ul>|
@@ -279,6 +280,12 @@ The **Detection technology** pivot organizes the chart by the feature that ident
 
 Hovering over a data point in the chart shows the count for each detection technology.
 
+#### Threat classification chart pivot in the All email view in Threat Explorer
+
+The **Threat classification** pivot organizes the chart by classified threats. For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
+
+Hovering over a data point in the chart shows the count for each classification.
+
 #### Full URL chart pivot in the All email view in Threat Explorer
 
 The **Full URL** pivot organizes the chart by the full URLs in messages for the specified date/time range and property filters.
@@ -340,6 +347,7 @@ The **Email** view shows a details table. You can sort the entries by clicking o
 - **Data loss prevention rule**
 - **Threat type**<sup>\*</sup>
 - **Detection technology**
+- **Threat classification**
 - **Attachment Count**
 - **URL Count**
 - **Email size**
@@ -681,6 +689,7 @@ The chart pivots that are available in the **Malware** view in Threat Explorer a
 |**Sender domain**|✔||
 |**Sender IP**|✔||
 |**Delivery action**|✔|✔|
+|**Threat classification**|✔|✔|
 |**Detection technology**|✔|✔|
 
 The available chart pivots are described in the following subsections.
@@ -720,6 +729,12 @@ The **Delivery action** pivot organizes the chart by what happened to messages t
 :::image type="content" source="media/te-rtd-malware-view-chart-delivery-action-pivot.png" alt-text="Screenshot of the chart in the Malware view in Threat Explorer using the Delivery action pivot." lightbox="media/te-rtd-malware-view-chart-delivery-action-pivot.png":::
 
 Hovering over a data point in the chart shows the count for each delivery action.
+
+#### Threat classification chart pivot in the Malware view in Threat Explorer and Real-time detections
+
+The **Threat classification** pivot organizes the chart by classified threats. For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
+
+Hovering over a data point in the chart shows the count for each classification.
 
 #### Detection technology chart pivot in the Malware view in Threat Explorer and Real-time detections
 
@@ -778,6 +793,7 @@ The following table shows the columns that are available in Threat Explorer and 
 |**Data loss prevention rule**|✔|✔|
 |**Threat type**<sup>\*</sup>|✔|✔|
 |**Detection technology**|✔|✔|
+|**Threat classification**|✔|✔|
 |**Attachment Count**|✔|✔|
 |**URL Count**|✔|✔|
 |**Email size**|✔|✔|
@@ -895,6 +911,7 @@ The filterable properties that are available in the **Sender address** box in th
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**</li></ul>|✔|✔|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|✔|✔|
 |Detection technology|Select one or more values: <ul><li>**Advanced filter**</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**</li><li>**File detonation reputation**</li><li>**File reputation**</li><li>**Fingerprint matching**</li><li>**General filter**</li><li>**Impersonation brand**</li><li>**Impersonation domain**</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**</li><li>**Mixed analysis detection**</li><li>**spoof DMARC**</li><li>**Spoof external domain**</li><li>**Spoof intra-org**</li><li>**URL detonation**</li><li>**URL detonation reputation**</li><li>**URL malicious reputation**</li></ul>|✔|✔|
+|Threat classification|Select one or more values: <ul><li>**Business inteligence**</li><li>**Contact establishment**</li><li>**Gift card**</li><li>**Invoice**</li><li>**Payroll**</li><li><**PII gathering**/li><li>**Task**</li></ul> For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).|✔|✔|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|✔|✔|
 |Latest delivery location|Same values as **Original delivery location**</li></ul>|✔|✔|
 |Phish confidence level|Select one or more values: <ul><li>**High**</li><li>**Normal**</li></ul>|✔||
@@ -947,6 +964,7 @@ The chart pivots that are available in the **Phish** view in Threat Explorer and
 |**Sender IP**|✔||
 |**Delivery action**|✔|✔|
 |**Detection technology**|✔|✔|
+|**Threat classification**|✔|✔|
 |**Full URL**|✔||
 |**URL domain**|✔|✔|
 |**URL domain and path**|✔||
@@ -988,6 +1006,12 @@ The **Detection technology** pivot organizes the chart by the feature that ident
 :::image type="content" source="media/te-rtd-phish-view-chart-detection-technology-pivot.png" alt-text="Screenshot of the chart in the Phish view in Threat Explorer using the Detection technology pivot." lightbox="media/te-rtd-phish-view-chart-detection-technology-pivot.png":::
 
 Hovering over a data point in the chart shows the count for each detection technology.
+
+#### Threat classification chart pivot in the Phish view in Threat Explorer and Real-time detections
+
+The **Threat classification** pivot organizes the chart by classified threats. For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
+
+Hovering over a data point in the chart shows the count for each classification.
 
 #### Full URL chart pivot in the Phish view in Threat Explorer
 
@@ -1065,6 +1089,7 @@ The following table shows the columns that are available in Threat Explorer and 
 |**Data loss prevention rule**|✔||
 |**Threat type**<sup>\*</sup>|✔|✔|
 |**Detection technology**|✔|✔|
+|**Threat classification**|✔|✔|
 |**Attachment Count**|✔|✔|
 |**URL Count**|✔|✔|
 |**Email size**|✔|✔|

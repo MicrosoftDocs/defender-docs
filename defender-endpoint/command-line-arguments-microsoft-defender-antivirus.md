@@ -8,7 +8,7 @@ ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: deniseb
-ms.date: 06/06/2023
+ms.date: 01/16/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -32,7 +32,7 @@ search.appverid: met150
 You can perform various functions in Microsoft Defender Antivirus using the dedicated command-line tool **mpcmdrun.exe**. This utility is useful when you want to automate Microsoft Defender Antivirus tasks. You can find the utility in `%ProgramFiles%\Windows Defender\MpCmdRun.exe`. Run it from a command prompt.
 
 > [!TIP]
-> You might need to open an administrator-level version of the command prompt. When you search for **Command Prompt** on the Start menu, choose **Run as administrator**. If you're running an updated Microsoft Defender antimalware platform version, run `MpCmdRun` from the following location: `C:\ProgramData\Microsoft\Windows Defender\Platform\<antimalware platform version>`. For more information about the antimalware platform, see [Microsoft Defender Antivirus updates and baselines](microsoft-defender-antivirus-updates.md).
+> You might need to open an administrator-level version of the command prompt. When you search for **Command Prompt** on the **Start** menu, choose **Run as administrator**. If you're running an updated Microsoft Defender antimalware platform version, run `MpCmdRun` from the following location: `C:\ProgramData\Microsoft\Windows Defender\Platform\<antimalware platform version>`. For more information about the antimalware platform, see [Microsoft Defender Antivirus updates and baselines](microsoft-defender-antivirus-updates.md).
 
 The MpCmdRun utility uses the following syntax:
 
@@ -52,24 +52,37 @@ In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 
 |Command|Description|
 |---|---|
-|`-?` **or** `-h`|Displays all available options for the MpCmdRun tool|
+|`-?` **or** `-h`|Displays all available options for the MpCmdRun tool.|
 |`-Scan [-ScanType [<value>]] [-File <path> [-DisableRemediation] [-BootSectorScan] [-CpuThrottling]] [-Timeout <days>] [-Cancel]`|Scans for malicious software. Values for **ScanType** are:<p>**0** Default, according to your configuration<p>**1** Quick scan<p>**2** Full scan<p>**3** File and directory custom scan.<p>CpuThrottling runs according to policy configurations.|
-|`-Trace [-Grouping #] [-Level #]`|Starts diagnostic tracing|
+|`-Trace [-Grouping #] [-Level #]`|Starts diagnostic tracing.|
 |`-CaptureNetworkTrace -Path <path>`|Captures all the network input into the Network Protection service and saves it to a file at `<path>`. <br/>Supply an empty path to stop tracing.|
 |`-GetFiles [-SupportLogLocation <path>]`|Collects support information. See [collecting diagnostic data](collect-diagnostic-data.md).|
 |`-GetFilesDiagTrack`|Same as `-GetFiles`, but outputs to temporary DiagTrack folder.|
 |`-RemoveDefinitions [-All]`|Restores the installed security intelligence to a previous backup copy or to the original default set.|
 |`-RemoveDefinitions [-DynamicSignatures]`|Removes only the dynamically downloaded security intelligence.|
 |`-RemoveDefinitions [-Engine]`|Restores the previous installed engine.|
-|`-SignatureUpdate [-UNC \|-MMPC]`|Checks for new security intelligence updates.|
-|`-Restore  [-ListAll \|[[-Name <name>] [-All] \|[-FilePath <filePath>]] [-Path <path>]]`|Restores or lists quarantined item(s).|
+|`-SignatureUpdate [-UNC |-MMPC]`|Checks for new security intelligence updates.|
+|`-Restore  [-ListAll |[[-Name <name>] [-All] |[-FilePath <filePath>]] [-Path <path>]]`|Restores or lists quarantined items.|
 |`-AddDynamicSignature [-Path]`|Loads dynamic security intelligence.|
 |`-ListAllDynamicSignatures`|Lists the loaded dynamic security intelligence.|
 |`-RemoveDynamicSignature [-SignatureSetID]`|Removes dynamic security intelligence.|
 |`-CheckExclusion -path <path>`|Checks whether a path is excluded.|
+|`-TDT [-on|-off|-default]`|Disable or Enable TDT feature or sets it to default. If no option is specified, it retrieves the current status.|
+|`-OSCA`|Prints OS Copy Acceleration feature status.|
+|`-DeviceControl -TestPolicyXml  <FilePath> [-Rules | -Groups]`|Validate xml policy groups and rules.|
+|`-TrustCheck -File <FilePath>`|Checks trust status of a file.|
 |`-ValidateMapsConnection`|Verifies that your network can communicate with the Microsoft Defender Antivirus cloud service. This command will only work on Windows 10, version 1703 or higher.|
+|`-ListCustomASR`|List the custom Azure Site Recovery rules present on this device.|
+|`-DisplayECSConnection`|Displays URLs that Defender Core service uses to establish connection to ECS.|
+|`-HeapSnapshotConfig <-Enable|-Disable> [-Pid <ProcessID>]`|Enable or Disable heap snapshot (tracing) configuration for process. Replace `<ProcessID>` with the actual process ID.|
 |`-ResetPlatform`| Reset platform binaries back to `%ProgramFiles%\Windows Defender`.|
 |`-RevertPlatform`| Revert platform binaries back to the previously installed version of the Defender platform.|
+
+> [!NOTE]
+> For the `Scan` command, the following are the default time out values for Quick or Full scans where the scan will stop at that time by default.
+> - Scheduled Full Scans or MpCmdRun -scan: Seven day limit
+> - Scheduled Quick Scans or MpCmdRun -scan: One day limit
+
 
 ## Common errors in running commands via mpcmdrun.exe
 
@@ -77,7 +90,7 @@ The following table lists common errors that can occur while using the MpCmdRun 
 
 |Error message|Possible reason|
 |---|---|
-|**ValidateMapsConnection failed (800106BA)** or **0x800106BA**|The Microsoft Defender Antivirus service is disabled. Enable the service and try again. If you need help re-enabling Microsoft Defender Antivirus, see [Reinstall/enable Microsoft Defender Antivirus on your endpoints](switch-to-mde-phase-2.md#step-1-reinstallenable-microsoft-defender-antivirus-on-your-endpoints).<p> Note that in Windows 10 1909 or older, and Windows Server 2019 or older, the service was formerly called *Windows Defender Antivirus*.|
+|**ValidateMapsConnection failed (800106BA)** or **0x800106BA**|The Microsoft Defender Antivirus service is disabled. Enable the service and try again. If you need help re-enabling Microsoft Defender Antivirus, see [Reinstall/enable Microsoft Defender Antivirus on your endpoints](switch-to-mde-phase-2.md#step-1-reinstallenable-microsoft-defender-antivirus-on-your-endpoints).<p> In Windows 10 1909 or older, and Windows Server 2019 or older, the service was formerly called *Windows Defender Antivirus*.|
 |**0x80070667**|You're running the `-ValidateMapsConnection` command from a computer that is Windows 10 version 1607 or older, or Windows Server 2016 or older. Run the command from a machine that is Windows 10 version 1703 or newer, or Windows Server 2019 or newer.|
 |**MpCmdRun is not recognized as an internal or external command, operable program, or batch file.**|The tool must be run from either `%ProgramFiles%\Windows Defender` or `C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2012.4-0` (where `2012.4-0` might differ since platform updates are monthly except for March)|
 |**ValidateMapsConnection failed to establish a connection to MAPS (hr=80070005 httpcode=450)**|The command was attempted using insufficient privileges. Use the command prompt (cmd.exe) as an administrator.|
@@ -92,7 +105,7 @@ The following table lists common errors that can occur while using the MpCmdRun 
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Configure Microsoft Defender Antivirus features](configure-microsoft-defender-antivirus-features.md)
 - [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
-- [Reference topics for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
+- [Reference articles for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)

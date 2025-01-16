@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 06/27/2024
+ms.date: 11/17/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -30,6 +30,7 @@ search.appverid: met150
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Security Exposure Management](/security-exposure-management/)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 In Microsoft Defender XDR Unified role-based access control (RBAC), you can edit and delete custom roles or roles that were imported from Defender for Endpoint, Defender for Identity, or Defender for Office 365.
 
@@ -39,7 +40,7 @@ The following steps guide you on how to edit roles in Microsoft Defender XDR Uni
 
 > [!IMPORTANT]
 > You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as global administrator or security administrator.
 
@@ -49,7 +50,7 @@ The following steps guide you on how to edit roles in Microsoft Defender XDR Uni
 
 4. Select the role you want to edit. You can only edit one role at a time.
 
-5. Once selected, this opens a flyout pane where you can edit the role:
+5. Once selected, a flyout pane opens where you can edit the role:
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-edit-roles.png" alt-text="Screenshot of the edit roles flyout page" lightbox="/defender/media/defender/m365-defender-rbac-edit-roles.png":::
 
@@ -60,7 +61,7 @@ The following steps guide you on how to edit roles in Microsoft Defender XDR Uni
 
 To delete roles in Microsoft Defender XDR Unified RBAC, select the role or roles you want to delete and select **Delete roles**.
 
-If the workload is active, by removing the role all assigned user permission will be deleted.
+If the workload is active, all assigned user permission are deleted by removing the role.
 
 > [!NOTE]
 > After deleting an imported role, the role won't be deleted from the individual product RBAC model. If needed, you can re-import it to the Microsoft Defender XDR Unified RBAC list of roles.
@@ -76,7 +77,7 @@ The Export feature enables you to export the following roles data:
 - The assigned data sources
 - The assigned users or user groups
 
-When a role has multiple assignments, each assignment will be represented as a separate row in the CSV file.
+When a role has multiple assignments, each assignment is represented as a separate row in the CSV file.
 
 The CSV also includes a snapshot of the Defender XDR Unified RBAC activation status for each workload available on the tenant.
 
@@ -97,7 +98,7 @@ The following steps guide you on how to export roles in Microsoft Defender XDR U
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-export-roles.png" alt-text="Screenshot of the export roles page" lightbox="/defender/media/defender/m365-defender-rbac-export-roles.png":::
 
-A CSV file containing all the roles data will be generated and downloaded to the local machine.
+A CSV file containing all the roles data is generated and downloaded to the local computer.
 
 ## Next steps
 

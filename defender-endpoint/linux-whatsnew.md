@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 01/09/2025
+ms.date: 01/13/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -42,6 +42,35 @@ This article is updated frequently to let you know what's new in the latest rele
 > If you have any concerns or need assistance during this transition, contact support.
 
 ## Releases for Defender for Endpoint on Linux
+
+### Jan-2025 Build: 101.24112.0001 | Release version: 30.124112.0001.0
+
+| Build:             | **101.24112.0001**    |
+|--------------------|-----------------------|
+| Released:          | **January 13, 2025** |
+| Published:         | **January 13, 2025** |
+| Release version:   | **30.124112.0001.0** |
+| Engine version:    | **1.1.24090.13**       |
+| Signature version: | **1.421.226.0**      |
+
+#### What's new
+
+- Upgraded the Bond version to 13.0.1 to address security vulnerabilities in versions 12 or lower.
+
+- Mdatp package no longer has a dependency on SELinux packages.
+  
+- User can now query the status of supplementary event provider eBPF using the threat hunting query in DeviceTvmInfoGathering. To learn more about this query check: [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf). The result of this query can return the following two values as eBPF status:
+  - Enabled: When eBPF is enabled as working as expected.
+  - Disabled: When eBPF is disabled due to one of the following reasons:
+    - When MDE is using auditD as a supplementary sensor
+    - When eBPF is not present and we fallback to Netlink as supplementary event provider
+    - There is no supplementary sensor present.
+
+- Starting from 2411, the MDATP package release to Production on packages.microsoft.com will follow a gradual rollout mechanism which spans over a week. The other release rings, insiderFast and insiderSlow, are unaffected by this change.
+
+- Stability and performance improvements.
+
+- Critical bugs fixes around definition update flow.
 
 ### Jan-2025 Build: 101.24102.0000 | Release version: 30.124102.0000.0
 

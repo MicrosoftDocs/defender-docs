@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 01/15/2025
 ---
 
 # Manage Microsoft Defender for Endpoint alerts
@@ -38,6 +38,7 @@ Selecting an alert in either of those places brings up the **Alert management pa
 :::image type="content" source="media/atp-alerts-selected.png" alt-text="The Alert management pane and the Alerts queue" lightbox="media/atp-alerts-selected.png":::
 
 Watch this video to learn how to use the new Microsoft Defender for Endpoint alert page.
+
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=8a9c08a6-558c-47a8-a336-d748acbdaa80]
 
 ## Link to another incident
@@ -98,6 +99,9 @@ Create custom rules to control when alerts are suppressed, or resolved. You can 
 5. Enter a rule name and a comment.
 
 6. Click **Save**.
+
+> [!NOTE]
+> Alert suppression is not compatible for custom detections. Make sure to fine-tune your custom detections to avoid [false positives](/defender-endpoint/defender-endpoint-false-positives-negatives).
 
 #### View the list of suppression rules
 

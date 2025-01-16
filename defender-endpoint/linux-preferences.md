@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 10/14/2024
+ms.date: 01/13/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -79,7 +79,10 @@ Specifies the enforcement preference of antivirus engine. There are three values
 > Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
-#### Enable/disable behavior monitoring 
+#### Enable/disable behavior monitoring [only if RTP is enabled]
+
+> [!IMPORTANT]
+> This feature only works when the enforcement level is set to `real-time`.
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
 
@@ -91,9 +94,12 @@ Determines whether behavior monitoring and blocking capability is enabled on the
 
 > [!NOTE]
 > Available in Defender for Endpoint version `101.45.00` or later.
-> This feature is applicable only when real-time protection is enabled.
+
 
 #### Run a scan after definitions are updated
+
+> [!IMPORTANT]
+> This feature only works when the enforcement level is set to `real-time`.
 
 Specifies whether to start a process scan after new security intelligence updates are downloaded on the device. Enabling this setting triggers an antivirus scan on the running processes of the device.
 
@@ -105,7 +111,6 @@ Specifies whether to start a process scan after new security intelligence update
 
 > [!NOTE]
 > Available in Defender for Endpoint version `101.45.00` or later.
-> This feature only works when the enforcement level is set to `real-time`.
 
 #### Scan archives (on-demand antivirus scans only)
 
@@ -266,7 +271,7 @@ To remove both NFS and Fuse from unmonitored list of filesystems, do the followi
 > [!NOTE]
 > Here's the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
 >
-> If any monitored filesystem needs to be added to the list of unmonitored filesystems,then it needs to be evaluated and enabled by Microsoft via cloud config. Following which customers can update managed_mdatp.json to unmonitor that filesystem.
+> If any monitored filesystem needs to be added to the list of unmonitored filesystems, then it needs to be evaluated and enabled by Microsoft via cloud config. Following which customers can update managed_mdatp.json to unmonitor that filesystem.
 
 
 
@@ -380,7 +385,7 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 
 ### Exclusion setting preferences
 
-**Exlusion setting preferences are currently in preview**.
+**Exclusion setting preferences are currently in preview**.
 
 > [!NOTE] 
 > Global exclusions are currently in public preview, and are available in Defender for Endpoint beginning with version `101.23092.0012` or later in the Insiders Slow and Production rings.
@@ -429,7 +434,7 @@ Specifies the type of content excluded from the scan.
 
 ##### Scopes of exclusion (optional)
 
-Specifies the set of exlusion scopes of content excluded. Currently supported scopes are `epp` and `global`.
+Specifies the set of exclusion scopes of content excluded. Currently supported scopes are `epp` and `global`.
 
 If nothing is specified in for an exclusion under *exclusionSettings* in managed configuration, then `global` is considered as scope.
 
@@ -496,8 +501,8 @@ Specifies a process for which all file activity is excluded from scanning. The p
 
 The following settings can be configured to enable certain advanced scanning features. 
 
-> [!NOTE]
-> Enabling these features might impact device performance. As such, it is recommended to keep the defaults.
+> [!IMPORTANT]
+> Enabling these features might impact device performance. As such, it is recommended to keep the defaults unless recommended otherwise by Microsoft Support.
 
 ##### Configure scanning of file modify permissions events
 
@@ -632,8 +637,8 @@ Depending on the enforcement level, the automatic security intelligence updates 
 
 The following settings can be configured to enable certain advanced features.
 
->[!NOTE]
->Enabling these features might impact device performance. It is recommended to keep the defaults.
+>[!IMPORTANT]
+>Enabling these features might impact device performance. It is recommended to keep the defaults unless recommended otherwise by Microsoft Support.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -681,7 +686,7 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 
 ##### Configure monitoring of file modify ownership events
 
-Determines whether file modify ownership events (chown) are monitored.
+Determines whether file modify ownership events (`chown`) are monitored.
 
 > [!NOTE]
 > When this feature is enabled, Defender for Endpoint will monitor changes to the ownership of files, but not scan these events. For more information, see [Advanced scanning features](linux-preferences.md#configure-scanning-of-file-modify-ownership-events) section for more details.
@@ -764,6 +769,42 @@ Determines whether module load events are monitored using eBPF and scanned.
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
+##### Configure monitoring of open events from specific filesystems using eBPF
+
+Determines whether open events from procfs are monitored by eBPF.
+
+> [!NOTE]
+> This feature is applicable only when Behavior Monitoring is enabled.
+
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|enableOtherFsOpenEvents|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version `101.24072.0001` or later.|
+
+##### Configure source enrichment of events using eBPF
+
+Determines whether events are enriched with metadata at source in eBPF.
+
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|enableEbpfSourceEnrichment|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version `101.24072.0001` or later.|
+
+#### Enable Antivirus Engine Cache
+
+Determines whether metadata of events being scanned by the antivirus engine are cached or not.
+
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|enableAntivirusEngineCache|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version `101.24072.0001` or later.|
+
 #### Report AV Suspicious Events to EDR
 
 Determines whether suspicious events from Antivirus are reported to EDR.
@@ -777,10 +818,11 @@ Determines whether suspicious events from Antivirus are reported to EDR.
 
 ### Network protection configurations
 
-The following settings can be used to configure advanced Network Protection inspection features to control what traffic gets inspected by Network Protection.
-
 > [!NOTE]
+> This is a preview feature.
 > For these to be effective, Network Protection has to be turned on. For more information, see [Turn on network protection for Linux](network-protection-linux.md).
+
+The following settings can be used to configure advanced Network Protection inspection features to control what traffic gets inspected by Network Protection.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -1023,7 +1065,7 @@ If the JSON is well-formed, the above command outputs it back to the Terminal an
 
 ## Verifying that the mdatp_managed.json file is working as expected
 
-To verify that your /etc/opt/microsoft/mdatp/managed/mdatp_managed.json is working properly, you should see "[managed]" next to these settings:
+To verify that your `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json` is working properly, you should see "[managed]" next to these settings:
 
 - `cloud_enabled`
 - `cloud_automatic_sample_submission_consent`
