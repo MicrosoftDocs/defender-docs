@@ -78,19 +78,19 @@ When you restore from a recovery point, you can restore the whole VM or specific
 
 ### [(Preview) Azure Local machine(s) should meet Secured-core requirements](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f56c47221-b8b7-446e-9ab7-c7c9dc07f0ad)
 
-**Description**: Ensure that all Azure Local machine(s) meet the Secured-core requirements. (Related policy: Guest Configuration extension should be installed on machines - Microsoft Azure.
+**Description**: Ensure that all Azure Local machine(s) meet the Secured-core requirements. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
 
 **Severity**: Low
 
 ### [(Preview) Azure Local machine(s) should have consistently enforced application control policies](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7384fde3-11b0-4047-acbd-b3cf3cc8ce07)
 
-**Description**: At a minimum, apply the Microsoft WDAC base policy in enforced mode on all Azure Local machine(s). Applied Windows Defender Application Control (WDAC) policies must be consistent across servers in the same cluster. (Related policy: Guest Configuration extension should be installed on machines - Microsoft Azure.
+**Description**: At a minimum, apply the Microsoft WDAC base policy in enforced mode on all Azure Local machine(s). Applied Windows Defender Application Control (WDAC) policies must be consistent across servers in the same cluster. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
 
 **Severity**: High
 
 ### [(Preview) Azure Local systems should have encrypted volumes](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fae95f12a-b6fd-42e0-805c-6b94b86c9830)
 
-**Description**: Use BitLocker to encrypt the OS and data volumes on Azure Local systems. (Related policy: Guest Configuration extension should be installed on machines - Microsoft Azure.
+**Description**: Use BitLocker to encrypt the OS and data volumes on Azure Local systems. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
 
 **Severity**: High
 
@@ -150,7 +150,7 @@ When you restore from a recovery point, you can restore the whole VM or specific
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
+- These new agentless endpoint recommendations replace existing recommendations *Endpoint protection should be installed on your machines* and *Endpoint protection health issues should be resolved on your machines*.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: Low
@@ -166,7 +166,7 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations [Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
+- These new agentless endpoint recommendations replace existing recommendations *Endpoint protection should be installed on your machines* and *Endpoint protection health issues should be resolved on your machines*.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -250,7 +250,7 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 ### [(Preview) Host and VM networking should be protected on Azure Local systems](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faee306e7-80b0-46f3-814c-d3d3083ed034)
 
-**Description**: Protect data on the Azure Local host's network and on virtual machine network connections. (Related policy: Guest Configuration extension should be installed on machines - Microsoft Azure.
+**Description**: Protect data on the Azure Local host's network and on virtual machine network connections. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
 
 **Severity**: Low
 
@@ -662,7 +662,7 @@ Authentication credentials `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` shoul
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
+- These new agentless endpoint recommendations replace existing recommendations *Endpoint protection should be installed on your machines* and *Endpoint protection health issues should be resolved on your machines*.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -674,7 +674,7 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
+- These new agentless endpoint recommendations replace existing recommendations *Endpoint protection should be installed on your machines* and *Endpoint protection health issues should be resolved on your machines*.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -736,7 +736,7 @@ To learn more about the supported runtimes that this control checks for the supp
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
+- These new agentless endpoint recommendations replace existing recommendations *Endpoint protection should be installed on your machines* and *Endpoint protection health issues should be resolved on your machines*.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
@@ -748,7 +748,7 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 This agentless endpoint recommendation is available if you have Defender for Servers Plan 2 or the Defender CSPM plan. [Learn more](endpoint-detection-response.md) about agentless endpoint protection recommendations.
 
 - These new agentless endpoint recommendations support Azure and multicloud machines. On-premises servers aren't supported.
-- These new agentless endpoint recommendations replace existing recommendations Endpoint protection should be installed on your machines and Endpoint protection health issues should be resolved on your machines.
+- These new agentless endpoint recommendations replace existing recommendations *Endpoint protection should be installed on your machines* and *Endpoint protection health issues should be resolved on your machines*.
 - These older recommendations use the MMA/AMA agent and will be replaced as the agents are [phased out in Defender for Servers](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud---strategy-and-plan-towards-log-analytics-agent-mma/3883341).
 
 **Severity**: High
