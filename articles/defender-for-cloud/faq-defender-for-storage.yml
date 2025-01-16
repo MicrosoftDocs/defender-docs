@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 02/08/2024
+  ms.date: 01/16/2025
 title: Common questions about Defender for Storage
 summary: Get answers to common questions about Microsoft Defender for Storage.
 
@@ -55,6 +55,9 @@ sections:
           Yes, you can use the REST API to return to the Defender for Storage (classic) plan.
 
           If you want to switch back to the Defender for Storage (classic) plan, you need to do two things. First, disable the new Defender for Storage plan that is enabled now. Second, check if there are any policies that can re-enable the new plan and turn them off too. The two Azure built-in policies enabling the new plan are **Configure Microsoft Defender for Storage to be enabled** and **Configure basic Microsoft Defender for Storage to be enabled (Activity Monitoring only).**
+
+          > [!NOTE]
+          > After February 5, 2025, you can no longer enable Defender for Storage (classic), the legacy per-transaction pricing plan, in most scenarios. The only exception is for subscriptions that already have the per-transaction pricing enabled. For more information, learn how to [migrate to the new plan](https://aka.ms/DF-Storage/NewPlanMigration).
 
 
       - question: |
