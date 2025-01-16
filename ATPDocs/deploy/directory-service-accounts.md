@@ -19,7 +19,7 @@ For example, when you have a DSA configured, the DSA is used to connect to the d
 
 A DSA is required for the following features and functionality:
 
-- When working with a sensor installed on an [AD FS / AD CS server](active-directory-federation-services.md).
+- When working with a sensor installed on an [AD FS, AD CS or Microsoft Entra Connect server](active-directory-federation-services.md).
 
 - Requesting member lists for local administrator groups from devices seen in network traffic, events and ETW activities via a [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
 
