@@ -321,7 +321,7 @@ RDS databases should have relevant logs enabled. Database logging provides detai
 
 **Severity**: High
 
-### Do not setup access keys during initial user setup for all IAM users that have a console password
+### Do not set up access keys during initial user setup for all IAM users that have a console password
 
 **Description**: AWS console defaults the checkbox for creating access keys to enabled. This results in many access keys being generated unnecessarily.
  In addition to unnecessary credentials, it also generates unnecessary management work in auditing and rotating these keys.
