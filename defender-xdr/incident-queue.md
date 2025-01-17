@@ -123,7 +123,7 @@ This table lists the filter names that are available.
 | **Alert severity<br>Incident severity** | The severity of an alert or incident is indicative of the impact it can have on your assets. The higher the severity, the bigger the impact and typically requires the most immediate attention. Select **High**, **Medium**, **Low**, or **Informational**. |
 | **Incident assignment** | Select the assigned user or users. |
 | **Multiple service sources**  | Specify whether the filter is for more than one service source. |
-| **Service/detection sources**  | Specify incidents that contain alerts from one or more of the following:<li>Microsoft Defender for Identity<li>Microsoft Defender for Cloud Apps<li>Microsoft Defender for Endpoint<li>Microsoft Defender XDR<li>Microsoft Defender for Office 365<li>App Governance<li>Microsoft Entra ID Protection<li>Microsoft Data Loss Prevention<li>Microsoft Defender for Cloud<li>Microsoft Sentinel<br><br>Many of these services can be expanded in the menu to reveal further choices of detection sources within a given service. |
+| **Service/detection sources**  | Specify incidents that contain alerts from one or more of the following:<li>Microsoft Defender for Identity<li>Microsoft Defender for Cloud Apps<li>Microsoft Defender for Endpoint<li>Microsoft Defender XDR<li>Microsoft Defender for Office 365<li>App Governance<li>Microsoft Entra ID Protection<li>Microsoft Data Loss Prevention<li>Microsoft Defender for Cloud<li>Microsoft Sentinel<li>Microsoft Purview Insider Risk Management<br><br>Many of these services can be expanded in the menu to reveal further choices of detection sources within a given service. |
 | **Tags** | Select one or multiple tag names from the list. |
 | **Multiple category**  | Specify whether the filter is for more than one category. |
 | **Categories** | Choose categories to focus on specific tactics, techniques, or attack components seen. |
@@ -136,6 +136,9 @@ This table lists the filter names that are available.
 | **Associated threat** | Specify a named threat.  |
 | **Alert policies** | Specify an alert policy title.  |
 | **Alert subscription IDs** | Specify an alert  based on a subscription ID.  |
+
+> [!NOTE]
+> If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
 The default filter is to show all alerts and incidents with a status of **New** and **In progress** and with a severity of **High**, **Medium**, or **Low**.
 

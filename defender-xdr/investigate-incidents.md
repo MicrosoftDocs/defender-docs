@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 11/19/2024
+ms.date: 01/17/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -141,6 +141,9 @@ Here's an example.
 :::image type="content" source="/defender/media/investigate-incidents/incident-alert-page-small.png" alt-text="The details of an alert within an incident in the Microsoft Defender portal." lightbox="/defender/media/investigate-incidents/incident-alert-page.png":::
 
 Learn how to use the alert queue and alert pages in [investigate alerts](investigate-alerts.md).
+
+> [!NOTE]
+> If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
 ## Assets
 

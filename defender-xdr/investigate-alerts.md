@@ -17,9 +17,9 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
-- MOE150
-- met150
-ms.date: 01/16/2025
+  - MOE150
+  - met150
+ms.date: 1/17/2025
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -129,6 +129,10 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Data Loss Prevention | `dl{GUID}` |
 | Microsoft Defender for Cloud | `dc{GUID}` |
 | Microsoft Sentinel | `sn{GUID}` |
+| Microsoft Purview Insider Risk Management | `ir{GUID}` |
+
+> [!NOTE]
+> If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
 <a name='configure-aad-ip-alert-service'></a>
 

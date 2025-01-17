@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 12/18/2024
+ms.date: 01/16/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -56,7 +56,7 @@ The following table summarizes network protection areas of coverage.
 > On Mac and Linux, you must have network protection in block mode for these features to be supported in the Microsoft Edge browser.
 > On Windows, network protection doesn't monitor Microsoft Edge. For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage network protection for inspection and enforcement.
 
-Here are a few important points to keep in mind:
+### Known issues & limitations
 
 - IP is supported for all three protocols (`TCP`, `HTTP`, and `HTTPS` (TLS)).
 - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
