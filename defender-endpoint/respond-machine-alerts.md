@@ -114,6 +114,9 @@ Or, use this alternate procedure:
 4. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
+
+   > [!NOTE]
+   > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
    
 ### Investigation package contents for Windows devices
 

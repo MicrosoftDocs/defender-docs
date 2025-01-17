@@ -121,7 +121,9 @@
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
           href: dlp-investigate-alerts-sentinel.md
         - name: Investigate and respond to container threats
-          href: investigate-respond-container-threats.md           
+          href: investigate-respond-container-threats.md
+        - name: Investigate insider risk threats
+          href: irm-investigate-alerts-defender.md                         
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
@@ -428,15 +430,6 @@
           href: integrate-microsoft-365-defender-secops-use-cases.md
         - name: Step 6. SOC maintenance tasks
           href: integrate-microsoft-365-defender-secops-tasks.md
-      - name: Optimize your security operations
-        items:
-        - name: SOC optimization overview
-          display name: SOC optimization
-          href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: Use SOC optimizations programmatically
-          href: /azure/sentinel/soc-optimization/soc-optimization-api?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: SOC optimization reference
-          href: /azure/sentinel/soc-optimization/soc-optimization-reference?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
     - name: Manage multitenant environments
       items:
         - name: Overview

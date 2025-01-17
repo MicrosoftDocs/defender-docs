@@ -124,9 +124,9 @@ The dashboard also gives you access to:
 > [!NOTE]
 > Live response actions initiated from the Device page are not available in the machineactions API.
 
-1. Sign in to Microsoft Defender portal.
+1. Sign in to [Microsoft Defender portal](https://security.microsoft.com).
 
-2. Navigate to **Endpoints > Device inventory** and select a device to investigate. The devices page opens.
+2. Navigate to **Endpoints** > **Device inventory** and select a device to investigate. The devices page opens.
 
 3. Launch the live response session by selecting **Initiate live response session**. A command console is displayed. Wait while the session connects to the device.
 
@@ -235,9 +235,12 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 #### To upload a file in the library
 
-1. Click **Upload file to library**.
+> [!NOTE]
+> There are restrictions on the characters that can be uploaded to the library. Use alphanumeric characters and some symbols (specifically, `-`, `_`, or `.`).
 
-2. Click **Browse** and select the file.
+1. Select **Upload file to library**.
+
+2. Select **Browse** and select the file.
 
 3. Provide a brief description.
 
@@ -245,7 +248,7 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 5. If you'd like to be,  know what parameters are needed for the script, select the script parameters check box. In the text field, enter an example and a description.
 
-6. Click **Confirm**.
+6. Select **Confirm**.
 
 7. (Optional) To verify that the file was uploaded to the library, run the `library` command.
 
@@ -254,7 +257,7 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 Anytime during a session, you can cancel a command by pressing CTRL + C.
 
 > [!WARNING]
-> Using this shortcut will not stop the command in the agent side. It will only cancel the command in the portal. So, changing operations such as "remediate" may continue, while the command is canceled.
+> Using this shortcut doesn't stop the command in the agent side. It only cancels the command in the Microsoft Defender portal. So, changing operations such as "remediate" may continue, even if the command is canceled.
 
 ## Run a script
 
