@@ -5,22 +5,22 @@ ms.topic: limits-and-quotas
 ms.date: 01/01/2024
 ---
 
-# Permissions for Defender for Containers extensions
+# Permissions for auto-provisioning Defender for Containers in AWS and GCP
 
-This article lists the roles and permissions required to use the Defender for Containers extensions for the AWS Elastic Kubernetes Service (EKS) and GCP Google Kubernetes Engine (GKE) environments.
+This article lists the roles and permissions required to auto-provision Defender for Containers components in the AWS Elastic Kubernetes Service (EKS) and GCP Google Kubernetes Engine (GKE) environments.
 
 ## Required permissions
 
 | Defender for Container extension                                                 | Component                                                    | Required Role                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| GKE Runtime threat protection, Kubernetes data plane hardening, Runtime vulnerability assessment (optional) | GKE Arc Auto provisioning (for Defender agent and Azure policy agent) | Azure Arc role: [**Defender Kubernetes Agent Operator**](#azure-arc-auto-provisioning-role-for-eks-and-gke)<br/><br/> GCP predefined role: [**Kubernetes Engine Admin**](https://cloud.google.com/iam/docs/understanding-roles#container.admin) <br/>OR<br/>[**Kubernetes Engine Viewer**](https://cloud.google.com/iam/docs/understanding-roles#container.viewer) (if only Agentless threat protection and/or Kubernetes API access extension are enabled) |
-| EKS Runtime threat protection, Kubernetes data plane hardening, Runtime vulnerability assessment (optional) | AWS Arc Auto provisioning (for Defender agent and Azure policy agent) | Azure Arc role: [**Defender Kubernetes Agent Operator**](#azure-arc-auto-provisioning-role-for-eks-and-gke)<br/><br/> AWS role: [**AzureDefenderKubernetesRole**](#aws-agentless-threat-protection-permissions) |
-| GKE Agentless threat protection (control plane)                  | GKE AuditLogs autoprovisioning                               | See [GCP Agentless threat protection permissions](#gcp-agentless-threat-protection-permissions) |
-| EKS Agentless threat protection (control plane)                  | AWS AuditLogs autoprovisioning                               | See [AWS Agentless threat protection permissions](#aws-agentless-threat-protection-permissions)    |
+| GKE Runtime threat protection, Kubernetes data plane hardening, Runtime vulnerability assessment (optional) | GKE Arc auto-provisioning (for Defender agent and Azure policy agent) | Azure Arc role: [**Defender Kubernetes Agent Operator**](#azure-arc-auto-provisioning-role-for-eks-and-gke)<br/><br/> GCP predefined role: [**Kubernetes Engine Admin**](https://cloud.google.com/iam/docs/understanding-roles#container.admin) <br/>OR<br/>[**Kubernetes Engine Viewer**](https://cloud.google.com/iam/docs/understanding-roles#container.viewer) (if only Agentless threat protection and/or Kubernetes API access extension are enabled) |
+| EKS Runtime threat protection, Kubernetes data plane hardening, Runtime vulnerability assessment (optional) | AWS Arc auto-provisioning (for Defender agent and Azure policy agent) | Azure Arc role: [**Defender Kubernetes Agent Operator**](#azure-arc-auto-provisioning-role-for-eks-and-gke)<br/><br/> AWS role: [**AzureDefenderKubernetesRole**](#aws-agentless-threat-protection-permissions) |
+| GKE Agentless threat protection (control plane)                  | GKE AuditLogs auto-provisioning                               | See [GCP Agentless threat protection permissions](#gcp-agentless-threat-protection-permissions) |
+| EKS Agentless threat protection (control plane)                  | AWS AuditLogs auto-provisioning                               | See [AWS Agentless threat protection permissions](#aws-agentless-threat-protection-permissions)    |
 
-### Azure Arc auto provisioning role for EKS and GKE
+### Azure Arc auto-provisioning role for EKS and GKE
 
-The Azure Arc built-in role **Defender Kubernetes Agent Operator** for autoprovisioning the Defender agent and Azure policy agent has the following permissions:
+The Azure Arc built-in role **Defender Kubernetes Agent Operator** for auto-provisioning the Defender agent and Azure policy agent has the following permissions:
 
 - Microsoft.Authorization/*/read
 - Microsoft.Insights/alertRules/*
