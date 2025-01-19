@@ -13,11 +13,11 @@ CustomerIntent: As the person responsible for the security of a cluster, I want 
 
 The AKS security dashboard provides comprehensive visibility and automated remediation capabilities for security issues, empowering platform engineering teams to easily, and more effectively, secure their Kubernetes environment.
 
-Consolidating security and operational data in one place directly within the AKS portal allows engineers to benefit from a unified view of their Kubernetes environment. The view enables more efficient detection and remediation of security issues, with minimal disruption to their workflows - thereby reducing the risk of overlooking security issues and improving remediation cycles.
+Consolidating security and operational data in one place directly within the AKS portal allows engineers to benefit from a unified view of their Kubernetes environment. The view enables more efficient detection and remediation of security issues, with minimal disruption to their workflows to reduce the risk of overlooking security issues and improving remediation cycles.
 
 The AKS Security Dashboard allows the user to:
 - View the security posture of the cluster.
-- Enable Defender for Container plan and configure extensions for the specific cluster resource.
+- Enable Defender for Containers plan and configure settings for the specific cluster resource.
 - Review vulnerability assessment recommendations.
 - Review configurations of the cluster and running containers that deviate from security best practices ("misconfigurations"), together with guided or automated remediation.
 - Assign an owner to a recommendation or misconfiguration responsible for remediation by a specified date. (Available with Defender Cloud Security Posture Management (DCSPM) enabled for the subscription.)
@@ -50,7 +50,7 @@ Selecting **Download CSV report** downloads the cluster vulnerabilities and misc
 
 ### Setting the Defender for Containers plan
 
-Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to enable or disable the Defender for Containers plan **for the cluster only**. If Defender for Containers was not enabled for the subscription, the user can toggle the Defender for Containers plan to **on** and the following extensions can then be toggled to enable or disable:
+Selecting **Settings** of **Microsoft Defender for Containers status** opens a pane for the user to configure the Defender for Containers plan **for the specific cluster**. In the case where Defender for Containers is enabled on the subscription level, plan settings can only be changed on the subscription level. Plan configurations include the following settings:
 
 - **Kubernetes API access** - Agentless Container Security Posture Management, runtime vulnerability assessment and response actions.
 - **Registry access** - Agentless vulnerability assessment for registry images.
