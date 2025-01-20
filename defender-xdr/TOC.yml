@@ -64,6 +64,8 @@
         href: /defender-office-365
       - name: Protect your cloud apps
         href: /defender-cloud-apps
+      - name: Protect your IoT/OT assets
+        href: protect-against-iot-ot-threats.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -75,31 +77,7 @@
           - name: Track your score history and meet goals
             href: microsoft-secure-score-history-metrics-trends.md
           - name: Data storage and privacy
-            href: secure-score-data-storage-privacy.md
-      - name: Protect your endpoints
-        href: /defender-endpoint
-      - name: Protect your IoT/OT assets
-        href: protect-against-iot-ot-threats.md
-      - name: Protect your identities
-        items:
-          - name: Sensor settings and health
-            href: /defender-for-identity/sensor-settings?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Directory Services account
-            href: /defender-for-identity/deploy/directory-service-accounts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: VPN integration
-            href: /defender-for-identity/vpn-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Set entity tags
-            href: /defender-for-identity/entity-tags?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Investigate Defender for Identity alerts
-            href: /defender-for-identity/manage-security-alerts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Configure detection exclusions
-            href: /defender-for-identity/exclusions?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Email and syslog notifications
-            href: /defender-for-identity/notifications?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-      - name: Protect your Office 365 workloads
-        href: /defender-office-365
-      - name: Create Custom Defender XDR reports
-        href: defender-xdr-custom-reports.md
+            href: secure-score-data-storage-privacy.md     
     - name: Investigate and respond to threats
       items:
       - name: Overview

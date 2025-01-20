@@ -13,39 +13,49 @@ ms.date: 01/20/2024
 
 # Protect enterprise IoT assets
 
-As the Internet of Things (IoT) and Operational Technology (OT) security landscape becomes more complex and attacks become more sophisticated, organizations must [secure their IoT/OT environments](../defender-for-iot/microsoft-defender-iot.md) efficiently to maintain operational reliability and safety. Microsoft Defender for IoT is designed to secure these environments, protecting networks and devices from unique IoT/OT vulnerabilities and threats.  
+The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. As the IoT/OT security landscape becomes more complex and attacks become more sophisticated, organizations must [secure their IoT/OT environments](../defender-for-iot/microsoft-defender-iot) efficiently to maintain operational reliability and safety. Microsoft Defender for IoT is designed to secure these environments, protecting networks and devices from unique IoT/OT vulnerabilities and threats.  
 
 In this article, you learn about IoT/OT security challenges, which protection is included with Defender XDR, how Defender XDR detects and monitors enterprise IoT devices, and how to extend this protection to OT devices and environments.
 
 > [!NOTE]
-> Defender for Endpoint customers can [enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal) as part of their Microsoft 365 E5 (ME5) / E5 Security license. For more information, see [how it works](#how-defender-xdr-detects-and-monitors-enterprise-iot-devices).
+> Defender for Endpoint customers can [enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal) as part of their Microsoft 365 E5 (ME5) / E5 Security license.
 
 ## Enterprise IoT security challenges
 
-The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. IoT/OT devices and networks are often built using specialized protocols, and might prioritize operational challenges over security.
+When IoT/OT devices can't be protected by traditional security monitoring systems, each new wave of innovation increases the risk and possible attack surfaces across those IoT devices and OT networks.
 
-When IoT/OT devices can't be protected by traditional security monitoring systems, each new wave of innovation increases the risk and possible attack surfaces across those IoT devices and OT networks. 
+Specifically, enterprise IoT security challenges include:
 
-Specific challenges for enterprise IoT assets include:
+- Complex device authentication and identity management, where traditional security models like password-based authentication are often insufficient.
+- Large amounts of sensitive data with insufficient data encryption.
+- Lack of security best practices in development, including the use of reputable and updated libraries.
+- Limited computational capacity, making it difficult to implement standard security measures like encryption, authentication, and firmware updates.
+- Unmanaged IoT devices, lack of visibility into IoT assets, and limited options for vulnerability management. These conditions increase the enterprise attack surfaces.
 
-- Complex device authentication and identity management, and traditional security models like password-based authentication are often insufficient.
-- IoT devices commonly collect large amounts of sensitive data, but they don’t encrypt data properly.
-- IoT device creators do not always follow development security best practices, including the use of reputable and updated libraries.
-- Many IoT devices have limited computational capacity, making it difficult to implement standard security measures like encryption, authentication, and firmware updates.
-- Unmanaged IoT devices increase enterprise attack surfaces. There is often a lack of visibility into IoT assets and limited options for vulnerability management.
-
-## How Defender XDR protects enterprise IoT devices
+## Enterprise IoT device protection in Defender XDR
 
 [Enterprise IoT security](/defender-for-iot/enterprise-iot) in Microsoft Defender XDR provides IoT-specific security value for IoT devices, including risk and exposure levels, vulnerabilities, and recommendations.
 
 The existing Defender for Endpoint agent runs on enterprise IoT assets and identifies, assesses, and secures them like any other organizational endpoint.
 
-|How to enable  |Supported devices  |Main capabilities  |
+## License and supported devices
+
+Defender for Endpoint customers can [enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal) as part of their Microsoft 365 E5 (ME5) / E5 Security license. Each license supports five devices per ME5/ E5 Security license. 
+
+Defender XDR protects Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs).
+
+## Main capabilities
+
+|Feature  |Location  |More details  |
 |---------|---------|---------|
-|Defender for Endpoint customers can [enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal) as part of their Microsoft 365 E5 (ME5) / E5 Security license.     |[Supported devices](../defender-for-iot/organizations/billing#defender-for-iot-devices) include an extensive range of hardware models and vendors, spanning corporate IoT devices such as printers, cameras, and VoIP phones, among others.         |- **[Discover assets]([Device discovery overview](../defender-endpoint/machines-view-overview.md)** for a full enterprise IoT inventory.<br>- **[Review alerts]([Review alerts in Microsoft Defender for Endpoint](../defender-endpoint/review-alerts.md)) triggered by IoT assets**.<br>- Set up [advanced hunting queries](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint#sample-advanced-hunting-queries-for-enterprise-iot) to create custom alert rules.<br>- [Review security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md) available for IoT assets to reduce risk and maintain a smaller attack surface.<br>- Check for [known vulnerabilities]([Vulnerable components](../defender-vulnerability-management/tvm-remediation.md)) associated with IoT assets. Alternatively, use [advanced hunting queries](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint#sample-advanced-hunting-queries-for-enterprise-iot) to collect vulnerabilities across all your devices. |
+|Discover enterprise IoT assets for a full enterprise IoT inventory.    |**Assets > Devices > IoT devices**         |[Device inventory overview](../defender-endpoint/machines-view-overview)  |
+|Review alerts triggered by enterprise IoT assets     |**Device details** page > **Alerts** tab         |- Learn more about [Defender for Endpoint alerts](../defender-endpoint/review-alerts).<br>- Simulate alerts in Microsoft 365 Defender for Enterprise IoT using the Raspberry Pi scenario available in the Microsoft 365 Defender [Evaluation & Tutorials page](https://security.microsoft.com/tutorials/all).         |
+|Review security recommendations for enterprise IoT assets     |**Device details** page > **Security recommendations** tab         |[Security recommendations in Defender for Endpoint](/defender-endpoint/device-discovery#vulnerability-assessment-on-discovered-devices)         |
+|Discover vulnerabilities associated with enterprise IoT assets     |**Device details** page > **Discovered vulnerabilities** tab        |[Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)         |
+|Use advanced hunting queries to [create custom alert rules](/defender-for-iot/enterprise-iot-manage#advanced-hunting-queries-for-enterprise-iot) or to [collect vulnerabilities](/defender-for-iot/enterprise-iot-manage#advanced-hunting-queries-for-enterprise-iot) across all your devices. |
 
 ## Extend protection to OT devices
 
-To go beyond the protection that the Defender for Endpoint agent provides for OT/IoT assets, Defender for IoT provides full visibility and security protection with OT sensors that monitor traffic in relevant internal networks. Learn more about [Defender for IoT features and use cases](/defender-for-iot/microsoft-defender-iot).
+To go beyond the protection that the Defender for Endpoint agent provides for enterprise IoT assets, Defender for IoT provides full visibility and security protection into OT assets in relevant internal networks. Learn more about [Defender for IoT features and use cases](/defender-for-iot/microsoft-defender-iot).
 
 To enable OT protection, you need to enable the Defender for IoT license. Learn how to [onboard Defender for IoT](/defender-for-iot/get-started).
