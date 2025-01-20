@@ -52,7 +52,7 @@ The following table shows how the family names map to the threat actors that we 
 |Influence operations|Influence operations|Flood|
 |Groups in development|Groups in development|Storm|
 
-The following table lists publicly disclosed threat actor names with their origin or threat actor category, previous names, and corresponding names used by other security vendors where available. This page will be updated as more info on other vendors’ names become available.  
+The following table lists publicly disclosed threat actor names with their origin or threat actor category, previous names, and corresponding names used by other security vendors where available. This page will be updated as more info on other vendors' names become available.  
 
 |Threat actor name|Origin/Threat actor category|Other names|
 |:-----|:-----|:---|

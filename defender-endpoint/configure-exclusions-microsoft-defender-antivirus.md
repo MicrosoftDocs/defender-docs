@@ -4,8 +4,8 @@ description: You can exclude files (including files modified by specified proces
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 09/13/2024
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: deniseb

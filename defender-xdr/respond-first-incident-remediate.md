@@ -39,7 +39,7 @@ Microsoft Defender XDR leverages its threat intelligence and the signals within 
 
 Learn how automatic attack disruption helps in incident response:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RW10OoF]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=4f299e61-5655-4e32-8713-cd9c72ba620e]
 
 Meanwhile, Microsoft Defender XDR's [automated investigation and response](m365d-autoir.md) capabilities can automatically investigate and apply remediation actions to malicious and suspicious items. These capabilities scale investigation and resolution to threats, freeing incident responders to focus their efforts on high-impact attacks.
 
@@ -59,7 +59,7 @@ Playbooks use Power Automate to create custom robotic process automation flows t
 
 Learn how Power Automate can help you automate your incident response through this video:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=01afebcb-850c-4a6f-abb4-692188ac6de7]
 
 ## Manual remediation
 

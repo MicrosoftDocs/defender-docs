@@ -38,9 +38,9 @@ To be considered for the MVI program, your organization must meet all the follow
 8. Your security solution must be certified within the last 12 months by at least one of the organizations listed below through independent testing. Yearly certification must be maintained.
 
 |Test Provider|Lab Test Type|Minimum Level/Score|
-| -------- | -------- | -------- |
-|[AV-Comparatives](https://www.av-comparatives.org/testmethod/real-world-protection-tests)|Real-World Protection Test or Malware Protection Test|Certified/Approved/Standard|
-|[AV-Test](https://www.av-test.org/en/about-the-institute/certification)|Real-World Protection Test for MVI, AV-Test |97% (Real-World Protection test for MVI)/Certified (AV-Test Home)/ Approved (AV-Test Enterprise)|
+|---|---|---|
+|[AV-Comparatives](https://www.av-comparatives.org/testmethod/real-world-protection-tests)|Real-World Protection Test or Malware Protection Test|Certified/Approved/Standard|
+|[AV-Test](https://www.av-test.org/en/about-the-institute/certification)|Real-World Protection Test for MVI, AV-Test|97% (Real-World Protection test for MVI)/Certified (AV-Test Home)/ Approved (AV-Test Enterprise)|
 |[SE Labs](https://selabs.uk/en/reports/)|Endpoint Security (EPS) or Enterprise Advanced Security (EAS)|AAA|
 |[SKD Labs](https://www.skdlabs.com/html/english/)|Starcheck Anti-malware Real-time protection and cleaning|Starcheck Certified|
 |[VB 100](https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1)|VB100|Detection rate of 95% with Grade C or higher|

@@ -105,7 +105,7 @@ The following steps describe the deployment in Ubuntu. The deployment steps for 
     export https_proxy='<IP>:<PORT>'
     ```
 
-1. If you accept the [software license terms](https://go.microsoft.com/fwlink/?linkid=862492), uninstall old versions and install Docker CE by running the commands appropriate for your environment:
+1. If you accept the software license terms, uninstall old versions and install Docker CE by running the commands appropriate for your environment:
 
     ### [CentOS](#tab/centos)
 

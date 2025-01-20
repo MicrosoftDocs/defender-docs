@@ -36,7 +36,7 @@ Watch this short overview of Microsoft Sentinel integration with Microsoft Defen
 
 <br>
 
->[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRo]
+>[!VIDEO https://learn-video.azurefd.net/vod/player?id=93a681fb-0f6e-40be-9274-3c96b014268b]
 
 
 Here's how it works.

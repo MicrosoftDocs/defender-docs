@@ -33,7 +33,7 @@ In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses 
 This article explains the basics of Attack simulation training.
 
 Watch this short video to learn more about Attack simulation training.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWMhvB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 > [!NOTE]
 > Attack simulation training replaces the old Attack Simulator v1 experience that was available in the Security & Compliance Center at **Threat management** \> **Attack simulator** or <https://protection.office.com/attacksimulator>.

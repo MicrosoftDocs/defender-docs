@@ -65,7 +65,7 @@ To create a new tenant group:
     :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-select-device-small.png" alt-text="Screenshot of the device selection pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-select-device.png":::
 
 7. Add a tenant group name and description about your tenant group in the Details page.
-8. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
+8. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
 
     :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-summary-tenantgroups-small.png" alt-text="Screenshot of summary of tenant groups with the checkbox highlighted." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-summary-tenantgroups.png":::
 
@@ -78,7 +78,7 @@ Your newly created tenant group appears in the Tenant groups page after creation
 
 :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-group-sample-small.png" alt-text="Screenshot of a tenant group page and the actions available within the page." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-group-sample.png":::
 
-Check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When selecting the result, a side pane containing the errors, recommendations, and impacted assets appears. Here’s an example.
+Check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When selecting the result, a side pane containing the errors, recommendations, and impacted assets appears. Here's an example.
 
 :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/mto-sync-results.png":::
 

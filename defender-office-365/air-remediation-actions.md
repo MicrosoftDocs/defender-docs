@@ -1,5 +1,5 @@
 ---
-title: Remediation actions in Microsoft Defender for Office 365
+title: Remediation actions from AIR
 f1.keywords: 
 - NOCSH
 author: chrisda
@@ -14,8 +14,8 @@ search.appverid:
 ms.collection: 
 - m365-security
 - tier2
-description: "Learn about remediation actions following automated investigation in Microsoft Defender for Office 365."
-ms.date: 06/09/2023
+description: "Learn about calculated and recommended remediation actions in automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2."
+ms.date: 07/10/2024
 ms.custom: 
 - air
 ms.service: defender-office-365
@@ -24,40 +24,29 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Remediation actions in Microsoft Defender for Office 365
+# Remediation actions from AIR in Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-## Remediation actions
+[Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-about.md) often results in remediation actions that require [approval](air-review-approve-pending-completed-actions.md) from you security operations (SecOps) team.
 
-Threat protection features in [Microsoft Defender for Office 365](mdo-about.md) include certain remediation actions. Such remediation actions can include:
+In some cases, AIR doesn't result in specific remediation actions. To further investigate and take appropriate actions, use the guidance in the following table.
 
-- Soft delete email messages or clusters
-- Block URL (time-of-click)
-- Turn off external mail forwarding
-- Turn off delegation
-
-In Microsoft Defender for Office 365, remediation actions aren't taken automatically. Instead, remediation actions are taken only upon approval by your organization's security operations team.
-
-## Threats and remediation actions
-
-Microsoft Defender for Office 365 includes remediation actions to address various threats. Automated investigations often result in one or more remediation actions to review and approve. In some cases, an automated investigation doesn't result in a specific remediation action. To further investigate and take appropriate actions, use the guidance in the following table.
-
-|Category|Threat/risk|Remediation action(s)|
+|Category|Threat/risk|Remediation actions|
 |:---|:---|:---|
-|Email|Malware|Soft delete email/cluster <p> If more than a handful of email messages in a cluster contain malware, the cluster is considered to be malicious.|
-|Email|Malicious URL <br> (A malicious URL was detected by [Safe Links](safe-links-about.md).)|Soft delete email/cluster <br> Block URL (time-of-click verification) <p> Email that contains a malicious URL is considered to be malicious.|
-|Email|Phish|Soft delete email/cluster <p> If more than a handful of email messages in a cluster contain phishing attempts, the whole cluster is considered a phishing attempt.|
-|Email|Zapped phish <br> (Email messages were delivered and then [zapped](zero-hour-auto-purge.md).)|Soft delete email/cluster <p> Reports are available to view zapped messages. [See if ZAP moved a message and FAQs](zero-hour-auto-purge.md#how-to-see-if-zap-moved-your-message).|
-|Email|Missed phish email [reported](submissions-users-report-message-add-in-configure.md) by a user|[Automated investigation triggered by the user's report](air-examples.md#example-a-user-reported-phish-message-launches-an-investigation-playbook)|
-|Email|Volume anomaly <br> (Recent email quantities exceed the previous 7-10 days for matching criteria.)|Automated investigation doesn't result in a specific pending action. <p>Volume anomaly isn't a clear threat, but is merely an indication of larger email volumes in recent days compared to the last 7-10 days. <p>Although a high volume of email can indicate potential issues, confirmation is needed in terms of either malicious verdicts or a manual review of email messages/clusters. See [Find suspicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md#find-suspicious-email-that-was-delivered).|
-|Email|No threats found <br> (The system didn't find any threats based on files, URLs, or analysis of email cluster verdicts.)|Automated investigation doesn't result in a specific pending action. <p>Threats found and [zapped](zero-hour-auto-purge.md) after an investigation is complete aren't reflected in an investigation's numerical findings, but such threats are viewable in [Threat Explorer](threat-explorer-real-time-detections-about.md).|
-|User|A user clicked a malicious URL <br> (A user navigated to a page that was later found to be malicious, or a user bypassed a [Safe Links warning page](safe-links-about.md#warning-pages-from-safe-links) to get to a malicious page.)|Automated investigation doesn't result in a specific pending action. <p> Block URL (time-of-click) <p> Use Threat Explorer to [view data about URLs and click verdicts](threat-explorer-real-time-detections-about.md#click-verdict-pivot-for-the-url-clicks-view-for-the-details-area-of-the-all-email-view-in-threat-explorer). <p> If your organization is using [Microsoft Defender for Endpoint](/windows/security/threat-protection/), consider [investigating the user](/defender-endpoint/investigate-user) to determine if their account is compromised.|
-|User|A user is sending malware/phish|Automated investigation doesn't result in a specific pending action. <p> The user might be reporting malware/phish, or someone could be [spoofing the user](anti-phishing-protection-spoofing-about.md) as part of an attack. Use [Threat Explorer](threat-explorer-real-time-detections-about.md) to view and handle email containing [malware](threat-explorer-real-time-detections-about.md#malware-view-in-threat-explorer-and-real-time-detections) or [phishing](threat-explorer-real-time-detections-about.md#phish-view-in-threat-explorer-and-real-time-detections).|
-|User|Email forwarding <br> (Mailbox forwarding rules are configured, chch could be used for data exfiltration.)|Remove forwarding rule <p> Use the [Autoforwarded messages report](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) to view specific details about forwarded email.|
-|User|Email delegation rules <br> (A user's account has delegations set up.)|Remove delegation rule <p> If your organization is using [Microsoft Defender for Endpoint](/windows/security/threat-protection/), consider [investigating the user](/defender-endpoint/investigate-user) who's getting the delegation permission.|
-|User|Data exfiltration <br> (A user violated email or file-sharing [DLP policies](/purview/dlp-learn-about-dlp) |Automated investigation doesn't result in a specific pending action. <p> [Get started with Activity Explorer](/purview/data-classification-activity-explorer#get-started-with-activity-explorer).|
-|User|Anomalous email sending <br> (A user recently sent more email than during the previous 7-10 days.)|Automated investigation doesn't result in a specific pending action. <p> Sending a large volume of email isn't malicious by itself; the user might just have sent email to a large group of recipients for an event. To investigate, use the [New users forwarding email insight in the EAC](/exchange/monitoring/mail-flow-insights/mfi-new-users-forwarding-email-insight) and [Outbound message report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports) to determine what's going on and take action.|
+|Email|Malware|Soft delete email/cluster. <br/><br/> If more than a handful of related messages contain malware, the entire cluster is considered to be malicious.|
+|Email|A malicious URL was detected by [Safe Links](safe-links-about.md).|Soft delete email/cluster. <br/><br/> Block URL at time-of-click. <br/><br/> The message that contains a malicious URL is considered to be malicious.|
+|Email|Phishing|Soft delete email/cluster. <br/><br/> If more than a handful of related messages contain phishing attempts, the entire cluster is considered to be a phishing attempt.|
+|Email|Phishing email delivered and then [removed by zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).)|Soft delete email/cluster. <br/><br/> To see if ZAP removed a message, see [How to see if ZAP moved your message](zero-hour-auto-purge.md#how-to-see-if-zap-moved-your-message).|
+|Email|[User reported phishing email](submissions-submit-files-to-microsoft.md)|[Automated investigation triggered by the user's report](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook)|
+|Email|Volume anomaly (recent email quantities exceed the previous 7-10 days for matching criteria).|No specific pending actions from AIR. <br/><br/> A volume anomaly isn't a clear threat. Although a high volume of email can indicate potential issues, confirmation is required in terms of either malicious verdicts or a manual review of email messages/clusters. For more information, see [Find suspicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md#find-suspicious-email-that-was-delivered).|
+|Email|No threats found (the system found no threats based on files, URLs, or analysis of email cluster verdicts).|No specific pending actions from AIR. <br/><br/> Threats found and [removed by ZAP](zero-hour-auto-purge.md) after a completed investigation aren't reflected in an investigation's numerical results, but such threats are viewable in [Threat Explorer](threat-explorer-real-time-detections-about.md).|
+|User|A user clicked a malicious URL (a user visited a page that was later found to be malicious, or bypassed a [Safe Links warning page](safe-links-about.md#warning-pages-from-safe-links) to get to a malicious page.)|No specific pending actions from AIR. <br/><br/> Block URL at time-of-click. <br/><br/> Use Threat Explorer to [view data about URLs and click verdicts](threat-explorer-real-time-detections-about.md#click-verdict-pivot-for-the-url-clicks-view-for-the-details-area-of-the-all-email-view-in-threat-explorer). <br/><br/> If your organization is using [Microsoft Defender for Endpoint](/windows/security/threat-protection/), consider [investigating the user](/defender-endpoint/investigate-user) to determine if their account is compromised.|
+|User|User sending malware/phishing messages|No specific pending actions from AIR. <br/><br/> The user might be reporting malware/phishing messages, or someone could be [spoofing the user](anti-phishing-protection-spoofing-about.md) as part of an attack. Use [Threat Explorer](threat-explorer-real-time-detections-about.md) to view and handle email containing [malware](threat-explorer-real-time-detections-about.md#malware-view-in-threat-explorer-and-real-time-detections) or [phishing](threat-explorer-real-time-detections-about.md#phish-view-in-threat-explorer-and-real-time-detections).|
+|User|Automatic external email forwarding ([SMTP forwarding](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding), Inbox rules, or Exchange mail flow rules (also known as transport rules) could be used for data exfiltration).|Remove the forwarding rule or configuration. <br/><br/> Use the [Autoforwarded messages report](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) to view specific details about forwarded email.|
+|User|Email delegation (an account has delegations set up).|Remove delegations. <br/><br/> If your organization is using [Defender for Endpoint](/windows/security/threat-protection/), consider [investigating the user](/defender-endpoint/investigate-user) with the delegation permission.|
+|User|Data exfiltration (a user violated email or file-sharing [DLP policies](/purview/dlp-learn-about-dlp)).|AIR doesn't result in a specific pending action. <br/><br/> [Get started with Activity Explorer](/purview/data-classification-activity-explorer#get-started-with-activity-explorer).|
+|User|Anomalous email sending (a user recently sent more email than during the previous 7-10 days.)|No specific pending actions from AIR. <br/><br/> Sending a large volume of email isn't necessarily malicious (for example, the user might have sent email to a large group of recipients for an event). To investigate, use the [New users forwarding email insight](/exchange/monitoring/mail-flow-insights/mfi-new-users-forwarding-email-insight) and [Outbound message report](/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports) in the Exchange admin center (EAC).|
 
 ## Next steps
 

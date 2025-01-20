@@ -6,11 +6,12 @@ ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: conceptual
-ms.date: 12/30/2024
+ms.date: 01/06/2025
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
-
+ms.custom:
+- partner-contribution
 ---
 
 # Microsoft Defender Antivirus and non-Microsoft antivirus solutions without Defender for Endpoint
@@ -21,9 +22,9 @@ ms.localizationpriority: medium
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 - Microsoft Defender Antivirus
 
-This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint.
+This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint Plan 2.
 
-Microsoft Defender Antivirus doesn't run in passive mode on devices that aren't onboarded to Defender for Endpoint.
+Microsoft Defender Antivirus doesn't run in passive mode on devices that aren't onboarded to Defender for Endpoint Plan 2.
 
 The following table summarizes what to expect:
 
@@ -48,23 +49,23 @@ gsv WinDefend, WdBoot, WdFilter, WdNisSvc, WdNisDrv | ft -auto DisplayName, Name
 |Display Name|Name|StartType|Status when Microsoft Defender Antivirus is enabled| Status when Microsoft Defender Antivirus is disabled| Comments |
 | -------- | -------- | -------- | -------- | -------- | -------- |
 |Microsoft Defender Antivirus Boot Driver |`WdBoot`|Boot |Stopped (`0x0 Boot_start`)| Stopped (`0x3 Demand_start`)|It's normal to be stopped after boot. |
-|Microsoft Defender Antivirus Mini-Filter Driver|`WdFilter`|Manual |Running (`0x0 Boot_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect status to be stopped. |
-|Microsoft Defender Antivirus Network Inspection System Driver |`WdNisDrv`|Manual|Running (`0x3 Demand_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect status to be stopped. |
-|Microsoft Defender Antivirus Network Inspection Service |`WdNisSvc`|Manual|Running (`0x3 Demand_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect status to be stopped. |
-|Microsoft Defender Antivirus Service|`WinDefend`|Automatic|Running (`0x2 Auto_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect status to be stopped.|
+|Microsoft Defender Antivirus Mini-Filter Driver|`WdFilter`|Manual |Running (`0x0 Boot_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect the status to be stopped. |
+|Microsoft Defender Antivirus Network Inspection System Driver |`WdNisDrv`|Manual|Running (`0x3 Demand_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect the status to be stopped. |
+|Microsoft Defender Antivirus Network Inspection Service |`WdNisSvc`|Manual|Running (`0x3 Demand_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect the status to be stopped. |
+|Microsoft Defender Antivirus Service|`WinDefend`|Automatic|Running (`0x2 Auto_start`)|Stopped (`0x3 Demand_start`)|If a non-Microsoft antivirus solution is installed, expect the status to be stopped.|
 
 ### Frequently Asked Questions (FAQ)
 
-Q: Can I update Microsoft Defender Antivirus components such as "Security intelligence update" or "Engine update" "Platform update" when Microsoft Defender Antivirus is disabled?
+**Q:** Can I update Microsoft Defender Antivirus components such as "Security intelligence update" or "Engine update" or "Platform update" when Microsoft Defender Antivirus is disabled?
 
-A: No. When Microsoft Defender Antivirus is disabled, since the services and drivers aren't running, you won't be able to update the components such as "Security intelligence update" or "Engine update" "Platform update".
+**A:** No. When Microsoft Defender Antivirus is disabled, since the services and drivers aren't running, you won't be able to update the components such as "Security intelligence update" or "Engine update" or "Platform update".
 
 > [!TIP]
-> If you are migrating to Microsoft Defender for Endpoint, when onboarded, Microsoft Defender Antivirus goes into passive mode automatically on Windows clients, and can be set to passive mode using a registry key on Windows Server. You can update the different components of Microsoft Defender Antivirus.
+> If you are migrating to Microsoft Defender for Endpoint Plan 2, when onboarded, Microsoft Defender Antivirus goes into passive mode automatically on Windows clients, and can be set to passive mode using a registry key on Windows Server. You can update the different components of Microsoft Defender Antivirus.
 
-Q: Can I manually change the start type of the services and drivers for Microsoft Defender Antivirus?
+**Q:** Can I manually change the start type of the services and drivers for Microsoft Defender Antivirus?
 
-A: We don't support the manual modification of the start type of the services and drivers for Microsoft Defender Antivirus in Windows images. On Windows clients, the supported method is by registering your non-Microsoft antivirus in Windows Security (WSC) API. Or, on Windows Server, you can uninstall the Microsoft Defender Antivirus feature by using roles and features MMC or by running the following PowerShell command (as an administrator): 
+**A:** We don't support the manual modification of the start type of the services and drivers for Microsoft Defender Antivirus in Windows images. On Windows clients, the supported method is by your non-Microsoft antivirus registering in Windows Security Center (WSC) api. Or, on Windows Server, you can uninstall the Microsoft Defender Antivirus feature by using roles and features MMC or by running the following PowerShell command (as an administrator): 
 
 ```powershell
 
@@ -72,17 +73,17 @@ Uninstall-WindowsFeature Windows-Defender
 
 ```
 
-Q: Can I use Microsoft Defender Antivirus in passive mode without onboarding to Microsoft Defender for Endpoint?
+**Q:** Can I use Microsoft Defender Antivirus in passive mode without onboarding to Microsoft Defender for Endpoint?
 
-A: No. Passive mode is functionality in Microsoft Defender for Endpoint Plan 2.
+**A:** No. Passive mode is a functionality in Microsoft Defender for Endpoint Plan 2.
 
-Q: Can I use [EDR in block mode](edr-in-block-mode.md) without onboarding to Microsoft Defender for Endpoint?
+**Q:** Can I use [EDR in block mode](edr-in-block-mode.md) without onboarding to Microsoft Defender for Endpoint?
 
-A: No. EDR in block mode is a functionality in Microsoft Defender for Endpoint Plan 2.
+**A:** No. EDR in block mode is a functionality in Microsoft Defender for Endpoint Plan 2.
 
-Q: Can I use indicators, such as file hashes, IP addresses, URLs, or certificates with Microsoft Defender Antivirus (in active mode) with my Microsoft 365 E3/A3 license?
+**Q:** Can I use indicators, such as file hashes, IP addresses, URLs, or certificates with Microsoft Defender Antivirus (in active mode) with my Microsoft 365 E3/A3 license?
 
-A: Yes. See [Tech Community Blog: Microsoft Defender for Endpoint Plan 1 Now Included in Microsoft 365 E3/A3 Licenses](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/microsoft-defender-for-endpoint-plan-1-now-included-in-m365-e3a3-licenses/3060639) and [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1).
+**A:** Yes. See [Tech Community Blog: Microsoft Defender for Endpoint Plan 1 Now Included in Microsoft 365 E3/A3 Licenses](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/microsoft-defender-for-endpoint-plan-1-now-included-in-m365-e3a3-licenses/3060639) and [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1).
 
 ## See also
 

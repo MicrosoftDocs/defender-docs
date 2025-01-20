@@ -63,20 +63,20 @@ You can prioritize which initiatives you want to see on the **Overview** dashboa
 On the **Metrics** tab of an initiative, or in the **Metrics** section of **Exposure Insights**, you can see the metric state, its effect and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
 
 - Review metrics properties, including:
-  - **14-day trend**: Shows the metric value changes over the last 14 days.
-  - **Affected items**: The number of items within the metric. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected items would be the number of missing Microsoft secure score points to effectively implement recommended controls.
-  - **Total**:  Total number of assets under the metric scope.
-  - **Weight**: The relative weight (importance) of the metric within the initiative, and its effect on the initiative score. From one (lowest) to ten (highest).
-  - **Score impact**: The impact that completing the metric (getting it to 0%) has on the security initiative. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score.
+  - **Metric name**: The name of the metric.
+  - **Progress**: Shows the improvement of the exposure level for the metric from 0 (high exposure) to 100 (no exposure).
   - **State**: Shows whether the metric needs attention, the risk was mitigated outside Security Exposure Management and shouldn't affect the initiative score, or was mitigated and the initiative score should be adjusted accordingly.
-  - **Current value**: Current percentage of exposed assets within the total assets covered by the metric, with the state for each metric. Zero percent is best since there's no exposure, while 100% is worst.
+  - **Affected assets**: The number of assets within the metric. In most cases, these would be assets that are exposed or that create a risk factor. In other cases, affected assets would be the number of missing Microsoft secure score points to effectively implement recommended controls.
+  - **Total assets**:  Total number of assets under the metric scope.
   - **Recommendations**: Security recommendations associated with the metric.
-  - **Last Updated** shows the last date the metric was updated.
+  - **Weight**: The relative weight (importance) of the metric within the initiative, and its effect on the initiative score. Shown as **High**, **Medium**, and **Low**. It can also be defined as **Risk accepted**.
+  - **14-day trend**: Shows the metric value changes over the last 14 days.
+  - **Last updated** shows the last date the metric was updated.
 
 - Filter metrics for specific findings.
 - Drill down into metrics to review and fix associated issues.
 - Suggest new metrics to the product team.
-- Customize the weight of a metric so that it has greater or lesser effect in the initiative, based on your business priorities. Editing a metric affects all the initiatives in which the metric is included.
+- Customize the weight of a metric so that it has greater or lesser effect in the initiative, based on your business priorities. Editing a metric affects all the initiatives in which the metric is included. Once edited, it might take up to 2 hours for changes to be reflected in the metric value and its related initiatives.
 
 ### Unavailable metrics
 

@@ -4,8 +4,8 @@ description: Enable behavior-based, heuristic, and real-time protection in Micro
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.topic: conceptual
 ms.custom: nextgen
 ms.reviewer: yongrhee

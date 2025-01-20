@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 09/24/2024
+ms.date: 01/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -185,6 +185,8 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
   > [!NOTE]
   > To see data for a specific date, use the day after. For example, to see January 10 data, use January 11 in the filter. Today's data is available for filtering tomorrow.
+  >
+  > Report data for some days is updated continuously, so the longer you wait to run the report, the more stable the message counts and classifications will be. For example, to return comprehensive weekly data from Sunday the 10th to Saturday the 17th, run the report on Friday the 23rd. The same report run on Sunday the 18th or Tuesday the 20th might contain slightly different message counts and classifications.
 
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
 - **Type**: Select one or more of the following values:
@@ -239,6 +241,10 @@ If you hover over a horizontal band in the diagram, you see the number of relate
 <sup>\*</sup> If you select this element, the diagram expands to show further details. For a description of each element in the expanded nodes, see [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
 
 :::image type="content" source="media/mail-flow-status-report-mailflow-view-details.png" alt-text="The Phishing block details in Mailflow view in the Mailflow status report." lightbox="media/mail-flow-status-report-mailflow-view-details.png":::
+
+In Defender for Office 365, if you select **Phishing block** \> **General filter**, threat classification results are shown. For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
+
+:::image type="content" source="media/mail-flow-status-report-mailflow-view-phishing-block-threat-class.png" alt-text="Screenshot of selecting Phishing block, General filter in the Mailflow view of the Mailflow status report." lightbox="media/mail-flow-status-report-mailflow-view-phishing-block-threat-class.png":::
 
 The details table below the diagram shows the following information:
 
@@ -686,7 +692,7 @@ In the details table below the chart, the following information is available:
 - **Subject**
 - **Sender**
 - **Recipients**
-- **Detection technology**: The same detection technology values from the chart.
+- **Detection technology**: The same detection technology values as described in [View data by Email \> Phish and Chart breakdown by Detection Technology](#view-data-by-email--phish-and-chart-breakdown-by-detection-technology).
 - **Delivery status**
 - **Sender IP**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
@@ -730,6 +736,91 @@ In Defender for Microsoft 365, the following actions are available at the top of
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
+### View data by Email \> Phish and Chart breakdown by Threat classification (Defender for Office 365)
+
+:::image type="content" source="media/threat-protection-status-report-phishing-threat-classification-view.png" alt-text="The Threat classification view for phishing email in the Threat protection status report." lightbox="media/threat-protection-status-report-phishing-threat-classification-view.png":::
+
+Threat classification in Defender for Office 365 uses AI to identify and categorize threats. For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
+
+In the **View data by Email \> Phish** view, selecting **Chart breakdown by Threat classification** shows the following information in the chart:
+
+- **PII Gathering**
+- **Business intelligence**
+- **Invoice**
+- **Payroll**
+- **Gift card**
+- **Contact establishment**
+- **Task**
+- **None**
+
+In the details table below the chart, the following information is available:
+
+- **Date**
+- **Subject**
+- **Sender**
+- **Recipients**
+- **Detection technology**: The same detection technology values as described in [View data by Email \> Phish and Chart breakdown by Detection Technology](#view-data-by-email--phish-and-chart-breakdown-by-detection-technology).
+- **Threat classification**: The same threat classification values shown in the chart and described in [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
+- **Delivery status**
+- **Sender IP**
+- **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
+
+  To see all columns, you likely need to do one or more of the following steps:
+
+  - Horizontally scroll in your web browser.
+  - Narrow the width of appropriate columns.
+  - Zoom out in your web browser.
+
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+
+- **Date (UTC)** **Start date** and **End date**
+- **Detection** section:
+  - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
+  - **Advanced filter**: Phishing signals based on machine learning.
+  - **General filter**: Phishing signals based on analyst rules.
+  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization. 
+  - **Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.
+  - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
+  - **Impersonation brand**: Sender impersonation of well-known brands.
+  - **Mixed analysis detection**: Multiple filters contributed to the message verdict.
+  - **File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.
+  - **Fingerprint matching**: The message closely resembles a previous detected malicious message.
+  - **URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.
+  - **URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.
+  - **Impersonation user**: Impersonation of protected senders that you specified in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) or learned through mailbox intelligence.
+  - **Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  - **Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  - **File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.
+  - **File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.
+  - **Campaign**: Messages identified as part of a [campaign](campaigns.md).
+- **Threat classification**: Leave the value **All** or remove it, double-click in the empty box, and then select an available value.
+- **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
+- **Evaluation**: **Yes** or **No**.
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
+- **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
+- **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
+- **Policy type**: Select **All** or one of the following values:
+  - **Anti-malware**
+  - **Safe Attachments**
+  - **Anti-phish**
+  - **Anti-spam**
+  - **Mail flow rule** (transport rule)
+  - **Others**
+- **Policy name (details table view only)**: Select **All** or a specific policy.
+- **Recipients (separated by commas)**
+
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+
+If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
+
+The following actions are available at the top of the Email summary panel for the Threat protection status report:
+
+- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+
+On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+
 ### Chart breakdown by Delivery status
 
 :::image type="content" source="media/threat-protection-status-report-phishing-delivery-status-view.png" alt-text="The Delivery status view for phishing email and malware email in the Threat protection status report." lightbox="media/threat-protection-status-report-phishing-delivery-status-view.png":::
@@ -752,7 +843,7 @@ In the details table below the chart, the following information is available:
 - **Subject**
 - **Sender**
 - **Recipients**
-- **Detection technology**: The same detection technology values from the chart.
+- **Detection technology**: The same detection technology values as described in [View data by Email \> Phish and Chart breakdown by Detection Technology](#view-data-by-email--phish-and-chart-breakdown-by-detection-technology).
 - **Delivery status**
 - **Sender IP**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
@@ -809,7 +900,7 @@ In the details table below the chart, the following information is available:
 - **Date**
 - **Attachment filename**
 - **Workload**
-- **Detection technology**: The same detection technology values from the chart.
+- **Detection technology**: The same detection technology values as described in [View data by Email \> Phish and Chart breakdown by Detection Technology](#view-data-by-email--phish-and-chart-breakdown-by-detection-technology).
 - **File size**
 - **Last modifying user**
 

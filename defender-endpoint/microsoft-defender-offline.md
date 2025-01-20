@@ -4,11 +4,11 @@ description: You can use Microsoft Defender Offline Scan straight from the Micro
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 09/18/2024
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.custom: nextgen
-ms.reviewer:
+ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: conceptual
 ms.collection: 

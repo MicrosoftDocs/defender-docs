@@ -46,12 +46,6 @@ Defender for Cloud Apps uses the following to measure risk:
 
 Select the investigation priority score for an alert or an activity to view the evidence that explains how Defender for Cloud Apps scored the activity.
 
-> [!NOTE]
-> We're gradually retiring the [**Investigation priority score increase**](investigate-anomaly-alerts.md#investigation-priority-score-increase-preview) alert from Microsoft Defender for Cloud Apps by August 2024. The investigation priority score and the procedure described in this article are not affected by this change.
->
-> For more information, see [Investigation priority score increase deprecation timeline](investigate-anomaly-alerts.md#deprecation-timeline).
-
-
 ## Phase 1: Connect to the apps you want to protect<a name="connect-apps-protect"></a>
 
 Connect at least one app to Microsoft Defender for Cloud Apps using the [API connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md). We recommend that you start by connecting [Microsoft 365](./connect-office-365.md).

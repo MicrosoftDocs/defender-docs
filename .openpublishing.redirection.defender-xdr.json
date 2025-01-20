@@ -1,6 +1,17 @@
 {
   "redirections": [
     {
+      "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud-apps.md",
+      "redirect_url": "/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/microsoft-365-security-center-mdi.md",
+      "redirect_url": "/defender-for-identity/microsoft-365-security-center-mdi",
+      "redirect_document_id": false
+    },
+
+    {
       "source_path": "defender-xdr/eval-create-eval-environment.md",
       "redirect_url": "/defender-xdr/pilot-deploy-overview",
       "redirect_document_id": false

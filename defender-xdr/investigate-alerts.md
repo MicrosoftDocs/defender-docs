@@ -22,7 +22,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - met150
-ms.date: 07/18/2024
+ms.date: 1/17/2025
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -126,13 +126,17 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender XDR | `ra{GUID}` <br> `ta{GUID}` for alerts from ThreatExperts <br> `ea{GUID}` for alerts from custom detections |
 | Microsoft Defender for Office 365 | `fa{GUID}` <br> Example: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Defender for Endpoint | `da{GUID}` <br> `ed{GUID}` for alerts from custom detections |
-| Microsoft Defender for Identity | `aa{GUID}` <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i` |
-| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` for alerts from XDR detection engine <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri638724443630474445_-1629192583` |
+| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> `rm{GUID}` for alerts from XDR detection engine <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Entra ID Protection | `ad{GUID}` |
 | App Governance | `ma{GUID}` |
 | Microsoft Data Loss Prevention | `dl{GUID}` |
 | Microsoft Defender for Cloud | `dc{GUID}` |
 | Microsoft Sentinel | `sn{GUID}` |
+| Microsoft Purview Insider Risk Management | `ir{GUID}` |
+
+> [!NOTE]
+> If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
 <a name='configure-aad-ip-alert-service'></a>
 
@@ -324,7 +328,7 @@ To create the automation, you'll need an API token before you can connect Power 
 
 Watch this short video to learn how automation works efficiently to create a smooth workflow and how to connect Power Automate to Defender for Cloud Apps.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=01afebcb-850c-4a6f-abb4-692188ac6de7]
 
 ## Next steps
 
