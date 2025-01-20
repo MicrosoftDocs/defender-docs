@@ -28,7 +28,9 @@ prerequisites:
   summary: |
     - [Microsoft Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled on the subscription.
 
-    - Supported VMs:  VMs deployed through Azure Resource Manager, VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models), VMs protected by Azure Firewalls on the same VNET as the VM, VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview), AWS EC2 instances (Preview) 
+    - Supported VMs:  VMs deployed through Azure Resource Manager, VMs protected by Azure Firewalls on the same VNET as the VM, AWS EC2 instances (Preview) 
+
+    - Unsupported VMs: VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models), VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview)
     
     - To set up just-in-time access on your AWS VMs, you need to [connect your AWS account](quickstart-onboard-aws.md) to Microsoft Defender for Cloud.
 
@@ -36,7 +38,7 @@ prerequisites:
 
     - You need **Reader** and **SecurityReader** permissions, or a custom role can view the JIT status and parameters.
 
-    - For a custom role, assign the permissions summarized in the table. tTo create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
+    - For a custom role, assign the permissions summarized in the table. To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
       | User action | Permissions to set|
         | --- | --- |
