@@ -59,22 +59,22 @@ You can learn more about Defender for Container's pricing on the [pricing page](
       - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud recommendations page. [Learn how to deploy the solution to specific clusters](defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
       - Manually install [Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
-    - [Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) provides API-based discovery of your Kubernetes clusters. To enable the **Agentless discovery for Kubernetes** feature, toggle the setting to **On**.
-    - The [Agentless Container Vulnerability Assessment](agentless-vulnerability-assessment-gcp.md) provides vulnerability management for images stored in Google Registries (GAR and GCR) and running images on your GKE clusters. To enable the **Agentless Container Vulnerability Assessment** feature, toggle the setting to **On**.
+    - [Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) provides API-based discovery of your Kubernetes clusters. To enable the **K8S API access** toggle to **On**.
+    - The [Agentless Container Vulnerability Assessment](agentless-vulnerability-assessment-gcp.md) provides vulnerability management for images stored in Google Registries (GAR and GCR) and running images on your GKE clusters. Set the **Registry access** toggle to **On**.
 
-1. Select the **Copy** button.
+2. Select the **Copy** button.
 
     :::image type="content" source="media/tutorial-enable-containers-gcp/copy-button.png" alt-text="Screenshot showing the location of the copy button.":::
 
-1. Select the **GCP Cloud Shell** button.
+3. Select the **GCP Cloud Shell** button.
 
-1. Paste the script into the Cloud Shell terminal, and run it.
+4. Paste the script into the Cloud Shell terminal, and run it.
 
     The connector will update after the script executes. This process can take up to 6-8 hours up to complete.
 
-1. Select **Next: Review and Generate>**.
+5. Select **Next: Review and Generate>**.
 
-1. Select **Update**.
+6. Select **Update**.
 
 ## Deploy the solution to specific clusters
 

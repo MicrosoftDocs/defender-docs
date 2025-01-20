@@ -23,8 +23,8 @@ With the cloud security explorer, you can query all of your security issues and 
   - You must [enable agentless scanning](enable-vulnerability-assessment-agentless.md).
   
   For agentless container posture, you must enable the following extensions:
-  - [Agentless discovery for Kubernetes](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan)
-  - [Agentless container vulnerability assessment](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan)
+  - [K8S API access](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan)
+  - [Registry access](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan)
 
   > [!NOTE]
   > If you only have [Defender for Servers P2](tutorial-enable-servers-plan.md) plan 2 enabled, you can use the cloud security explorer to query for keys and secrets, but you must have Defender CSPM enabled to get the full value of the explorer.

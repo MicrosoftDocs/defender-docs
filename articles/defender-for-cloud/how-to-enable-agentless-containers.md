@@ -23,7 +23,7 @@ Defender CSPM includes [two extensions](faq-defender-for-containers.yml#what-are
 
 1. Select the scope that's onboarded to the Defender CSPM plan, then select **Settings**.
 
-1. Ensure the **Agentless discovery for Kubernetes** and **Agentless Container vulnerability assessments** extensions are toggled to **On**.
+1. Ensure the **K8S API access** and **Agentless Container vulnerability assessments** extensions are toggled to **On**.
 
 1. Select **Continue**.
 
