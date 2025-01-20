@@ -1,8 +1,8 @@
 ---
 title: Updates from Microsoft Ignite 2024
-description: Learn about Microsoft's Defender for Cloud's updates to file integrity monitoring capabilities, including new features and improvements.
+description: Learn about Microsoft's Defender for Cloud's updates from Ignite 2024, including new features and improvements.
 ms.topic: reference
-ms.date: 01/19/2025
+ms.date: 01/20/2025
 ---
 
 # Updates from Microsoft Ignite 2024

@@ -1330,6 +1330,9 @@
         - name: Updates from Microsoft Ignite 2024
           DisplayName: updates, Ignite, 2024
           href: episode-fifty-four.md
+        - name: Cloud Detection Response experience
+          DisplayName: Cloud Detection Response, CDR
+          href: episode-fifty-five.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation
