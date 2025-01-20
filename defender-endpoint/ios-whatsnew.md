@@ -4,9 +4,9 @@ description: Learn about the major changes for previous versions of Microsoft De
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
-ms.reviewer: sunasing
+ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 12/11/2024
+ms.date: 01/07/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -29,6 +29,41 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+
+## Upgrading your experience: UX enhancements you should know about
+
+January 2025
+
+**Key changes**
+
+We are pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+
+Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation. 
+
+The following screenshot is an example of what the user sees in their dashboard:
+
+:::image type="content" source="media/ios-whatsnew/ios-dashboard.png" alt-text="Screenshot showing the user's dashboard.":::
+
+**Recommendation cards for alerts**
+
+The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert will bring forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table.
+
+| Card | Description |
+|--|--|
+| :::image type="content" source="media/ios-whatsnew/ios-network-protection-unsafe-connection.png" alt-text="Screenshot of a card indicating an unsafe network connection."::: | **Network protection** <br/>The user is prompted to connect to a secure network. |
+| :::image type="content" source="media/ios-whatsnew/ios-web-protection.png" alt-text="Screenshot of a card prompting the user to turn on web protection."::: | **Web protection** <br/>The user is prompted to turn on web protection. |
+| :::image type="content" source="media/ios-whatsnew/ios-update.png" alt-text="Screenshot of a card telling the user an iOS update is available."::: | **Device health** <br/>The user is prompted to update their device. |
+
+**Feature tiles**
+
+We have enhanced the current enterprise dashboard experience, featuring a new tile view. The following table lists some examples of tiles:
+
+| Tile | Description |
+|--|--|
+| :::image type="content" source="media/ios-whatsnew/ios-tile-network.png" alt-text="Screenshot of the network protection tile."::: | **Network protection** <br/>The user sees whether or not their connection is secure. |
+| :::image type="content" source="media/ios-whatsnew/ios-tile-web-protection.png" alt-text="Screenshot of the web protection tile."::: | **Web protection** <br/>The user sees their current status of web protection. If it's not enabled, the tile indicates action is needed. |
+| :::image type="content" source="media/ios-whatsnew/ios-tile-device-health.png" alt-text="Screenshot of the device health tile."::: | **Device health** <br/>The user sees their device health status. If an iOS update is available, the tile indicates that action is needed. |
+| :::image type="content" source="media/ios-whatsnew/ios-tile-global-secure-access.png" alt-text="Screenshot of the Global Secure Access tile."::: | **Global Secure Access** <br/>The user sees their current status of Global Secure Access. |
 
 ## Defender for Endpoint on iOS now supports iOS/iPadOS 16.x as the minimum version
 
@@ -75,19 +110,19 @@ With **Disable Web Protection**, customers who don't want to set up a VPN can co
 
 ## Integration with Tunnel
 
-Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. Integration with Tunnel provides a simpler, secure VPN experience on iOS with just one app. This feature was earlier available only on Android. For more information, [see the techcommunity post here](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995).
+Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. Integration with Tunnel provides a simpler, secure VPN experience on iOS with just one app. This feature was earlier available only on Android. For more information, see [Tech Community: What's new in Microsoft Endpoint Manager - 2204 (April) edition](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995).
 
 ## Improved experience on supervised iOS devices
 
-Microsoft Defender for Endpoint on iOS now has specialized ability on supervised iOS/iPadOS devices, given the increased management capabilities provided by the platform on these types of devices. It can also provide Web Protection **without setting up a local VPN on the device**. This gives end-users a seamless experience while still being protected from phishing and other web-based attacks. For more information, see [this documentation](ios-install.md#complete-deployment-for-supervised-devices).
+Microsoft Defender for Endpoint on iOS now has specialized ability on supervised iOS/iPadOS devices, given the increased management capabilities provided by the platform on these types of devices. It can also provide Web Protection **without setting up a local VPN on the device**. This gives end-users a seamless experience while still being protected from phishing and other web-based attacks. For more information, see [Complete deployment for supervised devices](ios-install.md#complete-deployment-for-supervised-devices).
 
 ## Microsoft Defender for Endpoint is now Microsoft Defender in the App store
 
-Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the app store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you'll have access to features for Microsoft Defender for Endpoint or to features for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the app store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you'll have access to features for Microsoft Defender for Endpoint or to features for Microsoft Defender for individuals. For more information, see [Microsoft Defender](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
 
 ## Vulnerability Management
 
-On January 25, 2022, we announced the general availability of Vulnerability management on Android and iOS. For more information, see [the techcommunity post here](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
+On January 25, 2022, we announced the general availability of Vulnerability management on Android and iOS. For more information, see [Tech Community: Announcing general availability of vulnerability management support for Android and iOS](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
 
 ## 1.1.28250101
 
@@ -103,24 +138,27 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 ## 1.1.23250104
 
 - Performance optimizations - Test battery performance with this version and let us know your feedback.
-- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboard for devices enrolled through Microsoft Intune has been added. For more information, see this [documentation](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint) for more details on setup and configuration.
+- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboard for devices enrolled through Microsoft Intune has been added. For more information, see this [Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
 - **Privacy Controls** - Configure privacy controls for phish alert report. For more information, see [Configure iOS features](ios-configure-features.md).
 
 ## 1.1.23010101
 
 - Bug fixes and performance improvements
-  - Performance optimizations were made in this release. Test battery performance with this version and let us know your feedback.
+- Performance optimizations were made in this release. Test battery performance with this version and let us know your feedback.
 
 ## 1.1.20240103
+
 - Device Health card - Device Health card notifies end-users about any pending software updates.
 - Usability enhancements - End-users can now disable the Defender for Endpoint VPN from the Microsoft Defender app itself. Prior to this update, end-users had to disable VPN only from the Settings app.
 - Bug fixes.
 
 ## 1.1.20020101
+
 - UX Enhancements - Microsoft Defender for Endpoint has a new look.
 - Bug fixes.
 
 ## 1.1.17240101
+
 - Support for Mobile Application Management (MAM) via Intune is generally available with this version. For more information, see [Microsoft Defender for Endpoint risk signals available for your App protection policies](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-defender-for-endpoint-risk-signals-available-for-your/ba-p/2186322)
 - **Jailbreak Detection** is generally available. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
 - **Auto-setup of VPN profile** for enrolled devices via Microsoft Intune is generally available. For more information, see [Auto-Setup VPN profile for enrolled iOS devices](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding).

@@ -1,9 +1,10 @@
 ---
 title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
+ms.reviewer: yongrhee 
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
@@ -161,7 +162,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
    > [!NOTE]
    > Copy the .admx, and separately the .adml to the En-US folder.
 
-3. Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc   
+3. Start, GPMC.msc (e.g. Domain Controller or) or GPEdit.msc   
 4. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
   
 5. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service

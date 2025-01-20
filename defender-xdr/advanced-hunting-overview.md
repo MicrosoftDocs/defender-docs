@@ -37,7 +37,7 @@ Advanced hunting supports two modes, guided and advanced. Use [guided mode](adva
 
 **To start hunting, read [Choose between guided and advanced modes to hunt in the Microsoft Defender portal](advanced-hunting-modes.md).**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4G6DO]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a3a3cfd9-6699-4e0d-b372-b0ecf4493eb5]
 
 You can use the same threat hunting queries to build custom detection rules. These rules run automatically to check for and then respond to suspected breach activity, misconfigured machines, and other findings.
 
@@ -52,7 +52,7 @@ Advanced hunting supports queries that check a broader data set coming from:
 To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md). Or to use advanced hunting with Microsoft Sentinel, [connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md). 
 
 
-For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://www.microsoft.com/en-us/videoplayer/embed/RWFISa). 
+For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://learn-video.azurefd.net/vod/player?id=ffdedc73-6edf-45a9-8c90-566296e8d4ec). 
 
 
 

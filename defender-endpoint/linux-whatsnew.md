@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 12/02/2024
+ms.date: 01/13/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -30,13 +30,10 @@ search.appverid: met150
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux.
 
-- [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
-- [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
-
 > [!IMPORTANT]
-> Starting with version `101.2408.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support has been available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF is not supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
+> Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support has been available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
 > 
-> 1. Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build will continue to be supported for several months, so you have time to plan and execute your migration to eBPF.
+> 1. Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 >
 > 2. If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. In the event of a fallback, all process operations continue to flow seamlessly. 
 >
@@ -45,6 +42,51 @@ This article is updated frequently to let you know what's new in the latest rele
 > If you have any concerns or need assistance during this transition, contact support.
 
 ## Releases for Defender for Endpoint on Linux
+
+### Jan-2025 Build: 101.24112.0001 | Release version: 30.124112.0001.0
+
+| Build:             | **101.24112.0001**    |
+|--------------------|-----------------------|
+| Released:          | **January 13, 2025** |
+| Published:         | **January 13, 2025** |
+| Release version:   | **30.124112.0001.0** |
+| Engine version:    | **1.1.24090.13**       |
+| Signature version: | **1.421.226.0**      |
+
+#### What's new
+
+- Upgraded the Bond version to 13.0.1 to address security vulnerabilities in versions 12 or lower.
+
+- Mdatp package no longer has a dependency on SELinux packages.
+  
+- User can now query the status of supplementary event provider eBPF using the threat hunting query in DeviceTvmInfoGathering. To learn more about this query check: [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf). The result of this query can return the following two values as eBPF status:
+  - Enabled: When eBPF is enabled as working as expected.
+  - Disabled: When eBPF is disabled due to one of the following reasons:
+    - When MDE is using auditD as a supplementary sensor
+    - When eBPF is not present and we fallback to Netlink as supplementary event provider
+    - There is no supplementary sensor present.
+
+- Starting from 2411, the MDATP package release to Production on packages.microsoft.com will follow a gradual rollout mechanism which spans over a week. The other release rings, insiderFast and insiderSlow, are unaffected by this change.
+
+- Stability and performance improvements.
+
+- Critical bugs fixes around definition update flow.
+
+### Jan-2025 Build: 101.24102.0000 | Release version: 30.124102.0000.0
+
+| Build:             | **101.24102.0000**    |
+|--------------------|-----------------------|
+| Released:          | **January 8, 2025** |
+| Published:         | **January 8, 2025** |
+| Release version:   | **30.124102.0000.0** |
+| Engine version:    | **1.1.24080.11**       |
+| Signature version: | **1.419.351.0**      |
+
+#### What's new
+
+- The default engine version has been updated to `1.1.24080.11`, and the default signature version has been updated to `1.419.351.0`.
+
+- Improved the reporting of command-line threat information for short lived processes on the security portal.
 
 ### Nov-2024 Build: 101.24092.0002 | Release version: 30.124092.0002.0
 
@@ -58,9 +100,9 @@ This article is updated frequently to let you know what's new in the latest rele
 
 #### What's new
 
-- Support added for hardened installations on non-executable `/var` partitions. Beginning with this release, antivirus signatures are installed at `/opt/microsoft/mdatp/definitions.noindex` by default, instead of `/var/opt/microsoft/mdatp/definitions.noindex`. During upgrades, the installer attempts to migrate older definitions to the new path unless it detects that the path is already customized (using `mdatp definitions path set`).
+- To support hardened installations with nonexecutable `/var` partitions, mdatp antivirus definitions will now install to `/opt/microsoft/mdatp/definitions.noindex` instead of `/var` if the latter is detected as nonexecutable. During upgrades, the installer attempts to migrate older definitions to the new path upon detecting a nonexecutable `/var`, unless it finds that the path has already been customized (using `mdatp definitions path set`).
 
-- Beginning with this version, Defender for Endpoint on Linux no longer needs executable permissions for `/var/log`. If these permissions are not available, log files are automatically be redirected to `/opt`.
+- Beginning with this version, Defender for Endpoint on Linux no longer needs executable permissions for `/var/log`. If these permissions aren't available, log files are automatically redirected to `/opt`.
 
 ### Oct-2024 Build: 101.24082.0004 | Release version: 30.124082.0004.0
 
@@ -74,7 +116,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 #### What's new
 
-- Starting this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have completely transitioned to eBPF. If you disable eBPF, or in the event eBPF is not supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Netlink as a fallback supplementary event provider. Netlink provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more details, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
+- Starting this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Netlink as a fallback supplementary event provider. Netlink provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
 - Stability and performance improvements
 - Other bug fixes
 
@@ -107,10 +149,10 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release.
 
-- Fixes bug in which infected command-line threat information was not showing correctly in security portal.
+- Fixes bug in which infected command-line threat information wasn't showing correctly in security portal.
 - Fixes a bug where disabling a preview feature required a Defender of Endpoint to disable it.
 - Global Exclusions feature using managed JSON is now in Public Preview. available in insiders slow from 101.23092.0012. For more information, see [linux-exclusions](linux-exclusions.md).
-- Updated the Linux default engine version to 1.1.24050.7 and default sigs Version to 1.411.410.0.
+- Updated the Linux default engine version to 1.1.24050.7 and default signature version to 1.411.410.0.
 - Stability and performance improvements.
 - Other bug fixes.
 
@@ -128,7 +170,7 @@ There are multiple fixes and new changes in this release.
 
 There are multiple fixes and new changes in this release.
 
-- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Please update to the latest MDE version to avoid any impact.
+- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Update to the latest MDE version to avoid any impact.
 - We have now simplified the output of `mdatp health --detail features`
 - Stability and performance improvements.
 - Other bug fixes.
@@ -165,7 +207,7 @@ There are multiple fixes and new changes in this release:
 
 There are multiple fixes and new changes in this release:
 
-- In passive and on-demand modes, antivirus engine remains in idle state and is used only during scheduled custom scans. Thus as part of performance improvements, we have made changes to keep the AV engine down  in passive and on-demand mode except during scheduled custom scans. If the real time protection is enabled, antivirus engine will always be up and running. This will have no impact on your server protection in any mode.
+- In passive and on-demand modes, antivirus engine remains in idle state and is used only during scheduled custom scans. Thus as part of performance improvements, we have made changes to keep the AV engine down  in passive and on-demand mode except during scheduled custom scans. If the real time protection is enabled, antivirus engine will always be up and running. This has no impact on your server protection in any mode.
  
   To keep users informed of the state of antivirus engine, we have introduced a new field called "engine_load_status" as part of MDATP health. It indicates whether antivirus engine is currently running or not.
 
@@ -205,7 +247,7 @@ There are multiple fixes and new changes in this release:
 
 There are multiple fixes and new changes in this release:
 
-- The addition of a new log file - `microsoft_defender_scan_skip.log`. This will log the filenames that were skipped from various antivirus scans by Microsoft Defender for Endpoint due to any reason.
+- The addition of a new log file - `microsoft_defender_scan_skip.log`. This logs the filenames that were skipped from various antivirus scans by Microsoft Defender for Endpoint due to any reason.
 - Stability and performance improvements.
 - Bug fixes.
 
@@ -254,14 +296,14 @@ There are multiple fixes and new changes in this release:
    | Alma 8.4 and higher | Insiders Slow | https://packages.microsoft.com/config/alma/8/insiders-slow.repo |
    | Alma 9.2 and higher | Insiders Slow | https://packages.microsoft.com/config/alma/9/insiders-slow.repo |
 
-If you already have Defender for Endpoint running on any of these distros and facing any issues in the older versions, please upgrade to the latest Defender for Endpoint version from the corresponding ring mentioned above. Refer our [public deployment docs](comprehensive-guidance-on-linux-deployment.md) for more details.
+If you already have Defender for Endpoint running on any of these distros and facing any issues in the older versions, upgrade to the latest Defender for Endpoint version from the corresponding ring mentioned above. Refer our [public deployment docs](comprehensive-guidance-on-linux-deployment.md) for more details.
 
 > [!NOTE]
 > Known issues: 
 > 
 > Microsoft Defender for Endpoint for Linux on Rocky and Alma currently has the following known issues:
 > - Live Response and Threat Vulnerability Management are currently not supported (work in progress).
-> - Operating system info for devices is not visible in the Microsoft Defender portal
+> - Operating system info for devices isn't visible in the Microsoft Defender portal
 
 ### January-2024 Build: 101.23112.0009 | Release version: 30.123112.0009.0
 
@@ -319,7 +361,7 @@ There are multiple fixes and new changes in this release:
   ```
 - Starting with this release, Microsoft Defender for Endpoint on Linux will no longer be shipping a solution for RHEL 6.
   
-    RHEL 6 'Extended end of life support' is poised to end by June 30, 2024 and customers are advised to plan their RHEL upgrades accordingly aligned with guidance from Red Hat. Customers who need to run Defender for Endpoint on RHEL 6 servers can continue to leverage version 101.23082.0011 (does not expire before June 30, 2024) supported on kernel versions 2.6.32-754.49.1.el6.x86_64 or prior.
+    RHEL 6 'Extended end of life support' is poised to end by June 30, 2024 and customers are advised to plan their RHEL upgrades accordingly aligned with guidance from Red Hat. Customers who need to run Defender for Endpoint on RHEL 6 servers can continue to use version 101.23082.0011 (doesn't expire before June 30, 2024) supported on kernel versions 2.6.32-754.49.1.el6.x86_64 or prior.
   - Engine Update to `1.1.23080.2007` and Signatures Ver: `1.395.1560.0`.
   - Streamlined device connectivity experience is now in public preview mode. [public blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-a-streamlined-device-connectivity-experience-for/ba-p/3956236)
   - Performance improvements & bug fixes.
@@ -342,7 +384,7 @@ There are multiple fixes and new changes in this release:
 
 This new release is build over October 2023 release (101.23082.0009) with addition of following changes. There's no change for other customers and upgrading is optional.
 
-Fix for immutable mode of auditd when supplementary subsystem is ebpf:  In ebpf mode all mdatp audit rules should be cleaned after switching to ebpf and rebooting.  After reboot, mdatp audit rules were not cleaned due to which it was resulting in hang of the server.  The fix cleans these rules, user should not see any mdatp rules loaded on reboot
+Fix for immutable mode of auditd when supplementary subsystem is ebpf:  In ebpf mode all mdatp audit rules should be cleaned after switching to ebpf and rebooting.  After reboot, mdatp audit rules weren't cleaned due to which it was resulting in hang of the server.  The fix cleans these rules, user shouldn't see any mdatp rules loaded on reboot
 
 Fix for MDE not starting up on RHEL 6.
 
@@ -427,7 +469,7 @@ sudo systemctl disable mdatp
     - You must add "*.dm.microsoft.com" to firewall exclusions for the feature to work correctly
   - Defender for Endpoint is now available for Debian 12 and Amazon Linux 2023
   - Support to enable Signature verification of updates downloaded
-    - Note that you must update the manajed.json as shown below
+    - You must update the manajed.json as shown below
       ```
         "features":{
           "OfflineDefinitionUpdateVerifySig":"enabled"
@@ -632,7 +674,7 @@ sudo systemctl disable mdatp
 - There are multiple fixes and new changes in this release 
     - Improved Network Protection Proxy handling.
     - In Passive mode, Defender for Endpoint no longer scans when Definition update happens.
-    - Devices continue to be protected even after Defender for Endpoint agent has expired. We recommend upgrading the Defender for Endpoint Linux agent to the latest available version to receive bug fixes, features and performance improvements.
+    - Devices continue to be protected even after Defender for Endpoint agent has expired. We recommend upgrading the Defender for Endpoint Linux agent to the latest available version to receive bug fixes, features, and performance improvements.
     - Removed semanage package dependency.
     - Engine Update to `1.1.20100.7` and Signatures Ver: `1.385.1648.0`.
     - Bug fixes.
@@ -884,7 +926,7 @@ sudo systemctl disable mdatp
   - Fixes an issue with accessing SMB shares behind Cisco AnyConnect VPN connections.
   - Fixes an issue with Network Protection and SMB.
   - lttng performance tracing support.
-  - TVM, eBPF, auditd, telemetry and mdatp cli improvements.
+  - TVM, eBPF, auditd, telemetry, and mdatp cli improvements.
   - mdatp health now reports behavior_monitoring
   - Other fixes.
 
@@ -1039,7 +1081,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 #### What's new
 
 - Added an option to [configure file hash computation](linux-preferences.md#configure-file-hash-computation-feature)
-- From this build onwards, the product has the new antimalware engine by default
+- From this build onwards, the product has the new anti-malware engine by default
 - Performance improvements for file copy operations
 - Bug fixes
 

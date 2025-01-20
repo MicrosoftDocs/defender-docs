@@ -1,5 +1,5 @@
 ---
-title: Configure alert notifications in Microsoft Defender XDR
+title: Configure alert notifications
 description: You can use Microsoft Defender for Endpoint to configure email notification settings for security alerts, based on severity and other criteria.
 ms.service: defender-xdr
 ms.author: diannegali
@@ -12,10 +12,10 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 07/08/2024
+ms.date: 01/17/2025
 ---
 
-# Configure alert notifications in Microsoft Defender XDR
+# Configure alert notifications
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -43,9 +43,10 @@ If you're using role-based access control (RBAC), recipients will only receive n
 The email notification includes basic information about the alert and a link to the portal where you can do further investigation.
 
 ## Create rules for alert notifications
+
 You can create rules that determine the devices and alert severities to send email notifications for and the notification recipients.
 
-1. Go to [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in using an account with the Security administrator or Global administrator role assigned.
+1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in using an account with the Security administrator or Global administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Email notifications**.
 
@@ -102,5 +103,5 @@ This section lists various issues that you may encounter when using email notifi
 - [Update data retention settings](/defender-endpoint/preferences-setup)
 - [Configure advanced features](/defender-endpoint/advanced-features)
 - [Configure vulnerability email notifications](/defender-endpoint/configure-vulnerability-email-notifications)
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

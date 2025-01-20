@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom:
 ms.topic: how-to
-ms.date: 08/03/2023
+ms.date: 11/17/2024
 ms.reviewer:
 search.appverid: met150
 ---
@@ -32,6 +32,7 @@ In Microsoft Defender XDR Unified role-based access control (RBAC) you can selec
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Security Exposure Management](/security-exposure-management/)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 <a name='microsoft-365-defender-unified-rbac-permission-details'></a>
 

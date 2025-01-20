@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/04/2021
+ms.date: 01/06/2025
 ---
 
 # Export secure configuration assessment per device
@@ -238,17 +238,14 @@ Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerab
 GET /api/machines/SecureConfigurationsAssessmentExport
 ```
 
-### Parameters
-
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours).
-
-### 2.5 Properties
+### 2.4 Properties
 
 > [!NOTE]
 >
-> - The files are gzip compressed & in multiline Json format.
-> - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are only valid for 1 hour.
 > - For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
+
 
 <br>
 
@@ -256,19 +253,19 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 
 Property (ID)|Data type|Description|Example of a returned value
 ---|---|---|---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
-### 2.6 Examples
+### 2.5 Examples
 
-#### 2.6.1 Request example
+#### 2.5.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentExport
 ```
 
-#### 2.6.2 Response example
+#### 2.5.2 Response example
 
 ```json
 {

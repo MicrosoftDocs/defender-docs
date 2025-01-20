@@ -92,6 +92,7 @@ Microsoft Defender XDR licensing requirements must be met before you can enable 
 
 - [Licensing requirements](prerequisites.md#licensing-requirements)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
+- [Microsoft Defender XDR in the Microsoft Defender portal](microsoft-365-defender-portal.md)
 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

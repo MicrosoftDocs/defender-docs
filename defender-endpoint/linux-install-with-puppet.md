@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/24/2024
+ms.date: 01/08/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
@@ -29,15 +29,9 @@ ms.date: 12/24/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-This article describes how to deploy Defender for Endpoint on Linux using Puppet. A successful deployment requires the completion of all of the following tasks:
-
-- [Download the onboarding package](#download-the-onboarding-package)
-- [Create Puppet manifest](#create-a-puppet-manifest)
-- [Deployment (include the manifest inside the site.pp file)](#include-the-manifest-inside-the-sitepp-file)
-- [Monitor your Puppet deployment](#monitor-puppet-deployment)
+This article describes how to deploy Defender for Endpoint on Linux using Puppet. 
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
-
 
 ## Prerequisites and system requirements
 
@@ -70,9 +64,9 @@ Download the onboarding package from Microsoft Defender portal.
    inflating: mdatp_onboard.json
    ```
 
-## Create a Puppet manifest
+## Create a directory structure
 
-You need to create a Puppet manifest for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from `puppetlabs`, and assumes that the modules are installed on your Puppet server.
+You need to create a directory structure for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from `puppetlabs`, and assumes that the modules are installed on your Puppet server.
 
 1. Under the **modules** folder if your Puppet installation, create the folders `install_mdatp/files` and `install_mdatp/manifests`. The **modules** folder is typically located at `/etc/puppetlabs/code/environments/production/modules` on your Puppet server. 
 
@@ -100,7 +94,7 @@ You need to create a Puppet manifest for deploying Defender for Endpoint on Linu
        └── init.pp
    ```
 
-## Create a manifest file
+## Create a Puppet manifest
 
 There are two ways to create a manifest file:
 
@@ -157,8 +151,8 @@ class install_mdatp (
 
 }
 ```
->[!NOTE]
->Installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help.
+> [!NOTE]
+> The installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help.
 >`./mde_installer.sh --help`
 
 #### Create a manifest to deploy Defender for Endpoint by configuring repositories manually
@@ -265,7 +259,6 @@ class install_mdatp (
 
 > [!NOTE]
 > Defender for Endpoint on Linux can be deployed from one of the following channels: **insiders-fast, insiders-slow, prod**. Each channel corresponds to a Linux software repository. The choice of the channel determines the type and frequency of the updates that are offered to your device. Devices in `insiders-fast` are the first ones to receive updates and new features in preview, followed by `insiders-slow`, and lastly by `prod`.
->
 > Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/[version]`.
 
 > [!Warning]
@@ -287,7 +280,7 @@ node "default" {
 
 Enrolled agent devices periodically poll the Puppet Server and install new configuration profiles and policies as soon as they're detected.
 
-## Monitor Puppet deployment
+## Monitor your Puppet deployment
 
 On the agent device, you can also check the deployment status by running the following command:
 
@@ -327,10 +320,10 @@ To get support from Microsoft, raise a support ticket and provide log files by u
 
 ## How to configure policies for Microsoft Defender on Linux
 
-You can configure antivirus and EDR settings on your endpoints using following methods:
+You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
 
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) to learn more about the available settings 
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
+- [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes the available settings 
+- [Security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
 
 ## Operating system upgrades
 

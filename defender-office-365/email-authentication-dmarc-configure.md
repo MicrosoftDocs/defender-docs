@@ -101,7 +101,7 @@ For example:
 
 - `v=DMARC1;` identifies the TXT record as a DMARC TXT record.
 
-- **DMARC policy**: Tells the destination email system what to with messages that fail DMARC as described earlier in this article:
+- **DMARC policy**: Tells the destination email system what to do with messages that fail DMARC as described earlier in this article:
   - `p=reject`: The messages should be rejected. What actually happens to the message depends on the destination email system, but the messages are typically discarded.
   - `p=quarantine`: The messages should be accepted but marked. What actually happens to the message depends on the destination email system. For example, the message might be quarantined as spam, delivered to the Junk Email folder, or delivered to the Inbox with an identifier added to the Subject or message body.
   - `p=none`: No suggested action for messages that fail DMARC. What happens to the message depends on the email protection features in the destination email system. You use this value for [testing and tuning of the DMARC policy](#set-up-dmarc-for-active-custom-domains-in-microsoft-365) as described later in this article.

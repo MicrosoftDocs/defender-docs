@@ -84,7 +84,7 @@ Integrating with your SIEM is accomplished in three steps:
 
 ### Step 2: Download the JAR file and run it on your server
 
-1. In the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=838596), after accepting the [software license terms](https://go.microsoft.com/fwlink/?linkid=862491), download the .zip file and unzip it.
+1. In the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=838596), after accepting the software license terms, download the .zip file and unzip it.
 
 1. Run the extracted file on your server:
 

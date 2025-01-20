@@ -250,7 +250,7 @@ Use these Defender for Cloud Apps tutorials to help you discover risk and protec
 - [Protect your files with admin quarantine](/cloud-app-security/use-case-admin-quarantine)
 - [Require step-up authentication upon risky action](/cloud-app-security/tutorial-step-up-authentication)
 
-For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see this [video](https://www.microsoft.com/en-us/videoplayer/embed/RWFISa).
+For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see this [video](https://learn-video.azurefd.net/vod/player?id=ffdedc73-6edf-45a9-8c90-566296e8d4ec).
 
 ## SIEM integration
 

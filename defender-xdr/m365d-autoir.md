@@ -36,7 +36,7 @@ As security alerts are triggered, it's up to your security operations team to lo
 
 Watch the following video to see how self-healing works: <p>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4BzwB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-562206a4bc23]
 
 In Microsoft Defender XDR, automated investigation and response with self-healing capabilities works across your devices, email & content, and identities.
 > [!TIP]

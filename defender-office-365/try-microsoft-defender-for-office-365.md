@@ -48,7 +48,7 @@ You can also learn more about Defender for Office 365 at this [interactive guide
 
 Watch this short video to learn more about how you can get more done in less time with Microsoft Defender for Office 365.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMmIe]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=29ff5c90-7b71-468c-92b9-d1d8ca9ee8fa]
 
 For pricing information, see [Microsoft Defender for Office 365](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-office-365).
 

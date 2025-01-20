@@ -22,7 +22,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 12/02/2024
+ms.date: 01/08/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -85,14 +85,7 @@ To connect a Microsoft Sentinel workspace to the Defender portal, complete the f
 1. In the Defender portal, select **Overview**.
 1. Select **Connect a workspace**.
 1. Choose the workspace you want to connect and select **Next**.
-1. Read and understand the product changes associated with connecting your workspace. These changes include:
-
-   - Incidents are no longer created by Microsoft Sentinel. They're now created by the correlation engine in the Microsoft Defender portal. This change is reflected in the incident's "incident provider name" field, which now reads "Microsoft Defender XDR."
-   - Therefore, any active [Microsoft security incident creation rules](/azure/sentinel/threat-detection#microsoft-security-rules) are deactivated to avoid creating duplicate incidents. The incident creation settings in other types of analytics rules remain as they were, but those settings are implemented in the Defender portal, not in Microsoft Sentinel.
-   - Log tables, queries, and functions in the Microsoft Sentinel workspace are also available in advanced hunting within the Defender portal.
-   - The Microsoft Sentinel Contributor role is assigned to the Microsoft Threat Protection and WindowsDefenderATP apps within the subscription.
-   - All alerts related to Defender XDR products are streamed directly from the main Defender XDR data connector to ensure consistency. Make sure you have incidents and alerts from this connector turned on in the workspace.
-
+1. Read and understand the product changes associated with connecting your workspace. 
 1. Select **Connect**.
 
 After your workspace is connected, the banner on the **Overview** page shows that your environment is ready. The **Overview** page is updated with new sections that include metrics from Microsoft Sentinel like the number of data connectors and automation rules.

@@ -20,8 +20,11 @@ Below is a list of the activity filters that can be applied. Most filters suppor
 - Activity objects – Search for the objects the activity was done on. This filter applies to files, folders, users, or app objects.
     - Activity object ID - the ID of the object (file, folder, user, or app ID).
 
-    - Item - Enables you to search by the name or ID of any activity object (for example, user names, files, parameters, sites). For the **Activity object Item** filter, you can select whether to filter for items that **Contain**, **Equal**, or **Starts with** the specific item.
+    - Item - Enables you to search by the name or ID of any activity object (for example, user names, files, parameters, sites). For the **Activity object Item** filter, you can select whether to filter for items that **Contains**, **Equals**, or **Starts with** the specific item.
 
+    > [!NOTE]
+    > Activity-Policy's **Activity object Item** filter supports the **Equals** operator only.
+  
 - Action type - Search for a more specific action performed in an app.
 
 - Activity type - Search for the app activity.

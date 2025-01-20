@@ -31,7 +31,7 @@ ms.date: 04/10/2024
 Microsoft Defender XDR is a unified experience where you can monitor and manage security across your enterprise. With the integrated alerts across identities, endpoints, data, apps, email, and collaboration tools - investigating and responding to threats now happen in a central location. 
 
 Watch this short video to learn how Microsoft Defender XDR helps to prevent, detect, investigate, and remediate threats across Microsoft 365.  
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4FTDg]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d41e1dac-41e3-4bcf-a201-9b95854dedb2]
 
 Whether you're new to the Microsoft suite of security products or familiar with individual workflows, this topic will guide you in the simple steps you need to take to get started with Microsoft Defender XDR.
 

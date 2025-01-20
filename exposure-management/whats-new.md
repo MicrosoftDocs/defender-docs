@@ -24,6 +24,16 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## January 2025
+
+### Metrics enhancements
+
+The metrics have been enhanced to show the improvement of the exposure levels with a progress bar, progressing from left to right and from 0% (indicating high exposure) to 100% (indicating no exposure).
+
+In addition, the metrics weight is now displayed as high, medium, or low, based on the metric's importance to the initiative. The weight can also be defined as risk accepted.
+
+For more information, see, [Working with metrics](exposure-insights-overview.md#working-with-metrics)
+
 ## December 2024
 
 ### New predefined classifications

@@ -49,6 +49,7 @@ To customize the device inventory views:
 - [Offboard devices](/defender-endpoint/offboard-machines).
 - [Investigate the device details](/defender-endpoint/investigate-machines) to identify behaviors or events that might be related to the alert.
 - In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts).
+- [Manually update the site associated with a device](manage-sites.md#manually-update-device-site-association) to maintain accurate monitoring of the network traffic.<!-- Devices can be manually updated[Update the site associated with a device.-->
 
 ## Next steps
 

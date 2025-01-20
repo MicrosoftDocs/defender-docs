@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.date: 05/17/2024
 audience: ITPro
 ms.topic: conceptual
-author: bsabetghadam
-ms.author: bsabetghadam
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: 
 - nextgen
 - partner-contribution
-ms.reviewer: pahuijbr, tudobril, yongrhee, bsabetghadam
+ms.reviewer: bsabetghadam
 manager: deniseb
 ms.subservice: ngp
 ms.collection: 

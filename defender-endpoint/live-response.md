@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/10/2025
 ---
 
 # Investigate entities on devices using live response
@@ -31,7 +31,7 @@ Live response gives security operations teams instantaneous access to a device (
 
 Live response is designed to enhance investigations by enabling your security operations team to collect forensic data, run scripts, send suspicious entities for analysis, remediate threats, and proactively hunt for emerging threats.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUW]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=38c8abec-021a-4cda-9198-5ff6402a79ee]
 
 With live response, analysts can do all of the following tasks:
 
@@ -122,11 +122,11 @@ The dashboard also gives you access to:
 ## Initiate a live response session on a device
 
 > [!NOTE]
-> Live response actions initiated from the Device page are not available in the machineactions API.
+> Live response actions initiated from the Device page are not available in the MachineActions API.
 
-1. Sign in to Microsoft Defender portal.
+1. Sign in to [Microsoft Defender portal](https://security.microsoft.com).
 
-2. Navigate to **Endpoints > Device inventory** and select a device to investigate. The devices page opens.
+2. Navigate to **Endpoints** > **Device inventory** and select a device to investigate. The devices page opens.
 
 3. Launch the live response session by selecting **Initiate live response session**. A command console is displayed. Wait while the session connects to the device.
 
@@ -229,15 +229,18 @@ Here are some examples:
 
 Live response has a library where you can put files into. The library stores files (such as scripts) that can be run in a live response session at the tenant level.
 
-Live response allows PowerShell scripts to run, however you must first put the files into the library before you can run them.
+Live response allows PowerShell and Bash scripts to run; however, you must first put the files into the library before you can run them.
 
-You can have a collection of PowerShell scripts that can run on devices that you initiate live response sessions with.
+You can have a collection of PowerShell and Bash scripts that can run on devices that you initiate live response sessions with.
 
 #### To upload a file in the library
 
-1. Click **Upload file to library**.
+> [!NOTE]
+> There are restrictions on the characters that can be uploaded to the library. Use alphanumeric characters and some symbols (specifically, `-`, `_`, or `.`).
 
-2. Click **Browse** and select the file.
+1. Select **Upload file to library**.
+
+2. Select **Browse** and select the file.
 
 3. Provide a brief description.
 
@@ -245,7 +248,7 @@ You can have a collection of PowerShell scripts that can run on devices that you
 
 5. If you'd like to be,  know what parameters are needed for the script, select the script parameters check box. In the text field, enter an example and a description.
 
-6. Click **Confirm**.
+6. Select **Confirm**.
 
 7. (Optional) To verify that the file was uploaded to the library, run the `library` command.
 
@@ -254,7 +257,7 @@ You can have a collection of PowerShell scripts that can run on devices that you
 Anytime during a session, you can cancel a command by pressing CTRL + C.
 
 > [!WARNING]
-> Using this shortcut will not stop the command in the agent side. It will only cancel the command in the portal. So, changing operations such as "remediate" may continue, while the command is canceled.
+> Using this shortcut doesn't stop the command in the agent side. It only cancels the command in the Microsoft Defender portal. So, changing operations such as "remediate" may continue, even if the command is canceled.
 
 ## Run a script
 
@@ -311,7 +314,7 @@ Live response supports table and JSON format output types. For each command, the
 
 ## Supported output pipes
 
-Live response supports output piping to CLI and file. CLI is the default output behavior. You can pipe the output to a file using the following command: [command] > [filename].txt.
+Live response supports output piping to CLI and file. CLI is the default output behavior. You can pipe the output to a file using the following command: `[command] > [filename].txt`.
 
 Example:
 

@@ -59,7 +59,7 @@ Watch our quick start video showing how to configure the prerequisites and perfo
 
 <br />
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4n1ZO]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=abfc7df7-12cc-4c9b-bb81-cf00450f9b76]
 
 ### Prerequisites
 

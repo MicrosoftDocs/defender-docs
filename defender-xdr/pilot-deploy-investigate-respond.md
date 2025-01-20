@@ -96,7 +96,7 @@ Defender for Office 365 with Microsoft 365 E5 or Microsoft Defender for Office 3
 
    For step by step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
 
-   > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvB]
+   > [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 For more information, see [Simulations](/defender-office-365/attack-simulation-training-get-started#simulations).
 
@@ -209,7 +209,7 @@ To see the Automated Incident and Response feature in action, keep the notepad.e
 > [!NOTE]
 > Before we walk you through this simulation, watch the following video to see how incident management helps you piece the related alerts together as part of the investigation process, where you can find it in the portal, and how it can help you in your security operations:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Bzwz?]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=208a5393-24b6-4f17-8523-e78bdb5a34cc?]
 
 Switching to the SOC analyst point of view, you can now start to investigate the attack in the Microsoft Defender portal.
 
@@ -318,7 +318,7 @@ Select the user name to open the user's profile page where further investigation
 > [!NOTE]
 > Before we walk you through this simulation, watch the following video to get familiar with what automated self-healing is, where to find it in the portal, and how it can help in your security operations:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4BzwB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-562206a4bc23]
 
 Navigate back to the incident in the Microsoft Defender portal. The **Investigations** tab in the **Incident** page shows the automated investigations that were triggered by Microsoft Defender for Identity and Microsoft Defender for Endpoint. The screenshot below displays only the automated investigation triggered by Defender for Endpoint. By default, Defender for Endpoint automatically remediates the artifacts found in the queue, which requires remediation.
 
@@ -443,7 +443,7 @@ For more information, see [Automated investigation and response](m365d-autoir.md
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Bp7O]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=197cbd32-a06e-4efc-ade0-0c9875d7b105]
 
 
 If the [optional fileless PowerShell attack simulation](pilot-deploy-investigate-respond.md#simulate-an-attack-with-an-isolated-domain-controller-and-client-device-optional) were a real attack that had already reached the credential access stage, you can use advanced hunting at any point in the investigation to proactively search through events and records in the network using what you already know from the generated alerts and affected entities. 
