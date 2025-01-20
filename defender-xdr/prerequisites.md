@@ -42,7 +42,7 @@ Any of the these licenses gives you access to Microsoft Defender XDR features vi
 - Enterprise Mobility + Security (EMS) E5 or A5
 - Office 365 E5 or A5
 - Microsoft Defender for Endpoint 
-    - Includes protection for enterprise IoT devices with the Microsoft 365 E5 (ME5) or E5 Security license. For more information, see [enterprise IoT licenses](/defender-for-iot/enterprise-iot-licenses#enterprise-iot-licenses).
+- [Microsoft Defender for IoT - Enterprise IoT protection](/defender-for-iot/enterprise-iot-licenses#enterprise-iot-licenses) (includes protection for enterprise IoT devices with the Microsoft 365 E5 (ME5) or E5 Security license)
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps or [Cloud App Discovery](/defender-cloud-apps/editions-cloud-app-security-aad)
 - Microsoft Defender for Office 365 (Plan 2)
