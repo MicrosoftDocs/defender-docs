@@ -1,6 +1,6 @@
 ---
 title: "Enhancing your organization's security posture"
-description: Provides an overview of of security posture management and risk reduction in Microsoft's unified security operations platform.
+description: Provides an overview of security posture management and risk reduction in Microsoft's unified security operations platform.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: dlanger
@@ -17,95 +17,67 @@ ms.topic: overview
 # customer intent: As a security operations center leader, I want to learn about the services and features available with Microsoft's unified security operations platform to help me determine whether it meets my organization's requirements.
 ---
 
-# What is Microsoft's unified security operations platform?
+# What is security posture?
 
-Microsoft's unified security operations platform provides a single platform for end-to-end security operations (SecOps). It integrates security information and event management (SIEM), security orchestration, automation, and response (SOAR), extended detection and response (XDR), posture and exposure management, cloud security, threat intelligence, and generative AI solutions.
+Security posture refers to an organization’s strength of protection over its networks, data, and systems (hardware and software). It measures how vulnerable your organization is to cyber-attacks or data breaches.
 
-To cover all those capabilities, Microsoft's unified SecOps platform combines services like [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender), [Microsoft Sentinel](/azure/sentinel/overview), [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) in the Microsoft Defender portal. Integrate more Microsoft Defender services to add security and provide integrated protection against sophisticated attacks. The Defender portal provides a single location to monitor, detect, investigate, remediate, and respond against pre- and post-breach cybersecurity risks and threats.
+Microsoft Security Exposure Management (MSEM) is a proactive approach to managing and mitigating security risks. Use tools like MSEM to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities.
 
-:::image type="content" source="media/overview-unified-security/defender-portal-home.png" lightbox="media/overview-unified-security/defender-portal-home.png" alt-text="Screenshot of the home page of Microsoft's unified SecOps platform in the Defender portal.":::
+Proactively protecting your organization from potential data breaches is more effective than just doing damage control once a breach occurs.
+Cyber Threat Exposure Management (CTEM) steps enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, should be integrated into your security posture management plan.
 
-## Protect assets
+## Scoping - Make a plan
 
-Protect a wide range of assets by integrating Defender XDR, Microsoft Sentinel, and other Defender services in Microsoft's unified SecOps platform.
+A well-defined plan is essential for effective exposure management. Your plan should outline the purpose and objectives of posture management for your organization, aligning with legal and regulatory requirements and the risks to your organization's goals. Identify internal stakeholders and important external parties and establish clear roles and responsibilities.
 
-Microsoft Defender XDR services include the following asset protection capabilities:
+## Discovery - Find vulnerabilities
 
-|Capability  |Security product  |
-|---------|---------|
-|Identify, detect, and investigate Microsoft Entra ID threats.|[Microsoft Defender for Identity](/defender-for-identity/what-is)|
-|Protect against threats posed by email messages, URL links, and Office 365 collaboration tools.     |   [Microsoft Defender for Office 365](/defender-office-365/mdo-about)      |
-|Monitor and protect endpoint devices. Monitor, detect, and investigate device breaches, and automatically respond to security threats.    |     [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)    |
-|Identify and protect operational technology (OT) and IT resources by extending Defender XDR protection to OT environments.|[Microsoft Defender for IoT](/defender-for-iot/microsoft-defender-iot)|
-|Identify assets and software inventory, and assess device posture to find security vulnerabilities.|[Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)|
-|Protect and control access to SaaS cloud apps.|[Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)|
+Utilize CTEM's Discovery step to identify vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
 
-Asset protection for services not licensed with Microsoft Defender XDR includes the following capabilities:
+### Security governance
 
-|Capability  |Security product  |
-|---------|---------|
-|Monitor and protect non-Microsoft and on-premises devices, services, and solutions. | [Microsoft Sentinel](/azure/sentinel/overview) |
-|Discover and assess assets, and remediate risk to reduce attack surfaces.|[Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management)|
-|Improve multicloud and on-premises security posture, and protect cloud workloads against threats.|[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)|
+Maintain an up-to-date inventory of your assets, including on-premises resources, cloud resources, and endpoints. Work with security governance teams to ensure assets are properly tagged and inventories are current. This helps incident responders quickly identify and address security issues.
 
-## Simplify security management
+## Education and training
 
-Combine Microsoft security services like [Defender XDR](/defender-xdr/microsoft-365-defender), [Microsoft Sentinel](/azure/sentinel/overview), and more for end-to-end pre- and post-breach protection of endpoints, identities, cloud apps and workloads, and email across your organization.
+Security posture management is a complex topic that requires a wide range of technical knowledge. Continuously educate and train your operations and incident response staff on MSEM technologies and how your organization uses them. This ensures your team is prepared to handle security incidents effectively.
 
-The Defender portal provides a single, centralized view of organizational security posture and threat detections and response. It provides a combined incidents queue that groups together information about security risks and breaches.
+### Incident classification framework
 
-Free up analyst time as unified security dashboards enable analysts to cross organization silos, prioritize the most critical threats, and hunt effectively for attempted breaches.
+Define what constitutes a "security incident" for your organization and develop a method for classifying incidents. A classification framework helps prioritize response and preparation activities, collect useful metrics, and improve the performance of your posture management program. Categories might include denial of service, malware, or unauthorized access, with impact-based severity levels such as critical, high, medium, or low.
 
-The following image shows the unified incident queue in Microsoft's unified SecOps platform, with incidents from multiple service sources.
+## Assess your security posture
 
-:::image type="content" source="media/overview-unified-security/unified-incidents.png" alt-text="Screenshot of the unified incident queue that shows incidents with multiple service sources." lightbox="media/overview-unified-security/unified-incidents.png":::
+Use MSEM to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities. MSEM provides a 360-degree view of your security landscape, helping you understand and quantify your attack surface exposure.
 
-## Reduce security risk and prevent attacks
+## Identify attack entry points
 
-Consistently reduce security risk and prevent cybersecurity attacks as a part of your organizational risk management framework. Microsoft's unified SecOps platform offers comprehensive exposure management and cloud protection capabilities. With [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction):
+MSEM helps you identify and map out potential attack paths, giving you visibility into critical choke points that need to be addressed. This proactive approach allows you to close down attack paths before they can be exploited.
 
-- Continuously discover organizational assets and assess their security posture.  
-- Protect cloud workloads from code to runtime.
-- Aggregate data and threat intelligence to discover security gaps and weaknesses, including analysis of potential attack paths.
-- Investigate and query to get insights into security posture.
-- Prioritize asset remediation, with the focus on critical resources, to reduce security gaps and attack surfaces.
+## Prioritize remediation efforts
 
-The following image shows the overview page for exposure management in Microsoft's unified SecOps platform.
+Focus on the most critical vulnerabilities and attack paths first. MSEM provides recommendations for remediation actions to help you prioritize your efforts. This ensures that your resources are used effectively to mitigate the most significant risks.
 
-:::image type="content" source="media/overview-unified-security/exposure-management-overview.png" alt-text="Screenshot of the overview page in the exposure management of the Defender portal." lightbox="media/overview-unified-security/exposure-management-overview.png":::
+## Validation – Test and confirm fixes
 
-## Reduce threat detection and response times
+Incorporate CTEM's Validation step to test and confirm that remediation efforts effectively address identified vulnerabilities. This involves conducting penetration tests and security audits to ensure that vulnerabilities are properly mitigated and that the fixes are effective.
 
-Standard cybersecurity metrics focus on the time to detect (TTD) and time to respond (TTR). Time to detect (TTD) measures how long it takes security teams to discover an incident. Time to respond (TTR) measures the amount of time it takes to respond after a threat is detected. The shorter the TTD and TTR, the more effective your detection, and response strategy is.
+## Key considerations for new users
 
-Microsoft's unified SecOps platform correlates millions of signals from Defender products, Microsoft Sentinel, Microsoft security research, and threat intelligence to identify attacks in progress. It initiates automatic attack disruption to automatically contain attacks, limiting lateral movement early and reducing attack impact. Automatic attack disruption helps to reduce costs associated with loss of productivity, provide control to the SecOps team control to investigate and remediate compromised assets.
+For users new to MSEM, it's important to understand the following:
 
-Automatic attack disruption responds to threats by containing devices and containing or disabling users to mitigate attacks. 
+- **Comprehensive view**: MSEM provides a 360-degree view of your organization's security posture, helping you understand the overall security landscape.
+- **Prioritization**: Focus on the most critical vulnerabilities and attack paths first to maximize the impact of your remediation efforts.
+- **Continuous monitoring**: MSEM continuously monitors your threat exposure and provides updates on your security posture.
 
-The following image shows an example of an incident where automatic attack disruption was triggered.
+**Key considerations for established users**
 
-:::image type="content" source="media/overview-unified-security/attack-disrupt.png" alt-text="Screenshot of the incidents attack that triggered automatic attack disruption." lightbox="media/overview-unified-security/attack-disrupt.png":::
+For users with an established posture program, consider the following:
 
-For more information, see [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption).
+- **Integration**: MSEM integrates with existing security tools and solutions, providing a unified view of your security posture.
+- **Advanced metrics**: Utilize advanced security metrics and insights provided by MSEM to fine-tune your security strategies.
+- **Collaboration**: Work with different teams within your organization to ensure a coordinated approach to exposure management.
 
-## Transform SOC productivity with AI
+## Ensuring your security posture
 
-Microsoft Security Copilot brings together the power of AI and human expertise to help your SOC team respond to attacks faster and more effectively. Security Copilot is embedded in the Defender portal to enable security teams to efficiently summarize incidents, analyze scripts and codes, analyze files, summarize device information, use guided responses to resolve incidents, generate KQL queries, and create incident reports. Security Copilot helps you to:
-
-- **Reduce exposure and improve posture**. Prevent breaches with insights to uncover critical exposure risk, and risk reduction recommendations.
-- **Prevent and disrupt threats**. Identify and prioritize with incident summaries MITRE ATT&CK framework mapping, and automatic alert enrichment.
-- **Empower analysts**:
-  - Accelerate incident resolution with guided responses, automated remediation, and summary report generation.
-  - Provide intelligent assistance with tailored prompts based on best practices that analyze malicious scripts and files, and suggest KQL queries.
-
-The following image shows the integration of Microsoft Copilot in an incident page in the Defender portal.
-
-:::image type="content" source="media/overview-unified-security/security-copilot.png" alt-text="Screenshot that shows the incidents integration of Microsoft Copilot in the Defender." lightbox="media/overview-unified-security/security-copilot.png":::
-
-For more information, see [Microsoft Copilot in Microsoft Defender](/defender-xdr/security-copilot-in-microsoft-365-defender).
-
-## Related content
-
-- Blog post: [AI-powered, unified SecOps](https://www.microsoft.com/security/business/solutions/ai-powered-unified-secops-platform)
-- [Microsoft's unified security operations platform planning overview](overview-plan.md)
-- [Deploy Microsoft's unified security operations platform](overview-deploy.md)
+Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By leveraging tools like Microsoft Security Exposure Management (MSEM), you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. By following the guidelines outlined in this document and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
