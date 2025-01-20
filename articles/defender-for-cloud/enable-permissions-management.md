@@ -18,7 +18,7 @@ Microsoft Defender for Cloud's integration with Microsoft Entra Permissions Mana
 
 - You must have the following Azure roles and permissions, depending on the cloud environment, to enable the **Permissions Management (CIEM)** extension of Defender CSPM:
     - **AWS and GCP**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) for your tenant.
-    - **Azure**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Microsoft.Authorization/roleAssignments/write](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) for the subscription.
+    - **Azure**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) for the subscription.
 
 - **AWS Only**: [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).
 
