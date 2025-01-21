@@ -46,6 +46,52 @@ Data collected by Defender for Endpoint is stored in the geo-location of the ten
 - **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
 - **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
+## Health status for Microsoft Defender for Endpoint
+
+Microsoft Defender for Servers provides visibility to the Microsoft Defender for Endpoint agents installed on your VMs.
+
+ 
+
+### Prerequisites
+
+1. Onboarding to Microsoft Defender for Servers P2 or DCSPM + Microsoft Defender for Servers P1.
+
+ 
+
+### Visibility into Health Issues in Defender for Servers
+
+Microsoft Defender for Servers provides visibility into two main types of health issues:
+
+1. __Installation Issues__: Errors that may occur during the installation process of the agent.
+
+1. __Heartbeat Issues__: Scenarios where the agent is installed but is not reporting properly.
+
+In some cases, Microsoft Defender for Endpoint might not be applicable for specific servers. This status is also reflected as described below.
+
+For each issue type, Defender for Servers displays specific error messages that detail the nature of the problem. Where available, there are also instructions for remediation.
+
+Health status information is refreshed every 4 hours, ensuring that any displayed issue reflects the state from no more than 4 hours prior.
+
+ 
+
+In order to get visibility to MDE health issues, please using the security explorer as described below:
+
+1. To get all the unhealthy VMs (with one of the above types of issues) run the following query:
+
+![Query1 - Unhealthy VMs](media/integration-defender-for-endpoint/query1---unhealthy-vms.png)
+
+Another option to consume this data:
+
+![Query2 - Unhealthy VMs](media/integration-defender-for-endpoint/query2---unhealthy-vms.png)
+
+1. To get all the healthy VMs where Microsoft Defender for Endpoints run properly, run the following query:
+
+![Query3 - healthy VMs](media/integration-defender-for-endpoint/query3---healthy-vms.png)
+
+1. To get the list of VMs where Microsoft Defender for Endpoint is not applicable, run the following query:
+
+![Query4 - not applicable VMs](media/integration-defender-for-endpoint/query4---not-applicable-vms.png)
+
 ## Next steps
 
 [Learn more](endpoint-detection-response.md) about EDR recommendations in Defender for Servers.
