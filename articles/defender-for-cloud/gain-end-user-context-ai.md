@@ -10,7 +10,7 @@ ms.date: 11/25/2024
 
 Microsoft Defender for Cloud's threat protection for AI workloads allows you to enhance the actionability and security value of the generated AI alerts by providing both end-user and application  context.
 
-For the majority of cases, scenarios leveraging AI services are built as part of an application, so the API calls to the AI service are originating from a web application, compute instance or an AI gateway. This architecture setup introduces complexity of lack of context when investigating the AI requests to determine the business application or the end-user involved.
+In most cases, applications and scenarios leveraging AI services are built as part of an application, so the API calls to the AI service originate from a web application, compute instance, or an AI gateway. This architecture setup introduces complexity due to a lack of context when investigating AI requests to determine the business application or the end-user involved.
 
 Defender for Cloud together with Azure AI enable adding parameters to your Azure AI API calls to propagate critical end-user and\or application context to Defender for Cloud's AI alerts. This in turn leads to more effective triaging and results. For example, when adding end-user IP or identity you can block that user or correlate incidents and alerts by that user. When adding application context, you can prioritize or ascertain whether suspicious behavior could be considered standard for that application in the organization.
 
