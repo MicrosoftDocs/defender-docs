@@ -38,7 +38,7 @@ If a field’s name is misspelled, the Azure OpenAI API call will still succeed.
 
 The exact schema can be found in Azure OpenAI [REST API reference documentation](/azure/ai-services/openai/reference-preview). 
 
-The [user security context object](/azure/ai-services/openai/reference-preview#usersecuritycontext) is part of the[ request body ](/azure/ai-services/openai/reference-preview#createchatcompletionrequest)of the chat completion API.
+The [user security context object](/azure/ai-services/openai/reference-preview#usersecuritycontext) is part of the [request body](/azure/ai-services/openai/reference-preview#createchatcompletionrequest) of the chat completion API.
 
 Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
