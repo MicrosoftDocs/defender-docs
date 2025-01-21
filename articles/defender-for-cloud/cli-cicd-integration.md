@@ -18,8 +18,6 @@ Defender for Cloud Command Line Interface (CLI) is an application you can use in
 
 - One of the following CI/CD pipeline tools: Jenkins, BitBucket Pipelines, Google Cloud Build, Bamboo, CircleCI, Travis CI, TeamCity, Oracle DevOps services, AWS CodeBuild
 
-- For Azure DevOps, [Microsoft Security DevOps (MSDO) Extension](azure-devops-extension.yml) installed on the Azure DevOps organization.
-
 - The [Defender CSPM](tutorial-enable-cspm-plan.md) enabled.
 
 - Security Admin Permission to create the client ID and secret.
@@ -90,11 +88,10 @@ After securely receiving the tokens, the developer must configure an environment
 
 |Name|Value|
 |||
-|GDN_PUSH_TOKEN_CLIENT_ID|&lt;Client id&gt;|
-|GDN_PUSH_TOKEN_CLIENT_ID|&lt;Client id&gt;|
-|GDN_PUSH_TOKEN_CLIENT_SECRET|&lt;Client Secret&gt;|
+|GDN_MDC_CLI_CLIENT_ID|&lt;Client id&gt;|
+|GDN_MDC_CLI_CLIENT_SECRET|&lt;Client Secret&gt;|
+|GDN_MDC_CLI_TENANT_ID|&lt;Tenant id&gt;|
 |GDN_PIPELINENAME|bitbucket, jenkins, gcp, bamboo, circle, travis, teamcity, oci, aws|
-|GDN_PUSH_TOKEN_TENANT_ID|&lt;Tenant id&gt;|
 
 ## Review results in Cloud Security Explorer
 
