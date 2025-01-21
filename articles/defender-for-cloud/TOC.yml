@@ -927,6 +927,9 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
+      - name: Protect clusters with AKS Security Dashboard
+        displayName: k8s, containers
+        href: cluster-security-dashboard.md
       - name: Investigate clusters with Cloud Security Explorer
         displayName: k8s, containers
         href: cloud-security-explorer-kubernetes-clusters.md
