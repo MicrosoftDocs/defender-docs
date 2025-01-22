@@ -14,7 +14,7 @@ ms.collection:
 - usx-security
 ms.topic: overview
 
-# customer intent: As a security operations center leader, I want to learn about the services and features available with Microsoft's unified security operations platform to help me determine whether it meets my organization's requirements.
+# customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, including tools like Microsoft Security Exposure Management (MSEM) and programs like Continuous Threat Exposure Management (CTEM), can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
 ---
 
 # What is security posture?
@@ -24,7 +24,7 @@ Security posture refers to an organization’s strength of protection over its n
 Microsoft Security Exposure Management (MSEM) is a proactive approach to managing and mitigating security risks. Use tools like MSEM to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities.
 
 Proactively protecting your organization from potential data breaches is more effective than just doing damage control once a breach occurs.
-Cyber Threat Exposure Management (CTEM) steps enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, should be integrated into your security posture management plan.
+Continuous Threat Exposure Management (CTEM) steps enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
 
 ## Scoping - Make a plan
 
@@ -32,7 +32,7 @@ A well-defined plan is essential for effective exposure management. Your plan sh
 
 ## Discovery - Find vulnerabilities
 
-Utilize CTEM's Discovery step to identify vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
+The **Discovery** step to identify vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
 
 ### Security governance
 
@@ -50,17 +50,23 @@ Define what constitutes a "security incident" for your organization and develop 
 
 Use MSEM to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities. MSEM provides a 360-degree view of your security landscape, helping you understand and quantify your attack surface exposure.
 
+Learn more here, [What is Microsoft Security Exposure Management?](/security-exposure-management/microsoft-security-exposure-management)
+
 ## Identify attack entry points
 
 MSEM helps you identify and map out potential attack paths, giving you visibility into critical choke points that need to be addressed. This proactive approach allows you to close down attack paths before they can be exploited.
+
+Learn more here, [Overview of attack surface management](/security-exposure-management/cross-workload-attack-surfaces)
 
 ## Prioritize remediation efforts
 
 Focus on the most critical vulnerabilities and attack paths first. MSEM provides recommendations for remediation actions to help you prioritize your efforts. This ensures that your resources are used effectively to mitigate the most significant risks.
 
+Learn more here, [Review security recommendations](/security-exposure-management/security-recommendations) 
+
 ## Validation – Test and confirm fixes
 
-Incorporate CTEM's Validation step to test and confirm that remediation efforts effectively address identified vulnerabilities. This involves conducting penetration tests and security audits to ensure that vulnerabilities are properly mitigated and that the fixes are effective.
+Incorporate the **Validation** step to test and confirm that remediation efforts effectively address identified vulnerabilities. This involves conducting penetration tests and security audits to ensure that vulnerabilities are properly mitigated and that the fixes are effective.
 
 ## Key considerations for users
 
