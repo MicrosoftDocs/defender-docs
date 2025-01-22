@@ -17,7 +17,7 @@ You can apply session policies on files that have a maximum size of 50 MB. For e
 
 In cases like these, be sure to cover files that are larger than 50 MB by using the tenant settings to determine whether the file is allowed or blocked, regardless of any matching policies.
 
-In Microsoft Defender XDR, select **Settings** > **Conditional Access App Control** > **Default behavior** to manage settings for files that are larger than 50 MB.
+In Microsoft Defender XDR, select **Settings** > **Cloud Apps** > **Conditional Access App Control** > **Default behavior** to manage settings for files that are larger than 50 MB.
 
 ## Maximum file size for session policies based on content inspection
 
