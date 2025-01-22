@@ -62,22 +62,22 @@ Focus on the most critical vulnerabilities and attack paths first. MSEM provides
 
 Incorporate CTEM's Validation step to test and confirm that remediation efforts effectively address identified vulnerabilities. This involves conducting penetration tests and security audits to ensure that vulnerabilities are properly mitigated and that the fixes are effective.
 
-## Key considerations for new users
+## Key considerations for users
 
-For users new to MSEM, it's important to understand the following:
+For users new to MSEM, it's important to understand the following benefits:
 
 - **Comprehensive view**: MSEM provides a 360-degree view of your organization's security posture, helping you understand the overall security landscape.
 - **Prioritization**: Focus on the most critical vulnerabilities and attack paths first to maximize the impact of your remediation efforts.
 - **Continuous monitoring**: MSEM continuously monitors your threat exposure and provides updates on your security posture.
 
-**Key considerations for established users**
-
-For users with an established posture program, consider the following:
+For users with an established posture program, consider the following advanced features:
 
 - **Integration**: MSEM integrates with existing security tools and solutions, providing a unified view of your security posture.
 - **Advanced metrics**: Utilize advanced security metrics and insights provided by MSEM to fine-tune your security strategies.
 - **Collaboration**: Work with different teams within your organization to ensure a coordinated approach to exposure management.
 
+A great starting point for any user is to set a specific goal. For instance, you might choose to enhance Ransomware Protection initiative by 20%. Use MSEM metrics and recommendations to identify and mitigate vulnerabilities that could be exploited by ransomware attacks to achieve this improvement.
+
 ## Ensuring your security posture
 
-Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By leveraging tools like Microsoft Security Exposure Management (MSEM), you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. By following the guidelines outlined in this document and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
+Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By using tools like Microsoft Security Exposure Management (MSEM), you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. Following the guidelines outlined here and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
