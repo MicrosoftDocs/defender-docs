@@ -33,8 +33,8 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
         > [!NOTE]
         > If you disable this configuration, the **Threat detection (control plane)** feature is also disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
 
-    - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) feature provides API-based discovery of your Kubernetes clusters. To enable the feature, set its toggle to **On**.
-    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-aws.md) feature provides vulnerability management for images stored in ECR and for running images on your EKS clusters. To enable the feature, set its toggle to **On**.
+    - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
+    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-aws.md) feature provides vulnerability management for images stored in ECR and for running images on your EKS clusters. Set the **Registry access** toggle to **On**.
 
 1. Continue through the remaining pages of the connector wizard.
 
