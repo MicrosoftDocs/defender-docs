@@ -13,7 +13,7 @@ ms.date: 10/20/2024
 Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management integrate natively with Microsoft Defender for Cloud to provide:
 
 - **Integrated security capabilities**: Security capabilities provided by Defender for Endpoint, Defender Vulnerability Management, and Defender for Cloud come together to provide end-to-end protection for machines protected by the Defender for Servers plan in Defender for Cloud.
-- **Licensing**: Defender for Servers covers licensing for [Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint). Licensing is charged per hour instead of per seat, lowering costs by protecting VMs only when they're in use.
+- **Licensing**: Defender for Servers covers licensing for [Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint). Licensing is charged per hour instead of per user, lowering costs by protecting VMs only when they're in use.
 - **Agent provisioning**: Defender for Cloud can automatically provision the Defender for Endpoint sensor on supported machines that are connected to Defender for Cloud.
 - **Unified alerts**: Alerts and vulnerability data from Defender for Endpoint appear in Defender for Cloud in the Azure portal. You can move to the Defender portal to drill down for detailed alert information and context.
 
@@ -45,6 +45,46 @@ Data collected by Defender for Endpoint is stored in the geo-location of the ten
 
 - **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
 - **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+
+## Health status for Microsoft Defender for Endpoint
+
+Microsoft Defender for Servers provides visibility to the Microsoft Defender for Endpoint agents installed on your VMs.
+
+### Prerequisites
+
+Onboarding to Microsoft Defender for Servers P2 or Defender CSPM + Microsoft Defender for Servers P1.
+
+### Visibility into health issues in Defender for Servers
+
+Microsoft Defender for Servers provides visibility into two main types of health issues:
+
+- **Installation Issues**: Errors during the agent's installation.
+
+- **Heartbeat Issues**: Problems where the agent is installed but not reporting correctly.
+
+Sometimes, Microsoft Defender for Endpoint doesn't apply to certain servers. This status is also shown as described in the last query.
+
+Defender for Servers shows specific error messages for each issue type. These messages explain the problem. When available, you'll also find instructions to fix the issue.
+
+Health status updates every four hours. This ensures the issue reflects the state from the last four hours.
+
+To see Microsoft Defender for Endpoint health issues, use the security explorer as follows:
+
+- To find all the unhealthy virtual machines (VMs) with the issues mentioned, run the following query:
+
+  :::image type="content" source="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png" alt-text="Screenshot of query of unhealthy virtual machines." lightbox="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png":::
+
+- Another way to access this data:
+
+  :::image type="content" source="media/integration-defender-for-endpoint/unhealthy-virtual-machines-alternate-query.png" alt-text="Screenshot of alternate query of unhealthy virtual machines." lightbox="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png":::
+
+- To find all the healthy VMs where Microsoft Defender for Endpoint works correctly, run the following query:
+
+  :::image type="content" source="media/integration-defender-for-endpoint/healthy-virtual-machines-query.png" alt-text="Screenshot of query of healthy virtual machines." lightbox="media/integration-defender-for-endpoint/healthy-virtual-machines-query.png":::
+
+- To get the list of VMs where Microsoft Defender for Endpoint isn't applicable, run the following query:
+
+  :::image type="content" source="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png" alt-text="Screenshot of query of virtual machines where Microsoft Defender for Endpoint isn't applicable." lightbox="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png":::
 
 ## Next steps
 

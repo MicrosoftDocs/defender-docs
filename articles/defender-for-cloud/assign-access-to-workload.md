@@ -10,7 +10,7 @@ ms.date: 12/11/2024
 
 # Assign access to workload owners
 
-When you onboard your Amazon Web Service (AWS) or Google Cloud Project (GCP) environments, Defender for Cloud automatically creates a security connector as an Azure resource within the connected subscription and resource group. Defender for Cloud also creates the identity provider as an IAM role required during the onboarding process.
+When you onboard your Amazon Web Service (AWS) or Google Cloud Platform (GCP) environments, Defender for Cloud automatically creates a security connector as an Azure resource within the connected subscription and resource group. Defender for Cloud also creates the identity provider as an IAM role required during the onboarding process.
 
 To assign permissions to users on a specific connector below the parent connector, you need to determine which AWS accounts or GCP projects you want users to access. You need to identify the security connectors that correspond to the AWS account or GCP project you want to assign users access to.
 
