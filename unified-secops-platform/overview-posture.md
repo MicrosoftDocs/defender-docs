@@ -14,14 +14,14 @@ ms.collection:
 - usx-security
 ms.topic: overview
 
-# customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, including tools like Microsoft Security Exposure Management (MSEM) and programs like Continuous Threat Exposure Management (CTEM), can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
+# customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, including tools like Microsoft Security Exposure Management (Exposure Management) and programs like Continuous Threat Exposure Management (CTEM), can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
 ---
 
 # What is security posture?
 
 Security posture refers to an organization’s strength of protection over its networks, data, and systems (hardware and software). It measures how vulnerable your organization is to cyber-attacks or data breaches.
 
-Microsoft Security Exposure Management (MSEM) is a proactive approach to managing and mitigating security risks. Use tools like MSEM to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities.
+Microsoft Security Exposure Management (MSEM) is a proactive approach to managing and mitigating security risks. Use tools like Exposure Management to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities.
 
 Proactively protecting your organization from potential data breaches is more effective than just doing damage control once a breach occurs.
 Continuous Threat Exposure Management (CTEM) steps enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
@@ -40,7 +40,7 @@ Maintain an up-to-date inventory of your assets, including on-premises resources
 
 ## Education and training
 
-Security posture management is a complex topic that requires a wide range of technical knowledge. Continuously educate and train your operations and incident response staff on MSEM technologies and how your organization uses them. This ensures your team is prepared to handle security incidents effectively.
+Security posture management is a complex topic that requires a wide range of technical knowledge. Continuously educate and train your operations and incident response staff on Exposure Management technologies and how your organization uses them. This ensures your team is prepared to handle security incidents effectively.
 
 ### Incident classification framework
 
@@ -48,19 +48,19 @@ Define what constitutes a "security incident" for your organization and develop 
 
 ## Assess your security posture
 
-Use MSEM to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities. MSEM provides a 360-degree view of your security landscape, helping you understand and quantify your attack surface exposure.
+Use Exposure Management to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities. Exposure Management provides a 360-degree view of your security landscape, helping you understand and quantify your attack surface exposure.
 
 Learn more here, [What is Microsoft Security Exposure Management?](/security-exposure-management/microsoft-security-exposure-management)
 
 ## Identify attack entry points
 
-MSEM helps you identify and map out potential attack paths, giving you visibility into critical choke points that need to be addressed. This proactive approach allows you to close down attack paths before they can be exploited.
+Exposure Management helps you identify and map out potential attack paths, giving you visibility into critical choke points that need to be addressed. This proactive approach allows you to close down attack paths before they can be exploited.
 
 Learn more here, [Overview of attack surface management](/security-exposure-management/cross-workload-attack-surfaces)
 
 ## Prioritize remediation efforts
 
-Focus on the most critical vulnerabilities and attack paths first. MSEM provides recommendations for remediation actions to help you prioritize your efforts. This ensures that your resources are used effectively to mitigate the most significant risks.
+Focus on the most critical vulnerabilities and attack paths first. Exposure Management provides recommendations for remediation actions to help you prioritize your efforts. This ensures that your resources are used effectively to mitigate the most significant risks.
 
 Learn more here, [Review security recommendations](/security-exposure-management/security-recommendations) 
 
@@ -70,20 +70,20 @@ Incorporate the **Validation** step to test and confirm that remediation efforts
 
 ## Key considerations for users
 
-For users new to MSEM, it's important to understand the following benefits:
+For users new to Exposure Management, it's important to understand the following benefits:
 
-- **Comprehensive view**: MSEM provides a 360-degree view of your organization's security posture, helping you understand the overall security landscape.
+- **Comprehensive view**: Exposure Management provides a 360-degree view of your organization's security posture, helping you understand the overall security landscape.
 - **Prioritization**: Focus on the most critical vulnerabilities and attack paths first to maximize the impact of your remediation efforts.
-- **Continuous monitoring**: MSEM continuously monitors your threat exposure and provides updates on your security posture.
+- **Continuous monitoring**: Exposure Management continuously monitors your threat exposure and provides updates on your security posture.
 
 For users with an established posture program, consider the following advanced features:
 
-- **Integration**: MSEM integrates with existing security tools and solutions, providing a unified view of your security posture.
-- **Advanced metrics**: Utilize advanced security metrics and insights provided by MSEM to fine-tune your security strategies.
+- **Integration**: Exposure Management integrates with existing security tools and solutions, providing a unified view of your security posture.
+- **Advanced metrics**: Utilize advanced security metrics and insights provided by Exposure Management to fine-tune your security strategies.
 - **Collaboration**: Work with different teams within your organization to ensure a coordinated approach to exposure management.
 
-A great starting point for any user is to set a specific goal. For instance, you might choose to enhance Ransomware Protection initiative by 20%. Use MSEM metrics and recommendations to identify and mitigate vulnerabilities that could be exploited by ransomware attacks to achieve this improvement.
+A great starting point for any user is to set a specific goal. For instance, you might choose to enhance Ransomware Protection initiative by 20%. Use Exposure Management metrics and recommendations to identify and mitigate vulnerabilities that could be exploited by ransomware attacks to achieve this improvement.
 
 ## Ensuring your security posture
 
-Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By using tools like Microsoft Security Exposure Management (MSEM), you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. Following the guidelines outlined here and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
+Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By using tools like Microsoft Security Exposure Management (Exposure Management), you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. Following the guidelines outlined here and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
