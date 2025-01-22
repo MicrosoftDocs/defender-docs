@@ -4,7 +4,7 @@ description: Run agentless scanning on VMs for vulnerabilities and threats in Mi
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 01/16/2024
+ms.date: 01/22/2025
 ---
 
 # Enable agentless machine scanning
@@ -28,6 +28,7 @@ When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Pos
 **GCP** | Agentless scanning is available on compute instances, instance groups (managed and unmanaged), with Google-managed encryption keys, and customer-managed encryption key (CMEK)
 **Kubernetes nodes** | Agentless scanning for vulnerabilities and malware in Kubernetes node VMs is available.<br/><br/> For [vulnerability assessment](kubernetes-nodes-va.md) the Defender for Servers Plan 2, or the Defender for Containers plan, or the Defender Cloud Security Posture Management (CSPM) plan is required.<br/><br/> For [malware scanning](kubernetes-nodes-malware.md), Defender for Servers Plan 2 or Defender for Containers is required.
 **Permissions** | [Review the permissions](concept-agentless-data-collection.md#permissions-used-by-agentless-scanning) used by Defender for Cloud for agentless scanning.
+**Unsupported** | Disk type - If any of the VM's disks are on this list, the VM won't be scanned: <br> - UltraSSD_LRS <br> - PremiumV2_LRS <br> <br> Resource type: <br> - Databricks VM
 
 ## Enable agentless scanning on Azure
 
