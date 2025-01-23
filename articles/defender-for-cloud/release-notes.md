@@ -43,7 +43,7 @@ We are updating one of the scan criteria for registry images in the preview reco
 Currently, we rescan images for 90 days after they have been pushed to a registry. This will now be changed to only scan 30 days back.
 Note
 
-There is no change to the current [Azure GA recommendation](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management) for container vulnerability assessment (VA) on registry images.
+> [!NOTE] There are no changes for the related GA recommendations for container vulnerability assessment (VA) on registry images.
 
 ## December 2024
 

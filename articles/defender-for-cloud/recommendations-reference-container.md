@@ -113,7 +113,7 @@ Images running on your Kubernetes cluster should come from known and monitored c
 
 **Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
 
-Recommendation Azure registry container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management) will be removed when the new recommendation is generally available.
+Recommendation ***Azure registry container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management)*** will be removed when the new recommendation is generally available.
 
 The new recommendation is in preview and not used for secure score calculation.
 
@@ -346,7 +346,7 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 **Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
 
-Recommendation AWS registry container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management) will be removed by the new recommendation is generally available. 
+Recommendation ***AWS registry container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management)*** will be removed by the new recommendation is generally available. 
 
 The new recommendation is in preview and not used for secure score calculation.
 
@@ -411,7 +411,7 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 **Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
 
-Recommendation GCP registry container images should have vulnerability findings resolved (powered by Microsoft Defender vulnerability Management will be removed when the new recommendation is generally available. 
+Recommendation ***GCP registry container images should have vulnerability findings resolved (powered by Microsoft Defender vulnerability Management)*** will be removed when the new recommendation is generally available. 
 
 The new recommendation is in preview and not used for secure score calculation.
 
