@@ -311,6 +311,9 @@
         href: permissions-management.md
       - name: Agentless machine scanning
         href: concept-agentless-data-collection.md
+      - name: Internet exposure analysis
+        displayName: internet, exposure, analysis
+        href: internet-exposure-analysis.md
       - name: Supported resource types for multicloud in Foundational CSPM
         href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection
@@ -924,6 +927,9 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
+      - name: Protect clusters with AKS Security Dashboard
+        displayName: k8s, containers
+        href: cluster-security-dashboard.md
       - name: Investigate clusters with Cloud Security Explorer
         displayName: k8s, containers
         href: cloud-security-explorer-kubernetes-clusters.md
@@ -1356,6 +1362,15 @@
         - name: Updated File Integrity Monitoring in Defender for Servers
           displayName: Defender for Servers, FIM
           href: episode-fifty-three.md
+        - name: Updates from Microsoft Ignite 2024
+          DisplayName: updates, Ignite, 2024
+          href: episode-fifty-four.md
+        - name: Cloud Detection Response experience
+          DisplayName: Cloud Detection Response, CDR
+          href: episode-fifty-five.md
+        - name: Improvements in Container's Posture Management
+          DisplayName: Container's Posture Management
+          href: episode-fifty-six.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation
