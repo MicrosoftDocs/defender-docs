@@ -78,17 +78,6 @@ Requires Kubernetes v1.14.0 or later.
 
 **Type**: Vulnerability Assessment
 
-
-### Azure registry container images should have vulnerabilities resolved (powered by Qualys)
-
-**Description**: Container image vulnerability assessment scans your registry for security vulnerabilities and exposes detailed findings for each image. Resolving the vulnerabilities can greatly improve your containers' security posture and protect them from attacks.
-(Related policy: [Vulnerabilities in Azure Container Registry images should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f5f0f936f-2f01-4bf5-b6be-d423792fa562)).
-
-**Assessment key**: dbd0cb49-b563-45e7-9724-889e799fa648
-
-**Type**: Vulnerability Assessment
-
-
 ### Azure running container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management)
 
 **Description**: Container image vulnerability assessment scans your registry for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. This recommendation provides visibility to vulnerable images currently running in your Kubernetes clusters. Remediating vulnerabilities in container images that are currently running is key to improving your security posture, significantly reducing the attack surface for your containerized workloads.
@@ -96,17 +85,6 @@ Requires Kubernetes v1.14.0 or later.
 **Severity**: High
 
 **Type**: Vulnerability Assessment
-
-
-### Azure running container images should have vulnerabilities resolved - (powered by Qualys)
-
-**Description**: Container image vulnerability assessment scans container images running on your Kubernetes clusters for security vulnerabilities and exposes detailed findings for each image. Resolving the vulnerabilities can greatly improve your containers' security posture and protect them from attacks.
-(No related policy)
-
-**Assessment key**: 41503391-efa5-47ee-9282-4eff6131462c
-
-**Type**: Vulnerability Assessment
-
 
 ### Container CPU and memory limits should be enforced
 

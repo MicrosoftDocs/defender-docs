@@ -27,6 +27,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## January 2025
+
+|Date | Category | Update|
+|--|--|--|
+| January 26 | GA | [Update to scan criteria for container registries]()
+
+### Update to scan criteria for container registries
+
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved) [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+
+**What's Changing?**
+
+Currently, we rescan images for 90 days after they have been pushed to a registry. This will now be changed to only scan 30 days back.
+Note
+
+There is no change to the current [Azure GA recommendation](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management) for container vulnerability assessment (VA) on registry images.
+
 ## December 2024
 
 |Date | Category | Update|

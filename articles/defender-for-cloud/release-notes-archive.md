@@ -902,7 +902,7 @@ You can now generate sample alerts for the security detections that were release
 
 September 6, 2023
 
-Containers vulnerability assessment powered by Microsoft Defender Vulnerability Management, now supports an additional trigger for scanning images pulled from an ACR. This newly added trigger provides additional coverage for active images in addition to the existing triggers scanning images pushed to an ACR in the last 90 days and images currently running in AKS.
+Containers vulnerability assessment powered by Microsoft Defender Vulnerability Management, now supports an additional trigger for scanning images pulled from an ACR. This newly added trigger provides additional coverage for active images in addition to the existing triggers scanning images pushed to an ACR in the last 30 days and images currently running in AKS.
 
 The new trigger will start rolling out today, and is expected to be available to all customers by end of September.
 
