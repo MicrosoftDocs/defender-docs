@@ -2,7 +2,7 @@
 title: Cloud Detection Response experience
 description: Learn about Microsoft's Defender for Cloud's Cloud Detection Response experience, including investigation enhancements and response capabilities.
 ms.topic: reference
-ms.date: 01/20/2025
+ms.date: 01/23/2025
 ---
 
 # Cloud Detection Response experience
@@ -14,7 +14,7 @@ ms.date: 01/20/2025
 
 - [02:00](/shows/mdc-in-the-field/cloud-detection-response-experience#time=02m00s) - What is Cloud Detection Response?
 - [03:48](/shows/mdc-in-the-field/cloud-detection-response-experience#time=03m48s) - Cloud Detection Response main components
-- [09:15](/shows/mdc-in-the-field/cloud-detection-response-experience#time=09m15s) - How will the new events enhance the investigation?
+- [09:15](/shows/mdc-in-the-field/cloud-detection-response-experience#time=09m15s) - How the new events enhance the investigation?
 - [11:10](/shows/mdc-in-the-field/cloud-detection-response-experience#time=11m10s) - Demonstration
 
 ## Recommended resources
@@ -33,4 +33,4 @@ ms.date: 01/20/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Improvements in Container’s Posture Management](episode-fifty-six.md)

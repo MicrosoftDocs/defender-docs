@@ -2,7 +2,7 @@
 title: Updates from Microsoft Ignite 2024
 description: Learn about Microsoft's Defender for Cloud's updates from Ignite 2024, including new features and improvements.
 ms.topic: reference
-ms.date: 01/20/2025
+ms.date: 01/23/2025
 ---
 
 # Updates from Microsoft Ignite 2024
@@ -28,4 +28,4 @@ ms.date: 01/20/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Cloud Detection Response experience](episode-fifty-five.md)

@@ -1336,6 +1336,9 @@
         - name: Cloud Detection Response experience
           DisplayName: Cloud Detection Response, CDR
           href: episode-fifty-five.md
+        - name: Improvements in Container's Posture Management
+          DisplayName: Container's Posture Management
+          href: episode-fifty-six.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation

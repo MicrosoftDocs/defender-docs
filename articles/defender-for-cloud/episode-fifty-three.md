@@ -2,7 +2,7 @@
 title: Updated File Integrity Monitoring in Defender for Servers
 description: Learn about Microsoft's Defender for Cloud's updates to file integrity monitoring capabilities, including new features and improvements.
 ms.topic: reference
-ms.date: 01/19/2025
+ms.date: 01/23/2025
 ---
 
 # Updated File Integrity Monitoring in Defender for Servers
