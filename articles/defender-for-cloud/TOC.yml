@@ -1330,6 +1330,15 @@
         - name: Updated File Integrity Monitoring in Defender for Servers
           displayName: Defender for Servers, FIM
           href: episode-fifty-three.md
+        - name: Updates from Microsoft Ignite 2024
+          DisplayName: updates, Ignite, 2024
+          href: episode-fifty-four.md
+        - name: Cloud Detection Response experience
+          DisplayName: Cloud Detection Response, CDR
+          href: episode-fifty-five.md
+        - name: Improvements in Container's Posture Management
+          DisplayName: Container's Posture Management
+          href: episode-fifty-six.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation
