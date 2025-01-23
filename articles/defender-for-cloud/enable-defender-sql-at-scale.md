@@ -32,7 +32,7 @@ This page explains how you can enable the auto-provision process for Defender fo
     - [How to migrate to Azure Monitor Agent from Log Analytics agent](/azure/azure-monitor/agents/azure-monitor-agent-migration)
 
 - [Connect Amazon Web Service (AWS) accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md)
-- [Connect your Google Cloud Project (GCP) to Microsoft Defender for Cloud](quickstart-onboard-gcp.md)
+- [Connect your Google Cloud Platform (GCP) to Microsoft Defender for Cloud](quickstart-onboard-gcp.md)
 
 - Install PowerShell on [Windows](/powershell/scripting/install/installing-powershell-on-windows), [Linux](/powershell/scripting/install/installing-powershell-on-linux), [macOS](/powershell/scripting/install/installing-powershell-on-macos), or [Azure Resource Manager (ARM)](/powershell/scripting/install/powershell-on-arm).
 - [Install the following PowerShell modules](/powershell/module/powershellget/install-module):
