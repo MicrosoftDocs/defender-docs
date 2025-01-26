@@ -31,11 +31,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| January 26 | GA | [Update to scan criteria for container registries](#update-to-scan-criteria-for-container-registries) |
+| January 30 | GA | [Update to scan criteria for container registries](#update-to-scan-criteria-for-container-registries) |
+| January 20 | Change | [Enhancements for the Linux Baselines recommendation powered by GC](#enhancements-for-the-linux-baselines-recommendation-powered-by-gc) |
+
 
 ### Update to scan criteria for container registries
 
-January 26, 2025
+January 30, 2025
 We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved) [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
 
 **What's Changing?**
@@ -44,6 +46,13 @@ Currently, we rescan images for 90 days after they have been pushed to a registr
 Note
 
 > [!NOTE] There are no changes for the related GA recommendations for container vulnerability assessment (VA) on registry images.
+
+### Enhancements for the Linux Baselines recommendation powered by GC 
+January 20, 2025
+
+We are enhancing the Baselines Linux (powered by GC) feature to improve its accuracy and coverage. During February, you may notice changes such as updated rule names and additional rules. These improvements are designed to make the baselines assessment more accurate and up-to-date. For more information about the changes, please refer to the relevant [blog](/azure/osconfig/quickstart-sec-baseline-mc?tabs=azure-cli)
+
+Some of the changes may include additional "public preview" changes. This update is beneficial for you, and we want to keep you informed. If you prefer, you can opt out of this recommendation by exempting it from your resource or removing the GC extension.
 
 ## December 2024
 
