@@ -47,7 +47,8 @@ Note
 
 > [!NOTE] There are no changes for the related GA recommendations for container vulnerability assessment (VA) on registry images.
 
-### Enhancements for the Linux Baselines recommendation powered by GC 
+### Enhancements for the Linux Baselines recommendation powered by GC
+
 January 20, 2025
 
 We are enhancing the Baselines Linux (powered by GC) feature to improve its accuracy and coverage. During February, you may notice changes such as updated rule names and additional rules. These improvements are designed to make the baselines assessment more accurate and up-to-date. For more information about the changes, please refer to the relevant [blog](/azure/osconfig/quickstart-sec-baseline-mc?tabs=azure-cli)
