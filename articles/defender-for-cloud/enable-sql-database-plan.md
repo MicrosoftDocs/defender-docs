@@ -2,7 +2,7 @@
 title: Deploy Defender for Azure SQL Databases
 description: Learn how to enable Defender for Azure SQL Databases as part of the Databases plan on your Azure subscription to enhance your database security.
 ms.topic: how-to
-ms.date: 12/12/2024
+ms.date: 01/26/2025
 #customer intent: As a database administrator, I want to enable Defender for Azure SQL Databases so that I can enhance the security of my databases.
 ---
 
@@ -34,11 +34,11 @@ Enabling the Defender for Azure SQL Databases plan activates protection for all 
 
 1. Locate the Databases plan and select **Select types**.
 
-    :::image type="content" source="media/enable-sql-database-plan.md/select-type.png" alt-text="Screenshot of the environment settings page that shows you where the select types button is located." lightbox="media/enable-sql-database-plan.md/select-type.png":::
+    :::image type="content" source="media//enable-sql-database-plan//select-type.png" alt-text="Screenshot of the environment settings page that shows you where the select types button is located." lightbox="media//enable-sql-database-plan//select-type.png":::
 
 1. Switch Azure SQL Databases to **On**.
 
-    :::image type="content" source="media/enable-sql-database-plan.md/toggle-on.png" alt-text="Screenshot that shows you where to select, to enable the Azure SQL Databases plan." lightbox="media/enable-sql-database-plan.md/toggle-on.png":::
+    :::image type="content" source="media//enable-sql-database-plan//toggle-on.png" alt-text="Screenshot that shows you where to select, to enable the Azure SQL Databases plan." lightbox="media//enable-sql-database-plan//toggle-on.png":::
 
 1. Select **Continue**.
 
