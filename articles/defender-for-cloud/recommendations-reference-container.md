@@ -354,6 +354,14 @@ The new recommendation is in preview and not used for secure score calculation.
 
 **Type**: Vulnerability Assessment
 
+### AWS registry container images should have vulnerability findings resolved
+
+**Description**: Scans your AWS registries container images for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. Resolving vulnerabilities can greatly improve your security posture, ensuring images are safe to use prior to deployment.
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
+
 ### [Preview] Containers running in AWS should have vulnerability findings resolved
 
 **Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
@@ -363,6 +371,14 @@ The new recommendation is in preview and not used for secure score calculation.
 > [!NOTE]
 > Starting October 6, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
 > To support this improvement the assessment key for this recommendation has been updated to `8749bb43-cd24-4cf9-848c-2a50f632043c`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the API call to use the new assessment key.
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
+
+### AWS running container images should have vulnerability findings resolved
+
+**Description**: Container image vulnerability assessment scans your registry for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. This recommendation provides visibility to vulnerable images currently running in your Elastic Kubernetes clusters. Remediating vulnerabilities in container images that are currently running is key to improving your security posture, significantly reducing the attack surface for your containerized workloads.
 
 **Severity**: High
 
@@ -419,6 +435,14 @@ The new recommendation is in preview and not used for secure score calculation.
 
 **Type**: Vulnerability Assessment
 
+### GCP registry container images should have vulnerability findings resolved
+
+**Description**: Scans your GCP registries container images for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. Resolving vulnerabilities can greatly improve your security posture, ensuring images are safe to use prior to deployment.
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
+
 ### [Preview] Containers running in GCP should have vulnerability findings resolved
 
 **Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
@@ -428,6 +452,14 @@ The new recommendation is in preview and not used for secure score calculation.
 > [!NOTE]
 > Starting October 6, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
 > To support this improvement the assessment key for this recommendation has been updated to `1b3abfa4-9e53-46f1-9627-51f2957f8bba`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the API call to use the new assessment key.
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
+
+### GCP running container images should have vulnerability findings resolved
+
+**Description**: Container image vulnerability assessment scans your registry for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. This recommendation provides visibility to vulnerable images currently running in your Google Kubernetes clusters. Remediating vulnerabilities in container images that are currently running is key to improving your security posture, significantly reducing the attack surface for your containerized workloads.
 
 **Severity**: High
 

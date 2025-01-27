@@ -42,8 +42,7 @@ We are updating one of the scan criteria for registry images in the preview reco
 
 **What's Changing?**
 
-Currently, we rescan images for 90 days after they have been pushed to a registry. This will now be changed to only scan 30 days back.
-Note
+Currently, we rescan images for 90 days after they have been pushed to a registry. This will now be changed to scan 30 days back.
 
 > [!NOTE]
 > There are no changes for the related GA recommendations for container vulnerability assessment (VA) on registry images.
