@@ -939,97 +939,127 @@
       - name: Defender for container registries (deprecated)
         displayName: ACR, registry, images
         href: defender-for-container-registries-introduction.md
-  - name: Database protection
+  - name: Defender for Databases
     items:
-     - name: Overview
-       displayName: database, protections
-       href: tutorial-enable-databases-plan.md
-     - name: Defender for Azure SQL Databases
-       items:
-        - name: Get started
+      - name: Overview
+        items:
+        - name: Overview of Defender for Databases
+          displayName: database, protections
+          href: defender-for-databases-overview.md
+        - name: Defender for Azure SQL Databases
           displayName: database
           href: defender-for-sql-introduction.md
-        - name: Vulnerability assessment
+        - name: Defender for SQL servers on machines
           items:
-           - name: Overview
-             href: sql-azure-vulnerability-assessment-overview.md
-           - name: Enable vulnerability assessment
-             href: sql-azure-vulnerability-assessment-enable.md
-           - name: Manage vulnerability assessments
-             items:
-              - name: Manage findings in Azure SQL databases
-                href: sql-azure-vulnerability-assessment-manage.md
-              - name: PowerShell examples
-                items:
-                 - name: Enable vulnerability assessments on Azure SQL databases with the express
-                          configuration
-                   href: powershell-sample-vulnerability-assessment-azure-sql.md
-                 - name: Set up baselines for vulnerability assessments on Azure SQL databases
-                   href: powershell-sample-vulnerability-assessment-baselines.md
-                 - name: Express configuration PowerShell wrapper module
-                   href: express-configuration-sql-commands.md
-                 - name: Example - express configuration
-                   href: express-configuration-powershell-commands.md
-              - name: Azure CLI examples
-                href: express-configuration-azure-commands.md
-              - name: Find and remediate vulnerabilities
-                href: sql-azure-vulnerability-assessment-find.md
-           - name: Vulnerability assessment rules
-             href: sql-azure-vulnerability-assessment-rules.md
-           - name: Vulnerability assessment rules changelog
-             href: sql-azure-vulnerability-assessment-rules-changelog.md
-           - name: Store vulnerability scans in storage
-             href: /azure/azure-sql/database/sql-database-vulnerability-assessment-storage?toc=/azure/defender-for-cloud/toc.json
-           - name: Consume and export scan results
-             href: defender-for-sql-scan-results.md
-        - name: Investigate threats
-          items:
-           - name: Overview
-             href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
-           - name: Configure threat detection
-             href: /azure/azure-sql/database/threat-detection-configure?toc=/azure/defender-for-cloud/toc.json
-     - name: Defender for SQL servers on machines
-       items:
-          - name: Overview
-            href: defender-for-sql-on-machines-overview.md
-          - name: Enable Defender for SQL Server on Machines
-            href: defender-for-sql-usage.md
-            displayName: hybrid, arc, Azure Defender
-          - name: Migrate to Azure Monitor Agent autoprovisioning
-              process
-            href: defender-for-sql-autoprovisioning.md
-            displayName: defender for sql, autoprovisioning, auto provisioning,
-              auto-provisioning
-          - name: Scan SQL resources for vulnerabilities
-            href: defender-for-sql-on-machines-vulnerability-assessment.md
-            displayName: hybrid, arc, Azure Defender, VA, registry, vulnerabilities
-     -  name: Defender for open-source relational databases
+          - name: Overview of Defender for SQL servers on machines
+            displayName: SQL, SQL servers, defender, machines
+            href: defender-for-sql-servers-introduction.md
+          - name: Overview of vulnerability assessment
+            displayName: vulnerability, assessment
+            href: sql-azure-vulnerability-assessment-overview.md
+          - name: Overview of advanced threat protection
+            displayName: threat, detection
+            href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
+        - name: Defender for open-source relational databases
+          displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+          href: defender-for-databases-introduction.md
+        - name: Defender for Azure Cosmos DB
+          displayName: Cosmos, DB, Cosmos DB
+          href: concept-defender-for-cosmos.md
+        - name: Common questions
+          href: faq-defender-for-databases.yml
+      - name: Deploy
         items:
-          - name: Overview
-            displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
-            href: defender-for-databases-introduction.md
+        - name: Deploy Defender for Databases
+          displayName: database
+          href: tutorial-enable-databases-plan.md
+        - name: Deploy Defender for Azure SQL Databases
+          displayName: database
+          href: enable-sql-database-plan.md
+        - name: Deploy Defender for SQL servers on machines
+          items:
+          - name: Enable Microsoft Defender for SQL servers on machines
+            displayName: hybrid, arc, Azure Defender
+            href: defender-for-sql-usage.md
+          - name: Enable Defender for SQL servers on machines at scale
+            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+            href: enable-defender-sql-at-scale.md
+          - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
+            href: sql-azure-vulnerability-assessment-enable.md
+          - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
+            href: sql-azure-vulnerability-assessment-enable-classic.md
+          - name: Advanced Threat Protection for Azure SQL Database
+            displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
+            href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
+        - name: Deploy Defender for open-source relational databases
+          items:
           - name: Enable on Azure
             displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
             href: enable-defender-for-databases-azure.md
           - name: Enable on AWS (Preview)
             displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
             href: enable-defender-for-databases-aws.md
-          - name: Respond to Defender open-source database alerts
-            displayName: PG, PostgreSQL, MySQL, MariaDB, open-source relational databases,
-              Azure Defender, OS RDBs, OSRDB
-            href: defender-for-databases-usage.md
-     - name: Defender for Azure Cosmos DB
-       items:
-         - name: Overview
-           displayName: Cosmos, DB, Cosmos DB
-           href: concept-defender-for-cosmos.md
-         - name: Enable Microsoft Defender for Azure Cosmos DB
-           displayName: Cosmos, DB, Cosmos db
-           href: defender-for-databases-enable-cosmos-protections.md
-     - name: Common questions about Defender for Databases
-       displayName: database, common questions, databases, sql, express configuration,
-          faq, frequently asked questions
-       href: faq-defender-for-databases.yml
+        - name: Deploy Defender for Azure Cosmos DB
+          displayName: Cosmos, DB, Cosmos DB
+          href: defender-for-databases-enable-cosmos-protections.md
+      - name: Configure
+        items:
+        - name: Configure vulnerability findings in your Azure SQL databases
+          items:
+          - name: Express configuration
+            displayName: vulnerability, assessment, findings, express
+            href: configure-vulnerability-findings-express.md
+          - name: Classic configuration
+            displayName: vulnerability, assessment, findings, classic
+            href: configure-vulnerability-findings-classic.md
+          - name: Troubleshoot express or classic configuration
+            href: troubleshoot-vulnerability-findings.md
+          - name: Migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process
+            displayName: vulnerability, assessment, findings, migrate
+            href: defender-for-sql-autoprovisioning.md
+          - name: Scan your SQL servers for vulnerabilities
+            href: defender-for-sql-on-machines-vulnerability-assessment.md
+          - name: Manage vulnerability assessments
+            items:
+            - name: PowerShell examples
+              items:
+              - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
+                href: powershell-sample-vulnerability-assessment-azure-sql.md
+              - name: Set up baselines for vulnerability assessments on Azure SQL databases
+                href: powershell-sample-vulnerability-assessment-baselines.md
+              - name: Express configuration PowerShell wrapper module
+                href: express-configuration-sql-commands.md
+              - name: Example - express configuration
+                href: express-configuration-powershell-commands.md
+              - name: Azure CLI examples
+                href: express-configuration-azure-commands.md
+              - name: Find and remediate vulnerabilities
+                href: sql-azure-vulnerability-assessment-find.md
+            - name: Vulnerability assessment rules
+              href: sql-azure-vulnerability-assessment-rules.md
+            - name: Vulnerability assessment rules changelog
+              href: sql-azure-vulnerability-assessment-rules-changelog.md
+            - name: Store vulnerability scans in storage
+              href: /azure/azure-sql/database/sql-database-vulnerability-assessment-storage?toc=/azure/defender-for-cloud/toc.json
+            - name: Consume and export scan results
+              href: defender-for-sql-scan-results.md
+
+      - name: Investigate and remediate
+        items:
+        - name: Investigate Defender for SQL security Alerts, reporting, and queries
+          displayName: SQL, SQL servers, defender, machines
+          href: defender-for-sql-alerts.md
+        - name: Find and remediate vulnerabilities
+          href: sql-azure-vulnerability-assessment-find.md
+        - name: Vulnerability assessment rules
+          href: sql-azure-vulnerability-assessment-rules.md
+        - name: SQL vulnerability assessment rules changelog
+          href: sql-azure-vulnerability-assessment-rules-changelog.md
+        - name: Consume and export scan results
+          href: defender-for-sql-scan-results.md
+        - name: Investigate Defender for SQL security alerts
+          href: defender-for-sql-alerts.md
+
   - name: Defender for App Service
     items:
       - name: Overview
