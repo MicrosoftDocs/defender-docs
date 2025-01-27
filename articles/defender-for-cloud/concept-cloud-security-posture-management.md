@@ -2,7 +2,7 @@
 title: Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 07/16/2024
+ms.date: 01/14/2025
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
@@ -47,7 +47,7 @@ The following table summarizes each plan and their cloud availability.
 | [Code-to-cloud mapping for containers](container-image-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps , Docker Hub, JFrog Artifactory|
 | [Code-to-cloud mapping for IaC](iac-template-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure DevOps, , Docker Hub, JFrog Artifactory |
 | [PR annotations](review-pull-request-annotations.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps |
-| Internet exposure analysis | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
+| [Internet exposure analysis](internet-exposure-analysis.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [External attack surface management](concept-easm.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [Permissions Management (CIEM)](permissions-management.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [Regulatory compliance assessments](concept-regulatory-compliance-standards.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, , Docker Hub, JFrog Artifactory |
@@ -59,6 +59,7 @@ The following table summarizes each plan and their cloud availability.
 |[Custom Recommendations](create-custom-recommendations.md)|-|:::image type="icon" source="./media/icons/yes-icon.png":::|Azure, AWS, GCP, Docker Hub, JFrog Artifactory|
 | [Agentless code-to-cloud containers vulnerability assessment](agentless-vulnerability-assessment-azure.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [API security posture management (Preview)](api-security-posture-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
+| [Azure Kubernetes Service security dashboard (Preview)](cluster-security-dashboard.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 
 
 <sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
@@ -68,7 +69,7 @@ The following table summarizes each plan and their cloud availability.
 
 ## Integrations
 
-Microsoft Defender for Cloud now has built-in integrations to help you use third-party systems to seamlessly manage and track tickets, events, and customer interactions. You can push recommendations to a third-party ticketing tool, and assign responsibility to a team for remediation.
+Microsoft Defender for Cloud now has built-in integrations to help you use partner systems to seamlessly manage and track tickets, events, and customer interactions. You can push recommendations to a partner ticketing tool, and assign responsibility to a team for remediation.
 
 Integration streamlines your incident response process, and improves your ability to manage security incidents. You can track, prioritize, and resolve security incidents more effectively.
 
@@ -78,7 +79,7 @@ You can choose which ticketing system to integrate. For preview, only ServiceNow
 
 - Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender CSPM pricing.
 
-- From March 7, 2024, advanced DevOps security posture capabilities will only be available through the paid Defender CSPM plan. Free foundational security posture management in Defender for Cloud will continue providing a number of Azure DevOps recommendations. Learn more about [DevOps security features](devops-support.md#azure-devops).
+- From March 7, 2024, advanced DevOps security posture capabilities will only be available through the paid Defender CSPM plan. Free foundational security posture management in Defender for Cloud continues providing many Azure DevOps recommendations. Learn more about [DevOps security features](devops-support.md#azure-devops).
 
 - For subscriptions that use both Defender CSPM and Defender for Containers plans, free vulnerability assessment is calculated based on free image scans provided via the Defender for Containers plan, as summarized [in the Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
@@ -98,8 +99,8 @@ You can choose which ticketing system to integrate. For preview, only ServiceNow
 
     | GCP Service | Resource types | Exclusions |
     |---|---|---|
-    | Compute |  1. Google Compute instances<br/> 2. Google Instance Group | Instances with non-running states |
-    | Storage | Storage buckets | - Buckets from classes: ‘nearline’, ‘coldline’, ‘archive’<br/>- Buckets from regions other than: europe-west1, us-east1, us-west1, us-central1, us-east4, asia-south1, northamerica-northeast1 |
+    | Compute |  1. Google Compute instances<br/> 2. Google Instance Group | Instances with nonrunning states |
+    | Storage | Storage buckets | - Buckets from classes: 'nearline', 'coldline', 'archive'<br/>- Buckets from regions other than: europe-west1, us-east1, us-west1, us-central1, us-east4, asia-south1, northamerica-northeast1 |
     | DBs | Cloud SQL Instances | --- |
 
 ## Azure cloud support
