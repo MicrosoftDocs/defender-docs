@@ -50,7 +50,7 @@ Defender for Cloud tools for automatically deploying the Log Analytics agent wor
 
 After you connect Defender for Cloud to your Azure subscription, select **Direct onboarding** in the Environment Settings of the Defender for Cloud to [directly enable Defender for Cloud on your on-premises machines](onboard-machines-with-defender-for-endpoint.md#enable-direct-onboarding)
 
-:::image type="content" source="media/quickstart-onboard-machines/environment-settings-direct-onboarding.png" alt-text="Screenshot showing the Direct onboarding option to enable Defender for Cloud for on-premises machines.":::
+:::image type="content" source="media/quickstart-onboard-machines/environment-settings-direct-onboarding.png" lightbox="media/quickstart-onboard-machines/environment-settings-direct-onboarding.png" alt-text="Screenshot showing the Direct onboarding option to enable Defender for Cloud for on-premises machines.":::
 
 ## Microsoft Defender for Endpoint integration or agentless scanning
 
