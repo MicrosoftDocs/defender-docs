@@ -38,7 +38,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 January 27, 2025
 
-The [GCP connector now has additional permissions](permissions.md) to support the GCP AI Platform (Vertex AI):
+The [GCP connector now has additional permissions](permissions.md#permissions-on-gcp) to support the GCP AI Platform (Vertex AI):
 
 - aiplatform.batchPredictionJobs.list
 - aiplatform.customJobs.list
