@@ -28,7 +28,9 @@ prerequisites:
   summary: |
     - [Microsoft Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled on the subscription.
 
-    - Supported VMs:  VMs deployed through Azure Resource Manager, VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models), VMs protected by Azure Firewalls on the same VNET as the VM, VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview), AWS EC2 instances (Preview) 
+    - Supported VMs:  VMs deployed through Azure Resource Manager, VMs protected by Azure Firewalls on the same VNET as the VM, AWS EC2 instances (Preview) 
+
+    - Unsupported VMs: VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models), VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview)
     
     - To set up just-in-time access on your AWS VMs, you need to [connect your AWS account](quickstart-onboard-aws.md) to Microsoft Defender for Cloud.
 
