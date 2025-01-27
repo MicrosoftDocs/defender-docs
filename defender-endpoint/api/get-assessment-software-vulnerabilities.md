@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/08/2025
+ms.date: 01/23/2025
 ---
 
 # Export software vulnerabilities assessment per device
@@ -288,12 +288,16 @@ Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerab
 GET /api/machines/SoftwareVulnerabilitiesExport
 ```
 
-### 2.4 Properties
+### 2.4 Parameters
+
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
+
+### 2.5 Properties
 
 > [!NOTE]
 >
-> - The files are gzip compressed & in multiline Json format.
-> - The download URLs are only valid for 1 hour.
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 6 hours.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 >
 > - Each record is approximately 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
@@ -309,15 +313,15 @@ Export files|array\[string\]|A list of download URLs for files holding the curre
 GeneratedTime|String|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
-### 2.5 Examples
+### 2.6 Examples
 
-#### 2.5.1 Request example
+#### 2.6.1 Request example
 
 ```http
 GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabilitiesExport
 ```
 
-#### 2.5.2 Response example
+#### 2.6.2 Response example
 
 ```json
 {

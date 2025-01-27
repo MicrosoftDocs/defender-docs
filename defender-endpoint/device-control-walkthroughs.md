@@ -4,7 +4,7 @@ description: Learn how to work with device control in Defender for Endpoint.
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb
-ms.date: 02/14/2024
+ms.date: 01/24/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -36,7 +36,7 @@ By default, [device control](device-control-overview.md) is disabled and there a
 
 Device control in Defender for Endpoint identifies a device based on its properties. Device properties are visible by selecting an entry in the report. 
 
-The **Device ID**, **Vendor ID** (VID), **Serial number**, and **Bus type** can all be used to identify a device (see [Device control policies in Microsoft Defender for Endpoint](device-control-policies.mddata is also available in [advanced hunting](/defender-xdr/advanced-hunting-overview), by searching for the `Plug and Play Device Connected action` (`PnPDeviceConnected`), as shown in the following example query:
+The **Device ID**, **Vendor ID** (VID), **Serial number**, and **Bus type** can all be used to identify a device (see [Device control policies in Microsoft Defender for Endpoint](device-control-policies.md)). Data is also available in [Advanced Hunting](/defender-xdr/advanced-hunting-overview), by searching for the Plug and Play Device Connected action (`PnPDeviceConnected`), as shown in the following example query:
 
 ```kusto
 
@@ -62,7 +62,7 @@ DeviceControlState                : Disabled
 
 ```
 
-Change the device control state to be enabled* on a test device. Make sure the policy is applied by checking [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus), as illustrated in the following snippet:
+Change the device control state to be enabled on a test device. Make sure the policy is applied by checking [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus), as illustrated in the following snippet:
 
 ```powershell
 
@@ -184,7 +184,7 @@ The following screenshot shows the settings we used for our example:
 
 By default, the sample uses the Global SID of `S-1-1-0`. Before deploying the policy, you can change the SID associated with the authorized USBs (writeable USBs) to `User1` and change the SID associated with the Read Only USBs to `User2`. 
 
-Once the policy is deployed, only User 1 has write access to the Authorized USBs, and only User 2 has read access to the ReadOnly USBs. 
+Once the policy is deployed, only User 1 has write access to the Authorized USBs, and only User 2 has read access to the ReadOnly USBs.
 
 Device control also supports group SIDs. Change the SID in the read-only policy to a group that contains `User2`. Once the policy is redeployed, the rules are the same for User 2 or any other user in that group.
 

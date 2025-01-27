@@ -73,6 +73,8 @@
       href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
     - name: Manage your unified SOC
       items:
+        - name: Manage cases
+          href: cases-overview.md
         - name: Manage multiple tenants
           items: 
             - name: Overview

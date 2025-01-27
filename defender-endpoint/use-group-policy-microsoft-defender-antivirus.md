@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 12/26/2024
+ms.date: 01/23/2025
 ms.reviewer: ksarens, jtoole, pahuijbr
 manager: deniseb
 ms.subservice: ngp
@@ -62,8 +62,7 @@ In general, you can use the following procedure to configure or change some sett
 The following table lists commonly used Group Policy settings that are available in Windows 10.
 
 > [!TIP]
-> For the most current settings, see get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
-
+> For the most current settings, get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
 
 |Location|Setting|Article|
 |---|---|---|

@@ -995,6 +995,11 @@
       "redirect_url": "/defender-cloud-apps/what-is-defender-for-cloud-apps",
       "redirect_document_id": true
     },
+     {
+      "source_path": "CloudAppSecurityDocs/tutorial-ueba.md",
+      "redirect_url": "/defender-cloud-apps/",
+      "redirect_document_id": true
+    },
     {
       "source_path": "CloudAppSecurityDocs/file-filters.md",
       "redirect_url": "/defender-cloud-apps/data-protection-policies",

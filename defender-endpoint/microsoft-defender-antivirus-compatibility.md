@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 01/10/2025
+ms.date: 01/23/2025
 ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
@@ -66,12 +66,19 @@ The following table summarizes what to expect:
 |Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
 |Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
 
-> [!NOTE]
-> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus.
-> On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*.
-> If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
-
 If the device is onboarded to Microsoft Defender for Endpoint, you can use Microsoft Defender Antivirus in passive mode as described later in this article.
+
+> [!NOTE]
+> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlets (as an administrator):
+>
+> - Windows Server 2019 and newer: `Uninstall-WindowsFeature Windows-Defender`
+> - Windows Server 2016: `Uninstall-WindowsFeature Windows-Defender` and `Uninstall-WindowsFeature Windows-Defender-Gui`
+> 
+> On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. 
+> 
+> Make sure to restart your server to finish removing Microsoft Defender Antivirus.
+> 
+> If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
 
 ## Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions
 
@@ -207,12 +214,13 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 - [Use Windows PowerShell to confirm that antivirus protection is running](#use-windows-powershell-to-confirm-that-antivirus-protection-is-running).
 
 > [!IMPORTANT]
-> Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#platform-and-engine-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it place Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
+> Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#platform-and-engine-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
 > 
 > - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, Microsoft Defender Antivirus remains disabled.
 > - To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
 > 
 > Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
+>Microsoft Defender for Endpoint – EDR response actions always operate in Passive mode, even if EDR is in block mode.
 
 ### Use the Windows Security app to identify your antivirus app
 

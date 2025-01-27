@@ -1,27 +1,23 @@
 ---
 title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
-keywords: incidents, alerts, investigate, analyze, response, correlation, attack, machines, devices, users, identities, identity, mailbox, email, 365, microsoft, m365
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection:
-  - m365-security
-  - m365initiative-m365-defender
-  - tier1
+- m365-security
+- m365initiative-m365-defender
+- tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - met150
+- MOE150
+- met150
 ms.date: 1/17/2025
 appliesto: 
 - Microsoft Defender XDR
@@ -195,10 +191,9 @@ The **Manage alert** pane allows you to view or specify:
 - A comment on the alert.
 
 > [!NOTE]
-> Around August 29th, 2022, previously supported alert determination values ('Apt' and 'SecurityPersonnel') will be deprecated and no longer available via the API.
-
-> [!NOTE]
-> One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is incrementally being rolled out and is currently in preview.
+> - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
+>
+> - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
 >
 > Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification will not reflect the updated tag name.
 
@@ -291,6 +286,7 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
 > [!NOTE]
 > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
+> The *Hide alert* feature is only available in Defender for Endpoint alerts.
 
 <!--what does this mean?-->
 
