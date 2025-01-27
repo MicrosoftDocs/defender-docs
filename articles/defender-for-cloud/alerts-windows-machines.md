@@ -29,16 +29,6 @@ Microsoft Defender for Servers Plan 2 provides unique detections and alerts, in 
 
 **Severity**: High
 
-### **Adaptive application control policy violation was audited**
-
-VM_AdaptiveApplicationControlWindowsViolationAudited
-
-**Description**: The below users ran applications that are violating the application control policy of your organization on this machine. It can possibly expose the machine to malware or application vulnerabilities.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
-
-**Severity**: Informational
-
 ### **Addition of Guest account to Local Administrators group**
 
 **Description**: Analysis of host data has detected the addition of the built-in Guest account to the Local Administrators group on %{Compromised Host}, which is strongly associated with attacker activity.
