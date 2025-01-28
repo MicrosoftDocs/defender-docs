@@ -26,19 +26,19 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
 
 1. To change optional configurations for the plan, select **Settings**.
 
-    :::image type="content" source="../media/tutorial-enable-containers-aws/containers-settings.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings." lightbox="../media/tutorial-enable-containers-aws/containers-settings.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
 
-    - Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the toggle for that feature to **On**. To change the retention period for your audit logs, enter the required time frame.
+    - Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the toggle for Agentless threat protection to **On**. To change the retention period for your audit logs, enter the required time frame.
 
         > [!NOTE]
-        > If you disable this configuration, the **Threat detection (control plane)** feature is also disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
+        > If you disable this configuration, control plan threat detection is disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
 
     - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
     - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-aws.md) feature provides vulnerability management for images stored in ECR and for running images on your EKS clusters. Set the **Registry access** toggle to **On**.
 
-1. Continue through the remaining pages of the connector wizard.
+2. Continue through the remaining pages of the connector wizard.
 
-1. If you're enabling the **Agentless Discovery for Kubernetes** feature, you need to grant control plane permissions on the cluster. You can grant permissions in one of the following ways:
+3. If you're enabling the **Agentless discovery for Kubernetes** feature, you need to grant control plane permissions on the cluster. You can grant permissions in one of the following ways:
 
     - Run [this Python script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/AWS/ReadMe.md). The script adds the Defender for Cloud role `MDCContainersAgentlessDiscoveryK8sRole` to `aws-auth ConfigMap` for the EKS clusters that you want to onboard.
     - Grant each Amazon EKS cluster the `MDCContainersAgentlessDiscoveryK8sRole` role with the ability to interact with the cluster. Sign in to all existing and newly created clusters by using [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html) and run the following script:
@@ -54,7 +54,7 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
 
       For more information, see [Grant IAM users access to Kubernetes with EKS access entries](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html) in the Amazon EKS user guide.
 
-1. Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernetes should be installed and running on your EKS clusters. There's a dedicated Defender for Cloud recommendation to install these extensions (and Azure Arc, if necessary): **EKS clusters should have Microsoft Defender's extension for Azure Arc installed.**
+4. Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernetes should be installed and running on your EKS clusters. There's a dedicated Defender for Cloud recommendation to install these extensions (and Azure Arc, if necessary): **EKS clusters should have Microsoft Defender's extension for Azure Arc installed.**
  
     Follow the remediation steps provided by the recommendation:
     
