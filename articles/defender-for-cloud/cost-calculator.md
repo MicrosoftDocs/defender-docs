@@ -60,7 +60,7 @@ To run this script successfully for each subscription, the account you use needs
 - **Query Resource Graph** (via Search-AzGraph).
 - **Read Metrics** (via Get-AzMetric and the Azure Monitor/Insights APIs).
 
-**Recommended Built-In role**:
+**Recommended built-in role**:
 
 In most cases, the **Reader** role *at the subscription scope* is sufficient. The Reader role provides the following key capabilities needed by this script:
 
@@ -68,7 +68,8 @@ In most cases, the **Reader** role *at the subscription scope* is sufficient. Th
 - **Read metrics (Microsoft.Insights/metrics/read)** so that calls to Get-AzMetric or direct Azure Monitor REST queries succeed.
 - **Resource Graph queries** works as long as you have at least read access to those resources in the subscription.
 
-**Note**: If you want to be certain you have the necessary metric permissions, you can also use **Monitoring Reader** role; however, the standard **Reader** role already includes read access to metrics and is usually all you need.
+> [!NOTE]
+> If you want to be certain you have the necessary metric permissions, you can also use **Monitoring Reader** role; however, the standard **Reader** role already includes read access to metrics and is usually all you need.
 
 **If you already have Contributor or Owner roles**:
 
@@ -79,10 +80,10 @@ In most cases, the **Reader** role *at the subscription scope* is sufficient. Th
 
 Granting your user or service principal the **Reader** role (or any higher-privileged role) on each subscription you wish to query ensures the script can:
 
-1. Retrieve the list of subscriptions.
-1. Enumerate and read all relevant resource information (via REST or Az PowerShell).
-1. Fetch the necessary metrics (Requests for APIM, RU consumption for Cosmos DB, Storage Accounts ingress, etc.).
-1. Run Resource Graph queries without issue.
+- Retrieve the list of subscriptions.
+- Enumerate and read all relevant resource information (via REST or Az PowerShell).
+- Fetch the necessary metrics (Requests for APIM, RU consumption for Cosmos DB, Storage Accounts ingress, etc.).
+- Run Resource Graph queries without issue.
 
 ##### AWS
 
@@ -90,50 +91,50 @@ The following is an overview of the permissions your AWS Identity (user or role)
 
 ###### AWS Managed Policy: ReadOnlyAccess or ViewOnlyAccess
 
-The simplest approach is to attach one of AWS’s built-in read-only policies to the IAM principal (user/role) that runs this script. Examples include:
+The simplest approach is to attach one of AWS's built-in read-only policies to the IAM principal (user/role) that runs this script. Examples include:
 
 - `arn:aws:iam::aws:policy/ReadOnlyAccess`
 - `arn:aws:iam::aws:policy/job-function/ViewOnlyAccess`
 
-Either of these covers the *describe* and *list* permissions for most AWS services. If your environment’s security policy allows it, **ReadOnlyAccess** is the easiest way to ensure the script works across all AWS resources it enumerates.
+Either of these covers the *describe* and *list* permissions for most AWS services. If your environment's security policy allows it, **ReadOnlyAccess** is the easiest way to ensure the script works across all AWS resources it enumerates.
 
 **Key services and required permissions**:
 
 If you need a more granular approach with a **custom** IAM policy, the following are the services and permissions you must allow:
 
-1. **EC2**
-   - ec2:DescribeInstances
-   - ec2:DescribeRegions
-   - ec2:DescribeInstanceTypes (for retrieving vCPU/core info)
-1. **RDS**
-   - rds:DescribeDBInstances
-1. **EKS**
-   - eks:ListClusters
-   - eks:DescribeCluster
-   - eks:ListNodegroups
-   - eks:DescribeNodegroup
-1. **Auto Scaling** (for EKS node groups’ underlying instances)
-   - autoscaling:DescribeAutoScalingGroups
-1. **S3**
-   - s3:ListAllMyBuckets
-1. **STS**
-   - sts:GetCallerIdentity (to retrieve the AWS Account ID)
+- **EC2**
+  - ec2:DescribeInstances
+  - ec2:DescribeRegions
+  - ec2:DescribeInstanceTypes (for retrieving vCPU/core info)
+- **RDS**
+  - rds:DescribeDBInstances
+- **EKS**
+  - eks:ListClusters
+  - eks:DescribeCluster
+  - eks:ListNodegroups
+  - eks:DescribeNodegroup
+- **Auto Scaling** (for EKS node groups underlying instances)
+  - autoscaling:DescribeAutoScalingGroups
+- **S3**
+  - s3:ListAllMyBuckets
+- **STS**
+  - sts:GetCallerIdentity (to retrieve the AWS Account ID)
 
-Additionally, if you need to list other resources not shown in the script or if you plan to expand the script’s capabilities, ensure you grant the appropriate Describe*, List*, and Get* actions as needed.
+Additionally, if you need to list other resources not shown in the script or if you plan to expand the script's capabilities, ensure you grant the appropriate Describe*, List*, and Get* actions as needed.
 
 **Summary**:
 
-- The most straightforward way is to attach AWS’s built-in **ReadOnlyAccess** policy, which already includes all the actions required to list and describe EC2, RDS, EKS, S3, Auto Scaling resources, and call STS to get your account info.
+- The most straightforward way is to attach AWS's built-in **ReadOnlyAccess** policy, which already includes all the actions required to list and describe EC2, RDS, EKS, S3, Auto Scaling resources, and call STS to get your account info.
 - If you want just enough privileges, create a custom read-only policy with the above Describe*, List*, and Get* actions for EC2, RDS, EKS, Auto Scaling, S3, and STS.
 
 Either approach gives your script sufficient permissions to:
 
-1. List regions.
-1. Retrieve EC2 instance metadata.
-1. Retrieve RDS instances.
-1. List and describe EKS clusters and node groups (and the underlying Auto Scaling groups).
-1. List S3 buckets.
-1. Obtain your AWS account ID via STS.
+- List regions.
+- Retrieve EC2 instance metadata.
+- Retrieve RDS instances.
+- List and describe EKS clusters and node groups (and the underlying Auto Scaling groups).
+- List S3 buckets.
+- Obtain your AWS account ID via STS.
 
 This ensures the script can discover resources and fetch the relevant metadata without creating, modifying, or deleting anything.
 
@@ -141,7 +142,7 @@ This ensures the script can discover resources and fetch the relevant metadata w
 
 The following is an overview of the permissions your GCP user or service account needs to run this script successfully. In short, the script needs to list and describe resources (VM instances, Cloud SQL, GKE clusters, and GCS buckets) in your chosen project.
 
-###### Recommended Built-In role: Project Viewer
+###### Recommended built-in role: Project Viewer
 
 The simplest approach to ensure read-only access across all these resources is granting your user or service account the **roles/viewer** role at the project level (the same project you select via gcloud config set project).
 
@@ -156,22 +157,22 @@ The **roles/viewer** role includes read-only access to most GCP services within 
 
 If you prefer a more granular approach, you can create a **custom IAM role** or set of roles that collectively grant just the needed read-list-describe actions for each service:
 
-1. **Compute Engine** (for VM Instances, Regions, Instance Templates, Instance Group Managers):
-   - compute.instances.list
-   - compute.regions.list
-   - compute.machineTypes.list
-   - compute.instanceTemplates.get
-   - compute.instanceGroupManagers.get
-   - compute.instanceGroups.get
-1. **Cloud SQL**:
-   - cloudsql.instances.list
-1. **Google Kubernetes Engine**:
-   - container.clusters.list
-   - container.clusters.get (needed when describing clusters)
-   - container.nodePools.list
-   - container.nodePools.get
-1. **Cloud Storage**:
-   - storage.buckets.list
+- **Compute Engine** (for VM Instances, Regions, Instance Templates, Instance Group Managers):
+  - compute.instances.list
+  - compute.regions.list
+  - compute.machineTypes.list
+  - compute.instanceTemplates.get
+  - compute.instanceGroupManagers.get
+  - compute.instanceGroups.get
+- **Cloud SQL**:
+  - cloudsql.instances.list
+- **Google Kubernetes Engine**:
+  - container.clusters.list
+  - container.clusters.get (needed when describing clusters)
+  - container.nodePools.list
+  - container.nodePools.get
+- **Cloud Storage**:
+  - storage.buckets.list
 
 The script doesn't create or modify any resources, so it doesn't require update or delete permissions—only list, get, or describe type permissions.
 
@@ -217,16 +218,16 @@ This read-level access allows enumerating resource counts and gathering metadata
   
 After generating the report, you can adjust the plans and the number of billable assets:  
   
-- Choose the environment you wish to modify by selecting the edit (pencil) icon.
-- A configuration page appears, enabling you to adjust plans, the number of billable assets, and the average monthly hours.  
-- Select the **Recalculate** button to update the cost estimate.  
+1. Choose the environment you wish to modify by selecting the edit (pencil) icon.
+1. A configuration page appears, enabling you to adjust plans, the number of billable assets, and the average monthly hours.  
+1. Select the **Recalculate** button to update the cost estimate.  
   
 ## Export the report
   
 Once you're satisfied with the report, you can export it as a CSV file:  
   
-- Select the **Export to CSV** button located at the bottom of the **Summary** panel on the right.  
-- The cost information is downloaded as a CSV file.  
+1. Select the **Export to CSV** button located at the bottom of the **Summary** panel on the right.  
+1. The cost information is downloaded as a CSV file.  
 
 ## Frequently asked questions
   
