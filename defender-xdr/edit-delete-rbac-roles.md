@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 11/17/2024
+ms.date: 02/16/2025
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -67,6 +67,11 @@ If the workload is active, all assigned user permission are deleted by removing 
 > After deleting an imported role, the role won't be deleted from the individual product RBAC model. If needed, you can re-import it to the Microsoft Defender XDR Unified RBAC list of roles.
 
 ## Export roles
+
+> [!IMPORTANT]
+> From February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants that have not created roles and permissions. In addition, these new tenants won't have the ability to export roles and permissions from the current model.
+>
+> All Defender for Endpoint tenants who assigned roles and permissions before this date can continue to use their current roles and permissions.
 
 The Export feature enables you to export the following roles data:
 

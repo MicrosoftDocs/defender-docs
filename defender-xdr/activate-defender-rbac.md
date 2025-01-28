@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 11/17/2024
+ms.date: 02/16/2025
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -33,6 +33,11 @@ search.appverid: met150
 - [Microsoft Security Exposure Management](/security-exposure-management/)
 
 For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new [custom roles](create-custom-rbac-roles.md) or [imported roles](import-rbac-roles.md), you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+
+> [!IMPORTANT]
+> From February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants that have not created roles and permissions. The activation of the Microsoft Defender XDR Unified RBAC model won't be available for these new tenants. In addition, these new tenants won't have the ability to export roles and permissions from the current model.
+>
+> All Defender for Endpoint tenants who assigned roles and permissions before this date can continue to use their current roles and permissions.
 
 <a name='activate-microsoft-365-defender-unified-rbac'></a>
 

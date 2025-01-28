@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: overview
-ms.date: 11/17/2024
+ms.date: 02/16/2025
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -35,6 +35,11 @@ search.appverid: met150
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
 The Microsoft Defender XDR Unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across different security solutions.
+
+> [!IMPORTANT]
+> From February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants that have not created roles and permissions. In addition, these new tenants won't have the ability to export roles and permissions from the current model.
+>
+> All Defender for Endpoint tenants who assigned roles and permissions before this date can continue to use their current roles and permissions.
 
 <a name='whats-supported-by-the-microsoft-365-defender-unified-rbac-model'></a>
 
