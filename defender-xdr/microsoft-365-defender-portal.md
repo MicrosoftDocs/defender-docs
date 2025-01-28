@@ -38,6 +38,7 @@ To learn more about the services that are part of the Microsoft Defender portal,
 - **[Microsoft Security Copilot embedded experience in the Microsoft Defender portal](security-copilot-in-microsoft-365-defender.md)**
 - **[Microsoft Defender for IoT enterprise monitoring in the Microsoft Defender portal](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint)**
 - **[Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)**
+- **[Microsoft Purview Insider Risk Management alerts in the Microsoft Defender portal](irm-investigate-alerts-defender.md)**
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 

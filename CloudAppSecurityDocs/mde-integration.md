@@ -65,13 +65,12 @@ To enable Defender for Endpoint integration with Defender for Cloud Apps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), from the navigation pane, select **Settings** > **Endpoints** > **General** > **Advanced features**.
 1. Toggle the **Microsoft Defender for Cloud Apps** to **On**.
-1. Select **Apply**.
+1. Select **Save preferences**.
 
 >[!NOTE]
 > It takes up to two hours after you enable the integration for the data to show up in Defender for Cloud Apps.
 >
-
-![Screenshot of the Defender for Endpoint settings.](media/mde-settings.png)
+![Screenshot of the Defender for Endpoint settings.](media\turn-on-advanced-features-for-microsoft-defender-for-cloud-apps.png)
 
 To configure the severity for alerts sent to Microsoft Defender for Endpoint:
 

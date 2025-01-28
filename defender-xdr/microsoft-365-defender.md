@@ -40,6 +40,7 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 - [**Microsoft Entra ID Protection**](/azure/active-directory/identity-protection/overview-identity-protection)
 - [**Microsoft Data Loss Prevention**](/microsoft-365/compliance/dlp-learn-about-dlp)
 - [**App Governance**](/defender-cloud-apps/app-governance-manage-app-governance)
+- [**Microsoft Purview Insider Risk Management**](/purview/insider-risk-management-solution-overview)
 
 With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 

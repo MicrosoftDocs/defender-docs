@@ -174,13 +174,13 @@ For the following services, use the different roles available, or create custom 
 
 ## Plan Zero Trust activities
 
-Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security model](/security/zero-trust/), which includes the following principles:
+Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security model](zero-trust.md), which includes the following principles:
 
-|Principle	| Description| 
-| ------------------------ | ------------------------------------------- |
-| **Verify explicitly**	| Always authenticate and authorize based on all available data points. |
-| **Use least privilege access**	| Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection. |
-| **Assume breach**	| Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses. |
+|Security principle |Description|
+|---|---|
+|**Verify explicitly** |Always authenticate and authorize based on all available data points. |
+|**Use least privilege access** |Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.      |
+|**Assume breach** |Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses. |
 
 Zero Trust security is designed to protect modern digital environments by leveraging network segmentation, preventing lateral movement, providing least-privileged access, and using advanced analytics to detect and respond to threats.
 
@@ -196,6 +196,8 @@ For more information about implementing Zero Trust principles in Microsoft's uni
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/zero-trust?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json)
 - [Microsoft Security Copilot](/security/zero-trust/copilots/zero-trust-microsoft-copilot-for-security)
 - [Microsoft Entra ID Protection](/entra/id-protection/how-to-deploy-identity-protection)
+
+For more information, see the [Zero Trust Guidance Center](/security/zero-trust/zero-trust-overview).
 
 ## Next step
 

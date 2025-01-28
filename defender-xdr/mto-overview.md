@@ -8,17 +8,17 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - highpri
-  - tier1
-  - usx-security
+- m365-security
+- highpri
+- tier1
+- usx-security
 ms.topic: conceptual
-ms.date: 09/30/2024
+ms.date: 01/27/2025
 appliesto:
-  - Microsoft Defender XDR
-  - Microsoft Sentinel in the Microsoft Defender portal
-  - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender for Office 365 P2
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender for Office 365 P2
 ---
 
 # Microsoft Defender multitenant management
@@ -70,9 +70,6 @@ The following key capabilities are available for each tenant you have access to 
 |**Endpoints** >**Vulnerability Management** > **Dashboard** |The Microsoft Defender Vulnerability Management dashboard provides both security administrators and security operations teams with aggregated vulnerability management information across multiple tenants. |
 |**Endpoints** > **Vulnerability management** > **Tenants** |For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
 |**Configuration** > **Settings**|Lists the tenants you have access to. Use this page to view and manage your tenants.|
-
-> [!NOTE]
-> The content distribution capability is not yet available for all GCC, GCC High, and DoD customers.
 
 ## Next steps
 
