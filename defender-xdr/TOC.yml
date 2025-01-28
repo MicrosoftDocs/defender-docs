@@ -132,10 +132,10 @@
           href: automatic-attack-disruption.md
         - name: Configure capabilities
           href: configure-attack-disruption.md
-        - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md          
         - name: View details and results
           href: autoad-results.md
+        - name: Exclude assets from automated responses
+          href: automatic-attack-disruption-exclusions.md           
       - name: Manage the deception capability
         items:
         - name: Overview
