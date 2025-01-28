@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 12/24/2024
+ms.date: 02/03/2025
 ms.collection:
 - m365-security
 - tier2
@@ -114,19 +114,6 @@ The following mailbox events need to be audited by minimum:
 Review [manage mailbox auditing](/purview/audit-mailboxes) to learn about managing mailbox auditing.
 
 #### Safelinks policy needs to be present.
-
-## Review or change automated response exclusions for users
-
-Automatic attack disruption enables the exclusion of specific user accounts from automated containment actions. Excluded users won't be affected by automated actions triggered by attack disruption. You must be a global administrator or security administrator to perform the following procedure:
-
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
-
-2. Go to **Settings** \> **Microsoft Defender XDR** \> **Identity automated response**. Check the user list to exclude accounts.
-:::image type="content" source="/defender/media/automatic-attack-disruption/Fig3-exclude-specific-users.png" alt-text="Selecting user accounts for automated response exclusion" lightbox="/defender/media/automatic-attack-disruption/Fig3-exclude-specific-users.png":::
-
-3. To exclude a new user account, select **Add user exclusion**.
-
-Excluding user accounts is not recommended, and accounts added to this list won't be suspended in all supported attack types like business email compromise (BEC) and human-operated ransomware.
 
 ## Next steps
 
