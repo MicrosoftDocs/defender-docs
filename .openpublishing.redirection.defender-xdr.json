@@ -132,6 +132,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "defender-xdr/unlink-alert-from-incident.md",
+      "redirect_url": "/defender-xdr/move-alert-to-another-incident",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-xdr/unified-secops-platform/defender-xdr-portal.md",
       "redirect_url": "/defender-xdr/",
       "redirect_document_id": false
