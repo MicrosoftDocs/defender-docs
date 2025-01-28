@@ -38,16 +38,16 @@ Defender for Endpoint supports two ways to manage permissions:
 
 > [!IMPORTANT]
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
-> Existing customers will keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac?view=o365-worldwide).
+> Existing customers keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac?view=o365-worldwide).
 
 ## Change from basic permissions to RBAC
 
-If you have already assigned basic permissions, you can switch to RBAC anytime. Consider the following before making the switch:
+If you have basic permissions, you can switch to RBAC anytime. Consider the following before making the switch:
 
 - Users who have full access (users who are assigned either the Global Administrator or Security Administrator directory role in Microsoft Entra ID) are automatically assigned the default Defender for Endpoint administrator role, which also has full access. 
 - Other Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC.
 - Only users who are assigned the Defender for Endpoint administrator role can manage permissions using RBAC. 
-- Users who have read-only access (Security Readers) lose access to the portal until they are assigned a role. Only Microsoft Entra user groups can be assigned a role under RBAC.
+- Users who have read-only access (Security Readers) lose access to the portal until they're assigned a role. Only Microsoft Entra user groups can be assigned a role under RBAC.
 - After switching to RBAC, you can't switch back to using basic permissions management.
 
 > [!IMPORTANT]

@@ -17,7 +17,7 @@ ms.date: 01/28/2025
 
 # Manage portal access using role-based access control
 > [!NOTE]
-> If you are running the Microsoft Defender XDR preview program you can now experience the new Microsoft Defender 365 Unified role-based access control (RBAC) model. For more information, see [Microsoft Defender 365 Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+> If you are running the Microsoft Defender XDR preview program, you can now experience the new Microsoft Defender 365 Unified role-based access control (RBAC) model. For more information, see [Microsoft Defender 365 Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -32,7 +32,7 @@ ms.date: 01/28/2025
 
 > [!IMPORTANT]
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
-> Existing customers will keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac?view=o365-worldwide).
+> Existing customers keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac?view=o365-worldwide).
 
 Using role-based access control (RBAC), you can create roles and groups within your security operations team to grant appropriate access to the  portal. Based on the roles and groups you create, you have fine-grained control over what users with access to the portal can see and do.
 
@@ -47,7 +47,7 @@ Large geo-distributed security operations teams typically adopt a tier-based mod
 |---|---|
 |Tier 1|**Local security operations team / IT team** <br/> This team usually triages and investigates alerts contained within their geolocation and escalates to Tier 2 in cases where an active remediation is required.|
 |Tier 2|**Regional security operations team** <br/>This team can see all the devices for their region and perform remediation actions.|
-|Tier 3|**Global security operations team** <br/>This team consists of security experts and are authorized to see and perform all actions from the portal.|
+|Tier 3|**Global security operations team** <br/>This team consists of security experts and is authorized to see and perform all actions from the portal.|
 
 > [!NOTE]
 > For Tier 0 assets, refer to [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for security admins to provide more granular control of Microsoft Defender for Endpoint and Microsoft Defender XDR.
@@ -62,7 +62,7 @@ Defender for Endpoint RBAC is designed to support your tier- or role-based model
     > [!NOTE]
     > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
-To implement role-based access, you'll need to define admin roles, assign corresponding permissions, and assign Microsoft Entra user groups assigned to the roles.
+To implement role-based access, you need to define admin roles, assign corresponding permissions, and assign Microsoft Entra user groups assigned to the roles.
 
 ## Before you begin
 
@@ -80,11 +80,11 @@ Someone with a Defender for Endpoint Global Administrator role has unrestricted 
 >
 > **Turning on role-based access control causes users with read-only permissions (for example, users assigned to Microsoft Entra Security reader role) to lose access until they are assigned to a role.**
 >
-> Users with administrator permissions are automatically assigned the default built-in Defender for Endpoint Global Administrator role with full permissions. After opting in to use RBAC, you can assign additional users who aren't Microsoft Entra Global Administrators or Security Administrators to the Defender for Endpoint Global Administrator role.
+> Users with administrator permissions are automatically assigned the default built-in Defender for Endpoint Global Administrator role with full permissions. After opting in to use RBAC, you can assign more users who aren't Microsoft Entra Global Administrators or Security Administrators to the Defender for Endpoint Global Administrator role.
 >
-> After opting in to use RBAC, you cannot revert to the initial roles as when you first logged into the portal.
+> After opting in to use RBAC, you can't revert to the initial roles as when you first logged into the portal.
 
-## Related topic
+## Related article
 
 - [RBAC roles](/defender-office-365/migrate-to-defender-for-office-365-onboard#rbac-roles)
 - [Create and manage device groups in Microsoft Defender for Endpoint](machine-groups.md)
