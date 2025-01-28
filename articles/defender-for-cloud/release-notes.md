@@ -31,8 +31,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| January 30 | GA | [Update to scan criteria for container registries](#update-to-scan-criteria-for-container-registries) |
 | January 27 | GA | [Permissions added to GCP connector to support AI platforms](#permissions-added-to-gcp-connector-to-support-ai-platforms) |
 | January 20 | Change | [Enhancements for the Linux Baselines recommendation powered by GC](#enhancements-for-the-linux-baselines-recommendation-powered-by-gc) |
+
+### Update to scan criteria for container registries
+
+January 30, 2025
+
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved) [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+
+**What's Changing?**
+
+Currently, we rescan images for 90 days after they have been pushed to a registry. This will now be changed to scan 30 days back.
+
+> [!NOTE]
+> There are no changes for the related GA recommendations for container vulnerability assessment (VA) on registry images.
 
 ### Permissions added to GCP connector to support AI platforms
 
