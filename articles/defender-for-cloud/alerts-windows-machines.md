@@ -29,16 +29,6 @@ Microsoft Defender for Servers Plan 2 provides unique detections and alerts, in 
 
 **Severity**: High
 
-### **Adaptive application control policy violation was audited**
-
-VM_AdaptiveApplicationControlWindowsViolationAudited
-
-**Description**: The below users ran applications that are violating the application control policy of your organization on this machine. It can possibly expose the machine to malware or application vulnerabilities.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
-
-**Severity**: Informational
-
 ### **Addition of Guest account to Local Administrators group**
 
 **Description**: Analysis of host data has detected the addition of the built-in Guest account to the Local Administrators group on %{Compromised Host}, which is strongly associated with attacker activity.
@@ -553,14 +543,6 @@ Attackers might exclude files from the antimalware scan on your virtual machine 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: -
 
 **Severity**: Medium
-
-### **Potential attempt to bypass AppLocker detected**
-
-**Description**: Analysis of host data on %{Compromised Host} detected a potential attempt to bypass AppLocker restrictions. AppLocker can be configured to implement a policy that limits what executables are allowed to run on a Windows system. The command-line pattern similar to that identified in this alert has been previously associated with attacker attempts to circumvent AppLocker policy by using trusted executables (allowed by AppLocker policy) to execute untrusted code. This could be legitimate activity, or an indication of a compromised host.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: -
-
-**Severity**: High
 
 ### **Rare SVCHOST service group executed**
 
