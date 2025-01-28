@@ -82,13 +82,24 @@ To learn more, see the following articles:
 
 Your organization's attack surfaces are all the places where you're vulnerable to cyberattacks. With Defender for Endpoint Plan 1, you can reduce your attack surfaces by protecting the devices and applications that your organization uses. The attack surface reduction capabilities that are included in Defender for Endpoint Plan 1 are described in the following sections.
 
-- [Attack surface reduction rules](#attack-surface-reduction-rules)
-- [Ransomware mitigation](#ransomware-mitigation)
-- [Device control](#device-control)
-- [Web protection](#web-protection)
-- [Network protection](#web-protection)
-- [Network firewall](#network-firewall)
-- [Application control](#application-control)
+- [Overview of Microsoft Defender for Endpoint Plan 1](#overview-of-microsoft-defender-for-endpoint-plan-1)
+  - [Defender for Endpoint Plan 1 capabilities](#defender-for-endpoint-plan-1-capabilities)
+  - [Next-generation protection](#next-generation-protection)
+  - [Manual response actions](#manual-response-actions)
+  - [Attack surface reduction](#attack-surface-reduction)
+    - [Attack surface reduction rules](#attack-surface-reduction-rules)
+    - [Ransomware mitigation](#ransomware-mitigation)
+    - [Device control](#device-control)
+    - [Web protection](#web-protection)
+    - [Network protection](#network-protection)
+    - [Network firewall](#network-firewall)
+    - [Application control](#application-control)
+  - [Centralized management](#centralized-management)
+    - [Role-based access control](#role-based-access-control)
+    - [Reporting](#reporting)
+    - [APIs](#apis)
+  - [Cross-platform support](#cross-platform-support)
+  - [Next steps](#next-steps)
 
 To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](overview-attack-surface-reduction.md).
 
@@ -158,6 +169,10 @@ To learn more, see [Microsoft Defender portal overview](/defender-xdr/microsoft-
 Using role-based access control (RBAC), your security administrator can create roles and groups to grant appropriate access to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). With RBAC, you have fine-grained control over who can access the Defender for Cloud, and what they can see and do. 
 
 To learn more, see [Manage portal access using role-based access control](rbac.md).
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 ### Reporting
 

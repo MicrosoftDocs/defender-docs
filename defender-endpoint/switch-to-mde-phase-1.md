@@ -97,6 +97,10 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
 
 3. Grant your security team access to the Microsoft Defender portal. (Need help? See [Manage portal access using RBAC](rbac.md).
 
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+
 ## Step 4: View information about device proxy and internet connectivity settings
 
 To enable communication between your devices and Defender for Endpoint, you might have to configure proxy and internet settings. The following table includes links to resources you can use to configure your proxy and internet settings for various operating systems:
