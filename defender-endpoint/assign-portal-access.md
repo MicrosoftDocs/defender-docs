@@ -44,14 +44,14 @@ Defender for Endpoint supports two ways to manage permissions:
 
 If you have basic permissions, you can switch to RBAC anytime. Consider the following before making the switch:
 
-- Users who have full access (users who are assigned either the Global Administrator or Security Administrator directory role in Microsoft Entra ID) are automatically assigned the default Defender for Endpoint administrator role, which also has full access. 
+- Users who have full access are automatically assigned the default Defender for Endpoint administrator role.
 - Other Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC.
 - Only users who are assigned the Defender for Endpoint administrator role can manage permissions using RBAC. 
 - Users who have read-only access (Security Readers) lose access to the portal until they're assigned a role. Only Microsoft Entra user groups can be assigned a role under RBAC.
 - After switching to RBAC, you can't switch back to using basic permissions management.
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions as it helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Related articles
 
