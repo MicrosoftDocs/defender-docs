@@ -26,12 +26,7 @@ f1.keywords: CSH
 
 Microsoft Defender XDR includes powerful [automated attack disruption](automatic-attack-disruption.md) capabilities that can protect your environment from sophisticated, high-impact attacks.
 
-This article describes how to configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> with these steps:
-
-1. [Review the prerequisites](#prerequisites-for-automatic-attack-disruption-in-microsoft-365-defender).
-2. [Review or change the automated response exclusions for users](#review-or-change-automated-response-exclusions-for-users).
-
-Then, after you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to settings.
+This article describes how to configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to settings.
 
 <a name='prerequisites-for-automatic-attack-disruption-in-microsoft-365-defender'></a>
 
@@ -43,7 +38,7 @@ Then, after you're all set up, you can view and manage containment actions in In
 |Deployment requirements|<ul><li>Deployment across Defender products (e.g., Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, the relevant product should be deployed to execute an automated response action. For example, Microsoft Defender for Endpoint is required to automatically contain a device. </li></ul><li>Microsoft Defender for Endpoint's device discovery is set to 'standard discovery' (prerequisite for the automatic initiation of the "Contain Device" action)</li></ul>|
 |Permissions|To configure automatic attack disruption capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
-### Microsoft Defender for Endpoint Prerequisites
+### Microsoft Defender for Endpoint prerequisites
 
 #### Minimum Sense Client version (MDE client)
 
@@ -65,10 +60,10 @@ Review the configured automation level for your device group policies, whether a
 
 Device discovery settings must be activated to "Standard Discovery" at a minimum. Learn how to configure device discovery in [Set up device discovery](/defender-endpoint/configure-device-discovery).
 
->[!NOTE]
->Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.
+> [!NOTE]
+> Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.
 
-### Microsoft Defender for Identity Prerequisites
+### Microsoft Defender for Identity prerequisites
 
 #### Set up auditing in domain controllers
 
@@ -82,8 +77,8 @@ You can find more information on the action accounts in [Configure Microsoft Def
 
 The Defender for Identity sensor needs to be deployed on the domain controller where the Active Directory account is to be turned off.
 
->[!NOTE]
->If you have automations in place to activate or block a user, check if the automations can interfere with Disruption. For example, if there is an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
+> [!NOTE]
+> If you have automations in place to activate or block a user, check if the automations can interfere with disruption. For example, if there is an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
 
 ### Microsoft Defender for Cloud Apps prerequisites
 
