@@ -9,7 +9,6 @@ metadata:
   ms.date: 10/07/2024
   audience: ITPro
   ms.topic: faq
-
   ms.localizationpriority: medium
   search.appverid:
     - MET150
@@ -19,7 +18,6 @@ metadata:
     - tier2
   description: Admins can view frequently asked questions and answers about quarantined messages in Exchange Online Protection (EOP).
   ms.custom: seo-marvel-apr2020
-  ms.subservice: mdo
   ms.service: defender-office-365
 
 title: Quarantined messages FAQ
