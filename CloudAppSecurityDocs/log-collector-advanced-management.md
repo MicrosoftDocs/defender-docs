@@ -155,7 +155,7 @@ docker cp Proxy-CA.crt Ubuntu-LogCollector:/var/adallom/ftp/discovery
     ./keytool --list --keystore ../lib/security/cacerts | grep self
     ```
 
-Your imported proxy CA certificate is displayed.
+    Your imported proxy CA certificate is displayed.
 
 ### Restrict IP addresses sending syslog messages to the log collector on Linux
 
@@ -188,7 +188,7 @@ The log collector is now able to communicate with Defender for Cloud Apps. After
 >[!NOTE]
 > If you have to update the configuration of the log collector, to add or remove a data source for example, you normally have to **delete** the container and perform the previous steps again. 
 >
-> To avoid this, you can re-run the *collector_config* tool with the new API token generated in the Defender for Cloud Apps portal.
+> To avoid this, you can re-run the *collector_config* tool with the new API token generated in the Defender for Cloud Apps.
 
 ### Change the Java KeyStore password
 
@@ -475,7 +475,7 @@ Use the following steps to verify that traffic is received by log collectors:
             cat <path_to_downloaded_sample_log>.log | nc -w 0 localhost <datasource_port>
             ```
 
-        If the collector is correctly configured, the log data is present in the messages file and shortly after that it's uploaded to the Defender for Cloud Apps portal.
+        If the collector is correctly configured, the log data is present in the messages file and shortly after that it's uploaded to Defender for Cloud Apps.
 
     - **Inspect relevant files within the Defender for Cloud Apps Docker container**:
 

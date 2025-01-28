@@ -18,7 +18,7 @@ ms.collection:
 description: Learn about how to define Safe Attachments policies to protect your organization from malicious files in email.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 07/22/2024
+ms.date: 01/06/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -36,6 +36,11 @@ In organizations with Microsoft Defender for Office 365, Safe Attachments is an 
 Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
 
 For greater granularity, you can also use the procedures in this article to create Safe Attachments policies that apply to specific users, group, or domains.
+
+> [!TIP]
+> Instead of creating and managing custom Safe Attachments policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+>
+> To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 
 You configure Safe Attachments policies in the Microsoft Defender portal or in Exchange Online PowerShell.
 

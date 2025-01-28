@@ -1,6 +1,6 @@
 ---
-title: How to schedule an update of the Microsoft Defender for Endpoint (Linux)
-description: Learn how to schedule an update of the Microsoft Defender for Endpoint (Linux) to better protect your organization's assets.
+title: How to schedule an update for Microsoft Defender for Endpoint on Linux
+description: Learn how to schedule an update for Microsoft Defender for Endpoint on Linux to better protect your organization's assets.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
@@ -15,16 +15,21 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/11/2024
+ms.date: 01/24/2025
 ---
 
-# Schedule an update of the Microsoft Defender for Endpoint (Linux)
+# Schedule an update for Microsoft Defender for Endpoint on Linux
+
+**Applies to**:
+
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
-Linux (and Unix) have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
+Linux and Unix have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
 
-## Pre-requisite
+## Prerequisite
 
 > [!NOTE]
 > To get a list of all the time zones, run the following command:
@@ -48,7 +53,7 @@ sudo crontab -l > /var/tmp/cron_backup_201118.dat
 ```
 
 > [!NOTE]
-> Where 201118 == YYMMDD
+> In our example, `201118` == `YYMMDD`.
 
 > [!TIP]
 > Do this before you edit or remove.
@@ -64,13 +69,13 @@ sudo crontab -e
 
 You might see:
 
-```output
+```console
 0 * * * * /etc/opt/microsoft/mdatp/logrorate.sh
 ```
 
 And
 
-```output
+```console
 0 2 * * sat /bin/mdatp scan quick>~/mdatp_cron_job.log
 ```
 
@@ -103,7 +108,9 @@ CRON_TZ=America/Los_Angeles
 > ```
 
 > [!NOTE]
-> In the examples above, we are setting it to 00 minutes, 6 a.m.(hour in 24 hour format), any day of the month, any month, on Sundays.[$(date +\%d) -le 15] == Won't run unless it's equal or less than the 15th day (3rd week). Meaning it will run every 3rd Sundays(7) of the month at 6:00 a.m. Pacific (UTC -8).
+> In the previous examples, we specified `00` minutes, 6 a.m. (hour using the 24-hour format), any day of the month, any month, on Sundays. 
+> `[$(date +\%d) -le 15]` doesn't run unless it's equal or less than the 15th day (third week). 
+> This means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
 
 Press "Esc"
 

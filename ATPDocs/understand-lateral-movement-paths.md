@@ -22,7 +22,7 @@ Watch the following video to learn more about reducing lateral movement paths wi
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAOfW]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d216a20e-b9a9-4ebc-b309-7b1eae97742a]
 
 ## Where can I find Defender for Identity LMPs?
 

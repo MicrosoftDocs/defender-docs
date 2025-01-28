@@ -42,6 +42,10 @@ landingContent:
             url: overview-plan.md
           - text: "Deploy Microsoft's unified SecOps platform"
             url: overview-deploy.md
+      - linkListType: overview
+        links:
+          - text: "Zero Trust with unified SecOps"
+            url: zero-trust.md
 
     # Card 
   - title: Prevent, detect, and hunt for threats

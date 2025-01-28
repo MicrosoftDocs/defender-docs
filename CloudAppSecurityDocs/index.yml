@@ -94,16 +94,6 @@ landingContent:
           - text: Threat response governance actions
             url: governance-actions.md
 
-      - linkListType: how-to-guide
-        links:
-          - text: Use in-browser protection with Microsoft Edge
-            url: in-browser-protection.md
-          - text: Investigate behaviors by hunting
-            url: behaviors.md
-          - text: Investigate anomaly detection alerts
-            url: investigate-anomaly-alerts.md
-          - text: Investigate risky users
-            url: tutorial-ueba.md
 
   # Card (optional)
   - title: Information protection

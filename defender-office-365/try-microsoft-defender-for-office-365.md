@@ -18,7 +18,7 @@ ms.collection:
 ms.custom: 
 ms.service: defender-office-365
 ROBOTS:
-ms.date: 4/8/2024
+ms.date: 12/10/2024
 ---
 
 # Try Microsoft Defender for Office 365
@@ -48,7 +48,7 @@ You can also learn more about Defender for Office 365 at this [interactive guide
 
 Watch this short video to learn more about how you can get more done in less time with Microsoft Defender for Office 365.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMmIe]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=29ff5c90-7b71-468c-92b9-d1d8ca9ee8fa]
 
 For pricing information, see [Microsoft Defender for Office 365](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-office-365).
 
@@ -441,10 +441,6 @@ A: No. The trial automatically provisions Defender for Office 365 Plan 2 license
 ### Q: How do I extend the trial?
 
 A: See [Extend your trial](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
-
-### Q: Why do I not see options to cancel or extend the trial?
-
-A: You don't see options to cancel or extend your trial if your subscription is part of the New Commerce Experience (NCE). Currently, only customers on legacy subscriptions have the capability to cancel or extend their trials. 
 
 ### Q: What happens to my data after the trial expires?
 

@@ -46,7 +46,7 @@ A campaign might be short-lived, or could span several days, weeks, or months wi
 
 ## Watch the *Exploring campaign views* video
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGBL8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0ed63ec3-48b1-4a6b-88d3-d3bb27b22c55]
 
 ## Investigating a suspicious email campaign using threat reports
 

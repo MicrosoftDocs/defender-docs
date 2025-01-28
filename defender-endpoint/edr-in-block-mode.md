@@ -58,7 +58,7 @@ EDR in block mode is integrated with [threat & vulnerability management](/defend
 > To get the best protection, make sure to **[deploy Microsoft Defender for Endpoint baselines](configure-machines-security-baseline.md)**.
 
 Watch this video to learn why and how to turn on endpoint detection and response (EDR) in block mode, enable behavioral blocking, and containment at every stage from pre-breach to post-breach.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4HjW2]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=69b80126-fa43-4f52-b89d-e4ebc3aba0a4]
 
 ## What happens when something is detected?
 
@@ -115,4 +115,3 @@ The following table lists requirements for EDR in block mode:
 - [Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)](edr-block-mode-faqs.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

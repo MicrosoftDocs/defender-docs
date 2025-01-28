@@ -1,28 +1,24 @@
 ---
 title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
-keywords: incidents, alerts, investigate, analyze, response, correlation, attack, machines, devices, users, identities, identity, mailbox, email, 365, microsoft, m365
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection:
-  - m365-security
-  - m365initiative-m365-defender
-  - tier1
+- m365-security
+- m365initiative-m365-defender
+- tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - met150
-ms.date: 07/18/2024
+- MOE150
+- met150
+ms.date: 01/17/2025
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -126,13 +122,17 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender XDR | `ra{GUID}` <br> `ta{GUID}` for alerts from ThreatExperts <br> `ea{GUID}` for alerts from custom detections |
 | Microsoft Defender for Office 365 | `fa{GUID}` <br> Example: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Defender for Endpoint | `da{GUID}` <br> `ed{GUID}` for alerts from custom detections |
-| Microsoft Defender for Identity | `aa{GUID}` <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i` |
-| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` for alerts from XDR detection engine <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri638724443630474445_-1629192583` |
+| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> `rm{GUID}` for alerts from XDR detection engine <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Entra ID Protection | `ad{GUID}` |
 | App Governance | `ma{GUID}` |
 | Microsoft Data Loss Prevention | `dl{GUID}` |
 | Microsoft Defender for Cloud | `dc{GUID}` |
 | Microsoft Sentinel | `sn{GUID}` |
+| Microsoft Purview Insider Risk Management | `ir{GUID}` |
+
+> [!NOTE]
+> If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
 <a name='configure-aad-ip-alert-service'></a>
 
@@ -188,10 +188,9 @@ The **Manage alert** pane allows you to view or specify:
 - A comment on the alert.
 
 > [!NOTE]
-> Around August 29th, 2022, previously supported alert determination values ('Apt' and 'SecurityPersonnel') will be deprecated and no longer available via the API.
-
-> [!NOTE]
-> One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is incrementally being rolled out and is currently in preview.
+> - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
+>
+> - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
 >
 > Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification will not reflect the updated tag name.
 
@@ -284,6 +283,7 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
 > [!NOTE]
 > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
+> The *Hide alert* feature is only available in Defender for Endpoint alerts.
 
 <!--what does this mean?-->
 
@@ -324,7 +324,7 @@ To create the automation, you'll need an API token before you can connect Power 
 
 Watch this short video to learn how automation works efficiently to create a smooth workflow and how to connect Power Automate to Defender for Cloud Apps.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=01afebcb-850c-4a6f-abb4-692188ac6de7]
 
 ## Next steps
 

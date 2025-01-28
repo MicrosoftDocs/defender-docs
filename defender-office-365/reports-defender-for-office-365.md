@@ -47,7 +47,7 @@ The rest of this article describes the reports that are exclusive to Defender fo
 
 Watch this short video to learn how you can use reports to understand the effectiveness of Defender for Office 365 in your organization.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWBkxB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=44f1f230-ca91-46e1-b1d0-5015936751d3]
 
 ## Safe Attachments file types report
 

@@ -4,8 +4,8 @@ description: You can configure Microsoft Defender Antivirus features with Intune
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.topic: conceptual
 ms.custom: nextgen
 ms.reviewer: yongrhee

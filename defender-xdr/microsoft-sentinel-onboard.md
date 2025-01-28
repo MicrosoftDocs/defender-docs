@@ -22,7 +22,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 12/02/2024
+ms.date: 01/08/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -53,7 +53,7 @@ To onboard and use Microsoft Sentinel in the Defender portal, you must have the 
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
 - The data connector for Microsoft Defender XDR enabled in Microsoft Sentinel for incidents and alerts. Install the Defender XDR solution and configure the data connector to connect Microsoft Sentinel to the Defender portal. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). Within the Defender XDR data connector, the configuration option to connect incident and alerts is turned off and disabled after you onboard Microsoft Sentinel to the Defender portal.
-- An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. The following table highlights some of the key roles needed.
+- An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the unified SecOps portal that you don't have permissions to onboard. The following table highlights some of the key roles needed.
 
   |Task |Microsoft Entra or Azure built-in role required |Scope  |
   |---------|---------|---------|
@@ -85,13 +85,7 @@ To connect a Microsoft Sentinel workspace to the Defender portal, complete the f
 1. In the Defender portal, select **Overview**.
 1. Select **Connect a workspace**.
 1. Choose the workspace you want to connect and select **Next**.
-1. Read and understand the product changes associated with connecting your workspace. These changes include:
-
-   - Log tables, queries, and functions in the Microsoft Sentinel workspace are also available in advanced hunting within the Defender portal.
-   - The Microsoft Sentinel Contributor role is assigned to the Microsoft Threat Protection and WindowsDefenderATP apps within the subscription.
-   - Active [Microsoft security incident creation rules](/azure/sentinel/threat-detection#microsoft-security-rules) are deactivated to avoid duplicate incidents. This change only applies to incident creation rules for Microsoft alerts and not to other analytics rules.
-   - All alerts related to Defender XDR products are streamed directly from the main Defender XDR data connector to ensure consistency. Make sure you have incidents and alerts from this connector turned on in the workspace.
-
+1. Read and understand the product changes associated with connecting your workspace. 
 1. Select **Connect**.
 
 After your workspace is connected, the banner on the **Overview** page shows that your environment is ready. The **Overview** page is updated with new sections that include metrics from Microsoft Sentinel like the number of data connectors and automation rules.

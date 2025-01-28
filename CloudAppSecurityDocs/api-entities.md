@@ -1,7 +1,7 @@
 ---
 title: Entities API
 description: This article provides information about using the Entities API.
-ms.date: 01/29/2023
+ms.date: 11/28/2024
 ms.topic: reference
 ---
 # Entities API
@@ -32,7 +32,7 @@ The following table describes the supported filters:
 | entity | entity pk | eq, neq | Filter entities with specific entities pks. If a user is selected, this filter also returns all of the user's accounts. Example: `[{ "id": "entity-id", "inst": 0 }]` |
 | userGroups |string | eq, neq | Filter entities by their associated group IDs |
 | app | integer | eq, neq | Filter entities using services with the specified SaaS ID for example: 11770 |
-| instance | integer | eq, neq | Filter entities using services with the specified Appstances (SaaS ID and Instance ID), for example: 11770, 1059065 |
+| instance | integer | eq, neq | Filter entities using services with the specified app instances (SaaS ID and Instance ID). For example: 11770, 1059065 |
 | isExternal | boolean | eq | The entity's affiliation. Possible values include:<br /><br />**true**: External<br />**false**: Internal<br />**null**: No value |
 | domain | string | eq, neq, isset, isnotset | The entity's related domain |
 | organization | string | eq, neq, isset, isnotset | Filter entities with the specified organization unit |

@@ -17,7 +17,7 @@ Use app governance to create OAuth policies for apps connected to Microsoft 365,
 
 <br>
 
->[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YU37]
+>[!VIDEO https://learn-video.azurefd.net/vod/player?id=b10dbf02-9f56-4f37-8c68-8221be5b4aea]
 
 <a name='create-oauth-app-policies-for-azure-ad'></a>
 

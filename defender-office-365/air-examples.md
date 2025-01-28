@@ -1,5 +1,5 @@
 ---
-title: How automated investigation and response works in Microsoft Defender for Office 365
+title: Automated investigation and response examples
 f1.keywords:
 - NOCSH
 author: chrisda
@@ -14,8 +14,8 @@ search.appverid:
 ms.collection:
 - m365-security
 - tier2
-ms.date: 06/09/2023
-description: See how automated investigation and response capabilities work in Microsoft Defender for Office 365
+ms.date: 01/10/2025
+description: See examples for how to start automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2.
 ms.custom:
 - air
 - seo-marvel-mar2020
@@ -25,67 +25,72 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# How automated investigation and response works in Microsoft Defender for Office 365
+# Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-As security alerts are triggered, it's up to your security operations team to look into those alerts and take steps to protect your organization. Sometimes, security operations teams can feel overwhelmed by the volume of alerts that are triggered. Automated investigation and response (AIR) capabilities in Microsoft Defender for Office 365 can help.
+Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 (included in Microsoft 365 licenses like E5 or as a standalone subscription) enables your SecOps team to operate more efficiently and effectively. AIR includes automated investigations to well-known threats, and provides recommended remediation actions. The SecOps team can review the evidence and approve or reject the recommended actions. For more information about AIR, see [Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-about.md).
 
-AIR enables your security operations team to operate more efficiently and effectively. AIR capabilities include automated investigation processes in response to well-known threats that exist today. Appropriate remediation actions await approval, enabling your security operations team to respond to detected threats.
+This article describes how AIR works through several examples:
 
-This article describes how AIR works through several examples. When you're ready to get started using AIR, see [Automatically investigate and respond to threats](air-about.md).
+- [Example: A user-reported phishing message launches an investigation playbook](#example-a-user-reported-phishing-message-launches-an-investigation-playbook)
+- [Example: A security administrator triggers an investigation from Threat Explorer](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer)
+- [Example: A security operations team integrates AIR with their SIEM using the Office 365 Management Activity API](#example-a-security-operations-team-integrates-air-with-their-siem-using-the-office-365-management-activity-api)
 
-- [Example 1: A user-reported phish message launches an investigation playbook](#example-a-user-reported-phish-message-launches-an-investigation-playbook)
-- [Example 2: A security administrator triggers an investigation from Threat Explorer](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer)
-- [Example 3: A security operations team integrates AIR with their SIEM using the Office 365 Management Activity API](#example-a-security-operations-team-integrates-air-with-their-siem-using-the-office-365-management-activity-api)
+## Example: A user-reported phishing message launches an investigation playbook
 
-## Example: A user-reported phish message launches an investigation playbook
+A user receives an email that looks like a phishing attempt. The user reports the message using the [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md), which results in an alert that's triggered by the **Email reported by user as malware or phish** [alert policy](/purview/alert-policies#threat-management-alert-policies), which automatically launches the investigation playbook.
 
-Suppose that a user in your organization receives an email that they think is a phishing attempt. The user, trained to report such messages, uses the [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md) to send it to Microsoft for analysis. The submission is also sent to your system and is visible in Explorer in the **Submissions** view (formerly referred to as the **User-reported** view). In addition, the user-reported message now triggers a system-based informational alert, which automatically launches the investigation playbook.
+Various aspects of the reported email message are assessed. For example:
 
-During the root investigation phase, various aspects of the email are assessed. These aspects include:
+- The identified threat type
+- Who sent the message
+- Where the message was sent from (sending infrastructure)
+- Whether other instances of the message were delivered or blocked
+- The tenant landscape, including similar messages and their verdicts through email clustering
+- Whether the message is associated with any known campaigns
+- And more.
 
-- A determination about what type of threat it might be;
-- Who sent it;
-- Where the email was sent from (sending infrastructure);
-- Whether other instances of the email were delivered or blocked;
-- An assessment from our analysts;
-- Whether the email is associated with any known campaigns;
-- and more.
+The playbook evaluates and automatically resolves submissions where no action is needed (which frequently happens on user reported messages). For the remaining submissions, a list of recommended actions to take on the original message and the associated _entities_ (for example, attached files, included URLs, and recipients) is provided:
 
-After the root investigation is complete, the playbook provides a list of recommended actions to take on the original email and the _entities_ associated with it (for example, files, URLs, and recipients).
-
-Next, several threat investigation and hunting steps are executed:
-
-- Similar email messages are identified via email cluster searches.
-- The signal is shared with other platforms, such as [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
-- A determination is made on whether any users have clicked through any malicious links in suspicious email messages.
-- A check is done across [Exchange Online Protection](eop-about.md) (EOP) and [Microsoft Defender for Office 365](mdo-about.md) to see if there are any other similar messages reported by users.
-- A check is done to see if a user has been compromised. This check leverages signals across Office 365, [Microsoft Defender for Cloud Apps](/cloud-app-security), and [Microsoft Entra ID](/azure/active-directory), correlating any related user activity anomalies.
-
-During the hunting phase, risks and threats are assigned to various hunting steps.
-
-Remediation is the final phase of the playbook. During this phase, remediation steps are taken, based on the investigation and hunting phases.
+- Identify similar email messages via email cluster searches.
+- Determine whether any users clicked through any malicious links in suspicious email messages.
+- Risks and threats are assigned. For more information, see [Details and results of an automated investigation](air-view-investigation-results.md).
+- Remediation steps. For more information, see [Remediation actions in Microsoft Defender for Office 365](air-remediation-actions.md).
 
 ## Example: A security administrator triggers an investigation from Threat Explorer
 
-In addition to automated investigations that are triggered by an alert, your organization's security operations team can trigger an automated investigation from a view in [Threat Explorer](threat-explorer-real-time-detections-about.md). This investigation also creates an alert, so Microsoft Defender XDR incidents and external SIEM tools can see that this investigation was triggered.
+You're in Explorer (Threat Explorer) at <https://security.microsoft.com/threatexplorerv3> in the **All email**, **Malware**, or **Phish** views. You're on the **Email** tab (view) of the details area below the chart. You select a message to investigate by using either of the following methods:
 
-For example, suppose that you are using the **Malware** view in Explorer. Using the tabs below the chart, you select the **Email** tab. If you select one or more items in the list, the **+ Actions** button activates.
+- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
 
-:::image type="content" source="media/Explorer-Malware-Email-ActionsInvestigate.png" alt-text="The Explorer with selected messages" lightbox="media/Explorer-Malware-Email-ActionsInvestigate.png":::
+  :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
-Using the **Actions** menu, you can select **Trigger investigation**.
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
 
-:::image type="content" source="media/explorer-malwareview-selectedemails-actions.jpg" alt-text="The Actions menu for selected messages" lightbox="media/explorer-malwareview-selectedemails-actions.jpg":::
+  :::image type="content" source="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="The actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
-Similar to playbooks triggered by an alert, automatic investigations that are triggered from a view in Explorer include a root investigation, steps to identify and correlate threats, and recommended actions to mitigate those threats.
+After you select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**, select **Initiate automated investigation**. For more information, see [Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+
+Similar to playbooks triggered by an alert, automatic investigations that are triggered from Threat Explorer include:
+
+- A root investigation.
+- Steps to identify and correlate threats. For more information, see [Details and results of an automated investigation](air-view-investigation-results.md).
+- Recommended actions to mitigate threats. For more information, see [Remediation actions in Microsoft Defender for Office 365](air-remediation-actions.md).
 
 ## Example: A security operations team integrates AIR with their SIEM using the Office 365 Management Activity API
 
-AIR capabilities in Microsoft Defender for Office 365 include [reports & details](air-view-investigation-results.md) that security operations teams can use to monitor and address threats. But you can also integrate AIR capabilities with other solutions. Examples include a security information and event management (SIEM) system, a case management system, or a custom reporting solution. These kinds of integrations can be done by using the [Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference).
+AIR capabilities in Defender for Office 365 Plan 2 include [reports and details](air-view-investigation-results.md) that the SecOps team can use to monitor and address threats. But you can also integrate AIR capabilities with other solutions. For example:
 
-For example, recently, an organization set up a way for their security operations team to view user-reported phish alerts that were already processed by AIR. Their solution integrates relevant alerts with the organization's SIEM server and their case-management system. The solution greatly reduces the number of false positives so that their security operations team can focus their time and effort on real threats. To learn more about this custom solution, see [Tech Community blog: Improve the Effectiveness of your SOC with Microsoft Defender for Office 365 and the O365 Management API](https://techcommunity.microsoft.com/t5/microsoft-security-and/improve-the-effectiveness-of-your-soc-with-office-365-atp-and/ba-p/1525185).
+- Security information and event management (SIEM) systems.
+- Case management systems.
+- Custom reporting solutions.
+
+Use the [Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference) for integration with these solutions.
+
+For an example of a custom solution that integrates alerts from user-reported phishing messages that were already processed by AIR into a SIEM server and case management system, see [Tech Community blog: Improve the Effectiveness of your SOC with Microsoft Defender for Office 365 and the Office 365 Management API](https://techcommunity.microsoft.com/t5/microsoft-security-and/improve-the-effectiveness-of-your-soc-with-office-365-atp-and/ba-p/1525185).
+
+The integrated solution greatly reduces the number of false positives, which allows the SecOps team to focus their time and effort on real threats.
 
 ## Next steps
 

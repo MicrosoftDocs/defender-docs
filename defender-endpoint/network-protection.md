@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 11/10/2024
+ms.date: 01/16/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -40,7 +40,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](h
 
 Network protection helps protect devices from certain Internet-based events by preventing connections to malicious or suspicious sites. Network protection is an attack surface reduction capability that helps prevent people in your organization from accessing domains that are considered dangerous through applications. Examples of dangerous domains are domains that host phishing scams, exploits, and other malicious content on the Internet. Network protection expands the scope of [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(S) traffic that attempts to connect to low-reputation sources (based on the domain or hostname).
 
-Network protection extends the protection in [Web protection](web-protection-overview.md) to the operating system level, and is a core component for Web Content Filtering (WCF). It provides the web protection functionality found in Microsoft Edge to other supported browsers and non-browser applications. Network protection also provides visibility and blocking of indicators of compromise (IOCs) when used with [Endpoint detection and response](overview-endpoint-detection-response.md). For example, network protection works with your [custom indicators](indicators-overview.md) that you can use to block specific domains or host names.
+Network protection extends the protection in [Web protection](web-protection-overview.md) to the operating system level, and is a core component for [Web Content Filtering](web-content-filtering.md) (WCF). It provides the web protection functionality found in Microsoft Edge to other supported browsers and nonbrowser applications. Network protection also provides visibility and blocking of indicators of compromise (IOCs) when used with [Endpoint detection and response](overview-endpoint-detection-response.md). For example, network protection works with your [custom indicators](indicators-overview.md) that you can use to block specific domains or host names.
 
 ### Network protection coverage
 
@@ -48,28 +48,36 @@ The following table summarizes network protection areas of coverage.
 
 | Feature | Microsoft Edge | Non-Microsoft browsers | Nonbrowser processes <br/> (for example, PowerShell) |
 |:---|:---|:---|:---|
-| Web Threat Protection | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
-| Custom Indicators | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
-| Web Content Filtering | SmartScreen must be enabled | Network protection must be in block mode | Not supported |
+| [Web Threat Protection](web-threat-protection.md) | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
+| [Custom Indicators](indicators-overview.md) | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
+| [Web Content Filtering](web-content-filtering.md) | SmartScreen must be enabled | Network protection must be in block mode | Not supported |
 
 > [!NOTE]
-> On Mac and Linux, you must have network protection in block mode to get support for these features in Edge.
-> On Windows, network protection does not monitor Microsoft Edge. For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage network protection for inspection and enforcement.
-> - IP is supported for all three protocols (TCP, HTTP, and HTTPS (TLS)).
-> - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
-> - Encrypted URLs (full path) can only be blocked on first party browsers (Internet Explorer, Edge).
-> - Encrypted URLs (FQDN only) can be blocked in third party browsers (i.e. other than Internet Explorer, Edge).
-> - Full URL path blocks can be applied for unencrypted URLs.
->
-> There might be up to 2 hours of latency (usually less) between the time the action is taken, and the URL and IP being blocked.
+> On Mac and Linux, you must have network protection in block mode for these features to be supported in the Microsoft Edge browser.
+> On Windows, network protection doesn't monitor Microsoft Edge. For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage network protection for inspection and enforcement.
 
-Watch this video to learn how Network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
+### Known issues & limitations
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4r4yZ]
+- IP is supported for all three protocols (`TCP`, `HTTP`, and `HTTPS` (TLS)).
+- Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
+- Encrypted URLs (full path) are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge).
+- Encrypted URLs (FQDN only) are blocked in non-Microsoft browsers.
+- URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
+
+- Network Protection will block connections on both standard and non-standard ports.
+
+- Full URL path blocks are applied for unencrypted URLs.
+
+There might be up to two hours of latency (usually less) between the time when the action is taken and the URL/IP is blocked.
+ 
+Watch this video to learn how network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2d0270f9-f216-4e9e-85c7-5e2b183c6d73]
 
 ## Requirements for network protection
 
 Network protection requires devices running one of the following operating systems:
+
 - Windows 10 or 11 (Pro or Enterprise) (see [Supported Windows versions](minimum-requirements.md#supported-windows-versions))
 - Windows Server, version 1803 or later (see [Supported Windows versions](minimum-requirements.md#supported-windows-versions))
 - macOS version 12 (Monterey) or later (see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md))
@@ -79,12 +87,12 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 
 | Windows version | Microsoft Defender Antivirus |
 |:---|:---|
-| Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md) and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
-| Windows Server 2012 R2 and Windows Server 2016 with the unified agent | Platform Update version 4.18.2001.x.x or newer |
+| Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md), and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
+| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified agent](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) | Platform update version `4.18.2001.x.x` or newer |
 
 ## Why network protection is important
 
-Network protection is a part of the attack surface reduction group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block URLs and IP addresses. Network protection can block URLs from being accessed by using certain browsers and standard network connections. By default, network protection guards your computers from known malicious URLs using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in Microsoft Edge browser. The network protection functionality can be extended to:
+Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block URLs and IP addresses. Network protection can block URLs from being accessed by using certain browsers and standard network connections. By default, network protection guards your computers from known malicious URLs using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in Microsoft Edge browser. The network protection functionality can be extended to:
 
 - Block IP/URL addresses from your own threat intelligence ([indicators](indicator-ip-domain.md))
 - Block unsanctioned services from [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
@@ -118,24 +126,26 @@ Support for Command and Control servers (C2) is an important part of this ransom
 
 | New mapping  | Response category  | Sources |
 | :--- | :--- | :--- |
-| phishing | Phishing | SmartScreen |
-| malicious | Malicious | SmartScreen |
-| command and control | C2 | SmartScreen |
-| command and control | COCO | SmartScreen |
-| malicious | Untrusted | SmartScreen |
-| by your IT admin | CustomBlockList |   |
-| by your IT admin | CustomPolicy |   |
+| `phishing` | `Phishing` | `SmartScreen` |
+| `malicious` | `Malicious` | `SmartScreen` |
+| `command and control` | `C2` | `SmartScreen` |
+| `command and control` | `COCO` | `SmartScreen` |
+| `malicious` | `Untrusted` | `SmartScreen` |
+| `by your IT admin` | `CustomBlockList` |   |
+| `by your IT admin` | `CustomPolicy` |   |
 
 > [!NOTE]
 > **customAllowList** does not generate notifications on endpoints.
 
 ### New notifications for network protection determination
 
-A new, publicly available capability in network protection utilizes functions in SmartScreen to block phishing activities from malicious command and control sites. When an end user attempts to visit a website in an environment in which network protection is enabled, three scenarios are possible:
+New capabilities in network protection use functions in SmartScreen to block phishing activities from malicious command and control sites. When an end user attempts to visit a website in an environment in which network protection is enabled, three scenarios are possible, as outlined in the following table:
 
-- The URL has a **known good reputation** - In this case the user is permitted access without obstruction, and there's no toast notification presented on the endpoint. In effect, the domain or URL is set to _Allowed_.
-- The URL has an **unknown or uncertain reputation** - The user's access is blocked, but with the ability to circumvent (unblock) the block. In effect, the domain or url is set to _Audit_.
-- The URL has a **known bad (malicious) reputation** - The user is prevented from access. In effect, the domain or url is set to _Block_.
+| Scenario | What happens |
+|--|--|
+| The URL has a known good reputation | The user is permitted access without obstruction, and there's no toast notification presented on the endpoint. In effect, the domain or URL is set to *Allowed*. |
+| The URL has an unknown or uncertain reputation | The user's access is blocked, but with the ability to circumvent (unblock) the block. In effect, the domain or url is set to *Audit*. |
+| The URL has a known bad (malicious) reputation | The user is prevented from access. In effect, the domain or url is set to *Block*. |
 
 #### Warn experience
 
@@ -223,11 +233,11 @@ The Response category tells you what caused the event, as in this example:
 
 | ResponseCategory | Feature responsible for the event |
 |:---|:---|
-| CustomPolicy |  WCF  |
-| CustomBlockList  |   Custom indicators   |
-| CasbPolicy   |   Defender for Cloud Apps   |
-| Malicious   |   Web threats  |
-| Phishing  |   Web threats  |
+| `CustomPolicy` |  WCF  |
+| `CustomBlockList`  |   Custom indicators   |
+| `CasbPolicy`   |   Defender for Cloud Apps   |
+| `Malicious`   |   Web threats  |
+| `Phishing`  |   Web threats  |
 
 For more information, see [Troubleshoot endpoint blocks](web-protection-overview.md#troubleshoot-endpoint-blocks).
 
@@ -246,12 +256,12 @@ You can use the resulting list of URLs and IPs to determine what would be blocke
 
 Once you've created an indicator, you can look at resolving the underlying issue as follows:
 
-- SmartScreen – request review
-- Indicator – modify existing indicator
-- MCA – review unsanctioned app
-- WCF – request recategorization
+- **SmartScreen**: request review
+- **Indicator**: modify existing indicator
+- **MCA**: review unsanctioned app
+- **WCF**: request recategorization
 
-Using this data you can make an informed decision on enabling Network protection in Block mode. See [Order of precedence for Network protection blocks](web-protection-overview.md#order-of-precedence).
+Using this data you can make an informed decision on enabling network protection in Block mode. See [Order of precedence for Network protection blocks](web-protection-overview.md#order-of-precedence).
 
 > [!NOTE]
 > As this is a per-device setting, if there are devices that cannot move to Block mode you can simply leave them on audit until you can rectify the challenge and you will still receive the auditing events.
@@ -338,8 +348,8 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
    - `Set-MpPreference -AllowNetworkProtectionDownLevel 1`
    - `Set-MpPreference -AllowDatagramProcessingOnWinServer 1`
 
-     > [!NOTE]
-     > In some cases, depending on your infrastructure, volume of traffic, and other conditions, `Set-MpPreference -AllowDatagramProcessingOnWinServer 1` can have an effect on network performance.
+   > [!NOTE]
+   > In some cases, depending on your infrastructure, volume of traffic, and other conditions, `Set-MpPreference -AllowDatagramProcessingOnWinServer 1` can have an effect on network performance.
 
 ### Network protection for Windows Servers
 
@@ -349,7 +359,7 @@ Following is information specific to Windows Servers.
 
 Verify whether network protection is enabled on a local device by using Registry Editor.
 
-1. Select the **Start** button in the task bar and type **regedit** to open the Registry Editor.
+1. Select the **Start** button in the task bar and type `regedit` to open Registry Editor.
 
 2. Select **HKEY_LOCAL_MACHINE** from the side menu.
 
@@ -380,7 +390,7 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 > [!NOTE]
 > Depending on your infrastructure, volume of traffic, and other conditions, **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Policies** > **Microsoft** > **Windows Defender** > **NIS** > **Consumers** > **IPS** - **AllowDatagramProcessingOnWinServer (dword) 1 (hex)** can have an effect on network performance.
 
-For more information, see: [Turn on network protection](enable-network-protection.md)
+For more information, see: [Turn on network protection](enable-network-protection.md).
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
@@ -418,6 +428,7 @@ The most generic method to disable QUIC is to disable that feature in Windows Fi
 
 
 ```powershell
+
 Copy
 $ruleParams = @{
     DisplayName = "Block QUIC"
@@ -428,6 +439,7 @@ $ruleParams = @{
     RemotePort = 443
 }
 New-NetFirewallRule @ruleParams
+
 ```
 
 ### Disable QUIC in a web browser

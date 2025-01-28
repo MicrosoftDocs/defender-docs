@@ -39,41 +39,71 @@ To set up a site and associate the OT devices in your network to it:
     - **Site description**: Describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
     - **Owners**: The contact emails of any users administering the site who must be contacted when problems occur.
 
-    :::image type="content" source="media/set-up-sites/site-security-set-up-details-new.png" alt-text="Screenshot showing the details for creating a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    :::image type="content" source="media/set-up-sites/site-security-set-up-details.png" alt-text="Screenshot showing the details for creating a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 1. When completed, select **Next** to associate devices to the site.
 
 ## Associate devices
 
-In this stage, you configure Defender for IoT to associate OT devices to the site, so it can correctly identify and associate all types of devices at the same site.
+In this stage, you configure Defender for IoT to associate devices to the site, so it can correctly identify and associate all types of devices at the same site.
 
-1. In the search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site.
+1. In the search bar, type either:
+    - A public IP address
+    - The IP/MAC address for a specific device located at this site
+    - The name of a specific device located at this site (can be an OT, IT, network, enterprise IoT device, and so on)
 
     A list of suggested sites appears in the table.
 
-1. If you don't know any of the OT device addresses:
+1. If you don't know any of the site's device addresses:
 
-    1. Select **Show all suggested sites**.
+    1. Select **Show all suggestions**.
 
-        A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the OT devices in that location.
+        A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the devices in that location.
 
     1. Open the location and check that at least one of these devices exists at your site.
 
-        Check each location, because Defender for IoT might list your OT devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified OT device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
+        Check each location, because Defender for IoT might list your devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
 
 1. Review the devices and select the suggested sites to associate with the site. You might need to select more than one suggested site.
 
     Use the **Group** column to check the ID for each suggested site. Sites with the same ID indicate that the devices are likely located at the same physical location. As these suggested sites are expected to belong to the same site, review and confirm that the devices listed are correct before making your selections and associating the suggested sites.
 
-    :::image type="content" source="media/set-up-sites/site-security-associate-group.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location with the Group column in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-associate-group.png":::
+    :::image type="content" source="media/set-up-sites/site-security-associate-group.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location with the Group column in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-associate-group.png" :::
   
 1. Select **Next** to review the site details.
 
 [!INCLUDE [defender-iot-site-association](includes/site-association.md)]
 
+## Preview devices
+
+In this stage, you review all of the devices discovered by the system. This gives admins the opportunity to review and remove devices before confirming the site creation. A list of all devices to be associated with this site is displayed.
+
+To manage devices in bulk, use the search bar to find devices by their name, IP, or MAC address.
+
+If, during your editing, you want to reset the device list to its original state, selecting **Discard all changes** undoes any device exclusions and restores the initial device selection.
+
+To remove any of the devices from this list:
+
+1. Select **Deselect devices from site**. All of the devices become editable.
+1. Deselect the checkbox of the devices to be removed.
+    1. To reset the device list to its original state, select **Discard all changes**.
+
+    :::image type="content" source="media/set-up-sites/site-security-associate-device-list-preview.png" alt-text="Screenshot of the site associtation preview devices page" lightbox="media/set-up-sites/site-security-associate-device-list-preview.png" :::
+
+1. When you're finished, select **Next**. The confirmation box appears.
+
+    1. Select **Confirm** to change the list of devices to associate with this site and removal of any unchecked devices.
+
+    1. If you haven't made changes, select **Skip**.
+
+>[!Important]
+>
+>When you exclude a specific device from site association, it is no longer assigned to sites based on network parameters. If the device is later moved to a different location, you’ll need to manually update its site settings, as automatic updates will not apply.
+>
+
 ## Review site details
 
-Review that information for the site you want to create:
+Review the information for the site you want to create:
 
 1. Review the selected OT devices. If needed, select **Edit devices** to return to the **Associate devices** screen.
 1. Select **Complete**.

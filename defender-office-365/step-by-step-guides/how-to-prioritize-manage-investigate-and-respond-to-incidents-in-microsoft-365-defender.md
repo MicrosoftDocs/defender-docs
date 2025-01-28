@@ -59,6 +59,6 @@ You can start using *Action Center* to act on pending action items from all inci
 
 [Manage incidents in Microsoft Defender XDR | Microsoft Docs](/defender-xdr/manage-incidents).
 
-[How automated investigation and response works in Microsoft Defender for Office 365](../air-examples.md).
+[Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](../air-examples.md).
 
 [Remediation actions in Microsoft Defender for Office 365](../air-remediation-actions.md).

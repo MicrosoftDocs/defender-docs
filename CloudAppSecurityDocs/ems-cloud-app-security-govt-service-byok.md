@@ -8,14 +8,14 @@ ms.date: 01/04/2024
 
 # Encrypt Defender for Cloud Apps data at rest with your own key (BYOK)
 
-This article describes how to configure Defender for Cloud Apps to use your own key to encrypt the data it collects, whilst it's at rest. If you are looking for documentation about applying encryption to data stored in cloud apps, see [Microsoft Purview integration](azip-integration.md).
+This article describes how to configure Defender for Cloud Apps to use your own key to encrypt the data it collects, while it's at rest. If you're looking for documentation about applying encryption to data stored in cloud apps, see [Microsoft Purview integration](azip-integration.md).
 
 Defender for Cloud Apps takes your security and privacy seriously. Therefore, once Defender for Cloud Apps starts collecting data, it uses its own managed keys to protect your data in accordance with our [data security and privacy](cas-compliance-trust.md) policy. Additionally, Defender for Cloud Apps allows you to further protect your data at rest by encrypting it with your own Azure Key Vault key.
 
 > [!IMPORTANT]
-> If there is a problem accessing your Azure Key Vault key, Defender for Cloud Apps will fail to encrypt your data and your tenant will be lock down within an hour. When your tenant is locked down, all access to it will be blocked until the cause has been resolved. Once your key is accessible again, full access to your tenant will be restored.
+> If there's a problem accessing your Azure Key Vault key, Defender for Cloud Apps will fail to encrypt your data, and your tenant will be locked down within an hour. When your tenant is locked down, all access to it will be blocked until the cause has been resolved. Once your key is accessible again, full access to your tenant will be restored.
 >
-> This procedure is available only on the Microsoft Defender portal, and cannot be performed on the classic Microsoft Defender for Cloud Apps portal.
+> This procedure is available only on the Microsoft Defender portal, and can't be performed on the classic Microsoft Defender for Cloud Apps.
 
 ## Prerequisites
 
@@ -104,7 +104,7 @@ You must register the **Microsoft Defender for Cloud Apps - BYOK** app in your t
 
 ## Enable data encryption in Defender for Cloud Apps
 
-When you enable data encryption, Defender for Cloud Apps immediately uses your Azure Key Vault key to encrypt data at rest. Since your key is essential to the encryption process, it is important to ensure that your designated Key Vault and key are accessible at all times.
+When you enable data encryption, Defender for Cloud Apps immediately uses your Azure Key Vault key to encrypt data at rest. Since your key is essential to the encryption process, it's important to ensure that your designated Key Vault and key are accessible at all times.
 
 ### To enable data encryption
 

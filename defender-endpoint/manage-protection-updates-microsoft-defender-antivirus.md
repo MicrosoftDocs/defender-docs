@@ -4,8 +4,8 @@ description: Manage the fallback order for how Microsoft Defender Antivirus rece
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.custom: nextgen

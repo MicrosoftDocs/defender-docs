@@ -105,7 +105,7 @@ This procedure describes how to deploy your machine with Ubuntu. The deployment 
 
 1. Change to root privileges using `sudo -i`.
 
-1. If you accept the [software license terms](https://go.microsoft.com/fwlink/?linkid=862492), uninstall old versions and install Docker CE by running the commands appropriate for your environment:
+1. If you accept the software license terms, uninstall old versions and install Docker CE by running the commands appropriate for your environment:
 
     #### [CentOS](#tab/centos)
 

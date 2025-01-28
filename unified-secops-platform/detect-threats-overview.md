@@ -34,7 +34,7 @@ Each supported Microsoft security product enabled unlocks more signals to stream
 
 ## Microsoft Defender XDR threat detection
 
-Defender XDR has a unique correlation capability that provides an extra layer of data analysis and threat detection. The following table gives examples of how suported security services are tuned to detect threats matching the character of its solution.
+Defender XDR has a unique correlation capability that provides an extra layer of data analysis and threat detection. The following table gives examples of how supported security services are tuned to detect threats matching the character of its solution.
 
 | Defender XDR service | Threat detection specialty |
 |---|---|

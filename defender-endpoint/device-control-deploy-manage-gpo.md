@@ -4,7 +4,7 @@ description: Learn how to deploy and manage device control in Defender for Endpo
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb 
-ms.date: 08/27/2024
+ms.date: 01/09/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -15,7 +15,7 @@ ms.collection:
 - mde-asr
 ms.custom: 
 - partner-contribution
-ms.reviewer: joshbregman
+ms.reviewer: joshbregman, tdoucette
 search.appverid: MET150
 f1.keywords: NOCSH 
 ---
@@ -61,7 +61,7 @@ To configure the device types that a device control policy is applied, follow th
 
 1. On a computer running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Turn on device control for specific device types**.
 
-2. In the **Turn on device control for specific types** window, specify the product family IDs, separate by a pipe (`|`). Product family IDs include `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, or `PrinterDevices`.
+2. In the **Turn on device control for specific types** window, specify the product family IDs, separate by a pipe (`|`). This setting must be a single string with no spaces or it will be parsed incorrectly by the device control engine causing unexpected behaviors. Product family IDs include `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, or `PrinterDevices`.
 
 ## Define groups
 
@@ -69,9 +69,19 @@ To configure the device types that a device control policy is applied, follow th
 
 1. Create one XML file for each removable storage group. 
 
-2. Use the properties in your removable storage group to create an XML file for each removable storage group. 
+2. Use the properties in your removable storage group to create an XML file for each removable storage group.
 
-3. Save each XML file to your network share.
+   Make sure the root node of the XML is PolicyGroups, for example, the following XML:
+
+   ```xml
+    <PolicyGroups>
+        <Group Id="{d8819053-24f4-444a-a0fb-9ce5a9e97862}" Type="Device">
+             
+        </Group>
+    </PolicyGroups>
+    ```
+
+3. Save the XML file to your network share.
 
 4. Define the settings as follows:
 
@@ -93,6 +103,16 @@ You can create different group types. Here's one group example XML file for any 
 
 2. Use the properties in removable storage access policy rule(s) to create an XML for each group's removable storage access policy rule. 
 
+   Ensure root node of the XML is PolicyRules, for example, the following XML:
+
+   ```xml
+   <PolicyRules>
+     <PolicyRule Id="{d8819053-24f4-444a-a0fb-9ce5a9e97862}">
+         ...
+      </PolicyRule> 
+   </PolicyRules>
+   ```
+
 3. Save the XML file to network share.
 
 4. Define the settings as follows:
@@ -103,7 +123,7 @@ You can create different group types. Here's one group example XML file for any 
 
 > [!NOTE]
 > To capture evidence of files being copied or printed, use [Endpoint DLP.](/purview/dlp-copy-matched-items-get-started?tabs=purview-portal%2Cpurview)
-> [!NOTE]
+> 
 > Comments using XML comment notation `<!-- COMMENT -->` can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the first line of the XML file.
 
 ## See also
@@ -111,3 +131,4 @@ You can create different group types. Here's one group example XML file for any 
 - [Device control in Defender for Endpoint](device-control-overview.md)
 - [Device control policies in and settings](device-control-policies.md)
 - [Device Control for macOS](mac-device-control-overview.md)
+

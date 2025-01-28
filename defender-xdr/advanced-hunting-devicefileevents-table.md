@@ -94,8 +94,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `string` | Additional information about the entity or event |
 | `InitiatingProcessSessionId` | `long` |  Windows session ID of the initiating process  |
 | `IsInitiatingProcessRemoteSession` | `bool` |   Indicates whether the initiating process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
-| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process’s RDP session was initiated |
-| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process’s RDP session was initiated |
+| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process's RDP session was initiated |
+| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process's RDP session was initiated |
 
 
 > [!NOTE]

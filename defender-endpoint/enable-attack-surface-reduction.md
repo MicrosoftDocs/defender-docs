@@ -76,10 +76,10 @@ You can enable attack surface reduction rules by using any of these methods:
 - [Microsoft Intune](#intune)
 - [Mobile Device Management (MDM)](#mdm)
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
-- [Group Policy](#group-policy)
+- [Group policy (GP)](#group-policy)
 - [PowerShell](#powershell)
 
-Enterprise-level management such as Intune or Microsoft Configuration Manager is recommended. Enterprise-level management overwrites any conflicting Group Policy or PowerShell settings on startup.
+Enterprise-level management such as Intune or Microsoft Configuration Manager is recommended. Enterprise-level management overwrites any conflicting group policy or PowerShell settings on startup.
 
 ## Exclude files and folders from attack surface reduction rules
 
@@ -93,7 +93,8 @@ When adding exclusions, keep these points in mind:
 
 * Exclusions are typically based on individual files or folders (using folder paths or the full path of the file to be excluded).
 * Exclusion paths can use environment variables and wildcards. See [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
-* When deployed through Group Policy or PowerShell, exclusions apply to all attack surface reduction rules. Using Intune, it is possible to configure an exclusion for a specific attack surface reduction rule. See [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions)
+* When deployed through group policy or PowerShell, exclusions apply to all attack surface reduction rules. Using Intune, it is possible to configure an exclusion for a specific attack surface reduction rule. See [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+
 * Exclusions can be added based on certificate and file hashes, by allowing specified Defender for Endpoint file and certificate indicators. See [Overview of indicators](indicators-overview.md).
 
 ## Policy Conflict
@@ -117,7 +118,7 @@ This section provides configuration details for the following configuration meth
 - [Custom profile in Intune](#custom-profile-in-intune)
 - [MDM](#mdm)
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
-- [Group Policy](#group-policy)
+- [Group policy](#group-policy)
 - [PowerShell](#powershell)
 
 The following procedures for enabling attack surface reduction rules include instructions for how to exclude files and folders.
@@ -267,12 +268,12 @@ Example:
 6. After the policy is created, select **Close**.
 
 > [!WARNING]
-> There is a known issue with the applicability of Attack Surface Reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no ETA for when this will be fixed.
+> There is a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no defined release date for when this will be fixed.
 
-### Group Policy
+### Group policy
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software will overwrite any conflicting Group Policy settings on startup.
+> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software will overwrite any conflicting group policy settings on startup.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx), right-click the Group Policy Object you want to configure and select **Edit**.
 

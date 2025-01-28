@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 10/22/2024
+ms.date: 12/24/2024
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -43,7 +43,7 @@ In organizations with Microsoft Defender for Office 365, Safe Links scanning pro
 
 Watch this short video on how to protect against malicious links with Safe Links in Microsoft Defender for Office 365.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGzjb]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=377095d3-f1a2-41c3-b04f-1eb2387affc1]
 
 > [!NOTE]
 > Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection in e-mail messages, Microsoft Teams, and files in supported Office apps to all recipients for customers that have at least one Defender for Office 365 license (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Links policies). For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md). You can also create Safe Links policies that apply to specific users, group, or domains. For instructions, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
@@ -62,7 +62,7 @@ Safe Links protection by Safe Links policies is available in the following locat
   > - Safe Links ignores S/MIME signed messages.
   > - Safe Links no longer wraps URLs pointing to SharePoint or OneDrive sites, but the URLs are still processed by the Safe Links service. This change doesn't degrade protection. Instead, it improves the performance of loading SharePoint or OneDrive URLs.
   > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
-
+ 
 - **Microsoft Teams**: Safe Links protection for links in Teams conversations, group chats, or from channels.
 
   For more information about Safe Links protection in Teams, see the [Safe Links settings for Microsoft Teams](#safe-links-settings-for-microsoft-teams) section later in this article.
@@ -107,6 +107,8 @@ You can use a condition or exception only once, but the condition or exception c
 ## Safe Links settings for email messages
 
 Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://<DataCenterLocation>.safelinks.protection.outlook.com` (for example, `https://nam01.safelinks.protection.outlook.com`). After the link is rewritten, it's analyzed for potentially malicious content.
+
+Safe Links rewrites URLs without altering their appearance in the standard email view. However, these rewritten URLs can be seen by viewing the email's source code. This process ensures secure links, protecting against potential threats while maintaining readability and integrity in the normal email view. When a user hovers over a URL, a pop-up message will display the original URL, indicating that it has been scanned by Safe Links. In plain text format emails, the Safe Links URLs will be directly visible within the content. 
 
 After Safe Links rewrites a URL, the URL is rewritten even if the message is _manually_ forwarded or replied to. Wrapping is done per message recipient (both internal and external recipients). Additional links that are added to the forwarded or replied-to message are also rewritten.
 

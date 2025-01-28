@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 11/15/2024
+ms.date: 01/08/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -40,7 +40,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 2. Verify the download.
 
    ```bash
-   echo '2A9BF0A6183831BE43C7BCB7917A40D772D226301B4CDA8EE4F258D00B6E4E97  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
 
 2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
@@ -62,7 +62,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    - `SupportToolLinuxBinary.zip`: For all Linux devices
    - `SupportToolMacOSBinary.zip`: For Mac devices
 
-1. Unzip the SupportToolMacOSBinary.zip. 
+5. Unzip the SupportToolMacOSBinary.zip. 
 
    ```bash
     unzip -q SupportToolMacOSBinary.zip
@@ -91,14 +91,14 @@ The tool currently requires Python version 3 or later to be installed on your de
    wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
       ```
       
-1. Verify the download. 
+2. Verify the download. 
 
    | OS | Command |
    |--|--|
    | Linux | `echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11 XMDEClientAnalyzer.zip'| sha256sum -c` |
    | macOS | `echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11  XMDEClientAnalyzer.zip'| shasum -a 256 -c` |
    
-1. Extract the contents of `XMDEClientAnalyzer.zip` on the machine. 
+3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine. 
 
    If you're using a terminal, extract the files by using the following command:
    
@@ -106,25 +106,25 @@ The tool currently requires Python version 3 or later to be installed on your de
    unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
    ```
    
-1. Change directory to the extracted location.
+4. Change directory to the extracted location.
 
    ```bash
    cd XMDEClientAnalyzer
    ```
    
-1. Give the tool executable permission:
+5. Give the tool executable permission:
 
    ```bash
    chmod a+x mde_support_tool.sh
    ```
    
-1. Run as a nonroot user to install required dependencies:
+6. Run as a nonroot user to install required dependencies:
 
    ```bash
    ./mde_support_tool.sh
    ```
    
-1. When you download files on macOS, it automatically adds a new extended attribut called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you will want to remove this extended attribute:
+7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you will want to remove this extended attribute:
 
    ```bash
    xattr -c MDESupportTools
@@ -136,7 +136,7 @@ The tool currently requires Python version 3 or later to be installed on your de
 
       Apple could not verify "MDESupportTool" is free of malware that may harm your Mac or compromise your privacy"
 
-1. To collect actual diagnostic package and generate the result archive file, run again as root:
+8. To collect actual diagnostic package and generate the result archive file, run again as root:
 
    ```bash
    sudo ./mde_support_tool.sh -d
@@ -168,7 +168,8 @@ Use the following command to get the machine diagnostic.
 
 Usage example: `sudo ./MDESupportTool -d`
 
-NOTE: The log level autoreset feature only available in 2405 or newer client version.
+> [!NOTE]
+> The log level autoreset feature is only available in 2405 or newer client version.
 
 ### Positional arguments
 
@@ -217,5 +218,23 @@ Usage example `./mde_support_tool.sh trace --length 5`
 | `Events.xml` | Another XML file used by the analyzer when building the HTML report. |
 | `Audited_info.txt` | Details on audited service and related components for [Linux](linux-resources.md) OS. |
 | `perf_benchmark.tar.gz` | The performance test reports. You see this file only if you're using the performance parameter. |
+
+## See also
+
+### Defender for Endpoint on macOS troubleshooting
+
+[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-troubleshoot-mode)
+
+[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-install)
+
+[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-license)
+
+[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-sys-ext)
+
+[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/troubleshoot-cloud-connect-mdemac)
+
+[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-perf-overview)
+
+[Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

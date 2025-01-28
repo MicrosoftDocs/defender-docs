@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/18/2024
+ms.date: 01/10/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -51,6 +51,17 @@ The incident queue has customizable columns that give you visibility into differ
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents-3.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="/defender/media/incidents-queue/incidents-ss-incidents-3.png":::
 
+The **Export** feature allows you to export the data in the incident queue that is displayed according to the applied filters and time ranges. It's available in the form of a button named **Export**, as displayed in the following screenshot:
+
+:::image type="content" source="/defender/media/defender/incidents-queue-with-export-button.png" alt-text="Shows the Export button in the Incidents page  of the Microsoft Defender portal":::
+
+When you click the **Export** button, the data is exported to a CSV file. You can apply various filters and time ranges to the incidents queue (not just in the context of exporting the data, but in a generic context). When you select **Export**, whichever filters and/or time ranges are applied to the incidents queue, such data is exported to the CSV file.
+
+Once you export the incidents queue-related data onto the CSV file, you can analyze the data and filter it further, based on your requirements.
+
+> [!NOTE]
+> The maximum number of records you can export to a CSV file is 10,000.
+
 ### Incident names
 
 For more visibility at a glance, Microsoft Defender XDR generates incident names automatically, based on alert attributes such as the number of endpoints affected, users affected, detection sources, or categories. This specific naming allows you to quickly understand the scope of the incident.
@@ -60,6 +71,33 @@ For example: *Multi-stage incident on multiple endpoints reported by multiple so
 If you onboarded Microsoft Sentinel to the unified security operations platform, then any alerts and incidents coming from Microsoft Sentinel are likely to have their names changed (regardless of whether they were created before or since the onboarding).
 
 We recommend that you avoid using the incident name as a condition for triggering [automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules). If the incident name is a condition, and the incident name changes, the rule will not be triggered.
+
+### Defender Boxed
+
+For a limited time during January and July of each year, **Defender Boxed** automatically appears when you first open the incident queue. Defender Boxed highlights your organization's security success, improvements, and response actions during the previous six months or calendar year.
+
+:::image type="content" source="/defender/media/defender-boxed/defender-boxed-recording.gif" alt-text="Defender Boxed as shown in the incident queue.":::
+
+> [!NOTE]
+> Defender Boxed is only available to users who performed applicable activities in the Microsoft Defender portal.
+
+You can do the following actions in the series of cards that appear in Defender Boxed:
+
+- Download a detailed summary of your achievements that can be shared with others in your organization.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-summary-small.png" alt-text="Screenshot of Defender Boxed slide with the download summary option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-summary.png":::
+
+- Change the frequency of how often Defender Boxed will appear. You can choose between once (every January) or twice (every January and July) per year.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-frequency-small.png" alt-text="Screenshot of Defender Boxed slide with the frequency highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-frequency.png":::
+
+- Share your achievement to your social media networks, email, and other forums by saving the slide as an image.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-save-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-save.png":::
+
+To reopen Defender Boxed, go to the Incidents queue and then select **Your Defender Boxed** on the right side of the pane.
+
+:::image type="content" source="/defender/media/defender-boxed/defender-boxed-incident-small.png" alt-text="Screenshot of the Defender Boxed option highlighted in the Incidents page." lightbox="/defender/media/defender-boxed/defender-boxed-incident.png":::
 
 ## Filters <a name="available-filters"></a>
 
@@ -85,7 +123,7 @@ This table lists the filter names that are available.
 | **Alert severity<br>Incident severity** | The severity of an alert or incident is indicative of the impact it can have on your assets. The higher the severity, the bigger the impact and typically requires the most immediate attention. Select **High**, **Medium**, **Low**, or **Informational**. |
 | **Incident assignment** | Select the assigned user or users. |
 | **Multiple service sources**  | Specify whether the filter is for more than one service source. |
-| **Service/detection sources**  | Specify incidents that contain alerts from one or more of the following:<li>Microsoft Defender for Identity<li>Microsoft Defender for Cloud Apps<li>Microsoft Defender for Endpoint<li>Microsoft Defender XDR<li>Microsoft Defender for Office 365<li>App Governance<li>Microsoft Entra ID Protection<li>Microsoft Data Loss Prevention<li>Microsoft Defender for Cloud<li>Microsoft Sentinel<br><br>Many of these services can be expanded in the menu to reveal further choices of detection sources within a given service. |
+| **Service/detection sources**  | Specify incidents that contain alerts from one or more of the following:<li>Microsoft Defender for Identity<li>Microsoft Defender for Cloud Apps<li>Microsoft Defender for Endpoint<li>Microsoft Defender XDR<li>Microsoft Defender for Office 365<li>App Governance<li>Microsoft Entra ID Protection<li>Microsoft Data Loss Prevention<li>Microsoft Defender for Cloud<li>Microsoft Sentinel<li>Microsoft Purview Insider Risk Management<br><br>Many of these services can be expanded in the menu to reveal further choices of detection sources within a given service. |
 | **Tags** | Select one or multiple tag names from the list. |
 | **Multiple category**  | Specify whether the filter is for more than one category. |
 | **Categories** | Choose categories to focus on specific tactics, techniques, or attack components seen. |
@@ -98,6 +136,9 @@ This table lists the filter names that are available.
 | **Associated threat** | Specify a named threat.  |
 | **Alert policies** | Specify an alert policy title.  |
 | **Alert subscription IDs** | Specify an alert  based on a subscription ID.  |
+
+> [!NOTE]
+> If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
 The default filter is to show all alerts and incidents with a status of **New** and **In progress** and with a severity of **High**, **Medium**, or **Low**.
 

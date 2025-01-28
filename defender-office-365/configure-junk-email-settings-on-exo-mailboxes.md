@@ -16,7 +16,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 12/08/2024
+ms.date: 01/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -172,3 +172,10 @@ As you can see, enabling the **Trust email from my contacts** setting reduces th
 
 - File name: outlk16.opax
 - Policy setting: **Trust e-mail from contacts**
+
+> [!IMPORTANT]
+> The following button helps identify and resolve issues with the safelist collection in user mailboxes (the Safe Senders list and Bloxked Senders list, which includes individual senders and domains):
+>
+<div class="nextstepaction">
+<p><a href="https://aka.ms/safeblockdiag" data-linktype="external">Run Tests: Mailbox safe/blocked sender list</a></p>
+</div>

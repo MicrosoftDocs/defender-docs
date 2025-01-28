@@ -35,7 +35,7 @@ The alert page in Microsoft Defender for Endpoint provides full context to the a
 
 Quickly triage, investigate, and take effective action on alerts that affect your organization. Understand why they were triggered, and their impact from one location. Learn more in this overview.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4yiO5]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=8a9c08a6-558c-47a8-a336-d748acbdaa80]
 
 ## Getting started with an alert
 

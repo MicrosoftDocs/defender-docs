@@ -1,114 +1,125 @@
 {
   "redirections": [
     {
-        "source_path": "defender-xdr/eval-create-eval-environment.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-overview",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud-apps.md",
+      "redirect_url": "/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-overview.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-overview",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/microsoft-365-security-center-mdi.md",
+      "redirect_url": "/defender-for-identity/microsoft-365-security-center-mdi",
+      "redirect_document_id": false
+    },
+
+    {
+      "source_path": "defender-xdr/eval-create-eval-environment.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-overview",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-endpoint-architecture.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-overview.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-overview",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-endpoint-enable-eval.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-endpoint-architecture.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-endpoint-overview.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-endpoint-enable-eval.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-endpoint-pilot.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-endpoint-overview.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-identity-architecture.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-endpoint-pilot.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-identity-enable-eval.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-identity-architecture.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-identity-overview.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-identity-enable-eval.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-identity-pilot.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-identity-overview.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-investigate-respond-additional.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-identity-pilot.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-identity",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-mcas-architecture.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-investigate-respond-additional.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-mcas-enable-eval.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-mcas-architecture.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-mcas-overview.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-mcas-enable-eval.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-mcas-pilot.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-mcas-overview.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-office-365-architecture.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-mcas-pilot.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-office-365-enable-eval.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-office-365-architecture.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-office-365-overview.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-office-365-enable-eval.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-office-365-pilot.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-office-365-overview.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-investigate-respond-simulate-attack.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-office-365-pilot.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-investigate-respond.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-investigate-respond-simulate-attack.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
+      "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-promote-to-production.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-overview",
-        "redirect_document_id": false
+      "source_path": "defender-xdr/eval-defender-investigate-respond.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/eval-defender-promote-to-production.md",
+      "redirect_url": "/defender-xdr/pilot-deploy-overview",
+      "redirect_document_id": false
     },
     {
       "source_path": "defender-xdr/microsoft-365-security-mde-redirection.md",

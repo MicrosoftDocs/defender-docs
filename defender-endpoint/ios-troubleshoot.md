@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 12/02/2024
+ms.date: 01/22/2025
 ---
 
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
@@ -48,8 +48,8 @@ While enabled by default, there might be some cases that require you to disable 
 
 3. Toggle off **Connect On Demand** to disable VPN.
 
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
+   > [!div class="mx-imgBorder"]
+   > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
 
 > [!NOTE]
 > Web Protection isn't available when VPN is disabled. To re-enable Web Protection, open the Defender for Endpoint app on the device and enable Web Protection.
@@ -127,13 +127,11 @@ If a user faces an issue that isn't already addressed in the above sections or i
 
    1. Open the MS Defender app on the iOS/iPadOS device.
    
-   2. Select the menu (profile icon) on the top-left corner, and then select **Send Feedback**.
+   2. Select the menu (profile icon) on the top-left corner, and then select **Help and Feedback**.
    
-   3. Choose from the given options. To report an issue, select **I don't like something**.
+   3. Choose from the given options. Under troubleshooting, select **Send Logs to Microsoft**.
 
-      Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
-
-   4. Select **Submit** to successfully send your feedback.
+   4. Share Incident ID to your support engineer.
 
 2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
 

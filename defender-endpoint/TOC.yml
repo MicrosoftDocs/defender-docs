@@ -137,9 +137,10 @@
             - name: Migrating devices to streamlined method
               href: migrate-devices-streamlined.md
 
-        - name: Onboarding Windows Client
+        - name: Onboard client devices
+          href: onboard-client.md
           items:
-          - name: Onboarding Windows Client overview
+          - name: Onboarding Windows client overview
             href: onboard-windows-client.md
           - name: Defender for Endpoint plug-in for WSL
             href: mde-plugin-wsl.md
@@ -158,7 +159,8 @@
           - name: Onboard previous versions of Windows
             href: onboard-downlevel.md
 
-        - name: Onboarding Windows Server
+        - name: Onboard server devices
+          href: onboard-server.md
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
@@ -255,6 +257,8 @@
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
+            - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
+              href: mde-linux-arm.md
             - name: Puppet based deployment
               href: linux-install-with-puppet.md
             - name: Ansible based deployment
@@ -283,7 +287,7 @@
               href: linux-schedule-scan-mde.md
             - name: Schedule antivirus scan in Defender for Endpoint on Linux
               href: schedule-antivirus-scan-in-mde.md
-            - name: Schedule an update of the Microsoft Defender for Endpoint (Linux)
+            - name: Schedule an update for Microsoft Defender for Endpoint on Linux
               href: linux-update-MDE-Linux.md
             - name: Configure eBPF-based sensor
               href: linux-support-ebpf.md 
@@ -507,6 +511,8 @@
           href: troubleshoot-collect-support-log.md
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
+        - name: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
+          href: troubleshoot-security-intelligence-not-updated.md 
         - name: Troubleshooting Security Intelligence Updates from Microsoft Update source
           href: security-intelligence-update-tshoot.md
           displayName: Troubleshooting Security Intelligence Updates from Microsoft Update source
@@ -787,6 +793,12 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Microsoft Defender Antivirus and third-party antivirus solutions without
+          Defender for Endpoint
+        href: defender-antivirus-compatibility-without-mde.md
+        displayName: Microsoft Defender Antivirus and non-Microsoft
+          antivirus/antimalware solutions, Antivirus protection without Defender for
+          Endpoint
       - name: Find malware detection names for Microsoft Defender for Endpoint
         href: find-defender-malware-name.md
 
@@ -914,16 +926,21 @@
 
       - name: Troubleshooting Microsoft Defender Antivirus
         items:
-        - name: Troubleshoot Microsoft Defender Antivirus performance issues
-          items:
+        - name: Troubleshoot performance issues related to real-time protection
+          href: troubleshoot-performance-issues.md
+          items: 
           - name: Performance analyzer for Microsoft Defender Antivirus
             href: tune-performance-defender-antivirus.md
           - name: Performance analyzer reference
             href: performance-analyzer-reference.md
-            displayName: high cpu msmpeng.exe antimalware engine microsoft defender
-              antivirus windows defender antivirus
-          - name: Troubleshoot performance issues related to real-time protection
-            href: troubleshoot-performance-issues.md
+          - name: Troubleshoot Microsoft Defender Antivirus performance issues with Process
+              Monitor
+            href: troubleshoot-av-performance-issues-with-procmon.md
+          - name: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
+            href: troubleshoot-av-performance-issues-with-wprui.md
+        - name: Troubleshoot Microsoft Defender Antivirus performance issues
+          items:
+          
         - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
           href: troubleshoot-microsoft-defender-antivirus.yml
         - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
@@ -1069,15 +1086,6 @@
       - name: Use sensitivity labels to prioritize incident response
         href: information-protection-investigation.md
 
-      - name: Reporting
-        items:
-        - name: Power BI - How to use API - Samples
-          href: api/api-power-bi.md
-        - name: Threat protection reports
-          href: threat-protection-reports.md
-        - name: Monthly security summary
-          href: monthly-security-summary-report.md
-
     - name: Advanced hunting
       href: /defender-xdr/advanced-hunting-overview
 
@@ -1111,54 +1119,16 @@
 
   - name: Reference
     items:
-    - name: Microsoft Security Resources
-      items: 
-        - name: Threat actor naming
-          href: /defender-xdr/microsoft-threat-actor-naming
-        - name: Malware names
-          href: /defender-xdr/malware-naming
-        - name: How Microsoft identifies malware and PUA
-          href: /defender-xdr/criteria
-        - name: Submit files for analysis
-          href: /defender-xdr/submission-guide
-        - name: Troubleshoot MSI portal errors caused by admin block
-          href: /defender-xdr/portal-submission-troubleshooting
-        - name: Microsoft virus initiative
-          href: /defender-xdr/virus-initiative-criteria
-        - name: Software developer FAQ
-          href: /defender-xdr/developer-faq
-    - name: Malware information
-      items: 
-       - name: Understanding malware
-         href: malware/understanding-malware.md
-       - name: Coinminers
-         href: malware/coinminer-malware.md
-       - name: Exploits and Exploit Kits
-         href: malware/exploits-malware.md
-       - name: Fileless threats
-         href: malware/fileless-threats.md
-       - name: Macro threats
-         href: malware/macro-malware.md
-       - name: Phishing trends
-         href: malware/phishing-trends.md
-       - name: Phishing
-         href: malware/phishing.md
-       - name: Prevent malware infection
-         href: malware/prevent-malware-infection.md
-       - name: Rootkits
-         href: malware/rootkits-malware.md
-       - name: Supply chain malware
-         href: malware/supply-chain-malware.md
-       - name: Support scams
-         href: malware/support-scams.md
-       - name: Trojans
-         href: malware/trojans-malware.md
-       - name: Unwanted software
-         href: malware/unwanted-software.md
-       - name: Worms
-         href: malware/worms-malware.md
-    - name: Understand threat intelligence concepts
-      href: threat-indicator-concepts.md
+    - name: Reports
+      items:
+        - name: Monthly security summary
+          href: monthly-security-summary-report.md
+        - name: Create custom reports using Power BI
+          href: api/api-power-bi.md
+        - name: Threat protection reports
+          href: threat-protection-reports.md
+        - name: Aggregated reports
+          href: aggregated-reporting.md                 
     - name: Configure integration with other Microsoft solutions
       items:
       - name: Configure conditional access
@@ -1561,7 +1531,55 @@
         href: conditional-access.md
       - name: Microsoft Defender for Cloud Apps integration overview
         href: microsoft-cloud-app-security-integration.md
-
+    - name: Microsoft Security Resources
+      items: 
+        - name: Threat actor naming
+          href: /defender-xdr/microsoft-threat-actor-naming
+        - name: Malware names
+          href: /defender-xdr/malware-naming
+        - name: How Microsoft identifies malware and PUA
+          href: /defender-xdr/criteria
+        - name: Submit files for analysis
+          href: /defender-xdr/submission-guide
+        - name: Troubleshoot MSI portal errors caused by admin block
+          href: /defender-xdr/portal-submission-troubleshooting
+        - name: Microsoft virus initiative
+          href: /defender-xdr/virus-initiative-criteria
+        - name: Software developer FAQ
+          href: /defender-xdr/developer-faq        
+    - name: Malware information
+      items: 
+       - name: Understanding malware
+         href: malware/understanding-malware.md
+       - name: Coinminers
+         href: malware/coinminer-malware.md
+       - name: Exploits and Exploit Kits
+         href: malware/exploits-malware.md
+       - name: Fileless threats
+         href: malware/fileless-threats.md
+       - name: Macro threats
+         href: malware/macro-malware.md
+       - name: Phishing trends
+         href: malware/phishing-trends.md
+       - name: Phishing
+         href: malware/phishing.md
+       - name: Prevent malware infection
+         href: malware/prevent-malware-infection.md
+       - name: Rootkits
+         href: malware/rootkits-malware.md
+       - name: Supply chain malware
+         href: malware/supply-chain-malware.md
+       - name: Support scams
+         href: malware/support-scams.md
+       - name: Trojans
+         href: malware/trojans-malware.md
+       - name: Unwanted software
+         href: malware/unwanted-software.md
+       - name: Worms
+         href: malware/worms-malware.md
+    - name: Understand threat intelligence concepts
+      href: threat-indicator-concepts.md
+      
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR

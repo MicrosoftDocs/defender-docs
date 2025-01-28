@@ -44,7 +44,7 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 
 ## Related videos
 
-[Remediation actions in Defender for Identity](https://www.microsoft.com/videoplayer/embed/RE4U7Pe)
+[Remediation actions in Defender for Identity](https://learn-video.azurefd.net/vod/player?id=adc6068b-225c-457d-b053-db6b64dedb79)
 
 ## See also
 

@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: how-to 
-ms.date: 11/18/2024
+ms.date: 01/15/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -14,9 +14,6 @@ ms.custom:
 ---
 
 # Searching and pivoting
-
->[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Defender Threat Intelligence (Defender TI) offers a robust and flexible search engine to streamline the investigation process. Defender TI is designed to let you pivot across various indicators from different data sources, making it easier than ever to discover relationships between disparate infrastructure. 
 

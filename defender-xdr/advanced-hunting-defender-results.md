@@ -30,17 +30,17 @@ ms.date: 11/19/2024
 
 ## Explore results
 
-Results of queries that were run appear in the **Results** tab. You can export the results to a CSV file by selecting **Export**. 
 
 :::image type="content" source="/defender/media/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-results.png":::
 
 You can also explore the results in-line with the following features:
 
-- Expand a result by selecting the dropdown arrow at the left of each result
-- Where applicable, expand details for results that are in JSON or array format by selecting the dropdown arrow at the left of applicable result row for added readability
-- Open the side pane to see a record's details (concurrent with expanded rows)
+- Expand a result by selecting the dropdown arrow at the left of each result.
+- Where applicable, expand details for results that are in JSON or array format by selecting the dropdown arrow at the left of applicable result row for added readability.
+- Open the side pane to see a record's details (concurrent with expanded rows).
 
 You can also right-click on any result value in a row so that you can use it to:
+
 - Add more filters to the existing query
 - Copy the value for use in further investigation
 - Update the query to extend a JSON field to a new column
@@ -64,18 +64,18 @@ You can use the link to incident feature to add advanced hunting query results t
     You can also select **Link to an existing incident** to add the selected records to an existing incident. Choose the related incident from the dropdown list of existing incidents. You can also enter the first few characters of the incident name or ID to find the incident you want.<br>
    :::image type="content" source="/defender/media/advanced-hunting-results-link4.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link4.png":::
 4.	For either selection, provide the following details, then select **Next**:
-    - **Alert title** – a descriptive title for the results that your incident responders can understand; this descriptive title becomes the alert title
-    - **Severity** – choose the severity applicable to the group of alerts
-    - **Category** – choose the appropriate threat category for the alerts
-    - **Description** – give a helpful description of the grouped alerts
-    - **Recommended actions** – list the recommended remediation actions for the security analysts who are investigating the incident
+    - **Alert title** – A descriptive title for the results that your incident responders can understand; this descriptive title becomes the alert title
+    - **Severity** – Choose the severity applicable to the group of alerts
+    - **Category** – Choose the appropriate threat category for the alerts
+    - **Description** – Give a helpful description of the grouped alerts
+    - **Recommended actions** – List the recommended remediation actions for the security analysts who are investigating the incident
 5.	In the **Entities** section, select the entities that are involved in the suspicious events. Those entities are used to correlate other alerts to the linked incident and are visible from the incident page. 
 
       For Microsoft Defender XDR data, the entities are automatically selected. If the data is from Microsoft Sentinel, you need to select the entities manually.
 
       There are two sections for which you can select entities:
 
-    a. **Impacted assets** – impacted assets that appear in the selected events should be added here. The following types of assets can be added: 
+    a. **Impacted assets** – Impacted assets that appear in the selected events should be added here. The following types of assets can be added: 
     - Account
     - Device
     - Mailbox
@@ -84,7 +84,7 @@ You can use the link to incident feature to add advanced hunting query results t
     - Amazon Web Services resource
     - Google Cloud Platform resource
 
-    b. **Related evidence** – non-assets that appear in the selected events can be added in this section. The supported entity types are:
+    b. **Related evidence** – Non-assets that appear in the selected events can be added in this section. The supported entity types are:
     - Process
     - File
     - Registry value
@@ -112,7 +112,7 @@ You can use the link to incident feature to add advanced hunting query results t
 
 6. Select **Next**.
 7. Review the details you've provided in the Summary section. 
-8.	Select **Done**.
+8. Select **Done**.
 
 ### View linked records in the incident
 You can select the generated link from the summary step of the wizard or select the incident name from the incident queue, to view the incident to which the events are linked.
@@ -127,6 +127,7 @@ You can also select the event from the timeline view or from the query results v
 :::image type="content" source="/defender/media/advanced-hunting-results-link8.png" alt-text="Screenshot of the incident page in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link8.png":::
 
 ### Filter for events added using advanced hunting
-You can view which alerts were generated from advanced hunting by filtering incidents and alerts by **Manual** detection source 
+
+You can view which alerts were generated from advanced hunting by filtering incidents and alerts by **Manual** detection source.
 
 :::image type="content" source="/defender/media/advanced-hunting-results-link9.png" alt-text="Screenshot of the filter dropdown in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link9.png":::

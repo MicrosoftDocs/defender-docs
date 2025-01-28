@@ -110,7 +110,7 @@ Sometimes, access to an unsanctioned app isn't blocked, either because the endpo
 
 ## Related videos
 
-- [Hunting with Microsoft Cloud App Security data](https://www.microsoft.com/videoplayer/embed/RWFISa)
+- [Hunting with Microsoft Cloud App Security data](https://learn-video.azurefd.net/vod/player?id=ffdedc73-6edf-45a9-8c90-566296e8d4ec)
 
 - [Discover and block Shadow IT using Defender for Endpoint](https://www.youtube.com/watch?v=MsHkTOoqSQo)
 

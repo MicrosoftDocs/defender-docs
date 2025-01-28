@@ -89,10 +89,55 @@ When you onboard Microsoft Sentinel to the Defender portal, you unify capabiliti
 
 Use the following Microsoft Sentinel configuration options to fine-tune your deployment:
 
-|Task  |Description  |
-|---------|---------|
-|**Enable health and auditing**     |  Monitor the health and audit the integrity of supported Microsoft Sentinel resources by turning on the auditing and health monitoring feature in Microsoft Sentinel's Settings page. Get insights on health drifts, such as the latest failure events or changes from success to failure states, and on unauthorized actions, and use this information to create notifications and other automated actions. <br><br>For more information, see [Turn on auditing and health monitoring for Microsoft Sentinel](/azure/sentinel/enable-monitoring?tabs=azure-portal).       |
-|**Configure Microsoft Sentinel content**     |  Based on the [data sources you selected](overview-plan.md#plan-microsoft-sentinel-costs-and-data-sources) when planning your deployment, install Microsoft Sentinel solutions and configure your data connectors. <br><br>Microsoft Sentinel provides a wide range of built-in solutions and data connectors, but you can also build custom connectors and set up connectors to ingest CEF or Syslog logs.  <br><br>For more information, see: <br> - [Configure content](/azure/sentinel/configure-content)<br>- [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy?tabs=azure-portal) <br>- [Find your data connector](/azure/sentinel/data-connectors-reference)       |
-|**Enable User and Entity Behavior Analytics (UEBA)**     | After setting up data connectors in Microsoft Sentinel, make sure to enable user entity behavior analytics to identify suspicious behavior that could lead to phishing exploits and eventually attacks such as ransomware. <br><br>For more information, see [Enable UEBA in Microsoft Sentinel](/azure/sentinel/enable-entity-behavior-analytics?tabs=azure).        |
-|**Set up interactive and long-term data retention**     |   Set up interactive and long-term data retention to make sure your organization retains the data that's important in the long term.  <br><br>For more information, see [Configure interactive and long-term data retention](/azure/sentinel/configure-data-retention-archive).      |
-|**Avoid duplicate incidents**     |  After you [connect Microsoft Sentinel to Microsoft Defender](/defender-xdr/microsoft-sentinel-onboard), a bi-directional sync between Microsoft Defender XDR incidents and Microsoft Sentinel is automatically established. <br><br>To avoid creating duplicate incidents for the same alerts, we recommend that you turn off all Microsoft incident creation rules for Microsoft Defender XDR-integrated products, including Defender for Endpoint, Defender for Identity, Defender for Office 365, Defender for Cloud Apps, and Microsoft Entra ID Protection. <br><br>For more information, see [Microsoft incident creation rules](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=azure-portal).|
+### Enable health and auditing
+
+Monitor the health and audit the integrity of supported Microsoft Sentinel resources by turning on the auditing and health monitoring feature in Microsoft Sentinel's Settings page. Get insights on health drifts, such as the latest failure events or changes from success to failure states, and on unauthorized actions, and use this information to create notifications and other automated actions.
+
+For more information, see[Turn on auditing and health monitoring for Microsoft Sentinel](/azure/sentinel/enable-monitoring?tabs=azure-portal).
+
+### Configure Microsoft Sentinel content
+
+Based on the [data sources you selected](overview-plan.md#plan-microsoft-sentinel-costs-and-data-sources) when planning your deployment, install Microsoft Sentinel solutions and configure your data connectors. Microsoft Sentinel provides a wide range of built-in solutions and data connectors, but you can also build custom connectors and set up connectors to ingest CEF or Syslog logs.
+
+For more information, see:
+
+- [Configure content](/azure/sentinel/configure-content)
+- [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy?tabs=azure-portal)
+- [Find your data connector](/azure/sentinel/data-connectors-reference)
+
+### Enable User and Entity Behavior Analytics (UEBA)
+
+After setting up data connectors in Microsoft Sentinel, make sure to enable user entity behavior analytics to identify suspicious behavior that could lead to phishing exploits and eventually attacks such as ransomware. For more information, see [Enable UEBA in Microsoft Sentinel](/azure/sentinel/enable-entity-behavior-analytics?tabs=azure).
+
+### Set up interactive and long-term data retention
+
+Set up interactive and long-term data retention to make sure your organization retains the data that's important in the long term. For more information, see [Configure interactive and long-term data retention](/azure/sentinel/configure-data-retention-archive).  
+
+### Enable analytics rules
+
+Analytics rules tell Microsoft Sentinel to alert you to events using a set of conditions that you consider to be important. The out-of-the-box decisions Microsoft Sentinel makes are based on user entity behavioral analytics (UEBA) and on correlations of data across multiple data sources. When turning on analytic rules for Microsoft Sentinel, prioritize enabling by connected data sources, organizational risk, and MITRE tactic.
+
+For more information, see [Threat detection in Microsoft Sentinel](/azure/sentinel/threat-detection).
+
+### Review anomaly rules
+
+Microsoft Sentinel anomaly rules are available out-of-the-box and enabled by default. Anomaly rules are based on machine learning models and UEBA that train on the data in your workspace to flag anomalous behavior across users, hosts, and others. Review the anomaly rules and anomaly score threshold for each one. If you're observing false positives for example, consider duplicating the rule and modifying the threshold.
+
+For more information, see [Work with anomaly detection analytics rules](/azure/sentinel/work-with-anomaly-rules#tune-anomaly-rules).
+
+### Use the Microsoft Threat Intelligence analytics rule
+
+Enable the out-of-the-box Microsoft Threat Intelligence analytics rule and verify that [this rule matches your log data with Microsoft-generated threat intelligence](/azure/sentinel/understand-threat-intelligence#detect-threats-with-threat-indicator-analytics). Microsoft has a vast repository of threat intelligence data, and this analytic rule uses a subset of it to generate high fidelity alerts and incidents for SOC (security operations centers) teams to triage.
+
+### Avoid duplicate incidents
+
+After you [connect Microsoft Sentinel to Microsoft Defender](/defender-xdr/microsoft-sentinel-onboard), a bi-directional sync between Microsoft Defender XDR incidents and Microsoft Sentinel is automatically established. To avoid creating duplicate incidents for the same alerts, we recommend that you turn off all Microsoft incident creation rules for Microsoft Defender XDR-integrated products, including Defender for Endpoint, Defender for Identity, Defender for Office 365, Defender for Cloud Apps, and Microsoft Entra ID Protection.
+
+For more information, see [Microsoft incident creation ](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=azure-portal).
+
+### Conduct a MITRE ATT&CK crosswalk
+
+With fusion, anomaly, and threat intelligence analytic rules enabled, conduct a MITRE Att&ck crosswalk to help you decide which remaining analytic rules to enable and to finish implementing a mature XDR (extended detection and response) process. This empowers you to detect and respond throughout the lifecycle of an attack.
+
+For more information, see [Understand security coverage](/azure/sentinel/mitre-coverage).
+

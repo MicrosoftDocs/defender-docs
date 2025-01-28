@@ -11,6 +11,15 @@ ms.topic: reference
 
 This article provides a list of ports and IP addresses you need to allow and allowlist to work with Microsoft Defender for Cloud Apps.
 
+In order to stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Cloud Apps services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://azureipranges.azurewebsites.net/).
+
+| Service tag name    |    Defender for Cloud Apps services included   |
+|:---|:---|
+| MicrosoftCloudAppSecurity | Portal access, Access and session controls, SIEM agent connection, App connector, Mail server, Log collector. |
+
+The following tables list the current static IP ranges covered by the MicrosoftCloudAppSecurity service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
+
+
 ## View your data center
 
 Some of the requirements below depend on which data center you're connected to.
@@ -28,6 +37,8 @@ To see which data center you're connecting to, do the following steps:
 To use Defender for Cloud Apps in the Microsoft Defender Portal, add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
 
 ```ini
+cdn.cloudappsecurity.com
+cdn-discovery.cloudappsecurity.com
 adaproddiscovery.azureedge.net
 *.s-microsoft.com
 *.msecnd.net
@@ -143,7 +154,7 @@ To enable Defender for Cloud Apps to connect to your SIEM, add **outbound port 4
 
 > [!NOTE]
 >
-> - If you didn't specify a proxy when you set up the Defender for Cloud Apps SIEM agent, you need to allow http connections on port 80 for the URLs listed on the [Azure TLS certificate changes](/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me) page. This is used for checking certificate revocation status when you connect to the Defender for Cloud Apps portal.
+> - If you didn't specify a proxy when you set up the Defender for Cloud Apps SIEM agent, you need to allow http connections on port 80 for the URLs listed on the [Azure TLS certificate changes](/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me) page. This is used for checking certificate revocation status when you connect to Defender for Cloud Apps.
 > - A genuine Microsoft Defender for Cloud Apps certificate usage is required for the SIEM agent connection.
 
 ## App connector

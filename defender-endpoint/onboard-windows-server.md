@@ -20,18 +20,10 @@ ms.date: 05/19/2022
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
+**Applies to**:
 
-- Windows Server 2008 R2
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server Semi-Annual Enterprise Channel
-- Windows Server 2019 and later
-- Windows Server 2019 core edition
-- Windows Server 2022
-- [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https:%2F%2Faka.ms%2FMDEp2OpenTrial)
 

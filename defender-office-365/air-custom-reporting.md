@@ -1,6 +1,6 @@
 ---
 title: Custom reporting solutions with automated investigation and response
-f1.keywords: 
+f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
@@ -8,14 +8,14 @@ manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
-search.appverid: 
+search.appverid:
 - MET150
 - MOE150
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 description: Learn how to integrate automated investigation and response with a custom or third-party reporting solution.
-ms.date: 06/09/2023
+ms.date: 07/10/2024
 ms.custom: 
 - air
 ms.service: defender-office-365
@@ -24,11 +24,13 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Custom or third-party reporting solutions for Microsoft Defender for Office 365
+# Custom or third-party reporting solutions for Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-With [Microsoft Defender for Office 365](mdo-about.md), you get [detailed information about automated investigations](air-view-investigation-results.md). However, some organizations also use a custom or third-party reporting solution. If your organization wants to integrate information about [automated investigations](air-about.md) with such a solution, you can use the Office 365 Management Activity API.
+Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 returns detailed information about the results. For more information, see [Details and results of automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-view-investigation-results.md).
+
+However, some Microsoft 365 organizations use custom or third-party reporting solutions. Those organizations can use the **Office 365 Management Activity APIs** to integrate information from AIR into other reporting solutions.
 
 |Resource|Description|
 |:---|:---|

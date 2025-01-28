@@ -7,6 +7,8 @@ items:
     href: what-is-defender-for-cloud-apps.md
   - name: What's new in Defender for Cloud Apps
     href: release-notes.md
+  - name: Defender for Cloud Apps in the Microsoft Defender portal
+    href: microsoft-365-security-center-defender-cloud-apps.md
   - name: Privacy with Defender for Cloud Apps
     href: cas-compliance-trust.md
   - name: Preview features
@@ -31,6 +33,8 @@ items:
     href: best-practices.md
 - name: Deploy Defender for Cloud Apps
   items:
+  - name: Pilot and deploy Microsoft Defender XDR
+    href: /defender-xdr/pilot-deploy-overview?toc=/cloud-app-security/toc.json&bc=/cloud-app-security/breadcrumb/toc.json
   - name: Network requirements
     href: network-requirements.md
   - name: Getting started
@@ -292,8 +296,6 @@ items:
       href: activity-filters-queries.md
     - name: Investigate apps discovered by Microsoft Defender for Endpoint
       href: mde-investigation.md
-    - name: Investigate files
-      href: file-filters.md
     - name: Investigate accounts from connected apps
       href: accounts.md
     - name: Investigate OAuth apps
@@ -308,8 +310,6 @@ items:
     items:
     - name: Investigate anomaly detection alerts
       href: investigate-anomaly-alerts.md
-    - name: Investigate risky users
-      href: tutorial-ueba.md
   - name: Respond to threats
     items:
     - name: Governing connected apps

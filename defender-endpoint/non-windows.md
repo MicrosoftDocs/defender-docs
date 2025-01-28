@@ -9,9 +9,7 @@ manager: deniseb
 audience: ITPro
 ms.collection:
   - m365-security
-  - m365solution-evalutatemtp
-  - highpri
-  - tier1
+  - tier3
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150

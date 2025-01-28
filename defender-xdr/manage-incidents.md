@@ -56,6 +56,9 @@ This article shows you how to perform various incident management tasks associat
 - Assess the activity audit and add comments in the [Activity log](#view-the-activity-log-of-an-incident).
 - [Export incident data to PDF](#export-incident-data-to-pdf).
 
+> [!TIP]
+> **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
+
 ## Access the *Manage incident* pane
 
 Most of these tasks are accessible from the **Manage incident** pane for an incident. You can reach this pane from any of several locations.

@@ -41,12 +41,12 @@ _Analyst report section of a threat analytics report_
 
 ## Know the different analyst report types
 A threat analytics report can be classified under one of the following report types:
-- **Activity profile** – Provides information on a specific attack campaign that’s often associated with a threat actor. This report discusses how an attack happened, why should you care about it, and how Microsoft protects its customers from it. An activity profile might also include details like timeline of events, attack chains, and behaviors and methodologies.
-- **Actor profile** – Provides information about a specific Microsoft-tracked threat actor behind notable cyberattacks. This report discusses the actor’s motivations, industry and/or geographical targets, and their tactics, techniques, and procedures (TTPs). An actor profile might also include information about the actor’s attack infrastructure, malware (custom or open source) and exploits they used, and notable events or campaigns that they were part of.
+- **Activity profile** – Provides information on a specific attack campaign that's often associated with a threat actor. This report discusses how an attack happened, why should you care about it, and how Microsoft protects its customers from it. An activity profile might also include details like timeline of events, attack chains, and behaviors and methodologies.
+- **Actor profile** – Provides information about a specific Microsoft-tracked threat actor behind notable cyberattacks. This report discusses the actor's motivations, industry and/or geographical targets, and their tactics, techniques, and procedures (TTPs). An actor profile might also include information about the actor's attack infrastructure, malware (custom or open source) and exploits they used, and notable events or campaigns that they were part of.
 - **Technique profile** – Provides information about a specific technique used by threat actors—for example, malicious use of PowerShell or credential harvesting in business email compromise (BEC)—and how Microsoft protects its customers by detecting activity associated with the technique.
 - **Threat overview** – Summarizes multiple profile reports into a narrative that paints a broader picture of a threat that uses or is related to these reports. For example, threat actors use different techniques to steal on-premise credentials, and a threat overview about on-premise credential theft might link to technique profiles on brute-force attacks, Kerberos attacks, or information-stealing malware. Microsoft Threat Intelligence uses their sensors on the top threats affecting customer environments to assess which threat might merit this report type.
-- **Tool profile** – Provides information about a specific custom or open-source tool that’s often associated with a threat actor. This report discusses the tool’s capabilities, the goals the threat actor using it might be trying to accomplish, and how Microsoft protects its customers by detecting activity associated with it. 
-- **Vulnerability profile** – Provides information about a specific Common Vulnerabilities and Exposures (CVE) ID or group of similar CVEs affecting a product. A vulnerability profile typically discusses noteworthy vulnerabilities, such as those being used by threat actors and notable attack campaigns. It covers one or more of the following types of information: type of vulnerability, impacted services, zero-day or in-the-wild exploitation, severity score and potential impact, and Microsoft’s coverage.
+- **Tool profile** – Provides information about a specific custom or open-source tool that's often associated with a threat actor. This report discusses the tool's capabilities, the goals the threat actor using it might be trying to accomplish, and how Microsoft protects its customers by detecting activity associated with it. 
+- **Vulnerability profile** – Provides information about a specific Common Vulnerabilities and Exposures (CVE) ID or group of similar CVEs affecting a product. A vulnerability profile typically discusses noteworthy vulnerabilities, such as those being used by threat actors and notable attack campaigns. It covers one or more of the following types of information: type of vulnerability, impacted services, zero-day or in-the-wild exploitation, severity score and potential impact, and Microsoft's coverage.
 
 ## Scan the analyst report
 
@@ -66,7 +66,7 @@ Each section of the analyst report is designed to provide actionable information
 
 The analyst report also provides information from various Microsoft solutions that can help detect the threat. It lists detections specific to this threat from each of the products listed in the following sections, as applicable. Alerts from these threat-specific detections show up in the alert status cards of the Threat analytics page. 
 
-Some analyst reports also mention alerts that are designed to generically flag suspicious behavior and might not be associated with the tracked threat. In such cases, the report will clearly state that the alert can be triggered by unrelated threat activity and that it isn’t monitored in the status cards provided in the Threat analytics page.
+Some analyst reports also mention alerts that are designed to generically flag suspicious behavior and might not be associated with the tracked threat. In such cases, the report will clearly state that the alert can be triggered by unrelated threat activity and that it isn't monitored in the status cards provided in the Threat analytics page.
 
 
 ### Microsoft Defender Antivirus
@@ -115,7 +115,7 @@ Microsoft Sentinel has powerful hunting search and query tools to hunt for secur
 
 Threat analytics dynamically tracks the status of certain [security updates](threat-analytics.md#endpoints-exposure-know-the-deployment-status-of-security-updates) and [secure configurations](threat-analytics.md#recommended-actions-review-list-of-mitigations-and-the-status-of-your-devices). These types of information are available as charts and tables in the **Endpoints exposures** and **Recommended actions** tabs, and are repeatable recommendations that apply to this threat and might apply to other threats, too.
 
-In addition to these tracked recommendations, the analyst report could also discuss mitigations that are *not* dynamically monitored because they’re specific to just the threat or situation being discussed in the report. Here are some examples of important mitigations that aren’t dynamically tracked:
+In addition to these tracked recommendations, the analyst report could also discuss mitigations that are *not* dynamically monitored because they're specific to just the threat or situation being discussed in the report. Here are some examples of important mitigations that aren't dynamically tracked:
 
 - Block emails with _.lnk_ attachments or other suspicious file types
 - Randomize local administrator passwords

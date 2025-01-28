@@ -3,10 +3,10 @@ title: Configure Microsoft Defender Antivirus with Group Policy
 description: Learn how to use a Group Policy to configure and manage Microsoft Defender Antivirus on your endpoints in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 04/03/2024
+ms.date: 01/23/2025
 ms.reviewer: ksarens, jtoole, pahuijbr
 manager: deniseb
 ms.subservice: ngp
@@ -62,8 +62,7 @@ In general, you can use the following procedure to configure or change some sett
 The following table lists commonly used Group Policy settings that are available in Windows 10.
 
 > [!TIP]
-> For the most current settings, see get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
-
+> For the most current settings, get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
 
 |Location|Setting|Article|
 |---|---|---|
@@ -159,6 +158,9 @@ The following table lists commonly used Group Policy settings that are available
 |Security intelligence updates|Turn on scan after Security intelligence update|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
 |Threats|Specify threat alert levels at which default action should not be taken when detected|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Threats|Specify threats upon which default action should not be taken when detected|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
+
+> [!TIP]
+> Instead of using "Run full scan on mapped network drives", if you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaption Protocol (ICAP) scanning with the Microsoft Defender Antivirus engine. For more information, see **[Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234)**.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

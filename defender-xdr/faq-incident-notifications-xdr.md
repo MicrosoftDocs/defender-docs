@@ -2,8 +2,7 @@
 title: FAQs related to Microsoft Defender Experts for XDR incident notifications
 ms.reviewer:
 description: Frequently asked questions related to Defender Experts for XDR incident notifications
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium

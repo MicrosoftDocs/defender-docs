@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 12/02/2024
+ms.date: 01/07/2025
 search.appverid: met150
 ---
 
@@ -51,7 +51,7 @@ Attack surface reduction rules are categorized as one of two types:
 
 - **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the effect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable impact on the end user.
 
-- **Other rules**: Rules that require some measure of following the documented deployment steps [Plan > Test (audit) > Enable (block/warn modes)], as documented in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md)
+- **Other rules**: Rules that require some measure of following the documented deployment steps [Plan > Test (audit) > Enable (block/warn modes)], as documented in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 For the easiest method to enable the standard protection rules, see: [Simplified standard protection option](attack-surface-reduction-rules-report.md#simplified-standard-protection-option).
 
@@ -180,7 +180,7 @@ Toast notifications are generated for all rules in Block mode. Rules in any othe
 
 For rules with the "Rule State" specified:
 
-- ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices at cloud block level "High". 
+- ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices at cloud block level "High"
 - Devices that not at the high cloud block level don't generate alerts for any `ASR Rule, Rule State` combinations
 - EDR alerts are generated for ASR rules in the specified states, for devices at cloud block level "High+"
 - Toast notifications occur in block mode only and for devices at cloud block level "High"
@@ -320,7 +320,7 @@ Dependencies: Microsoft Defender Antivirus
 ### Block credential stealing from the Windows local security authority subsystem
 
 > [!NOTE]
-> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled and [Credential Guard](/windows/security/identity-protection/credential-guard) enabled, this attack surface reduction rule is not required. 
+> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled, this attack surface reduction rule is not required. For a more secure posture, we also recommend enabling [Credential Guard](/windows/security/identity-protection/credential-guard) with the LSA protection.
 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
@@ -634,7 +634,7 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block Webshell creation for Servers
 
-This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a specifically crafted script that allows an attacker to control the compromised server. A web shell may include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, identifying potential targets etc.
+This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a specifically crafted script that allows an attacker to control the compromised server. A web shell may include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, and identifying potential targets.
  
 Intune name: `Block Webshell creation for Servers`
  

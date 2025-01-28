@@ -8,7 +8,7 @@ ms.topic: reference
 
 
 
-In order to access the Defender for Cloud Apps API, you have to create an API token and use it in your software to connect to the API. This token will be included in the header when Defender for Cloud Apps makes API requests.
+In order to access the Defender for Cloud Apps API, you have to create an API token and use it in your software to connect to the API. This token is included in the header when Defender for Cloud Apps makes API requests.
 
 The API tokens tab enables you to help you manage all the API tokens of your tenant.
 
@@ -16,7 +16,7 @@ The API tokens tab enables you to help you manage all the API tokens of your ten
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **System**, select **API tokens**.
 
-1. Select the **Add token** and provide a name to identify the token in the future, and select **Generate**.
+1. Select **Add token** and provide a name to identify the token in the future, and select **Generate**.
 
     ![Defender for Cloud Apps generates API token.](media/api-token-gen.png)
 
@@ -26,9 +26,9 @@ The API tokens tab enables you to help you manage all the API tokens of your ten
 
     - **Generated:** Tokens that have never been used.
     - **Active:** Tokens that were generated and were used within the past seven days.
-    - **Inactive:** Tokens that were used but there was no activity in the last seven days.
+    - **Inactive:** Tokens that were used, but there was no activity in the last seven days.
 
-1. After you generate a new token, you'll be provided with a new URL to use to access the Defender for Cloud Apps portal.
+1. After you generate a new token, you'll be provided with a new URL to use to access Defender for Cloud Apps.
 
     ![Defender for Cloud Apps API token.](media/generate-api-token.png)
 
@@ -46,7 +46,7 @@ After a token is revoked, it's removed from the table, and the software that was
 
 > [!NOTE]
 >
-> - SIEM connectors and log collectors also use API tokens. These tokens should be managed from the log collectors and SIEM agent sections and do not appear in this table.
-> - Deprovisioned users API tokens are retained in Defender for Cloud Apps but cannot be used. Any attempt to use them will result in a permission denied response. However, we recommend that such tokens are revoked on the **API tokens** page.
+> - SIEM connectors and log collectors also use API tokens. These tokens should be managed from the log collectors and SIEM agent sections and don't appear in this table.
+> - Deprovisioned users API tokens are retained in Defender for Cloud Apps but can't be used. Any attempt to use them will result in a permission denied response. However, we recommend that such tokens are revoked on the **API tokens** page.
 
 [!INCLUDE [Open support ticket](includes/support.md)]
