@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/09/2024
+ms.date: 01/28/2025
 ---
 
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
@@ -51,6 +51,10 @@ Defender for Endpoint supports two ways to manage permissions:
 Microsoft recommends leveraging RBAC to ensure that only users that have a business justification can access Defender for Endpoint.
 
 You can find details on permission guidelines here: [Create roles and assign the role to a Microsoft Entra group](user-roles.md#create-roles-and-assign-the-role-to-an-azure-active-directory-group).
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers will keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac?view=o365-worldwide).
 
 The following example table serves to identify the Cyber Defense Operations Center structure in your environment that will help you determine the RBAC structure required for your environment.
 

@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.date: 06/25/2024
+ms.date: 01/28/2025
 ---
 
 # Assign user access 
@@ -35,6 +35,10 @@ Defender for Endpoint supports two ways to manage permissions:
 - **Basic permissions management**: Set permissions to either full access or read-only. See [Use basic permissions to access the portal](basic-permissions.md).
 
 - **Role-based access control (RBAC)**: Set granular permissions by defining roles, assigning Microsoft Entra user groups to the roles, and granting the user groups access to device groups. For more information on RBAC, see [Manage portal access using role-based access control](rbac.md).
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers will keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac?view=o365-worldwide).
 
 ## Change from basic permissions to RBAC
 
