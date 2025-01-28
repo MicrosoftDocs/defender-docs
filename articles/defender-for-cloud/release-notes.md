@@ -43,6 +43,7 @@ The [GCP connector now has additional permissions](permissions.md#permissions-on
 - aiplatform.batchPredictionJobs.list
 - aiplatform.customJobs.list
 - aiplatform.datasets.list
+- aiplatform.datasets.get
 - aiplatform.endpoints.getIamPolicy
 - aiplatform.endpoints.list
 - aiplatform.indexEndpoints.list
@@ -54,6 +55,7 @@ The [GCP connector now has additional permissions](permissions.md#permissions-on
 - aiplatform.tuningJobs.list
 - discoveryengine.dataStores.list
 - discoveryengine.documents.list
+- discoveryengine.engines.list
 - notebooks.instances.list
 
 ### Enhancements for the Linux Baselines recommendation powered by GC
