@@ -21,7 +21,7 @@ ms.date: 06/01/2023
 
 1. Turn on the relevant component.
 
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="../media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-aks/container-settings-aks.png" alt-text="Screenshot that shows turning on components." lightbox="../media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
     > [!NOTE]
     >
