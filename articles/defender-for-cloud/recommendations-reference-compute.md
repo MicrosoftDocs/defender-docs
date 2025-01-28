@@ -384,16 +384,6 @@ Learn more in [Introduction to Microsoft Defender for servers](defender-for-serv
 
 **Severity**: High
 
-### Microsoft Defender for Servers should be enabled on workspaces
-
-**Description**: Microsoft Defender for servers brings threat detection and advanced defenses for your Windows and Linux machines.
-With this Defender plan enabled on your subscriptions but not on your workspaces, you're paying for the full capability of Microsoft Defender for servers but missing out on some of the benefits.
-When you enable Microsoft Defender for servers on a workspace, all machines reporting to that workspace will be billed for Microsoft Defender for servers - even if they're in subscriptions without Defender plans enabled. Unless you also enable Microsoft Defender for servers on the subscription, those machines won't be able to take advantage of just-in-time VM access, adaptive application controls, and network detections for Azure resources.
-Learn more in [Introduction to Microsoft Defender for servers](defender-for-servers-introduction.md).
-(No related policy)
-
-**Severity**: Medium
-
 ### Secure Boot should be enabled on supported Windows virtual machines
 
 **Description**: Enable Secure Boot on supported Windows virtual machines to mitigate against malicious and unauthorized changes to the boot chain. Once enabled, only trusted bootloaders, kernel, and kernel drivers will be allowed to run. This assessment only applies to trusted launch enabled Windows virtual machines.

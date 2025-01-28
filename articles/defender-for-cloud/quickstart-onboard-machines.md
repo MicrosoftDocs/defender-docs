@@ -48,85 +48,17 @@ Defender for Cloud tools for automatically deploying the Log Analytics agent wor
 
 ## Connect on-premises machines by using the Azure portal
 
-After you connect Defender for Cloud to your Azure subscription, you can start connecting your on-premises machines from the **Getting started** page in Defender for Cloud.
+After you connect Defender for Cloud to your Azure subscription, select **Direct onboarding** in the Environment Settings of the Defender for Cloud to [directly enable Defender for Cloud on your on-premises machines](onboard-machines-with-defender-for-endpoint.md#enable-direct-onboarding)
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+:::image type="content" source="media/quickstart-onboard-machines/environment-settings-direct-onboarding.png" lightbox="media/quickstart-onboard-machines/environment-settings-direct-onboarding.png" alt-text="Screenshot showing the Direct onboarding option to enable Defender for Cloud for on-premises machines.":::
 
-1. Search for and select **Microsoft Defender for Cloud**.
+## Microsoft Defender for Endpoint integration or agentless scanning
 
-1. On the Defender for Cloud menu, select **Getting started**.
+Defender for Cloud collects data from your non-Azure (including on-premises) machines to monitor for security vulnerabilities and threats. Some Defender plans require monitoring components to collect data from your workloads.
 
-1. Select the **Get started** tab.
+Data collection is required to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
-1. Find **Add non-Azure servers** and select **Configure**.
-
-    :::image type="content" source="./media/quickstart-onboard-machines/onboarding-get-started-tab.png" alt-text="Screenshot of the tab for getting started with Defender for Cloud and adding an on-premises server." lightbox="./media/quickstart-onboard-machines/onboarding-get-started-tab.png":::
-
-    A list of your Log Analytics workspaces appears.
-
-1. (Optional) If you don't already have a Log Analytics workspace in which to store the data, select **Create new workspace**, and follow the on-screen guidance.
-
-1. From the list of workspaces, select **Upgrade** for the relevant workspace to turn on Defender for Cloud paid plans for 30 free days.
-
-1. From the list of workspaces, select **Add Servers** for the relevant workspace.
-
-1. On the **Agents management** page, choose one of the following procedures, depending on the type of machines you're onboarding:
-
-   - [Onboard your Windows server](#onboard-your-windows-server)
-   - [Onboard your Linux server](#onboard-your-linux-server)
-
-## Onboard your Windows server
-
-When you add a Windows server, you need to get the information on the **Agents management** page and download the appropriate agent file (32 bit or 64 bit).
-
-To onboard a Windows server:
-
-1. Select **Windows servers**.
-
-    :::image type="content" source="media/quickstart-onboard-machines/windows-servers.png" alt-text="Screenshot that shows the tab for Windows servers.":::
-
-1. Select the **Download Windows Agent** link that's applicable to your computer processor type to download the setup file.
-
-1. From the **Agents management** page, copy the **Workspace ID** and **Primary Key** values into Notepad.
-
-1. Copy the downloaded setup file to the target computer and run it.
-
-1. Follow the installation wizard (select **Next** > **I Agree** > **Next** > **Next**).
-
-1. On the **Azure Log Analytics** page, paste the **Workspace ID** and **Primary Key** values that you copied into Notepad.
-
-1. If the computer should report to a Log Analytics workspace in the Azure Government cloud, select **Azure US Government** from the **Azure Cloud** dropdown list.
-
-1. If the computer needs to communicate through a proxy server to the Log Analytics service, select **Advanced**. Then provide the URL and port number of the proxy server.
-
-1. When you finish entering all of the configuration settings, select **Next**.
-
-1. On the **Ready to Install** page, review the settings to be applied and select **Install**.
-
-1. On the **Configuration completed successfully** page, select **Finish**.
-
-When the process is complete, **Microsoft Monitoring agent** appears in **Control Panel**. You can review your configuration there and verify that the agent is connected.
-
-For more information on installing and configuring the agent, see [Connect Windows machines](/azure/azure-monitor/agents/agent-windows#install-the-agent).
-
-### Onboard your Linux server
-
-To add Linux machines, you need the `wget` command from the **Agents management** page.
-
-To onboard your Linux server:
-
-1. Select **Linux servers**.
-
-    :::image type="content" source="media/quickstart-onboard-machines/linux-servers.png" alt-text="Screenshot that shows the tab for Linux servers.":::
-
-1. Copy the `wget` command into Notepad. Save this file to a location that you can access from your Linux computer.
-
-1. On your Linux computer, open the file that contains the `wget` command. Copy the entire contents and paste them into a terminal console.
-
-1. When the installation finishes, validate that the Operations Management Suite Agent is installed by running the `pgrep` command. The command returns the `omsagent` persistent ID.
-
-    You can find the logs for the agent at `/var/opt/microsoft/omsagent/<workspace id>/log/`. The new Linux machine might take up to 30 minutes to appear in Defender for Cloud.
-
+To ensure your servers are secured, receive all the security content of Defender for Servers, verify [Defender for Endpoint (MDE) integration](integration-defender-for-endpoint.md) and [agentless disk scanning](concept-agentless-data-collection.md) are enabled on your subscriptions. This ensures you'll seamlessly be up to date and receive all the alternative deliverables once they're provided.
 ## Verify that your machines are connected
 
 Your Azure and on-premises machines are available to view in one location.

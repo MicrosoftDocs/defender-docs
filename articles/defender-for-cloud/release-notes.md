@@ -27,6 +27,45 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## January 2025
+
+|Date | Category | Update|
+|--|--|--|
+| January 27 | GA | [Permissions added to GCP connector to support AI platforms](#permissions-added-to-gcp-connector-to-support-ai-platforms) |
+| January 20 | Change | [Enhancements for the Linux Baselines recommendation powered by GC](#enhancements-for-the-linux-baselines-recommendation-powered-by-gc) |
+
+### Permissions added to GCP connector to support AI platforms
+
+January 27, 2025
+
+The [GCP connector now has additional permissions](permissions.md#permissions-on-gcp) to support the GCP AI Platform (Vertex AI):
+
+- aiplatform.batchPredictionJobs.list
+- aiplatform.customJobs.list
+- aiplatform.datasets.list
+- aiplatform.datasets.get
+- aiplatform.endpoints.getIamPolicy
+- aiplatform.endpoints.list
+- aiplatform.indexEndpoints.list
+- aiplatform.indexes.list
+- aiplatform.models.list
+- aiplatform.models.get
+- aiplatform.pipelineJobs.list
+- aiplatform.schedules.list
+- aiplatform.tuningJobs.list
+- discoveryengine.dataStores.list
+- discoveryengine.documents.list
+- discoveryengine.engines.list
+- notebooks.instances.list
+
+### Enhancements for the Linux Baselines recommendation powered by GC
+ 
+January 20, 2025
+
+We are enhancing the Baselines Linux (powered by GC) feature to improve its accuracy and coverage. During February, you may notice changes such as updated rule names and additional rules. These improvements are designed to make the baselines assessment more accurate and up-to-date. For more information about the changes, please refer to the relevant [blog](/azure/osconfig/quickstart-sec-baseline-mc?tabs=azure-cli)
+
+Some of the changes may include additional "public preview" changes. This update is beneficial for you, and we want to keep you informed. If you prefer, you can opt out of this recommendation by exempting it from your resource or removing the GC extension.
+
 ## December 2024
 
 |Date | Category | Update|
