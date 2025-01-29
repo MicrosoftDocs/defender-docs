@@ -65,6 +65,9 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 ### Exclude device groups
 
+> [!CAUTION]
+> Excluding device groups from automated responses also impacts [automated investigation and response](m365d-autoir.md) actions.
+
 1. Under **Automated responses**, select **Devices**.
 
 2. In the **Device groups** tab, choose a device group by selecting the checkbox next to the group name from the list to configure attack disruption automation settings.
@@ -101,11 +104,17 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 ### Remove exclusions
 
-To remove an exclusion, go to the **Identities** page or **IPs** tab. Select the asset you want to remove from the list, and then select **Remove exclusion**.
+To remove an exclusion:
 
-:::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-remove-small.png" alt-text="Highlighting the removal option when removing an excluded IP in the IP tab of attack disruption automation settings" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-remove.png":::
+- Go to the **Identities** page. Select the user account you want to remove from the list and then select **Remove**.
 
-Device group exclusions can be configured in the **Device groups** tab. Select the device group you want to configure from the list and choose the appropriate exclusion from the flyout pane. Select **Save** to save the exclusion.
+:::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-user-remove.png" alt-text="Highlighting the removal option when removing an excluded user in the Identities page of attack disruption automation settings":::
+
+- Go to the **Devices** page and navigate to the **IPs** tab. Select the IP address you want to remove from the list and then select **Remove exclusion**.
+
+:::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-remove.png" alt-text="Highlighting the removal option when removing an excluded IP in the IP tab of attack disruption automation settings":::
+
+- Device group exclusions can be configured in the **Device groups** tab. Select the device group you want to configure from the list and choose the appropriate exclusion from the flyout pane. Select **Save** to save the exclusion.
 
 ## See also
 
