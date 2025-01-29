@@ -73,7 +73,7 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 3. In the flyout pane, select the appropriate automation level for the device group. You can choose from specific automation levels appropriate for your device group.
 
-  :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout-small.png" alt-text="Flyout pane when configuring automation levels for a device group"/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout.png":::
+  :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout-small.png" alt-text="Flyout pane when configuring automation levels for a device group" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout.png":::
 
 4. Select **Save** to save the automation level for the device group.
 
