@@ -360,7 +360,7 @@
           href: concept-data-security-posture.md
         - name: Support and prerequisites
           href: concept-data-security-posture-prepare.md
-        - name: Data security dashboard
+        - name: Data and AI security dashboard (Preview)
           href: data-aware-security-dashboard-overview.md
         - name: Supported sensitive data information types
           href: sensitive-info-types.md

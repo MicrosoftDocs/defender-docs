@@ -1,11 +1,14 @@
 ---
-title: The data security posture management dashboard
+title: The data and AI security dashboard (Preview)
 description: Learn about the capabilities and functions of the data security posture management view in Microsoft Defender for Cloud.
-ms.topic: conceptual
-ms.date: 02/11/2024
+ms.topic: concept-article
+ms.date: 01/29/2025
+#customer intent: As a security professional, I want to understand the information presented to me on the data and AI security dashboard so that I can effectively manage the security of my organization's data and AI estate, risks and insights.
 ---
 
-# Data security dashboard
+# Data and AI security dashboard (Preview)
+
+Microsoft Defender for Cloud's data and AI security dashboard provides an interactive view of all connected data and AI estate, risks and insights.
 
 Microsoft Defender for Cloud's data security dashboard provides an interactive view of significant risks to sensitive data. It prioritizes alerts and potential attack paths across multicloud data resources, making data protection management more effective.
 
@@ -88,7 +91,7 @@ You can select the **Manage data sensitivity settings** to get to the **Data sen
 
 :::image type="content" source="media/data-aware-security-dashboard/manage-security-sensitivity-settings.png" alt-text="Screenshot that shows where to access managing data sensitivity settings." lightbox="media/data-aware-security-dashboard/manage-security-sensitivity-settings.png":::
 
-## Next steps
+## Related content
 
 - Learn more about [data security posture management](concept-data-security-posture.md).
 - Learn how to [enable Defender CSPM](tutorial-enable-cspm-plan.md).
