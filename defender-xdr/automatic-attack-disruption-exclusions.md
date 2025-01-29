@@ -72,13 +72,12 @@ To exclude assets from automated responses in automatic attack disruption, follo
    :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-select-small.png" alt-text="Device groups tab in the automated response settings for attack disruption" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-select.png":::
 
 3. In the flyout pane, select the appropriate automation level for the device group. You can choose from the following automation levels:
-    - **Full - remediate threats automatically**: Automatically contain devices when a threat is detected.
-    - **Semi - require approval for core folders**: Automatically investigate devices when an alert is received and apply     remediation actions except to items within core system folders. Remediation actions for the core folders require approval.
-    - **Semi - require approval for non-temp folders**: Automatically investigate and apply remediation to actions within temp and download folders when an alert is received. All other remediation actions require approval.
-    - **Semi - require approval for all folders**: Automatically investigate devices when an alert is received. All  remediation actions require approval.
-    - **No automated response**: No automated investigation or response is taken for devices in this group.
-    
-    :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout-small.png" alt-text="Flyout pane when configuring automation levels for a device group"/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout.png":::
+   - **Full - remediate threats automatically**: Automatically contain devices when a threat is detected.
+   - **Semi - require approval for core folders**: Automatically investigate devices when an alert is received and apply     remediation actions except to items within core system folders. Remediation actions for the core folders require approval.
+   - **Semi - require approval for non-temp folders**: Automatically investigate and apply remediation to actions within temp and download folders when an alert is received. All other remediation actions require approval.
+   - **Semi - require approval for all folders**: Automatically investigate devices when an alert is received. All  remediation actions require approval.
+   - **No automated response**: No automated investigation or response is taken for devices in this group.
+  :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout-small.png" alt-text="Flyout pane when configuring automation levels for a device group"/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout.png":::
 
 4. Select **Save** to save the automation level for the device group.
 
