@@ -122,8 +122,8 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender XDR | `ra{GUID}` <br> `ta{GUID}` for alerts from ThreatExperts <br> `ea{GUID}` for alerts from custom detections |
 | Microsoft Defender for Office 365 | `fa{GUID}` <br> Example: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Defender for Endpoint | `da{GUID}` <br> `ed{GUID}` for alerts from custom detections |
-| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` for alerts from XDR detection engine <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri638724443630474445_-1629192583` |
-| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> `rm{GUID}` for alerts from XDR detection engine <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` for alerts from XDR detection engine <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri001122334455667788_-0123456789` |
+| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> `ma{GUID}` for alerts from App Governance detections and policies <br> `rm{GUID}` for alerts from XDR detection engine <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Entra ID Protection | `ad{GUID}` |
 | App Governance | `ma{GUID}` |
 | Microsoft Data Loss Prevention | `dl{GUID}` |
@@ -212,7 +212,7 @@ The **Recommendations** tab provides next-step actions and advice for investigat
 
 ## Tune an alert
 
-As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on high severity and high priority alerts. Meanwhile, analysts are also required to triage and resolve lower priority alerts, which tends to be a manual process.
+As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on high severity and high priority alerts. Meanwhile, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
 
 Alert tuning, previously known as *alert suppression*, provides the ability to tune and manage alerts in advance. This streamlines the alert queue and saves triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs and rule conditions are met.
 
