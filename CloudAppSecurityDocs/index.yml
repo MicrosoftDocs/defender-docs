@@ -48,6 +48,8 @@ landingContent:
         links:
           - text: Basic setup
             url: general-setup.md
+          - text: Connect cloud apps
+            url: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
           - text: View and manage security posture
             url: security-saas.md
       - linkListType: concept
@@ -70,8 +72,6 @@ landingContent:
         links:
           - text: Calculate risk scores
             url: risk-score.md
-          - text: Connect cloud apps
-            url: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
           - text: Collect logs
             url: discovery-docker.md
           - text: Discover and manage shadow IT

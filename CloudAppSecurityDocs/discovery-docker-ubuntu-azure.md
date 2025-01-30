@@ -46,7 +46,7 @@ If you require more than 10 data sources, we recommend that you split the data s
         To work with a network appliance that isn't listed, select **Other > Customer log format** or **Other (manual only)**. For more information, see [Working with the custom log parser](custom-log-parser.md).
 
     >[!NOTE]
-    >Integrating with secure transfer protocols (FTPS and Syslog – TLS) often requires additional settings or your firewall/proxy.
+    >Integrating with secure transfer protocols (FTPS and Syslog – TLS) often requires additional settings on your firewall/proxy. For more information, see [Advanced log collector management](log-collector-advanced-management.md).
 
 Repeat this process for each firewall and proxy whose logs can be used to detect traffic on your network.
 
