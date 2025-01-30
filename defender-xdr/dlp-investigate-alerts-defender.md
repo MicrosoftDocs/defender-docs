@@ -17,29 +17,27 @@ search.appverid:
   - MOE150
   - met150
 ms.date: 11/14/2023
+appliesto: 
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Investigate data loss prevention alerts with Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-
-You can manage Microsoft Purview Data Loss Prevention (DLP) alerts in the Microsoft Defender portal. Open **Incidents & alerts** \> **Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. From this page, you can:
+You can manage and respond to Microsoft Purview Data Loss Prevention (DLP) alerts and incidents in the Microsoft Defender portal. Open **Incidents & alerts** \> **Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. From this page, you can:
 
 - View all your DLP alerts grouped under incidents in the Microsoft Defender XDR incident queue.
-- View intelligent inter-solution (DLP-MDE, DLP-MDO) and intra-solution (DLP-DLP) correlated alerts under a single incident.
-- Hunt for compliance logs along with security under Advanced Hunting.
-- In-place admin remediation actions on user, file, and device.
+- View DLP alerts correlated with other DLP alerts, or with alerts from other solutions (Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, and so on), under a single incident.
+- Hunt for security threats, using queries combining compliance logs with security logs, under Advanced Hunting.
+- Take remediation actions in-place on users, files, and devices.
 - Associate custom tags to DLP incidents and filter by them.
-- Filter by DLP policy name, tag, Date, service source, incident status, and user on the unified incident queue.
+- Filter the unified incident queue by DLP policy name, tag, date, service source, incident status, and user.
 
-> [!TIP]
-> You can also pull DLP incidents along with events and evidence into Microsoft Sentinel for investigation and remediation with the Microsoft Defender XDR connector in Microsoft Sentinel.
+## Prerequisites
 
-## Licensing requirements
+### Licensing requirements
 
 To investigate Microsoft Purview Data Loss Prevention incidents in the Microsoft Defender portal, you need a license from one of the following subscriptions:
 
@@ -51,17 +49,18 @@ To investigate Microsoft Purview Data Loss Prevention incidents in the Microsoft
 > [!NOTE]
 > When you are licensed and eligible for this feature, DLP alerts will automatically flow into Microsoft Defender XDR. If you don't want DLP alerts to flow into Defender, open a support case to disable this feature. If you disable this feature DLP alerts will surface in the Defender portal as Microsoft Defender for Office alerts.
 
-## Roles
+### Roles
 
 It's best practice to only grant minimal permissions to alerts in the Microsoft Defender portal. You can create a custom role with these roles and assign it to the users who need to investigate DLP alerts.
 
-|Permission  |Defender Alert Access  |
-|---------|---------|
-|Manage Alerts    | DLP + Security |
-|View-Only Manage Alerts     |DLP + Security         |
-|Information Protection Analyst     |DLP only         |
-|DLP Compliance Management     |DLP only         |
-|View-Only DLP Compliance Management     |DLP only         |
+| Permission | Defender Alert Access  |
+| ---------- | --------- |
+| Manage Alerts                       | DLP + Security |
+| View-Only Manage Alerts             | DLP + Security |
+| Information Protection Analyst      | DLP only       |
+| DLP Compliance Management           | DLP only       |
+| View-Only DLP Compliance Management | DLP only       |
+
 
 ## Before you start
 
@@ -70,15 +69,15 @@ It's best practice to only grant minimal permissions to alerts in the Microsoft 
 > [!NOTE]
 > [Administrative units](/microsoft-365/compliance/microsoft-365-compliance-center-permissions#administrative-units) restrictions flow from data loss prevention (DLP) into the Defender portal. If you are an administrative unit restricted admin, you'll only see the DLP alerts for your administrative unit.
 
+
+
 <a name='investigate-dlp-alerts-in-the-microsoft-365-defender-portal'></a>
 
 ## Investigate DLP alerts in the Microsoft Defender portal
 
 1. Go to the Microsoft Defender portal, and select **Incidents** in the left hand navigation menu to open the incidents page.
 
-1. Select **Filters** on the top right, and choose **Service Source : Data Loss Prevention** to view all incidents with DLP alerts. Here's a few examples of the subfilters that are available in preview:
-    1. by user and device names
-    1. (in preview) In the **Entities** filter, you can search on file names, user, device names, and file paths.
+1. Select **Add filter** on the toolbar, and choose the **Service/detection sources** filter. Then select that filter and choose **Microsoft Data Loss Prevention** to view all incidents with DLP alerts. You can also filter the queue by user and device names (using the **Entities** filter) and by policies, using the **Policy/policy rule** filter, you can search on file names, user, device names, and file paths.
     1. (in preview) In the **Incidents** queue > **Alert policies** > Alert policy title. You can search on the DLP policy name.
 
 1. Search for the DLP policy name of the alerts and incidents you're interested in.
@@ -99,7 +98,7 @@ The **CloudAppEvents** table contains all audit logs across all locations like S
 
 If you're new to advanced hunting, you should review [Get started with advanced hunting](advanced-hunting-overview.md).
 
-Before you can use advance hunting you must have [access to the **CloudAppEvents** table](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps) that contains the Microsoft Purview data.
+Before you can use advanced hunting you must have [access to the **CloudAppEvents** table](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps) that contains the Microsoft Purview data.
 
 #### Using built in queries
 
