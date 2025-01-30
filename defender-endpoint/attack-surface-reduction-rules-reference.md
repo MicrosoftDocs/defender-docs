@@ -320,8 +320,9 @@ Dependencies: Microsoft Defender Antivirus
 ### Block credential stealing from the Windows local security authority subsystem
 
 > [!NOTE]
-> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled, this attack surface reduction rule isn't required. For a more secure posture, we also recommend enabling [Credential Guard](/windows/security/identity-protection/credential-guard) with the LSA protection. 
-> If the LSA protection is enabled, the ASR rule is classified as *not applicable* in Defender for Endpoint management settings in the [Microsoft Defender portal](https://security.microsoft.com). 
+> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled, this attack surface reduction rule isn't required. For a more secure posture, we also recommend enabling [Credential Guard](/windows/security/identity-protection/credential-guard) with the LSA protection.
+>
+> If the LSA protection is enabled, the ASR rule is classified as *not applicable* in Defender for Endpoint management settings in the [Microsoft Defender portal](https://security.microsoft.com).
 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
@@ -332,13 +333,16 @@ By default the state of this rule is set to block. In most cases, many processes
 Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection cannot be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
 > [!TIP]
+>
 > 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
-> 2. The rule is designed to suppress block reports/toasts for friendly processes. It is also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled. 
+> 2. The rule is designed to suppress block reports/toasts for friendly processes. It is also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
 > 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
 
 > [!NOTE]
-> In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal. 
+> In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal.
+>
 > The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support WARN mode.
+>
 > In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate a lot of noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
 Intune name: `Flag credential stealing from the Windows local security authority subsystem`
 
@@ -357,7 +361,7 @@ Known issues: These applications and "Block credential stealing from the Windows
 
 |Application name|For information|
 | -------- | -------- |
-|Quest Dirsync Password Sync|[Dirsync Password Sync isn’t working when Windows Defender is installed, error: "VirtualAllocEx failed: 5" (4253914)](https://support.quest.com/kb/4253914/dirsync-password-sync-isn-t-working-when-windows-defender-is-installed-error-virtualallocex-failed-5)|
+|Quest Dirsync Password Sync|[Dirsync Password Sync isn't working when Windows Defender is installed, error: "VirtualAllocEx failed: 5" (4253914)](https://support.quest.com/kb/4253914/dirsync-password-sync-isn-t-working-when-windows-defender-is-installed-error-virtualallocex-failed-5)|
 
 For technical support, contact the software vendor.
 
@@ -383,6 +387,7 @@ Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
 > The rule **Block executable content from email client and webmail** has the following alternative descriptions, depending on which application you use:
+>
 > - Intune (Configuration Profiles): Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions).
 > - Configuration Manager: Block executable content download from email and webmail clients.
 > - Group Policy: Block executable content from email client and webmail.
@@ -498,8 +503,8 @@ Dependencies: Microsoft Defender Antivirus
 Known issues: These applications and "Block Office applications from injecting code into other processes" rule, are incompatible:
 
 |Application name|For information|
-| -------- | -------- |
-|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)](/defender-endpoint/microsoft-defender-antivirus-updates).  |
+|---|---|
+|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \| Engine 1.1.24090.11)](/defender-endpoint/microsoft-defender-antivirus-updates).|
 |Heimdal security|n/a|
 
 For technical support, contact the software vendor.
@@ -567,24 +572,22 @@ Advanced hunting action type:
 Dependencies: Microsoft Defender Antivirus
 
 ### Block rebooting machine in Safe Mode (preview)
- 
+
 This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
- 
+
 > [!NOTE]
 > This capability is currently in preview. Additional upgrades to improve efficacy are under development.
- 
+
 Intune Name: `[PREVIEW] Block rebooting machine in Safe Mode`
 
 Configuration Manager name: Not yet available
- 
+
 GUID: `33ddedf1-c6e0-47cb-833e-de6133960387`
- 
+
 Advanced hunting action type:
 
 - `AsrSafeModeRebootedAudited`
-
 - `AsrSafeModeRebootBlocked`
-
 - `AsrSafeModeRebootWarnBypassed`
 
 Dependencies: Microsoft Defender Antivirus
@@ -610,18 +613,18 @@ Advanced hunting action type:
 Dependencies: Microsoft Defender Antivirus
 
 ### Block use of copied or impersonated system tools (preview)
- 
+
 This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs may try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
 
 > [!NOTE]
 > This capability is currently in preview. Additional upgrades to improve efficacy are under development.
- 
+
 Intune Name: `[PREVIEW] Block use of copied or impersonated system tools`
 
 Configuration Manager name: Not yet available
 
 GUID: `c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb`
- 
+
 Advanced hunting action type:
 
 - `AsrAbusedSystemToolAudited`
@@ -635,9 +638,9 @@ Dependencies: Microsoft Defender Antivirus
 ### Block Webshell creation for Servers
 
 This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a specifically crafted script that allows an attacker to control the compromised server. A web shell may include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, and identifying potential targets.
- 
+
 Intune name: `Block Webshell creation for Servers`
- 
+
 GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 
 Dependencies: Microsoft Defender Antivirus
@@ -695,6 +698,5 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

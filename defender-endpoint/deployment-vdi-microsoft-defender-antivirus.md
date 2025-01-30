@@ -157,7 +157,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
 
 ## Microsoft Defender Antivirus configuration settings
 
-It's important to take advantage of the included threat protection capabilities by enabling them with the following recommended configuration settings.  It's optimized for VDI environments.
+It's important to take advantage of the included threat protection capabilities by enabling them with the following recommended configuration settings. It's optimized for VDI environments.
 
 > [!TIP]
 > The latest Windows group policy administrative templates are available in [Create and manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
@@ -176,7 +176,7 @@ It's important to take advantage of the included threat protection capabilities 
 
 ### Client Interface
 
-- Enable headless UI mode: `Enabled`
+- Enable headless UI mode: `Enabled`
 
    > [!NOTE]
    > This policy hides the entire Microsoft Defender Antivirus user interface from end users in your organization.
@@ -202,7 +202,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Enable file hash computation feature: `Enabled`
 
 > [!NOTE]
-> "Enable file hash computation feature" is only needed if using Indicators – File hash.  It can cause higher amount of CPU utilization, since it has to parse thru each binary on disk to get the file hash.
+> "Enable file hash computation feature" is only needed if using Indicators – File hash. It can cause higher amount of CPU utilization, since it has to parse thru each binary on disk to get the file hash.
 
 ### Real-time protection
 
@@ -235,7 +235,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
 
    > [!NOTE]
-   > If you want to harden, you could change "Turn on catch-up quick scan" to enabled, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans.  But since it is running a scheduled scan, it will use additional CPU.
+   > If you want to harden, you could change "Turn on catch-up quick scan" to enabled, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it will use additional CPU.
 
 - Turn on e-mail scanning: `Enabled`
 

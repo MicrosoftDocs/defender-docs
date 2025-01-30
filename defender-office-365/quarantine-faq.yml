@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 10/07/2024
+  ms.date: 01/28/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -224,6 +224,13 @@ sections:
       - question: |
           Why aren't users receiving notifications about their quarantined messages?
         answer: |
+          First, use [message trace](message-trace-defender-portal.md) to confirm that the recipient didn't receive a quarantine notification:
+
+          - **Sender**: `Quarantine@messaging.micosoft.com` or a [custom sender address](quarantine-policies.md#configure-global-quarantine-notification-settings-in-the-microsoft-defender-portal).
+          - **Recipient**: The recipient's email address.
+
+          After you confirm that quarantine notifications weren't sent, proceed with the following guidance.
+
           If the quarantine policy that's defined for the [supported quarantine action](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) doesn't have notifications turned on, the quarantine notifications aren't sent.
 
           For more information, see the last table in [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy) and the individual feature tables in [Recommended settings for EOP and Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md) to see which default quarantine policies have quarantine notifications turned on.
@@ -262,7 +269,7 @@ sections:
         answer: |
           **Block sender** is disabled by default for quarantined messages.
           
-          For end users, admins can create and assign a custom quarantine policy that includes the **Block sender** action. For more information, see [Quarantine policies](quarantine policies).
+          For end users, admins can create and assign a custom quarantine policy that includes the **Block sender** action. For more information, see [Quarantine policies](quarantine-policies.md).
 
           Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
 
