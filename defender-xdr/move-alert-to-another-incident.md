@@ -13,7 +13,7 @@ ms.collection:
 - usx-security
 - sentinel-only
 ms.topic: how-to
-ms.date: 11/21/2024
+ms.date: 01/30/2025
 search.appverid: met150
 appliesto:
     - Microsoft Defender XDR
