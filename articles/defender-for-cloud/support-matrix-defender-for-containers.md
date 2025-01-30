@@ -70,7 +70,7 @@ The following are the features provided by Defender for Containers, for the supp
 |--|--|
 | Registries and images | **Supported**<br> * ACR registries <br> * [ACR registries protected with Azure Private Link](/azure/container-registry/container-registry-private-link) (Private registries requires access to Trusted Services) <br> * Container images in Docker V2 format <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images<br> is currently unsupported <br> |
 | Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9. (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12) <br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows Server 2016, 2019, 2022 |
-| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * .NET <br> * Java<br> * Go |
+| Language specific packages <br><br>  | **Supported**<br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
 
 ### Kubernetes distributions and configurations for Azure - Runtime threat protection
 
@@ -110,7 +110,7 @@ The following are the features provided by Defender for Containers, for the supp
 |--|--|
 | Registries and images | **Supported**<br> * ECR registries <br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
 | Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows server 2016, 2019, 2022 |
-| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * .NET <br> * Java<br> * Go |
+| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
 
 ### Kubernetes distributions/configurations support for AWS - Runtime threat protection
 
@@ -158,7 +158,7 @@ If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see
 |--|--|
 | Registries and images | **Supported**<br> * Google Registries (GAR, GCR) <br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
 | Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows server 2016, 2019, 2022 |
-| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * .NET <br> * Java<br> * Go |
+| Language specific packages <br><br>  | **Supported** <br><br> * Python <br> * Node.js <br>* PHP <br>* Ruby <br>* Rust <br> * .NET <br> * Java<br> * Go |
 
 ### Kubernetes distributions/configurations support for GCP - Runtime threat protection
 
