@@ -8,7 +8,6 @@ metadata:
   description: Microsoft Defender for Cloud Apps delivers full protection for SaaS applications, helping you monitor and protect your cloud app data, using fundamental cloud access security broker (CASB) functionality, SaaS Security Posture Management (SSPM) features, advanced threat protection, and app-to-app protection.
   services: na
   ms.service: defender-for-cloud-apps
-  ms.subservice: na
   ms.topic: landing-page
   ms.collection: na
   author: batamig
@@ -49,6 +48,8 @@ landingContent:
         links:
           - text: Basic setup
             url: general-setup.md
+          - text: Connect cloud apps
+            url: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
           - text: View and manage security posture
             url: security-saas.md
       - linkListType: concept
@@ -71,8 +72,6 @@ landingContent:
         links:
           - text: Calculate risk scores
             url: risk-score.md
-          - text: Connect cloud apps
-            url: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
           - text: Collect logs
             url: discovery-docker.md
           - text: Discover and manage shadow IT

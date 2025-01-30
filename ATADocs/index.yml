@@ -8,7 +8,6 @@ metadata:
   description: Protect your enterprise using information from multiple network data-sources to learn the behavior of users and entities in your organization.
   services: service
   ms.service: advanced-threat-analytics
-  ms.subservice: ms.subservice
   ms.topic: landing-page
   ms.collection: M365-security-compliance
   author: batamig

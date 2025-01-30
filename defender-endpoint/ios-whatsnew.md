@@ -29,22 +29,21 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-
 ## Upgrading your experience: UX enhancements you should know about
 
-January 2025
+**January 2025**:
 
-**Key changes**
+**Key changes**:
 
-We are pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+We are pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
 
-Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation. 
+Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
 
 The following screenshot is an example of what the user sees in their dashboard:
 
 :::image type="content" source="media/ios-whatsnew/ios-dashboard.png" alt-text="Screenshot showing the user's dashboard.":::
 
-**Recommendation cards for alerts**
+**Recommendation cards for alerts**:
 
 The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert will bring forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table.
 
@@ -54,7 +53,7 @@ The structure of the dashboard has been updated to include a recommendation card
 | :::image type="content" source="media/ios-whatsnew/ios-web-protection.png" alt-text="Screenshot of a card prompting the user to turn on web protection."::: | **Web protection** <br/>The user is prompted to turn on web protection. |
 | :::image type="content" source="media/ios-whatsnew/ios-update.png" alt-text="Screenshot of a card telling the user an iOS update is available."::: | **Device health** <br/>The user is prompted to update their device. |
 
-**Feature tiles**
+**Feature tiles**:
 
 We have enhanced the current enterprise dashboard experience, featuring a new tile view. The following table lists some examples of tiles:
 
@@ -75,8 +74,8 @@ New users won't be able to install the Microsoft Defender app on devices running
 
 To check which devices support iOS 16 or iPadOS 16 (if applicable), see the following Apple documentation:
 
-- [Supported iPhone Models](https://support.apple.com/en-in/guide/iphone/iphe3fa5df43/16.0/ios/16.0)
-- [Supported iPad Models](https://support.apple.com/en-in/guide/ipad/ipad213a25b2/16.0/ipados/16.0)
+- [Supported iPhone Models](https://support.apple.com/guide/iphone/iphe3fa5df43/16.0/ios/16.0)
+- [Supported iPad Models](https://support.apple.com/guide/ipad/ipad213a25b2/16.0/ipados/16.0)
 
 ## User enrollment
 
