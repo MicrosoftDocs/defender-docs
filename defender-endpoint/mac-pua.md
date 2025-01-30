@@ -2,8 +2,9 @@
 title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Mac
 description: Detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro

@@ -47,6 +47,8 @@
       href: reduce-risk-overview.md
     - name: Detect threats
       href: detect-threats-overview.md
+    - name: Uncover adversaries with threat intel
+      href: threat-intelligence-overview.md
     - name: Hunt for threats
       items:
       - name: Overview

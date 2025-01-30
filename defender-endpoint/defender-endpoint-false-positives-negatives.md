@@ -41,7 +41,7 @@ In endpoint protection solutions, a false positive is an entity, such as a file 
 
 Continue here if the "Alert source" is "Microsoft Defender for Endpoint".
 
-The next step is to review the “detection source”:
+The next step is to review the "detection source":
 
 |Detection source| Information|
 | -------- | -------- |

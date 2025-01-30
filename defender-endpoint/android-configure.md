@@ -102,12 +102,13 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
    |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender.|
    |Manage Network Protection detection for Open Networks| 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/>  Security admins manage this setting to enable or disable open network detection.|
    |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, notification alerts are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and alerts are sent to SOC admins when Defender detects a bad certificate.|
-   
+
 6. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
+>
 > - The other config keys of Network Protection will only work if the parent key '**Enable Network Protection in Microsoft Defender'** is enabled.
-> - Users need to enable location permission (which is an optional permission) and need to grant “Allow All the Time” permission to ensure protection against Wi-Fi threat, even when the app is not actively in use. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+> - Users need to enable location permission (which is an optional permission) and need to grant "Allow All the Time" permission to ensure protection against Wi-Fi threat, even when the app is not actively in use. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
 
 ## Privacy Controls
 

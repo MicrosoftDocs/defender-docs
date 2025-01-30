@@ -2,10 +2,10 @@
 title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on Mac
 description: Learn how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
-ms.reviewer: yongrhee
+ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:

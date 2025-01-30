@@ -174,7 +174,7 @@ As you can see, enabling the **Trust email from my contacts** setting reduces th
 - Policy setting: **Trust e-mail from contacts**
 
 > [!IMPORTANT]
-> The following button helps identify and resolve issues with the safelist collection in user mailboxes (the Safe Senders list and Bloxked Senders list, which includes individual senders and domains):
+> The following button helps identify and resolve issues with the safelist collection in user mailboxes (the Safe Senders list and Blocked Senders list, which includes individual senders and domains):
 >
 <div class="nextstepaction">
 <p><a href="https://aka.ms/safeblockdiag" data-linktype="external">Run Tests: Mailbox safe/blocked sender list</a></p>
