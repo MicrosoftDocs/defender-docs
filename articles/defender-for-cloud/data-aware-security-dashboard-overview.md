@@ -8,22 +8,22 @@ ms.date: 01/30/2025
 
 # Data and AI security dashboard (Preview)
 
-Microsoft Defender for Cloud's Data and AI security dashboard is designed to enhance customer engagement by providing a centralized platform that you can use to monitor and manage data and AI resources. This dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can easily navigate and access critical information through the elements the dashboard offers, to stay informed about your data and AI environments.
+Microsoft Defender for Cloud's Data and AI security dashboard enhances customer engagement by providing a centralized platform to monitor and manage data and AI resources. This dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can easily navigate and access critical information through the dashboard's elements to stay informed about your data and AI environments.
 
-One of the key benefits of the Data and AI Dashboard is its ability to provide a quick and clear overview of your organization's most critical data and security issues. This allows you to make informed decisions and take proactive measures to mitigate risks.
+One key benefit of the Data and AI Dashboard is its ability to provide a quick and clear overview of your organization's most critical data and security issues. This enables you to make informed decisions and take proactive measures to mitigate risks.
 
 ## Benefits of the Data and AI security dashboard
 
-With the Data and AI security dashboard you can:
+With the Data and AI security dashboard, you can:
 
 - Track and manage data and AI resources, making it easier to stay informed and in control.
 - Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues, allowing you to make informed decisions and take proactive measures.
-- Explore potential threats data by highlighting [attack paths](concept-attack-path.md) that lead to sensitive data.
+- View the most critical data and AI security issues, enabling you to make informed decisions and take proactive measures.
+- Explore potential threats by highlighting [attack paths](concept-attack-path.md) that lead to sensitive data.
 - View issue tracking, recommendations, and data threat analysis in one place.
-- Manage data and AI environments in a centralized platform.
-- View the most critical threats to your data and AI environments and allowing you to mitigate the issues and improve your overall security posture.
-- Explore useful data insights by highlighting useful data queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
+- Manage data and AI environments on a centralized platform.
+- View the most critical threats to your data and AI environments, enabling you to mitigate issues and improve your overall security posture.
+- Explore useful data insights by highlighting data queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 
 :::image type="content" source="media/data-aware-security-dashboard/data-security.png" alt-text="Screenshot that shows you how to navigate to the data security dashboard." lightbox="media/data-aware-security-dashboard/data-security.png":::
 
