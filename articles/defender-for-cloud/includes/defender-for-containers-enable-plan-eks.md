@@ -16,19 +16,18 @@ author: dcurwin
 To help protect your EKS clusters, enable the Defender for Containers plan on the relevant account connector:
 
 1. In Defender for Cloud, open **Environment settings**.
+
 1. Select the AWS connector.
 
     :::image type="content" source="../media/defender-for-kubernetes-intro/select-aws-connector.png" alt-text="Screenshot of an AWS connector in the Defender for Cloud environment settings.":::
 
-1. Verify that the toggle for the **Containers** plan is set to **On**.
-
-    :::image type="content" source="../media/defender-for-kubernetes-intro/enable-containers-plan-on-aws-connector.png" alt-text="Screenshot of turning on Defender for Containers for an AWS connector.":::
+1. Select the **Defender plans** page and verify that the toggle for the **Containers** plan is set to **On**.
 
 1. To change optional configurations for the plan, select **Settings**.
 
     :::image type="content" source="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
 
-    - Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the toggle for Agentless threat protection to **On**. To change the retention period for your audit logs, enter the required time frame.
+    - Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the **Agentless threat protection** to toggle to **On**. To change the retention period for your audit logs, enter the required time frame.
 
         > [!NOTE]
         > If you disable this configuration, control plane threat detection is disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).

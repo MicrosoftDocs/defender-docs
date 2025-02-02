@@ -27,7 +27,7 @@ The authentication process works as follows:
 
 :::image type="content" source="media/quickstart-onboard-gcp/authentication-process.png" alt-text="A diagram of the Defender for Cloud GCP connector authentication process." lightbox="media/quickstart-onboard-gcp/authentication-process.png":::
 
-1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. The token is signed by Microsoft Entra ID using the RS256 algorithm and is valid for 1 hour.
+1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. Microsoft Entra ID signs the token using the RS256 algorithm and is valid for 1 hour.
 
 1. The Microsoft Entra token is exchanged with Google's STS token.
 
@@ -71,7 +71,7 @@ You also select a location and add the organization ID for your project.
 
 You can also set an interval to scan the GCP environment every 4, 6, 12, or 24 hours.
 
-Some data collectors run with fixed scan intervals and are not affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
+Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
 
 | Data collector name | Scan interval |
 |--|--|
@@ -279,8 +279,8 @@ Microsoft Defender for Containers brings threat detection and advanced defenses 
   - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud recommendations page. [Learn how to deploy the solution to specific clusters](defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
   - Manually install [Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
-- The [Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
-- The [Agentless Container Vulnerability Assessment](agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google Container Registry (GCR) and Google Artifact Registry (GAR) and running images on your GKE clusters. Set the **Registry access** toggle to **On**.
+- The [K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+- The [Registry access](agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google Container Registry (GCR) and Google Artifact Registry (GAR) and running images on your GKE clusters. To enable, set the **Registry access** toggle to **On**.
 
 To configure the Defender for Containers plan:
 

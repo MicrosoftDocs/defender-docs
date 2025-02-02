@@ -44,8 +44,8 @@ To help protect your GKE clusters, use the following steps to enable the Defende
       - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud **Recommendations** page. [Learn how to deploy the solution to specific clusters](../defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
       - Manually install [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
-    - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
-    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google registries (Google Artifact Registry and Google Container Registry) and running images on your GKE clusters. Set the **Registry access** toggle to **On**.
+    - The [K8S API access](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
+    - The [Registry access](../agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google registries (Google Artifact Registry and Google Container Registry) and running images on your GKE clusters. Set the **Registry access** toggle to **On**.
 
 2. Select the **Copy** button.
 
