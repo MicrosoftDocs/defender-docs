@@ -62,19 +62,19 @@ You can learn more about Defender for Container's pricing on the [pricing page](
     - The [Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. To enable the **K8S API access** toggle to **On**.
     - The [Agentless Container Vulnerability Assessment](agentless-vulnerability-assessment-gcp.md) feature provides vulnerability management for images stored in Google Registries (GAR and GCR) and running images on your GKE clusters. Set the **Registry access** toggle to **On**.
 
-2. Select the **Copy** button.
+1. Select the **Copy** button.
 
     :::image type="content" source="media/tutorial-enable-containers-gcp/copy-button.png" alt-text="Screenshot showing the location of the copy button.":::
 
-3. Select the **GCP Cloud Shell** button.
+1. Select the **GCP Cloud Shell** button.
 
-4. Paste the script into the Cloud Shell terminal, and run it.
+1. Paste the script into the Cloud Shell terminal, and run it.
 
     The connector will update after the script executes. This process can take up to 6-8 hours up to complete.
 
-5. Select **Next: Review and Generate>**.
+1. Select **Next: Review and Generate>**.
 
-6. Select **Update**.
+1. Select **Update**.
 
 ## Deploy the solution to specific clusters
 

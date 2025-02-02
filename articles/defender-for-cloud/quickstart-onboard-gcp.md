@@ -286,13 +286,13 @@ To configure the Defender for Containers plan:
 
 1. Follow the steps to [connect your GCP project](#connect-your-gcp-project).
 
-2. On the **Select plans** tab, select **Configure**. Then, on the **Defender for Containers configuration** pane, turn the toggles to **On**.
+1. On the **Select plans** tab, select **Configure**. Then, on the **Defender for Containers configuration** pane, turn the toggles to **On**.
 
     :::image type="content" source="media/tutorial-enable-containers-gcp/containers-settings-gcp.png" alt-text="Screenshot of Defender for Cloud's environment settings page showing the settings for the Containers plan." lightbox="media/tutorial-enable-containers-gcp/containers-settings-gcp.png":::
 
-3. Select **Save**.
+1. Select **Save**.
 
-4. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
+1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
 
 ### Configure the Defender CSPM plan
 
