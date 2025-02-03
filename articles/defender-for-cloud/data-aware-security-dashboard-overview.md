@@ -63,24 +63,24 @@ From here, you can see which of your resources are fully, partially, or not prot
 
 ## Top issues
 
-The Top issues section provides an overview of the most critical issues affecting your resources. This section presents your:
+The Top issues section gives an overview of the most critical issues affecting your resources. This section presents your:
 
-- Alerts that have the highest severities based on the presented MITRE ATT&CK tactics.
-- Recommendations with both critical and high severities based on the presented risk factors.
-- Attack paths with both critical and high severities based on the presented risk factors.
+- Alerts with the highest severities based on the presented MITRE ATT&CK tactics.
+- Recommendations with critical and high severities based on the presented risk factors.
+- Attack paths with critical and high severities based on the presented risk factors.
 
     :::image type="content" source="media/data-aware-security-dashboard/top-issues.png" alt-text="Screenshot that shows the top issues section of the data security view." lightbox="media/data-aware-security-dashboard/top-issues.png":::
 
 ## Data closer look
 
-The Data closer look section provides an overview into the most critical issues your data is facing, that Defender for Databases has discovered that are affecting your resources.
+The Data closer look section gives an overview of the most critical issues your data is facing, discovered by Defender for Databases.
 
-This section presents: 
+This section presents:
 
-- Which of your resources contain sensitive data and the type of data discovered.
-- Alerts on managed databases and storage prioritized by severity.
-- Data queries to locate sensitive data through the security explorer.
-- The location of resources exposed to the internet and sorted by storage assets, managed databases and hosted  databases. ALong with the ability to view all internet exposed data resources.
+- Which of your resources contain sensitive data and the type of data.
+- Alerts on managed databases and storage, prioritized by severity.
+- Data queries to locate sensitive data using the security explorer.
+- The location of resources exposed to the internet, sorted by storage assets, managed databases, and hosted databases, along with the ability to view all internet-exposed data resources.
 
     :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
 
