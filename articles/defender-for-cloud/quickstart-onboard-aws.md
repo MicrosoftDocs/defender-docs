@@ -54,7 +54,7 @@ To complete the procedures in this article, you need:
 
 - Contributor level permission for the relevant Azure subscription.
   
-- - If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](https://learn.microsoft.com/azure/defender-for-cloud/enable-permissions-management?source=recommendations#before-you-start) for your tenant.
+- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](https://learn.microsoft.com/azure/defender-for-cloud/enable-permissions-management?source=recommendations#before-you-start) for your tenant.
 
 > [!NOTE]
 > The AWS connector is not available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
