@@ -34,15 +34,16 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
   ```
-  $name = "ComputerA" 
-  Get-ADComputer -Identity $name |
+  $name = "UserA" 
+  Get-ADUser -Identity $name |
   Set-ADAccountControl -AccountNotDelegated:$true
   ```
   Another option is to set the `UserAccountControl` attribute to `NOT_DELEGATED = 0x100000` under the Attribute Editor tab for the exposed device.   
   
   For example:  
   
-    ![Screenshot of device profile.](media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png)
+  ![image](https://github.com/user-attachments/assets/48a76abc-19dc-4c98-8740-72e9f2ac95d8)
+
   
 ## Next steps
 
