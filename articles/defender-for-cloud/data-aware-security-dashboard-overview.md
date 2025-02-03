@@ -8,9 +8,9 @@ ms.date: 01/30/2025
 
 # Data and AI security dashboard (Preview)
 
-Microsoft Defender for Cloud's Data and AI security dashboard enhances customer engagement by providing a centralized platform to monitor and manage data and AI resources. This dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can easily navigate and access critical information through the dashboard's elements to stay informed about your data and AI environments.
+Microsoft Defender for Cloud's Data and AI security dashboard enhances customer engagement by providing a centralized platform to monitor and manage data and AI resources. The dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can easily navigate and access critical information through the dashboard's elements to stay informed about your data and AI environments.
 
-One key benefit of the Data and AI Dashboard is its ability to provide a quick and clear overview of your organization's most critical data and security issues. This enables you to make informed decisions and take proactive measures to mitigate risks.
+One key benefit of the Data and AI Dashboard is its ability to quickly show your organization's most critical data and security issues. This feature helps you make informed decisions and take proactive measures to mitigate risks.
 
 ## Benefits of the Data and AI security dashboard
 
@@ -31,7 +31,7 @@ With the Data and AI security dashboard, you can:
 
 **To view the dashboard**:
 
-- You must [enable Defender CSPM](tutorial-enable-cspm-plan.md).
+- You must [enable Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md).
 - [Enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) within the Defender CSPM plan.  
 
 **To receive the alerts for data sensitivity**:
@@ -55,7 +55,7 @@ With the Data and AI security dashboard, you can:
 
 ## Data security overview section
 
-The data security overview section provides a general overview of your cloud data estate, per cloud, including all data resources, divided into storage assets, managed databases, and hosted databases (IaaS).
+The Data and AI security overview section shows your cloud data and AI estate for each cloud. It includes all data and AI resources, divided into storage assets, managed databases, hosted databases (IaaS), and AI services.
 
 :::image type="content" source="media/data-aware-security-dashboard/data-security-overview.png" alt-text="Screenshot that shows the overview section of the data security view." lightbox="media/data-aware-security-dashboard/data-security-overview.png":::
 
