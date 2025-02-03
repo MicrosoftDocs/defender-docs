@@ -73,10 +73,14 @@ The Top issues section provides an overview of the most critical issues affectin
 
 ## Data closer look
 
-The **Closer look** section provides a more detailed view into the sensitive data within the organization.
+The Data closer look section provides an overview into the most critical issues your data is facing, that Defender for Databases has discovered that are affecting your resources.
 
-- **Sensitive data discovery** - summarizes the results of the sensitive resources discovered, allowing customers to explore a specific sensitive information type and label.
-- **Internet-exposed data resources** - summarizes the discovery of sensitive data resources that are internet-exposed for storage and managed databases.
+This section presents: 
+
+- Which of your resources contain sensitive data and the type of data discovered.
+- Alerts on managed databases and storage prioritized by severity.
+- Data queries to locate sensitive data through the security explorer.
+- The location of resources exposed to the internet and sorted by storage assets, managed databases and hosted  databases. ALong with the ability to view all internet exposed data resources.
 
     :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
 
