@@ -2,7 +2,7 @@
 title: The data and AI security dashboard (Preview)
 description: Learn about the capabilities and functions of the data security posture management view in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 01/30/2025
+ms.date: 02/03/2025
 #customer intent: As a security professional, I want to understand the information presented to me on the data and AI security dashboard so that I can effectively manage the security of my organization's data and AI estate, risks and insights.
 ---
 
@@ -53,35 +53,25 @@ With the Data and AI security dashboard, you can:
 > [!NOTE]
 > The data security dashboard feature is turned on at the subscription level.
 
-## Data security overview section
+## Data and AI security overview
 
 The Data and AI security overview section shows your cloud data and AI estate for each cloud. It includes all data and AI resources, divided into storage assets, managed databases, hosted databases (IaaS), and AI services.
 
+From here, you can see which of your resources are fully, partially, or not protected by the Defender CSPM, Defender for Storage, and Defender for Databases plans. You can also see which of your Data and AI resources have high-severity recommendations, alerts, or attack paths that need to be addressed.
+
 :::image type="content" source="media/data-aware-security-dashboard/data-security-overview.png" alt-text="Screenshot that shows the overview section of the data security view." lightbox="media/data-aware-security-dashboard/data-security-overview.png":::
-
-- **Coverage status** - displays the limited data coverage for resources without Defender CSPM workload protection:
-
-  - **Covered** – resources that have the necessary Defender CSPM, or Defender for Storage, or Defender for Databases enabled.
-  - **Partially covered** – missing either the Defender CSPM, Defender for Storage, or Defender for Storage plan. Select the tooltip to present a detailed view of what is missing.
-  - **Not covered** - resources that aren't covered by Defender CSPM, or Defender for Storage, or Defender for Databases.
-
-- **Sensitive resources** – displays how many resources are sensitive.
-
-  - **Sensitive resources requiring attention** - displays the number of sensitive resources that have either high severity security alerts or attack paths.
 
 ## Top issues
 
-The **Top issues** section provides a highlighted view of top active and potential risks to sensitive data.
+The Top issues section provides an overview of the most critical issues affecting your resources. This section presents your:
 
-- **Sensitive data resources with high severity alerts** - summarizes the active threats to sensitive data resources and which data types are at risk.
-
-- **Sensitive data resources in attack paths** - summarizes the potential threats to sensitive data resources  by presenting attack paths leading to sensitive data resources and which data types are at potential risk.
-
-- **Data queries in security explorer** - presents the top data-related queries in security explorer that helps focus on multicloud risks to sensitive data.
+- Alerts that have the highest severities based on the presented MITRE ATT&CK tactics.
+- Recommendations with both critical and high severities based on the presented risk factors.
+- Attack paths with both critical and high severities based on the presented risk factors.
 
     :::image type="content" source="media/data-aware-security-dashboard/top-issues.png" alt-text="Screenshot that shows the top issues section of the data security view." lightbox="media/data-aware-security-dashboard/top-issues.png":::
 
-## Closer look
+## Data closer look
 
 The **Closer look** section provides a more detailed view into the sensitive data within the organization.
 
@@ -91,6 +81,12 @@ The **Closer look** section provides a more detailed view into the sensitive dat
     :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
 
 You can select the **Manage data sensitivity settings** to get to the **Data sensitivity** page. The **Data sensitivity** page allows you to manage the data sensitivity settings of cloud resources at the tenant level, based on selective info types and labels originating from the Purview compliance portal, and [customize sensitivity settings](data-sensitivity-settings.md) such as creating your own customized info types and labels, and setting sensitivity label thresholds.
+
+- **Sensitive data resources with high severity alerts** - summarizes the active threats to sensitive data resources and which data types are at risk.
+
+- **Sensitive data resources in attack paths** - summarizes the potential threats to sensitive data resources  by presenting attack paths leading to sensitive data resources and which data types are at potential risk.
+
+- **Data queries in security explorer** - presents the top data-related queries in security explorer that helps focus on multicloud risks to sensitive data.
 
 :::image type="content" source="media/data-aware-security-dashboard/manage-security-sensitivity-settings.png" alt-text="Screenshot that shows where to access managing data sensitivity settings." lightbox="media/data-aware-security-dashboard/manage-security-sensitivity-settings.png":::
 
