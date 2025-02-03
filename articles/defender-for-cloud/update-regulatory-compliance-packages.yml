@@ -11,23 +11,16 @@ metadata:
 title: |
   Assign security standards
 introduction: |
-  Defender for Cloud's regulatory standards and benchmarks are represented as [security standards](security-policy-concept.md). Each standard is an initiative defined in Azure Policy.
+  Defender for Cloud's regulatory standards and benchmarks are represented as [security standards](security-policy-concept.md). Each standard is defined as an initiative in Azure Policy.
 
-  In Defender for Cloud, you assign security standards to specific scopes such as Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects that have Defender for Cloud enabled.
+  In Defender for Cloud, assign security standards to specific scopes such as Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects with Defender for Cloud enabled.
 
-  Defender for Cloud continually assesses the environment in scope against the standards. Based on assessments, it shows in-scope resources as compliant or noncompliant with the standard, and provides remediation recommendations.
+  Defender for Cloud continually assesses the scoped environment against the standards. Based on assessments, it shows whether in-scope resources are compliant or noncompliant with the standard and provides remediation recommendations.
 
-  This article describes how to add regulatory compliance standards as security standards in an Azure subscription, AWS account, or GCP project.
+  This article explains how to add regulatory compliance standards as security standards in an Azure subscription, AWS account, or GCP project.
 prerequisites:
-  summary: |  
-    - To add compliance standards, at least one of the following plans must be enabled: 
-      **Defender for Cloud Security Posture Management (CSPM)**, 
-      **Defender for Servers Plan 2**, 
-      **Defender for Containers**, 
-      **Defender for App Service**.
-
-      > [!NOTE]
-      > Regulatory compliance isn't included with Defender for Server's Plan 2 or Defender for API.
+  summary: |
+    - To access compliance standards in Defender for Cloud, onboard any Defender for Cloud plan, except Defender for Servers Plan 1 or Defender for API Plan 1.
       
     - You need `Owner` or `Policy Contributor` permissions to add a standard.
 procedureSection:
