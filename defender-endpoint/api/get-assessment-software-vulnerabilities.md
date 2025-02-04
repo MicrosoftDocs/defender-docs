@@ -2,8 +2,8 @@
 title: Export software vulnerabilities assessment per device
 description: The API response is per device and contains vulnerable software installed on your exposed devices and any known vulnerabilities in these software products. This table also includes operating system information, CVE IDs, and vulnerability severity information.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 01/31/2025
 ---
 
 # Export software vulnerabilities assessment per device
@@ -33,15 +33,15 @@ ms.date: 01/23/2025
 
 Returns all known software vulnerabilities and their details for all devices, on a per-device basis.
 
-Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
+Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
 
-1. [Export software vulnerabilities assessment **JSON response**](#1-export-software-vulnerabilities-assessment-json-response)  The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+1. [Export software vulnerabilities assessment: **JSON response**](#1-export-software-vulnerabilities-assessment-json-response)  The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-2. [Export software vulnerabilities assessment **via files**](#2-export-software-vulnerabilities-assessment-via-files) This API solution enables pulling larger amounts of data faster and more reliably. Via-files is recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
+2. [Export software vulnerabilities assessment: **via files**](#2-export-software-vulnerabilities-assessment-via-files) This API solution enables pulling larger amounts of data faster and more reliably. Via-files is recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
    - Call the API to get a list of download URLs with all your organization data.
    - Download all the files using the download URLs and process the data as you like.
 
-3. [Delta export software vulnerabilities assessment **JSON response**](#3-delta-export-software-vulnerabilities-assessment-json-response)  Returns a table with an entry for every unique combination of: DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId, and EventTimestamp.
+3. [Delta export software vulnerabilities assessment: **JSON response**](#3-delta-export-software-vulnerabilities-assessment-json-response)  Returns a table with an entry for every unique combination of: DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId, and EventTimestamp.
 The API pulls data in your organization as Json responses. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results.
 
    The full "software vulnerabilities assessment (JSON response)" is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device. However, the delta export API call is used to fetch only the changes that happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you only get specific information on new, fixed, and updated vulnerabilities. Delta export JSON response API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed?" or "how many new vulnerabilities were added to my organization?"
@@ -57,7 +57,7 @@ Data that is collected (using either _Json response_ or _via files_) is the curr
 
 ### 1.1 API method description
 
-This API response contains all the data of installed software per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID.
+This API response contains all the data of installed software per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, and CVEID.
 
 #### 1.1.1 Limitations
 
@@ -89,8 +89,8 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 > [!NOTE]
 >
 > - Each record is 1 KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so please use only the documented columns.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+> - The properties defined in the following table are listed alphabetically, by property ID. While running this API, the resulting output isn't necessarily returned in the same order listed in this table.
 
 <br>
 
@@ -100,17 +100,17 @@ CveId|String|Unique identifier assigned to the security vulnerability under the 
 CvssScore|String|The CVSS score of the CVE.|6.2
 DeviceId|String|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
 DeviceName|String|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com
-DiskPaths|Array\[string\]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]
+DiskPaths|Array[string]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]
 ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
 FirstSeenTimestamp|String|First time this product CVE was seen on the device.|2020-11-03 10:13:34.8476880
-Id|String|Unique identifier for the record.|123ABG55_573AG&mnp!
-LastSeenTimestamp|String|Last time the software vulnerability was seen on the device.|2020-11-03 10:13:34.8476880
+ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!
+LastSeenTimestamp|String|Last time the software was reported on the device.|2020-11-03 10:13:34.8476880
 OSPlatform|String|Platform of the operating system running on the device. This property indicates specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management supported operating systems and platforms for details.|Windows10 and Windows 11
 RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."|Servers
 RecommendationReference|String|A reference to the recommendation ID related to this software.|va-_-microsoft-_-silverlight
 RecommendedSecurityUpdate (optional)|String|Name or description of the security update provided by the software vendor to address the vulnerability.|April 2020 Security Updates
 RecommendedSecurityUpdateId (optional)|String|Identifier of the applicable security updates or identifier for the corresponding guidance or knowledge base (KB) articles|4550961
-RegistryPaths|Array\[string\]|Registry evidence that the product is installed in the device.|["HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight"]
+RegistryPaths|Array[string]|Registry evidence that the product is installed in the device.|["HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight"]
 SecurityUpdateAvailable|Boolean|Indicates whether a security update is available for the software.| Possible values are true or false.
 SoftwareName|String|Name of the software product.|Chrome
 SoftwareVendor|String|Name of the software vendor.|Google
@@ -297,11 +297,11 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 > [!NOTE]
 >
 > - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 6 hours.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 >
-> - Each record is approximately 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+> - Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
+> - Some extra columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
 <br>
 
@@ -309,7 +309,7 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|String|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
@@ -342,13 +342,13 @@ GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabiliti
 Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId. The API pulls data in your organization as Json responses. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results. Unlike the full software vulnerabilities assessment (JSON response), which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device, the delta export JSON response API call is used to fetch only the changes that happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you only get specific information on new, fixed, and updated vulnerabilities. Delta export JSON response API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed?" or "how many new vulnerabilities were added to my organization?"
 
 > [!NOTE]
-> It's highly recommended you use the full export software vulnerabilities assessment by device API call at least once a week and this additional export software vulnerabilities changes by device (delta) API call all the other days of the week. Unlike the other Assessments JSON response APIs, the "delta export" isn't a full export. The delta export includes only the changes that happened between a selected date and the current date (the "delta" API call).
+> It's highly recommended you use the full export software vulnerabilities assessment by device API call at least once a week and this extra export software vulnerabilities changes by device (delta) API call all the other days of the week. Unlike the other Assessments JSON response APIs, the "delta export" isn't a full export. The delta export includes only the changes that happened between a selected date and the current date (the "delta" API call).
 
 #### 3.1.1 Limitations
 
 - Maximum page size is 200,000.
 - The sinceTime parameter has a maximum of 14 days.
-- Rate limitations for this API are 30 calls per minute and 1000 calls per hour.
+- Rate limitations for this API are 30 calls per minute and 1,000 calls per hour.
 
 ### 3.2 Permissions
 
@@ -394,7 +394,7 @@ DiskPaths|Array[string]|Disk evidence that the product is installed on the devic
 EventTimestamp|String|The time this delta event was found.|2021-01-11T11:06:08.291Z
 ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit  
 FirstSeenTimestamp|String|First time the CVE of this product was seen on the device.|2020-11-03 10:13:34.8476880  
-Id|String|Unique identifier for the record.|123ABG55_573AG&mnp!  
+ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!  
 LastSeenTimestamp|String|Last time the CVE was seen on the device.|2020-11-03 10:13:34.8476880  
 OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management supported operating systems and platforms for details.|Windows10 and Windows 11 
 RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."|Servers  

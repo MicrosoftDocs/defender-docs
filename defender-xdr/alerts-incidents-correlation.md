@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 10/25/2024
+ms.date: 02/02/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -41,11 +41,11 @@ The criteria used by the Defender portal to correlate alerts together in a singl
 
 While Microsoft Defender already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
 
-For more information on moving an alert from one incident to another, see [Move alerts from one incident to another in the Microsoft Defender portal](move-alert-to-another-incident.md)
+For more information on moving an alert from one incident to another, see [Move alerts from one incident to another in the Microsoft Defender portal](move-alert-to-another-incident.md).
 
 ## Incident correlation and merging
 
-The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents, and between alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
+The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents and alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
 
 ### Criteria for merging incidents
 
@@ -73,9 +73,7 @@ The contents of the incidents are handled in the following ways:
 - A **`Redirected`** tag is added to the source incident.
 - Entities (assets etc.) follow the alerts they're linked to.
 - Analytics rules recorded as involved in the creation of the source incident are added to the rules recorded in the target incident.
-- Comments and activity log entries in the source incident are moved to the target incident.
-
-To see the source incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
+- Currently, comments and activity log entries in the source incident are *not* moved to the target incident.<br>To see the source incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
 
 ### When incidents aren't merged
 

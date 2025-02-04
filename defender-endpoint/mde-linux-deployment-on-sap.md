@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/06/2025
+ms.date: 02/04/2025
 ms.custom: 
 - partner-contribution
 ---
@@ -262,7 +262,7 @@ sudo mdatp diagnostic create
 
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md#run-the-connectivity-test)
 
-- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md#troubleshoot-performance-issues-using-microsoft-defender-for-endpoint-client-analyzer)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
 ## Related articles
 
