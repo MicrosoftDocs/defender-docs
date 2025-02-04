@@ -27,16 +27,10 @@ With the Data and AI security dashboard, you can:
 
 :::image type="content" source="media/data-aware-security-dashboard/data-security.png" alt-text="Screenshot that shows you how to navigate to the data security dashboard." lightbox="media/data-aware-security-dashboard/data-security.png":::
 
-## Prerequisites
-
-**To view the dashboard**:
-
-- You must [enable Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md).
-- [Enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) within the Defender CSPM plan.  
-
-**To receive the alerts for data sensitivity**:
-
-- You must [enable Defender for Storage](tutorial-enable-storage-plan.md).
+> [!NOTE]
+> The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans you have enabled.
+>
+> To have full access to the dashboard you must enable, [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md),[sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md),  [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
 
 ## Required permissions and roles
 
@@ -49,9 +43,6 @@ With the Data and AI security dashboard, you can:
 **Role** - the minimum required privileged role-based access control role of **Security explorer**.
 
 - Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
-
-> [!NOTE]
-> The data security dashboard feature is turned on at the subscription level.
 
 ## Data and AI security overview
 

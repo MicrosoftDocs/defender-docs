@@ -1,0 +1,47 @@
+---
+title: Review AI security alerts
+description: Learn how to review AI security alerts in the Data and AI security dashboard in Microsoft Defender for Cloud.
+ms.topic: how-to
+ms.date: 02/04/2025
+---
+
+# Review AI security alerts
+
+Microsoft Defender for Cloud's AI security alerts provide insights into potential threats and vulnerabilities in your AI environments. The alerts help you identify and respond to security issues quickly, enabling you to take proactive measures to mitigate risks.
+
+Through the use of the Data and AI security dashboard, you can easily navigate and access critical information about your AI environments. The dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can view AI security alerts in one place, making it easier to manage your AI environments and improve your overall security posture.
+
+## Prerequisites
+
+- Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md).
+- Enable [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
+- Enable [threat protection for AI workloads](ai-onboarding.md).
+
+**Roles and permissions**: 
+
+- **Permissions**:
+
+    - Microsoft.Security/assessments/read
+    - Microsoft.Security/assessments/subassessments/read
+    - Microsoft.Security/alerts/read
+
+- **Role** - the minimum required privileged role-based access control role of **Security explorer**.
+
+- Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
+
+## Review AI alerts
+
+Alerts are generated when Defender for Cloud detects potential security issues in your AI environments. You can find AI security alerts in the Data and AI security dashboard.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Navigate to **Defender for Cloud** > **Data and AI security dashboard**.
+
+1. Locate the AI threat protection section and select **View all AI Threat protection alerts**.
+
+Once you have navigated to the AI alerts page you can then [investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Manage and respond to security alerts](managing-and-responding-alerts.yml)
