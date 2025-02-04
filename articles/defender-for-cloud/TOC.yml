@@ -688,10 +688,10 @@
   - name: Data security posture
     items:
     - name: Overview
-      items: concept-data-security-posture.md
+      href: concept-data-security-posture.md
     - name: Support and prerequisites
       href: concept-data-security-posture-prepare.md
-    - name: Supported sensitive data  information
+    - name: Supported sensitive data information
       href: sensitive-info-types.md
     - name: Discover sensitive data
       href: 
@@ -707,7 +707,7 @@
   - name: AI security posture
     items:
     - name: Overview
-      items: ai-security-posture.md
+      href: ai-security-posture.md
     - name: Discover generative AI workloads
       href: identify-ai-workload-model.md
     - name: Explore risks to pre-deployment generative AI artifacts
