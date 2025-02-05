@@ -38,7 +38,7 @@ sections:
           Yes, you can move to the new Defender for Storage plan with per-storage account pricing through the Azure portal or other supported methods. This change isn't automatic, you'll need to actively make the switch. Learn about how to [migrate to the new Defender for Storage](defender-for-storage-classic-migrate.md).
 
           > [!NOTE]
-          > Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans. For more information, visit [migrate to the new plan](https://aka.ms/DF-Storage/NewPlanMigration)
+          > Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans. For more information, visit [migrate to the new plan](https://aka.ms/DF-Storage/NewPlanMigration).
 
       - question: |
           Can I exclude specific storage accounts from protection in the new Defender for Storage plan?
