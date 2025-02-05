@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: dlanger
 author: dlanger
 ms.localizationpriority: medium
-ms.date: 01/20/2025
+ms.date: 02/05/2025
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -14,21 +14,26 @@ ms.collection:
 - usx-security
 ms.topic: overview
 
-# customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, including tools like Microsoft Security Exposure Management (Exposure Management) and programs like Continuous Threat Exposure Management (CTEM), can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
+# customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, specifically tools like Microsoft Security Exposure Management can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
 ---
 
-# What is security posture?
+# How Exposure Management helps with security posture
 
 Security posture refers to an organization’s strength of protection over its networks, data, and systems (hardware and software). It measures how vulnerable your organization is to cyber-attacks or data breaches.
 
-Microsoft Security Exposure Management (MSEM) is a proactive approach to managing and mitigating security risks. Use tools like Exposure Management to get a comprehensive view of your organization's security posture, including key metrics, critical assets, and potential vulnerabilities.
+The cyber landscape is becoming more perilous with increasing threat actors, faster phishing attacks, and more password attacks. Cyber jobs are harder due to regulatory updates, numerous security tools, and open jobs. Organizations face exposure with critical assets and open attack paths.
+
+Microsoft Security Exposure Management transforms the attack surface by providing tools to discover, assess, and reduce risk with confidence. It integrates with various Microsoft Defender products and offers a unified view of internal and external exposure, potential attack paths, and critical asset protection.
 
 Proactively protecting your organization from potential data breaches is more effective than just doing damage control once a breach occurs.
-Continuous Threat Exposure Management (CTEM) steps enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
+
+Continuous Threat Exposure Management (CTEM) steps can enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
 
 ## Scoping - Make a plan
 
 A well-defined plan is essential for effective exposure management. Your plan should outline the purpose and objectives of posture management for your organization, aligning with legal and regulatory requirements and the risks to your organization's goals. Identify internal stakeholders and important external parties and establish clear roles and responsibilities.
+
+Continuous Threat Exposure Management (CTEM) steps can enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
 
 ## Discovery - Find vulnerabilities
 
@@ -41,6 +46,8 @@ Maintain an up-to-date inventory of your assets, including on-premises resources
 ## Education and training
 
 Security posture management is a complex topic that requires a wide range of technical knowledge. Continuously educate and train your operations and incident response staff on Exposure Management technologies and how your organization uses them. This ensures your team is prepared to handle security incidents effectively.
+
+The evolution of vulnerability management includes TI-Based, Risk-Based, and Exposure Management stages. Continuous Exposure Management involves attack surface management, attack path analysis, and unified exposure insights. Microsoft integrates exposure management data across Defender products to enhance security posture.
 
 ### Incident classification framework
 
@@ -55,6 +62,8 @@ Learn more here, [What is Microsoft Security Exposure Management?](/security-exp
 ## Identify attack entry points
 
 Exposure Management helps you identify and map out potential attack paths, giving you visibility into critical choke points that need to be addressed. This proactive approach allows you to close down attack paths before they can be exploited.
+
+80% of organizations have at least one open attack path to a critical asset. 61% of attack paths lead to sensitive user accounts. Only 1% of total assets in organizations are critical or sensitive.
 
 Learn more here, [Overview of attack surface management](/security-exposure-management/cross-workload-attack-surfaces)
 
