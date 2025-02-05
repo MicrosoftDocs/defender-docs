@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 01/10/2025
+ms.date: 02/04/2025
 ---
 
 # Investigate entities on devices using live response
@@ -63,6 +63,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
   - **Windows Server 2012 R2** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
 
   - **Windows Server 2016** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
+
     > [!NOTE]
     > For Windows Server 2012 R2 or Windows Server 2016, you must have the [Unified Agent](update-agent-mma-windows.md#update-mma-on-your-devices) installed, and it is recommended to patch to latest sensor version with KB5005292. Live response doesn't work as expected for offline down-level servers onboarded using the streamlined method, because of the static proxy. Consider using a system proxy instead.
     
@@ -71,6 +72,8 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
 
   - **Windows Server 2022**
+
+  - **Windows Server 2025** (beginning in February 2025 and rolling out over the next several weeks)
 
 - **Enable live response from the advanced settings page**.
 

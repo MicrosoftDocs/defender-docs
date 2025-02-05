@@ -164,7 +164,7 @@
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019, and 2022
+          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019 and later
             href: configure-server-endpoints.md
           - name: Onboard Windows devices using Configuration Manager
             href: configure-endpoints-sccm.md
@@ -924,11 +924,10 @@
             href: troubleshoot-av-performance-issues-with-wprui.md
         - name: Troubleshoot Microsoft Defender Antivirus performance issues
           items:
-          
-        - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
-          href: troubleshoot-microsoft-defender-antivirus.yml
-        - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
-          href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
+          - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
+            href: troubleshoot-microsoft-defender-antivirus.yml
+          - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
+            href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
 
       - name: Behavioral blocking and containment
         items:
