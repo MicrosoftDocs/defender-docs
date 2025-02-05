@@ -3,11 +3,11 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 10/30/2024
+ms.date: 02/05/2025
 audience: ITPro
 ms.topic: reference
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: pahuijbr, tudobril, yongrhee
 manager: deniseb
@@ -98,6 +98,18 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### January-2025 (Platform: 4.18.25010.xxxx | Engine: 1.1.25010.xxxx)
+
+- Security intelligence update version: **x.x.x.x**
+- Release date: **February 18, 2025 (Engine) / February 18, 2025 (Platform)**
+- Platform: **4.18.225010.xxxx**
+- Engine: **1.1.25010.xxxx**
+- Support phase: **Security and Critical Updates**
+
+>[!NOTE]
+> Release dates are tentative and subject to change.
+
+
 ### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
 
 - Security intelligence update version: **1.421.12.0**
@@ -107,7 +119,21 @@ Updates contain:
 - Support phase: **Security and Critical Updates**
 
 #### What's new
-
+- Improved handling of ASR rules exclusions.
+- Improved `AMSI` scan performance via changes to exclusion handling
+- Fixed Control Folder Access (CFA) protection for OneDrive when backup is enabled.
+- Fixed performance issues with Full scans when triggered from the portal.
+- Fixed `ASR` warn mode processing for containerized objects (Office files) when unblock option is selected.
+- Fixed `ASR` warn mode processing when exclusions are applied.
+- Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
+- Implemented `AzureAd` cache to handle offline environments with Device control.
+- Fixed `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
+- Fixed Tamper protection for Exclusions where exclusion policy was handled by System Center Configuration Manager.
+- Fixed issue with Device Control auditing of removable media.
+- Fixed issue with `MDM` policy management on Azure Virtual Desktop.
+- Added support for wildcards in Tamper protection trusted process.
+- Improved Device control policy enforcement in offline environments.
+- Fixed issue in `WDNisDrv.sys` driver causing system hangs during shutdown.
 - Improved detection logic to reduce false positives related to the ASR rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
 - Resolved an issue that could lead to a Windows device to be marked as [non-compliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
 - Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting was not honored.
