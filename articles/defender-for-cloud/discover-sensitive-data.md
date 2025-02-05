@@ -45,7 +45,9 @@ Resources containing sensitive data are at risk of exposure to unauthorized user
 
 1. Select the Resource name to view all recommendations and alerts associated with the resource.
 
-1. [Remediate the recommendations](implement-security-recommendations.md) and [respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+1. [Remediate the recommendations](implement-security-recommendations.md).
+
+1. [Respond to the security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
 
 ## Related content
 
