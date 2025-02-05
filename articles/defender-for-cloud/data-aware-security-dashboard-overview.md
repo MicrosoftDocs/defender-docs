@@ -32,18 +32,6 @@ With the Data and AI security dashboard, you can:
 >
 > To have full access to the dashboard you must enable, [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md),[sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md),  [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
 
-## Required permissions and roles
-
-**Permissions**:
-
-- Microsoft.Security/assessments/read
-- Microsoft.Security/assessments/subassessments/read
-- Microsoft.Security/alerts/read
-
-**Role** - the minimum required privileged role-based access control role of **Security explorer**.
-
-- Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
-
 ## Data and AI security overview
 
 The Data and AI security overview section shows your cloud data and AI estate for each cloud. It includes all data and AI resources, divided into storage assets, managed databases, hosted databases (IaaS), and AI services.
@@ -75,15 +63,7 @@ This section presents:
 
     :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
 
-You can select the **Manage data sensitivity settings** to get to the **Data sensitivity** page. The **Data sensitivity** page allows you to manage the data sensitivity settings of cloud resources at the tenant level, based on selective info types and labels originating from the Purview compliance portal, and [customize sensitivity settings](data-sensitivity-settings.md) such as creating your own customized info types and labels, and setting sensitivity label thresholds.
-
-- **Sensitive data resources with high severity alerts** - summarizes the active threats to sensitive data resources and which data types are at risk.
-
-- **Sensitive data resources in attack paths** - summarizes the potential threats to sensitive data resources  by presenting attack paths leading to sensitive data resources and which data types are at potential risk.
-
-- **Data queries in security explorer** - presents the top data-related queries in security explorer that helps focus on multicloud risks to sensitive data.
-
-:::image type="content" source="media/data-aware-security-dashboard/manage-security-sensitivity-settings.png" alt-text="Screenshot that shows where to access managing data sensitivity settings." lightbox="media/data-aware-security-dashboard/manage-security-sensitivity-settings.png":::
+You can select the **Manage sensitivity settings** to get to the Data sensitivity page. The Data sensitivity page allows you to manage the data sensitivity settings of cloud resources at the tenant level, based on selective info types and labels originating from the Purview compliance portal. You can [customize sensitivity settings](data-sensitivity-settings.md) such as information types, labels, and setting sensitivity label thresholds.
 
 ## Related content
 
