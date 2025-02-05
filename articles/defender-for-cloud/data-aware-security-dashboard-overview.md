@@ -14,51 +14,21 @@ A key benefit of the Data and AI Dashboard is its ability to quickly show your o
 
 ## Benefits of the Data and AI security dashboard
 
-## Benefits of the Data and AI security dashboard
-
 The Data and AI security dashboard allows you to:
 
-- Track and manage data and AI resources to stay informed and in control.
-- Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues to make informed decisions and take proactive measures.
-- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
-
-The Data and AI security dashboard allows you to:
-
-- Track and manage data and AI resources to stay informed and in control.
-- Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues to make informed decisions and take proactive measures.
-- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
-
-The Data and AI security dashboard allows you to:
-
-- Track and manage data and AI resources to stay informed and in control.
-- Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues to make informed decisions and take proactive measures.
-- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
-
-The Data and AI security dashboard allows you to:
-
-- Track and manage data and AI resources to stay informed and in control.
-- Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues to make informed decisions and take proactive measures.
-- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
-
-The Data and AI security dashboard allows you to:
-
-- Track and manage data and AI resources to stay informed and in control.
-- Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues to make informed decisions and take proactive measures.
-- Explore potential threats by highlighting [attack paths](concept-attack-path.md) that lead to sensitive data.
-- View issue tracking, recommendations, and data threat analysis in one place.
-- Manage data and AI environments on a centralized platform.
-- View the most critical threats to your data and AI environments to mitigate issues and improve your overall security posture.
-- Explore useful data insights by highlighting data queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
+- Track and manage data and AI resources to stay informed and maintain control.
+- Access critical information and complete tasks efficiently.
+- Make informed decisions and take proactive measures regarding data and AI security issues.
+- Identify potential threats by highlighting [attack paths](concept-attack-path.md) that lead to sensitive data.
+- View issue tracking, recommendations, and data threat analysis in a single location.
+- Manage data and AI environments on a unified platform.
+- Mitigate critical threats and improve your overall security posture on your data and AI environments.
+- Discover useful data insights by highlighting data queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 
 :::image type="content" source="media/data-aware-security-dashboard/data-security.png" alt-text="Screenshot that shows you how to navigate to the data security dashboard." lightbox="media/data-aware-security-dashboard/data-security.png":::
 
 > [!NOTE]
-> The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans you have enabled.
+> The data security dashboard feature enables at the subscription level. The dashboard information bases on the data and AI resources in your subscription and the plans enabled on your subscription.
 >
 > To have full access to the dashboard, you must enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md),[sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md),  [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
 
