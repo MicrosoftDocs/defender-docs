@@ -8,21 +8,51 @@ ms.date: 02/03/2025
 
 # Data and AI security dashboard (Preview)
 
-Microsoft Defender for Cloud's Data and AI security dashboard enhances customer engagement by providing a centralized platform to monitor and manage data and AI resources. The dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can easily navigate and access critical information through the dashboard's elements to stay informed about your data and AI environments.
+Microsoft Defender for Cloud's Data and AI security dashboard enhances customer engagement by providing a centralized platform to monitor and manage data and AI resources. The dashboard integrates features like issue tracking, recommendations, and data threat analysis. You can navigate and access critical information through the dashboard's elements to stay informed about your data and AI environments.
 
-One key benefit of the Data and AI Dashboard is its ability to quickly show your organization's most critical data and security issues. This feature helps you make informed decisions and take proactive measures to mitigate risks.
+A key benefit of the Data and AI Dashboard is its ability to quickly show your organization's most critical data and security issues. This feature helps you make informed decisions and take proactive measures to reduce risks.
 
 ## Benefits of the Data and AI security dashboard
 
-With the Data and AI security dashboard, you can:
+## Benefits of the Data and AI security dashboard
 
-- Track and manage data and AI resources, making it easier to stay informed and in control.
+The Data and AI security dashboard allows you to:
+
+- Track and manage data and AI resources to stay informed and in control.
 - Access critical information and perform tasks efficiently.
-- View the most critical data and AI security issues, enabling you to make informed decisions and take proactive measures.
+- View the most critical data and AI security issues to make informed decisions and take proactive measures.
+- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
+
+The Data and AI security dashboard allows you to:
+
+- Track and manage data and AI resources to stay informed and in control.
+- Access critical information and perform tasks efficiently.
+- View the most critical data and AI security issues to make informed decisions and take proactive measures.
+- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
+
+The Data and AI security dashboard allows you to:
+
+- Track and manage data and AI resources to stay informed and in control.
+- Access critical information and perform tasks efficiently.
+- View the most critical data and AI security issues to make informed decisions and take proactive measures.
+- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
+
+The Data and AI security dashboard allows you to:
+
+- Track and manage data and AI resources to stay informed and in control.
+- Access critical information and perform tasks efficiently.
+- View the most critical data and AI security issues to make informed decisions and take proactive measures.
+- Explore potential threats by highlighting## Benefits of the Data and AI security dashboard
+
+The Data and AI security dashboard allows you to:
+
+- Track and manage data and AI resources to stay informed and in control.
+- Access critical information and perform tasks efficiently.
+- View the most critical data and AI security issues to make informed decisions and take proactive measures.
 - Explore potential threats by highlighting [attack paths](concept-attack-path.md) that lead to sensitive data.
 - View issue tracking, recommendations, and data threat analysis in one place.
 - Manage data and AI environments on a centralized platform.
-- View the most critical threats to your data and AI environments, enabling you to mitigate issues and improve your overall security posture.
+- View the most critical threats to your data and AI environments to mitigate issues and improve your overall security posture.
 - Explore useful data insights by highlighting data queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 
 :::image type="content" source="media/data-aware-security-dashboard/data-security.png" alt-text="Screenshot that shows you how to navigate to the data security dashboard." lightbox="media/data-aware-security-dashboard/data-security.png":::
@@ -30,7 +60,7 @@ With the Data and AI security dashboard, you can:
 > [!NOTE]
 > The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans you have enabled.
 >
-> To have full access to the dashboard you must enable, [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md),[sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md),  [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
+> To have full access to the dashboard, you must enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md),[sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md),  [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
 
 ## Data and AI security overview
 
@@ -45,25 +75,36 @@ From here, you can see which of your resources are fully, partially, or not prot
 The Top issues section gives an overview of the most critical issues affecting your resources. This section presents your:
 
 - Alerts with the highest severities based on the presented MITRE ATT&CK tactics.
-- Recommendations with critical and high severities based on the presented risk factors.
-- Attack paths with critical and high severities based on the presented risk factors.
+- Recommendations with critical and high severities.
+- Attack paths with critical and high severities.
 
     :::image type="content" source="media/data-aware-security-dashboard/top-issues.png" alt-text="Screenshot that shows the top issues section of the data security view." lightbox="media/data-aware-security-dashboard/top-issues.png":::
 
 ## Data closer look
 
-The Data closer look section gives an overview of the most critical issues your data is facing, discovered by Defender for Databases.
+The Data closer look section gives an overview of the most critical issues your data is facing.
 
 This section presents:
 
-- Which of your resources contain sensitive data and the type of data.
-- Alerts on managed databases and storage, prioritized by severity.
+- The top type of sensitive data discovered in your cloud resources.
+- The resources that contain sensitive data based on labels.
 - Data queries to locate sensitive data using the security explorer.
 - The location of resources exposed to the internet, sorted by storage assets, managed databases, and hosted databases, along with the ability to view all internet-exposed data resources.
 
     :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
 
-You can select the **Manage sensitivity settings** to get to the Data sensitivity page. The Data sensitivity page allows you to manage the data sensitivity settings of cloud resources at the tenant level, based on selective info types and labels originating from the Purview compliance portal. You can [customize sensitivity settings](data-sensitivity-settings.md) such as information types, labels, and setting sensitivity label thresholds.
+Select **Manage sensitivity settings** to go to the Data sensitivity page. The Data sensitivity page allows you to manage the data sensitivity settings of cloud resources at the tenant level, based on selective info types and labels from the Purview compliance portal. You can [customize sensitivity settings](data-sensitivity-settings.md) such as information types, labels, and setting sensitivity label thresholds.
+
+## AI SPM discovery
+
+The AI SPM discovery section presents an overview of the most critical issues your AI workloads are facing.
+
+This section presents:
+
+- All of your AI resources and their locations within your environment.
+- All of the alerts detected, sorted by severity.
+- An AI query to locate sensitive data using the security explorer.
+- An AI query to locate containers in your environment with vulnerabilities.
 
 ## Related content
 
