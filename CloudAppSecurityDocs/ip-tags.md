@@ -40,7 +40,7 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 
     - **Corporate**: These IPs should be all the public IP addresses of your internal network, your branch offices, and your Wi-Fi roaming addresses.
 
-    - **Risky**: These IPs should be any IP addresses that you consider risky. They can include suspicious IP addresses you've seen in the past, IP addresses in your competitors' networks, and so on.
+    - **Risky**: These IPs should be any IP addresses that you consider risky. They can include suspicious IP addresses you've seen in the past, IP addresses in your competitors' networks, and so on. It is suggested to be cautious with applying automatic governance actions only based on risky IP, since there are some cases when IPs that serve malicious actors are also being in use by legitimate employees, hence our recommendation is to examine each case by itself.
 
     - **VPN**: These IPs should be any IP addresses you use for remote workers. By using this category, you can avoid raising [impossible travel](anomaly-detection-policy.md#impossible-travel) alerts when employees connect from their home locations via the corporate VPN.
 

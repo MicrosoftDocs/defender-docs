@@ -6,7 +6,7 @@ ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: conceptual
-ms.date: 01/06/2025
+ms.date: 01/23/2025
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
@@ -67,10 +67,18 @@ gsv WinDefend, WdBoot, WdFilter, WdNisSvc, WdNisDrv | ft -auto DisplayName, Name
 
 **A:** We don't support the manual modification of the start type of the services and drivers for Microsoft Defender Antivirus in Windows images. On Windows clients, the supported method is by your non-Microsoft antivirus registering in Windows Security Center (WSC) api. Or, on Windows Server, you can uninstall the Microsoft Defender Antivirus feature by using roles and features MMC or by running the following PowerShell command (as an administrator): 
 
+Windows Server 2019 and newer
 ```powershell
 
 Uninstall-WindowsFeature Windows-Defender
 
+```
+
+Windows Server 2016
+```powershell
+
+Uninstall-WindowsFeature Windows-Defender
+Uninstall-WindowsFeature Windows-Defender-Gui
 ```
 
 **Q:** Can I use Microsoft Defender Antivirus in passive mode without onboarding to Microsoft Defender for Endpoint?

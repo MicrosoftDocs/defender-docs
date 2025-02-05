@@ -54,9 +54,9 @@ There are two ways to capture the Windows Performance Recorder (WPRUI) trace:
 1. Run the MDE Client Analyzer with the `-a` and `-v` switches.
 
    PowerShellCopy
-   
+
    ```
-   C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd
+   C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -a -v
    ```
    
 ## Manually
@@ -90,7 +90,7 @@ There are two ways to capture the Windows Performance Recorder (WPRUI) trace:
 
    ![Screenshot showing the in-file.](media/wpr-infile.png)
    
-   > [!WARNING]
+      > [!WARNING]
    > If your Windows Server has 64 GB of RAM or more, use the custom measurement `Microsoft Defender for Endpoint analysis for large servers` instead of `Microsoft Defender for Endpoint analysis`. Otherwise, your system might consume a high amount of nonpaged pool memory or buffers, leading to system instability. To address this, explore **Resource Analysis** to choose profiles to add.
    > This custom profile provides the necessary context for in-depth performance analysis.
 

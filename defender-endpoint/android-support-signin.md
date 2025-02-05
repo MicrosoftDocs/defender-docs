@@ -104,7 +104,7 @@ Enable the required permission on Xiaomi devices.
 
 - **Xiaomi**
 
-Defender App asks for Battery Optimization/Permanent Protection permission on devices as part of app onboarding, and selecting **Allow** returns an error that the permission couldn't be set. It only affects the last permission called "Permanent Protection." 
+Defender App asks for Battery Optimization/Permanent Protection permission on devices as part of app onboarding, and selecting **Allow** returns an error that the permission couldn't be set. It only affects the last permission called "Permanent Protection."
 
 **Cause:**
 
@@ -116,34 +116,33 @@ The Android devices Battery Optimization screen opens automatically as part of t
 
 1. Select Work Profile to see all of the work profile apps
 
-![Image of Battery Optimisation screen](media/android-support-signin/image.png)
-2. Tap on **Not optimised** and select **All Apps**
+   ![Image of Battery Optimization screen](media/android-support-signin/image.png)
 
-![Image of Optimisation dropdown menu](media/android-support-signin/image1.png)
+2. Tap on **Not optimized** and select **All Apps**
 
-![Image of All Apps option in the dropdown](media/android-support-signin/image2.png)
+   ![Image of Optimization dropdown menu](media/android-support-signin/image1.png)
+
+   ![Image of All Apps option in the dropdown](media/android-support-signin/image2.png)
 
 3. Scroll down to find **Microsoft Defender** and tap on it
 
-![Image of All Apps including Microsoft Defender](media/android-support-signin/image3.png)
+   ![Image of All Apps including Microsoft Defender](media/android-support-signin/image3.png)
 
-4. Select **Don’t Optimise** option and tap on **Done**
+4. Select **Don't Optimize** option and tap on **Done**
 
-![Image of the Microsoft Defende Optimise drop down](media/android-support-signin/image4.png)
+   ![Image of the Microsoft Defender Optimize drop down](media/android-support-signin/image4.png)
 
 5. Navigate back to Defender
 
 **Solution 2** (needed in case the Solution 1 does not work):
 
-1. Install MDE app in personal profile. (Sign-in isn't required.) 
- 2. Open the Company Portal and tap on Settings. 
- 3. Go to the Battery Optimization section, tap on the **Turn Off** button, and then select on **Allow** to turn off Battery Optimization for the Company Portal. 
- 4. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens. 
- 5. Find the Defender app and tap on it. 
- 6. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
- 7. The application shouldn't be uninstalled from personal profile for this to work. 
-
-
+1. Install MDE app in personal profile. (Sign-in isn't required.)
+2. Open the Company Portal and tap on Settings.
+3. Go to the Battery Optimization section, tap on the **Turn Off** button, and then select on **Allow** to turn off Battery Optimization for the Company Portal.
+4. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens. 
+5. Find the Defender app and tap on it.
+6. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
+7. The application shouldn't be uninstalled from personal profile for this to work.
 
 ## Unable to use banking applications with MDE app
 
@@ -153,16 +152,15 @@ The Android devices Battery Optimization screen opens automatically as part of t
 
 **Solution:**
 Users need to disable MDE VPN from the Settings page. The following steps can be used:
+
 1. Go to Settings on the mobile device.
 2. Search for VPN or open 'Network and Internet' and select on VPN.
 3. Select on Microsoft Defender and select Disconnect.
 
 Users should enable VPN when they're no longer using the banking app to ensure that their devices are protected. 
 
->[!NOTE]
-> This a temporary workaround. We are working on other alternatives to provide users more control over the VPN settings from within the app. 
-
-
+> [!NOTE]
+> This a temporary workaround. We are working on other alternatives to provide users more control over the VPN settings from within the app.
 
 ## Send in-app feedback
 
