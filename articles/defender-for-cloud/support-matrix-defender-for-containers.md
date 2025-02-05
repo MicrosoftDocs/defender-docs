@@ -34,7 +34,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | ACR, AKS | GA | GA | Enable **Agentless discovery on Kubernetes** toggle | Agentless | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
 | [Control plane hardening](defender-for-containers-architecture.md) <sup>[1](#footnote1spm)</sup> | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | ACR, AKS | GA | GA | Activated with plan | Agentless | Free | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | [Kubernetes data plane hardening](kubernetes-workload-protections.md) <sup>[1](#footnote1spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Enable **Azure Policy for Kubernetes** toggle | Azure Policy | Free | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
-| Docker CIS | Docker CIS benchmark | VM, Virtual Machine Scale Set | GA | - | Enabled with plan | Log Analytics agent | Defender for Servers Plan 2 | Commercial clouds<br><br> National clouds: Azure Government, Microsoft Azure operated by 21Vianet  |
+| CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | AKS | GA | - | Assigned as a security standard | Agentless | Defender for Containers **OR** Defender CSPM | Commercial clouds<br><br> |
 
 <sup><a name="footnote1spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
 
@@ -93,7 +93,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Security posture management  | Comprehensive inventory capabilities | ECR, EKS | GA | GA | Agentless| Defender for Containers **OR** Defender CSPM |
 | Security posture management  | Attack path analysis | ECR, EKS | GA | GA | Agentless | Defender CSPM |
 | Security posture management  | Enhanced risk-hunting | ECR, EKS | GA | GA | Agentless | Defender for Containers **OR** Defender CSPM |
-| Security posture management | Docker CIS | EC2 | GA | - | Log Analytics agent | Defender for Servers Plan 2 |
+| Security posture management | CIS Amazon Elastic Kubenretes Service | EKS | GA | - | Agentless | Defender for Containers **OR** Defender CSPM |
 | Security posture management | Control plane hardening | - | - | - | - | - |
 | Security posture management | Kubernetes data plane hardening | EKS | GA| - | Azure Policy for Kubernetes | Defender for Containers |
 | [Vulnerability assessment](agentless-vulnerability-assessment-aws.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-aws---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| ECR | GA | GA | Agentless | Defender for Containers or Defender CSPM |
@@ -141,7 +141,7 @@ If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see
 | Security posture management  | Comprehensive inventory capabilities | GAR, GCR, GKE | GA | GA | Agentless| Defender for Containers **OR** Defender CSPM |
 | Security posture management  | Attack path analysis | GAR, GCR, GKE | GA | GA | Agentless | Defender CSPM |
 | Security posture management  | Enhanced risk-hunting | GAR, GCR, GKE | GA | GA | Agentless | Defender for Containers **OR** Defender CSPM |
-| Security posture management | Docker CIS | GCP VMs | GA | - | Log Analytics agent | Defender for Servers Plan 2 |
+| Security posture management | CIS Google Kubernetes Engine | GKE | GA | - | Agentless | Defender for Containers **OR** Defender CSPM |
 | Security posture management | Control plane hardening | GKE | GA | GA | Agentless | Free |
 | Security posture management | Kubernetes data plane hardening | GKE | GA| - | Azure Policy for Kubernetes | Defender for Containers |
 | [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| GAR, GCR | GA | GA | Agentless | Defender for Containers or Defender CSPM |
