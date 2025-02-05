@@ -1,0 +1,53 @@
+---
+title: Discover sensitive data
+description: Learn how to discover resources with sensitive data types in the Data and AI security dashboard in Microsoft Defender for Cloud.
+ms.topic: how-to
+ms.date: 02/05/2025
+#customer intent: As a security administrator, I want to discover sensitive data so that I can protect it.
+---
+
+# Discover sensitive data
+
+Microsoft Defender for Cloud's ability to detect resources with sensitive info types helps you identify and protect sensitive data in your cloud environment. The sensitive data discovery feature in Defender for Cloud automatically scans your cloud resources to identify sensitive data types, such as credit card numbers, social security numbers, and more. This feature helps you understand where sensitive data resides in your cloud environment and take steps to protect it.
+
+## Prerequisites
+
+- Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md).
+- Enable [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
+- Enable [Defender for Storage](tutorial-enable-storage-plan.md).
+- Enable [Defender for Databases](tutorial-enable-databases-plan.md).
+
+**Roles and permissions**: 
+
+- **Permissions**:
+
+    - Microsoft.Security/assessments/read
+    - Microsoft.Security/assessments/subassessments/read
+    - Microsoft.Security/alerts/read
+
+- **Role** - the minimum required privileged role-based access control role of **Security explorer**.
+
+- Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
+
+## View resources with sensitive data
+
+Resources can contain data that is considered sensitive are at risk of being exposed to unauthorized users. The sensitive data discovery feature in Defender for Cloud helps you identify resources that contain sensitive data types so that you can take proactive steps to prevent data breaches.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Navigate to **Defender for Cloud** > **Data and AI security dashboard**.
+
+1. Locate the Data closer look section and select **View all resources with sensitive info types**.
+
+1. Select **search**.
+
+1. Review each record found and select **View details** to see more information about the resource.
+
+1. Select the Resource name to view all recommendations and alerts associated with the resource.
+
+1. [Remediate the recommendations](implement-security-recommendations.md) and [respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+
+## Related content
+
+- [Remediate recommendations](implement-security-recommendations.md)
+- [Respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert)

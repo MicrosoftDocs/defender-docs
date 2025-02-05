@@ -2,7 +2,8 @@
 title: Review AI security alerts
 description: Learn how to review AI security alerts in the Data and AI security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 02/04/2025
+ms.date: 02/05/2025
+#customer intent: As a security analyst, I want to review AI security alerts so that I can identify and mitigate potential threats in my AI environments.
 ---
 
 # Review AI security alerts

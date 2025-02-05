@@ -694,7 +694,7 @@
     - name: Supported sensitive data information
       href: sensitive-info-types.md
     - name: Discover sensitive data
-      href: 
+      href: discover-sensitive-data.md
   - name: Data security threat protection
     items:
     - name: Review data security alerts
