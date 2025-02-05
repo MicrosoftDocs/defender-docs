@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 12/24/2024
+ms.date: 02/02/2025
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -55,7 +55,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | **DEFENDER FOR DATABASES FEATURES** | | | |
 | [Defender for Azure SQL database servers](defender-for-sql-introduction.md) | GA | GA | GA<br/><br/>A subset of alerts/vulnerability assessments is available.<br/>Behavioral threat protection isn't available.|
 | [Defender for SQL servers on machines](defender-for-sql-servers-introduction.md) | GA | GA | GA |
-| [Defender for SQL Servers on Machines](defender-for-sql-introduction.md) | GA | GA | NA|
+| [Defender for SQL Servers on Machines](defender-for-sql-introduction.md) | GA | GA | GA |
 | [Vulnerability assessment](sql-azure-vulnerability-assessment-overview.md) Express and Classic configurations | GA | GA | GA |
 | [Advanced threat protection](/azure/azure-sql/database/threat-detection-overview?view=azuresql&preserve-view=true) | GA | GA | GA |
 | [Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) | GA | GA | GA |
