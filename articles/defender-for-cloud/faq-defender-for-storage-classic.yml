@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 01/22/2025
+  ms.date: 02/05/2025
 title: Common questions about Defender for Storage classic
 summary: Get answers to common questions about Microsoft Defender for Storage classic.
 
@@ -38,7 +38,7 @@ sections:
           Yes, you can move to the new Defender for Storage plan with per-storage account pricing through the Azure portal or other supported methods. This change isn't automatic, you'll need to actively make the switch. Learn about how to [migrate to the new Defender for Storage](defender-for-storage-classic-migrate.md).
 
           > [!NOTE]
-          > After February 5, 2025, you can no longer enable Defender for Storage (classic), the legacy per-transaction pricing plan, in most scenarios. The only exception is for subscriptions that already have the per-transaction pricing enabled. For more information, learn how to [migrate to the new plan](https://aka.ms/DF-Storage/NewPlanMigration)
+          > Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans. For more information, visit [migrate to the new plan](https://aka.ms/DF-Storage/NewPlanMigration)
 
       - question: |
           Can I exclude specific storage accounts from protection in the new Defender for Storage plan?
@@ -55,13 +55,7 @@ sections:
       - question: |
           Can I return to per-transaction pricing in the Defender for Storage (classic) plan after switching to per-storage account pricing?
         answer: |
-          Yes, you can [enable per-transaction pricing](defender-for-storage-classic-enable.md) under the Defender for Storage (classic) plan to migrate back from per-storage account pricing using all enablement methods except for the Azure portal.
-
-
-      - question: |
-          Will you continue supporting per-transaction pricing in the Defender for Storage (classic) plan?
-        answer: |
-          Yes, you can [enable per-transaction pricing](defender-for-storage-classic-enable.md) under the Defender for Storage (classic) plan from all the supported enablement methods, except for the Azure portal.
+          No, once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction plan.
 
 
       - question: |
