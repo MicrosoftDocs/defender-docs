@@ -10,7 +10,7 @@ ms.date: 02/05/2025
 
 Microsoft Defender for Cloud's AI security alerts provide insights into potential threats and vulnerabilities in your AI environments. The alerts help you identify and respond to security issues quickly, enabling you to take proactive measures to mitigate risks.
 
-Through the use of the Data and AI security dashboard, you can easily navigate and access critical information about your AI environments. The dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can view AI security alerts in one place, making it easier to manage your AI environments and improve your overall security posture.
+By using the Data and AI security dashboard, you can easily navigate and access critical information about your AI environments. The dashboard integrates various features such as issue tracking, recommendations, and data threat analysis. You can view AI security alerts in one place, making it easier to manage your AI environments and improve your overall security posture.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Alerts are generated when Defender for Cloud detects potential security issues i
 
 1. Locate the AI threat protection section and select **View all AI Threat protection alerts**.
 
-Once you have navigated to the AI alerts page you can then [investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+Once you navigate to the alerts page, you can then[investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
 
 ## Next steps
 

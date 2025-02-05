@@ -698,7 +698,7 @@
   - name: Data security threat protection
     items:
     - name: Review data security alerts
-      href: 
+      href: review-data-security-alerts.md
 
 - name: Protect AI workloads
   items:
