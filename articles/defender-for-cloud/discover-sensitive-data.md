@@ -8,7 +8,7 @@ ms.date: 02/05/2025
 
 # Discover sensitive data
 
-Microsoft Defender for Cloud's ability to detect resources with sensitive info types helps you identify and protect sensitive data in your cloud environment. The sensitive data discovery feature in Defender for Cloud automatically scans your cloud resources to identify sensitive data types, such as credit card numbers, social security numbers, and more. This feature helps you understand where sensitive data resides in your cloud environment and take steps to protect it.
+Microsoft Defender for Cloud detects resources with sensitive info types, helping you identify and protect sensitive data in your cloud environment. The sensitive data discovery feature in Defender for Cloud scans your cloud resources to identify sensitive data types, such as credit card numbers and social security numbers. This feature helps you locate sensitive data in your cloud environment and take steps to protect it.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Microsoft Defender for Cloud's ability to detect resources with sensitive info t
 
 ## View resources with sensitive data
 
-Resources can contain data that is considered sensitive are at risk of being exposed to unauthorized users. The sensitive data discovery feature in Defender for Cloud helps you identify resources that contain sensitive data types so that you can take proactive steps to prevent data breaches.
+Resources containing sensitive data are at risk of exposure to unauthorized users. The sensitive data discovery feature in Defender for Cloud helps you identify resources with sensitive data types, enabling you to take proactive steps to prevent data breaches.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
