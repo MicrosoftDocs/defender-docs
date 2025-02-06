@@ -27,13 +27,11 @@ Microsoft Security Exposure Management transforms the attack surface by providin
 
 Proactively protecting your organization from potential data breaches is more effective than just doing damage control once a breach occurs.
 
-Continuous Threat Exposure Management (CTEM) steps can enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
-
 ## Scoping - Make a plan
 
 A well-defined plan is essential for effective exposure management. Your plan should outline the purpose and objectives of posture management for your organization, aligning with legal and regulatory requirements and the risks to your organization's goals. Identify internal stakeholders and important external parties and establish clear roles and responsibilities.
 
-Continuous Threat Exposure Management (CTEM) steps can enhance this proactive approach by providing a structured method to identify, evaluate, and manage security risks. The CTEM steps, which include Scoping, Discovery, Prioritization, and Validation, can be integrated into your security posture management plan.
+:::image type="content" source="media/reduce-risk-overview/MS_products.png" alt-text="Graphic of MSEM and XDR working together":::
 
 ## Discovery - Find vulnerabilities
 
