@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 02/05/2025
+ms.date: 02/06/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -109,16 +109,8 @@ Updates contain:
 >[!NOTE]
 > Release dates are tentative and subject to change.
 
-
-### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
-
-- Security intelligence update version: **1.421.12.0**
-- Release date: **October 30, 2024** (Engine and Platform)
-- Platform: **4.18.24090.11**
-- Engine: **1.1.24090.11**
-- Support phase: **Security and Critical Updates**
-
 #### What's new
+
 - Improved handling of Azure Site Recovery rules (Azure Site Recovery) exclusions.
 - Improved `AMSI` scan performance via changes to exclusion handling
 - Fixed Control Folder Access (CFA) protection for OneDrive when backup is enabled.
@@ -134,6 +126,17 @@ Updates contain:
 - Added support for wildcards in Tamper protection trusted process.
 - Improved Device control policy enforcement in offline environments.
 - Fixed issue in `WDNisDrv.sys` driver causing system hangs during shutdown.
+
+### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
+
+- Security intelligence update version: **1.421.12.0**
+- Release date: **October 30, 2024** (Engine and Platform)
+- Platform: **4.18.24090.11**
+- Engine: **1.1.24090.11**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
 - Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
 - Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
 - Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
