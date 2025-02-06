@@ -106,9 +106,6 @@ Updates contain:
 - Engine: **1.1.25010.xxxx**
 - Support phase: **Security and Critical Updates**
 
->[!NOTE]
-> Release dates are tentative and subject to change.
-
 #### What's new
 
 - Improved handling of Azure Site Recovery rules (Azure Site Recovery) exclusions.
