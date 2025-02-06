@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: cwatson
 author: cwatson-cat
 ms.localizationpriority: medium
-ms.date: 11/19/2024
+ms.date: 02/05/2025
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -24,10 +24,13 @@ Microsoft's unified SecOps platform provides a set of integrated tools and solut
 
 Proactive security management allows you to manage cybersecurity as an ongoing risk, rather than series of unpredictable events. Proactive risk management helps to reduce the likelihood of breaches, minimize business disruptions when attacks do occur, and raise security awareness as an ongoing practice across the business.
 
-
 ## Improve prebreach security
 
 Security teams must address key activities for effective prebreach security.
+
+:::image type="content" source="media/reduce-risk-overview/posture.png" alt-text="Graphic of security integration with Operations" lightbox="media/reduce-risk-overview/posture.png":::
+
+:::image type="content" source="media/reduce-risk-overview/usx.png" alt-text="Graphic of unified security operations":::
 
 Activity | Details
 --- | ---
