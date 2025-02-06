@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to use Attack simulation training to run simulated phishing and password attacks in their Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 12/04/2024
+ms.date: 02/04/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -54,12 +54,27 @@ Watch this short video to learn more about Attack simulation training.
     - **Global Administrator**¹
     - **Security Administrator**
     - **Attack Simulation Administrators**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
+    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later. 
+    - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
     > ¹ Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
     >
     > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
+    >
+    >   Members of Attack Payload Author have the following limitations in attack simulation training:
+    >
+    >   - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    >   - They can't change global settings.
+    >   - They can't change content (for example, notifications), but they can change payloads.
+    >   - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
+    >
+    > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
+    >
+    >   - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    >   - They can't change global settings.
+    >   - They can't change content (for example, tenant payloads or notifications).
+    >   - They can access data through read APIs with user scope, but they can't use write APIs.
 
     Currently, [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) isn't supported.
 

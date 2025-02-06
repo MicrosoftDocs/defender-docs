@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 11/12/2024
+ms.date: 01/30/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -41,7 +41,7 @@ In endpoint protection solutions, a false positive is an entity, such as a file 
 
 Continue here if the "Alert source" is "Microsoft Defender for Endpoint".
 
-The next step is to review the “detection source”:
+The next step is to review the "detection source":
 
 |Detection source| Information|
 | -------- | -------- |
@@ -212,9 +212,11 @@ To define exclusions across Microsoft Defender for Endpoint, perform the followi
 
 - [Create "allow" indicators for Microsoft Defender for Endpoint](#indicators-for-defender-for-endpoint)
 - [Define exclusions for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
+- For Attack Surface Reduction Rule exclusions [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions) or you can leverage [ASR rule only exclusions](/defender-endpoint/enable-attack-surface-reduction#exclude-files-and-folders-from-attack-surface-reduction-rules)
 
 > [!NOTE]
 > Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use [custom indicators](indicators-overview.md) for Microsoft Defender for Endpoint and exclusions for Microsoft Defender Antivirus.
+> ASR Rules can leverage ASR Rule Exclusions - where the exclusions apply to all ASR Rules; ASR per Rule Exclusions; Defender AV exclusions; as well as allow indicators defined in Custom Indicators.
 
 The procedures in this section describe how to define indicators and exclusions.
 
@@ -240,7 +242,7 @@ Before you create indicators for files, make sure the following requirements are
 
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
 - Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2), or Windows Server 2019, or Windows Server 2022
+- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), or Windows Server 2019, or Windows Server 2022
 - The [Block or allow feature is turned on](advanced-features.md)
 
 #### Indicators for IP addresses, URLs, or domains
@@ -263,7 +265,7 @@ Before you create indicators for application certificates, make sure the followi
 
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2), or Windows Server 2019, or Windows Server 2022
+- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), or Windows Server 2019, or Windows Server 2022
 - Virus and threat protection definitions are up to date
 
 > [!TIP]

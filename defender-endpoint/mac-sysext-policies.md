@@ -3,8 +3,9 @@ title: New configuration profiles for macOS Big Sur and newer versions of macOS
 description: This topic describes the changes that are must be made in order to benefit from the system extensions, which are a replacement for kernel extensions on macOS Big Sur and newer versions of macOS.
 search.appverid: met150
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro

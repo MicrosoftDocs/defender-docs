@@ -268,7 +268,7 @@ Clicking on the **Alert name** value in a row takes you to the details page for 
 
 Clicking anywhere else in the row other than the **Alert name** value or the check box next to the first column opens a details flyout for the alert. This details flyout is the same as clicking anywhere in the row other than the **Alert name** value or the check box next to the first column on the corresponding entry on the **Alerts** page at <https://security.microsoft.com/alerts>.
 
-The actions that are available at the top of the alert details flyout depend on the nature of the alert contain the same actions that are available in the details flyout of the corresponding alert on the **Alerts** page at <https://security.microsoft.com/alerts>. For example, alerts named **Email messages containing malicious URL removed after delivery​** have the following actions available in the alert details flyout:
+The actions that are available at the top of the alert details flyout depend on the nature of the alert contain the same actions that are available in the details flyout of the corresponding alert on the **Alerts** page at <https://security.microsoft.com/alerts>. For example, alerts named **Email messages containing malicious URL removed after delivery** have the following actions available in the alert details flyout:
 
 - :::image type="icon" source="media/m365-cc-sc-open-url-page-icon.png" border="false"::: **Open alert page**: Opens the same details page as when you click on the **Alert name** value of an entry on the **Alerts** page at <https://security.microsoft.com/alerts>. For more information, see [Analyze an alert](/defender-xdr/investigate-alerts#analyze-an-alert).
 

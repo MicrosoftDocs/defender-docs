@@ -61,14 +61,14 @@ Specifies the enforcement preference of antivirus engine. There are three values
 - Real-time (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 - On-demand (`on_demand`): Files are scanned only on demand. In this:
   - Real-time protection is turned off.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
 - Passive (`passive`): Runs the antivirus engine in passive mode. In this case, all of the following apply:
   - Real-time protection is turned off: Threats are not remediated by Microsoft Defender Antivirus.
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
   - Automatic threat remediation is turned off: No files are moved and your security administrator is expected to take required action.
   - Security intelligence updates are turned on: Alerts are available in the security administrator's tenant.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
-    
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
+
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|enforcementLevel|Enforcement Level|
@@ -1052,7 +1052,7 @@ When you run the `mdatp health` command for the first time, the value for the ta
 
    > [!NOTE]
    > Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
- 
+
 ## Configuration profile validation
 
 The configuration profile must be a valid JSON-formatted file. There are many tools that can be used to verify this. For example, if you have `python` installed on your device:
@@ -1076,6 +1076,7 @@ To verify that your `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json` is wor
 > [!NOTE]
 > No restart of mdatp daemon is required for changes to _most_ configurations in `mdatp_managed.json` to take effect.
   **Exception:** The following configurations require a daemon restart to take effect:
+>
 > - `cloud-diagnostic`
 > - `log-rotation-parameters`
 

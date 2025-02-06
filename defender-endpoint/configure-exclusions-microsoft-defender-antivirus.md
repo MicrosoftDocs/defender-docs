@@ -3,7 +3,7 @@ title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 09/13/2024
+ms.date: 01/27/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
@@ -40,11 +40,16 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 
 > [!CAUTION]
 > Use Microsoft Defender Antivirus extensions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+> Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format
 
 If you're using Microsoft Intune to manage Microsoft Defender Antivirus or Microsoft Defender for Endpoint, use the following procedures to define exclusions:
 
-- [Manage antivirus exclusions in Intune (for existing policies)](#manage-antivirus-exclusions-in-intune-for-existing-policies)
-- [Create a new antivirus policy with exclusions in Intune](#create-a-new-antivirus-policy-with-exclusions-in-intune)
+- [Configure custom exclusions for Microsoft Defender Antivirus](#configure-custom-exclusions-for-microsoft-defender-antivirus)
+  - [Configure and validate exclusions](#configure-and-validate-exclusions)
+      - [Manage antivirus exclusions in Intune (for existing policies)](#manage-antivirus-exclusions-in-intune-for-existing-policies)
+      - [Create a new antivirus policy with exclusions in Intune](#create-a-new-antivirus-policy-with-exclusions-in-intune)
+  - [Important points about exclusions](#important-points-about-exclusions)
+  - [Audit antivirus exclusions on Exchange systems](#audit-antivirus-exclusions-on-exchange-systems)
 
 If you're using another tool, such as Configuration Manager or Group Policy, or you want more detailed information about custom exclusions, see these articles:
 

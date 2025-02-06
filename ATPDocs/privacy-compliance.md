@@ -22,14 +22,13 @@ For more information see: [Microsoft Defender for Identity monitored activities]
 
 Defender for Identity operates in the Microsoft Azure data centers in the following locations:
 
-- European Union
-- United Kingdom
-- United States
-- Australia
-- Switzerland
-- Singapore
-
-- India
+- European Union (West Europe, North Europe)
+- United Kingdom (UK South) 
+- United States (East US, West US, West US2)
+- Australia (Australia East)
+- Switzerland (Switzerland North)
+- Singapore (Southeast Asia)
+- India (Central India, South India)
 
 Customer data collected by the service might be stored as follows:
 

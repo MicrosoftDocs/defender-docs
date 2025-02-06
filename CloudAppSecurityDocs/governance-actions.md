@@ -144,7 +144,7 @@ The Governance log provides a status record of each task that you set Defender f
 
 To view the governance log, in the Microsoft Defender Portal, under **Cloud Apps**, select **Governance log**.
 
-The following table is the full list of actions the Defender for Cloud Apps portal enables you to take. These actions are enabled in various places throughout the console as described in the **Location** column. Each governance action taken is listed in the Governance Log.
+The following table is the full list of actions Microsoft Defender for Cloud Apps enables you to take. These actions are enabled in various places throughout the console as described in the **Location** column. Each governance action taken is listed in the Governance Log.
 For information about how governance actions are treated when there are policy conflicts, see [Policy Conflicts](control-cloud-apps-with-policies.md).
 
 | Location | Target object type | Governance action |Description| Related connectors|
