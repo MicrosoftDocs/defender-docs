@@ -191,7 +191,7 @@ GET /api/machines/browserextensionsinventoryExport
 > [!NOTE]
 >
 > - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 6 hours.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
@@ -200,7 +200,7 @@ GET /api/machines/browserextensionsinventoryExport
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 
 ### 2.6 Examples

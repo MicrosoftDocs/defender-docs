@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb
-ms.date: 10/11/2024
+ms.date: 02/05/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -34,7 +34,7 @@ By default device control is disabled, so access to all types of devices is allo
 
 ## Controlling default behavior
 
-When device control is enabled, it's enabled for all device types by default. The default enforcement can also be changed from *Allow* to *Deny*. Your security team can also configure the types of devices that device control protects. The following table below illustrates how various combinations of settings change the access control decision.
+When device control is enabled, it's enabled for all device types by default. The default enforcement can also be changed from *Allow* to *Deny*. Your security team can also configure the types of devices that device control protects. The following table illustrates how various combinations of settings change the access control decision.
 
 | Is device control enabled? | Default behavior | Device types |
 |---|---|---|
@@ -52,7 +52,7 @@ For more information, see the following articles:
 
 ## Policies
 
-To further refine access to devices, device control uses policies.  A policy is a set of rules and groups. How rules and groups are defined varies slightly among management experiences and operating systems, as described in the following table.
+To further refine access to devices, device control uses policies. A policy is a set of rules and groups. How rules and groups are defined varies slightly among management experiences and operating systems, as described in the following table.
 
 | Management tool    | Operating system | How rules and groups are managed |
 |---|---|---|
@@ -64,34 +64,28 @@ To further refine access to devices, device control uses policies.  A policy is 
 
 Rules and groups are identified by Global Unique ID (GUIDs). If device control policies are deployed using a management tool other than Intune, the GUIDs must be generated. You can generate the GUIDs by using [PowerShell](/powershell/module/microsoft.powershell.utility/new-guid).
 
-For schema details, see [JSON schema for Mac](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
+For schema details, see the [JSON schema for Mac](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
 
 ## Users
 
-Device control policies can be applied to users and/or user groups.
+Device control policies can be applied to users and/or user groups. On Windows, device control policies can have a condition to target users or user groups defined in [Microsoft Entra ID or Windows Server Active Directory](/entra/fundamentals/compare). You can define policies that allow specific users to have more or less permissions based on business needs. Device control actively looks at user sessions and makes enforcement decisions based on policies that target specific users or groups. This means that some actions, such as locking a device or signing out of the user profile, could cause user conditions to be unsatisfied, which is expected behavior.
 
 > [!NOTE]
-> In the articles related to device control, groups of users are referred to as <i>user groups</i>.  The term <i>groups</i> refer to [groups](#groups) defined in the device control policy.
-
-Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
-
-On Windows, a user or user group can be a condition on an [entry](#entries) in a policy.
-
-Entries with user or user groups can reference objects from either Entra Id or a local Active Directory.
+> In the articles related to device control, groups of users are referred to as *user groups*.  The term *groups* refers to [groups](#groups) defined in the device control policy.
 
 ### Best practices for using device control with users and user groups
 
-- To create a rule for an individual user on Windows, create an entry with a  `Sid` condition foreach user in a [rule](#rules)
+- To create a rule for an individual user on Windows, create an entry with a  `Sid` condition for each user in a [rule](#rules).
 
 - To create a rule for a user group on Windows and Intune, **either** create an entry with a `Sid` condition for each user group in a [rule] and target the policy to a machine group in Intune **or** create a rule without conditions and target the policy with Intune to the user group.
 
-- On Mac, use Intune and target the policy to a user group in Entra Id.
+- On Mac, use Intune and target the policy to a user group in Microsoft Entra ID.
 
 > [!WARNING]
-> Do not use both user/user group conditions in rules and user group targeting in Intune.
+> Don't use both user/user group conditions in rules and user group targeting in Intune.
 
 > [!NOTE]
-> If network connectivity is an issue, use Intune user group targeting **or** a local Active Directory groups.  User/user group conditions that reference Entra Id should **only** be used in environments that have a reliable connection to Entra Id.
+> If network connectivity is an issue, use Intune user group targeting **or** a local Active Directory groups. User/user group conditions that reference Microsoft Entra ID should **only** be used in environments that have a reliable connection to Microsoft Entra ID.
 
 ## Rules
 
@@ -154,7 +148,7 @@ The following table provides more context for the XML code snippet:
 | `Name` | String, the name of the policy and displays on the toast based on the policy setting. | |
 | `IncludedIdList` | The groups that the policy applies to. If multiple groups are added, the media must be a member of each group in the list to be included. | The Group ID/GUID must be used at this instance. <br/><br/>The following example shows the usage of GroupID: `<IncludedIdList> <GroupId> {EAA4CCE5-F6C9-4760-8BAD-FDCC76A2ACA1}</GroupId> </IncludedIdList>` |
 | `ExcludedIDList` | The groups that the policy doesn't apply to. If multiple groups are added, the media must be a member of a group in the list to be excluded. | The Group ID/GUID must be used at this instance. |
-| `Entry` | One PolicyRule can have multiple entries; each entry with a unique GUID tells device control one restriction. | See  Entry properties table below to get details. |
+| `Entry` | One PolicyRule can have multiple entries; each entry with a unique GUID tells device control one restriction. | See the Entry Properties table in this article to get details. |
 
 ### [**JSON (Mac)**](#tab/JSON)
 
@@ -202,7 +196,7 @@ Device control policies define access (called an entry) for a set of devices. En
 
 There are two types of entries: enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
 
-Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
+Enforcement entries for a rule are evaluated in order until all of the requested permissions are matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
 
 ### Audit entries
 
@@ -211,7 +205,7 @@ Audit events control the behavior when device control enforces a rule (allow/den
 Device control can also create an event that is available in Advanced Hunting.
 
 > [!IMPORTANT]
-> There is a limit of 300 events per device per day. Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
+> There's a limit of 300 events per device per day. Audit entries are processed after the enforcement decision is made.  All corresponding audit entries are evaluated.
 
 ### Conditions
 
@@ -220,7 +214,7 @@ An entry supports the following optional conditions:
 - User/User Group Condition: Applies the action only to the user/user group identified by the SID
 
 > [!NOTE]
-> For user groups and users that are stored in Microsoft Entra Id, use the object id in the condition.  For user groups and users that are stored locally, use the Security Identifier (SID)
+> For user groups and users that are stored in Microsoft Entra ID, use the object id in the condition.  For user groups and users that are stored locally, use the Security Identifier (SID)
 > [!NOTE]
 > On Windows, The SID of the user who's signed in can be retrieved by running the PowerShell command `whoami /user`.
 
@@ -275,7 +269,7 @@ The following table provides more context for the XML code snippet:
 | `AccessMask` | Defines the access | See the following section [Understand mask access](#understand-mask-access-windows) |
 | `Sid` | Local user SID or user SID group, or the SID of the Microsoft Entra object or the Object ID. It defines whether to apply this policy over a specific user or user group. One entry can have a maximum of one SID and an entry without any SID means to apply the policy over the device. | SID |
 | `ComputerSid` | Local computer SID or computer SID group, or the SID of the Microsoft Entra object or the Object Id. It defines whether to apply this policy over a specific device or device group. One entry can have a maximum of one ComputerSID and an entry without any ComputerSID means to apply the policy over the device. If you want to apply an Entry to a specific user and specific device, add both SID and ComputerSID into the same Entry. | SID |
-| `Parameters` | Condition for an entry, such as network condition. | Can add groups (non-device types) or even put parameters into parameters. For more information, see the [advanced conditions](#advanced-conditions) section (in this article).  |
+| `Parameters` | Condition for an entry, such as network condition. | Can add groups (nondevice types) or even put parameters into parameters. For more information, see the [advanced conditions](#advanced-conditions) section (in this article).  |
 
 #### Understand mask access (Windows)
 
@@ -344,8 +338,8 @@ The following table describes the device type specific access and how they map t
 |---|---|---|---|---|---|
 | `appleDevice` | `backup_device` |  | X |  |  |
 | `appleDevice` | `update_device` |  |  | X |   |
-| `appleDevice` | `download_photos_from_device` | download photo(s) from the specific iOS device to local device | X  |  |  |
-| `appleDevice` | `download_files_from_device` | download file(s) from the specific iOS device to local device | X  |  |  |
+| `appleDevice` | `download_photos_from_device` | download photos from the specific iOS device to local device | X  |  |  |
+| `appleDevice` | `download_files_from_device` | download files from the specific iOS device to local device | X  |  |  |
 | `appleDevice` | `sync_content_to_device` | sync content from local device to specific iOS device |  | X |  |
 | `portableDevice` | `download_files_from_device` | X  |  |  |
 | `portableDevice` | `send_files_to_device`  |  |  | X |  |
@@ -379,7 +373,7 @@ The properties can be matched in four ways:  `MatchAll`, `MatchAny`, `MatchExclu
 - `MatchExcludeAll`: The properties are an "And" relationship, any items that do NOT meet are covered. For example, if administrator puts `DeviceID` and `InstancePathID` and uses `MatchExcludeAll`, for every connected USB, system enforces as long as the USB doesn't have both identical `DeviceID` and `InstanceID` value.
 - `MatchExcludeAny`: The properties are an "Or" relationship, any items that do NOT meet are covered. For example, if administrator puts `DeviceID` and `InstancePathID` and uses `MatchExcludeAny`, for every connected USB, system enforces as long as the USB doesn't have either an identical `DeviceID` or `InstanceID` value.
 
-Groups are used two ways:  to select devices for inclusion/exclusion in rules, and to filter access for advanced conditions.  This table summarizes the group types and how they're used.
+Groups are used two ways:  to select devices for inclusion/exclusion in rules, and to filter access for advanced conditions. This table summarizes the group types and how they're used.
 
 | Type | Description | O/S | Include/Exclude Rules | Advanced conditions |
 |---|---|---|---|---|
@@ -389,14 +383,14 @@ Groups are used two ways:  to select devices for inclusion/exclusion in rules, a
 | File | Filter file properties | Windows |  | X |
 | Print Job | Filter properties of the file being printed | Windows |  | X |
 
-The devices that are in scope for the policy determined by a list of included groups and a list of excluded groups. A rule applies if the device is in all of the included groups and none of the excluded groups.  Groups can be composed from the properties of devices. The following properties can be used:
+The devices that are in scope for the policy determined by a list of included groups and a list of excluded groups. A rule applies if the device is in all of the included groups and none of the excluded groups. Groups can be composed from the properties of devices. The following properties can be used:
 
 | Property | Description | Windows devices | Mac devices | Printers |
 |---|---|---|---|---|
 | `FriendlyNameId`  | The friendly name in Windows Device Manager | Y | N | Y |
 | `PrimaryId` | The type of the device | Y | Y | Y |
 | `VID_PID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. Product ID is the four-digit product code that the vendor assigns to the device. Wildcards are supported. For example, `0751_55E0` | Y | N | Y |
-|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premise Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that is not connecting through Microsoft print port<br/>- `Local`: printer not any of above type, e.g. print through RDP or redirect printers | N | N | Y |
+|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premises Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that isn't connecting through Microsoft print port<br/>- `Local`: printer not any of previously mentioned types. For example, print through RDP or redirect printers | N | N | Y |
 | `BusId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `DeviceId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `HardwareId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
@@ -404,7 +398,7 @@ The devices that are in scope for the policy determined by a list of included gr
 | `SerialNumberId` | Information about the device (for more information, see the sections that follow this table) | Y | Y | N |
 | `PID` | Product ID is the four-digit product code that the vendor assigns to the device | Y | Y | N |
 | `VID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. | Y | Y | N |
-|`DeviceEncryptionStateId`|(Preview) The BitLocker encryption state of a device.  Valid values are `BitlockerEncrypted` or `Plain`|Y|N|N|
+|`DeviceEncryptionStateId`|(Preview) The BitLocker encryption state of a device. Valid values are `BitlockerEncrypted` or `Plain`|Y|N|N|
 | `APFS Encrypted` | If the device is APFS encrypted | N | Y | N |
 
 ### Using Windows Device Manager to determine device properties
@@ -431,7 +425,7 @@ For Windows devices, you can use Device Manager to understand the properties of 
 
 ### Using reports and advanced hunting to determine properties of devices
 
-Device properties have slightly different labels in advanced hunting. The table below maps the labels in the portal to the `propertyId` in a device control policy.
+Device properties have slightly different labels in advanced hunting. The following table maps the labels in the portal to the `propertyId` in a device control policy.
 
 | Microsoft Defender Portal property | Device control property Id |
 |---|---|
@@ -448,7 +442,7 @@ Device properties have slightly different labels in advanced hunting. The table 
 You can configure groups in Intune, by using an XML file for Windows, or by using a JSON file on Mac. Select each tab for more details.
 
 > [!NOTE]
-> The `Group Id` in XML and `id` in JSON is used to identify the group within device control.  Its not a reference to any other such as a [user group](#users) in Entra Id.
+> The `Group Id` in XML and `id` in JSON is used to identify the group within device control.  It's not a reference to any other such as a [user group](#users) in Microsoft Entra ID.
 
 ### [**Intune**](#tab/Removable)
 
@@ -546,7 +540,7 @@ The following values are supported as clauses:
 | `productId` | four-digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
-| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. The group must be defined within the policy prior to the clause. |
+| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. The group must be defined within the policy before the clause. |
 
 Here's an example query:
 
@@ -588,7 +582,7 @@ This query matches all devices that don't have the specified serial number.
 
 ## Advanced conditions
 
-Entries can be further restricted based on parameters. Parameters apply advanced conditions that go beyond the device. Advanced conditions allow for fine-grained control based on Network, VPN Connection, File or Print Job being evaluated.
+Entries can be further restricted based on parameters. Parameters apply advanced conditions that go beyond the device. Advanced conditions allow for fine-grained control based on Network, VPN Connection, File, or Print Job being evaluated.
 
 > [!NOTE]
 > Advanced conditions are only supported in the XML format.
@@ -642,7 +636,7 @@ The following table describes VPN connection conditions:
 | `VPNServerAddressId` | The string value of `VPNServerAddress`. Wildcards are supported. |
 | `VPNDnsSuffixId` | The string value of `VPNDnsSuffix`. Wildcards are supported. |
 
-These properties are added to the DescriptorIdList of a group of type VPNConnection, as shown in the following snippet:
+These properties are added to the `DescriptorIdList` of a group of type `VPNConnection`, as shown in the following snippet:
 
 ```xml
 

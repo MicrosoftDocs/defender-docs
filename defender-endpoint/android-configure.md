@@ -49,7 +49,7 @@ Defender for Endpoint on Android allows IT Administrators the ability to configu
 [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and IP addresses) are supported as part of web protection. Web content filtering is currently not supported on mobile platforms.
 
 > [!NOTE]
-> Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN is not a regular VPN. Instead, it's a local/self-looping VPN that does not take traffic outside the device.
+> Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN isn't a regular VPN. Instead, it's a local/self-looping VPN that doesn't take traffic outside the device.
 >
 > For more information, see [Configure web protection on devices that run Android](/mem/intune/protect/advanced-threat-protection-manage-android).
 
@@ -92,7 +92,7 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
    |Manage Network Protection detection for Open Networks|2- Enable (default), 1- Audit mode, 0 - Disable. Security admins manage this setting to enable, audit, or disable open network detection, respectively. In 'Audit' mode, alerts are sent only to the ATP portal with no end user experience. For end user experience, the config should be set to 'Enable' mode.|
    |Manage Network protection Detection for Certificates|2- Enable, 1- Audit mode, 0 - Disable (default).  In Audit mode, notification alerts are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and alerts are also sent to the SOC Admin. |
    
-5. Add the required groups to which the policy will have to be applied. Review and create the policy.
+5. Add the required groups to which the policy has to be applied. Review and create the policy.
 
    | Configuration Key| Description|
    |---|---|
@@ -106,9 +106,9 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 6. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
->
 > - The other config keys of Network Protection will only work if the parent key '**Enable Network Protection in Microsoft Defender'** is enabled.
-> - Users need to enable location permission (which is an optional permission) and need to grant "Allow All the Time" permission to ensure protection against Wi-Fi threat, even when the app is not actively in use. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+> - To ensure comprehensive protection against Wi-Fi threats, users should enable location permission and select the "Allow All the Time" option. This permission is optional but highly recommended, even when the app is not actively in use. If location permission is denied, Defender for Endpoint will only offer limited protection against network threats and will only safeguard users from rogue certificates.
+**An open wi-fi network alert** is generated whenever a user connects to an open Wi-Fi network. If the user reconnects to the same network within a seven-day period, no new alert will be generated. However, connecting to a different open Wi-Fi network will result in an immediate alert.
 
 ## Privacy Controls
 
@@ -156,7 +156,7 @@ These controls help the end user to configure the information shared to their or
 
 These toggles will only be visible if enabled by the admin. Users can decide if they want to send the information to their organization or not.
 
-Enabling/disabling the above privacy controls won't impact the device compliance check or conditional access.
+Enabling/disabling the above privacy controls won't affect the device compliance check or conditional access.
 
 ## Configure vulnerability assessment of apps for BYOD devices
 
@@ -207,7 +207,7 @@ Defender for Endpoint supports vulnerability assessment of apps in the work prof
 
 5. Select **Next** and assign this profile to targeted devices/users.
 
-Turning the above privacy controls on or off won't impact the device compliance check or conditional access.
+Turning the above privacy controls on or off won't affect the device compliance check or conditional access.
 
 ## Configure privacy for phishing alert report
 
@@ -233,7 +233,7 @@ Use the following steps to turn it on for targeted users:
 
 4. Select **Next** and assign this profile to targeted devices/users.
 
-Using this privacy control won't impact the device compliance check or conditional access.
+Using this privacy control won't affect the device compliance check or conditional access.
 
 ### Configure privacy for phishing alert report on Android Enterprise work profile
 
@@ -248,7 +248,7 @@ Use the following steps to turn on privacy for targeted users in the work profil
 
 5. Select **Next** and assign this profile to targeted devices/users.
 
-Turning the above privacy controls on or off won't impact the device compliance check or conditional access.
+Turning the above privacy controls on or off won't affect the device compliance check or conditional access.
 
 ## Configure privacy for malware threat report
 
@@ -274,7 +274,7 @@ Use the following steps to turn it on for targeted users:
 
 4. Select **Next** and assign this profile to targeted devices/users.
 
-Using this privacy control won't impact the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
+Using this privacy control won't affect the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
 
 ### Configure privacy for malware alert report on Android Enterprise work profile
 
@@ -289,12 +289,12 @@ Use the following steps to turn on privacy for targeted users in the work profil
 
 5. Select **Next** and assign this profile to targeted devices/users.
 
-Using this privacy control won't impact the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
+Using this privacy control won't affect the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
 
-## Disable sign-out
+## Disable sign out
 
-Defender for Endpoint supports deployment without the sign-out button in the app to prevent users from signing out of the Defender app. This is important to prevent users from tampering with the device.
-Use the following steps to configure Disable sign-out:
+Defender for Endpoint supports deployment without the sign out button in the app to prevent users from signing out of the Defender app. This is important to prevent users from tampering with the device.
+Use the following steps to configure Disable out sign:
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
@@ -302,7 +302,7 @@ Use the following steps to configure Disable sign-out:
 4. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
 
    - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles and 0 for device administrator mode.
-   - Admins need to make Disable Sign Out = 0 to enable the sign-out button in the app. Users will be able to see the sign-out button once the policy is pushed.
+   - Admins need to make Disable Sign Out = 0 to enable the sign out button in the app. Users are able to see the sign out button once the policy is pushed.
 
 5. Select **Next** and assign this profile to targeted devices and users.
 
@@ -321,11 +321,11 @@ Use the following steps to configure the Device tags:
    - Admin can edit an existing tag by modifying the value of the key **DefenderDeviceTag**.
    - Admin can delete an existing tag by removing the key **DefenderDeviceTag**.
 
-5. Click Next and assign this policy to targeted devices and users.
+5. Select Next and assign this policy to targeted devices and users.
 
 
 > [!NOTE]
-> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It might take up to 18 hours for tags to reflect in the portal.
 
 ## Related articles
 

@@ -203,4 +203,4 @@ To unblock a mailbox from sending email, follow the procedures in [Remove blocke
 - [Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
 - [Internet Crime Complaint Center](https://www.ic3.gov/Home/Ransomware)
 - [Securities and Exchange Commission - "Phishing" Fraud](https://www.sec.gov/investor/pubs/phishing.htm)
-- [Use the Report Message add-in](https://support.microsoft.com/office/b5caa9f1-cdf3-4443-af8c-ff724ea719d2) to report spam email directly to Microsoft and/or admins (depending on how [User reported settings](submissions-user-reported-messages-custom-mailbox.md) are configured).
+- [Report messages as phishing](https://support.microsoft.com/office/9ba3ea70-1169-4993-801b-ec2bb8fc071d) to Microsoft and/or admins (depending on how [User reported settings](submissions-user-reported-messages-custom-mailbox.md) are configured in the organization).

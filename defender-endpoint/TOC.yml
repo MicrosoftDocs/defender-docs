@@ -164,7 +164,7 @@
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019, and 2022
+          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019 and later
             href: configure-server-endpoints.md
           - name: Onboard Windows devices using Configuration Manager
             href: configure-endpoints-sccm.md
@@ -605,9 +605,6 @@
       - name: Manage device group and tags
         href: machine-tags.md
 
-    - name: Host firewall reporting in Microsoft Defender for Endpoint
-      href: host-firewall-reporting.md
-
     - name: Tamper resiliency
       href: tamper-resiliency.md
 
@@ -633,8 +630,6 @@
             href: attack-surface-reduction-rules-deployment-operationalize.md
         - name: Attack surface reduction rules reference
           href: attack-surface-reduction-rules-reference.md
-        - name: Attack surface reduction rules report
-          href: attack-surface-reduction-rules-report.md
         - name: Troubleshoot attack surface reduction rules
           href: troubleshoot-asr-rules.md
         - name: Enable ASR rules alternate configuration methods
@@ -665,8 +660,6 @@
           href: device-control-deploy-manage-gpo.md
         - name: Device control frequently asked questions
           href: device-control-faq.md
-        - name: Device control reports
-          href: device-control-report.md
       - name: Exploit protection
         items:
         - name: Protect devices from exploits
@@ -703,8 +696,6 @@
           items:
           - name: Web threat protection overview
             href: web-threat-protection.md
-          - name: Monitor web security
-            href: web-protection-monitoring.md
           - name: Respond to web threats
             href: web-protection-response.md
         - name: Web content filtering
@@ -910,13 +901,6 @@
 
       - name: Diagnostics for Microsoft Defender Antivirus
         items:
-        - name: Device health reports
-          href: device-health-reports.md
-          items:
-          - name: Microsoft Defender Antivirus health report
-            href: device-health-microsoft-defender-antivirus-health.md
-          - name: Sensor health and OS report
-            href: device-health-sensor-health-os.md
         - name: Microsoft Defender Core service overview
           href: microsoft-defender-core-service-overview.md
         - name: Microsoft Defender Core service configurations and experimentation 
@@ -940,11 +924,10 @@
             href: troubleshoot-av-performance-issues-with-wprui.md
         - name: Troubleshoot Microsoft Defender Antivirus performance issues
           items:
-          
-        - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
-          href: troubleshoot-microsoft-defender-antivirus.yml
-        - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
-          href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
+          - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
+            href: troubleshoot-microsoft-defender-antivirus.yml
+          - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
+            href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
 
       - name: Behavioral blocking and containment
         items:
@@ -1121,14 +1104,27 @@
     items:
     - name: Reports
       items:
-        - name: Monthly security summary
-          href: monthly-security-summary-report.md
-        - name: Create custom reports using Power BI
-          href: api/api-power-bi.md
-        - name: Threat protection reports
+        - name: Microsoft Defender for Endpoint reports
           href: threat-protection-reports.md
+        - name: Device health reports
+          href: device-health-reports.md
+          items:
+          - name: Microsoft Defender Antivirus health report
+            href: device-health-microsoft-defender-antivirus-health.md
+          - name: Sensor health and OS report
+            href: device-health-sensor-health-os.md
+        - name: Host firewall reporting
+          href: host-firewall-reporting.md
+        - name: Web protection and monitoring reports
+          href: web-protection-monitoring.md
+        - name: Device control reports
+          href: device-control-report.md
+        - name: Attack surface reduction rules report
+          href: attack-surface-reduction-rules-report.md                                                    
         - name: Aggregated reports
-          href: aggregated-reporting.md                 
+          href: aggregated-reporting.md
+        - name: Create custom reports using Power BI
+          href: api/api-power-bi.md                         
     - name: Configure integration with other Microsoft solutions
       items:
       - name: Configure conditional access

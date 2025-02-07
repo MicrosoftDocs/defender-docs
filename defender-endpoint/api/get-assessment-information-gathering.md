@@ -78,7 +78,7 @@ GET /api/Machines/InfoGatheringExport
 > [!NOTE]
 > 
 > - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 6 hours.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
 > - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 

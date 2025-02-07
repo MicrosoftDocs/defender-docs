@@ -90,8 +90,8 @@
         items:
         - name: Incidents
           href: investigate-incidents.md
-        - name: Unlink alerts from incidents
-          href: unlink-alert-from-incident.md
+        - name: Move alerts to another incident
+          href: move-alert-to-another-incident.md
         - name: Alerts
           href: investigate-alerts.md
         - name: Entity pages
