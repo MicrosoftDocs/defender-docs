@@ -31,7 +31,7 @@ You can do the following with security standards in Defender for Cloud:
 
 - **Add regulatory compliance standards**: If you have one or more paid plans enabled, you can assign built-in compliance standards to assess your Azure, AWS, and GCP resources. [Learn more about assigning regulatory standards](update-regulatory-compliance-packages.yml).
 
-- **Add custom standards**: If you have at least one paid Defender plan enabled, you can define new *An external link was removed to protect your privacy.* and *An external link was removed to protect your privacy.* in the Defender for Cloud portal. You can then add recommendations to those standards.
+- **Add custom standards**: If you have at least one paid Defender plan enabled, you can define new [custom standards](custom-security-policies.md) and [custom recommendations](create-custom-recommendations.md) in the Defender for Cloud portal. You can then add recommendations to those standards.
 
 ### Custom standards
 
