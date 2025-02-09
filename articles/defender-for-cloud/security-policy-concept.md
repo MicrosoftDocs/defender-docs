@@ -1,8 +1,9 @@
 ---
 title: Security policies in Microsoft Defender for Cloud 
-description: Learn about security policies, standards, and recommendations to improve your cloud security posture in Microsoft Defender for Cloud.
-ms.topic: conceptual
-ms.date: 11/27/2023
+description: Learn how to improve your cloud security posture in Microsoft Defender for Cloud with security policies, standards, and recommendations.
+ms.topic: concept-article
+ms.date: 02/09/2025
+#customer intent: As a security administrator, I want to understand and implement security policies in Microsoft Defender for Cloud so that I can improve my cloud security posture.
 ---
 
 # Security policies in Defender for Cloud
