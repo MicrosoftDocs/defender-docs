@@ -15,7 +15,7 @@ Security standards define rules, compliance conditions, and actions (effects) if
 
 Security standards in Defender for Cloud originate from these sources:
 
-- **Microsoft cloud security benchmark (MCSB)**: The MCSB standard applies by default when you onboard cloud accounts to Defender. Your *An external link was removed to protect your privacy.* is based on assessment against some MCSB recommendations.
+- **Microsoft cloud security benchmark (MCSB)**: The MCSB standard applies by default when you onboard cloud accounts to Defender. Your [secure score](secure-score-security-controls.md) is based on assessment against some MCSB recommendations.
 
 - **Regulatory compliance standards**: When you enable one or more *An external link was removed to protect your privacy.*, you can add standards from various predefined regulatory compliance programs.
 
