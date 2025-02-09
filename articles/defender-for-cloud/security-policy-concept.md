@@ -17,7 +17,7 @@ Security standards in Defender for Cloud originate from these sources:
 
 - **Microsoft cloud security benchmark (MCSB)**: The MCSB standard applies by default when you onboard cloud accounts to Defender. Your [secure score](secure-score-security-controls.md) is based on assessment against some MCSB recommendations.
 
-- **Regulatory compliance standards**: When you enable one or more *An external link was removed to protect your privacy.*, you can add standards from various predefined regulatory compliance programs.
+- **Regulatory compliance standards**: When you enable one or more [Defender for Cloud plans](defender-for-cloud-introduction.md), you can add standards from various predefined regulatory compliance programs.
 
 - **Custom standards**: You can create custom security standards in Defender for Cloud and add built-in and custom recommendations as needed.
 
