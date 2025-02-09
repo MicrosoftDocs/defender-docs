@@ -41,7 +41,7 @@ Recommendations from assessments against custom standards appear with recommenda
 
 ### Custom recommendations
 
-Using custom recommendations based on Kusto Query Language (KQL) is recommended and supported for all clouds but requires enabling the *An external link was removed to protect your privacy.*. With these recommendations, you specify a unique name, description, remediation steps, severity, and relevant standards. You add recommendation logic with KQL. A query editor provides a built-in query template that you can tweak, or you can write your KQL query.
+Using custom recommendations based on Kusto Query Language (KQL) is recommended and supported for all clouds but requires enabling the [Defender CSPM plan](concept-cloud-security-posture-management.md). With these recommendations, you specify a unique name, description, remediation steps, severity, and relevant standards. You add recommendation logic with KQL. A query editor provides a built-in query template that you can tweak, or you can write your KQL query.
 
 Alternatively, all Azure customers can onboard their Azure Policy custom initiatives as custom recommendations (legacy approach).
 
