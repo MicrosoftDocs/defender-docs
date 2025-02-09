@@ -29,7 +29,7 @@ You can do the following with security standards in Defender for Cloud:
 
 - **Modify the built-in MCSB for the subscription**: When you enable Defender for Cloud, the MCSB automatically assigns to all Defender for Cloud registered subscriptions. *An external link was removed to protect your privacy.*.
 
-- **Add regulatory compliance standards**: If you have one or more paid plans enabled, you can assign built-in compliance standards to assess your Azure, AWS, and GCP resources. *An external link was removed to protect your privacy.*.
+- **Add regulatory compliance standards**: If you have one or more paid plans enabled, you can assign built-in compliance standards to assess your Azure, AWS, and GCP resources. [Learn more about assigning regulatory standards](update-regulatory-compliance-packages.yml).
 
 - **Add custom standards**: If you have at least one paid Defender plan enabled, you can define new *An external link was removed to protect your privacy.* and *An external link was removed to protect your privacy.* in the Defender for Cloud portal. You can then add recommendations to those standards.
 
