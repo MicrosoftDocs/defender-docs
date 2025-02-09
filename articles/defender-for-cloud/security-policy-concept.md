@@ -63,7 +63,7 @@ Each recommendation includes the following information:
 Every recommendation in Defender for Cloud has an associated risk level representing how exploitable and impactful the security issue is in your environment. The risk assessment engine considers factors such as internet exposure, data sensitivity, lateral movement possibilities, and attack path remediation. You can prioritize recommendations based on risk levels.
 
 > [!IMPORTANT]
-> Risk prioritization doesn't affect the secure score.
+> [Risk prioritization](risk-prioritization.md) doesn't affect the secure score.
 
 ### Example
 
