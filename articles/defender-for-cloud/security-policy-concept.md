@@ -45,7 +45,7 @@ Using custom recommendations based on Kusto Query Language (KQL) is recommended 
 
 Alternatively, all Azure customers can onboard their Azure Policy custom initiatives as custom recommendations (legacy approach).
 
-For more information, see *An external link was removed to protect your privacy.*.
+For more information, see [Create custom security standards and recommendations in Microsoft Defender for Cloud](create-custom-recommendations.md).
 
 ## Security recommendations
 
