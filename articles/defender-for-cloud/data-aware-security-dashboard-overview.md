@@ -29,8 +29,6 @@ The Data and AI security dashboard allows you to:
 - Discover useful data and AI insights by highlighting data and AI queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 - Identify and summarize sensitive data resources within your cloud data and AI assets.
 
-:::image type="content" source="media/data-aware-security-dashboard/data-security.png" alt-text="Screenshot that shows you how to navigate to the data security dashboard." lightbox="media/data-aware-security-dashboard/data-security.png":::
-
 > [!NOTE]
 > The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans enabled in your subscription.
 >
@@ -69,20 +67,25 @@ This section includes:
 
 - **Data queries in security explorer**: Provides queries that assist with investigations related to data-related risks such as data resources with plaintext secrets, external user access to databases, and public storage containing sensitive data.
 
-- **Internet exposed data resources**: Provides an overview of resources exposed to the internet, categorized by storage assets, managed databases, and hosted databases, making them vulnerable to potential threats.
+- **Internet exposed data resources**: Provides an overview of resources exposed to the internet, categorized by storage assets, managed databases, and hosted databases. These resources are vulnerable to potential threats.
 
-    :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
+:::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
 
-## AI SPM discovery
+## AI closer look
 
-The AI SPM discovery section presents an overview of the most critical issues your AI workloads are facing.
+The AI closer look section provides an overview of the most critical issues affecting your AI workloads.
 
-This section presents:
+This section includes:
 
-- All of your AI resources and their locations within your environment.
-- All of the alerts detected, sorted by severity.
-- An AI query to locate sensitive data using the security explorer.
-- An AI query to locate containers in your environment with vulnerabilities.
+- **AI discovery**: Provides an overview of all AI resources located within your environment.
+
+- **AI threat protection**: Provides an overview of the number of prompts scanned and all alerts detected, sorted by severity.
+
+- **AI queries in security explorer**: Provides queries that assist with investigations related to AI-related risks such as sensitive data resources used for grounding and vulnerable containers used for AI.
+
+- **Internet exposed resources used for grounding**: Provides an overview of AI resources exposed to the internet, categorized by storage and search assets.
+
+:::image type="content" source="media/data-aware-security-dashboard/ai-closer-look.png" alt-text="Screenshot that shows the AI closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/ai-closer-look.png":::
 
 ## Related content
 
