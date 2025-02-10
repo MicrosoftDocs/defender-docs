@@ -30,7 +30,7 @@ By using the Data and AI security dashboard, you can easily navigate and access 
 
 - Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
 
-## Review AI alerts
+## Locate all AI alerts
 
 Alerts are generated when Defender for Cloud detects potential security issues in your AI environments. You can find AI security alerts in the Data and AI security dashboard.
 
@@ -39,6 +39,8 @@ Alerts are generated when Defender for Cloud detects potential security issues i
 1. Navigate to **Defender for Cloud** > **Data and AI security dashboard**.
 
 1. Locate the AI threat protection section and select **View all AI Threat protection alerts**.
+
+    :::image type="content" source="media/review-ai-alerts/view-all-ai-alerts.png" alt-text="Screenshot of the Data and AI security dashboard that shows you where to select the view all AI alerts button is located." lightbox="media/review-ai-alerts/view-all-ai-alerts.png":::
 
 Once you navigate to the alerts page, you can then [investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
 

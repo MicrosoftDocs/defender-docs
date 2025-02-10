@@ -2,7 +2,7 @@
 title: Discover sensitive data
 description: Learn how to discover resources with sensitive data types in the Data and AI security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 02/05/2025
+ms.date: 02/10/2025
 #customer intent: As a security administrator, I want to discover sensitive data so that I can protect it.
 ---
 
@@ -39,7 +39,11 @@ Resources containing sensitive data are at risk of exposure to unauthorized user
 
 1. Locate the Data closer look section and select **View all resources with sensitive info types**.
 
+    :::image type="content" source="media/discover-sensitive-data/view-all-resources.png" alt-text="Screenshot of the Data and AI security dashboard that shows where the view all resources with sensitive data type button is located." lightbox="media/discover-sensitive-data/view-all-resources.png":::
+
 1. Select **search**.
+
+    :::image type="content" source="media/discover-sensitive-data/search-button.png" alt-text="Screenshot that shows where the search button is located on the Cloud Security Explorer page." lightbox="media/discover-sensitive-data/search-button.png":::
 
 1. Review each record found and select **View details** to see more information about the resource.
 
