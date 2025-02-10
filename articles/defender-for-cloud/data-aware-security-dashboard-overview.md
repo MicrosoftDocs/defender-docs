@@ -56,18 +56,22 @@ The Top Issues section provides details on resources needing the most immediate 
 
 ## Data closer look
 
-The Data closer look section gives an overview of the most critical issues your data is facing.
+The Data closer look section provides an in-depth view of data resources and their risks.
 
-This section presents:
+This section includes:
 
-- The top type of sensitive data discovered in your cloud resources.
-- The resources that contain sensitive data based on labels.
-- Data queries to locate sensitive data using the security explorer.
-- The location of resources exposed to the internet, sorted by storage assets, managed databases, and hosted databases, along with the ability to view all internet-exposed data resources.
+- **Sensitive data discovery**: Provides an overview of sensitive findings, including the most common sensitive information types and sensitivity labels in your cloud data resources.
+
+    > [!TIP]
+    > Select **Manage Sensitivity Settings** to navigate to the Data Sensitivity page. The Data Sensitivity page allows you to [customize sensitivity settings](data-sensitivity-settings.md) for cloud resources at the tenant level. Sensitivity settings can be set based on selected information types and labels from the Purview compliance portal, including sensitivity label thresholds. For more information, see [Manage sensitivity settings](data-sensitivity-settings.md).
+
+- **Data threat protection**: Provides an overview of alerts detected in storage and managed database resources.
+
+- **Data queries in security explorer**: Provides queries that assist with investigations related to data-related risks such as data resources with plaintext secrets, external user access to databases, and public storage containing sensitive data.
+
+- **Internet exposed data resources**: Provides an overview of resources exposed to the internet, categorized by storage assets, managed databases, and hosted databases, making them vulnerable to potential threats.
 
     :::image type="content" source="media/data-aware-security-dashboard/closer-look.png" alt-text="Screenshot that shows the closer look section of the data security dashboard." lightbox="media/data-aware-security-dashboard/closer-look.png":::
-
-Select **Manage sensitivity settings** to go to the Data sensitivity page. The Data sensitivity page allows you to manage the data sensitivity settings of cloud resources at the tenant level, based on selective info types and labels from the Purview compliance portal. You can [customize sensitivity settings](data-sensitivity-settings.md) such as information types, labels, and setting sensitivity label thresholds.
 
 ## AI SPM discovery
 
