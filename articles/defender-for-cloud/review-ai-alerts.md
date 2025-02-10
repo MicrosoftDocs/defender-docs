@@ -2,7 +2,7 @@
 title: Review AI security alerts
 description: Learn how to review AI security alerts in the Data and AI security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 02/05/2025
+ms.date: 02/10/2025
 #customer intent: As a security analyst, I want to review AI security alerts so that I can identify and mitigate potential threats in my AI environments.
 ---
 
@@ -40,9 +40,9 @@ Alerts are generated when Defender for Cloud detects potential security issues i
 
 1. Locate the AI threat protection section and select **View all AI Threat protection alerts**.
 
-Once you navigate to the alerts page, you can then[investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+Once you navigate to the alerts page, you can then [investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Manage and respond to security alerts](managing-and-responding-alerts.yml)
