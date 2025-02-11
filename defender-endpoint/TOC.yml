@@ -259,16 +259,18 @@
             items:
             - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
               href: mde-linux-arm.md
-            - name: Puppet based deployment
-              href: linux-install-with-puppet.md
+            - name: Installer script
+              href: linux-installer-script.md
             - name: Ansible based deployment
               href: linux-install-with-ansible.md
             - name: Chef based deployment
               href: linux-deploy-defender-for-endpoint-with-chef.md
-            - name: Manual deployment
-              href: linux-install-manually.md
+            - name: Puppet based deployment
+              href: linux-install-with-puppet.md
             - name: Saltstack-based deployment
               href: linux-install-with-saltack.md
+            - name: Manual deployment
+              href: linux-install-manually.md
             - name: Advanced deployment for Defender for Endpoint on Linux
               href: comprehensive-guidance-on-linux-deployment.md
             - name: Deployment guidance for Defender for Endpoint on Linux for SAP
