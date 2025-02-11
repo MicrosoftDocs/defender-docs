@@ -20,7 +20,7 @@ Defender for Cloud, together with Azure AI, enables adding parameters to your Az
 
 - Read up on [Overview - AI threat protection](ai-threat-protection.md).
 
-- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure OpenAI Service. Note, this feature is currently not supported when leveraging models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
+- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure OpenAI Service. Note, this feature is currently not supported when leveraging models consumed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
 ## Add security parameters to your Azure OpenAI call
 
@@ -32,7 +32,7 @@ For end-user context, we recommend passing the `EndUserId` and `SourceIP` fields
 
 For application context, simply pass the `applicationName` field, as a simple string.
 
-If a field’s name is misspelled, the Azure OpenAI API call will still succeed. The `UserSecurityContext` schema doesn't require validation to pass through the Azure OpenAI user field. Application developers should ensure that a valid JSON is passed to the `user` field in every request made by the application to Azure OpenAI.
+If a field’s name is misspelled, the Azure OpenAI API call will still succeed. The `UserSecurityContext` schema doesn't require validation to pass through the Azure OpenAI user field. Application developers should ensure that a valid JSON is passed in every request made by the application to Azure OpenAI.
 
 ## UserSecurityContext schema
 
@@ -46,10 +46,13 @@ This feature is currently not supported when leveraging models deployed through 
 
 |Source |Version support|Comments|
 
-|----|:----| ----|
+|----|----| ----|
 
-|Azure Open AI REST API|2025-01-01 version|-|
-|.NET SDK| [v2.2.0-beta.1 (2025-02-07) or higher](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.2.0-beta.1/sdk/openai/Azure.AI.OpenAI/CHANGELOG.md)|
+|Azure Open AI REST API|[2025-01-01 version](/azure/ai-services/openai/reference-preview)|-|
+|Azure .NET SDK| [v2.2.0-beta.1 (2025-02-07) or higher](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.2.0-beta.1/sdk/openai/Azure.AI.OpenAI/CHANGELOG.md)|-|
+|Azure Python SDK|[v1.61.1 or higher](https://github.com/openai/openai-python/releases/tag/v1.61.1)|The support is provided by appending to "extra_body" object|
+|Azure JS/Node SDK|[v4.83.0 or higher](https://github.com/openai/openai-node/releases/tag/v4.83.0)|The support is provided by appending to "extra_body" object|
+|Azure Go SDK|[v0.7.2 or higher ](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/ai/azopenai@v0.7.2#UserSecurityContext)|-|
 
 ## Next step
 
