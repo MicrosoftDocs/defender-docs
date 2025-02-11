@@ -44,7 +44,7 @@ This feature is currently not supported when leveraging models deployed through 
 
 ## Availability
 
-|Source | Version support| Comments|
+|Source |Version support|Comments|
 
 |----|:----| ----|
 
