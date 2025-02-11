@@ -2,8 +2,8 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 02/11/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -49,10 +49,6 @@ In order to preview new features and provide early feedback, it's recommended th
 
 > [!WARNING]
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
-
-## Installer script
-
-To use the installer script method, see [Use the installer script to deploy Microsoft Defender for Endpoint on Linux](linux-installer-script.md).
 
 ## Application installation
 
@@ -198,7 +194,7 @@ Download the onboarding package from Microsoft Defender portal.
    > To run this command, you must have `python` or `python3` installed on the device depending on the distro and version. If needed, see [Step-by-step Instructions for Installing Python on Linux](https://opensource.com/article/20/4/install-python-linux).
 
    > [!NOTE]
-   > To onboard a device that was previously offboarded you must remove the mdatp_offboard.json file located at /etc/opt/microsoft/mdatp.
+   > To onboard a device that was previously offboard, you must remove the mdatp_offboard.json file located at /etc/opt/microsoft/mdatp.
 
    If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`.
 
@@ -225,11 +221,11 @@ Download the onboarding package from Microsoft Defender portal.
    ```
 
    > [!IMPORTANT]
-   > When the product starts for the first time, it downloads the latest anti-malware definitions. This process may take up to a few minutes depending on the network connectivity. During this time, the command mentioned earlier returns a value of `false`. You can check the status of the definition update using the following command:
+   > When the product starts for the first time, it downloads the latest anti-malware definitions. This process might take up to a few minutes depending on the network connectivity. During this time, the command mentioned earlier returns a value of `false`. You can check the status of the definition update using the following command:
    >
    > `mdatp health --field definitions_status`
    >
-   > Note that you may also need to configure a proxy after completing the initial installation. See [Configure Defender for Endpoint on Linux for static proxy discovery: Post-installation configuration](linux-static-proxy-configuration.md#post-installation-configuration).
+   > You might also need to configure a proxy after completing the initial installation. See [Configure Defender for Endpoint on Linux for static proxy discovery: Post-installation configuration](linux-static-proxy-configuration.md#post-installation-configuration).
 
 1. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
@@ -284,7 +280,7 @@ The following external package dependencies exist for the mdatp package:
 
 > [!NOTE]
 > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF is not supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following other dependencies on the auditd package exist for mdatp:
+> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following other dependencies on the auditd package exist for mdatp:
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
@@ -298,11 +294,24 @@ The `mde-netfilter` package also has the following package dependencies:
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
 
-## Log installation issues
+## Troubleshoot installation issues
 
-See [Log installation issues](linux-resources.md#log-installation-issues) for more information on how to find the automatically generated log that is created by the installer when an error occurs.
+- For details on how to find the log that's generated when an installation error occurs, see [Log installation issues](/defender-endpoint/linux-resources#log-installation-issues). 
 
-## How to migrate from Insiders-Fast to Production channel
+- For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+
+- If the health of the device is false, see [Investigate agent health issues](health-status.md). 
+
+- For product performance issues, see [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md).
+
+- For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md). 
+
+- To get support from Microsoft, open a support ticket, and provide the log files created by using the [Microsoft Defender for Endpoint client analyzer tool](run-analyzer-linux.md). 
+
+
+## How to switch between channels
+
+For example, to change channel from Insiders-Fast to Production, do the following:
 
 1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
@@ -310,7 +319,7 @@ See [Log installation issues](linux-resources.md#log-installation-issues) for mo
    sudo yum remove mdatp
    ```
 
-1. Disable the Defender for Endpoint on Linux Insiders-Fast repo
+2. Disable the Defender for Endpoint on Linux Insiders-Fast repo.
 
    ```bash
    sudo yum repolist
@@ -323,14 +332,38 @@ See [Log installation issues](linux-resources.md#log-installation-issues) for mo
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-1. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
+3. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
-## Uninstallation
+Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as [channel]): 
 
-See [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) for details on how to remove Defender for Endpoint on Linux from client devices.
+- `insiders-fast`
+- `insiders-slow`
+- `prod` 
 
-## See also
+Each of these channels corresponds to a Linux software repository. This article describes how to configure your device to use one of these repositories.
 
-- [Investigate agent health issues](health-status.md)
+The choice of channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
+
+In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either `insiders-fast` or `insiders-slow`. 
+
+> [!WARNING]
+> Switching channels after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location. 
+
+## How to configure policies for Microsoft Defender for Endpoint on Linux
+
+You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
+
+- [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes the available settings
+- [Security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+
+## Uninstall Microsoft Defender for Endpoint on Linux
+
+For manual uninstallation, execute the below command as per your Linux distribution.
+
+- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
+- `sudo zypper remove mdatp` for SLES and variants.
+- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
+- `sudo dnf remove mdatp` for Mariner
+
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
