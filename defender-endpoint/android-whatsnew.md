@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 01/06/2025
+ms.date: 02/04/2025
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
@@ -28,23 +28,45 @@ ms.date: 01/06/2025
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-### Upgrading your experience: Upcoming enhancements you should know about
+#### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
-January 2025
+**February 2025:**
 
-**Key changes**
+As part of our Microsoft Defender for Mobile application, we offer Open Wi-Fi detection within our Network Protection feature set. When enabled, this feature generates an alert in the Security portal. Currently, the alert is informational and doesn't require any action from the SOC analyst or admin. It provides valuable information that aids in triaging incidents involving mobile devices.
 
-We are pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+**Current Behavior:**
 
-Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation. 
+- Every time the end user connects to an open Wi-Fi network, an alert is raised.
+
+- If the user goes out of the open Wi-Fi range and reconnects to the same network, another alert is raised.
+
+Based on our research insights and inputs from Microsoft and other SOC teams, we're implementing a caching behavior to ensure the value of the alerts remains and also doesn't cause fatigue to SOC teams due to sheer volume.
+
+**New behavior:** 
+
+- Every time the end user connects to an open Wi-Fi network, an alert is raised.
+
+- If a user reconnects to the same open wi-fi in the next seven days, another alert won't be raised.
+
+Please note that if a user connects to a different open Wi-Fi network, an alert is immediately generated, and there's no change to that behavior.
+
+## Upgrading your experience: Upcoming enhancements you should know about
+
+**January 2025**:
+
+**Key changes**:
+
+We're pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+
+Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
 
 The following screenshot is an example of what the user sees in their dashboard:
 
 :::image type="content" source="media/android-whatsnew/android-dashboard-screen.png" alt-text="Screenshot showing the user's dashboard in the Microsoft Defender app.":::
 
-**Recommendation cards for alerts**
+**Recommendation cards for alerts**:
 
-The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert will bring forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table:
+The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table:
 
 | Card | Description |
 |---|---|
@@ -52,8 +74,7 @@ The structure of the dashboard has been updated to include a recommendation card
 | :::image type="content" source="media/android-whatsnew/android-allow-vpn.png" alt-text="Screenshot showing a recommendation to set up a VPN connection."::: | **VPN option** <br/>The user is prompted to set up a VPN connection on their device. |
 | :::image type="content" source="media/android-whatsnew/android-threat-found.png" alt-text="Screenshot showing a recommendation to take action on a detected threat."::: | **Malware detection** <br/>The user is prompted to take action on a detected threat. |
 
-      
-**Feature tiles**
+**Feature tiles**:
 
 The current enterprise dashboard experience now features a tile view for your security team. The following table describes tiles your security team might see.
 
@@ -66,44 +87,44 @@ The current enterprise dashboard experience now features a tile view for your se
 
 ## Android low-touch onboarding is now GA
 
-**December 2024**
+**December 2024**:
 
-**Key benefits**
+**Key benefits**:
 
-1. **Faster setup on Android devices** – Simplified Android onboarding supports silent sign-on and autogranting of certain permissions on a user's device. As such, users are required to grant only the necessary permissions to onboard to Defender for Endpoint.  
+1. **Faster setup on Android devices** – Simplified Android onboarding supports silent sign-on and autogranting of certain permissions on a user's device. As such, users are required to grant only the necessary permissions to onboard to Defender for Endpoint.
 
-2. **Intuitive guidance** - A clear and intuitive flow to guide users through each step. 
+2. **Intuitive guidance** - A clear and intuitive flow to guide users through each step.
 
-3. **Broad coverage with support across multiple Android profiles** – Android enterprise BYOD, COPE, and fully managed. 
+3. **Broad coverage with support across multiple Android profiles** – Android enterprise BYOD, COPE, and fully managed.
 
-**Configuring low-touch onboarding** 
+**Configuring low-touch onboarding**:
 
 Although low-touch onboarding is disabled by default, security administrators can enable it through app configuration policies in Intune. See [Android low-touch onboarding](/defender-endpoint/android-intune).
 
 > [!IMPORTANT]
-> **Ending support for device administrator enrolled devices**
-> 
+> **Ending support for device administrator enrolled devices**:
+>
 > Microsoft Intune and Defender for Endpoint are ending support for device administrator enrolled devices with access to [Google Mobile Services](/mem/intune/apps/manage-without-gms) (GMS), beginning December 31, 2024.
-> 
-> **For devices with access to GMS**
-> 
-> After support ends for device administrator enrolled devices, devices with access to GMS will be affected in the following ways: 
-> 
+>
+> **For devices with access to GMS**:
+>
+> After support ends for device administrator enrolled devices, devices with access to GMS will be affected in the following ways:
+>
 > - Intune and Defender for Endpoint won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.
 > - Intune and Defender for Endpoint technical support will no longer support devices with access to GMS.
-> 
+>
 > For more information, see [Tech Community blog: Intune ending support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443).
 
 ## Network protection
 
-**Aug-2024 (version: 1.0.6812.0101)**
+**Aug-2024 (version: 1.0.6812.0101)**:
 
 - Network Protection feature is enabled by default for all users
 
 Network protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices, and rogue certificates. It notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an insecure connection.
 
 > [!IMPORTANT]
-> **This feature is now enabled by default for all users.** As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the set up. Administrators can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. 
+> **This feature is now enabled by default for all users.** As a result, users are able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup. Administrators can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. 
 There are also several administrator controls to offer flexibility, including privacy controls to configure the data that's sent by Defender for Endpoint from Android devices. For more information, see [network protection](android-configure.md).
 
 ## Device tagging
@@ -163,25 +184,25 @@ Release Build: `1.0.3501.0301`
 Release month: Nov 2021
 Microsoft Defender for Endpoint has released this update required by [Google](https://developer.android.com/distribute/play-policies#APILevel30) to upgrade to Android API 30. This change prompts users seeking access to [new storage permission](https://developer.android.com/training/data-storage/manage-all-files#all-files-access-google-play), for devices running Android 11 or later. Users need to accept this new storage permission once they update Defender app with the release build 1.0.3501.0301 or later. This update ensures that Defender for Endpoint's app security feature to function without any disruption. For more information, review the following sections.
 
-**How this affects your organization:** These changes take effect if you're using Microsoft Defender for Endpoint on devices running Android 11 or later and updated Defender for Endpoint to release build 1.0.3501.0301 or later.
+**How this affects your organization**: These changes take effect if you're using Microsoft Defender for Endpoint on devices running Android 11 or later and updated Defender for Endpoint to release build 1.0.3501.0301 or later.
 
 > [!NOTE]
-> The new storage permissions cannot be configured by administrators to auto approve through Microsoft Intune. Users must take action to provide access to this permission.
+> The new storage permissions can't be configured by administrators to auto approve through Microsoft Intune. Users must take action to provide access to this permission.
 
-**User experience:** Users receive a notification indicating a missing permission for app security. If the user denies this permission, app security functionality is turned off on the device. If user doesn't accept or deny permission, they continue to receive the prompt when unlocking their device or opening the app, until it's approved.
+**User experience**: Users receive a notification indicating a missing permission for app security. If the user denies this permission, app security functionality is turned off on the device. If user doesn't accept or deny permission, they continue to receive the prompt when unlocking their device or opening the app, until it's approved.
 
 > [!NOTE]
-> If your organization is previewing the tamper protection feature and if the new storage permissions are not granted by the user within seven days of updating to the latest version, the user might lose access to corporate resources.
+> If your organization is previewing the tamper protection feature and if the new storage permissions aren't granted by the user within seven days of updating to the latest version, the user might lose access to corporate resources.
 
-**What you need to do to prepare:**
+**What you need to do to prepare**:
 
 Notify your users and help desk (as applicable) that end users must accept the new permissions when prompted after they update Defender for Endpoint to build `1.0.3501.0301` or later. To accept the permissions, users should follow these steps:
 
 1. Tap on the Defender for Endpoint in-app notification or open the Defender for Endpoint app. Users see a screen that lists the permissions needed. A green check mark is missing next to **Storage permission**.
 
-1. Tap **Begin**.
+2. Tap **Begin**.
 
-3. Tap the toggle for **Allow access to manage all files.** 
+3. Tap the toggle for **Allow access to manage all files**.
 
    The device is now protected.
 

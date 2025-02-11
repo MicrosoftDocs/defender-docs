@@ -139,7 +139,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Smoke Sandstorm|Iran|UNC1549|
 |Spandex Tempest|Financially motivated|TA505|
 |Spotted Sandstorm||NEODYMIUM, BlackOasis|
-|[Star Blizzard](https://www.microsoft.com/en-us/security/blog/2023/12/07/star-blizzard-increases-sophistication-and-evasion-in-ongoing-attacks/)|Russia|SEABORGIUM, COLDRIVER, Callisto Group, BlueCharlie, TA446|
+|[Star Blizzard](https://www.microsoft.com/en-us/security/blog/tag/star-blizzard-seaborgium/)|Russia|SEABORGIUM, COLDRIVER, Callisto Group, BlueCharlie, TA446|
 |Storm-0216|Financially motivated|Twisted Spider, UNC2198|
 |Storm-0230|Group in development|Conti Team 1, DEV-0230|
 |Storm-0247|China|ToddyCat, Websiic|

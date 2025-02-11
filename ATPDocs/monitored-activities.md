@@ -14,10 +14,12 @@ In the case of a valid threat, or **true positive**, Defender for Identity enabl
 The information monitored by Defender for Identity is presented in the form of activities. Defender for Identity currently supports monitoring of the following activity types:
 
 > [!NOTE]
->
 > - This article is relevant for all Defender for Identity sensor types.
 > - Defender for Identity monitored activities appear on both the user and machine profile page.
-> - Defender for Identity monitored activities are also available in Microsoft Defender XDR's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - Defender for Identity monitored activities are also available in [Microsoft Defender XDR's Advanced Hunting](/defender-xdr/advanced-hunting-overview) page.
+
+> [!TIP]
+> For detailed information on all supported event types (`ActionType` values) in Advanced Hunting Identity-related tables, use the built-in schema reference available in Microsoft Defender XDR.
 
 ## Monitored user activities: User account AD attribute changes
 
@@ -25,7 +27,7 @@ The information monitored by Defender for Identity is presented in the form of a
 |---------------------|------------------|
 |Account Constrained Delegation State Changed|The account state is now enabled or disabled for delegation.|
 |Account Constrained Delegation SPNs Changed|Constrained delegation restricts the services to which the specified server can act on behalf of the user.|
-|Account Delegation Changed | Changes to the account delegation settings |
+|Account Delegation Changed | Changes to the account delegation settings. |
 |Account Disabled Changed|Indicates whether an account is disabled or enabled.|
 |Account Expired|Date when the account expires.|
 |Account Expiry Time Changed|Change to the date when the account expires.|
@@ -35,9 +37,9 @@ The information monitored by Defender for Identity is presented in the form of a
 |Account Password Never Expires Changed|User's password changed to never expire.|
 |Account Password Not Required Changed|User account was changed to allow logging in with a blank password.|
 |Account Smartcard Required Changed|Account changes to require users to log on to a device using a smart card.|
-|Account Supported Encryption Types Changed|Kerberos supported encryption types were changed (types: Des, AES 129, AES 256)|
-|Account Unlock changed | Changes to the account unlock settings |
-|Account UPN Name Changed|User's principle name was changed.|
+|Account Supported Encryption Types Changed|Kerberos supported encryption types were changed (types: Des, AES 129, AES 256).|
+|Account Unlock changed | Changes to the account unlock settings. |
+|Account UPN Name Changed|User's principal name was changed.|
 |Group Membership Changed|User was added/removed, to/from a group, by another user or by themselves.|
 |User Mail Changed|Users email attribute was changed.|
 |User Manager Changed|User's manager attribute was changed.|
@@ -48,8 +50,8 @@ The information monitored by Defender for Identity is presented in the form of a
 
 |Monitored activity|Description|
 |---------------------|------------------|
-|User Account Created|User account was created|  
-|Computer Account Created|Computer account was created|
+|User Account Created|User account was created.|  
+|Computer Account Created|Computer account was created.|
 |Security Principal Deleted Changed|Account was deleted/restored (both user and computer).|
 |Security Principal Display Name Changed|Account display name was changed from X to Y.|
 |Security Principal Name Changed|Account name attribute was changed.|
@@ -69,7 +71,7 @@ The information monitored by Defender for Identity is presented in the form of a
 |Private Data Retrieval|User attempted/succeeded to query private data using LSARPC protocol.|
 |Service Creation|User attempted to remotely create a specific service to a remote machine.|
 |SMB Session Enumeration|User attempted to enumerate all users with open SMB sessions on the domain controllers.|
-|SMB file copy|User copied files using SMB|
+|SMB file copy|User copied files using SMB.|
 |SAMR Query|User performed a SAMR query.|
 |Task Scheduling|User tried to remotely schedule X task to a remote machine.|
 |Wmi Execution|User attempted to remotely execute a WMI method.|
@@ -83,7 +85,7 @@ For more information, see [Supported logon types](/microsoft-365/security/defend
 |Monitored activity|Description|
 |---------------------|------------------|
 |Computer Operating System Changed|Change to the computer OS.|
-|SID-History changed | Changes to the computer SID history |
+|SID-History changed | Changes to the computer SID history. |
 
 ## See Also
 

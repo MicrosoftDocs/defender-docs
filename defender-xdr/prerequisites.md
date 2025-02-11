@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/18/2024
+ms.date: 02/04/2025
 appliesto:
 - Microsoft Defender XDR
 ---
@@ -31,7 +31,7 @@ Learn about licensing and other requirements for provisioning and using [Microso
 
 Microsoft Defender XDR natively correlates Microsoft security products' signals, providing security operations teams a single pane of glass to detect, investigate, respond, and protect your assets. These signals are dependent on the license that you have and the access provisioned to you.
 
-Any of the these licenses gives you access to Microsoft Defender XDR features via the Microsoft Defender portal without additional cost:
+Any of these licenses give you access to Microsoft Defender XDR features via the Microsoft Defender portal without any additional cost:
 
 - Microsoft 365 E5 or A5
 - Microsoft 365 E3 with the Microsoft 365 E5 Security add-on

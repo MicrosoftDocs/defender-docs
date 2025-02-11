@@ -7,7 +7,7 @@ metadata:
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting
-  ms.date: 02/16/2024
+  ms.date: 02/04/2025
   ms.localizationpriority: medium
   ms.custom: nextgen
   manager: deniseb
@@ -102,71 +102,6 @@ sections:
           - User: Domain\User
 
           - Scan Time: The duration of a scan.
-
-     - question: Event ID 1003
-       answer: |
-
-         Symbolic name: `MALWAREPROTECTION_SCAN_PAUSED`
-
-         Message: An antimalware scan was paused.
-
-         Description:
-
-          - Scan ID: ID number of the relevant scan.
-
-          - Scan Type: Scan type. Examples: Antivirus, Antispyware, or Antimalware
-
-          - Scan Parameters: Scan parameters. Examples: Full scan, Quick scan, or Customer scan
-
-          - User: Domain\User
-
-     - question: Event ID 1004
-       answer: |
-
-         Symbolic name: `MALWAREPROTECTION_SCAN_RESUMED`
-
-         Message: An antimalware scan was resumed.
-
-         Description:
-
-          - Scan ID: ID number of the relevant scan.
-
-          - Scan Type: Scan type. Examples: Antivirus, Antispyware, or Antimalware
-
-          - Scan Parameters: Scan parameters. Examples: Full scan, Quick scan, or Customer scan
-
-          - User: Domain\User
-
-     - question: Event ID 1005
-       answer: |
-
-         Symbolic name: `MALWAREPROTECTION_SCAN_FAILED`
-
-         Message: An antimalware scan failed.
-
-         Description:
-
-          - Scan ID: ID number of the relevant scan.
-
-          - Scan Type: Scan type. Examples: Antivirus, Antispyware, or Antimalware
-
-          - Scan Parameters: Scan parameters. Examples: Full scan, Quick scan, or Custom scan
-
-          - User: Domain\User
-
-          - Error Code: Error code. Result code associated with threat status. Standard HRESULT values.
-
-          - Error Description: Error description. Description of the error.
-
-         User action:
-
-           The antivirus client encountered an error, and the current scan stopped. The scan might fail due to a client-side issue. This event record includes the scan ID, type of scan (Microsoft Defender Antivirus, antispyware, antimalware), scan parameters, the user that started the scan, the error code, and a description of the error. To troubleshoot this event:
-
-             - Run the scan again.
-
-             - If it fails in the same way, go to the [Microsoft Support site](https://support.microsoft.com/), enter the error number in the Search box to look for the error code.
-
-             - Contact [Microsoft Technical Support](/microsoft-365/admin/get-help-support).
 
      - question: Event ID 1006
        answer: |

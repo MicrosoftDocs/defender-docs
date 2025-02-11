@@ -14,7 +14,7 @@ ms.custom:
 - next-gen
 - mde-edr
 - admindeeplinkDEFENDER
-ms.date: 06/25/2024
+ms.date: 02/10/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -80,15 +80,31 @@ When EDR in block mode is turned on, and a malicious artifact is detected, Defen
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)) and sign in.
 
-2. Choose **Settings** \> **Endpoints** \> **General** \> **Advanced features**.
+1. Choose **Settings** > **Endpoints** > **General** > **Advanced features**.
 
-3. Scroll down, and then turn on **Enable EDR in block mode**.
+1. Scroll down, and then turn on **Enable EDR in block mode**.
 
 ### Intune
 
 To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/deploy-oma-uris-to-target-csp-via-intune).
 
 For more information on the Defender CSP used for EDR in block mode, see "Configuration/PassiveRemediation" under [Defender CSP](/windows/client-management/mdm/defender-csp).
+
+### Group Policy
+
+You can use Group Policy to enable EDR in block mode.
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+2. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+
+3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
+
+4. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
+
+5. Select **OK**. 
 
 ## Requirements for EDR in block mode
 

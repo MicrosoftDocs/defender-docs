@@ -143,7 +143,7 @@ For more information about setting up Workday integration users, security groups
 
     ![Screenshot of authorizing access to app.](media/connect-workday-add-app-allow.png)
 
-1. Back in the Defender for Cloud Apps portal, you should see a message that Workday was successfully connected.
+1. In Defender for Cloud Apps, you should see a message that Workday was successfully connected.
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 

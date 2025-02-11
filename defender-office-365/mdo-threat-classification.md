@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about threat classification in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/06/2025
+ms.date: 01/21/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -38,7 +38,7 @@ _Threat type_ refers to the primary categorization of a threat based on fundamen
 
 ## Threat detections
 
-_Threat detections refer to the technologies and methodologies that are used to identify specific indicators or suspicious activities within an email message or communication. Threat detections help spot the presence of threats by identifying anomalies or characteristics in the message. Common threat detections include:
+_Threat detections_ refer to the technologies and methodologies that are used to identify specific indicators or suspicious activities within an email message or communication. Threat detections help spot the presence of threats by identifying anomalies or characteristics in the message. Common threat detections include:
 
 - **Spoof**: Identifies when the sender's email address is forged to look like a trusted source.
 - **Impersonation**: Detects when an email message impersonates a legitimate entity, such as an executive or trusted business partner, to trick recipients into taking harmful actions.
@@ -84,3 +84,5 @@ The results of threat classification are available in the following experiences 
 - [Explorer (Threat Explorer)](threat-explorer-real-time-detections-about.md)
 - [Incidents and alerts](mdo-sec-ops-manage-incidents-and-alerts.md)
 - [Advanced hunting](/defender-xdr/advanced-hunting-overview)
+- The [Threat protection status report](reports-email-security.md#view-data-by-email--phish-and-chart-breakdown-by-threat-classification-defender-for-office-365)
+- The [Mailflow status report](reports-email-security.md#mailflow-view-for-the-mailflow-status-report)

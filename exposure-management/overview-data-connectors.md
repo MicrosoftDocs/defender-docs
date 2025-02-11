@@ -38,25 +38,6 @@ Data Connectors in Microsoft Security Exposure Management is currently in public
 > [!NOTE]
 > During the preview phase, use of the data connectors feature is free. Once data connectors become generally available, there will be a consumption-based cost for each non-Microsoft data connector based on number of assets retrieved from the connected security tool. The charge will be according to volume of ingested billable assets, where a billable asset is any asset (device, container, identity, application) on which data is reported from that connector. Each connector will have clearly defined applicable assets and guidance on how to determine the numbers. Pricing will be announced before billing of external connectors starts at GA.  
 
-## Prerequisites
-
-The following prerequisites are required to integrate external data connecters to Microsoft Security Exposure Management.
-
-### Roles & permissions
-
-For full access to connect and disconnect the data connectors you need one of the following Microsoft Entra ID roles:
-
-- Global Admin (read and write permissions)
-- Security Admin (read and write permissions)
-- Security Operator (read and limited write permissions)
-
-To view the status of the connectors, you can use one of the following roles:
-
-- Global Reader (read permissions)
-- Security Reader (read permissions)
-
-You can find more details about the permission levels here, [Prerequisites, and support](prerequisites.md).
-
 ## Next steps
 
 [Configure your data connectors](configure-data-connectors.md).
