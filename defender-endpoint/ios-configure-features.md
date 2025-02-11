@@ -317,9 +317,11 @@ Follow the steps below to create a compliance policy against jailbroken devices.
 Defender for Endpoint on iOS enables admins to configure custom indicators on iOS devices as well. For more information on how to configure custom indicators, see [Overview of indicators](indicators-overview.md).
 
 > [!NOTE]
-> Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on iOS.
->
-> For iOS, no alerts are generated on Microsoft Defender XDR when the URL or domain set in the indicator is accessed.
+> Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on iOS. 
+> 
+> IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
+> 
+> For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
 
 ## Configure vulnerability assessment of apps
 
