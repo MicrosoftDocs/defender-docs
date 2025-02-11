@@ -69,9 +69,9 @@ If the workload is active, all assigned user permission are deleted by removing 
 ## Export roles
 
 > [!IMPORTANT]
-> From February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants that have not created roles and permissions. In addition, these new tenants won't have the ability to export roles and permissions from the current model.
+> Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model.
 >
-> All Defender for Endpoint tenants who assigned roles and permissions before this date can continue to use their current roles and permissions.
+> Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
 
 The Export feature enables you to export the following roles data:
 

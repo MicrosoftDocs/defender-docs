@@ -35,9 +35,9 @@ search.appverid: met150
 This article lists the steps to activate Defender workloads available in your environment to use the Microsoft Defender XDR Unified role-based access control (RBAC). Activate the Unified RBAC model for some or all of your workloads for the Microsoft Defender portal to start enforcing the permissions and assignments configured in your new [custom roles](create-custom-rbac-roles.md) or [imported roles](import-rbac-roles.md).
 
 > [!IMPORTANT]
-> From February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants where there are no roles or permissions created yet. As a result, activating the Unified RBAC model won't be available for these new tenants. In addition, these new tenants won't have the ability to export roles and permissions from the current model.
+> Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model.
 >
-> All Defender for Endpoint tenants with previously assigned/exported roles and permissions before this date can continue to use their current roles and permissions.
+> Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
 
 <a name='activate-microsoft-365-defender-unified-rbac'></a>
 
