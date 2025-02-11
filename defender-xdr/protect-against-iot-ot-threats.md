@@ -48,7 +48,7 @@ This table describes the supported protection for different licenses.
 |Enterprise IoT add-on device license (add-on to MDE P2)   |&#x2705;  |&#x2705; |&#x2705; |&#10060; |[Enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal)  |
 |E5<sup>1</sup>     |&#x2705;  |&#x2705; |&#x2705; |&#x2705; |[Enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal)  |
 
-<sup>1</sup>Includes the MDE P2 license and the enterprise IoT add-on.<br>- Each Microsoft Defender for endpoint user license supports five enterprise IoT add-on device licenses.<br>- 
+<sup>1</sup>Includes the MDE P2 license and the enterprise IoT add-on. Each Microsoft Defender for endpoint user license supports five enterprise IoT add-on device licenses. 
 
 ### Supported devices
 
