@@ -10,7 +10,7 @@ ms.date: 02/10/2025
 
 Microsoft Defender for Cloud's Data and AI security dashboard provides a centralized platform to monitor and manage data and AI resources, their associated risks, and protection status. The dashboard highlights critical security issues, resources needing attention, and internet-exposed resources, enabling proactive risk mitigation. Additionally, it provides insights into sensitive data within data resources and AI workloads, strengthening the overall security posture.
 
-A key benefit of the Data and AI Dashboard is its ability to see your organization's most critical data and AI security issues. This feature helps you make informed decisions and take proactive measures to mitigate risks.
+A key benefit of the Data and AI dashboard is its ability to see your organization's most critical data and AI security issues. This feature helps you make informed decisions and take proactive measures to mitigate risks.
 
 ## Benefits of the Data and AI security dashboard
 
@@ -32,7 +32,7 @@ The Data and AI security dashboard allows you to:
 > [!NOTE]
 > The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans enabled in your subscription.
 >
-> To have full access to the dashboard, you must enable the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md), and Defender CSPM's extension [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md),  [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
+> To have full access to the dashboard, you must enable the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md), and Defender CSPM's extension [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
 
 ## Data and AI security overview
 
@@ -44,7 +44,7 @@ Here, you can see which of your resources are fully, partially, or not protected
 
 ## Top issues
 
-The Top Issues section provides details on resources needing the most immediate attention due to critical issues affecting them. This section presents:
+The Top issues section provides details on resources needing the most immediate attention due to critical issues affecting them. This section presents:
 
 - Alerts with the highest severities based on the presented MITRE ATT&CK tactics.
 - Recommendations with critical and high severities.
@@ -58,7 +58,7 @@ The Data closer look section provides an in-depth view of data resources and the
 
 This section includes:
 
-- **Sensitive data discovery**: Provides an overview of sensitive findings, including the most common sensitive information types and sensitivity labels in your cloud data resources.
+- **Sensitive data discovery**: Provides an overview of sensitive findings, including the most common sensitive information types and sensitivity labels in cloud data resources.
 
     > [!TIP]
     > Select **Manage Sensitivity Settings** to navigate to the Data Sensitivity page. The Data Sensitivity page allows you to [customize sensitivity settings](data-sensitivity-settings.md) for cloud resources at the tenant level. Sensitivity settings can be set based on selected information types and labels from the Purview compliance portal, including sensitivity label thresholds. For more information, see [Manage sensitivity settings](data-sensitivity-settings.md).
@@ -73,11 +73,11 @@ This section includes:
 
 ## AI closer look
 
-The AI closer look section provides an overview of the most critical issues affecting your AI workloads.
+The AI closer look section provides an overview of the most critical issues affecting AI workloads.
 
 This section includes:
 
-- **AI discovery**: Provides an overview of all AI resources located within your environment.
+- **AI discovery**: Provides an overview of all AI resources located within the environment.
 
 - **AI threat protection**: Provides an overview of the number of prompts scanned and all alerts detected, sorted by severity.
 
