@@ -9,7 +9,7 @@ ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
-ms.date: 10/18/2018
+ms.date: 01/28/2025
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -39,12 +39,12 @@ You can choose to configure and evaluate each setting independently, or all at o
 
 The guide is available:
 
-- [Evaluate Microsoft Defender Antivirus using PowerShell](microsoft-defender-antivirus-using-powershell.md)
-- in PDF format for offline viewing: [Download the guide in PDF format](https://www.microsoft.com/download/details.aspx?id=54795).
+- [Evaluate Microsoft Defender Antivirus using PowerShell](microsoft-defender-antivirus-using-powershell.md).
+- In PDF format for offline viewing: [Download the guide in PDF format](https://www.microsoft.com/download/details.aspx?id=54795).
 
 You can also download a PowerShell that will enable all the settings described in the guide automatically. You can obtain the script alongside the PDF download above, or individually from PowerShell Gallery:
 
-- [Download the PowerShell script to automatically configure the settings](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings)
+- [Download the PowerShell script to automatically configure the settings](https://aka.ms/wdeppscript).
 
 > [!IMPORTANT]
 > The guide is currently intended for single-machine evaluation of Microsoft Defender Antivirus. Enabling all of the settings in this guide may not be suitable for real-world deployment.
@@ -62,9 +62,22 @@ You can also download a PowerShell that will enable all the settings described i
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-## Related topics
+## Related articles
+
+- Evaluate Microsoft Defender Antivirus using [Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) ](/defender-endpoint/evaluate-mda-using-mde-security-settings-management)
+
+- Evaluate Microsoft Defender Antivirus using [Group Policy](/defender-endpoint/evaluate-mdav-using-gp)
+
+- Evaluate Microsoft Defender Antivirus using [Powershell](/defender-endpoint/microsoft-defender-antivirus-using-powershell)
+
+- [Advanced technologies](/defender-endpoint/adv-tech-of-mdav) at the core of Microsoft Defender Antivirus
+
+- [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility)
+
+- [Microsoft Defender Antivirus and non-Microsoft antivirus solutions without Defender for Endpoint](/defender-endpoint/defender-antivirus-compatibility-without-mde)
 
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
+
 - [Deploy Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -44,7 +44,13 @@
       "ms.service": "defender-for-cloud-apps",
       "ms.suite": "ems",
       "contributors_to_exclude": [
-        "beccarobins"
+        "beccarobins",
+        "rjagiewich",
+        "claydetels19",
+        "garycentric",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
       ]
     },
     "fileMetadata": {},

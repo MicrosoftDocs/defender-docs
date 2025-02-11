@@ -2,10 +2,10 @@
 title: Set preferences for Microsoft Defender for Endpoint on Mac
 description: Configure Microsoft Defender for Endpoint on Mac in enterprise organizations.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
-ms.reviewer: yongrhee
+ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 11/11/2024
+ms.date: 01/31/2025
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
@@ -416,6 +416,16 @@ Determines whether security intelligence updates are installed automatically:
 |**Data type**|Boolean|
 |**Possible values**|true (default) <p> false|
 
+#### Duration for security intelligence updates due (in days)
+
+Determines the number of days after which the last installed security intelligence updates are considered outdated.
+
+|Section|Value|
+|---|---|
+|**Key**|definitionUpdateDue|
+|**Data type**|Integer|
+|**Possible values**|7 (default). Allowed values are integers between 1 and 30|
+
 ### User interface preferences
 
 Manage the preferences for the user interface of Microsoft Defender for Endpoint on macOS.
@@ -742,6 +752,8 @@ The following configuration profile (or, in case of JAMF, a property list that c
                     <true/>
                     <key>automaticDefinitionUpdateEnabled</key>
                     <true/>
+                    <key>definitionUpdateDue</key>
+                    <integer>7</integer>
                 </dict>
                 <key>tamperProtection</key>
                 <dict>
@@ -855,6 +867,8 @@ The following templates contain entries for all settings described in this docum
         <true/>
         <key>cloudBlockLevel</key>
         <string>normal</string>
+        <key>definitionUpdateDue</key>
+        <integer>7</integer>
     </dict>
     <key>edr</key>
     <dict>
@@ -1043,6 +1057,8 @@ The following templates contain entries for all settings described in this docum
                     <true/>
                     <key>cloudBlockLevel</key>
                     <string>normal</string>
+                    <key>definitionUpdateDue</key>
+                    <integer>7</integer>
                 </dict>
                 <key>edr</key>
                 <dict>
