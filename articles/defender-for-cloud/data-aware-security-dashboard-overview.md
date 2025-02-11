@@ -1,6 +1,6 @@
 ---
-title: The data and AI security dashboard (Preview)
-description: Learn about the capabilities and functions of the data security posture management view in Microsoft Defender for Cloud.
+title: Data and AI security dashboard (Preview)
+description: Discover the capabilities of the Data and AI Security Dashboard in Microsoft Defender for Cloud. Enhance your security posture and manage risks effectively.
 ms.topic: concept-article
 ms.date: 02/10/2025
 #customer intent: As a security professional, I want to understand the information presented to me on the data and AI security dashboard so that I can effectively manage the security of my organization's data and AI estate, risks and insights.
@@ -16,16 +16,16 @@ A key benefit of the Data and AI dashboard is its ability to see your organizati
 
 The Data and AI security dashboard allows you to:
 
-- View a unified view of all organizational data and AI resources in a single interface.
-- Gain insights into where data is stored and the types of resources that hold it.
+- View all organizational data and AI resources in a single interface.
+- Gain insights into data storage locations and the types of resources that hold it.
 - Assess the protection coverage of data and AI resources.
-- Track and manage data and AI resources to stay informed and in control.
-- Access critical information and complete tasks efficiently.
-- Make informed decisions and take proactive measures on data and AI security issues.
+- Track and manage data and AI resources to stay informed.
+- Access critical information and complete tasks.
+- Make informed decisions and take proactive measures on data and AI security.
 - Identify potential threats by highlighting [attack paths](concept-attack-path.md) leading to sensitive data.
-- View issue tracking, recommendations, and data threat analysis in one location.
+-  View issue tracking, recommendations, and data threat analysis in one location.
 - Manage data and AI environments on a unified platform.
-- Mitigate critical threats and improve your overall security posture in your data and AI environments.
+- Mitigate critical threats and improve security posture in data and AI environments.
 - Discover useful data and AI insights by highlighting data and AI queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 - Identify and summarize sensitive data resources within your cloud data and AI assets.
 
@@ -33,6 +33,15 @@ The Data and AI security dashboard allows you to:
 > The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans enabled in your subscription.
 >
 > To have full access to the dashboard, you must enable the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md), and Defender CSPM's extension [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan), [Defender for Storage](tutorial-enable-storage-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [threat protection for AI workloads](ai-onboarding.md).
+>
+> You must also register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
+>
+>  You must also have the following permissions and role:
+> - **Permissions**:
+>  - Microsoft.Security/assessments/read
+>  - Microsoft.Security/assessments/subassessments/read
+>  - Microsoft.Security/alerts/read
+> - **Role** - the minimum required privileged role-based access control role of **Security explorer**.
 
 ## Data and AI security overview
 

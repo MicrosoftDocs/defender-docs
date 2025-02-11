@@ -18,18 +18,6 @@ By using the Data and AI security dashboard, you can easily navigate and access 
 - Enable [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
 - Enable [threat protection for AI workloads](ai-onboarding.md).
 
-**Roles and permissions**: 
-
-- **Permissions**:
-
-    - Microsoft.Security/assessments/read
-    - Microsoft.Security/assessments/subassessments/read
-    - Microsoft.Security/alerts/read
-
-- **Role** - the minimum required privileged role-based access control role of **Security explorer**.
-
-- Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
-
 ## Locate all AI alerts
 
 Alerts are generated when Defender for Cloud detects potential security issues in your AI environments. You can find AI security alerts in the Data and AI security dashboard.

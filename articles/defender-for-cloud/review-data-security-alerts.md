@@ -17,18 +17,6 @@ Microsoft Defenders for Cloud's data security alerts provide insights into poten
 - Enable [Defender for Storage](tutorial-enable-storage-plan.md).
 - Enable [Defender for Databases](tutorial-enable-databases-plan.md).
 
-**Roles and permissions**: 
-
-- **Permissions**:
-
-    - Microsoft.Security/assessments/read
-    - Microsoft.Security/assessments/subassessments/read
-    - Microsoft.Security/alerts/read
-
-- **Role** - the minimum required privileged role-based access control role of **Security explorer**.
-
-- Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
-
 ## View data security alerts
 
 Data security alerts in Defender for Cloud help you identify potential threats and vulnerabilities in your data environments. Review alerts to understand security issues and take necessary actions to mitigate risks.

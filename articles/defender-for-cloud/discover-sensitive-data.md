@@ -17,16 +17,6 @@ Microsoft Defender for Cloud detects resources with sensitive info types, helpin
 - Enable [Defender for Storage](tutorial-enable-storage-plan.md).
 - Enable [Defender for Databases](tutorial-enable-databases-plan.md).
 
-**Roles and permissions**: 
-
-- **Permissions**:
-
-    - Microsoft.Security/assessments/read
-    - Microsoft.Security/assessments/subassessments/read
-    - Microsoft.Security/alerts/read
-
-- **Role** - the minimum required privileged role-based access control role of **Security explorer**.
-
 - Register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
 
 ## View resources with sensitive data
