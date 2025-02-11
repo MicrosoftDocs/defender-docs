@@ -1,6 +1,6 @@
 ---
-title: Configure automatic attack disruption capabilities in Microsoft Defender XDR
-description: Configure automatic attack disruption options in Microsoft Defender XDR
+title: Configure automatic attack disruption in Microsoft Defender XDR
+description: Learn how to set up automatic attack disruption in Microsoft Defender XDR and ensure prerequisites are met.
 search.appverid: MET150
 ms.author: diannegali
 author: diannegali
@@ -20,7 +20,7 @@ ms.reviewer: evaldm, isco
 f1.keywords: CSH
 ---
 
-# Configure automatic attack disruption capabilities in Microsoft Defender XDR
+# Configure automatic attack disruption in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -28,9 +28,9 @@ Microsoft Defender XDR includes powerful [automated attack disruption](automatic
 
 This article describes how to configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to settings.
 
-<a name='prerequisites-for-automatic-attack-disruption-in-microsoft-365-defender'></a>
+## Prerequisites
 
-## Prerequisites for automatic attack disruption in Microsoft Defender XDR
+The following are prerequisites for configuring automatic attack disruption in Microsoft Defender XDR:
 
 |Requirement|Details|
 |---|---|
@@ -78,11 +78,11 @@ You can find more information on the action accounts in [Configure Microsoft Def
 The Defender for Identity sensor needs to be deployed on the domain controller where the Active Directory account is to be turned off.
 
 > [!NOTE]
-> If you have automations in place to activate or block a user, check if the automations can interfere with disruption. For example, if there is an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
+> If you have automation in place to activate or block a user, check if the automation can interfere with disruption. For example, if there is an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
 
 ### Microsoft Defender for Cloud Apps prerequisites
 
-#### Microsoft Office 365 Connector 
+#### Microsoft Office 365 connector 
 
 Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 through the connector. To connect Defender for Cloud Apps, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps). 
 
@@ -108,14 +108,15 @@ The following mailbox events need to be audited by minimum:
 
 Review [manage mailbox auditing](/purview/audit-mailboxes) to learn about managing mailbox auditing.
 
-#### Safelinks policy needs to be present.
+#### Safelinks policy needs to be present
 
 ## Next steps
 
 - [View details and results](autoad-results.md)
+- [Set and manage attack disruption exclusions](automatic-attack-disruption-exclusions.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
 
-## See also
+## Related content
 
 - [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
 - [Automatic attack disruption for SAP](/azure/sentinel/sap/deployment-attack-disrupt)
