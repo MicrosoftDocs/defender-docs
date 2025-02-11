@@ -67,6 +67,9 @@
           href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
     - name: Respond to threats automatically
       items:
+        - name: Overview
+          href: respond-threats-overview.md
+          displayName: Respond to threats automatically
         - name: Automatic attack disruption 
           href: /defender-xdr/automatic-attack-disruption?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Automation in Microsoft Sentinel (SOAR)
