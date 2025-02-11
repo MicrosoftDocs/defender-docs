@@ -42,11 +42,11 @@ The existing Defender for Endpoint agent runs on enterprise IoT assets and ident
 
 This table describes the supported protection for different licenses.
 
-|License  |Enterprise IoT device discovery  |Threat detection for managed/unmanaged devices |VM |Recommendations |How to enable/notes |
+|License  |Device discovery  |Threat detection - managed/unmanaged devices |VM |Recommendations |How to enable |
 |---------|---------|---------|---------|---------|---------|---------|
-|MDE P2     |&#x2705;  |&#x2705; |Not included |&#10060; |Included as part of the license by default. |
+|MDE P2     |&#x2705;  |&#x2705; |&#10060; |&#10060; |Included as part of the license by default. |
 |Enterprise IoT add-on device license (add-on to MDE P2)     |&#x2705;  |&#x2705; |&#x2705; |&#10060; |[Enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal)  |
-|E5     |&#x2705;  |&#x2705; |&#x2705; |&#x2705; |Includes both the MDE P2 license and the enterprise IoT add-on. Each Microsoft Defender for endpoint user license supports five enterprise IoT add-on device licenses.  |
+|E5     |&#x2705;  |&#x2705; |&#x2705; |&#x2705; |- Includes the MDE P2 license and the enterprise IoT add-on.<br>- Each Microsoft Defender for endpoint user license supports five enterprise IoT add-on device licenses.  |
 
 ### Supported devices
 
