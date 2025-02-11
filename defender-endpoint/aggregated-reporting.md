@@ -61,9 +61,9 @@ Aggregated reporting supports the following event types:
 > [!div class="mx-tdBreakAll"]
 > |Action type|Advanced hunting table|Device timeline presentation|Properties|
 > |:---|:---|:-------|:-------------------------------|
-> |FileCreatedAggregatedReport|DeviceFileEvents|{ProcessName} created {Occurrences} {FilePath} files|1. File path </br> 2. Process name </br> 3. Process name|
->|FileRenamedAggregatedReport|DeviceFileEvents|{ProcessName} renamed {Occurrences} {FilePath} files|1. File path </br> 2. Process name </br> 3. Process name|
-> |FileModifiedAggregatedReport|DeviceFileEvents|{ProcessName} modified {Occurrences} {FilePath} files|1. File path </br> 2. Process name </br> 3. Process name|
+> |FileCreatedAggregatedReport|DeviceFileEvents|{ProcessName} created {Occurrences} {FilePath} files|1. File path </br> 2. File extension </br> 3. Process name|
+>|FileRenamedAggregatedReport|DeviceFileEvents|{ProcessName} renamed {Occurrences} {FilePath} files|1. File path </br> 2. File extension </br> 3. Process name|
+> |FileModifiedAggregatedReport|DeviceFileEvents|{ProcessName} modified {Occurrences} {FilePath} files|1. File path </br> 2. File extension </br> 3. Process name|
 > |ProcessCreatedAggregatedReport|DeviceProcessEvents|{InitiatingProcessName} created {Occurrences} {ProcessName} processes|1. Initiating process command line </br> 2. Initiating process SHA1 </br> 3. Initiating process file path </br> 4. Process command line </br> 5. Process SHA1 </br> 6. Folder path|
 > |ConnectionSuccessAggregatedReport|DeviceNetworkEvents|{InitiatingProcessName} established {Occurrences} connections with {RemoteIP}:{RemotePort}|1. Initiating process name </br> 2. Source IP </br> 3. Remote IP </br> 4. Remote port|
 > |ConnectionFailedAggregatedReport|DeviceNetworkEvents|{InitiatingProcessName} failed to establish {Occurrences} connections with {RemoteIP:RemotePort}|1. Initiating process name </br> 2. Source IP </br> 3. Remote IP </br> 4. Remote port|
@@ -92,7 +92,7 @@ You can use the following KQL queries to gather specific information using aggre
 
 The following query highlights noisy process activity, which can be correlated with malicious signals.
 
-```KQL
+```Kusto
 DeviceProcessEvents
 | where Timestamp > ago(1h)
 | where ActionType == "ProcessCreatedAggregatedReport"
@@ -105,7 +105,7 @@ DeviceProcessEvents
 
 The following query identifies repeated sign-in attempt failures.
 
-```KQL
+```Kusto
 DeviceLogonEvents
 | where Timestamp > ago(30d)
 | where ActionType == "LogonFailedAggregatedReport"
@@ -119,7 +119,7 @@ DeviceLogonEvents
 
 The following query identifies suspicious RDP connections, which might indicate malicious activity.
 
-```KQL
+```Kusto
 DeviceNetworkEvents
 | where Timestamp > ago(1d)
 | where ActionType endswith "AggregatedReport"

@@ -22,13 +22,33 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## January 2025
 
+- [Unified threat intelligence](#unified-threat-intelligence)
 - [Manage SecOps work natively with case management (Preview)](#case-management-preview)
 - [Unified device timeline in Microsoft Defender portal (Preview)](#unified-device-timeline-in-microsoft-defender-portal-preview)
 - [SOC optimization updates for unified coverage management](#soc-optimization-updates-for-unified-coverage-management)
 
+### Unified threat intelligence
+
+Microsoft Sentinel-powered threat intelligence has moved in the Defender portal to **Intel management**, unifying threat intelligence features. In the Azure portal, the location remains unchanged.
+
+:::image type="content" source="media/whats-new/intel-management-navigation.png" alt-text="Screenshot showing new menu placement for Microsoft Sentinel threat intelligence.":::
+
+Along with the new location, the management interface streamlines the creation and curation of threat intel with these key features:
+
+- Define relationships as you create new STIX objects.
+- Curate existing threat intelligence with the new relationship builder.
+- Create multiple objects quickly by copying common metadata from a new or existing TI object with the duplicate feature.
+- Use advanced search to sort and filter your threat intelligence objects without even writing a Log Analytics query.
+
+For more information, see the following articles:
+
+- [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md)
+- [New STIX objects in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/announcing-public-preview-new-stix-objects-in-microsoft-sentinel/4369164)
+- [Understand threat intelligence](/azure/sentinel/understand-threat-intelligence#create-and-manage-threat-intelligence)
+
 ### Case management (Preview)
 
-Case management is the first installment of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that CMSK supports.
+Case management is the first installment of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that case management supports.
 
 - Define your own case workflow with custom status values
 - Assign tasks to collaborators and configure due dates
@@ -38,6 +58,7 @@ Case management is the first installment of an end-to-end solution that provides
 This is just the start. Stay tuned for additional capabilities as we evolve this solution.
 
 For more information, see the following articles:
+
 - [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md)
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 

@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 05/19/2022
+ms.date: 01/29/2025
 ---
 
 # Defender for Endpoint onboarding Windows Server
@@ -37,22 +37,24 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 ## Windows Server onboarding overview
 
-You'll need to complete the following general steps to successfully onboard servers 2008 R2, 2012 R2, 2016, 2019, 2022.
+You'll need to complete the following general steps to successfully onboard Windows Server. Supported versions include Windows Server 2008 R2, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks).
 
-:::image type="content" source="media/server-onboarding.png" alt-text="Server Onboarding" lightbox="media/server-onboarding.png":::
+:::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
 ### Windows Server 2012 R2 and Windows Server 2016
+
 - Download installation and onboarding packages.
 - Apply the installation package.
 - Follow the onboarding steps for the corresponding tool.
 
 ### Windows Server Semi-Annual Enterprise Channel and Windows Server 2019
+
 - Download the onboarding package.
 - Follow the onboarding steps for the corresponding tool.
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, and Windows Server 2019 Core edition with the same method available for Windows 10 client devices.
+You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks) with the same method available for Windows 10 client devices.
 
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
 - [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
@@ -69,9 +71,10 @@ For other Windows server versions, you have two options to offboard Windows serv
 > [!NOTE]
 > These offboarding instructions for other Windows server versions also apply if you are running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
-## Related topics
+## Related articles
 
 - [Onboard Windows devices using Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
 - [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
 - [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

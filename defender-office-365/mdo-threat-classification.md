@@ -38,7 +38,7 @@ _Threat type_ refers to the primary categorization of a threat based on fundamen
 
 ## Threat detections
 
-_Threat detections refer to the technologies and methodologies that are used to identify specific indicators or suspicious activities within an email message or communication. Threat detections help spot the presence of threats by identifying anomalies or characteristics in the message. Common threat detections include:
+_Threat detections_ refer to the technologies and methodologies that are used to identify specific indicators or suspicious activities within an email message or communication. Threat detections help spot the presence of threats by identifying anomalies or characteristics in the message. Common threat detections include:
 
 - **Spoof**: Identifies when the sender's email address is forged to look like a trusted source.
 - **Impersonation**: Detects when an email message impersonates a legitimate entity, such as an executive or trusted business partner, to trick recipients into taking harmful actions.

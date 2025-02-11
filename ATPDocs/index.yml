@@ -6,8 +6,7 @@ metadata:
   title: Microsoft Defender for Identity documentation
   description: Microsoft Defender for Identity cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
   services: service
-  ms.service: azure-advanced-threat-protection
-  ms.subservice: subservice
+  ms.service: microsoft-defender-for-identity
   ms.topic: landing-page
   ms.collection: M365-security-compliance
   author: batamig
