@@ -33,7 +33,6 @@ The following predefined classification rules were added to the critical assets 
 | Classification                                       | Description                                                  |
 | :--------------------------------------------------- | :----------------------------------------------------------- |
 | Security Operations Admin User              | This rule applies to security operations admin users that configure, manage, monitor, and respond to threats within the organization. |
-| Security Operations Admin Device        | This rule applies to critical devices used to configure, manage, and monitor the security within an organization are vital for security operations administration and are at high risk of cyber threats. They require top-level security measures to prevent unauthorized access. |
 
 For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
