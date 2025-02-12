@@ -1,6 +1,6 @@
 ---
 title: Security Operations Guide for Defender for Office 365
-f1.keywords: 
+f1.keywords:
   - NOCSH
 ms.author: chrisda
 author: chrisda
@@ -8,10 +8,10 @@ manager: deniseb
 audience: Admin
 ms.topic: conceptual
 ms.localizationpriority: medium
-search.appverid: 
+search.appverid:
   - MET150
   - MOE150
-ms.collection: 
+ms.collection:
   - zerotrust-solution
   - msftsolution-secops
   - tier1
@@ -19,7 +19,7 @@ ms.collection:
 ms.custom:
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/19/2024
+ms.date: 01/10/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -70,6 +70,10 @@ Incident queue management and the responsible personas are described in the foll
 |Classify incidents.|Daily|Classify incidents as true or false. For true alerts, specify the threat type. This classification helps your security team see threat patterns and defend your organization from them.|Security Operations Team|
 
 ### Manage false positive and false negative detections
+
+> [!TIP]
+> - For a quick overview on how to manage false positives, check out this short video: <https://youtu.be/yuduVj6wvsw>
+> - For a quick overview on how to get started with false negative investigations, check out this short video: <https://youtu.be/sFMAI8MeDKQ>
 
 In Defender for Office 365, you manage false positives (good mail marked as bad) and false negatives (bad mail allowed) in the following locations:
 
@@ -133,6 +137,9 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 ## Ad-hoc activities
 
+> [!TIP]
+> For a quick overview on how to investigate email messages in Microsoft Defender for Office 365, check out this short video: <https://youtu.be/5hA7VfaMvqs>.
+
 ### Manual investigation and removal of email
 
 |Activity|Cadence|Description|Persona|
@@ -184,6 +191,11 @@ Permissions for managing Defender for Office 365 in the Microsoft Defender porta
 > Privileged Identity Management (PIM) in Microsoft Entra ID is also a way to assign required permissions to SecOps personnel. For more information, see [Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365](pim-in-mdo-configure.md).
 
 The following permissions (roles and role groups) are available in Defender for Office 365 and can be used to grant access to security team members:
+
+- **Microsoft Defender XDR Unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender XDR Unified RBAC](/defender-xdr/manage-rbac).
+  - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
+  - _Preview and download email messages_: **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
+  - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**.
 
 - **Microsoft Entra ID**: Centralized roles that assign permissions for _all_ Microsoft 365 services, including Defender for Office 365. You can view the Microsoft Entra roles and assigned users in the Microsoft Defender portal, but you can't manage them directly there. Instead, you manage Microsoft Entra roles and members at <https://aad.portal.azure.com/#view/Microsoft_AAD_IAM/RolesManagementMenuBlade/~/AllRoles/adminUnitObjectId//resourceScope/%2F>. The most frequent roles used by security teams are:
   - **[Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)**
@@ -296,7 +308,7 @@ Designate the reporting mailbox where user reported messages are sent on the **U
 > - The third-party reporting tool must include the original reported message as an uncompressed .EML or .MSG attachment in the message that's sent to the reporting mailbox (don't just forward the original message to the reporting mailbox). For more information, see [Message submission format for third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools).
 > - The reporting mailbox requires specific prerequisites to allow potentially bad messages to be delivered without being filtered or altered. For more information, see [Configuration requirements for the reporting mailbox](submissions-user-reported-messages-custom-mailbox.md#configuration-requirements-for-the-reporting-mailbox).
 
-When a user reported message arrives in the reporting mailbox, Defender for Office 365 automatically generates the alert named **Email reported by user as malware or phish**. This alert launches an [AIR playbook](air-examples.md#example-a-user-reported-phish-message-launches-an-investigation-playbook). The playbook performs a series of automated investigations steps:
+When a user reported message arrives in the reporting mailbox, Defender for Office 365 automatically generates the alert named **Email reported by user as malware or phish**. This alert launches an [AIR playbook](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook). The playbook performs a series of automated investigations steps:
 
 - Gather data about the specified email.
 - Gather data about the threats and _entities_ related to that email (for example, files, URLs, and recipients).

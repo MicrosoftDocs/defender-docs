@@ -8,15 +8,15 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - highpri
-  - tier1
-  - usx-security
+- m365-security
+- highpri
+- tier1
+- usx-security
 ms.topic: conceptual
-ms.date: 08/19/2024
+ms.date: 01/29/2025
 appliesto:
-  - Microsoft Defender XDR
-  - Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Set up Microsoft Defender multitenant management
@@ -81,8 +81,8 @@ The first time you use Microsoft Defender multitenant management, you need setup
 
 3. Choose the tenants you want to manage and select **Add**
 
->[!Note]
-> The Microsoft Defender multitenant view currently has a limit of 50 target tenants.
+> [!Note]
+> The Microsoft Defender multitenant view currently has a limit of 100 target tenants.
 
 The features available in multitenant management now appear on the navigation bar and you're ready to view and manage security data across all your tenants.
 

@@ -4,10 +4,11 @@ description: Learn how to download the Microsoft Defender for Endpoint Client An
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
+ms.reviewer: yongrhee 
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -29,7 +30,7 @@ Learn how to download the Microsoft Defender for Endpoint client analyzer on sup
 ## Download client analyzer for Windows OS
 
 1. The latest stable edition is available for download from following URL: <https://aka.ms/MDEAnalyzer>
-2. The latest preview edition is available for download from following URL: <https://aka.ms/BetaMDEAnalyzer>
+2. The latest preview edition is available for download from following URL: <https://aka.ms/MDEClientAnalyzerPreview>
 
 ## Download client analyzer for macOS or Linux
 

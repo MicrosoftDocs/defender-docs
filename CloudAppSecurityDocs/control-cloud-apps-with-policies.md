@@ -28,7 +28,7 @@ The following types of policies can be created:
 |![access policy icon.](media/proxy-policy.png)|Access policy|Conditional Access|Access policies provide you with real-time monitoring and control over user logins to your cloud apps. [Learn more](access-policy-aad.md)|
 |![session policy icon.](media/proxy-policy.png)|Session policy|Conditional Access|Session policies provide you with real-time monitoring and control over user activity in your cloud apps. [Learn more](session-policy-aad.md)|
 |![cloud discovery policy icon.](media/discovery-policy.png)|App discovery policy|Shadow IT|App discovery policies enable you to set alerts that notify you when new apps are detected within your organization. [Learn more](cloud-discovery-policies.md)|
-|![anomaly detection policy icon.](media/anomaly-detection-policy.png)|cloud discovery anomaly detection policy|Shadow IT|Cloud discovery anomaly detection policies look at the logs you use for discovering cloud apps and search for unusual occurrences. For example, when a user who never used Dropbox before suddenly uploads 600 GB to Dropbox, or when there are a lot more transactions than usual on a particular app. [Learn more](cloud-discovery-anomaly-detection-policy.md)|
+
 
 ## Identifying risk
 

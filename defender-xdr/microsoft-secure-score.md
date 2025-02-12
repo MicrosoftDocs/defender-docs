@@ -35,7 +35,7 @@ Secure Score helps organizations:
 - Compare with benchmarks and establish key performance indicators (KPIs).
 
 Watch this video for a quick overview of Secure score.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWUPrP]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7a45971a-f075-48b9-b8f1-1f7f20152a73]
 
 Organizations gain access to robust visualizations of metrics and trends, integration with other Microsoft products, score comparison with similar organizations, and much more. The score can also reflect when non-Microsoft solutions addressed recommended actions.
 

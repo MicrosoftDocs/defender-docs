@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: This article describes Microsoft Defender for Cloud Apps and how it works.
-ms.date: 06/14/2023
+ms.date: 06/14/2024
 ms.topic: overview
 ---
 # Microsoft Defender for Cloud Apps overview

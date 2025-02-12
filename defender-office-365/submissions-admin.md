@@ -51,7 +51,7 @@ When admins or users submit messages to Microsoft for analysis, we do the follow
 
 Watch this short video to learn how to use admin submissions in Microsoft Defender for Office 365 to submit messages to Microsoft for evaluation.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9357652e-0c17-49ab-8299-36838c3532aa]
 
 For more information about how **users** can submit messages and files to Microsoft, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
@@ -1157,7 +1157,7 @@ After you submit a user reported message to Microsoft from the **User reported**
 
 :::image type="content" source="media/admin-submission-user-reported-submit-button-options.png" alt-text="The Trigger investigation action in the Submit to Microsoft for analysis dropdown list." lightbox="media/admin-submission-user-reported-submit-button-options.png":::
 
-For more information, see [Trigger an investigation](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
+For more information, see [A security administrator triggers an investigation from Threat Explorer](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
 #### Notify users about admin submitted messages to Microsoft
 

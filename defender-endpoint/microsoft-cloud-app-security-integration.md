@@ -40,7 +40,7 @@ Microsoft Defender for Cloud Apps is a comprehensive solution that gives visibil
 
 Defender for Cloud Apps discovery relies on cloud traffic logs being forwarded to it from enterprise firewall and proxy servers. Microsoft Defender for Endpoint integrates with Defender for Cloud Apps by collecting and forwarding all cloud app networking activities, providing unparalleled visibility to cloud app usage. The monitoring functionality is built into the device, providing complete coverage of network activity.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4r4yQ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0bba87dc-5047-492b-add5-c942faa050d4]
 
 The integration provides the following major improvements to the existing Defender for Cloud Apps discovery:
 
@@ -56,4 +56,3 @@ For more information about cloud discovery, see [Working with discovered apps](/
 
 - [Configure Microsoft Defender for Cloud Apps integration](microsoft-cloud-app-security-config.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

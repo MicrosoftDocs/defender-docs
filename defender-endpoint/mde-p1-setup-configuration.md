@@ -10,8 +10,8 @@ ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 09/26/2024
-ms.reviewer: 
+ms.date: 12/10/2024
+ms.reviewer: yonghree, pahuijbr
 f1.keywords: NOCSH
 ms.collection: 
 - m365-security
@@ -60,10 +60,10 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 > The standalone version of Defender for Endpoint Plan 1 doesn't include server licenses. To onboard servers, you'll require an additional license, such as:
 > 
 > - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering.
-> - Microsoft Defender for Endpoint for Servers
+> - Microsoft Defender for Endpoint Server
 > - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses)
 > 
-> To learn more. see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md)
+> To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md)
 
 ## Plan your deployment
 
@@ -78,7 +78,7 @@ When you plan your deployment, you can choose from several different architectur
 
 To learn more about your deployment options, see [Plan your Defender for Endpoint deployment](deployment-strategy.md). And, download the following poster: 
 
-[:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Screnshot of deployment strategy poster thumbnail.":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
+[:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Screenshot of deployment strategy poster thumbnail.":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
 
 **[Get the deployment poster](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)**
 
@@ -251,7 +251,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 5. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
 
-6. Select an item in the list, such as **All Removable Storage classes: Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
+6. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
 
 7. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
 

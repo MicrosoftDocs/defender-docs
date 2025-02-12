@@ -184,7 +184,29 @@ conceptualContent:
           footerLink:
            text: See more
            url: /defender-for-iot/    
-          
+
+        - title: Microsoft's unified security operations platform
+          summary: End-to-end SecOps with Microsoft Sentinel
+          links:
+          - url: /unified-secops-platform/overview-unified-security
+            itemType: overview
+            text: Overview          
+          - url: /unified-secops-platform/reduce-risk-overview
+            itemType: overview
+            text: Reduce your security risk
+          - url: /azure/sentinel/threat-detection?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json ## PLACEHOLDER LINK
+            itemType: how-to-guide
+            text: Detect threats          
+          - url: /defender-xdr/investigate-incidents?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            itemType: how-to-guide
+            text: Investigate incidents          
+          - url: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            itemType: how-to-guide
+            text: Optimize security operations          
+          footerLink:
+           text: See more
+           url: /unified-secops-platform/  
+           
 additionalContent:
    sections:
    - title: Community & support

@@ -27,6 +27,7 @@ ms.date: 07/11/2022
 
 
 **Applies to:**
+
 - Microsoft Defender XDR
 
 The **Export** feature allows you to export the data in the incident queue that is displayed according to the applied filters and time ranges. It's available in the form of a button named **Export**, as displayed in the following screenshot:
@@ -42,7 +43,8 @@ For example, for the data on the CSV file, you can apply filters to view the fol
 - Data regarding who is your most productive analyst.
 
 > [!NOTE]
-> The maximum number of records you can export to a CSV file is 10,000. 
+> The maximum number of records you can export to a CSV file is 10,000.
 
 If you have thoughts or suggestions about the new **Export** feature (the **Export** button) for the incident queue, contact Microsoft team or send your feedback through the Microsoft Defender portal.
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

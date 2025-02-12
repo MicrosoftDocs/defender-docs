@@ -16,7 +16,7 @@ search.appverid:
 ms.collection: 
 - m365-security
 - tier2 
-ms.date: 06/21/2024
+ms.date: 11/19/2024
 ---
 
 # Provide managed security service provider (MSSP) access 
@@ -24,6 +24,10 @@ ms.date: 06/21/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
+
+
+> [!IMPORTANT]
+> Procedures in this article use features that require at a minimum Microsoft Entra ID P2 [for each user under scope of management](/entra/id-governance/licensing-fundamentals#how-can-i-license-usage-of-microsoft-entra-id-governance-features-for-business-guests).
 
 **Applies to:**
 
@@ -125,4 +129,5 @@ To implement a multitenant delegated access solution, take the following steps:
      At this point, analyst access has been provisioned, and each analyst should be able to access the customer's Microsoft Defender portal:
 
     `https://security.microsoft.com/?tid=<CustomerTenantId>` with the permissions and roles they were assigned.
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -3,8 +3,9 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yonghree
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -98,7 +99,7 @@ Details: This program is dangerous and executes command from an attacker.
 Affected items:
 behavior: process: C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe, pid:6132:118419370780344
 process: pid:6132,ProcessStart:133621698624737241
-Learn more	Actions
+Learn more    Actions
 ```
 
 In the [Microsoft Defender portal](https://security.microsoft.com), you should see information like this: 
@@ -123,7 +124,7 @@ When RTP is enabled, the result shows a value of 1.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on how to enable behavior monitoring for Defender for Endpoint, see [Deployment instructions](behavior-monitor-macos.md#deployment-instructions).
+For more information on how to enable behavior monitoring for Defender for Endpoint, see [Deployment instructions for behavior monitoring](behavior-monitor-macos.md#deployment-instructions-for-behavior-monitoring).
 
 ### Demonstration of how Behavior Monitoring works
 
@@ -156,7 +157,7 @@ To demonstrate how Behavior Monitoring blocks a payload:
 
    `zsh: killed      sudo bash BM_test.sh`
 
-   The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
+   The file is quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
 
    ```bash
    mdatp threat list

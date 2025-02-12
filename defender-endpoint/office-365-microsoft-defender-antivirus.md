@@ -5,12 +5,12 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
-ms.reviewer: 
+ms.reviewer: yonghree 
 manager: deniseb
 ms.subservice: ngp
 ms.collection: 
@@ -80,7 +80,7 @@ Microsoft Defender for Office 365 integrated with Microsoft Defender for Endpoin
 
 Protection from ransomware is one great reason to put your files in OneDrive. And there are several more good reasons, summarized in this video: <br/><br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/70b4d256-46fb-481f-ad9b-921ef5fd7bed]
+> [!VIDEO 50131993-b117-4ef6-af5e-2cedfbdc020f]
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

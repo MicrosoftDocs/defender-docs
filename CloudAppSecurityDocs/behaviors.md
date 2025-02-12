@@ -26,22 +26,22 @@ While behaviors might be related to security scenarios, they're not necessarily 
 
 Behaviors currently support low-fidelity, Defender for Cloud Apps detections, that may not meet the standard for alerts but are still useful in providing context during an investigation. Currently supported detections include:
 
-|Alert name  |Policy name  |
-|---------|---------|
-|**Activity from infrequent country**  |Activity from infrequent country/region   |
-|**Impossible travel activity**  |Impossible travel  |
-|**Mass delete**  |Unusual file deletion activity (by user)  |
-|**Mass download**  |Unusual file download (by user)  |
-|**Mass share**  |Unusual file share activity (by user)  |
-|**Multiple delete VM activities**  |Multiple delete VM activities  |
-|**Multiple failed login attempts**  |Multiple failed sign-in attempts  |
-|**Multiple Power BI report sharing activities**  |Multiple Power BI report sharing activities  |
-|**Multiple VM creation activities**  |Multiple VM creation activities  |
-|**Suspicious administrative activity**  |Unusual administrative activity (by user)  |
-|**Suspicious impersonated activity**  |Unusual impersonated activity (by user)  |
-|**Suspicious OAuth app file download activities**  |Suspicious OAuth app file download activities  |
-|**Suspicious Power BI report sharing**  |Suspicious Power BI report sharing   |
-|**Unusual addition of credentials to an OAuth app**  |Unusual addition of credentials to an OAuth app  |
+|Alert name  |Policy name  |ActionType (Hunting)|
+|---------|---------|---------|
+|**Activity from infrequent country**  |Activity from infrequent country/region   |ActivityFromInfrequentCountry|
+|**Impossible travel activity**  |Impossible travel  |ImpossibleTravelActivity|
+|**Mass delete**  |Unusual file deletion activity (by user)  |MassDelete|
+|**Mass download**  |Unusual file download (by user)  |MassDownload|
+|**Mass share**  |Unusual file share activity (by user)  |MassShare|
+|**Multiple delete VM activities**  |Multiple delete VM activities  |MultipleDeleteVmActivities|
+|**Multiple failed login attempts**  |Multiple failed sign-in attempts  |MultipleFailedLoginAttempts|
+|**Multiple Power BI report sharing activities**  |Multiple Power BI report sharing activities  |MultiplePowerBiReportSharingActivities|
+|**Multiple VM creation activities**  |Multiple VM creation activities  |MultipleVmCreationActivities|
+|**Suspicious administrative activity**  |Unusual administrative activity (by user)  |SuspiciousAdministrativeActivity|
+|**Suspicious impersonated activity**  |Unusual impersonated activity (by user)  |SuspiciousImpersonatedActivity|
+|**Suspicious OAuth app file download activities**  |Suspicious OAuth app file download activities  |SuspiciousOauthAppFileDownloadActivities|
+|**Suspicious Power BI report sharing**  |Suspicious Power BI report sharing   |SuspiciousPowerBiReportSharing|
+|**Unusual addition of credentials to an OAuth app**  |Unusual addition of credentials to an OAuth app  |UnusualAdditionOfCredentialsToAnOauthApp|
 
 
 ## Defender for Cloud Apps' transition from alerts to behaviors

@@ -21,7 +21,7 @@ ms.topic: reference
 ms.date: 12/29/2023
 ---
 
-# CloudAuditEvents
+# CloudAuditEvents (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

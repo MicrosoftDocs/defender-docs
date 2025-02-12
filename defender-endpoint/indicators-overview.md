@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 11/10/2024
+ms.date: 12/10/2024
 ---
 
 # Overview of indicators in Microsoft Defender for Endpoint
@@ -47,7 +47,7 @@ Organizations can create indicators that define the detection, prevention, and e
 
 This video shows a walkthrough of creating and adding indicators:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qLVw]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a4469df9-4f31-4ed0-9577-8b26ac5293ad]
 
 ### About Microsoft indicators
 
@@ -155,6 +155,8 @@ The IoC API schema and the threat IDs in advance hunting are updated to align wi
 > File and certificate indicators do not block [exclusions defined for Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus). Indicators are not supported in Microsoft Defender Antivirus when it is in passive mode.
 > 
 > The format for importing new indicators (IoCs) has changed according to the new updated actions and alerts settings. We recommend downloading the new CSV format that can be found at the bottom of the import panel.
+>
+> If indicators are synced to the Microsoft Defender portal from Microsoft Defender for Cloud Apps for sanctioned or unsanctioned applications, the `Generate Alert` option is enabled by default in the Microsoft Defender portal. If you try to clear the `Generate Alert` option for Defender for Endpoint, it is re-enabled after some time because the Defender for Cloud Apps policy overrides it.
 
 ## Known issues and limitations
 

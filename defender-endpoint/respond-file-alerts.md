@@ -288,7 +288,7 @@ Use the deep analysis feature to investigate the details of any file, usually du
 :::image type="content" source="/defender/media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="/defender/media/defender-endpoint/deep-analysis.png":::
 
 Learn about deep analysis in the following video:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c6c613b8-28dc-40cc-926d-8469472ebdfb]
 
 **Submit for deep analysis** is enabled when the file is available in the Defender for Endpoint backend sample collection, or if it was observed on a Windows 10 device that supports submitting to deep analysis.
 

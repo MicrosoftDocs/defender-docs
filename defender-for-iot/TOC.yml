@@ -44,12 +44,16 @@
         href: device-discovery.md
       - name: Discover and manage devices
         href: manage-devices-inventory.md
+    - name: Review security initiatives       
+      items:      
+      - name: Review security initiatives
+        href: review-security-initiatives.md
     - name: Prioritize and remediate vulnerabilities       
       items:
       - name: Overview
         href: discover-vulnerabilities-overview.md
       - name: Prioritize and remediate vulnerabilities
-        href: prioritize-vulnerabilities.md
+        href: prioritize-vulnerabilities.md    
     - name: Investigate and remediate threats
       items:
       - name: Investigate incidents and alerts

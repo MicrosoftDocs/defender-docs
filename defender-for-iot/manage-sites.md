@@ -17,6 +17,34 @@ When you manage a site, you might need to edit or delete the site information li
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
+## Manually update device site association
+
+Security admininstrators can manually assign or modify the site location for a device. Manually assigning a site overrides the automatic site association created when making the site.
+
+To quickly update a group of devices, select multiple devices from the inventory and set the site for all of the selected devices simulataneously.
+
+**To change the site associated with a device**:
+
+1. Select **Assets -> Devices** to open the **Device Inventory**.
+
+1. Select the device, or group of devices, to update. A list of action buttons appear at the top of the Device Inventory table.
+
+1. Select **Set site**. The **Set site** pane opens.
+
+    :::image type="content" source="media/manage-sites/set-site-from-inventory-boxed.png" alt-text="Screenshot of the set site button in the device inventory table for changing the site location setting" lightbox="media/manage-sites/set-site-from-inventory-boxed.png":::
+
+1. In **Set site manually**, open the **Select site** drop down list and select the site to associate with this device. If you want to leave a device unassociated with a specific site, select **Unassigned**.
+
+    :::image type="content" source="media/manage-sites/device-set-site-manually.png" alt-text="Screenshot of the set site manually drop down list for changing the site location setting" lightbox="media/manage-sites/device-set-site-manually.png":::
+
+1. Select **Save and close**.
+
+1. The Set site confirmation box appears. Select **Confirm** to finalize the change. Finalizing the change prevents automatic site reassignment based on existing site security rules. This change remains until the device is reset manually.
+
+>[!Note]
+>
+>For managing an entire site, instead of manually changing each individual device to a new site, it is recommended to go to **Site security** and use the **Edit site** wizard to more efficiently manage the site and the devices associated to it. For more information, see [Site security](monitor-site-security.md).
+
 ## Edit or delete a site
 
 To edit or delete a site:

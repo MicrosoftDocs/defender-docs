@@ -29,6 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 - [Microsoft Security Exposure Management](/security-exposure-management/)
 
 For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new [custom roles](create-custom-rbac-roles.md) or [imported roles](import-rbac-roles.md), you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.

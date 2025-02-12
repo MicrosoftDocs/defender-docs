@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 01/23/2025
 ---
 
 # Device inventory
@@ -57,6 +57,11 @@ The following image depicts the devices list:
 ## Sort and filter the device list
 
 You can apply the following filters to limit the list of alerts and get a more focused view.
+
+> [!NOTE]
+> If you're not seeing some devices, try clearing your filters.
+>
+> To clear your filters, navigate to the top-right of the **Devices list** and select the  **Filter** icon. On the flight-out pane, select the **Clear all filters** button.
 
 ### Device name
 
@@ -129,144 +134,152 @@ The available device properties to use as filters vary based on the device inven
 
 |Property|Tabs|Description|
 |---|---|---|
-|**Antivirus status**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The antivirus status of the device. The available values are: <ul><li>**Disabled**</li><li>**Not updated**</li><li>**Unknown**</li></ul>|
-|**Cloud platforms**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The cloud platform that the device belongs to. The available values are: <ul><li>**Azure**</li><li>**AWS**</li><li>**GCP**</li><li>**Arc**</li><li>**None**</li></ul>|
-|**Criticality level**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The assigned criticality level of the device (how critical a device is for your organization). The available values are: <ul><li>**Very high**: The device is considered a business critical asset</li><li>**High**</li><li>**Medium**</li><li>**Low**</li><li>**None**</li></ul> <br/> For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management).|
-|**Device category**|**All devices**|The category value assigned to the device. Enter a value or select from the available values: <ul><li>**BMS**</li><li>**Computers and Mobile**</li><li>**IoT**</li><li>**Medical**</li><li>**Network Device**</li><li>**OT**</li><li>**Unknown**</li></ul>|
-|**Device subtype**|<ul><li>**All devices**</li><li>**IoT/OT**</li></ul>|The subtype value assigned to the device. Enter a value or select an available value (for example, **Video conference**).|
-|**Device type**|<ul><li>**All devices**</li><li>**IoT/OT**</li></ul>|The type value assigned to the device. Enter a value or select an available value (for example, **Audio and Video**).|
+|**Cloud platforms**|**All devices**, **Computers & mobile**|The cloud platform that the device belongs to. The available values are: <br/> - **Azure** <br/> - **AWS** <br/> - **GCP** <br/> - **Arc** <br/> - **None**|
+|**Criticality level**|**All devices**, **Computers & mobile**|The available values are: <br/> - **Very high** (The device is considered a business critical asset) <br/> - **High** <br/> - **Medium** <br/> - **Low** <br/> - **None**. For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management).|
+|**Device category**|**All devices**|The category value assigned to the device. Enter a value or select from the available values: <br/> - **BMS** <br/> - **Computers and Mobile** <br/> - **IoT** <br/> - **Medical** <br/> - **Network Device** <br/> - **OT** <br/> - **Unknown**|
+|**Device subtype**|**All devices**, **IoT/OT**|The subtype value assigned to the device. Enter a value or select an available value (for example, **Video conference**).|
+|**Device type**|**All devices**, **IoT/OT**|The type value assigned to the device. Enter a value or select an available value (for example, **Audio and Video**).|
+|**Device role**|All|The specific role of the device within the organization. For detailed descriptions of each role, see [Predefined classifications](/security-exposure-management/predefined-classification-rules-and-levels).|
 |**Device value**|All|The assigned value of the device. The available values are **High** and **Low**.|
 |**Discovery sources**|All|The source reporting on the device.|
 |**Exclusion state**|All|The available values are **Not excluded** and **Excluded**. For more information, see [Exclude devices](exclude-devices.md).|
-|**Exposure level**|All|The exposure level of the device based on pending security recommendations. The available values are: <ul><li>**High**</li><li>**Medium**</li><li>**Low**: Devices are less vulnerable to exploitation.</li><li>**No data available**: Possible causes for this value include: <ul><li>The device is inactive (stopped reporting for more than 30 days).</li><li>The OS on the device isn't supported. For more information, see [minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).</li><li>The agent software on the device is stale (unlikely).</li></ul></li></ul>|
+|**Exposure level**|All|The exposure level of the device based on pending security recommendations. The available values are: <br/>- **High** <br/> - **Medium** <br/> - **Low**: Devices are less vulnerable to exploitation. <br/>- **No data available**: Possible causes for this value include: <br/> - The device is inactive (stopped reporting for more than 30 days). - The OS on the device isn't supported. For more information, see [minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). - The agent software on the device is stale (unlikely).|
 |**First seen**|All tabs except **Network devices**|How long ago the device was first seen on the network or when it was first reported by the Microsoft Defender for Endpoint sensor. The available values are **Last 7 days** or **Over 7 days ago**.|
-|**Group**|<ul><li>**All devices**</li><li>**Computers & mobile**</li><li>**Network devices**</li></ul>|Device groups. Enter a value in the box.|
-|**Internet facing**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|Whether the device is internet facing. The available values are **Yes** and **No**.|
-|**Managed by**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|How the device is being managed. The available values are: <ul><li>**Intune**</li><li>**Intune**: Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach.</li><li>**ConfigMgr**: Microsoft Configuration manager.</li><li>**MDE**: Microsoft Defender for Endpoint.</li><li>**Unknown**: This value is caused by one of the following conditions: <ul><li>An outdated version of Windows.</li><li>GPO management.</li><li>Non-Microsoft mobile device management (MDM).</li></ul></li></ul>|
-|**Mitigation status**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The available values are **Contained** and **Isolated**.|
+|**Group**|**All devices**, **Computers & mobile**, **Network devices**|Device groups. Enter a value in the box.|
+|**Internet facing**|**Tabs**|**Description**|
+|**All devices**|**Computers & mobile**|Whether the device is internet facing. The available values are **Yes** and **No**.|
+|**Managed by**|**All devices**, **Computers & mobile**|How the device is being managed. The available values are: <br/> - **Intune**: Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach <br/> - **ConfigMgr**: Microsoft Configuration manager <br/> - **MDE**: Microsoft Defender for Endpoint <br/> - **Unknown**: This value is caused by one of the following conditions: An outdated version of Windows, GPO management, Non-Microsoft mobile device management (MDM).|
+|**Mitigation status**|**All devices**, **Computers & mobile**|The available values are **Contained** and **Isolated**.|
 |**Model**|**All devices**|The model of the device. Enter a value or select from the available values.|
-|**Onboarding status**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|Whether the device is currently onboarded in Defender for Endpoint. Device discovery must be enabled for this filter to appear. The available values are: <ul><li>**Onboarded**: The device is onboarded to Defender for Endpoint.</li><li>**Can be onboarded**: The supported device was discovered, but it isn't currently onboarded. We highly recommend onboarding these devices.</li><li>**Unsupported**: The unsupported device was discovered.</li><li>**Insufficient info**: The system couldn't determine the supportability of the device.|
-|**OS Platform**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The operating system on the device. The available values are: <ul><li>**Windows 11**</li><li>**Windows 10**</li><li>**Windows 8.1**</li><li>**Windows 8**</li><li>**Windows 7**</li><li>**Windows Server 2022**</li><li>**Windows Server 2019**</li><li>**Windows Server 2016**</li><li>**Windows Server 2012 R2**</li><li>**Windows Server 2008 R2**</li><li>**Linux**</li><li>**macOS**</li><li>**iOS**</li><li>**Android**</li><li>**Windows 10 WVD**</li><li>**Other**</li></ul>|
-|**OS Version**|**All devices**|The version of the operating system, which includes Windows versions. On the **Computers & mobile** tab, the **Windows version** filter is also available.|
-|**Risk level**|All|The overall risk assessment of the device based on a combination of factors, including the type and severity of active alerts on the device. The available values are: <ul><li>**High**</li><li>**Medium**</li><li>**Low**</li><li>**Informational**</li><li>**No known risk**</li></ul> <br/> Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.|
-|**Sensor health state**|<ul><li>**All devices**</li><li>**Computers & mobile**</li></ul>|The available values for onboarded devices are: <ul><li>**Active**: Devices that are actively reporting sensor data to the service.</li><li>**Inactive**: Devices that stopped sending signals for more than seven days.</li><li>**Misconfigured**: Devices with impaired communications or devices that can't send sensor data. For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md)</li></ul>.|
-|**Site**|<ul><li>**All devices**</li><li>**IoT/OT**</li></ul>|Used for Defender for IoT [site security](/defender-for-iot/site-security-overview) (requires a Defender for IoT license).|
+|**Onboarding status**|**All devices**, **Computers & mobile**|Whether the device is currently onboarded in Defender for Endpoint. Device discovery must be enabled for this filter to appear. The available values are: <br/> - **Onboarded**: The device is onboarded to Defender for Endpoint. <br/> - **Can be onboarded**: The supported device was discovered, but it isn't currently onboarded. We highly recommend onboarding these devices. <br/> - **Unsupported**: The unsupported device was discovered. <br/> - **Insufficient info**: The system couldn't determine the supportability of the device.|
+|**OS distribution**|**All devices**, **Computers & mobile**|The distribution of the operating system. The available values are: <br/> - **Windows 11** <br/>- **Windows 10** <br/> - **Windows 8.1** <br/> - **Windows 8**<br/> - **Windows 7** <br/> - **Windows Server 2022** <br/> - **Windows Server 2019** <br/> - **Windows Server 2016** <br/> - **Windows Server 2012 R2** <br/> - **Windows Server 2008 R2** <br/> - **Linux** <br/> - **macOS** <br/> - **iOS** <br/> - **Android** <br/> - **Windows 10 WVD** <br/> - **Other**|
+|**OS Platform**|**All devices**, **Computers & mobile**|The operating system on the device. The available
+|**Risk level**|All|The overall risk assessment of the device based on a combination of factors, including the type and severity of active alerts on the device. The available values are: - **High** - **Medium** - **Low** - **Informational** - **No known risk** Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.|
+|**Sensor health state**|**All devices**, **Computers & mobile** |The available values for onboarded devices are: <br/> - **Active**: Devices that are actively reporting sensor data to the service. <br/> - **Inactive**: Devices that stopped sending signals for more than seven days. <br/> - **Misconfigured**: Devices with impaired communications or devices that can't send sensor data. For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).|
+|**Site**|**All devices**, **IoT/OT**|Used for Defender for IoT [site security](/defender-for-iot/site-security-overview) (requires a Defender for IoT license).|
 |**Tags**|All|The grouping and tagging that you added to individual devices. For more information, see [Create and manage device tags](machine-tags.md).|
 |**Transient device**|All|The available values are **No** and **Yes**. By default, transient devices are filtered to reduce inventory noise. For more information, see [Identifying transient devices](transient-device-tagging.md).|
 |**Vendor**|**All devices**|The vendor of the device. Enter a value or select from the available values.|
-|**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available. <br/> The value **Future version** for this property is caused by one of the following scenarios: <ul><li>A prerelease build of a future Windows release.</li><li>The build has no version name.</li><li>The build version name isn't yet supported</li></ul> <br/> The full OS version is visible on the device details page.|
+|**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  <br/><br/>The value **Future version** for this property is caused by one of the following scenarios:<br/>- A prerelease build of a future Windows release.
+- The build has no version name.<br/>- The build version name isn't yet supported<br/><br/>The full OS version is visible on the device details page.|
 
 ## Use columns to customize the device inventory views
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (*):
 
 - **All devices** tab:
-  - **Name**<sup\*</sup>
-  - **IP**<sup\*</sup>
+
+  - **Name***
+  - **IP***
   - **MAC address**
-  - **Criticality level**<sup\*</sup>
-  - **Device category**<sup\*</sup>
-  - **Device type**<sup\*</sup>
+  - **Criticality level***
+  - **Device category***
+  - **Device role**
+  - **Device type***
   - **Device subtype**
   - **Vendor**
   - **Model**
-  - **Domain**<sup\*</sup>
-  - **Device AAD id**<sup\*</sup>
-  - **Risk level**<sup\*</sup>
-  - **Exposure level**<sup\*</sup>
-  - **OS platform**<sup\*</sup>
+  - **Domain***
+  - **Device AAD id***
+  - **Risk level***
+  - **Exposure level***
+  - **OS platform***
   - **OS distribution**
-  - **OS version**<sup\*</sup>
-  - **Sensor health state**<sup\*</sup>
-  - **Onboarding status**<sup\*</sup>
+  - **OS version***
+  - **Sensor health state***
+  - **Onboarding status***
   - **Discovery sources**
   - **First seen**
-  - **Last device update**<sup\*</sup>
-  - **Tags**<sup\*</sup>
+  - **Last device update***
+  - **Tags***
   - **Exclusion state**
-  - **Managed by**<sup\*</sup>
-  - **Managed by status**<sup\*</sup>
-  - **Mitigation status**<sup\*</sup>
-  - **Cloud platforms**<sup\*</sup>
+  - **Managed by***
+  - **Managed by status***
+  - **Mitigation status***
+  - **Cloud platforms***
 
   Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
 
 - **Computers & mobile** tab:
-  - **Name**<sup\*</sup>
-  - **Domain**<sup\*</sup>
-  - **Device AAD id**<sup\*</sup>
+
+  - **Name***
+  - **Domain***
+  - **Device AAD id***
+  - **Device role**
   - **Device type**
   - **Device subtype**
-  - **Risk level**<sup\*</sup>
-  - **Exposure level**<sup\*</sup>
-  - **OS platform**<sup\*</sup>
+  - **Risk level***
+  - **Exposure level***
+  - **OS platform***
   - **OS distribution**
-  - **Windows version**<sup\*</sup>
+  - **Windows version***
   - **MAC address**
-  - **Criticality level**<sup\*</sup>
-  - **Sensor health state**<sup\*</sup>
-  - **Onboarding status**<sup\*</sup>
+  - **Criticality level***
+  - **Sensor health state***
+  - **Onboarding status***
   - **Discovery sources**
-  - **Last device update**<sup\*</sup>
+  - **Last device update***
   - **First seen**
-  - **Tags**<sup\*</sup>
+  - **Tags***
   - **Exclusion state**
-  - **Managed by**<sup\*</sup>
-  - **Managed by status**<sup\*</sup>
-  - **Mitigation status**<sup\*</sup>
-  - **Cloud platforms**<sup\*</sup>
+  - **Managed by***
+  - **Managed by status***
+  - **Mitigation status***
+  - **Cloud platforms***
 
-- **Network devices** tab
-  - **IP**<sup>\*</sup>
+- **Network devices** tab:
+
+  - **IP***
   - **MAC address**
-  - **Vendor**<sup>\*</sup>
-  - **Model**<sup>\*</sup>
-  - **Name**<sup>\*</sup>
+  - **Vendor***
+  - **Model***
+  - **Name***
   - **Discovery sources**
   - **Domain**
   - **Device type**
   - **Device subtype**
-  - **Risk level**<sup>\*</sup>
-  - **Exposure level**<sup>\*</sup>
-  - **OS distribution**<sup>\*</sup>
-  - **OS version**<sup>\*</sup>
-  - **Last device update**<sup>\*</sup>
+  - **Risk level***
+  - **Exposure level***
+  - **OS distribution***
+  - **OS version***
+  - **Last device update***
   - **First seen**
-  - **Tags**<sup>\*</sup>
+  - **Tags***
   - **Exclusion state**
 
-- **IoT/OT devices** tab
-  - **IP**<sup>\*</sup>
-  - **MAC address**<sup>\*</sup>
-  - **Name**<sup>\*</sup>
-  - **Device type**<sup>\*</sup>
-  - **Device subtype**<sup>\*</sup>
-  - **Vendor**<sup>\*</sup>
-  - **Model**<sup>\*</sup>
-  - **Risk level**<sup>\*</sup>
-  - **Exposure level**<sup>\*</sup>
+- **IoT/OT devices** tab:
+
+  - **IP***
+  - **MAC address***
+  - **Name***
+  - **Device type***
+  - **Device subtype***
+  - **Vendor***
+  - **Model***
+  - **Risk level***
+  - **Exposure level***
   - **Discovery sources**
-  - **OS distribution**<sup>\*</sup>
-  - **OS version**<sup>\*</sup>
+  - **OS distribution***
+  - **OS version***
   - **First seen**
-  - **Last device update**<sup>\*</sup>
+  - **Last device update***
   - **Domain**
-  - **Tags**<sup>\*</sup>
+  - **Tags***
   - **Exclusion state**
 
 - **Uncategorized devices** tab:
-  - **Name**<sup>\*</sup>
-  - **Vendor**<sup>\*</sup>
-  - **IP**<sup>\*</sup>
+  - **Name***
+  - **Vendor***
+  - **IP***
   - **Discovery sources**
   - **MAC address**
   - **Risk level**
   - **Exposure level**
-  - **OS distribution**<sup>\*</sup>
-  - **OS version**<sup>\*</sup>
-  - **Last device update**<sup>\*</sup>
+  - **OS distribution***
+  - **OS version***
+  - **Last device update***
   - **First seen**
-  - **Tags**<sup>\*</sup>
+  - **Tags***
   - **Exclusion state**
 
 > [!TIP]

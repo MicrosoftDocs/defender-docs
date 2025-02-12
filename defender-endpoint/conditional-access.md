@@ -29,7 +29,7 @@ ms.date: 12/18/2020
 
 Conditional Access is a capability that helps you better protect your users and enterprise information by making sure that only secure devices have access to applications.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4byD1]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d5655a77-d21f-4da4-b00c-3260d0bf13d6]
 
 With Conditional Access, you can control access to enterprise information based on the risk level of a device. This helps keep trusted users on trusted devices using trusted applications.
 

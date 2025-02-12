@@ -39,7 +39,7 @@ ms.date: 12/18/2020
 
 Microsoft Defender for Endpoint supports streaming events available through [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to an [Event Hubs](/azure/event-hubs/) and/or [Azure storage account](/azure/storage/common/storage-account-overview).
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4r4ga]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=56edfb3f-b612-4e4c-acb9-4bbd141bd535]
 
 ## In this section
 

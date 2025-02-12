@@ -18,30 +18,8 @@
         href: usgov.md
       - name: Industry tests
         href: ./top-scoring-industry-tests.md
-      - name: Microsoft Defender portal services
-        items:
-        - name: Portal overview
-          href: microsoft-365-defender-portal.md
-        - name: Defender for Endpoint
-          href: microsoft-365-security-center-mde.md
-        - name: Defender for IoT
-          href: /defender-for-iot/microsoft-defender-iot
-        - name: Defender for Office 365
-          href: microsoft-365-security-center-mdo.md
-        - name: Defender for Identity
-          href: microsoft-365-security-center-mdi.md
-        - name: Defender for Cloud Apps
-          href: microsoft-365-security-center-defender-cloud-apps.md
-        - name: Defender for Cloud
-          href: microsoft-365-security-center-defender-cloud.md
-        - name: Microsoft Sentinel
-          items:
-          - name: Integration overview
-            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
-          - name: Experience in Defender portal
-            href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Connect Microsoft Sentinel to Microsoft Defender
-            href: microsoft-sentinel-onboard.md
+      - name: Microsoft Defender XDR in the Microsoft Defender portal
+        href: microsoft-365-defender-portal.md
     - name: Plan
       items:
         - name: Prerequisites
@@ -74,28 +52,18 @@
           href: deploy-supported-services.md
         - name: 3. Train your security staff
           href: microsoft-365-defender-train-security-staff.md
-        - name : Guides and FAQs
-          items:
-          - name: Setup guides for Microsoft Defender XDR
-            href: deploy-configure-m365-defender.md
-          - name: Turning on Microsoft Defender XDR FAQs
-            href: m365d-enable-faq.md
-          - name: Guides for your security staff
-            items:
-            - name: Respond to your first incident
-              href: respond-first-incident-365-defender.md
-            - name: Analyze your first incident
-              href: respond-first-incident-analyze.md
-            - name: Remediate your first incident
-              href: respond-first-incident-remediate.md
-            - name: Additional incident examples
-              items:
-              - name: Phishing email
-                href: first-incident-path-phishing.md
-              - name: Identity
-                href: first-incident-path-identity.md
+        - name: Setup guides for Microsoft Defender XDR
+          href: deploy-configure-m365-defender.md
     - name: Protect against threats
       items:
+      - name: Protect your endpoints
+        href: /defender-endpoint
+      - name: Protect your identities
+        href: /defender-for-identity
+      - name: Protect your Office 365 workloads
+        href: /defender-office-365
+      - name: Protect your cloud apps
+        href: /defender-cloud-apps
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -107,367 +75,331 @@
           - name: Track your score history and meet goals
             href: microsoft-secure-score-history-metrics-trends.md
           - name: Data storage and privacy
-            href: secure-score-data-storage-privacy.md
-      - name: Protect your endpoints
-        href: /defender-endpoint
-      - name: Protect your identities
-        items:
-          - name: Sensor settings and health
-            href: /defender-for-identity/sensor-settings?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Directory Services account
-            href: /defender-for-identity/deploy/directory-service-accounts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: VPN integration
-            href: /defender-for-identity/vpn-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Set entity tags
-            href: /defender-for-identity/entity-tags?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Investigate Defender for Identity alerts
-            href: /defender-for-identity/manage-security-alerts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Configure detection exclusions
-            href: /defender-for-identity/exclusions?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Email and syslog notifications
-            href: /defender-for-identity/notifications?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-      - name: Protect your Office 365 workloads
-        href: /defender-office-365
-      - name: Create Custom Defender XDR reports
-        href: defender-xdr-custom-reports.md
+            href: secure-score-data-storage-privacy.md      
     - name: Investigate and respond to threats
       items:
-       - name: Overview
-         href: incidents-overview.md
-       - name: Correlation and merging
-         href: alerts-incidents-correlation.md
-       - name: Respond to incidents
-         items:
-              - name: Overview
-                href: incident-response-overview.md
-              - name: Prioritize incidents
-                href: incident-queue.md
-              - name: Manage incidents
-                href: manage-incidents.md
-              - name: Export incidents queue to CSV file
-                href: export-incidents-queue.md
-              - name: Investigate incidents
-                items:
-                 - name: Incidents
-                   href: investigate-incidents.md
-                 - name: Investigate data loss prevention alerts with Microsoft Defender XDR
-                   href: dlp-investigate-alerts-defender.md
-                 - name: Investigate data loss prevention alerts with Microsoft Sentinel
-                   href: dlp-investigate-alerts-sentinel.md
-                 - name: Investigate and respond to container threats
-                   href: investigate-respond-container-threats.md  
-                 - name: Alerts
-                   href: investigate-alerts.md
-                 - name: Alert classification playbooks
-                   items:
-                    - name: Overview
-                      href: alert-classification-playbooks.md
-                    - name: Suspicious email forwarding activity
-                      href: alert-grading-playbook-email-forwarding.md
-                    - name: Suspicious inbox forwarding rules
-                      href: alert-grading-playbook-inbox-forwarding-rules.md
-                    - name: Suspicious inbox manipulation rules
-                      href: alert-grading-playbook-inbox-manipulation-rules.md
-                    - name: Suspicious password-spray-related IP address
-                      href: alert-classification-suspicious-ip-password-spray.md
-                    - name: Malicious exchange connectors
-                      href: alert-classification-malicious-exchange-connectors.md
-                    - name: Password spray attacks
-                      href: alert-classification-password-spray-attack.md
-                 - name: Entity pages
-                   items:
-                   - name: User
-                     href: investigate-users.md
-                   - name: Device
-                     href: entity-page-device.md
-                   - name: IP
-                     href: entity-page-ip.md
-              - name: Incident response playbooks
-                href: /security/operations/incident-response-playbooks
-              - name: Investigate domains and URLs associated with Microsoft Defender XDR
-                href: /defender-endpoint/investigate-domain
-       - name: Manage automated investigation and response
-         items:
-              - name: Overview
-                href: m365d-autoir.md
-              - name: Configure capabilities
-                href: m365d-configure-auto-investigation-response.md
-              - name: Remediation actions
-                href: m365d-remediation-actions.md
-              - name: Use the Action center
-                href: m365d-action-center.md
-              - name: View and manage remediation actions
-                href: m365d-autoir-actions.md
-              - name: View details and results
-                href: m365d-autoir-results.md
-              - name: Address false positives and negatives
-                href: m365d-autoir-report-false-positives-negatives.md
-       - name: Manage automatic attack disruption
-         items:
-              - name: Overview
-                href: automatic-attack-disruption.md
-              - name: Configure capabilities
-                href: configure-attack-disruption.md
-              - name: View details and results
-                href: autoad-results.md
-       - name: Manage the deception capability
-         items:
-              - name: Overview
-                href: deception-overview.md
-              - name: Configure capabilities
-                href: configure-deception.md
-       - name: Search for threats with advanced hunting
-         items:
-             - name: Overview
-               href: advanced-hunting-overview.md
-             - name: Guided and advanced modes
-               href: advanced-hunting-modes.md
-             - name: Generate KQL queries with Security Copilot
-               href: advanced-hunting-security-copilot.md
-             - name: Hunt over Microsoft Sentinel data
-               items:
-                 - name: Microsoft Sentinel data in advanced hunting
-                   href: advanced-hunting-microsoft-defender.md
-                 - name: Use functions, saved queries, and custom rules
-                   href: advanced-hunting-defender-use-custom-rules.md
-                 - name: Work with results containing Microsoft Sentinel data
-                   href: advanced-hunting-defender-results.md
-             - name: Build queries using guided mode
-               items:
-                 - name: Get started with query builder
-                   href: advanced-hunting-query-builder.md
-                 - name: Refine your query in guided mode
-                   href: advanced-hunting-query-builder-details.md
-                 - name: Work with query results in guided mode
-                   href: advanced-hunting-query-builder-results.md
-             - name: Create queries using advanced mode
-               items:
-                 - name: Learn, train, & get examples
-                   items:
-                     - name: Learn the query language
-                       href: advanced-hunting-query-language.md
-                     - name: Get expert training
-                       href: advanced-hunting-expert-training.md
-                     - name: Use shared queries
-                       href: advanced-hunting-shared-queries.md
-                     - name: Hunt across devices, emails, apps, and identities
-                       href: advanced-hunting-query-emails-devices.md
-                     - name: Hunt for ransomware
-                       href: advanced-hunting-find-ransomware.md
-                     - name: Hunt for email threats
-                       href: advanced-hunting-email-threats.md
-                     - name: Transition from Defender for Endpoint
-                       href: advanced-hunting-migrate-from-mde.md
-                 - name: Quickly investigate with go hunt
-                   href: advanced-hunting-go-hunt.md
-                 - name: Create custom functions
-                   href: advanced-hunting-custom-functions.md
-                 - name: Use built-in functions
-                   items:
-                    - name: AssignedIPAddresses()
-                      href: advanced-hunting-assignedipaddresses-function.md
-                    - name: DeviceFromIP()
-                      href: advanced-hunting-devicefromip-function.md
-                    - name: FileProfile()
-                      href: advanced-hunting-fileprofile-function.md
-                    - name: SeenBy()
-                      href: advanced-hunting-seenby-function.md
-                 - name: Optimize & handle errors
-                   items:
-                    - name: Apply query best practices
-                      href: advanced-hunting-best-practices.md
-                    - name: Handle errors
-                      href: advanced-hunting-errors.md
-             - name: Work with query results
-               href: advanced-hunting-query-results.md
-             - name: Rerun query in query history
-               href: advanced-hunting-query-history.md
-             - name: Data schema
-               items:
-                - name: Understand the schema
-                  href: advanced-hunting-schema-tables.md
-                - name: Schema naming changes
-                  href: advanced-hunting-schema-changes.md
-                - name: AADSignInEventsBeta
-                  href: advanced-hunting-aadsignineventsbeta-table.md
-                - name: AADSpnSignInEventsBeta
-                  href: advanced-hunting-aadspnsignineventsbeta-table.md
-                - name: AlertEvidence
-                  href: advanced-hunting-alertevidence-table.md
-                - name: AlertInfo
-                  href: advanced-hunting-alertinfo-table.md
-                - name: BehaviorEntities
-                  href: advanced-hunting-behaviorentities-table.md
-                - name: BehaviorInfo
-                  href: advanced-hunting-behaviorinfo-table.md
-                - name: CloudAppEvents
-                  href: advanced-hunting-cloudappevents-table.md
-                - name: CloudAuditEvents
-                  href: advanced-hunting-cloudauditevents-table.md
-                - name: CloudProcessEvents
-                  href: advanced-hunting-cloudprocessevents-table.md                  
-                - name: DeviceEvents
-                  href: advanced-hunting-deviceevents-table.md
-                - name: DeviceFileCertificateInfo
-                  href: advanced-hunting-devicefilecertificateinfo-table.md
-                - name: DeviceFileEvents
-                  href: advanced-hunting-devicefileevents-table.md
-                - name: DeviceImageLoadEvents
-                  href: advanced-hunting-deviceimageloadevents-table.md
-                - name: DeviceInfo
-                  href: advanced-hunting-deviceinfo-table.md
-                - name: DeviceLogonEvents
-                  href: advanced-hunting-devicelogonevents-table.md
-                - name: DeviceNetworkEvents
-                  href: advanced-hunting-devicenetworkevents-table.md
-                - name: DeviceNetworkInfo
-                  href: advanced-hunting-devicenetworkinfo-table.md
-                - name: DeviceProcessEvents
-                  href: advanced-hunting-deviceprocessevents-table.md
-                - name: DeviceRegistryEvents
-                  href: advanced-hunting-deviceregistryevents-table.md
-                - name: DeviceTvmHardwareFirmware
-                  href: advanced-hunting-devicetvmhardwarefirmware-table.md
-                - name: DeviceTvmInfoGathering
-                  href: advanced-hunting-devicetvminfogathering-table.md
-                - name: DeviceTvmInfoGatheringKB
-                  href: advanced-hunting-devicetvminfogatheringkb-table.md
-                - name: DeviceTvmSecureConfigurationAssessment
-                  href: advanced-hunting-devicetvmsecureconfigurationassessment-table.md
-                - name: DeviceTvmSecureConfigurationAssessmentKB
-                  href: advanced-hunting-devicetvmsecureconfigurationassessmentkb-table.md
-                - name: DeviceTvmSoftwareEvidenceBeta
-                  href: advanced-hunting-devicetvmsoftwareevidencebeta-table.md
-                - name: DeviceTvmSoftwareInventory
-                  href: advanced-hunting-devicetvmsoftwareinventory-table.md
-                - name: DeviceTvmSoftwareVulnerabilities
-                  href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
-                - name: DeviceTvmSoftwareVulnerabilitiesKB
-                  href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
-                - name: EmailAttachmentInfo
-                  href: advanced-hunting-emailattachmentinfo-table.md
-                - name: EmailEvents
-                  href: advanced-hunting-emailevents-table.md
-                - name: EmailPostDeliveryEvents
-                  href: advanced-hunting-emailpostdeliveryevents-table.md
-                - name: EmailUrlInfo
-                  href: advanced-hunting-emailurlinfo-table.md
-                - name: ExposureGraphEdges
-                  href: advanced-hunting-exposuregraphedges-table.md
-                - name: ExposureGraphNodes
-                  href: advanced-hunting-exposuregraphnodes-table.md
-                - name: IdentityDirectoryEvents
-                  href: advanced-hunting-identitydirectoryevents-table.md
-                - name: IdentityInfo
-                  href: advanced-hunting-identityinfo-table.md
-                - name: IdentityLogonEvents
-                  href: advanced-hunting-identitylogonevents-table.md
-                - name: IdentityQueryEvents
-                  href: advanced-hunting-identityqueryevents-table.md
-                - name: UrlClickEvents
-                  href: advanced-hunting-urlclickevents-table.md
-             - name: Custom detections
-               items:
-                - name: Custom detections overview
-                  href: custom-detections-overview.md
-                - name: Create & manage detection rules
-                  href: custom-detection-rules.md
-             - name: Take action on query results
-               href: advanced-hunting-take-action.md
-             - name: Link query results to an incident
-               href: advanced-hunting-link-to-incident.md
-             - name: Find resource-heavy queries
-               href: advanced-hunting-limits.md
-             - name: Extend data coverage
-               href: advanced-hunting-extend-data.md
-       - name: Track and respond to emerging threats
-         items:
-              - name: Threat analytics overview
-                href: threat-analytics.md
-              - name: Understand the analyst report
-                href: threat-analytics-analyst-reports.md
-              - name: Defender Threat Intelligence in Microsoft Defender XDR
-                href: defender-threat-intelligence.md
-       - name: Endpoint Attack Notifications
-         href: /defender-endpoint/endpoint-attack-notifications
-       - name: Collaborate with Microsoft Defender Experts for Hunting
-         items:
-              - name: Overview
-                href: defender-experts-for-hunting.md
-              - name: Before you begin
-                href: before-you-begin-defender-experts.md
-              - name: Start using Defender Experts for Hunting
-                items:
-                - name: Onboarding and setting up Defender Experts Notifications
-                  href: onboarding-defender-experts-for-hunting.md
-                - name: Access Defender Experts Notifications using Graph security API
-                  href: access-den-graph-api.md
-                - name: Ask Defender Experts
-                  href: experts-on-demand.md
-              - name: Understand Defender Experts for Hunting reports
-                href: defender-experts-report.md
-       - name: Collaborate with Microsoft Defender Experts for XDR
-         items:
-              - name: Overview
-                href: dex-xdr-overview.md
-              - name: Before you begin
-                href: before-you-begin-xdr.md
-              - name: Get started with Microsoft Defender Experts for XDR service
-                href: get-started-xdr.md
-              - name: Start using Microsoft Defender Experts for XDR service
-                items:
-                - name: Managed detection and response
-                  href: managed-detection-and-response-xdr.md
-                - name: Reports
-                  href: reports-xdr.md
-                - name: Communicate with Defender Experts for XDR
-                  href: communicate-defender-experts-xdr.md
-                - name: Defender Experts for Hunting
-                  href: defender-experts-for-hunting.md
-                - name: Auditing
-                  href: auditing.md
-              - name: Frequently asked questions
-                items:
-                - name: General information
-                  href: frequently-asked-questions.md
-                - name: Defender Experts for XDR Incident notifications
-                  href: faq-incident-notifications-xdr.md
-                - name: Managed response
-                  href: faq-managed-response.md
-              - name: Additional information on Defender Experts for XDR
-                items:
-                - name: Important considerations
-                  href: additional-information-xdr.md
-                - name: How Defender Experts for XDR permissions work
-                  href: dex-xdr-permissions.md
-                - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
-                  href: teams-restrictions-dexapp.md
-       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
-         items:
-              - name: Overview
-                href: security-copilot-in-microsoft-365-defender.md
-              - name: Summarize incidents
-                href: security-copilot-m365d-incident-summary.md
-              - name: Run script analysis
-                href: security-copilot-m365d-script-analysis.md
-              - name: Analyze files
-                href: copilot-in-defender-file-analysis.md
-              - name: Generate device summaries
-                href: copilot-in-defender-device-summary.md
-              - name: Summarize identities
-                href: security-copilot-defender-identity-summary.md                
-              - name: Use guided responses
-                href: security-copilot-m365d-guided-response.md
-              - name: Generate KQL queries
-                href: advanced-hunting-security-copilot.md
-              - name: Create incident reports
-                href: security-copilot-m365d-create-incident-report.md
-       - name: Ransomware playbooks
-         items:
-              - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
-                href: playbook-detecting-ransomware-m365-defender.md
-              - name: Responding to ransomware attacks
-                href: playbook-responding-ransomware-m365-defender.md
+      - name: Overview
+        href: incidents-overview.md
+      - name: Correlation and merging
+        href: alerts-incidents-correlation.md
+      - name: Prioritize incidents
+        href: incident-queue.md
+      - name: Manage incidents
+        href: manage-incidents.md
+      - name: Investigate incidents
+        items:
+        - name: Incidents
+          href: investigate-incidents.md
+        - name: Move alerts to another incident
+          href: move-alert-to-another-incident.md
+        - name: Alerts
+          href: investigate-alerts.md
+        - name: Entity pages
+          items:
+          - name: User
+            href: investigate-users.md
+          - name: Device
+            href: entity-page-device.md
+          - name: IP
+            href: entity-page-ip.md
+        - name: Investigate data loss prevention alerts with Microsoft Defender XDR
+          href: dlp-investigate-alerts-defender.md
+        - name: Investigate data loss prevention alerts with Microsoft Sentinel
+          href: dlp-investigate-alerts-sentinel.md
+        - name: Investigate and respond to container threats
+          href: investigate-respond-container-threats.md
+        - name: Investigate insider risk threats
+          href: irm-investigate-alerts-defender.md                         
+      - name: Configure and manage automated investigation and response
+        items:
+        - name: Overview
+          href: m365d-autoir.md
+        - name: Configure capabilities
+          href: m365d-configure-auto-investigation-response.md
+        - name: Remediation actions
+          href: m365d-remediation-actions.md
+        - name: Use the Action center
+          href: m365d-action-center.md
+        - name: View and manage remediation actions
+          href: m365d-autoir-actions.md
+        - name: View details and results
+          href: m365d-autoir-results.md
+        - name: Address false positives and negatives
+          href: m365d-autoir-report-false-positives-negatives.md
+      - name: Manage attack disruption
+        items:
+        - name: Overview
+          href: automatic-attack-disruption.md
+        - name: Configure capabilities
+          href: configure-attack-disruption.md
+        - name: View details and results
+          href: autoad-results.md
+      - name: Manage the deception capability
+        items:
+        - name: Overview
+          href: deception-overview.md
+        - name: Configure capabilities
+          href: configure-deception.md
+      - name: Search for threats with advanced hunting
+        items:
+        - name: Overview
+          href: advanced-hunting-overview.md
+        - name: Guided and advanced modes
+          href: advanced-hunting-modes.md
+        - name: Generate KQL queries with Security Copilot
+          href: advanced-hunting-security-copilot.md
+        - name: Hunt over Microsoft Sentinel data
+          items:
+          - name: Microsoft Sentinel data in advanced hunting
+            href: advanced-hunting-microsoft-defender.md
+          - name: Use functions, saved queries, and custom rules
+            href: advanced-hunting-defender-use-custom-rules.md
+          - name: Work with results containing Microsoft Sentinel data
+            href: advanced-hunting-defender-results.md
+        - name: Build queries using guided mode
+          items:
+          - name: Get started with query builder
+            href: advanced-hunting-query-builder.md
+          - name: Refine your query in guided mode
+            href: advanced-hunting-query-builder-details.md
+          - name: Work with query results in guided mode
+            href: advanced-hunting-query-builder-results.md
+        - name: Create queries using advanced mode
+          items:
+          - name: Learn, train, & get examples
+            items:
+            - name: Learn the query language
+              href: advanced-hunting-query-language.md
+            - name: Get expert training
+              href: advanced-hunting-expert-training.md
+            - name: Use shared queries
+              href: advanced-hunting-shared-queries.md
+            - name: Hunt across devices, emails, apps, and identities
+              href: advanced-hunting-query-emails-devices.md
+            - name: Hunt for ransomware
+              href: advanced-hunting-find-ransomware.md
+            - name: Hunt for email threats
+              href: advanced-hunting-email-threats.md
+            - name: Transition from Defender for Endpoint
+              href: advanced-hunting-migrate-from-mde.md
+          - name: Quickly investigate with go hunt
+            href: advanced-hunting-go-hunt.md
+          - name: Create custom functions
+            href: advanced-hunting-custom-functions.md
+          - name: Use built-in functions
+            items:
+            - name: AssignedIPAddresses()
+              href: advanced-hunting-assignedipaddresses-function.md
+            - name: DeviceFromIP()
+              href: advanced-hunting-devicefromip-function.md
+            - name: FileProfile()
+              href: advanced-hunting-fileprofile-function.md
+            - name: SeenBy()
+              href: advanced-hunting-seenby-function.md
+          - name: Optimize & handle errors
+            items:
+            - name: Apply query best practices
+              href: advanced-hunting-best-practices.md
+            - name: Handle errors
+              href: advanced-hunting-errors.md
+        - name: Work with query results
+          href: advanced-hunting-query-results.md
+        - name: Rerun query in query history
+          href: advanced-hunting-query-history.md
+        - name: Data schema
+          items:
+          - name: Understand the schema
+            href: advanced-hunting-schema-tables.md
+          - name: Schema naming changes
+            href: advanced-hunting-schema-changes.md
+          - name: AADSignInEventsBeta
+            href: advanced-hunting-aadsignineventsbeta-table.md
+          - name: AADSpnSignInEventsBeta
+            href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AlertEvidence
+            href: advanced-hunting-alertevidence-table.md
+          - name: AlertInfo
+            href: advanced-hunting-alertinfo-table.md
+          - name: BehaviorEntities
+            href: advanced-hunting-behaviorentities-table.md
+          - name: BehaviorInfo
+            href: advanced-hunting-behaviorinfo-table.md
+          - name: CloudAppEvents
+            href: advanced-hunting-cloudappevents-table.md
+          - name: CloudAuditEvents
+            href: advanced-hunting-cloudauditevents-table.md
+          - name: CloudProcessEvents
+            href: advanced-hunting-cloudprocessevents-table.md                     
+          - name: DeviceBaselineComplianceAssessment
+            href: advanced-hunting-devicebaselinecomplianceassessment-table.md
+          - name: DeviceBaselineComplianceAssessmentKB
+            href: advanced-hunting-devicebaselinecomplianceassessmentkb-table.md
+          - name: DeviceBaselineComplianceProfiles
+            href: advanced-hunting-devicebaselinecomplianceprofiles-table.md     
+          - name: DeviceEvents
+            href: advanced-hunting-deviceevents-table.md
+          - name: DeviceFileCertificateInfo
+            href: advanced-hunting-devicefilecertificateinfo-table.md
+          - name: DeviceFileEvents
+            href: advanced-hunting-devicefileevents-table.md
+          - name: DeviceImageLoadEvents
+            href: advanced-hunting-deviceimageloadevents-table.md
+          - name: DeviceInfo
+            href: advanced-hunting-deviceinfo-table.md
+          - name: DeviceLogonEvents
+            href: advanced-hunting-devicelogonevents-table.md
+          - name: DeviceNetworkEvents
+            href: advanced-hunting-devicenetworkevents-table.md
+          - name: DeviceNetworkInfo
+            href: advanced-hunting-devicenetworkinfo-table.md
+          - name: DeviceProcessEvents
+            href: advanced-hunting-deviceprocessevents-table.md
+          - name: DeviceRegistryEvents
+            href: advanced-hunting-deviceregistryevents-table.md
+          - name: DeviceTvmBrowserExtensions
+            href: advanced-hunting-devicetvmbrowserextensions-table.md
+          - name: DeviceTvmBrowserExtensionsKB
+            href: advanced-hunting-devicetvmbrowserextensionskb-table.md
+          - name: DeviceTvmCertificateInfo
+            href: advanced-hunting-devicetvmcertificateinfo-table.md
+          - name: DeviceTvmHardwareFirmware
+            href: advanced-hunting-devicetvmhardwarefirmware-table.md
+          - name: DeviceTvmInfoGathering
+            href: advanced-hunting-devicetvminfogathering-table.md
+          - name: DeviceTvmInfoGatheringKB
+            href: advanced-hunting-devicetvminfogatheringkb-table.md
+          - name: DeviceTvmSecureConfigurationAssessment
+            href: advanced-hunting-devicetvmsecureconfigurationassessment-table.md
+          - name: DeviceTvmSecureConfigurationAssessmentKB
+            href: advanced-hunting-devicetvmsecureconfigurationassessmentkb-table.md
+          - name: DeviceTvmSoftwareEvidenceBeta
+            href: advanced-hunting-devicetvmsoftwareevidencebeta-table.md
+          - name: DeviceTvmSoftwareInventory
+            href: advanced-hunting-devicetvmsoftwareinventory-table.md
+          - name: DeviceTvmSoftwareVulnerabilities
+            href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
+          - name: DeviceTvmSoftwareVulnerabilitiesKB
+            href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
+          - name: EmailAttachmentInfo
+            href: advanced-hunting-emailattachmentinfo-table.md
+          - name: EmailEvents
+            href: advanced-hunting-emailevents-table.md
+          - name: EmailPostDeliveryEvents
+            href: advanced-hunting-emailpostdeliveryevents-table.md
+          - name: EmailUrlInfo
+            href: advanced-hunting-emailurlinfo-table.md
+          - name: ExposureGraphEdges
+            href: advanced-hunting-exposuregraphedges-table.md
+          - name: ExposureGraphNodes
+            href: advanced-hunting-exposuregraphnodes-table.md
+          - name: IdentityDirectoryEvents
+            href: advanced-hunting-identitydirectoryevents-table.md
+          - name: IdentityInfo
+            href: advanced-hunting-identityinfo-table.md
+          - name: IdentityLogonEvents
+            href: advanced-hunting-identitylogonevents-table.md
+          - name: IdentityQueryEvents
+            href: advanced-hunting-identityqueryevents-table.md
+          - name: UrlClickEvents
+            href: advanced-hunting-urlclickevents-table.md
+        - name: Custom detections
+          items:
+          - name: Custom detections overview
+            href: custom-detections-overview.md
+          - name: Create & manage detection rules
+            href: custom-detection-rules.md
+        - name: Take action on query results
+          href: advanced-hunting-take-action.md
+        - name: Link query results to an incident
+          href: advanced-hunting-link-to-incident.md
+        - name: Find resource-heavy queries
+          href: advanced-hunting-limits.md
+        - name: Extend data coverage
+          href: advanced-hunting-extend-data.md
+      - name: Track and respond to emerging threats
+        items:
+        - name: Threat analytics overview
+          href: threat-analytics.md
+        - name: Understand the analyst report
+          href: threat-analytics-analyst-reports.md
+        - name: Defender Threat Intelligence in Microsoft Defender XDR
+          href: defender-threat-intelligence.md
+      - name: Collaborate with Microsoft Defender Experts for Hunting
+        items:
+        - name: Overview
+          href: defender-experts-for-hunting.md
+        - name: Before you begin
+          href: before-you-begin-defender-experts.md
+        - name: Start using Defender Experts for Hunting
+          items:
+          - name: Onboarding and setting up Defender Experts Notifications
+            href: onboarding-defender-experts-for-hunting.md
+          - name: Access Defender Experts Notifications using Graph security API
+            href: access-den-graph-api.md
+          - name: Ask Defender Experts
+            href: experts-on-demand.md
+        - name: Frequently asked questions
+          href: faq-defender-experts-hunting.md    
+        - name: Understand Defender Experts for Hunting reports
+          href: defender-experts-report.md
+      - name: Collaborate with Microsoft Defender Experts for XDR
+        items:
+        - name: Overview
+          href: dex-xdr-overview.md
+        - name: Before you begin
+          href: before-you-begin-xdr.md
+        - name: Get started with Microsoft Defender Experts for XDR service
+          href: get-started-xdr.md
+        - name: Start using Microsoft Defender Experts for XDR service
+          items:
+          - name: Managed detection and response
+            href: managed-detection-and-response-xdr.md
+          - name: Scoped coverage
+            href: defender-experts-scoped-coverage.md  
+          - name: Communicate with Defender Experts for XDR
+            href: communicate-defender-experts-xdr.md
+          - name: Reports
+            href: reports-xdr.md
+          - name: Defender Experts for Hunting
+            href: defender-experts-for-hunting.md
+          - name: Auditing
+            href: auditing.md
+        - name: Frequently asked questions
+          items:
+          - name: General information
+            href: frequently-asked-questions.md
+          - name: Defender Experts for XDR Incident notifications
+            href: faq-incident-notifications-xdr.md
+          - name: Managed response
+            href: faq-managed-response.md
+        - name: Additional information on Defender Experts for XDR
+          items:
+          - name: Important considerations
+            href: additional-information-xdr.md
+          - name: How Defender Experts for XDR permissions work
+            href: dex-xdr-permissions.md
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: teams-restrictions-dexapp.md
+      - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
+        items:
+        - name: Overview
+          href: security-copilot-in-microsoft-365-defender.md
+        - name: Summarize incidents
+          href: security-copilot-m365d-incident-summary.md
+        - name: Run script analysis
+          href: security-copilot-m365d-script-analysis.md
+        - name: Analyze files
+          href: copilot-in-defender-file-analysis.md
+        - name: Generate device summaries
+          href: copilot-in-defender-device-summary.md
+        - name: Summarize identities
+          href: security-copilot-defender-identity-summary.md                
+        - name: Use guided responses
+          href: security-copilot-m365d-guided-response.md
+        - name: Generate KQL queries
+          href: advanced-hunting-security-copilot.md
+        - name: Create incident reports
+          href: security-copilot-m365d-create-incident-report.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -486,15 +418,6 @@
           href: integrate-microsoft-365-defender-secops-use-cases.md
         - name: Step 6. SOC maintenance tasks
           href: integrate-microsoft-365-defender-secops-tasks.md
-      - name: Optimize your security operations
-        items:
-        - name: SOC optimization overview
-          display name: SOC optimization
-          href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: Use SOC optimizations programmatically
-          href: /azure/sentinel/soc-optimization/soc-optimization-api?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: SOC optimization reference
-          href: /azure/sentinel/soc-optimization/soc-optimization-reference?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
     - name: Manage multitenant environments
       items:
         - name: Overview
@@ -543,30 +466,28 @@
               href: custom-permissions-details.md
     - name: Reference
       items:
+        - name: Microsoft Defender XDR FAQs
+          href: m365d-enable-faq.md      
         - name: Audit activities and events
           href: microsoft-xdr-auditing.md
-        - name: Portal actions
+        - name: Configure email notifications
           items:
-            - name: Configure notifications
-              items:
-              - name: Get notified about new and updated incidents
-                href: m365d-notifications-incidents.md
-              - name: Set up email notifications for response actions
-                href: m365d-response-actions-notifications.md
-              - name: Set up email notifications for Threat analytics reports
-                href: m365d-threat-analytics-notifications.md
-              - name: Configure alert notifications
-                href: configure-email-notifications.md
-            - name: Set time zone
-              href: m365d-time-zone.md
-            - name: Set up dynamic rules for devices
-              href: configure-asset-rules.md
-            - name: Provide feedback
-              href: feedback.md
-            - name: Provide managed service provider (MSSP) access
-              href: mssp-access.md
+          - name: Get notified about new and updated incidents
+            href: m365d-notifications-incidents.md
+          - name: Set up email notifications for response actions
+            href: m365d-response-actions-notifications.md
+          - name: Set up email notifications for Threat analytics reports
+            href: m365d-threat-analytics-notifications.md
+          - name: Configure alert notifications
+            href: configure-email-notifications.md
+        - name: Manage devices through dynamic rules
+          href: configure-asset-rules.md
+        - name: Provide managed service provider (MSSP) access
+          href: mssp-access.md
         - name: Troubleshoot service issues
-          href: troubleshoot.md              
+          href: troubleshoot.md
+        - name: Create Custom Defender XDR reports
+          href: defender-xdr-custom-reports.md                        
         - name: Microsoft Defender XDR APIs
           items:
             - name: Overview
@@ -633,26 +554,46 @@
                  href: /defender-endpoint/technological-partners
                - name: Professional services supported by Microsoft Defender XDR
                  href: /defender-endpoint/professional-services
-        - name: Bi-directional connector for Microsoft Sentinel
-          href: microsoft-365-defender-integration-with-azure-sentinel.md
     - name: Resources
       items:
-        - name: Threat actor naming
-          href: microsoft-threat-actor-naming.md
-        - name: Malware names
-          href: malware-naming.md
-        - name: How Microsoft identifies malware and PUA
-          href: criteria.md
-        - name: Submit files for analysis
-          href: submission-guide.md
-        - name: Understand threat intelligence concepts
-          href: /defender-endpoint/threat-indicator-concepts          
-        - name: Microsoft virus initiative
-          href: virus-initiative-criteria.md
-        - name: Software developer FAQ
-          href: developer-faq.yml
-    - name: Microsoft Sentinel docs
-      href: /azure/sentinel
+      - name: Alert classification playbooks
+        items:
+        - name: Overview
+          href: alert-classification-playbooks.md
+        - name: Suspicious email forwarding activity
+          href: alert-grading-playbook-email-forwarding.md
+        - name: Suspicious inbox forwarding rules
+          href: alert-grading-playbook-inbox-forwarding-rules.md
+        - name: Suspicious inbox manipulation rules
+          href: alert-grading-playbook-inbox-manipulation-rules.md
+        - name: Suspicious password-spray-related IP address
+          href: alert-classification-suspicious-ip-password-spray.md
+        - name: Malicious Exchange connectors
+          href: alert-classification-malicious-exchange-connectors.md
+        - name: Password spray attacks
+          href: alert-classification-password-spray-attack.md
+      - name: Incident response playbooks
+        href: /security/operations/incident-response-playbooks
+      - name: Ransomware playbooks
+        items:
+        - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
+          href: playbook-detecting-ransomware-m365-defender.md
+        - name: Responding to ransomware attacks
+          href: playbook-responding-ransomware-m365-defender.md
+      - name: Threat actor naming
+        href: microsoft-threat-actor-naming.md
+      - name: Malware names
+        href: malware-naming.md
+      - name: How Microsoft identifies malware and PUA
+        href: criteria.md
+      - name: Submit files for analysis
+        href: submission-guide.md
+      - name: Understand threat intelligence concepts
+        href: /defender-endpoint/threat-indicator-concepts          
+      - name: Microsoft virus initiative
+        href: virus-initiative-criteria.md
+      - name: Software developer FAQ
+        href: developer-faq.yml                                    
     - name: Microsoft Defender XDR docs
       items:
        - name: Defender for Office 365

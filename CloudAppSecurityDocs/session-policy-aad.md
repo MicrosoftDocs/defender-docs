@@ -7,8 +7,6 @@ ms.topic: how-to
 
 # Create Microsoft Defender for Cloud Apps session policies
 
-
-
 Microsoft Defender for Cloud Apps session policies provide granular visibility into cloud apps with real-time, session-level monitoring. Use session policies to take various actions, depending on the policy you set for a user session.
 
 In contrast to [access policies](access-policy-aad.md), which allow or block access completely, session policies allow access while monitoring the session. Add Conditional Access app control to your session policies to limit specific session activities.

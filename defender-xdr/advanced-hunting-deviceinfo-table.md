@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 12/04/2024
 ---
 
 # DeviceInfo
@@ -39,7 +39,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
-| `Timestamp` | `datetime` | Date and time when the event was recorded |
+| `Timestamp` | `datetime` | Last date and time recorded for the device |
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 | `DeviceName` | `string` | Fully qualified domain name (FQDN) of the device |
 | `ClientVersion` | `string` | Version of the endpoint agent or sensor running on the device |
@@ -89,8 +89,9 @@ You can use the following sample query to get the latest state of a device:
 ```kusto
 // Get latest information on user/device
 DeviceInfo
+| extend IngestionTime = ingestion_time()
 | where DeviceName == "example" and isnotempty(OSPlatform)
-| summarize arg_max(Timestamp, *) by DeviceId 
+| summarize arg_max(IngestionTime, *) by DeviceId
 ```
 
 ## Related topics

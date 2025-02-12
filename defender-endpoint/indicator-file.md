@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 10/17/2024
+ms.date: 02/06/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -36,7 +36,7 @@ search.appverid: met150
 > In Defender for Endpoint Plan 1 and Defender for Business, you can create an indicator to block or allow a file. In Defender for Business, your indicator is applied across your environment and cannot be scoped to specific devices.
 
 > [!NOTE]
-> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2). 
+> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). 
 > Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced antimalware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
@@ -47,15 +47,13 @@ There are three ways you can create indicators for files:
 - By creating a contextual indicator using the add indicator button from the file details page
 - By creating an indicator through the [Indicator API](api/ti-indicator.md)
 
-
-
 ## Before you begin
 
 Understand the following prerequisites before you create indicators for files:
 
 - [Behavior Monitoring is enabled](behavior-monitor.md)
 
-- [Cloud-based protection is turned on](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- [Cloud-based protection is turned on](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus).
 
 - [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
 
@@ -64,6 +62,7 @@ Understand the following prerequisites before you create indicators for files:
 ### Windows prerequisites
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
+
 - The Antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
 
 - This feature is supported on devices running Windows 10, version 1703 or later, Windows 11, Windows Server 2012 R2, Windows Server 2016 or later, Windows Server 2019, or Windows Server 2022.
@@ -77,11 +76,13 @@ Understand the following prerequisites before you create indicators for files:
 
 - [File hash computation is enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line) by running `mdatp config enable-file-hash-computation --value enabled`
 
-### linux prerequisites
+### Linux prerequisites
 
 - Available in Defender for Endpoint version 101.85.27 or later.
 
-- [File hash computation is enabled](/defender-endpoint/linux-preferences#configure-file-hash-computation-feature) from the portal or in the managed JSON 
+- [File hash computation is enabled](/defender-endpoint/linux-preferences#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
+
+- Behavior monitoring is preferred, but this will work with any other scan (RTP or Custom).
 
 ## Create an indicator for files from the settings page
 
@@ -94,7 +95,9 @@ Understand the following prerequisites before you create indicators for files:
 4. Specify the following details:
 
    - Indicator: Specify the entity details and define the expiration of the indicator.
+
    - Action: Specify the action to be taken and provide a description.
+   
    - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
 
    > [!NOTE]
@@ -138,7 +141,7 @@ The current supported actions for file IOC are allow, audit and block, and remed
    > For more information about the EnableFileHashComputation group policy, see [Defender CSP](/windows/client-management/mdm/defender-csp).
    > For more information on configuring this feature on Defender for Endpoint on Linux and macOS, see [Configure file hash computation feature on Linux](linux-preferences.md#configure-file-hash-computation-feature) and [Configure file hash computation feature on macOS](mac-preferences.md#configure-file-hash-computation-feature).
 
-> ## Advanced hunting capabilities (preview)
+## Advanced hunting capabilities (preview)
 
 > [!IMPORTANT]
 > Information in this section (**Public Preview for Automated investigation and remediation engine**) relates to prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
