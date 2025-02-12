@@ -24,6 +24,25 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## February 2025
+
+### New predefined classifications
+
+The following predefined **Identity** classification rules were added to the critical assets list:
+
+| Classification                     | Description                                                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Senior Executive (Technology)      | This rule applies to identities classified as senior executives in the field of Technology. |
+| Senior Executive (Finance)         | This rule applies to identities classified as senior executives in the field of Finance. |
+| Senior Executive (Operations)      | This rule applies to identities classified as senior executives in the field of Operations. |
+| Senior Executive (Marketing)   | This rule applies to identities classified as senior executives in the field of Marketing. |
+| Senior Executive (Information)     | This rule applies to identities classified as senior executives in the field of Information. |
+| Senior Executive (Execution)       | This rule applies to identities classified as senior executives in the field of Execution. |
+| Senior Executive (Human Resources) | This rule applies to identities classified as senior executives in the field of Resources. |
+| Senior Executive (Unclassified)    | This rule applies to identities classified as senior executives in an unclassified field. |
+
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
+
 ## January 2025
 
 ### Metrics enhancements
@@ -54,23 +73,6 @@ For more information, see, [Predefined classifications](predefined-classificatio
 Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
 
 ## November 2024
-
-### New predefined classifications
-
-The following predefined **Identity** classification rules were added to the critical assets list:
-
-| Classification                     | Description                                                  |
-| ---------------------------------- | ------------------------------------------------------------ |
-| Senior Executive (Technology)      | This rule applies to identities classified as senior executives in the field of Technology. |
-| Senior Executive (Finance)         | This rule applies to identities classified as senior executives in the field of Finance. |
-| Senior Executive (Operations)      | This rule applies to identities classified as senior executives in the field of Operations. |
-| Senior Executive (Marketing)   | This rule applies to identities classified as senior executives in the field of Marketing. |
-| Senior Executive (Information)     | This rule applies to identities classified as senior executives in the field of Information. |
-| Senior Executive (Execution)       | This rule applies to identities classified as senior executives in the field of Execution. |
-| Senior Executive (Human Resources) | This rule applies to identities classified as senior executives in the field of Resources. |
-| Senior Executive (Unclassified)    | This rule applies to identities classified as senior executives in an unclassified field. |
-
-For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
 ### Announcing the General Availability of Microsoft Security Exposure Management
 
