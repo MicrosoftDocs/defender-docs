@@ -22,7 +22,7 @@ appliesto:
 
 An aggregated view of all security policies from all tenants is now available through the **Endpoint security policies** page in multitenant management. The page gives you access to manage security settings on your tenants' devices, allowing you to create, edit, or delete security policies. Navigate to the page through **Endpoint > Configuration management > Endpoint security policies**.
 
-:::image type="content" source="media/endpoint-security-policy/navigation-mto-endpoint-policies-small.png" alt-text="Screenshot of the endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/endpoint-security-policy/navigation-mto-endpoint-policies.png":::
+:::image type="content" source="media/mto-endpoint-security-policy/navigation-mto-endpoint-policies-small.png" alt-text="Screenshot of the endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/navigation-mto-endpoint-policies.png":::
 
 > [!IMPORTANT]
 > The Endpoint security policies page is available only for [users with the security administrator role in Microsoft Defender XDR](/defender-endpoint/assign-portal-access). Any other user role like Security Reader cannot access the security policies page. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
@@ -47,7 +47,7 @@ To create a new security policy, perform the following steps:
 1. Sign in to the Microsoft Defender portal using a security administrator role.
 2. From the main menu, select **Configuration management > Endpoint security policies**, then select **Create new Policy**.
 3. Select a tenant, platform, and a template in the dropdown menus. Then select Create policy.
-   :::image type="content" source="media/endpoint-security-policy/mto-create-policy-small.png" alt-text="Screenshot of the policy creation page in endpoints security policy page in multitenant management." lightbox="media/endpoint-security-policy/mto-create-policy.png":::
+   :::image type="content" source="media/mto-endpoint-security-policy/mto-create-policy-small.png" alt-text="Screenshot of the policy creation page in endpoints security policy page in multitenant management." lightbox="media/mto-endpoint-security-policy/mto-create-policy.png":::
 4. On the **Basics** page, enter a name and description for the new policy, then choose **Next**.
 5. On the **Configuration settings** page, expand a group of settings and configure the settings you need to manage the endpoints in the tenant. Select **Next** once you're done with the configuration.
 6. On the **Assignments** page, select the Microsoft Entra ID groups where the policy will apply, then select **Next**.
@@ -69,7 +69,7 @@ To edit an existing security policy, perform the following steps:
 
 You can delete a security policy by selecting the policy in the Endpoint security policies page, then selecting **Delete**.
 
-:::image type="content" source="media/endpoint-security-policy/mto-edit-policy-small.png" alt-text="Screenshot of the editing pane for endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/endpoint-security-policy/mto-edit-policy.png":::
+:::image type="content" source="media/mto-endpoint-security-policy/mto-edit-policy-small.png" alt-text="Screenshot of the editing pane for endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-edit-policy.png":::
 
 ## Verify endpoint security policy status
 
@@ -77,7 +77,7 @@ To verify that you have successfully created a policy, select the policy from th
 
 The policy page displays details of an endpoint security policy, including the status, which devices the policy applies to, and the assigned groups.
 
-:::image type="content" source="media/endpoint-security-policy/mto-policy-page-small.png" alt-text="Screenshot of the policy page in multitenant management in Microsoft Defender XDR." lightbox="media/endpoint-security-policy/mto-policy-page.png":::
+:::image type="content" source="media/mto-endpoint-security-policy/mto-policy-page-small.png" alt-text="Screenshot of the policy page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-policy-page.png":::
 
 You can also view the policy in the Microsoft Intune admin center. To do so, select the More actions ellipsis (…) in the policy page, then select **View in Intune**.
 

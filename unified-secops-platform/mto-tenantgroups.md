@@ -43,31 +43,31 @@ To create a new tenant group:
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups) in multitenant management in Microsoft Defender XDR.
 2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.:
 
-    :::image type="content" source="media/tenant-groups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="media/tenant-groups/mto-add-tenants.png":::
+    :::image type="content" source="media/mto-tenantgroups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="media/mto-tenantgroups/mto-add-tenants.png":::
 
 3. In the **Content selection** page, select the content to be distirbuted across all tenants in your tenant group, then select **Next**.
     
-    :::image type="content" source="media/tenant-groups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="media/tenant-groups/mto-add-content.png":::
+    :::image type="content" source="media/mto-tenantgroups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="media/mto-tenantgroups/mto-add-content.png":::
 
 > [!NOTE]
 > The content type selection is currently limited to adding custom detection rules to a tenant group. Adding other content types will be available in the future. 
 
 4. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
 
-    :::image type="content" source="media/tenant-groups/mto-add-custom-small.png" alt-text="Screenshot of custom detection rules addition wizard." lightbox="media/tenant-groups/mto-add-custom.png":::
+    :::image type="content" source="media/mto-tenantgroups/mto-add-custom-small.png" alt-text="Screenshot of custom detection rules addition wizard." lightbox="media/mto-tenantgroups/mto-add-custom.png":::
 
 5. In the **Select detection rules** page, filter the source tenant of the content, then select **Apply**. Choose the content you want to add to your tenant group from the list.
 
-    :::image type="content" source="media/tenant-groups/mto-select-content-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="media/tenant-groups/mto-select-content.png":::
+    :::image type="content" source="media/mto-tenantgroups/mto-select-content-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="media/mto-tenantgroups/mto-select-content.png":::
 
 6. In the **Device groups** page, select the devices or specific device groups that need to be in your tenant's scope.
 
-    :::image type="content" source="media/tenant-groups/mto-select-device-small.png" alt-text="Screenshot of the device selection pane." lightbox="media/tenant-groups/mto-select-device.png":::
+    :::image type="content" source="media/mto-tenantgroups/mto-select-device-small.png" alt-text="Screenshot of the device selection pane." lightbox="media/mto-tenantgroups/mto-select-device.png":::
 
 7. Add a tenant group name and description about your tenant group in the Details page.
 8. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
 
-    :::image type="content" source="media/tenant-groups/mto-summary-tenantgroups-small.png" alt-text="Screenshot of summary of tenant groups with the checkbox highlighted." lightbox="media/tenant-groups/mto-summary-tenantgroups.png":::
+    :::image type="content" source="media/mto-tenantgroups/mto-summary-tenantgroups-small.png" alt-text="Screenshot of summary of tenant groups with the checkbox highlighted." lightbox="media/mto-tenantgroups/mto-summary-tenantgroups.png":::
 
 9. Select **Submit** to finish your tenant group creation.
 
@@ -76,11 +76,11 @@ To create a new tenant group:
 
 Your newly created tenant group appears in the Tenant groups page after creation. Select the tenant group from the list to add or remove content, add, edit, or remove tenants, or sync the tenant group.
 
-:::image type="content" source="media/tenant-groups/mto-group-sample-small.png" alt-text="Screenshot of a tenant group page and the actions available within the page." lightbox="media/tenant-groups/mto-group-sample.png":::
+:::image type="content" source="media/mto-tenantgroups/mto-group-sample-small.png" alt-text="Screenshot of a tenant group page and the actions available within the page." lightbox="media/mto-tenantgroups/mto-group-sample.png":::
 
 Check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When selecting the result, a side pane containing the errors, recommendations, and impacted assets appears. Here's an example.
 
-:::image type="content" source="media/tenant-groups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="media/tenant-groups/mto-sync-results.png":::
+:::image type="content" source="media/mto-tenantgroups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="media/mto-tenantgroups/mto-sync-results.png":::
 
 ## Syncing content among tenant groups
 
