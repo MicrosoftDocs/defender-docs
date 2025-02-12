@@ -29,7 +29,7 @@ This article describes the steps you need to take to start using multitenant man
 
 >[!Note]
 >- In multitenant management, interactions between the multitenant user and the managed tenants could involve accessing data and managing configurations. The ability to undertake these actions is determined by the permissions a managed tenant has granted the multitenant user.
->- [Data privacy](data-privacy.md), [role-based access control (RBAC)](/defender-xdr/m365d-permissions) and [Licensing](/defender-xdr/prerequisites#licensing-requirements) are respected by Microsoft Defender multi-tenant management.
+>- [Data privacy](/defender-xdr/data-privacy), [role-based access control (RBAC)](/defender-xdr/m365d-permissions) and [Licensing](/defender-xdr/prerequisites#licensing-requirements) are respected by Microsoft Defender multi-tenant management.
 
 ## Review the requirements
 
