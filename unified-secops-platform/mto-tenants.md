@@ -2,7 +2,7 @@
 title: Manage tenants with Microsoft Defender multitenant management
 description: Learn about the tenant list in Microsoft Defender multitenant management
 search.appverid: met150
-ms.service: defender-xdr
+ms.service: unified-secops-platform
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
@@ -28,7 +28,7 @@ Add or remove tenants from the settings page in Microsoft Defender multitenant m
 
 To view the list of tenants that appear in multitenant management, go to [Settings page](https://mto.security.microsoft.com/mtosettings) in Microsoft Defender multitenant management:
 
-   :::image type="content" source="/defender/media/defender/mto-tenant-settings.png" alt-text="Screenshot of Microsoft Defender multitenant management" lightbox="/defender/media/defender/mto-tenant-settings.png":::
+   :::image type="content" source="media/mto-tenants/mto-tenant-settings.png" alt-text="Screenshot of Microsoft Defender multitenant management" lightbox="media/mto-tenants/mto-tenant-settings.png":::
 
 From the **Settings** page you can:
 
@@ -42,15 +42,15 @@ The multitenant management status indicator provides information on whether data
 
 When no issue exists, the status indicator is a green tick:
 
-- ![No data issues](/defender/media/defender/mto_nodata_issue.png)
+- ![No data issues](media/mto-tenants/mto_nodata_issue.png)
 
 When an issue exists, the status indicator shows a red warning sign:
 
-- ![data issues](/defender/media/defender/mto-data-issues.png)
+- ![data issues](media/mto-tenants/mto-data-issues.png)
 
 Hovering over the red warning sign displays the issues that occurred and the tenant information. By expanding each section, you see all the tenants with this issue.
 
-- ![tenant data issues](/defender/media/defender/mto-tenantdata-issues.png)
+- ![tenant data issues](media/mto-tenants/mto-tenantdata-issues.png)
 
 ## Related content
 
