@@ -55,8 +55,7 @@ To configure your External Attack Surface initiative, you need to have **Global 
 
 > [!NOTE]
 >
-> If you have previously configured the initiative, you can click on "Switch pre-built footprint" to re-configure it with a new data.
-
+> If you have previously configured the initiative, you can click on "Switch pre-built footprint" to re-configure it with new data.
  > [!IMPORTANT]
 > Initiatives that are in preview are marked accordingly. Preview initiatives are still in development, and are subject to change.
 
