@@ -24,7 +24,7 @@ ms.date: 12/12/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-secopsdashboard-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 If you're already completed the steps to set up your Microsoft Defender for Endpoint deployment, and you have assigned roles and permissions for Defender for Endpoint, your next step is to create a plan for onboarding. Your plan begins with identifying your architecture and choosing your deployment method.
 

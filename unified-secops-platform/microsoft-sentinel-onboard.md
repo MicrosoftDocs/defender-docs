@@ -1,7 +1,7 @@
 ---
 title: Connect Microsoft Sentinel to the Microsoft Defender portal
 description: Learn how to connect your Microsoft Sentinel environment to the Defender portal to unify your security operations.
-ms.service: defender-xdr
+ms.service: unified-secops-platform
 f1.keywords: 
   - NOCSH
 ms.author: cwatson
@@ -41,8 +41,8 @@ For preview, Microsoft Sentinel is available in the Defender portal without Micr
 Before you begin, review the feature documentation to understand the product changes and limitations.
 
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
-- [Advanced hunting in the Microsoft Defender portal](advanced-hunting-microsoft-defender.md)
-- [Alerts, incidents, and correlation in Microsoft Defender XDR](alerts-incidents-correlation.md)
+- [Advanced hunting in the Microsoft Defender portal](/defender-xdr/advanced-hunting-microsoft-defender)
+- [Alerts, incidents, and correlation in Microsoft Defender XDR](/defender-xdr/alerts-incidents-correlation)
 - [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
 
 The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to one workspace at a time. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
@@ -141,6 +141,6 @@ If you want to connect to a different workspace, from the **Workspaces** page, s
 
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 - [Advanced hunting in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2264410)
-- [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
-- [Investigate incidents in Microsoft Defender portal](investigate-incidents.md)
+- [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption)
+- [Investigate incidents in Microsoft Defender portal](/defender-xdr/investigate-incidents)
 - [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal)
