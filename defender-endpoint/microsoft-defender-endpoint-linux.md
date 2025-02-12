@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/10/2025
+ms.date: 02/04/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -125,6 +125,9 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
  |`vfat`||
  |`xfs`||
   
+  > [!NOTE]
+  > For NFS v3 mount points to be scanned thoroughly, it is  required to set the `no_root_squash` export option on these mount points. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
+
   > [!NOTE]
   > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient extended Berkeley Packet Filter (eBPF) technology.
   > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, then Audit framework (`auditd`) must be enabled on your system.

@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/12/2024
+ms.date: 01/31/2025
 ---
 
 # Device Control for macOS
@@ -33,33 +33,30 @@ ms.date: 06/12/2024
 
 ## Requirements
 
-Device Control for macOS has the following prerequisites:
+Device control for Mac has the following prerequisites:
 
-> [!div class="checklist"]
->
-> - Microsoft Defender for Endpoint entitlement (can be trial)
-> - Minimum OS version: macOS 11 or higher
-> - Minimum product version: 101.34.20
+- Defender for Endpoint or Defender for Business licenses (can be a trial subscription)
+- Minimum OS version: macOS 11 or higher
+- Minimum product version: `101.34.20`
 
 ## Overview
 
-Microsoft Defender for Endpoint Device Control feature enables you to:
+Device control in Defender for Endpoint on macOS enables you to:
 
 - Audit, allow, or prevent the read, write, or execute access to removable storage; and 
 - Manage iOS and Portable devices, and Apple APFS encrypted devices and Bluetooth media, with or without exclusions.
 
 ## Prepare your endpoints
 
-- Microsoft Defender for Endpoint entitlement (can be trial)
-- Minimum OS version: macOS 11 or higher
 - Deploy Full Disk Access: you might have created and deployed this [https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) for other MDE features. You need to grant Full Disk Access permission for a new application: `com.microsoft.dlp.daemon`.
-- Enable Device Control on the MDE Preference setting:
 
-  - Data Loss Prevention (DLP)/Features/
+- Enable Device Control on your Defender for Endpoint preferences:
 
-  - For **Feature Name**, enter "DC_in_dlp"
+  - Data Loss Prevention (DLP)/Features
 
-  - For **State**, enter "enabled"
+  - For **Feature Name**, type `DC_in_dlp`
+
+  - For **State**, specify `enabled`
 
 Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema).
 
@@ -72,19 +69,20 @@ Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/
 <dict> 
   <key>features</key>
   <array> 
-	<dict> 
-	  <key>name</key>
-	  <string>DC_in_dlp</string>
-	  <key>state</key>
-	  <string>enabled</string>
-	</dict>
+    <dict> 
+      <key>name</key>
+      <string>DC_in_dlp</string>
+      <key>state</key>
+      <string>enabled</string>
+    </dict>
   </array>
 </dict>
 ```
 
 
 - Minimum product version: 101.91.92 or higher
-- Run _mdatp version_ through Terminal to see the product version on your client machine:
+
+- Run `mdatp version` through Terminal to see the product version on your client machine:
 
   :::image type="content" source="media/macos-device-control-mdatp-version-terminal.png " alt-text="Screenshot that shows the results when you run mdatp version in Terminal to see the product version on a client machine." lightbox="media/macos-device-control-mdatp-version-terminal.png ":::
 
@@ -92,16 +90,16 @@ Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/
 
 Policies determine the behavior of device control for macOS. The policy is targeted via Intune or JAMF to a collection of machines or users.  
 
-The Device Control for macOS policy includes settings, groups, and rules:
+The device control for macOS policy includes settings, groups, and rules:
 
 - Global setting called 'settings' allows you to define the global environment.
-- Group called 'groups' allows you to create media groups. For example, authorized USB group or encrypted USB group.
+- Group called `groups` allows you to create media groups. For example, authorized USB group or encrypted USB group.
 - Access policy rule called 'rules' allows you to create policy to restrict each group. For example, only allow authorized user to Write access-authorized USB group.
 
 
 
 > [!NOTE]
-> We recommend you use the examples on the GitHub to understand the properties: [mdatp-devicecontrol/Removable Storage Access Control Samples/macOS/policy at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples/macOS/policy). 
+> We recommend you use the examples on the GitHub to understand the properties: [mdatp-devicecontrol/Removable Storage Access Control Samples/macOS/policy at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/tree/main/macOS/policy/samples). 
 > 
 > You can also use the scripts at [mdatp-devicecontrol/tree/main/python#readme at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/tree/main/python#readme) to translate Windows Device Control policy to macOS Device Control policy or translate macOS Device Control V1 policy to this V2 policy.
 
@@ -112,9 +110,10 @@ The Device Control for macOS policy includes settings, groups, and rules:
 
 Device control for macOS has similar capabilities to Device control for Windows, but macOS and Windows provide different underlying capabilities to manage devices, so there are some important differences:
 
-- macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example of a ```portableDevice``` device control for macOS can deny or allow ```download_photos_from_device```.
-- To stay consistent with Windows, there are ```generic_read```,```generic_write``` ,and ```generic_execute``` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
-- Creating a ```deny``` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
+- macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example, a `portableDevice` policy can deny or allow `download_photos_from_device`.
+
+- To stay consistent with Windows, there are `generic_read`,`generic_write` , and `generic_execute` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
+- Creating a `deny` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
 
 
 ### Settings
@@ -123,7 +122,7 @@ Here are the properties you can use when you create the groups, rules, and setti
 
 | Property name | Description | Options |
 |:---|:---|:---|
-| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it won't apply even if you create a custom policy for `removableMedia`, because it's disabled by default. |
+| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it doesn't apply, even if you create a custom policy for `removableMedia`, because it's disabled by default. |
 | global | Set default enforcement  | You can set `defaultEnforcement` to<br/>- `allow` (_default_)<br/>- `deny` |
 | ux | You can set a hyperlink on notification. | `navigationTarget: string`. Example: `"http://www.microsoft.com"` |
 
@@ -132,9 +131,9 @@ Here are the properties you can use when you create the groups, rules, and setti
 | Property name | Description | Options |
 |:---|:---|:---|
 | `$type` | The kind of group | "device" |
-| `id` | GUID, a unique ID, represents the group and will be used in the policy. | You can generate the ID through [New-Guid (Microsoft.PowerShell.Utility) - PowerShell](/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-7.2&preserve-view=true) or the uuidgen command on macOS |
+| `id` | GUID, a unique ID, represents the group and is used in the policy. | You can generate the ID through [New-Guid (Microsoft.PowerShell.Utility) - PowerShell](/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-7.2&preserve-view=true) or the uuidgen command on macOS |
 | `name` | Friendly name for the group. | string |
-| `query` | The media coverage under this group | See the **query** properties tables below for details. |
+| `query` | The media coverage under this group | See the **query** property tables for details. |
 
 ### Query
 
@@ -145,7 +144,7 @@ Query type 1 is as follows:
 | Property name | Description | Options |
 |:---|:---|:---|
 | `$type` | Identify the logical operation to perform on the clauses | **all**: Any attributes under the **clauses** are an _And_ relationship. For example, if the administrator puts `vendorId` and `serialNumber`, for every connected USB, the system checks to see whether the USB meets both values.<br> **and**: is equivalent to _all_ <br> **any:** The attributes under the **clauses** are _Or_ relationship. For example, if administrator puts `vendorId` and `serialNumber`, for every connected USB, system does the enforcement as long as the USB has either an identical `vendorId` or `serialNumber` value. <br> **or**: is equivalent to _any_ |
-| `clauses` | Use media device property to set group condition. | An array of clause objects that are evaluated to determine group membership. See the [Clause](#clause) section below. |
+| `clauses` | Use media device property to set group condition. | An array of clause objects that are evaluated to determine group membership. See the [Clause](#clause) section. |
 
 Query type 2 is as follows:
 
@@ -172,15 +171,15 @@ Query type 2 is as follows:
 | `productId` | Four digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
-| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy prior to the clause. |
+| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy before the clause. |
 
 ### Access policy rule
 
 | Property name | Description | Options |
 |:---|:---|:---|
-| `id` | GUID, a unique ID, represents the rule and will be used in the policy. | New-Guid (Microsoft.PowerShell.Utility) - PowerShell <br> uuidgen |
-| `name` | String, the name of the policy and will display on the toast based on the policy setting. | |
-| `includeGroups` | The groups that the policy will be applied to. If multiple groups are specified, the policy applies to any media in all those groups. If not specified, the rule applies to all devices. | The **id** value inside the group must be used in this instance. If multiple groups are in the `includeGroups`, it's _AND_. <br/> `"includeGroups": ["3f082cd3-f701-4c21-9a6a-ed115c28e217"]` |
+| `id` | GUID, a unique ID, represents the rule and is used in the policy. | New-Guid (Microsoft.PowerShell.Utility) - PowerShell <br> uuidgen |
+| `name` | String, the name of the policy. Displays in the toast notification based on the policy setting. | |
+| `includeGroups` | The groups that the policy is applied to. If multiple groups are specified, the policy applies to any media in all those groups. If not specified, the rule applies to all devices. | The **id** value inside the group must be used in this instance. If multiple groups are in the `includeGroups`, it's _AND_. <br/> `"includeGroups": ["3f082cd3-f701-4c21-9a6a-ed115c28e217"]` |
 | `excludeGroups` | The groups that the policy doesn't apply to. | The **id** value inside the group must be used in this instance. If multiple groups are in the excludeGroups, it's _OR_. |
 | `entries` | One rule can have multiple entries; each entry with a unique GUID tells Device Control one restriction.| See entry properties table later in this article to get the details. |
 
@@ -259,7 +258,7 @@ v2_full_disk_access                         : "approved"
 - `active` - feature version, you should see ["v2"]. (Device Control is enabled, but not configured.)
     - [] - Device Control isn't configured on this machine.
     - ["v1"] - You are on a preview version of Device Control. Migrate to version 2 using this guide. v1 is considered obsolete and not described in this documentation.
-    - ["v1,""v2"] - You have both v1 and v2 enabled. Offboard from v1.
+    - ["v1", "v2"] - You have both v1 and v2 enabled. Offboard from v1.
 - `v1_configured` - v1 configuration is applied
 - `v1_enforcement_level` - when v1 is enabled
 - `v2_configured` - v2 configuration is applied
@@ -284,27 +283,27 @@ In this scenario, you need to create two groups: one group for any removable med
 ```json
 "settings": { 
 
-	"features": { 
+    "features": { 
 
-		"removableMedia": { 
+        "removableMedia": { 
 
-			"disable": false 
+            "disable": false 
 
-		} 
+        } 
 
-	}, 
+    }, 
 
-	"global": { 
+    "global": { 
 
-		"defaultEnforcement": "allow" 
+        "defaultEnforcement": "allow" 
 
-	}, 
+    }, 
 
-	"ux": { 
+    "ux": { 
 
-		"navigationTarget": "http://www.deskhelp.com" 
+        "navigationTarget": "http://www.deskhelp.com" 
 
-	} 
+    } 
 
 } 
 ```
@@ -384,85 +383,85 @@ Create access policy rule and put into `rules`:
 ```json
 "rules": [ 
 
-	{ 
+    { 
 
-		"id": "772cef80-229f-48b4-bd17-a69130092981", 
+        "id": "772cef80-229f-48b4-bd17-a69130092981", 
 
-		"name": "Deny RWX to all Removable Media Devices except Kingston", 
+        "name": "Deny RWX to all Removable Media Devices except Kingston", 
 
-		"includeGroups": [ 
+        "includeGroups": [ 
 
-			"3f082cd3-f701-4c21-9a6a-ed115c28e211" 
+            "3f082cd3-f701-4c21-9a6a-ed115c28e211" 
 
-		], 
+        ], 
 
-		"excludeGroups": [ 
+        "excludeGroups": [ 
 
-			"3f082cd3-f701-4c21-9a6a-ed115c28e212" 
+            "3f082cd3-f701-4c21-9a6a-ed115c28e212" 
 
-		], 
+        ], 
 
-		"entries": [ 
+        "entries": [ 
 
-			{ 
+            { 
 
-				"$type": "removableMedia", 
+                "$type": "removableMedia", 
 
-				"id": "A7CEE2F8-CE34-4B34-9CFE-4133F0361035", 
+                "id": "A7CEE2F8-CE34-4B34-9CFE-4133F0361035", 
 
-				"enforcement": { 
+                "enforcement": { 
 
-					"$type": "deny" 
+                    "$type": "deny" 
 
-				}, 
+                }, 
 
-				"access": [ 
+                "access": [ 
 
-					"read", 
+                    "read", 
 
-					"write", 
+                    "write", 
 
-					"execute" 
+                    "execute" 
 
-				] 
+                ] 
 
-			}, 
+            }, 
 
-			{ 
+            { 
 
-				"$type": "removableMedia", 
+                "$type": "removableMedia", 
 
-				"id": "18BA3DD5-4C9A-458B-A756-F1499FE94FB4", 
+                "id": "18BA3DD5-4C9A-458B-A756-F1499FE94FB4", 
 
-				"enforcement": { 
+                "enforcement": { 
 
-					"$type": "auditDeny", 
+                    "$type": "auditDeny", 
 
-					"options": [ 
+                    "options": [ 
 
-						"send_event", 
+                        "send_event", 
 
-						"show_notification" 
+                        "show_notification" 
 
-					] 
+                    ] 
 
-				}, 
+                }, 
 
-				"access": [ 
+                "access": [ 
 
-					"read", 
+                    "read", 
 
-					"write", 
+                    "write", 
 
-					"execute" 
+                    "execute" 
 
-				] 
+                ] 
 
-			} 
+            } 
 
-		] 
+        ] 
 
-	} 
+    } 
 
 ] 
 ```
@@ -486,4 +485,5 @@ In this case, only have one access rule policy, but if you have multiple, make s
 - [Deploy Device Control by using JAMF](mac-device-control-jamf.md)
 - [Deploy Device Control manually](mac-device-control-manual.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

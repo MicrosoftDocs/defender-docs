@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view, create, modify, and delete outbound spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 01/29/2025
+ms.date: 02/05/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -128,9 +128,9 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      Select one of the following actions from the **Automatic forwarding rules** dropdown list:
 
-     - **Automatic - System-controlled**: This is the default value. This value is now the same as **Off**. When this value was originally introduced, it was equivalent to **On**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
-     - **On**: Automatic external email forwarding isn't disabled by the policy.
-     - **Off**: All automatic external email forwarding is disabled by the policy.
+     - **Automatic - System-controlled**: This is the default value. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+     - **On - Forwarding is enabled**: Automatic external email forwarding isn't disabled by the policy.
+     - **Off - Forwarding is disabled**: All automatic external email forwarding is disabled by the policy.
 
      > [!NOTE]
      >

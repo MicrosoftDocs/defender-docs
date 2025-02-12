@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/10/2025
+ms.date: 01/27/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -107,7 +107,7 @@ The **Filters** list above the list of incidents shows the currently applied fil
 
 From the default incident queue, you can select **Add filter** to see the **Add filter** drop-down, from which you specify filters to apply to the incidents queue to limit the set of incidents shown. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig1-newfilters.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal.":::
+:::image type="content" source="/defender/media/incidents-queue/incidents-all-filters.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal.":::
 
 Select the filters you want to use, then select **Add** at the bottom of the list to make them available.
 
@@ -134,8 +134,9 @@ This table lists the filter names that are available.
 | **Classification** | Specify the set of classifications of the related alerts. |
 | **Automated investigation state** | Specify the status of automated investigation.  |
 | **Associated threat** | Specify a named threat.  |
-| **Alert policies** | Specify an alert policy title.  |
-| **Alert subscription IDs** | Specify an alert  based on a subscription ID.  |
+| **Policy/policy rule** | Filter incidents based on policy or policy rule.  |
+| **Product names** | Filter incidents based on product name.  |
+| **Data stream** | Filter incidents based on the location or workload.  |
 
 > [!NOTE]
 > If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).

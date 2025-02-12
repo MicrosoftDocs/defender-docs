@@ -16,18 +16,16 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
-- MOE150
-- met150
-ms.date: 01/17/2025
+  - MOE150
+  - met150
+ms.date: 1/27/2025
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Investigate alerts in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!NOTE]
 > This article describes security alerts in Microsoft Defender XDR. However, you can use activity alerts to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Create activity alerts - Microsoft Purview | Microsoft Docs](/Microsoft-365/compliance/create-activity-alerts).
@@ -38,15 +36,15 @@ In Microsoft Defender XDR, related alerts are aggregated together to form [incid
 
 The **Alerts queue** shows the current set of alerts. You get to the alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
-:::image type="content" source="/defender/media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alerts-ss-alerts-queue.png":::
+:::image type="content" source="/defender/media/investigate-alerts/alerts-page-defender-small.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alerts-page-defender.png":::
 
 Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear here.
 
 By default, the alerts queue in the Microsoft Defender portal displays the new and in progress alerts from the last seven days. The most recent alert is at the top of the list so you can see it first.
 
-From the default alerts queue, you can select **Filter** to see a **Filter** pane, from which you can specify a subset of the alerts. Here's an example.
+From the default alerts queue, you can select **Filter** to see all available filters from which you can specify a subset of the alerts. Here's an example.
 
-:::image type="content" source="/defender/media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="The Filters section in the Microsoft Defender portal." lightbox="/defender/media/investigate-alerts/alerts-ss-alerts-filter.png":::
+:::image type="content" source="/defender/media/investigate-alerts/alerts-all-filters.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal":::
 
 You can filter alerts according to these criteria:
 
@@ -55,10 +53,12 @@ You can filter alerts according to these criteria:
 - Categories
 - Service/detection sources
 - Tags
-- Policy
+- Policy/Policy rule
+- Alert type
+- Product name
 - Entities (the impacted assets)
 - Automated investigation state
-- Alert subscription IDs
+- Data stream (workload or location)
 
 > [!NOTE]
 > Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
@@ -72,6 +72,17 @@ An alert can have system tags and/or custom tags with certain color backgrounds.
 
 > [!TIP]
 > Microsoft's Security Exposure Management, based on predefined classifications, automatically tags devices, identities, and cloud resources as a **critical asset**. This out-of-the-box capability ensures the protection of an organization's valuable and most important assets. It also helps security operations teams to prioritize investigation and remediation. Know more about [critical asset management](/security-exposure-management/critical-asset-management).
+
+> [!IMPORTANT]
+> Some information in this article relates to a prereleased product, which may be substantially modified before it’s commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
+
+You can search for alerts using a custom date and time range or by using the search bar to search for specific alerts. To search for alerts within a specific date or time range, select **Custom range** in the date picker and then specify the start and end dates and times.
+
+:::image type="content" source="/defender/media/investigate-alerts/alerts-custom-range.png" alt-text="Highlighting the custom range option in the date and time picker in the Alerts queue.":::
+
+To search for specific alerts, enter the search term in the search bar. You can search for alerts based on the alert title or alert ID.
+
+:::image type="content" source="/defender/media/investigate-alerts/alerts-search-bar-small.png" alt-text="Highlighting the search bar in the Alerts queue" lightbox="/defender/media/investigate-alerts/alerts-search-bar.png":::
 
 ## Required roles for Defender for Office 365 alerts
 
