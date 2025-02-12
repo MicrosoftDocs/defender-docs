@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 02/18/2024
+ms.date: 02/11/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -41,6 +41,8 @@ The Device Health report provides information about the devices in your organiza
 >
 > For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 
+## View device health cards
+
 In the Microsoft Defender portal, in the navigation pane, select **Reports**, and then open **Device health and compliance**. The [**Microsoft Defender Antivirus health** tab](#microsoft-defender-antivirus-health-tab) has eight cards that report on the following aspects of Microsoft Defender Antivirus:
 
 - [Antivirus mode card](#antivirus-mode-card)
@@ -57,14 +59,13 @@ In the Microsoft Defender portal, in the navigation pane, select **Reports**, an
 To access the Device health and antivirus compliance report in the Microsoft Defender portal, the following permissions are required:
 
 | Permission name | Permission type |
-|:---|:---|
+|---|---|
 | View Data | Threat and vulnerability management (TVM) |
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-
-To Assign these permissions:
+To assign permissions, follow these steps:
 
 1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
 
@@ -90,12 +91,12 @@ Two cards, [Antivirus mode card](#antivirus-mode-card) and [Recent antivirus sca
 
 The remaining six cards report about the Microsoft Defender Antivirus status for devices in your organization:
 
-| `version` cards: | `update` cards{<a id="fn1">1</a>} |
+| `version` cards: | `update` cards |
 |:---|:---|
 | [Antivirus engine version card](#antivirus-engine-version-card) <br> [Antivirus security intelligence version card](#antivirus-security-intelligence-version-card) <br> [Antivirus platform version card](#antivirus-platform-version-card) | [Antivirus engine updates card](#antivirus-engine-updates-card) <br> [Security intelligence updates card](#security-intelligence-updates-card) <br> [Antivirus platform updates card](#antivirus-platform-updates-card) |
 | The three version cards provide flyout reports that provide additional information, and enable further exploration. | The three up-to-date reporting cards provide links to resources to learn more. |
 
-<sup>{[1](#fn1)}</sup> For the three `updates` cards (also known as up-to-date reporting cards), "**No data available**" (or "Unknown" value) indicates devices that aren't reporting update status. Devices that aren't reporting update status can be due to various reasons, such as:
+For the three `updates` cards (also known as up-to-date reporting cards), "**No data available**" (or "Unknown" value) indicates devices that aren't reporting update status. Devices that aren't reporting update status can be due to various reasons, such as:
 
 - Computer is disconnected from the network.
 - Computer is powered down or in a hibernation state.
@@ -139,7 +140,7 @@ To add or remove specific types of information on the **Microsoft Defender Antiv
 The following table contains a list of terms that are new to Microsoft Defender Antivirus reporting.
 
 | Column name | Description |
-|:---|:---|
+|---|---|
 | Security intelligence publish time | Indicates Microsoft's release date of the security intelligence update version on the device. Devices with a security intelligence publish time greater than seven days are considered out of date in the reports. |
 | Last seen | Indicates date when device last had connection. |
 | Data refresh timestamp | Indicates when client events were last received for reporting on: AV mode, AV engine version, AV platform version, AV security intelligence version, and scan information. |
@@ -215,9 +216,16 @@ Reports on how many devices in your organization – on the date indicated on th
 Following are descriptions for each mode:
 
 - **Active** mode - In active mode, Microsoft Defender Antivirus is used as the primary antivirus app on the device. Files are scanned, threats are remediated, and detected threats are listed in your organization's security reports and in your Windows Security app.
-- **Passive** mode - In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. Files are scanned, and detected threats are reported, but threats aren't remediated by Microsoft Defender Antivirus. IMPORTANT: Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
+
+- **Passive** mode - In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. 
+
+   > [!IMPORTANT]
+   > Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
+
 - **Disabled** mode - synonymous with: uninstalled, disabled, sideBySidePassive, and Low Periodic Scan. When disabled, Microsoft Defender Antivirus isn't used. Files aren't scanned, and threats aren't remediated. In general, Microsoft doesn't recommend disabling or uninstalling Microsoft Defender Antivirus.
+
 - **Others** mode - Not running, Unknown
+
 - **EDR in Block** mode - In endpoint detection and response (EDR) blocked mode. See [Endpoint detection and response in block mode](edr-in-block-mode.md)
 
 Devices that are in either passive, LPS, or Off present a potential security risk and should be investigated.

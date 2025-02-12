@@ -27,7 +27,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 This topic describes deploying Defender for Endpoint on iOS on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll).
 
@@ -37,14 +37,14 @@ This topic describes deploying Defender for Endpoint on iOS on Microsoft Intune 
 
 - Ensure iOS enrollment is done for your users. Users need to have a Defender for Endpoint license assigned in order to use Defender for Endpoint on iOS. Refer to [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign) for instructions on how to assign licenses.
 
-- Ensure the end users have company portal app installed, signed in and enrollment completed.
+- Ensure the end users have company portal app installed, signed inC, and enrollment completed.
 
 > [!NOTE]
 > Microsoft Defender for Endpoint on iOS is available in the [Apple App Store](https://aka.ms/mdatpiosappstore).
 
 This section covers:
 
-1. **Deployment steps** (applicable for both **Supervised** and **Unsupervised** devices)- Admins can deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal. This step is not needed for VPP (volume purchase) apps.
+1. **Deployment steps** (applicable for both **Supervised** and **Unsupervised** devices)- Admins can deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal. This step isn't needed for VPP (volume purchase) apps.
 
 1. **Complete deployment** (only for Supervised devices)- Admins can select to deploy any one of the given profiles.
     1. **Zero touch (Silent) Control Filter** - Provides Web Protection without the local loopback VPN and also enables silent onboarding for users. App is automatically installed  and activated without the need for user to open the app.
@@ -52,11 +52,11 @@ This section covers:
   
 1. **Automated Onboarding setup** (only for **Unsupervised** devices) - Admins can automate the Defender for Endpoint onboarding for users in two different ways:
     1. **Zero touch (Silent) Onboarding** - App is automatically installed and activated without the need for users to open the app.
-    1. **Auto Onboarding of VPN** - Defender for Endpoint VPN profile is automatically set up without having the user to do so during onboarding. This step is not recommended in Zero touch configurations.
+    1. **Auto Onboarding of VPN** - Defender for Endpoint VPN profile is automatically set up without having the user to do so during onboarding. This step isn't recommended in Zero touch configurations.
 
 1. **User Enrollment setup** (only for Intune User Enrolled devices) - Admins can deploy and configure the Defender for Endpoint app on the Intune User Enrolled devices also.
 
-1. **Complete onboarding and check status** -  This step is applicable for all enrollment types to ensure app is installed on the device, onboarding is completed and device is visible in the Microsoft Defender portal. It can be skipped for the zero touch (silent) onboarding.
+1. **Complete onboarding and check status** -  This step is applicable for all enrollment types to ensure app is installed on the device, onboarding is completed, and device is visible in the Microsoft Defender portal. It can be skipped for the zero touch (silent) onboarding.
 
 ## Deployment steps (applicable for both Supervised and Unsupervised devices)
 
@@ -64,15 +64,15 @@ Deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal.
 
 ### Add iOS store app
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **iOS/iPadOS** > **Add** > **iOS store app** and click **Select**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **iOS/iPadOS** > **Add** > **iOS store app** and select **Select**.
 
    :::image type="content" source="media/ios-deploy-1.png" alt-text="The Add applications tab in the Microsoft Intune admin center" lightbox="media/ios-deploy-1.png":::
 
-1. On the **Add app** page, click on **Search the App Store** and type **Microsoft Defender** in the search bar. In the search results section, click on *Microsoft Defender* and click **Select**.
+1. On the **Add app** page, select **Search the App Store** and type **Microsoft Defender** in the search bar. In the search results section, select *Microsoft Defender* and select **Select**.
 
-1. Select **iOS 15.0** as the Minimum operating system. Review the rest of information about the app and click **Next**.
+1. Select **iOS 15.0** as the Minimum operating system. Review the rest of information about the app and select **Next**.
 
-1. In the **Assignments** section, go to the **Required** section and select **Add group**. You can then choose the user group(s) that you would like to target Defender for Endpoint on iOS app. Click **Select** and then **Next**.
+1. In the **Assignments** section, go to the **Required** section and select **Add group**. You can then choose the user groups that you would like to target Defender for Endpoint on iOS app. Click **Select** and then **Next**.
 
     > [!NOTE]
     > The selected user group should consist of Microsoft Intune enrolled users.
@@ -120,7 +120,7 @@ Configure the supervised mode for Defender for Endpoint app through an App confi
 
 1. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
-1. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it is best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
+1. On the **Assignments** page, select the groups that receive this profile. For this scenario, it's best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
    When deploying to user groups, a user must sign in to a device before the policy applies.
 

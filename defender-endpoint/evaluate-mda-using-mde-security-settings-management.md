@@ -3,8 +3,8 @@ title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint S
 ms.reviewer: yonghree
 description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
-ms.author: vpattnaik
-author: vpattnai
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: dolmont
 audience: ITPro
@@ -17,14 +17,14 @@ ms.custom:
 - cx-ean
 ms.subservice: edr
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 02/12/2025
 ---
 
 # Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
 
 In Windows 10 or later, and in Windows Server 2016 or later, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
-This article describes configuration options in Windows 10 or later, and in Windows Server 2016 or later, that guide you to activate and test the key protection features in MDAV and Microsoft Defender EG; and provides you with guidance and with links to more information.
+This article outlines the configuration options available in Windows 10 and later versions, as well as in Windows Server 2016 and later versions. It provides step-by-step guidance on how to activate and test the key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender for Endpoint (EG).
 
 If you have any questions about a detection that MDAV makes, or you discover a missed detection, you can submit a file to us at our [sample submission help site](/defender-xdr/submission-guide).
 
@@ -49,24 +49,24 @@ To configure the options that you must use to test the protection features, perf
 1. From these groups of settings, select those settings that you want to manage with this profile.
 1. Set the policies for the chosen groups of settings by configuring the settings as described in the following tables:
 
-**Real-time Protection (Always-on protection, real-time scanning)**:
+   **Real-time Protection (Always-on protection, real-time scanning)**:
 
-|Description|Settings|
-|---|---|
-|Allow Realtime Monitoring|Allowed|
-|Real Time Scan Direction|Monitor all files (bi-directional)|
-|Allow Behavior Monitoring|Allowed|
-|Allow On Access Protection|Allowed|
-|PUA Protection|PUA Protection on|
+   |Description|Settings|
+   |---|---|
+   |Allow Real-time Monitoring|Allowed|
+   |Real Time Scan Direction|Monitor all files (bi-directional)|
+   |Allow Behavior Monitoring|Allowed|
+   |Allow On Access Protection|Allowed|
+   |PUA Protection|PUA Protection on|
 
-**Cloud protection features**:
+   **Cloud protection features**:
 
-|Description|Setting|
-|---|---|
-|Allow Cloud Protection|Allowed|
-|Cloud Block Level|High|
-|Cloud Extended Timeout|Configured, 50|
-|Submit Samples Consent|Send all samples automatically|
+   |Description|Setting|
+   |---|---|
+   |Allow Cloud Protection|Allowed|
+   |Cloud Block Level|High|
+   |Cloud Extended Time-out|Configured, 50|
+   |Submit Samples Consent|Send all samples automatically|
 
 Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
@@ -86,7 +86,7 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 |Description|Setting|
 |---|---|
 |Enable Network Protection|Enabled (block mode)|
-|Allow Network Protection Down Level|Network protection will be enabled downlevel.|
+|Allow Network Protection Down Level|Network protection is enabled downlevel.|
 |Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled.|
 |Disable DNS over TCP parsing|DNS over TCP parsing is enabled.|
 |Disable HTTP parsing|HTTP parsing is enabled.|
@@ -158,23 +158,54 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
    |[PREVIEW] Block use of copied or impersonated system tools|Block|
    |Block JavaScript or VBScript from launching downloaded executable content|Block|
    |Block credential stealing from the Windows local security authority subsystem|Block|
-   |Block Webshell creation for Servers|Block|
+   |Block Web shell creation for Servers|Block|
    |Block Office applications from creating executable content|Block|
    |Block untrusted and unsigned processes that run from USB|Block|
    |Block Office applications from injecting code into other processes|Block|
    |Block persistence through WMI event subscription|Block|
    |Use advanced protection against ransomware|Block|
-   |Block process creations originating from PSExec and WMI commands|Block <br/> **NOTE**: If you have Configuration Manager (formerly SCCM), or other management tools, that use WMI, you might need to set this to **Audit** instead of **Block**.|
+   |Block process creations originating from PSExec and WMI commands|Block (If you have Configuration Manager (formerly SCCM), or other management tools that use WMI you might need to set this to **Audit** instead of **Block**)|
    |[PREVIEW] Block rebooting machine in Safe Mode|Block|
    |Enable Controlled Folder Access|Enabled|
 
 > [!TIP]
-> Any of the rules may block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions".  And, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
+> Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
 1. Select **Next**.
-1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+3. Select **Next**.
+4. On the **Review + create** tab, review your policy settings, and then select **Save**.
+
+#### Enable Tamper Protection
+
+1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
+1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
+1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
+1. Select **Security Experience** from the **Select Template** drop-down list.
+1. Select **Create policy**. The **Create a new policy** page appears.
+1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
 1. Select **Next**.
-1. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. On the **Configuration settings** page, expand the groups of settings.
+1. From these groups, select the settings that you want to manage with this profile.
+1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
+
+   |Description| Setting|
+   | -------- | -------- |
+   | TamperProtection (Device) | On|
+
+#### Check the Cloud Protection network connectivity
+
+It's important to check that the Cloud Protection network connectivity is working during your penetration testing.
+
+CMD (Run as admin)
+
+
+```powershell
+cd "C:\Program Files\Windows Defender"
+MpCmdRun.exe -ValidateMapsConnection
+```
+
+For more information [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 #### Check the platform update version
 
@@ -188,7 +219,7 @@ Get-MPComputerStatus | Format-Table AMProductVersion
 
 #### Check the Security Intelligence Update version
 
-The latest "Security Intelligence Update" version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
+The latest "Security Intelligence Update" version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
 
 To check which "Security Intelligence Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
 
@@ -198,7 +229,7 @@ Get-MPComputerStatus | Format-Table AntivirusSignatureVersion
 
 #### Check the Engine Update version
 
-The latest scan "engine update" version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
+The latest scan "engine update" version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
 
 To check which "Engine Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
 
