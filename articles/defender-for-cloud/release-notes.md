@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/28/2024
+ms.date: 02/12/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -26,6 +26,29 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## February 2025
+
+|Date | Category | Update|
+|--|--|--|
+| February 16 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
+
+### Data and AI security dashboard (Preview)
+
+February 16, 2025
+
+We are excited to announce the enhancement of our Data security dashboard, now extended to include the Data and AI security dashboard. This new feature in Microsoft Defender for Cloud provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
+
+Key Benefits:
+
+- **Unified view**: Gain a comprehensive view of all organizational data and AI resources in a single pane of glass.
+- **Data insights**: Understand where your data is stored and the types of resources holding it.
+- **Protection coverage**: Assess the protection coverage of your data and AI resources.
+- **Critical issues**: Highlight resources that require immediate attention based on high-severity recommendations, alerts, and attack paths.
+- **Sensitive data discovery**: Easily locate and summarize sensitive data resources in your cloud and AI assets.
+- **AI workloads**: Discover AI application footprints, including services, containers, data sets, and models.
+
+Learn more about the [Data and AI security dashboard](data-aware-security-dashboard-overview.md).
 
 ## January 2025
 
