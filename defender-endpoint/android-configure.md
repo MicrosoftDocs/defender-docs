@@ -2,9 +2,9 @@
 title: Configure Microsoft Defender for Endpoint on Android features
 description: Describes how to configure Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: priyankagill
-author: priyankagill
-ms.reviewer: priyankagill
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: denishdonga
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/22/2024
+ms.date: 02/11/2025
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -38,6 +38,7 @@ For more information about how to set up Defender for Endpoint on Android and Co
 > [!NOTE]
 > Defender for Endpoint on Android only supports creating custom indicators for IP addresses and URLs/domains.
 > 
+> IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
 > Also, alerts for custom indicators are currently not supported for Defender for Endpoint on Android.
 
 Defender for Endpoint on Android enables admins to configure custom indicators to support Android devices as well. For more information on how to configure custom indicators, see [Overview of indicators](indicators-overview.md).
@@ -332,4 +333,5 @@ Use the following steps to configure the Device tags:
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 
 - [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

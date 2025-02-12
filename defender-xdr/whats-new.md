@@ -36,6 +36,8 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) IPs can now be excluded from automated responses in attack disruption. This feature enables you to exclude specific IPs from automated containment actions triggered by attack disruption. For more information, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
 
+- (Preview) The `PrivilegedEntraPimRoles` column is available for preview in the advanced hunting [IdentityInfo](advanced-hunting-identityinfo-table.md) table. 
+
 ## January 2025
 
 - (Preview) Device activity events from Microsoft Sentinel's device [entity pages](/azure/sentinel/entity-pages) are now visible in the *Timeline* tab on the [Device entity page](./entity-page-device.md#timeline-tab) in the Defender portal, in addition to remaining visible on the [*Sentinel events* tab](./entity-page-device.md#sentinel-events-tab).

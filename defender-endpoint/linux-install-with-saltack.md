@@ -25,7 +25,7 @@ ms.date: 12/24/2024
 - Microsoft Defender for Endpoint Server
 - [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 
 This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article.
@@ -98,7 +98,7 @@ There are two ways you can create the Saltstack state files:
    ```
   
 > [!NOTE]
-> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default) ), realtime protection, version, etc. To select from the list of available options, check help through the following command:
+> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default)), real-time protection, version, etc. To select from the list of available options, check help through the following command:
 >```./mde_installer.sh --help```
 
 ### Create Saltstack state files by manually configuring repositories
@@ -116,14 +116,14 @@ In this step, you create a SaltState state file in your configuration repository
 > In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
 > [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
 1. Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
 
 2. In the following commands, replace *[distro]* and *[version]* with your information.
 
    > [!NOTE]
-   > In case of Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel". For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
+   > For Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel." For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
 
    ```bash
    cat /srv/salt/install_mdatp.sls
