@@ -79,7 +79,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
-<sup><a name="footnote1"></a>1</sup>: Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts. Additionally, P1 doesn't support the automatic deployment of Microsoft Defender for Endpoint on Azure Virtual Machine Scale Sets uniform instances.
+<sup><a name="footnote1"></a>1</sup> Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts. Additionally, P1 doesn't support the automatic deployment of Microsoft Defender for Endpoint on Azure Virtual Machine Scale Sets uniform instances.
 
 ## Linux machine support
 
@@ -104,7 +104,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
-<sup><a name="footnote1"></a>1</sup>: Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts. Additionally, P1 doesn't support the automatic deployment of Microsoft Defender for Endpoint on Azure Virtual Machine Scale Sets uniform instances.
+<sup><a name="footnote1"></a>1</sup> Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts. Additionally, P1 doesn't support the automatic deployment of Microsoft Defender for Endpoint on Azure Virtual Machine Scale Sets uniform instances.
 
 ## Multicloud machines
 
