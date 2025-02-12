@@ -19,7 +19,7 @@ The Data and AI security dashboard allows you to:
 - A unified view of all organizational data and AI resources in a single interface. 
 - Gain insights into data storage locations and the types of resources that hold it.
 - Assess the protection coverage of data and AI resources.
-- View [attack paths](concept-attack-path.md), recommendations, and [data threat](alerts-overview.md) analysis in one location.
+- View [attack paths](concept-attack-path.md), [recommendations](review-security-recommendations.md), and [data threat](alerts-overview.md) analysis in one location.
 - Mitigate critical threats and improve security posture in data and AI environments.
 - Discover useful data and AI insights by highlighting queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 - Identify and summarize sensitive data resources within your cloud data resource and AI assets
