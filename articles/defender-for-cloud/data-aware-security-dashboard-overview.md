@@ -16,15 +16,13 @@ A key benefit of the Data and AI dashboard is its ability to see your organizati
 
 The Data and AI security dashboard allows you to:
 
-- View all organizational data and AI resources in a single interface.
-
 - A unified view of all organizational data and AI resources in a single interface. 
 - Gain insights into data storage locations and the types of resources that hold it.
 - Assess the protection coverage of data and AI resources.
-- View [attack paths](concept-attack-path.md), recommendations, and data threat analysis in one location.
+- View [attack paths](concept-attack-path.md), recommendations, and [data threat](alerts-overview.md) analysis in one location.
 - Mitigate critical threats and improve security posture in data and AI environments.
 - Discover useful data and AI insights by highlighting queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
-- Identify and summarize sensitive data resources within your cloud data and AI assets.
+- Identify and summarize sensitive data resources within your cloud data resource and AI assets
 
 > [!NOTE]
 > The data security dashboard feature is enabled at the subscription level. The dashboard information is based on the data and AI resources in your subscription and the plans enabled in your subscription.
@@ -44,7 +42,7 @@ The Data and AI security dashboard allows you to:
 
 The Data and AI security overview section displays your cloud data and AI estate for each cloud. It includes all data and AI resources, categorized into storage assets, managed databases, hosted databases (IaaS), and AI services.
 
-Here, you can see which of your resources are fully, partially, or not protected by Defender CSPM, Defender for Storage, Defender for Databases, and AI threat protection. The dashboard also highlights which of your data and AI resources have high and critical severity recommendations based on alerts, or attack paths that need addressing.
+Here, you can see which of your resources are fully, partially, or not protected by Defender CSPM, Defender for Storage, Defender for Databases, and AI threat protection. The dashboard also highlights which of your data and AI resources have high and critical severity recommendations alerts, or attack paths that need addressing.
 
 :::image type="content" source="media/data-aware-security-dashboard/data-security-overview.png" alt-text="Screenshot that shows the overview section of the data security view." lightbox="media/data-aware-security-dashboard/data-security-overview.png":::
 
