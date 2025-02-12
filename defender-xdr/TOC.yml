@@ -418,6 +418,12 @@
           href: integrate-microsoft-365-defender-secops-use-cases.md
         - name: Step 6. SOC maintenance tasks
           href: integrate-microsoft-365-defender-secops-tasks.md
+    - name: Manage multitenant environments
+      items:
+        - name: Overview
+          href: /unified-secops-platform/mto-overview
+        - name: Set up multitenant management
+          href: /unified-secops-platform/mto-requirements
     - name: Manage roles and permissions
       items:
         - name: Manage access and roles in Microsoft Defender XDR
