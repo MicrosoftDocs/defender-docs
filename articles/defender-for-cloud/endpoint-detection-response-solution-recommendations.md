@@ -23,6 +23,7 @@ Based on EDR solution findings, Defender for Cloud provides [recommendations](de
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - Scanning using the MMA will be deprecated in November 2024.
+> - To exempt resources from these EDR assessments, ensure that the **Azure CSPM initiative is assigned**. This initiative is enabled by default when Defender CSPM is turned on.
 
 ## Prerequisites
 
