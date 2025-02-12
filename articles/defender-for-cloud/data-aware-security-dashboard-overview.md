@@ -2,7 +2,7 @@
 title: Data and AI security dashboard (Preview)
 description: Discover the capabilities of the Data and AI Security Dashboard in Microsoft Defender for Cloud. Enhance your security posture and manage risks effectively.
 ms.topic: concept-article
-ms.date: 02/10/2025
+ms.date: 02/12/2025
 #customer intent: As a security professional, I want to understand the information presented to me on the data and AI security dashboard so that I can effectively manage the security of my organization's data and AI estate, risks and insights.
 ---
 
@@ -17,16 +17,13 @@ A key benefit of the Data and AI dashboard is its ability to see your organizati
 The Data and AI security dashboard allows you to:
 
 - View all organizational data and AI resources in a single interface.
+
+- A unified view of all organizational data and AI resources in a single interface. 
 - Gain insights into data storage locations and the types of resources that hold it.
 - Assess the protection coverage of data and AI resources.
-- Track and manage data and AI resources to stay informed.
-- Access critical information and complete tasks.
-- Make informed decisions and take proactive measures on data and AI security.
-- Identify potential threats by highlighting [attack paths](concept-attack-path.md) leading to sensitive data.
--  View issue tracking, recommendations, and data threat analysis in one location.
-- Manage data and AI environments on a unified platform.
+- View [attack paths](concept-attack-path.md), recommendations, and data threat analysis in one location.
 - Mitigate critical threats and improve security posture in data and AI environments.
-- Discover useful data and AI insights by highlighting data and AI queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
+- Discover useful data and AI insights by highlighting queries in the [security explorer](how-to-manage-cloud-security-explorer.md).
 - Identify and summarize sensitive data resources within your cloud data and AI assets.
 
 > [!NOTE]
