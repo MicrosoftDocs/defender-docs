@@ -32,6 +32,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## February 2025
+- (Preview) The `PrivilegedEntraPimRoles` column is available for preview in the advanced hunting [IdentityInfo](advanced-hunting-identityinfo-table.md) table. 
+
 ## January 2025
 
 - (Preview) Device activity events from Microsoft Sentinel's device [entity pages](/azure/sentinel/entity-pages) are now visible in the *Timeline* tab on the [Device entity page](./entity-page-device.md#timeline-tab) in the Defender portal, in addition to remaining visible on the [*Sentinel events* tab](./entity-page-device.md#sentinel-events-tab).
