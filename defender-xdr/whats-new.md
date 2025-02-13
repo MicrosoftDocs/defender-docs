@@ -55,7 +55,7 @@ You can also get product updates and important notifications through the [messag
 
 ## December 2024
 
-- (GA) [Content distribution via tenant groups in multitenant management](mto-tenantgroups.md) is now generally available. Create tenant groups to manage content across tenants in multitenant management in Microsoft Defender XDR.
+- (GA) [Content distribution via tenant groups in multitenant management](/unified-secops-platform/mto-tenantgroups) is now generally available. Create tenant groups to manage content across tenants in multitenant management in Microsoft Defender XDR.
 - Microsoft Defender Experts for XDR now offers [scoped coverage](defender-experts-scoped-coverage.md) for customers who wish to define a specific set of devices and/or users, based on geography, subsidiary, or function, for which they'd like Defender Experts to provide support.
 - (Preview) The [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature in Microsoft Defender advanced hunting now allows linking of Microsoft Sentinel query results. In both the Microsoft Defender unified experience and in [Defender XDR advanced hunting](advanced-hunting-link-to-incident.md), you can now specify whether an entity is an impacted asset or related evidence.
 - (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries-preview), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you are already in Microsoft Defender.
@@ -64,7 +64,7 @@ You can also get product updates and important notifications through the [messag
 
 ## November 2024
 
-- We've updated the steps to create tenant groups in multitenant management. Learn the new steps in the [content distribution using tenant groups in multitenant management](mto-tenantgroups.md).
+- We've updated the steps to create tenant groups in multitenant management. Learn the new steps in the [content distribution using tenant groups in multitenant management](/unified-secops-platform/mto-tenantgroups).
 - (Preview) **Attack paths** in the incident graph are now available in the Microsoft Defender portal. The attack story now includes potential attack paths that show the paths that attackers can potentially take after compromising a device. This feature helps you prioritize your response efforts. For more information, see [attack paths in the attack story](investigate-incidents.md#attack-paths).
 - (Preview) Microsoft Defender XDR customers can now export incident data to PDF. Use the exported data to easily capture and share incident data to other stakeholders. For details, see **[Export incident data to PDF](manage-incidents.md#export-incident-data-to-pdf)**.
 - (GA) The **last update time** column in the [incident queue](incident-queue.md#incident-queue) is now generally available.
@@ -92,7 +92,7 @@ You can also get product updates and important notifications through the [messag
 
 ## August 2024
 
-- (Preview) Microsoft Sentinel data is now available with Defender XDR data in Microsoft Defender multitenant management. Only one Microsoft Sentinel workspace per tenant is currently supported in the Microsoft unified security operations platform. So, Microsoft Defender multitenant management shows security information and event management (SIEM) data from one Microsoft Sentinel workspace per tenant. For more information, see [Microsoft Defender multitenant management](mto-overview.md) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
+- (Preview) Microsoft Sentinel data is now available with Defender XDR data in Microsoft Defender multitenant management. Only one Microsoft Sentinel workspace per tenant is currently supported in the Microsoft unified security operations platform. So, Microsoft Defender multitenant management shows security information and event management (SIEM) data from one Microsoft Sentinel workspace per tenant. For more information, see [Microsoft Defender multitenant management](/unified-secops-platform/mto-overview) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 - To ensure a smooth experience while navigating the Microsoft Defender portal, configure your network firewall by adding the appropriate addresses to your allow list. For more information, see [Network firewall configuration for Microsoft Defender XDR](m365d-enable.md#configure-your-network-firewall).
 
 ## July 2024
@@ -122,7 +122,7 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2024
 
-- (Preview) **[Content distribution through tenant groups in multitenant management](mto-tenantgroups.md)** is now available. Content distribution helps you manage content at scale across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
+- (Preview) **[Content distribution through tenant groups in multitenant management](/unified-secops-platform/mto-tenantgroups)** is now available. Content distribution helps you manage content at scale across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
@@ -132,7 +132,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) Security analysts can now investigate a user's insider risk in the Microsoft Defender portal with **insider risk severity and insights** available for Microsoft Defender XDR users with provisioned access to Microsoft Purview Insider Risk Management. See the [entity details in the user page](investigate-users.md#entity-details) for more information.
 
-- (GA) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
+- (GA) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](/unified-secops-platform/mto-endpoint-security-policy).
 
 - Create alert tuning rules using **Alert severity** and **Alert title** values as conditions. Alert tuning can help you streamline the alert queue, saving triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs, and rule conditions are met. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert).
 - (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who aren't using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
@@ -261,7 +261,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The [unified Assets tab in the Incidents page](investigate-incidents.md) is now generally available.
 
-- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new threat actor taxonomy](microsoft-threat-actor-naming.md).
+- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new threat actor taxonomy](/unified-secops-platform/microsoft-threat-actor-naming).
 
 ## March 2023
 

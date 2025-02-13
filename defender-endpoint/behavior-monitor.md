@@ -133,7 +133,7 @@ withNames | join kind = fullouter DefUpdate on DeviceId
 
 ## Troubleshooting high CPU usage
 
-Detections related to behavior monitoring start with "[Behavior](/defender-xdr/malware-naming#type)".
+Detections related to behavior monitoring start with "[Behavior](/unified-secops-platform/malware-naming#type)".
 
 When investigating high CPU usage in `MsMpEng.exe`, you can temporarily disable behavior monitoring to see if the issues continue.
 
