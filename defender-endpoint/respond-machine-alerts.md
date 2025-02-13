@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 12/03/2024
+ms.date: 02/20/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -320,6 +320,47 @@ You'll be able to stop containing a device at any time.
 1. Select the device from the **Device inventory** or open the device page.
 
 2. Select **Release from containment** from the action menu. This action will restore this device's connection to the network.
+
+### Contain IP addresses of undiscovered devices
+
+> [!IMPORTANT]
+> Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other non-compromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
+
+> [!NOTE]
+> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 2012 R2, Windows 2016, and Windows Server 2019+ devices.
+
+Containing an IP address associated with undiscovered devices or devices not onboarded to Defender for Endpoint is done automatically through [automatic attack disruption](/defender-xdr/automatic-attack-disruption). The Contain IP policy automatically blocks a malicious IP address when Defender for Endpoint detects the IP address to be associated with an undiscovered device or a device not onboarded.
+
+A message indicating that the action is applied appears on the applicable incident, device, or IP page. Here’s an example.
+
+**[INSERT SCREENSHOT]**
+
+After an IP address is contained, you can view the action in the History view of the Action Center. You can see when the action occurred and identify the IP addresses that were contained.
+
+**[INSERT SCREENSHOT]**
+
+If a contained IP address is part of an incident, an indicator is present on the [incident graph](/defender-xdr/investigate-incidents#attack-story) and on the incident’s [evidence and response](/defender-xdr/investigate-incidents#evidence-and-response) tab. Here’s an example.
+
+**[INSERT SCREENSHOTS]**
+
+You can stop an IP address’ containment at any time. To stop containment, you can perform any of the following:
+
+- Select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**.
+- Select the IP address from either the incident page side pane or alert side pane, then select **Undo**.
+
+This action restores the IP address’ connection to the network.
+
+### Containing critical assets
+
+When a critical asset is compromised and used to spread threats within an organization, stopping the spread can be challenging because these assets must continue to function to avoid productivity loss. Defender for Endpoint addresses this by granularly containing the critical asset, preventing the spread of the attack while ensuring the asset remains operational for business continuity.
+
+Through automatic attack disruption, Defender for Endpoint incriminates a malicious device, identifies the role of the device to apply a matching policy to automatically contain a critical asset. The granular containment is done by blocking only specific ports and communication directions.
+
+**[INSERT SCREENSHOT]**
+
+You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment currently supports critical asset types like domain controllers, DNS servers, and DHCP servers.
 
 ## Contain user from the network
 
