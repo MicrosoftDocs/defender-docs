@@ -2,15 +2,15 @@
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb 
 audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 02/04/2025
+ms.date: 02/13/2025
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
@@ -99,7 +99,7 @@ Your organization's attack surfaces are all the places where you're vulnerable t
     - [Role-based access control](#role-based-access-control)
     - [Reporting](#reporting)
     - [APIs](#apis)
-  - [Cross-platform support](#cross-platform-support)
+  - [Next steps](#next-steps)
 
 To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](overview-attack-surface-reduction.md).
 
