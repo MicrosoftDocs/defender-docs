@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 01/17/2025
+ms.date: 02/16/2025
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -34,7 +34,7 @@ You can also get product updates and important notifications through the [messag
 
 ## February 2025
 
-- (Preview) IPs can now be excluded from automated responses in attack disruption. This feature enables you to exclude specific IPs from automated containment actions triggered by attack disruption. For more information, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
+- (Preview) IP addresses can now be excluded from automated responses in attack disruption. This feature allows you to exclude specific IPs from automated containment actions triggered by attack disruption. For more information, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
 
 - (Preview) The `PrivilegedEntraPimRoles` column is available for preview in the advanced hunting [IdentityInfo](advanced-hunting-identityinfo-table.md) table. 
 
