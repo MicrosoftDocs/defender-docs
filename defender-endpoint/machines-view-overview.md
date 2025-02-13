@@ -94,11 +94,6 @@ From the **Network devices** and **IoT/OT devices** tabs, you also see informati
 
 :::image type="content" alt-text="Image of network devices list." source="media/device-inventory-networkdevices.png" lightbox="media/device-inventory-networkdevices.png":::
 
-> [!NOTE]
-> Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
->
-> With Defender for IoT, you can also view and manage Enterprise IoT devices (like printers, smart TVs, and conferencing systems) as part of enterprise IoT monitoring. For more information, see [Enable Enterprise IoT security with Defender for Endpoint](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
-
 At the top of each device inventory tab, the following device counts are available:
 
 - **Total**: The total number of devices.
@@ -109,6 +104,14 @@ At the top of each device inventory tab, the following device counts are availab
 - **Newly discovered**: The number of newly discovered devices within the last 7 days (all tabs except **Computers & mobile**).
 
 You can use this information to help you prioritize devices for security posture improvements.
+
+### IoT/OT device data
+
+Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete IoT/OT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
+
+With Defender for IoT, you can also view and manage Enterprise IoT devices (like printers, smart TVs, and conferencing systems) as part of enterprise IoT monitoring. For more information, see [Enable Enterprise IoT security with Defender for Endpoint](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
+
+In addition, when a Defender for Endpoint agent is associated with an IoT/OT site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that the site is used by an OT security persona.
 
 ## Explore the device inventory
 
