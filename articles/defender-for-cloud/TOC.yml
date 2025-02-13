@@ -981,6 +981,9 @@
           - name: Enable Microsoft Defender for SQL servers on machines
             displayName: hybrid, arc, Azure Defender
             href: defender-for-sql-usage.md
+          - name: Troubleshoot guide - SQL Server deployment on machines
+            displayName: Troubleshoot guide, SQL, servers, machines
+            href: troubleshoot-sql-machines-guide.md
           - name: Enable Defender for SQL servers on machines at scale
             displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
             href: enable-defender-sql-at-scale.md
@@ -991,9 +994,6 @@
           - name: Advanced Threat Protection for Azure SQL Database
             displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
             href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
-          - name: Troubleshoot guide - SQL Server deployment on machines
-            displayName: Troubleshoot guide, SQL, servers, machines
-            href: troubleshoot-sql-machines-guide.md
         - name: Deploy Defender for open-source relational databases
           items:
           - name: Enable on Azure
