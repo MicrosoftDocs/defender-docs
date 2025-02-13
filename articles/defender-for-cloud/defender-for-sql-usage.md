@@ -4,7 +4,7 @@ description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 12/25/2024
+ms.date: 02/13/2025
 #customer intent: As a security administrator, I want to enable Microsoft Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ---
 
@@ -166,6 +166,8 @@ Before deploying AMA with Defender for Cloud, ensure you have the following prer
 
 1. To complete the installation process, restart the SQL server (instance) for versions 2017 and older.
 
+If you run into any configuration issues while enabling Defender for SQL on machines, check out the [troubleshooting guide](troubleshoot-sql-machines-guide.md).
+
 ## Related content
 
 For related information, see these resources:
@@ -173,3 +175,4 @@ For related information, see these resources:
 - [How Microsoft Defender for Azure SQL can protect SQL servers anywhere](https://www.youtube.com/watch?v=V7RdB6RSVpc).
 - [Security alerts for SQL Database and Azure Synapse Analytics](alerts-sql-database-and-azure-synapse-analytics.md)
 - Check out [common questions](faq-defender-for-databases.yml) about Defender for Databases.
+- [Troubleshoot guide - SQL Server deployment on machines](troubleshoot-sql-machines-guide.md)
