@@ -75,7 +75,7 @@ The following procedures help you complete the deployment process:
 - [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 > [!TIP]
-> By default, Defender for Identity sensors query the directory using LDAP on ports 389 and 3268. To switch to LDAPS on ports 636 and 3269,  open a support case. For more information, see [Microsoft Defender for Identity support](../support.md).
+> By default, Defender for Identity sensors query the directory using LDAP on ports 389 and 3268. To switch to LDAPS on ports 636 and 3269, open a support case. For more information, see [Microsoft Defender for Identity support](../support.md).
 >
 
 > [!IMPORTANT]
