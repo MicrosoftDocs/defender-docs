@@ -34,7 +34,7 @@ Only one Microsoft Sentinel workspace per tenant is currently supported in the u
 
 For more information, see:
 
-- [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+- [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
 
 Multitenant management is also available to US government customers. Refer to the table below for specific scenarios for GCC, GCC High, DoD, and Commercial customers.

@@ -29,7 +29,7 @@ ms.date: 10/15/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
 
@@ -67,11 +67,10 @@ There are several methods and deployment tools that you can use to install and c
 
 ### System requirements
 
-These four most recent major releases of macOS are supported.
+These three most recent major releases of macOS are supported.
 - 15.0.1 (Sequoia)
 - 14 (Sonoma)
 - 13 (Ventura)
-- 12 (Monterey)
 
 - Supported processors: x64 and ARM64
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
 ms.topic: concept-article #Don't change.
-ms.date: 12/02/2024
+ms.date: 02/09/2025
 ms.collection:
 - usx-security
 
@@ -48,6 +48,7 @@ Other services supported in the Microsoft Defender portal as part of Microsoft's
 | [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/) | Protects multi-cloud and hybrid environments with advanced threat detection and response. |
 | [**Microsoft Defender Threat Intelligence**](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) | Streamlines threat intelligence workflows by aggregating and enriching critical data sources to correlate indicators of compromise (IOCs) with related articles, actor profiles, and vulnerabilities. |
 | [**Microsoft Entra ID Protection**](/entra/id-protection/overview-identity-protection) | Evaluates risk data from sign-in attempts to evaluate the risk of each sign-in to your environment. |
+| **[Microsoft Purview Insider Risk Management](/purview/insider-risk-management)** | Correlates various signals to identify potential malicious or inadvertent insider risks, such as IP theft, data leakage and security violations. |
 
 ## Review service prerequisites
 
@@ -71,6 +72,7 @@ Before you deploy Microsoft's unified security operations platform, review the p
 | Microsoft Defender for Cloud                             | [Start planning multicloud protection](/azure/defender-for-cloud/plan-multicloud-security-get-started) and other articles in the same section. |
 | Microsoft Defender Threat Intelligence                   | [Prerequisites for Defender Threat Intelligence](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal#prerequisites) |
 | Microsoft Entra ID Protection                            | [Prerequisites for Microsoft Entra ID Protection](/entra/id-protection/how-to-deploy-identity-protection#prerequisites) |
+| Microsoft Purview Insider Risk Management | [Get started with insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal) |
 
 ## Review data security and privacy practices
 
@@ -94,6 +96,7 @@ Before you deploy Microsoft's unified security operations platform, make sure th
 | Microsoft Defender for Cloud | [Microsoft Defender for Cloud data security](/azure/defender-for-cloud/data-security) |
 | Microsoft Defender Threat Intelligence | [Data security and retention in Microsoft Defender XDR](/defender-xdr/data-privacy) |
 | Microsoft Entra ID Protection | [Microsoft Entra data retention](/entra/identity/monitoring-health/reference-reports-data-retention) |
+| Microsoft Purview Insider Risk Management | [Microsoft Purview Insider Risk Management and Communication Compliance privacy guide](/purview/insider-risk-solution-privacy) <br><br> [Messaging Records Management (MRM) and Retention Policies in Microsoft 365](/microsoft-365/troubleshoot/retention/mrm-and-retention-policy) |
 
 ## Plan your Log Analytics workspace architecture
 
@@ -148,6 +151,29 @@ Plan your Microsoft Sentinel budget, considering cost implications for each plan
 - [Log retention plans in Microsoft Sentinel](/azure/sentinel/log-plans)
 - [Plan costs and understand Microsoft Sentinel pricing and billing](/azure/sentinel/billing?tabs=simplified%2Ccommitment-tiers)
 
+## Understand Microsoft security portals and admin centers
+
+While the Microsoft Defender portal is the home for monitoring and managing security across your identities, data, devices, and apps, you need to access various portals for certain specialized tasks.
+
+Microsoft security portals include:
+
+| Portal name | Description | Link |
+|---|---|---|
+| **Microsoft Defender portal** | Monitor and respond to threat activity and strengthen security posture across your identities, email, data, endpoints, and apps with Microsoft Defender XDR](../defender-xdr/microsoft-365-defender.md) | [security.microsoft.com](https://security.microsoft.com/)  <br/><br/>The Microsoft Defender portal is where you view and manage alerts, incidents, settings, and more. |
+| **Defender for Cloud portal** | Use [Microsoft Defender for Cloud](/azure/security-center/security-center-intro) to strengthen the security posture of your data centers and your hybrid workloads in the cloud | [portal.azure.com/#blade/Microsoft_Azure_Security](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0) |
+| **Microsoft Security Intelligence portal** | Get security intelligence updates for Microsoft Defender for Endpoint, submit samples, and explore the threat encyclopedia | [microsoft.com/wdsi](https://microsoft.com/wdsi) |
+
+The following table describes portals for other workloads that can impact your security. Visit these portals to manage identities, permissions, device settings, and data handling policies.
+
+| Portal name | Description | Link |
+|---|---|---|
+| **Microsoft Entra admin center** | Access and administer the [Microsoft Entra](/entra) family to protect your business with decentralized identity, identity protection, governance, and more, in a multicloud environment| [entra.microsoft.com](https://entra.microsoft.com/) |
+| **Azure portal** | View and manage all your [Azure resources](/azure/azure-resource-manager/management/overview)  | [portal.azure.com](https://portal.azure.com/) |
+| **Microsoft Purview portal** | Manage data handling policies and ensure [compliance with regulations](/compliance/regulatory/offering-home) | [purview.microsoft.com](https://purview.microsoft.com/) |
+| **Microsoft 365 admin center** | Configure Microsoft 365 services; manage roles, licenses, and track updates to your Microsoft 365 services | [admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2166757) |
+| **Microsoft Intune admin center** | Use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage and secure devices. Can also combine Intune and Configuration Manager capabilities. | [intune.microsoft.com](https://intune.microsoft.com/) |
+| **Microsoft Intune portal** | Use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to deploy device policies and monitor devices for compliance | [intune.microsoft.com](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/overview) |
+
 ## Plan roles and permissions
 
 Use Microsoft Entra role based access control (RBAC) to create and assign roles within your security operations team to grant appropriate access to services included in Microsoft's unified SecOps platform.
@@ -171,6 +197,7 @@ For the following services, use the different roles available, or create custom 
 | **Other services supported in the Microsoft Defender portal**             |             |
 | Microsoft Security Exposure Management     | [Permissions for Microsoft Security Exposure Management](/security-exposure-management/prerequisites)   |
 | Microsoft Defender for Cloud      | [User roles and permissions](/azure/defender-for-cloud/permissions) |
+| Microsoft Purview Insider Risk Management | [Enable permissions for insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal#step-1-required-enable-permissions-for-insider-risk-management) |
 
 ## Plan Zero Trust activities
 
@@ -196,8 +223,11 @@ For more information about implementing Zero Trust principles in Microsoft's uni
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/zero-trust?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json)
 - [Microsoft Security Copilot](/security/zero-trust/copilots/zero-trust-microsoft-copilot-for-security)
 - [Microsoft Entra ID Protection](/entra/id-protection/how-to-deploy-identity-protection)
+- [Microsoft Purview](/purview/zero-trust-microsoft-purview)
 
 For more information, see the [Zero Trust Guidance Center](/security/zero-trust/zero-trust-overview).
+
+
 
 ## Next step
 

@@ -152,7 +152,7 @@ If the Defender XDR-Microsoft Sentinel connector is turned on, insider risk mana
 > [!NOTE]
 > When the Defender XDR-Microsoft Sentinel connector is turned on, Microsoft Purview Insider Risk Management data becomes accessible in Microsoft Sentinel regardless of role-based access control settings.
 
-To integrate additional insider risk management data like behaviors and events into Microsoft Sentinel, we recommend onboarding Microsoft Sentinel to Microsoft Defender to get a unified view of your entire security operations center. Onboarding helps you bring insider risk management alerts and other data from Microsoft Sentinel into Microsoft Defender, allowing cross-table hunting and other powerful workflows. To onboard, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
+To integrate additional insider risk management data like behaviors and events into Microsoft Sentinel, we recommend onboarding Microsoft Sentinel to Microsoft Defender to get a unified view of your entire security operations center. Onboarding helps you bring insider risk management alerts and other data from Microsoft Sentinel into Microsoft Defender, allowing cross-table hunting and other powerful workflows. To onboard, see [Connect Microsoft Sentinel to Microsoft Defender](/unified-secops-platform/microsoft-sentinel-onboard).
 
 ## Next steps
 

@@ -105,7 +105,7 @@ You can also get product updates and important notifications through the [messag
 
 - Blog post: [General availability of the Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
   - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
-  - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+  - [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
   - [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
 
 - (Preview) You can now customize columns in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. You can add, remove, reorder columns to display the information you need. For more information, see how to customize columns in the [incident queue](incident-queue.md#incident-queue) and [alert queue](investigate-alerts.md).
@@ -159,7 +159,7 @@ You can also get product updates and important notifications through the [messag
 
   - Blog announcement: [Unified security operations platform ready to revolutionize protection and efficiency](https://aka.ms/unified-soc-announcement)
   - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
-  - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+  - [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
   - [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
 
 - (GA) **[Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)** is now generally available. Copilot in Defender helps you investigate and respond to incidents faster and more effectively. Copilot provides guided responses, incident summaries, and reports, helps you build KQL queries to hunt for threats, provide file and script analyses, and enable you to summarize relevant and actionable threat intelligence.

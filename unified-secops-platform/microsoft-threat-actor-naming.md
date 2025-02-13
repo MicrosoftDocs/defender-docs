@@ -2,7 +2,7 @@
 title: How Microsoft names threat actors
 ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-ms.service: defender-xdr
+ms.service: unified-secops-platform
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
@@ -24,7 +24,7 @@ ms.date: 12/19/2024
 
 Microsoft uses a naming taxonomy for threat actors aligned with the theme of weather. We intend to bring better clarity to customers and other security researchers with this taxonomy. We offer a more organized, articulate, and easy way to reference threat actors so that organizations can better prioritize and protect themselves. We also aim to aid security researchers, who are already confronted with an overwhelming amount of threat intelligence data.
 
-:::image type="content" source="/defender/media/threat-actor-naming/threat-actor-categories.png" alt-text="Nation-state actors based on Microsoft naming" lightbox="/defender/media/threat-actor-naming/threat-actor-categories-lg.png":::
+:::image type="content" source="media/microsoft-threat-actor-naming/threat-actor-categories.png" alt-text="Nation-state actors based on Microsoft naming" lightbox="media/microsoft-threat-actor-naming/threat-actor-categories-lg.png":::
 
 Microsoft categorizes threat actors into five key groups:
 
@@ -185,7 +185,7 @@ Read our announcement about this taxonomy for more information: [https://aka.ms/
 
 ## Putting intelligence into the hands of security professionals
 
-[Intel profiles in Microsoft Defender Threat Intelligence](defender-threat-intelligence.md) bring crucial insights about threat actors. These insights enable security teams to get the context they need as they prepare for and respond to threats.
+[Intel profiles in Microsoft Defender Threat Intelligence](/defender-xdr/defender-threat-intelligence) bring crucial insights about threat actors. These insights enable security teams to get the context they need as they prepare for and respond to threats.
 
 Additionally, the Microsoft Defender Threat Intelligence Intel Profiles API provides the most up-to-date threat actor infrastructure visibility in the industry today. Updated information is crucial in enabling threat intelligence and security operations (SecOps) teams to streamline their advanced threat hunting and analysis workflows. Learn more about this API in the documentation: [Use the threat intelligence APIs in Microsoft Graph (preview)](/graph/api/resources/security-threatintelligence-overview).
 

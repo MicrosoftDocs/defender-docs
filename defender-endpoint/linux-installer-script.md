@@ -50,7 +50,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
     
     4. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
    
-   :::image type="content" source="media/linux-script-image.png" alt-text="Screenshot showing the options to select to download the onboarding package." lightbox="media/linux-script-image.png":::
+       :::image type="content" source="media/linux-script-image.png" alt-text="Screenshot showing the options to select to download the onboarding package." lightbox="media/linux-script-image.png":::
     
     5. From a command prompt, extract the contents of the archive:
 
@@ -77,19 +77,19 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
    chmod +x mde_installer.sh
    ```
 
-4. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
+1. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
 
    ```bash
-
-   sudo ./mde_installer.sh --install --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req -y
-
+   
+   sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
+   
    ```
+   
+      This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
 
-   This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
+      Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
 
-   Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
-
-   ```bash
+      ```bash
 
     ❯ ./mde_installer.sh --help
    mde_installer.sh v0.7.0
@@ -108,7 +108,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
    -m|--min_req         enforce minimum requirements
    -x|--skip_conflict   skip conflicting application verification
    -w|--clean           remove repo from package manager for a specific channel
-   -y|--yes             assume yes for all mid-process prompts (default, depracated)
+   -y|--yes             assume yes for all mid-process prompts (default, deprecated)
    -n|--no              remove assume yes sign
    -s|--verbose         verbose output
    -v|--version         print out script version
@@ -124,19 +124,19 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
    | Scenario | Command |
    |---|---|
-   | Install a specific agent version | `sudo ~/mde_installer.sh --install --channel prod --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --min_req -y –-mdatp 101.24082.0004 ` |
-   | To upgrade to the latest version | `sudo ~/mde_installer.sh --upgrade -y` |
-   | For upgrading to a specific version | `sudo ~/mde_installer.sh --upgrade -y –-mdatp 101.24082.0004` |
-   | To downgrade to a specific version | `sudo ~/mde_installer.sh --downgrade -y –-mdatp 101.24082.0004` |
-   | To remove `mdatp` | `sudo ~/mde_installer.sh --remove -y` |
-
-
-   > [!NOTE]
-   > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
+   |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --min_req –-mdatp 101.24082.0004 ` |
+   |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
+   |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
+   |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
+   |Uninstall agent | `sudo ./mde_installer.sh --remove` |
+   
+   
+      > [!NOTE]
+      > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
 
 ## Verify deployment status
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 mins for the device to show up in the portal.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
 2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
@@ -170,14 +170,22 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
       mdatp threat list
       ```
 
-3. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-   1. Verify that the onboarded Linux server appears in the Microsoft Defender portal. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
+   1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
+      
+   1. Grant executable permissions to the script:
+   
+      ```bash
+      chmod +x mde_linux_edr_diy.sh
+      ```
+      
+   1. Run the following command: 
 
-   2. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and run the following command: 
-   
-      `./mde_linux_edr_diy.sh`
-   
+      ```bash
+      ./mde_linux_edr_diy.sh
+      ```
+      
    3. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
    
    4. Check the alert details, machine timeline, and perform your typical investigation steps.
