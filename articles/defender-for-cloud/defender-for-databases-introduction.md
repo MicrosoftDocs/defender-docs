@@ -16,7 +16,7 @@ In Microsoft Defender for Cloud, the *Defender for open-source relational databa
 
 For pricing information about Defender for open-source relational databases, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-Defender for open-source relational databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS) and not on Azure Arc-enabled machines. For more information about availability, see the [Defender for Cloud support matrix](support-matrix-cloud-environment.md#cloud-support).
+Defender for open-source relational databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS) and not on Azure Arc-enabled machines. For more information about availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md#cloud-support).
 
 Defender for open-source relational databases brings threat protections for the following open-source relational databases on Azure.
 
@@ -63,7 +63,7 @@ When you enable Defender for open-source relational databases, Defender for Clou
 
 :::image type="content" source="media/defender-for-databases-introduction/defender-alerts.png" alt-text="Screenshot that shows example multicloud alerts for databases where Microsoft Defender for open-source relational databases is enabled." lightbox="./media/defender-for-databases-introduction/defender-alerts.png":::
 
-## Alert triggers
+## Alert types
 
 Activities that trigger multicloud alerts enriched with threat intelligence include:
 

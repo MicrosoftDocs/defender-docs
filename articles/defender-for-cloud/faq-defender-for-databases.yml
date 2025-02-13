@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Common questions - Defender for Databases
+  title: Common Questions - Defender for Databases
   description: Get answers to frequently asked questions about Microsoft Defender for Databases.
   ms.topic: faq
   ms.service: defender-for-cloud
@@ -17,81 +17,80 @@ sections:
       - question: |
           If I enable this Microsoft Defender plan on my subscription, are all SQL servers on the subscription protected?
         answer: |
-          No. To defend a SQL Server deployment on an Azure virtual machine, or a SQL Server running on an Azure Arc-enabled machine, Defender for Cloud requires:
+          No. To defend a SQL server running on an Azure virtual machine or an Azure Arc-enabled machine, Defender for Cloud requires:
 
-          - a Log Analytics agent on the machine
-          - the relevant Log Analytics workspace to have the Microsoft Defender for SQL solution enabled
+          - A Log Analytics agent on the machine.
+          - The relevant Log Analytics workspace to have Microsoft Defender for SQL servers on machines enabled.
 
-          The subscription *status*, shown in the SQL server page in the Azure portal, reflects the default workspace status and applies to all connected machines. Only the SQL servers on hosts with a Log Analytics agent reporting to that workspace are protected by Defender for Cloud.Y
+          The subscription status, shown on the SQL server's page in the Azure portal, reflects the default workspace status and applies to all connected machines. Defender for Cloud helps protect only the SQL servers on hosts that have a Log Analytics agent reporting to that workspace.
 
       - question: |
-          Is there a performance effect from deploying Microsoft Defender for Azure SQL on machines?
+          Is there a performance effect from deploying Microsoft Defender for SQL servers on machines?
         answer: |
-          The focus of **Microsoft Defender for SQL on machines** is obviously security. But we also care about your business and so we've prioritized performance to ensure the minimal effect on your SQL servers.
+          Microsoft Defender for SQL servers on machines focuses on security, but it has a split architecture to balance data uploading and speed with performance:
 
-          The service has a split architecture to balance data uploading and speed with performance:
-
-          - Some of our detectors, including an [extended events trace](/azure/azure-sql/database/xevent-db-diff-from-svr) named `SQLAdvancedThreatProtectionTraffic`, run on the machine for real-time speed advantages.
+          - Some of our detectors, including an [Extended Events trace](/azure/azure-sql/database/xevent-db-diff-from-svr) named `SQLAdvancedThreatProtectionTraffic`, run on the machine for real-time speed advantages.
           - Other detectors run in the cloud to spare the machine from heavy computational loads.
 
-          Lab tests of our solution showed CPU usage averaging 3% for peak slices, comparing it against benchmark loads. An analysis of our current user data shows a negligible effect on CPU and memory usage.
+          Lab tests of our solution showed CPU usage averaging 3% for peak slices, compared against benchmark loads. An analysis of our current user data shows a negligible effect on CPU and memory usage.
 
-          Performance always varies between environments, machines, and loads. The statements are provided as a general guideline, not a guarantee for any individual deployment.
+          Performance always varies between environments, machines, and loads. These statements are provided as a general guideline, not a guarantee for any individual deployment.
 
       - question: |
-          I changed the Log Analytics workspace for Defender for SQL on Machines and lost all my scan results and baselines settings. What happened?
+          I changed the Log Analytics workspace for Defender for SQL servers on machines and lost all my scan results and baselines settings. What happened?
         answer: |
-          The scan results and baselines are not stored in the Log Analytics workspace but are linked to it. Changing the workspace will reset the scan results and baseline settings. However, if you revert to the original workspace within 90 days, the scan results and baseline settings will be restored. [Read more](defender-for-sql-on-machines-vulnerability-assessment.md#data-residency)
+          The scan results and baselines are not stored in the Log Analytics workspace but are linked to it. Changing the workspace resets the scan results and baseline settings. However, if you revert to the original workspace within 90 days, the scan results and baseline settings are restored. [Read more](defender-for-sql-on-machines-vulnerability-assessment.md#data-residency).
 
       - question: |
           What happens to the old scan results and baselines after I switch to express configuration?
         answer: |
-          Old results and baselines settings remain available on your storage account, but won't be updated or used by the system. You don't need to maintain these files for SQL vulnerability assessment to work after you switch to express configuration, but you can keep your old baseline definitions for future reference.
+          Old results and baseline settings remain available on your storage account, but they won't be updated or used by the system. You don't need to maintain these files for SQL vulnerability assessment to work after you switch to express configuration, but you can keep your old baseline definitions for future reference.
 
           When express configuration is enabled, you don't have direct access to the result and baseline data because it's stored on internal Microsoft storage.
 
       - question: |
-          Why is my Azure SQL Server marked as unhealthy for "SQL servers should have vulnerability assessment configured", even though I’ve properly set it up using classic configuration?
+          Why is my Azure SQL server marked as unhealthy for **SQL servers should have vulnerability assessment configured**, even though I set it up properly by using classic configuration?
         answer: |
-          The policy behind this recommendation checks for the existence of subassessments for the server. With classic configuration, system databases are scanned only if at least one user database exists. Therefore, a server without any user databases will not have scans or reported scan results, causing the policy to remain unhealthy. 
-          Switching to express configuration will enable scheduled and manual scans for system databases, thus mitigating this issue.
+          The policy behind this recommendation checks for the existence of subassessments for the server. With classic configuration, system databases are scanned only if at least one user database exists. A server without any user databases doesn't have scans or reported scan results, which causes the policy to remain unhealthy.
+
+          Switching to express configuration mitigates the issue by enabling scheduled and manual scans for system databases.
 
       - question: |
           Can I set up recurring scans with express configuration?
         answer: |
-          Express configuration automatically sets up recurring scans for all databases under your server. This is the default and isn't configurable at server or database level.
+          Express configuration automatically sets up recurring scans for all databases under your server. This behavior is the default, and it isn't configurable at the server or database level.
 
       - question: |
-          Is there a way with express configuration to get the weekly email report that is provided in the classic configuration?
+          Is there a way with express configuration to get the weekly email report that's provided in classic configuration?
         answer: |
-          You can use workflow automation and Logic Apps email scheduling, following the Microsoft Defender for Cloud processes:
+          You can use workflow automation and Logic Apps email scheduling, by following the Microsoft Defender for Cloud processes:
 
-          - Time based triggers
-          - Scan based triggers
+          - Time-based triggers
+          - Scan-based triggers
           - Support for disabled rules
 
       - question: |
-          Why can’t I set database policies anymore?
+          Why can't I set database policies anymore?
         answer: |
-          SQL vulnerability assessment reports all vulnerabilities and misconfigurations in your environment, so it helps to have all databases included. Defender for SQL is billed per server, not per database.
+          The SQL vulnerability assessment reports all vulnerabilities and misconfigurations in your environment, so including all databases is helpful. Defender for SQL servers on machines is billed per server, not per database.
 
       - question: |
-          Can I revert back to the classic configuration?
+          Can I revert to classic configuration?
         answer: |
-          Yes. You can revert back to the classic configuration using the existing REST APIs and PowerShell cmdlets. When you revert back to the classic configuration, you see a notification in the Azure portal to change to the express configuration.
+          Yes. You can revert to classic configuration by using the existing REST APIs and PowerShell cmdlets. When you revert to classic configuration, a notification appears in the Azure portal to change to express configuration.
 
       - question: |
-          Will we see express configuration for other types of SQL?
+          Will express configuration become available for other types of SQL?
         answer: |
           Stay tuned for updates!
 
       - question: |
           Can I choose which experience is the default?
         answer: |
-          No. Express configuration is the default for every new supported Azure SQL database.
+          No. Express configuration is the default for every new, supported Azure SQL database.
 
       - question: |
-          Does express configuration change scan behavior?
+          Does express configuration change scanning behavior?
         answer: |
           No, express configuration provides the same scanning behavior and performance.
 
@@ -103,60 +102,60 @@ sections:
       - question: |
           What does the 1-MB cap per rule mean?
         answer: |
-          Any individual rule can't produce results that are more than 1 MB. When that limit is reached, the results for the rule are stopped. You can't set a baseline for the rule, the rule isn't included in the overall recommendation health, and the results are shown as "Not applicable".
+          Any individual rule can't produce results that are more than 1 MB. When results for the rule reach that limit, they stop. You can't set a baseline for the rule, the rule isn't included in the overall recommendation health, and the results appear as **Not applicable**.
 
       - question: |
-          Once the Microsoft Defender for SQL servers on machines deployment is done, how long do we need to wait to see a successful deployment?
+          After I enable Microsoft Defender for SQL servers on machines, how long do I need to wait to see a successful deployment?
         answer: |
-          It takes approximately 30 minutes to update the protection status by the SQL IaaS Extension, assuming all the prerequisites are fulfilled.
+          It takes approximately 30 minutes to update the protection status via the SQL IaaS Agent Extension, assuming that all the prerequisites are fulfilled.
 
       - question: |
-          How do I verify that my Defender for SQL servers on machines deployment ended successfully and that my database is now protected?
+          How do I verify that my deployment of Defender for SQL servers on machines ended successfully and that my database is now protected?
         answer: |
-          1. Locate the database on the upper search bar in the Azure portal.
-          2. Under the **Security** tab, select **Defender for Cloud**.
-          3. Check the **Protection status**. If the status is **Protected**, the deployment was successful.
+          1. In the Azure portal, locate the database on the upper search bar.
+          2. On the **Security** tab, select **Defender for Cloud**.
+          3. Check **Protection status**. If the status is **Protected**, the deployment was successful.
 
-          :::image type="content" source="media/defender-for-sql-usage/protection-status-protected.png" alt-text="Screenshot showing protection status as protected." lightbox="media/defender-for-sql-usage/protection-status-protected.png":::
-
-      - question: |
-          What is the purpose of the managed identity created during the installation process on Azure SQL VMs?
-        answer: |
-          The managed identity is part of the Azure Policy, which pushes out the AMA. It's used by the AMA to access the database to collect the data and send it via the Log Analytics Workspace (LAW) to Defender for Cloud. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent).
+          :::image type="content" source="media/defender-for-sql-usage/protection-status-protected.png" alt-text="Screenshot that shows protection status as protected." lightbox="media/defender-for-sql-usage/protection-status-protected.png":::
 
       - question: |
-          Can I use my own DCR or managed-identity instead of Defender for Cloud creating a new one?
+          What is the purpose of the managed identity created during the installation process on Azure SQL virtual machines?
         answer: |
-          Yes, we allow you to bring your own identity or DCR using the following script only. For more information, see [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
+          The managed identity is part of the Azure policy, which pushes out the Azure Monitor Agent. The Azure Monitor Agent uses the managed identity to access the database so that it can collect the data and send it via the Log Analytics workspace to Defender for Cloud. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent).
 
       - question: |
-          How many resource groups and Log analytics workspaces are created through the auto-provisioning process?
+          Can I use my own DCR or managed identity instead of Defender for Cloud creating a new one?
         answer: |
-          By default, we create the resource group, workspace and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resource group/DCR is created in the same location as the workspace.
+          Yes, we allow you to bring your own identity or data collection rule (DCR) by using only the script described in [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
       - question: |
-          How can I enable SQL servers on machines with AMA at scale?
+          How many resource groups and Log Analytics workspaces does the autoprovisioning process create?
         answer: |
-          See [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md) for the process of how to enable Microsoft Defender for SQL's autoprovisioning across multiple subscriptions simultaneously. It's applicable to SQL servers hosted on Azure Virtual Machines, on-premises environments, and Azure Arc-enabled SQL servers.
+          By default, we create the resource group, workspace, and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resource group or DCR is created in the same location as the workspace.
 
       - question: |
-          Which tables are used in LAW with AMA?
+          How can I enable SQL servers on machines with the Azure Monitor Agent at scale?
         answer: |
-          Defender for SQL on SQL VMs and Arc-enabled SQL servers uses the Log Analytics Workspace (LAW) to transfer data from the database to the Defender for Cloud portal. This means that no data is saved locally at the LAW. The tables in the LAW named *SQLAtpStatus* and the *SqlVulnerabilityAssessmentScanStatus* will be retired [when MMA is deprecated](/azure/azure-monitor/agents/azure-monitor-agent-migration). ATP and VA status can be viewed in the Defender for Cloud portal.
+          For the process of how to enable autoprovisioning across multiple subscriptions simultaneously, see [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md). It's applicable to SQL servers hosted on Azure virtual machines, SQL servers hosted in on-premises environments, and Azure Arc-enabled SQL servers.
 
       - question: |
-          How does Defender for SQL collect logs from the SQL server?
+          Which tables are used in a Log Analytics workspace with the Azure Monitor Agent?
         answer: |
-          Defender for SQL uses **Xevent**, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL collects the logs using the SQL server audit logs.
+          Defender for SQL servers on machines (for both SQL virtual machines and Azure Arc-enabled SQL servers) uses the Log Analytics workspace to transfer data from the database to the Defender for Cloud portal. No data is saved locally at the Log Analytics workspace. The tables in the Log Analytics workspace named `SQLAtpStatus` and `SqlVulnerabilityAssessmentScanStatus` will be retired [when the Microsoft Monitor Agent is deprecated](/azure/azure-monitor/agents/azure-monitor-agent-migration). You can view the status of threat protection and vulnerability assessments in the Defender for Cloud portal.
 
       - question: |
-          I see a parameter named enableCollectionOfSqlQueriesForSecurityResearch in the policy initiative. Does this mean that my data is collected for analysis?
+          How does Defender for SQL servers on machines collect logs from the SQL server?
         answer: |
-          This parameter isn't in use today. Its default value is *false*, meaning that unless you proactively change the value, it remains false. There's no effect from this parameter.
+          Defender for SQL servers on machines uses Extended Events, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL servers on machines collects the logs by using the SQL Server audit logs.
+
+      - question: |
+          Does the presence of a parameter named enableCollectionOfSqlQueriesForSecurityResearch in the policy initiative mean that my data is collected for analysis?
+        answer: |
+          The `enableCollectionOfSqlQueriesForSecurityResearch` parameter isn't in use today. Its default value is `false`. Unless you proactively change the value, it remains `false`. This parameter has no effect.
 
 additionalContent: |
 
-  ## Next steps
+  ## Related content
   
-  [Learn about Defender for Databases](quickstart-enable-database-protections.md)
+  [Protect your databases with Defender for Databases](quickstart-enable-database-protections.md)
   
