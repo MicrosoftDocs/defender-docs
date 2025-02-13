@@ -3,6 +3,7 @@ title: Troubleshoot Defender for SQL on Machines plan deployment in Defender for
 description: Troubleshoot deployment issues for SQL Servers on machines via the Azure Monitoring Agent (AMA)-based autoprovisioning process.
 ms.date: 02/13/2025
 ms.topic: how-to
+ms.custom: references_regions
 #customer intent: As a security professional, I want to ensure that my deployment of SQL servers on machines is correct and protects my resources.
 ---
 
@@ -20,7 +21,7 @@ Make sure you've [enabled the Defender for SQL on Machines plan using the AMA-ba
 
 Defender for SQL Servers on Machines automatically creates resources through the autoprovisioning process. Resources are created at the subscription level, and some resources are configured at the Azure SQL VM level, or at the Azure Arc-enabled SQL VM level.
 
-:::image type="content" source="media/troubleshoot-sql-machines-guide/resource-level.png" alt-text="Conceptual image that shows resources and the levels that they're created on." lightbox="media/troubleshoot-sql-machines-guide/resource-level.png":::
+:::image type="content" source="media/troubleshoot-sql-machines-guide/resource-level.png" alt-text="Diagram that shows resources and the levels that they're created on." lightbox="media/troubleshoot-sql-machines-guide/resource-level.png":::
 
 The table summarizes the resource architecture described in the graphic.
 
