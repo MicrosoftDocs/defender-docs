@@ -83,7 +83,8 @@ You must [Enable Defender for SQL using the AMA-based autoprovisioning process](
 1. Select the noncompliant policy name.
 
     > [!WARNING]
-    > For each noncompliant issue, you must resolve them in a specific order, **Identity** > **Workspace** > **DCR**. DCR resolution relies on Workspace resolution, and Workspace resolution relies on Identity resolution. If you try to resolve these misconfigurations out of order, the misconfigurations won't be resolved.
+    > For each noncompliant issue, you must resolve them in a specific order, **Identity** > **Workspace** > **DCR**. 
+    > DCR resolution relies on Workspace resolution, and Workspace resolution relies on Identity resolution. If you try to resolve these misconfigurations out of order, the misconfigurations won't be resolved.
 
     - **Identity** - `Create and assign a built-in user-assigned managed identity`.
     - **Workspace** - `Configure the Microsoft Defender for SQL Log Analytics workspace`.
