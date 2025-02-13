@@ -45,6 +45,8 @@ While Microsoft provides a comprehensive platform for email security, we underst
 
 This configuration is covered in detail in [Enhanced Filtering for Connectors in Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) and is fully supported by Microsoft. Email security vendors that support [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) work best, but there are limitations. For example, avoid using [Safe Links](safe-links-about.md) to check and wrap links with a non-Microsoft service that also rewrites links. Double link wrapping can prevent Safe Links from validating link status, detonating links for threats, and potentially triggering one-time use links. We recommend disabling the link wrapping feature in the non-Microsoft service.
 
+For additional background on this configuration, see [Manage mail flow using a third-party cloud service with Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud).
+
 ## Integration via the Microsoft Graph API
 
 Some non-Microsoft services authenticate and use the Microsoft Graph API to scan messages after they're delivered to user mailboxes. This configuration also allows the non-Microsoft service to remove messages that they believe to be malicious or unwanted. Typically, this configuration requires full access to mailboxes by the non-Microsoft service. Be sure to understand the security and support practices of the non-Microsoft service before granting this permission.

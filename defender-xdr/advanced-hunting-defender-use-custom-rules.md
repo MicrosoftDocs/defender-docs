@@ -57,6 +57,9 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 
 :::image type="content" source="/defender-xdr/media/adx-sample.png" alt-text="Screenshot of adx operator in advanced hunting." lightbox="/defender-xdr/media/adx-sample.png":::
 
+> [!NOTE]
+> The `adx()` operator is not supported for custom detections.
+
 
 ### Use arg() operator for Azure Resource Graph queries
 The `arg()` operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like. 

@@ -2,8 +2,7 @@
 title: Important considerations related to Defender Experts for XDR
 ms.reviewer:
 description: Additional information and important considerations related to Defender Experts for XDR
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security

@@ -2,8 +2,7 @@
 title: Defender experts for XDR report 
 ms.reviewer:
 description: Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
@@ -18,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 01/31/2025
 ---
 
 # Get real-time visibility with Defender Experts for XDR reports

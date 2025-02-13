@@ -1,6 +1,6 @@
 ---
-title: Remediation actions in Microsoft Defender XDR
-description: Get an overview of remediation actions that follow automated investigations in Microsoft Defender XDR
+title: Get notified about remediation actions
+description: Get an overview of remediation actions that follow automated investigations in the Microsoft Defender portal
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -19,7 +19,7 @@ ms.reviewer: evaldm, isco
 ms.date: 08/06/2024
 ---
 
-# Remediation actions in Microsoft Defender XDR
+# Get notified about remediation actions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

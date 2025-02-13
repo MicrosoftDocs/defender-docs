@@ -34,7 +34,7 @@ Each supported Microsoft security product enabled unlocks more signals to stream
 
 ## Microsoft Defender XDR threat detection
 
-Defender XDR has a unique correlation capability that provides an extra layer of data analysis and threat detection. The following table gives examples of how suported security services are tuned to detect threats matching the character of its solution.
+Defender XDR has a unique correlation capability that provides an extra layer of data analysis and threat detection. The following table gives examples of how supported security services are tuned to detect threats matching the character of its solution.
 
 | Defender XDR service | Threat detection specialty |
 |---|---|
@@ -62,7 +62,7 @@ Microsoft Sentinel connected to the Defender portal enables data collection from
 | Workbooks | Detect threats with visual insights, especially to monitor the health of your data collection and understand gaps that prevent proper threat detection. | [Visualize your data with workbooks](/azure/sentinel/monitor-your-data?tabs=defender-portal) |
 | Summary rules | Optimizes noisy, high volume logs to detect threat in low-security value data. | [Generate alerts on threat intelligence matches against network data](/azure/sentinel/summary-rules#generate-alerts-on-threat-intelligence-matches-against-network-data) |
 
-For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard).
+For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md).
 
 ## Microsoft Defender for Cloud threat detection
 

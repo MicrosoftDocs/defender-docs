@@ -90,7 +90,7 @@ The following videos discuss how to investigate phishing and BEC attacks in Micr
 - **Video**: [Investigating BEC and AiTM phishing in Microsoft Defender XDR](https://youtu.be/h9YEr9XwALU)
 - **Video**: Defending against spearphishing and phishing using Defender for Office 365
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE5bzVE]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9a0111a4-0f85-4e72-8ba5-2ba8793d02a5]
 
 Investigate an identity compromise and know what you can do to contain an attack through this video:
 
@@ -118,7 +118,7 @@ Discover how you can protect your cloud apps in real time with this video of the
 
 - **Video**: Protecting cloud apps and related files through Defender for Cloud Apps
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE5d0tz]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e42eaceb-9b72-4836-a5dc-487f21fc8118]
 
 ### Breach analysis
 
@@ -138,13 +138,13 @@ Attackers often use vulnerabilities to gain access to an organization. Some rans
 - **Tutorial**: [Assess your organization's risk through the Exposure score](/defender-vulnerability-management/tvm-exposure-score)
 - **Video**: Threat and vulnerability management via Defender Vulnerability Management
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XTiJ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f61aabec-2b0d-48d0-b053-e65f7a188a69]
 
 Breaches also happen through various devices like phones and tablets that connect to your organization's network. Incident responders can further investigate these devices within the portal. The following video talks about the top threats from mobile devices and how you can investigate these:
 
 - Mobile threat defense in Microsoft Defender XDR
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RW10icV]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=94fd2a87-fa6b-448f-8dfd-362e945dabbb]
 
 ## Resources for threat intelligence and hunting
 
@@ -154,7 +154,7 @@ Microsoft Defender XDR's built-in threat intelligence capabilities and hunting a
 
 Use the intelligence in Threat analytics to deep dive into new threats with the following video:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWwJfU]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=1a28b04c-d413-462f-85b0-9478f01c89c2]
 
 Proactively hunt for threats within the organization using the portal's built-in [advanced hunting](advanced-hunting-overview.md) capability.
 

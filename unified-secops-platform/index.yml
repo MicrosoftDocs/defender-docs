@@ -7,7 +7,6 @@ metadata:
   title: Microsoft's unified security operations platform documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Bring together the full capabilities of Microsoft Sentinel, Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: unified-secops-platform #Required; use either service or product per approved list. 
-  ms.subservice: usx
   ms.topic: landing-page # Required
   ms.collection: usx-security # Optional; Remove if no collection is used.
   author: cwatson-cat #Required; your GitHub user alias, with correct capitalization.
@@ -42,6 +41,10 @@ landingContent:
             url: overview-plan.md
           - text: "Deploy Microsoft's unified SecOps platform"
             url: overview-deploy.md
+      - linkListType: overview
+        links:
+          - text: "Zero Trust with unified SecOps"
+            url: zero-trust.md
 
     # Card 
   - title: Prevent, detect, and hunt for threats

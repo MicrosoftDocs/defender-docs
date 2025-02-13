@@ -1,25 +1,24 @@
 {
-    "redirections": [
+  "redirections": [
     {
-        "source_path": "ATPDocs/security-assessment-do-not-expire-passwords.md",
-        "redirect_url": "security-assessment",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/security-assessment-do-not-expire-passwords.md",
+      "redirect_url": "security-assessment",
+      "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/security-assessment-old-passwords.md",
-        "redirect_url": "security-assessment",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/security-assessment-old-passwords.md",
+      "redirect_url": "security-assessment",
+      "redirect_document_id": false
     },
-            
     {
       "source_path": "ATPDocs/active-directory-federation-services.md",
       "redirect_url": "deploy/active-directory-federation-services",
       "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/configure-event-collection.md",
-        "redirect_url": "deploy/configure-event-collection",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/configure-event-collection.md",
+      "redirect_url": "deploy/configure-event-collection",
+      "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-event-forwarding.md",
@@ -27,24 +26,24 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/configure-port-mirroring.md",
-        "redirect_url": "deploy/configure-port-mirroring",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/configure-port-mirroring.md",
+      "redirect_url": "deploy/configure-port-mirroring",
+      "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/manage-action-accounts.md",
-        "redirect_url": "deploy/manage-action-accounts",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/manage-action-accounts.md",
+      "redirect_url": "deploy/manage-action-accounts",
+      "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/multi-forest.md",
-        "redirect_url": "deploy/multi-forest",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/multi-forest.md",
+      "redirect_url": "deploy/multi-forest",
+      "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/remote-calls-sam.md",
-        "redirect_url": "deploy/remote-calls-sam",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/remote-calls-sam.md",
+      "redirect_url": "deploy/remote-calls-sam",
+      "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/capacity-planning.md",
@@ -52,9 +51,9 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "ATPDocs/configure-proxy.md",
-        "redirect_url": "deploy/configure-proxy",
-        "redirect_document_id": false
+      "source_path": "ATPDocs/configure-proxy.md",
+      "redirect_url": "deploy/configure-proxy",
+      "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-sensor-settings.md",
@@ -246,801 +245,800 @@
       "redirect_url": "/previous-versions/defender-for-identity/classic-workspace-portal",
       "redirect_document_id": false
     },
-        {
-            "source_path": "ATPDocs/validate-port-mirroring.md",
-            "redirect_url": "/defender-for-identity/configure-port-mirroring#validate-port-mirroring",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/security-baseline.md",
-            "redirect_url": "/security/benchmark/azure/baselines/defender-for-identity-security-baseline",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/ata-configuration-file.md",
-            "redirect_url": "/advanced-threat-analytics/ata-configuration-file",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/ata-database-management.md",
-            "redirect_url": "/advanced-threat-analytics/ata-database-management",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/ata-health-center.md",
-            "redirect_url": "/advanced-threat-analytics/ata-health-center",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/ata-role-groups.md",
-            "redirect_url": "/advanced-threat-analytics/ata-role-groups",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/ata-silent-installation.md",
-            "redirect_url": "/advanced-threat-analytics/ata-silent-installation",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/configure-event-collection.md",
-            "redirect_url": "/advanced-threat-analytics/configure-event-collection",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/configure-port-mirroring.md",
-            "redirect_url": "/advanced-threat-analytics/configure-port-mirroring",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/install-ata-step1.md",
-            "redirect_url": "/advanced-threat-analytics/install-ata-step1",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/install-ata-step2.md",
-            "redirect_url": "/advanced-threat-analytics/install-ata-step2",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/install-ata-step3.md",
-            "redirect_url": "/advanced-threat-analytics/install-ata-step3",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/install-ata-step4.md",
-            "redirect_url": "/advanced-threat-analytics/install-ata-step4",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/install-ata-step5.md",
-            "redirect_url": "/advanced-threat-analytics/install-ata-step5",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/install-ata-step6.md",
-            "redirect_url": "/advanced-threat-analytics/install-ata-step6",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/manage-telemetry-settings.md",
-            "redirect_url": "/advanced-threat-analytics/manage-telemetry-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/modifying-ata-config-centercert.md",
-            "redirect_url": "/advanced-threat-analytics/modifying-ata-config-centercert",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/modifying-ata-config-centerip.md",
-            "redirect_url": "/advanced-threat-analytics/modifying-ata-config-centerip",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/modifying-ata-config-consoleurl.md",
-            "redirect_url": "/advanced-threat-analytics/modifying-ata-config-consoleurl",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/setting-ata-alerts.md",
-            "redirect_url": "/advanced-threat-analytics/setting-ata-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/modifying-ata-configuration.md",
-            "redirect_url": "/advanced-threat-analytics/modifying-ata-configuration",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/modifying-ata-config-dcpassword.md",
-            "redirect_url": "/advanced-threat-analytics/modifying-ata-config-dcpassword",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/setting-syslog-email-server-settings.md",
-            "redirect_url": "/advanced-threat-analytics/setting-syslog-email-server-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/use-case-forged-pac.md",
-            "redirect_url": "/advanced-threat-analytics/use-case-forged-pac",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/validate-port-mirroring.md",
-            "redirect_url": "/advanced-threat-analytics/validate-port-mirroring",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/working-with-ata-console.md",
-            "redirect_url": "/advanced-threat-analytics/working-with-ata-console",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/working-with-detection-settings.md",
-            "redirect_url": "/advanced-threat-analytics/working-with-detection-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/DeployUse/working-with-suspicious-activities.md",
-            "redirect_url": "/advanced-threat-analytics/working-with-suspicious-activities",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/PlanDesign/ata-architecture.md",
-            "redirect_url": "/advanced-threat-analytics/ata-architecture",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/PlanDesign/ata-prerequisites.md",
-            "redirect_url": "/advanced-threat-analytics/ata-prerequisites",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/PlanDesign/ata-capacity-planning.md",
-            "redirect_url": "/advanced-threat-analytics/ata-capacity-planning",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Troubleshoot/disaster-recovery.md",
-            "redirect_url": "/advanced-threat-analytics/disaster-recovery",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md",
-            "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-known-errors",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md",
-            "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-ata-database",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-logs.md",
-            "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-logs",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-perf-counters.md",
-            "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-perf-counters",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/ata-technical-faq.md",
-            "redirect_url": "/advanced-threat-analytics/ata-technical-faq",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/ata-threats.md",
-            "redirect_url": "/advanced-threat-analytics/ata-threats",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/ata-update-1.5-migration-guide.md",
-            "redirect_url": "/advanced-threat-analytics/ata-update-1.5-migration-guide",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/ata-update-1.6-migration-guide.md",
-            "redirect_url": "/advanced-threat-analytics/ata-update-1.6-migration-guide",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/ata-update-1.7-migration-guide.md",
-            "redirect_url": "/advanced-threat-analytics/ata-update-1.7-migration-guide",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/ATA-versions.md",
-            "redirect_url": "/advanced-threat-analytics/ATA-versions",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/what-is-ata.md",
-            "redirect_url": "/advanced-threat-analytics/what-is-ata",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/whats-new-version-1.4.md",
-            "redirect_url": "/advanced-threat-analytics/whats-new-version-1.4",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/whats-new-version-1.5.md",
-            "redirect_url": "/advanced-threat-analytics/whats-new-version-1.5",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/whats-new-version-1.6.md",
-            "redirect_url": "/advanced-threat-analytics/whats-new-version-1.6",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATADocs/Understand/whats-new-version-1.7.md",
-            "redirect_url": "/advanced-threat-analytics/whats-new-version-1.7",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/known-issues.md",
-            "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/monitoring-alerts.md",
-            "redirect_url": "/defender-for-identity/health-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/advanced-audit-policy.md",
-            "redirect_url": "/defender-for-identity/configure-windows-event-collection",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/ata-atp-move-overview.md",
-            "redirect_url": "/defender-for-identity/migrate-from-ata-overview",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-activities-filtering-mcas.md",
-            "redirect_url": "/defender-for-identity/activities-filtering-mcas",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-activities-search.md",
-            "redirect_url": "/defender-for-identity/activities-search",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-architecture.md",
-            "redirect_url": "/defender-for-identity/architecture",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-capacity-planning.md",
-            "redirect_url": "/defender-for-identity/capacity-planning",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-clear-text.md",
-            "redirect_url": "/defender-for-identity/cas-isp-clear-text",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-dormant-entities.md",
-            "redirect_url": "/defender-for-identity/cas-isp-dormant-entities",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-laps.md",
-            "redirect_url": "/defender-for-identity/cas-isp-laps",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-legacy-protocols.md",
-            "redirect_url": "/defender-for-identity/cas-isp-legacy-protocols",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-print-spooler.md",
-            "redirect_url": "/defender-for-identity/cas-isp-print-spooler",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-riskiest-lmp.md",
-            "redirect_url": "/defender-for-identity/cas-isp-riskiest-lmp",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-unconstrained-kerberos.md",
-            "redirect_url": "/defender-for-identity/cas-isp-unconstrained-kerberos",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-unmonitored-domain-controller.md",
-            "redirect_url": "/defender-for-identity/cas-isp-unmonitored-domain-controller",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-unsecure-account-attributes.md",
-            "redirect_url": "/defender-for-identity/cas-isp-unsecure-account-attributes",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-unsecure-sid-history-attribute.md",
-            "redirect_url": "/defender-for-identity/cas-isp-unsecure-sid-history-attribute",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-cas-isp-weak-cipher.md",
-            "redirect_url": "/defender-for-identity/cas-isp-weak-cipher",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-compromised-credentials-alerts.md",
-            "redirect_url": "/defender-for-identity/compromised-credentials-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-domain-dominance-alerts.md",
-            "redirect_url": "/defender-for-identity/domain-dominance-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-exfiltration-alerts.md",
-            "redirect_url": "/defender-for-identity/exfiltration-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-health-center.md",
-            "redirect_url": "/defender-for-identity/health-center",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-isp-overview.md",
-            "redirect_url": "/defender-for-identity/isp-overview",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-lateral-movement-alerts.md",
-            "redirect_url": "/defender-for-identity/lateral-movement-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-mcas-integration.md",
-            "redirect_url": "/defender-for-identity/mcas-integration",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-multi-forest.md",
-            "redirect_url": "/defender-for-identity/multi-forest",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-nnr-policy.md",
-            "redirect_url": "/defender-for-identity/nnr-policy",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-playbook-domain-dominance.md",
-            "redirect_url": "/defender-for-identity/playbook-domain-dominance",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-playbook-lab-overview.md",
-            "redirect_url": "/defender-for-identity/playbook-lab-overview",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-playbook-lateral-movement.md",
-            "redirect_url": "/defender-for-identity/playbook-lateral-movement",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-playbook-reconnaissance.md",
-            "redirect_url": "/defender-for-identity/playbook-reconnaissance",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-playbook-setup-lab.md",
-            "redirect_url": "/defender-for-identity/playbook-setup-lab",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-prerequisites.md",
-            "redirect_url": "/defender-for-identity/prerequisites",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-privacy-compliance.md",
-            "redirect_url": "/defender-for-identity/privacy-compliance",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-reconnaissance-alerts.md",
-            "redirect_url": "/defender-for-identity/reconnaissance-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-release-reference.md",
-            "redirect_url": "/defender-for-identity/release-reference",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-resources.md",
-            "redirect_url": "/defender-for-identity/resources",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-role-groups.md",
-            "redirect_url": "/defender-for-identity/role-groups",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-sensor-monitoring.md",
-            "redirect_url": "/defender-for-identity/sensor-monitoring",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-silent-installation.md",
-            "redirect_url": "/defender-for-identity/silent-installation",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-support.md",
-            "redirect_url": "/defender-for-identity/support",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-technical-faq.md",
-            "redirect_url": "/defender-for-identity/technical-faq",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-us-govt-gcc-high.md",
-            "redirect_url": "/defender-for-identity/us-govt-gcc-high",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/atp-whats-new.md",
-            "redirect_url": "/defender-for-identity/whats-new",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step1.md",
-            "redirect_url": "/defender-for-identity/install-step1",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step2.md",
-            "redirect_url": "/defender-for-identity/install-step2",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step3.md",
-            "redirect_url": "/defender-for-identity/install-step3",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step4.md",
-            "redirect_url": "/defender-for-identity/install-step4",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step5.md",
-            "redirect_url": "/defender-for-identity/install-step5",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step6-vpn.md",
-            "redirect_url": "/defender-for-identity/install-step6-vpn",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step7.md",
-            "redirect_url": "/defender-for-identity/configure-detection-exclusions",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step7.md",
-            "redirect_url": "/defender-for-identity/configure-detection-exclusions",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/excluding-entities-from-detections.md",
-            "redirect_url": "/defender-for-identity/configure-detection-exclusions",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-atp-step8-samr.md",
-            "redirect_url": "/defender-for-identity/install-step8-samr",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/modifying-atp-config-dcpassword.md",
-            "redirect_url": "/defender-for-identity/modifying-config-dcpassword",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/troubleshooting-atp-known-issues.md",
-            "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/troubleshooting-atp-using-logs.md",
-            "redirect_url": "/defender-for-identity/troubleshooting-using-logs",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/integrate-wd-atp.md",
-            "redirect_url": "/defender-for-identity/integrate-msde",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/what-is-atp.md",
-            "redirect_url": "/defender-for-identity/what-is",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step8-samr.md",
-            "redirect_url": "/defender-for-identity/remote-calls-sam",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step4.md",
-            "redirect_url": "/defender-for-identity/install-sensor",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step3.md",
-            "redirect_url": "/defender-for-identity/install-sensor",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step5.md",
-            "redirect_url": "/defender-for-identity/configure-sensor-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/workspace-portal.md",
-            "redirect_url": "/defender-for-identity/what-is",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/sensor-update.md",
-            "redirect_url": "/defender-for-identity/sensor-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/sensor-monitoring.md",
-            "redirect_url": "/defender-for-identity/sensor-settings",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step6-vpn.md",
-            "redirect_url": "/defender-for-identity/vpn-integration",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/manage-sensitive-honeytoken-accounts.md",
-            "redirect_url": "/defender-for-identity/entity-tags",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/configure-detection-exclusions.md",
-            "redirect_url": "/defender-for-identity/exclusions",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/use-case-lateral-movement-path.md",
-            "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/suspicious-activity-guide.md",
-            "redirect_url": "/defender-for-identity/alerts-overview",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/working-with-suspicious-activities.md",
-            "redirect_url": "/defender-for-identity/manage-security-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/isp-overview.md",
-            "redirect_url": "/defender-for-identity/security-assessment",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-print-spooler.md",
-            "redirect_url": "/defender-for-identity/security-assessment-print-spooler",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-dormant-entities.md",
-            "redirect_url": "/defender-for-identity/security-assessment-dormant-entities",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-clear-text.md",
-            "redirect_url": "/defender-for-identity/security-assessment-clear-text",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-laps.md",
-            "redirect_url": "/defender-for-identity/security-assessment-laps",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-legacy-protocols.md",
-            "redirect_url": "/defender-for-identity/security-assessment-legacy-protocols",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-riskiest-lmp.md",
-            "redirect_url": "/defender-for-identity/security-assessment-riskiest-lmp",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-unmonitored-domain-controller.md",
-            "redirect_url": "/defender-for-identity/security-assessment-unmonitored-domain-controller",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-unsecure-account-attributes.md",
-            "redirect_url": "/defender-for-identity/security-assessment-unsecure-account-attributes",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-unconstrained-kerberos.md",
-            "redirect_url": "/defender-for-identity/security-assessment-unconstrained-kerberos",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-unsecure-sid-history-attribute.md",
-            "redirect_url": "/defender-for-identity/security-assessment-unsecure-sid-history-attribute",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-weak-cipher.md",
-            "redirect_url": "/defender-for-identity/security-assessment-weak-cipher",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/release-reference.md",
-            "redirect_url": "/defender-for-identity/whats-new",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step1.md",
-            "redirect_url": "/defender-for-identity/deploy-defender-identity",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/install-step2.md",
-            "redirect_url": "/defender-for-identity/directory-service-accounts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/setting-syslog.md",
-            "redirect_url": "/defender-for-identity/notifications",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/modifying-config-dcpassword.md",
-            "redirect_url": "/defender-for-identity/directory-service-accounts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/health-center.md",
-            "redirect_url": "/defender-for-identity/sensor-health",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/integrate-mde.md",
-            "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/defender-for-identity-in-microsoft-365-defender.md",
-            "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/resources.md",
-            "redirect_url": "/defender-for-identity/what-is",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/silent-installation.md",
-            "redirect_url": "/defender-for-identity/install-sensor",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-lateral-movement-path.md",
-            "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/activities-search.md",
-            "redirect_url": "/defender-for-identity/monitored-activities",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/cas-isp-unsecure-domain-configurations.md",
-            "redirect_url": "/defender-for-identity/security-assessment-unsecure-domain-configurations",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/activities-filtering-mcas.md",
-            "redirect_url": "/defender-for-identity/deploy-defender-identity",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/mcas-integration.md",
-            "redirect_url": "/defender-for-identity/deploy-defender-identity",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/understand-entities.md",
-            "redirect_url": "/defender-for-identity/investigate-assets",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/entity-profiles.md",
-            "redirect_url": "/defender-for-identity/investigate-assets",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-a-computer.md",
-            "redirect_url": "/defender-for-identity/investigate-assets",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-a-user.md",
-            "redirect_url": "/defender-for-identity/investigate-assets",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-entity.md",
-            "redirect_url": "/defender-for-identity/investigate-assets",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/sensor-health.md",
-            "redirect_url": "/defender-for-identity/health-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/domain-dominance-alerts.md",
-            "redirect_url": "/defender-for-identity/persistence-privilege-escalation-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/compromised-credentials-alerts.md",
-            "redirect_url": "/defender-for-identity/credential-access-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/reconnaissance-alerts.md",
-            "redirect_url": "/defender-for-identity/reconnaissance-discovery-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/exfiltration-alerts.md",
-            "redirect_url": "/defender-for-identity/other-alerts",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/sensitive-accounts.md",
-            "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
-            "redirect_document_id": false
-        },
-         {
-            "source_path": "ATPDocs/security-assessment-legacy-protocols.md",
-            "redirect_url": "/defender-for-identity/security-assessment",
-            "redirect_document_id": false
-        }
-
-    ]
+    {
+      "source_path": "ATPDocs/validate-port-mirroring.md",
+      "redirect_url": "/defender-for-identity/configure-port-mirroring#validate-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/security-baseline.md",
+      "redirect_url": "/security/benchmark/azure/baselines/defender-for-identity-security-baseline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-configuration-file.md",
+      "redirect_url": "/advanced-threat-analytics/ata-configuration-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-database-management.md",
+      "redirect_url": "/advanced-threat-analytics/ata-database-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-health-center.md",
+      "redirect_url": "/advanced-threat-analytics/ata-health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-role-groups.md",
+      "redirect_url": "/advanced-threat-analytics/ata-role-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-silent-installation.md",
+      "redirect_url": "/advanced-threat-analytics/ata-silent-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/configure-event-collection.md",
+      "redirect_url": "/advanced-threat-analytics/configure-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/configure-port-mirroring.md",
+      "redirect_url": "/advanced-threat-analytics/configure-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step1.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step2.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step3.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step4.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step5.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step6.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/manage-telemetry-settings.md",
+      "redirect_url": "/advanced-threat-analytics/manage-telemetry-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-centercert.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-centercert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-centerip.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-centerip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-consoleurl.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-consoleurl",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/setting-ata-alerts.md",
+      "redirect_url": "/advanced-threat-analytics/setting-ata-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-configuration.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-dcpassword.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/setting-syslog-email-server-settings.md",
+      "redirect_url": "/advanced-threat-analytics/setting-syslog-email-server-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/use-case-forged-pac.md",
+      "redirect_url": "/advanced-threat-analytics/use-case-forged-pac",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/validate-port-mirroring.md",
+      "redirect_url": "/advanced-threat-analytics/validate-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/working-with-ata-console.md",
+      "redirect_url": "/advanced-threat-analytics/working-with-ata-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/working-with-detection-settings.md",
+      "redirect_url": "/advanced-threat-analytics/working-with-detection-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/working-with-suspicious-activities.md",
+      "redirect_url": "/advanced-threat-analytics/working-with-suspicious-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/PlanDesign/ata-architecture.md",
+      "redirect_url": "/advanced-threat-analytics/ata-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/PlanDesign/ata-prerequisites.md",
+      "redirect_url": "/advanced-threat-analytics/ata-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/PlanDesign/ata-capacity-planning.md",
+      "redirect_url": "/advanced-threat-analytics/ata-capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/disaster-recovery.md",
+      "redirect_url": "/advanced-threat-analytics/disaster-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-known-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-ata-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-logs.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-perf-counters.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-perf-counters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-technical-faq.md",
+      "redirect_url": "/advanced-threat-analytics/ata-technical-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-threats.md",
+      "redirect_url": "/advanced-threat-analytics/ata-threats",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-update-1.5-migration-guide.md",
+      "redirect_url": "/advanced-threat-analytics/ata-update-1.5-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-update-1.6-migration-guide.md",
+      "redirect_url": "/advanced-threat-analytics/ata-update-1.6-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-update-1.7-migration-guide.md",
+      "redirect_url": "/advanced-threat-analytics/ata-update-1.7-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ATA-versions.md",
+      "redirect_url": "/advanced-threat-analytics/ATA-versions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/what-is-ata.md",
+      "redirect_url": "/advanced-threat-analytics/what-is-ata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.4.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.5.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.6.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.7.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/known-issues.md",
+      "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/monitoring-alerts.md",
+      "redirect_url": "/defender-for-identity/health-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/advanced-audit-policy.md",
+      "redirect_url": "/defender-for-identity/configure-windows-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/ata-atp-move-overview.md",
+      "redirect_url": "/defender-for-identity/migrate-from-ata-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-activities-filtering-mcas.md",
+      "redirect_url": "/defender-for-identity/activities-filtering-mcas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-activities-search.md",
+      "redirect_url": "/defender-for-identity/activities-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-architecture.md",
+      "redirect_url": "/defender-for-identity/architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-capacity-planning.md",
+      "redirect_url": "/defender-for-identity/capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-clear-text.md",
+      "redirect_url": "/defender-for-identity/cas-isp-clear-text",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/cas-isp-dormant-entities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-laps.md",
+      "redirect_url": "/defender-for-identity/cas-isp-laps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-legacy-protocols.md",
+      "redirect_url": "/defender-for-identity/cas-isp-legacy-protocols",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-print-spooler.md",
+      "redirect_url": "/defender-for-identity/cas-isp-print-spooler",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/cas-isp-riskiest-lmp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unconstrained-kerberos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unmonitored-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unsecure-account-attributes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unsecure-sid-history-attribute",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-cas-isp-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/cas-isp-weak-cipher",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-compromised-credentials-alerts.md",
+      "redirect_url": "/defender-for-identity/compromised-credentials-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-domain-dominance-alerts.md",
+      "redirect_url": "/defender-for-identity/domain-dominance-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-exfiltration-alerts.md",
+      "redirect_url": "/defender-for-identity/exfiltration-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-health-center.md",
+      "redirect_url": "/defender-for-identity/health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-isp-overview.md",
+      "redirect_url": "/defender-for-identity/isp-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-lateral-movement-alerts.md",
+      "redirect_url": "/defender-for-identity/lateral-movement-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-mcas-integration.md",
+      "redirect_url": "/defender-for-identity/mcas-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-multi-forest.md",
+      "redirect_url": "/defender-for-identity/multi-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-nnr-policy.md",
+      "redirect_url": "/defender-for-identity/nnr-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-playbook-domain-dominance.md",
+      "redirect_url": "/defender-for-identity/playbook-domain-dominance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-playbook-lab-overview.md",
+      "redirect_url": "/defender-for-identity/playbook-lab-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-playbook-lateral-movement.md",
+      "redirect_url": "/defender-for-identity/playbook-lateral-movement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-playbook-reconnaissance.md",
+      "redirect_url": "/defender-for-identity/playbook-reconnaissance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-playbook-setup-lab.md",
+      "redirect_url": "/defender-for-identity/playbook-setup-lab",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-prerequisites.md",
+      "redirect_url": "/defender-for-identity/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-privacy-compliance.md",
+      "redirect_url": "/defender-for-identity/privacy-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-reconnaissance-alerts.md",
+      "redirect_url": "/defender-for-identity/reconnaissance-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-release-reference.md",
+      "redirect_url": "/defender-for-identity/release-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-resources.md",
+      "redirect_url": "/defender-for-identity/resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-role-groups.md",
+      "redirect_url": "/defender-for-identity/role-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-sensor-monitoring.md",
+      "redirect_url": "/defender-for-identity/sensor-monitoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-silent-installation.md",
+      "redirect_url": "/defender-for-identity/silent-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-support.md",
+      "redirect_url": "/defender-for-identity/support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-technical-faq.md",
+      "redirect_url": "/defender-for-identity/technical-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-us-govt-gcc-high.md",
+      "redirect_url": "/defender-for-identity/us-govt-gcc-high",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/atp-whats-new.md",
+      "redirect_url": "/defender-for-identity/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step1.md",
+      "redirect_url": "/defender-for-identity/install-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step2.md",
+      "redirect_url": "/defender-for-identity/install-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step3.md",
+      "redirect_url": "/defender-for-identity/install-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step4.md",
+      "redirect_url": "/defender-for-identity/install-step4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step5.md",
+      "redirect_url": "/defender-for-identity/install-step5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step6-vpn.md",
+      "redirect_url": "/defender-for-identity/install-step6-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step7.md",
+      "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step7.md",
+      "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/excluding-entities-from-detections.md",
+      "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-atp-step8-samr.md",
+      "redirect_url": "/defender-for-identity/install-step8-samr",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/modifying-atp-config-dcpassword.md",
+      "redirect_url": "/defender-for-identity/modifying-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/troubleshooting-atp-known-issues.md",
+      "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/troubleshooting-atp-using-logs.md",
+      "redirect_url": "/defender-for-identity/troubleshooting-using-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/integrate-wd-atp.md",
+      "redirect_url": "/defender-for-identity/integrate-msde",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/what-is-atp.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step8-samr.md",
+      "redirect_url": "/defender-for-identity/remote-calls-sam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step4.md",
+      "redirect_url": "/defender-for-identity/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step3.md",
+      "redirect_url": "/defender-for-identity/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step5.md",
+      "redirect_url": "/defender-for-identity/configure-sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/workspace-portal.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/sensor-update.md",
+      "redirect_url": "/defender-for-identity/sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/sensor-monitoring.md",
+      "redirect_url": "/defender-for-identity/sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step6-vpn.md",
+      "redirect_url": "/defender-for-identity/vpn-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/manage-sensitive-honeytoken-accounts.md",
+      "redirect_url": "/defender-for-identity/entity-tags",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/configure-detection-exclusions.md",
+      "redirect_url": "/defender-for-identity/exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/use-case-lateral-movement-path.md",
+      "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/suspicious-activity-guide.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/working-with-suspicious-activities.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/isp-overview.md",
+      "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-print-spooler.md",
+      "redirect_url": "/defender-for-identity/security-assessment-print-spooler",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/security-assessment-dormant-entities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-clear-text.md",
+      "redirect_url": "/defender-for-identity/security-assessment-clear-text",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-laps.md",
+      "redirect_url": "/defender-for-identity/security-assessment-laps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-legacy-protocols.md",
+      "redirect_url": "/defender-for-identity/security-assessment-legacy-protocols",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/security-assessment-riskiest-lmp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unmonitored-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unsecure-account-attributes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unconstrained-kerberos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unsecure-sid-history-attribute",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/security-assessment-weak-cipher",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/release-reference.md",
+      "redirect_url": "/defender-for-identity/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step1.md",
+      "redirect_url": "/defender-for-identity/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-step2.md",
+      "redirect_url": "/defender-for-identity/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/setting-syslog.md",
+      "redirect_url": "/defender-for-identity/notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/modifying-config-dcpassword.md",
+      "redirect_url": "/defender-for-identity/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/health-center.md",
+      "redirect_url": "/defender-for-identity/sensor-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/integrate-mde.md",
+      "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/defender-for-identity-in-microsoft-365-defender.md",
+      "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/resources.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/silent-installation.md",
+      "redirect_url": "/defender-for-identity/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/investigate-lateral-movement-path.md",
+      "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/activities-search.md",
+      "redirect_url": "/defender-for-identity/monitored-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/cas-isp-unsecure-domain-configurations.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unsecure-domain-configurations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/activities-filtering-mcas.md",
+      "redirect_url": "/defender-for-identity/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/mcas-integration.md",
+      "redirect_url": "/defender-for-identity/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/understand-entities.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/entity-profiles.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/investigate-a-computer.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/investigate-a-user.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/investigate-entity.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/sensor-health.md",
+      "redirect_url": "/defender-for-identity/health-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/domain-dominance-alerts.md",
+      "redirect_url": "/defender-for-identity/persistence-privilege-escalation-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/compromised-credentials-alerts.md",
+      "redirect_url": "/defender-for-identity/credential-access-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/reconnaissance-alerts.md",
+      "redirect_url": "/defender-for-identity/reconnaissance-discovery-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/exfiltration-alerts.md",
+      "redirect_url": "/defender-for-identity/other-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/sensitive-accounts.md",
+      "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/security-assessment-legacy-protocols.md",
+      "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    }
+  ]
 }

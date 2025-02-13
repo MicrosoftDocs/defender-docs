@@ -3,8 +3,8 @@ title: Schedule antivirus scans using Group Policy
 description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.date: 09/07/2024
 ms.reviewer: pauhijbr, ksarens
@@ -57,16 +57,16 @@ For more information, see the [Manage when protection updates should be download
 | Scan | Specify the scan type to use for a scheduled scan | Quick scan |
 | Scan | Specify the day of the week to run a scheduled scan | Specify the day (or never) to run a scan. | Never |
 | Scan | Specify the time of day to run a scheduled scan | Specify the number of minutes after midnight (for example, enter **60** for 1 a.m.). | 2 a.m. |
-| Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from 0 to 23 hours. By default, scheduled tasks will begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
+| Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from 0 to 23 hours. By default, scheduled tasks begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
 
-## Group Policy settings for scheduling scans for when an endpoint is not in use
+## Group Policy settings for scheduling scans for when an endpoint isn't in use
 
 | Location | Setting | Description | Default setting (if not configured) |
 |:---|:---|:---|:---|
-| Scan | Start the scheduled scan only when computer is on but not in use | Scheduled scans will not run, unless the computer is on but not in use | Enabled |
+| Scan | Start the scheduled scan only when computer is on but not in use | Scheduled scans won't run, unless the computer is on but not in use | Enabled |
 
 > [!NOTE]
-> When you schedule scans for times when endpoints are not in use, scans do not honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
+> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
 
 ## Group Policy settings for scheduling remediation-required scans
 

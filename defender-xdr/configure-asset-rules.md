@@ -1,6 +1,6 @@
 ---
-title: Asset rule management - Dynamic rules 
-description: You can use Microsoft Defender for Endpoint to configure dynamic tagging 
+title: Create dynamic rules for devices in asset rule management
+description: Use asset rule management in Microsoft Defender for Endpoint to configure dynamic tagging for devices.
 ms.service: defender-xdr
 ms.author: deniseb
 author: denisebmsft
@@ -12,10 +12,10 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 09/04/2024
+ms.date: 01/02/2025
 ---
 
-# Asset rule management - Dynamic rules for devices
+# Create dynamic rules for devices in asset rule management
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased products/services that might be substantially modified before they are commercially released. Microsoft makes no warranties, express or implied, for the information provided here.
@@ -66,6 +66,9 @@ The following steps guide you on how to create a new dynamic rule in Microsoft D
 ### Dynamic tags in the Device Inventory
 
 You can see the dynamic tags assigned in the Device Inventory view.
+
+> [!NOTE]
+> Dynamic tags are not supported by [security baseline assessments](/defender-vulnerability-management/tvm-security-baselines).
 
 To see tags on individual devices:
 

@@ -16,7 +16,7 @@ ms.custom:
 description: Admins can learn how to create, modify, and delete the advanced anti-phishing policies that are available in organizations with Microsoft Defender for Office 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 4/8/2024
+ms.date: 01/29/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -32,6 +32,11 @@ In organizations with Microsoft Defender for Office 365, anti-phishing policies 
 - Anti-impersonation protection from other types of phishing attacks. For more information, see [Exclusive settings in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 The default anti-phishing policy automatically applies to all recipients. For greater granularity, you can also create custom anti-phishing policies that apply to specific users, groups, or domains in your organization.
+
+> [!TIP]
+> Instead of creating and managing custom anti-phishing policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+>
+> To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 
 You configure anti-phishing policies in the Microsoft Defender portal or in Exchange Online PowerShell.
 
@@ -78,6 +83,9 @@ For anti-phishing policy procedures in organizations without Defender for Office
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups.
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
+
+     > [!TIP]
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 

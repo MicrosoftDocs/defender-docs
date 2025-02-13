@@ -35,7 +35,7 @@ When you investigate an incident, you'll see:
 - Incident comments and actions
 - Tabs (alerts, devices, investigations, evidence, graph)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUV]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=46fe6a58-ea33-4f79-a1ec-26ae86d68033]
 
 ## Analyze incident details
 

@@ -11,7 +11,7 @@ This article describes how to use the Microsoft Defender for Identity sizing too
 
 While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-The sizing tool measures the capacity needed for domain controllers only. There is no need to run it against AD FS / AD CS servers, as the performance impact on AD FS / AD CS servers is extremely minimal to not existent.
+The sizing tool measures the capacity needed for domain controllers only. There is no need to run it against AD FS / AD CS / Entra Connect servers, as the performance impact on these servers is extremely minimal to not existent.
 
 > [!TIP]
 > By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.
@@ -47,17 +47,17 @@ Common results include:
 
 |Result  |Description  |
 |---------|---------|
-|**Yes**     |   The sensor is supported on your server      |
+|**Yes**     |   The sensor is supported on your server.      |
 |**Yes, but additional resources required** | The sensor is supported on your server as long you add any specified missing resources.  |
-|**Maybe**     |     The current **Busy Packets/Second** value may be significantly higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.     |
-|**Maybe, but additional resources required** |The sensor may be supported on your server as long you add any specified missing resources, or the **Busy packets / Second** may be above 60K |
-|**No**     |    The sensor isn't supported on your server. <br><br>The current **Busy Packets/Second** value may be significantly higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.    |
-|**Missing OS Data**     |  There was an issue reading the operating system data.  Make sure the connection to your server is able to query WMI remotely.   |
-|**Missing Traffic Data**     | There was an issue reading the traffic data.    Make sure the connection to your server is able to query performance counters remotely.        |
-|**Missing RAM data**     |    There was an issue reading the RAM data.  Make sure the connection to your server is able to query WMI remotely.       |
+|**Maybe**     |     The current **Busy Packets/sec** value may be significantly higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.     |
+|**Maybe, but additional resources required** |The sensor may be supported on your server as long you add any specified missing resources, or the **Busy packets/sec** may be above 60K. |
+|**No**     |    The sensor isn't supported on your server. <br><br>The current **Busy Packets/sec** value may be significantly higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.    |
+|**Missing OS Data**     |  There was an issue reading the operating system data. Make sure the connection to your server is able to query WMI remotely.   |
+|**Missing Traffic Data**     | There was an issue reading the traffic data. Make sure the connection to your server is able to query performance counters remotely.        |
+|**Missing RAM data**     |    There was an issue reading the RAM data. Make sure the connection to your server is able to query WMI remotely.       |
 |**Missing core data**     |   There was an issue reading the core data. Make sure the connection to your server is able to query WMI remotely.          |
 
-For example, the following image shows a set of results where the **Maybe** indicates that the **Busy Packets/Second** value is significantly higher at that point than average.  Note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
+For example, the following image shows a set of results where the **Maybe** indicates that the **Busy Packets/sec** value is significantly higher at that point than average.  Note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
 
 :::image type="content" source="../media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values." lightbox="../media/capacity-tool-maybe.png":::
 

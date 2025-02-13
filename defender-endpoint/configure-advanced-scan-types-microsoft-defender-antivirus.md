@@ -3,13 +3,13 @@ title: Configure scanning options for Microsoft Defender Antivirus
 description: You can configure Microsoft Defender Antivirus to scan email storage files, back-up or reparse points, network files, and archived files (such as .zip files).
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.subservice: ngp
-ms.date: 11/01/2024
+ms.date: 12/26/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -74,6 +74,9 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 
 > [!NOTE]
 > If real-time protection is turned on, files are scanned before they are accessed and executed. The scanning scope includes all files, including files on mounted removable media, such as USB drives. If the device performing the scan has real-time protection or on-access protection turned on, the scan also includes network shares.
+
+> [!TIP]
+> If you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaption Protocol (ICAP) scanning with the Microsoft Defender Antivirus engine. For more information, see **[Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234)**.
 
 ## Use PowerShell to configure scanning options
 

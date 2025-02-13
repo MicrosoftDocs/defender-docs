@@ -89,7 +89,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it’s crucial for a capability’s continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
 
 ## See also
 

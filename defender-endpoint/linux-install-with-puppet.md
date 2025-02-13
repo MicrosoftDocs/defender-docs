@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/16/2024
+ms.date: 01/08/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
@@ -27,23 +27,17 @@ ms.date: 12/16/2024
 - Microsoft Defender for Endpoint Server
 - [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint) 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
-This article describes how to deploy Defender for Endpoint on Linux using Puppet. A successful deployment requires the completion of all of the following tasks:
-
-- [Download the onboarding package](#download-the-onboarding-package)
-- [Create Puppet manifest](#create-a-puppet-manifest)
-- [Deployment (include the manifest inside the site.pp file)](#include-the-manifest-inside-the-sitepp-file)
-- [Monitor your Puppet deployment](#monitor-puppet-deployment)
+This article describes how to deploy Defender for Endpoint on Linux using Puppet. 
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
-
 
 ## Prerequisites and system requirements
 
  For a description of prerequisites and system requirements, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
 
-In addition, for Puppet deployment, you need to be familiar with Puppet administration tasks, have Puppet configured, and know how to deploy packages. Puppet has many ways to complete the same task. These instructions assume availability of supported Puppet modules, such as *apt* to help deploy the package. Your organization might use a different workflow. Refer to the [Puppet documentation](https://puppet.com/docs) for details.
+In addition, for Puppet deployment, you need to be familiar with Puppet administration tasks, have Puppet configured, and know how to deploy packages. Puppet has many ways to complete the same task. These instructions assume availability of supported Puppet modules, such as *apt* to help deploy the package. Your organization might use a different workflow. For more information, see [Puppet documentation](https://puppet.com/docs).
 
 ## Download the onboarding package
 
@@ -59,18 +53,7 @@ Download the onboarding package from Microsoft Defender portal.
 
    :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The option to download the onboarded package.":::
 
-4. From a command prompt, verify that you have the file. 
-
-    ```bash
-    ls -l
-    ```
-
-    ```console
-    total 8
-    -rw-r--r-- 1 test  staff  4984 Feb 18 11:22 WindowsDefenderATPOnboardingPackage.zip
-    ```
-
-5. Extract the contents of the archive.
+4. Extract the contents of the archive.
 
    ```bash
    unzip WindowsDefenderATPOnboardingPackage.zip
@@ -81,9 +64,9 @@ Download the onboarding package from Microsoft Defender portal.
    inflating: mdatp_onboard.json
    ```
 
-## Create a Puppet manifest
+## Create a directory structure
 
-You need to create a Puppet manifest for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from `puppetlabs`, and assumes that the modules are installed on your Puppet server.
+You need to create a directory structure for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from `puppetlabs`, and assumes that the modules are installed on your Puppet server.
 
 1. Under the **modules** folder if your Puppet installation, create the folders `install_mdatp/files` and `install_mdatp/manifests`. The **modules** folder is typically located at `/etc/puppetlabs/code/environments/production/modules` on your Puppet server. 
 
@@ -111,7 +94,7 @@ You need to create a Puppet manifest for deploying Defender for Endpoint on Linu
        └── init.pp
    ```
 
-### Create a manifest file
+## Create a Puppet manifest
 
 There are two ways to create a manifest file:
 
@@ -120,7 +103,14 @@ There are two ways to create a manifest file:
 
 #### Create a manifest to deploy Defender for Endpoint using an installer script
 
-Add the following content to the `install_mdatp/manifests/init.pp` file. You can also download the file directly from [GitHub](https://teams.microsoft.com/l/message/19:2c1dc910-b8b7-415a-a9fd-2cd04843b43c_cb7ab2ef-8a66-4fcf-8c66-1723507f52df@unq.gbl.spaces/1734343607885?context=%7B%22contextType%22%3A%22chat%22%7D)
+1. Download the installer bash script. Pull the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) from Microsoft GitHub Repository or use the following command to download it.
+
+
+```bash
+wget https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/linux/installation/mde_installer.sh /etc/puppetlabs/code/environments/production/modules/install_mdatp/files/
+```
+
+2. Add the following content to the `install_mdatp/manifests/init.pp` file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/puppet.install_mdatp_simplified.init.pp)
 
 ```bash
 
@@ -160,33 +150,14 @@ class install_mdatp (
   }
 
 }
-
 ```
+> [!NOTE]
+> The installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help.
+>`./mde_installer.sh --help`
+
 #### Create a manifest to deploy Defender for Endpoint by configuring repositories manually
 
-Defender for Endpoint on Linux can be deployed from one of the following channels:
-
-- *insiders-fast*, denoted as `[channel]`
-- *insiders-slow*, denoted as `[channel]`
-- *prod*, denoted as `[channel]` using the version name (see [Linux Software Repository for Microsoft Products](/linux/packages))
-
-Each channel corresponds to a Linux software repository.
-
-The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow*, and lastly by *prod*.
-
-In order to preview new features and provide early feedback, we recommend that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
-
-> [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
-
-Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
-
-In the below commands, replace *[distro]* and *[version]* with the information you've identified:
-
-> [!NOTE]
-> In case of RedHat, Oracle Linux, Amazon Linux 2, and CentOS 8, replace *[distro]* with 'rhel'.
-
-Add the following content to the `install_mdatp/manifests/init.pp` file:
+Add the following content to the `install_mdatp/manifests/init.pp` file. You can also download it from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/puppet.install_mdatp_manual.init.pp). 
 
 ```bash
 # Puppet manifest to install Microsoft Defender for Endpoint on Linux.
@@ -286,6 +257,13 @@ class install_mdatp (
 
 ```
 
+> [!NOTE]
+> Defender for Endpoint on Linux can be deployed from one of the following channels: **insiders-fast, insiders-slow, prod**. Each channel corresponds to a Linux software repository. The choice of the channel determines the type and frequency of the updates that are offered to your device. Devices in `insiders-fast` are the first ones to receive updates and new features in preview, followed by `insiders-slow`, and lastly by `prod`.
+> Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/[version]`.
+
+> [!Warning]
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+
 ## Include the manifest inside the site.pp file
 
 Include the manifest described earlier in this article in your `site.pp` file:
@@ -302,7 +280,7 @@ node "default" {
 
 Enrolled agent devices periodically poll the Puppet Server and install new configuration profiles and policies as soon as they're detected.
 
-## Monitor Puppet deployment
+## Monitor your Puppet deployment
 
 On the agent device, you can also check the deployment status by running the following command:
 
@@ -342,10 +320,10 @@ To get support from Microsoft, raise a support ticket and provide log files by u
 
 ## How to configure policies for Microsoft Defender on Linux
 
-You can configure antivirus and EDR settings on your endpoints using following methods:
+You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
 
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) to learn more about the available settings 
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
+- [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes the available settings 
+- [Security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
 
 ## Operating system upgrades
 

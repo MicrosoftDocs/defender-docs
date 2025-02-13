@@ -4,10 +4,10 @@ description: With Microsoft Defender Antivirus now included in the Windows Secur
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.reviewer:
+ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.collection: 
@@ -26,8 +26,8 @@ ms.date: 08/28/2023
 Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus settings are viewable in the Windows Security app. See [Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) for more information about security features and settings that are built into Windows.
 
 > [!IMPORTANT]
-> Disabling the Windows Security app does not disable Microsoft Defender Antivirus or [Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). These capabilities are disabled or set to passive mode when non-Microsoft antivirus/antimalware software is installed on the device and kept up to date.
-> If you do disable the Windows Security app, or configure its associated Group Policy settings to prevent it from starting or running, the Windows Security app might display stale or inaccurate information about any antivirus or firewall products that are installed on the device.It might also prevent Microsoft Defender Antivirus from re-enabling when you uninstall any non-Microsoft antivirus/antimalware software.
+> Disabling the Windows Security app doesn't disable Microsoft Defender Antivirus or [Windows Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). These capabilities are disabled or set to passive mode when non-Microsoft antivirus/antimalware software is installed on the device and kept up to date.
+> If you do disable the Windows Security app, or configure its associated Group Policy settings to prevent it from starting or running, the Windows Security app might display stale or inaccurate information about any antivirus or firewall products that are installed on the device. It might also prevent Microsoft Defender Antivirus from re-enabling when you uninstall any non-Microsoft antivirus/antimalware software.
 > Disabling the Windows Security app can significantly lower the level protection of your device and could lead to malware infection.
 
 ## Review virus and threat protection settings in the Windows Security app
@@ -39,7 +39,7 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 3. Use one or more of the subsequent sections to perform tasks using the Windows Security app.
 
 > [!NOTE]
-> If these settings are configured and deployed using Group Policy, the settings described in this section will be greyed-out and unavailable for use on individual endpoints. Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting will be updated in Windows Settings. The [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md) topic describes how local policy override settings can be configured.
+> If these settings are configured and deployed using Group Policy, the settings described in this section are grayed-out and unavailable for use on individual endpoints. Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting are updated in Windows Settings. The [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md) topic describes how local policy override settings can be configured.
 
 ## Run a scan with the Windows Security app
 
@@ -72,8 +72,8 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 4. Toggle the **Real-time protection** switch to **On**.
 
     > [!NOTE]
-    > If you switch **Real-time protection** off, it will automatically turn back on after a short delay. This is to ensure you are protected from malware and threats.
-    > If you install another antivirus product, Microsoft Defender Antivirus automatically disables itself and is indicated as such in the Windows Security app. A setting will appear that will allow you to enable [limited periodic scanning](limited-periodic-scanning-microsoft-defender-antivirus.md).
+    > If you switch **Real-time protection** off, it will automatically turn back on after a short delay. This automatic enablement is to ensure you're protected from malware and threats.
+    > If you install another antivirus product, Microsoft Defender Antivirus automatically disables itself and is indicated as such in the Windows Security app. A setting appears that allows you to enable [limited periodic scanning](limited-periodic-scanning-microsoft-defender-antivirus.md).
 
 ## Add exclusions for Microsoft Defender Antivirus in the Windows Security app
 

@@ -40,7 +40,6 @@ Following proper investigation, all Defender for Cloud Apps alerts can be classi
 
 You should use the following general guidelines when investigating any type of alert to gain a clearer understanding of the potential threat before applying the recommended action.
 
-- Review the user's [investigation priority score](tutorial-ueba.md#understand-the-investigation-priority-score) and compare with the rest of the organization. This will help you identify which users in your organization pose the greatest risk.
 - If you identify a **TP**, review all the user's activities to gain an understanding of the impact.
 - Review all user activity for other indicators of compromise and explore the source and scope of impact. For example, review the following user device information and compare with known device information:
   - Operating system and version
@@ -712,74 +711,14 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review the deletion activities and create a list of deleted files. If needed, recover the deleted files.
 1. Optionally, create a playbook using Power Automate to contact users and their managers to verify the activity.
 
-### Investigation priority score increase (preview)
+### Investigation priority score increase (legacy)
 
-Anomalous activities and activities that triggered alerts are given scores based on severity, user impact, and behavioral analysis of the user. The analysis is done based on other users in the tenants.
+Starting November 2024, **Investigate risky users** support for Microsoft Defender for Cloud Apps is retired. If this feature was used in your organization and is needed, we recommend using the Entra risk score feature. Please use the following resources for additional information:
 
-When there's a significant and anomalous increase in the investigation priority score of a certain user, the alert will be triggered.
+- [Investigate risk Microsoft Entra ID Protection - Microsoft Entra ID Protection | Microsoft Learn](/entra/id-protection/howto-identity-protection-investigate-risk)
 
-This alert enables detecting potential breaches that are characterized by activities that don't necessarily trigger specific alerts but accumulate to a suspicious behavior for the user.
+- [Microsoft Entra ID Protection risk-based access policies - Microsoft Entra ID Protection | Microsoft Learn](/entra/id-protection/concept-identity-protection-policies)
 
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days, during which alerts aren't triggered for any score increase.
-
-**TP**, **B-TP**, or **FP**?
-
-1. **TP**: If you're able to confirm that the activities of the user aren't legitimate.
-  
-    **Recommended action**: Suspend the user, mark the user as compromised, and reset their password.
-
-1. **B-TP**: If you're able to confirm that user indeed significantly deviated from usual behavior, but there's no potential breach.
-
-1. **FP**  (Unusual behavior): If you're able to confirm that the user legitimately performed the unusual activities, or more activities than the established baseline.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review all user activity and alerts for additional indicators of compromise.
-
-#### Deprecation timeline
-
-We're gradually retiring the **Investigation priority score increase** alert from Microsoft Defender for Cloud Apps by August 2024.
-
-After careful analysis and consideration, we decided to deprecate it due to the high rate of false positives associated with this alert, which we found wasn't contributing effectively to the overall security of your organization.
-
-Our research indicated that this feature wasn't adding significant value and wasn't aligned with our strategic focus on delivering high-quality, reliable security solutions.
-
-We're committed to continuously improving our services and ensuring that they meet your needs and expectations.
-
-For those who wish to continue using this alert, we suggest using the following advanced hunting query instead as a suggested template. Modify the query based on your needs.
-
-```kql    
-let time_back = 1d;
-let last_seen_threshold = 30;
-// the number of days which the resource is considered to be in use by the user lately, and therefore not indicates anomaly resource usage
-// anomaly score based on LastSeenForUser column in CloudAppEvents table
-let last_seen_scores =
-CloudAppEvents
-| where Timestamp > ago(time_back)
-| where isnotempty(LastSeenForUser)
-| mv-expand LastSeenForUser
-| extend resource = tostring(bag_keys(LastSeenForUser)[0])
-| extend last_seen = LastSeenForUser[resource]
-| where last_seen < 0 or last_seen > last_seen_threshold
-// score is calculated as the number of resources which were never seen before or breaching the chosen threshold
-| summarize last_seen_score = dcount(resource) by ReportId, AccountId;
-// anomaly score based on UncommonForUser column in CloudAppEvents table
-let uncommonality_scores =
-CloudAppEvents
-| where Timestamp > ago(time_back)
-| where isnotempty(UncommonForUser)
-| extend uncommonality_score = array_length(UncommonForUser)
-// score is calculated as the number of uncommon resources on the event
-| project uncommonality_score, ReportId, AccountId;
-last_seen_scores | join kind=innerunique uncommonality_scores on ReportId and AccountId
-| project-away ReportId1, AccountId1
-| extend anomaly_score = last_seen_score + uncommonality_score
-// joined scores
-```
 
 ## See also
 

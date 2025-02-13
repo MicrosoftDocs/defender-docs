@@ -3,8 +3,8 @@ title: Troubleshooting mode scenarios in Microsoft Defender for Endpoint
 description: Use the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: pricci
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: conceptual
 ms.subservice: ngp
-ms.date: 10/26/2023
+ms.date: 01/09/2025
 ---
 
 # Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
@@ -45,7 +45,7 @@ If you want to install an application but receive an error message that Microsof
 
 2. Connect to the device (using Terminal Services for example) with local admin permissions.  
 
-3. Start [Process Monitor](troubleshoot-performance-issues.md#capture-process-logs-using-process-monitor) (ProcMon). See the steps described in [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md).  
+3. Start [Process Monitor](troubleshoot-av-performance-issues-with-procmon.md), and see the steps described in [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md).  
 
 4. Go to **Windows security** > **Threat & virus protection** > **Manage settings** > **Tamper protection** > **Off**.
 
@@ -67,7 +67,7 @@ Sometimes during a scheduled scan, MsMpEng.exe can consume high CPU.
 
 1. Go to **Task Manager** > **Details** tab to confirm that `MsMpEng.exe` is the reason behind the high CPU usage. Also check to see if a scheduled scan is currently underway.
 
-2. Run [Process Monitor](troubleshoot-performance-issues.md#capture-process-logs-using-process-monitor) (ProcMon) during the CPU spike for around five minutes, and then review the ProcMon log for clues. 
+2. Run [Process Monitor](troubleshoot-av-performance-issues-with-procmon.md) (ProcMon) during the CPU spike for around five minutes, and then review the ProcMon log for clues. 
 
 3. When the root cause is determined, turn on troubleshooting mode. 
 

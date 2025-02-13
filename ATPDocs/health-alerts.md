@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 07/09/2024
+ms.date: 01/16/2025
 ms.topic: how-to
 ---
 
@@ -103,7 +103,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|There has been no communication from the Defender for Identity sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Defender for Identity sensor. This affects Defender for Identity's ability to detect suspicious activities, since network traffic isn't able to reach the Defender for Identity cloud service.|Check that the port used for the communication between the Defender for Identity sensor and Defender for Identity cloud service isn't blocked by any routers or firewalls.|Medium|Sensors health issues tab|
+|There has been no communication from the Defender for Identity sensor. The default time span for this alert is 5 minutes.|This indicates that the sensor failed to send data or a keep-alive signal to the Defender for Identity services for a period exceeding the allowed time. This typically suggests either a network issue in the environment that prevented data transmission or a server restart that took longer than the acceptable time frame, impacting Defender for Identity's ability to detect suspicious activities.|Check the communication between the Defender for Identity sensor and Defender for Identity cloud service isn't blocked by any routers or firewalls.|Medium|Sensors health issues tab|
 
 ### Some Windows events are not being analyzed
 
@@ -190,6 +190,12 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
+
+### Auditing for AD CS servers is not enabled as required
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Auditing for AD CS servers is not enabled as required. (This configuration is validated once a day, per sensor).|The Advanced Auditing Policy Configuration or AD CS auditing is not enabled as required.|Enable the Advanced Auditing Policy Configuration and AD CS auditing according to the guidance as described in the [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Sensor failed to retrieve Microsoft Entra Connect service configuration
 

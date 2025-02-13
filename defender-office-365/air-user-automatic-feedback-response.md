@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.reviewer: kellycrider
 manager: deniseb
 ms.topic: overview
-ms.date: 05/23/2024
+ms.date: 07/10/2024
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -15,7 +15,7 @@ appliesto:
 
 # Automatic user notifications for user reported phishing results in AIR
 
-In Microsoft 365 organizations with Microsoft Defender for Office 365 Plan 2, when a user reports a message as phishing, an investigation is automatically created in [automated investigation and response (AIR)](air-about.md). Admins can configure the user reported message settings to send an email notification to the user who reported the message based on the verdict from AIR. This notification is also known as _automatic feedback response_. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
+In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet), when a user reports a message as phishing, an investigation is automatically created in [automated investigation and response (AIR)](air-about.md). Admins can configure the user reported message settings to send an email notification to the user who reported the message based on the verdict from AIR. This notification is also known as _automatic feedback response_. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 This article explains how to enable and customize automatic feedback response for specific AIR verdicts, how the notification email messages are sent, and what the notifications look like.
 
@@ -96,4 +96,4 @@ To learn more about submissions and investigations in Defender for Microsoft 365
 - [Automated investigation and response in Microsoft Defender for Office 365](air-about.md)
 - [View the results of an automated investigation in Microsoft 365](air-view-investigation-results.md)
 - [Admin review for reported messages](submissions-admin-review-user-reported-messages.md)
-- [How automated investigation and response works in Microsoft Defender for Office 365](air-examples.md)
+- [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md)

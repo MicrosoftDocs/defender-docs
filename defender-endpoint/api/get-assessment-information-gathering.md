@@ -15,8 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-
-ms.date: 07/26/2022
+ms.date: 01/22/2025
 ---
 
 # Information gathering assessment per device
@@ -72,18 +71,16 @@ GET /api/Machines/InfoGatheringExport
 
 ### 1.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours)
+- `sasValidHours`: The number of hours that the download URLs are valid for Maximum is 6 hours.
 
 ### 1.5 Properties
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> 
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
