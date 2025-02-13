@@ -206,6 +206,51 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-xdr/mto-advanced-hunting.md",
+      "redirect_url": "/unified-secops-platform/mto-advanced-hunting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-dashboard.md",
+      "redirect_url": "/unified-secops-platform/mto-dashboard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-endpoint-security-policy.md",
+      "redirect_url": "/unified-secops-platform/mto-endpoint-security-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-incidents-alerts.md",
+      "redirect_url": "/unified-secops-platform/mto-incidents-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-overview.md",
+      "redirect_url": "/unified-secops-platform/mto-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-requirements.md",
+      "redirect_url": "/unified-secops-platform/mto-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-tenant-devices.md",
+      "redirect_url": "/unified-secops-platform/mto-tenant-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-tenantgroups.md",
+      "redirect_url": "/unified-secops-platform/mto-tenantgroups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/mto-tenants.md",
+      "redirect_url": "/unified-secops-platform/mto-tenants",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-xdr/portals.md",
       "redirect_url": "/unified-secops-platform/overview-plan#understand-microsoft-security-portals-and-admin-centers",
       "redirect_document_id": false
