@@ -53,7 +53,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## October 2024
 
-- **Tenant Allow/Block List in Microsoft 365 now supports IPv6 address**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) now supports [allowing and blocking IPv6 addresses] (tenant-allow-block-list-ip-addresses-configure.md). It's available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments.
+- **Tenant Allow/Block List in Microsoft 365 now supports IPv6 address**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) now supports [allowing and blocking IPv6 addresses](tenant-allow-block-list-ip-addresses-configure.md). It's available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments.
 
 ## September 2024
 
