@@ -67,7 +67,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`Department`|`string`|	Name of the department that the account user belongs to|
 |`SourceCodeInfo`|	`string`|	Details of the source code repository involved in the event|
 |`CcPolicyMatchInfo`|	`JSON object` | Details of the Communications Compliance policy matches for this event |
-|`IpAddress`|	`string`|	IP addresses of the clients on which the activity was performed; can contain multiple Ips if related to Microsoft Defender for Cloud Apps alerts|
+|`IPAddress`|	`string`|	IP addresses of the clients on which the activity was performed; can contain multiple Ips if related to Microsoft Defender for Cloud Apps alerts|
 |`Timestamp`|	`datetime`|	Date and time when the event was recorded|
 |`DeviceSourceLocationType`|	`int`|	Indicates the type of location where the endpoint signals originated from; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
 |`DeviceDestinationLocationType`|	Int|	Indicates the type of location where the endpoint signals connected to; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
