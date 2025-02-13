@@ -26,8 +26,6 @@
           href: prerequisites.md
         - name: Data security and privacy
           href: data-privacy.md
-        - name: Microsoft security portals
-          href: portals.md
     - name: Pilot and deploy Microsoft Defender XDR
       items:
         - name: Overview
@@ -567,17 +565,9 @@
         - name: Responding to ransomware attacks
           href: playbook-responding-ransomware-m365-defender.md
       - name: Threat actor naming
-        href: microsoft-threat-actor-naming.md
-      - name: Malware names
-        href: malware-naming.md
-      - name: How Microsoft identifies malware and PUA
-        href: criteria.md
-      - name: Submit files for analysis
-        href: submission-guide.md
+        href: /unified-secops-platform/microsoft-threat-actor-naming
       - name: Understand threat intelligence concepts
         href: /defender-endpoint/threat-indicator-concepts          
-      - name: Microsoft virus initiative
-        href: virus-initiative-criteria.md
       - name: Software developer FAQ
         href: developer-faq.yml                                    
     - name: Microsoft Defender XDR docs

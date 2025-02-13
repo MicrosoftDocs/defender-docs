@@ -108,12 +108,14 @@
     - name: Resources
       items:
         - name: Threat actor naming
-          href: /defender-xdr/microsoft-threat-actor-naming?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          href: microsoft-threat-actor-naming.md
+        - name: Malware names
+          href: malware-naming.md
         - name: Identification of malware and unwanted apps
-          href: /defender-xdr/criteria?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          href: criteria.md
         - name: Submit files for analysis
-          href: /defender-xdr/submission-guide?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          href: submission-guide.md
         - name: Microsoft virus initiative
-          href: /defender-xdr/virus-initiative-criteria?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          href: virus-initiative-criteria.md
         - name: Microsoft security portals
           href: /defender-xdr/portals?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
