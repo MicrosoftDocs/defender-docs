@@ -40,11 +40,11 @@ To customize the device inventory views:
 - [Use filters](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views)
 - [Use columns](/defender-endpoint/machines-view-overview#use-columns-to-customize-the-device-inventory-views)
 
+[!INCLUDE [defender-iot-site-association](includes/site-association.md)]
+
 ### OT network tag
 
 When a Defender for Endpoint agent is associated with a site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that the site is used by an OT security persona.
-
-[!INCLUDE [defender-iot-site-association](includes/site-association.md)]
 
 ## Manage OT devices
 
