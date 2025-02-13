@@ -144,6 +144,33 @@ You should only resolve misconfigurations at the resource level once you have re
 
 1. Select **Apply**.
 
-1. 
+1. Locate and select the relevant DCR.
+
+    > [!NOTE]
+    > The DCR naming convention follows this format: `MicrosoftDefenderForSQL-region-dcr`.
+
+1. Select **Configuration** > **Resources**.
+
+    :::image type="content" source="media/troubleshoot-sql-machines-guide/resources.png" alt-text="Screenshot that shows you where to select configuration and resources." lightbox="media/troubleshoot-sql-machines-guide/resources.png":::
+
+1. Select **+ Add**.
+
+    :::image type="content" source="media/troubleshoot-sql-machines-guide/add.png" alt-text="Screenshot that shows where the add button is located." lightbox="media/troubleshoot-sql-machines-guide/add.png":::
+
+1. In the Resource type dropdown table select **Machines - Azure Arc** and **Virtual machines**.
+
+    :::image type="content" source="media/troubleshoot-sql-machines-guide/resource-type-filter.png" alt-text="Screenshot that shows where to filter by Machines Azure Arc and Virtual machines." lightbox="media/troubleshoot-sql-machines-guide/resource-type-filter.png":::
+
+1. Expand each resource group and select each machine.
+
+    :::image type="content" source="media/troubleshoot-sql-machines-guide/select-machines.png" alt-text="Screenshot that shows each machine selected individually." lightbox="media/troubleshoot-sql-machines-guide/select-machines.png":::
+
+1. Select **Apply**.
+
+Once you have completed all of the steps on this page, you should [verify the protection status of each SQL Server instance](faq-defender-for-databases.yml#how-do-i-verify-that-my-defender-for-sql-servers-on-machines-deployment-ended-successfully-and-that-my-database-is-now-protected-).
 
 ## Related content
+
+- [Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
+- [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md)
+- Check out [common questions](faq-defender-for-databases.yml) about Defender for Databases
