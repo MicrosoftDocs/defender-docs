@@ -77,5 +77,5 @@ Select **Open detection rules** to view this rule in a new tab for the specific 
 ## Related content
 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
-- [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+- [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
 - [View and manage incidents and alerts](mto-incidents-alerts.md)

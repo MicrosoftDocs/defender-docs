@@ -11,7 +11,7 @@ ms.author: ewalsh
 ms.custom: 
 - nextgen
 - partner-contribution
-ms.reviewer: pahuijbr, dmcwee
+ms.reviewer: pahuijbr, dmcwee, yongrhee
 manager: deniseb
 ms.collection: 
 - m365-security
@@ -36,6 +36,7 @@ Microsoft Defender Antivirus is available on endpoints running the following ver
 
 - Windows 11
 - Windows 10 
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803, or newer
@@ -105,7 +106,10 @@ The following table summarizes the state of Microsoft Defender Antivirus in seve
 
 ## Windows Server and passive mode
 
-On Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or  Windows Server 2012 R2, Microsoft Defender Antivirus doesn't enter passive mode automatically when you install a non-Microsoft antivirus product. In those cases, set Microsoft Defender Antivirus to passive mode to prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key as follows:
+> [!TIP]
+> If you are planning to keep Microsoft Defender Antivirus in passive mode for your Windows Servers, the `ForceDefenderPassiveMode` setting needs to be set before onboarding the device to Microsoft Defender for Endpoint.
+
+On Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or Windows Server 2012 R2, Microsoft Defender Antivirus doesn't enter passive mode automatically when you install a non-Microsoft antivirus product. In those cases, set Microsoft Defender Antivirus to passive mode to prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key as follows:
 
 - Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
 - Name: `ForceDefenderPassiveMode`
@@ -120,7 +124,7 @@ For passive mode to work on endpoints running Windows Server 2016 and Windows Se
 > [!IMPORTANT]
 > Beginning with [platform version 4.18.2208.0 and later](msda-updates-previous-versions-technical-upgrade-support.md#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Microsoft Defender for Endpoint, [tamper protection](/editor/MicrosoftDocs/microsoft-365-docs-pr/microsoft-365%2Fsecurity%2Fdefender-endpoint%2Fmicrosoft-defender-antivirus-compatibility.md/main/9a5f8a9f-f5b9-cd00-0d21-171936a25b2b/prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
 >
-> Notice the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
+> Notice the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: When Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
 On Windows Server 2016, Windows Server 2012 R2, Windows Server version 1803 or newer, Windows Server 2019, and Windows Server 2022, if you're using a non-Microsoft antivirus product on an endpoint that *isn't* onboarded to Microsoft Defender for Endpoint, disable/uninstall Microsoft Defender Antivirus manually to prevent problems caused by having multiple antivirus products installed on a server. However, Defender for Endpoint includes capabilities that further extend the antivirus protection that is installed on your endpoint. If you have Defender for Endpoint, you can benefit from running Microsoft Defender Antivirus alongside another antivirus solution.
 
@@ -134,7 +138,9 @@ For example, [Endpoint detection and response (EDR) in block mode](edr-in-block-
 In order for Microsoft Defender Antivirus to run in passive mode, endpoints must meet the following requirements:
 
 - Operating system: Windows 10 or newer; Windows Server 2022, Windows Server 2019, or Windows Server, version 1803, or newer <br/>(Windows Server 2012 R2 and Windows Server 2016 if onboarded using the [modern, unified solution](configure-server-endpoints.md)). 
+
 - Microsoft Defender Antivirus must be installed. 
+
 - Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. ([Add Microsoft Defender for Endpoint to your exclusion list for your existing solution](/defender-endpoint/switch-to-mde-phase-2)). 
 
 - Endpoints must be onboarded to Defender for Endpoint. 
@@ -236,7 +242,7 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 
 2. Select the **Details** tab.
 
-3. Look for **MsMpEng.exe** in the list.
+3. Look for `MsMpEng.exe` in the list.
 
 ### Use Windows PowerShell to confirm that Microsoft Defender Antivirus is running
 
@@ -302,7 +308,7 @@ If you're looking for Antivirus related information for other platforms, see:
 
 - [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-windows.md)
 - [EDR in block mode](edr-in-block-mode.md)
-
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

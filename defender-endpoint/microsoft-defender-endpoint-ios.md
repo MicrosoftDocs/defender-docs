@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 12/11/2024
+ms.date: 02/12/2025
 ---
 
 # Microsoft Defender for Endpoint on iOS
@@ -73,9 +73,9 @@ ms.date: 12/11/2024
 
 ### System Requirements
 
-- Device running iOS/iPadOS 15.0 (ending support January 31, 2025) and later.
+- Device running iOS/iPadOS 16.0 and later.
 
-- The device is either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account.
+- The device should be either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account to seamlessly onboard the device.
 
 > [!IMPORTANT]
 > Microsoft Defender for Endpoint is ending support for devices running iOS/iPadOS 15 on January 31, 2025. Moving forward, only devices running iOS/iPadOS 16 and later are supported.

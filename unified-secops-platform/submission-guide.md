@@ -2,7 +2,7 @@
 title: Submit files for analysis by Microsoft
 description: Learn how to submit files to Microsoft for malware analysis, how to track your submissions, and dispute detections.
 ms.reviewer:
-ms.service: defender-xdr
+ms.service: unified-secops-platform
 ms.localizationpriority: medium
 ms.author: dansimp
 author: dansimp
@@ -21,7 +21,7 @@ ms.date: 05/10/2024
 If you have a file that you suspect might be malware or is being incorrectly detected, you can submit it to us for analysis. This page has answers to some common questions about submitting a file for analysis.
 
 > [!TIP]
-> If your organization's subscription includes [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint), [Microsoft Defender for Office 365 Plan 2](/defender-office-365/mdo-about), or [Microsoft Defender XDR](microsoft-365-defender.md), you can use the [new unified submissions portal](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770). To learn more, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+> If your organization's subscription includes [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint), [Microsoft Defender for Office 365 Plan 2](/defender-office-365/mdo-about), or [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender), you can use the [new unified submissions portal](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770). To learn more, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 ## How do I submit a file to Microsoft for analysis?
 

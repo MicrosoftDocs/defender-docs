@@ -234,6 +234,8 @@
               href: mac-troubleshoot-mode.md
             - name: Troubleshoot macOS installation issues
               href: mac-support-install.md
+            - name: Troubleshoot macOS configuration
+              href: mac-support-configuration.md
             - name: Troubleshoot macOS performance issues overview
               href: mac-support-perf-overview.md
               displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS

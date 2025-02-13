@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 01/17/2025
+ms.date: 02/12/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -48,7 +48,7 @@ The rest of this article describes the reports that are exclusive to Defender fo
 
 ## Email security report changes in the Microsoft Defender portal
 
-The Exchange Online Protection (EOP) and Microsoft Defender for Office 365 reports in the Microsoft Defender portal that have been replaced, moved, or deprecated are described in the following table.
+The Exchange Online Protection (EOP) and Microsoft Defender for Office 365 reports in the Microsoft Defender portal that were replaced, moved, or deprecated are described in the following table.
 
 |Deprecated report and cmdlets|New report and cmdlets|Message Center ID|Date|
 |---|---|:---:|:---:|
@@ -65,7 +65,7 @@ The Exchange Online Protection (EOP) and Microsoft Defender for Office 365 repor
 
 ## Compromised users report
 
-The **Compromised users** report shows the number of user accounts that were marked as **Suspicious** or **Restricted** within the last 7 days. Accounts in either of these states are problematic or even compromised. With frequent use, you can use the report to spot spikes, and even trends, in suspicious or restricted accounts. For more information about compromised users, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
+The **Compromised users** report shows the number of user accounts marked as **Suspicious** or **Restricted** within the last 7 days. Accounts in either of these states are problematic or even compromised. With frequent use, you can use the report to spot spikes, and even trends, in suspicious or restricted accounts. For more information about compromised users, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
 
 :::image type="content" source="media/compromised-users-report-widget.png" alt-text="The Compromised users widget on the Email & collaboration reports page." lightbox="media/compromised-users-report-widget.png":::
 
@@ -75,8 +75,8 @@ On the **Email & collaboration reports** page at <https://security.microsoft.com
 
 On the **Compromised users** page, the chart shows the following information for the specified date range:
 
-- **Restricted**: The user account has been restricted from sending email due to highly suspicious patterns.
-- **Suspicious**: The user account has sent suspicious email and is at risk of being restricted from sending email.
+- **Restricted**: The user account was restricted from sending email due to highly suspicious patterns.
+- **Suspicious**: The user account sent suspicious email and is at risk of being restricted from sending email.
 
 :::image type="content" source="media/compromised-users-report-activity-view.png" alt-text="The Report view in the Compromised users report." lightbox="media/compromised-users-report-activity-view.png":::
 
@@ -113,6 +113,10 @@ The **Mailflow status report** is a smart report that shows information about in
 
 > [!TIP]
 > If a message is sent to five recipients, we count it as five different messages, not one message.
+>
+> The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **all threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
+>
+> The aggregate message count in the Mailflow status report could also be more than the message count in Threat Explorer or Real-time detections due to [zero-hour autopurge (ZAP)](zero-hour-auto-purge.md) activity. ZAP removes messages from mailboxes after delivery, so ZAP activity doesn't affect message counts in the Mailflow status report. ZAP activity does affect message counts in Threat Explorer or Real-time detections. In Defender for Office 365, use the [Post-delivery activities report](reports-defender-for-office-365.md#post-delivery-activities-report) to understand the lifecycle of ZAP on messages in the organization.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Mailflow status summary**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/mailflowStatusReport>.
 
@@ -126,14 +130,14 @@ The available views in the **Mailflow status report** are described in the follo
 
 On the **Mailflow status report** page, the **Type** tab is selected by default. The chart shows the following information for the specified date range:
 
-- **Malware**: Email that's blocked as malware by various filters.
+- **Malware**: Email blocked as malware by various filters.
 - **Total**
-- **Good mail**: Email that's determined not to be spam or that's allowed by user or organizational policies.
-- **Phishing email**: Email that's blocked as phishing by various filters.
-- **Spam**: Email that's blocked as spam by various filters.
-- **Edge protection**: Email that's rejected at the edge/perimeter before examination by EOP or Defender for Office 365.
-- **Rule messages**: Email messages that were quarantined by mail flow rules (also known as transport rules).
-- **Data loss prevention**: Email messages that were quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
+- **Good mail**: Email determined not to be spam or allowed by user or organizational policies.
+- **Phishing email**: Email blocked as phishing by various filters.
+- **Spam**: Email blocked as spam by various filters.
+- **Edge protection**: Email rejected at the edge/perimeter before examination by EOP or Defender for Office 365.
+- **Rule messages**: Email quarantined by mail flow rules (also known as transport rules).
+- **Data loss prevention**: Email quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
 
 The details table below the graph shows the following information:
 
@@ -196,7 +200,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Edge protection**
   - **Rule messages**
   - **Phishing email**
-  - **Data loss prevention**: Email messages that were quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
+  - **Data loss prevention**: Email quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
 - **Domain**: Select **All** or an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
 When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
@@ -223,22 +227,22 @@ The diagram is organized into the following horizontal bands:
 
 - **Total email** band: This value is always shown first.
 - **Edge block** and **Processed** band:
-  - **Edge block**: Messages that were filtered at the edge and identified as Edge Protection.
-  - **Processed**: Messages that were handled by the filtering stack.
+  - **Edge block**: Messages filtered at the edge and identified as Edge Protection.
+  - **Processed**: Messages handled by the filtering stack.
 - Outcomes band:
   - **Data loss prevention block**
-  - **Rule Block**: Messages that were quarantined by Exchange mail flow rules (transport rules).
-  - **Malware block**: Messages that were identified as malware.<sup>\*</sup>
-  - **Phishing block**: Messages that were identified as phishing.<sup>\*</sup>
-  - **Spam block**: Messages that were identified as spam.<sup>\*</sup>
-  - **Impersonation block**: Messages that were detected as user impersonation or domain impersonation in Defender for Office 365.<sup>\*</sup>
-  - **Detonation block**: Messages that were detected during file or URL detonation by Safe Attachments policies or Safe Links policies in Defender for Office 365.<sup>\*</sup>
-  - **ZAP removed**: Messages that were removed by zero-hour auto purge (ZAP).<sup>\*</sup>
-  - **Delivered**: Messages that were delivered to users due to an allow.<sup>\*</sup>
+  - **Rule Block**: Messages quarantined by Exchange mail flow rules (transport rules).
+  - **Malware block**: Messages identified as malware.<sup>\*</sup>
+  - **Phishing block**: Messages identified as phishing.<sup>\*</sup>
+  - **Spam block**: Messages identified as spam.<sup>\*</sup>
+  - **Impersonation block**: Messages detected as user impersonation or domain impersonation in Defender for Office 365.<sup>\*</sup>
+  - **Detonation block**: Messages detected during file or URL detonation by Safe Attachments policies or Safe Links policies in Defender for Office 365.<sup>\*</sup>
+  - **ZAP removed**: Messages removed by zero-hour auto purge (ZAP).<sup>\*</sup>
+  - **Delivered**: Messages delivered to users due to an allow.<sup>\*</sup>
 
 If you hover over a horizontal band in the diagram, you see the number of related messages.
 
-<sup>\*</sup> If you select this element, the diagram expands to show further details. For a description of each element in the expanded nodes, see [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
+<sup>\*</sup> If you select this element, the diagram expands to show more details. For a description of each element in the expanded nodes, see [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
 
 :::image type="content" source="media/mail-flow-status-report-mailflow-view-details.png" alt-text="The Phishing block details in Mailflow view in the Mailflow status report." lightbox="media/mail-flow-status-report-mailflow-view-details.png":::
 
@@ -278,7 +282,7 @@ On the **Mailflow** tab, the :::image type="icon" source="media/m365-cc-sc-downl
 ## Malware detections report
 
 > [!NOTE]
-> This report has been deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
+> This report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
 
 ## Mail latency report
 
@@ -291,11 +295,11 @@ The **Post-delivery activities** report is available only in organizations with 
 ## Spam detections report
 
 > [!NOTE]
-> This report has been deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
+> This report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
 
 ## Spoof detections report
 
-The **Spoof detections** report shows information about messages that were blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection in EOP](anti-phishing-protection-spoofing-about.md).
+The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection in EOP](anti-phishing-protection-spoofing-about.md).
 
 The aggregate and detail views of the report allows for 90 days of filtering.
 
@@ -356,7 +360,7 @@ On the **Spoof mail report** page, the :::image type="icon" source="media/m365-c
 
 ## Submissions report
 
-The **Submissions** report shows information about items that admins have reported to Microsoft for analysis for the last 30 days. For more information about admin submissions, see [Use Admin Submission to submit suspected spam, phish, URLs, and files to Microsoft](submissions-admin.md).
+The **Submissions** report shows information about items that admins reported to Microsoft for analysis for the last 30 days. For more information about admin submissions, see [Use Admin Submission to submit suspected spam, phish, URLs, and files to Microsoft](submissions-admin.md).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Submissions**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/adminSubmissionReport>.
 
@@ -369,7 +373,7 @@ The chart shows the following information:
 - **Pending**
 - **Completed**
 
-The details table below the graph shows the same information and has the same available actions actions as the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>:
+The details table below the graph shows the same information and has the same available actions as the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>:
 
 - :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**
 - :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group**
@@ -410,14 +414,14 @@ The **Threat protection status** report is available in both EOP and Defender fo
 
 The report provides the count of email messages with malicious content. For example:
 
-- Files or website addresses (URLs) that were blocked by the anti-malware engine.
+- Files or website addresses (URLs) blocked by the anti-malware engine.
 - Files or messages affected by [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md)
-- Files or messages that were blocked by Defender for Office 365 features: [Safe Links](safe-links-about.md), [Safe Attachments](safe-attachments-about.md), and [impersonation protection features in anti-phishing policies](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+- Files or messages blocked by Defender for Office 365 features: [Safe Links](safe-links-about.md), [Safe Attachments](safe-attachments-about.md), and [impersonation protection features in anti-phishing policies](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 You can use the information in this report to identify trends or determine whether your organizational policies need adjustment.
 
 > [!TIP]
-> if a message is sent to five recipients, we count it as five different messages, not one message.
+> If a message is sent to five recipients, we count it as five different messages, not one message.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Submissions**, and then select **View details**. Or, to go directly to the report, use one of the following URLS:
 
@@ -439,7 +443,7 @@ In the **View data by Overview** view, the following detection information is sh
 - **Email malware**
 - **Email phish**
 - **Email spam**
-- **Content malware** (Defender for Office 365 only: Files detected by [Built-in virus protection in SharePoint Online, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md))
+- **Content malware** (Defender for Office 365 only: Files detected by [Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md))
 
 No details table is available below the chart.
 
@@ -466,7 +470,7 @@ When you're finished configuring the filters, select **Apply**, **Cancel**, or :
 :::image type="content" source="media/threat-protection-status-report-phishing-detection-tech-view.png" alt-text="The Detection technology view for phishing email in the Threat protection status report." lightbox="media/threat-protection-status-report-phishing-detection-tech-view.png":::
 
 > [!NOTE]
-> In May 2021, phishing detections in email were updated to include **message attachments** that contain phishing URLs. This change might shift some of the detection volume out of the **View data by Email \> Malware** view and into the **View data by Email \> Phish** view. In other words, message attachments with phishing URLs that were traditionally identified as malware now might be identified as phishing instead.
+> In May 2021, phishing detections in email were updated to include **message attachments** that contain phishing URLs. This change might shift some of the detection volume out of the **View data by Email \> Malware** view and into the **View data by Email \> Phish** view. In other words, message attachments with phishing URLs traditionally identified as malware now might be identified as phishing instead.
 
 In the **View data by Email \> Phish** and **Chart breakdown by Detection Technology** view, the following information is shown in the chart:
 
@@ -580,7 +584,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   If the **Detection** value **Bulk** isn't selected, the slider is grayed-out and bulk detections aren't included in the report.
 
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
-- **Direction**: **All** or enter **Inbound**, **Outbound** and **Intra-org**.
+- **Direction**: **All** or enter **Inbound**, **Outbound**, and **Intra-org**.
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -610,7 +614,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 :::image type="content" source="media/threat-protection-status-report-malware-detection-tech-view.png" alt-text="The Detection technology view for malware in the Threat protection status report." lightbox="media/threat-protection-status-report-malware-detection-tech-view.png":::
 
 > [!NOTE]
-> In May 2021, malware detections in email were updated to include **harmful URLs** in messages attachments. This change might shift some of the detection volume out of the **View data by Email \> Phish** view and into the **View data by Email \> Malware** view. In other words, harmful URLs in message attachments that were traditionally identified as phishing now might be identified as malware instead.
+> In May 2021, malware detections in email were updated to include **harmful URLs** in messages attachments. This change might shift some of the detection volume out of the **View data by Email \> Phish** view and into the **View data by Email \> Malware** view. In other words, harmful URLs in message attachments traditionally identified as phishing now might be identified as malware instead.
 
 In the **View data by Email \> Malware** and **Chart breakdown by Detection Technology** view, the following information is shown in the chart:
 
@@ -920,7 +924,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 
 In the **View data by System override** and **Chart breakdown by Reason** view, the following override reason information is shown in the chart:
 
-- **Data Loss Prevention**: Email messages that were quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
+- **Data Loss Prevention**: Email messages quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
 - **Exchange transport rule**
 - **Exclusive setting (Outlook)**
 - **IP Allow**
@@ -1046,7 +1050,7 @@ On the **Top malware** page, the :::image type="icon" source="media/m365-cc-sc-c
 
 The **Top senders and recipients** report is available in both EOP and Defender for Office 365; however, the reports contain different data. For example, EOP customers can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-The **Top senders and recipients** report shows the top 20 message senders in the organization, as well as the top 20 recipients for messages that were detected by EOP and Defender for Office 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
+The **Top senders and recipients** report shows the top 20 message senders in the organization, as well as the top 20 recipients for messages detected by EOP and Defender for Office 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Top senders and recipients**.
 
@@ -1104,7 +1108,7 @@ The **URL protection report** is available only in Microsoft Defender for Office
 > [!IMPORTANT]
 > In order for the **User reported messages** report to work correctly, **audit logging must be turned on** in your Microsoft 365 organization (it's on by default). For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
-The **User reported messages** report shows information about email messages that users have reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
+The **User reported messages** report shows information about email messages that users reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **User reported messages**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/userSubmissionReport>.
 
@@ -1172,11 +1176,11 @@ Depending on the report and the specific view in the report, one or more of the 
 > [!TIP]
 >
 > - The exported data is affected by any filters that are configured in the report at the time of export.
-> - If the exported data exceeds 150000 entries, the data is split into multiple files.
+> - If the exported data exceeds 150,000 entries, the data is split into multiple files.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
 
-2. In the **Export conditions** flyout that opens, review and configure the following settings:
+2. In the **Export conditions** flyout that opens, review, and configure the following settings:
 
    - **Select a view to export**: Select one of the following values:
      - **Summary**: Data from the last 90 days is available. This is the default value.
