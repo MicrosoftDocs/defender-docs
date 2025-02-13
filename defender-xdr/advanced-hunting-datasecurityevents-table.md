@@ -1,7 +1,6 @@
 ---
 title: DataSecurityEvents table in the advanced hunting schema
-description: Learn about the DataSecurityBehaviors table of the advanced hunting schema, which contains information about user activities that violate customer defined or default policies in Microsoft Purview suite of solutions.
-search.appverid: met150
+description: Learn about the DataSecurityEvents table of the advanced hunting schema, which contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. 
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
@@ -35,7 +34,7 @@ ms.date: 02/11/2025
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `DataSecurityBehaviors` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user activities that violate customer defined or default policies in Microsoft Purview suite of solutions. Each record represents a single user activity enriched with proprietary Microsoft detections (like sensitive info types) and customer-defined enrichment labels like domain categories, sensitivity labels, and the like.
+The `DataSecurityEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. Each log represents a single user activity enriched with proprietory Microsoft detections (like sensitive info types) and user-defined enrichment labels like domain categories, sensitivity labels, and others.
 
 Use this reference to construct queries that return information from this table.
 
@@ -43,68 +42,66 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
-|`Application`|	`string`|Application that performed the recorded action|
-|`DeviceId`|	`string`|	Device ID provided by Microsoft Defender for Endpoint|
-|`DeviceName`|	`string`|	Fully Qualified Domain Name(FQDN) of the device|
-|`AadDeviceId`|	`guid`|	Unique identifier for the device in the Azure Active Directory on which the activity was performed|
-|`IsManagedDevice`|	`bool`|	 Indicates if the device is managed by the organization|
-|`DlpPolicyMatchInfo`|	`string`|	Information around the list of DLP policies matching this event; displayed in JSON array format|
-|`DLPPolicyEnforcementMode`|	`int`|	Indicates whether the DLP enforcement mode is one of audit/warn(block with override)/block/allow(audit without alerts)|
-|`DlpPolicyRuleMatchInfo`|	`string`|	Details of DLP policy rules that matched with this event; displayed in JSON array format|
-|`FileRenameInfo`|`string`|	Details of the file prior to this event|
-|`PreviousFileName` |`string`|Details of the file prior to this event|
-|`PrevioudFileExtension`|`string`| Extension of the file prior to this event|
-|`PhysicalAccessPointId`|	`string`|	Unique identifier for the Physical access point|
-|`PhysicalAccessPointName`|	`string`|	Name of the Physical access point|
-|`PhysicalAccessStatus`	|`string`|	The status of physical access whether it succeeded or failed|
-|`PhysicalAssetTag`|`string`	|The tag assigned to the asset as per the config defined in Microsoft Insider Risk Management global settings|
-|`RemovableMediaManufacturer`|`string`|	The manufacturer name of the removable device|
-|`RemovableMediaModel`|	`string`|	The model name of the removable device|
-|`RemovableMediaSerialNumber`|	`string`|The serial number of the removable device|
-|`TeamsChannelName`|`string`|	Name of the teams channel|
-|`TeamsChannelType`|	`string`g|	Type of the teams channel|
-|`TeamsTeamName`|	`string`	|Name of the team|
-|`UserAlternateEmails`|	`string`|	Comma separated string of alternate mails or aliases of user|
+|`ApplicationNames`|	`string`|List of application names used or related to the event|
+|`DeviceId`|	`string`|	Unique identifier for the device in Microsoft Defender for Endpoint|
+|`DeviceName`|	`string`|	Fully qualified domain name(FQDN) of the device|
+|`AadDeviceId`|	`guid`|	Unique identifier for the device in Microsoft Entra ID|
+|`IsManagedDevice`|	`bool`| Indicates if the device is managed by the organization (True) or not (False)|
+|`DlpPolicyMatchInfo`|	`string`|	Information around the list of data loss prevention (DLP) policies matching this event|
+|`DlpPolicyEnforcementMode`|	`int`|	Indicates the Data Loss Prevention policy that was enforced; value can be: 0 (None), 1 (Audit), 2 (Warn), 3 (Warn and bypass), 4 (Block), 5 (Allow)|
+|`DlpPolicyRuleMatchInfo`|	`string`|	Details of the data loss prevention (DLP)  rules that matched with this event; displayed in JSON array format|
+|`FileRenameInfo`|`string`|	Details of the file (file name and extension) prior to this event|
+|`PhysicalAccessPointId`|	`string`|	Unique identifier for the physical access point|
+|`PhysicalAccessPointName`|	`string`|	Name of the physical access point|
+|`PhysicalAccessStatus`	|`string`|	Status of physical access, whether it succeeded or failed|
+|`PhysicalAssetTag`|`string`	|Tag assigned to the asset as configured in Microsoft Insider Risk Management global settings|
+|`RemovableMediaManufacturer`|`string`|	Manufacturer name of the removable device|
+|`RemovableMediaModel`|	`string`|	Model name of the removable device|
+|`RemovableMediaSerialNumber`|	`string`|Serial number of the removable device|
+|`TeamsChannelName`|`string`|	Name of the Teams channel|
+|`TeamsChannelType`|	`string`|	Type of the Teams channel|
+|`TeamsTeamName`|	`string`	|Name of the Teams team |
+|`UserAlternateEmails`|	`string`|	Alternate emails or aliases of the user|
 |`AccountUpn`|	`string`|	User principal name (UPN) of the account|
 |`AccountObjectId`|	`string`|	Unique identifier for the account in Microsoft Entra ID|
-|`Department`|`string`|	Department of the user/actor|
-|`SourceCodeInfo`|	`string`|	Captures the details of the source code in related activities|
-|`CcPolicyMatchInfo`|	JSON object | xxx	
-|`IPAddress`|	`string`|	Comma separated string of IP Addresses of the clients on which the activity was performed. This can contain multiple IPs if the activity is related to MCAS alerts.|
-|`Timestamp`|	`datetime`|	Time stamp of the event|
-|DeviceSourceLocationType|	`int`|	Type of the source location for endpoint signals. Represented by a resolved enum value|
-|`DeviceDestinationLocationType`|	Int|	Destination location of the activity. Represented by a resolved enum value|
-|`IrmPolicyMatchInfo`|	JSON Object| xxx |	
-|`UnallowedUrlDomains`|	`string`|	List of websites, service URLs involved in this event that are configured as Unallowed in IRM Global settings|
-|`ExternalUrlDomains`|	`string`|	List of websites, service URLs involved in this event that are classified as external in IRM Global settings|
-|`UrlDomainInfo`|	`string`|	List of websites, service URLs in the behavior involved in the behavior|
-|`SourceUrlDomain`|	`string`|	Originating domain for the endpoint and email signals|
-|`TargetUrlDomain`|	`string`|	Details of the target domain that content is shared with or user has browsed to|
-|`EmailAttachmentCount`|`int`|  xxx	|
+|`Department`|`string`|	Name of the department that the account user belongs to|
+|`SourceCodeInfo`|	`string`|	Details of the source code repository involved in the event|
+|`CcPolicyMatchInfo`|	`JSON object` | Details of the Communications Compliance policy matches for this event |
+|`IpAddress`|	`string`|	IP addresses of the clients on which the activity was performed; can contain multiple Ips if related to Microsoft Defender for Cloud Apps alerts|
+|`Timestamp`|	`datetime`|	Date and time when the event was recorded|
+|`DeviceSourceLocationType`|	`int`|	Indicates the type of location where the endpoint signals originated from; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
+|`DeviceDestinationLocationType`|	Int|	Indicates the type of location where the endpoint signals connected to; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
+|`IrmPolicyMatchInfo`|	`JSON Object`| Details of Insider Risk Management policy matches for the content involved in the event |	
+|`UnallowedUrlDomains`|	`string`|	Websites or service URLs involved in this event that are configured as Unallowed in Insider Risk Management global settings|
+|`ExternalUrlDomains`|	`string`|	Websites or service URLs involved in this event that are classified as External in Insider Risk Management global settings|
+|`UrlDomainInfo`|	`string`|	Details about the websites or service URLs involved in the event|
+|`SourceUrlDomain`|	`string`|	Domain where the device and email signals originated|
+|`TargetUrlDomain`|	`string`|	Domain where the content was shared with or the user has browsed to|
+|`EmailAttachmentCount`|`int`| Number of email attachments	|
 |`EmailAttachmentInfo`|	Array<JSON Object>|	Details of email attachments|
-|`InternetMessageId`|`string`	|The internet message id of the entity related to email or teams message. This field is relevant to exchange infra |
-|`NetworkMessageId`|	`guid`|	The network message id of the entity related to email. This field is relevant to exchange infra |
+|`InternetMessageId`|`string`	|Public-facing identifier for the email or Teams message that is set by the sending email system |
+|`NetworkMessageId`|	`guid`|	Unique identifier for the email, generated by Microsoft 365 |
 |`EmailSubject`|	`string`|	Subject of the email|
-|`ObjectId`|	`string`	|File full path (URL). For SharePoint and OneDrive for Business activity, the full path name of the file or folder accessed by the user. For MCAS alerts it is the alert id. For emails it is internet message id.|
-|`ObjectName`|	`string`|	Name on the item on which the activity was done. In case of files it includes the extension also.|
-|`ObjectType`|	`string`|	A unique enumeration value indicates type included in the activity.|
-|`ObjectSize`|	`int`|	Size of the item in bytes.|
-|`IsHidden`|	`bool`|	Indicates whether the user marks the content as hidden.
-|`Id`	|`guid`|	Unique id of the activity log|
-|`ActionType`|`string`|	This field gives a more verbose context around the type of activity done as per the audit operation and some specific fields (in case of few specific operation). This is a comma separated list which might have multiple activity description for some particular activities like for FileCreated operation it can be "Hidden File Created" or "Sensitive File Created" or both.|
-|`SensitiveInfoTypeInfo`|	Array<JSON Object>|	Information regarding the DLP sensitive information.|
-|`SensitivtyLabelIds`|`string`|	The current MIP sensitivity label ID associated with the item.|
-|`SharepointSiteSensitivityLabelIds`|`string`|	The MIP sensitivity label ID assigned to the parent site of the item related to SharePoint activities.|
-|`PreviousSensitivityLabelId`|	`string`|	The old MIP sensitivity label Id for the item in case of activities where sensitive label was changed like SpoFileLabelDowngraded, SpoFileLabelRemoved, SpoSiteLabelRemoved.|
-|`Operation`|	`string`|	The name of the admin activity.|
-|`RecipientEmailAddress`|	`string`|	Comma separated list of recipients for the corresponding activity. It could be the recipients of email, SharePoint shared items, teams message, teams channel member addition action etc.|
+|`ObjectId`|	`string`	|Unique identifier of the object that the recorded action was applied to, in case of files it includes the extension|
+|`ObjectName`|	`string`|	Name of the object that the recorded action was applied to, in case of files it includes the extension|
+|`ObjectType`|	`string`|	Type of object, such as a file or a folder, that the recorded action was applied to|
+|`ObjectSize`|	`int`|	Size of the object in bytes|
+|`IsHidden`|	`bool`|	Indicates whether the user has marked the content as hidden (True) or not (False) |
+|`ActivityId`	|`guid`|	Unique identifier of the activity log|
+|`ActionType`|`string`|	Type of activity that triggered the event|
+|`SensitiveInfoTypeInfo`|	Array<JSON Object>|	Details of Data Loss Prevention sensitive info types detected in the impacted asset|
+|`SensitivityLabelId`|`string`|The current Microsoft Information Protection sensitivity label ID associated with the item|
+|`SharepointSiteSensitivityLabelIds`|`string`|	The current Microsoft Information Protection sensitivity label ID assigned to the parent site of the item related to SharePoint activities |
+|`PreviousSensitivityLabelId`|	`string`|The previous Microsoft Information Protection sensitivity label ID associated with the item in case of activities where the sensitivity label was changed|
+|`Operation`|	`string`|	Name of the admin activity|
+|`RecipientEmailAddress`|	`string`|	Email address of the recipient, or email address of the recipient after distribution list expansion|
 |`SiteUrl`|	`string` | xxx |	
 |`SourceRelativeUrl`|	`string`| xxx |	
-|`TargetFilePath`|	`string`|	Target file path for end point activities.|
+|`TargetFilePath`|	`string`|	Target file path of endpoint activities|
 |`PrinterName`|	`string`|	List of printers involved in the behavior|
-|`Workload`|`string`|	The Microsoft 365 service where the activity occurred.|
-|`IrmActionCategory`|	`enum`|	A unique enumeration value indicating the activity category in Microsoft Purview Insider risk management.|
-|`SequenceCorrelationId`|	xx	|Details of the sequence activity|
+|`Workload`|`string`|	The Microsoft 365 service where the event occurred|
+|`IrmActionCategory`|	`enum`|	A unique enumeration value indicating the activity category in Microsoft Purview Insider Risk Management|
+|`SequenceCorrelationId`|`string`	|Details of the sequence activity|
 
 
 ## Related articles

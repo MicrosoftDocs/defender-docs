@@ -227,7 +227,11 @@
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
-            href: advanced-hunting-cloudprocessevents-table.md                     
+            href: advanced-hunting-cloudprocessevents-table.md
+          - name: DataSecurityBehaviors
+            href: advanced-hunting-datasecuritybehaviors-table.md  
+          - name: DataSecurityEvents
+            href: advanced-hunting-datasecurityevents-table.md                                               
           - name: DeviceBaselineComplianceAssessment
             href: advanced-hunting-devicebaselinecomplianceassessment-table.md
           - name: DeviceBaselineComplianceAssessmentKB
