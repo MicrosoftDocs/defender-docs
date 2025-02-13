@@ -981,6 +981,9 @@
           - name: Enable Microsoft Defender for SQL servers on machines
             displayName: hybrid, arc, Azure Defender
             href: defender-for-sql-usage.md
+          - name: Troubleshoot guide - SQL Server deployment on machines
+            displayName: Troubleshoot guide, SQL, servers, machines
+            href: troubleshoot-sql-machines-guide.md
           - name: Enable Defender for SQL servers on machines at scale
             displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
             href: enable-defender-sql-at-scale.md
