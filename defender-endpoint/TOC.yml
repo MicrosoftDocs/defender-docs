@@ -1534,17 +1534,21 @@
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: /defender-xdr/microsoft-threat-actor-naming
+          href: /unified-secops-platform/microsoft-threat-actor-naming
+
         - name: Malware names
-          href: /defender-xdr/malware-naming
+          href: /unified-secops-platform/malware-naming
+
         - name: How Microsoft identifies malware and PUA
           href: /defender-xdr/criteria
         - name: Submit files for analysis
-          href: /defender-xdr/submission-guide
+          href: /unified-secops-platform/submission-guide
+
         - name: Troubleshoot MSI portal errors caused by admin block
           href: /defender-xdr/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: /defender-xdr/virus-initiative-criteria
+          href: /unified-secops-platform/virus-initiative-criteria
+
         - name: Software developer FAQ
           href: /defender-xdr/developer-faq        
     - name: Malware information

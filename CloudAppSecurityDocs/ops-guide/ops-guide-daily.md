@@ -146,7 +146,7 @@ Based on the data you review, you might want to create new or adjust app governa
 
 For more information, see:
 
-- [View and manage incidents and alerts](/microsoft-365/security/defender/mto-incidents-alerts)
+- [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [View your app details with app governance](../app-governance-visibility-insights-view-apps.md)
 - [Create app policies in app governance](../app-governance-app-policies-create.md).
 
@@ -163,7 +163,7 @@ App governance uses machine learning-based detection algorithms to detect anomal
 
 For more information, see:
 
-- [View and manage incidents and alerts](/microsoft-365/security/defender/mto-incidents-alerts)
+- [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [View your app details with app governance](../app-governance-visibility-insights-view-apps.md)
 - [Getting detailed information on an app](../app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
 
@@ -199,7 +199,7 @@ By default, there's no access or session policies deployed, and therefore no rel
 
 For more information, see:
 
-- [View and manage incidents and alerts](/microsoft-365/security/defender/mto-incidents-alerts)
+- [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [Protect apps with Microsoft Defender for Cloud Apps Conditional Access app control](../proxy-intro-aad.md)
 - [Block and protect download of sensitive data to unmanaged or risky devices](../best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices)
 - [Secure collaboration with external users by enforcing real-time session controls](../best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls)
@@ -231,7 +231,7 @@ Create app discovery policies to start alerting and tagging newly discovered app
 
 For more information, see:
 
-- [View and manage incidents and alerts](/microsoft-365/security/defender/mto-incidents-alerts)
+- [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [Cloud discovery policies](../policies-cloud-discovery.md)
 - [Create cloud discovery policies](../cloud-discovery-policies.md)
 - [Set up cloud discovery](../set-up-cloud-discovery.md)
@@ -298,7 +298,7 @@ Use the results of these queries to adjust existing file policies or create new 
 
 For more information, see:
 
-- [View and manage incidents and alerts](/microsoft-365/security/defender/mto-incidents-alerts)
+- [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [Information protection policies](../policies-information-protection.md).
 
 ## Related content
