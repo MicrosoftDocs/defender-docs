@@ -1,59 +1,52 @@
 ---
-title: Benefits and features of Microsoft Defender for Azure SQL
-description: Learn how Microsoft Defender for Azure SQL helps you discover, track, and mitigate vulnerabilities, and alerts you to potential threats.
+title: Benefits and Features of Defender for SQL
+description: Learn how Microsoft Defender for SQL helps you discover, track, and mitigate vulnerabilities, and alerts you to potential threats.
 ms.date: 03/12/2024
 ms.topic: overview
 ms.custom: references_regions
 ms.author: dacurwin
 author: dcurwin
-#customer intent: As a database administrator, I want to understand the benefits and features of Microsoft Defender for Azure SQL so that I can protect my databases effectively.
+#customer intent: As a database administrator, I want to understand the benefits and features of Microsoft Defender for SQL so that I can protect my databases effectively.
 ---
 
-# Overview of Microsoft Defender for Azure SQL
+# Overview of Microsoft Defender for SQL
 
-Microsoft Defender for Azure SQL helps you discover and mitigate potential [database vulnerabilities](sql-azure-vulnerability-assessment-overview.md) and alerts you to [anomalous activities](#advanced-threat-protection) that might indicate a threat to your databases.
+In Microsoft Defender for Cloud, the *Defender for SQL* component of the Defender for Databases plan helps you discover and mitigate potential [database vulnerabilities](sql-azure-vulnerability-assessment-overview.md). It alerts you to anomalous activities that might indicate a threat to your databases.
 
-- [Vulnerability assessment](#discover-and-mitigate-vulnerabilities): Scan databases to discover, track, and remediate vulnerabilities. Learn more about [vulnerability assessment](sql-azure-vulnerability-assessment-overview.md).
-- [Threat protection](#advanced-threat-protection): Receive detailed security alerts and recommended actions based on SQL Advanced Threat Protection to mitigate threats. Learn more about [SQL Advanced Threat Protection](/azure/azure-sql/database/threat-detection-overview).
+When you enable Defender for SQL, all supported resources within the subscription are protected. Future resources that you create on the same subscription will also be protected. For information about billing, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-When you enable Defender for Azure SQL, all supported resources within the subscription are protected. Future resources created on the same subscription will also be protected.
+Defender for SQL helps protect read/write replicas of:
 
-Defender for Azure SQL is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
-
-Defender for Azure SQL protects read-write replicas of the following SQL versions of :
--  Azure SQL [single databases](/azure/azure-sql/database/single-database-overview) and [elastic pools](/azure/azure-sql/database/elastic-pool-overview).
+- Azure SQL [single databases](/azure/azure-sql/database/single-database-overview) and [elastic pools](/azure/azure-sql/database/elastic-pool-overview).
 - [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview).
-- [Azure Synapse Analytics (formerly SQL DW) dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
+- [Azure Synapse Analytics (formerly Azure SQL Data Warehouse) dedicated SQL pools](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
 
-Defender for Azure SQL protects the following SQL versions:
-- SQL Server version: 2012, 2014, 2016, 2017, 2019, 2022.
-- [SQL on Azure virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)
-- [SQL Server on Azure Arc-enabled servers](/sql/sql-server/azure-arc/overview).
+Defender for SQL helps protect the following SQL Server products:
 
-## What are the benefits of Microsoft Defender for Azure SQL?
+- SQL Server version 2012, 2014, 2016, 2017, 2019, and 2022
+- [SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview)
+- [SQL Server on Azure Arc-enabled servers](/sql/sql-server/azure-arc/overview)
 
-### Discover and mitigate vulnerabilities
+## Benefits of Defender for SQL
 
-A vulnerability assessment service discovers, tracks, and helps you fix potential database vulnerabilities. Assessment scans provide an overview of your SQL machines' security state and details of any security findings. Defender for Azure SQL helps you identify and mitigate potential database vulnerabilities and detect anomalous activities that could indicate threats to your databases.
+### Vulnerability assessment
 
-Learn more about [vulnerability assessment for Azure SQL Database](./sql-azure-vulnerability-assessment-overview.md).
+A vulnerability assessment service in Defender for SQL discovers, tracks, and helps you fix potential database vulnerabilities. Assessment scans provide an overview of your SQL machines' security state and details of any security findings, including anomalous activities that could indicate threats to your databases. [Learn more about the vulnerability assessment](./sql-azure-vulnerability-assessment-overview.md).
 
-### Advanced threat protection
+### Threat protection
 
-An advanced threat protection service continuously monitors your SQL servers for threats like SQL injection, brute-force attacks, and privilege abuse. This service provides action-oriented security alerts in Microsoft Defender for Cloud with details of the suspicious activity, guidance on how to mitigate the threats, and options for continuing your investigations with Microsoft Sentinel. Learn more about [advanced threat protection](/azure/azure-sql/database/threat-detection-overview).
+A service in Defender for SQL that's based on [Advanced Threat Protection](/azure/azure-sql/database/threat-detection-overview) continuously monitors your SQL servers for threats like:
 
-Threat intelligence-enriched security alerts are triggered when there are:
+- **Potential SQL injection attacks**: For example, vulnerabilities detected when applications generate a faulty SQL statement in the database.
+- **Anomalous database access and query patterns**: For example, an abnormally high number of failed sign-in attempts with different credentials (a brute force attack).
+- **Suspicious database activity**: For example, a legitimate user accessing a SQL server from a breached computer that communicated with a crypto-mining command and control (C&C) server.
 
-- **Potential SQL injection attacks** - including vulnerabilities detected when applications generate a faulty SQL statement in the database.
-- **Anomalous database access and query patterns** - such as, an abnormally high number of failed sign-in attempts with different credentials (a brute force attempt).
-- **Suspicious database activity** - such as, a legitimate user accessing an SQL Server from a breached computer that communicated with a crypto-mining C&C server.
+The threat protection service provides action-oriented security alerts. These alerts include details of the suspicious activity, guidance on how to mitigate the threats, and options for continuing your investigations by using Microsoft Sentinel.
 
-Alerts include details of the incident that triggered them and recommendations on how to investigate and remediate threats. Learn more about the [security alerts for SQL servers](alerts-sql-database-and-azure-synapse-analytics.md).
+[Learn more about the security alerts for SQL servers](alerts-sql-database-and-azure-synapse-analytics.md).
 
-## Next steps
+## Related content
 
-In this article, you learned about Microsoft Defender for Azure SQL. Now you can:
-
-- [Enable Microsoft Defender for Azure SQL](quickstart-enable-database-protections.md)
-- [How Microsoft Defender for Azure SQL can protect SQL servers anywhere](https://www.youtube.com/watch?v=V7RdB6RSVpc).
-- [Set up email notifications for security alerts](configure-email-notifications.md)
+- [Protect your databases with Defender for Databases](quickstart-enable-database-protections.md)
+- [How Defender for SQL can protect SQL servers anywhere](https://www.youtube.com/watch?v=V7RdB6RSVpc) (video)
+- [Configure email notifications for alerts and attack paths](configure-email-notifications.md)
