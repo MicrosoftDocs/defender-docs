@@ -419,9 +419,9 @@
     - name: Manage multitenant environments
       items:
         - name: Overview
-          href: /unified-secops-platform/mto-overview
+          href: /unified-secops-platform/mto-overview?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
         - name: Set up multitenant management
-          href: /unified-secops-platform/mto-requirements
+          href: /unified-secops-platform/mto-requirements?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
     - name: Manage roles and permissions
       items:
         - name: Manage access and roles in Microsoft Defender XDR
@@ -565,7 +565,7 @@
         - name: Responding to ransomware attacks
           href: playbook-responding-ransomware-m365-defender.md
       - name: Threat actor naming
-        href: /unified-secops-platform/microsoft-threat-actor-naming
+        href: /unified-secops-platform/microsoft-threat-actor-naming?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
       - name: Understand threat intelligence concepts
         href: /defender-endpoint/threat-indicator-concepts          
       - name: Software developer FAQ
