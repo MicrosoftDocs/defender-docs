@@ -18,6 +18,6 @@ ms.subservice: ios
 search.appverid: met150
 ---
 
-# What's new in Microsoft Defender for Endpoint on iOS
+# New user experiences in Microsoft Defender for Endpoint on iOS
 
 tbd...
