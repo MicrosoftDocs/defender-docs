@@ -37,7 +37,7 @@ Defender for Office 365 helps organizations secure their enterprise by offering 
 
 In addition to the detection of advanced threats, the following video shows how the SecOps capabilities of Defender for Office 365 can help your team respond to threats:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMmIe]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=29ff5c90-7b71-468c-92b9-d1d8ca9ee8fa]
 
 ### Audit mode vs. blocking mode for Defender for Office 365
 

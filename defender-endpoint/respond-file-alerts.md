@@ -28,7 +28,7 @@ ms.date: 06/26/2024
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -288,7 +288,7 @@ Use the deep analysis feature to investigate the details of any file, usually du
 :::image type="content" source="/defender/media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="/defender/media/defender-endpoint/deep-analysis.png":::
 
 Learn about deep analysis in the following video:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c6c613b8-28dc-40cc-926d-8469472ebdfb]
 
 **Submit for deep analysis** is enabled when the file is available in the Defender for Endpoint backend sample collection, or if it was observed on a Windows 10 device that supports submitting to deep analysis.
 

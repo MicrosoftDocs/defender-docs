@@ -94,6 +94,6 @@ To learn more about alerts in the Microsoft Defender portal, see [Manage alerts]
 ## Related content
 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
-- [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+- [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
 - [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
 

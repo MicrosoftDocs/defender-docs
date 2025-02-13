@@ -13,7 +13,7 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: dansimp #Required; your GitHub user alias, with correct capitalization.
   ms.author: dansimp #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/26/2024
+  ms.date: 01/06/2025
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -35,7 +35,7 @@ landingContent:
       - linkListType: video
         links:
           - text: Overview video
-            url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Bzww
+            url: https://learn-video.azurefd.net/vod/player?id=a729be92-46e7-4c9b-89c4-cc2de0bc851f
 
 
 # Card
@@ -63,52 +63,36 @@ landingContent:
           url: deploy-supported-services.md
         - text: Setup guides for Microsoft Defender XDR
           url: deploy-configure-m365-defender.md
-# Card
-  - title: Microsoft Defender for Identity
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: What is Microsoft Defender for Identity?
-            url: /defender-for-identity/what-is
-          - text: Microsoft Defender for Identity architecture
-            url: /defender-for-identity/architecture
-
-   # Card
-  - title: Microsoft Defender for Office 365
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: What is Microsoft Defender for Office 365?
-            url: /defender-office-365/mdo-about
-          - text: Microsoft Defender for Office 365 service description
-            url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
-          - text: Microsoft Defender for Office 365 in Microsoft Defender XDR
-            url: microsoft-365-security-center-mdo.md
-          - text: Redirecting Microsoft Defender for Office 365 in Microsoft Defender XDR
-            url: microsoft-365-security-center-mdo.md
 
   # Card
-  - title: Microsoft Defender for Endpoint
+  - title: Microsoft's unified security operations platform
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Microsoft Defender for Endpoint?
+          - text: "What is Microsoft's unified SecOps platform?"
+            url: /unified-secops-platform/overview-unified-security
+          - text: "Microsoft Defender portal overview"
+            url: /unified-secops-platform/overview-defender-portal
+      - linkListType: deploy
+        links:
+          - text: "Plan your unified SecOps deployment"
+            url: /unified-secops-platform/overview-plan
+          - text: "Deploy Microsoft's unified SecOps platform"
+            url: /unified-secops-platform/overview-deploy
+
+# Card
+  - title: Microsoft Defender XDR services
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Microsoft Defender for Identity
+            url: /defender-for-identity/what-is
+          - text: Microsoft Defender for Office 365
+            url: /defender-office-365/mdo-about
+          - text: Microsoft Defender for Endpoint
             url: /defender-endpoint/microsoft-defender-endpoint
-          - text: Defender for Endpoint in Microsoft Defender XDR
-            url: microsoft-365-security-center-mde.md
-          - text: Redirecting Defender for Endpoint in Microsoft Defender XDR
-            url: microsoft-365-security-mde-redirection.md
-
-
-   # Card
-  - title: Microsoft Defender for Cloud Apps
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: What is Microsoft Defender for Cloud Apps?
+          - text: Microsoft Defender for Cloud Apps
             url: /cloud-app-security/what-is-cloud-app-security
-          - text: Get started with Microsoft Defender for Cloud Apps
-            url: /cloud-app-security/getting-started-with-cloud-app-security
 
 # Card
   - title: Manage incidents and alerts

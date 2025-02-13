@@ -101,7 +101,7 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 
 This section outlines the general steps you to onboard devices (endpoints).
 
-1. [Watch this video](https://www.microsoft.com/videoplayer/embed/RE4bGqr) for a quick overview of the onboarding process and learn about the available tools and methods.
+1. [Watch this video](https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60) for a quick overview of the onboarding process and learn about the available tools and methods.
 
 2. Review your [device onboarding tool options](onboarding.md) and select the most appropriate option for your environment. 
 

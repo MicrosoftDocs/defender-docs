@@ -6,7 +6,7 @@ author: deniseb
 ms.author: deniseb
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 12/11/2024
+ms.date: 01/24/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -46,7 +46,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 - On macOS Sequoia (Version 15.0 - 15.1.1), users may encounter prompts about incoming network connections from applications when the native firewall is active.  
 
    ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
-
+  
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't impact Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web).  This issue is fixed in macOS Sequoia 15.2.
 
 ## Sequoia support
@@ -63,6 +63,35 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 ### Behavior Monitoring for macOS is now in public preview
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+
+### Jan-2025 (Build: 101.24122.0005  | Release version: 20.124122.5.0)
+
+| Build:             | **101.24122.0005**    |
+|--------------------|-----------------------|
+| Release version:   | **20.124122.4.0**     |
+| Engine version:    | **1.1.24080.11**      |
+| Signature version: | **1.419.351.0**       |
+
+##### What's new
+
+- Removed support of macOS 12, the minimal requirement is now macOS 13.0 or later
+- Fix: Defender quarantines a file even if it is marked as immutable
+- `mdatp health` can return [`out_of_date`](device-health-microsoft-defender-antivirus-health.md#up-to-date-definitions) status for `definitions_status`
+- Bug and performance fixes
+
+### Dec-2024 (Build: 101.24102.0018  | Release version: 20.124102.18.0)
+
+| Build:             | **101.24102.0018**    |
+|--------------------|-----------------------|
+| Release version:   | **20.124102.18.0**    |
+| Engine version:    | **1.1.24080.10**      |
+| Signature version: | **1.419.298.0**       |
+
+##### What's new
+
+- **Improved User/Group Permission Handling** - Added reporting in `mdatp-health` for user/group permission issues for Defender files. On restart Defender attempts to cure these issues.
+- Bug and performance fixes.
+
 
 ### Oct-2024 (Build: 101.24092.0004  | Release version: 20.124092.4.0)
 
@@ -98,15 +127,15 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- Resolved the issue causing outdated vulnerability assessments impacting some MAC OSs devices
+- Resolved the issue causing outdated vulnerability assessments impacting some macOS devices
 
 ### Aug-2024 (Build: 101.24072.0006  | Release version: 20.124072.6.0)
 
 | Build:             | **101.24072.0006**    |
 |--------------------|-----------------------|
-| Release version:   | 20.124072.6.0         |
-| Engine version:    | 1.1.24060.7           |
-| Signature version: | 1.417.325.0           |
+| Release version:   | **20.124072.6.0** |
+| Engine version:    | **1.1.24060.7**  |
+| Signature version: | **1.417.325.0**  |
 
 ##### What's new
 
@@ -116,9 +145,9 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 | Build:             | **101.24062.0009**         |
 |--------------------|-----------------------|
-| Release version:   | 20.124062.9.0 |
-| Engine version:    | 1.1.24050.7       |
-| Signature version: | 1.411.410.0      |
+| Release version:   | **20.124062.9.0** |
+| Engine version:    | **1.1.24050.7**       |
+| Signature version: | **1.411.410.0**      |
 
 ##### What's new
 

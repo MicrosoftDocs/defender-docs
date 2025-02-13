@@ -54,7 +54,7 @@ Deployment of Microsoft Defender for Endpoint on mobile can be done via Microsof
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMpiC]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c944a31c-0017-4707-a1bc-afff9e2f2e00]
 
 ### Deploy
 
@@ -115,7 +115,7 @@ iOS Dedicated/shared/kiosk device enrollment isn't supported.
 
   <br/>
 
-  > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMwR1]
+  > [!VIDEO https://learn-video.azurefd.net/vod/player?id=eac95cd5-17b0-47ca-8819-41d7d5247af9]
 
 ### Simplify Onboarding
 

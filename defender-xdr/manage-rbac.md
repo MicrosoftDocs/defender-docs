@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: overview
-ms.date: 07/02/2024
+ms.date: 11/17/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -30,6 +30,7 @@ search.appverid: met150
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Security Exposure Management](/security-exposure-management/)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
@@ -50,11 +51,10 @@ Centralized permissions management is supported for the following solutions:
 |Microsoft Defender for Identity|Full support for all identity data and actions. </br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
 |Microsoft Defender for Cloud|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
 |Microsoft Security Exposure Management|Full support for all Exposure Management data and actions, including Microsoft Secure Score data.|
+|Microsoft Defender for Cloud Apps|Full support for all cloud apps data and actions. </br></br> **Note:** Once Unified RBAC is activated, some built-in scoped roles will no longer be supported. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions).|
 
 > [!NOTE]
 > Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview compliance portal.
->
-> This offering isn't currently available for Microsoft Defender for CloudApps.
 
 ## Before you start
 
@@ -108,6 +108,6 @@ Use the following steps as a guide to start using the Microsoft Defender XDR Uni
 
 Watch the following video to see the preceding steps in action:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW12hyh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0b4bc29d-0b8b-41f1-ad8b-105b0d0386f8]
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

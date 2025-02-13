@@ -31,7 +31,7 @@ Defender for Cloud Apps operates in the Microsoft Azure data centers in the foll
 |**Customers whose tenants are provisioned in the European Union or the United Kingdom**     |    Either the European Union and/or the United Kingdom      |
 |**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned    |
 
-In addition to the locations above, the App Governance features within Defender for Cloud Apps operate in the Microsoft Azure data centers in the following geographical regions: 
+In addition to the locations above, the App Governance features within Defender for Cloud Apps operate in the Microsoft Azure data centers in the following geographical regions listed below. Customer with App Governance enabled will have data stored within the data storage location the customer provisions in above, and in a second data storage location as described below: 
 
 |Customer provisioning location  |Data storage location  |
 |---------|---------|
@@ -65,7 +65,7 @@ Defender for Cloud Apps shares data, including customer data, among the followin
 - Microsoft Defender for Cloud
 - Microsoft Sentinel
 - Microsoft Defender for Endpoint
-- Microsoft Security Exposure Management (Preview)
+- Microsoft Security Exposure Management
 - Microsoft Purview
 - Microsoft Entra ID Protection
 

@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud-apps.md",
+      "redirect_url": "/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/microsoft-365-security-center-mdi.md",
+      "redirect_url": "/defender-for-identity/microsoft-365-security-center-mdi",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-xdr/eval-create-eval-environment.md",
       "redirect_url": "/defender-xdr/pilot-deploy-overview",
       "redirect_document_id": false
@@ -121,6 +131,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "defender-xdr/unlink-alert-from-incident.md",
+      "redirect_url": "/defender-xdr/move-alert-to-another-incident",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-xdr/unified-secops-platform/defender-xdr-portal.md",
       "redirect_url": "/defender-xdr/",
       "redirect_document_id": false
@@ -156,6 +171,31 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-xdr/microsoft-threat-actor-naming.md",
+      "redirect_url": "/unified-secops-platform/microsoft-threat-actor-naming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/malware-naming.md",
+      "redirect_url": "/unified-secops-platform/malware-naming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/criteria.md",
+      "redirect_url": "/unified-secops-platform/criteria",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/submission-guide.md",
+      "redirect_url": "/unified-secops-platform/submission-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/virus-initiative-criteria.md",
+      "redirect_url": "/unified-secops-platform/virus-initiative-criteria",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-xdr/tickets.md",
       "redirect_url": "/defender-xdr/troubleshoot",
       "redirect_document_id": true
@@ -163,6 +203,16 @@
     {
       "source_path": "defender-xdr/portal-submission-troubleshooting.md",
       "redirect_url": "/defender-xdr/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/portals.md",
+      "redirect_url": "/unified-secops-platform/overview-plan#understand-microsoft-security-portals-and-admin-centers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/microsoft-sentinel-onboard.md",
+      "redirect_url": "/unified-secops-platform/microsoft-sentinel-onboard",
       "redirect_document_id": false
     }
   ]

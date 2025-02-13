@@ -35,7 +35,7 @@ Before you can track and manage onboarding of devices:
 - [Ensure you have the necessary permissions](configure-machines.md#obtain-required-permissions)
 
 Watch this video to learn how to easily onboard clients with Microsoft Defender for Endpoint.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4bGqr?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
 
 ## Discover and track unprotected devices
 

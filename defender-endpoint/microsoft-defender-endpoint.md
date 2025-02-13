@@ -44,7 +44,7 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 Watch the following video to learn more about Defender for Endpoint:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=88c39a8e-5b13-418e-9093-f8d6100ca728]
 
 Defender for Endpoint uses the following combination of technology built into Windows 10 and Microsoft's robust cloud service:
 
@@ -76,7 +76,7 @@ Defender for Endpoint uses the following combination of technology built into Wi
 
 <p></p>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=95c63786-0382-413d-8a75-eb373e825fa6]
 
 > [!TIP]
 > - Learn about the latest enhancements in Defender for Endpoint: [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).

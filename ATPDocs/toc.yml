@@ -11,8 +11,8 @@ items:
     href: zero-trust.md
   - name: System architecture
     href: architecture.md
-  - name: Defender for Identity in Microsoft Defender XDR
-    href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/bread/toc.json&toc=/defender-for-identity/TOC.json
+  - name: Defender for Identity in the Microsoft Defender portal
+    href: microsoft-365-security-center-mdi.md
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
 - name: Deploy
@@ -20,7 +20,9 @@ items:
   items:
   - name: Quick installation guide
     href: deploy/quick-installation-guide.md
-  - name: Deployment overview
+  - name: Pilot and deploy Microsoft Defender XDR
+    href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: Defender for Identity deployment overview
     href: deploy/deploy-defender-identity.md
   - name: Plan and prepare
     items:

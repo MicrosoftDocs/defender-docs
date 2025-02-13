@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete Safe Links policies in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 10/18/2024
+ms.date: 01/29/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -36,6 +36,11 @@ In organizations with Microsoft Defender for Office 365, Safe Links provides URL
 Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Links policies aren't affected. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
 
 For greater granularity, you can also use the procedures in this article to create Safe Links policies that apply to specific users, group, or domains.
+
+> [!TIP]
+> Instead of creating and managing custom Safe Links policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+>
+> To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 
 You configure Safe Links policies in the Microsoft Defender portal or in Exchange Online PowerShell.
 
@@ -60,7 +65,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
 - For our recommended settings for Safe Links policies, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
   > [!TIP]
-  > [Exceptions to Built-in protection for Safe Links](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy) or settings in custom Safe Links policies are ignored if a recipient is also included in the [Standard or Strict preset security policies](preset-security-policies.md). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
+  > If a recipient is included in the [Standard or Strict preset security policies](preset-security-policies.md), exceptions to Built-in protection for Safe Links or exceptions in custom Safe Links policies don't apply due to the order of precedence (preset security policies are always applied first). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
 
 - Allow up to 6 hours for a new or updated policy to be applied.
 
@@ -85,6 +90,9 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
      - Members of the specified distribution groups (including non-mail-enabled security groups within distribution groups) or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups.
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
+
+     > [!TIP]
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png"::: next to the value.
 

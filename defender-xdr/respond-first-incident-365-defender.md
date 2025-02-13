@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 06/05/2024
+ms.date: 07/01/2024
 ---
 
 # Responding to your first incident in Microsoft Defender XDR
@@ -86,7 +86,10 @@ You can contribute to [incident management](manage-incidents.md) efficiency by p
 
 Learn how to classify incidents and alerts through this video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4LHJq]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e2ff3e56-0f6e-4f9a-996e-25dabd77ebe7]
+
+> [!TIP]
+> **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
 
 ## Next steps
 

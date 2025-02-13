@@ -2,8 +2,8 @@
 title: Production ring deployment using Group Policy and network share
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy over a network share.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: yongrhee
 ms.localizationpriority: high
 manager: deniseb

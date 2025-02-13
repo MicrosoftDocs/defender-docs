@@ -46,7 +46,7 @@ Automatic attack disruption operates in three key stages:
 
 - It uses Defender XDR's ability to correlate signals from many different sources into a single, high-confidence incident through insights from endpoints, identities, email and collaboration tools, and SaaS apps.
 - It identifies assets controlled by the attacker and used to spread the attack.
-- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by isolating affected assets.
+- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
 
 This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
 
@@ -76,6 +76,21 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
 For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender XDR.
+
+### Automated response actions for SAP with Microsoft Sentinel
+
+If you're using the [unified security operations platform](/unified-secops-platform/microsoft-sentinel-onboard) and you deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
+
+For example, deploy attack disruption for SAP to contain compromised assets by locking suspicious SAP users in case of a financial process manipulation attack. 
+
+After the risk is mitigated, Microsoft Defender admins can manually unlock the users that had been automatically locked by the attack disruption response. The ability to manually unlock users is available from the Microsoft Defender action center, and only for users that were locked by attack disruption. 
+
+To use attack disruption for SAP, deploy a new data connector agent, or make sure that your agent is using version 90847355 or higher, and then assign and apply the required Azure and SAP roles. For more information, see:
+
+- [Deploy and configure the container hosting the SAP data connector agent](/azure/sentinel/sap/deploy-data-connector-agent-container)
+- [Update Microsoft Sentinel's SAP data connector agent](/azure/sentinel/sap/update-sap-data-connector), especially [Update your system for automatic attack disruption](/azure/sentinel/sap/update-sap-data-connector#update-your-data-connector-agent-for-attack-disruption).
+
+While you configure attack disruption in the Azure portal and your SAP system, automatic attack disruption itself surfaces only in the unified security operations platform in the Microsoft Defender portal.
 
 ## Identify when an attack disruption happens in your environment
 

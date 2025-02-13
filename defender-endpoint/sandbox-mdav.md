@@ -4,8 +4,9 @@ description: This article describes how to run Microsoft Defender Antivirus in a
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 manager: deniseb
 ms.date: 02/26/2024
 ms.subservice: ngp
@@ -68,7 +69,7 @@ You can follow these steps to enable sandboxing by setting a machine-wide enviro
     setx /M MP_FORCE_USE_SANDBOX 1  
     ```
 
-    :::image type="content" source="media/enable-sandbox.png" alt-text="Screenshot that shows Windows PowerShell tool for admins with cmdlet details to enable sanbox.":::
+    :::image type="content" source="media/enable-sandbox.png" alt-text="Screenshot that shows Windows PowerShell tool for admins with cmdlet details to enable sandbox.":::
 
 2. Restart the device. Once you've restarted, you'll see a new process besides MsMpEng.exe that is `MsMpEngCP.exe` in the following folders:
    

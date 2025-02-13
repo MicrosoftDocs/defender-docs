@@ -4,10 +4,11 @@ description: Learn how to download the Microsoft Defender for Endpoint Client An
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
+ms.reviewer: yongrhee 
 audience: ITPro
 ms.collection: 
 - m365-security

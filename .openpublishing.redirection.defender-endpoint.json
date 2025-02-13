@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/configure-microsoft-threat-experts.md",
+      "redirect_url": "/defender-xdr/defender-experts-for-hunting",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
       "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
       "redirect_document_id": false
@@ -74,6 +79,11 @@
       "source_path": "defender-endpoint/pilot-deploy-defender-endpoint.md",
       "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-endpoint/monthly-security-summary-report.md",
+      "redirect_url": "/defender-endpoint/threat-protection-reports#monthly-security-summary",
+      "redirect_document_id": true
+    }    
   ]
 }
