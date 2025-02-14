@@ -34,7 +34,7 @@ ms.date: 02/11/2025
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `DataSecurityEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. Each log represents a single user activity enriched with proprietory Microsoft detections (like sensitive info types) and user-defined enrichment labels like domain categories, sensitivity labels, and others.
+The `DataSecurityEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. Each log represents a single user activity enriched with proprietary Microsoft detections (like sensitive info types) and user-defined enrichment labels like domain categories, sensitivity labels, and others.
 
 Use this reference to construct queries that return information from this table.
 
@@ -72,8 +72,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`DeviceSourceLocationType`|	`int`|	Indicates the type of location where the endpoint signals originated from; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
 |`DeviceDestinationLocationType`|	`int`|	Indicates the type of location where the endpoint signals connected to; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
 |`IrmPolicyMatchInfo`|	`dynamic`| Details of Insider Risk Management policy matches for the content involved in the event; in JSON array format |	
-|`UnallowedUrlDomains`|	`string`|	Websites or service URLs involved in this event that are configured as Unallowed in Insider Risk Management global settings|
-|`ExternalUrlDomains`|	`string`|	Websites or service URLs involved in this event that are classified as External in Insider Risk Management global settings|
+|`UnallowedUrlDomains`|	`string`|	Websites or service URLs involved in this event that is configured as Unallowed in Insider Risk Management global settings|
+|`ExternalUrlDomains`|	`string`|	Websites or service URLs involved in this event that is classified as External in Insider Risk Management global settings|
 |`UrlDomainInfo`|	`string`|	Details about the websites or service URLs involved in the event|
 |`SourceUrlDomain`|	`string`|	Domain where the device and email signals originated|
 |`TargetUrlDomain`|	`string`|	Domain where the content was shared with or the user has browsed to|
