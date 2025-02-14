@@ -465,3 +465,9 @@ To information on how to make False Negatives (FNs) submissions, see:
 
 - [Troubleshoot problems with tamper protection](/defender-endpoint/troubleshoot-problems-with-tamper-protection)
 
+- [Troubleshoot performance issues related to real-time protection](/defender-endpoint/troubleshoot-performance-issues)
+
+- [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
+
+- [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+
