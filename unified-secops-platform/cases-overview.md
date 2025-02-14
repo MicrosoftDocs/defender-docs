@@ -114,7 +114,7 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
-The threshold for linking is 100 incidents per case.
+Each case has a threshold of 100 linked incidents.
 
 ### Activity log
 
