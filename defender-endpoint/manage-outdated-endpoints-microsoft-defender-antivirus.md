@@ -214,9 +214,9 @@ See the following article for more information and allowed parameters:
 - If you have set up scheduled quick scans, double-click the Allow Microsoft Defender Antivirus to update and communicate over a metered connection setting and set the option to **Enabled**.
   - Select **OK**.
     
-|Settings| Description|
-| -------- | -------- |
-|Allow Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy will automatically download updates, even over metered data connections (charges may apply)|
+|Settings| Description| Default | 
+| -------- | -------- | -------- |
+|Allow Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy will automatically download updates, even over metered data connections (charges may apply)| Disabled |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
