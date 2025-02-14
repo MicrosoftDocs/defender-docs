@@ -76,18 +76,18 @@ In order to preview new features and provide early feedback, it's recommended th
 
 2. Locate the correct package for your distribution and version. Use the following table to help guide you in locating the package:
 
-  |Distro & version|Package|
-  |---|---|
-  |For Alma 8.4 and higher|[https://packages.microsoft.com/config/alma/8/prod.repo](https://packages.microsoft.com/config/alma/8/prod.repo)|
-  |For Alma 9.2 and higher|[https://packages.microsoft.com/config/alma/9/prod.repo](https://packages.microsoft.com/config/alma/9/prod.repo)|
-  |For RHEL/Centos/Oracle 9.0-9.8|[https://packages.microsoft.com/config/rhel/9/prod.repo](https://packages.microsoft.com/config/rhel/9/prod.repo)|
-  |For RHEL/Centos/Oracle 8.0-8.10|<https://packages.microsoft.com/config/rhel/8/prod.repo>|
-  |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |<https://packages.microsoft.com/config/rhel/7.2/prod.repo>|
-  |For Amazon Linux 2023 |<https://packages.microsoft.com/config/amazonlinux/2023/prod.repo>|
-  |For Fedora 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
-  |For Fedora 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
-  |For Rocky 8.7 and higher|<https://packages.microsoft.com/config/rocky/8/prod.repo>|
-  |For Rocky 9.2 and higher|<https://packages.microsoft.com/config/rocky/9/prod.repo>|
+   |Distro & version|Package|
+   |---|---|
+   | Alma 8.4 and higher|[https://packages.microsoft.com/config/alma/8/prod.repo](https://packages.microsoft.com/config/alma/8/prod.repo)|
+   | Alma 9.2 and higher|[https://packages.microsoft.com/config/alma/9/prod.repo](https://packages.microsoft.com/config/alma/9/prod.repo)|
+   | RHEL/Centos/Oracle 9.0-9.8|[https://packages.microsoft.com/config/rhel/9/prod.repo](https://packages.microsoft.com/config/rhel/9/prod.repo)|
+   | RHEL/Centos/Oracle 8.0-8.10|[https://packages.microsoft.com/config/rhel/8/prod.repo](https://packages.microsoft.com/config/rhel/8/prod.repo)|
+   | RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |[https://packages.microsoft.com/config/rhel/7.2/prod.repo](https://packages.microsoft.com/config/rhel/7.2/prod.repo)|
+   | Amazon Linux 2023 |[https://packages.microsoft.com/config/amazonlinux/2023/prod.repo](https://packages.microsoft.com/config/amazonlinux/2023/prod.repo)|
+   | Fedora 33|[https://packages.microsoft.com/config/fedora/33/prod.repo](https://packages.microsoft.com/config/fedora/33/prod.repo)|
+   | Fedora 34|[https://packages.microsoft.com/config/fedora/34/prod.repo](https://packages.microsoft.com/config/fedora/34/prod.repo)|
+   | Rocky 8.7 and higher|[https://packages.microsoft.com/config/rocky/8/prod.repo](https://packages.microsoft.com/config/rocky/8/prod.repo)|
+   | Rocky 9.2 and higher|[https://packages.microsoft.com/config/rocky/9/prod.repo](https://packages.microsoft.com/config/rocky/9/prod.repo)|
   
 
    > [!NOTE]
