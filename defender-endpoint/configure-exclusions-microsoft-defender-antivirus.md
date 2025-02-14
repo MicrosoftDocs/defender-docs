@@ -36,6 +36,13 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 > [!TIP]
 > For a detailed overview of suppressions, submissions, and exclusions across Microsoft Defender Antivirus and Defender for Endpoint, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
 
+## Hide the antivirus exclusions from users and/or local administrators.
+
+| Setting | Description | Default value |
+| -------- | -------- | -------- |
+| Configure whether or not exclusions are visible to Local Admins | Controls whether or not exclusions are visible to Local Admins.  For end users (that are not Local Admins) exclusions are not visible, whether or not this setting is enabled.  Disabled (Default):  If you disable or do not configure this setting, Local Admins will be able to see exclusions in the Windows Security App or via PowerShell.  Enabled:  If you enable this setting, Local Admins will no longer be able to see the exclusion list in Windows Security App or via PowerShell.  Note: Applying this setting will not remove exclusions, it will only prevent them from being visible to Local Admins. This is reflected in Get-MpPreference.   | Disabled |
+| Configure whether exclusions are visible to local users | Controls whether exclusions are visible to local users on the device.  Use the policy setting Configure whether or not exclusions are visible to Local Admins (HideExclusionsFromLocalAdmins) to hide exclusions from both standard and administrative local users. | Disabled |
+
 ## Configure and validate exclusions
 
 > [!CAUTION]
