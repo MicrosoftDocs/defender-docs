@@ -89,37 +89,35 @@ In order to preview new features and provide early feedback, it's recommended th
    | Rocky 8.7 and higher|[https://packages.microsoft.com/config/rocky/8/prod.repo](https://packages.microsoft.com/config/rocky/8/prod.repo)|
    | Rocky 9.2 and higher|[https://packages.microsoft.com/config/rocky/9/prod.repo](https://packages.microsoft.com/config/rocky/9/prod.repo)|
   
-
    > [!NOTE]
    > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
 
-    
-    In the following commands, replace *[version]* and *[channel]* with the information you've identified:
+3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
-    ```bash
-  sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
-  ```
+   ```bash
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
+   ```
 
-    > [!TIP]
-  > Use hostnamectl command to identify system related information including release *[version]*.
+   > [!TIP]
+   > Use hostnamectl command to identify system related information including release *[version]*.
 
-    For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
+   For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
 
-    ```bash
-  sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
-  ```
+   ```bash
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
+   ```
 
-    Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-fast* channel:
+   Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-fast* channel:
 
-    ```bash
-  sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
-  ```
+   ```bash
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+   ```
 
-- Install the Microsoft GPG public key:
+4. Install the Microsoft GPG public key:
 
-  ```bash
-  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-  ```
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+   ```
 
 ### SLES and variants
 
