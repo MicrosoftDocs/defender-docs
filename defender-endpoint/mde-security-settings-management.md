@@ -215,15 +215,15 @@ For more information, see:
 
 |Description|Setting|
 |---|---|
-| Check For Signatures Before Running Scan | a |
-| Randomize Schedule Task Times | a |
-| Scheduler Randomization Time | a |
-| Avg CPU Load Factor | a |
-| Enable Low CPU Priority | a |
-| Disable Catchup Full Scan | a |
-| Disable Catchup Quick Scan | a |
-| Archive Max Depth | a |
-| Archive Max Size | a |
+| Check For Signatures Before Running Scan | Disabled (Default)|
+| Randomize Schedule Task Times | Not configured |
+| Scheduler Randomization Time | Scheduled tasks will not be randomized|
+| Avg CPU Load Factor | Not Configured (Default, 50)|
+| Enable Low CPU Priority | Disabled (Default)|
+| Disable Catchup Full Scan | Enabled (Default)|
+| Disable Catchup Quick Scan | Enabled (Default)|
+| Archive Max Depth | Not configured|
+| Archive Max Size | Not configured|
 
 ***Daily Quick Scan***
 
@@ -231,14 +231,21 @@ For more information, see:
 |---|---|
 | Schedule Quick Scan Time | 720 |
 
+> [!NOTE]
+> In this example, a quick scan would run for Windows clients on Wednesday's at 12:00 p.m. (720).
+
 ***Weekly Quick Scan or Full Scan***
 
 |Description|Setting|
 |---|---|
 | Scan Parameter | Quick scan (Default) |
 | Schedule Scan Day | Windows Clients: Wednesday <br/> Windows Servers: Saturday |
-| Schedule Scan Time | Windows Clients: 720 <br/> Windows Servers: 60|
+| Schedule Scan Time | Windows Clients: 1020 <br/> Windows Servers: 60|
 
+
+> [!NOTE]
+> In this example, a quick scan would run for Windows clients on Wednesday's at 5:00 p.m. (1020).
+> And for Windows Servers, on Saturday's at 1:00 a.m. (60)
 
 For more information, see:
 
