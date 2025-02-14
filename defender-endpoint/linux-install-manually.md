@@ -27,10 +27,26 @@ ms.date: 02/11/2025
 - Microsoft Defender for Endpoint Server
 - [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+
 > [!TIP]
 > Looking for advanced guidance on deploying Microsoft Defender for Endpoint on Linux? See [Advanced deployment guide on Defender for Endpoint on Linux](comprehensive-guidance-on-linux-deployment.md).
 
-This article describes how to deploy Microsoft Defender for Endpoint on Linux manually. 
+This article describes how to deploy Microsoft Defender for Endpoint on Linux manually. A successful deployment requires the completion of all of the following tasks:
+
+- [Prerequisites and system requirements](#prerequisites-and-system-requirements)
+- [Configure the Linux software repository](#configure-the-linux-software-repository)
+  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma-1)
+  - [SLES and variants](#sles-and-variants-1)
+  - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
+  - [Mariner](#mariner)
+- [Application installation](#application-installation)
+  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
+  - [SLES and variants](#sles-and-variants)
+  - [Ubuntu and Debian systems](#ubuntu-and-debian-systems-1)
+  - [Mariner](#mariner-1)
+- [Download the onboarding package](#download-the-onboarding-package)
+- [Client configuration](#client-configuration)
 
 ## Prerequisites and system requirements
 
@@ -48,9 +64,195 @@ The choice of the channel determines the type and frequency of updates that are 
 In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
 > [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+
+### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
+- Install `yum-utils` if it isn't installed yet:
+    ```bash
+  sudo yum install yum-utils
+  ```
+
+    > [!NOTE]
+  > Your distribution and version, and identify the closest entry (by major, then minor) for it under `https://packages.microsoft.com/config/rhel/`.
+
+    Use the following table to help guide you in locating the package:
+
+  |Distro & version|Package|
+  |---|---|
+  |For Alma 8.4 and higher|<https://packages.microsoft.com/config/alma/8/prod.repo>|
+  |For Alma 9.2 and higher|<https://packages.microsoft.com/config/alma/9/prod.repo>|
+  |For RHEL/Centos/Oracle 9.0-9.8|<https://packages.microsoft.com/config/rhel/9/prod.repo>|
+  |For RHEL/Centos/Oracle 8.0-8.10|<https://packages.microsoft.com/config/rhel/8/prod.repo>|
+  |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |<https://packages.microsoft.com/config/rhel/7.2/prod.repo>|
+  |For Amazon Linux 2023 |<https://packages.microsoft.com/config/amazonlinux/2023/prod.repo>|
+  |For Fedora 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
+  |For Fedora 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
+  |For Rocky 8.7 and higher|<https://packages.microsoft.com/config/rocky/8/prod.repo>|
+  |For Rocky 9.2 and higher|<https://packages.microsoft.com/config/rocky/9/prod.repo>|
+  
+    In the following commands, replace *[version]* and *[channel]* with the information you've identified:
+
+    ```bash
+  sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
+  ```
+
+    > [!TIP]
+  > Use hostnamectl command to identify system related information including release *[version]*.
+
+    For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
+
+    ```bash
+  sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
+  ```
+
+    Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-fast* channel:
+
+    ```bash
+  sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+  ```
+
+- Install the Microsoft GPG public key:
+
+  ```bash
+  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  ```
+
+### SLES and variants
+
+> [!NOTE]
+> Your distribution and version, and identify the closest entry (by major, then minor) for it under `https://packages.microsoft.com/config/sles/`.
+
+   In the following commands, replace *[distro]* and *[version]* with the information you've identified:
+
+   ```bash
+   sudo zypper addrepo -c -f -n microsoft-[channel] https://packages.microsoft.com/config/[distro]/[version]/[channel].repo
+   ```
+
+   > [!TIP]
+   > Use SPident command to identify system related information including release *[version]*.
+
+   For example, if you're running SLES 12 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
+
+   ```bash
+   sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
+   ```
+
+- Install the Microsoft GPG public key:
+
+  ```bash
+  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  ```
+
+### Ubuntu and Debian systems
+
+- Install `curl` if it isn't installed yet:
+
+  ```bash
+  sudo apt-get install curl
+  ```
+
+- Install `libplist-utils` if it isn't installed yet:
+
+  ```bash
+  sudo apt-get install libplist-utils
+  ```
+
+  > [!NOTE]
+  > Your distribution and version, and identify the closest entry (by major, then minor) for it under `https://packages.microsoft.com/config/[distro]/`.
+
+  In the following command, replace *[distro]* and *[version]* with the information you've identified:
+
+  ```bash
+  curl -o microsoft.list https://packages.microsoft.com/config/[distro]/[version]/[channel].list
+  ```
+
+  > [!TIP]
+  > Use hostnamectl command to identify system related information including release *[version]*.
+
+  For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
+
+  ```bash
+  curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
+  ```
+
+- Install the repository configuration:
+
+  ```bash
+  sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
+  ```
+
+  For example, if you chose `prod` channel:
+
+  ```bash
+  sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
+  ```
+
+- Install the `gpg` package if not already installed:
+
+  ```bash
+  sudo apt-get install gpg
+  ```
+
+  If `gpg` isn't available, then install `gnupg`.
+
+  ```bash
+  sudo apt-get install gnupg
+  ```
+
+- Install the Microsoft GPG public key:
+  - For Debian 11 and earlier, run the following command.
+ 
+    ```bash
+    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+    ```
+
+  - For Debian 12 and later, run the following command.
+
+    ```bash
+    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+    ```
+
+- Install the HTTPS driver if not already installed:
+
+  ```bash
+  sudo apt-get install apt-transport-https
+  ```
+
+- Update the repository metadata:
+
+  ```bash
+  sudo apt-get update
+  ```
+### Mariner
+
+- Install `dnf-plugins-core` if it isn't installed yet:
+
+  ```bash
+  sudo dnf install dnf-plugins-core
+  ```
+
+- Configure and Enable the required repositories
+
+  > [!NOTE]
+  > On Mariner, Insider Fast Channel is not available.
+
+  If you want to deploy Defender for Endpoint on Linux from the `prod` channel. Use the following commands
+  
+  ```bash
+  sudo dnf install mariner-repos-extras
+  sudo dnf config-manager --enable mariner-official-extras
+  ```
+
+  Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-slow* channel. Use the following commands:
+  
+  ```bash
+  sudo dnf install mariner-repos-extras-preview
+  sudo dnf config-manager --enable mariner-official-extras-preview
+  ```
 
 ## Application installation
+
+Follow the below commands to install Defender for Endpoint on your Linux distribution.
 
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
@@ -223,7 +425,9 @@ Download the onboarding package from Microsoft Defender portal.
    > [!IMPORTANT]
    > When the product starts for the first time, it downloads the latest anti-malware definitions. This process might take up to a few minutes depending on the network connectivity. During this time, the command mentioned earlier returns a value of `false`. You can check the status of the definition update using the following command:
    >
-   > `mdatp health --field definitions_status`
+   > ```bash
+   > mdatp health --field definitions_status
+   > ```
    >
    > You might also need to configure a proxy after completing the initial installation. See [Configure Defender for Endpoint on Linux for static proxy discovery: Post-installation configuration](linux-static-proxy-configuration.md#post-installation-configuration).
 
@@ -319,7 +523,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    sudo yum remove mdatp
    ```
 
-2. Disable the Defender for Endpoint on Linux Insiders-Fast repo.
+2. Disable the Defender for Endpoint on Linux Insiders-Fast repo
 
    ```bash
    sudo yum repolist
@@ -334,20 +538,6 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 
 3. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
-Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as [channel]): 
-
-- `insiders-fast`
-- `insiders-slow`
-- `prod` 
-
-Each of these channels corresponds to a Linux software repository. This article describes how to configure your device to use one of these repositories.
-
-The choice of channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
-
-In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either `insiders-fast` or `insiders-slow`. 
-
-> [!WARNING]
-> Switching channels after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location. 
 
 ## How to configure policies for Microsoft Defender for Endpoint on Linux
 
