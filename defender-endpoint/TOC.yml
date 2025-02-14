@@ -261,7 +261,7 @@
             items:
             - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
               href: mde-linux-arm.md
-            - name: Installer script
+            - name: Installer script based deployment
               href: linux-installer-script.md
             - name: Ansible based deployment
               href: linux-install-with-ansible.md
