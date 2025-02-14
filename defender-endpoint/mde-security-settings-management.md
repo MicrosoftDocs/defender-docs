@@ -181,12 +181,13 @@ Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus
 'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update);
 'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
 
-**Engine updates**:
+
+**Engine updates**
 |Description|Setting|
 |---|---|
 | Engine Updates Channel | a |
 
-**Platform updates**:
+**Platform updates**
 |Description|Setting|
 |---|---|
 | Platform Updates Channel | a |
