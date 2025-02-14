@@ -162,6 +162,8 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 |Allow Scanning Network Files|Allowed|
 |Allow Full Scan Removable Drive Scanning |Allowed|
 |Allow Full Scan On Mapped Network Drives |Not Allowed|
+|Archive Max Depth | Not configured|
+|Archive Max Size | Not configured|
 
 For more information, see:
 
@@ -222,8 +224,7 @@ For more information, see:
 | Enable Low CPU Priority | Disabled (Default)|
 | Disable Catchup Full Scan | Enabled (Default)|
 | Disable Catchup Quick Scan | Enabled (Default)|
-| Archive Max Depth | Not configured|
-| Archive Max Size | Not configured|
+
 
 ***Daily Quick Scan***
 
