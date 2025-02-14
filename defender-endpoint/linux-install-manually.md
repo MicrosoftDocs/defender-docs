@@ -122,9 +122,9 @@ In order to preview new features and provide early feedback, it's recommended th
 ### SLES and variants
 
 > [!NOTE]
-> Your distribution and version, and identify the closest entry (by major, then minor) for it under `https://packages.microsoft.com/config/sles/`.
+> For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/sles/`.
 
-   In the following commands, replace *[distro]* and *[version]* with the information you've identified:
+1. In the following commands, replace *[distro]* and *[version]* with the information you've identified:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-[channel] https://packages.microsoft.com/config/[distro]/[version]/[channel].repo
@@ -139,101 +139,103 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
-- Install the Microsoft GPG public key:
+2. Install the Microsoft GPG public key:
 
-  ```bash
-  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-  ```
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+   ```
 
 ### Ubuntu and Debian systems
 
-- Install `curl` if it isn't installed yet:
+1. Install `curl` if it isn't installed yet:
 
-  ```bash
-  sudo apt-get install curl
-  ```
+   ```bash
+   sudo apt-get install curl
+   ```
 
-- Install `libplist-utils` if it isn't installed yet:
+2. Install `libplist-utils` if it isn't installed yet:
 
-  ```bash
-  sudo apt-get install libplist-utils
-  ```
+   ```bash
+   sudo apt-get install libplist-utils
+   ```
 
-  > [!NOTE]
-  > Your distribution and version, and identify the closest entry (by major, then minor) for it under `https://packages.microsoft.com/config/[distro]/`.
+   > [!NOTE]
+   > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/[distro]/`.
 
-  In the following command, replace *[distro]* and *[version]* with the information you've identified:
+3. In the following command, replace *[distro]* and *[version]* with the information you've identified:
 
-  ```bash
-  curl -o microsoft.list https://packages.microsoft.com/config/[distro]/[version]/[channel].list
-  ```
+   ```bash
+   curl -o microsoft.list https://packages.microsoft.com/config/[distro]/[version]/[channel].list
+   ```
 
-  > [!TIP]
-  > Use hostnamectl command to identify system related information including release *[version]*.
+   > [!TIP]
+   > Use hostnamectl command to identify system related information including release *[version]*.
 
-  For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
+   For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
 
-  ```bash
-  curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
-  ```
+   ```bash
+   curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
+   ```
 
-- Install the repository configuration:
+4. Install the repository configuration:
 
-  ```bash
-  sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
-  ```
+   ```bash
+   sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
+   ```
 
-  For example, if you chose `prod` channel:
+   For example, if you chose `prod` channel:
 
-  ```bash
-  sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
-  ```
+   ```bash
+   sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
+   ```
 
-- Install the `gpg` package if not already installed:
+5. Install the `gpg` package if not already installed:
 
-  ```bash
-  sudo apt-get install gpg
-  ```
+   ```bash
+   sudo apt-get install gpg
+   ```
 
-  If `gpg` isn't available, then install `gnupg`.
+   If `gpg` isn't available, then install `gnupg`.
 
-  ```bash
-  sudo apt-get install gnupg
-  ```
+   ```bash
+   sudo apt-get install gnupg
+   ```
 
-- Install the Microsoft GPG public key:
-  - For Debian 11 and earlier, run the following command.
+6. Install the Microsoft GPG public key:
+
+   - For Debian 11 and earlier, run the following command.
  
-    ```bash
-    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
-    ```
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+      ```
 
-  - For Debian 12 and later, run the following command.
+   - For Debian 12 and later, run the following command.
 
-    ```bash
-    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
-    ```
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      ```
 
-- Install the HTTPS driver if not already installed:
+7. Install the HTTPS driver if not already installed:
 
-  ```bash
-  sudo apt-get install apt-transport-https
-  ```
+   ```bash
+   sudo apt-get install apt-transport-https
+   ```
 
-- Update the repository metadata:
+8. Update the repository metadata:
 
-  ```bash
-  sudo apt-get update
-  ```
+   ```bash
+   sudo apt-get update
+   ```
+
 ### Mariner
 
-- Install `dnf-plugins-core` if it isn't installed yet:
+1. Install `dnf-plugins-core` if it isn't installed yet:
 
-  ```bash
-  sudo dnf install dnf-plugins-core
-  ```
+   ```bash
+   sudo dnf install dnf-plugins-core
+   ```
 
-- Configure and Enable the required repositories
+2. Configure and enable the required repositories.
 
   > [!NOTE]
   > On Mariner, Insider Fast Channel is not available.
