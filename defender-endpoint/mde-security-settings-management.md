@@ -172,7 +172,7 @@ For more information, see:
 |Description|Setting|
 |---|---|
 |Signature Update Interval|Configured, 4|
-|Signature Update Fallback Order| 'InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC'|
+|Signature Update Fallback Order| 'InternalDefinitionUpdateServer, MicrosoftUpdateServer, MMPC'|
 |Signature Update File Shares Sources | |
 | Metered Connection Updates | |
 | Security Intelligence Updates Channel | |
