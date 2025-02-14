@@ -99,7 +99,7 @@ Customers integrating insider risk management alerts with other security informa
 |SecurityEvents.ReadWrite.All|||Read||
 |ThreatHunting.Read.All||||Read|
 
-More information about integrating data using the Microsoft Graph security API in [Integrate insider risk management data with Microsoft Graph security API](#integrate-insider-risk-management-data-through-graph-api).
+More information about integrating data using the Microsoft Graph security API in [Integrate insider risk management data with Microsoft Graph security API](#integrate-insider-risk-management-data-with-microsoft-graph-security-api).
 
 ## Investigation experience in the Microsoft Defender portal
 
@@ -204,7 +204,7 @@ For customers using [Office 365 Management Activity API](/office/office-365-mana
 
 ## Impact to Microsoft Sentinel users
 
-We recommend Microsoft Sentinel customers to use the [Microsoft Purview Insider Risk Management – Microsoft Sentinel data connector](/sentinel/connect-services-api-based) to get insider risk management alerts in Microsoft Sentinel.
+We recommend Microsoft Sentinel customers to use the [Microsoft Purview Insider Risk Management – Microsoft Sentinel data connector](/azure/sentinel/connect-services-api-based) to get insider risk management alerts in Microsoft Sentinel.
 
 If you are using automation on Microsoft Sentinel incidents, note that automation risks failure due to insider risk management incidents having no alert content. To mitigate this, [turn off data sharing in insider risk management settings](/purview/insider-risk-management-settings-share-data#use-the-apis-to-review-insider-risk-alert-information).
 
