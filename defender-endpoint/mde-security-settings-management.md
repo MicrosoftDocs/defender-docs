@@ -120,16 +120,16 @@ During an investigation, you can also view the **Security policies** tab in the 
 
 ## Antivirus policies for Windows and Windows Server
 
-1. **Real-time Protection (Always-on protection, real-time scanning)**:
+**Real-time Protection (Always-on protection, real-time scanning)**:
 
-   |Description|Settings|
-   |---|---|
-   |Allow Realtime Monitoring|Allowed|
-   |Real Time Scan Direction|Monitor all files (bi-directional)|
-   |Allow Behavior Monitoring|Allowed|
-   |Allow On Access Protection|Allowed|
-   |PUA Protection|PUA Protection on|
-   
+|Description|Settings|
+|---|---|
+|Allow Realtime Monitoring|Allowed|
+|Real Time Scan Direction|Monitor all files (bi-directional)|
+|Allow Behavior Monitoring|Allowed|
+|Allow On Access Protection|Allowed|
+|PUA Protection|PUA Protection on|
+
 For more information, see:
 
 [Advanced technologies at the core of Microsoft Defender Antivirus](/defender-endpoint/adv-tech-of-mdav)
@@ -172,27 +172,42 @@ For more information, see:
 |Description|Setting|
 |---|---|
 |Signature Update Interval|Configured, 4|
-|Signature Update Fallback Order| 'InternalDefinitionUpdateServer, MicrosoftUpdateServer, MMPC'|
-|Signature Update File Shares Sources | a |
-| Metered Connection Updates | a |
-| Security Intelligence Updates Channel | a |
+|Signature Update Fallback Order|InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC|
+|Signature Update File Shares Sources | Not configured|
+| Metered Connection Updates | Not allowed (default)|
+| Security Intelligence Updates Channel | Not configured|
 
 > [!NOTE]
-> Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed.
+> Where:
+> 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed.
 > 'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update).
 > 'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
+
+For more information, see:
+
+[Microsoft Defender Antivirus security intelligence and product updates](/defender-endpoint/microsoft-defender-antivirus-updates)
+
+[Update channels for security intelligence updates](/defender-endpoint/manage-gradual-rollout)
 
 **Engine updates**
 
 |Description|Setting|
 |---|---|
-| Engine Updates Channel | a |
+| Engine Updates Channel |Not configured|
+
+For more information, see:
+
+[Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout)
 
 **Platform updates**
 
 |Description|Setting|
 |---|---|
-| Platform Updates Channel | a |
+| Platform Updates Channel |Not configured|
+
+For more information, see:
+
+[Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout)
 
 **Scheduled scan and On-Demand scan**
 
@@ -221,9 +236,15 @@ For more information, see:
 |Description|Setting|
 |---|---|
 | Scan Parameter | Quick scan (Default) |
-| Schedule Scan Day | Clients: Wednesday <br/> Servers: Saturday |
-| Schedule Scan Time | Clients: 720 <br/> Servers: 60|
+| Schedule Scan Day | Windows Clients: Wednesday <br/> Windows Servers: Saturday |
+| Schedule Scan Time | Windows Clients: 720 <br/> Windows Servers: 60|
 
+
+For more information, see:
+
+[Configure scheduled quick or full Microsoft Defender Antivirus scans](/defender-endpoint/schedule-antivirus-scans)
+
+[Microsoft Defender Antivirus full scan considerations and best practices](/defender-endpoint/mdav-scan-best-practices)
 
 **Threat severity default action**:
 
@@ -238,6 +259,10 @@ For more information, see:
 |---|---|
 |Days To Retain Cleaned Malware|Configured, 60|
 |Allow User UI Access|Allowed.  Let users access UI.|
+
+For more information, see:
+
+[Configure remediation for Microsoft Defender Antivirus detections](/defender-endpoint/configure-remediation-microsoft-defender-antivirus)
 
 **Antivirus exclusions:**
 
@@ -255,12 +280,22 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Excluded Paths | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe |
 |Excluded Processes | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe|
 
+For more information, see:
+
+[Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings](/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus)
+
+[Configure custom exclusions for Microsoft Defender Antivirus](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus)
+
 **Microsoft Defender Core service:**
 
 |Description|Setting|
 |---|---|
 | Disable Core Service ECS Integration | The Defender core service will use the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes. |
 | Disable Core Service Telemetry | The Defender core service will use the OneDsCollector framework to rapidly collect telemetry.|
+
+For more information, see:
+
+[Microsoft Defender Core service overview](/defender-endpoint/microsoft-defender-core-service-overview)
 
 **Network Protection**:
 
@@ -274,6 +309,12 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Disable SSH parsing|SSH parsing is enabled.|
 |Disable TLS parsing|TLS parsing is enabled.|
 |Enable DNS Sinkhole|DNS Sinkhole is enabled.|
+
+For more information, see:
+
+[Use network protection to help prevent connections to malicious or suspicious sites](/defender-endpoint/network-protection)
+
+ 
 
 1. When you're done configuring settings, select **Next**.
 1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**. 
@@ -319,6 +360,10 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > [!TIP]
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
+For more information, see:
+
+[Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment)
+
 1. Select **Next**.
 1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 1. Select **Next**.
@@ -341,6 +386,10 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
    |Description| Setting|
    | -------- | -------- |
    | TamperProtection (Device) | On|
+
+For more information, see:
+
+[Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection)
 
 #### Check the Cloud Protection network connectivity
 
@@ -386,7 +435,7 @@ To check which "Engine Update" version you have installed, run the following com
 Get-MPComputerStatus | Format-Table AMEngineVersion
 ```
 
-If yo find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
+If you find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 #### For False Negatives (FNs) submissions
 
@@ -394,3 +443,17 @@ To information on how to make False Negatives (FNs) submissions, see:
 
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.
+## **See also**
+
+- [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+
+- [Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated](/defender-endpoint/troubleshoot-security-intelligence-not-updated)
+
+- [Troubleshooting Security Intelligence Updates from Microsoft Update source](/defender-endpoint/security-intelligence-update-tshoot)
+
+- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+
+- [Troubleshoot network protection](/defender-endpoint/troubleshoot-np)
+
+- [Troubleshoot problems with tamper protection](/defender-endpoint/troubleshoot-problems-with-tamper-protection)
+
