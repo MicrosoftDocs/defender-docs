@@ -70,7 +70,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`RecipientEmailInfo`|	`dynamic`|	List of information about the recipient involved in the behavior, including the email address of the recipient and the number of events in the behavior involving the recipient; in JSON array format|
 |`RemovableMediaInfo`|	`dynamic`|	List of any removable media involved in the behavior, including the serial number of the removable media device, the manufacturer of the removable media device, and the model of the removable device; in JSON array format|
 |`PrinterName`|	`dynamic`	|List of printers involved in the behavior; in array format|
-|`PriorityContentMatchInfo`	|`dynamic`|	List of priority content matches identified within this behavior and thier associated details. Priority content definitions are done by the admins for each Insider risk management policy. Displayed in JSON array format.|
+|`PriorityContentMatchInfo`	|`dynamic`|	List of priority content matches identified within this behavior and their associated details. Priority content definitions are done by the admins for each Insider risk management policy. Displayed in JSON array format.|
 
 ## Related articles
 
