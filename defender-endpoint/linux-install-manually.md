@@ -237,26 +237,26 @@ In order to preview new features and provide early feedback, it's recommended th
 
 2. Configure and enable the required repositories.
 
-  > [!NOTE]
-  > On Mariner, Insider Fast Channel is not available.
+   > [!NOTE]
+   > On Mariner, Insider Fast Channel is not available.
 
-  If you want to deploy Defender for Endpoint on Linux from the `prod` channel. Use the following commands
+   If you want to deploy Defender for Endpoint on Linux from the `prod` channel. Use the following commands
   
-  ```bash
-  sudo dnf install mariner-repos-extras
-  sudo dnf config-manager --enable mariner-official-extras
-  ```
+   ```bash
+   sudo dnf install mariner-repos-extras
+   sudo dnf config-manager --enable mariner-official-extras
+   ```
 
-  Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-slow* channel. Use the following commands:
+   Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-slow* channel. Use the following commands:
   
-  ```bash
-  sudo dnf install mariner-repos-extras-preview
-  sudo dnf config-manager --enable mariner-official-extras-preview
-  ```
+   ```bash
+   sudo dnf install mariner-repos-extras-preview
+   sudo dnf config-manager --enable mariner-official-extras-preview
+   ```
 
 ## Application installation
 
-Follow the below commands to install Defender for Endpoint on your Linux distribution.
+Use the commands in the following sections to install Defender for Endpoint on your Linux distribution.
 
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
@@ -350,7 +350,7 @@ sudo dnf config-manager --enable mariner-official-extras
 
 ## Download the onboarding package
 
-Download the onboarding package from Microsoft Defender portal.
+Download the onboarding package from the [Microsoft Defender portal](https://security.microsoft.com).
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
@@ -358,7 +358,9 @@ Download the onboarding package from Microsoft Defender portal.
 > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the `mdatp health` command returns a value of `false`.
 
 1. In the Microsoft Defender portal, go to **Settings > Endpoints > Device management > Onboarding**.
+
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Local Script** as the deployment method.
+
 3. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
 
    :::image type="content" source="media/portal-onboarding-linux.png" alt-text="Downloading an onboarding package in the Microsoft Defender portal":::
