@@ -183,11 +183,13 @@ For more information, see:
 > 'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
 
 **Engine updates**
+
 |Description|Setting|
 |---|---|
 | Engine Updates Channel | a |
 
 **Platform updates**
+
 |Description|Setting|
 |---|---|
 | Platform Updates Channel | a |
@@ -195,6 +197,7 @@ For more information, see:
 **Scheduled scan and On-Demand scan**
 
 ***General settings for Scheduled scan and On-Demand scan***
+
 |Description|Setting|
 |---|---|
 | Check For Signatures Before Running Scan | a |
@@ -207,12 +210,14 @@ For more information, see:
 | Archive Max Depth | a |
 | Archive Max Size | a |
 
-*** Daily or Hourly Quick Scan *** 
+*** Daily or Hourly Quick Scan ***
+
 |Description|Setting|
 |---|---|
 | Schedule Quick Scan Time | a |
 
 *** Weekly Quick Scan or Full Scan *** 
+
 |Description|Setting|
 |---|---|
 | Scan Parameter | a |
@@ -243,6 +248,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Allow User UI Access|Allowed.  Let users access UI.|
 
 ** Antivirus exclusions **
+
 |Description|Setting|
 |---|---|
 |Excluded Extensions | a |
@@ -250,6 +256,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Excluded Processes | a |
 
 ** Microsoft Defender Core service **
+
 |Description|Setting|
 |---|---|
 | Disable Core Service ECS Integration | a |
