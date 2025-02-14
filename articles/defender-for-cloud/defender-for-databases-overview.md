@@ -12,7 +12,7 @@ author: dcurwin
 
 In Microsoft Defender for Cloud, the Defender for Databases plan helps protect your database estate from threats and vulnerabilities. The Defender for Databases plan provides threat protection and security management across cloud environments.
 
-Microsoft Defender for Databases includes four plan types that relate to types of databases:
+Defender for Databases includes four offerings that relate to database types:
 
 - [Microsoft Defender for Azure SQL databases](defender-for-sql-introduction.md): Offers threat protection for Azure SQL databases by detecting and responding to potential security threats.
 
