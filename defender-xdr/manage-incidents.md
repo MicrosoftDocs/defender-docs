@@ -294,9 +294,6 @@ When doing a postmortem of an incident, view the incident's **Activity log** to 
 
 You can also [add your own comments](#add-comments-to-an-incident) using the comment box available within the activity log. The comment box accepts text and formatting, links, and images.
 
-> [!IMPORTANT]
-> Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## Export incident data to PDF
 
 You can export an incident's data to PDF through the **Export incident as PDF** function and save it into PDF format. This function allows security teams to review an incident's details offline at any given time.
