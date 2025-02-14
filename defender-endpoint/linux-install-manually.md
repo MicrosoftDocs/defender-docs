@@ -523,20 +523,13 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    sudo yum remove mdatp
    ```
 
-2. Disable the Defender for Endpoint on Linux Insiders-Fast repo
-
-   ```bash
-   sudo yum repolist
-   ```
-
-   > [!NOTE]
-   > The output should show `packages-microsoft-com-fast-prod`.
+2. Disable the Defender for Endpoint on Linux Insiders-Fast channel
 
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-3. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
+3. Re-install Microsoft Defender for Endpoint on Linux using the 'Production channel' and onboard the device to Defender Portal. 
 
 
 ## How to configure policies for Microsoft Defender for Endpoint on Linux
