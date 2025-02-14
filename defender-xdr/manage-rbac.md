@@ -45,7 +45,7 @@ Centralized permissions management is supported for the following solutions:
 |Solution|Description|
 |---|---|
 |Microsoft Defender XDR|Centralized permissions management for Microsoft Defender XDR experiences.|
-|Microsoft Defender for Endpoint|Full support for all endpoint data and actions. All roles are compatible with the device group's scope as defined on the device groups page.|
+|Microsoft Defender for Endpoint|Full support for all endpoint data and actions. All roles are compatible with the device group's scope as defined on the device groups page. Limiting permissions to different device groups is accomplished in the Devices Groups page.|
 |Microsoft Defender Vulnerability Management|Centralized permissions management for all  Defender Vulnerability Management capabilities.|
 |Microsoft Defender for Office 365|Full support for all data and actions. </br></br> **Note**: <ul><li>Initially, the Microsoft Defender XDR RBAC model is available only for organizations with Microsoft Defender for Office 365 Plan 2 licenses (trial licenses aren't supported).</li><li>Granular delegated admin privileges (GDAP) aren't supported.</li><li>Exchange Online PowerShell and Security & Compliance PowerShell continue to use [Exchange Online roles](/exchange/permissions-exo/permissions-exo) and [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions). Microsoft Defender XDR Unified RBAC doesn't affect Exchange Online PowerShell or Security & Compliance PowerShell.</li><li>Azure B2B invited guests aren't supported by all experiences that were previously under Exchange Online RBAC.</li></ul>|
 |Microsoft Defender for Identity|Full support for all identity data and actions. </br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
@@ -77,6 +77,8 @@ This section provides useful information on what you need to know before you sta
 ### Migration of existing roles and permissions
 
 The new Microsoft Defender XDR Unified RBAC model provides easy migration of the existing permissions in the individual supported unified RBAC models to the new RBAC model.
+
+Defender for Endpoint Devices Groups now use the device groups side of the interface to define which groups have access to the proper Device Groups.
 
 All permissions listed within the Microsoft Defender XDR Unified RBAC model align to permissions in the individual RBAC models to ensure backward compatibility. For more information on how the permissions align, see [Map permissions in Microsoft Defender XDR unified role-based access control (RBAC)](compare-rbac-roles.md).
 
