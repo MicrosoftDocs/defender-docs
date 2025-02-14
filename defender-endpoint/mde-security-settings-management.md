@@ -166,18 +166,7 @@ For more information, see:
 
 [Configure Microsoft Defender Antivirus scanning options](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus)
 
-**Network Protection**:
 
-|Description|Setting|
-|---|---|
-|Enable Network Protection|Enabled (block mode)|
-|Allow Network Protection Down Level|Network protection is enabled downlevel.|
-|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled.|
-|Disable DNS over TCP parsing|DNS over TCP parsing is enabled.|
-|Disable HTTP parsing|HTTP parsing is enabled.|
-|Disable SSH parsing|SSH parsing is enabled.|
-|Disable TLS parsing|TLS parsing is enabled.|
-|Enable DNS Sinkhole|DNS Sinkhole is enabled.|
 
 **Security Intelligence updates**:
 
@@ -256,10 +245,25 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > [!TIP]
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
+**Network Protection**:
+
+|Description|Setting|
+|---|---|
+|Enable Network Protection|Enabled (block mode)|
+|Allow Network Protection Down Level|Network protection is enabled downlevel.|
+|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled.|
+|Disable DNS over TCP parsing|DNS over TCP parsing is enabled.|
+|Disable HTTP parsing|HTTP parsing is enabled.|
+|Disable SSH parsing|SSH parsing is enabled.|
+|Disable TLS parsing|TLS parsing is enabled.|
+|Enable DNS Sinkhole|DNS Sinkhole is enabled.|
+
 1. Select **Next**.
 2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 3. Select **Next**.
 4. On the **Review + create** tab, review your policy settings, and then select **Save**.
+
+
 
 #### Enable Tamper Protection
 
