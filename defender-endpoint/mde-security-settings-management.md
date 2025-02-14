@@ -225,14 +225,6 @@ For more information, see:
 | Schedule Scan Time | a |
 
 
-**Local administrator AV**:
-
-Disable local administrator AV settings such as exclusions, and set the policies from the Microsoft Defender for Endpoint Security Settings Management as described in the following table:
-
-|Description|Setting|
-|---|---|
-|Disable Local Admin Merge|Disable Local Admin Merge| a |
-
 **Threat severity default action**:
 
 |Description|Setting|
@@ -248,6 +240,14 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Allow User UI Access|Allowed.  Let users access UI.|
 
 **Antivirus exclusions**
+
+***Local administrator AV***:
+
+Disable local administrator AV settings such as exclusions, and set the policies from the Microsoft Defender for Endpoint Security Settings Management as described in the following table:
+
+|Description|Setting|
+|---|---|
+|Disable Local Admin Merge|Disable Local Admin Merge| a |
 
 |Description|Setting|
 |---|---|
