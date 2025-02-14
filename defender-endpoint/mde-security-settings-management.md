@@ -210,13 +210,13 @@ For more information, see:
 | Archive Max Depth | a |
 | Archive Max Size | a |
 
-#### Daily or Hourly Quick Scan
+*** Daily or Hourly Quick Scan ***
 
 |Description|Setting|
 |---|---|
 | Schedule Quick Scan Time | a |
 
-#### Weekly Quick Scan or Full Scan
+*** Weekly Quick Scan or Full Scan ***
 
 |Description|Setting|
 |---|---|
@@ -247,7 +247,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Days To Retain Cleaned Malware|Configured, 60|
 |Allow User UI Access|Allowed.  Let users access UI.|
 
-#### Antivirus exclusions
+** Antivirus exclusions **
 
 |Description|Setting|
 |---|---|
@@ -255,7 +255,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Excluded Paths | a |
 |Excluded Processes | a |
 
-#### Microsoft Defender Core service
+** Microsoft Defender Core service **
 
 |Description|Setting|
 |---|---|
@@ -323,9 +323,6 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 1. Select **Next**.
 1. On the **Review + create** tab, review your policy settings, and then select **Save**.
-
-
-
 
 
 #### Enable Tamper Protection
