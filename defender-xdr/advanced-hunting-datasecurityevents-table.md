@@ -70,7 +70,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`IPAddress`|	`string`|	IP addresses of the clients on which the activity was performed; can contain multiple Ips if related to Microsoft Defender for Cloud Apps alerts|
 |`Timestamp`|	`datetime`|	Date and time when the event was recorded|
 |`DeviceSourceLocationType`|	`int`|	Indicates the type of location where the endpoint signals originated from; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
-|`DeviceDestinationLocationType`|	Int|	Indicates the type of location where the endpoint signals connected to; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
+|`DeviceDestinationLocationType`|	`int`|	Indicates the type of location where the endpoint signals connected to; values can be: 0 (Unknown), 1 (Local), 2 (Remote), 3 (Removable), 4 (Cloud), 5 (File share)|
 |`IrmPolicyMatchInfo`|	`dynamic`| Details of Insider Risk Management policy matches for the content involved in the event; in JSON array format |	
 |`UnallowedUrlDomains`|	`string`|	Websites or service URLs involved in this event that are configured as Unallowed in Insider Risk Management global settings|
 |`ExternalUrlDomains`|	`string`|	Websites or service URLs involved in this event that are classified as External in Insider Risk Management global settings|
