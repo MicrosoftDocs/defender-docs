@@ -217,7 +217,6 @@ Use Group Policy to configure security intelligence updates over a metered conne
 |Settings| Description|
 | -------- | -------- |
 |Allow Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy will automatically download updates, even over metered data connections (charges may apply)|
-| Cell 3   | Cell 4   |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
