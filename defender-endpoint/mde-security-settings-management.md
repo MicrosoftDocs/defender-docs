@@ -171,11 +171,11 @@ For more information, see:
 |Description|Setting|
 |---|---|
 |Signature Update Interval|Configured, 4|
+|Signature Update Fallback Order| 'InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC'|
 
-**Description**: Signature Update Fallback Order
-**Setting**: Select the checkbox for **Signature Update Fallback**
-
-InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC, where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 'MicrosoftUpdateServer' = Microsoft Update (formerly Windows Update); and MMPC = https://www.microsoft.com/en-us/wdsi/definitions.
+Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 
+'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update);
+'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
 
 **Local administrator AV**:
 
