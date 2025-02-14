@@ -221,8 +221,8 @@ For more information, see:
 |Description|Setting|
 |---|---|
 | Scan Parameter | Quick scan (Default) |
-| Schedule Scan Day | Clients: Wednesday Servers: Saturday |
-| Schedule Scan Time | Clients: 720 Servers: 60|
+| Schedule Scan Day | Clients: Wednesday <br/> Servers: Saturday |
+| Schedule Scan Time | Clients: 720 <br/> Servers: 60|
 
 
 **Threat severity default action**:
