@@ -177,10 +177,10 @@ For more information, see:
 | Metered Connection Updates | a |
 | Security Intelligence Updates Channel | a |
 
-Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 
-'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update);
-'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
-
+> [!NOTE]
+> Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed.
+> 'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update).
+> 'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
 
 **Engine updates**
 |Description|Setting|
