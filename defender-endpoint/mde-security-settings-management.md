@@ -210,19 +210,19 @@ For more information, see:
 | Archive Max Depth | a |
 | Archive Max Size | a |
 
-***Daily or Hourly Quick Scan***
+***Daily Quick Scan***
 
 |Description|Setting|
 |---|---|
-| Schedule Quick Scan Time | a |
+| Schedule Quick Scan Time | 720 |
 
 ***Weekly Quick Scan or Full Scan***
 
 |Description|Setting|
 |---|---|
-| Scan Parameter | a |
-| Schedule Scan Day | a |
-| Schedule Scan Time | a |
+| Scan Parameter | Quick scan (Default) |
+| Schedule Scan Day | Clients: Wednesday Servers: Saturday |
+| Schedule Scan Time | Clients: 720 Servers: 60|
 
 
 **Threat severity default action**:
@@ -239,9 +239,9 @@ For more information, see:
 |Days To Retain Cleaned Malware|Configured, 60|
 |Allow User UI Access|Allowed.  Let users access UI.|
 
-**Antivirus exclusions**
+**Antivirus exclusions:**
 
-***Local administrator AV***:
+***Local administrator merge behavior***:
 
 Disable local administrator AV settings such as exclusions, and set the policies from the Microsoft Defender for Endpoint Security Settings Management as described in the following table:
 
@@ -255,7 +255,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Excluded Paths | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe |
 |Excluded Processes | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe|
 
-**Microsoft Defender Core service**
+**Microsoft Defender Core service:**
 
 |Description|Setting|
 |---|---|
