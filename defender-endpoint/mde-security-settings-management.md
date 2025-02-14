@@ -173,9 +173,9 @@ For more information, see:
 |---|---|
 |Signature Update Interval|Configured, 4|
 |Signature Update Fallback Order| 'InternalDefinitionUpdateServer, MicrosoftUpdateServer, MMPC'|
-|Signature Update File Shares Sources | |
-| Metered Connection Updates | |
-| Security Intelligence Updates Channel | |
+|Signature Update File Shares Sources | a |
+| Metered Connection Updates | a |
+| Security Intelligence Updates Channel | a |
 
 Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 
 'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update);
@@ -184,39 +184,39 @@ Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus
 **Engine updates**:
 |Description|Setting|
 |---|---|
-| Engine Updates Channel | |
+| Engine Updates Channel | a |
 
 **Platform updates**:
 |Description|Setting|
 |---|---|
-| Platform Updates Channel | |
+| Platform Updates Channel | a |
 
 **Scheduled scan and On-Demand scan**
 
 ***General settings for Scheduled scan and On-Demand scan***
 |Description|Setting|
 |---|---|
-| Check For Signatures Before Running Scan | |
-| Randomize Schedule Task Times | |
-| Scheduler Randomization Time | |
-| Avg CPU Load Factor | |
-| Enable Low CPU Priority | |
-| Disable Catchup Full Scan | |
-| Disable Catchup Quick Scan | |
-| Archive Max Depth | |
-| Archive Max Size | |
+| Check For Signatures Before Running Scan | a |
+| Randomize Schedule Task Times | a |
+| Scheduler Randomization Time | a |
+| Avg CPU Load Factor | a |
+| Enable Low CPU Priority | a |
+| Disable Catchup Full Scan | a |
+| Disable Catchup Quick Scan | a |
+| Archive Max Depth | a |
+| Archive Max Size | a |
 
 *** Daily or Hourly Quick Scan *** 
 |Description|Setting|
 |---|---|
-| Schedule Quick Scan Time | |
+| Schedule Quick Scan Time | a |
 
 *** Weekly Quick Scan or Full Scan *** 
 |Description|Setting|
 |---|---|
-| Scan Parameter | |
-| Schedule Scan Day | |
-| Schedule Scan Time | |
+| Scan Parameter | a |
+| Schedule Scan Day | a |
+| Schedule Scan Time | a |
 
 
 **Local administrator AV**:
@@ -225,7 +225,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 
 |Description|Setting|
 |---|---|
-|Disable Local Admin Merge|Disable Local Admin Merge|
+|Disable Local Admin Merge|Disable Local Admin Merge| a |
 
 **Threat severity default action**:
 
@@ -244,15 +244,15 @@ Disable local administrator AV settings such as exclusions, and set the policies
 ** Antivirus exclusions **
 |Description|Setting|
 |---|---|
-|Excluded Extensions | |
-|Excluded Paths | |
-|Excluded Processes | |
+|Excluded Extensions | a |
+|Excluded Paths | a |
+|Excluded Processes | a |
 
 ** Microsoft Defender Core service **
 |Description|Setting|
 |---|---|
-| Disable Core Service ECS Integration | |
-| Disable Core Service Telemetry | |
+| Disable Core Service ECS Integration | a |
+| Disable Core Service Telemetry | a |
 
 **Network Protection**:
 
