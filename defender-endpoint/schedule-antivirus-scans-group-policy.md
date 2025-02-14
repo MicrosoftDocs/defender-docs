@@ -58,6 +58,7 @@ For more information, see the [Manage when protection updates should be download
 | Scan | Specify the day of the week to run a scheduled scan | Specify the day (or never) to run a scan. | Never |
 | Scan | Specify the time of day to run a scheduled scan | Specify the number of minutes after midnight (for example, enter **60** for 1 a.m.). | 2 a.m. |
 | Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from 0 to 23 hours. By default, scheduled tasks begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
+| Root | Configure scheduled task times randomization window | Allows you to configure scheduled task scan start time and the scheduled security intelligence update start time window in hours. This setting affects the Randomize scheduled task times configuration.  If you enable this setting, you must pick a randomization window in hours. The possible randomization window interval is between 1 and 23 hours. The randomization interval implemented is between 0 and the configured value.  When you enable this setting, Randomize scheduled task times settings uses the randomization window specified in this configuration setting.  If you disable or do not configure this policy setting, Randomize scheduled task times settings will randomize scheduled task times between 0-4 hours. | Never |
 
 ## Group Policy settings for scheduling scans for when an endpoint isn't in use
 
