@@ -201,7 +201,7 @@ See the following article for more information and allowed parameters:
 
 4. [Deploy the updated policy as usual](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
-Use Group Policy to configure security intelligence updates over a metered connection
+### Use Group Policy to configure security intelligence updates over a metered connection
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -211,7 +211,7 @@ Use Group Policy to configure security intelligence updates over a metered conne
 
 1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Security Intelligence Update** and configure the following settings:
 
-  - If you have set up scheduled quick scans, double-click the Allow Microsoft Defender Antivirus to update and communicate over a metered connection setting and set the option to **Enabled**.
+- If you have set up scheduled quick scans, double-click the Allow Microsoft Defender Antivirus to update and communicate over a metered connection setting and set the option to **Enabled**.
   - Select **OK**.
     
 |Settings| Description|
