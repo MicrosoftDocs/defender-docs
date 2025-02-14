@@ -124,7 +124,7 @@ During an investigation, you can also view the **Security policies** tab in the 
 
    |Description|Settings|
    |---|---|
-   |Allow Real-time Monitoring|Allowed|
+   |Allow Realtime Monitoring|Allowed|
    |Real Time Scan Direction|Monitor all files (bi-directional)|
    |Allow Behavior Monitoring|Allowed|
    |Allow On Access Protection|Allowed|
@@ -146,7 +146,7 @@ For more information, see:
 |---|---|
 |Allow Cloud Protection|Allowed|
 |Cloud Block Level|High|
-|Cloud Extended Time-out|Configured, 50|
+|Cloud Extended Timeout|Configured, 50|
 |Submit Samples Consent|Send all samples automatically|
 
 Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
@@ -160,7 +160,8 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 |Allow Script Scanning|Allowed|
 |Allow Archive Scanning|Allowed|
 |Allow Scanning Network Files|Allowed|
-|Allow Full Scan Removable Drive Scanning|Allowed|
+|Allow Full Scan Removable Drive Scanning |Allowed|
+|Allow Full Scan On Mapped Network Drives |Not Allowed|
 
 For more information, see:
 
@@ -172,10 +173,51 @@ For more information, see:
 |---|---|
 |Signature Update Interval|Configured, 4|
 |Signature Update Fallback Order| 'InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC'|
+|Signature Update File Shares Sources | |
+| Metered Connection Updates | |
+| Security Intelligence Updates Channel | |
 
 Where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 
 'MicrosoftUpdateServer' is Microsoft Update (formerly Windows Update);
 'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
+
+**Engine updates**:
+|Description|Setting|
+|---|---|
+| Engine Updates Channel | |
+
+**Platform updates**:
+|Description|Setting|
+|---|---|
+| Platform Updates Channel | |
+
+**Scheduled scan and On-Demand scan**
+
+***General settings for Scheduled scan and On-Demand scan***
+|Description|Setting|
+|---|---|
+| Check For Signatures Before Running Scan | |
+| Randomize Schedule Task Times | |
+| Scheduler Randomization Time | |
+| Avg CPU Load Factor | |
+| Enable Low CPU Priority | |
+| Disable Catchup Full Scan | |
+| Disable Catchup Quick Scan | |
+| Archive Max Depth | |
+| Archive Max Size | |
+
+*** Daily or Hourly Quick Scan *** 
+|Description|Setting|
+|---|---|
+| Schedule Quick Scan Time | |
+
+*** Weekly Quick Scan or Full Scan *** 
+|Description|Setting|
+|---|---|
+| Scan Parameter | |
+| Schedule Scan Day | |
+| Schedule Scan Time | |
+
 
 **Local administrator AV**:
 
@@ -196,8 +238,21 @@ Disable local administrator AV settings such as exclusions, and set the policies
 
 |Description|Setting|
 |---|---|
-|Days to Retain Cleaned|Configured, 60|
+|Days To Retain Cleaned Malware|Configured, 60|
 |Allow User UI Access|Allowed.  Let users access UI.|
+
+** Antivirus exclusions **
+|Description|Setting|
+|---|---|
+|Excluded Extensions | |
+|Excluded Paths | |
+|Excluded Processes | |
+
+** Microsoft Defender Core service **
+|Description|Setting|
+|---|---|
+| Disable Core Service ECS Integration | |
+| Disable Core Service Telemetry | |
 
 **Network Protection**:
 
