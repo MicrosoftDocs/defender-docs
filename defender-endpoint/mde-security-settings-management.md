@@ -233,7 +233,8 @@ For more information, see:
 | Schedule Quick Scan Time | 720 |
 
 > [!NOTE]
-> In this example, a quick scan would run for Windows clients on Wednesday's at 12:00 p.m. (720).
+> In this example, a quick scan would run daily on the Windows clients at 12:00 p.m. (720).
+> In this example, we are using lunch time, due to a lot of devices nowadays being laptops that could be turned off after-hours.
 
 ***Weekly Quick Scan or Full Scan***
 
