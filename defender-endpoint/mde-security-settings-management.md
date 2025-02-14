@@ -210,7 +210,7 @@ For more information, see:
 | Archive Max Depth | a |
 | Archive Max Size | a |
 
-*** Daily or Hourly Quick Scan ***
+***Daily or Hourly Quick Scan***
 
 |Description|Setting|
 |---|---|
