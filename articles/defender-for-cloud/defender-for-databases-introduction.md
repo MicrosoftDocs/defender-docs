@@ -10,15 +10,15 @@ author: dcurwin
 
 # Overview of Microsoft Defender for open-source relational databases
 
-In Microsoft Defender for Cloud, the *Defender for open-source relational databases* component of the Defender for Databases plan detects anomalous activities that indicate unusual and potentially harmful attempts to access or exploit databases. With Defender for open-source relational databases, you can address potential threats to databases without the need to be a security expert or manage advanced security-monitoring systems.
+In Microsoft Defender for Cloud, the *Defender for open-source relational databases* plan within Defender for Databases detects anomalous activities that indicate unusual and potentially harmful attempts to access or exploit databases. With this plan, you can address potential threats to databases without the need to be a security expert or manage advanced security-monitoring systems.
 
 ## Availability
 
 For pricing information about Defender for open-source relational databases, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-Defender for open-source relational databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS) and not on Azure Arc-enabled machines. For more information about availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md#cloud-support).
+Defender for open-source relational databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS). It isn't supported on Azure Arc-enabled machines. For more information about availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md#cloud-support).
 
-Defender for open-source relational databases brings threat protections for the following open-source relational databases on Azure.
+This plan brings threat protections for the following open-source relational databases on Azure.
 
 ### Azure Database for PostgreSQL
 
@@ -54,7 +54,7 @@ Amazon Relational Database Service (RDS) instances on AWS (preview) support:
 
 Defender for Cloud provides multicloud alerts on anomalous activities so that you can detect potential threats and respond to them as they occur.
 
-When you enable Defender for open-source relational databases, Defender for Cloud provides alerts when it detects anomalous database access and query patterns, along with suspicious database activities. The alerts include:
+When you enable this plan, Defender for Cloud provides alerts when it detects anomalous database access and query patterns, along with suspicious database activities. The alerts include:
 
 - Details of the suspicious activity that triggered them.
 - The associated MITRE ATT&CK tactic.

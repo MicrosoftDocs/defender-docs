@@ -162,7 +162,7 @@ Resolve misconfigurations at the resource level only after resolving misconfigur
 
 1. Select **Apply**.
 
-Once you complete all of the steps on this page, [verify the protection status of each SQL Server instance](faq-defender-for-databases.yml#how-do-i-verify-that-my-defender-for-sql-servers-on-machines-deployment-ended-successfully-and-that-my-database-is-now-protected-).
+Once you complete all of the steps on this page, [verify the protection status of each SQL Server instance](faq-defender-for-databases.yml#how-do-i-verify-that-my-deployment-of-defender-for-sql-servers-on-machines-ended-successfully-and-that-my-database-is-now-protected-).
 
 ## Related content
 

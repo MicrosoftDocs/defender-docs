@@ -7,7 +7,7 @@ metadata:
   author: dcurwin
   ms.author: dacurwin
   ms.date: 06/20/2023
-title: Common questions about Defender for Databases
+title: Common questions about Microsoft Defender for Databases
 summary: Get answers to common questions about Microsoft Defender for Databases.
 
 
@@ -34,7 +34,7 @@ sections:
 
           Lab tests of our solution showed CPU usage averaging 3% for peak slices, compared against benchmark loads. An analysis of our current user data shows a negligible effect on CPU and memory usage.
 
-          Performance always varies between environments, machines, and loads. These statements are provided as a general guideline, not a guarantee for any individual deployment.
+          Performance always varies between environments, machines, and loads. These statements serve as a general guideline, not a guarantee for any individual deployment.
 
       - question: |
           I changed the Log Analytics workspace for Defender for SQL servers on machines and lost all my scan results and baselines settings. What happened?
@@ -49,7 +49,7 @@ sections:
           When express configuration is enabled, you don't have direct access to the result and baseline data because it's stored on internal Microsoft storage.
 
       - question: |
-          Why is my Azure SQL server marked as unhealthy for **SQL servers should have vulnerability assessment configured**, even though I set it up properly by using classic configuration?
+          Why is my Azure SQL server marked as unhealthy for "SQL servers should have vulnerability assessment configured," even though I set it up properly by using classic configuration?
         answer: |
           The policy behind this recommendation checks for the existence of subassessments for the server. With classic configuration, system databases are scanned only if at least one user database exists. A server without any user databases doesn't have scans or reported scan results, which causes the policy to remain unhealthy.
 
@@ -77,7 +77,7 @@ sections:
       - question: |
           Can I revert to classic configuration?
         answer: |
-          Yes. You can revert to classic configuration by using the existing REST APIs and PowerShell cmdlets. When you revert to classic configuration, a notification appears in the Azure portal to change to express configuration.
+          Yes. You can revert to classic configuration by using the existing REST APIs and PowerShell cmdlets. When you revert to classic configuration, a notification appears in the Azure portal for changing to express configuration.
 
       - question: |
           Will express configuration become available for other types of SQL?
@@ -113,8 +113,8 @@ sections:
           How do I verify that my deployment of Defender for SQL servers on machines ended successfully and that my database is now protected?
         answer: |
           1. In the Azure portal, locate the database on the upper search bar.
-          2. On the **Security** tab, select **Defender for Cloud**.
-          3. Check **Protection status**. If the status is **Protected**, the deployment was successful.
+          2. Under **Security**, select **Microsoft Defender for Cloud**.
+          3. Check **Protection Status**. If the status is **Protected**, the deployment was successful.
 
           :::image type="content" source="media/defender-for-sql-usage/protection-status-protected.png" alt-text="Screenshot that shows protection status as protected." lightbox="media/defender-for-sql-usage/protection-status-protected.png":::
 
@@ -124,9 +124,9 @@ sections:
           The managed identity is part of the Azure policy, which pushes out the Azure Monitor Agent. The Azure Monitor Agent uses the managed identity to access the database so that it can collect the data and send it via the Log Analytics workspace to Defender for Cloud. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent).
 
       - question: |
-          Can I use my own DCR or managed identity instead of Defender for Cloud creating a new one?
+          Can I use my own DCR or managed identity instead of the one that Defender for Cloud creates?
         answer: |
-          Yes, we allow you to bring your own identity or data collection rule (DCR) by using only the script described in [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
+          Yes. We allow you to bring your own identity or data collection rule (DCR) by using only the script described in [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
       - question: |
           How many resource groups and Log Analytics workspaces does the autoprovisioning process create?
