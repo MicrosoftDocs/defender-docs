@@ -251,16 +251,16 @@ Disable local administrator AV settings such as exclusions, and set the policies
 
 |Description|Setting|
 |---|---|
-|Excluded Extensions | a |
-|Excluded Paths | a |
-|Excluded Processes | a |
+|Excluded Extensions | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe |
+|Excluded Paths | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe |
+|Excluded Processes | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe|
 
 **Microsoft Defender Core service**
 
 |Description|Setting|
 |---|---|
-| Disable Core Service ECS Integration | a |
-| Disable Core Service Telemetry | a |
+| Disable Core Service ECS Integration | The Defender core service will use the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes. |
+| Disable Core Service Telemetry | The Defender core service will use the OneDsCollector framework to rapidly collect telemetry.|
 
 **Network Protection**:
 
