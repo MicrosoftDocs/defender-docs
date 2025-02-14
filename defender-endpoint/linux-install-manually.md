@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/15/2025
+ms.date: 02/14/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -50,7 +50,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux ma
 
 ## Prerequisites and system requirements
 
-Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements for the current software version.
+Before you begin, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements for the current software version.
 
 > [!WARNING]
 > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the below steps.
@@ -67,21 +67,20 @@ In order to preview new features and provide early feedback, it's recommended th
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
-- Install `yum-utils` if it isn't installed yet:
-    ```bash
-  sudo yum install yum-utils
-  ```
 
-    > [!NOTE]
-  > Your distribution and version, and identify the closest entry (by major, then minor) for it under `https://packages.microsoft.com/config/rhel/`.
+1. Install `yum-utils` if it isn't installed yet:
 
-    Use the following table to help guide you in locating the package:
+   ```bash
+   sudo yum install yum-utils
+   ```
+
+2. Locate the correct package for your distribution and version. Use the following table to help guide you in locating the package:
 
   |Distro & version|Package|
   |---|---|
-  |For Alma 8.4 and higher|<https://packages.microsoft.com/config/alma/8/prod.repo>|
-  |For Alma 9.2 and higher|<https://packages.microsoft.com/config/alma/9/prod.repo>|
-  |For RHEL/Centos/Oracle 9.0-9.8|<https://packages.microsoft.com/config/rhel/9/prod.repo>|
+  |For Alma 8.4 and higher|[https://packages.microsoft.com/config/alma/8/prod.repo](https://packages.microsoft.com/config/alma/8/prod.repo)|
+  |For Alma 9.2 and higher|[https://packages.microsoft.com/config/alma/9/prod.repo](https://packages.microsoft.com/config/alma/9/prod.repo)|
+  |For RHEL/Centos/Oracle 9.0-9.8|[https://packages.microsoft.com/config/rhel/9/prod.repo](https://packages.microsoft.com/config/rhel/9/prod.repo)|
   |For RHEL/Centos/Oracle 8.0-8.10|<https://packages.microsoft.com/config/rhel/8/prod.repo>|
   |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |<https://packages.microsoft.com/config/rhel/7.2/prod.repo>|
   |For Amazon Linux 2023 |<https://packages.microsoft.com/config/amazonlinux/2023/prod.repo>|
@@ -90,6 +89,11 @@ In order to preview new features and provide early feedback, it's recommended th
   |For Rocky 8.7 and higher|<https://packages.microsoft.com/config/rocky/8/prod.repo>|
   |For Rocky 9.2 and higher|<https://packages.microsoft.com/config/rocky/9/prod.repo>|
   
+
+   > [!NOTE]
+   > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
+
+    
     In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
     ```bash
