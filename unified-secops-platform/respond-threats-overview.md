@@ -1,38 +1,151 @@
 ---
-title: Threat detection features across the Microsoft unified security platform
-description: Learn about the features that help detect threats in the Microsoft unified security platform
+title: Threat detection in Microsoft's unified SecOps platform
+description: Learn about the features that help detect and respond to threats in the Microsoft unified SecOps platform, ensuring comprehensive protection.
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: austinmc
-author: austinmccollum
+ms.author: batamig
+author: bagol
 ms.localizationpriority: medium
-ms.date: 11/22/2024
-audience: ITPro
+ms.date: 02/16/2025
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: conceptual
+
 # customer intent: As a security operations center business decision maker, I want to learn about the tools available to respond to threats automatically in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---
 
 # Respond to threats in Microsoft's unified SecOps platform
 
-Cybersecurity threats abound in the current technology landscape. A lot of noise is created by the constant specter of breach and an abundance of signals available to security operation centers. Microsoft's unified SecOps platform separates actionable threats from the noise. Each service in Microsoft's unified SecOps platform adds its own finely tuned detections to match the complexion of the solution it provides and puts it all together into a single dashboard.
+In today’s evolving cybersecurity landscape, organizations must respond to threats efficiently and proactively. Microsoft’s unified security operations platform offers a comprehensive approach to threat detection, investigation, and response by integrating services such as Microsoft Defender XDR, Microsoft Sentinel, Microsoft Defender for Cloud, Microsoft Security Exposure Management, and Microsoft Security Copilot. By leveraging automation, AI-driven insights, and risk-based prioritization, security teams can minimize dwell time and mitigate risks effectively.
 
-Microsoft's unified SecOps platform in the Microsoft Defender portal pulls detections together in the form of alerts and incidents from Microsoft Defender XDR, Microsoft Sentinel, and Microsoft Defender for Cloud.
+## Automate threat detection and response with Microsoft Defender XDR
 
-## Threat response in the Microsoft Defender portal
+Microsoft Defender XDR provides a unified threat protection platform that automates security across endpoints, identities, email, applications, and cloud workloads. Key response features include:
 
-## Microsoft Defender XDR threat response
+### Automated Investigation & Response (AIR)
 
-For more information, see [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender)
+Reduce analyst workload by automatically analyzing alerts and applying remediation actions such as isolating compromised devices or reversing malicious changes.
+
+Microsoft Defender XDR's AIR capabilities help security operations teams manage the high volume of alerts by automating investigation and response processes. Acting as a virtual analyst, AIR mimics ideal investigation steps, working 24/7 to reduce response times and free up the security team for other tasks. When an alert triggers an incident, AIR initiates an automated investigation, resulting in verdicts (malicious, suspicious, or no threats) and identifying necessary remediation actions, such as quarantining files or stopping processes.
+
+The Defender portal's **Action Center** provides visibility into all actions, whether pending or completed, and the **Automated Investigation & Response** card offers an overview of remediation actions and alerts. Organizations can configure AIR capabilities to suit their needs, with remediation actions being automatic or requiring approval from the security team. This automation significantly enhances the efficiency and effectiveness of security operations.
+
+For more information, see [Automated investigation and response in Defender XDR](/defender-xdr/m365d-autoir).
 
 ## Microsoft Sentinel threat response
 
+Onboard Microsoft Sentinel to the Defender portal for a unified security operations platform, with cloud-native SIEM (Security Information and Event Management) and SOAR (Security Orchestration, Automation, and Response) features for intelligent security analytics and threat intelligence across the enterprise. Microsoft Sentinel helps security teams detect, investigate, and respond to threats with speed and efficiency.
+
+The following sections describe how Microsoft Sentinel features add to your threat detection and response capabilities.
+
 For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard).
+
+### Automated playbooks
+
+Built using Azure Logic Apps, playbooks can automatically respond to threats by isolating endpoints, disabling compromised accounts, or notifying relevant teams.
+
+### Customizable dashboards
+
+Customizable Dashboards: Provides security analysts with visual insights into threat trends and incidents.
+
 
 ## Microsoft Defender for Cloud threat response
 
+## Cross-service threat responses in the Defender portal
+
+The following features are supported across the Defender portal for threat detection and response.
+
+### Incident correlation
+
+In the Defender portal, related alerts from across multiple attack surfaces are grouped into a single incident, improving the efficiency of incident response. Correlating alerts from various sources such as endpoints, identities, email, and cloud workloads, helps security teams gain a holistic view of an attack campaign. This comprehensive perspective allows analysts to understand the full scope of an incident, identify the root cause, and determine the most effective remediation actions.
+
+Incident correlation reduces the noise generated by individual alerts and helps prioritize incidents based on their potential impact. This streamlined approach enables security teams to focus on the most critical threats, reducing the time and effort required to investigate and respond to incidents. By consolidating related alerts into a single incident, organizations can enhance their threat response capabilities, minimize dwell time, and mitigate risks more effectively.
+
+For more information, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
+
+### Advanced Hunting
+
+The **Advanced hunting** area of the Defender portal allows security teams to proactively search for threats across their environment using the powerful Kusto Query Language (KQL). advanced hunting allows analysts to create custom queries to detect advanced attacks, uncover hidden threats, and investigate suspicious activities. By leveraging the extensive data collected from various sources, security teams can identify patterns and anomalies that might indicate a security breach, enabling them to respond swiftly and effectively to potential threats.
+
+For more information, see [Hunting in Microsoft's unified SecOps platform](hunting-overview.md).
+
+### Integrated threat intelligence
+
+Threat intelligence is integrated across Defender portal services to enrich alerts with valuable information on known indicators of compromise (IOCs), such as malicious IP addresses, domains, and file hashes. This enrichment helps security teams quickly understand the context and severity of threats, enabling faster and more informed decision-making. Use threat intelligence from Microsoft and third-party sources to correlate alerts with known attack patterns and tactics, techniques, and procedures (TTPs) used by adversaries.
+
+This integration not only accelerates the investigation process but also enhances the accuracy of threat detection by reducing false positives. Security teams can prioritize their response efforts based on the relevance and credibility of the threat intelligence, ensuring that the most critical threats are addressed promptly. Continuous updates to threat intelligence feeds also ensure that security teams stay ahead of emerging threats, improving the overall resilience of the organization's security posture.
+
+For more information, see [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md).
+
 ## Related content
 
+
+Microsoft Sentinel, a cloud-native SIEM (Security Information and Event Management) and SOAR (Security Orchestration, Automation, and Response) platform, aggregates security data across an organization’s infrastructure and automates responses.
+
+Key Features:
+
+3. Microsoft Defender for Cloud: Protecting Cloud Workloads
+
+Microsoft Defender for Cloud provides Cloud Security Posture Management (CSPM) and Cloud Workload Protection (CWPP) to safeguard multi-cloud and hybrid environments.
+
+Key Features:
+
+Security Posture Management: Continuously assesses security configurations and provides remediation recommendations for cloud services.
+
+Threat Protection for Cloud Workloads: Automatically detects and responds to threats targeting cloud-native applications, virtual machines (VMs), containers, and Kubernetes clusters.
+
+Just-in-Time (JIT) Access: Minimizes the attack surface by allowing temporary, role-based access to critical resources.
+
+Integration with Microsoft Defender XDR: Provides correlated insights into hybrid attack campaigns.
+
+By leveraging these capabilities, organizations can protect their cloud resources while ensuring compliance with security best practices.
+
+4. Microsoft Security Exposure Management: Proactive Risk Reduction
+
+Microsoft Security Exposure Management enables organizations to identify and mitigate potential attack paths before they can be exploited.
+
+Key Features:
+
+Attack Path Analysis: Maps out potential attack vectors and provides remediation recommendations to reduce risk.
+
+Risk-Based Prioritization: Uses Microsoft’s security scoring system to prioritize vulnerabilities and misconfigurations that pose the greatest threat.
+
+Automated Risk Reduction Recommendations: Suggests security measures to strengthen an organization’s overall security posture.
+
+With exposure management, security teams can shift from reactive defense to a proactive approach that prevents threats before they manifest.
+
+5. Microsoft Security Copilot: AI-Powered Threat Response
+
+Microsoft Security Copilot enhances security operations with generative AI and machine learning, providing real-time insights and recommendations.
+
+Key Features:
+
+Incident Summarization: Automatically generates human-readable summaries of security incidents, enabling faster decision-making.
+
+Guided Investigation: Assists security analysts in investigating threats by suggesting response actions based on Microsoft’s threat intelligence.
+
+Automated Query Generation: Helps analysts create advanced queries in Microsoft Sentinel and Defender XDR, speeding up threat hunting efforts.
+
+By incorporating Security Copilot, organizations can enhance SOC efficiency and improve response times with AI-powered insights.
+
+Best Practices for Effective Threat Response
+
+To maximize the benefits of Microsoft’s security operations platform, organizations should:
+
+Implement Automated Playbooks: Utilize Sentinel’s SOAR capabilities to handle common security incidents with predefined response workflows.
+
+Leverage AI-Powered Insights: Use Security Copilot to accelerate investigations and optimize response strategies.
+
+Regularly Review Security Posture: Continuously monitor exposure management reports and apply recommended security controls.
+
+Integrate Threat Intelligence: Utilize Defender XDR and Sentinel’s threat intelligence feeds to stay ahead of emerging threats.
+
+Customize Defender XDR’s AIR Rules: Fine-tune automated responses based on the organization’s security policies and risk tolerance.
+
+Conclusion
+
+By leveraging Microsoft Defender XDR, Microsoft Sentinel, Microsoft Defender for Cloud, Microsoft Security Exposure Management, and Microsoft Security Copilot, organizations can create a comprehensive and automated security operations strategy. These integrated solutions provide end-to-end threat detection, investigation, and response, helping security teams mitigate risks more effectively and efficiently.
+
+With proactive security measures, AI-driven insights, and automated workflows, Microsoft customers can stay ahead of cyber threats and ensure robust protection for their digital assets.
