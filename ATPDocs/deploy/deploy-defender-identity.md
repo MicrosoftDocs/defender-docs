@@ -50,9 +50,8 @@ Use the following steps to prepare for deploying Defender for Identity:
 1. [Plan your Defender for Identity capacity](capacity-planning.md).
 
 > [!TIP]
-> We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
->
-> The link to the *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
+> We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if the servers in your environment have the necessary prerequisites.
+> You can use the [DefenderForIdentity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/) to add the required auditing and configure the necessary settings.
 
 ## Deploy Defender for Identity
 
@@ -71,12 +70,12 @@ The following procedures help you complete the deployment process:
 
 - [**Enable and configure unified role-based access control (RBAC)**](../role-groups.md) for Defender for Identity.
 
-- [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage. For example, when you have a DSA configured, the DSA is used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
+- [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage. For example, when you have a DSA configured, the DSA is used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities.
 
 - [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 > [!TIP]
-> By default, Defender for Identity sensors query the directory using LDAP on ports 389 and 3268. To switch to LDAPS on ports 636 and 3269, please open a support case. For more information, see [Microsoft Defender for Identity support](../support.md).
+> By default, Defender for Identity sensors query the directory using LDAP on ports 389 and 3268. To switch to LDAPS on ports 636 and 3269, open a support case. For more information, see [Microsoft Defender for Identity support](../support.md).
 >
 
 > [!IMPORTANT]

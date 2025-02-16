@@ -48,7 +48,7 @@ Other services supported in the Microsoft Defender portal as part of Microsoft's
 | [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/) | Protects multi-cloud and hybrid environments with advanced threat detection and response. |
 | [**Microsoft Defender Threat Intelligence**](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) | Streamlines threat intelligence workflows by aggregating and enriching critical data sources to correlate indicators of compromise (IOCs) with related articles, actor profiles, and vulnerabilities. |
 | [**Microsoft Entra ID Protection**](/entra/id-protection/overview-identity-protection) | Evaluates risk data from sign-in attempts to evaluate the risk of each sign-in to your environment. |
-| **Microsoft Purview Insider Risk Management** | [Learn about Insider Risk Management](/purview/insider-risk-management) |
+| **[Microsoft Purview Insider Risk Management](/purview/insider-risk-management)** | Correlates various signals to identify potential malicious or inadvertent insider risks, such as IP theft, data leakage and security violations. |
 
 ## Review service prerequisites
 

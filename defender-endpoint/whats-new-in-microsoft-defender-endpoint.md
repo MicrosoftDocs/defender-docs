@@ -7,7 +7,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 01/21/2025
+ms.date: 02/12/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -26,22 +26,9 @@ ms.topic: conceptual
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint.
-
-For more information on preview features, see [Preview features](/defender-xdr/preview).
-
-For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
-[What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
-
-For more information on what's new with other Microsoft Defender security products, see:
-
-- [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
-- [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
-- [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
-- [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
+The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint. For more information on preview features, see [Preview features](/defender-xdr/preview).
 
 For more information on Microsoft Defender for Endpoint on specific operating systems:
 
@@ -51,9 +38,27 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+For more information on what's new with other Microsoft Defender security products, see:
+
+- [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
+- [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
+- [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
+- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
+
+
 ## January 2025
 
 - (Preview) **Aggregated reporting in Microsoft Defender for Endpoint**: Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties. This feature is available for Microsoft Defender for Endpoint Plan 2. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
+
+## November-December 2024
+
+- [Five new demonstration scenarios](defender-endpoint-demonstrations.md) were added:
+   - [AMSI demos](mde-demonstration-amsi.md)
+   - [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)
+   - [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)
+   - [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)
+   - [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)
 
 ## August 2024
 
@@ -116,7 +121,6 @@ Two new ASR rules are now in public preview:
    - If you close Defender Boxed and you want to reopen it, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
    - Act quickly! Defender Boxed is available only for a short period of time.
 - (GA) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using [Automatic Attack Disruption](/defender-xdr/automatic-attack-disruption).
-
 
 ## November 2023
 

@@ -119,8 +119,8 @@ Use advanced hunting to further investigate insider risk events and behaviors. R
 |:---|:---|
 |[AlertInfo](advanced-hunting-alertinfo-table.md)|Insider risk management alerts are available as part the AlertInfo table, which contains information about alerts from various Microsoft security solutions.|
 |[AlertEvidence](advanced-hunting-alertevidence-table.md)|Insider risk management alerts are available as part of the AlertEvidence table, which contains information about entities associated with alerts from various Microsoft security solutions.|
-|DataSecurityBehaviors|This table contains insights into potentially suspicious user behavior that violates the default or customer-defined policies in Microsoft Purview.|
-|DataSecurityEvents|This table contains enriched events about user activities that violate the default or customer-defined policies in Microsoft Purview.|
+|[DataSecurityBehaviors](advanced-hunting-datasecuritybehaviors-table.md)|This table contains insights into potentially suspicious user behavior that violates the default or customer-defined policies in Microsoft Purview.|
+|[DataSecurityEvents](advanced-hunting-datasecurityevents-table.md)|This table contains enriched events about user activities that violate the default or customer-defined policies in Microsoft Purview.|
 
 In the example below, we use the **DataSecurityEvents** table to investigate potentially suspicious user behavior. In this case, the user uploaded a file to Google Drive, which can be viewed as suspicious behavior if a company doesn't support file uploads to Google Drive.
 
@@ -152,7 +152,7 @@ If the Defender XDR-Microsoft Sentinel connector is turned on, insider risk mana
 > [!NOTE]
 > When the Defender XDR-Microsoft Sentinel connector is turned on, Microsoft Purview Insider Risk Management data becomes accessible in Microsoft Sentinel regardless of role-based access control settings.
 
-To integrate additional insider risk management data like behaviors and events into Microsoft Sentinel, we recommend onboarding Microsoft Sentinel to Microsoft Defender to get a unified view of your entire security operations center. Onboarding helps you bring insider risk management alerts and other data from Microsoft Sentinel into Microsoft Defender, allowing cross-table hunting and other powerful workflows. To onboard, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
+To integrate additional insider risk management data like behaviors and events into Microsoft Sentinel, we recommend onboarding Microsoft Sentinel to Microsoft Defender to get a unified view of your entire security operations center. Onboarding helps you bring insider risk management alerts and other data from Microsoft Sentinel into Microsoft Defender, allowing cross-table hunting and other powerful workflows. To onboard, see [Connect Microsoft Sentinel to Microsoft Defender](/unified-secops-platform/microsoft-sentinel-onboard).
 
 ## Next steps
 
