@@ -22,7 +22,7 @@ appliesto:
 
 # View and manage incidents and alerts in Microsoft Defender multitenant management
 
-Multitenant management for Microsoft Defender XDR and the Microsoft unified security operations platform enables security operation center (SOC) analysts to access and analyze data from multiple tenants in one place, allowing them to quickly identify and respond to threats. Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data for tenants that onboarded a Microsoft Sentinel workspace to the unified security operations platform.
+Multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal enables security operation center (SOC) analysts to access and analyze data from multiple tenants in one place, allowing them to quickly identify and respond to threats. Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data for tenants that onboarded a Microsoft Sentinel workspace to the Defender platform.
 
 Manage incidents & alerts originating from multiple tenants under **Incidents & alerts**.
 
