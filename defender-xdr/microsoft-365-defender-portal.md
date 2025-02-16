@@ -92,7 +92,7 @@ Automated actions are capabilities within Microsoft Defender XDR that help you a
 
 These actions can be reviewed and managed in the [**Action Center**](m365d-action-center.md) page in the Microsoft Defender portal.
 
-You can submit files, email and email attachments, URLs, or Teams messages in the **Submissions** page to Microsoft for further analysis. For more information, see the [Submission guide](submission-guide.md).
+You can submit files, email and email attachments, URLs, or Teams messages in the **Submissions** page to Microsoft for further analysis. For more information, see the [Submission guide](/unified-secops-platform/submission-guide).
 
 ## Threat analytics
 

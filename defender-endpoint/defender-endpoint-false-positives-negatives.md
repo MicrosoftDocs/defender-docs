@@ -322,7 +322,7 @@ You can submit entities, such as files and fileless detections, to Microsoft for
 
 If you have a file that was either wrongly detected as malicious or was missed, follow these steps to submit the file for analysis.
 
-1. Review the guidelines here: [Submit files for analysis](/windows/security/threat-protection/intelligence/submission-guide).
+1. Review the guidelines here: [Submit files for analysis](/unified-secops-platform/submission-guide).
 
 2. [Submit files in Defender for Endpoint](admin-submissions-mde.md) or visit the [Microsoft Security Intelligence submission site](https://www.microsoft.com/wdsi/filesubmission/) and submit your files.
 
@@ -336,7 +336,7 @@ If something was detected as malware based on behavior, and you don't have a fil
 
    A .cab file is generated that contains various diagnostic logs. The location of the file is specified in the output of the command prompt. By default, the location is `C:\ProgramData\Microsoft\Microsoft Defender\Support\MpSupportFiles.cab`.
 
-3. Review the guidelines here: [Submit files for analysis](/windows/security/threat-protection/intelligence/submission-guide).
+3. Review the guidelines here: [Submit files for analysis](/unified-secops-platform/submission-guide).
 
 4. Visit the [Microsoft Security Intelligence submission site](https://www.microsoft.com/wdsi/filesubmission) (https://www.microsoft.com/wdsi/filesubmission), and submit your .cab files.
 
@@ -353,7 +353,7 @@ For submissions that weren't already processed, they're prioritized for analysis
 To check for updates regarding your submission, sign in at the [Microsoft Security Intelligence submission site](https://www.microsoft.com/wdsi/filesubmission).
 
 > [!TIP]
-> To learn more, see [Submit files for analysis](/windows/security/threat-protection/intelligence/submission-guide#how-does-microsoft-prioritize-submissions).
+> To learn more, see [Submit files for analysis](/unified-secops-platform/submission-guide#how-does-microsoft-prioritize-submissions).
 
 ## Part 5: Review and adjust your threat protection settings
 

@@ -82,7 +82,7 @@ landingContent:
           - text: "Optimize your SOC"
             url: /azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal&branch=main?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json   
           - text: "Manage multiple tenants"
-            url: /defender-xdr/mto-overview?branch=main?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            url: mto-overview.md
 
 
 
