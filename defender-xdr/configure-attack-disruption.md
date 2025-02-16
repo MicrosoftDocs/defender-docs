@@ -54,7 +54,7 @@ Review the configured automation level for your device group policies, whether a
 
 2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
-3. Review your device group policies. Look at the **Automation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To exclude a device group from automated containment, set its automation level to **no automated response**. Note that this is not highly recommended and should only be done for a limited number of devices.
+3. Review your device group policies. Look at the **Automation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To exclude a device group from automated containment, set its automation level to **no automated response** (Semi autoamtion level will allow triggering of automatic attack disruption with no need for manual approval). Note that this is not highly recommended and should only be done for a limited number of devices.
 
 #### Device discovery configuration
 
