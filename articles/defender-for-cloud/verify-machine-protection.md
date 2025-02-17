@@ -27,4 +27,4 @@ Copy and run this script to verify protection on multiple machines:
 
 ## Troubleshoot unprotected machines
 
-[Troubleshooting guide](troubleshoot-sql-machines-guide.md)
+If you find that databases are not protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.
