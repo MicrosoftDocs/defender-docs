@@ -8,7 +8,7 @@ ms.date: 02/17/2025
 
 # Protect your databases with Defender for Databases
 
-Defender for Databases in Microsoft Defender for Cloud lets you protect your entire database estate with attack detection and threat response for the most popular database types in Azure. Defender for Cloud protects database engines and data types based on their attack surface and security risks.
+Defender for Databases in Microsoft Defender for Cloud helps you protect your entire database estate. It provides attack detection and threat response for the most popular database types in Azure. Defender for Cloud protects database engines and data types based on their attack surface and security risks.
 
 Database protection includes:
 
@@ -25,7 +25,7 @@ These four database protection plans are priced separately. Find more info about
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS account](quickstart-onboard-aws.md) or [GCP projects](quickstart-onboard-gcp.md).
+- Connect your [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service (AWS) account](quickstart-onboard-aws.md), or [Google Cloud Platform (GCP) projects](quickstart-onboard-gcp.md).
 
 ## Enable the Databases plan
 
@@ -37,13 +37,13 @@ Enabling database protection activates all four Defender plans and protects all 
 
 1. In the Defender for Cloud menu, select **Environment settings**.
 
-1. Select the relevant Azure subscription, AWS account or GCP project.
+1. Select the relevant Azure subscription, AWS account, or GCP project.
 
 1. On the Defender plans page, switch the Databases plan to **On**.
 
     :::image type="content" source="media/tutorial-enabledatabases-plan/enable-databases.png" alt-text="Screenshot that shows you where to select, to enable the databases plan." lightbox="media/tutorial-enabledatabases-plan/enable-databases.png":::
 
-## Enable and modify specific datbase plans
+## Enable and modify specific database plans
 
 Enabling database protection activates the following four Defender plans:
 
@@ -54,7 +54,7 @@ Enabling database protection activates the following four Defender plans:
 
 These plans protect all supported databases in your subscription. 
 
-To enable and modify each plan individually see:
+To enable and modify each plan individually, see:
 
 - [Enable Defender for Azure SQL Databases](enable-sql-database-plan.md)
 - [Enable Defender for SQL Server on Machines](defender-for-sql-usage.md)
