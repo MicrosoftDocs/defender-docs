@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Defender for SQL on Machines plan deployment in Defender for Cloud
-description: Troubleshoot deployment issues for SQL Servers on machines via the Azure Monitoring Agent (AMA)-based autoprovisioning process.
+description: Troubleshoot deployment issues for SQL Servers on machines using the Azure Monitoring Agent (AMA) autoprovisioning process.
 ms.date: 02/17/2025
 ms.topic: how-to
 ms.custom: references_regions
@@ -11,13 +11,13 @@ ms.custom: references_regions
 
 If you've enabled Defender for SQL Server on Machines and some SQL instances aren't in a protected state, use this article to troubleshoot deployment issues.
 
-Before you start the troubleshooting steps in this article, make sure that you have:
+Before starting the troubleshooting steps, ensure you have:
 - Followed the steps to [enable Defender for SQL on Machines](defender-for-sql-usage.md).
 - Reviewed the [protection status of databases running on protected machines](verify-machine-protection.md).
 
 ## Step 1: Understand how resources are created
 
-Defender for SQL Servers on Machines automatically creates resources as shown in the graphic.
+Defender for SQL Servers on Machines automatically creates resources as shown in the diagram.
 
 :::image type="content" source="media/troubleshoot-sql-machines-guide/resource-level.png" alt-text="Diagram that shows resources and the levels that they're created on." lightbox="media/troubleshoot-sql-machines-guide/resource-level.png":::
 
@@ -27,7 +27,7 @@ Resources are summarized in the table:
 |--|--|
 | **Resource group** - Created in East US Azure region | Subscription level |
 | **Managed identity** - A user-assigned managed identity is created in each Azure region | Subscription level |
-| **Log Analytics workspace** - Use the defualt or a custom workspace. | Subscription level |
+| **Log Analytics workspace** - Use the default or a custom workspace. | Subscription level |
 | **Data collection rule (DCR)** - Created for each workspace | Subscription level |
 | **Data collection rule association (DCRA)** | Defined on each SQL Server instance |
 | **Azure Monitoring Agent (AMA)**  | The extension is installed on each SQL Server instance |
@@ -35,7 +35,7 @@ Resources are summarized in the table:
 
 ## Step 2: Make sure extensions are allowed
 
-In order for protection to work as expected, ensure your organizational deny policy don't block these extensions: 
+To ensure protection works as expected, make sure your organizational deny policy doesn't block these extensions: 
 
 - Defender for SQL (IaaS and Arc)
     - Publisher: Microsoft.Azure.AzureDefenderForSQL
@@ -52,11 +52,11 @@ In order for protection to work as expected, ensure your organizational deny pol
 
 ## Step 3: Ensure East US region is allowed
 
-When you enable the plan, a resource group is created in the Azure East US region. Make sure that this region isn't blocked by any deny policies.
+When you enable the plan, a resource group is created in the Azure East US region. Ensure this region isn't blocked by any deny policies.
 
 ## Step 4: Verify resource naming conventions
 
-Defender for SQL Server on Machines uses a specific naming convention for resources. Make sure that these naming conventions aren't blocked by your organization and don't modify any of the automatically created resources:
+Defender for SQL Server on Machines uses specific naming conventions for resources. Ensure these naming conventions aren't blocked by your organization and don't modify any of the automatically created resources:
 
 - DCR: `MicrosoftDefenderForSQL--dcr` 
 - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` 
@@ -100,13 +100,13 @@ Use the [SQL Servers on Machines AMA Helper workbook](https://ms.portal.azure.co
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/ama-helper-workbook-results.png" alt-text="Screenshot of the SQL Servers on Machines AMA Helper workbook results." lightbox="media/troubleshoot-sql-machines-guide/ama-helper-workbook-results.png":::
 
-After you locate a subscription with misconfigurations, you should resolve the misconfigurations first on the subscription level and then on the resource level and extension installation level.
+After locating a subscription with misconfigurations, resolve the misconfigurations first at the subscription level, then at the resource level and extension installation level.
 
 ## Step 6: Resolve misconfigurations at the subscription level
 
-After you've identified misconfigurations start by fixing DCR, workspace and identity issues at the subscription level. 
+After identifying misconfigurations, start by fixing DCR issues, then workspace issues, and finally identity issues at the subscription level.
 
-It's important to fix misconfigurations in the right order. DCR resolution rely on workspace resolution, and workspace resolution rely on identity resolution. If you try to resolve these misconfigurations out of order, the misconfigurations won't be resolved.
+It's important to fix misconfigurations in the correct order. DCR resolution relies on workspace resolution, and workspace resolution relies on identity resolution. If you try to resolve these misconfigurations out of order, they won't be resolved.
 
 1. Navigate to **Policy** > **Compliance**.
 
@@ -127,7 +127,7 @@ It's important to fix misconfigurations in the right order. DCR resolution rely 
 1. Fix each issue as follows:
     - **Identity** - `Create and assign a built-in user-assigned managed identity`.
     - **Workspace** - `Configure the Microsoft Defender for SQL Log Analytics workspace`.
-    - **DCR** - `Configure SQL Virtual Machines to automatically install Microsoft Defender for SQL and DCR with a Log Analytics worskpace` or `Configure Arc-enabled SQL Servers to automatically install Microsoft Defender for SQL and DCR with a Log Analytics workspace`.
+    - **DCR** - `Configure SQL Virtual Machines to automatically install Microsoft Defender for SQL and DCR with a Log Analytics workspace` or `Configure Arc-enabled SQL Servers to automatically install Microsoft Defender for SQL and DCR with a Log Analytics workspace`.
 
 1. For each policy that is noncompliant, review the compliance reason and select **Create remediation task** to resolve it.
     
@@ -139,13 +139,13 @@ It's important to fix misconfigurations in the right order. DCR resolution rely 
 
 1. Repeat these steps for each noncompliant policy and subscription.
 
-### Imput custom values with PowerShell deployment script
+### Input custom values with PowerShell deployment script
 
 If you couldn't resolve subscription issues with the workbook, Defender for SQL Servers on Machines provides a PowerShell deployment script that enables you to input your own values for workspace, DCR, and user Identity. To use the PowerShell script follow the [instructions on this page](enable-defender-sql-at-scale.md).
 
 ## Step 7: Resolve misconfigurations at the resource level
 
-After you've resolved misconfigurations at the subscription level, you can resolve misconfigurations at the resource level including DCRA misconfigurations and incomplete AMA or Defender for SQL extension deployment.
+After resolving misconfigurations at the subscription level, resolve misconfigurations at the resource level, including DCRA misconfigurations and incomplete AMA or Defender for SQL extension deployment.
 
 ### Troubleshoot extension misconfigurations
 
@@ -196,4 +196,4 @@ After you've resolved misconfigurations at the subscription level, you can resol
 
 ## Step 8: Reverify protection status
 
-After you complete all the steps on this page, [reverify the protection status of each SQL Server instance](verify-machine-protection.md).
+After completing all the steps on this page, [reverify the protection status of each SQL Server instance](verify-machine-protection.md).

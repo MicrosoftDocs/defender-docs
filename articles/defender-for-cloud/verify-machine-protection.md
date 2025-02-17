@@ -10,7 +10,7 @@ ms.date: 02/17/2025
 
 # Verify SQL machine protection
 
-After you enable protection for SQL VMs with the Defender for SQL Servers on Machines plan, you should verify that your SQL servers are protected as expected.
+After enabling protection for SQL VMs with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
 
 ## Verify protection on multiple machines
 
@@ -20,7 +20,7 @@ Copy and run this script to verify protection on multiple machines:
 
 1. In the Azure portal search for and select **SQL databases**.
 
-1. Locate and select the a database on the machine.
+1. Locate and select a database on the machine.
 
 1. Under the **Security** tab, select **Defender for Cloud**.
 
@@ -30,4 +30,4 @@ Copy and run this script to verify protection on multiple machines:
 
 ## Troubleshoot unprotected machines
 
-If you find that databases are not protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.
+If databases are not protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.
