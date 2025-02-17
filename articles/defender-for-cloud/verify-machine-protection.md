@@ -39,7 +39,7 @@ resources
 
 ## Verify protection on a single SQL server instance
 
-1. In the Azure portal, search for and select **SQL databases**.
+1. In the Azure portal, search for and select **SQL virtual machines**.
 
 1. Locate and select a database on the machine.
 
