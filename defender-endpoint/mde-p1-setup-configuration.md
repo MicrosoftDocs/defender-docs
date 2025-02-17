@@ -5,7 +5,6 @@ search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb 
-audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -104,6 +103,10 @@ Microsoft recommends assigning users only the level of permission they need to p
 
 - With basic permissions management, Global Administrators and Security Administrators have full access, whereas Security Readers have read-only access.
 - With RBAC, you can set more granular permissions through more roles. For example, you can have Security Readers, Security Operators, Security Administrators, Endpoint Administrators, and more.
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 The following table describes key roles to consider for Defender for Endpoint in your organization: <br/><br/>
 
