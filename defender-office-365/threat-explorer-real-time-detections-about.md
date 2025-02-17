@@ -104,6 +104,9 @@ Threat Explorer and Real-time detections contain the following elements:
   |**URL clicks**|✔||Information about user clicks on URLs in email messages, Teams messages, SharePoint files, and OneDrive files.|
 
   These views are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
+  
+  > [!TIP]
+  > Real-time detections only shows the malicious email detections at the time of delivery whereas Threat Explorer shows all email detections at the time of delivery along with post delivery activities.
 
 - **Date/time filters**: By default, the view is filtered by yesterday and today. To change the date filter, select the date range, and then select **Start Date** and **End date** values up to 30 days ago.
 
