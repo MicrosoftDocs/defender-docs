@@ -14,7 +14,17 @@ After enabling protection for SQL VMs with the Defender for SQL Servers on Machi
 
 ## Verify protection on multiple Azure VMs
 
-Copy and run [this script](https://aka.ms/verify-sql-instances) to verify protection on multiple machines.
+Run the [Get-SsqlVMProtectionStatusReport.ps1 PowerShell script](https://aka.ms/DfSQLprotectionverificationscale) to retrieve and report the protection status of SQL VMs protection for Defender for SQL Servers on Machines within a specified Azure subscription. This script is applicable for Azure VMs only and does the following:
+- Queries registry settings from SQL VMs.
+- Retrieves protection status from the machine registry.
+- Converts the timestamp from .NET ticks to an ISO 8601 formatted date.
+- Aggregates results for all SQL instances found on each VM.
+- Exports the collected data to an Excel report, which includes:
+    - SQL VM Name
+    - SQL Instance Name
+    - Protection Status
+    - Last Update Time
+    - SQL VM Resource ID
 
 ## Verify protection on multiple Azure Arc-enabled VMs
 
