@@ -77,18 +77,25 @@ For more information on data connectors, see [Data connectors overview](overview
 
 Exposure Management is available in the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com)
 
-Access to the exposure management blade and features in the Microsoft Defender portal is available with any of these licenses:
+Access to the exposure management blade and features in the Microsoft Defender portal according to the license requirements.
 
-- Microsoft 365 E5 o*r A5*
-- Microsoft 365 E3
+The following licenses allow accessing all Microsoft Security Exposure Management experiences:
+
+- Microsoft 365 E5 or A5
 - Microsoft 365 E3 with the Microsoft Enterprise Mobility + Security E5 add-on
 - Microsoft 365 A3 with the Microsoft 365 A5 security add-on
 - Microsoft Enterprise Mobility + Security E5 or A5
-- Microsoft Defender for Endpoint (Plan 1 and 2)
+- Microsoft Defender for Endpoint (Plan 1)
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps
-- Microsoft Defender for Office 365 (Plans 1 and 2)
+- Microsoft Defender for Office 365 (Plan 1)
 - Microsoft Defender Vulnerability Management
+
+The following licenses will allow access to Microsoft Secure Score experience only:
+
+- Microsoft 365 E3
+- Microsoft Defender for Endpoint (Plan 2)
+- Microsoft Defender for Office 365 (Plan 2)
 
 Integration of data from the above tools and other Microsoft Security tools like Microsoft Defender for Cloud, Microsoft Defender Cloud Security Posture Management and Microsoft Defender External Attack Surface Management is available with those licenses.
 
