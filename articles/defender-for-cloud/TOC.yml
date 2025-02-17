@@ -961,9 +961,16 @@
         - name: Deploy Defender for Azure SQL Databases
           displayName: database
           href: enable-sql-database-plan.md
+        - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
+          href: sql-azure-vulnerability-assessment-enable.md
+        - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
+          href: sql-azure-vulnerability-assessment-enable-classic.md
+        - name: Advanced Threat Protection for Azure SQL Database
+          displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
+          href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
       - name: Defender for SQL Server on Machines
         items:
-        - name: Overview of Defender for SQL servers on machines
+        - name: Overview
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-servers-introduction.md
         - name: vulnerability assessment
@@ -972,24 +979,18 @@
         - name: Advanced threat protection
           displayName: threat, detection
           href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
-        - name: Deploy
-          items:
-          - name: Enable Microsoft Defender for SQL servers on machines
-            displayName: hybrid, arc, Azure Defender
-            href: defender-for-sql-usage.md
-          - name: Troubleshoot guide - SQL Server deployment on machines
-            displayName: Troubleshoot guide, SQL, servers, machines
-            href: troubleshoot-sql-machines-guide.md
-          - name: Enable Defender for SQL servers on machines at scale
-            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-            href: enable-defender-sql-at-scale.md
-          - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
-            href: sql-azure-vulnerability-assessment-enable.md
-          - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
-            href: sql-azure-vulnerability-assessment-enable-classic.md
-          - name: Advanced Threat Protection for Azure SQL Database
-            displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
-            href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
+        - name: Enable Defender for SQL Servers on Machines
+          displayName: hybrid, arc, Azure Defender
+          href: defender-for-sql-usage.md
+        - name: Verify SQL machine protection
+          displayName: SQL, SQL servers, defender, machines
+          href: verify-machine-protection.md
+        - name: Troubleshoot SQL machine protection
+          displayName: Troubleshoot guide, SQL, servers, machines
+          href: troubleshoot-sql-machines-guide.md
+        - name: Enable Defender for SQL servers on machines at scale
+          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+          href: enable-defender-sql-at-scale.md
       - name: Defender for Open-Source Relational Databases
         items:
         - name: Overview
