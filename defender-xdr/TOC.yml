@@ -132,6 +132,8 @@
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
+        - name: Exclude assets from automated responses
+          href: automatic-attack-disruption-exclusions.md           
       - name: Manage the deception capability
         items:
         - name: Overview
@@ -227,7 +229,11 @@
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
-            href: advanced-hunting-cloudprocessevents-table.md                     
+            href: advanced-hunting-cloudprocessevents-table.md
+          - name: DataSecurityBehaviors
+            href: advanced-hunting-datasecuritybehaviors-table.md  
+          - name: DataSecurityEvents
+            href: advanced-hunting-datasecurityevents-table.md                                               
           - name: DeviceBaselineComplianceAssessment
             href: advanced-hunting-devicebaselinecomplianceassessment-table.md
           - name: DeviceBaselineComplianceAssessmentKB
