@@ -18,7 +18,7 @@ Copy and run this script to verify protection on multiple machines:
 
 ## Verify protection on a single SQL server instance
 
-1. In the Azure portal search for and select **SQL databases**.
+1. In the Azure portal, search for and select **SQL databases**.
 
 1. Locate and select a database on the machine.
 
@@ -30,4 +30,4 @@ Copy and run this script to verify protection on multiple machines:
 
 ## Troubleshoot unprotected machines
 
-If databases are not protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.
+If databases aren't protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.

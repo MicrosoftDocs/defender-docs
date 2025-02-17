@@ -9,7 +9,7 @@ ms.custom: references_regions
 
 # Troubleshoot machine protection in Defender for SQL on Machines
 
-If you've enabled Defender for SQL Server on Machines and some SQL instances aren't in a protected state, use this article to troubleshoot deployment issues.
+If you enable Defender for SQL Server on Machines and some SQL instances aren't in a protected state, use this article to troubleshoot deployment issues.
 
 Before starting the troubleshooting steps, ensure you have:
 - Followed the steps to [enable Defender for SQL on Machines](defender-for-sql-usage.md).
@@ -52,11 +52,11 @@ To ensure protection works as expected, make sure your organizational deny polic
 
 ## Step 3: Ensure East US region is allowed
 
-When you enable the plan, a resource group is created in the Azure East US region. Ensure this region isn't blocked by any deny policies.
+When you enable the plan, Azure creates a resource group in the East US region. Ensure no deny policies block this region.
 
 ## Step 4: Verify resource naming conventions
 
-Defender for SQL Server on Machines uses specific naming conventions for resources. Ensure these naming conventions aren't blocked by your organization and don't modify any of the automatically created resources:
+Defender for SQL Server on Machines uses specific naming conventions for resources. Ensure your organization doesn't block these naming conventions and don't modify any automatically created resources.
 
 - DCR: `MicrosoftDefenderForSQL--dcr` 
 - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` 
@@ -67,9 +67,7 @@ Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag.
 
 ## Step 5: Identify misconfigurations at subscription level
 
-Use the [SQL Servers on Machines AMA Helper workbook](https://ms.portal.azure.com/#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/Azure%20Security%20Center/ConfigurationId/community-Workbooks%2FAzure%20Security%20Center%2FSQL%20Servers%20on%20Machines%20AMA%20Helper/WorkbookTemplateName/SQL%20Servers%20on%20Machines%20AMA%20Helper) to identify which subscriptions have misconfigurations.
-
-1. Sign in to the [Azure portal](https://portal.azure.com/).
+To identify which subscriptions have misconfigurations, use the [SQL Servers on Machines AMA Helper workbook](https://ms.portal.azure.com/#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/Azure%20Security%20Center/ConfigurationId/community-Workbooks%2FAzure%20Security%20Center%2FSQL%20Servers%20on%20Machines%20AMA%20Helper/WorkbookTemplateName/SQL%20Servers%20on%20Machines%20AMA%20Helper).
 
 1. Open the [SQL Servers on Machines AMA Helper workbook](https://ms.portal.azure.com/#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/Azure%20Security%20Center/ConfigurationId/community-Workbooks%2FAzure%20Security%20Center%2FSQL%20Servers%20on%20Machines%20AMA%20Helper/WorkbookTemplateName/SQL%20Servers%20on%20Machines%20AMA%20Helper).
 
@@ -96,7 +94,7 @@ Use the [SQL Servers on Machines AMA Helper workbook](https://ms.portal.azure.co
     - AMA autoprovisioning enabled for the subscription.
     - Defender for SQL enabled for the subscription.
 
-1. For each subscription check which component doesn't match the expected configuration, such as 0/1, 10/15, or No. In our example screenshot, the Demo subscription has misconfigurations in DCRA 0/1. 
+1. For each subscription, check which component doesn't match the expected configuration, such as 0/1, 10/15, or No. In our example screenshot, the Demo subscription has misconfigurations in DCRA 0/1. 
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/ama-helper-workbook-results.png" alt-text="Screenshot of the SQL Servers on Machines AMA Helper workbook results." lightbox="media/troubleshoot-sql-machines-guide/ama-helper-workbook-results.png":::
 
@@ -106,7 +104,8 @@ After locating a subscription with misconfigurations, resolve the misconfigurati
 
 After identifying misconfigurations, start by fixing DCR issues, then workspace issues, and finally identity issues at the subscription level.
 
-It's important to fix misconfigurations in the correct order. DCR resolution relies on workspace resolution, and workspace resolution relies on identity resolution. If you try to resolve these misconfigurations out of order, they won't be resolved.
+Fix misconfigurations in the correct order. DCR resolution relies on workspace resolution, and workspace resolution relies on identity resolution. If you try to resolve these misconfigurations out of order, they aren't resolved.
+
 
 1. Navigate to **Policy** > **Compliance**.
 
@@ -141,7 +140,7 @@ It's important to fix misconfigurations in the correct order. DCR resolution rel
 
 ### Input custom values with PowerShell deployment script
 
-If you couldn't resolve subscription issues with the workbook, Defender for SQL Servers on Machines provides a PowerShell deployment script that enables you to input your own values for workspace, DCR, and user Identity. To use the PowerShell script follow the [instructions on this page](enable-defender-sql-at-scale.md).
+If you couldn't resolve subscription issues with the workbook, Defender for SQL Servers on Machines provides a PowerShell deployment script that enables you to input your own values for workspace, DCR, and user Identity. To use the PowerShell script, follow the [instructions on this page](enable-defender-sql-at-scale.md).
 
 ## Step 7: Resolve misconfigurations at the resource level
 
