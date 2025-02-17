@@ -31,15 +31,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| February 17 | Upcoming Change | [Update to scan criteria for container registries](#update-to-scan-criteria-for-container-registries) |
+| February 17 | Upcoming Change | [Upcoming change to the recommendation severity levels](#upcoming-change-to-the-recommendation-severity-levels) |
 
 ### Upcoming change to the recommendation severity levels
 
 February 17, 2025
 
-We are enhancing the severity levels of recommendations to improve risk assessment and prioritization. As part of this update, we have reevaluated all severity classifications and introduced a new level — Critical. Previously, recommendations were categorized into three levels: Low, Medium, and High. With this update, there are now four distinct levels: Low, Medium, High, and Critical, providing a more granular risk evaluation to help customers focus on the most urgent security issues.
+We're enhancing the severity levels of recommendations to improve risk assessment and prioritization. As part of this update, we reevaluated all severity classifications and introduced a new level — Critical. Previously, recommendations were categorized into three levels: Low, Medium, and High. With this update, there are now four distinct levels: Low, Medium, High, and Critical, providing a more granular risk evaluation to help customers focus on the most urgent security issues.
 
-As a result, customers may notice changes in the severity of existing recommendations. Additionally, the risk level evaluation, which is available for Defender CSPM customers only, may also be affected as both recommendation severity and asset context are taken into consideration. These adjustments could impact overall risk level.
+As a result, customers might notice changes in the severity of existing recommendations. Additionally, the risk level evaluation, which is available for Defender CSPM customers only, might also be affected as both recommendation severity and asset context are taken into consideration. These adjustments could affect the overall risk level.
 
 **The projected change will take place on March 25, 2025.**
 
