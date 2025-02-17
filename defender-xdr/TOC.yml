@@ -26,8 +26,6 @@
           href: prerequisites.md
         - name: Data security and privacy
           href: data-privacy.md
-        - name: Microsoft security portals
-          href: portals.md
     - name: Pilot and deploy Microsoft Defender XDR
       items:
         - name: Overview
@@ -136,6 +134,8 @@
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
+        - name: Exclude assets from automated responses
+          href: automatic-attack-disruption-exclusions.md           
       - name: Manage the deception capability
         items:
         - name: Overview
@@ -231,7 +231,11 @@
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
-            href: advanced-hunting-cloudprocessevents-table.md                     
+            href: advanced-hunting-cloudprocessevents-table.md
+          - name: DataSecurityBehaviors
+            href: advanced-hunting-datasecuritybehaviors-table.md  
+          - name: DataSecurityEvents
+            href: advanced-hunting-datasecurityevents-table.md                                               
           - name: DeviceBaselineComplianceAssessment
             href: advanced-hunting-devicebaselinecomplianceassessment-table.md
           - name: DeviceBaselineComplianceAssessmentKB
@@ -423,23 +427,9 @@
     - name: Manage multitenant environments
       items:
         - name: Overview
-          href: mto-overview.md
+          href: /unified-secops-platform/mto-overview?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
         - name: Set up multitenant management
-          href: mto-requirements.md
-        - name: View and manage incidents and alerts
-          href: mto-incidents-alerts.md
-        - name: Advanced hunting
-          href: mto-advanced-hunting.md
-        - name: Multitenant devices
-          href: mto-tenant-devices.md
-        - name: Vulnerability management
-          href: mto-dashboard.md
-        - name: Manage tenants
-          href: mto-tenants.md
-        - name: Create and manage endpoint security policies
-          href: mto-endpoint-security-policy.md
-        - name: Manage content distribution with tenant groups
-          href: mto-tenantgroups.md
+          href: /unified-secops-platform/mto-requirements?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
     - name: Manage roles and permissions
       items:
         - name: Manage access and roles in Microsoft Defender XDR
@@ -583,17 +573,9 @@
         - name: Responding to ransomware attacks
           href: playbook-responding-ransomware-m365-defender.md
       - name: Threat actor naming
-        href: microsoft-threat-actor-naming.md
-      - name: Malware names
-        href: malware-naming.md
-      - name: How Microsoft identifies malware and PUA
-        href: criteria.md
-      - name: Submit files for analysis
-        href: submission-guide.md
+        href: /unified-secops-platform/microsoft-threat-actor-naming?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
       - name: Understand threat intelligence concepts
         href: /defender-endpoint/threat-indicator-concepts          
-      - name: Microsoft virus initiative
-        href: virus-initiative-criteria.md
       - name: Software developer FAQ
         href: developer-faq.yml                                    
     - name: Microsoft Defender XDR docs

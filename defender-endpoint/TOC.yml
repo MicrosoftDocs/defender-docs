@@ -164,7 +164,7 @@
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019, and 2022
+          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019 and later
             href: configure-server-endpoints.md
           - name: Onboard Windows devices using Configuration Manager
             href: configure-endpoints-sccm.md
@@ -234,6 +234,8 @@
               href: mac-troubleshoot-mode.md
             - name: Troubleshoot macOS installation issues
               href: mac-support-install.md
+            - name: Troubleshoot macOS configuration
+              href: mac-support-configuration.md
             - name: Troubleshoot macOS performance issues overview
               href: mac-support-perf-overview.md
               displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -259,16 +261,18 @@
             items:
             - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
               href: mde-linux-arm.md
-            - name: Puppet based deployment
-              href: linux-install-with-puppet.md
+            - name: Installer script based deployment
+              href: linux-installer-script.md
             - name: Ansible based deployment
               href: linux-install-with-ansible.md
             - name: Chef based deployment
               href: linux-deploy-defender-for-endpoint-with-chef.md
-            - name: Manual deployment
-              href: linux-install-manually.md
+            - name: Puppet based deployment
+              href: linux-install-with-puppet.md
             - name: Saltstack-based deployment
               href: linux-install-with-saltack.md
+            - name: Manual deployment
+              href: linux-install-manually.md
             - name: Advanced deployment for Defender for Endpoint on Linux
               href: comprehensive-guidance-on-linux-deployment.md
             - name: Deployment guidance for Defender for Endpoint on Linux for SAP
@@ -924,11 +928,10 @@
             href: troubleshoot-av-performance-issues-with-wprui.md
         - name: Troubleshoot Microsoft Defender Antivirus performance issues
           items:
-          
-        - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
-          href: troubleshoot-microsoft-defender-antivirus.yml
-        - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
-          href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
+          - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
+            href: troubleshoot-microsoft-defender-antivirus.yml
+          - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
+            href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
 
       - name: Behavioral blocking and containment
         items:
@@ -1531,17 +1534,21 @@
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: /defender-xdr/microsoft-threat-actor-naming
+          href: /unified-secops-platform/microsoft-threat-actor-naming
+
         - name: Malware names
-          href: /defender-xdr/malware-naming
+          href: /unified-secops-platform/malware-naming
+
         - name: How Microsoft identifies malware and PUA
           href: /defender-xdr/criteria
         - name: Submit files for analysis
-          href: /defender-xdr/submission-guide
+          href: /unified-secops-platform/submission-guide
+
         - name: Troubleshoot MSI portal errors caused by admin block
           href: /defender-xdr/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: /defender-xdr/virus-initiative-criteria
+          href: /unified-secops-platform/virus-initiative-criteria
+
         - name: Software developer FAQ
           href: /defender-xdr/developer-faq        
     - name: Malware information

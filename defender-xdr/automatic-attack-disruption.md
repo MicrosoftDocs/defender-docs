@@ -46,7 +46,7 @@ Automatic attack disruption operates in three key stages:
 
 - It uses Defender XDR's ability to correlate signals from many different sources into a single, high-confidence incident through insights from endpoints, identities, email and collaboration tools, and SaaS apps.
 - It identifies assets controlled by the attacker and used to spread the attack.
-- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by isolating affected assets.
+- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
 
 This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
 
@@ -79,7 +79,7 @@ For more information, see [remediation actions](m365d-remediation-actions.md) in
 
 ### Automated response actions for SAP with Microsoft Sentinel
 
-If you're using the [unified security operations platform](microsoft-sentinel-onboard.md) and you deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
+If you're using the [unified security operations platform](/unified-secops-platform/microsoft-sentinel-onboard) and you deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
 
 For example, deploy attack disruption for SAP to contain compromised assets by locking suspicious SAP users in case of a financial process manipulation attack. 
 
