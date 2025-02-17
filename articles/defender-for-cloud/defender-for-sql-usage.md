@@ -96,4 +96,4 @@ Select a Log Analytics workspace to work with the Defender for SQL on Machines p
 
 ## Verify that your machines are protected
 
-As the last step in enabling the Defender for SQL Server Machines plan, you should verify that all machines are protected. To do that follow the instruction in <INSERT NEW ARTICLE>.
+As the last step in enabling the Defender for SQL Server Machines plan, you should [verify that all machines are protected](verify-machine-protection.md).

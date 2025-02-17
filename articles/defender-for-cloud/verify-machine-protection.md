@@ -1,22 +1,20 @@
 ---
 title: Verify SQL machine protection
-description: 
+description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
 ms.author: dacurwin
 author: dcurwin
+ms.topic: how-to
 ms.date: 02/17/2025
 #customer intent: 
 ---
 
-## Verify SQL machine protection
+# Verify SQL machine protection
 
 After you enable protection for SQL VMs with the Defender for SQL Servers on Machines plan, you should verify that your SQL servers are protected as expected.
-
-
 
 ## Verify protection on multiple machines
 
 Copy and run this script to verify protection on multiple machines:
-
 
 ## Verify protection on a single machine
 
