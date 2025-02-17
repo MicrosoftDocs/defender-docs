@@ -56,7 +56,7 @@ Review the configured automation level for your device group policies, whether a
 
 3. Review your device group policies and look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.
 
-You can also create or edit your device groups to set the appropriate remediation level for each group. Selecting the **Semi** automation level allows triggering of automatic attack disruption without the need for manual approval. To exclude a device group from automated containment, you can set its automation level to **no automated response**. Note that this settings is not highly recommended and should only be done for a limited number of devices.
+You can also create or edit your device groups to set the appropriate remediation level for each group. Selecting the **Semi automation** level allows triggering of automatic attack disruption without the need for manual approval. To exclude a device group from automated containment, you can set its automation level to **no automated response**. Note that this setting is not highly recommended and should only be done for a limited number of devices.
 
 #### Device discovery configuration
 
