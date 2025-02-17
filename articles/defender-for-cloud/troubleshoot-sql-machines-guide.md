@@ -9,13 +9,13 @@ ms.custom: references_regions
 
 # Troubleshoot machine protection in Defender for SQL on Machines
 
-If you've enable Defender for SQL Server on Machines and some databases aren't in a protected state, use this article to troubleshoot deployment issues.
+If you've enabled Defender for SQL Server on Machines and some SQL instances aren't in a protected state, use this article to troubleshoot deployment issues.
 
 Before you start the troubleshooting steps in this article, make sure that you have:
 - Followed the steps to [enable Defender for SQL on Machines](defender-for-sql-usage.md).
 - Reviewed the [protection status of databases running on protected machines](verify-machine-protection.md).
 
-## Step1: Understand how resources are created
+## Step 1: Understand how resources are created
 
 Defender for SQL Servers on Machines automatically creates resources as shown in the graphic.
 
@@ -35,7 +35,7 @@ Resources are summarized in the table:
 
 ## Step 2: Make sure extensions are allowed
 
-In order for protection to work as expected, ensure your organizational policy allows these extensions: 
+In order for protection to work as expected, ensure your organizational deny policy don't block these extensions: 
 
 - Defender for SQL (IaaS and Arc)
     - Publisher: Microsoft.Azure.AzureDefenderForSQL
@@ -52,11 +52,11 @@ In order for protection to work as expected, ensure your organizational policy a
 
 ## Step 3: Ensure East US region is allowed
 
-When you enable the plan, a resource group is created in the East US region. Make sure that this region is added to the allowed group for the plan to be enabled and configured successfully.
+When you enable the plan, a resource group is created in the Azure East US region. Make sure that this region isn't blocked by any deny policies.
 
 ## Step 4: Verify resource naming conventions
 
-Defender for SQL Server on Machines uses a specific naming convention for resources. Make sure that the naming is allowed in your environment and that you don't modify any of the automatically created resources:
+Defender for SQL Server on Machines uses a specific naming convention for resources. Make sure that these naming conventions aren't blocked by your organization and don't modify any of the automatically created resources:
 
 - DCR: `MicrosoftDefenderForSQL--dcr` 
 - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` 
@@ -104,9 +104,9 @@ After you locate a subscription with misconfigurations, you should resolve the m
 
 ## Step 6: Resolve misconfigurations at the subscription level
 
-After you've identified misconfigurations start by fixing them at the subscription level. 
+After you've identified misconfigurations start by fixing DCR, workspace and identity issues at the subscription level. 
 
-It's important to fix misconfigurations in the right order. DCR resolution rely on Workspace resolution, and Workspace resolution rely on Identity resolution. If you try to resolve these misconfigurations out of order, the misconfigurations won't be resolved.
+It's important to fix misconfigurations in the right order. DCR resolution rely on workspace resolution, and workspace resolution rely on identity resolution. If you try to resolve these misconfigurations out of order, the misconfigurations won't be resolved.
 
 1. Navigate to **Policy** > **Compliance**.
 
@@ -138,6 +138,10 @@ It's important to fix misconfigurations in the right order. DCR resolution rely 
 1. Select **Remediate**.
 
 1. Repeat these steps for each noncompliant policy and subscription.
+
+### Imput custom values with PowerShell deployment script
+
+If you couldn't resolve subscription issues with the workbook, Defender for SQL Servers on Machines provides a PowerShell deployment script that enables you to input your own values for workspace, DCR, and user Identity. To use the PowerShell script follow the [instructions on this page](enable-defender-sql-at-scale.md).
 
 ## Step 7: Resolve misconfigurations at the resource level
 
@@ -193,8 +197,3 @@ After you've resolved misconfigurations at the subscription level, you can resol
 ## Step 8: Reverify protection status
 
 After you complete all the steps on this page, [reverify the protection status of each SQL Server instance](verify-machine-protection.md).
-
-
-## Step : Allow creation of resources
-
-Depending on your environment, Deny policies might be in place that prevent the creation of resources. If you encounter this issue, you can [manually create and configure the plan at scale with PowerShell](enable-defender-sql-at-scale.md).

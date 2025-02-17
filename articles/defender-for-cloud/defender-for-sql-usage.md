@@ -48,52 +48,20 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 Select a Log Analytics workspace to work with the Defender for SQL on Machines plan.
 
-1. In the Azure portal search for and select **Policy** > **Authoring** > **Definitions**.
+1. In the **Defender plans** page, in **Databases**, **Monitoring Coverage** column select **settings**.
 
-1. If you want to use the default workspace search for `Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a Log Analytics Workspace`. This creates a resource group in East US and a managed identity. It also creates a resource group that includes data collection rules and a default Log Analytics Workspace. The data collection rule and Log Analytics workspace are created to align with the region of the VM. All resources are consolidated under this single resource group.
+1. In the **Azure Monitoring Agent for SQL server on machines** section, in the **configurations** column select **Edit configurations**.
 
-    :::image type="content" source="media/defender-for-sql-usage/default-log-analytics-workspace.png" alt-text="Screenshot of how to configure default log analytics workspace." lightbox="media/defender-for-sql-usage/default-log-analytics-workspace.png":::
+1. In the **Autoprovisioning configuration** page, select the **Default workspace** or specify a **Custom workspace**.
 
-1. If you want to use a custom workspace, search for `Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a user-defined Log Analytics Workspace`. This creates a resource group in East US and a managed identity. It also creates a resource group with data collection rules and a custom Log Analytics workspace in the predefined region.
+1. In SQL server automatic registration make sure that you leave the **Register Azure SQL Server instances by enabling SQL IaaS extension automatic registration** option enabled.
 
-    :::image type="content" source="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png" alt-text="Screenshot of how to configure user-defined log analytics workspace." lightbox="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png":::
+    :::image type="content" source="media/defender-for-sql-usage/leave-enabled.png" alt-text="Screenshot that shows where to leave the register Azure SQL Server instances enabled." lightbox="media/defender-for-sql-usage/leave-enabled.png":::
 
-1. To complete the installation process, restart the SQL server (instance) for versions 2017 and older.
+    Registration ensure that all SQL instances can be discovered and configured correctly.
 
-## Enable the plan on Azure Arc-enabled VMs
-
-1. In the Azure portals, search for and select **Microsoft Defender for Cloud**.
-
-1. In the Defender for Cloud menu, select **Environment settings**.
-
-1. Select the relevant subscription.
-
-1. On the Defender plans page, locate the Databases plan and select **Select types**.
-
-    :::image type="content" source="media/tutorial-enabledatabases-plan/select-types.png" alt-text="Screenshot that shows you where to select, select types on the Defender plans page." lightbox="media/tutorial-enabledatabases-plan/select-types.png":::
-
-1. In the Resource types selection window, toggle the **SQL servers on machines** plan to **On**.
-
-1. Select **Continue**.
-
-1. Select **Save**.
-
-### Select a workspace
-
-Select a Log Analytics workspace to work with the Defender for SQL on Machines plan.
-
-1. In the Azure portal search for and select **Policy** > **Authoring** > **Definitions**.
-
-1. If you want to use the default workspace search for `Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a Log Analytics Workspace`. This creates a resource group in East US and a managed identity. It also creates a resource group that includes data collection rules and a default Log Analytics Workspace. The data collection rule and Log Analytics workspace are created to align with the region of the VM. All resources are consolidated under this single resource group.
-
-    :::image type="content" source="media/defender-for-sql-usage/default-log-analytics-workspace.png" alt-text="Screenshot of how to configure default log analytics workspace." lightbox="media/defender-for-sql-usage/default-log-analytics-workspace.png":::
-
-1. If you want to use a custom workspace, search for `Configure SQL VMs and Arc-enabled SQL servers to install Microsoft Defender for SQL and AMA with a user-defined Log Analytics Workspace`. This creates a resource group in East US and a managed identity. It also creates a resource group with data collection rules and a custom Log Analytics workspace in the predefined region.
-
-    :::image type="content" source="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png" alt-text="Screenshot of how to configure user-defined log analytics workspace." lightbox="media/defender-for-sql-usage/user-defined-log-analytics-workspace.png":::
-
-1. To complete the installation process, restart the SQL server (instance) for versions 2017 and older.
+1. Select **Apply**.
 
 ## Verify that your machines are protected
 
-As the last step in enabling the Defender for SQL Servers Machines plan, you should [verify that all machines are protected](verify-machine-protection.md).
+Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md). Don't skip this step, as it's important to verify your deployment is protected.
