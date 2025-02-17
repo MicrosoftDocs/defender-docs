@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 01/07/2025
+ms.date: 02/11/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -60,10 +60,6 @@ Note that if a user connects to a different open Wi-Fi network, an alert is imme
 We're pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
 
 Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
-
-The following screenshot is an example of what the user sees in their dashboard:
-
-:::image type="content" source="media/ios-whatsnew/ios-dashboard.png" alt-text="Screenshot showing the user's dashboard.":::
 
 **Recommendation cards for alerts**:
 
