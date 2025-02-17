@@ -83,7 +83,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `CloudPlatforms` | `string` | The cloud platforms that the device belongs to. Can be Azure, Amazon Web Services, Google Cloud Platform and Azure Arc. |
 | `AzureVmId` | `string` | Unique identifier assigned to the device in Azure |
 | `AzureVmSubscriptionId` | `string` | Unique identifier of the Azure subscription associated with the device |
-| `IsTransient` | `string` | Indicates whether this device is classified as short-lived or transient based on the frequency of appearance of the device on the network |
+| `IsTransient` | `boolean` | Indicates whether this device is classified as short-lived or transient based on the frequency of appearance of the device on the network |
 | `OsBuildRevision` | `string` | Build revision number of the operating system running on the machine |
 | `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
 | `IsPartiallyIdentified` | `string` | A device is classified as partially identified if it does not have a strong identifier to uniquely determine its identity. |
