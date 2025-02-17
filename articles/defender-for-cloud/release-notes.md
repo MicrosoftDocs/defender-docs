@@ -27,6 +27,36 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## February 2025
+
+|Date | Category | Update|
+|--|--|--|
+| February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
+
+### MDC Cost Calculator (Preview)
+
+February 19, 2025
+
+Introducing the New MDC Cost Calculator: Simplify Your Cost Estimations
+
+We are excited to introduce our new MDC cost calculator to help you easily estimate the costs associated with protecting your cloud environments. This tool is tailored to provide you with a clear and accurate understanding of your expenses, ensuring you can plan and budget effectively.
+
+**Why Use the Cost Calculator?**
+
+Our cost calculator simplifies the process of estimating costs by allowing you to define the scope of your protection needs. You select the environments and plans you want to enable, and the calculator automatically fills in the billable resources for each plan, including any applicable discounts. This ensures that you have a comprehensive view of your potential costs without any surprises.
+
+**Key Features:**
+
+***Scope Definition:*** Select the plans and environments that interest you. The calculator performs a discovery process to automatically populate the number of billable units for each plan per environment.
+
+***Automatic and Manual Adjustments:*** The tool allows for both automatic collection of data and manual adjustments. You can modify the unit quantity and discount levels to see how changes affect the overall cost.
+
+***Comprehensive Cost Estimation:*** The calculator provides an estimate for each plan and a total cost report. This ensures that you have a detailed breakdown of costs, making it easier to understand and manage your expenses.
+
+***Multi-Cloud Support:*** Our solution works for all supported clouds, ensuring that you get accurate cost estimations regardless of your cloud provider.
+
+***Export and Share:*** Once you have your cost estimate, you can easily export and share it for budget planning and approvals.
+
 ## January 2025
 
 |Date | Category | Update|
