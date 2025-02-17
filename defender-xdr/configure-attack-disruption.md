@@ -52,9 +52,11 @@ Review the configured automation level for your device group policies, whether a
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
+2. Go to **System** \> **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
-3. Review your device group policies. Look at the **Automation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To exclude a device group from automated containment, set its automation level to **no automated response** (Semi autoamtion level will allow triggering of automatic attack disruption with no need for manual approval). Note that this is not highly recommended and should only be done for a limited number of devices.
+3. Review your device group policies and look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.
+
+You can also create or edit your device groups to set the appropriate remediation level for each group. Selecting the **Semi** automation level allows triggering of automatic attack disruption without the need for manual approval. To exclude a device group from automated containment, you can set its automation level to **no automated response**. Note that this settings is not highly recommended and should only be done for a limited number of devices.
 
 #### Device discovery configuration
 
