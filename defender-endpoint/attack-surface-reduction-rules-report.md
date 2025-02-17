@@ -58,15 +58,30 @@ For more information about individual attack surface reduction rules, see [Attac
 
 To access the attack surface reduction rules report in the Microsoft Defender portal, the following permissions are required:
 
-| Permission type | Permission | Permission display name |
-|:---|:---|:---|
-| Application | `Machine.Read.All` | `Read all machine profiles` |
-| Delegated (work or school account) | `Machine.Read` | `Read machine information` |
+| Permission name | Permission type |
+|:---|:---|
+| View Data | Security operations |
 
-You can assign permissions by using Microsoft Entra ID or the Microsoft Defender portal.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- To use Microsoft Entra ID, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
-- To use the Microsoft Defender portal, see [Assign user access](assign-portal-access.md).
+
+To Assign these permissions:
+
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+
+1. Select the role you'd like to edit.
+
+1. Select **Edit**.
+
+1. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
+
+1. In **Description** type a brief summary of the role.
+
+1. In **Permissions**, select **View Data**, and under **View Data** select **Security operations**.
+
 
 ## Navigate to the attack surface reduction rules report
 
