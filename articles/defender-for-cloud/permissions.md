@@ -16,9 +16,9 @@ In addition to the built-in roles, there are two roles specific to Defender for 
 - **Security Reader**: A user that belongs to this role has read-only access to Defender for Cloud. The user can view recommendations, alerts, a security policy, and security states, but can't make changes.
 - **Security Admin**: A user that belongs to this role has the same access as the Security Reader and can also update the security policy, and dismiss alerts and recommendations.
 
-We recommend assigning the least permissive role needed for users to complete their tasks. 
+We recommend assigning the least permissive role needed for users to complete their tasks.
 
-For example, you can assign the Reader role to users who only need to view security health information of a resource without taking any action. Users with a Reader role can apply recommendations or editing policies.
+For example, you can assign the Reader role to users who only need to view security health information of a resource without taking any action. Users with a Reader role can't apply recommendations or edit policies.
 
 ## Roles and allowed actions
 
@@ -47,10 +47,10 @@ To allow the Security Admin role to automatically provision agents and extension
 
 | Service Principal | Roles |
 |:-|:-|
-| Defender for Containers provisioning Azure Kubernetes Service (AKS) Security Profile | * Kubernetes Extension Contributor<br>* Contributor<br>* Azure Kubernetes Service Contributor<br>* Log Analytics Contributor |
-| Defender for Containers provisioning Arc-enabled Kubernetes | * Azure Kubernetes Service Contributor<br>* Kubernetes Extension Contributor<br>* Contributor<br>* Log Analytics Contributor |
-| Defender for Containers provisioning Azure Policy for Kubernetes  | * Kubernetes Extension Contributor<br>* Contributor<br>* Azure Kubernetes Service Contributor |
-| Defender for Containers provisioning Policy extension for Arc-enabled Kubernetes | * Azure Kubernetes Service Contributor<br>* Kubernetes Extension Contributor<br>* Contributor |
+| Defender for Containers provisioning Azure Kubernetes Service (AKS) Security Profile | *Kubernetes Extension Contributor<br>* Contributor<br>*Azure Kubernetes Service Contributor<br>* Log Analytics Contributor |
+| Defender for Containers provisioning Arc-enabled Kubernetes | *Azure Kubernetes Service Contributor<br>* Kubernetes Extension Contributor<br>*Contributor<br>* Log Analytics Contributor |
+| Defender for Containers provisioning Azure Policy for Kubernetes  | *Kubernetes Extension Contributor<br>* Contributor<br>* Azure Kubernetes Service Contributor |
+| Defender for Containers provisioning Policy extension for Arc-enabled Kubernetes | *Azure Kubernetes Service Contributor<br>* Kubernetes Extension Contributor<br>* Contributor |
 
 ## Permissions on AWS
 
@@ -58,7 +58,7 @@ When you onboard an Amazon Web Services (AWS) connector, Defender for Cloud crea
 
 | Defender for Cloud plan | Role created | Permission assigned on AWS account |
 |--|--|--|
-| Defender Cloud Security Posture Management (CSPM) | CspmMonitorAws  | To discover AWS resources permissions,  read all resources except:<br> consolidatedbilling:* <br> freetier:* <br> invoicing:* <br> payments:* <br> billing:* <br> tax:* <br> cur:*  |
+| Defender Cloud Security Posture Management (CSPM) | CspmMonitorAws  | To discover AWS resources permissions,  read all resources except:<br> consolidatedbilling:*<br> freetier:* <br> invoicing:*<br> payments:* <br> billing:*<br> tax:* <br> cur:*  |
 | Defender CSPM <br><br> Defender for Servers | DefenderForCloud-AgentlessScanner | To create and clean up disk snapshots (scoped by tag) "CreatedBy": "Microsoft Defender for Cloud" Permissions:<br> ec2:DeleteSnapshot ec2:ModifySnapshotAttribute<br>  ec2:DeleteTags<br>  ec2:CreateTags<br>  ec2:CreateSnapshots<br>  ec2:CopySnapshot<br>  ec2:CreateSnapshot<br>  ec2:DescribeSnapshots<br>  ec2:DescribeInstanceStatus<br>  Permission to EncryptionKeyCreation kms:CreateKey<br>  kms:ListKeys<br>  Permissions to EncryptionKeyManagement kms:TagResource<br>  kms:GetKeyRotationStatus<br>  kms:PutKeyPolicy<br>  kms:GetKeyPolicy<br>  kms:CreateAlias<br>  kms:TagResource<br>  kms:ListResourceTags<br>  kms:GenerateDataKeyWithoutPlaintext<br>  kms:DescribeKey<br> kms:RetireGrant<br>  kms:CreateGrant<br>  kms:ReEncryptFrom |
 | Defender CSPM <br><br> Defender for Storage | SensitiveDataDiscovery | Permissions to discover S3 buckets in the AWS account, permission for the Defender for Cloud scanner to access data in the S3 buckets <br> S3 read only <br/><br/> KMS decrypt <br/> kms:Decrypt |
 | CIEM | DefenderForCloud-Ciem <br> DefenderForCloud-OidcCiem | Permissions for Ciem Discovery<br> sts:AssumeRole<br>  sts:AssumeRoleWithSAML<br>  sts:GetAccessKeyInfo<br>  sts:GetCallerIdentity<br>  sts:GetFederationToken<br>  sts:GetServiceBearerToken<br>  sts:GetSessionToken<br>  sts:TagSession |
