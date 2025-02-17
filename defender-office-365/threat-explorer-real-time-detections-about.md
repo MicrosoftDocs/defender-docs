@@ -176,7 +176,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |Exchange transport rule|Text. Separate multiple values by commas.|
 |Data loss prevention rule|Text. Separate multiple values by commas.|
 |Context|Select one or more values: <ul><li>**Evaluation**</li><li>**Priority account protection**</li></ul>|
-|Connector|Text. Separate multiple values by commas.|
+|Connector|Text. Connector name. Separate multiple values by commas.|
 |Delivery action|Select one or more values: <ul><li>**Blocked**: Email messages that were quarantined, that failed delivery, or were dropped.</li><li>**Delivered**: Email delivered to the user's Inbox or other folder where the user can access the message.</li><li>**Delivered to junk**: Email delivered to the user's Junk Email folder or Deleted Items folder where the user can access the message.</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**: The message was retroactively identified as good.</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|
@@ -633,7 +633,7 @@ The filterable properties that are available in the **Sender address** box in th
 |Exchange transport rule|Text. Separate multiple values by commas.|✔||
 |Data loss prevention rule|Text. Separate multiple values by commas.|✔||
 |Context|Select one or more values: <ul><li>**Evaluation**</li><li>**Priority account protection**</li></ul>|✔||
-|Connector|Text. Separate multiple values by commas.|✔||
+|Connector|Text. Connector name. Separate multiple values by commas.|✔||
 |Delivery action|Select one or more values: <ul><li>**Blocked**</li><li>**Delivered**</li><li>**Delivered to junk**</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|✔|✔|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|✔|✔|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|✔|✔|
@@ -906,7 +906,7 @@ The filterable properties that are available in the **Sender address** box in th
 |Exchange transport rule|Text. Separate multiple values by commas.|✔||
 |Data loss prevention rule|Text. Separate multiple values by commas.|✔||
 |Context|Select one or more values: <ul><li>**Evaluation**</li><li>**Priority account protection**</li></ul>|✔||
-|Connector|Text. Separate multiple values by commas.|✔||
+|Connector|Text. Connector name. Separate multiple values by commas.|✔||
 |Delivery action|Select one or more values: <ul><li>**Blocked**</li><li>**Delivered**</li><li>**Delivered to junk**</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|✔|✔|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**</li></ul>|✔|✔|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|✔|✔|
