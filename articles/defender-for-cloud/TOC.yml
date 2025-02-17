@@ -973,12 +973,6 @@
         - name: Overview
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-servers-introduction.md
-        - name: vulnerability assessment
-          displayName: vulnerability, assessment
-          href: sql-azure-vulnerability-assessment-overview.md
-        - name: Advanced threat protection
-          displayName: threat, detection
-          href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
         - name: Enable Defender for SQL Servers on Machines
           displayName: hybrid, arc, Azure Defender
           href: defender-for-sql-usage.md
