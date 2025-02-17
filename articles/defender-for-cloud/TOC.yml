@@ -944,6 +944,12 @@
       - name: Overview
         displayName: database, protections
         href: defender-for-databases-overview.md
+      - name: Vulnerability assessment
+        displayName: vulnerability, assessment
+        href: sql-azure-vulnerability-assessment-overview.md
+      - name: Advanced threat protection
+        displayName: threat, detection
+        href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
       - name: Deploy all Defender for Databases plans
         displayName: database
         href: tutorial-enable-databases-plan.md
@@ -952,12 +958,6 @@
         - name: Overview
           displayName: database
           href: defender-for-sql-introduction.md
-        - name: Vulnerability assessment
-          displayName: vulnerability, assessment
-          href: sql-azure-vulnerability-assessment-overview.md
-        - name: Advanced threat protection
-          displayName: threat, detection
-          href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
         - name: Deploy Defender for Azure SQL Databases
           displayName: database
           href: enable-sql-database-plan.md
