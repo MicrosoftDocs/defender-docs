@@ -39,11 +39,11 @@ February 19, 2025
 
 Introducing the New MDC Cost Calculator: Simplify Your Cost Estimations
 
-We are excited to introduce our new MDC cost calculator to help you easily estimate the costs associated with protecting your cloud environments. This tool is tailored to provide you with a clear and accurate understanding of your expenses, ensuring you can plan and budget effectively.
+We're excited to introduce our new MDC cost calculator to help you easily estimate the costs associated with protecting your cloud environments. This tool is tailored to provide you with a clear and accurate understanding of your expenses, ensuring you can plan and budget effectively.
 
 **Why Use the Cost Calculator?**
 
-Our cost calculator simplifies the process of estimating costs by allowing you to define the scope of your protection needs. You select the environments and plans you want to enable, and the calculator automatically fills in the billable resources for each plan, including any applicable discounts. This ensures that you have a comprehensive view of your potential costs without any surprises.
+Our cost calculator simplifies the process of estimating costs by allowing you to define the scope of your protection needs. You select the environments and plans you want to enable, and the calculator automatically fills in the billable resources for each plan, including any applicable discounts. You're given a comprehensive view of your potential costs without any surprises.
 
 **Key Features:**
 
@@ -51,7 +51,7 @@ Our cost calculator simplifies the process of estimating costs by allowing you t
 
 ***Automatic and Manual Adjustments:*** The tool allows for both automatic collection of data and manual adjustments. You can modify the unit quantity and discount levels to see how changes affect the overall cost.
 
-***Comprehensive Cost Estimation:*** The calculator provides an estimate for each plan and a total cost report. This ensures that you have a detailed breakdown of costs, making it easier to understand and manage your expenses.
+***Comprehensive Cost Estimation:*** The calculator provides an estimate for each plan and a total cost report. You're provided a detailed breakdown of costs, making it easier to understand and manage your expenses.
 
 ***Multi-Cloud Support:*** Our solution works for all supported clouds, ensuring that you get accurate cost estimations regardless of your cloud provider.
 
