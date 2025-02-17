@@ -291,7 +291,7 @@ Once devices are contained, we recommend investigating and remediating the threa
 
 3. On the contain device popup, type a comment, and select **Confirm**.
 
-:::image type="content" alt-text="Screenshot of the contain device menu item." source="/defender/media/defender-endpoint/contain_device_popup.png" lightbox="/defender/media/defender-endpoint/contain_device_popup.png":::
+   :::image type="content" alt-text="Screenshot of the contain device menu item." source="/defender/media/defender-endpoint/contain_device_popup.png" lightbox="/defender/media/defender-endpoint/contain_device_popup.png":::
 
 > [!IMPORTANT]
 > Containing a large number of devices might cause performance issues on Defender for Endpoint-onboarded devices. To prevent any issues, Microsoft recommends containing up to 100 devices at any given time.
@@ -307,19 +307,19 @@ A device can also be contained from the device page by selecting **Contain devic
 
 > [!IMPORTANT]
 >
-> - If a contained device changes its IP address, then all Microsoft Defender for Endpoint onboarded devices will recognize this and start blocking communications with the new IP address. The original IP address will no longer be blocked (It may take up to 5 mins to see these changes).
-> - In cases where the contained device's IP is used by another device on the network, there will be a warning while containing the device, with a link to advanced hunting (with a pre-populated query). This will provide visibility to the other devices using the same IP to help you make a conscious decision if you'd like to continue with containing the device.
-> - In cases where the contained device is a network device, a warning will appear with a message that this may cause network connectivity issues (for example, containing a router that is acting as a default gateway). At this point, you'll be able to choose whether to contain the device or not.
+> - If a contained device changes its IP address, all Microsoft Defender for Endpoint onboarded devices recognize this and start blocking communications with the new IP address. The original IP address is no longer be blocked (It may take up to 5 minutes to see these changes).
+> - In cases where the contained device's IP is used by another device on the network, a warning while containing the device with a link to advanced hunting (with a pre-populated query) is displayed. This provides visibility to other devices using the same IP to help you make a conscious decision if you'd like to continue containing the device.
+> - In cases where the contained device is a network device, a warning appears with a message that containment can cause network connectivity issues (for example, containing a router that is acting as a default gateway). At this point, you're able to choose whether to contain the device or not.
 
 After you contain a device, if the behavior isn't as expected, verify the Base Filtering Engine (BFE) service is enabled on the Defender for Endpoint onboarded devices.
 
 ### Stop containing a device
 
-You'll be able to stop containing a device at any time.
+You're be able to stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
-2. Select **Release from containment** from the action menu. This action will restore this device's connection to the network.
+2. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
 
 ### Contain IP addresses of undiscovered devices
 
@@ -335,22 +335,17 @@ Containing an IP address associated with undiscovered devices or devices not onb
 
 A message indicating that the action is applied appears on the applicable incident, device, or IP page. Here’s an example.
 
-**[INSERT SCREENSHOT]**
+:::image type="content" source="/defender/media/defender-endpoint/contain-ip-attack-disrupt-small.png" alt-text="Highlighting a contained IP address in the incident graph." lightbox="/defender/media/defender-endpoint/contain-ip-attack-disrupt.png":::
 
 After an IP address is contained, you can view the action in the History view of the Action Center. You can see when the action occurred and identify the IP addresses that were contained.
 
-**[INSERT SCREENSHOT]**
+:::image type="content" source="/defender/media/defender-endpoint/contain-ip-action-center-small.png" alt-text="View the contained IP address in the Action center." lightbox="/defender/media/defender-endpoint/contain-ip-action-center.png":::
 
-If a contained IP address is part of an incident, an indicator is present on the [incident graph](/defender-xdr/investigate-incidents#attack-story) and on the incident’s [evidence and response](/defender-xdr/investigate-incidents#evidence-and-response) tab. Here’s an example.
+If a contained IP address is part of an incident, an indicator is present on the [incident graph](/defender-xdr/investigate-incidents#attack-story) and on the incident's [evidence and response](/defender-xdr/investigate-incidents#evidence-and-response) tab. Here’s an example.
 
-**[INSERT SCREENSHOTS]**
+:::image type="content" source="/defender/media/defender-endpoint/contain-ip-evidence-small.png" alt-text="Highlighting a contained IP address in the Evidence and response tab of an incident." lightbox="/defender/media/defender-endpoint/contain-ip-evidence.png":::
 
-You can stop an IP address’ containment at any time. To stop containment, you can perform any of the following:
-
-- Select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**.
-- Select the IP address from either the incident page side pane or alert side pane, then select **Undo**.
-
-This action restores the IP address’ connection to the network.
+You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
 
 ### Containing critical assets
 
