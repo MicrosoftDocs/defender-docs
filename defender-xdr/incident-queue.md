@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/10/2025
+ms.date: 01/27/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -42,7 +42,7 @@ Select **Most recent incidents and alerts** to toggle the expansion of the top s
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="/defender/media/incidents-queue/incidents-ss-incidents2.png":::
 
-Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made.
+Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made. You can also find the **total number of incidents** in the queue indicated beside the Search bar. The total number of incidents varies depending on the filters used in the queue.
 
 The incident queue has customizable columns that give you visibility into different characteristics of the incident or the impacted entities. This filtering helps you make an informed decision regarding the prioritization of incidents for analysis. Select **Customize columns** to perform the following customizations based on your preferred view:
 
@@ -107,7 +107,7 @@ The **Filters** list above the list of incidents shows the currently applied fil
 
 From the default incident queue, you can select **Add filter** to see the **Add filter** drop-down, from which you specify filters to apply to the incidents queue to limit the set of incidents shown. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig1-newfilters.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal.":::
+:::image type="content" source="/defender/media/incidents-queue/incidents-all-filters.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal.":::
 
 Select the filters you want to use, then select **Add** at the bottom of the list to make them available.
 
@@ -134,8 +134,9 @@ This table lists the filter names that are available.
 | **Classification** | Specify the set of classifications of the related alerts. |
 | **Automated investigation state** | Specify the status of automated investigation.  |
 | **Associated threat** | Specify a named threat.  |
-| **Alert policies** | Specify an alert policy title.  |
-| **Alert subscription IDs** | Specify an alert  based on a subscription ID.  |
+| **Policy/policy rule** | Filter incidents based on policy or policy rule.  |
+| **Product names** | Filter incidents based on product name.  |
+| **Data stream** | Filter incidents based on the location or workload.  |
 
 > [!NOTE]
 > If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).

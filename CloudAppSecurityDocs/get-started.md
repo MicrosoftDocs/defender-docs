@@ -160,7 +160,7 @@ Now the risk scores given to discovered apps are configured precisely according 
 Some features work best when they're customized to your needs.
 Provide a better experience for your users with your own email templates. Decide what notifications you receive and customize your risk score metric to fit your organization's preferences.
 
-## Step 7: Organize the data according to your needs
+## Step 6: Organize the data according to your needs
 
 **How to page**: [Working with IP ranges and tags](ip-tags.md)
 

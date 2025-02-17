@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 06/10/2024
+ms.date: 02/05/2025
 audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -41,9 +41,9 @@ The following types of automatic forwarding are available in Microsoft 365:
 
 You can use outbound spam filter policies to control automatic forwarding to external recipients. Three settings are available:
 
-- **Automatic - System-controlled**: This is the default setting. This setting is now the same as **Off**. When this setting was originally introduced, it was equivalent to **On**. Over time, thanks to the principles of [secure by default](secure-by-default.md), this setting was gradually changed to **Off** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
-- **On**: Automatic external forwarding is allowed and not restricted.
-- **Off**: Automatic external forwarding is disabled and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
+- **Automatic - System-controlled**: This is the default value. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+- **On - Forwarding is enabled**: Automatic external forwarding is allowed and not restricted.
+- **Off - Forwarding is disabled**: Automatic external forwarding is disabled and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
 For instructions on how to configure these settings, see [Configure outbound spam filtering in EOP](outbound-spam-policies-configure.md).
 

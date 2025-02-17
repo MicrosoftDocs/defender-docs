@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 07/18/2024
+ms.date: 02/10/2025
 ---
 
 # Create and manage custom detections rules
@@ -132,7 +132,7 @@ With the query in the query editor, select **Create detection rule** and specify
 
 #### Rule frequency
 
-When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback duration based on the frequency you choose:
+When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback period based on the frequency you choose:
 
 - **Every 24 hours** - Runs every 24 hours, checking data from the past 30 days.
 - **Every 12 hours** - Runs every 12 hours, checking data from the past 48 hours.
@@ -141,7 +141,7 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT), see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
 
 > [!TIP]
-> Match the time filters in your query with the lookback duration. Results outside of the lookback duration are ignored.
+> Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
 
 When you edit a rule, it will run with the applied changes in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time.
 

@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 05/10/2024
+ms.date: 02/12/2025
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -34,7 +34,7 @@ search.appverid: met150
 
 In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
-This topic explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information.
+This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information.
 
 This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer.
 
@@ -42,14 +42,13 @@ This article describes configuration options in Windows 10 or newer and Windows 
 
 This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection.
 
-1. Grab the latest 'Windows Group Policy Administrative Templates'.
+1. Grab the latest 'Windows Group Policy Administrative Templates.'
 
    For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
    > [!TIP]
    > 1. The Windows one works with the Windows Servers.
-   >
-   > 1. Even if you are running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
+   > 1. Even if you're running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
 
 2. Create a 'Central Store' to host the latest .admx and .adml templates.
 
@@ -59,21 +58,21 @@ This guide provides the Microsoft Defender Antivirus Group Policy that configure
 
    1. Create a new OU block policy inheritance.
 
-   1. Open Group policy Management Console (GPMC.msc).
+   2. Open Group policy Management Console (GPMC.msc).
 
-   1. Go to **Group Policy Objects** and create a new Group Policy.
+   3. Go to **Group Policy Objects** and create a new Group Policy.
 
-   1. Right-click the new policy created and select **Edit**.
+   4. Right-click the new policy created and select **Edit**.
 
-   1. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
+   5. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
    or
 
    If joined to a workgroup
 
-   1. Open Group Policy Editor MMC (GPEdit.msc).
+   6. Open Group Policy Editor MMC (GPEdit.msc).
 
-   2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
+   7. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
 ## MDAV and Potentially Unwanted Applications (PUA)
 
@@ -179,14 +178,14 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | Description | Setting |
 | --- | --- |
 | Prevent users and apps from accessing dangerous websites | Enabled, Block |
-| This settings controls whether Network Protection is allowed to be configured into block or audit mode on Windows Server | Enabled |
+| This settings controls whether Network Protection can be configured into block or audit mode on Windows Server | Enabled |
 
-To enable Network Protection for Windows Servers, for now, please use Powershell:
+To enable Network Protection for Windows Servers, for now, please use PowerShell:
 
-| OS | Powershell cmdlet |
+| OS | PowerShell cmdlet |
 | --- | --- |
 | Windows Server 2012 R2Windows Server 2022 and later	| set-MpPreference -AllowNetworkProtectionOnWinServer $true |
-| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | set-MpPreference -AllowNetworkProtectionOnWinServer $true and set-MpPreference -AllowNetworkProtectionDownLevel $true
+| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | set-MpPreference -AllowNetworkProtectionOnWinServer $true and set-MpPreference -AllowNetworkProtectionDownLevel $ true
 
 ## Attack Surface Reduction Rules
 
@@ -204,7 +203,7 @@ To enable Network Protection for Windows Servers, for now, please use Powershell
 | 01443614-cd74-433a-b99e-2ecdc07bfc25<br><br>**Note:** (Block executable files from running unless they meet a prevalence, age, or trusted list criterion) | 1 (Block) |
 | 26190899-1602-49e8-8b27-eb1d0a1ce869<br><br>**Note:** (Block Office communication application from creating child processes) | 1 (Block) |
 | d4f940ab-401b-4efc-aadc-ad5f3c50688a<br><br>**Note:** (Block all Office applications from creating child processes) | 1 (Block) |
-| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ( \[PREVIEW\] Block use of copied or impersonated system tools) | 1 (Block) |
+| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ([PREVIEW] Block use of copied or impersonated system tools) | 1 (Block) |
 | d3e037e1-3eb8-44c8-a917-57927947596d<br><br>**Note:** (Block JavaScript or VBScript from launching downloaded executable content) | 1 (Block) |
 | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2<br><br>**Note:** (Block credential stealing from the Windows local security authority subsystem) | 1 (Block) |
 | a8f5898e-1dc8-49a9-9878-85004b8a61e6<br><br>**Note:** (Block Web shell creation for Servers) | 1 (Block) |
@@ -214,10 +213,10 @@ To enable Network Protection for Windows Servers, for now, please use Powershell
 | e6db77e5-3df2-4cf1-b95a-636979351e5b<br><br>**Note:** (Block persistence through WMI event subscription) | 1 (Block) |
 | c1db55ab-c21a-4637-bb3f-a12568109d35<br><br>**Note:** (Use advanced protection against ransomware) | 1 (Block) |
 | d1e49aac-8f56-4280-b9ba-993a6d77406c<br><br>**Note:** (Block process creations originating from PSExec and WMI commands) | 1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 ('audit') instead of 1('block'). |
-| 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ( \[PREVIEW\] Block rebooting machine in Safe Mode) | 1 (Block) |
+| 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ([PREVIEW] Block rebooting machine in Safe Mode) | 1 (Block) |
 
 > [!TIP]
-> Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
+> Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
 
 ## Controlled Folder Access
 
@@ -229,13 +228,33 @@ Navigate to **Computer Configuration** > **Administrative Templates** > **Window
 
 Assign the policies to the OU where the test machines are located.
 
+#### Enable Tamper Protection
+
+In the Microsoft XDR portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
+
+For more information, see [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
+
+#### Check the Cloud Protection network connectivity
+
+It's important to check that the Cloud Protection network connectivity is working during your pen testing.
+
+CMD (Run as admin)
+
+
+```
+cd "C:\Program Files\Windows Defender"
+MpCmdRun.exe -ValidateMapsConnection
+```
+
+For more information, see [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+
 ## Check the Platform Update version
 
 The latest 'Platform Update' version Production channel (GA) is available here:
 
 [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update)
 
-To check which 'Platform Update' version you have installed, use the following PowerShell command (Run as admin):
+To check which 'Platform Update' version is installed, use the following PowerShell command (Run as admin):
 
 ```powershell
 get-mpComputerStatus | ft AMProductVersion
@@ -245,9 +264,9 @@ get-mpComputerStatus | ft AMProductVersion
 
 The latest 'Security Intelligence Update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-To check which 'Security Intelligence Update' version you have installed, use the following PowerShell command (Run as admin):
+To check which 'Security Intelligence Update' version is installed, use the following PowerShell command (Run as admin):
 
 ```PowerShell
 get-mpComputerStatus | ft AntivirusSignatureVersion
@@ -257,9 +276,9 @@ get-mpComputerStatus | ft AntivirusSignatureVersion
 
 The latest scan 'engine update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-To check which 'Engine Update' version you have installed, use the following PowerShell command(Run as admin):
+To check which 'Engine Update' version is installed, use the following PowerShell command(Run as admin):
 
 ```PowerShell
 get-mpComputerStatus | ft AMEngineVersion

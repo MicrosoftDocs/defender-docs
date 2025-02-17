@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 01/06/2025
+ms.date: 02/04/2025
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
@@ -28,13 +28,35 @@ ms.date: 01/06/2025
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+#### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
+
+**February 2025:**
+
+As part of our Microsoft Defender for Mobile application, we offer Open Wi-Fi detection within our Network Protection feature set. When enabled, this feature generates an alert in the Security portal. Currently, the alert is informational and doesn't require any action from the SOC analyst or admin. It provides valuable information that aids in triaging incidents involving mobile devices.
+
+**Current Behavior:**
+
+- Every time the end user connects to an open Wi-Fi network, an alert is raised.
+
+- If the user goes out of the open Wi-Fi range and reconnects to the same network, another alert is raised.
+
+Based on our research insights and inputs from Microsoft and other SOC teams, we're implementing a caching behavior to ensure the value of the alerts remains and also doesn't cause fatigue to SOC teams due to sheer volume.
+
+**New behavior:** 
+
+- Every time the end user connects to an open Wi-Fi network, an alert is raised.
+
+- If a user reconnects to the same open wi-fi in the next seven days, another alert won't be raised.
+
+Please note that if a user connects to a different open Wi-Fi network, an alert is immediately generated, and there's no change to that behavior.
+
 ## Upgrading your experience: Upcoming enhancements you should know about
 
 **January 2025**:
 
 **Key changes**:
 
-We are pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+We're pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
 
 Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
 
@@ -44,7 +66,7 @@ The following screenshot is an example of what the user sees in their dashboard:
 
 **Recommendation cards for alerts**:
 
-The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert will bring forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table:
+The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table:
 
 | Card | Description |
 |---|---|
@@ -102,7 +124,7 @@ Although low-touch onboarding is disabled by default, security administrators ca
 Network protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices, and rogue certificates. It notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an insecure connection.
 
 > [!IMPORTANT]
-> **This feature is now enabled by default for all users.** As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the set up. Administrators can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. 
+> **This feature is now enabled by default for all users.** As a result, users are able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup. Administrators can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. 
 There are also several administrator controls to offer flexibility, including privacy controls to configure the data that's sent by Defender for Endpoint from Android devices. For more information, see [network protection](android-configure.md).
 
 ## Device tagging
@@ -165,12 +187,12 @@ Microsoft Defender for Endpoint has released this update required by [Google](ht
 **How this affects your organization**: These changes take effect if you're using Microsoft Defender for Endpoint on devices running Android 11 or later and updated Defender for Endpoint to release build 1.0.3501.0301 or later.
 
 > [!NOTE]
-> The new storage permissions cannot be configured by administrators to auto approve through Microsoft Intune. Users must take action to provide access to this permission.
+> The new storage permissions can't be configured by administrators to auto approve through Microsoft Intune. Users must take action to provide access to this permission.
 
 **User experience**: Users receive a notification indicating a missing permission for app security. If the user denies this permission, app security functionality is turned off on the device. If user doesn't accept or deny permission, they continue to receive the prompt when unlocking their device or opening the app, until it's approved.
 
 > [!NOTE]
-> If your organization is previewing the tamper protection feature and if the new storage permissions are not granted by the user within seven days of updating to the latest version, the user might lose access to corporate resources.
+> If your organization is previewing the tamper protection feature and if the new storage permissions aren't granted by the user within seven days of updating to the latest version, the user might lose access to corporate resources.
 
 **What you need to do to prepare**:
 

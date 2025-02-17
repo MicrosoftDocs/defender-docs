@@ -169,7 +169,7 @@ The following resources provide more information on how to use advanced hunting:
 Extend your threat intelligence with the latest security research and changes from Microsoft security research teams:
 
 - [Microsoft Security blog](https://www.microsoft.com/security/blog/topic/threat-intelligence/?sort-by=newest-oldest&date=any)
-- [Microsoft threat actor information](/microsoft-365/security/intelligence/microsoft-threat-actor-naming)
+- [Microsoft threat actor information](/unified-secops-platform/microsoft-threat-actor-naming)
 
 Collaborate with Microsoft's experts for incident response and threat hunting to enhance your security operations teams' capabilities. Know more about our experts and how to engage them in the following resources:
 

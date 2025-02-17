@@ -28,7 +28,7 @@ ms.date: 12/31/2024
 - [Endpoint data loss prevention (DLP)](/microsoft-365/compliance/endpoint-dlp-learn-about)
 - [Insider risk management](/microsoft-365/compliance/insider-risk-management)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https:%2F%2Faka.ms%2FMDEp2OpenTrial)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 To onboard Windows client devices, follow the onboarding steps in the [Microsoft Defender portal](https://security.microsoft.com) (Go to **Settings** > **Endpoints** > **Onboarding**). You can onboard any of the supported devices. Depending on the particular device, you're guided with the appropriate steps according to the management and deployment tool options suitable for the device.
 

@@ -189,7 +189,7 @@ Microsoft Sentinel includes a Microsoft Defender for XDR data connector to bring
 
 For more information, see:
 
-- [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard)
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard)
 - [Generic SIEM integration](/cloud-app-security/siem)
 
 ## Next step
