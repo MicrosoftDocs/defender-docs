@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Defender for SQL on Machines plan deployment in Defender for Cloud
+title: Troubleshoot Defender for SQL on Machines deployment
 description: Troubleshoot deployment issues for SQL Servers on machines using the Azure Monitoring Agent (AMA) autoprovisioning process.
 ms.date: 02/17/2025
 ms.topic: how-to

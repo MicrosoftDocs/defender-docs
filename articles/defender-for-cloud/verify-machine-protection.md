@@ -12,9 +12,20 @@ ms.date: 02/17/2025
 
 After enabling protection for SQL VMs with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
 
-## Verify protection on multiple machines
+## Verify protection on multiple Azure VMs
 
-Copy and run this script to verify protection on multiple machines:
+Copy and run [this script](https://aka.ms/verify-sql-instances) to verify protection on multiple machines.
+
+## Verify protection on multiple Azure Arc-enabled VMs
+
+Run the following query in Azure Resource Graph to identify Azure Arc-enabled VMs that aren't in a protected state. Follow these instructions to [run a query in Azure Resource Graph](/azure/governance/resource-graph/first-query-portal).
+
+```azurecli
+resources
+| where type == "microsoft.azurearcdata/sqlserverinstances"
+| extend SQLonArcProtection= tostring(properties.azureDefenderStatus)
+| extend protectionStatusLastUpdate = tostring(properties.azureDefenderStatusLastUpdated)
+```
 
 ## Verify protection on a single SQL server instance
 

@@ -45,7 +45,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 1. Select **Continue** > **Save**.
 
-### Select a workspace
+## Select a workspace
 
 Select a Log Analytics workspace to work with the Defender for SQL on Machines plan.
 
