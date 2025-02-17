@@ -28,7 +28,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 | **Region requirement** | When you enable the plan a resource group is created in the East US. This region must be allowed in your environment. |
 | **Resource naming conventions** | Defender for SQL uses the following naming convention when creating our resources: <br> - Data Collection Rule: `MicrosoftDefenderForSQL--dcr` <br> - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` <br> - Resource group: `DefaultResourceGroup-` <br> - Log analytics workspace: `D4SQL--` <br> - Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag. <br><br> This naming convention must be allowed. |
 
-## Enable the plan on Azure VMs
+## Enable the plan
 
 1. In the Azure portal, search for and select **Microsoft Defender for Cloud**.
 
