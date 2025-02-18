@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 02/06/2025
+ms.date: 02/18/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -108,21 +108,21 @@ Updates contain:
 
 #### What's new
 
-- Improved handling of Azure Site Recovery rules (Azure Site Recovery) exclusions.
-- Improved `AMSI` scan performance via changes to exclusion handling
-- Fixed Control Folder Access (CFA) protection for OneDrive when backup is enabled.
-- Fixed performance issues with Full scans when triggered from the portal.
-- Fixed `ASR` warn mode processing for containerized objects (Office files) when unblock option is selected.
-- Fixed `ASR` warn mode processing when exclusions are applied.
+- Improved handling of [attack surface reduction rule](attack-surface-reduction-rules-reference.md) exclusions.
+- Improved AMSI scan performance with changes to exclusion handling.
+- Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
+- Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
+- Fixed ASR warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
+- Fixed ASR warn mode processing when exclusions are applied.
 - Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
-- Implemented `AzureAd` cache to handle offline environments with Device control.
-- Fixed `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
-- Fixed Tamper protection for Exclusions where exclusion policy was handled by System Center Configuration Manager.
-- Fixed issue with Device Control auditing of removable media.
-- Fixed issue with `MDM` policy management on Azure Virtual Desktop.
-- Added support for wildcards in Tamper protection trusted process.
-- Improved Device control policy enforcement in offline environments.
-- Fixed issue in `WDNisDrv.sys` driver causing system hangs during shutdown.
+- Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
+- Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
+- Resolved an issue with [tamper protection for exclusions](/defender-endpoint/manage-tamper-protection-intune#tamper-protection-for-antivirus-exclusions) where an exclusion policy was handled by System Center Configuration Manager.
+- Fixed issue with device control auditing of removable media.
+- Fixed issue with MDM policy management on Azure Virtual Desktop.
+- Added support for wildcards in [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) trusted process.
+- Improved device control policy enforcement in offline environments.
+- Fixed issue in the `WDNisDrv.sys` driver that caused system hangs during shutdown.
 
 ### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
 
