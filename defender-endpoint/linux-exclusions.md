@@ -148,11 +148,14 @@ As a security administrator, you can configure Defender for Endpoint exclusions 
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**, and then select the Linux platform. 
 
-2. Tag devices with the `MDE-Management` tag. Most devices will enroll and apply the policy within minutes, though some may take up to 24 hours. For more information refer-[configure-your-tenant-to-support-defender-for-endpoint-security-settings-management](/mem/intune/protect/mde-security-integration?branch=main)
+2. Tag devices with the `MDE-Management` tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that are not enrolled with Intune](/mem/intune/protect/mde-security-integration).
 
-#### 2. Creating Microsoft Entra group
+#### 2. Create a Microsoft Entra group
 
-Create a dynamic Microsoft Entra group based on device OS Type to ensure all devices in Defender for Endpoint receive policies. This allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information on how to manage Entra groups refer: [create-microsoft-entra-groups](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups.md) 
+Create a dynamic Microsoft Entra group that uses the operating system type to ensure that all devices onboarded to Defender for Endpoint receive policies. Using a dynamice group allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information, see the following articles:
+
+- [Create Microsoft Entra Groups](/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups) 
+- [Microsoft Entra groups overview](/entra/fundamentals/concept-learn-about-groups)
 
 #### 3. Create an endpoint security policy 
 
