@@ -10,7 +10,7 @@ ms.date: 12/24/2024
 
 # Overview of Microsoft Defender for Azure Cosmos DB
 
-In Microsoft Defender for Cloud, the *Defender for Azure Cosmos DB* plan within Defender for Databases detects potential SQL injections, known bad actors, and suspicious access patterns based on [Microsoft Threat Intelligence](https://www.microsoft.com/security/blog/topic/threat-intelligence/). It also identifies potential exploitation of your database through compromised identities or malicious insiders.
+In Microsoft Defender for Cloud, the *Defender for Azure Cosmos DB* plan within Defender for Databases detects potential SQL injections, known bad actors, and suspicious access patterns based on [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/). It also identifies potential exploitation of your database through compromised identities or malicious insiders.
 
 Defender for Azure Cosmos DB continually analyzes the personal data stream from the Azure Cosmos DB service. When it detects potentially malicious activities, it generates security alerts in Defender for Cloud. These alerts provide details of the suspicious activity, along with relevant investigation steps, remediation actions, and security recommendations to prevent future attacks.
 
