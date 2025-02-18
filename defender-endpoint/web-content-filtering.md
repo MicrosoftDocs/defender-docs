@@ -189,7 +189,7 @@ You can access the **Report details** for each card by selecting a table row or 
 
 - **Web categories**: Lists the web content categories that have had access attempts in your organization. Select a specific category to open a summary flyout.
 
-- **Domains**: Lists the web domains that have been accessed or blocked in your organization. Select a specific domain to view detailed information about that domain.
+- **Domains**: Lists the web domains that have been accessed or blocked in your organization.
 
 - **Device groups**: Lists all the device groups that have generated web activity in your organization
 
