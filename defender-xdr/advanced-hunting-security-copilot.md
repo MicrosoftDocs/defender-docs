@@ -68,11 +68,11 @@ Users with access to Security Copilot have access to this capability in advanced
 
 1. Review the generated query. To check how Copilot came up with the query, you can select **See the logic behind the query** below the query text to expand the explanation behind the query. Select it again to minimize.
 
-   ![Screenshot of Copilot button showing Add the query to query editor and run.](/defender/media/advanced-hunting-security-copilot-see-logic.png)
+   ![Screenshot of Copilot button showing See the logic behind the query.](/defender/media/advanced-hunting-security-copilot-see-logic.png)
 
      You can then choose to run the query by selecting **Run query**.
 
-   ![Screenshot of Copilot button showing Add the query to query editor and run.](/defender/media/advanced-hunting-security-copilot-run-query.png)
+   ![Screenshot of Copilot button showing Run query option.](/defender/media/advanced-hunting-security-copilot-run-query.png)
 
     The generated query then appears as the last query in the query editor and runs automatically.
 
