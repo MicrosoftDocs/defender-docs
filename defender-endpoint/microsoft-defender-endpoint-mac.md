@@ -79,7 +79,7 @@ These three most recent major releases of macOS are supported.
 - Beta versions of macOS aren't supported.
 
 > [!IMPORTANT]
-> On macOS 11 (Large Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
+> On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
 
 After you've enabled the service, you might need to configure your network or firewall to allow outbound connections between it and your endpoints.
 
