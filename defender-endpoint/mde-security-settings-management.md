@@ -8,7 +8,7 @@ manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 07/22/2024
+ms.date: 02/18/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -42,7 +42,7 @@ Use the Microsoft Defender for Endpoint Security Settings Management to manage M
 Please review the pre-requisites [here](/mem/intune/protect/mde-security-integration). 
 
 > [!NOTE]
-> The **Endpoint Security Policies** page in  the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and  the Microsoft Defender portal.
+> The **Endpoint Security Policies** page in  the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in the scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
 
 As a security administrator, you can configure different Microsoft Defender Antivirus security policy settings in the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -55,7 +55,7 @@ You'll find endpoint security policies under **Endpoints** > **Configuration man
 
 The following list provides a brief description of each endpoint security policy type:
 
-- **Antivirus** - Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. 
+- **Antivirus** - Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices.
 
 - **Disk encryption** - Endpoint security disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
 
@@ -81,7 +81,7 @@ The following list provides a brief description of each endpoint security policy
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the groups that will receive this profile. 
+7. On the **Assignments** page, select the groups that will receive this profile.
 
    Select **Next**.
 
@@ -108,7 +108,7 @@ The following list provides a brief description of each endpoint security policy
 To verify that you have successfully created a policy, select a policy name from the list of endpoint security policies.
 
 > [!NOTE]
-> It can take up to 90 minutes for a policy to reach a device. To expedite the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it is applied in approximately 10 minutes.
+> It can take up to 90 minutes for a policy to reach a device. To speed up the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it is applied in approximately 10 minutes.
 > :::image type="content" source="./media/policy-sync.png" alt-text="Image showing policy sync button":::
 
 The policy page displays details that summarize the status of the policy. You can view a policy's status, which devices it has been applied to, and assigned groups.
@@ -149,7 +149,7 @@ For more information, see:
 |Cloud Extended Timeout|Configured, 50|
 |Submit Samples Consent|Send all samples automatically|
 
-Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
+Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service delivers this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
 **Scans**:
 
@@ -233,8 +233,8 @@ For more information, see:
 | Schedule Quick Scan Time | 720 |
 
 > [!NOTE]
-> In this example, a quick scan would run daily on the Windows clients at 12:00 p.m. (720).
-> In this example, we are using lunch time, due to a lot of devices nowadays being laptops that could be turned off after-hours.
+> In this example, a quick scan runs daily on the Windows clients at 12:00 p.m. (720).
+> In this example, we use lunch time, since a lot of devices nowadays are turned off after-hours (e.g laptops).
 
 ***Weekly Quick Scan or Full Scan***
 
@@ -246,7 +246,7 @@ For more information, see:
 
 
 > [!NOTE]
-> In this example, a quick scan would run for Windows clients on Wednesday's at 5:00 p.m. (1020).
+> In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 p.m. (1020).
 > And for Windows Servers, on Saturday's at 1:00 a.m. (60)
 
 For more information, see:
@@ -323,12 +323,10 @@ For more information, see:
 
 [Use network protection to help prevent connections to malicious or suspicious sites](/defender-endpoint/network-protection)
 
- 
-
 1. When you're done configuring settings, select **Next**.
-1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**. 
-1. Select **Next**.
-1. On the **Review + create** tab, review your policy settings, and then select **Save**.
+2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+3. Select **Next**.
+4. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 ### Attack Surface Reduction rules
 
@@ -340,7 +338,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
 1. Select **Create policy**.
 1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
-1. On the **Configuration settings** page, expand the groups of settings and configure those settings you want to manage with this profile.
+1. On the **Configuration settings** page, expand the groups of settings and configure the settings that you want to manage with this profile.
 1. Set the policies based on the following recommended settings:
 
    |Description|Setting|
@@ -405,7 +403,6 @@ For more information, see:
 It's important to check that the Cloud Protection network connectivity is working during your penetration testing.
 
 CMD (Run as admin)
-
 
 ```powershell
 cd "C:\Program Files\Windows Defender"
