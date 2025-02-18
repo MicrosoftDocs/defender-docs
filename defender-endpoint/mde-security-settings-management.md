@@ -174,10 +174,11 @@ For more information, see:
 |Description|Setting|
 |---|---|
 |Signature Update Interval|Configured, 4|
-|Signature Update Fallback Order|InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC|
+|Signature Update Fallback Order|InternalDefinitionUpdateServer |
+|MicrosoftUpdateServer | MMPC|
 |Signature Update File Shares Sources | Not configured|
-| Metered Connection Updates | Not allowed (default)|
-| Security Intelligence Updates Channel | Not configured|
+|Metered Connection Updates | Not allowed (default)|
+|Security Intelligence Updates Channel | Not configured|
 
 > [!NOTE]
 > Where:
@@ -275,7 +276,7 @@ Disable local administrator AV settings such as exclusions, and set the policies
 
 |Description|Setting|
 |---|---|
-|Disable Local Admin Merge|Disable Local Admin Merge| a |
+|Disable Local Admin Merge|Disable Local Admin Merge|
 
 |Description|Setting|
 |---|---|
