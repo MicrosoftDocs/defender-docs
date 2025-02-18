@@ -33,17 +33,17 @@ If you're experiencing reliability or device health issues with Defender for End
 
 ## Running the binary version of the client analyzer
 
-1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the macOS or Linux machine you need to investigate.\
+1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the macOS or Linux machine you need to investigate.\
 If you're using a terminal, download the tool by entering the following command:
 
     ```bash
-    wget --quiet -O XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
+    wget --quiet -O XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
     ```
 
 1. Verify the download.
 
     ```bash
-    echo '2A9BF0A6183831BE43C7BCB7917A40D772D226301B4CDA8EE4F258D00B6E4E97 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. If you're using a terminal, extract the files by entering the following command:
@@ -93,7 +93,7 @@ If you're using a terminal, download the tool by entering the following command:
 2. Verify the download.
 
     ```bash
-    echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11 XMDEClientAnalyzer.zip' | sha256sum -c
+    echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
 3. Extract the contents of XMDEClientAnalyzer.zip on the machine. If you're using a terminal, extract the files by using the following command:
@@ -422,7 +422,7 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 
 ## Use live response in Defender for Endpoint to collect support logs
 
-The XMDE Client Analyzer tool can be downloaded as a [binary](https://go.microsoft.com/fwlink/?linkid=2297517) or [Python](https://aka.ms/XMDEClientAnalyzer) package that can be extracted and executed on Linux machines. Both versions of the XMDE Client Analyzer can be executed during a Live Response session.
+The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMDEClientAnalyzerBinary) or [Python](https://aka.ms/XMDEClientAnalyzer) package that can be extracted and executed on Linux machines. Both versions of the XMDE Client Analyzer can be executed during a Live Response session.
 
 - For installation, the `unzip` package is required.
 - For execution, the `acl` package is required.
@@ -455,8 +455,8 @@ The following script performs the first six steps of the [Running the Binary ver
    whoami
 
    echo "Getting XMDEClientAnalyzerBinary"
-   wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
-   echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
+   echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
 
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
@@ -481,11 +481,11 @@ The following script performs the first six steps of the [Running the Python ver
    whoami
   
    echo "Getting XMDEClientAnalyzer.zip"
-   wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
-   echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
+   wget --quiet -O /tmp/XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
+   echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 /tmp/XMDEClientAnalyzer.zip' | sha256sum -c  
 
    echo "Unzipping XMDEClientAnalyzer.zip"
-   unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
+   unzip -q /tmp/XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
 
    echo "Setting execute permissions on mde_support_tool.sh script"
    cd /tmp/XMDEClientAnalyzer 
