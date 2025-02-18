@@ -1,6 +1,6 @@
 ---
 title: Add, update, or delete a scan definition
-description: Learn how to use the Add, update, or delete scan definitions.
+description: Learn how to use the add, update, or delete scan definitions.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
@@ -60,8 +60,8 @@ Delegated (work or school account)|Machine.Read.Write|Read and write all scan in
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - To view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md) for more information)
-> - To edit data the user needs to have at least the following role permission: `ManageSecurity` (See [Create and manage roles](../user-roles.md) for more information)
+> - To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md) for more information)
+> - To edit data, the user needs to have at least the following role permission: `ManageSecurity` (See [Create and manage roles](../user-roles.md) for more information)
 
 ## HTTP request
 
