@@ -159,16 +159,22 @@ Create a dynamic Microsoft Entra group that uses the operating system type to en
 
 #### 3. Create an endpoint security policy 
 
-- Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using at least a Security Administrator role.
-- Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
-- Select a platform as "Linux" from the dropdown list.
-- Select the required exclusion template (`Microsoft defender global exclusion(AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions`), then select **Create policy**.
-- On the **Basics** page, enter a name and description for the profile, then choose **Next**.
-- On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
-- When you're done configuring settings, select **Next**.
-- On the **Assignments** page, select the groups that will receive this profile. 
-- Select **Next**.
-- On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**. 
+
+2. For Platform, select **Linux**.
+
+3. Select the required exclusion template (**Microsoft defender global exclusion(AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions`), then select **Create policy**.
+
+4. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+
+5. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
+
+6. When you're done configuring settings, select **Next**.
+
+7. On the **Assignments** page, select the groups that will receive this profile. Then select **Next**.
+
+8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
 For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/manage-security-policies?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fbreadcrumb%2Ftoc.json#create-an-endpoint-security-policy.md)
 
 ### Using the command line
