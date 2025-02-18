@@ -34,8 +34,18 @@ Run the following query in Azure Resource Graph to identify Azure Arc-enabled VM
 resources
 | where type == "microsoft.azurearcdata/sqlserverinstances"
 | extend SQLonArcProtection= tostring(properties.azureDefenderStatus)
-| extend protectionStatusLastUpdate = tostring(properties.azureDefenderStatusLastUpdated)
+| extend ProtectionStatusLastUpdate = tostring(properties.azureDefenderStatusLastUpdated)
+| project name, SQLonArcProtection, ProtectionStatusLastUpdate, resourceGroup, location, type, tenantId, subscriptionId, properties
+| order by ['name'] asc
 ```
+
+After you run the script, the results will show the SQLonArcProtection status. Any result that doesn't state `Protected` indicates that the SQL VM isn't protected.
+
+:::image type="content" source="media/verify-machines-protection/script-results.png" alt-text="Screenshot of the results screen once the script has been run." lightbox="media/verify-machines-protection/script-results.png":::
+
+If the `ProtectionStatusLastUpdate` field doesn't show a date within the last month, the machine might not be protected. Verify the protection of the single SQL server instance.
+
+:::image type="content" source="media/verify-machines-protection/status-update.png" alt-text="Screenshot that shows the last status update for the SQL instance." lightbox="media/verify-machines-protection/status-update.png":::
 
 ## Verify protection on a single SQL server instance
 
