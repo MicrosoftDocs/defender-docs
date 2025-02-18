@@ -68,7 +68,7 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 - [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution. The disable user action behaves differently depending on how the user is hosted in your environment.
   - When the user account is hosted in Active Directory: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity agent.
   - When the user account is hosted in Active Directory and is synced on Microsoft Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Entra ID synced account.
-  - When the user account is hosted in Entra ID only (cloud native account): attack disruption disable the user account on the Entra ID synced account.
+  - When the user account is hosted in Entra ID only (cloud native account): attack disruption disables the user account on the Entra ID synced account.
  
 > [!NOTE]
 > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
@@ -79,18 +79,18 @@ For more information, see [remediation actions](m365d-remediation-actions.md) in
 
 ### Automated response actions for SAP with Microsoft Sentinel
 
-If you're using the [unified security operations platform](/unified-secops-platform/microsoft-sentinel-onboard) and you deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
+If you [onboarded Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md) and deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
 
-For example, deploy attack disruption for SAP to contain compromised assets by locking suspicious SAP users in case of a financial process manipulation attack. 
+For example, deploy attack disruption for SAP to contain compromised assets by locking suspicious SAP users in case of a financial process manipulation attack.
 
-After the risk is mitigated, Microsoft Defender admins can manually unlock the users that had been automatically locked by the attack disruption response. The ability to manually unlock users is available from the Microsoft Defender action center, and only for users that were locked by attack disruption. 
+After the risk is mitigated, Microsoft Defender admins can manually unlock the users that had been automatically locked by the attack disruption response. The ability to manually unlock users is available from the Microsoft Defender action center, and only for users that were locked by attack disruption.
 
 To use attack disruption for SAP, deploy a new data connector agent, or make sure that your agent is using version 90847355 or higher, and then assign and apply the required Azure and SAP roles. For more information, see:
 
 - [Deploy and configure the container hosting the SAP data connector agent](/azure/sentinel/sap/deploy-data-connector-agent-container)
 - [Update Microsoft Sentinel's SAP data connector agent](/azure/sentinel/sap/update-sap-data-connector), especially [Update your system for automatic attack disruption](/azure/sentinel/sap/update-sap-data-connector#update-your-data-connector-agent-for-attack-disruption).
 
-While you configure attack disruption in the Azure portal and your SAP system, automatic attack disruption itself surfaces only in the unified security operations platform in the Microsoft Defender portal.
+While you configure attack disruption in the Azure portal and your SAP system, automatic attack disruption itself surfaces only in the Microsoft Defender portal.
 
 ## Identify when an attack disruption happens in your environment
 
