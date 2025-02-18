@@ -28,7 +28,7 @@ Cross-cloud visibility allows GCC High and DoD multitenant customers to view and
 
 ## Prerequisites
 
-Cross-cloud visibility is available to government customers who have the applicable [licensing requirements](/un/usgov#licensing-requirements).
+Cross-cloud visibility is available to government customers who have the applicable [licensing requirements](/defender-xdr/usgov#licensing-requirements).
 
 In addition, ensure that the trust multi-factor authentication (MFA) from Microsoft Entra tenants is properly configured to successfully access tenants in Microsoft Commercial cloud environments. To configure MFA, see [Change inbound trust settings for MFA and device claims](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims).
 
