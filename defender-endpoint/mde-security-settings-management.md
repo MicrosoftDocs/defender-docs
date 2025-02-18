@@ -37,12 +37,12 @@ ms.custom:
 
 Use the Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus security policies on devices. 
 
-### Pre-requisites:
+### Prerequisites:
 
-Please review the pre-requisites [here](/mem/intune/protect/mde-security-integration). 
+Review the prerequisites [here](/mem/intune/protect/mde-security-integration). 
 
 > [!NOTE]
-> The **Endpoint Security Policies** page in  the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in the scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
+> The **Endpoint Security Policies** page in  the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, can't access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in the scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
 
 As a security administrator, you can configure different Microsoft Defender Antivirus security policy settings in the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -81,7 +81,7 @@ The following list provides a brief description of each endpoint security policy
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the groups that will receive this profile.
+7. On the **Assignments** page, select the groups that receive this profile.
 
    Select **Next**.
 
@@ -101,17 +101,17 @@ The following list provides a brief description of each endpoint security policy
    - Settings
    - Assignments
 
-4. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to additional categories.
+4. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to more categories.
 
 ## Verify endpoint security policies
 
 To verify that you have successfully created a policy, select a policy name from the list of endpoint security policies.
 
 > [!NOTE]
-> It can take up to 90 minutes for a policy to reach a device. To speed up the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it is applied in approximately 10 minutes.
+> It can take up to 90 minutes for a policy to reach a device. To speed up the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it's applied in approximately 10 minutes.
 > :::image type="content" source="./media/policy-sync.png" alt-text="Image showing policy sync button":::
 
-The policy page displays details that summarize the status of the policy. You can view a policy's status, which devices it has been applied to, and assigned groups.
+The policy page displays details that summarize the status of the policy. You can view a policy's status, which devices it is applied to, and assigned groups.
 
 During an investigation, you can also view the **Security policies** tab in the device page to view the list of policies that are being applied to a particular device. For more information, see [Investigating devices](investigate-machines.md#security-policies).
 
@@ -124,7 +124,7 @@ During an investigation, you can also view the **Security policies** tab in the 
 
 |Description|Settings|
 |---|---|
-|Allow Realtime Monitoring|Allowed|
+|Allow real-time Monitoring|Allowed|
 |Real Time Scan Direction|Monitor all files (bi-directional)|
 |Allow Behavior Monitoring|Allowed|
 |Allow On Access Protection|Allowed|
@@ -146,7 +146,7 @@ For more information, see:
 |---|---|
 |Allow Cloud Protection|Allowed|
 |Cloud Block Level|High|
-|Cloud Extended Timeout|Configured, 50|
+|Cloud Extended time-out|Configured, 50|
 |Submit Samples Consent|Send all samples automatically|
 
 Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service delivers this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
@@ -219,7 +219,7 @@ For more information, see:
 |---|---|
 | Check For Signatures Before Running Scan | Disabled (Default)|
 | Randomize Schedule Task Times | Not configured |
-| Scheduler Randomization Time | Scheduled tasks will not be randomized|
+| Scheduler Randomization Time | Scheduled tasks won't be randomized|
 | Avg CPU Load Factor | Not Configured (Default, 50)|
 | Enable Low CPU Priority | Disabled (Default)|
 | Disable Catchup Full Scan | Enabled (Default)|
@@ -234,7 +234,7 @@ For more information, see:
 
 > [!NOTE]
 > In this example, a quick scan runs daily on the Windows clients at 12:00 p.m. (720).
-> In this example, we use lunch time, since a lot of devices nowadays are turned off after-hours (e.g laptops).
+> In this example, we use lunch time, since many devices nowadays are turned off after-hours (e.g laptops).
 
 ***Weekly Quick Scan or Full Scan***
 
@@ -299,8 +299,8 @@ For more information, see:
 
 |Description|Setting|
 |---|---|
-| Disable Core Service ECS Integration | The Defender core service will use the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes. |
-| Disable Core Service Telemetry | The Defender core service will use the OneDsCollector framework to rapidly collect telemetry.|
+| Disable Core Service ECS Integration | The Defender core service uses the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes. |
+| Disable Core Service Telemetry | The Defender core service uses the OneDsCollector framework to rapidly collect telemetry.|
 
 For more information, see:
 
@@ -468,4 +468,4 @@ To information on how to make False Negatives (FNs) submissions, see:
 - [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
 
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
-
+  
