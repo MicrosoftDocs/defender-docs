@@ -154,7 +154,7 @@ As a security administrator, you can configure Defender for Endpoint exclusions 
 
 #### 2. Create a Microsoft Entra group
 
-Create a dynamic Microsoft Entra group that uses the operating system type to ensure that all devices onboarded to Defender for Endpoint receive policies. Using a dynamice group allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information, see the following articles:
+Create a dynamic Microsoft Entra group that uses the operating system type to ensure that all devices onboarded to Defender for Endpoint receive policies. Using a dynamic group allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information, see the following articles:
 
 - [Create Microsoft Entra Groups](/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups) 
 - [Microsoft Entra groups overview](/entra/fundamentals/concept-learn-about-groups)
@@ -196,7 +196,7 @@ mdatp exclusion
 
 Examples:
 
-- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)* :
+- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)*:
 
     ```bash
     mdatp exclusion extension add --name .txt
