@@ -56,7 +56,7 @@ For more information, see the [Manage when protection updates should be download
 |:---|:---|:---|:---|
 | Scan | Specify the scan type to use for a scheduled scan | Quick scan ||
 | Scan | Specify the day of the week to run a scheduled scan | Specify the day (or never) to run a scan. | Never |
-| Scan | Specify the time of day to run a scheduled scan | Specify the number of minutes after midnight to run a scan (for example, enter **60** for 1 a.m.). | 2 a.m. |
+| Scan | Specify the time of day to run a scheduled scan | Specify the number of minutes after midnight to run a scan (for example, enter **60** for 1 AM). | 2 AM. |
 | Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from **0 to 23 hours**. By default, scheduled tasks begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
 | Root | Configure scheduled task times randomization window |- This setting lets you set the start time for scheduled task scans and security updates. <br> - When enabled, you can choose a randomization window between **1 and 23 hours**. <br> - The Randomize Scheduled Task Times uses the specified window. <br> - If disabled or not configured, it randomizes times between **0 and 4 hours**. | Not configured (Disabled)|
 
@@ -74,14 +74,14 @@ For more information, see the [Manage when protection updates should be download
 | Location | Setting | Description | Default setting (if not configured) |
 |---|---|---|---|
 | Remediation | Specify the day of the week to run a scheduled full scan to complete remediation | Specify the day (or never) to run a scan. | Never |
-| Remediation | Specify the time of day to run a scheduled full scan to complete remediation | Specify the number of minutes after midnight (for example, enter **60** for 1 a.m.) | 2 a.m. |
+| Remediation | Specify the time of day to run a scheduled full scan to complete remediation | Specify the number of minutes after midnight (for example, enter **60** for 1 AM.) | 2 AM. |
 
 ## Group Policy settings for scheduling daily scans
 
 | Location | Setting | Description | Default setting (if not configured) |
 |:---|:---|:---|:---|
 | Scan | Specify the interval to run quick scans per day | Specify how many hours should elapse before the next quick scan. For example, to run every two hours, enter **2**, for once a day, enter **24**. Enter **0** to never run a daily quick scan. | Never |
-| Scan | Specify the time for a daily quick scan | Specify the number of minutes after midnight (for example, enter **60** for 1 a.m.)  Note that if this setting is set to 0, daily quick scans don't run.| 2 a.m. |
+| Scan | Specify the time for a daily quick scan | Specify the number of minutes after midnight (for example, enter **60** for 1 AM.)  Note that if this setting is set to 0, daily quick scans don't run.| 2 AM. |
 
 ## Group Policy settings for scheduling scans after protection updates
 
