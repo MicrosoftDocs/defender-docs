@@ -205,18 +205,18 @@ See the following article for more information and allowed parameters:
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-1. Select **Policies** then **Administrative templates**.
+1. Select **Policies** and then select **Administrative templates**.
 
 1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Security Intelligence Update** and configure the following settings:
 
 - If you have set up scheduled quick scans, double-click the Allow Microsoft Defender Antivirus to update and communicate over a metered connection setting and set the option to **Enabled**.
   - Select **OK**.
     
-|Settings| Description| Default | 
-| -------- | -------- | -------- |
-|Allow Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy will automatically download updates, even over metered data connections (charges may apply)| Disabled |
+  |Settings| Description| Default | 
+  | -------- | -------- | -------- |
+  |Allow Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy will automatically download updates, even over metered data connections (charges may apply)| Disabled |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
