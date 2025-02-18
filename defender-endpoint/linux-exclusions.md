@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 02/18/2025
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
@@ -52,7 +52,7 @@ Antivirus exclusions can be used to exclude trusted files and processes from rea
 
 | Exclusion Category | Exclusion Scope | Description |
 | --- | --- | --- |
-| Antivirus Exclusion  | Antivirus engine <br/>*(scope: epp)*  | Excludes content from antivirus (AV) scans and on-demand scans.| 
+| Antivirus Exclusion  | Antivirus engine <br/>*(scope: epp)*  | Excludes content from antivirus scans and on-demand scans.| 
 | Global Exclusion  | Antivirus and endpoint detections and response engine <br/>*(scope: global)*  | Excludes events from real time protection and EDR visibility. Doesn't apply to on-demand scans by default. |
 
 > [!IMPORTANT]
@@ -86,6 +86,8 @@ Wildcard|Description|Examples|
 > File path needs to be present before adding or removing file exclusions with scope as global.
 
 ## How to configure the list of exclusions
+
+You can configure exclusions using a management console, Defender for Endpoint security settings management, or the command line.
 
 ### Using the management console
 
@@ -139,30 +141,44 @@ To configure exclusions from Puppet, Ansible, or another management console, ple
 For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
 ### Using Defender for Endpoint security settings management
-> [!NOTE]
-> Please review the prerequisites: [Defender for Endpoint security settings management Prerequisites](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration#prerequisites.md)
 
-As a security administrator, you can configure different Microsoft Defender exclusions using security policy settings in the Microsoft Defender portal. If you are using security settings management for the first time, you need to refer the following steps:
+> [!NOTE]
+> Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/mem/intune/protect/mde-security-integration#prerequisites)
+
+As a security administrator, you can configure Defender for Endpoint exclusions using the Microsoft Defender portal. This method is referred to as Defender for Endpoint security settings management. If you're using this method for the first time, make sure to complete the following procedures:
 
 #### 1. Configure your tenant to support security settings management
-Enable security settings management on your tenant by signing in to the Microsoft Defender portal, navigating to `Settings > Endpoints > Configuration Management > Enforcement Scope`, and selecting the Linux platform. Test the feature by tagging devices with the "MDE-Management" tag. Most devices will enroll and apply the policy within minutes, though some may take up to 24 hours. For more information refer-[configure-your-tenant-to-support-defender-for-endpoint-security-settings-management](/mem/intune/protect/mde-security-integration?branch=main)
 
-#### 2. Creating Microsoft Entra group
-Create a dynamic Microsoft Entra group based on device OS Type to ensure all devices in Defender for Endpoint receive policies. This allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information on how to manage Entra groups refer: [create-microsoft-entra-groups](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups.md) 
+1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**, and then select the Linux platform. 
+
+2. Tag devices with the `MDE-Management` tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that are not enrolled with Intune](/mem/intune/protect/mde-security-integration).
+
+#### 2. Create a Microsoft Entra group
+
+Create a dynamic Microsoft Entra group that uses the operating system type to ensure that all devices onboarded to Defender for Endpoint receive policies. Using a dynamic group allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information, see the following articles:
+
+- [Create Microsoft Entra Groups](/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups) 
+- [Microsoft Entra groups overview](/entra/fundamentals/concept-learn-about-groups)
 
 #### 3. Create an endpoint security policy 
-- Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using at least a Security Administrator role.
-- Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
-- Select a platform as "Linux" from the dropdown list.
-- Select the required exclusion template (`Microsoft defender global exclusion(AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions`), then select **Create policy**.
-- On the **Basics** page, enter a name and description for the profile, then choose **Next**.
-- On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
-- When you're done configuring settings, select **Next**.
-- On the **Assignments** page, select the groups that will receive this profile. 
-- Select **Next**.
-- On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/manage-security-policies?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fbreadcrumb%2Ftoc.json#create-an-endpoint-security-policy.md)
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**. 
+
+2. For Platform, select **Linux**.
+
+3. Select the required exclusion template (**Microsoft defender global exclusion (AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions**), and then select **Create policy**.
+
+4. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+
+5. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
+
+6. When you're done configuring settings, select **Next**.
+
+7. On the **Assignments** page, select the groups that will receive this profile. Then select **Next**.
+
+8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
 
 ### Using the command line
 Run the following command to see the available switches for managing exclusions:
@@ -179,7 +195,7 @@ mdatp exclusion
 
 Examples:
 
-- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)* :
+- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)*:
 
     ```bash
     mdatp exclusion extension add --name .txt
