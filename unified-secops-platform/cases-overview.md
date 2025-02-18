@@ -1,6 +1,6 @@
 ---
-title: Manage cases natively with Microsoft Sentinel in the Defender portal
-description: Learn about case management features with Microsoft Sentinel in the Defender portal.
+title: Manage cases natively in Microsoft's unified SecOps platform
+description: Learn about case management features across Microsoft's unified security operations (SecOps) platform.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: austinmc
@@ -14,12 +14,12 @@ ms.collection:
 - usx-security
 ms.topic: conceptual
 
-# customer intent: As a security operations center business decision maker, I want to learn about the case management tool available in the Defender portal so I can unify security tickets and case management tools so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
+# customer intent: As a security operations center business decision maker, I want to learn about the case management tool available in Microsoft's unified SecOps platform so I can unify security tickets and case management tools so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---
 
-# Manage cases natively with Microsoft Sentinel in the Defender portal
+# Manage cases natively in Microsoft's unified security operations platform
 
-Case management is the first installment of new capabilities for managing security work when you onboard Microsoft Sentinel to the Microsoft Defender portal. <!--double-check to see if this is correct. is case management also available for sentinel only?-->
+Case management is the first installment of new capabilities for managing security work when you onboard to Microsoft's unified security operations (SecOps) platform.
 
 This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
