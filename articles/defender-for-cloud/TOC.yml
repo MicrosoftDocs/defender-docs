@@ -985,6 +985,9 @@
         - name: Enable Defender for SQL servers on machines at scale
           displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
           href: enable-defender-sql-at-scale.md
+        - name: Migrate to AMA
+          displayName: vulnerability, assessment, findings, migrate
+          href: defender-for-sql-autoprovisioning.md  
       - name: Defender for Open-Source Relational Databases
         items:
         - name: Overview
@@ -1008,9 +1011,6 @@
           href: defender-for-databases-enable-cosmos-protections.md
       - name: Common questions
         href: faq-defender-for-databases.yml     
-      - name: Migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process
-        displayName: vulnerability, assessment, findings, migrate
-        href: defender-for-sql-autoprovisioning.md  
       - name: Manage vulnerability assessment
         items:
         - name: Configure vulnerability findings in your Azure SQL databases
