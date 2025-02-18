@@ -197,9 +197,7 @@ For more information, see:
 |---|---|
 | Engine Updates Channel |Not configured|
 
-For more information, see:
-
-[Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout)
+For more information, see [Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout).
 
 **Platform updates**:
 
@@ -207,9 +205,7 @@ For more information, see:
 |---|---|
 | Platform Updates Channel |Not configured|
 
-For more information, see:
-
-[Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout)
+For more information, see [Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout).
 
 **Scheduled scan and On-Demand scan**:
 
@@ -233,7 +229,7 @@ For more information, see:
 | Schedule Quick Scan Time | 720 |
 
 > [!NOTE]
-> In this example, a quick scan runs daily on the Windows clients at 12:00 p.m. (720).
+> In this example, a quick scan runs daily on the Windows clients at 12:00 PM. (720).
 > In this example, we use lunch time, since many devices nowadays are turned off after-hours (e.g laptops).
 
 ***Weekly Quick Scan or Full Scan***
@@ -246,8 +242,8 @@ For more information, see:
 
 
 > [!NOTE]
-> In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 p.m. (1020).
-> And for Windows Servers, on Saturday's at 1:00 a.m. (60)
+> In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 PM. (1020).
+> And for Windows Servers, on Saturday's at 1:00 AM. (60)
 
 For more information, see:
 
@@ -269,9 +265,7 @@ For more information, see:
 |Days To Retain Cleaned Malware|Configured, 60|
 |Allow User UI Access|Allowed.  Let users access UI.|
 
-For more information, see:
-
-[Configure remediation for Microsoft Defender Antivirus detections](/defender-endpoint/configure-remediation-microsoft-defender-antivirus)
+For more information, see [Configure remediation for Microsoft Defender Antivirus detections](/defender-endpoint/configure-remediation-microsoft-defender-antivirus).
 
 **Antivirus exclusions:**
 
@@ -302,9 +296,7 @@ For more information, see:
 | Disable Core Service ECS Integration | The Defender core service uses the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes. |
 | Disable Core Service Telemetry | The Defender core service uses the OneDsCollector framework to rapidly collect telemetry.|
 
-For more information, see:
-
-[Microsoft Defender Core service overview](/defender-endpoint/microsoft-defender-core-service-overview)
+For more information, see [Microsoft Defender Core service overview](/defender-endpoint/microsoft-defender-core-service-overview).
 
 **Network Protection**:
 
@@ -319,9 +311,7 @@ For more information, see:
 |Disable TLS parsing|TLS parsing is enabled.|
 |Enable DNS Sinkhole|DNS Sinkhole is enabled.|
 
-For more information, see:
-
-[Use network protection to help prevent connections to malicious or suspicious sites](/defender-endpoint/network-protection)
+For more information, see [Use network protection to help prevent connections to malicious or suspicious sites](/defender-endpoint/network-protection).
 
 1. When you're done configuring settings, select **Next**.
 2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
@@ -367,9 +357,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > [!TIP]
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
-For more information, see:
-
-[Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment)
+For more information, see [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment).
 
 1. Select **Next**.
 1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
