@@ -64,6 +64,19 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
+### Feb-2025 (Build: 101.24122.0011  | Release version: 20.124122.11.0)
+
+| Build:             | **101.24122.0011**    |
+|--------------------|-----------------------|
+| Release version:   | **20.124122.11.0**    |
+| Engine version:    | **1.1.24080.11**      |
+| Signature version: | **1.419.351.0**       |
+
+##### What's new
+
+- Fixed an issue with the auth prompt during new installation on macOS with multiple active users
+- Improved stability when using the antivirus engine in passive mode
+
 ### Jan-2025 (Build: 101.24122.0005  | Release version: 20.124122.5.0)
 
 | Build:             | **101.24122.0005**    |
