@@ -57,11 +57,10 @@ Permission type|Permission|Permission display name
 Application|Machine.ReadWrite.All| Read and write all scan information.
 Delegated (work or school account)|Machine.Read.Write|Read and write all scan information.
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md) for more information)
-> - To edit data, the user needs to have at least the following role permission: `ManageSecurity` (See [Create and manage roles](../user-roles.md) for more information)
+When obtaining a token using user credentials:
+
+- To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
+- To edit data, the user needs to have at least the following role permission: `ManageSecurity` (See [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 
