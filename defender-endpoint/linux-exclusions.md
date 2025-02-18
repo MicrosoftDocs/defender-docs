@@ -89,6 +89,8 @@ Wildcard|Description|Examples|
 
 ## How to configure the list of exclusions
 
+You can configure exclusions using a management console, Defender for Endpoint security settings management, or the command line.
+
 ### Using the management console
 
 To configure exclusions from Puppet, Ansible, or another management console, please refer to the following sample `mdatp_managed.json`.
