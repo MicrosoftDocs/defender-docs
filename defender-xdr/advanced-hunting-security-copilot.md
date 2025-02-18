@@ -83,7 +83,7 @@ Users with access to Security Copilot have access to this capability in advanced
     The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
 
 
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right*, **Needs improvement**, or **Inappropriate**.
+1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right**, **Needs improvement**, or **Inappropriate**.
 
 
 > [!TIP]
