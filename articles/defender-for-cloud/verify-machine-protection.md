@@ -14,18 +14,7 @@ After enabling protection for SQL VMs with the Defender for SQL Servers on Machi
 
 ## Verify protection on multiple Azure VMs
 
-Retrieve and review the Defender for SQL Servers on Machines protection status report for all SQL VMs within a specified Azure subscription by running the [Get-SqlVMProtectionStatusReport.ps1 PowerShell script](https://aka.ms/DfSQLprotectionverificationscale). The script applies to Azure VMs only and performs the following tasks:
-
-- Queries registry settings from SQL VMs.
-- Retrieves protection status from the machine registry.
-- Converts the timestamp from .NET ticks to an ISO 8601 formatted date.
-- Aggregates results for all SQL instances found on each VM.
-- Exports the collected data to an Excel report, which includes:
-    - SQL VM Name
-    - SQL Instance Name
-    - Protection Status
-    - Last Update Time
-    - SQL VM Resource ID
+Retrieve and review the Defender for SQL Servers on Machines protection status report for all SQL VMs within a specified Azure subscription by running the [Get-SqlVMProtectionStatusReport.ps1 PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20SQL%20servers%20on%20machines%20status%20report). The script applies to Azure VMs only.
 
 ## Verify protection on multiple Azure Arc-enabled VMs
 
@@ -33,7 +22,7 @@ Retrieve and review the Defender for SQL Servers on Machines protection status r
 
 1. Copy and run the following query to identify Azure Arc-enabled VMs that aren't in a protected state.
 
-    ```azcopy
+    ```kusto   
     resources
     | where type == "microsoft.azurearcdata/sqlserverinstances"
     | extend SQLonArcProtection= tostring(properties.azureDefenderStatus)
@@ -58,7 +47,7 @@ The script can return the following possible protection statuses:
 
 ## Verify protection on a single SQL server instance
 
-1. In the Azure portal, search for and select **SQL virtual machines**.
+1. Depending on the resources in your environment, search for and select **SQL virtual machines** or **SQL Server - Azure Arc** in the Azure portal.
 
 1. Locate and select the relevant resource.
 
