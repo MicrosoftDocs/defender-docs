@@ -191,7 +191,7 @@ For more information, see:
 
 [Update channels for security intelligence updates](/defender-endpoint/manage-gradual-rollout)
 
-**Engine updates**
+**Engine updates**:
 
 |Description|Setting|
 |---|---|
@@ -201,7 +201,7 @@ For more information, see:
 
 [Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout)
 
-**Platform updates**
+**Platform updates**:
 
 |Description|Setting|
 |---|---|
@@ -211,7 +211,7 @@ For more information, see:
 
 [Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout)
 
-**Scheduled scan and On-Demand scan**
+**Scheduled scan and On-Demand scan**:
 
 ***General settings for Scheduled scan and On-Demand scan***
 
