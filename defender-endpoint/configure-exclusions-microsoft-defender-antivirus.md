@@ -36,7 +36,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 > [!TIP]
 > For a detailed overview of suppressions, submissions, and exclusions across Microsoft Defender Antivirus and Defender for Endpoint, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
 
-## Hide the antivirus exclusions from users and/or local administrators.
+## Hide the antivirus exclusions from users and/or local administrators
 
 | Setting | Description | Default value |
 | -------- | -------- | -------- |
