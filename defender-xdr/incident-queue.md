@@ -42,7 +42,7 @@ Select **Most recent incidents and alerts** to toggle the expansion of the top s
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="/defender/media/incidents-queue/incidents-ss-incidents2.png":::
 
-Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made.
+Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made. You can also find the **total number of incidents** in the queue indicated beside the Search bar. The total number of incidents varies depending on the filters used in the queue.
 
 The incident queue has customizable columns that give you visibility into different characteristics of the incident or the impacted entities. This filtering helps you make an informed decision regarding the prioritization of incidents for analysis. Select **Customize columns** to perform the following customizations based on your preferred view:
 
