@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 02/08/2024
+  ms.date: 02/05/2025
 title: Common questions about Defender for Storage
 summary: Get answers to common questions about Microsoft Defender for Storage.
 
@@ -38,23 +38,14 @@ sections:
 
 
       - question: |
-          Is there a difference in features between the new and Defender for Storage (classic)?
-        answer: |
-          Yes, there's a difference in the capabilities of the two plans. New and future security capabilities are only available in the new Defender for Storage plan. If you want to access these new capabilities, you need to enable the new plan.
-
-
-      - question: |
-          Will the Defender for Storage (classic) continue to be supported?
-        answer: |
-          The Defender for Storage (classic) will still continue to be supported for three years after the release of the new Defender for Storage to general availability (GA).
-
-
-      - question: |
           Can I switch back to the Defender for Storage (classic)?
         answer: |
-          Yes, you can use the REST API to return to the Defender for Storage (classic) plan.
+          No, Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans.
 
           If you want to switch back to the Defender for Storage (classic) plan, you need to do two things. First, disable the new Defender for Storage plan that is enabled now. Second, check if there are any policies that can re-enable the new plan and turn them off too. The two Azure built-in policies enabling the new plan are **Configure Microsoft Defender for Storage to be enabled** and **Configure basic Microsoft Defender for Storage to be enabled (Activity Monitoring only).**
+
+          > [!NOTE]
+          > After February 5, 2025, you can no longer enable Defender for Storage (classic), the legacy per-transaction pricing plan, in most scenarios. The only exception is for subscriptions that already have the per-transaction pricing enabled. For more information, learn how to [migrate to the new plan](https://aka.ms/DF-Storage/NewPlanMigration).
 
 
       - question: |

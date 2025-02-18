@@ -27,6 +27,72 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## January 2025
+
+|Date | Category | Update|
+|--|--|--|
+| January 30 | GA | [Update to scan criteria for container registries](#update-to-scan-criteria-for-container-registries) |
+| January 29 | Change | [Enhancements for the Containers Vulnerabilities Assessment scanning powered by MDVM](#enhancements-for-the-containers-vulnerabilities-assessment-scanning-powered-by-mdvm) |
+| January 27 | GA | [Permissions added to GCP connector to support AI platforms](#permissions-added-to-gcp-connector-to-support-ai-platforms) |
+| January 20 | Change | [Enhancements for the Linux Baselines recommendation powered by GC](#enhancements-for-the-linux-baselines-recommendation-powered-by-gc) |
+
+### Update to scan criteria for container registries
+
+January 30, 2025
+
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved), [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+
+**What's Changing?**
+
+Currently, we rescan images for 90 days after they have been pushed to a registry. This will now be changed to scan 30 days back.
+
+> [!NOTE]
+> There are no changes for the related GA recommendations for container vulnerability assessment (VA) on registry images.
+
+### Enhancements for the Containers Vulnerabilities Assessment scanning, powered by MDVM
+
+January 29, 2025
+
+We are excited to announce enhancements to our container vulnerability assessment scanning coverage with the following updates:
+
+- **Additional Programming Languages**: Now supporting PHP, Ruby, and Rust.
+
+- **Extended Java Language Support**: Includes scanning for exploded JARs.
+
+- **Improved Memory Usage**: Optimized performance when reading large container image files.
+
+### Permissions added to GCP connector to support AI platforms
+
+January 27, 2025
+
+The [GCP connector now has additional permissions](permissions.md#permissions-on-gcp) to support the GCP AI Platform (Vertex AI):
+
+- aiplatform.batchPredictionJobs.list
+- aiplatform.customJobs.list
+- aiplatform.datasets.list
+- aiplatform.datasets.get
+- aiplatform.endpoints.getIamPolicy
+- aiplatform.endpoints.list
+- aiplatform.indexEndpoints.list
+- aiplatform.indexes.list
+- aiplatform.models.list
+- aiplatform.models.get
+- aiplatform.pipelineJobs.list
+- aiplatform.schedules.list
+- aiplatform.tuningJobs.list
+- discoveryengine.dataStores.list
+- discoveryengine.documents.list
+- discoveryengine.engines.list
+- notebooks.instances.list
+
+### Enhancements for the Linux Baselines recommendation powered by GC
+ 
+January 20, 2025
+
+We are enhancing the Baselines Linux (powered by GC) feature to improve its accuracy and coverage. During February, you may notice changes such as updated rule names and additional rules. These improvements are designed to make the baselines assessment more accurate and up-to-date. For more information about the changes, please refer to the relevant [blog](/azure/osconfig/quickstart-sec-baseline-mc?tabs=azure-cli)
+
+Some of the changes may include additional "public preview" changes. This update is beneficial for you, and we want to keep you informed. If you prefer, you can opt out of this recommendation by exempting it from your resource or removing the GC extension.
+
 ## December 2024
 
 |Date | Category | Update|
@@ -63,7 +129,7 @@ Defender for Cloud's Security Posture Management (CSPM) sensitivity scanning cap
 
 Before this update, enabling the Defender CSPM plan on a subscription would automatically scan blob containers within storage accounts for sensitive data. With this update, Defender for CSPM's sensitivity scanning feature now includes file shares within those storage accounts. This enhancement improves the risk assessment and protection of sensitive storage accounts, providing a more comprehensive analysis of potential risks.
 
-Learn more about [sensitivity scanning](/azure/defender-for-cloud/concept-data-security-posture-prepare).
+Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md).
 
 ### Integrate Defender for Cloud CLI with Popular CI/CD Tools
 
@@ -168,7 +234,7 @@ Starting on December 1, 2024, Defender for Storage malware scanning will **suppo
 
 Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
 
-To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](/azure/defender-for-cloud/on-upload-malware-scanning).
+To avoid unexpected high charges, you may want to set an appropriate cap on total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](on-upload-malware-scanning.md).
 
 ### Updated versions of CIS standards for managed Kubernetes environments and new recommendations
 

@@ -168,7 +168,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: High
 
-### **PREVIEW - Azurite toolkit run detected**
+### **PREVIEW - FSecure's Azurite toolkit detected**
 
 (ARM_Azurite)
 
@@ -178,7 +178,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: High
 
-### **PREVIEW - Suspicious creation of compute resources detected**
+### **Suspicious creation of compute resources detected**
 
 (ARM_SuspiciousComputeCreation)
 
@@ -190,7 +190,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: Medium
 
-### **PREVIEW - Suspicious key vault recovery detected**
+### **Suspicious key vault recovery detected**
 
 (Arm_Suspicious_Vault_Recovering)
 
@@ -332,7 +332,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: Medium
 
-### **Privileged custom role created for your subscription in a suspicious way (Preview)**
+### **Privileged custom role created for your subscription in a suspicious way** 
 
 (ARM_PrivilegedRoleDefinitionCreation)
 
@@ -422,7 +422,9 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: Medium
 
-### **Suspicious elevate access operation (Preview)**(ARM_AnomalousElevateAccess)
+### **Suspicious elevate access operation** 
+
+(ARM_AnomalousElevateAccess)
 
 **Description**: Microsoft Defender for Resource Manager identified a suspicious "Elevate Access" operation. The activity is deemed suspicious, as this principal rarely invokes such operations. While this activity might be legitimate, a threat actor might utilize an "Elevate Access" operation to perform privilege escalation for a compromised user.
 

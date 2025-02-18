@@ -105,6 +105,55 @@ sections:
         answer: |
           Any individual rule can't produce results that are more than 1 MB. When that limit is reached, the results for the rule are stopped. You can't set a baseline for the rule, the rule isn't included in the overall recommendation health, and the results are shown as "Not applicable".
 
+      - question: |
+          Once the Microsoft Defender for SQL servers on machines deployment is done, how long do we need to wait to see a successful deployment?
+        answer: |
+          It takes approximately 30 minutes to update the protection status by the SQL IaaS Extension, assuming all the prerequisites are fulfilled.
+
+      - question: |
+          How do I verify that my Defender for SQL servers on machines deployment ended successfully and that my database is now protected?
+        answer: |
+          1. Locate the database on the upper search bar in the Azure portal.
+          2. Under the **Security** tab, select **Defender for Cloud**.
+          3. Check the **Protection status**. If the status is **Protected**, the deployment was successful.
+
+          :::image type="content" source="media/defender-for-sql-usage/protection-status-protected.png" alt-text="Screenshot showing protection status as protected." lightbox="media/defender-for-sql-usage/protection-status-protected.png":::
+
+      - question: |
+          What is the purpose of the managed identity created during the installation process on Azure SQL VMs?
+        answer: |
+          The managed identity is part of the Azure Policy, which pushes out the AMA. It's used by the AMA to access the database to collect the data and send it via the Log Analytics Workspace (LAW) to Defender for Cloud. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent).
+
+      - question: |
+          Can I use my own DCR or managed-identity instead of Defender for Cloud creating a new one?
+        answer: |
+          Yes, we allow you to bring your own identity or DCR using the following script only. For more information, see [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
+
+      - question: |
+          How many resource groups and Log analytics workspaces are created through the auto-provisioning process?
+        answer: |
+          By default, we create the resource group, workspace and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resource group/DCR is created in the same location as the workspace.
+
+      - question: |
+          How can I enable SQL servers on machines with AMA at scale?
+        answer: |
+          See [Enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md) for the process of how to enable Microsoft Defender for SQL's autoprovisioning across multiple subscriptions simultaneously. It's applicable to SQL servers hosted on Azure Virtual Machines, on-premises environments, and Azure Arc-enabled SQL servers.
+
+      - question: |
+          Which tables are used in LAW with AMA?
+        answer: |
+          Defender for SQL on SQL VMs and Arc-enabled SQL servers uses the Log Analytics Workspace (LAW) to transfer data from the database to the Defender for Cloud portal. This means that no data is saved locally at the LAW. The tables in the LAW named *SQLAtpStatus* and the *SqlVulnerabilityAssessmentScanStatus* will be retired [when MMA is deprecated](/azure/azure-monitor/agents/azure-monitor-agent-migration). ATP and VA status can be viewed in the Defender for Cloud portal.
+
+      - question: |
+          How does Defender for SQL collect logs from the SQL server?
+        answer: |
+          Defender for SQL uses **Xevent**, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL collects the logs using the SQL server audit logs.
+
+      - question: |
+          I see a parameter named enableCollectionOfSqlQueriesForSecurityResearch in the policy initiative. Does this mean that my data is collected for analysis?
+        answer: |
+          This parameter isn't in use today. Its default value is *false*, meaning that unless you proactively change the value, it remains false. There's no effect from this parameter.
+
 additionalContent: |
 
   ## Next steps

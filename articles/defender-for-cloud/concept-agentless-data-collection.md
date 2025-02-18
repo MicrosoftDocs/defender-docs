@@ -28,7 +28,7 @@ Agentless scanning is available in the following Defender for Cloud plans:
 - [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
 - [Defender for Servers Plan 2](defender-for-servers-overview.md#defender-for-servers-plans).
 - Malware scanning is only available in Defender for Servers Plan 2.
-- Agentless scanning is available for Azure VMs, GCP/AWS machines connected to Defender for Cloud, and on-premises machines that are onboarded as Azure Arc-enabled VMs.
+- Agentless scanning is available for Azure VMs, AWS EC2 and GCP compute instances connected to Defender for Cloud.
 
 ## Agentless scanning architecture
 

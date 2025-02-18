@@ -123,6 +123,46 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: High
 
+### Access from suspicious IP
+
+(AI.Azure_AccessFromSuspiciousIP)
+
+**Description**: An IP address accessing one of your AI services was identified by Microsoft Threat Intelligence as having a high probability of being a threat. While observing malicious Internet traffic, this IP came up as involved in attacking other online targets.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
+
+**Severity**: High
+
+### Suspected wallet attack - recurring requests
+
+(AI.Azure_DOWDuplicateRequests)
+
+**Description**: Wallet attacks are a family of attacks common for AI resources that consist of threat actors excessively engage with an AI resource directly or through an application in hopes of causing the organization large financial damages. This detection tracks high volumes of identical requests targeting the same AI resource which may be caused due to an ongoing attack.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
+
+**Severity**: Medium
+
+### Suspected wallet attack - volume anomaly
+
+(AI.Azure_DOWVolumeAnomaly)
+
+**Description**: Wallet attacks are a family of attacks common for AI resources that consist of threat actors excessively engage with an AI resource directly or through an application in hopes of causing the organization large financial damages. This detection tracks high volumes of requests and responses by the resource that are inconsistent with its historical usage patters.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
+
+**Severity**: Medium
+
+### Access anomaly in AI resource
+
+(AI.Azure_AccessAnomaly)
+
+**Description**: This alert track anomalies in access patterns to an AI resource. Changes in request parameters by users or applications such as user agents, IP ranges, authentication methods, etc. can indicate a compromised resource that is now being accessed by malicious actors. This alert may trigger when requests are valid if they represent significant changes in the pattern of previous access to a certain resource.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution, Reconnaissance, Initial access
+
+**Severity**: Medium
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 

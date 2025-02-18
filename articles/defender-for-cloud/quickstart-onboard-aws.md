@@ -2,7 +2,7 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 07/17/2024
+ms.date: 01/29/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -53,6 +53,8 @@ To complete the procedures in this article, you need:
 - Access to an AWS account.
 
 - Contributor level permission for the relevant Azure subscription.
+  
+- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](https://learn.microsoft.com/azure/defender-for-cloud/enable-permissions-management?source=recommendations#before-you-start) for your tenant.
 
 > [!NOTE]
 > The AWS connector is not available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
@@ -296,7 +298,7 @@ To view all the active recommendations for your resources by resource type, use 
 
 ## Integrate with Microsoft Defender XDR
 
-When you enable Defender for Cloud, its security alerts are automatically integrated into the Microsoft Defender Portal. No further steps are needed.
+When you enable Defender for Cloud, its security alerts are automatically integrated into the Microsoft Defender Portal.
 
 The integration between Microsoft Defender for Cloud and Microsoft Defender XDR brings your cloud environments into Microsoft Defender XDR. With Defender for Cloud's alerts and cloud correlations integrated into Microsoft Defender XDR, SOC teams can now access all security information from a single interface.
 

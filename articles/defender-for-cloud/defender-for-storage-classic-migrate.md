@@ -23,11 +23,11 @@ The new pricing plan charges based on the number of storage accounts you protect
 To take advantage of these features, we recommend moving to the new Defender for Storage plan by February 5, 2025.
 
 > [!NOTE]
-> After February 5, 2025, you can no longer enable Defender for Storage (classic), the legacy per-transaction pricing plan, in most scenarios. The only exception is for subscriptions that already have the per-transaction pricing enabled.
+> After February 5, 2025, you can no longer enable Defender for Storage (classic), the legacy per-transaction pricing plan, in most scenarios. The only exception is for subscriptions that already have the per-transaction pricing **enabled**.
 
 ## Important changes in Defender for Storage (classic)
 
-Defender for Storage (Classic) offers two pricing structures: per-transaction and per-storage account. Beginning February 5, 2025, this plan will transition to Defender for Storage with per-storage-account pricing.
+Defender for Storage (Classic) offers two pricing structures: per-transaction and per-storage account. 
 
 ### Impact on the Defender for Storage (classic) per-transaction plan
 

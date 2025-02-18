@@ -18,8 +18,11 @@ This article lists the prerequisites and permissions required to [enable Defende
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - The following storage types are supported:
-  - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, malware scanning, sensitive Data Discovery.
+  - [Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard/Premium StorageV2, including Data Lake Gen2) Activity monitoring, Malware scanning, Sensitive data discovery.
+    
   - Azure Files (over REST API and SMB): Activity monitoring.
+
+- Storage accounts that belong to a resource group with any of the following names are not supported: App_Browsers, App_Code, App_Data, App_GlobalResources, App_LocalResources, App_Themes, App_WebReferences, Bin. 
 
 ## Permissions required to enable Defender for Storage
 
@@ -66,3 +69,4 @@ The action sets are collections of Azure resource provider operations that you c
 ## Related content
 
 - [Common questions about Defender for Storage](faq-defender-for-storage.yml)
+

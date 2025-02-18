@@ -1,10 +1,10 @@
 ---
-title: Migrate to SQL server-targeted Azure Monitoring Agent's autoprovisioning process
+title: Migrate to SQL server-targeted AMA autoprovisioning
 description: Learn how to enable SQL server-targeted Azure Monitoring Agent's autoprovisioning process for Defender for SQL.
 ms.topic: install-set-up-deploy
 ms.author: dacurwin
 author: dcurwin
-ms.date: 09/21/2023
+ms.date: 12/30/2024
 ---
 
 # Migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process

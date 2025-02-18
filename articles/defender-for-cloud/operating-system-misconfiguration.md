@@ -15,7 +15,7 @@ Microsoft Defender for Cloud provides security recommendations to improve organi
 
 Defender for Cloud assesses and enforces best-practice security configurations using [built-in Azure policy initiatives](policy-reference.md). The [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) is Defender for Cloud's default initiative.
 
-MSCB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
+MCSB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
 Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features)
 

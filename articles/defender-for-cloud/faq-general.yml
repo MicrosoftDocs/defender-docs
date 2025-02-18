@@ -147,6 +147,10 @@ sections:
           - IoT Devices - Permissive firewall rule in the input chain was found
           - IoT Devices - Permissive firewall rule in the output chain was found
           - IP Filter rule large IP range
+          - Kubernetes clusters should be accessible only over HTTPS
+          - Kubernetes clusters should disable automounting API credentials
+          - Kubernetes clusters should not use the default namespace
+          - Kubernetes clusters should not grant CAPSYSADMIN security capabilities
           - Least privileged Linux capabilities should be enforced for containers
           - Overriding or disabling of containers AppArmor profile should be restricted
           - Privileged containers should be avoided

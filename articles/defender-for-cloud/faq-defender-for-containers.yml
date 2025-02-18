@@ -83,7 +83,7 @@ sections:
         answer: |
           To identify pull events performed by the scanner, do the following steps:
 
-          1. Search for pull events with the UserAgent of *AzureContainerImageScanner*.
+          1. Search for pull events with the UserAgent of *MDCContainersSecurity/1.0*.
           1. Extract the identity associated with this event.
           1. Use the extracted identity to identify pull events from the scanner.
 

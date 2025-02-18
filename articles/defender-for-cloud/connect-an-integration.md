@@ -21,7 +21,7 @@ For the full list of available integrations, see the [overview of partner integr
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Connect your [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service accounts](quickstart-onboard-aws.md), or [Google Cloud Projects](quickstart-onboard-gcp.md).
+- Connect your [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service accounts](quickstart-onboard-aws.md), or [Google Cloud Platform](quickstart-onboard-gcp.md).
 
 - Have a subscription or an account with your partner integration.
 

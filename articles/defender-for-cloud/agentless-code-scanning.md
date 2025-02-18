@@ -63,7 +63,7 @@ Agentless code scanning uses various open-source tools to find vulnerabilities a
 | **[Checkov](https://github.com/bridgecrewio/checkov)**           | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE)  |
 | **[ESLint](https://github.com/eslint/eslint)**            | JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
 | **[Template Analyzer](https://github.com/Azure/template-analyzer)** | ARM IaC templates, Bicep IaC templates                       | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt)         |
-| **[Terrascan](https://github.com/accurics/terrascan)**         | Terraform IaC templates (HCL2), Kubernetes manifest files (YAML/JSON), Dockerfiles, AWS CloudFormation templates (YAML/JSON), Azure ARM IaC templates, Helm chart files (v3), Kustomize files | [Apache 2.0](https://github.com/accurics/terrascan/blob/master/LICENSE)  |
+
 
 These tools support a wide range of languages and IaC frameworks, ensuring thorough security analysis across your codebase.
 
@@ -187,7 +187,8 @@ These measures ensure a secure, compliant, and efficient code scanning process, 
 During the **public preview** phase, the following limitations apply:  
 
 - **No binary scanning**: The system scans only code and Infrastructure-as-Code (IaC) files.  
-- **Scan frequency**: It scans repositories every 3-4 days.  
+- **Scan frequency**: It scans repositories every 3 days.  
+
 - **Repository size**: It limits scanning to repositories under 1 GB.
 
 - **Branch coverage**: Scans cover only the default (main) branch.  

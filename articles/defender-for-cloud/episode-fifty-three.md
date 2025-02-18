@@ -2,7 +2,7 @@
 title: Updated File Integrity Monitoring in Defender for Servers
 description: Learn about Microsoft's Defender for Cloud's updates to file integrity monitoring capabilities, including new features and improvements.
 ms.topic: reference
-ms.date: 12/04/2024
+ms.date: 01/23/2025
 ---
 
 # Updated File Integrity Monitoring in Defender for Servers
@@ -33,4 +33,4 @@ ms.date: 12/04/2024
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Updates from Microsoft Ignite 2024](episode-fifty-four.md)
