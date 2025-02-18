@@ -175,7 +175,7 @@ Create a dynamic Microsoft Entra group that uses the operating system type to en
 
 8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/manage-security-policies?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fbreadcrumb%2Ftoc.json#create-an-endpoint-security-policy.md)
+For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
 
 ### Using the command line
 
