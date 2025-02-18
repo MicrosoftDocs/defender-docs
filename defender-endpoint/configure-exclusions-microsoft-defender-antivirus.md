@@ -40,7 +40,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 
 | Setting | Description | Default value |
 | -------- | -------- | -------- |
-|**Configure if exclusions are visible to Local Admins** | - **Disabled (Default)**:  If you disable or do not configure this setting, Local Admins will be able to see exclusions in the Windows Security App or via PowerShell. <br> - **Enabled**: If this setting is enabled, Local Admins will no longer be able to see the exclusion list in Windows Security App or via PowerShell.  <br> - Please note that applying this setting will not remove exclusions, it will only prevent them from being visible to Local Admins. This is reflected in Get-MpPreference. <br>  | Disabled |
+|**Configure if exclusions are visible to Local Admins** | - **Disabled (Default)**:  If you disable or don't configure this setting, Local Admins are able to see exclusions in the Windows Security App or via PowerShell. <br> - **Enabled**: If this setting is enabled, Local Admins no longer see the exclusion list in Windows Security App or via PowerShell.  <br> - Please note that applying this setting won't remove exclusions, it prevents them from being visible to Local Admins. This is reflected in Get-MpPreference. <br>  | Disabled |
 |**Configure whether exclusions are visible to local users** | - Use this policy setting to configure whether or not exclusions are visible to Local Admins (HideExclusionsFromLocalAdmins).  | Disabled |
 
 ## Configure and validate exclusions
@@ -123,7 +123,7 @@ Remember these important points:
 
 ## Audit antivirus exclusions on Exchange systems
 
-Microsoft Exchange has supported integration with the Antimalware Scan Interface (AMSI) since the June 2021 Quarterly Updates for Exchange (see [Running Windows antivirus software on Exchange servers](/exchange/antispam-and-antimalware/windows-antivirus-software)). It's highly recommended to install these updates and make sure that AMSI is working properly. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).  
+Microsoft Exchange has supported integration with the anti-malware Scan Interface (AMSI) since the June 2021 Quarterly Updates for Exchange (see [Running Windows antivirus software on Exchange servers](/exchange/antispam-and-antimalware/windows-antivirus-software)). It's highly recommended to install these updates and make sure that AMSI is working properly. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).  
 
 Many organizations exclude the Exchange directories from antivirus scans for performance reasons. Microsoft recommends auditing Microsoft Defender Antivirus exclusions on Exchange systems and assessing whether exclusions can be removed without impacting performance in your environment to ensure the highest level of protection. Exclusions can be managed by using Group Policy, PowerShell, or systems management tools like Microsoft Intune.
 
