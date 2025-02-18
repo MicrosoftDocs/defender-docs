@@ -66,7 +66,7 @@ See [Proactively hunt for threats with advanced hunting in Microsoft Defender XD
 
 Threat analytics is a threat intelligence capability in Microsoft Defender XDR designed to assist your security team to be as efficient as possible while facing emerging threats. It includes detailed analysis and information on:
 
-- Active [threat actors](/microsoft-365/security/intelligence/microsoft-threat-actor-naming) and their campaigns
+- Active [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) and their campaigns
 - Popular and new attack techniques
 - Critical vulnerabilities
 - Common attack surfaces
