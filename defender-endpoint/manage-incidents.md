@@ -38,25 +38,25 @@ Selecting an incident from the **Incidents queue** brings up the **Incident mana
 You can assign incidents to yourself, change the status and classification, rename, or comment on them to keep track of their progress.
 
 > [!TIP]
-> For additional visibility at a glance, incident names are automatically generated based on alert attributes such as the number of endpoints affected, users affected, detection sources or categories. This allows you to quickly understand the scope of the incident.
+> For additional visibility at a glance, incident names are automatically generated based on alert attributes such as the number of endpoints affected, users affected, detection sources, or categories. This allows you to quickly understand the scope of the incident.
 >
 > For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
 >
-> Incidents that existed prior the rollout of automatic incident naming will retain their names.
+> Incidents that existed prior to the rollout of automatic incident naming retain their names.
 >
 
 :::image type="content" source="media/atp-incident-details-updated.png" alt-text="The incident detail page" lightbox="media/atp-incident-details-updated.png":::
 
 ## Assign incidents
-If an incident has not been assigned yet, you can select **Assign to me** to assign the incident to yourself. Doing so assumes ownership of not just the incident, but also all the alerts associated with it.
+If an incident hasn't been assigned yet, you can select **Assign to me** to assign the incident to yourself. Doing so assumes ownership of not just the incident, but also all the alerts associated with it.
 
 ## Set status and classification
 ### Incident status
 You can categorize incidents (as **Active**, or **Resolved**) by changing their status as your investigation progresses. This helps you organize and manage how your team can respond to incidents.
 
-For example, your SOC analyst can review the urgent **Active** incidents for the day, and decide to assign them to himself for investigation.
+For example, your SOC analyst can review the urgent **Active** incidents for the day, and decide to assign them to their self for investigation.
 
-Alternatively, your SOC analyst might set the incident as **Resolved** if the incident has been remediated. 
+Alternatively, your SOC analyst might set the incident as **Resolved** if the incident was remediated. 
 
 ### Classification
 You can choose not to set a classification, or decide to specify whether an incident is true or false. Doing so helps the team see patterns and learn from them.
@@ -64,14 +64,16 @@ You can choose not to set a classification, or decide to specify whether an inci
 ### Add comments
 You can add comments and view historical events about an incident to see previous changes made to it.
 
-Whenever a change or comment is made to an alert, it is recorded in the Comments and history section.
+Whenever a change or comment is made to an alert, it's recorded in the Comments and history section.
 
 Added comments instantly appear on the pane.
 
 
 
-## Related topics
+## Related articles
+
 - [Incidents queue](view-incidents-queue.md)
 - [View and organize the Incidents queue](view-incidents-queue.md)
 - [Investigate incidents](investigate-incidents.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
