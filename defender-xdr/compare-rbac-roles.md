@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom:
 ms.topic: reference
-ms.date: 11/17/2024
+ms.date: 02/16/2025
 ms.reviewer:
 search.appverid: met150
 ---
@@ -41,6 +41,11 @@ This article describes how existing roles and permissions in Microsoft Defender 
 <a name='map-microsoft-365-defender-unified-rbac-permissions-to-existing-rbac-permissions'></a>
 
 ## Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions
+
+> [!IMPORTANT]
+> Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model.
+>
+> Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
 
 Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender XDR Unified RBAC roles:
 
