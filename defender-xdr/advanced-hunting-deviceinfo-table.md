@@ -86,7 +86,6 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `IsTransient` | `boolean` | Indicates whether this device is classified as short-lived or transient based on the frequency of appearance of the device on the network |
 | `OsBuildRevision` | `string` | Build revision number of the operating system running on the machine |
 | `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
-| `IsPartiallyIdentified` | `boolean` | A device is classified as partially identified if it does not have a strong identifier to uniquely determine its identity. |
 | `Site` | `string` | Represents the physical location where the device is located |
 | `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it. |
 
