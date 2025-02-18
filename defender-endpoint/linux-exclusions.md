@@ -163,7 +163,7 @@ Create a dynamic Microsoft Entra group that uses the operating system type to en
 
 2. For Platform, select **Linux**.
 
-3. Select the required exclusion template (**Microsoft defender global exclusion(AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions`), then select **Create policy**.
+3. Select the required exclusion template (**Microsoft defender global exclusion (AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions**), and then select **Create policy**.
 
 4. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
