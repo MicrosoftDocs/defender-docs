@@ -63,21 +63,17 @@ Antivirus exclusions can be used to exclude trusted files and processes from rea
 
 The following table shows the exclusion types supported by Defender for Endpoint on Linux.
 
-Exclusion|Definition|Examples
----|---|---
-File extension|All files with the extension, anywhere on the device (not available for global exclusions) |`.test`
-File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`
-Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`
-Process|A specific process (specified either by the full path or file name) and all files opened by it|`/bin/cat`<br/>`cat`<br/>`c?t`
+|Exclusion|Definition|Examples|
+|---|---|---|
+|File extension|All files with the extension, anywhere on the device (not available for global exclusions) |`.test`|
+|File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`|
+|Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`|
+|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>*We recommend using full and trusted process launch path.*|`/bin/cat`<br/>`cat`<br/>`c?t`|
 
 > [!IMPORTANT]
-> The paths used must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`.
+> The paths used must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`. When implementing global process exclusions, exclude only what is absolutely necessary to ensure system reliability and security. Verify that the process is known and trusted, specify the complete path to the process location, and confirm that the process will consistently launch from the same trusted full path.
 
-File, folder, and process exclusions support the following wildcards:
-
-> [!NOTE]
-> File path needs to be present before adding or removing file exclusions with scope as global.
-> Wildcards aren't supported while configuring global exclusions.
+### File, folder, and process exclusions support the following wildcards:
 
 Wildcard|Description|Examples|
 ---|---|---
@@ -85,7 +81,9 @@ Wildcard|Description|Examples|
 ?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not`file123.log`
 
 > [!NOTE]
+> Wildcards aren't supported while configuring global exclusions. 
 > For antivirus exclusions, when using the * wildcard at the end of the path, it matches all files and subdirectories under the parent of the wildcard.
+> File path needs to be present before adding or removing file exclusions with scope as global.
 
 ## How to configure the list of exclusions
 
@@ -140,10 +138,20 @@ To configure exclusions from Puppet, Ansible, or another management console, ple
 
 For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
+### Using Defender for Endpoint security settings management
+> [!NOTE]
+> Please review the prerequisites: [Defender for Endpoint security settings management Prerequisites](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration#prerequisites.md)
+
+As a security administrator, you can configure different Microsoft Defender exclusions using security policy settings in the Microsoft Defender portal. If you are using security settings management for the first time, you need to refer the following steps:
+
+- **Configure your tenant to support security settings management** - First step is to enable security settings management on your tenant if you haven’t already. Sign in to the Microsoft Defender portal and go to `Settings > Endpoints > Configuration Management > Enforcement Scope` and enable security settings management for Linux platform. Initially we recommend testing the feature for each platform by selecting the platforms option for on tagged devices and then tagging the devices with the “MDE-Management” tag. Once devices have been tagged, most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment. For more information refer-[configure-your-tenant-to-support-defender-for-endpoint-security-settings-management](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-defender-for-endpoint-security-settings-management.md)
+
+- **Creating a dynamic Microsoft Entra group** - Create a dynamic Microsoft Entra group based on device OS Type to ensure all devices in Defender for Endpoint receive policies. This allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. 
+
+- **Create an endpoint security policy**:
+
 ### Using the command line
-
 Run the following command to see the available switches for managing exclusions:
-
 > [!NOTE]
 > `--scope` is an optional flag with accepted value as `epp` or `global`. It provides the same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn't mentioned, the scope value is set as `epp`.
 > Exclusions added through CLI before the introduction of `--scope` flag remain unaffected and their scope is considered `epp`.
