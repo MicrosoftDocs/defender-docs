@@ -97,6 +97,10 @@ Select the chat bubble icon (**New chat**) to discard the current session.
 
    ![Screenshot of Security Copilot in advanced hunting showing the new chat icon.](/defender/media/advanced-hunting-security-copilot-clear-session.png)
 
+## Query explanations
+
+
+
 ## Modify settings
 
 Select the ellipses in the Copilot side pane to choose whether or not to automatically add and run the generated query in advanced hunting.
