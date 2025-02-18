@@ -52,21 +52,25 @@ Users with access to Security Copilot have access to this capability in advanced
 
 1. Open the **advanced hunting** page from the navigation bar in Microsoft Defender XDR. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
-    :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
+    :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane-big.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
 
     You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
 1. In the Copilot prompt bar, ask any threat hunting query that you want to run and press :::image type="icon" source="media/Send.png" border="false"::: or **Enter** .
 
 
 
-    :::image type="content" source="/defender/media/advanced-hunting-security-copilot-query.png" alt-text="Screenshot that shows prompt bar in the Security Copilot for advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-query-big.png":::
+    :::image type="content" source="/defender/media/advanced-hunting-security-copilot-query-big.png" alt-text="Screenshot that shows prompt bar in the Security Copilot for advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-query-big.png":::
 
 1. Copilot generates a KQL query from your text instruction or question. While Copilot is generating, you can cancel the query generation by selecting **Stop generating**.
 
     ![Screenshot of Security Copilot in advanced hunting generating a response.](/defender/media/advanced-hunting-security-copilot-generate.png)
 
 
-1. Review the generated query. You can then choose to run the query by selecting **Add and run**.
+1. Review the generated query. To check how Copilot came up with the query, you can select **See the logic behind the query** below the query text to expand the explanation behind the query. Select it again to minimize.
+
+   ![Screenshot of Copilot button showing Add the query to query editor and run.](/defender/media/advanced-hunting-security-copilot-see-logic.png)
+
+     You can then choose to run the query by selecting **Run query**.
 
    ![Screenshot of Copilot button showing Add the query to query editor and run.](/defender/media/advanced-hunting-security-copilot-run-query.png)
 
@@ -79,7 +83,7 @@ Users with access to Security Copilot have access to this capability in advanced
     The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
 
 
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Confirm**, **Off-target**, or **Potentially harmful**.
+1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right*, **Needs improvement**, or **Inappropriate**.
 
 
 > [!TIP]
