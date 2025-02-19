@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/18/2025
+ms.date: 02/19/2025
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
@@ -181,105 +181,113 @@ Create a dynamic Microsoft Entra group that uses the operating system type to en
 For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
 
 ### Using the command line
+
 Run the following command to see the available switches for managing exclusions:
-> [!NOTE]
-> `--scope` is an optional flag with accepted value as `epp` or `global`. It provides the same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn't mentioned, the scope value is set as `epp`.
-> Exclusions added through CLI before the introduction of `--scope` flag remain unaffected and their scope is considered `epp`.
 
 ```bash
 mdatp exclusion
 ```
 
+> [!NOTE]
+> `--scope` is an optional flag with accepted value as `epp` or `global`. It provides the same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn't mentioned, the scope value is set as `epp`.
+> Exclusions added through CLI before the introduction of `--scope` flag remain unaffected and their scope is considered `epp`.
+
 > [!TIP]
 > When configuring exclusions with wildcards, enclose the parameter in double-quotes to prevent globbing.
 
-Examples:
+This section includes several examples.
 
-- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)*:
+#### Example 1: Add an exclusion for a file extension
 
-    ```bash
-    mdatp exclusion extension add --name .txt
-    ```
+You can add an exclusion for a file extension. Keep in mind that extension exclusions aren't supported for the global exclusion scope.
 
-    ```console
-    Extension exclusion configured successfully
-    ```
+```bash
+mdatp exclusion extension add --name .txt
+```
+
+```console
+Extension exclusion configured successfully
+```
     
-    ```bash
-    mdatp exclusion extension remove --name .txt
-    ```
+```bash
+mdatp exclusion extension remove --name .txt
+```
 
-    ```console
-    Extension exclusion removed successfully
-    ```
+```console
+Extension exclusion removed successfully
+  ```
 
-- Add or Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)*:
+#### Example 2: Add or remove a file exclusion
 
-    ```bash
-    mdatp exclusion file add --path /var/log/dummy.log --scope epp
-    ```
+You can add or remove an exclusion for a file. The file path should already be present if you're adding or removing an exclusion with the global scope.
 
-    ```console
-    File exclusion configured successfully
-    ```
+```bash
+mdatp exclusion file add --path /var/log/dummy.log --scope epp
+```
 
-    ```bash
-    mdatp exclusion file remove --path /var/log/dummy.log --scope epp
-    ```
+```console
+File exclusion configured successfully
+```
+
+```bash
+mdatp exclusion file remove --path /var/log/dummy.log --scope epp
+```
     
-    ```console
-    File exclusion removed successfully"
-    ```
+```console
+File exclusion removed successfully"
+```
     
-     ```bash
-    mdatp exclusion file add --path /var/log/dummy.log --scope global
-    ```
+```bash
+mdatp exclusion file add --path /var/log/dummy.log --scope global
+```
 
-    ```console
-    File exclusion configured successfully
-    ```
+```console
+File exclusion configured successfully
+```
 
-    ```bash
-    mdatp exclusion file remove --path /var/log/dummy.log --scope global
-    ```
+```bash
+mdatp exclusion file remove --path /var/log/dummy.log --scope global
+```
 
-    ```console
-    File exclusion removed successfully"
-    ```
+```console
+File exclusion removed successfully"
+```
 
-- Add or Remove an exclusion for a folder:
+#### Example 3: Add or remove a folder exclusion
 
-    ```bash
-    mdatp exclusion folder add --path /var/log/ --scope epp
-    ```
+You can add or remove an exclusion for a folder.
 
-    ```console
-    Folder exclusion configured successfully
-    ```
+```bash
+mdatp exclusion folder add --path /var/log/ --scope epp
+```
+
+```console
+Folder exclusion configured successfully
+```
     
-    ```bash
-    mdatp exclusion folder remove --path /var/log/ --scope epp
-    ```
+```bash
+mdatp exclusion folder remove --path /var/log/ --scope epp
+```
 
-    ```console
-    Folder exclusion removed successfully
-    ```
+```console
+Folder exclusion removed successfully
+```
 
-    ```bash
-    mdatp exclusion folder add --path /var/log/ --scope global
-    ```
+```bash
+mdatp exclusion folder add --path /var/log/ --scope global
+```
 
-    ```console
-    Folder exclusion configured successfully
-    ```
+```console
+Folder exclusion configured successfully
+```
 
-    ```bash
-    mdatp exclusion folder remove --path /var/log/ --scope global
-    ```
+```bash
+mdatp exclusion folder remove --path /var/log/ --scope global
+```
 
-    ```console
-    Folder exclusion removed successfully
-    ```
+```console
+Folder exclusion removed successfully
+```
 
 - Add an exclusion for a second folder:
 
