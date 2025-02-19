@@ -2,7 +2,7 @@
 title: Protecting secrets in Microsoft Defender for Cloud
 description: Learn how to protect secrets with Microsoft Defender for Server's agentless secrets scanning.
 ms.topic: overview
-ms.date: 04/16/2024
+ms.date: 02/19/2025
 ---
 
 

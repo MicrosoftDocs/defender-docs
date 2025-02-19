@@ -4,7 +4,7 @@ description: Learn how to review machine changes with file integrity monitoring 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/11/2024
+ms.date: 02/19/2025
 ---
 
 # Review changes in file integrity monitoring
