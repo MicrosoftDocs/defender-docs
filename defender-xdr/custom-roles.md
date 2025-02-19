@@ -4,11 +4,11 @@ description: Learn how to manage custom roles in the Microsoft Defender portal
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
 ms.date: 08/22/2024
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,15 +18,15 @@ search.appverid:
   - MOE150
   - MET150
 appliesto:
-  - Microsoft Defender for Cloud
-  - Microsoft Defender for Cloud Apps
-  - Microsoft Defender for Endpoint
-  - Microsoft Defender for Identity
-  - Microsoft Defender for IoT
-  - Microsoft Defender for Office 365
-  - Microsoft Defender XDR
-  - Microsoft Security Exposure Management (preview)
-  - Microsoft Sentinel
+- Microsoft Defender for Cloud
+- Microsoft Defender for Cloud Apps
+- Microsoft Defender for Endpoint
+- Microsoft Defender for Identity
+- Microsoft Defender for IoT
+- Microsoft Defender for Office 365
+- Microsoft Defender XDR
+- Microsoft Security Exposure Management (preview)
+- Microsoft Sentinel
 ---
 # Custom roles in role-based access control for Microsoft Defender portal services
 
