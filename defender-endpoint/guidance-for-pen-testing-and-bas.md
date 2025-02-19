@@ -111,11 +111,13 @@ Have the following information handy
 
 It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days.
 
+You can use either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal to submit your files.
+
+**MDSI portal**: The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed.
+
+**Microsoft Defender portal**: If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal.
+
 1. Submit the data you gathered during steps 1-2 by using either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal.
-
-   - **MDSI portal**: The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed.
-
-   - **Microsoft Defender portal**: If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal.
 
    | Portal | What to do |
    |--|--|
