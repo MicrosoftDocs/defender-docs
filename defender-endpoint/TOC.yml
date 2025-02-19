@@ -66,6 +66,8 @@
     - name: Evaluate Microsoft Defender Antivirus
       href: evaluate-microsoft-defender-antivirus.md
       items:
+      - name: Guidance for pen testing and BAS scenarios
+        href: guidance-for-pen-testing-and-bas.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
@@ -261,7 +263,7 @@
             items:
             - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
               href: mde-linux-arm.md
-            - name: Installer script
+            - name: Installer script based deployment
               href: linux-installer-script.md
             - name: Ansible based deployment
               href: linux-install-with-ansible.md
