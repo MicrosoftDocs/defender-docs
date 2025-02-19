@@ -68,7 +68,7 @@ To access the attack surface reduction rules report in the Microsoft Defender po
 
 To assign these permissions:
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com].
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -114,7 +114,7 @@ Selecting the **ASR rules detections** link at the top of the card also opens th
 
 The top section focuses on three recommended rules, which protect against common attack techniques. This card shows current-state information about the computers in your organization that have the following [Three \(ASR\) standard protection rules](#simplified-standard-protection-option) set in **Block mode**, **Audit mode**, or **off** (not configured). The **Protect devices** button shows full configuration details for only the three rules; customers can quickly take action to enable these rules.
 
-The bottom section surfaces six rules based on the number of unprotected devices per rule. The "View configuration" button surfaces all configuration details for all ASR rules. The "Add exclusion" button shows the **add exclusion** page with all detected file/process names listed for Security Operation Center (SOC) to evaluate. The **Add exclusion** page is linked to Microsoft Intune.
+The bottom section surfaces six rules based on the number of unprotected devices per rule. The **View configuration** button surfaces all configuration details for all ASR rules. The **Add exclusions** button shows the **add exclusion** page with all detected file/process names listed for Security Operation Center (SOC) to evaluate. The **Add exclusion** page is linked to Microsoft Intune.
 
 The card also includes two action buttons:
 
@@ -258,8 +258,8 @@ To enable ASR rules:
 
    :::image type="content" source="media/attack-surface-reduction-rules-report-configuration-add-to-policy.png" alt-text="Shows the ASR rules fly-out to add ASR rules to devices" lightbox="media/attack-surface-reduction-rules-report-configuration-add-to-policy.png":::
 
-   > [NOTE!]
-   > If you have devices that require that different ASR rules be applied, you should configure those devices individually.
+  > [NOTE!]
+  > If you have devices that require that different ASR rules be applied, you should configure those devices individually.
 
 ### Attack surface reduction rules Add exclusions tab
 
@@ -269,7 +269,7 @@ The **Add exclusions** tab presents a ranked list of detections by file name and
 - **Detections**: The total number of detected events for named file. Individual devices can trigger multiple ASR rules events.
 - **Devices**: The number of devices on which the detection occurred.
 
->:::image type="content" source="media/attack-surface-reduction-rules-report-exclusion-tab.png" alt-text="Shows the ASR rules report add exclusions tab" lightbox="media/attack-surface-reduction-rules-report-exclusion-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-exclusion-tab.png" alt-text="Shows the ASR rules report add exclusions tab." lightbox="media/attack-surface-reduction-rules-report-exclusion-tab.png":::
 
 > [!IMPORTANT]
 > Excluding files or folders can severely reduce the protection provided by ASR rules. Excluded files are allowed to run, and no report or event is recorded.
@@ -277,16 +277,16 @@ The **Add exclusions** tab presents a ranked list of detections by file name and
 
 When you select a file, a **Summary & expected impact** fly out opens, presenting the following types of information:
 
-- **Files selected**  The number of files you've selected for exclusion
-- **(_number of_) detections**  States the expected reduction in detections after adding the selected exclusions. The reduction in detections is represented graphically for **Actual detections** and **Detections after exclusions**
-- **(_number of_) affected devices** States the expected reduction in devices that report detections for the selected exclusions.
+- **Files selected** - The number of files you've selected for exclusion
+- **(_number of_) detections** - States the expected reduction in detections after adding the selected exclusions. The reduction in detections is represented graphically for **Actual detections** and **Detections after exclusions**.
+- **(_number of_) affected devices** - States the expected reduction in devices that report detections for the selected exclusions.
 
 The Add exclusion page has two buttons for actions that can be used on any detected files (after selection). You can:
 
-- **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see: [Intune](enable-attack-surface-reduction.md) in "Enable ASR rules alternate configuration methods."
-- **Get exclusion paths** which downloads file paths in a csv format
+- **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see [Intune](enable-attack-surface-reduction.md) in "Enable ASR rules alternate configuration methods."
+- **Get exclusion paths** which downloads file paths in a csv format.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png" alt-text="Shows the ASR rules report add exclusions tab flyout impact summary" lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png" alt-text="Shows the ASR rules report add exclusions tab flyout impact summary." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png":::
 
 ## See also
 
