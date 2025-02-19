@@ -55,6 +55,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 #### What's new
 - Modified the offline definition update logic to first attempt downloading definitions without proxy and then retry with proxy.
+- The MDATP package 101.24122.0008 will be gradually made available for each distribution.
 - Other stability improvements and bug fixes
 
 ### Feb-2025 Build: 101.24112.0003 | Release version: 30.124112.0003.0
