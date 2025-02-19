@@ -47,7 +47,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 | Build:             | **101.24122.0008**    |
 | -------- | -------- |
-|Released:| February 19, 2025|
+|Released:| **February 19, 2025**|
 | Released:          | **February 19, 2025** |
 | Published:         | **February 19, 2025** |
 | Release version:   | **30.124122.0008.0** |
