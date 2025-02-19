@@ -19,11 +19,38 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+## February 2025
+
+Due to improvements being made to Microsoft Defender for Cloud Apps to improve security and performance, you must update network information in your system's firewall and additional third-party services. Make these changes by March 16, 2025 to ensure uninterrupted access to our services:
+
+- Update your firewall rules to allow outbound traffic on port 443 to the following new CDN endpoints before March 16, 2025:
+
+     - 'cdn.cloudappsecurity.com
+     - cdn-discovery.cloudappsecurity.com
+
+- All required outbound access URLs can also be found in Defender for Cloud Apps network requirements page under 'Portal Access.'
+
+- To use Defender for Cloud Apps in the Microsoft Defender portal, make sure you add outbound port 443 for all IP addresses and DNS names listed in our documentation to your firewall's allowlist.
+
+- To connect to third-party apps, enable Defender for Cloud Apps to connect from the following IP addresses, also available in our documentation:
+
+- **US1**: - 23.101.201.123 - 20.228.186.154
+
+- **US2**: - 20.15.114.156 - 172.202.90.196
+
+- **US3**: - 20.3.226.231 - 4.255.218.227
+
+- **EU1**: - 20.71.203.39 - 137.116.224.49
+
+- **EU2**: - 20.0.210.84 - 20.90.9.64
+
+- To stay up to date on IP ranges that impact the experiences in Microsoft Defender for Cloud Apps in the areas of portal experience access, access and session controls, SIEM agent connection, app connectors, mail servers, and log collector, we recommend using the Azure service tag for Microsoft Defender for Cloud Apps services, 'MicrosoftCloudAppSecurity.' The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview).
+
 ## November 2024
 
 ### Internal Session Controls application notice
- The Enterprise application “Microsoft Defender for Cloud Apps – Session Controls” is used internally by the Conditional Access App Control service.  
-Please ensure there is no CA policy restricting access to this application. 
+ The Enterprise application 'Microsoft Defender for Cloud Apps – Session Controls' is used internally by the Conditional Access App Control service.  
+Ensure there's no CA policy restricting access to this application. 
 For policies that restrict all or certain applications, please ensure this application is listed as an exception or confirm that the blocking policy is deliberate.  
 
 For more information, see [Sample: Create Microsoft Entra ID Conditional Access policies for use with Defender for Cloud Apps](session-policy-aad.md#sample-create-microsoft-entra-id-conditional-access-policies-for-use-with-defender-for-cloud-apps).
