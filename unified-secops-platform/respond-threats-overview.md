@@ -53,7 +53,7 @@ Microsoft Defender XDR unifies threat protection by automating security across e
 
 Automatic attack disruption boosts a SOC team's response by rapidly detecting and containing threats before escalation. It uses AI detection, predefined playbooks, and real-time threat intelligence to identify attack patterns and trigger immediate actions, such as isolating compromised endpoints or blocking malicious connections. This approach reduces the window for attackers and minimizes incident impact.
 
-:::image type="content" source="media/respond-threats-overview/attack-disrupt.png" alt-text="Screenshot of an incident with attack disruption actions."lightbox="media/respond-threats-overview/attack-disrupt.png:::
+:::image type="content" source="media/respond-threats-overview/attack-disrupt.png" alt-text="Screenshot of an incident with attack disruption actions."lightbox="media/respond-threats-overview/attack-disrupt.png":::
 
 Automated attack disruption also improves collaboration across SOC teams by streamlining communication and responses. It alerts analysts and can suggest or execute actions based on predefined policies. This orchestration accelerates decision-making and ensures security teams can scale their efforts efficiently despite increasing threats.
 
@@ -65,7 +65,7 @@ Microsoft Defender XDR's AIR capabilities help security operations teams manage 
 
 Acting as a virtual analyst, AIR mimics ideal investigation steps, working 24/7 to reduce response times and free up the security team for other tasks. When an alert triggers an incident, AIR initiates an automated investigation, resulting in verdicts such as *malicious*, *suspicious*, or *no threats*, and identifying necessary remediation actions, such as quarantining files or stopping processes.
 
-:::image type="content" source="media/respond-threats-overview/investigations.png" alt-text="Screenshot of the Investigations tab, showing automated investigation steps taken by Microsoft Defender XDR." lightbox="media/respond-threats-overview/investigations.png:::
+:::image type="content" source="media/respond-threats-overview/investigations.png" alt-text="Screenshot of the Investigations tab, showing automated investigation steps taken by Microsoft Defender XDR." lightbox="media/respond-threats-overview/investigations.png":::
 
 Organizations can configure AIR capabilities to suit their needs, choosing either automatic remediation actions or ones that require security team approval. This automation significantly enhances the efficiency and effectiveness of security operations.
 
