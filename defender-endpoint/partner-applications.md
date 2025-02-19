@@ -86,7 +86,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |---|---|---|
 |![Logo for Aruba ClearPass Policy Manager.](media/aruba-logo.png)|[Aruba ClearPass Policy Manager](https://go.microsoft.com/fwlink/?linkid=2127544)|Ensure Defender for Endpoint is installed and updated on each endpoint before allowing access to the network |
 |![Logo for Blue Hexagon for Network.](media/bluehexagon-logo.png)|[Blue Hexagon for Network](/training/modules/explore-malware-threat-protection/)|Blue Hexagon has built the industry's first real-time deep learning platform for network threat protection |
-|![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2135620)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment |
+|![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://www.forescout.com/press-releases/forescout-acquires-cybermdx-to-expand-healthcare-cybersecurity-focus/)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment |
 |![Logo for HYAS Protect.](media/hyas-logo.png)|[HYAS Protect](https://go.microsoft.com/fwlink/?linkid=2156763)|HYAS Protect utilizes authoritative knowledge of attacker infrastructure to proactively protect Microsoft Defender for Endpoint endpoints from cyberattacks |
 |![Logo for Vectra Network Detection and Response (NDR).](media/vectra-logo.png)|[Vectra Network Detection and Response (NDR)](https://go.microsoft.com/fwlink/?linkid=866934)|Vectra applies AI & security research to detect and respond to cyber-attacks in real time |
 
