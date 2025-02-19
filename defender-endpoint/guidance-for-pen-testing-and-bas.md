@@ -89,7 +89,7 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 | Operating system | What to do |
 |--|--|
-| Windows | 1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -getfiles](/defender-endpoint/collect-diagnostic-data). <br/><br/>You can also [Collect the investigation package](/defender-endpoint/respond-machine-alerts) in the [Microsoft Defender portal](https://security.microsoft.com). |
+| Windows | 1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -getfiles](/defender-endpoint/collect-diagnostic-data). <br/><br/>You can also [collect the investigation package](/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices) in the Microsoft Defender portal. |
 | Mac | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `Mdatp log level set--level debug`. <br/>3. Run the following command: `Sudo mdatp diagnostic create`. <br/><br/>For more information, see [Resources for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-resources). |
 | Linux | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `Mdatp log level set--level debug`. <br/>`Sudo mdatp diagnostic create`. <br/><br/>For more information, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources). |
 
