@@ -1,6 +1,6 @@
 ---
 title: Prioritize incidents in the Microsoft Defender portal
-description: Learn how to filter incidents from the incident queue in the unified security operations platform in the Microsoft Defender portal.
+description: Learn how to filter incidents from the incident queue in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -26,7 +26,7 @@ appliesto:
 
 # Prioritize incidents in the Microsoft Defender portal
 
-The unified security operations platform in the Microsoft Defender portal applies correlation analytics and aggregates related alerts and automated investigations from different products into an incident. Microsoft Sentinel and Defender XDR also trigger unique alerts on activities that can only be identified as malicious given the end-to-end visibility in the unified platform across the entire suite of products. This view gives your security analysts the broader attack story, which helps them better understand and deal with complex threats across your organization.
+The Microsoft Defender portal applies correlation analytics and aggregates related alerts and automated investigations from different products into an incident. Microsoft Sentinel and Defender XDR also trigger unique alerts on activities that can only be identified as malicious given the end-to-end visibility in the unified platform across the entire suite of products. This view gives your security analysts the broader attack story, which helps them better understand and deal with complex threats across your organization.
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
@@ -42,7 +42,7 @@ Select **Most recent incidents and alerts** to toggle the expansion of the top s
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="/defender/media/incidents-queue/incidents-ss-incidents2.png":::
 
-Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made.
+Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made. You can also find the **total number of incidents** in the queue indicated beside the Search bar. The total number of incidents varies depending on the filters used in the queue.
 
 The incident queue has customizable columns that give you visibility into different characteristics of the incident or the impacted entities. This filtering helps you make an informed decision regarding the prioritization of incidents for analysis. Select **Customize columns** to perform the following customizations based on your preferred view:
 
@@ -68,7 +68,7 @@ For more visibility at a glance, Microsoft Defender XDR generates incident names
 
 For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
 
-If you onboarded Microsoft Sentinel to the unified security operations platform, then any alerts and incidents coming from Microsoft Sentinel are likely to have their names changed (regardless of whether they were created before or since the onboarding).
+If you onboarded Microsoft Sentinel to the Defender portal, then any alerts and incidents coming from Microsoft Sentinel are likely to have their names changed (regardless of whether they were created before or since the onboarding).
 
 We recommend that you avoid using the incident name as a condition for triggering [automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules). If the incident name is a condition, and the incident name changes, the rule will not be triggered.
 
