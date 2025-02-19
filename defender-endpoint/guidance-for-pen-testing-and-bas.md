@@ -18,9 +18,9 @@ ms.collection:
 search.appverid: met150
 ---
 
-# Guidance for pen testing and breach-and-attack-simulation (BAS) scenarios with Microsoft Defender for Endpoint
+# Guidance for penetration testing and breach-and-attack-simulation scenarios with Microsoft Defender for Endpoint
 
-This article describes common challenges and potential misconfigurations that might arise during penetration testing (pen testing) or using breach and attack simulation (BAS) tools.
+This article describes common challenges and potential misconfigurations that might arise during penetration testing (pen testing) or using breach and attack simulation (BAS) tools. This article also describes how to submit potential false negatives for investigation.
 
 ## Common challenges during pen testing
 
@@ -93,25 +93,25 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 | Mac | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `Mdatp log level set--level debug`. <br/>3. Run the following command: `Sudo mdatp diagnostic create`. <br/><br/>For more information, see [Resources for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-resources). |
 | Linux | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `Mdatp log level set--level debug`. <br/>`Sudo mdatp diagnostic create`. <br/><br/>For more information, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources). |
 
-### Step 2: Have the following information handy
+### Step 2: Gather information
+
+Have the following information handy
 
 - **Microsoft Defender OrgID**. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Microsoft Defender XDR** > **Account** > **Org ID**.
 
 - **Device ID**. In the [Microsoft Defender portal](https://security.microsoft.com), open the device page.
 
-- binary names
+- Binary names.
 
 - Start and end of when testing was done in `HH:MM:SS UTC` format.
 
 - It would be highly beneficial if you could provide the steps to reproduce the issue, along with a sample of the payload.
 
-### Step 3: Report to Microsoft immediately
+### Step 3: Submit data to Microsoft as soon as possible
 
-It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days
+It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days.
 
-### Step 4: Submit data
-
-1. Submit the data you gathered during steps 1-3 by using either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal.
+1. Submit the data you gathered during steps 1-2 by using either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal.
 
    The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed.
 
