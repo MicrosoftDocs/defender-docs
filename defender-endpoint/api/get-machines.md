@@ -60,7 +60,7 @@ Delegated (work or school account)|Machine.ReadWrite|'Read and write machine inf
 
 When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (see [Create and manage roles](../user-roles.md)).
 
-Responses include only devices that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
+Responses include only devices that the user has access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
 
 Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
 
@@ -82,7 +82,7 @@ Empty
 
 ## Response
 
-If successful and machines exists - 200 OK with list of [machine](machine.md) entities in the body. If no recent machines - 404 Not Found.
+If successful, and the machines exist, you see `200 OK` with list of [machine](machine.md) entities in the body. If there are no recent machines, you see `404 Not Found`.
 
 ## Example
 
