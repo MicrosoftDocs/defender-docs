@@ -73,7 +73,7 @@
         - name: Automatic attack disruption 
           href: /defender-xdr/automatic-attack-disruption?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Automation in Microsoft Sentinel (SOAR)
-          href: /azure/sentinel/automation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          href: /azure/sentinel/automation/automation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Automated investigation and response in Microsoft Defender XDR
           href: /defender-xdr/m365d-autoir?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
     - name: Optimize your security operations 
