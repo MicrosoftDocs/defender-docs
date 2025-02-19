@@ -20,36 +20,47 @@ search.appverid: met150
 
 # Guidance for pen testing and breach-and-attack-simulation (BAS) scenarios with Microsoft Defender for Endpoint
 
-This document describes some common challenges that might arise during penetration testing (pen testing) or using breach and attack simulation (BAS) tools.
+This article describes common challenges and potential misconfigurations that might arise during penetration testing (pen testing) or using breach and attack simulation (BAS) tools.
 
 ## Common challenges during pen testing
 
 - Testing the current configuration of the environment, which might not be the optimal configuration for Microsoft Defender for Endpoint or Microsoft Defender Antivirus.
 
-- Concern about enabling cloud protection, as it might proceed to cloud protection detonation if it doesn't find metadata. For more information about Microsoft Defender Antivirus and cloud protection, see [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav).
+- Concerns about enabling [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as it might proceed to cloud protection detonation if it doesn't find metadata. For more information about Microsoft Defender Antivirus and cloud protection, see [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav).
 
 > [!NOTE]
-> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that it might not be a true positive (TP) and the non-Microsoft vendor might be having a false positive (FP). Review "How to submit False Negatives (FNs) for investigation" section in this article.
+> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that what's occuring might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See   Review "How to submit False Negatives (FNs) for investigation" section in this article.
 
-## Common misconfigurations of MDAV during pen testing
+## Common misconfigurations of Microsoft Defender Antivirus during pen testing
 
-It's common for penetration testers to disable features of Microsoft Defender Antivirus while executing their attack. Before doing so, confirm that the following options are enabled:
+It's common for penetration testers to disable features of Microsoft Defender Antivirus while executing their attack. Before doing so, confirm that the following settings are configured:
 
-- [Tamper Protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled in block mode.
-- Microsoft Defender Antivirus is running as the primary antivirus, and not in [passive mode.](/defender-endpoint/microsoft-defender-antivirus-compatibility)
-  - Note: If you have a non-Microsoft antivirus installed, ensure to uninstall it for testing.
+- [Tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled in block mode.
+
+- Microsoft Defender Antivirus is running as the primary antivirus, and not in [passive mode.](/defender-endpoint/microsoft-defender-antivirus-compatibility). If you're using non-Microsoft antivirus, we recommend uninstalling it during pen testing.
+
 - [Platform update, engine update, and/or Security intelligence updates](/defender-endpoint/microsoft-defender-antivirus-updates) are up to date.
-- Real-time protection is enabled.
+
+- [Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) is enabled.
+
 - [Behavior monitoring](/defender-endpoint/behavior-monitor) is enabled.
-- Adding AV exclusions to where the payload is, after the payload is copied.
-  - [!TIP]: Once copying the payload to the device is done, remove the AV exclusion, for MDAV to be able to block.
-- AV exclusions to BAS tools such as AttackIQ, Cymulate, SafeBreach, and others aren't done.
+
+- Adding [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) to where the payload is, after the payload is copied. After you have copied the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
+
+- Make sure that you don't have antivirus exclusions for your BAS tools, such as AttackIQ, Cymulate, SafeBreach, and others.
+
 - [Cloud-delivered protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
-- Cloud protection [sample submission](/defender-endpoint/specify-cloud-protection-level-microsoft-defender-antivirus) is enabled.
+
+- [Cloud protection sample submission](/defender-endpoint/specify-cloud-protection-level-microsoft-defender-antivirus) is enabled.
+
 - [Cloud protection network connection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is working.
+
 - [Potentially unwanted apps (PUA)](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) is enabled.
+
 - [Attack Surface Reduction Rules (ASR rules](/defender-endpoint/overview-attack-surface-reduction) are set to block mode.
+
 - [Network Protection](/defender-endpoint/enable-network-protection) is set to block mode
+
 - [Controlled Folder Access](/defender-endpoint/enable-controlled-folders) (CFA) is set to block mode
 
 It's important to get the settings correct. To resolve, depending on the management tool that you're using to manage Microsoft Defender Antivirus, review the following articles:
