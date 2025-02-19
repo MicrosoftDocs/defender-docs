@@ -1382,7 +1382,7 @@
         - name: AKS security dashboard
           DisplayName: AKS security dashboard
           href: episode-fifty-eight.md
-        - name: Integrate Defender for Cloud CLI with CI/CD pipelines
+        - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
     - name: Manage user data

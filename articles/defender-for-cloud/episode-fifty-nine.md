@@ -1,20 +1,19 @@
 ---
-title: Integrate Defender for Cloud CLI with CI/CD pipelines
+title: Integrate CLI with CI/CD pipelines
 description: Learn how to integrate Defender for Cloud CLI with CI/CD pipelines.
 ms.topic: reference
 ms.date: 02/19/2025
 ---
 
-# Integrate Defender for Cloud CLI with CI/CD pipelines
+# Integrate CLI with CI/CD pipelines
 
-**Episode description**: In this episode of Defender for Cloud in the Field, James Brotsos joins Yuri Diogenes to talk about the Command Line Interface (CLI) that you can use in continuous integration and continuous deployment (CI/CD) pipelines in Defender for Cloud. James explains how you can use Defender for Cloud CLI in any build process to scan images for security vulnerabilities with built-in security scanners. James also demonstrates how to configure and use this new CLI tool.
-  
+**Episode description**: In this episode of Defender for Cloud in the Field, James Brotsos joins Yuri Diogenes to discuss the Command Line Interface (CLI) for continuous integration and continuous deployment (CI/CD) pipelines in Defender for Cloud. James explains how to use the Defender for Cloud CLI in any build process to scan images for security vulnerabilities with built-in security scanners. James also demonstrates how to configure and use this new CLI tool.
 
 > [!VIDEO https://aka.ms/docs/player?id=80d2714f-ef62-4679-bf88-26b31f6ef5d8]
 
-- [02:22](/shows/mdc-in-the-field/integrate-cli-ci-cd#time=02m22s) - What problems does this new CLI helps to address?
-- [03:20](/shows/mdc-in-the-field/integrate-cli-ci-cd#time=03m20s) - How this new CLI compares to previous versions?
-- [08:42](/shows/mdc-in-the-field/integrate-cli-ci-cd#time=08m42s) - Demonstration
+- [02:22](/shows/mdc-in-the-field/integrate-cli-ci-cd#time=02m22s) - What problems does this new CLI help to address?
+- [03:20](/shows/mdc-in-the-field/integrate-cli-ci-cd#time=03m20s) - How does this new CLI compare to previous versions?
+- [08:42](/shows/mdc-in-the-field/integrate-cli-ci-cd#time=08m42s) - Demonstration of the CLI tool.
 
 ## Recommended resources
 
