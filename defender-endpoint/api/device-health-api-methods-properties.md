@@ -86,9 +86,9 @@ Data that is collected using either `JSON response` or by using files is a snaps
 | `avSignatureVersion` | String | Antivirus security intelligence version | `1.371.1323.0` |
 | `computerDnsName` | String | DNS name | `SampleDns` |
 | `dataRefreshTimestamp` | DateTimeOffset | Datetime when data is refreshed for this report | `2022-08-04T12:44:02Z` |
-| `fullScanError` | String | Error codes from full scan | "0x80508023" |
-| `fullScanResult` | String | Full scan result of this device | `Completed`, `Canceled`, or `Failed` |
-| `fullScanTime` | DateTimeOffset | Datetime when full scan has completed | `2022-08-04T12:44:02Z` |
+| `fullScanError` | String | Error codes from the full scan | "0x80508023" |
+| `fullScanResult` | String | Full scan result of the device | `Completed`, `Canceled`, or `Failed` |
+| `fullScanTime` | DateTimeOffset | Datetime when the full scan completed | `2022-08-04T12:44:02Z` |
 | `id` | String | Machine GUID | `30a8fa2826abf24d24379b23f8a44d471f00feab` |
 | `lastSeenTime` | DateTimeOffset | Last seen datetime of this machine | `2022-08-04T12:44:02Z` |
 | `machineId` | String | Machine GUID | `30a8fa2826abf24d24379b23f8a44d471f00feab` |
