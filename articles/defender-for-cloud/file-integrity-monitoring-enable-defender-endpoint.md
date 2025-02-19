@@ -4,12 +4,12 @@ description: Learn how to enable file integrity monitoring when you collect data
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 09/09/2024
+ms.date: 02/19/2025
 ---
 
 # Enable file integrity monitoring
 
-In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
 
 After you enable Defender for Servers Plan 2, follow the instructions in this article to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
@@ -20,13 +20,11 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 >   - Windows: 10.8760 or later.
 >   - Linux: 30.124082 or later.
 
-
 ## Prerequisites
 
 - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) should be enabled.
 - The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent should be installed on machines you want to monitor.
 - You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
-
 
 ## Verify Defender for Endpoint client version
 
@@ -86,5 +84,5 @@ Disable as follows:
 
 ## Next steps
 
--  Events collected for file integrity monitoring are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
+- Events collected for file integrity monitoring are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
 - [Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.

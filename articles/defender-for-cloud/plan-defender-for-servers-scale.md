@@ -4,7 +4,7 @@ description: Scale protection of Azure, AWS, GCP, and on-premises servers by usi
 ms.topic: conceptual
 ms.author: dacurwin
 author: dcurwin
-ms.date: 08/14/2023
+ms.date: 02/19/2025
 ---
 # Scale a Defender for Servers deployment
 
