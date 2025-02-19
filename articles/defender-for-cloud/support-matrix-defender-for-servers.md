@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 09/08/2024
+ms.date: 02/19/2025
 ---
 
 # Defender for Servers support

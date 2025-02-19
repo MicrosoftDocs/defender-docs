@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers
 ms.topic: overview
 author: dcurwin
 ms.author: dacurwin
-ms.date: 01/09/2024
+ms.date: 02/19/2025
 ---
 
 # Container protection in Defender for Cloud

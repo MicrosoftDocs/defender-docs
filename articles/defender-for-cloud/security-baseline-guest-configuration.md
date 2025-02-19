@@ -4,7 +4,7 @@ description: Learn how to install the guest configuration on machines protected 
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 07/31/2023
+ms.date: 02/19/2025
 ---
 
 # Install the Azure machine configuration extension
