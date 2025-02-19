@@ -20,64 +20,65 @@ search.appverid: met150
 
 # Guidance for pen testing and breach-and-attack-simulation (BAS) scenarios with Microsoft Defender for Endpoint
 
-During trials of Microsoft Defender for Endpoint and/or Microsoft Defender Antivirus where your pen testing and/or using breach and attack simulation (BAS) tools. This document goes over some common articles that arise.
+This document outlines some common challenges that might arise during penetration (pen) testing or using breach and attack simulation (BAS) tools when working with Microsoft Defender for Endpoint and Microsoft Defender Antivirus.
 
-## Common challenges during pen testing
+## Common challenges during penetration testing
 
-Not testing the capability (optimal configuration) of Microsoft Defender for Endpoint/Microsoft Defender Antivirus and instead testing the current configuration of the environment.
+1. Not testing the capability (optimal configuration) of Microsoft Defender for Endpoint/Microsoft Defender Antivirus and instead testing the current configuration of the environment.
 
-If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads. Keep in mind that it might not be a true positive (TP) and the non-Microsoft vendor might be having a false positive (FP). Please review "How to submit False Negatives (FNs) for investigation" section below.
+1. Penetration testers might be concerned about enabling Microsoft Defender Antivirus (MDAV)'s Cloud Protection, as it may proceed to Cloud Protection detonation if it doesn't find metadata. Please review the [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav) for details of MDAV and Cloud Protection.
 
-Pen testers might be apprehensive about enabling MDAV's Cloud Protection, since if it doesn't find metadata, the next step it takes is Cloud Protection detonation. Please review the [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav) for details of MDAV and Cloud Protection.
+> [!NOTE]
+> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, please keep in mind that it might not be a true positive (TP) and the non-Microsoft vendor might be having a false positive (FP). Please review "How to submit False Negatives (FNs) for investigation" section in this article.
 
 ## Common misconfigurations of MDAV during pen testing
 
-It's common for pen testers to disable features of Microsoft Defender Antivirus while executing their attack. Ensure that the following options are confirmed.
+It's common for penetration testers to disable features of Microsoft Defender Antivirus while executing their attack. Before doing so, confirm that the following options are enabled:
 
-- Ensure that [Tamper Protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled in block mode.
-- Ensure that Microsoft Defender Antivirus is running as the primary antivirus, and not in [passive mode.](/defender-endpoint/microsoft-defender-antivirus-compatibility)
-  - Note: If you have a non-Microsoft antivirus installed, for testing, please uninstall it completely.
-- Ensure that [Platform update, engine update, and/or Security intelligence update](/defender-endpoint/microsoft-defender-antivirus-updates) are up to date.
-- Ensure that Real-time protection is enabled.
-- Ensure that [Behavior monitoring](/defender-endpoint/behavior-monitor) is enabled.
+- [Tamper Protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled in block mode.
+- Microsoft Defender Antivirus is running as the primary antivirus, and not in [passive mode.](/defender-endpoint/microsoft-defender-antivirus-compatibility)
+  - Note: If you have a non-Microsoft antivirus installed, please uninstall for testing.
+- [Platform update, engine update, and/or Security intelligence updates](/defender-endpoint/microsoft-defender-antivirus-updates) are up to date.
+- Real-time protection is enabled.
+- [Behavior monitoring](/defender-endpoint/behavior-monitor) is enabled.
 - Adding AV exclusions to where the payload is, after the payload is copied.
-  - Tip: Once you have done copying the payload to the device, you should remove the AV exclusion, for MDAV to be able to block.
-- Ensure that AV exclusions to BAS tools such as AttackIQ, Cymulate, SafeBreach, and others aren't done.
-- Ensure that [cloud-delivered protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
-- Ensure that cloud protection [sample submission](/defender-endpoint/specify-cloud-protection-level-microsoft-defender-antivirus) is enabled.
-- Ensure that [cloud protection network connection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is working.
-- Ensure that [potentially unwanted apps (PUA)](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) is enabled.
-- Ensure that [Attack Surface Reduction Rules (ASR rules](/defender-endpoint/overview-attack-surface-reduction)) are set to block mode.
-- Ensure that [Network Protection](/defender-endpoint/enable-network-protection) is set to block mode
-- Ensure that [Controlled Folder Access](/defender-endpoint/enable-controlled-folders) (CFA) is set to block mode
+  - [!TIP]: Once you have done copying the payload to the device, you should remove the AV exclusion, for MDAV to be able to block.
+- AV exclusions to BAS tools such as AttackIQ, Cymulate, SafeBreach, and others aren't done.
+- [Cloud-delivered protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
+- Cloud protection [sample submission](/defender-endpoint/specify-cloud-protection-level-microsoft-defender-antivirus) is enabled.
+- [Cloud protection network connection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is working.
+- [Potentially unwanted apps (PUA)](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) is enabled.
+- [Attack Surface Reduction Rules (ASR rules](/defender-endpoint/overview-attack-surface-reduction) are set to block mode.
+- [Network Protection](/defender-endpoint/enable-network-protection) is set to block mode
+- [Controlled Folder Access](/defender-endpoint/enable-controlled-folders) (CFA) is set to block mode
 
-It's important to get the settings correct. To resolve, depending on the management tool that you're using to manage Microsoft Defender Antivirus, please review:
+It's important to get the settings correct. To resolve, depending on the management tool that you're using to manage Microsoft Defender Antivirus, please review the following:
 
 ### Windows
 
-#### (Preferred) Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
+**(Preferred) Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)**
 
-[https://learn.microsoft.com/defender-endpoint/evaluate-mda-using-mde-security-settings-management](/defender-endpoint/evaluate-mda-using-mde-security-settings-management) 
-
-Or
-
-#### (Alternative 1) Evaluate Microsoft Defender Antivirus using Group Policy
-
-[https://learn.microsoft.com/defender-endpoint/evaluate-mdav-using-gp](/defender-endpoint/evaluate-mdav-using-gp) 
+[https://learn.microsoft.com/defender-endpoint/evaluate-mda-using-mde-security-settings-management](/defender-endpoint/evaluate-mda-using-mde-security-settings-management)
 
 Or
 
-#### (Alternative 2) Evaluate Microsoft Defender Antivirus using PowerShell
+**(Alternative 1) Evaluate Microsoft Defender Antivirus using Group Policy**
+
+[https://learn.microsoft.com/defender-endpoint/evaluate-mdav-using-gp](/defender-endpoint/evaluate-mdav-using-gp)
+
+Or
+
+**(Alternative 2) Evaluate Microsoft Defender Antivirus using PowerShell**
 
 [https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-using-powershell](/defender-endpoint/microsoft-defender-antivirus-using-powershell)
 
 ### macOS
 
-#### Intune
+**Intune**
 
 [Set preferences for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-preferences)
 
-#### JamF
+**JamF**
 
 [Set preferences for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-preferences)
 
@@ -87,7 +88,7 @@ Or
 
 ## How to submit possible False Negatives (FNs) for investigation
 
-##  Step 1) Gather the Microsoft Defender for Endpoint diagnostic logs
+**Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs**
 
 ### MDE Client Analyzer log
 
@@ -139,7 +140,7 @@ Sudo mdatp diagnostic create
 
 [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources)
 
-## Step 2) Have the following information handy
+**Step 2: Have the following information handy**
 
 - Microsoft Defender OrgID 
   - In the Microsoft XDR portal (security.microsoft.com), go to "Settings" > "Microsoft Defender XDR" > "Account" > "Org ID"  
@@ -149,9 +150,9 @@ Sudo mdatp diagnostic create
 - Start and end of when testing was done in HH:MM:SS UTC. 
 - It would be highly beneficial if you could provide the steps to reproduce the issue, along with a sample of the payload.
 
-## Step 3) It's crucial that customers report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days.
+**Step 3: It's crucial that customers report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days**
 
-## Step 4) Submit the data from steps 1-3 to Microsoft Defender Security Intelligence <br>(MDSI, https://www.microsoft.com/en-us/wdsi, [https://](https://aka.ms/mdsi))aka.ms/wdsi)
+**Step 4: Submit the data from steps 1-3 to Microsoft Defender Security Intelligence <br>(MDSI, https://www.microsoft.com/en-us/wdsi, [https://](https://aka.ms/mdsi))aka.ms/wdsi)**
 
 **MSDI Portal *** 
 
