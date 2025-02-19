@@ -8,7 +8,7 @@ author: emmwalshh
 ms.topic: conceptual
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 10/18/2021
+ms.date: 02/19/2025
 ms.reviewer: yongrhee
 manager: deniseb
 ms.collection: 
@@ -31,7 +31,7 @@ search.appverid: met150
 
 In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. These notifications also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.
 
-If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat has been detected and remediated.
+If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat was detected and remediated.
 
 ## Configure antivirus notifications using Group Policy or the Windows Security app
 
@@ -41,7 +41,7 @@ You can configure the display of more notifications, such as recent threat detec
 | Setting| Description |
 | -------- | -------- |
 | Configure time interval for service health reports | This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints.  If you disable or do not configure this setting, the default value will be applied. The default value is set at 60 minutes (1 hour).  If you configure this setting to 0, no service health reports will be sent.  The maximum value allowed to be set is 14400 minutes (10 days). |
-| Configure time out for detections in critically failed state | This policy setting configures the time in minutes before a detection in the “critically failed” state to moves to either the “additional action” state or the “cleared” state. |
+| Configure time out for detections in critically failed state | This policy setting configures the time in minutes before a detection in the "critically failed" state to moves to either the "additional action" state or the "cleared" state. |
 | Configure time out for detections in non-critical failed state | This policy setting configures the time in minutes before a detection in the "non-critically failed" state moves to the "cleared" state. |
 | Configure time out for detections in recently remediated state | This policy setting configures the time in minutes before a detection in the "completed" state moves to the "cleared" state. |
 | Configure time out for detections in requiring additional action | This policy setting configures the time in minutes before a detection in the "additional action" state moves to the "cleared" state. |
