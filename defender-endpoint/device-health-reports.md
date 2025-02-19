@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 06/25/2024
+ms.date: 02/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -22,9 +22,8 @@ ms.reviewer: mkaminska
 **Applies to:**
 
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
