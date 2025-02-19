@@ -129,6 +129,3 @@ You can use either the Microsoft Defender Security Intelligence (MDSI) portal or
 3. Wait for an update. After Microsoft receives the sample, the file is investigated, and a determination is made. If Microsoft determines that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
    If you have questions, [contact support](/defender-endpoint/contact-support).
-
-
-
