@@ -89,39 +89,9 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 | Operating system | What to do |
 |--|--|
-| Windows | 
-
-**Windows**
-
-Start, CMD (Run as admin)
-
-[MpCmdRun.exe -getfiles](/defender-endpoint/collect-diagnostic-data) 
-
-TIP: This can be done via "[Collect Investigation Package](/defender-endpoint/respond-machine-alerts)" from Microsoft XDR portal (security.microsoft.com)
-
-**macOS**
-
-In macOS running Microsoft Defender for Endpoint to collect diagnostic data
-
-Terminal (shell session)
-
-Mdatp log level set--level debug
-
-Sudo mdatp diagnostic create
-
-[Resources for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-resources)
-
-#### Linux
-
-In Linux running Microsoft Defender for Endpoint to collect diagnostic data
-
-Terminal (shell session)
-
-Mdatp log level set--level debug
-
-Sudo mdatp diagnostic create
-
-[Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources)
+| Windows | 1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -getfiles](/defender-endpoint/collect-diagnostic-data). <br/><br/>You can also [Collect the investigation package](/defender-endpoint/respond-machine-alerts) in the [Microsoft Defender portal](https://security.microsoft.com). |
+| Mac | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `Mdatp log level set--level debug`. <br/>3. Run the following command: `Sudo mdatp diagnostic create`. <br/><br/>For more information, see [Resources for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-resources). |
+| Linux | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `Mdatp log level set--level debug`. <br/>`Sudo mdatp diagnostic create`. <br/><br/>For more information, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources). |
 
 ### Step 2: Have the following information handy
 
