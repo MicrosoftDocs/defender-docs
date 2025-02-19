@@ -92,26 +92,26 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 | `lastSeenTime` | DateTimeOffset | Last seen datetime of this machine | "2022-08-04T12:44:02Z" |
 | `machineId` | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
 | `osKind` | String | Operating system kind | "windows", "mac", "linux" |
-| `osPlatform` | String | Operating system major version name | Windows 10, macOs |
+| `osPlatform` | String | Operating system major version name | Windows 10, macOS |
 | `osVersion` | String | Operating system version | 10.0.18363.1440, 12.4.0.0 |
 | `quickScanError` | String | Error codes from quick scan | "0x80508023" |
 | `quickScanResult` | String | Quick scan result of this device | "Completed" <br>"Canceled" <br>"Failed" |
-| `quickScanTime` | DateTimeOffset | Datetime when quick scan has completed | "2022-08-04T12:44:02Z" |
+| `quickScanTime` | DateTimeOffset | Datetime when quick scan completed | "2022-08-04T12:44:02Z" |
 | `rbacGroupId` | Long | Device group ID that this machine belongs to | 712 |
 | `rbacGroupName` | String | Name of device group that this machine belongs to | "SampleGroup" |
 
 ### 1.4 Export device antivirus health details API properties (via files)
 
 > [!IMPORTANT]
-> Information in this section relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Information in this section relates to prereleased product which can be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 > [!NOTE]
 >
 > - The files are gzip compressed & in multiline Json format.
 > - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region that your data resides.
+> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 > - Each record is approximately 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+> - Some more columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
