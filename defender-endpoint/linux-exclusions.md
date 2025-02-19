@@ -368,18 +368,19 @@ mdatp exclusion process remove --name cat --scope epp
 Process exclusion removed successfully
 ```
 
-- Add an exclusion for a second process:
+#### Example 7: Add an exclusion for a second process
 
-    ```bash
-    mdatp exclusion process add --name cat --scope epp
-    mdatp exclusion process add --path /usr/bin/dog --scope global
-    ```
+You can add an exclusion for a second process.
 
-    ```console
-    Process exclusion configured successfully
-    ```
+```bash
+mdatp exclusion process add --name cat --scope epp
+mdatp exclusion process add --path /usr/bin/dog --scope global
+```
+
+```console
+Process exclusion configured successfully
+```
     
-
 ## Validate exclusions lists with the EICAR test file
 
 You can validate that your exclusion lists are working by using `curl` to download a test file.
