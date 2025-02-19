@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: deniseb 
 author: denisebmsft
 ms.localizationpriority: medium 
-ms.date: 02/18/2025
+ms.date: 02/19/2025
 manager: deniseb 
 ms.reviewr: mkaminska
 audience: ITPro 
@@ -24,7 +24,6 @@ search.appverid: met150
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-
 - [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
@@ -77,7 +76,7 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 | `avIsEngineUpToDate` | String | Up-to-date status of antivirus engine | "True", "False", "Unknown" |
 | `avIsPlatformUpToDate` | String | Up-to-date status of antivirus platform | "True", "False", "Unknown" |
 | `avIsSignatureUpToDate` | String | Up-to-date status of antivirus signature | "True", "False", "Unknown" |
-| `avMode` | String | Antivirus mode. | Each mode is a string typed integer value ranging from 0 to 5. Refer to the following mapping to see its value's meaning: <br/>'' = Other<br/>'0' = Active<br/>'1' = Passive<br/>'2' = Disabled<br/>'3' = Other<br/>'4' = EDRBlocked<br/>'5' = PassiveAudit |
+| `avMode` | String | Antivirus mode. | Each mode is a string typed integer value ranging from 0 to 5. <br/>`''` = `Other`<br/>`0` = `Active`<br/>`1` = `Passive`<br/>`2` = `Disabled`<br/>`3` = `Other`<br/>`4` = `EDRBlocked`<br/>`5` = `PassiveAudit` |
 | `avPlatformUpdateTime` | DateTimeOffset | Datetime when antivirus platform was last updated on device | "2022-08-04T12:44:02Z" |
 | `avPlatformVersion` | String | Antivirus platform version | "4.18.2203.5" |
 | `avSignaturePublishTime` | DateTimeOffset | Datetime when antivirus security intelligence build was released | "2022-08-04T12:44:02Z" |
@@ -106,12 +105,11 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 > Information in this section relates to prereleased product which can be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 > [!NOTE]
->
-> - The files are gzip compressed & in multiline Json format.
+> - The files are gzip-compressed and in multiline `.json` format.
 > - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
-> - Each record is approximately 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some more columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
+> - Each record uses approximately 1KB of data. You should take this into account when choosing the correct `pageSize` parameter.
+> - More columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
@@ -119,7 +117,7 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 | GeneratedTime | String | The time that the export was generated. | 2022-05-20T08:00:00Z |
 
 > [!NOTE]
-> In each of the Export files a property "DeviceGatheredInfo" containing the data about Antivirus information can be found. Each of its attributes can provide you with information on the device's health and its status.
+> In each of the export files, there's a property called `DeviceGatheredInfo`, which contains antivirus data. Each of its attributes can provide you with information on the device's health and its status.
 
 ## See also
 
