@@ -91,8 +91,6 @@ Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernet
 
 1. Run the generated script on your cluster.
 
-    :::image type="content" source="media/tutorial-enable-containers-aws/generate-script-defender-extension-kubernetes.gif" alt-text="Video of how to use the Defender for Cloud recommendation to generate a script for your EKS clusters that enables the Azure Arc extension. ":::
-
 ## Next steps
 
 - For advanced enablement features for Defender for Containers, see the [Enable Microsoft Defender for Containers](defender-for-containers-enable.md) page.

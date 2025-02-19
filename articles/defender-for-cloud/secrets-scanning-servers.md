@@ -2,7 +2,7 @@
 title: Protecting VM secrets with Microsoft Defender for Cloud
 description: Learn how to protect VM secrets with Defender for Server's agentless secrets scanning in Microsoft Defender for Cloud.
 ms.topic: overview
-ms.date: 04/16/2024
+ms.date: 02/19/2025
 ---
 
 
