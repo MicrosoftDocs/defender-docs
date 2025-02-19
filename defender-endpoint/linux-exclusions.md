@@ -401,26 +401,34 @@ echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > te
 
 You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you're attempting to exclude.
 
-## Allow threats
+## Allow a threat
 
-In addition to excluding certain content from being scanned, you can also configure the product not to detect some classes of threats (identified by the threat name). You should exercise caution when using this functionality, as it can leave your device unprotected.
+In addition to excluding certain content from being scanned, you can also configure Defender for Endpoint on Linux not to detect some classes of threats, identified by the threat name. 
 
-To add a threat name to the allowed list, execute the following command:
+> [!WARNING]
+> Exercise caution when using this functionality, as it can leave your device unprotected.
+
+To add a threat name to the allowed list, run the following command:
 
 ```bash
 mdatp threat allowed add --name [threat-name]
 ```
 
-The threat name associated with a detection on your device can be obtained using the following command:
+To get the name of a detected threat, run the following command:
 
 ```bash
 mdatp threat list
 ```
 
-For example, to add `EICAR-Test-File (not a virus)` (the threat name associated with the EICAR detection) to the allowed list, execute the following command:
+For example, to add `EICAR-Test-File (not a virus)` to the allow list, run the following command:
 
 ```bash
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
+
+## See also
+
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
