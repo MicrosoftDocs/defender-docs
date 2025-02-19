@@ -67,7 +67,7 @@ For more information, see:
     ![Screenshot showing finish page of Configure Microsoft Sentinel integration.](media/siem-sentinel-configuration-complete.png)
 
 > [!NOTE]
-> New discovery logs will usually appear in Microsoft Sentinel within 15 minutes of configuring them in the Defender for Cloud Apps portal. However, it may take longer depending on system environment conditions. For more information, see [Handle ingestion delay in analytics rules](/azure/sentinel/ingestion-delay).
+> New discovery logs will usually appear in Microsoft Sentinel within 15 minutes of configuring them in Defender for Cloud Apps. However, it may take longer depending on system environment conditions. For more information, see [Handle ingestion delay in analytics rules](/azure/sentinel/ingestion-delay).
 
 ## Alerts and discovery logs in Microsoft Sentinel
 

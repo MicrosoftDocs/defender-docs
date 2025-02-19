@@ -47,7 +47,7 @@ ZAP addresses these issues by continually monitoring spam and malware signature 
 
 Watch this short video to learn how ZAP in Microsoft Defender for Office 365 automatically detects and neutralizes threats in email.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGrLg]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=20bb600a-363a-44ca-be1a-714fb9a82566]
 
 ## Zero-hour auto purge (ZAP) for email messages
 

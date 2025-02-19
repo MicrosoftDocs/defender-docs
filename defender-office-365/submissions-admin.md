@@ -51,7 +51,7 @@ When admins or users submit messages to Microsoft for analysis, we do the follow
 
 Watch this short video to learn how to use admin submissions in Microsoft Defender for Office 365 to submit messages to Microsoft for evaluation.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9357652e-0c17-49ab-8299-36838c3532aa]
 
 For more information about how **users** can submit messages and files to Microsoft, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 

@@ -181,6 +181,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
+- **Modified by**: Provide an incomplete or complete email address to search by it. 
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 

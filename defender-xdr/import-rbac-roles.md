@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 07/01/2024
+ms.date: 11/17/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -29,6 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 <a name='import-roles-to-microsoft-365-defender-unified-rbac-from-individual-rbac-models'></a>
 
@@ -36,7 +37,7 @@ search.appverid: met150
 
 You can import existing roles that are maintained as part of individual supported products in Microsoft Defender XDR (for example, Microsoft Defender for Endpoint) to the Microsoft Defender XDR Unified RBAC model.
 
-Importing roles will migrate and maintain the roles with full parity in relation to their permissions and user assignments in the Microsoft Defender XDR Unified RBAC model.
+Importing roles migrates and maintains the roles with full parity in relation to their permissions and user assignments in the Microsoft Defender XDR Unified RBAC model.
 
 > [!NOTE]
 > Once roles are migrated, you can modify the imported roles and change the level of permissions as needed.
@@ -45,7 +46,7 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 
 > [!IMPORTANT]
 > You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -72,14 +73,14 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 
 9. Select **Done** on the confirmation page.
 
-Now that you have imported your roles you will be able to [View and edit roles](edit-delete-rbac-roles.md) and activate the workloads.
+After importing your roles, you are be able to [View and edit roles](edit-delete-rbac-roles.md) and activate the workloads.
 
-For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you'll need to activate the new Defender XDR Unified RBAC model. For more information, see [Activate the workloads](activate-defender-rbac.md).
+You need to activate the new Defender XDR Unified RBAC model to start enforcing the permissions and assignments configured in your new or imported roles within the Microsoft Defender portal. For more information, see [Activate the workloads](activate-defender-rbac.md).
 
-Imported roles appear in the **Permissions and roles** list together with any custom roles you might have created. All imported roles will be marked as **Imported** in the description. Once you edit an imported role it will no longer be marked as **Imported**.
+Imported roles appear in the **Permissions and roles** list together with any custom roles you created. All imported roles are marked as **Imported** in the description. Once you edit an imported role, it will no longer be marked as **Imported**.
 
 > [!NOTE]
-> You can import roles as frequently as required. After you edit an imported role, the changes will not affect the original role where it was imported from. This means you have the option to delete an imported role and re-import the original role, if required. If you import the same role twice you will create a duplicate role.
+> You can import roles as frequently as required. After you edit an imported role, the changes will not affect the original role where it was imported from. This means you have the option to delete an imported role and re-import the original role, if necessary. If you import the same role twice, you create a duplicate role.
 
 ## Next steps
 

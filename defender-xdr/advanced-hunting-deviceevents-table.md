@@ -97,12 +97,12 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `string` | Additional information about the event in JSON array format |
 | `InitiatingProcessSessionId` | `long` |  Windows session ID of the initiating process  |
 | `IsInitiatingProcessRemoteSession` | `bool` |   Indicates whether the initiating process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
-| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process’s RDP session was initiated |
-| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process’s RDP session was initiated |
+| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process's RDP session was initiated |
+| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process's RDP session was initiated |
 | `CreatedProcessSessionId` | `long` | Windows session ID of the created process |
 |`IsProcessRemoteSession` | `bool` | Indicates whether the created process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
-| `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process’s RDP session was initiated |
-| `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process’s RDP session was initiated |
+| `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process's RDP session was initiated |
+| `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process's RDP session was initiated |
 
 
 

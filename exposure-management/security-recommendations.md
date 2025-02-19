@@ -26,17 +26,16 @@ This article describes how to work with security recommendations in [Microsoft S
 
 1. Sort the recommendations by any of the headings or filter them based on your task needs. Sorting includes all of the headers:
     - **Name** - Name.
-    - **Compliance state** - Compliant or not compliant.
+    - **State** - Compliant or not compliant.
     - **Impact** - High, low, or medium impact.
+    - **Workload** - Which workload the recommendations relate to.
+    - **Domain** - Device, apps, data, or identity.
     - **Last calculated** - Last time the recommendation was calculated.
     - **Last state change** - Last time the recommendation state changed.
     - **Related initiatives** - The number of related initiatives.
     - **Related metrics** - The number of related metrics.
-    - **Source** - The assessment standard source.
-    - **Workload** - Which workload the recommendations relate to.
-    - **Domain** - Device, apps, data, or identity.
-
-1. Filter recommendations by state, source, impact, workload, and domain.
+   
+1. Filter recommendations by state, impact, workload, and domain.
 
 1. Select a recommendation to view and review details.
 
