@@ -1,6 +1,6 @@
 ---
 title: Custom roles for role-based access control
-description: Learn how to manage custom roles in the Microsoft Defender portal
+description: Learn how to manage custom roles for Microsoft Defender XDR in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH

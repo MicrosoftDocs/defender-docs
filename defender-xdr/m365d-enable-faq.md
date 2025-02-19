@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom: admindeeplinkDEFENDER
-ms.topic: FAQ
+ms.topic: concept
 search.appverid: 
   - MOE150
   - MET150

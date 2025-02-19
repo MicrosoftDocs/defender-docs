@@ -14,10 +14,10 @@ ms.topic: how-to
 search.appverid: met150
 ms.date: 02/19/2025
 appliesto:
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
+- Microsoft Defender XDR
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender for Business
 #customer intent: As a security administrator, I want to create dynamic rules for devices in asset rule management so that I can automatically assign tags and device values based on certain criteria.
 ---
 

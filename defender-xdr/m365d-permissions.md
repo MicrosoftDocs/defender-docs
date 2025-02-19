@@ -1,13 +1,13 @@
 ---
-title: Manage access to Microsoft Defender XDR data in the Microsoft Defender portal
-description: Learn how to manage permissions to data in Microsoft Defender XDR
+title: Manage access to Microsoft Defender XDR with Microsoft Entra global roles
+description: Learn how to manage access to Microsoft Defender XDR capabilities with Microsoft Entra global roles.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: diannegali
+author: iannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
