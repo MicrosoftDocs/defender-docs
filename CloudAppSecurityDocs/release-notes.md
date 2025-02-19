@@ -25,10 +25,10 @@ Due to improvements being made to Microsoft Defender for Cloud Apps to improve s
 
 - Update your firewall rules to allow outbound traffic on port 443 to the following new CDN (Content Delivery Network)  endpoints before March 16, 2025:
 
-     - cdn.cloudappsecurity.com
-     - cdn-discovery.cloudappsecurity.com
+  - cdn.cloudappsecurity.com
+  - cdn-discovery.cloudappsecurity.com
 
-- All required outbound access URLs can also be found in Defender for Cloud Apps network requirements page under 'Portal Access.'
+- All required outbound access URLs can also be found in Defender for Cloud Apps network requirements page under 'Portal Access'.
 
 - To use Defender for Cloud Apps in the Microsoft Defender portal, make sure you add outbound port 443 for all IP addresses and DNS names listed in our documentation to your firewall's allowlist.
 
@@ -44,13 +44,14 @@ Due to improvements being made to Microsoft Defender for Cloud Apps to improve s
 
 - **EU2**: - 20.0.210.84 - 20.90.9.64
 
-- To stay up to date on IP ranges that impact the experiences in Microsoft Defender for Cloud Apps in the areas of portal experience access, access and session controls, SIEM agent connection, app connectors, mail servers, and log collector, we recommend using the Azure service tag for Microsoft Defender for Cloud Apps services, 'MicrosoftCloudAppSecurity.' The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://learn.microsoft.com/azure/virtual-network/service-tags-overview).
+- To stay up to date on IP ranges that impact the experiences in Microsoft Defender for Cloud Apps in the areas of portal experience access, access and session controls, SIEM agent connection, app connectors, mail servers, and log collector, we recommend using the Azure service tag for Microsoft Defender for Cloud Apps services, 'MicrosoftCloudAppSecurity.' The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](/azure/virtual-network/service-tags-overview).
 
 ## November 2024
 
 ### Internal Session Controls application notice
- The Enterprise application 'Microsoft Defender for Cloud Apps – Session Controls' is used internally by the Conditional Access App Control service.  
-Ensure there's no CA policy restricting access to this application. 
+
+The Enterprise application 'Microsoft Defender for Cloud Apps – Session Controls' is used internally by the Conditional Access App Control service.  
+Ensure there's no CA policy restricting access to this application.
 For policies that restrict all or certain applications, please ensure this application is listed as an exception or confirm that the blocking policy is deliberate.  
 
 For more information, see [Sample: Create Microsoft Entra ID Conditional Access policies for use with Defender for Cloud Apps](session-policy-aad.md#sample-create-microsoft-entra-id-conditional-access-policies-for-use-with-defender-for-cloud-apps).
@@ -100,13 +101,13 @@ For more information, see [OAuth app data usage insights on app governance](/def
 ### New anomaly data in advanced hunting CloudAppEvents table
 
 Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal, can now utilize the new *LastSeenForUser* and *UncommonForUser* columns for queries and detections rules.  
-The new columns are designed to assist you to better __identify uncommon activities__ that may appear suspicious, and allow you to create more accurate custom detections, as well as investigate any suspicious activities that arise.
+The new columns are designed to assist you to better __identify uncommon activities__ that may appear suspicious, and allow you to create more accurate custom detections, as well as investigate any suspicious activities that arise.
 
 For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/microsoft-365/security/defender/advanced-hunting-cloudappevents-table).
 
 ### New Conditional Access app control / inline data in advanced hunting CloudAppEvents table
 
-Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal can now use the new *AuditSource* and *SessionData* columns for queries and detection rules.   
+Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal can now use the new *AuditSource* and *SessionData* columns for queries and detection rules.
 Using this data allows for queries that consider specific audit sources, including access and session control, and queries by specific inline sessions.
 
 For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/microsoft-365/security/defender/advanced-hunting-cloudappevents-table).
@@ -127,8 +128,7 @@ Administrators who understand the power of Edge in-browser protection, can now r
 
 A primary reason is security, since the barrier to circumventing session controls using Edge is much higher than with reverse proxy technology.
 
-For more information see: 
-[Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps)
+For more information see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
 
 ### Connect Mural to Defender for Cloud Apps (Preview)
 
@@ -178,11 +178,12 @@ For more information, see [Export activities six months back](activity-filters-q
 
 Customize the Microsoft Defender for Cloud Apps(MDA) block experience for apps that are blocked using Cloud Discovery.
 
-You can set up a custom redirect URL on block pages 
+You can set up a custom redirect URL on block pages:
+
 - To educate and redirect end users to organization acceptable use policy 
 - To guide end users on steps to follow to secure an exception for block
 
-For more information, see  [Configure custom URL for MDA block pages](mde-govern.md#educate-users-when-accessing-blocked-apps--customize-the-block-page)
+For more information, see [Configure custom URL for MDA block pages](mde-govern.md#educate-users-when-accessing-blocked-apps--customize-the-block-page).
 
 
 ### In-browser protection for macOS users and newly supported policies (Preview)
