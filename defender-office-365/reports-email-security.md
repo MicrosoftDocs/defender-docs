@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 02/12/2025
+ms.date: 02/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -114,7 +114,7 @@ The **Mailflow status report** is a smart report that shows information about in
 > [!TIP]
 > If a message is sent to five recipients, we count it as five different messages, not one message.
 >
-> The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **all threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
+> The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
 >
 > The aggregate message count in the Mailflow status report could also be more than the message count in Threat Explorer or Real-time detections due to [zero-hour autopurge (ZAP)](zero-hour-auto-purge.md) activity. ZAP removes messages from mailboxes after delivery, so ZAP activity doesn't affect message counts in the Mailflow status report. ZAP activity does affect message counts in Threat Explorer or Real-time detections. In Defender for Office 365, use the [Post-delivery activities report](reports-defender-for-office-365.md#post-delivery-activities-report) to understand the lifecycle of ZAP on messages in the organization.
 
