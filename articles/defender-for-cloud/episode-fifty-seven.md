@@ -7,7 +7,7 @@ ms.date: 02/19/2025
 
 # Onboarding Docker Hub and JFrog Artifactory
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Beatriss Kovernaig joins Yuri Diogenes to discuss the new support for Docker Hub and JFrog Artifactory in Defender for Containers. Beatriss explains the importance of scanning external containers and what this new onboarding experience for Docker Hub and JFrog Artifactory looks like. Beatriss also demonstrates the onboarding experience and the use of cloud security explorer to identify vulnerabilities.
+**Episode description**: In this episode of Defender for Cloud in the Field, Beatriss Kovernaig joins Yuri Diogenes. They discuss the new support for Docker Hub and JFrog Artifactory in Defender for Containers. Beatriss explains the importance of scanning external containers and what this new onboarding experience for Docker Hub and JFrog Artifactory looks like. Beatriss also demonstrates the onboarding experience and the use of cloud security explorer to identify vulnerabilities.
 
 > [!VIDEO https://aka.ms/docs/player?id=e3ba5366-c2fa-4daa-ad4e-1535db1f07d4]
 
