@@ -24,6 +24,27 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## February 2025
+
+The following predefined classification rules were added to the critical assets list:
+
+| Classification                                       | Description                                                  |
+| :--------------------------------------------------- | :----------------------------------------------------------- |
+| Azure Key Vault with high number of operations       | This rule identifies and classifies Azure Key Vaults that experience a high volume of operations, indicating their criticality within the cloud environment. |
+| Security Operations Admin Device        | This rule applies to critical devices used to configure, manage, and monitor the security within an organization are vital for security operations administration and are at high risk of cyber threats. They require top-level security measures to prevent unauthorized access. |
+
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
+
+## January 2025
+
+### Metrics enhancements
+
+The metrics have been enhanced to show the improvement of the exposure levels with a progress bar, progressing from left to right and from 0% (indicating high exposure) to 100% (indicating no exposure).
+
+In addition, the metrics weight is now displayed as high, medium, or low, based on the metric's importance to the initiative. The weight can also be defined as risk accepted.
+
+For more information, see, [Working with metrics](exposure-insights-overview.md#working-with-metrics)
+
 ## December 2024
 
 ### New predefined classifications

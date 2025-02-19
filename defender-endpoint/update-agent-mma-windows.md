@@ -74,7 +74,7 @@ A new agent was released in April 2022 for Windows Server 2012 R2 and Windows Se
 >
 > Devices running Windows Server 2012 R2 or Windows Server 2016 should be upgraded to the [new, unified solution](application-deployment-via-mecm.md) so that they no longer require the use of MMA. 
 >
-> [AMA](/azure/azure-monitor/agents/agents-overview) cannot be used as a substitute for Defender for Endpoint. 
+> [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) cannot be used as a substitute for Defender for Endpoint. 
 
 ## See also
 

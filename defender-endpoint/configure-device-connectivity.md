@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 06/11/2024
+ms.date: 02/04/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -80,6 +80,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 - Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
 - Windows 11
+- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).

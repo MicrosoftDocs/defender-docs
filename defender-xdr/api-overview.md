@@ -51,7 +51,7 @@ Along with these Microsoft Defender XDR-specific APIs, each of our other securit
 > The transition to the unified portal should not affect the PowerBi dashboards based on Microsoft Defender for Endpoint APIs. You can continue to work with the existing APIs regardless of the interactive portal transition.
 
 Watch this short video to learn how you can use Microsoft Defender XDR to automate workflows and integrate apps.  
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4d73M?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f6300637-b48e-49d7-aa76-2778a711ae6c]
 
 ## Learn more
 

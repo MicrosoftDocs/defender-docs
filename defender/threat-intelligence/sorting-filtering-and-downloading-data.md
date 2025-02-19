@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: how-to 
-ms.date: 11/18/2024
+ms.date: 01/15/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -14,9 +14,6 @@ ms.custom:
 ---
 
 # Sorting, filtering, and downloading data
-
->[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Defender Threat Intelligence (Defender TI) lets you access our vast collection of crawling data in an indexed and pivot table format. These data sets can be large, returning expansive amounts of historic and recent data. By letting you appropriately sort and filter the data, we help you surface the connections of interest easily.
 

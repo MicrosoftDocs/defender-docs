@@ -37,7 +37,7 @@ The campaigns feature lets you see the overall picture of an email attack faster
 
 Watch this short video on how campaigns in Microsoft Defender for Office 365 help you understand coordinated email attacks that target your organization.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGBL8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0ed63ec3-48b1-4a6b-88d3-d3bb27b22c55]
 
 ## What is a campaign?
 
