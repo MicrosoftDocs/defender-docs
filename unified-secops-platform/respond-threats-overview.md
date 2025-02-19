@@ -53,7 +53,7 @@ Microsoft Defender XDR unifies threat protection by automating security across e
 
 Automatic attack disruption boosts a SOC team's response by rapidly detecting and containing threats before escalation. It uses AI detection, predefined playbooks, and real-time threat intelligence to identify attack patterns and trigger immediate actions, such as isolating compromised endpoints or blocking malicious connections. This approach reduces the window for attackers and minimizes incident impact.
 
-:::image type="content" source="media/respond-threats-overview/attack-disrupt.png" alt-text="Screenshot of an incident with attack disruption actions.":::
+:::image type="content" source="media/respond-threats-overview/attack-disrupt.png" alt-text="Screenshot of an incident with attack disruption actions."lightbox="media/respond-threats-overview/attack-disrupt.png:::
 
 Automated attack disruption also improves collaboration across SOC teams by streamlining communication and responses. It alerts analysts and can suggest or execute actions based on predefined policies. This orchestration accelerates decision-making and ensures security teams can scale their efforts efficiently despite increasing threats.
 
@@ -65,7 +65,7 @@ Microsoft Defender XDR's AIR capabilities help security operations teams manage 
 
 Acting as a virtual analyst, AIR mimics ideal investigation steps, working 24/7 to reduce response times and free up the security team for other tasks. When an alert triggers an incident, AIR initiates an automated investigation, resulting in verdicts such as *malicious*, *suspicious*, or *no threats*, and identifying necessary remediation actions, such as quarantining files or stopping processes.
 
-:::image type="content" source="media/respond-threats-overview/investigations.png" alt-text="Screenshot of the Investigations tab, showing automated investigation steps taken by Microsoft Defender XDR.":::
+:::image type="content" source="media/respond-threats-overview/investigations.png" alt-text="Screenshot of the Investigations tab, showing automated investigation steps taken by Microsoft Defender XDR." lightbox="media/respond-threats-overview/investigations.png:::
 
 Organizations can configure AIR capabilities to suit their needs, choosing either automatic remediation actions or ones that require security team approval. This automation significantly enhances the efficiency and effectiveness of security operations.
 
@@ -91,7 +91,7 @@ For more information, see [Connect Microsoft Sentinel to the Microsoft Defender 
 
 Microsoft Sentinel automation rules allow SOC teams to streamline and automate incident handling processes, ensuring structured responses across your environment. Automation rules can perform basic steps, such as adding incident tasks, suppressing noisy incidents, and changing incident statuses. They can also automate responses for multiple detections simultaneously, control the order of actions executed, and perform automation for limited time periods only, such as during testing or maintenance windows.
 
-:::image type="content" source="media/respond-threats-overview/automation-rule.png" alt-text="Screenshot of a sample automation rule.":::
+:::image type="content" source="media/respond-threats-overview/automation-rule.png" alt-text="Screenshot of a sample automation rule." lightbox="media/respond-threats-overview/automation-rule.png":::
 
 When onboarded to the Defender portal, automation rules with incident triggers apply universally across both Microsoft Sentinel and Microsoft Defender XDR incidents, ensuring cohesive and comprehensive incident management.
 
@@ -103,7 +103,7 @@ Microsoft Sentinel playbooks are built using Azure Logic Apps and are automated 
 
 Common use cases for Microsoft Sentinel playbooks include data enrichment, bi-directional synchronization with ticketing systems, orchestration of incident management through communication platforms like Microsoft Teams or Slack, and immediate threat response actions. Microsoft Sentinel provides many playbooks out-of-the-box in solutions available from the **Content hub**.
 
-:::image type="content" source="media/respond-threats-overview/playbooks.png" alt-text="Screenshot of many playbooks available from the Content hub.":::
+:::image type="content" source="media/respond-threats-overview/playbooks.png" alt-text="Screenshot of many playbooks available from the Content hub." lightbox="media/respond-threats-overview/playbooks.png":::
 
 To create and manage these playbooks, specific roles and permissions are required, and extra charges may apply for the usage of Azure Logic Apps. For more information, see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automation/automate-responses-with-playbooks).
 
@@ -111,7 +111,7 @@ To create and manage these playbooks, specific roles and permissions are require
 
 [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) enables organizations to identify and mitigate potential attack paths before they can be exploited. Microsoft Security Exposure Management treats attack paths like incidents, providing a proactive approach to managing vulnerabilities and misconfigurations, and aiding in responses to in-progress attacks.
 
-:::image type="content" source="media/respond-threats-overview/attack-paths.png" alt-text="Screenshot of the Attack paths Overview page.":::
+:::image type="content" source="media/respond-threats-overview/attack-paths.png" alt-text="Screenshot of the Attack paths Overview page." lightbox="media/respond-threats-overview/attack-paths.png":::
 
 An attack path analysis maps out potential attack vectors, providing remediation recommendations to reduce risk. Microsoft Security Exposure Management's security scoring system helps to prioritize vulnerabilities and misconfigurations that pose the greatest threat, and automated recommendations suggest the measures needed to strengthen an organization's overall security posture.
 
