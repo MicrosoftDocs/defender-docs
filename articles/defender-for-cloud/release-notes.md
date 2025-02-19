@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
-| February 19 | Preview | [31 new and enhanced multi-cloud regulatory standards coverage](#31-new-and-enhanced-multi-cloud-regulatory-standards-coverage) |
+| February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
 
 ### MDC Cost Calculator (Preview)
 
@@ -52,11 +52,11 @@ Our cost calculator simplifies the process of estimating costs by allowing you t
 
 ***Comprehensive Cost Estimation:*** The calculator provides an estimate for each plan and a total cost report. You're provided a detailed breakdown of costs, making it easier to understand and manage your expenses.
 
-***Multi-Cloud Support:*** Our solution works for all supported clouds, ensuring that you get accurate cost estimations regardless of your cloud provider.
+***Multicloud Support:*** Our solution works for all supported clouds, ensuring that you get accurate cost estimations regardless of your cloud provider.
 
 ***Export and Share:*** Once you have your cost estimate, you can easily export and share it for budget planning and approvals.
 
-### 31 new and enhanced multi-cloud regulatory standards coverage
+### 31 new and enhanced multicloud regulatory standards coverage
 
 February 19, 2025
 
@@ -66,8 +66,8 @@ We are excited to announce the enhanced and expanded support of over 31 security
 
 |Standards|Clouds|
 | -------- | -------- |
-|EU 2022 2555 (NIS2) 2022  |Azure , AWS, GCP|
-|EU General Data Protection Regulation (GDPR) 2016 679  |Azure , AWS, GCP|
+|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
+|EU General Data Protection Regulation (GDPR) 2016 679  |Azure, AWS, GCP|
 |NIST CSF v2.0  |Azure, AWS, GCP|
 |NIST 800 171 Rev3  |Azure, AWS, GCP|
 |NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
@@ -89,7 +89,7 @@ We are excited to announce the enhanced and expanded support of over 31 security
 |CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
 |Cyber Essentials v3.1  |Azure, AWS, GCP|
 |Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
-|FFIEC CAT 2017  |Azure, AWS ,GCP|
+|FFIEC CAT 2017  |Azure, AWS, GCP|
 |Brazilian General Data Protection Law (LGPD) 2018  |Azure|
 |NZISM v3.7  |Azure, AWS, GCP|
 |Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS|
