@@ -44,7 +44,7 @@ Retrieves a list of all scan agents.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -55,10 +55,7 @@ Permission type|Permission|Permission display name
 Application|Machine.Read.All| Read all scan information.
 Delegated (work or school account)|Machine.Read.All|Read all scan information.
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - To view data the user needs to have at least the following role permission: 'ViewData' or 'TvmViewData' (See [Create and manage roles](../user-roles.md) for more information)
+When obtaining a token using user credentials, to view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 
