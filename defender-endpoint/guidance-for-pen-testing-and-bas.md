@@ -29,7 +29,7 @@ This article describes common challenges and potential misconfigurations that mi
 - Concerns about enabling [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as it might proceed to cloud protection detonation if it doesn't find metadata. For more information about Microsoft Defender Antivirus and cloud protection, see [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav).
 
 > [!NOTE]
-> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that what's occuring might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See   Review "How to submit False Negatives (FNs) for investigation" section in this article.
+> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that what's occuring might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See [How to submit possible false negatives for investigation](#how-to-submit-possible-false-negatives-for-investigation) (in this article).
 
 ## Common misconfigurations of Microsoft Defender Antivirus during pen testing
 
@@ -109,23 +109,22 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days
 
-### Step 4: Submit the data from steps 1-3 to Microsoft Defender Security Intelligence <br>(MDSI, https://www.microsoft.com/en-us/wdsi, [https://](https://aka.ms/mdsi))aka.ms/wdsi)
+### Step 4: Submit data
 
-**MSDI Portal**
+1. Submit the data you gathered during steps 1-3 by using either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal.
 
-The MDSI Portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions
+   | Portal | What to do |
+   |--|--|
+   | Microsoft Defender Security Intelligence portal <br/><br/>The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed. | 1. Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. <br/>2. Follow the guidance on the page. |
+   | The Microsoft Defender portal <br/><br/>If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. | See [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde). |
 
-[!NOTE] The name changed from Windows Defender Security Intelligence (WSDI) to Microsoft Defender Security Intelligence (MSDI) since we now support macOS, Linux, and Android. The Url changes haven't been addressed yet.
+2. After you've uploaded the files, note the `Submission ID` that's created for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
 
-**Submit malware files to Microsoft**
+3. Wait for an update. 
 
-Organizations that have a Microsoft Defender XDR subscription, or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+   After Microsoft receives the sample, it's investigated, and a determination is made. If Microsoft determines that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
-Or, you can go to the Microsoft Defender Security Intelligence page at <https://aka.ms/mdsi> to submit the file. To receive analysis updates, sign in or enter a valid email address. We recommend using your Microsoft work or school account.
+   If you have questions, you can [contact support](/defender-endpoint/contact-support).
 
-After you've uploaded the files, note the **Submission ID** that's created for your sample submission (for example, 7c6c214b-17d4-4703-860b-7f1e9da03f7f).
 
-After we receive the sample, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
-
-Or [Contact Microsoft Defender for Endpoint support ](/defender-endpoint/contact-support)
 
