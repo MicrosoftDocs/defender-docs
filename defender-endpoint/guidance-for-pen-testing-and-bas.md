@@ -119,7 +119,7 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
 
    | Portal | What to do |
    |--|--|
-   | Microsoft Defender Security Intelligence portal  | 1. Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. <br/>2. Follow the guidance on the page. |
+   | MDSI portal  | 1. Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. <br/>2. Follow the guidance on the page. |
    | The Microsoft Defender portal  | See [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde). |
 
 2. After you upload the files, note the `Submission ID` for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
