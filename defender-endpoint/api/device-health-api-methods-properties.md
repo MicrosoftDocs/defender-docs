@@ -77,7 +77,7 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 | `avIsEngineUpToDate` | String | Up-to-date status of antivirus engine | "True", "False", "Unknown" |
 | `avIsPlatformUpToDate` | String | Up-to-date status of antivirus platform | "True", "False", "Unknown" |
 | `avIsSignatureUpToDate` | String | Up-to-date status of antivirus signature | "True", "False", "Unknown" |
-| `avMode` | String | Antivirus mode. | Each mode will be a string typed integer value ranging from 0 to 5. Refer to the mapping below to see its value's meaning: <ul><li>'' = Other</li><li> '0' = Active</li><li> '1' = Passive</li><li> '2' = Disabled</li><li> '3' = Other</li><li> '4' = EDRBlocked</li><li>'5' = PassiveAudit</li></ul> |
+| `avMode` | String | Antivirus mode. | Each mode is a string typed integer value ranging from 0 to 5. Refer to the following mapping to see its value's meaning: <br/>'' = Other<br/>'0' = Active<br/>'1' = Passive<br/>'2' = Disabled<br/>'3' = Other<br/>'4' = EDRBlocked<br/>'5' = PassiveAudit |
 | `avPlatformUpdateTime` | DateTimeOffset | Datetime when antivirus platform was last updated on device | "2022-08-04T12:44:02Z" |
 | `avPlatformVersion` | String | Antivirus platform version | "4.18.2203.5" |
 | `avSignaturePublishTime` | DateTimeOffset | Datetime when antivirus security intelligence build was released | "2022-08-04T12:44:02Z" |
