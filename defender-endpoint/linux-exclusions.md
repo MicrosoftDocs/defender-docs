@@ -312,21 +312,21 @@ mdatp exclusion folder add --path "/var/*/tmp"
 
 The previous command excludes paths under `*/var/*/tmp/*`, but not folders that are siblings of `*tmp*`. For example, `*/var/this-subfolder/tmp*` is excluded, but `*/var/this-subfolder/log*` isn't excluded.
 
-    ```bash
-    mdatp exclusion folder add --path "/var/" --scope epp
-    ```
-    OR
+```bash
+mdatp exclusion folder add --path "/var/" --scope epp
+```
 
-    ```bash
-    mdatp exclusion folder add --path "/var/*/" --scope epp
-    ```
+OR
 
-    > [!NOTE]
-    > This excludes all paths whose parent is */var/*; for example, */var/this-subfolder/and-this-subfolder-as-well*.
+```bash
+mdatp exclusion folder add --path "/var/*/" --scope epp
+```
 
-    ```console
-    Folder exclusion configured successfully
-    ```
+The previous command excludes all paths whose parent is `*/var/*`, such as `*/var/this-subfolder/and-this-subfolder-as-well*`.
+
+```console
+Folder exclusion configured successfully
+```
 
 - Add an exclusion for a process:
 
