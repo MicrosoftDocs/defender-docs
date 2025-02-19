@@ -9,7 +9,7 @@ ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 ms.date: 06/19/2024
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -19,14 +19,13 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Details and results of an automatic attack disruption action
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 When an automatic attack disruption triggers in Microsoft Defender XDR, the details about the risk and the containment status of compromised assets are available during and after the process. You can view the details on the incident page, which provides the full details of the attack and the up-to-date status of associated assets.
 
@@ -58,16 +57,18 @@ You can use specific queries in [advanced hunting](advanced-hunting-overview.md)
 Contain actions triggered by attack disruption are found in the [DeviceEvents table](advanced-hunting-deviceevents-table.md) in advanced hunting. Use the following queries to hunt for these specific contain actions:
 
 - Device contain actions:
-```Kusto
-DeviceEvents
-| where ActionType contains "ContainedDevice"
-```
+
+  ```Kusto
+  DeviceEvents
+  | where ActionType contains "ContainedDevice"
+  ```
 
 - User contain actions:
-```Kusto
-DeviceEvents
-| where ActionType contains "ContainedUser"
-```
+
+  ```Kusto
+  DeviceEvents
+  | where ActionType contains "ContainedUser"
+  ```
 
 ### Hunt for disable user account actions
 

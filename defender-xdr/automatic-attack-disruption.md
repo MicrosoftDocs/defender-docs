@@ -7,27 +7,25 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
 ms.date: 09/11/2024
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Automatic attack disruption in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 Microsoft Defender XDR correlates millions of individual signals to identify active ransomware campaigns or other sophisticated attacks in the environment with high confidence. While an attack is in progress, Defender XDR disrupts the attack by automatically containing compromised assets that the attacker is using through automatic attack disruption.
 
@@ -105,7 +103,7 @@ The Defender XDR user experience now includes additional visual cues to ensure v
 
     - A tag titled *Attack Disruption* appears next to affected incidents
 
-1. On the incident page:
+2. On the incident page:
 
     - A tag titled *Attack Disruption*
     - A yellow banner at the top of the page that highlights the automatic action taken
@@ -121,7 +119,7 @@ For more information, see [view attack disruption details and results](autoad-re
 
 ## Next steps
 
-- [Configuring automatic attack disruption in Microsoft Defender XDR](configure-attack-disruption.md)
+- [Configure automatic attack disruption](configure-attack-disruption.md)
 - [View details and results](autoad-results.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
 
