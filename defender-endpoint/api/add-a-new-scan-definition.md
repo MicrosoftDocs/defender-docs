@@ -79,16 +79,16 @@ Content-Type|string|application/json. **Required**.
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-scanType|Enum|The type of scan. Possible values are: "Windows", "Network".  **Required**.
-scanName|String|Name of the scan.  **Required**.
-isActive|Boolean|Status of whether the scan actively running.  **Required**.
-target|String| A comma separated list of targets to scan, either IP addresses or hostnames. **Required**.
-intervalInHours|Int|The interval at which the scan runs.  **Required**.
-targetType|String|The target type in the target field. Possible types are "IP Address" or "Hostname". Default value is IP Address. **Required**.
-scannerAgent|Object|machine Id. **Required**.
-scanAuthenticationParams|Object|An object representing the authentication parameters, see [Authentication parameters object properties](./get-authenticated-scan-properties.md#authentication-parameters-object-properties) for expected fields. This property is mandatory when creating a new scan and is optional when updating a scan.
+|Parameter|Type|Description|
+|:---|:---|:---|
+|`scanType`|Enum|The type of scan. Possible values are: "Windows", "Network".  **Required**.|
+|`scanName`|String|Name of the scan.  **Required**.|
+|`isActive`|Boolean|Status of whether the scan actively running.  **Required**.|
+|`target`|String| A comma separated list of targets to scan, either IP addresses or hostnames. **Required**.|
+|`intervalInHours`|Int|The interval at which the scan runs.  **Required**.|
+|`targetType`|String|The target type in the target field. Possible types are "IP Address" or "Hostname". Default value is IP Address. **Required**.|
+|`scannerAgent`|Object|machine Id. **Required**.|
+|`scanAuthenticationParams`|Object|An object representing the authentication parameters, see [Authentication parameters object properties](./get-authenticated-scan-properties.md#authentication-parameters-object-properties) for expected fields. This property is mandatory when creating a new scan and is optional when updating a scan.|
 
 ## Response
 
