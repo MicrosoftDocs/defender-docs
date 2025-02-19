@@ -32,15 +32,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 |--|--|--|
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
-|February 19|Preview| [31 new and enhanced multi-cloud regulatory standards coverage](#31-new-and-enhanced-multi-cloud-regulatory-standards-coverage)|
+| February 19 | Preview | [31 new and enhanced multi-cloud regulatory standards coverage](#31-new-and-enhanced-multi-cloud-regulatory-standards-coverage) |
 
 ### MDC Cost Calculator (Preview)
 
 February 19, 2025
 
-Introducing the New MDC Cost Calculator: Simplify Your Cost Estimations
-
-We're excited to introduce our new MDC cost calculator to help you easily estimate the costs associated with protecting your cloud environments. This tool is tailored to provide you with a clear and accurate understanding of your expenses, ensuring you can plan and budget effectively.
+We're excited to introduce our new [MDC Cost Calculator](https://portal.azure.com/#view/Microsoft_Azure_Security/CostEstimator.ReactView) to help you easily estimate the costs associated with protecting your cloud environments. This tool is tailored to provide you with a clear and accurate understanding of your expenses, ensuring you can plan and budget effectively.
 
 **Why Use the Cost Calculator?**
 
