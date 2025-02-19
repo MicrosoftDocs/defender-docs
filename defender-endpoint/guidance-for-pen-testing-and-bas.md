@@ -95,15 +95,19 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 ### Step 2: Have the following information handy
 
-- Microsoft Defender OrgID
-  - In the Microsoft XDR portal (security.microsoft.com), go to "Settings" > "Microsoft Defender XDR" > "Account" > "Org ID"  
-- Device ID
-  - In the Microsoft XDR portal (security.microsoft.com), available in the device page
+- **Microsoft Defender OrgID**. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Microsoft Defender XDR** > **Account** > **Org ID**.
+
+- **Device ID**. In the [Microsoft Defender portal](https://security.microsoft.com), open the device page.
+
 - binary names
-- Start and end of when testing was done in HH:MM:SS UTC.
+
+- Start and end of when testing was done in `HH:MM:SS UTC` format.
+
 - It would be highly beneficial if you could provide the steps to reproduce the issue, along with a sample of the payload.
 
-### Step 3: It's crucial that customers report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days
+### Step 3: Report to Microsoft immediately
+
+It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days
 
 ### Step 4: Submit the data from steps 1-3 to Microsoft Defender Security Intelligence <br>(MDSI, https://www.microsoft.com/en-us/wdsi, [https://](https://aka.ms/mdsi))aka.ms/wdsi)
 
