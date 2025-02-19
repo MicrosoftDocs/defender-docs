@@ -66,7 +66,7 @@
     - name: Evaluate Microsoft Defender Antivirus
       href: evaluate-microsoft-defender-antivirus.md
       items:
-      - name: Guidance for Penetration Testing and Breach and Attack Simulation (BAS) scenarios.
+      - name: Guidance for pen testing and BAS scenarios
         href: guidance-for-pen-testing-and-bas.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
