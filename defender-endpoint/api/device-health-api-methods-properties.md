@@ -40,11 +40,13 @@ Retrieves a list of Microsoft Defender Antivirus device health details. This API
 
 - **JSON response**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- **via files** This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
-  - Call the API to get a list of download URLs with all your organization data.
-  - Download all the files using the download URLs and process the data as you like.
+- **via files** This API solution enables pulling larger amounts of data faster and more reliably, and is recommended for large organizations who have more than 100,000 devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
 
-Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
+   1. Call the API to get a list of download URLs with all your organization data.
+
+   2. Download all the files using the download URLs and process the data as you like.
+
+Data that is collected using either `JSON response` or by using files is a snapshot of the current state. This data doesn't contain historical data. To collect historical data, you must save the data in your own data storage.
 
 > [!IMPORTANT]
 > For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
