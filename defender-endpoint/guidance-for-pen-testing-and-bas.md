@@ -109,20 +109,19 @@ Have the following information handy
 
 ### Step 3: Submit data to Microsoft as soon as possible
 
-It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days.
+It's crucial to report to Microsoft as soon as possible. The advanced hunting telemetry data wraps around and overwrites itself after 30 days. You can use either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal to submit your files.
 
-You can use either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal to submit your files.
+| Portal | Description |
+|--|--|
+| MDSI portal | The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed. |
+| Microsoft Defender portal | If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
 
-**MDSI portal**: The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed.
-
-**Microsoft Defender portal**: If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal.
-
-1. Submit the data you gathered during steps 1-2 by using either the Microsoft Defender Security Intelligence (MDSI) portal or the Microsoft Defender portal.
+1. Submit the data you gathered during steps 1-2 by using either the MDSI portal or the Microsoft Defender portal.
 
    | Portal | What to do |
    |--|--|
-   | MDSI portal  | 1. Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. <br/>2. Follow the guidance on the page. |
-   | The Microsoft Defender portal  | See [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde). |
+   | [MDSI portal](https://www.microsoft.com/en-us/wdsi)  | 1. Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. <br/>2. Follow the guidance on the page. |
+   | [The Microsoft Defender portal](https://security.microsoft.com)  | See [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde). |
 
 2. After you upload the files, note the `Submission ID` for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
 
