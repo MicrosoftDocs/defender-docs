@@ -82,7 +82,7 @@ If successful, this method returns 200 - OK response code with a list of authent
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions
@@ -90,7 +90,7 @@ GET https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefiniti
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
