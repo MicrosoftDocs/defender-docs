@@ -11,10 +11,18 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom:
-ms.topic: reference
+ms.topic: concept-article
 ms.date: 02/16/2025
 ms.reviewer:
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365 P2
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud
+- Microsoft Defender for Cloud Apps
 ---
 
 # Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
@@ -24,16 +32,6 @@ All permissions listed within the Microsoft Defender XDR Unified RBAC model alig
 This article describes how existing roles and permissions in Microsoft Defender for Endpoint, Microsoft Defender Vulnerability Management, Microsoft Defender for Office 365, Microsoft Defender for Identity, and Microsoft Entra roles map to the roles and permission in the Microsoft Defender XDR Unified RBAC model.
 
 [!INCLUDE[Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2118804)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/p/?LinkID=2198108)
-- [Microsoft Defender for Office 365 Plan 2](https://go.microsoft.com/fwlink/p/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](https://go.microsoft.com/fwlink/p/?linkid=2229011)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
