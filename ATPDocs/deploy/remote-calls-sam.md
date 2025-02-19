@@ -64,6 +64,8 @@ To ensure that Windows clients and servers allow your Defender for Identity Dire
     >
     > The [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) recommends replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connections from performing network sign-ins. Review your local policy settings before managing the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
 
+     :::image type="content" source="../media/define-security-policy-setting.png" alt-text="Screenshot of Security Policy Settings." lightbox="../media/define-security-policy-setting.png":::
+
 ## Configure a Device profile for Microsoft Entra hybrid joined devices only
 
 This procedure describes how to use the [Microsoft Intune admin center](https://intune.microsoft.com/) to configure the policies in a Device profile if you're working with Microsoft Entra hybrid joined devices.
