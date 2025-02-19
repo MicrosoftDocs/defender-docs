@@ -289,28 +289,28 @@ mdatp exclusion folder remove --path /var/log/ --scope global
 Folder exclusion removed successfully
 ```
 
-- Add an exclusion for a second folder:
+#### Example 4: Add an exclusion for a second folder
 
-    ```bash
-    mdatp exclusion folder add --path /var/log/ --scope epp
-    mdatp exclusion folder add --path /other/folder  --scope global
-    ```
+You can add an exclusion for a second folder.
 
-    ```console
-    Folder exclusion configured successfully
-    ```
+```bash
+mdatp exclusion folder add --path /var/log/ --scope epp
+mdatp exclusion folder add --path /other/folder  --scope global
+```
 
-- Add an exclusion for a folder with a wildcard in it:
-    
-    > [!NOTE]
-    > Wildcards aren't supported while configuring global exclusions.  
+```console
+Folder exclusion configured successfully
+```
 
-    ```bash
-    mdatp exclusion folder add --path "/var/*/tmp"
-    ```
+#### Example 5: Add a folder exclusion with a wildcard
 
-    > [!NOTE]
-    > This excludes paths under */var/\*/tmp/*, but not folders which are siblings of *tmp*; for example, */var/this-subfolder/tmp*, but not */var/this-subfolder/log*.
+You can add an exclusion for a folder with a wildcard. Keep in mind that Wildcards aren't supported while configuring global exclusions.  
+
+```bash
+mdatp exclusion folder add --path "/var/*/tmp"
+```
+
+The previous command excludes paths under `*/var/*/tmp/*`, but not folders that are siblings of `*tmp*`. For example, `*/var/this-subfolder/tmp*` is excluded, but `*/var/this-subfolder/log*` isn't excluded.
 
     ```bash
     mdatp exclusion folder add --path "/var/" --scope epp
