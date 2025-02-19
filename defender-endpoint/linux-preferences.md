@@ -665,7 +665,7 @@ Determines whether module load events (file open events on shared libraries) are
 Determines whether infected processes that open or load any infected file will get remediated or not.
 
 > [!NOTE]
-> When enabled the processes that open or load any infected file will get remediated but these processes will not appear in the threat list.
+> When enabled the processes that open or load any infected file will be remediated in RTP mode. These processes will not appear in the threat list as these are not malicious but are only being terminated because they were loading the threat file in memory. 
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
