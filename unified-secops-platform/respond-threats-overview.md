@@ -1,6 +1,6 @@
 ---
-title: Threat detection in Microsoft's unified SecOps platform
-description: Learn about the features that help detect and respond to threats in the Microsoft unified SecOps platform, ensuring comprehensive protection.
+title: Threat response in Microsoft's unified SecOps platform
+description: Learn about the features that help respond to threats in the Microsoft unified SecOps platform, ensuring comprehensive protection.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: bagol
@@ -19,11 +19,11 @@ appliesto:
 # Customer intent: As a security operations center business decision maker, I want to learn about the tools available to respond to threats automatically in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---
 
-# Respond to threats in Microsoft's unified SecOps platform
+# Threat response in Microsoft's unified SecOps platform
 
 As cyber threats evolve and data stores and tooling grow in complexity, security solutions must adapt and respond faster in real time. This article explains how the advanced response features provided across the Microsoft's unified SecOps platform help contain threats as they're detected and neutralize them before causing damage.
 
-## Respond to threats across the Defender portal
+## Threat response across the Defender portal
 
 In the Defender portal, unified support for incident correlation and integrated threat intelligence across multiple attack surfaces helps security teams respond to threats effectively.
 
@@ -45,7 +45,7 @@ Continuous updates to threat intelligence feeds keep security teams ahead of eme
 
 For more information, see [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md).
 
-## Respond to threats with Microsoft Defender XDR
+## Microsoft Defender XDR threat response features
 
 Microsoft Defender XDR unifies threat protection by automating security across endpoints, identities, email, apps, and cloud workloads, helping organizations respond to threats effectively.
 
@@ -81,7 +81,7 @@ Guided responses are shown together with other Copilot recommendations, as actio
 
 For more information, see [Triage and investigate incidents with guided responses from Microsoft Copilot in Microsoft Defender](/defender-xdr/security-copilot-m365d-guided-response).
 
-## Respond to threats with Microsoft Sentinel
+## Microsoft Sentinel threat response features
 
 Onboard Microsoft Sentinel to the Defender portal for a unified security operations platform, with cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your threat detection and response capabilities.
 
@@ -107,7 +107,7 @@ Common use cases for Microsoft Sentinel playbooks include data enrichment, bi-di
 
 To create and manage these playbooks, specific roles and permissions are required, and extra charges may apply for the usage of Azure Logic Apps. For more information, see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automation/automate-responses-with-playbooks).
 
-## Respond to potential threats with Microsoft Security Exposure Management
+## Microsoft Security Exposure Management for potential threat response
 
 [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) enables organizations to identify and mitigate potential attack paths before they can be exploited. Microsoft Security Exposure Management treats attack paths like incidents, providing a proactive approach to managing vulnerabilities and misconfigurations, and aiding in responses to in-progress attacks.
 
