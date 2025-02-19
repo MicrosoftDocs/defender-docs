@@ -5,7 +5,7 @@ ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
 ms.author: diannegali
-author: iannegali
+author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 - essentials-manage
-ms.topic: concept
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150

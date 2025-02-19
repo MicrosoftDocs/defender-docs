@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom:
-ms.topic: concept
+ms.topic: concept-article
 ms.date: 02/16/2025
 ms.reviewer:
 search.appverid: met150
