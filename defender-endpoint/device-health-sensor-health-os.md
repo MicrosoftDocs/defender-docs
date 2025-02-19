@@ -33,7 +33,7 @@ The Device Health report provides information about the devices in your organiza
 > [!IMPORTANT]
 > For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 
-In the Microsoft Defender portalnel, select **Reports**, and then open **Device health and compliance**.
+In the Microsoft Defender portal, select **Reports**, and then open **Device health and compliance**.
 
 - The [**Sensor health & OS** tab](#sensor-health--os-tab) provides general operating system information, divided into three cards that display the following device attributes:
   - [Sensor health card](#sensor-health-card)
