@@ -106,7 +106,7 @@ The following table lists the changes in navigation between Microsoft Defender f
 
 For more information, see:
 
-- [Related videos for Microsoft Defender for Identity](https://www.microsoft.com/videoplayer/embed/RE4HcEU)
+- [Related videos for Microsoft Defender for Identity](https://learn-video.azurefd.net/vod/player?id=f4589332-7b78-40f0-b456-b896851a5aae)
 - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 - [Microsoft Defender for Identity](/defender-for-identity/)
 

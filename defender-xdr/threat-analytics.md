@@ -68,7 +68,7 @@ By default, access to services available in the Defender portal are managed coll
 >[!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 >
-> You'll have visibility to all threat analytics reports even if you have just one of the products supported. However, you're required to have each product and role to see that product’s specific incidents, assets, exposure, and recommended actions associated with the threat. 
+> You'll have visibility to all threat analytics reports even if you have just one of the products supported. However, you're required to have each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat. 
 
 ## View the threat analytics dashboard
 
@@ -206,7 +206,7 @@ You can set up email notifications that will send you updates on threat analytic
 When looking at the threat analytics data, remember the following factors:
 
 - The checklist in the **Recommended actions** tab only displays recommendations tracked in [Microsoft Secure Score](microsoft-secure-score.md). Check the **Analyst report** tab for more recommended actions that aren't tracked in Secure Score.
-- The recommended actions don’t guarantee complete resilience and only reflect the best possible actions needed to improve it.
+- The recommended actions don't guarantee complete resilience and only reflect the best possible actions needed to improve it.
 - Antivirus-related statistics are based on Microsoft Defender Antivirus settings. 
 - The **Misconfigured devices** column in the main Threat analytics page shows the number of devices affected by a threat when the threat's related recommended actions aren't turned on. However, if Microsoft researchers don't link any recommended actions, the **Misconfigured devices** column shows the status *Not available*.  
 - The **Vulnerable devices** column in the main Threat analytics page shows the number of devices running software that are vulnerable to any of the vulnerabilities linked to the threat. However, if Microsoft researchers don't link any vulnerabilities, the **Vulnerable devices** column shows the status *Not available*.

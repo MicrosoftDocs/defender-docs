@@ -22,6 +22,38 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## February 2025
+
+### New attack paths tab on the Identity profile page
+
+This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview) 
+
+Additional identity page enhancements:
+
+- New side panel with more information for each entry on the user timeline.
+
+- Filtering capabilities on the Devices tab under Observed in organization.
+
+### Updating 'Protect and manage local admin passwords with Microsoft LAPS' posture recommendation
+
+This update aligns the security posture assessment within Secure Score with the latest version of [Windows LAPS](/windows-server/identity/laps/laps-overview), ensuring it reflects current security best practices for managing local administrator passwords.
+
+### New and updated events in the Advanced hunting IdentityDirectoryEvents table
+
+We have added and updated the following events in the `IdentityDirectoryEvents` table in Advanced Hunting:
+
+- User Account control flag has been changed
+
+- Security group creation in Active directory
+
+- Failed attempt to change an account password
+
+- Successful account password change
+
+- Account primary group ID has been changed
+
+Additionally, the **built-in schema reference** for Advanced Hunting in Microsoft Defender XDR has been updated to include detailed information on all supported event types (**`ActionType`** values) in identity-related tables, ensuring complete visibility into available events. For more information, see [Advanced hunting schema details](/defender-xdr/advanced-hunting-schema-tables).
+
 ## December 2024
 
 ### New security posture assessment: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
@@ -443,7 +475,7 @@ This version includes the following improvements:
 
     For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
-- **Health issues**: Added the *The 'Remove learning period' toggle was automatically switched off for this tenant* health issue
+- **Health issues**: The 'Remove learning period' toggle was automatically switched off for this tenant* health issue.
 
 This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 

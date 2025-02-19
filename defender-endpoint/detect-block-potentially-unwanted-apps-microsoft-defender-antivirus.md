@@ -58,7 +58,7 @@ Here are some examples:
 - **Evasion software** that actively tries to evade detection by security products, including software that behaves differently in the presence of security products.
 
 > [!TIP]
-> For more examples and a discussion of the criteria we use to label applications for special attention from security features, see [How Microsoft identifies malware and potentially unwanted applications](/windows/security/threat-protection/intelligence/criteria).
+> For more examples and a discussion of the criteria we use to label applications for special attention from security features, see [How Microsoft identifies malware and potentially unwanted applications](/unified-secops-platform/criteria).
 
 Potentially unwanted applications can increase the risk of your network being infected with actual malware, make malware infections harder to identify, or cost your IT and security teams time and effort to clean them up. If your organization's subscription includes [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), you can also set Microsoft Defender Antivirus PUA to block, in order to block apps that are considered to be PUA on Windows devices.
 
@@ -131,7 +131,7 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 
 ### Use Group Policy to configure PUA protection
 
-1. Download and install [Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103507)
+1. Download and install [the latest Administrative templates for Windows 11](https://www.bing.com/search?q=administrative+template+download+windows+11&FORM=R5FD)
 
 2. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 

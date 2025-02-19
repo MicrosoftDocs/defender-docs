@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/16/2024
+ms.date: 02/07/2025
 ---
 
 # Configure offline security intelligence update for Microsoft Defender for Endpoint on Linux 
@@ -187,7 +187,7 @@ Use the following sample `mdatp_managed.json` and update the parameters as per t
   },
   "antivirusEngine": {
     "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/",
-    "offlineDefintionUpdateFallbackToCloud":false,
+    "offlineDefinitionUpdateFallbackToCloud":false,
     "offlineDefinitionUpdate": "enabled"
   },
   "features": {
@@ -237,7 +237,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ### Automatic update
 
-- If the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
+- If the [enforcement level for the antivirus engine](/defender-endpoint/linux-preferences#enforcement-level-for-antivirus-engine) is set to `real_time`, and the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the offline security intelligence updates are triggered automatically at periodic intervals.
 - By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
 
 ### Manual update

@@ -67,7 +67,7 @@ Learn how to protect your cloud apps in Microsoft Defender XDR:
 
 **Protecting cloud apps in Microsoft Defender XDR**:<br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE59yVU title="Protecting cloud apps in Microsoft Defender XDR"]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a722f8cd-806b-40dd-ad93-139fa2b487b9 title="Protecting cloud apps in Microsoft Defender XDR"]
 
 <br>
 
