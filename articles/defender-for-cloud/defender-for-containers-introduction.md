@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers
 ms.topic: overview
 author: dcurwin
 ms.author: dacurwin
-ms.date: 01/09/2024
+ms.date: 02/19/2025
 ---
 
 # Container protection in Defender for Cloud
@@ -88,9 +88,7 @@ Examples of security events that Microsoft Defenders for Containers monitors inc
 - Creation of high privileged roles
 - Creation of sensitive mounts
 
-You can view security alerts by selecting the Security alerts tile at the top of the Defender for Cloud's overview page, or the link from the sidebar.
-
-Security alerts for runtime workload in the clusters have the `K8S.NODE_` alert type prefix.  For a full list of the cluster level alerts, see the [reference table of alerts](alerts-containers.md).
+For more information about alerts detected by Defender for Containers, including an alert simulation tool [alerts for Kubernetes clusters](alerts-containers.md).
 
 Defender for Containers includes threat detection with over 60 Kubernetes-aware analytics, AI, and anomaly detections based on your runtime workload.
 

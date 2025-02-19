@@ -4,7 +4,7 @@ description: Learn how Microsoft Defender for Cloud uses the guest configuration
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 07/31/2023
+ms.date: 02/19/2025
 ---
 
 # Remediate OS misconfigurations

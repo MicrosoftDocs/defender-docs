@@ -68,29 +68,51 @@ By default, when you enable Defender for Cloud, the following standards are enab
 
 The following standards are available in Defender for Cloud:
 
-| Standards for Azure subscriptions | Standards for AWS accounts | Standards for GCP projects |
-|--|--|--|
-| Australian Government ISM Protected | AWS Foundational Security Best Practices | Brazilian General Personal Data Protection Law (LGPD)|
-| Canada Federal PBMM | AWS Well-Architected Framework | California Consumer Privacy Act (CCPA)|
-| CIS Azure Foundations | Brazilian General Personal Data Protection Law (LGPD) | CIS Controls|
-| CIS Azure Kubernetes Service (AKS) Benchmark | California Consumer Privacy Act (CCPA) | CIS GCP Foundations|
-| CMMC |CIS Amazon Elastic Kubernetes Service (EKS) Benchmark| CIS Google Cloud Platform Foundation Benchmark|
-| FedRAMP ‘H’ & ‘M’ | CIS AWS Foundations | CIS Google Kubernetes Engine (GKE) Benchmark|
-| HIPAA/HITRUST | CRI Profile | CRI Profile|
-| ISO/IEC 27001 | CSA Cloud Controls Matrix (CCM) | CSA Cloud Controls Matrix (CCM)|
-| New Zealand ISM Restricted | GDPR | Cybersecurity Maturity Model Certification (CMMC)|
-| NIST SP 800-171 | ISO/IEC 27001 | FFIEC Cybersecurity Assessment Tool (CAT)|
-| NIST SP 800-53 | ISO/IEC 27002 | GDPR|
-| PCI DSS | NIST Cybersecurity Framework (CSF) | ISO/IEC 27001|
-| RMIT Malaysia | NIST SP 800-172 | ISO/IEC 27002|
-| SOC 2 | PCI DSS | ISO/IEC 27017|
-| Spanish ENS | | NIST Cybersecurity Framework (CSF)|
-| SWIFT CSP CSCF | | NIST SP 800-53 |
-| UK OFFICIAL and UK NHS| | NIST SP 800-171|
-| | | NIST SP 800-172|
-| | | PCI DSS|
-| | | Sarbanes Oxley Act (SOX)|
-| | | SOC 2|
+|Standards|Clouds|
+| -------- | -------- |
+|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
+|EU General Data Protection Regulation (GDPR) 2016 679  |Azure, AWS, GCP|
+|NIST CSF v2.0  |Azure, AWS, GCP|
+|NIST 800 171 Rev3  |Azure, AWS, GCP|
+|NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
+|PCI DSS v4.0.1  |Azure, AWS, GCP|
+|CIS AWS Foundations v3.0.0  |AWS|
+|CIS Azure Foundations v2.1.0  |Azure|
+|CIS Controls v8.1  |Azure, AWS, GCP|
+|CIS GCP Foundations v3.0  |GCP|
+|CIS Google Cloud Platform Foundation Benchmark|GCP|
+|CIS Azure Kubernetes Service (AKS) Benchmark|Azure|
+|CIS Amazon Elastic Kubernetes Service (EKS) Benchmark|AWS|
+|CIS Google Kubernetes Engine (GKE) Benchmark|GCP|
+|HITRUST CSF v11.3.0  |Azure, AWS, GCP|
+|SOC 2023  |Azure, AWS, GCP|
+|SWIFT Customer Security Controls Framework 2024  |Azure, AWS, GCP|
+|ISO IEC 27001:2022  |Azure, AWS, GCP|
+|ISO IEC 27002:2022  |Azure, AWS, GCP|
+|ISO IEC 27017:2015  |Azure, AWS, GCP|
+|Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0  |Azure, AWS, GCP|
+|AWS Well Architected Framework 2024  |AWS|
+|Canada Federal PBMM 3.2020  |Azure, AWS, GCP|
+|APRA CPS 234 2019  |Azure, AWS|
+|CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
+|Cyber Essentials v3.1  |Azure, AWS, GCP|
+|Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
+|FFIEC CAT 2017  |Azure, AWS, GCP|
+|Brazilian General Data Protection Law (LGPD) 2018  |Azure, AWS, GCP|
+|NZISM v3.7  |Azure, AWS, GCP|
+|Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS, GCP|
+|NCSC Cyber Assurance Framework (CAF) v3.2  |Azure, AWS, GCP|
+|Australian Government ISM Protected|Azure|
+|FedRAMP ‘H’ & ‘M’|Azure|
+|HIPAA|Azure|
+|RMIT Malaysia  |Azure|
+|SOC 2|Azure, GCP|
+|Spanish ENS|Azure|
+|California Consumer Privacy Act (CCPA)|AWS, GCP|
+|UK OFFICIAL and UK NHS              |Azure|
+|AWS Foundational Security Best Practices             |AWS|
+|CRI Profile          |AWS, GCP|
+|NIST SP 800-172|AWS, GCP|
 
 ## Related content
 
