@@ -28,7 +28,7 @@ ms.date: 06/26/2024
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -175,6 +175,10 @@ The **Download file** button can have the following states:
 
 :::image type="content" source="media/atp-download-file-action.png" alt-text="The download file action" lightbox="media/atp-download-file-action.png":::
 
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+
 ### Download quarantined files
 
 Files that were quarantined by Microsoft Defender Antivirus or your security team are saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
@@ -288,7 +292,7 @@ Use the deep analysis feature to investigate the details of any file, usually du
 :::image type="content" source="/defender/media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="/defender/media/defender-endpoint/deep-analysis.png":::
 
 Learn about deep analysis in the following video:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c6c613b8-28dc-40cc-926d-8469472ebdfb]
 
 **Submit for deep analysis** is enabled when the file is available in the Defender for Endpoint backend sample collection, or if it was observed on a Windows 10 device that supports submitting to deep analysis.
 

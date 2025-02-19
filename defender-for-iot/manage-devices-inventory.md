@@ -10,7 +10,7 @@ ms.topic: how-to
 ---
 
 # Discover and manage devices
-<!-- possibly add to h1 in the device inventory-->
+
 Microsoft Defender for IoT in the Microsoft Defender portal includes the device inventory, which helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to discover and manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more.
 
 Learn more about the benefits of OT [device discovery](device-discovery.md).

@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 01/14/2025
 ---
 
 # Auditing
@@ -28,7 +28,7 @@ ms.date: 10/30/2024
 
 As a tenant administrator, you can use Microsoft Purview to search the audit logs for the times Microsoft Defender Experts signed into your tenant and the actions they did there to perform their investigations. You can also search the audit logs for the changes done by your tenant administrators to the Defender Experts settings.
 
-[Audit (Standard)](/microsoft-365/compliance/audit-solutions-overview) is turned on by default for all Microsoft Defender Experts for XDR customers when paid licenses are assigned to the tenant. If you have a trial license, work with your service delivery manager to turn on Audit if it isn't yet.
+Auditing is automatically turned on in the Microsoft Defender portal. Features that are audited are logged in the audit log automatically. Auditing can also collect audit logs from GCC environments.
 
 > [!NOTE]
 > Make sure you have the right [permissions](/microsoft-365/compliance/audit-log-search#before-you-search-the-audit-log) to search for audit logs.
