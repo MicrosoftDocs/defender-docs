@@ -44,7 +44,7 @@ Due to improvements being made to Microsoft Defender for Cloud Apps to improve s
 
 - **EU2**: - 20.0.210.84 - 20.90.9.64
 
-- To stay up to date on IP ranges that impact the experiences in Microsoft Defender for Cloud Apps in the areas of portal experience access, access and session controls, SIEM agent connection, app connectors, mail servers, and log collector, we recommend using the Azure service tag for Microsoft Defender for Cloud Apps services, 'MicrosoftCloudAppSecurity.' The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview).
+- To stay up to date on IP ranges that impact the experiences in Microsoft Defender for Cloud Apps in the areas of portal experience access, access and session controls, SIEM agent connection, app connectors, mail servers, and log collector, we recommend using the Azure service tag for Microsoft Defender for Cloud Apps services, 'MicrosoftCloudAppSecurity.' The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://learn.microsoft.com/azure/virtual-network/service-tags-overview).
 
 ## November 2024
 
