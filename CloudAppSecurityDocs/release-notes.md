@@ -23,9 +23,9 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 Due to improvements being made to Microsoft Defender for Cloud Apps to improve security and performance, you must update network information in your system's firewall and additional third-party services. Make these changes by March 16, 2025 to ensure uninterrupted access to our services:
 
-- Update your firewall rules to allow outbound traffic on port 443 to the following new CDN endpoints before March 16, 2025:
+- Update your firewall rules to allow outbound traffic on port 443 to the following new CDN (Content Delivery Network)  endpoints before March 16, 2025:
 
-     - 'cdn.cloudappsecurity.com
+     - cdn.cloudappsecurity.com
      - cdn-discovery.cloudappsecurity.com
 
 - All required outbound access URLs can also be found in Defender for Cloud Apps network requirements page under 'Portal Access.'
@@ -167,7 +167,7 @@ Use the feedback mechanisms at the top and bottom of each documentation page to 
 
 ### Large scale export of Activity logs (Preview)
 
-A new user experience dedicated to providing users the option to export from “activity log” page up to six months back or up to 100K events.
+A new user experience dedicated to providing users the option to export from 'activity log' page up to six months back or up to 100K events.
 
 You can filter the results using time range and various other filters and even hide private activities.
 
