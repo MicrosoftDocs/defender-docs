@@ -20,13 +20,13 @@ search.appverid: met150
 
 # Guidance for pen testing and breach-and-attack-simulation (BAS) scenarios with Microsoft Defender for Endpoint
 
-This document describes some common challenges that might arise during penetration (pen) testing or using breach and attack simulation (BAS) tools.
+This document describes some common challenges that might arise during penetration testing (pen testing) or using breach and attack simulation (BAS) tools.
 
-## Common challenges during penetration testing
+## Common challenges during pen testing
 
-1. Testing the current configuration of the environment, which might not be the optimal configuration for Microsoft Defender for Endpoint or Microsoft Defender Antivirus.
+- Testing the current configuration of the environment, which might not be the optimal configuration for Microsoft Defender for Endpoint or Microsoft Defender Antivirus.
 
-2. Concern about enabling Microsoft Defender Antivirus (MDAV)'s Cloud Protection, as it might proceed to Cloud Protection detonation if it doesn't find metadata. Review the [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav) for details of MDAV and Cloud Protection.
+- Concern about enabling cloud protection, as it might proceed to cloud protection detonation if it doesn't find metadata. For more information about Microsoft Defender Antivirus and cloud protection, see [hybrid detection and protection](/defender-endpoint/adv-tech-of-mdav).
 
 > [!NOTE]
 > If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that it might not be a true positive (TP) and the non-Microsoft vendor might be having a false positive (FP). Review "How to submit False Negatives (FNs) for investigation" section in this article.
