@@ -3,8 +3,8 @@ title: Threat detection in Microsoft's unified SecOps platform
 description: Learn about the features that help detect and respond to threats in the Microsoft unified SecOps platform, ensuring comprehensive protection.
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: batamig
-author: bagol
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 02/16/2025
 ms.collection:
@@ -12,6 +12,9 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: conceptual
+appliesto:
+  - Microsoft Defender XDR
+  - Microsoft Sentinel in the Microsoft Defender portal
 
 # Customer intent: As a security operations center business decision maker, I want to learn about the tools available to respond to threats automatically in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---
