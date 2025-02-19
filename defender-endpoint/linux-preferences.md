@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 01/13/2025
+ms.date: 02/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -937,7 +937,7 @@ The following configuration profile contains entries for all settings described 
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
-      "offlineDefintionUpdateFallbackToCloud":false,
+      "offlineDefinitionUpdateFallbackToCloud":false,
       "offlineDefinitionUpdate":"disabled"
    },
    "cloudService":{
@@ -956,7 +956,7 @@ The following configuration profile contains entries for all settings described 
         "enableRawSocketEvent":"disabled",
         "enableBootLoaderCalls":"disabled",
         "enableProcessCalls":"disabled",
-        "enablePseudofsCalls":"diabled",
+        "enablePseudofsCalls":"disabled",
         "enableEbpfModuleLoadEvents":"disabled",
         "sendLowfiEvents":"disabled"
       },

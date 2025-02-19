@@ -47,12 +47,12 @@ For information on other tables in the advanced hunting schema, [see the advance
 |-------------|-----------|-------------|
 |`Timestamp` | `datetime`	| Date and time when the record was generated or updated |
 |`BehaviorId` | `string` | Unique identifier for the behavior |
-|`ActionType`|	`string`|Type of behavior. Refer to the catalog of behaviors detected by Microsoft Purview Insider Risk Management |
+|`ActionType`|	`string`|Type of behavior. Refer to the catalog of behaviors detected by Microsoft Purview Insider Risk Management. |
 |`StartTime`|	`datetime`	|Date and time of the first activity related to the behavior|
 |`EndTime`|	`datetime`|	Date and time of the last activity related to the behavior|
 |`AttackTechniques`|	`string`|	MITRE ATT&CK techniques associated with the activity that triggered the behavior. Refer to subtechniques in the insider risk management behavior catalog.|
 |`Categories`|	`string`|	Type of threat indicator or breach activity identified by the behavior|
-|`ActivityType`|	`enum`|	Activity category based on categories in Microsoft Purview Insider Risk Management|
+|`ActionCategory`|	`enum`|	Category of action that triggered the event |
 |`Description`|	`string`|	Description of the behavior|
 |`ServiceSource`|	`string`|	Product or service that identified the behavior|
 |`DetectionSource`|	`string`|	Detection technology or sensor that identified the notable component or activity|
