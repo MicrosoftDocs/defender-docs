@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 12/04/2024
+ms.date: 02/17/2025
 ---
 
 # DeviceInfo
@@ -79,10 +79,17 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AzureResourceId` | `string` | Unique identifier of the Azure resource associated with the device |
 | `AwsResourceName` | `string` | Unique identifier specific to Amazon Web Services devices, containing the Amazon resource name |
 | `GcpFullResourceName` | `string` | Unique identifier specific to Google Cloud Platform devices, containing a combination of zone and ID for GCP|
+| `HardwareUuid` | `string` | Universally Unique Identifier (UUID) of the device's hardware |
+| `CloudPlatforms` | `string` | The cloud platforms that the device belongs to. Can be Azure, Amazon Web Services, Google Cloud Platform and Azure Arc. |
+| `AzureVmId` | `string` | Unique identifier assigned to the device in Azure |
+| `AzureVmSubscriptionId` | `string` | Unique identifier of the Azure subscription associated with the device |
+| `IsTransient` | `boolean` | Indicates whether this device is classified as short-lived or transient based on the frequency of appearance of the device on the network |
+| `OsBuildRevision` | `string` | Build revision number of the operating system running on the machine |
+| `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
+| `Site` | `string` | Represents the physical location where the device is located |
+| `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it. |
 
-
-
-The `DeviceInfo` table provides device information based on periodic reports or signals (heartbeats) from a device. Complete reports are sent every hour and every time a change happens to a previous heartbeat. 
+The DeviceInfo table is updated continuously, and all updates contain the full current device data for that device.
 
 You can use the following sample query to get the latest state of a device:
 
