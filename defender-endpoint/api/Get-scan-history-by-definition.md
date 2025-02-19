@@ -1,6 +1,6 @@
 ---
 title: Get scan history by definition
-description: Learn how to use the get scan history by definition api
+description: Learn how to use the get scan history by definition API
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
@@ -52,7 +52,7 @@ For an example of OData operation usage, see [example $top request](#example-top
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -63,10 +63,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Application|Machine.Read.All| Read all scan information.|
 |Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
-> [!NOTE]
-> When obtaining a token using user credentials:
-> - To view data the user needs to have at least the following role permission: 'ViewData' or 'TvmViewData' (See [Create and manage roles](../user-roles.md) for more information)
-> 
+When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md)).
 
 ## HTTP request
 
