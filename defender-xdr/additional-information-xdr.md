@@ -20,6 +20,8 @@ ms.custom:
 - cx-dex
 search.appverid: met150
 ms.date: 10/30/2024
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Important considerations for Microsoft Defender Experts for XDR

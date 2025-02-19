@@ -50,12 +50,12 @@ Users with access to Security Copilot have access to this capability in advanced
 
 ## Try your first request
 
-1. Open the **advanced hunting** page from the navigation bar in Microsoft Defender XDR. The Security Copilot side pane for advanced hunting appears at the right hand side.
+1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender XDR. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
     :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane-big.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
 
     You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
-1. In the Copilot prompt bar, ask any threat hunting query that you want to run and press :::image type="icon" source="media/Send.png" border="false"::: or **Enter** .
+1. In the Copilot prompt bar, ask any threat hunting query that you want to run and press :::image type="icon" source="media/Send.png" border="false"::: or **Enter**.
 
 
 
