@@ -55,7 +55,7 @@ Permission type|Permission|Permission display name
 Application|Machine.Read.All| Read all scan information.
 Delegated (work or school account)|Machine.Read.All|Read all scan information.
 
-When obtaining a token using user credentials, to view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
+When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 
@@ -81,7 +81,7 @@ If successful, this method returns 200 - OK response code with a list of authent
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 https://api-us.securitycenter.microsoft.com/api/DeviceAuthenticatedScanAgents
@@ -89,7 +89,7 @@ https://api-us.securitycenter.microsoft.com/api/DeviceAuthenticatedScanAgents
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
