@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/14/2024
+ms.date: 01/22/2025
 ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
@@ -34,7 +34,7 @@ search.appverid: met150
 - macOS (See [Network protection for macOS](network-protection-macos.md))
 
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [Network protection](network-protection.md) helps to prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
 
@@ -84,8 +84,8 @@ To enable network protection, you can use one of the following methods:
 
    | Windows Server version | Commands |
    |---|---|
-   | Windows Server 2022 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
-   | Windows Server 2016 <br/>Windows Server 2012 R2 | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
+   | Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
+   | Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
 
 4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 

@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/04/2024
+ms.date: 01/15/2025
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint onboarding issues
@@ -24,12 +24,12 @@ ms.date: 11/04/2024
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+
 - Windows Server 2012 R2
 - Windows Server 2016
 - [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 You might need to troubleshoot the Microsoft Defender for Endpoint onboarding process if you encounter issues.
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.
@@ -299,10 +299,7 @@ If the verification fails and your environment is using a proxy to connect to th
    >   
    > If Microsoft Defender Antivirus is in passive mode, these drivers are set to manual (`0`).
 
-## Troubleshoot onboarding issues 
-
-> [!NOTE]
-> The following troubleshooting guidance is only applicable for Windows Server 2016 and earlier versions of Windows Server.
+## Troubleshoot onboarding issues on Windows Server 2016 and earlier versions of Windows Server.
 
 If you encounter issues while onboarding a server, go through the following verification steps to address possible issues.
 

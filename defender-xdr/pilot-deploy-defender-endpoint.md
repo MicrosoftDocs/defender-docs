@@ -131,7 +131,7 @@ The [Plan deployment](/defender-endpoint/deployment-strategy) topic outlines the
 
 Watch this video for a quick overview of the onboarding process and learn about the available tools and methods.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bGqr]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
 
 ### Onboarding tool options
 

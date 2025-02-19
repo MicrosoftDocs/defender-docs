@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 07/18/2024
+ms.date: 02/10/2025
 ---
 
 # Create and manage custom detections rules
@@ -71,24 +71,28 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 #### Required columns in the query results
 
-To create a custom detection rule, the query must return the following columns:
 
-- `Timestamp`- Used to set the timestamp for generated alerts
-- `ReportId`- Enables lookups for the original records
-- One of the following columns that identify specific devices, users, or mailboxes:
-  - `DeviceId`
-  - `DeviceName`
-  - `RemoteDeviceName`
-  - `RecipientEmailAddress`
-  - `SenderFromAddress` (envelope sender or Return-Path address)
-  - `SenderMailFromAddress` (sender address displayed by email client)
-  - `RecipientObjectId`
-  - `AccountObjectId`
-  - `AccountSid`
-  - `AccountUpn`
-  - `InitiatingProcessAccountSid`
-  - `InitiatingProcessAccountUpn`
-  - `InitiatingProcessAccountObjectId`
+To create a custom detection rule, the query must return the following columns:
+1. `Timestamp` - Used to set the timestamp for generated alerts
+2. A column or combination of columns that uniquely identify the event in Defender XDR tables:
+      - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
+      - For Alert* tables, `Timestamp` must appear in the event
+      - For Observation* tables, `Timestamp`and `ObservationId` must appear in the same event
+      - For all others, `Timestamp` and `ReportId` must appear in the same event
+3. One of the following columns that contain a strong identifier for an impacted asset:
+      - `DeviceId`
+      - `DeviceName`
+      - `RemoteDeviceName`
+      - `RecipientEmailAddress`
+      - `SenderFromAddress` (envelope sender or Return-Path address)
+      - `SenderMailFromAddress` (sender address displayed by email client)
+      - `RecipientObjectId`
+      - `AccountObjectId`
+      - `AccountSid`
+      - `AccountUpn`
+      - `InitiatingProcessAccountSid`
+      - `InitiatingProcessAccountUpn`
+      - `InitiatingProcessAccountObjectId`
 
 > [!NOTE]
 > Support for additional entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
@@ -119,16 +123,16 @@ With the query in the query editor, select **Create detection rule** and specify
 
 - **Detection name** - Name of the detection rule; should be unique
 - **Frequency** -Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
-- **Alert title** - Title displayed with alerts triggered by the rule; should be unique.
+- **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Makrdown, and other code won't work.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
-- **Description** - More information about the component or activity identified by the rule.
+- **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Makrdown, and other code won't work.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
 
 #### Rule frequency
 
-When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback duration based on the frequency you choose:
+When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback period based on the frequency you choose:
 
 - **Every 24 hours** - Runs every 24 hours, checking data from the past 30 days.
 - **Every 12 hours** - Runs every 12 hours, checking data from the past 48 hours.
@@ -137,7 +141,7 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT), see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
 
 > [!TIP]
-> Match the time filters in your query with the lookback duration. Results outside of the lookback duration are ignored.
+> Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
 
 When you edit a rule, it will run with the applied changes in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time.
 

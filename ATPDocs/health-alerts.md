@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 07/09/2024
+ms.date: 01/16/2025
 ms.topic: how-to
 ---
 
@@ -190,6 +190,12 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
+
+### Auditing for AD CS servers is not enabled as required
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Auditing for AD CS servers is not enabled as required. (This configuration is validated once a day, per sensor).|The Advanced Auditing Policy Configuration or AD CS auditing is not enabled as required.|Enable the Advanced Auditing Policy Configuration and AD CS auditing according to the guidance as described in the [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Sensor failed to retrieve Microsoft Entra Connect service configuration
 

@@ -17,7 +17,7 @@ These features enable automatic control over these apps and provide extra app be
 
 Watch this video for a brief explanation of these features:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWWYEm]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d22073a4-555a-413a-8e01-fc0f42d97f6f]
 
 ## App insights
 

@@ -32,7 +32,7 @@ ms.date: 07/25/2023
 
 Microsoft Defender XDR supports streaming events through [Advanced Hunting](advanced-hunting-overview.md) to an [Event Hubs](/azure/event-hubs/) and/or [Azure storage account](/azure/event-hubs/).
 
-For more information on Microsoft Defender XDR streaming API, see the [video](https://www.microsoft.com/en-us/videoplayer/embed/RE4r4ga).
+For more information on Microsoft Defender XDR streaming API, see the [video](https://learn-video.azurefd.net/vod/player?id=56edfb3f-b612-4e4c-acb9-4bbd141bd535).
 
 ## In this section
 
@@ -43,7 +43,7 @@ Topic | Description
 [Supported event types](supported-event-types.md) | Learn which Advanced Hunting event types the Streaming API supports.
 
 Watch this short video to learn how to set up the streaming API to ship event information directly to Azure Event hubs for consumption by visualization services, data processing engines, or Azure storage for long-term data retention.  
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4r4ga]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=56edfb3f-b612-4e4c-acb9-4bbd141bd535]
 
 ## Related topics
 

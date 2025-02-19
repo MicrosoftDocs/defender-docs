@@ -71,6 +71,10 @@ Incident queue management and the responsible personas are described in the foll
 
 ### Manage false positive and false negative detections
 
+> [!TIP]
+> - For a quick overview on how to manage false positives, check out this short video: <https://youtu.be/yuduVj6wvsw>
+> - For a quick overview on how to get started with false negative investigations, check out this short video: <https://youtu.be/sFMAI8MeDKQ>
+
 In Defender for Office 365, you manage false positives (good mail marked as bad) and false negatives (bad mail allowed) in the following locations:
 
 - The [Submissions page (admin submissions)](submissions-admin.md).
@@ -132,6 +136,9 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 |Use **Campaign Views** at <https://security.microsoft.com/campaigns> to review malware and phishing attacks that affect you.|Weekly|Learn about the attacks and techniques and what Defender for Office 365 was able to identify and block. <br/><br/> Use **Download threat report** in Campaign Views for detailed information about a campaign.|Security Operations Team|
 
 ## Ad-hoc activities
+
+> [!TIP]
+> For a quick overview on how to investigate email messages in Microsoft Defender for Office 365, check out this short video: <https://youtu.be/5hA7VfaMvqs>.
 
 ### Manual investigation and removal of email
 
