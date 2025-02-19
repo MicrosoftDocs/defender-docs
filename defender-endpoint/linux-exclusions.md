@@ -328,44 +328,45 @@ The previous command excludes all paths whose parent is `*/var/*`, such as `*/va
 Folder exclusion configured successfully
 ```
 
-- Add an exclusion for a process:
+#### Example 6: Add an exclusion for a process
 
-    ```bash
-    mdatp exclusion process add --path /usr/bin/cat --scope global 
-    ```
+You can add an exclusion for a process.
 
-    ```console
-    Process exclusion configured successfully
-    ```
+```bash
+mdatp exclusion process add --path /usr/bin/cat --scope global 
+```
 
-    ```bash
-    mdatp exclusion process remove --path /usr/bin/cat  --scope global
-    ```
+```console
+Process exclusion configured successfully
+```
+
+```bash
+mdatp exclusion process remove --path /usr/bin/cat  --scope global
+```
     
-   > [!NOTE]
-   > Only full path is supported for setting process exclusion with `global` scope.
-   > Use only `--path` flag
+> [!NOTE]
+> Only full path is supported for setting process exclusion with `global` scope.
+> Use only `--path` flag
 
-    ```console
-    Process exclusion removed successfully
-    ```
+```console
+Process exclusion removed successfully
+```
 
-   ```bash
-    mdatp exclusion process add --name cat --scope epp 
-    ```
+```bash
+mdatp exclusion process add --name cat --scope epp 
+```
 
-    ```console
-    Process exclusion configured successfully
-    ```
+```console
+Process exclusion configured successfully
+```
 
+```bash
+mdatp exclusion process remove --name cat --scope epp
+```
 
-    ```bash
-    mdatp exclusion process remove --name cat --scope epp
-    ```
-
-    ```console
-    Process exclusion removed successfully
-    ```
+```console
+Process exclusion removed successfully
+```
 
 - Add an exclusion for a second process:
 
