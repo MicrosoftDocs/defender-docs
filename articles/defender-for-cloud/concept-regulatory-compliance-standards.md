@@ -70,8 +70,8 @@ The following standards are available in Defender for Cloud:
 
 |Standards|Clouds|
 | -------- | -------- |
-|EU 2022 2555 (NIS2) 2022  |Azure , AWS, GCP|
-|EU General Data Protection Regulation (GDPR) 2016 679  |Azure , AWS, GCP|
+|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
+|EU General Data Protection Regulation (GDPR) 2016 679  |Azure, AWS, GCP|
 |NIST CSF v2.0  |Azure, AWS, GCP|
 |NIST 800 171 Rev3  |Azure, AWS, GCP|
 |NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
@@ -97,7 +97,7 @@ The following standards are available in Defender for Cloud:
 |CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
 |Cyber Essentials v3.1  |Azure, AWS, GCP|
 |Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
-|FFIEC CAT 2017  |Azure, AWS ,GCP|
+|FFIEC CAT 2017  |Azure, AWS, GCP|
 |Brazilian General Data Protection Law (LGPD) 2018  |Azure, AWS, GCP|
 |NZISM v3.7  |Azure, AWS, GCP|
 |Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS, GCP|
