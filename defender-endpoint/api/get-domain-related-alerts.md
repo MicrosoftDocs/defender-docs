@@ -53,9 +53,9 @@ Application|Alert.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account)|Alert.Read|'Read alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 
-When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md))
+When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md)).
 
-A response includes only alerts, associated with devices, that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md))
+A response includes only alerts, associated with devices, that the user has access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
 
 Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
@@ -77,7 +77,7 @@ Empty
 
 ## Response
 
-If successful and domain exists - 200 OK with list of [alert](alerts.md) entities. If domain does not exist - 200 OK with an empty set.
+If successful and domain exists - 200 OK with list of [alert](alerts.md) entities. If domain doesn't exist - 200 OK with an empty set.
 
 ## Example
 
