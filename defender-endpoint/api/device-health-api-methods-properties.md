@@ -67,39 +67,39 @@ Data that is collected using either `JSON response` or by using files is a snaps
 
 ### 1.3 Export device antivirus health details API properties (JSON response)
 
-- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output won't necessarily be returned in the same order listed in this table.
+- The properties defined in the following table are listed alphabetically, by property ID. When you use this API, the resulting output won't necessarily be returned in the same order listed in this table.
 - Note that **rbacgroupname** and **Id** aren't supported filter operators.
 - Some more columns might be returned in the response. These columns can be temporary and might be removed; use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
 | `avEngineUpdateTime` | DateTimeOffset | Datetime when the antivirus engine was last updated on device | "2022-08-04T12:44:02Z" |
-| `avEngineVersion` | String | Antivirus engine version | "1.1.19400.3" |
-| `avIsEngineUpToDate` | String | Up-to-date status of antivirus engine | "True", "False", "Unknown" |
-| `avIsPlatformUpToDate` | String | Up-to-date status of antivirus platform | "True", "False", "Unknown" |
-| `avIsSignatureUpToDate` | String | Up-to-date status of antivirus signature | "True", "False", "Unknown" |
+| `avEngineVersion` | String | Antivirus engine version | `1.1.19400.3` |
+| `avIsEngineUpToDate` | String | Up-to-date status of antivirus engine | `True`, `False`, or `Unknown` |
+| `avIsPlatformUpToDate` | String | Up-to-date status of antivirus platform | `True`, `False`, or `Unknown` |
+| `avIsSignatureUpToDate` | String | Up-to-date status of antivirus signature | `True`, `False`, or `Unknown` |
 | `avMode` | String | Antivirus mode. | Each mode is a string typed integer value ranging from 0 to 5. <br/>`''` = `Other`<br/>`0` = `Active`<br/>`1` = `Passive`<br/>`2` = `Disabled`<br/>`3` = `Other`<br/>`4` = `EDRBlocked`<br/>`5` = `PassiveAudit` |
 | `avPlatformUpdateTime` | DateTimeOffset | Datetime when antivirus platform was last updated on device | "2022-08-04T12:44:02Z" |
-| `avPlatformVersion` | String | Antivirus platform version | "4.18.2203.5" |
+| `avPlatformVersion` | String | Antivirus platform version | `4.18.2203.5` |
 | `avSignaturePublishTime` | DateTimeOffset | Datetime when antivirus security intelligence build was released | "2022-08-04T12:44:02Z" |
 | `avSignatureUpdateTime` | DateTimeOffset | Datetime when antivirus security intelligence was last updated on device | "2022-08-04T12:44:02Z" |
-| `avSignatureVersion` | String | Antivirus security intelligence version | "1.371.1323.0" |
-| `computerDnsName` | String | DNS name | "SampleDns" |
-| `dataRefreshTimestamp` | DateTimeOffset | Datetime when data is refreshed for this report | "2022-08-04T12:44:02Z" |
+| `avSignatureVersion` | String | Antivirus security intelligence version | `1.371.1323.0` |
+| `computerDnsName` | String | DNS name | `SampleDns` |
+| `dataRefreshTimestamp` | DateTimeOffset | Datetime when data is refreshed for this report | `2022-08-04T12:44:02Z` |
 | `fullScanError` | String | Error codes from full scan | "0x80508023" |
-| `fullScanResult` | String | Full scan result of this device | "Completed" <br> "Canceled" <br>"Failed" |
-| `fullScanTime` | DateTimeOffset | Datetime when full scan has completed | "2022-08-04T12:44:02Z" |
-| `id` | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
-| `lastSeenTime` | DateTimeOffset | Last seen datetime of this machine | "2022-08-04T12:44:02Z" |
-| `machineId` | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
-| `osKind` | String | Operating system kind | "windows", "mac", "linux" |
-| `osPlatform` | String | Operating system major version name | Windows 10, macOS |
-| `osVersion` | String | Operating system version | 10.0.18363.1440, 12.4.0.0 |
-| `quickScanError` | String | Error codes from quick scan | "0x80508023" |
-| `quickScanResult` | String | Quick scan result of this device | "Completed" <br>"Canceled" <br>"Failed" |
-| `quickScanTime` | DateTimeOffset | Datetime when quick scan completed | "2022-08-04T12:44:02Z" |
-| `rbacGroupId` | Long | Device group ID that this machine belongs to | 712 |
-| `rbacGroupName` | String | Name of device group that this machine belongs to | "SampleGroup" |
+| `fullScanResult` | String | Full scan result of this device | `Completed`, `Canceled`, or `Failed` |
+| `fullScanTime` | DateTimeOffset | Datetime when full scan has completed | `2022-08-04T12:44:02Z` |
+| `id` | String | Machine GUID | `30a8fa2826abf24d24379b23f8a44d471f00feab` |
+| `lastSeenTime` | DateTimeOffset | Last seen datetime of this machine | `2022-08-04T12:44:02Z` |
+| `machineId` | String | Machine GUID | `30a8fa2826abf24d24379b23f8a44d471f00feab` |
+| `osKind` | String | Operating system kind | `windows`, `mac`, or `linux` |
+| `osPlatform` | String | Operating system major version name | `Windows 10` or `macOS` |
+| `osVersion` | String | Operating system version | `10.0.18363.1440, 12.4.0.0` |
+| `quickScanError` | String | Error codes from quick scan | `0x80508023` |
+| `quickScanResult` | String | Quick scan result of this device | `Completed`, `Canceled`, or `Failed` |
+| `quickScanTime` | DateTimeOffset | Datetime when quick scan completed | `2022-08-04T12:44:02Z` |
+| `rbacGroupId` | Long | Device group ID that this machine belongs to | `712` |
+| `rbacGroupName` | String | Name of device group that this machine belongs to | `SampleGroup` |
 
 ### 1.4 Export device antivirus health details API properties (via files)
 
