@@ -27,7 +27,7 @@ search.appverid: met150
 
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -66,54 +66,52 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 
 ### 1.3 Export device antivirus health details API properties (JSON response)
 
-> [!NOTE]
->
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
-> - Note that **rbacgroupname** and **Id** are not supported filter operators.
-> - Some additional columns might be returned in the response. These columns can be temporary and might be removed; use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output won't necessarily be returned in the same order listed in this table.
+- Note that **rbacgroupname** and **Id** aren't supported filter operators.
+- Some more columns might be returned in the response. These columns can be temporary and might be removed; use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
-| avEngineUpdateTime | DateTimeOffset | Datetime when AV engine was last updated on device | "2022-08-04T12:44:02Z" |
-| avEngineVersion | String | Antivirus engine version | "1.1.19400.3" |
-| avIsEngineUpToDate | String | Up-to-date status of AV engine | "True", "False", "Unknown" |
-| avIsPlatformUpToDate | String | Up-to-date status of AV platform | "True", "False", "Unknown" |
-| avIsSignatureUpToDate | String | Up-to-date status of AV signature | "True", "False", "Unknown" |
-| avMode | String | Antivirus mode. | Each mode will be a string typed integer value ranging from 0 to 5. Refer to the mapping below to see its value's meaning: <ul><li>'' = Other</li><li> '0' = Active</li><li> '1' = Passive</li><li> '2' = Disabled</li><li> '3' = Other</li><li> '4' = EDRBlocked</li><li>'5' = PassiveAudit</li></ul> |
-| avPlatformUpdateTime | DateTimeOffset | Datetime when AV platform was last updated on device | "2022-08-04T12:44:02Z" |
-| avPlatformVersion | String | Antivirus platform version | "4.18.2203.5" |
-| avSignaturePublishTime | DateTimeOffset | Datetime when AV security intelligence build was released | "2022-08-04T12:44:02Z" |
-| avSignatureUpdateTime | DateTimeOffset | Datetime when AV security intelligence was last updated on device | "2022-08-04T12:44:02Z" |
-| avSignatureVersion | String | Antivirus security intelligence version | "1.371.1323.0" |
-| computerDnsName | String | DNS name | "SampleDns" |
-| dataRefreshTimestamp | DateTimeOffset | Datetime when data is refreshed for this report | "2022-08-04T12:44:02Z" |
-| fullScanError | String | Error codes from full scan | "0x80508023" |
-| fullScanResult | String | Full scan result of this device | "Completed" <br> "Canceled" <br>"Failed" |
-| fullScanTime | DateTimeOffset | Datetime when full scan has completed | "2022-08-04T12:44:02Z" |
-| id | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
-| lastSeenTime | DateTimeOffset | Last seen datetime of this machine | "2022-08-04T12:44:02Z" |
-| machineId | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
-| osKind | String | Operating system kind | "windows", "mac", "linux" |
-| osPlatform | String | Operating system major version name | Windows 10, macOs |
-| osVersion | String | Operating system version | 10.0.18363.1440, 12.4.0.0 |
-| quickScanError | String | Error codes from quick scan | "0x80508023" |
-| quickScanResult | String | Quick scan result of this device | "Completed" <br>"Canceled" <br>"Failed" |
-| quickScanTime | DateTimeOffset | Datetime when quick scan has completed | "2022-08-04T12:44:02Z" |
-| rbacGroupId | Long | Device group ID that this machine belongs to | 712 |
-| rbacGroupName | String | Name of device group that this machine belongs to | "SampleGroup" |
+| `avEngineUpdateTime` | DateTimeOffset | Datetime when the antivirus engine was last updated on device | "2022-08-04T12:44:02Z" |
+| `avEngineVersion` | String | Antivirus engine version | "1.1.19400.3" |
+| `avIsEngineUpToDate` | String | Up-to-date status of antivirus engine | "True", "False", "Unknown" |
+| `avIsPlatformUpToDate` | String | Up-to-date status of antivirus platform | "True", "False", "Unknown" |
+| `avIsSignatureUpToDate` | String | Up-to-date status of antivirus signature | "True", "False", "Unknown" |
+| `avMode` | String | Antivirus mode. | Each mode is a string typed integer value ranging from 0 to 5. Refer to the following mapping to see its value's meaning: <br/>'' = Other<br/>'0' = Active<br/>'1' = Passive<br/>'2' = Disabled<br/>'3' = Other<br/>'4' = EDRBlocked<br/>'5' = PassiveAudit |
+| `avPlatformUpdateTime` | DateTimeOffset | Datetime when antivirus platform was last updated on device | "2022-08-04T12:44:02Z" |
+| `avPlatformVersion` | String | Antivirus platform version | "4.18.2203.5" |
+| `avSignaturePublishTime` | DateTimeOffset | Datetime when antivirus security intelligence build was released | "2022-08-04T12:44:02Z" |
+| `avSignatureUpdateTime` | DateTimeOffset | Datetime when antivirus security intelligence was last updated on device | "2022-08-04T12:44:02Z" |
+| `avSignatureVersion` | String | Antivirus security intelligence version | "1.371.1323.0" |
+| `computerDnsName` | String | DNS name | "SampleDns" |
+| `dataRefreshTimestamp` | DateTimeOffset | Datetime when data is refreshed for this report | "2022-08-04T12:44:02Z" |
+| `fullScanError` | String | Error codes from full scan | "0x80508023" |
+| `fullScanResult` | String | Full scan result of this device | "Completed" <br> "Canceled" <br>"Failed" |
+| `fullScanTime` | DateTimeOffset | Datetime when full scan has completed | "2022-08-04T12:44:02Z" |
+| `id` | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
+| `lastSeenTime` | DateTimeOffset | Last seen datetime of this machine | "2022-08-04T12:44:02Z" |
+| `machineId` | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
+| `osKind` | String | Operating system kind | "windows", "mac", "linux" |
+| `osPlatform` | String | Operating system major version name | Windows 10, macOS |
+| `osVersion` | String | Operating system version | 10.0.18363.1440, 12.4.0.0 |
+| `quickScanError` | String | Error codes from quick scan | "0x80508023" |
+| `quickScanResult` | String | Quick scan result of this device | "Completed" <br>"Canceled" <br>"Failed" |
+| `quickScanTime` | DateTimeOffset | Datetime when quick scan completed | "2022-08-04T12:44:02Z" |
+| `rbacGroupId` | Long | Device group ID that this machine belongs to | 712 |
+| `rbacGroupName` | String | Name of device group that this machine belongs to | "SampleGroup" |
 
 ### 1.4 Export device antivirus health details API properties (via files)
 
 > [!IMPORTANT]
-> Information in this section relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Information in this section relates to prereleased product which can be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 > [!NOTE]
 >
 > - The files are gzip compressed & in multiline Json format.
 > - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region that your data resides.
+> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 > - Each record is approximately 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+> - Some more columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
