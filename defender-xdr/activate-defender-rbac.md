@@ -1,6 +1,6 @@
 ---
 title: Activate Microsoft Defender XDR Unified role-based access control (RBAC)
-description: Activate Microsoft Defender XDR Security unified role-based access control(RBAC)
+description: Activate Microsoft Defender XDR unified role-based access control(RBAC) to enforce permissions and assignments configured in your new custom or imported roles.
 ms.service: defender-xdr
 ms.author: diannegali
 author: siosulli
@@ -15,22 +15,21 @@ ms.topic: how-to
 ms.date: 02/16/2025
 ms.reviewer: 
 search.appverid: met150
+appliesto:
+  - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
+  - [Microsoft Defender XDR](microsoft-365-defender.md)
+  - [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
+  - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
+  - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+  - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+  - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
+  - [Microsoft Security Exposure Management](/security-exposure-management/)
+#customer intent: As a security administrator, I want to activate Microsoft Defender XDR Unified RBAC so that I can enforce permissions and assignments configured in my new custom roles or imported roles.
 ---
 
 # Activate Microsoft Defender XDR Unified role-based access control (RBAC)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
-- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
-- [Microsoft Security Exposure Management](/security-exposure-management/)
 
 This article lists the steps to activate Defender workloads available in your environment to use the Microsoft Defender XDR Unified role-based access control (RBAC). Activate the Unified RBAC model for some or all of your workloads for the Microsoft Defender portal to start enforcing the permissions and assignments configured in your new [custom roles](create-custom-rbac-roles.md) or [imported roles](import-rbac-roles.md).
 

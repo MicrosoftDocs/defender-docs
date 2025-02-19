@@ -13,28 +13,26 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: concept
 search.appverid: 
   - MOE150
   - MET150
+appliesto:
+  - Microsoft Defender for Cloud
+  - Microsoft Defender for Cloud Apps
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Identity
+  - Microsoft Defender for IoT
+  - Microsoft Defender for Office 365
+  - Microsoft Defender XDR
+  - Microsoft Security Exposure Management (preview)
+  - Microsoft Sentinel
 ---
 # Custom roles in role-based access control for Microsoft Defender portal services
 
 By default, access to services available in the Microsoft Defender portal are managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service.
 
 For example, create a custom role for Microsoft Defender for Endpoint to manage access to specific Defender for Endpoint data, or create a custom role for Microsoft Defender for Office to manage access to specific email and collaboration data.
-
-**Applies to:**
-
-- Microsoft Defender for Cloud
-- Microsoft Defender for Cloud Apps
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Identity
-- Microsoft Defender for IoT
-- Microsoft Defender for Office 365
-- Microsoft Defender XDR
-- Microsoft Security Exposure Management (preview)
-- Microsoft Sentinel
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 

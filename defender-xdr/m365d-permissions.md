@@ -13,21 +13,19 @@ ms.collection:
 - m365-security
 - tier1
 - essentials-manage
-ms.topic: conceptual
+ms.topic: concept
 search.appverid: 
   - MOE150
   - MET150
 ms.date: 03/04/2024
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Manage access to Microsoft Defender XDR with Microsoft Entra global roles
 
 > [!NOTE]
 > Microsoft Defender XDR users can now take advantage of a centralized permissions management solution to control user access and permissions across different Microsoft security solutions. Learn more about the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

@@ -15,22 +15,20 @@ ms.topic: overview
 ms.date: 02/16/2025
 ms.reviewer: 
 search.appverid: met150
+appliesto:
+   - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
+   - [Microsoft Defender XDR](microsoft-365-defender.md)
+   - [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
+   - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
+   - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+   - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+   - [Microsoft Security Exposure Management](/security-exposure-management/)
+   - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 ---
 
 # Microsoft Defender XDR Unified role-based access control (RBAC)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
-- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Security Exposure Management](/security-exposure-management/)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 

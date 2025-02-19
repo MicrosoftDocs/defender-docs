@@ -15,21 +15,19 @@ ms.topic: how-to
 ms.date: 11/17/2024
 ms.reviewer: 
 search.appverid: met150
+appliesto:
+    - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
+    - [Microsoft Defender XDR](microsoft-365-defender.md)
+    - [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
+    - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
+    - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+    - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+    - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 ---
 
 # Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
-- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 <a name='import-roles-to-microsoft-365-defender-unified-rbac-from-individual-rbac-models'></a>
 
