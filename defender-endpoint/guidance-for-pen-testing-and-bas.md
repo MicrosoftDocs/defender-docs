@@ -37,7 +37,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled in block mode.
 
-- Microsoft Defender Antivirus is running as the primary antivirus, and not in [passive mode.](/defender-endpoint/microsoft-defender-antivirus-compatibility). If you're using non-Microsoft antivirus, we recommend uninstalling it during pen testing.
+- Microsoft Defender Antivirus is running as the primary antivirus, and not in [passive mode](/defender-endpoint/microsoft-defender-antivirus-compatibility). If you're using non-Microsoft antivirus, we recommend uninstalling it during pen testing.
 
 - [Platform update, engine update, and/or Security intelligence updates](/defender-endpoint/microsoft-defender-antivirus-updates) are up to date.
 
