@@ -90,7 +90,7 @@ To navigate to the summary cards for the attack surface reduction rules report
 
 3. Scroll down to **Devices** to find the **Attack surface reduction rules** summary cards. The summary report cards for ASR rules resemble the following image:
 
-   :::image type="content" source="media/attack-surface-reduction-rules-report-summary.png" alt-text="Shows the ASR rules report summary cards" lightbox="media/attack-surface-reduction-rules-report-summary.png":::
+  :::image type="content" source="media/attack-surface-reduction-rules-report-summary.png" alt-text="Shows the ASR rules report summary cards" lightbox="media/attack-surface-reduction-rules-report-summary.png":::
 
 ## ASR rules report summary cards
 
@@ -158,9 +158,9 @@ While the ASR rules report summary cards are useful for getting quick summary of
 
 ### Search capabilities
 
- Search capability is added to **Detection**, **Configuration**, and **Add exclusion** main tabs. With this capability, you can search by using device ID, file name, or process name.
+Search capability is added to **Detection**, **Configuration**, and **Add exclusion** main tabs. With this capability, you can search by using device ID, file name, or process name.
 
->:::image type="content" source="media/attack-surface-reduction-rules-report-main-tabs-search.png" alt-text="Shows the ASR rules report search feature." lightbox="media/attack-surface-reduction-rules-report-main-tabs-search.png":::
+ :::image type="content" source="media/attack-surface-reduction-rules-report-main-tabs-search.png" alt-text="Shows the ASR rules report search feature." lightbox="media/attack-surface-reduction-rules-report-main-tabs-search.png":::
 
 ### Filtering
 
@@ -175,7 +175,7 @@ Filtering provides a way for you to specify what results are returned:
 > [!TIP]
 > As the filter currently functions in this release, every time you want to "group by," you must first scroll down to last detection in the list to load the complete data set. After you have loaded the complete data set, you can then launch the "sort by" filtering. If you don't scroll down to last detection listed on every use or when changing filtering options (for example, the ASR rules applied to the current filter run), then results are incorrect for any result that has more than one viewable page of listed detections.
 
->:::image type="content" source="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png" alt-text="Screenshot that shows the ASR rules report search feature on the configuration tab." lightbox="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png" alt-text="Screenshot that shows the ASR rules report search feature on the configuration tab." lightbox="media/attack-surface-reduction-rules-report-main-tabs-search-configuration-tab.png":::
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/asr-defender365-filter.png" alt-text="Screenshot that shows the attack surface reduction rules detections filter on rules." lightbox="media/asr-defender365-filter.png":::
