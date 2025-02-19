@@ -55,67 +55,41 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Cloud protection network connection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is working.
 
-- [Potentially unwanted apps (PUA)](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) is enabled.
+- [Protection from potentially unwanted apps](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) (PUA) is enabled.
 
-- [Attack Surface Reduction Rules (ASR rules](/defender-endpoint/overview-attack-surface-reduction) are set to block mode.
+- [Attack surface reduction rules](/defender-endpoint/overview-attack-surface-reduction)  (ASR rules) are set to block mode.
 
-- [Network Protection](/defender-endpoint/enable-network-protection) is set to block mode
+- [Network Protection](/defender-endpoint/enable-network-protection) is set to block mode.
 
-- [Controlled Folder Access](/defender-endpoint/enable-controlled-folders) (CFA) is set to block mode
+- [Controlled Folder Access](/defender-endpoint/enable-controlled-folders) (CFA) is set to block mode.
 
-It's important to get the settings correct. To resolve, depending on the management tool that you're using to manage Microsoft Defender Antivirus, review the following articles:
+It's important to get the settings correct. To resolve misconfiguration issues, use the following articles:
 
-#### Windows
+| OS | Management tool | Article |
+|--|--|--|
+| Windows | Microsoft Defender for Endpoint security settings management <br/>(*recommended*) | [Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)](evaluate-mda-using-mde-security-settings-management.md) |
+| Windows | Group Policy | [Evaluate Microsoft Defender Antivirus using Group Policy](evaluate-mdav-using-gp.md)  |
+| Windows | PowerShell | [Evaluate Microsoft Defender Antivirus using PowerShell](microsoft-defender-antivirus-using-powershell.md) |
+| Mac | Jamf (or another tool)  | [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md) |
+| Linux | Configuration profile <br/> Defender for Endpoint security settings management | [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md) |
 
-**(Preferred) Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)**
-
-[https://learn.microsoft.com/defender-endpoint/evaluate-mda-using-mde-security-settings-management](/defender-endpoint/evaluate-mda-using-mde-security-settings-management)
-
-Or
-
-**(Alternative 1) Evaluate Microsoft Defender Antivirus using Group Policy**
-
-[https://learn.microsoft.com/defender-endpoint/evaluate-mdav-using-gp](/defender-endpoint/evaluate-mdav-using-gp)
-
-Or
-
-**(Alternative 2) Evaluate Microsoft Defender Antivirus using PowerShell**
-
-[https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-using-powershell](/defender-endpoint/microsoft-defender-antivirus-using-powershell)
-
-#### macOS
-
-**Intune**
-
-[Set preferences for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-preferences)
-
-**JamF**
-
-[Set preferences for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-preferences)
-
-#### Linux
-
-[Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
-
-## How to submit possible False Negatives (FNs) for investigation
+## How to submit possible false negatives for investigation
 
 ### Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs
 
-#### MDE Client Analyzer log
+#### Use the MDE Client Analyzer log
 
-**Windows**
-
-You can collect using [Live Response](/defender-endpoint/run-analyzer-windows) or [locally](/defender-endpoint/run-analyzer-windows).
-
-**macOS**
-
-You can collect [locally](/defender-endpoint/run-analyzer-macos).
-
-#### Linux
-
-You can collect using [Live Response](/defender-endpoint/run-analyzer-linux) or [locally](/defender-endpoint/run-analyzer-linux).
+| Operating system | What to do |
+|--|--|
+| Windows | You can collect diagnostics logs by using [Live Response](/defender-endpoint/run-analyzer-windows) or [locally](/defender-endpoint/run-analyzer-windows). |
+| Mac | You can collect [locally](/defender-endpoint/run-analyzer-macos). |
+| Linux | You can collect using [Live Response](/defender-endpoint/run-analyzer-linux) or [locally](/defender-endpoint/run-analyzer-linux). |
 
 #### Microsoft Defender Antivirus diagnostic data (MpSupport.cab)
+
+| Operating system | What to do |
+|--|--|
+| Windows | 
 
 **Windows**
 
