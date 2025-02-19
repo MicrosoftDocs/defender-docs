@@ -40,7 +40,7 @@ Retrieves a collection of [Alerts](alerts.md) related to a given domain address.
 ## Limitations
 
 - You can query on alerts last updated according to your configured retention period.
-- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -53,13 +53,11 @@ Application|Alert.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account)|Alert.Read|'Read alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
-> - Response will include only alerts, associated with devices, that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md))
+
+A response includes only alerts, associated with devices, that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md))
+
+Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 
