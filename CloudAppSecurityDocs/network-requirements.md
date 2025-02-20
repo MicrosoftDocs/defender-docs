@@ -38,20 +38,20 @@ To use Defender for Cloud Apps in the Microsoft Defender Portal:
 
 1. Add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
 
-```ini
-cdn.cloudappsecurity.com
-cdn-discovery.cloudappsecurity.com
-adaproddiscovery.azureedge.net
-*.s-microsoft.com
-*.msecnd.net
-dev.virtualearth.net
-flow.microsoft.com
-static2.sharepointonline.com
-*.blob.core.windows.net
-discoveryresources-cdn-prod.cloudappsecurity.com
-discoveryresources-cdn-gov.cloudappsecurity.com
-
-```
+    ```ini
+    cdn.cloudappsecurity.com
+    cdn-discovery.cloudappsecurity.com
+    adaproddiscovery.azureedge.net
+    *.s-microsoft.com
+    *.msecnd.net
+    dev.virtualearth.net
+    flow.microsoft.com
+    static2.sharepointonline.com
+    *.blob.core.windows.net
+    discoveryresources-cdn-prod.cloudappsecurity.com
+    discoveryresources-cdn-gov.cloudappsecurity.com
+    
+    ```
 
 1. Allow the following items based on your data center:
 
