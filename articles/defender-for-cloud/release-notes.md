@@ -31,13 +31,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| February 16 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
+| February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
+| February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
+| February 23 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
 
 ### Data and AI security dashboard (Preview)
 
-February 16, 2025
+February 23, 2025
 
-We are excited to announce the enhancement of our Data security dashboard, now extended to include the Data and AI security dashboard. This new feature in Microsoft Defender for Cloud provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
+Defender for Cloud is announcing the enhanced Data security dashboard, now extended to include the Data and AI security dashboard. This new feature in Microsoft Defender for Cloud provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
 
 Key Benefits:
 
@@ -49,6 +51,70 @@ Key Benefits:
 - **AI workloads**: Discover AI application footprints, including services, containers, data sets, and models.
 
 Learn more about the [Data and AI security dashboard](data-aware-security-dashboard-overview.md).
+### MDC Cost Calculator (Preview)
+
+February 19, 2025
+
+We're excited to introduce our new [MDC Cost Calculator](https://portal.azure.com/#view/Microsoft_Azure_Security/CostEstimator.ReactView) to help you easily estimate the costs associated with protecting your cloud environments. This tool is tailored to provide you with a clear and accurate understanding of your expenses, ensuring you can plan and budget effectively.
+
+**Why Use the Cost Calculator?**
+
+Our cost calculator simplifies the process of estimating costs by allowing you to define the scope of your protection needs. You select the environments and plans you want to enable, and the calculator automatically fills in the billable resources for each plan, including any applicable discounts. You're given a comprehensive view of your potential costs without any surprises.
+
+**Key Features:**
+
+***Scope Definition:*** Select the plans and environments that interest you. The calculator performs a discovery process to automatically populate the number of billable units for each plan per environment.
+
+***Automatic and Manual Adjustments:*** The tool allows for both automatic collection of data and manual adjustments. You can modify the unit quantity and discount levels to see how changes affect the overall cost.
+
+***Comprehensive Cost Estimation:*** The calculator provides an estimate for each plan and a total cost report. You're provided a detailed breakdown of costs, making it easier to understand and manage your expenses.
+
+***Multicloud Support:*** Our solution works for all supported clouds, ensuring that you get accurate cost estimations regardless of your cloud provider.
+
+***Export and Share:*** Once you have your cost estimate, you can easily export and share it for budget planning and approvals.
+
+### 31 new and enhanced multicloud regulatory standards coverage
+
+February 19, 2025
+
+We are excited to announce the enhanced and expanded support of over 31 security and regulatory frameworks in Defender for Cloud across Azure, AWS & GCP. This enhancement simplifies the path to achieving and maintaining compliance, reduces the risk of data breaches, and helps avoid fines and reputational damage.
+
+**The new and enhanced frameworks are**:
+
+|Standards|Clouds|
+| -------- | -------- |
+|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
+|EU General Data Protection Regulation (GDPR) 2016 679  |Azure, AWS, GCP|
+|NIST CSF v2.0  |Azure, AWS, GCP|
+|NIST 800 171 Rev3  |Azure, AWS, GCP|
+|NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
+|PCI DSS v4.0.1  |Azure, AWS, GCP|
+|CIS AWS Foundations v3.0.0  |AWS|
+|CIS Azure Foundations v2.1.0  |Azure|
+|CIS Controls v8.1  |Azure, AWS, GCP|
+|CIS GCP Foundations v3.0  |GCP|
+|HITRUST CSF v11.3.0  |Azure, AWS, GCP|
+|SOC 2023  |Azure, AWS, GCP|
+|SWIFT Customer Security Controls Framework 2024  |Azure, AWS, GCP|
+|ISO IEC 27001:2022  |Azure, AWS, GCP|
+|ISO IEC 27002:2022  |Azure, AWS, GCP|
+|ISO IEC 27017:2015  |Azure, AWS, GCP|
+|Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0  |Azure, AWS, GCP|
+|AWS Well Architected Framework 2024  |AWS|
+|Canada Federal PBMM 3.2020  |Azure, AWS, GCP|
+|APRA CPS 234 2019  |Azure, AWS|
+|CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
+|Cyber Essentials v3.1  |Azure, AWS, GCP|
+|Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
+|FFIEC CAT 2017  |Azure, AWS, GCP|
+|Brazilian General Data Protection Law (LGPD) 2018  |Azure|
+|NZISM v3.7  |Azure, AWS, GCP|
+|Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS|
+|NCSC Cyber Assurance Framework (CAF) v3.2  |Azure, AWS, GCP|
+
+This joins the recent releases of CIS Azure Kubernetes Service (AKS) v1.5, CIS Google Kubernetes Engine (GKE) v1.6, and CIS Amazon Elastic Kubernetes Service (EKS) v.15 from few months ago ([link](/azure/defender-for-cloud/release-notes)).
+
+For more information about Defender for Cloud Regulatory Compliance offering, [Learn more>](/azure/defender-for-cloud/concept-regulatory-compliance-standards)
 
 ## January 2025
 
