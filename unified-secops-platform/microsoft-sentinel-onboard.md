@@ -22,15 +22,14 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 01/08/2025
+ms.date: 02/20/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
 
 Microsoft Sentinel is generally available within Microsoft's unified security operations (SecOps) platform in the Microsoft Defender portal. When you onboard Microsoft Sentinel to the Defender portal with Microsoft Defender XDR, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
 
-- Blog post: [General availability of the Microsoft's unified security operations platform](https://aka.ms/unified-soc-announcement)
-- Blog post: [Frequently asked questions about the unified security operations platform](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/frequently-asked-questions-about-the-unified-security-operations/ba-p/4212048)
+- [What is Microsoft's unified security operations platform?](overview-unified-security.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 - [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
 
@@ -45,14 +44,14 @@ Before you begin, review the feature documentation to understand the product cha
 - [Alerts, incidents, and correlation in Microsoft Defender XDR](/defender-xdr/alerts-incidents-correlation)
 - [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
 
-The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to one workspace at a time. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
+The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to a primary workspace and multiple secondary workspaces. For more information, see ADD LINK. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
 
 ### Microsoft Sentinel prerequisites
 
 To onboard and use Microsoft Sentinel in the Defender portal, you must have the following resources and access:
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
-- The data connector for Microsoft Defender XDR enabled in Microsoft Sentinel for incidents and alerts. Install the Defender XDR solution and configure the data connector to connect Microsoft Sentinel to the Defender portal. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). Within the Defender XDR data connector, the configuration option to connect incident and alerts is turned off and disabled after you onboard Microsoft Sentinel to the Defender portal.
+
 - An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the Defender portal to onboard where you don't have the required permissions. The following table highlights some of the key roles needed.
 
   |Task |Microsoft Entra or Azure built-in role required |Scope  |

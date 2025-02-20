@@ -25,17 +25,21 @@ appliesto:
 
 Multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal provides your security operation teams with a single, unified view of all the tenants you manage. This view enables your teams to quickly investigate incidents and perform advanced hunting across data from multiple tenants, improving your security operations.
 
-If you have tenants with a Microsoft Sentinel workspace onboarded to the Defender portal, you're able to:
+## Microsoft Sentinel support
+
+The Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
+
+If you have tenants with Microsoft Sentinel workspaces onboarded to the Defender portal, you're able to:
 
 - Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data.
 - Proactively search for SIEM and XDR data across multiple tenants.
-
-Only one Microsoft Sentinel workspace per tenant is currently supported in the Defender portal. So in Microsoft Defender multitenant management, you have SIEM data from one Microsoft Sentinel workspace per tenant.
 
 For more information, see:
 
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
+
+## Feature availability
 
 Multitenant management is also available to US government customers. Refer to the table below for specific scenarios for GCC, GCC High, DoD, and Commercial customers.
 
