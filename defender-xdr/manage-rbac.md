@@ -1,9 +1,9 @@
 ---
 title: Microsoft Defender XDR Unified role-based access control (RBAC)
-description: Manage permissions and access to Microsoft Defender XDR Security portal experiences using unified role-based access control (RBAC).
+description: Manage permissions and access to the Microsoft Defender portal experiences using unified role-based access control (RBAC).
 ms.service: defender-xdr
 ms.author: diannegali
-author: siosulli
+author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,9 +12,10 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: overview
-ms.date: 11/17/2024
+ms.date: 02/16/2025
 ms.reviewer: 
 search.appverid: met150
+#customer intent: As a security administrator, I want to manage permissions and access to Microsoft Defender portal experiences using unified role-based access control (RBAC).
 ---
 
 # Microsoft Defender XDR Unified role-based access control (RBAC)
@@ -35,6 +36,11 @@ search.appverid: met150
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
 The Microsoft Defender XDR Unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across different security solutions.
+
+> [!IMPORTANT]
+> Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model.
+>
+> Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
 
 <a name='whats-supported-by-the-microsoft-365-defender-unified-rbac-model'></a>
 
