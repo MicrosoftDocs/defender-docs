@@ -21,7 +21,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## February 2025
 
-### Enhanced Alert source accuracy
+### Enhanced alert source accuracy
 
 Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.   
 The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
