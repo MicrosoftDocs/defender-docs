@@ -35,7 +35,7 @@ To learn more about the Graph API alert resource: [alert resource type - Microso
 
 Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
 
-The following new IP addresses have been added to enable continued connection to third-party apps and Defender for Cloud Apps.
+The following new IP addresses must be added to your firewall's allowlist to enable continued connection to third-party apps and Defender for Cloud Apps.
 
 |Data center|IP addresses|DNS name|
 |----|----|----|
