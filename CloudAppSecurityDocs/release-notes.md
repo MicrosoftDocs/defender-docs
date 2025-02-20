@@ -24,17 +24,20 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### Enhanced alert source accuracy
 
-Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.   
+Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+
 The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
 
-To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
+To learn more about the different alert sources in Defender XDR see the *Alert sources* section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
 
 To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0)
 
 ### Network requirement updates
+
 Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
 
 To connect to third-party apps and enable Defender for Cloud Apps, use the following IP addresses:
+
 |Data center|IP addresses|DNS name|
 |----|----|----|
 |US1|13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
@@ -44,7 +47,6 @@ To connect to third-party apps and enable Defender for Cloud Apps, use the follo
 |EU2|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
 |Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
 |GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
-
 
 For **US Government GCC High** customers:
 
@@ -60,9 +62,9 @@ For **US Government GCC** customers:
 |----|----|----|
 |**Session controls**|US Gov Arizona: 52.235.147.86, 52.126.49.55, 52.126.48.233 <br /><br /> US Gov Virginia: 52.245.225.0, 52.245.224.229, 52.245.224.234, 52.245.224.228, 20.141.230.215, 52.227.10.254, 52.126.48.233, 52.227.3.207 | \*.mcas-gov.ms<br/>\*.admin-mcas-gov.ms|
 |**Access controls** |US Gov Arizona: 52.127.2.97, 52.235.143.220, 52.126.48.233 <br /><br />US Gov Virginia: 52.245.224.235, 52.245.224.227, 52.127.50.130, 52.245.222.168, 52.245.222.172, 52.245.222.180, 52.245.222.209, 52.245.223.38, 52.245.223.72, 52.245.223.177, 52.245.223.181, 52.245.223.182, 52.245.223.190, 23.97.12.140, 52.227.3.207  | \*.access.mcas-gov.ms|
-|**SAML proxy** |US Gov Arizona: 52.126.48.233 <br /> US Gov Virginia: 52.227.216.80, 52.126.48.233, 52.227.3.207 | \*.saml.cloudappsecuritygov.com|
+|**SAML proxy** |US Gov Arizona: 52.126.48.233 <br> US Gov Virginia: 52.227.216.80, 52.126.48.233, 52.227.3.207 | \*.saml.cloudappsecuritygov.com|
 
-For more information, see [Network requirements - Microsoft Defender for Cloud Apps](https://learn.microsoft.com/en-us/defender-cloud-apps/network-requirements#portal-access) 
+For a full list of all the IP Addressess needed, check out [network requirements](network-requirements.md#portal-access).
 
 ## November 2024
 
