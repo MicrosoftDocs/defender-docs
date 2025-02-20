@@ -70,6 +70,8 @@
     - name: Evaluate Microsoft Defender Antivirus
       href: evaluate-microsoft-defender-antivirus.md
       items:
+      - name: Guidance for pen testing and BAS scenarios
+        href: guidance-for-pen-testing-and-bas.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
@@ -265,7 +267,7 @@
             items:
             - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
               href: mde-linux-arm.md
-            - name: Installer script
+            - name: Installer script based deployment
               href: linux-installer-script.md
             - name: Ansible based deployment
               href: linux-install-with-ansible.md
@@ -1538,17 +1540,21 @@
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: /defender-xdr/microsoft-threat-actor-naming
+          href: /unified-secops-platform/microsoft-threat-actor-naming
+
         - name: Malware names
-          href: /defender-xdr/malware-naming
+          href: /unified-secops-platform/malware-naming
+
         - name: How Microsoft identifies malware and PUA
           href: /defender-xdr/criteria
         - name: Submit files for analysis
-          href: /defender-xdr/submission-guide
+          href: /unified-secops-platform/submission-guide
+
         - name: Troubleshoot MSI portal errors caused by admin block
           href: /defender-xdr/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: /defender-xdr/virus-initiative-criteria
+          href: /unified-secops-platform/virus-initiative-criteria
+
         - name: Software developer FAQ
           href: /defender-xdr/developer-faq        
     - name: Malware information

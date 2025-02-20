@@ -11,10 +11,18 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom:
-ms.topic: reference
-ms.date: 11/17/2024
+ms.topic: concept-article
+ms.date: 02/16/2025
 ms.reviewer:
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365 P2
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud
+- Microsoft Defender for Cloud Apps
 ---
 
 # Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
@@ -25,22 +33,17 @@ This article describes how existing roles and permissions in Microsoft Defender 
 
 [!INCLUDE[Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2118804)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/p/?LinkID=2198108)
-- [Microsoft Defender for Office 365 Plan 2](https://go.microsoft.com/fwlink/p/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](https://go.microsoft.com/fwlink/p/?linkid=2229011)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
-
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 <a name='map-microsoft-365-defender-unified-rbac-permissions-to-existing-rbac-permissions'></a>
 
 ## Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions
+
+> [!IMPORTANT]
+> Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model.
+>
+> Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
 
 Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender XDR Unified RBAC roles:
 
