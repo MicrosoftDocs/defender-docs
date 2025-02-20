@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 01/07/2025
+ms.date: 02/11/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -27,7 +27,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 #### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
@@ -60,10 +60,6 @@ Note that if a user connects to a different open Wi-Fi network, an alert is imme
 We're pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
 
 Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
-
-The following screenshot is an example of what the user sees in their dashboard:
-
-:::image type="content" source="media/ios-whatsnew/ios-dashboard.png" alt-text="Screenshot showing the user's dashboard.":::
 
 **Recommendation cards for alerts**:
 

@@ -62,7 +62,7 @@ Microsoft Sentinel connected to the Defender portal enables data collection from
 | Workbooks | Detect threats with visual insights, especially to monitor the health of your data collection and understand gaps that prevent proper threat detection. | [Visualize your data with workbooks](/azure/sentinel/monitor-your-data?tabs=defender-portal) |
 | Summary rules | Optimizes noisy, high volume logs to detect threat in low-security value data. | [Generate alerts on threat intelligence matches against network data](/azure/sentinel/summary-rules#generate-alerts-on-threat-intelligence-matches-against-network-data) |
 
-For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard).
+For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md).
 
 ## Microsoft Defender for Cloud threat detection
 

@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 ms.custom: migrationguides
-ms.date: 09/13/2024
+ms.date: 02/12/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.subservice: onboard
 search.appverid: met150
@@ -52,7 +52,10 @@ To resolve this issue, take the following steps:
 
 ### Set Microsoft Defender Antivirus to passive mode manually
 
-On Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or Windows Server 2012 R2, you must set Microsoft Defender Antivirus to passive mode manually. This action helps prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using PowerShell, Group Policy, or a registry key.
+> [!TIP]
+> If you are planning to keep Microsoft Defender Antivirus in passive mode for your Windows Servers, the `ForceDefenderPassiveMode` setting needs to be set **before** onboarding the device to Microsoft Defender for Endpoint.
+
+On Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or Windows Server 2012 R2, you must set Microsoft Defender Antivirus to passive mode manually. This action helps prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key.
 
 You can set Microsoft Defender Antivirus to passive mode by setting the following registry key:
 
@@ -97,6 +100,6 @@ If you are using a non-Microsoft antivirus/antimalware solution on Windows Serve
 ## See also
 
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
-
 - [Onboarding tools and methods for Windows devices in Defender for Endpoint](onboard-windows-client.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

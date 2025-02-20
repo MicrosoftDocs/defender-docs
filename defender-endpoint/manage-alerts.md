@@ -27,7 +27,7 @@ ms.date: 01/15/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-managealerts-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Defender for Endpoint notifies you of possible malicious events, attributes, and contextual information through alerts. A summary of new alerts is displayed and you can access all alerts in the **Alerts queue**.
 

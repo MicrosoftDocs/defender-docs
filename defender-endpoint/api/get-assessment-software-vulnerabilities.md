@@ -29,7 +29,7 @@ ms.date: 02/11/2025
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 Returns all known software vulnerabilities and their details for all devices, on a per-device basis.
 
@@ -395,7 +395,7 @@ Each returned record contains all the data from the full export software vulnera
 |ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit|
 |FirstSeenTimestamp|String|First time the CVE of this product was seen on the device.|2020-11-03 10:13:34.8476880|
 |ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!|
-|LastSeenTimestamp|String|Last time the CVE was reported on the device.|2020-11-03 10:13:34.8476880|
+|LastSeenTimestamp|String|Last time the software was reported on the device.|2020-11-03 10:13:34.8476880|
 |OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management supported operating systems and platforms for details.|Windows10 and Windows 11|
 |RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."|Servers|
 |RecommendationReference|string|A reference to the recommendation ID related to this software.|va--microsoft--silverlight|
