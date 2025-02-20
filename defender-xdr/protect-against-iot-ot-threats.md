@@ -9,6 +9,8 @@ manager: raynew
 audience: ITPro
 ms.topic: conceptual
 ms.date: 01/20/2024
+
+#Customer intent: As a Defender XDR customer, I want to know what IoT/OT protection is included in my license so that I can better protect my IoT/OT assets.
 ---
 
 # IoT/OT security - protect enterprise IoT and OT assets
@@ -20,7 +22,7 @@ To maintain operational reliability and safety, organizations must use [tailored
 In this article, you learn about IoT/OT security challenges, and how Defender XDR leverages Defender for IoT to detect and monitor enterprise IoT and OT devices.
 
 > [!NOTE]
-> Defender for Endpoint customers can enable enterprise IoT security as part of their license. Learn more about the [Enterprise IoT device protection](#enterprise-iot-device-protection-in-defender-for-endpoint-and-defender-xdr) supported for different licenses.
+> Microsoft E5 and E5 Security customers can enable enterprise IoT security as part of their license. Learn more about the [Enterprise IoT device protection](#enterprise-iot-device-protection-in-defender-for-endpoint-and-defender-xdr) supported for different licenses.
 
 ## Enterprise IoT security challenges
 
@@ -38,17 +40,17 @@ Specifically, enterprise IoT security challenges include:
 
 [Enterprise IoT security](/defender-for-iot/enterprise-iot) in Microsoft Defender for Endpoint and Defender XDR provides IoT-specific security value for IoT devices, including risk and exposure levels, vulnerabilities, and recommendations.
 
-The existing Defender for Endpoint agent runs on enterprise IoT assets and identifies, assesses, and secures them like any other organizational endpoint.
+While monitoring endpoints on the network, the existing Defender for Endpoint agent detects, identifies, assesses, and secures enterprise IoT assets on the monitored endpoints.
 
 This table describes the supported protection for different licenses.
 
 |License  |Device discovery  |Threat detection - managed/unmanaged devices |VM |Security recommendations |How to enable |
 |---------|---------|---------|---------|---------|---------|---------|
 |Microsoft Defender for Endpoint P2     |&#x2705;  |&#x2705; |&#10060; |&#10060; |- [Start with a free trial](/defender-for-iot/enterprise-iot-get-started#set-up-a-standalone-trial-license)- Purchase the [standalone full license](/defender-for-iot/enterprise-iot-get-started#set-up-a-standalone-full-license). |
-|Enterprise IoT add-on device license (add-on to MDE P2)   |&#x2705;  |&#x2705; |&#x2705; |&#10060; |[Enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal)  |
+|Enterprise IoT add-on device license (add-on to MDE P2)   |&#x2705;  |&#x2705; |&#x2705; |&#x2705; |[Enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal)  |
 |E5<sup>1</sup>     |&#x2705;  |&#x2705; |&#x2705; |&#x2705; |[Enable enterprise IoT security](/defender-for-iot/enterprise-iot-get-started#add-enterprise-iot-security-in-the-defender-portal)  |
 
-<sup>1</sup>Includes the MDE P2 license and the enterprise IoT add-on. Each Microsoft Defender for endpoint user license supports five enterprise IoT add-on device licenses. 
+<sup>1</sup>Includes the MDE P2 license and the enterprise IoT add-on. Each E5 user license supports five enterprise IoT add-on device licenses.
 
 ### Supported devices
 
