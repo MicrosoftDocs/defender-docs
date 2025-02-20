@@ -55,7 +55,7 @@ Admins can mark messages and notify users of review results only if the user [re
 
 - You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: _Specify an email address in your domain_. For more information about enabling or disabling access to Exchange Online PowerShell, see the following articles:
   - [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell)
-  - [Client Access Rules in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) ([until October 2023](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-client-access-rules-in-exchange-online/ba-p/3638563))
+  - [Client Access Rules in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) ([until October 2023](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-client-access-rules-in-exchange-online/3638563))
 
 ## Notify users from within the portal
 
