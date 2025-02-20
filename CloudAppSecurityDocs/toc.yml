@@ -296,8 +296,6 @@ items:
       href: activity-filters-queries.md
     - name: Investigate apps discovered by Microsoft Defender for Endpoint
       href: mde-investigation.md
-    - name: Investigate files
-      href: file-filters.md
     - name: Investigate accounts from connected apps
       href: accounts.md
     - name: Investigate OAuth apps
@@ -312,8 +310,6 @@ items:
     items:
     - name: Investigate anomaly detection alerts
       href: investigate-anomaly-alerts.md
-    - name: Investigate risky users
-      href: tutorial-ueba.md
   - name: Respond to threats
     items:
     - name: Governing connected apps

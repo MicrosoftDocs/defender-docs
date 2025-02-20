@@ -11,10 +11,19 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom:
-ms.topic: how-to
-ms.date: 08/03/2023
+ms.topic: concept-article
+ms.date: 11/17/2024
 ms.reviewer:
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365 P2
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud
+- Microsoft Security Exposure Management
+- Microsoft Defender for Cloud Apps
 ---
 
 # Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
@@ -22,16 +31,6 @@ search.appverid: met150
 In Microsoft Defender XDR Unified role-based access control (RBAC) you can select permissions from each permission group to customize a role.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
-- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Security Exposure Management](/security-exposure-management/)
 
 <a name='microsoft-365-defender-unified-rbac-permission-details'></a>
 
