@@ -45,13 +45,12 @@ This article describes how to install, configure, update, and use Defender for E
    - Additionally, devices can be [enrolled](/mem/intune/user-help/enroll-device-android-company-portal) via the Intune Company Portal app to enforce Intune device compliance policies. 
 
 - **For Administrators**:
-   - Access to the Microsoft Defender portal.
+   - Access to the [Microsoft Defender portal](https://security.microsoft.com).
    - Access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to:
       - Deploy the app to enrolled user groups in your organization.
       - Configure Microsoft Defender for Endpoint risk signals in app protection policy.
   
 > [!NOTE]
->
 > - Microsoft Defender for Endpoint now extends protection to organizational data within a managed application (MAM) for devices that aren't enrolled using mobile device management (MDM), but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/mem/intune/apps/mam-faq).
 > - In addition, Microsoft Defender for Endpoint already supports devices that are enrolled using Intune mobile device management (MDM).
 
