@@ -139,7 +139,7 @@ Administrators who understand the power of Edge in-browser protection, can now r
 
 A primary reason is security, since the barrier to circumventing session controls using Edge is much higher than with reverse proxy technology.
 
-For more information see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
+For more information, see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
 
 ### Connect Mural to Defender for Cloud Apps (Preview)
 
