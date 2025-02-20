@@ -57,7 +57,7 @@ The following recommendations were added as Microsoft Secure Score improvement a
  
 **Microsoft Share Point:** 
 
-- Ensure that SharePoint guest users cannot share items they don't own.
+- Ensure that SharePoint guests can't share items they don't own.
 
 ### Defender for Cloud Apps support for multiple instances of an app
 
@@ -67,7 +67,7 @@ For more information, see [Turn on and manage SaaS security posture management (
 
 ## December 2023
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Entra (AAD):**
 
@@ -75,11 +75,11 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 **Microsoft Sway:**
 
-- Ensure that Sways cannot be shared with people outside of your organization.
+- Ensure that Sways can't be shared with people outside of your organization.
 
 **Microsoft Exchange Online:**
 
-- Ensure users installing Outlook add-ins is not allowed.
+- Ensure users installing Outlook add-ins isn't allowed.
 
 **Zendesk:**
 
@@ -87,12 +87,12 @@ The following recommendations have been added as Microsoft Secure Score improvem
 - Send a notification on password change for admins, agents, and end users.
 - Enable IP restrictions.
 - Block customers to bypass IP restrictions.
-- Admins and agents can use the Zendesk Support mobile app.
+- Use the Zendesk Support mobile app (admins and agents).
 - Enable Zendesk authentication.
 - Enable session timeout for users.
 - Block account assumption.
 - Block admins to set passwords.
-- Automatic redaction.
+- Enable automatic redaction.
 
 **Net Document:**
 
