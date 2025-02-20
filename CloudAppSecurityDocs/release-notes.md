@@ -21,6 +21,17 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## February 2025
 
+### Enhanced Alert source accuracy
+
+Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.   
+The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
+
+To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
+
+To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0)
+
+### Network requirement updates
+
 Due to improvements being made to Microsoft Defender for Cloud Apps to improve security and performance, you must update network information in your system's firewall and additional third-party services. Make these changes by March 16, 2025 to ensure uninterrupted access to our services:
 
 - Update your firewall rules to allow outbound traffic on port 443 to the following new CDN (Content Delivery Network)  endpoints before March 16, 2025:
