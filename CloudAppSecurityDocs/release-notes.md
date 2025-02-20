@@ -45,7 +45,7 @@ The following new IP addresses must be added to your firewall's allowlist to ena
 |EU1|20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
 |EU2| 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
 
-New IP addresses for **US Government GCC High** customers:
+#### New IP addresses for **US Government GCC High** customers:
 
 ||IP addresses|DNS name|
 |----|----|----|
@@ -53,7 +53,7 @@ New IP addresses for **US Government GCC High** customers:
 |**Access controls**|US Gov Arizona: 52.235.156.231, 52.235.156.197, 52.235.157.183, 52.235.156.9, 52.235.156.225, 52.235.157.175, 52.235.157.131, 52.235.157.11, 52.126.39.112, 52.235.156.151 <br><br>US Gov Virginia: 13.72.27.216, 13.72.27.215, 52.127.50.130, 52.235.179.123, 52.245.252.18, 52.245.252.131, 52.245.252.191, 52.245.253.12, 52.245.253.58, 52.245.253.229, 52.245.254.39, 52.245.254.51, 52.245.254.212, 52.245.254.245, 52.235.184.112, 52.235.184.112|\*.access.mcas-gov.us<br>\*.access.cloudappsecurity.us|
 |**SAML proxy**|US Gov Arizona: 20.140.49.129, 52.126.55.65<br><br>US Gov Virginia: 52.227.216.80, 52.235.184.112|\*.saml.cloudappsecurity.us|
 
-New IP addresses for **US Government GCC** customers:
+### New IP addresses for **US Government GCC** customers:
 
 ||IP addresses|DNS name|
 |----|----|----|
