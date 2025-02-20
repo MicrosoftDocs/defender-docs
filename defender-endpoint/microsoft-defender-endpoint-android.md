@@ -32,7 +32,7 @@ ms.date: 02/20/2025
 This article describes how to install, configure, update, and use Defender for Endpoint on Android.
 
 > [!CAUTION]
-> Running other third-party endpoint protection products alongside Defender for Endpoint on Android is likely to cause performance problems and unpredictable system errors.
+> Running other non-Microsoft endpoint protection products alongside Defender for Endpoint on Android is likely to cause performance problems and unpredictable system errors.
 
 ## How to install Microsoft Defender for Endpoint on Android
 
@@ -52,12 +52,12 @@ This article describes how to install, configure, update, and use Defender for E
   
 > [!NOTE]
 >
-> - Microsoft Defender for Endpoint now extends protection to an organization's data within a managed application (MAM) for devices that aren't enrolled using mobile device management (MDM), but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/mem/intune/apps/mam-faq).
+> - Microsoft Defender for Endpoint now extends protection to organizational data within a managed application (MAM) for devices that aren't enrolled using mobile device management (MDM), but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/mem/intune/apps/mam-faq).
 > - In addition, Microsoft Defender for Endpoint already supports devices that are enrolled using Intune mobile device management (MDM).
 
 ### Network Requirements
 
-- For Microsoft Defender for Endpoint on Android to function when connected to a network the firewall/proxy will need to be configured to [enable access to Microsoft Defender for Endpoint service URLs](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
+- For Microsoft Defender for Endpoint on Android to function when connected to a network, the firewall/proxy must be configured to [enable access to Microsoft Defender for Endpoint service URLs](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
 ### System Requirements
 
