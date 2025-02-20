@@ -12,8 +12,7 @@ Microsoft Defender for Endpoint customers, who've already onboarded their domain
 This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!IMPORTANT]
-> Information in this article relates to a feature that is currently in limited availablility for a select set of use cases. If you weren't directed to use the Defender for Identity **Activation** page, use our [main deployment guide](deploy-defender-identity.md) instead.
->
+> Information in this article relates to a feature that is currently in limited availability for a select set of use cases. If you weren't directed to use the Defender for Identity **Activation** page, use our [main deployment guide](deploy-defender-identity.md) instead.
 
 ## Prerequisites
 
@@ -122,7 +121,7 @@ In the Defender portal, check for the following details:
 
 - **Device entities**: Select **Assets > Devices**, and select the machine for your new sensor. Defender for Identity events are shown on the device timeline.
 
-- **User entities**. Select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
+- **User entities**: Select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
@@ -192,12 +191,12 @@ Test remediation actions on a test user. For example:
 
 1. In the Defender portal, go to the user details page for a test user.
 
-1. From the options menu, select any of the avialable remediation actions.
+1. From the **Options** menu, select any of the available remediation actions.
 
 1. Check Active Directory for the expected activity.
 
 > [!NOTE]
-> The current version does not collect the User Account Control (UAC) flags correctly. So disabled users, would still appear as Enabled in the portal.
+> The current version doesn't collect the User Account Control (UAC) flags correctly. So disabled users, would still appear as Enabled in the portal.
 
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
