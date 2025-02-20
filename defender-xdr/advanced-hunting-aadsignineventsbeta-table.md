@@ -45,7 +45,7 @@ Use this reference to construct queries that return information from the table. 
 |`ApplicationId`|`string`|Unique identifier for the application|
 |`LogonType`|`string`|Type of logon session, specifically interactive, remote interactive (RDP), network, batch, and service|
 |`ErrorCode`|`int`|Contains the error code if a sign-in error occurs. To find a description of a specific error code, visit <https://aka.ms/AADsigninsErrorCodes>.|
-|`CorrelationId`|`string`|Unique identifier of the sign-in event|
+|`CorrelationId`|`string`|Identifier of the sign-in event|
 |`SessionId`|`string`|Unique number assigned to a user by a website's server for the duration of the visit or session|
 |`AccountDisplayName`|`string`|Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user.|
 |`AccountObjectId`|`string`|Unique identifier for the account in Microsoft Entra ID|
