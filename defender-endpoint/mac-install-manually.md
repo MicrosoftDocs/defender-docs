@@ -2,8 +2,9 @@
 title: Manual deployment for Microsoft Defender for Endpoint on macOS
 description: Install Microsoft Defender for Endpoint on macOS manually, from the command line.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -27,7 +28,7 @@ ms.date: 04/30/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink).
+> Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 This article describes how to deploy Microsoft Defender for Endpoint on macOS manually. A successful deployment requires the completion of all of the following steps:
 
@@ -98,13 +99,13 @@ To complete this process, you must have admin privileges on the device.
 
     :::image type="content" source="media/installation-type.png" alt-text="Screenshot that shows the final installation step.":::
 
-7. Click **Install**.
+7. Select **Install**.
 
 8. Enter the password, when prompted.
 
     :::image type="content" source="media/password-2g.png" alt-text="Screenshot that shows the password dialog box.":::
 
-9. Click **Install Software**.
+9. Select **Install Software**.
 
 10. At the end of the installation process, for macOS Big Sur (11.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
 
@@ -131,37 +132,37 @@ To complete this process, you must have admin privileges on the device.
 The macOS Catalina (10.15) and newer versions require full disk access to be granted to **Microsoft Defender for Endpoint** in order to be able to protect and monitor.
 
 > [!NOTE]
-> Full disk access grant to **Microsoft Defender for Endpoint** is a new requirement for all the third-party software by Apple for files and folders containing personal data.
+> Full disk access grant to **Microsoft Defender for Endpoint** is a new requirement for non-Microsoft software by Apple for files and folders containing personal data.
 
 To grant full disk access:
 
-1. Open **System Preferences** \> **Security & Privacy** \> **Privacy** \> **Full Disk Access**. Click the lock icon to make changes (bottom of the dialog box).
+1. Open **System Preferences** \> **Security & Privacy** \> **Privacy** \> **Full Disk Access**. Select the lock icon to make changes (bottom of the dialog box).
 
-1. Grant **Full Disk Access** permission to **Microsoft Defender** and **Microsoft Defenders Endpoint Security Extension**.
+2. Grant **Full Disk Access** permission to **Microsoft Defender** and **Microsoft Defenders Endpoint Security Extension**.
 
    :::image type="content" source="media/full-disk-access-security-privacy.png" alt-text="The screenshot shows the full disk access's security and privacy.":::
 
-1. Select **General** \> **Restart** for the new system extensions to take effect.
+3. Select **General** \> **Restart** for the new system extensions to take effect.
 
    :::image type="content" source="media/restart-fulldisk.png" alt-text="Screenshot that allows you to restart the system for new system extensions to be enabled.":::
 
-1. Enable *Potentially Unwanted Application* (PUA) in block mode.
+4. Enable *Potentially Unwanted Application* (PUA) in block mode.
 
    To enable PUA, refer [configure PUA protection](mac-pua.md).
 
-1. Enable *Network Protection*.
+5. Enable *Network Protection*.
 
    To enable *Network protection*, refer [manual deployment](network-protection-macos.md).
 
-1. Enable *Device Control*.
+6. Enable *Device Control*.
 
    To enable *Device Control*, refer [device control for macOS](mac-device-control-overview.md).
 
-1. Enable *Tamper Protection* in block mode.
+7. Enable *Tamper Protection* in block mode.
 
-   To enable *Tamper Protection*, refer [Protect MacOS security settings with tamper protection](tamperprotection-macos.md).
+   To enable *Tamper Protection*, refer [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
 
-1. If you have the *Microsoft Purview – Endpoint data loss prevention license*,  you can review [Get started with Microsoft Purview - Endpoint data loss prevention](/purview/endpoint-dlp-getting-started).
+8. If you have the *Microsoft Purview – Endpoint data loss prevention license*,  you can review [Get started with Microsoft Purview - Endpoint data loss prevention](/purview/endpoint-dlp-getting-started).
 
 ## Background execution
 
@@ -170,17 +171,17 @@ macOS will pop a prompt up, telling the user that Microsoft Defender can run in 
 
 :::image type="content" source="media/background-items-notification.png" alt-text="Screenshot that shows background items notification":::
 
-You can view applications permitted to run in background in System Settings => Login Items => Allow in the Background at any time:
+You can view applications permitted to run in background in System Settings => sign in Items => Allow in the Background at any time:
 
 :::image type="content" source="media/background-items.png" alt-text="Screenshot that shows background items":::
 
-Make sure all Microsoft Defender and Microsoft Corporation items are enabled. If they are disabled then macOS will not start Microsoft Defender after a machine restart.
+Make sure all Microsoft Defender and Microsoft Corporation items are enabled. If they are disabled, then macOS won't start Microsoft Defender after a machine restart.
 
 ## Bluetooth permissions
 
 Starting with macOS 14, a user must explicitly allow an application to access Bluetooth.
 macOS will pop a prompt up, telling the user that Microsoft Defender can access Bluetooth (applies only if you use Bluetooth based policies for Device Control).
-Click Allow to grant Microsoft Defender to access Bluetooth.
+Select Allow to grant Microsoft Defender to access Bluetooth.
 
 :::image type="content" source="media/macos-defender-bluetooth.png" alt-text="Screenshot that shows Bluetooth access request":::
 
@@ -190,11 +191,11 @@ You can confirm that permissions are granted in System Settings => Privacy Setti
 
 ## Onboarding Package
 
-Once you have installed the MDE on macOS client, you must now onboard the package, which registers to your Microsoft Defender for Endpoint tenant and licenses it.
+Once you install the MDE on macOS client, you must now onboard the package, which registers to your Microsoft Defender for Endpoint tenant and licenses it.
 
-1. Verify if MDE on macOS has already been onboarded.
+1. Verify if MDE on macOS is onboard.
 
-   Copy *wdav.pkg* and *MicrosoftDefenderATPOnboardingMacOs.sh* to the device where you have deployed Microsoft Defender for Endpoint on macOS.
+   Copy *wdav.pkg* and *MicrosoftDefenderATPOnboardingMacOs.sh* to the device where you deployed Microsoft Defender for Endpoint on macOS.
 
    The client device isn't associated with *org_id*. The *org_id* attribute is blank.
 
@@ -256,7 +257,7 @@ See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove M
 > [!TIP]
 >
 > - Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).
-> - If you have any feedback that you will like to share, submit it by opening Microsoft Defender Endpoint on Mac on your device and navigate to **Help** \> **Send feedback**.
+> - If you have any feedback that you'll like to share, submit it by opening Microsoft Defender Endpoint on Mac on your device and navigate to **Help** \> **Send feedback**.
 
 ## Recommended content
 

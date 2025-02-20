@@ -10,9 +10,15 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
-ms.date: 01/02/2025
+ms.date: 02/19/2025
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender for Business
+#customer intent: As a security administrator, I want to create dynamic rules for devices in asset rule management so that I can automatically assign tags and device values based on certain criteria.
 ---
 
 # Create dynamic rules for devices in asset rule management
@@ -20,18 +26,13 @@ ms.date: 01/02/2025
 > [!IMPORTANT]
 > Some information in this article relates to prereleased products/services that might be substantially modified before they are commercially released. Microsoft makes no warranties, express or implied, for the information provided here.
 
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
+Dynamic rules for devices can help manage device context by assigning tags and device values automatically based on certain criteria, saving time and ensuring accuracy of the device inventory. Dynamic rules also ensure devices remain relevant by removing tags or updating values when criteria are no longer met.
 
 Maintaining an accurate inventory of devices in a constantly changing corporate environment is a critical task for security and IT teams. Failing to effectively manage device context, such as device value and tags, which many organizations use in their security workflows can lead to security vulnerabilities.
 
-Devices may require updates, replacements, or reconfigurations due to changing business needs. This can create a significant challenge for security and IT teams who are responsible for the ongoing management of the device inventory, and ensuring devices are effectively tracked and managed over time.
+Devices might also require updates, replacements, or reconfigurations due to changing business needs. This can create a significant challenge for security and IT teams who are responsible for the ongoing management of the device inventory, and ensuring devices are effectively tracked and managed over time.
 
-Dynamic rules can help manage device context by assigning tags and device values automatically based on certain criteria. This will save time and ensure accuracy. For example, tagging devices with a specific OS version or assigning a value to devices with a particular naming convention. Dynamic rules also ensure devices remain relevant by removing tags or updating values when criteria are no longer met.
+You can create dynamic rules in the **Asset rule management** in the Microsoft Defender portal to help you create steps in managing devices, like tagging devices with a specific OS version or assigning a value to devices with a particular naming convention.
 
 ## Create a new dynamic rule
 

@@ -38,7 +38,7 @@ Threat Explorer or Real-time detections allow you to take the following actions:
 
 Watch this short video to learn how to hunt and investigate email and collaboration-based threats using Defender for Office 365.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWyPRU]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=62857c41-a1ad-41cb-a2b2-5bfe2cb4be77]
 
 > [!TIP]
 > Advanced hunting in Microsoft Defender XDR supports an easy-to-use query builder that doesn't use the Kusto Query Language (KQL). For more information, see [Build queries using guided mode](/defender-xdr/advanced-hunting-query-builder).

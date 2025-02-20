@@ -26,7 +26,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 Microsoft Defender for Endpoint on Android and iOS is our **mobile threat defense solution (MTD)**. Typically, companies are proactive in protecting PCs from vulnerabilities and attack while mobile devices often go unmonitored and unprotected. Where mobile platforms have built-in protection such as app isolation and vetted consumer app stores, these platforms remain vulnerable to web-based or other sophisticated attacks. As more employees use devices for work and to access sensitive information, it's imperative that companies deploy an MTD solution to protect devices and your resources from increasingly sophisticated attacks on mobiles.
 
@@ -54,7 +54,7 @@ Deployment of Microsoft Defender for Endpoint on mobile can be done via Microsof
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMpiC]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c944a31c-0017-4707-a1bc-afff9e2f2e00]
 
 ### Deploy
 
@@ -115,7 +115,7 @@ iOS Dedicated/shared/kiosk device enrollment isn't supported.
 
   <br/>
 
-  > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMwR1]
+  > [!VIDEO https://learn-video.azurefd.net/vod/player?id=eac95cd5-17b0-47ca-8819-41d7d5247af9]
 
 ### Simplify Onboarding
 

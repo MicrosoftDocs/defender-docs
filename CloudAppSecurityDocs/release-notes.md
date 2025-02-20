@@ -19,7 +19,6 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
-
 ## February 2025
 
 ### Enhanced alert source accuracy
@@ -32,6 +31,7 @@ To learn more about the different alert sources in Defender XDR see the _Alert s
 To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0)
 
 ### Network requirement updates
+
 Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
 
 To connect to third-party apps and enable Defender for Cloud Apps, use the following IP addresses:
@@ -67,8 +67,9 @@ For more information, see [Network requirements - Microsoft Defender for Cloud A
 ## November 2024
 
 ### Internal Session Controls application notice
- The Enterprise application “Microsoft Defender for Cloud Apps – Session Controls” is used internally by the Conditional Access App Control service.  
-Please ensure there is no CA policy restricting access to this application. 
+
+The Enterprise application 'Microsoft Defender for Cloud Apps – Session Controls' is used internally by the Conditional Access App Control service.  
+Ensure there's no CA policy restricting access to this application.
 For policies that restrict all or certain applications, please ensure this application is listed as an exception or confirm that the blocking policy is deliberate.  
 
 For more information, see [Sample: Create Microsoft Entra ID Conditional Access policies for use with Defender for Cloud Apps](session-policy-aad.md#sample-create-microsoft-entra-id-conditional-access-policies-for-use-with-defender-for-cloud-apps).
@@ -118,13 +119,13 @@ For more information, see [OAuth app data usage insights on app governance](/def
 ### New anomaly data in advanced hunting CloudAppEvents table
 
 Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal, can now utilize the new *LastSeenForUser* and *UncommonForUser* columns for queries and detections rules.  
-The new columns are designed to assist you to better __identify uncommon activities__ that may appear suspicious, and allow you to create more accurate custom detections, as well as investigate any suspicious activities that arise.
+The new columns are designed to assist you to better __identify uncommon activities__ that may appear suspicious, and allow you to create more accurate custom detections, as well as investigate any suspicious activities that arise.
 
 For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/microsoft-365/security/defender/advanced-hunting-cloudappevents-table).
 
 ### New Conditional Access app control / inline data in advanced hunting CloudAppEvents table
 
-Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal can now use the new *AuditSource* and *SessionData* columns for queries and detection rules.   
+Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal can now use the new *AuditSource* and *SessionData* columns for queries and detection rules.
 Using this data allows for queries that consider specific audit sources, including access and session control, and queries by specific inline sessions.
 
 For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/microsoft-365/security/defender/advanced-hunting-cloudappevents-table).
@@ -145,8 +146,7 @@ Administrators who understand the power of Edge in-browser protection, can now r
 
 A primary reason is security, since the barrier to circumventing session controls using Edge is much higher than with reverse proxy technology.
 
-For more information see: 
-[Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps)
+For more information, see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
 
 ### Connect Mural to Defender for Cloud Apps (Preview)
 
@@ -185,7 +185,7 @@ Use the feedback mechanisms at the top and bottom of each documentation page to 
 
 ### Large scale export of Activity logs (Preview)
 
-A new user experience dedicated to providing users the option to export from “activity log” page up to six months back or up to 100K events.
+A new user experience dedicated to providing users the option to export from 'activity log' page up to six months back or up to 100K events.
 
 You can filter the results using time range and various other filters and even hide private activities.
 
@@ -196,11 +196,12 @@ For more information, see [Export activities six months back](activity-filters-q
 
 Customize the Microsoft Defender for Cloud Apps(MDA) block experience for apps that are blocked using Cloud Discovery.
 
-You can set up a custom redirect URL on block pages 
+You can set up a custom redirect URL on block pages:
+
 - To educate and redirect end users to organization acceptable use policy 
 - To guide end users on steps to follow to secure an exception for block
 
-For more information, see  [Configure custom URL for MDA block pages](mde-govern.md#educate-users-when-accessing-blocked-apps--customize-the-block-page)
+For more information, see [Configure custom URL for MDA block pages](mde-govern.md#educate-users-when-accessing-blocked-apps--customize-the-block-page).
 
 
 ### In-browser protection for macOS users and newly supported policies (Preview)
