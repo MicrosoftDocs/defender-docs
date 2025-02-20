@@ -87,11 +87,11 @@ Wildcard|Description|Examples|
 
 ## How to configure the list of exclusions
 
-You can configure exclusions using a management console, Defender for Endpoint security settings management, or the command line.
+You can configure exclusions using a management Json configuration, Defender for Endpoint security settings management, or the command line.
 
 ### Using the management console
 
-To configure exclusions from Puppet, Ansible, or another management console, please refer to the following sample `mdatp_managed.json`.
+In enterprise environments, exclusions can also be managed through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`. For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md). Please refer to the following sample of `mdatp_managed.json`. 
 
 ```JSON
 {
@@ -138,14 +138,13 @@ To configure exclusions from Puppet, Ansible, or another management console, ple
 }
 ```
 
-For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
-
 ### Using Defender for Endpoint security settings management
 
 > [!NOTE]
+> This method is currently in private Preview. For enabling this feature, please reach out to xplatpreviewsupport@microsoft.com.
 > Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/mem/intune/protect/mde-security-integration#prerequisites)
 
-As a security administrator, you can configure Defender for Endpoint exclusions using the Microsoft Defender portal. This method is referred to as Defender for Endpoint security settings management. If you're using this method for the first time, make sure to complete the following procedures:
+You can use the Microsoft Intune admin center or the Microsoft Defender XDR portal to manage exclusions as endpoint security policies and assign those policies to Microsoft Entra ID groups. If you're using this method for the first time, make sure to complete the following steps:
 
 #### 1. Configure your tenant to support security settings management
 
@@ -155,10 +154,7 @@ As a security administrator, you can configure Defender for Endpoint exclusions 
 
 #### 2. Create a Microsoft Entra group
 
-Create a dynamic Microsoft Entra group that uses the operating system type to ensure that all devices onboarded to Defender for Endpoint receive policies. Using a dynamic group allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information, see the following articles:
-
-- [Create Microsoft Entra Groups](/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups) 
-- [Microsoft Entra groups overview](/entra/fundamentals/concept-learn-about-groups)
+Create a dynamic Microsoft Entra group that uses the operating system type to ensure that all devices onboarded to Defender for Endpoint receive policies. Using a dynamic group allows devices managed by Defender for Endpoint to be automatically added to the group, eliminating the need for admins to create new policies manually. For more information, see the following article: [Create Microsoft Entra Groups](/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups) 
 
 #### 3. Create an endpoint security policy 
 
@@ -166,7 +162,7 @@ Create a dynamic Microsoft Entra group that uses the operating system type to en
 
 2. For Platform, select **Linux**.
 
-3. Select the required exclusion template (**Microsoft defender global exclusion (AV+EDR) for global exclusions and Microsoft defender antivirus exclusions for antivirus exclusions**), and then select **Create policy**.
+3. Select the required exclusion template (`Microsoft defender global exclusions (AV+EDR)` for global exclusions and `Microsoft defender antivirus exclusions` for antivirus exclusions), and then select **Create policy**.
 
 4. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
