@@ -251,7 +251,7 @@ The following Microsoft Defender for Identity recommendations were added as Micr
 - Remove non-admin accounts with DCSync permissions.
 - Start your Defender for Identity deployment, installing Sensors on Domain Controllers and other eligible servers.
 
-The following Google workspace recommendation were added as a Microsoft Secure Score improvement action:
+The following Google workspace recommendations were added as a Microsoft Secure Score improvement action:
 
 - Enable multifactor authentication (MFA)
 
