@@ -34,7 +34,9 @@ To see which data center you're connecting to, do the following steps:
 
 ## Portal access
 
-To use Defender for Cloud Apps in the Microsoft Defender Portal, add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
+To use Defender for Cloud Apps in the Microsoft Defender Portal:
+
+1. Add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
 
 ```ini
 cdn.cloudappsecurity.com
@@ -48,7 +50,7 @@ static2.sharepointonline.com
 *.blob.core.windows.net
 ```
 
-Additionally, the following items should be allowed, depending on which data center you use:
+1. Allow the following items based on your data center:
 
 |Data center|IP addresses|DNS name|
 |----|----|----|
