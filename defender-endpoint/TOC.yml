@@ -27,12 +27,8 @@
         href: linux-whatsnew.md
       - name: What's new in Defender for Endpoint on Android
         href: android-whatsnew.md
-      - name: New user experiences in Defender for Endpoint on Android
-        href: android-new-ux.md
       - name: What's new in Defender for Endpoint on iOS
         href: ios-whatsnew.md
-      - name: New user experiences in Defender for Endpoint on iOS
-        href: ios-new-ux.md
       - name: Previous Defender for Endpoint releases (archive)
         href: whats-new-mde-archive.md
 
@@ -323,6 +319,10 @@
                 href: ios-install-unmanaged.md
             - name: Configure Mobile Threat Defense
               items:
+              - name: New user experiences in Defender for Endpoint on Android
+                href: android-new-ux.md
+              - name: New user experiences in Defender for Endpoint on iOS
+                href: ios-new-ux.md
               - name: Mobile device resources for Defender for Endpoint 
                 href: mobile-resources-defender-endpoint.md
               - name: Configure Defender for Endpoint on Android features
