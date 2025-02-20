@@ -153,7 +153,7 @@ The following recommendations were added as Microsoft Secure Score improvement a
 - Enable strong Password Policies.
 - Enable session time out for web users.
 - Enable Password expiration policies.
-- Atlassian mobile app security - Users that are affected by policies.
+- Atlassian mobile app security - Users who are affected by policies.
 - Atlassian mobile app security - App data protection.
 - Atlassian mobile app security - App access requirement.
 
