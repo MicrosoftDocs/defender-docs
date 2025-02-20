@@ -36,6 +36,7 @@ To learn more about the Graph API alert resource: [alert resource type - Microso
 Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
 
 The following new IP addresses have been added to enable continued connection to third-party apps and Defender for Cloud Apps.
+
 |Data center|IP addresses|DNS name|
 |----|----|----|
 |US1|23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
@@ -45,6 +46,7 @@ The following new IP addresses have been added to enable continued connection to
 |EU2| 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
 
 New IP addresses for **US Government GCC High** customers:
+
 ||IP addresses|DNS name|
 |----|----|----|
 |**Session controls**|US Gov Arizona: 52.244.144.65, 52.244.43.90, 52.244.43.225, 52.244.215.117, 52.235.134.195, 52.126.54.167, 52.126.55.65 <br><br>US Gov Virginia: 13.72.27.223, 13.72.27.219, 13.72.27.220, 13.72.27.222, 20.141.230.137, 52.235.179.167, 52.235.184.112|\*.mcas-gov.us<br/>\*.admin-mcas-gov.us|
@@ -52,6 +54,7 @@ New IP addresses for **US Government GCC High** customers:
 |**SAML proxy**|US Gov Arizona: 20.140.49.129, 52.126.55.65<br><br>US Gov Virginia: 52.227.216.80, 52.235.184.112|\*.saml.cloudappsecurity.us|
 
 New IP addresses for **US Government GCC** customers:
+
 ||IP addresses|DNS name|
 |----|----|----|
 |**Session controls**|US Gov Arizona: 52.235.147.86, 52.126.49.55, 52.126.48.233 <br><br> US Gov Virginia: 52.245.225.0, 52.245.224.229, 52.245.224.234, 52.245.224.228, 20.141.230.215, 52.227.10.254, 52.126.48.233, 52.227.3.207 | \*.mcas-gov.ms<br>\*.admin-mcas-gov.ms|
