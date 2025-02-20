@@ -44,7 +44,7 @@ To customize the device inventory views:
 
 ### OT network tag
 
-When a Defender for Endpoint agent is associated with a site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that these devices are part of the site. This tag helps users assess their OT security perimeter.
+When a Defender for Endpoint agent is associated with a site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that these devices are part of the site. This tag helps users focus on devices that belong to their OT network.
 
 ## Manage OT devices
 
