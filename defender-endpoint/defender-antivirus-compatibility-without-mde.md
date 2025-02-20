@@ -36,6 +36,7 @@ The following table summarizes what to expect:
 |Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|A non-Microsoft antivirus solution|Disabled (set manually; see the note that follows this table)|
 
 > [!NOTE]
+> Defender for Endpoint support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 > On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus. On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See **[Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](/defender-endpoint/enable-update-mdav-to-latest-ws)**.
 
 Check the services and filter drivers for Microsoft Defender Antivirus by using the following command:

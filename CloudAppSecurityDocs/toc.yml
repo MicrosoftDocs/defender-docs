@@ -310,8 +310,6 @@ items:
     items:
     - name: Investigate anomaly detection alerts
       href: investigate-anomaly-alerts.md
-    - name: Investigate risky users
-      href: tutorial-ueba.md
   - name: Respond to threats
     items:
     - name: Governing connected apps

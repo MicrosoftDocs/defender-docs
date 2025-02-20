@@ -38,6 +38,7 @@ To learn more about the services that are part of the Microsoft Defender portal,
 - **[Microsoft Security Copilot embedded experience in the Microsoft Defender portal](security-copilot-in-microsoft-365-defender.md)**
 - **[Microsoft Defender for IoT enterprise monitoring in the Microsoft Defender portal](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint)**
 - **[Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)**
+- **[Microsoft Purview Insider Risk Management alerts in the Microsoft Defender portal](irm-investigate-alerts-defender.md)**
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
@@ -91,7 +92,7 @@ Automated actions are capabilities within Microsoft Defender XDR that help you a
 
 These actions can be reviewed and managed in the [**Action Center**](m365d-action-center.md) page in the Microsoft Defender portal.
 
-You can submit files, email and email attachments, URLs, or Teams messages in the **Submissions** page to Microsoft for further analysis. For more information, see the [Submission guide](submission-guide.md).
+You can submit files, email and email attachments, URLs, or Teams messages in the **Submissions** page to Microsoft for further analysis. For more information, see the [Submission guide](/unified-secops-platform/submission-guide).
 
 ## Threat analytics
 

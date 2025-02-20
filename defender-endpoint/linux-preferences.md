@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 01/13/2025
+ms.date: 02/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -27,7 +27,7 @@ search.appverid: met150
 - Microsoft Defender for Endpoint Server
 - [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 > [!IMPORTANT]
 > This article contains instructions for how to set preferences for Defender for Endpoint on Linux in enterprise environments. If you are interested in configuring the product on a device from the command-line, see [Resources](linux-resources.md#configure-from-the-command-line).
@@ -61,14 +61,14 @@ Specifies the enforcement preference of antivirus engine. There are three values
 - Real-time (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 - On-demand (`on_demand`): Files are scanned only on demand. In this:
   - Real-time protection is turned off.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
 - Passive (`passive`): Runs the antivirus engine in passive mode. In this case, all of the following apply:
   - Real-time protection is turned off: Threats are not remediated by Microsoft Defender Antivirus.
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
   - Automatic threat remediation is turned off: No files are moved and your security administrator is expected to take required action.
   - Security intelligence updates are turned on: Alerts are available in the security administrator's tenant.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
-    
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
+
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|enforcementLevel|Enforcement Level|
@@ -937,7 +937,7 @@ The following configuration profile contains entries for all settings described 
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
-      "offlineDefintionUpdateFallbackToCloud":false,
+      "offlineDefinitionUpdateFallbackToCloud":false,
       "offlineDefinitionUpdate":"disabled"
    },
    "cloudService":{
@@ -956,7 +956,7 @@ The following configuration profile contains entries for all settings described 
         "enableRawSocketEvent":"disabled",
         "enableBootLoaderCalls":"disabled",
         "enableProcessCalls":"disabled",
-        "enablePseudofsCalls":"diabled",
+        "enablePseudofsCalls":"disabled",
         "enableEbpfModuleLoadEvents":"disabled",
         "sendLowfiEvents":"disabled"
       },
@@ -1052,7 +1052,7 @@ When you run the `mdatp health` command for the first time, the value for the ta
 
    > [!NOTE]
    > Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
- 
+
 ## Configuration profile validation
 
 The configuration profile must be a valid JSON-formatted file. There are many tools that can be used to verify this. For example, if you have `python` installed on your device:
@@ -1076,6 +1076,7 @@ To verify that your `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json` is wor
 > [!NOTE]
 > No restart of mdatp daemon is required for changes to _most_ configurations in `mdatp_managed.json` to take effect.
   **Exception:** The following configurations require a daemon restart to take effect:
+>
 > - `cloud-diagnostic`
 > - `log-rotation-parameters`
 

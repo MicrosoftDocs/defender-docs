@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 01/10/2025
+ms.date: 01/13/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -93,6 +93,7 @@ Supported versions of Windows include:
   - Windows Server 2019 core edition
   - Windows Server 2022
   - Windows Server 2022 core edition
+  - Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
 - Azure Virtual Desktop
 - Windows 365 running one of the previously listed operating systems/versions
 
