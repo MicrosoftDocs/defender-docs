@@ -1,22 +1,22 @@
 ---
 title: Overview of Defender for Open-Source Relational Databases
-description: Learn about the benefits and features of Microsoft Defender for open-source relational databases such as PostgreSQL, MySQL, and MariaDB.
+description: Learn about the benefits and features of Microsoft Defender for Open-Source Relational Databases such as PostgreSQL, MySQL, and MariaDB.
 ms.date: 05/01/2024
 ms.topic: overview
 ms.author: dacurwin
 author: dcurwin
-#customer intent: As a reader, I want to understand the purpose and features of Microsoft Defender for open-source relational databases so that I can make informed decisions about its usage.
+#customer intent: As a reader, I want to understand the purpose and features of Microsoft Defender for Open-Source Relational Databases so that I can make informed decisions about its usage.
 ---
 
-# Overview of Microsoft Defender for open-source relational databases
+# Overview of Microsoft Defender for Open-Source Relational Databases
 
-In Microsoft Defender for Cloud, the *Defender for open-source relational databases* plan within Defender for Databases detects anomalous activities that indicate unusual and potentially harmful attempts to access or exploit databases. With this plan, you can address potential threats to databases without the need to be a security expert or manage advanced security-monitoring systems.
+In Microsoft Defender for Cloud, the *Defender for Open-Source Relational Databases* plan within Defender for Databases detects anomalous activities that indicate unusual and potentially harmful attempts to access or exploit databases. With this plan, you can address potential threats to databases without the need to be a security expert or manage advanced security-monitoring systems.
 
 ## Availability
 
-For pricing information about Defender for open-source relational databases, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+For pricing information about Defender for Open-Source Relational Databases, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-Defender for open-source relational databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS). It isn't supported on Azure Arc-enabled machines. For more information about availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md#cloud-support).
+Defender for Open-Source Relational Databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS). It isn't supported on Azure Arc-enabled machines. For more information about availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md#cloud-support).
 
 This plan brings threat protections for the following open-source relational databases on Azure.
 
@@ -61,7 +61,7 @@ When you enable this plan, Defender for Cloud provides alerts when it detects an
 - Recommended actions for how to investigate and mitigate the threat.
 - Options for continuing your investigations by using Microsoft Sentinel.
 
-:::image type="content" source="media/defender-for-databases-introduction/defender-alerts.png" alt-text="Screenshot that shows example multicloud alerts for databases where Microsoft Defender for open-source relational databases is enabled." lightbox="./media/defender-for-databases-introduction/defender-alerts.png":::
+:::image type="content" source="media/defender-for-databases-introduction/defender-alerts.png" alt-text="Screenshot that shows example multicloud alerts for databases where Microsoft Defender for Open-Source Relational Databases is enabled." lightbox="./media/defender-for-databases-introduction/defender-alerts.png":::
 
 ## Alert types
 
