@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 02/19/2025
+ms.date: 02/20/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -43,20 +43,19 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
-### Feb-2025 Build: 101.24122.0008 | Release version: 20.124112.0008.0
+### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
 | Build:             | **101.24122.0008**    |
 | -------- | -------- |
-|Released:| **February 19, 2025**|
-| Released:          | **February 19, 2025** |
-| Published:         | **February 19, 2025** |
+|Released:| **February 20, 2025**|
+| Released:          | **February 20, 2025** |
+| Published:         | **February 20, 2025** |
 | Release version:   | **30.124122.0008.0** |
 | Engine version:    | **1.1.24090.13**   |
 | Signature version: | **1.421.226.0**      |
 
 #### What's new
 
-- Modified the offline definition update logic to first attempt downloading definitions without proxy and then retry with proxy.
 - The MDATP package `101.24122.0008` is rolling out gradually for each distribution.
 - Other stability improvements and bug fixes
 
