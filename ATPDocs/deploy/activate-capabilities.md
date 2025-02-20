@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Activate Microsoft Defender for Identity capabilities directly on a domain controller
 
-Microsoft Defender for Endpoint customers, who've already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using a [Microsoft Defender for Identity sensor](deploy-defender-identity.md).
+Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using a [Microsoft Defender for Identity sensor](deploy-defender-identity.md).
 
 This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
