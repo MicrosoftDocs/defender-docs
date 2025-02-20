@@ -39,18 +39,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 February 23, 2025
 
-Defender for Cloud is announcing the enhanced Data security dashboard, now extended to include the Data and AI security dashboard. This new feature in Microsoft Defender for Cloud provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
+Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in Preview. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
 
-Key Benefits:
+Key Benefits of the Data and AI security dashboard include:
 
-- **Unified view**: Gain a comprehensive view of all organizational data and AI resources in a single pane of glass.
+- **Unified view**: Gain a comprehensive view of all organizational data and AI resources.
 - **Data insights**: Understand where your data is stored and the types of resources holding it.
 - **Protection coverage**: Assess the protection coverage of your data and AI resources.
 - **Critical issues**: Highlight resources that require immediate attention based on high-severity recommendations, alerts, and attack paths.
-- **Sensitive data discovery**: Easily locate and summarize sensitive data resources in your cloud and AI assets.
+- **Sensitive data discovery**: Locate and summarize sensitive data resources in your cloud and AI assets.
 - **AI workloads**: Discover AI application footprints, including services, containers, data sets, and models.
 
 Learn more about the [Data and AI security dashboard](data-aware-security-dashboard-overview.md).
+
 ### MDC Cost Calculator (Preview)
 
 February 19, 2025
