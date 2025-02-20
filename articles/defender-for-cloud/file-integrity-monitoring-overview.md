@@ -4,7 +4,7 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 12/30/2024
+ms.date: 02/19/2025
 ---
 # File integrity monitoring
 
@@ -41,7 +41,6 @@ After enabling Defender for Servers Plan 2, you enable and configure file integr
 - You select a Log Analytics workspace in which to store change events for monitored files/resources. You can use an existing workspace, or define a new one.
 - Defender for Cloud recommends resources to monitor with file integrity monitoring.
 
-
 ## Choose what to monitor
 
 Defender for Cloud recommends entities to monitor with file integrity monitoring. You can choose items from the recommendations. When choosing which files to monitor:
@@ -54,25 +53,25 @@ Defender for Cloud recommends entities to monitor with file integrity monitoring
 
 When using file integrity monitoring with the Defender for Endpoint agent, we recommend monitoring these items with based on known attack patterns.
 
-**Linux file** | **Windows files** | **Windows registry keys (HKEY_LOCAL_MACHINE)**
---- | --- | ---
-/bin | C:\config.sys | HKLM\SOFTWARE\Microsoft\Cryptography\OID\*                        
-/bin/passwd | C:\Windows\regedit.exe  | HKLM\SOFTWARE\WOW6432Node\Microsoft\Cryptography\OID\*            
-/boot | C:\Windows\System32\userinit.exe | **Key**: HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows<br/>**Values**: loadappinit_dlls, appinit_dlls, iconservicelib 
-/etc/*.conf | C:\Windows\explorer.exe | **Key**: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>**Values**: common startup, startup
-/etc/cron.daily | C:\autoexec.bat | **Key**: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders<br/> **Values**: common startup, startup
-/etc/cron.hourly  | C:\boot.ini | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
-/etc/cron.monthly | C:\Windows\system.ini            |HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce 
-/etc/cron.weekly  | C:\Windows\win.ini | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunServicesOnce 
-/etc/crontab |   | **Key**: HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\NT\CurrentVersion\Windows <br/>**Values**: appinit_dlls, loadappinit_dlls 
-/etc/init.d       |   | **Key**: HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders <br/> **Values**: common startup, startup 
-/opt/sbin | | **Key**: HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders <br />**Values**: common startup, startup |
-/sbin  |  | HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run
-/usr/bin |  | HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce 
-/usr/local/bin |  | HKLM\SECURITY\POLICY\SECRETS 
-/usr/local/sbin | |
-/usr/sbin | |
-/opt/bin | |
+| **Linux file**    | **Windows files**                | **Windows registry keys (HKEY_LOCAL_MACHINE)**               |
+| ----------------- | -------------------------------- | ------------------------------------------------------------ |
+| /bin              | C:\config.sys                    | HKLM\SOFTWARE\Microsoft\Cryptography\OID\*                   |
+| /bin/passwd       | C:\Windows\regedit.exe           | HKLM\SOFTWARE\WOW6432Node\Microsoft\Cryptography\OID\*       |
+| /boot             | C:\Windows\System32\userinit.exe | **Key**: HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows<br/>**Values**: loadappinit_dlls, appinit_dlls, iconservicelib |
+| /etc/*.conf       | C:\Windows\explorer.exe          | **Key**: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>**Values**: common startup, startup |
+| /etc/cron.daily   | C:\autoexec.bat                  | **Key**: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders<br/> **Values**: common startup, startup |
+| /etc/cron.hourly  | C:\boot.ini                      | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run           |
+| /etc/cron.monthly | C:\Windows\system.ini            | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce       |
+| /etc/cron.weekly  | C:\Windows\win.ini               | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunServicesOnce |
+| /etc/crontab      |                                  | **Key**: HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\NT\CurrentVersion\Windows <br/>**Values**: appinit_dlls, loadappinit_dlls |
+| /etc/init.d       |                                  | **Key**: HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders <br/> **Values**: common startup, startup |
+| /opt/sbin         |                                  | **Key**: HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders <br />**Values**: common startup, startup |
+| /sbin             |                                  | HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run |
+| /usr/bin          |                                  | HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce |
+| /usr/local/bin    |                                  | HKLM\SECURITY\POLICY\SECRETS                                 |
+| /usr/local/sbin   |                                  |                                                              |
+| /usr/sbin         |                                  |                                                              |
+| /opt/bin          |                                  |                                                              |
 
 ## Next steps
 

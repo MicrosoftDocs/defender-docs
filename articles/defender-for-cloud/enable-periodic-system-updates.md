@@ -4,7 +4,7 @@ description: Learn how to enable system updates on your servers to keep them sec
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 09/08/2024
+ms.date: 02/19/2025
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.
 ---
 
