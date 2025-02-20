@@ -135,7 +135,7 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 ## October 2023:
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Entra (AAD):**
 
@@ -144,14 +144,14 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 **Microsoft Sway:**
 
-- Ensure that Sways cannot be shared with people outside of your organization.
+- Ensure that Sways can't be shared with people outside of your organization.
 
 **Atlassian:**
 
-- Enable multi-factor authentication (MFA).
+- Enable multifactor authentication (MFA).
 - Enable Single Sign On (SSO).
 - Enable strong Password Policies.
-- Enable session timeout for web users.
+- Enable session time out for web users.
 - Enable Password expiration policies.
 - Atlassian mobile app security - Users that are affected by policies.
 - Atlassian mobile app security - App data protection.
@@ -159,7 +159,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 ## September 2023:
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Information Protection:**
 
@@ -188,7 +188,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 ## August 2023
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Information Protection:**
 
