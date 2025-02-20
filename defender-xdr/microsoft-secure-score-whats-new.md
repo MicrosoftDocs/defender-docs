@@ -172,7 +172,7 @@ The following recommendations were added as Microsoft Secure Score improvement a
 - Ensure modern authentication for Exchange Online is enabled.
 - Ensure MailTips are enabled for end users.
 - Ensure mailbox auditing for all users is enabled.
-- Ensure additional storage providers are restricted in Outlook on the web.
+- Ensure other storage providers are restricted in Outlook on the web.
 
 **Microsoft Defender for Cloud Apps:**
 
@@ -184,7 +184,7 @@ The following recommendations were added as Microsoft Secure Score improvement a
 - Ensure all forms of mail forwarding are blocked and/or disabled.
 - Ensure Safe Links for Office Applications is enabled.
 - Ensure Safe Attachments policy is enabled.
-- Ensure that an anti-phishing policy has been created. 
+- Ensure that an anti-phishing policy was created. 
 
 ## August 2023
 
@@ -201,7 +201,7 @@ The following recommendations were added as Microsoft Secure Score improvement a
 - Ensure all forms of mail forwarding are blocked and/or disabled.
 - Ensure MailTips are enabled for end users.
 - Ensure mailbox auditing for all users is enabled.
-- Ensure additional storage providers are restricted in Outlook on the web.
+- Ensure other storage providers are restricted in Outlook on the web.
 
 **Microsoft Entra ID:**
 
@@ -214,7 +214,7 @@ To see the following new Microsoft Entra controls in the Office 365 connector, y
 
 - Ensure Safe Links for Office Applications is enabled.
 - Ensure Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled.
-- Ensure that an anti-phishing policy has been created.
+- Ensure that an anti-phishing policy was created.
 
 To see the following new SharePoint controls in the Office 365 connector, you need to turn on Microsoft Defender for Cloud Apps in the App connectors settings page:
 
