@@ -17,7 +17,7 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 09/29/2024
+ms.date: 02/20/2025
 ---
 
 # Microsoft Secure Score
