@@ -25,7 +25,7 @@ ms.date: 02/19/2024
 
 To make Microsoft Secure Score a better representative of your security posture, we continue to add new features and improvement actions.
 
-The more improvement actions you take, the higher your Secure Score will be. For more information, see [Microsoft Secure Score](microsoft-secure-score.md).
+The more improvement actions you take, the higher your Secure Score is. For more information, see [Microsoft Secure Score](microsoft-secure-score.md).
 
 Microsoft Secure Score can be found at <https://security.microsoft.com/securescore> in the [Microsoft Defender portal](microsoft-365-defender-portal.md).
 
@@ -39,17 +39,17 @@ The following recommendation is added as a Microsoft Secure Score improvement ac
 
 ## January 2024
 
-The following recommendations have been added as Microsoft Secure Score improvement actions: 
+The following recommendations were added as Microsoft Secure Score improvement actions: 
 
 **Microsoft Entra (AAD):**
 
-- Ensure 'Phishing-resistant MFA strength' is required for Administrators. 
+- Ensure "Phishing-resistant MFA strength" is required for Administrators. 
 - Ensure custom banned passwords lists are used. 
-- Ensure 'Windows Azure Service Management API' is limited to administrative roles.
+- Ensure "Windows Azure Service Management API" is limited to administrative roles.
 
 **Admin Center:**
 
-- Ensure 'User owned apps and services' is restricted. 
+- Ensure "User owned apps and services" is restricted. 
 
 **Microsoft Forms:** 
 
@@ -71,7 +71,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 **Microsoft Entra (AAD):**
 
-- Ensure 'Microsoft Azure Management' is limited to administrative roles.
+- Ensure "Microsoft Azure Management" is limited to administrative roles.
 
 **Microsoft Sway:**
 
@@ -139,7 +139,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 **Microsoft Entra (AAD):**
 
-- Ensure 'Phishing-resistant MFA strength' is required for administrators.
+- Ensure "Phishing-resistant MFA strength" is required for administrators.
 - Ensure custom banned passwords lists are used.
 
 **Microsoft Sway:**
@@ -208,7 +208,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 To see the following new Microsoft Entra controls in the Office 365 connector, you need to turn on Microsoft Defender for Cloud Apps in the App connectors settings page:
 
 - Ensure password protection is enabled for on-premises Active Directory.
-- Ensure 'LinkedIn account connections' is disabled.
+- Ensure "LinkedIn account connections" is disabled.
 
 **SharePoint:**
 
@@ -244,7 +244,7 @@ A new data source **Secure Score – Additional data source** is also available.
 
 The following Microsoft Defender for Identity recommendations were added as Microsoft Secure Score improvement actions:
 
-- Remove the attribute 'password never expires' from accounts in your domain.
+- Remove the attribute "password never expires" from accounts in your domain.
 - Remove access rights on suspicious accounts with the Admin SDHolder permission.
 - Manage accounts with passwords more than 180 days old.
 - Remove local admins on identity assets.
@@ -309,7 +309,7 @@ New Microsoft Defender for Office 365 recommendations for anti-phishing policies
 - Quarantine messages that are detected from impersonated users.
 - Quarantine messages that are detected from impersonated domains.
 - Move messages that are detected as impersonated users by mailbox intelligence.
-- Enable the 'show first contact safety tip' option.
+- Enable the "show first contact safety tip" option.
 - Enable the user impersonation safety tip.
 - Enable the domain impersonation safety tip.
 - Enable the user impersonation unusual characters safety tip.
@@ -402,4 +402,5 @@ If you have any issues, let us know by posting in the [Defender XDR community](h
 - [Assess your security posture](microsoft-secure-score-improvement-actions.md)
 - [Track your Microsoft Secure Score history and meet goals](microsoft-secure-score-history-metrics-trends.md)
 - [What's coming](whats-new.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
