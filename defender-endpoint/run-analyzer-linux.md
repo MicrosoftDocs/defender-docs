@@ -51,7 +51,7 @@ If you're experiencing reliability or device health issues with Defender for End
     unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
     ```
 
-3. Change to the tool's directory by entering the following command:
+3. Change the directory:
 
     ```bash
     cd XMDEClientAnalyzerBinary
@@ -62,7 +62,7 @@ If you're experiencing reliability or device health issues with Defender for End
    - **SupportToolLinuxBinary.zip** : For all Linux devices
    - **SupportToolMacOSBinary.zip** : For Mac devices
 
-5. Unzip `SupportToolLinuxBinary.zip` files based on the machine you need to investigate.
+5. Unzip `SupportToolLinuxBinary.zip` file.
 
      ```bash
      unzip -q SupportToolLinuxBinary.zip
@@ -95,13 +95,13 @@ If you're experiencing reliability or device health issues with Defender for End
     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
-3. Extract the contents of XMDEClientAnalyzer.zip on the machine by using the following command:
+3. Extract the contents of XMDEClientAnalyzer.zip on the machine.
 
     ```bash
     unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
     ```
 
-4. Change directory to the extracted location.
+4. Change the directory.
 
     ```bash
     cd XMDEClientAnalyzer
@@ -225,7 +225,7 @@ optional arguments:
 Usage example: `sudo ./MDESupportTool -d`
 
 > [!NOTE]
-> The log level autoreset feature only available in 2405 or newer client version.
+> The log level autoreset feature is available only on agent version 101.24052.0002 or above.
 
 The files generated when using this mode are summarized in the following table:
 
@@ -306,7 +306,7 @@ Collect extensive machine performance tracing of Defender for Endpoint processes
 
 Usage example: `sudo ./MDESupportTool performance --frequency 500`
 
-The files generated when using this mode:
+Below is the file generated when using this mode:
 
 | File  | Remarks |
 | ------ | ------ |
@@ -315,13 +315,15 @@ The files generated when using this mode:
 > [!NOTE]
 > The files corresponding to diagnostic mode are also generated.
 
-The tar files contain files on the format `<pid of a MDE process>.data`.
+The tar contains files in the format `<pid of a MDE process>.data`.
 The data file can be read using the command:
 
-`perf report -i <pid>.data`
+```console
+perf report -i <pid>.data
+```
 
 #### Run connectivity test
-This modes test if the cloud resources needed by Defender for Endpoint are reachable or not.
+This mode tests if the cloud resources needed by Defender for Endpoint are reachable or not.
 
 ```console
 
@@ -332,9 +334,12 @@ This modes test if the cloud resources needed by Defender for Endpoint are reach
 
 ```
 
-Usage example: `sudo ./MDESupportTool connectivitytest -o ~/MicrosoftDefenderATPOnboardingLinuxServer.py`
+Usage example: 
 
-The result is printed in the screen.
+```console
+sudo ./MDESupportTool connectivitytest -o ~/MicrosoftDefenderATPOnboardingLinuxServer.py`
+```
+The output printed on the screen will show if the URLs are reachable or not.
 
 
 #### Collect different installation/onboarding reports
@@ -349,9 +354,12 @@ This mode collects installation related info like distro info, system requiremen
 
 ```
 
-Usage example: `sudo ./MDESupportTool installation --all`
+Usage example: 
+```console
+sudo ./MDESupportTool installation --all
+```
 
-A single report `installation_report.json` is generated. The keys in the file are as:
+A single report `installation_report.json` is generated. The keys in the file are as follows:
 
 | Key  | Remarks |
 | ------------- | ------------- |
@@ -360,7 +368,7 @@ A single report `installation_report.json` is generated. The keys in the file ar
 
 #### Exclude mode
 
-Add exclusions for audit-d monitoring.
+This mode adds exclusions for audit-d monitoring.
 
 ```console
 
@@ -384,11 +392,14 @@ Add exclusions for audit-d monitoring.
 
 ```
 
-Usage example: `sudo ./MDESupportTool exclude -d /var/foo/bar`
+Usage example: 
+```console
+sudo ./MDESupportTool exclude -d /var/foo/bar`
+```
 
 ### AuditD rate limiter
 
-Syntax that can be used to limit the number of events being reported by the auditD plugin. This option sets the rate limit globally for AuditD causing a drop in all the audit events. When the limiter is enabled the number of auditd events are limited to 2500 events/sec. This option can be used in cases where we see high CPU usage from AuditD side.
+This option sets the rate limit globally for AuditD causing a drop in all the audit events. When the limiter is enabled the number of auditd events are limited to 2500 events/sec. This option can be used in cases where we see high CPU usage from AuditD side.
 
 ```console
 
@@ -397,14 +408,17 @@ Syntax that can be used to limit the number of events being reported by the audi
 
 ```
 
-Usage example: `sudo ./mde_support_tool.sh ratelimit -e true`
+Usage example: 
+```console
+sudo ./mde_support_tool.sh ratelimit -e true
+```
 
 > [!NOTE]
-> This functionality should be carefully used as limits the number of events being reported by the auditd subsystem as a whole. This could reduces the number of events for other subscribers as well.
+> This functionality should be carefully used as it limits the number of events being reported by the auditd subsystem as a whole. This could reduce the number of events for other subscribers as well.
 
-### AuditD skips faulty rules
+### AuditD skip faulty rules
 
-This option enables you to skip the faulty rules added in the auditd rules file while loading them. This option allows the auditd subsystem to continue loading rules even if there's a faulty rule. This option summarizes the results of loading the rules. In the background, this option runs the auditctl with the `-c` option.
+This option enables you to skip the faulty rules added in the auditd rules file while loading them. It allows the auditd subsystem to continue loading rules even if there's a faulty rule.
 
 ```console
 
@@ -413,7 +427,10 @@ This option enables you to skip the faulty rules added in the auditd rules file 
 
 ```
 
-Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
+Usage example: 
+```console
+sudo ./mde_support_tool.sh skipfaultyrules -e true
+```
 
 > [!NOTE]
 > This functionality skips faulty rules. Faulty rules must be further identified and fixed.
@@ -448,7 +465,7 @@ The following script performs the first six steps of the [Running the Binary ver
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
    ```bash
-   #! /usr/bin/bash
+   #! /usr/bin/bash 
 
    echo "Starting Client Analyzer Script. Running As:"
    whoami
