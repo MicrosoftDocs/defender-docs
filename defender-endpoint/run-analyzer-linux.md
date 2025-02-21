@@ -33,8 +33,7 @@ If you're experiencing reliability or device health issues with Defender for End
 
 ## Running the binary version of the client analyzer
 
-1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the macOS or Linux machine you need to investigate.\
-If you're using a terminal, download the tool by entering the following command:
+1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
     wget --quiet -O XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
@@ -46,7 +45,7 @@ If you're using a terminal, download the tool by entering the following command:
     echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
-2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. If you're using a terminal, extract the files by entering the following command:
+2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
 
     ```bash
     unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
@@ -63,7 +62,7 @@ If you're using a terminal, download the tool by entering the following command:
    - **SupportToolLinuxBinary.zip** : For all Linux devices
    - **SupportToolMacOSBinary.zip** : For Mac devices
 
-5. Unzip `SupportToolLinuxBinary.zip` files based on the machine you need to investigate. When using a terminal, unzip the file by entering the following command:
+5. Unzip `SupportToolLinuxBinary.zip` files based on the machine you need to investigate.
 
      ```bash
      unzip -q SupportToolLinuxBinary.zip
@@ -84,7 +83,7 @@ If you're using a terminal, download the tool by entering the following command:
 > [!WARNING]
 > Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it's recommended that you install the packages into a user PIP environment.
 
-1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on Linux machine you need to investigate. If you're using a terminal, download the tool by running the following command:
+1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
     wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
@@ -96,7 +95,7 @@ If you're using a terminal, download the tool by entering the following command:
     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
-3. Extract the contents of XMDEClientAnalyzer.zip on the machine. If you're using a terminal, extract the files by using the following command:
+3. Extract the contents of XMDEClientAnalyzer.zip on the machine by using the following command:
 
     ```bash
     unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
@@ -120,15 +119,14 @@ If you're using a terminal, download the tool by entering the following command:
     ./mde_support_tool.sh
     ```
 
-7. To collect actual diagnostic package and generate the result archive file, run again as root.
+7. To collect diagnostic package and generate the result archive file, run again as root.
 
     ```bash
     sudo ./mde_support_tool.sh -d
     ```
 
 ## Command line options
-
-### All command line options
+Below are the command line options provided by client analyzer
 
 ```console
 
@@ -191,8 +189,8 @@ optional arguments:
 
 ### Diagnostics mode
 
-Diagnostics mode is used to collected extensive set of machine information, such as memory, disk, MDATP logs, etc.
-This set of files give us primary set of information required to debug any issue related to MDE.
+Diagnostics mode is used to collect extensive set of machine information, such as memory, disk, MDATP logs, etc.
+This set of files give us primary set of information required to debug any issue related to Defender For Endpoint.
 
 The options supported are as follows:
 
@@ -292,7 +290,8 @@ The files generated when using this mode are summarized in the following table:
 | `top_output.txt `| Process running in the machine when the tool was run |
 | `top_summary.txt` | Memory and CPU usage analytics of the process running |
 
-### Positional arguments
+### Optional argumets for Client Analyzer
+Client Analyzer provides the following optional arguments for extra data collection:
 
 #### Collect performance info
 
@@ -519,7 +518,7 @@ Live response doesn't support running the XMDE Client Analyzer or Python directl
 > [!IMPORTANT]
 > The following scripts assume the XMDE Client Analyzer was installed using the same locations from the scripts mentioned earlier. If your organization has chosen to install the scripts into a different location, then the scripts must be updated to align with your organization's chosen installation location.
 
-#### Binary client analyzer run script
+#### Script to execute the binary client analyzer
 
 The binary version of the client analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during live response, the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
@@ -536,7 +535,7 @@ The binary version of the client analyzer accepts command line parameters to per
 
    ```
 
-#### Python client analyzer run script
+#### Script to execute Python client analyzer
 
 The Python version of the client analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during live response, the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
