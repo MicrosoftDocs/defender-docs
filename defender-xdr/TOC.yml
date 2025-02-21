@@ -55,13 +55,13 @@
     - name: Protect against threats
       items:
       - name: Protect your endpoints
-        href: /defender-endpoint
+        href: /defender-endpoint/microsoft-defender-endpoint?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your identities
-        href: /defender-for-identity
+        href: /defender-for-identity/what-is?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
-        href: /defender-office-365
+        href: /defender-office-365/mdo-about?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your cloud apps
-        href: /defender-cloud-apps
+        href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -132,6 +132,8 @@
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
+        - name: Exclude assets from automated responses
+          href: automatic-attack-disruption-exclusions.md           
       - name: Manage the deception capability
         items:
         - name: Overview
@@ -227,7 +229,11 @@
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
-            href: advanced-hunting-cloudprocessevents-table.md                     
+            href: advanced-hunting-cloudprocessevents-table.md
+          - name: DataSecurityBehaviors
+            href: advanced-hunting-datasecuritybehaviors-table.md  
+          - name: DataSecurityEvents
+            href: advanced-hunting-datasecurityevents-table.md                                               
           - name: DeviceBaselineComplianceAssessment
             href: advanced-hunting-devicebaselinecomplianceassessment-table.md
           - name: DeviceBaselineComplianceAssessmentKB
