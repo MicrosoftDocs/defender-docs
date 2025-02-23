@@ -83,7 +83,7 @@ For more information, see [Triage and investigate incidents with guided response
 
 ## Microsoft Sentinel threat response features
 
-Onboard Microsoft Sentinel to the Defender portal for a unified security operations platform, with cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your threat detection and response capabilities.
+Microsoft Sentinel provides cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your threat detection and response capabilities.
 
 For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard).
 
@@ -93,7 +93,7 @@ Microsoft Sentinel automation rules allow SOC teams to streamline and automate i
 
 :::image type="content" source="media/respond-threats-overview/automation-rule.png" alt-text="Screenshot of a sample automation rule." lightbox="media/respond-threats-overview/automation-rule.png":::
 
-When onboarded to the Defender portal, automation rules with incident triggers apply universally across both Microsoft Sentinel and Microsoft Defender XDR incidents, ensuring cohesive and comprehensive incident management.
+In Microsoft's unified SecOps platform, automation rules with incident triggers apply universally across both Microsoft Sentinel and Microsoft Defender XDR incidents, ensuring cohesive and comprehensive incident management.
 
 For more information, see [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded).
 
