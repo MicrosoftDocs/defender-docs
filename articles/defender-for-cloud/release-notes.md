@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/28/2024
+ms.date: 02/23/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -33,6 +33,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |--|--|--|
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
 | February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
+| February 23 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
+
+### Data and AI security dashboard (Preview)
+
+February 23, 2025
+
+Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in Preview. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
+
+Key Benefits of the Data and AI security dashboard include:
+
+- **Unified view**: Gain a comprehensive view of all organizational data and AI resources.
+- **Data insights**: Understand where your data is stored and the types of resources holding it.
+- **Protection coverage**: Assess the protection coverage of your data and AI resources.
+- **Critical issues**: Highlight resources that require immediate attention based on high-severity recommendations, alerts, and attack paths.
+- **Sensitive data discovery**: Locate and summarize sensitive data resources in your cloud and AI assets.
+- **AI workloads**: Discover AI application footprints, including services, containers, data sets, and models.
+
+Learn more about the [Data and AI security dashboard](data-aware-security-dashboard-overview.md).
 
 ### MDC Cost Calculator (Preview)
 
