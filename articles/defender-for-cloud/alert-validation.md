@@ -53,10 +53,11 @@ After a few minutes, the alerts appear on the security alerts page. They also ap
 
 ## Simulate alerts on your Azure VMs (Windows)
 
-After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps from the machine where you want to be the attacked resource of the alert:
+After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps from the machine where you want to be the attacked resource of the alert.
 
-1. Open an elevated command-line prompt on the device and run the script:
-    1. Go to **Start** and type `cmd`.
+Open an elevated command-line prompt on the device and run the script:
+
+1. Go to **Start** and type `cmd`.
 1. Right-select **Command Prompt** and select **Run as administrator**.
 
     :::image type="content" source="media/alert-validation/command-prompt.png" alt-text="Screenshot showing where to select Run as Administrator." lightbox="media/alert-validation/command-prompt.png":::
@@ -65,7 +66,7 @@ After the Microsoft Defender for Endpoint agent is installed on your machine as 
 1. The Command Prompt window closes automatically. If successful, a new alert should appear in Defender for Cloud Alerts blade in 10 minutes.
 1. The message line in the PowerShell box should appear similar to how it's presented here:
 
-:::image type="content" source="media/alert-validation/powershell-no-exit.png" alt-text="Screenshot showing PowerShell message line." lightbox="media/alert-validation/powershell-no-exit.png":::
+    :::image type="content" source="media/alert-validation/powershell-no-exit.png" alt-text="Screenshot showing PowerShell message line." lightbox="media/alert-validation/powershell-no-exit.png":::
 
 Alternatively, you can use the [EICAR](https://www.eicar.org/download-anti-malware-testfile/) test string to perform this test: Create a text file, paste the EICAR line, and save the file as an executable file to your machine's local drive.
 
@@ -98,9 +99,9 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 1. Once the website is created, access it by using the following URL:
     1. Open the app service resource pane and copy the domain for the URL from the default domain field.
 
-    :::image type="content" source="media/alert-validation/copy-default-domain.png" alt-text="Screenshot showing where to copy the default domain." lightbox="media/alert-validation/copy-default-domain.png":::
+        :::image type="content" source="media/alert-validation/copy-default-domain.png" alt-text="Screenshot showing where to copy the default domain." lightbox="media/alert-validation/copy-default-domain.png":::
 
-1. Copy the website name into the URL: `https://<website-name>.azurewebsites.net/This_Will_Generate_ASC_Alert`.
+    1. Copy the website name into the URL: `https://<website-name>.azurewebsites.net/This_Will_Generate_ASC_Alert`.
 1. An alert is generated within about 1 to 2 hours.
 
 ## Simulate alerts for Storage ATP (Advanced Threat Protection)
