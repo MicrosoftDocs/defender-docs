@@ -26,8 +26,6 @@
           href: prerequisites.md
         - name: Data security and privacy
           href: data-privacy.md
-        - name: Microsoft security portals
-          href: portals.md
     - name: Pilot and deploy Microsoft Defender XDR
       items:
         - name: Overview
@@ -54,30 +52,16 @@
           href: microsoft-365-defender-train-security-staff.md
         - name: Setup guides for Microsoft Defender XDR
           href: deploy-configure-m365-defender.md
-        - name: Turning on Microsoft Defender XDR FAQs
-          href: m365d-enable-faq.md
     - name: Protect against threats
       items:
       - name: Protect your endpoints
-        href: /defender-endpoint
+        href: /defender-endpoint/microsoft-defender-endpoint?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your identities
-        items:
-          - name: Sensor settings and health
-            href: /defender-for-identity/sensor-settings?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Directory Services account
-            href: /defender-for-identity/deploy/directory-service-accounts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: VPN integration
-            href: /defender-for-identity/vpn-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Set entity tags
-            href: /defender-for-identity/entity-tags?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Investigate Defender for Identity alerts
-            href: /defender-for-identity/manage-security-alerts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Configure detection exclusions
-            href: /defender-for-identity/exclusions?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Email and syslog notifications
-            href: /defender-for-identity/notifications?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        href: /defender-for-identity/what-is?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
-        href: /defender-office-365
+        href: /defender-office-365/mdo-about?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Protect your cloud apps
+        href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -104,8 +88,8 @@
         items:
         - name: Incidents
           href: investigate-incidents.md
-        - name: Unlink alerts from incidents
-          href: unlink-alert-from-incident.md
+        - name: Move alerts to another incident
+          href: move-alert-to-another-incident.md
         - name: Alerts
           href: investigate-alerts.md
         - name: Entity pages
@@ -121,7 +105,9 @@
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
           href: dlp-investigate-alerts-sentinel.md
         - name: Investigate and respond to container threats
-          href: investigate-respond-container-threats.md           
+          href: investigate-respond-container-threats.md
+        - name: Investigate insider risk threats
+          href: irm-investigate-alerts-defender.md                         
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
@@ -146,6 +132,8 @@
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
+        - name: Exclude assets from automated responses
+          href: automatic-attack-disruption-exclusions.md           
       - name: Manage the deception capability
         items:
         - name: Overview
@@ -241,7 +229,11 @@
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
-            href: advanced-hunting-cloudprocessevents-table.md                     
+            href: advanced-hunting-cloudprocessevents-table.md
+          - name: DataSecurityBehaviors
+            href: advanced-hunting-datasecuritybehaviors-table.md  
+          - name: DataSecurityEvents
+            href: advanced-hunting-datasecurityevents-table.md                                               
           - name: DeviceBaselineComplianceAssessment
             href: advanced-hunting-devicebaselinecomplianceassessment-table.md
           - name: DeviceBaselineComplianceAssessmentKB
@@ -350,6 +342,8 @@
             href: access-den-graph-api.md
           - name: Ask Defender Experts
             href: experts-on-demand.md
+        - name: Frequently asked questions
+          href: faq-defender-experts-hunting.md    
         - name: Understand Defender Experts for Hunting reports
           href: defender-experts-report.md
       - name: Collaborate with Microsoft Defender Experts for XDR
@@ -428,35 +422,12 @@
           href: integrate-microsoft-365-defender-secops-use-cases.md
         - name: Step 6. SOC maintenance tasks
           href: integrate-microsoft-365-defender-secops-tasks.md
-      - name: Optimize your security operations
-        items:
-        - name: SOC optimization overview
-          display name: SOC optimization
-          href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: Use SOC optimizations programmatically
-          href: /azure/sentinel/soc-optimization/soc-optimization-api?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: SOC optimization reference
-          href: /azure/sentinel/soc-optimization/soc-optimization-reference?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
     - name: Manage multitenant environments
       items:
         - name: Overview
-          href: mto-overview.md
+          href: /unified-secops-platform/mto-overview?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
         - name: Set up multitenant management
-          href: mto-requirements.md
-        - name: View and manage incidents and alerts
-          href: mto-incidents-alerts.md
-        - name: Advanced hunting
-          href: mto-advanced-hunting.md
-        - name: Multitenant devices
-          href: mto-tenant-devices.md
-        - name: Vulnerability management
-          href: mto-dashboard.md
-        - name: Manage tenants
-          href: mto-tenants.md
-        - name: Create and manage endpoint security policies
-          href: mto-endpoint-security-policy.md
-        - name: Manage content distribution with tenant groups
-          href: mto-tenantgroups.md
+          href: /unified-secops-platform/mto-requirements?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
     - name: Manage roles and permissions
       items:
         - name: Manage access and roles in Microsoft Defender XDR
@@ -485,6 +456,8 @@
               href: custom-permissions-details.md
     - name: Reference
       items:
+        - name: Microsoft Defender XDR FAQs
+          href: m365d-enable-faq.md      
         - name: Audit activities and events
           href: microsoft-xdr-auditing.md
         - name: Configure email notifications
@@ -598,17 +571,9 @@
         - name: Responding to ransomware attacks
           href: playbook-responding-ransomware-m365-defender.md
       - name: Threat actor naming
-        href: microsoft-threat-actor-naming.md
-      - name: Malware names
-        href: malware-naming.md
-      - name: How Microsoft identifies malware and PUA
-        href: criteria.md
-      - name: Submit files for analysis
-        href: submission-guide.md
+        href: /unified-secops-platform/microsoft-threat-actor-naming?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
       - name: Understand threat intelligence concepts
         href: /defender-endpoint/threat-indicator-concepts          
-      - name: Microsoft virus initiative
-        href: virus-initiative-criteria.md
       - name: Software developer FAQ
         href: developer-faq.yml                                    
     - name: Microsoft Defender XDR docs

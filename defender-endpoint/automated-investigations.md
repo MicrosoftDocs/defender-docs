@@ -32,7 +32,7 @@ search.appverid: met150
 
 Want to see how it works? Watch the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bOeh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f7299926-ec86-40f6-9188-372304ab80f9]
 
 The technology in automated investigation uses various inspection algorithms and is based on processes that are used by security analysts. AIR capabilities are designed to examine alerts and take immediate action to resolve breaches. AIR capabilities significantly reduce alert volume, allowing security operations to focus on more sophisticated threats and other high-value initiatives. All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). In the Action center, pending actions are approved (or rejected), and completed actions can be undone if needed.
 
