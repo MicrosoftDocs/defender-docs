@@ -340,7 +340,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
 1. Expand the **Configuration** container to show the **Configuration** node, which begins with **"CN=Configuration,DC=..."**.
 
-    :::image type="content" source="../media/cn-configuration.png" alt-text="":::
+    :::image type="content" source="../media/cn-configuration.png" alt-text="Screenshot of selections for opening properties for the CN Configuration node.":::
 
 1. Right-click the **Configuration** node and select **Properties**.
 
