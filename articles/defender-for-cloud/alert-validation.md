@@ -1,5 +1,5 @@
 ---
-title: Alert validation
+title: How to validate alerts
 description: Learn how to validate that your security alerts are correctly configured in Microsoft Defender for Cloud
 ms.topic: how-to
 ms.custom: linux-related-content
@@ -9,11 +9,11 @@ author: dcurwin
 ---
 # Alert validation in Microsoft Defender for Cloud
 
-This document helps you learn how to verify if your system is properly configured for Microsoft Defender for Cloud alerts.
+This article helps you verify if your system is properly configured for Microsoft Defender for Cloud alerts.
 
 ## What are security alerts?
 
-Alerts are the notifications that Defender for Cloud generates when it detects threats on your resources. It prioritizes and lists the alerts along with the information needed to quickly investigate the problem. Defender for Cloud also provides recommendations for how you can remediate an attack.
+Alerts are notifications that Defender for Cloud generates when it detects threats on your resources. It prioritizes and lists the alerts along with the information needed to quickly investigate the problem. Defender for Cloud also provides recommendations for how you can remediate an attack.
 
 For more information, see [Security alerts in Defender for Cloud](alerts-overview.md) and [Managing and responding to security alerts](managing-and-responding-alerts.yml).
 
@@ -27,8 +27,8 @@ If you're using the new preview alerts experience as described in [Manage and re
 
 Use sample alerts to:
 
-- evaluate the value and capabilities of your Microsoft Defender plans.
-- validate any configurations you've made for your security alerts (such as SIEM integrations,  workflow automation, and email notifications).
+- Evaluate the value and capabilities of your Microsoft Defender plans.
+- Validate any configurations you've made for your security alerts (such as SIEM integrations, workflow automation, and email notifications).
 
 To create sample alerts:
 
@@ -43,7 +43,7 @@ To create sample alerts:
 
     :::image type="content" source="media/alert-validation/notification-sample-alerts-creation.png" alt-text="Screenshot showing notification that the sample alerts are being generated." lightbox="media/alert-validation/notification-sample-alerts-creation.png":::
 
-    After a few minutes, the alerts appear in the security alerts page. They also appear anywhere else that you've configured to receive your Microsoft Defender for Cloud security alerts (connected SIEMs, email notifications, and so on).
+After a few minutes, the alerts appear on the security alerts page. They also appear anywhere else that you've configured to receive your Microsoft Defender for Cloud security alerts (connected SIEMs, email notifications, and so on).
 
     :::image type="content" source="media/alert-validation/sample-alerts.png" alt-text="Screenshot showing sample alerts in the security alerts list." lightbox="media/alert-validation/sample-alerts.png":::
 
@@ -52,17 +52,17 @@ To create sample alerts:
 
 ## Simulate alerts on your Azure VMs (Windows) <a name="validate-windows"></a>
 
-After the Microsoft Defender for Endpoint agent is installed on your machine, as part of Defender for Servers integration, follow these steps from the machine where you want to be the attacked resource of the alert:
+After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps from the machine where you want to be the attacked resource of the alert:
 
 1. Open an elevated command-line prompt on the device and run the script:
 
     1. Go to **Start** and type `cmd`.
 
-    1. Right-select **Command Prompt** and select **Run as administrator**
+1. Right-select **Command Prompt** and select **Run as administrator**.
 
     :::image type="content" source="media/alert-validation/command-prompt.png" alt-text="Screenshot showing where to select Run as Administrator." lightbox="media/alert-validation/command-prompt.png":::
 
-1. At the prompt, copy and run the following command: `powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'`
+1. At the prompt, copy and run the following command: `powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\test-MDATP-test\invoice.exe');Start-Process 'C:\test-MDATP-test\invoice.exe'`.
 
 1. The Command Prompt window closes automatically. If successful, a new alert should appear in Defender for Cloud Alerts blade in 10 minutes.
 
