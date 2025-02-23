@@ -2,7 +2,7 @@
 title: Enable threat protection for AI workloads (preview)
 description: Learn how to enable threat protection for AI workloads on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 11/25/2024
+ms.date: 02/05/2025
 ---
 
 # Enable threat protection for AI workloads (preview)
