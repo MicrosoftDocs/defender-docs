@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| February 23 | Preview | [Container registry agnostic agentless vulnerability assessment for AKS runtime containers (Preview)](#mdc-cost-calculator-preview) |
+| February 23 | Preview | [Container registry agnostic agentless vulnerability assessment for AKS runtime containers (Preview)](#container-registry-agnostic-agentless-vulnerability-assessment-for-aks-runtime-containers-preview) |
 | February 23 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
 | February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
