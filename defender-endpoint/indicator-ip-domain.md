@@ -61,7 +61,7 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 
 ## Before you begin
 
-It's important to understand the following prerequisites before creating indicators for IPS, URLs, or domains.
+It's important to understand the following prerequisites before creating indicators for IPs, URLs, or domains.
 
 ### Microsoft Defender Antivirus version requirements
 

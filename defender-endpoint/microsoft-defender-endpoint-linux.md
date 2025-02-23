@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 02/20/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -63,7 +63,8 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   - Red Hat Enterprise Linux 7.2 or higher
   - Red Hat Enterprise Linux 8.x
   - Red Hat Enterprise Linux 9.x
-  - CentOS 7.2 or higher
+  - CentOS 7.2 or higher, excluding CentOS Stream
+    
   - Ubuntu 16.04 LTS 
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
