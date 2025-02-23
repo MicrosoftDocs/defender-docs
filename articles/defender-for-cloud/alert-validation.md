@@ -8,7 +8,7 @@ ms.author: dacurwin
 author: dcurwin
 ---
 
-# Validate Alerts in Microsoft Defender for Cloud
+# Validate alerts in Microsoft Defender for Cloud
 
 This article explains how to validate that your system is properly configured for Microsoft Defender for Cloud alerts, ensuring you can effectively monitor and respond to security threats.
 
@@ -59,7 +59,7 @@ After the Microsoft Defender for Endpoint agent is installed on your machine as 
     1. Go to **Start** and type `cmd`.
 1. Right-select **Command Prompt** and select **Run as administrator**.
 
-:::image type="content" source="media/alert-validation/command-prompt.png" alt-text="Screenshot showing where to select Run as Administrator." lightbox="media/alert-validation/command-prompt.png":::
+    :::image type="content" source="media/alert-validation/command-prompt.png" alt-text="Screenshot showing where to select Run as Administrator." lightbox="media/alert-validation/command-prompt.png":::
 
 1. At the prompt, copy and run the following command: `powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\test-MDATP-test\invoice.exe');Start-Process 'C:\test-MDATP-test\invoice.exe'`.
 1. The Command Prompt window closes automatically. If successful, a new alert should appear in Defender for Cloud Alerts blade in 10 minutes.
@@ -98,7 +98,7 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 1. Once the website is created, access it by using the following URL:
     1. Open the app service resource pane and copy the domain for the URL from the default domain field.
 
-:::image type="content" source="media/alert-validation/copy-default-domain.png" alt-text="Screenshot showing where to copy the default domain." lightbox="media/alert-validation/copy-default-domain.png":::
+    :::image type="content" source="media/alert-validation/copy-default-domain.png" alt-text="Screenshot showing where to copy the default domain." lightbox="media/alert-validation/copy-default-domain.png":::
 
 1. Copy the website name into the URL: `https://<website-name>.azurewebsites.net/This_Will_Generate_ASC_Alert`.
 1. An alert is generated within about 1 to 2 hours.
@@ -108,12 +108,12 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 1. Navigate to a storage account that has Azure Defender for Storage enabled.
 1. Select the **Containers** tab in the sidebar.
 
-:::image type="content" source="media/alert-validation/storage-atp-navigate-container.png" alt-text="Screenshot showing where to navigate to select a container." lightbox="media/alert-validation/storage-atp-navigate-container.png":::
+    :::image type="content" source="media/alert-validation/storage-atp-navigate-container.png" alt-text="Screenshot showing where to navigate to select a container." lightbox="media/alert-validation/storage-atp-navigate-container.png":::
 
 1. Navigate to an existing container or create a new one.
 1. Upload a file to that container. Avoid uploading any file that might contain sensitive data.
 
-:::image type="content" source="media/alert-validation/storage-atp-upload-image.png" alt-text="Screenshot showing where to upload a file to the container." lightbox="media/alert-validation/storage-atp-upload-image.png":::
+    :::image type="content" source="media/alert-validation/storage-atp-upload-image.png" alt-text="Screenshot showing where to upload a file to the container." lightbox="media/alert-validation/storage-atp-upload-image.png":::
 
 1. Right-select the uploaded file and select **Generate SAS**.
 1. Select the Generated SAS token and URL button (no need to change any options).
