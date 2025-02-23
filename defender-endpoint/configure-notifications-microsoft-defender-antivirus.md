@@ -8,7 +8,7 @@ author: emmwalshh
 ms.topic: conceptual
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 10/18/2021
+ms.date: 02/19/2025
 ms.reviewer: yongrhee
 manager: deniseb
 ms.collection: 
@@ -31,11 +31,26 @@ search.appverid: met150
 
 In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. These notifications also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.
 
-If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat has been detected and remediated.
+If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat was detected and remediated.
 
 ## Configure antivirus notifications using Group Policy or the Windows Security app
 
 You can configure the display of more notifications, such as recent threat detection summaries, in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
+
+
+| Setting| Description |
+| -------- | -------- |
+| Configure time interval for service health reports | This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. If you disable or don't configure this setting, the default value is applied. The default value is set at 60 minutes (1 hour). If you configure this setting to 0, no service health reports are sent. The maximum value allowed to be set is 14400 minutes (10 days). |
+| Configure time out for detections in critically failed state | This policy setting configures the time in minutes before a detection in the "critically failed" state to moves to either the "additional action" state or the "cleared" state. |
+| Configure time out for detections in noncritical failed state | This policy setting configures the time in minutes before a detection in the "non-critically failed" state moves to the "cleared" state. |
+| Configure time out for detections in recently remediated state | This policy setting configures the time in minutes before a detection in the "completed" state moves to the "cleared" state. |
+| Configure time out for detections in requiring additional action | This policy setting configures the time in minutes before a detection in the "additional action" state moves to the "cleared" state. |
+| Configure Watson events | This policy setting allows you to configure whether or not Watson events are sent. If you enable or don't configure this setting, Watson events are sent. If you disable this setting, Watson events aren't sent. |
+| Configure whether to report Dynamic Signature dropped events | This policy setting configures whether to report Dynamic Signature dropped events. If you don't configure this setting, the default value is applied. The default value is set to disabled (such events aren't reported). If you configure this setting to be enabled, Dynamic Signature dropped events are reported. If you configure this setting to disabled, Dynamic Signature dropped events aren't reported. |
+| Configure Windows software trace preprocessor components | This policy configures Windows software trace preprocessor (WPP Software Tracing) components. |
+| Configure WPP tracing level | This policy allows you to configure tracing levels for Windows software trace preprocessor (WPP Software Tracing). Tracing levels are defined as:  1 - Error  2 - Warning  3 - Info  4 - Debug |
+| Turn off enhanced notifications | Use this policy setting to specify if you want Microsoft Defender Antivirus enhanced notifications to display on clients. If you disable or do not configure this setting, Microsoft Defender Antivirus enhanced notifications will display on clients. If you enable this setting, Microsoft Defender Antivirus enhanced notifications will not display on clients. |
+
 
 > [!NOTE]
 > In Windows 10, version 1607 the feature was called **Enhanced notifications** and was configured under **Windows Settings** \> **Update & security** \> **Windows Defender**. In Group Policy settings for all versions of Windows 10 and Windows 11, the notification feature is called **Enhanced notifications**.

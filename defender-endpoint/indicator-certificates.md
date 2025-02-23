@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 07/31/2024
+ms.date: 01/23/2025
 ---
 
 # Create indicators based on certificates
@@ -33,19 +33,19 @@ ms.date: 07/31/2024
 
 You can create indicators for certificates. Some common use cases include:
 
-- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allow list.
-- Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Windows Defender AV will prevent file executions (block and remediate) and the Automated Investigation and Remediation behave the same.
+- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
+- Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Microsoft Defender Antivirus prevents file executions (block and remediate), and automated investigation and remediation behaves the same.
 
 ## Before you begin
 
-It's important to understand the following requirements prior to creating indicators for certificates:
+It's important to understand the following requirements before creating indicators for certificates:
 
-- This feature is available if your organization uses Microsoft Defender Antivirus and Cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
-- The Antimalware client version must be  4.18.1901.x or later.
+- This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- The anti-malware client version must be `4.18.1901.x` or later.
 - Supported on machines on Windows 10, version 1703 or later, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2022.
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 will need to be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) for this feature to work.
 
 - The virus and threat protection definitions must be up to date.
 - This feature currently supports entering .CER or .PEM file extensions.
@@ -53,8 +53,8 @@ It's important to understand the following requirements prior to creating indica
 > [!IMPORTANT]
 >
 > - A valid leaf certificate is a signing certificate that has a valid certification path and must be chained to the Root Certificate Authority (CA) trusted by Microsoft. Alternatively, a custom (self-signed) certificate can be used as long as it's trusted by the client (Root CA certificate is installed under the Local Machine 'Trusted Root Certification Authorities').
-> - The children or parent of the allow/block certificate IOCs are not included in the allow/block IoC functionality, only leaf certificates are supported.
-> - Microsoft signed certificates cannot be blocked.
+> - The children or parent of the allow/block certificate IOCs aren't included in the allow/block IoC functionality, only leaf certificates are supported.
+> - Microsoft signed certificates can't be blocked.
 
 ## Create an indicator for certificates from the settings page:
 
@@ -66,11 +66,12 @@ It's important to understand the following requirements prior to creating indica
 2. Select **Add indicator**.
 
 3. Specify the following details:
-   - Indicator - Specify the entity details and define the expiration of the indicator.
-   - Action - Specify the action to be taken and provide a description.
-   - Scope - Define the scope of the machine group.
 
-4. Review the details in the Summary tab, then click **Save**.
+   - **Indicator**: Specify the entity details and define the expiration of the indicator.
+   - **Action**: Specify the action to be taken and provide a description.
+   - **Scope**: Define the scope of the machine group.
+
+4. Review the details on the **Summary** tab, and then select **Save**.
 
 ## Related articles
 
@@ -79,4 +80,5 @@ It's important to understand the following requirements prior to creating indica
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

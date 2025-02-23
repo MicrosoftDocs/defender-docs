@@ -41,7 +41,7 @@ Defender for Endpoint is a component of [Microsoft Defender XDR](/defender-xdr/)
 
 Before you begin to plan or deploy Defender for Endpoint on Windows Server with SAP, take a moment to get an overview of Defender for Endpoint. The following video provides an overview:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=88c39a8e-5b13-418e-9093-f8d6100ca728]
 
 For more detailed information about Defender for Endpoint and Microsoft security offerings, see the following resources:
 

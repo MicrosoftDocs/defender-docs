@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 12/11/2024
+ms.date: 02/12/2025
 ---
 
 # Microsoft Defender for Endpoint on iOS
@@ -27,7 +27,7 @@ ms.date: 12/11/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 **Microsoft Defender for Endpoint on iOS** offers protection against phishing and unsafe network connections from websites, emails, and apps. All alerts are available through a single pane of glass in the Microsoft Defender portal. The portal gives security teams a centralized view of threats on iOS devices along with other platforms.
 
@@ -73,9 +73,9 @@ ms.date: 12/11/2024
 
 ### System Requirements
 
-- Device running iOS/iPadOS 15.0 (ending support January 31, 2025) and later.
+- Device running iOS/iPadOS 16.0 and later.
 
-- The device is either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account.
+- The device should be either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account to seamlessly onboard the device.
 
 > [!IMPORTANT]
 > Microsoft Defender for Endpoint is ending support for devices running iOS/iPadOS 15 on January 31, 2025. Moving forward, only devices running iOS/iPadOS 16 and later are supported.
