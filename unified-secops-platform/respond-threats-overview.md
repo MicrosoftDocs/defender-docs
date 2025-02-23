@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 02/16/2025
+ms.date: 02/23/2025
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -31,6 +31,8 @@ In the Defender portal, unified support for incident correlation and integrated 
 
 In the Defender portal, related alerts from across multiple attack surfaces are grouped into a single incident, improving the efficiency of incident response. Correlating alerts from various sources such as endpoints, identities, email, and cloud workloads helps security teams gain a holistic view of an attack campaign. This comprehensive perspective allows analysts to understand the full scope of an incident, identify the root cause, and determine the most effective remediation actions.
 
+The following image shows a sample collection of alerts collected into a single incident in the Defender portal. In this example, alerts from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender XDR, Microsoft Defender for Office 365, and Microsoft Sentinel are all included in the same incident.
+
 :::image type="content" source="media/respond-threats-overview/unified-incidents.png" alt-text="Screenshot of an incident with alerts from services across the Defender portal." lightbox="media/respond-threats-overview/unified-incidents.png":::
 
 For more information, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
@@ -40,6 +42,8 @@ For more information, see [Alert correlation and incident merging in the Microso
 Threat intelligence integrates across Defender portal services to enrich alerts with information on indicators of compromise (IOCs) such as malicious IP addresses, domains, and file hashes. This enrichment helps security teams quickly grasp threat context and severity, identifying false positives better and enabling faster, informed decision-making. Use threat intelligence from Microsoft and third-party sources to correlate alerts with attack patterns and tactics, techniques, and procedures (TTPs) employed by adversaries.
 
 Continuous updates to threat intelligence feeds keep security teams ahead of emerging threats and improve the organization's overall resilience.
+
+The following image shows an example of the incidents related to the **Human-operated ransomware** threat type in **Threat intelligence** area of the Defender portal.
 
 :::image type="content" source="media/respond-threats-overview/threat-analytics.png" alt-text="Screenshot of a list of related incidents to a specific threat." lightbox="media/respond-threats-overview/threat-analytics.png":::
 
@@ -53,7 +57,13 @@ Microsoft Defender XDR unifies threat protection by automating security across e
 
 Automatic attack disruption boosts a SOC team's response by rapidly detecting and containing threats before escalation. It uses AI detection, predefined playbooks, and real-time threat intelligence to identify attack patterns and trigger immediate actions, such as isolating compromised endpoints or blocking malicious connections. This approach reduces the window for attackers and minimizes incident impact.
 
+The following image shows an example of an incident tagged with attack disruption actions. The link in the notification takes you to a filtered view of the **Action center**, listing all the relevant automated attack disrupt actions taken.
+
 :::image type="content" source="media/respond-threats-overview/attack-disrupt.png" alt-text="Screenshot of an incident with attack disruption actions."lightbox="media/respond-threats-overview/attack-disrupt.png":::
+
+The following image shows the **Action center** in this scenario. Select each item in the grid to show more details about the automated actions taken.
+
+:::image type="content" source="media/respond-threats-overview/action-center.png" alt-text="Screenshot of the Action center with automatic attack disruption actions displayed.":::
 
 Automated attack disruption also improves collaboration across SOC teams by streamlining communication and responses. It alerts analysts and can suggest or execute actions based on predefined policies. This orchestration accelerates decision-making and ensures security teams can scale their efforts efficiently despite increasing threats.
 
@@ -64,6 +74,8 @@ Use Microsoft Defender XDR's automatic attack disruption to enhance your environ
 Microsoft Defender XDR's AIR capabilities help security operations teams manage the high volume of alerts by automating investigation and response processes.
 
 Acting as a virtual analyst, AIR mimics ideal investigation steps, working 24/7 to reduce response times and free up the security team for other tasks. When an alert triggers an incident, AIR initiates an automated investigation, resulting in verdicts such as *malicious*, *suspicious*, or *no threats*, and identifying necessary remediation actions, such as quarantining files or stopping processes.
+
+The following image shows the automated investigation steps taken by Microsoft Defender XDR for the incident in our example. On the **Investigations** tab, select each investigation to view more details on the side.
 
 :::image type="content" source="media/respond-threats-overview/investigations.png" alt-text="Screenshot of the Investigations tab, showing automated investigation steps taken by Microsoft Defender XDR." lightbox="media/respond-threats-overview/investigations.png":::
 
@@ -77,7 +89,9 @@ Microsoft Defender XDR's guided response features, powered by Microsoft Security
 
 Guided responses are shown together with other Copilot recommendations, as actionable cards that describe the suggested action, the targeted entity, and the rationale behind the recommendation. This structured approach enables incident response teams to confidently and swiftly apply appropriate measures, enhancing overall security posture.
 
-:::image type="content" source="/defender/media/copilot-in-defender/guided-response/copilot-defender-guided-response-status.png" alt-text="Screenshot of the Guided response area in an incident's Copilot side pane.":::
+The following image shows a sample of the **Guided response** section of the Copilot pane for a specific incident. If you have a lot of recommended actions to sort through, select the **Status** filter to show only some of the actions at a time
+
+:::image type="content" source="media/respond-threats-overview/guided-response.png" alt-text="Screenshot of the Guided response section of the Copilot pane for a specific incident.":::
 
 For more information, see [Triage and investigate incidents with guided responses from Microsoft Copilot in Microsoft Defender](/defender-xdr/security-copilot-m365d-guided-response).
 
@@ -85,13 +99,13 @@ For more information, see [Triage and investigate incidents with guided response
 
 Microsoft Sentinel provides cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your threat detection and response capabilities.
 
-For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard).
-
 ### Automation rules
 
 Microsoft Sentinel automation rules allow SOC teams to streamline and automate incident handling processes, ensuring structured responses across your environment. Automation rules can perform basic steps, such as adding incident tasks, suppressing noisy incidents, and changing incident statuses. They can also automate responses for multiple detections simultaneously, control the order of actions executed, and perform automation for limited time periods only, such as during testing or maintenance windows.
 
-:::image type="content" source="media/respond-threats-overview/automation-rule.png" alt-text="Screenshot of a sample automation rule." lightbox="media/respond-threats-overview/automation-rule.png":::
+The following image shows an example of the sorts of configurations available for Microsoft Sentinel automation rules.
+
+:::image type="content" source="media/respond-threats-overview/automation-rule.png" alt-text="Screenshot of a sample automation rule in Microsoft Sentinel." lightbox="media/respond-threats-overview/automation-rule.png":::
 
 In Microsoft's unified SecOps platform, automation rules with incident triggers apply universally across both Microsoft Sentinel and Microsoft Defender XDR incidents, ensuring cohesive and comprehensive incident management.
 
@@ -103,6 +117,8 @@ Microsoft Sentinel playbooks are built using Azure Logic Apps and are automated 
 
 Common use cases for Microsoft Sentinel playbooks include data enrichment, bi-directional synchronization with ticketing systems, orchestration of incident management through communication platforms like Microsoft Teams or Slack, and immediate threat response actions. Microsoft Sentinel provides many playbooks out-of-the-box in solutions available from the **Content hub**.
 
+The following image shows the Microsoft Sentinel **Content hub**, filtered for out-of-the-box playbooks available together with Microsoft Sentinel solutions.
+
 :::image type="content" source="media/respond-threats-overview/playbooks.png" alt-text="Screenshot of many playbooks available from the Content hub." lightbox="media/respond-threats-overview/playbooks.png":::
 
 To create and manage these playbooks, specific roles and permissions are required, and extra charges may apply for the usage of Azure Logic Apps. For more information, see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automation/automate-responses-with-playbooks).
@@ -110,6 +126,8 @@ To create and manage these playbooks, specific roles and permissions are require
 ## Microsoft Security Exposure Management for potential threat response
 
 [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) enables organizations to identify and mitigate potential attack paths before they can be exploited. Microsoft Security Exposure Management treats attack paths like incidents, providing a proactive approach to managing vulnerabilities and misconfigurations, and aiding in responses to in-progress attacks.
+
+The following image shows an example of the number of attack paths detected over time in Microsoft Security Exposure Management.
 
 :::image type="content" source="media/respond-threats-overview/attack-paths.png" alt-text="Screenshot of the Attack paths Overview page." lightbox="media/respond-threats-overview/attack-paths.png":::
 
