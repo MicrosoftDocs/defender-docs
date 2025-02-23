@@ -51,7 +51,7 @@ As a security administrator, you can configure different Microsoft Defender Anti
 
 You'll find endpoint security policies under **Endpoints** > **Configuration management** > **Endpoint security policies**.
 
-:::image type="content" source="./media/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Defender portal":::
+:::image type="content" source="./media/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Defender portal" lightbox="./media/endpoint-security-policies.png":::
 
 The following list provides a brief description of each endpoint security policy type:
 
@@ -109,14 +109,14 @@ To verify that you have successfully created a policy, select a policy name from
 
 > [!NOTE]
 > It can take up to 90 minutes for a policy to reach a device. To speed up the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it's applied in approximately 10 minutes.
-> :::image type="content" source="./media/policy-sync.png" alt-text="Image showing policy sync button":::
+>
+> :::image type="content" source="./media/policy-sync.png" alt-text="Image showing policy sync button" lightbox="./media/policy-sync.png":::
 
 The policy page displays details that summarize the status of the policy. You can view a policy's status, which devices it is applied to, and assigned groups.
 
 During an investigation, you can also view the **Security policies** tab in the device page to view the list of policies that are being applied to a particular device. For more information, see [Investigating devices](investigate-machines.md#security-policies).
 
-
-:::image type="content" source="./media/security-policies-list.png" alt-text="Security policies tab with list of policies":::
+:::image type="content" source="./media/security-policies-list.png" alt-text="Security policies tab with list of policies" lightbox="./media/security-policies-list.png":::
 
 ## Antivirus policies for Windows and Windows Server
 
@@ -131,14 +131,10 @@ During an investigation, you can also view the **Security policies** tab in the 
 |PUA Protection|PUA Protection on|
 
 For more information, see:
-
-[Advanced technologies at the core of Microsoft Defender Antivirus](/defender-endpoint/adv-tech-of-mdav)
-
-[Enable and configure Microsoft Defender Antivirus always-on protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus)
-
-[Behavior monitoring in Microsoft Defender Antivirus](/defender-endpoint/behavior-monitor)
-
-[Detect and block potentially unwanted applications](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
+- [Advanced technologies at the core of Microsoft Defender Antivirus](/defender-endpoint/adv-tech-of-mdav)
+- [Enable and configure Microsoft Defender Antivirus always-on protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus)
+- [Behavior monitoring in Microsoft Defender Antivirus](/defender-endpoint/behavior-monitor)
+- [Detect and block potentially unwanted applications](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
 
 1. **Cloud protection features**:
 
@@ -165,9 +161,7 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 |Archive Max Depth | Not configured|
 |Archive Max Size | Not configured|
 
-For more information, see:
-
-[Configure Microsoft Defender Antivirus scanning options](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus)
+For more information, see [Configure Microsoft Defender Antivirus scanning options](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus).
 
 **Security Intelligence updates**:
 
@@ -187,10 +181,8 @@ For more information, see:
 > 'MMPC' is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
 
 For more information, see:
-
-[Microsoft Defender Antivirus security intelligence and product updates](/defender-endpoint/microsoft-defender-antivirus-updates)
-
-[Update channels for security intelligence updates](/defender-endpoint/manage-gradual-rollout)
+- [Microsoft Defender Antivirus security intelligence and product updates](/defender-endpoint/microsoft-defender-antivirus-updates)
+- [Update channels for security intelligence updates](/defender-endpoint/manage-gradual-rollout)
 
 **Engine updates**:
 
@@ -247,10 +239,8 @@ For more information, see [Manage the gradual rollout process for Microsoft Defe
 > And for Windows Servers, on Saturday's at 1:00 AM. (60)
 
 For more information, see:
-
-[Configure scheduled quick or full Microsoft Defender Antivirus scans](/defender-endpoint/schedule-antivirus-scans)
-
-[Microsoft Defender Antivirus full scan considerations and best practices](/defender-endpoint/mdav-scan-best-practices)
+- [Configure scheduled quick or full Microsoft Defender Antivirus scans](/defender-endpoint/schedule-antivirus-scans)
+- [Microsoft Defender Antivirus full scan considerations and best practices](/defender-endpoint/mdav-scan-best-practices)
 
 **Threat severity default action**:
 
@@ -285,10 +275,8 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Excluded Processes | Add as needed for working around false positives (FPs) and/or troubleshooting high cpu utilizations in MsMpEng.exe|
 
 For more information, see:
-
-[Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings](/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus)
-
-[Configure custom exclusions for Microsoft Defender Antivirus](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus)
+- [Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings](/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus)
+- [Configure custom exclusions for Microsoft Defender Antivirus](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus)
 
 **Microsoft Defender Core service:**
 
@@ -383,9 +371,7 @@ For more information, see [Attack surface reduction rules deployment overview](/
    | -------- | -------- |
    | TamperProtection (Device) | On|
 
-For more information, see:
-
-[Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection)
+For more information, see [Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 
 #### Check the Cloud Protection network connectivity
 
@@ -398,7 +384,7 @@ cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+For more information, see [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 #### Check the platform update version
 

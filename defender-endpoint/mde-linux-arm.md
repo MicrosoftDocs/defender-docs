@@ -43,15 +43,27 @@ Initially, the following Linux distributions are supported in preview:
 
 - Ubuntu 20.04 ARM64
 - Ubuntu 22.04 ARM64
+- Ubuntu 24.04 ARM64
+
 - Amazon Linux 2 ARM64
 - Amazon Linux 2023 ARM64
+
+- RHEL 8.x ARM64
+
+- RHEL 9.x ARM64
+
+- Oracle Linux 8.x ARM64
+
+- Oracle Linux 9.x ARM64
+
+- SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
 
 > [!NOTE]
 > Support for more Linux distributions is planned as part of this preview program.
 
-The installation procedures in this article install the agent version `101.24102.0002` from the insiders-slow channel on the ARM64-based device. (See [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md).) 
-
 ## Deploy Defender for Endpoint on Linux for ARM64-based devices
+
+The deployment procedures in this article installs the agent version `101.24102.0003` from the insiders-slow channel on the ARM64-based device. (See [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md).) 
 
 You can choose from several methods to deploy Defender for Endpoint on Linux to your ARM64-based device:
 
@@ -351,7 +363,7 @@ See these articles:
 
 ## Troubleshoot deployment issues
 
-If you run into any issues deploying Defender for Endpoint on Linux to your ARM64-based devices, help is available. First, review our list of common issues and how to resolve them. If the problem persists, contact us.
+If you run into any issues deploying Defender for Endpoint on Linux to your ARM64-based devices, help is available. First, review our list of common issues and how to resolve them. If the problem persists, [contact us](#contact-us-if-you-need-help).
 
 ### Common issues and how to resolve them
 
