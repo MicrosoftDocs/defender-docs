@@ -41,7 +41,7 @@ To ensure that Windows clients and servers allow your Defender for Identity Dire
 
 1. Add the DSA to the list of approved accounts able to perform this action, together with any other account that you've discovered during audit mode.
 
-   :::image type="content" source="../media/restrict-clients-allowed-to-make-remote-calls-to-SAM.png" alt-text="Screenshot of the Network access policy settings." lightbox="../media/restrict-clients-allowed-to-make-remote-calls-to-SAM.png":::
+   :::image type="content" source="../media/restrict-clients-allowed-to-make-remote-calls-to-sam.png" alt-text="Screenshot of the Network access policy settings." lightbox="../media/restrict-clients-allowed-to-make-remote-calls-to-sam.png":::
 
 
    For more information, see [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
