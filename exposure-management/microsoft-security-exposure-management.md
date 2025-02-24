@@ -127,4 +127,4 @@ We reserve the right to modify some or all of these parameters in the future, in
 
 ## Next steps
 
-Review [integration and licensing](access%20to%20msem.md) for Microsoft Security Exposure Management to understand how to access and use the service.
+Review [integration and licensing](integration-licensing.md) for Microsoft Security Exposure Management to understand how to access and use the service.
