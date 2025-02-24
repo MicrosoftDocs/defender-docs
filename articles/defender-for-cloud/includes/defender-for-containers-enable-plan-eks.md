@@ -1,7 +1,7 @@
 ---
 ms.service: defender-for-cloud
 ms.topic: include
-ms.date: 12/11/2023
+ms.date: 02/24/2025
 ms.author: dacurwin
 author: dcurwin
 ---
@@ -27,13 +27,13 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
 
     :::image type="content" source="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
 
-    - Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the **Agentless threat protection** to toggle to **On**. To change the retention period for your audit logs, enter the required time frame.
+    - The [Agentless threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) feature provides runtime protection to your cluster containers. The feature sends Kubernetes audit logs to Microsoft Defender. Set the **Agentless threat protection** toggle to **On** and set the retention period of your audit logs.
 
         > [!NOTE]
         > If you disable this configuration, control plane threat detection is disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
 
-    - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
-    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-aws.md) feature provides vulnerability management for images stored in ECR and for running images on your EKS clusters. Set the **Registry access** toggle to **On**.
+    - [K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+    - [Registry access](agentless-vulnerability-assessment-aws.md) sets permissions to allow vulnerability assessment of images stored in ECR To enable, set the **Registry access** toggle to **On**.
 
 1. Continue through the remaining pages of the connector wizard.
 
