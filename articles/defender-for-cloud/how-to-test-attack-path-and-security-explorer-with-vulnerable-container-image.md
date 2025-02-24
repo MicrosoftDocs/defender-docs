@@ -30,9 +30,9 @@ If there are no entries in the list of attack paths, you can still test this fea
         ```azurecli
         docker pull alpine
         ```
-    
+
     1. Tag the image with the following label and push it to your ACR. Replace `<MYACR>` with your Azure Container Registry name:
-    
+
         ```azurecli
         docker tag alpine <MYACR>.azurecr.io/mdc-mock-0001
         docker push <MYACR>.azurecr.io/mdc-mock-0001

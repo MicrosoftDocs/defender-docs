@@ -168,7 +168,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: High
 
-### **PREVIEW - Azurite toolkit run detected**
+### **PREVIEW - FSecure's Azurite toolkit detected**
 
 (ARM_Azurite)
 
@@ -492,7 +492,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: High
 
-### **Suspicious classic role assignment detected**
+### **Suspicious classic role assignment detected (Preview)**
 
 (ARM_AnomalousClassicRoleAssignment)
 

@@ -4,7 +4,7 @@ description: This document addresses recommendations in Microsoft Defender for C
 ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
-ms.date: 05/30/2024
+ms.date: 02/19/2025
 ---
 # Protect network resources
 

@@ -4,7 +4,7 @@ description: Learn how to configure settings in the Defender for Servers plan in
 ms.topic: install-set-up-deploy
 ms.author: elkrieger
 author: elazark
-ms.date: 10/20/2024
+ms.date: 02/19/2025
 ---
 
 # Review and modify Defender for Servers settings

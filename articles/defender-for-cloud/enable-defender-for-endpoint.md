@@ -4,7 +4,7 @@ description: Learn how to turn on Microsoft Defender for Endpoint integration in
 author: elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 02/19/2025
 #customer intent: As a user, I want to learn how to manually enable the Defender for Endpoint integration in Defender for Cloud so that I can protect multicloud and on-premises machines.
 ---
 

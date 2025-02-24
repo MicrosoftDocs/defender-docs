@@ -360,10 +360,10 @@
           href: concept-data-security-posture.md
         - name: Support and prerequisites
           href: concept-data-security-posture-prepare.md
-        - name: Data security dashboard
-          href: data-aware-security-dashboard-overview.md
         - name: Supported sensitive data information types
           href: sensitive-info-types.md
+        - name: Data and AI security dashboard (Preview)
+          href: data-aware-security-dashboard-overview.md
     - name: Improve container security posture
       items:
         - name: Agentless container posture in Defender CSPM
@@ -681,6 +681,48 @@
           displayName: workflow
           href: workflow-automation.yml
 
+- name: Protect data
+  items:
+  - name: Overview data and AI security dashboard (Preview)
+    href: data-aware-security-dashboard-overview.md
+  - name: Data security posture
+    items:
+    - name: Overview
+      href: concept-data-security-posture.md
+    - name: Support and prerequisites
+      href: concept-data-security-posture-prepare.md
+    - name: Supported sensitive data information
+      href: sensitive-info-types.md
+    - name: Discover sensitive data
+      href: discover-sensitive-data.md
+  - name: Data security threat protection
+    items:
+    - name: Review data security alerts
+      href: review-data-security-alerts.md
+
+- name: Protect AI workloads
+  items:
+  - name: Overview data and AI security dashboard (Preview)
+    href: data-aware-security-dashboard-overview.md
+  - name: AI security posture
+    items:
+    - name: Overview
+      href: ai-security-posture.md
+    - name: Discover generative AI workloads
+      href: identify-ai-workload-model.md
+    - name: Explore risks to pre-deployment generative AI artifacts
+      href: explore-ai-risk.md
+  - name: AI threat protection
+    items:
+    - name: Overview
+      href: ai-threat-protection.md
+    - name: Enable threat protection for AI workloads (preview)
+      href: ai-onboarding.md
+    - name: Review AI security alerts
+      href: review-ai-alerts.md
+    - name: Gain application and end-user context
+      href: gain-end-user-context-ai.md
+
 - name: Protect workloads
   items:
   - name: Settings & monitoring
@@ -942,56 +984,58 @@
   - name: Defender for Databases
     items:
       - name: Overview
+        displayName: database, protections
+        href: defender-for-databases-overview.md
+      - name: Vulnerability assessment
+        displayName: vulnerability, assessment
+        href: sql-azure-vulnerability-assessment-overview.md
+      - name: Advanced threat protection
+        displayName: threat, detection
+        href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
+      - name: Deploy all Defender for Databases plans
+        displayName: database
+        href: tutorial-enable-databases-plan.md
+      - name: Defender for Azure SQL Databases
         items:
-        - name: Overview of Defender for Databases
-          displayName: database, protections
-          href: defender-for-databases-overview.md
-        - name: Defender for Azure SQL Databases
+        - name: Overview
           displayName: database
           href: defender-for-sql-introduction.md
-        - name: Defender for SQL servers on machines
-          items:
-          - name: Overview of Defender for SQL servers on machines
-            displayName: SQL, SQL servers, defender, machines
-            href: defender-for-sql-servers-introduction.md
-          - name: Overview of vulnerability assessment
-            displayName: vulnerability, assessment
-            href: sql-azure-vulnerability-assessment-overview.md
-          - name: Overview of advanced threat protection
-            displayName: threat, detection
-            href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
-        - name: Defender for open-source relational databases
-          displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
-          href: defender-for-databases-introduction.md
-        - name: Defender for Azure Cosmos DB
-          displayName: Cosmos, DB, Cosmos DB
-          href: concept-defender-for-cosmos.md
-        - name: Common questions
-          href: faq-defender-for-databases.yml
-      - name: Deploy
-        items:
-        - name: Deploy Defender for Databases
-          displayName: database
-          href: tutorial-enable-databases-plan.md
         - name: Deploy Defender for Azure SQL Databases
           displayName: database
           href: enable-sql-database-plan.md
-        - name: Deploy Defender for SQL servers on machines
-          items:
-          - name: Enable Microsoft Defender for SQL servers on machines
-            displayName: hybrid, arc, Azure Defender
-            href: defender-for-sql-usage.md
-          - name: Enable Defender for SQL servers on machines at scale
-            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-            href: enable-defender-sql-at-scale.md
-          - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
-            href: sql-azure-vulnerability-assessment-enable.md
-          - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
-            href: sql-azure-vulnerability-assessment-enable-classic.md
-          - name: Advanced Threat Protection for Azure SQL Database
-            displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
-            href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
-        - name: Deploy Defender for open-source relational databases
+        - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
+          href: sql-azure-vulnerability-assessment-enable.md
+        - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
+          href: sql-azure-vulnerability-assessment-enable-classic.md
+        - name: Advanced Threat Protection for Azure SQL Database
+          displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
+          href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
+      - name: Defender for SQL Server on Machines
+        items:
+        - name: Overview
+          displayName: SQL, SQL servers, defender, machines
+          href: defender-for-sql-servers-introduction.md
+        - name: Enable Defender for SQL Servers on Machines
+          displayName: hybrid, arc, Azure Defender
+          href: defender-for-sql-usage.md
+        - name: Verify SQL machine protection
+          displayName: SQL, SQL servers, defender, machines
+          href: verify-machine-protection.md
+        - name: Troubleshoot SQL machine protection
+          displayName: Troubleshoot guide, SQL, servers, machines
+          href: troubleshoot-sql-machines-guide.md
+        - name: Enable Defender for SQL servers on machines at scale
+          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+          href: enable-defender-sql-at-scale.md
+        - name: Migrate to AMA
+          displayName: vulnerability, assessment, findings, migrate
+          href: defender-for-sql-autoprovisioning.md  
+      - name: Defender for Open-Source Relational Databases
+        items:
+        - name: Overview
+          displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+          href: defender-for-databases-introduction.md
+        - name: Deploy
           items:
           - name: Enable on Azure
             displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
@@ -999,10 +1043,17 @@
           - name: Enable on AWS (Preview)
             displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
             href: enable-defender-for-databases-aws.md
+      - name: Defender for Azure Cosmos DB
+        items:
+        - name: Defender for Azure Cosmos DB
+          displayName: Cosmos, DB, Cosmos DB
+          href: concept-defender-for-cosmos.md
         - name: Deploy Defender for Azure Cosmos DB
           displayName: Cosmos, DB, Cosmos DB
           href: defender-for-databases-enable-cosmos-protections.md
-      - name: Configure
+      - name: Common questions
+        href: faq-defender-for-databases.yml     
+      - name: Manage vulnerability assessment
         items:
         - name: Configure vulnerability findings in your Azure SQL databases
           items:
@@ -1014,9 +1065,6 @@
             href: configure-vulnerability-findings-classic.md
           - name: Troubleshoot express or classic configuration
             href: troubleshoot-vulnerability-findings.md
-          - name: Migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process
-            displayName: vulnerability, assessment, findings, migrate
-            href: defender-for-sql-autoprovisioning.md
           - name: Scan your SQL servers for vulnerabilities
             href: defender-for-sql-on-machines-vulnerability-assessment.md
           - name: Manage vulnerability assessments
@@ -1043,7 +1091,6 @@
               href: /azure/azure-sql/database/sql-database-vulnerability-assessment-storage?toc=/azure/defender-for-cloud/toc.json
             - name: Consume and export scan results
               href: defender-for-sql-scan-results.md
-
       - name: Investigate and remediate
         items:
         - name: Investigate Defender for SQL security Alerts, reporting, and queries
@@ -1244,6 +1291,8 @@
       href: /training/browse/?term=defender%20for%20cloud&terms=defender%20for%20cloud&expanded=microsoft-defender&products=defender-for-cloud
     - name: Defender for Cloud glossary of terms
       href: defender-for-cloud-glossary.md
+    - name: Defender for Cloud cost calculator
+      href: cost-calculator.md
     - name: Optimize costs with prepurchase plan
       href: prepurchase-plan.md
     - name: Microsoft Defender for Cloud in the field
@@ -1369,6 +1418,15 @@
         - name: Improvements in Container's Posture Management
           DisplayName: Container's Posture Management
           href: episode-fifty-six.md
+        - name: Onboarding Docker Hub and JFrog Artifactory
+          DisplayName: Docker Hub, JFrog Artifactory
+          href: episode-fifty-seven.md
+        - name: AKS security dashboard
+          DisplayName: AKS security dashboard
+          href: episode-fifty-eight.md
+        - name: Integrate CLI with CI/CD pipelines
+          DisplayName: Defender for Cloud CLI, CI/CD pipelines
+          href: episode-fifty-nine.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation

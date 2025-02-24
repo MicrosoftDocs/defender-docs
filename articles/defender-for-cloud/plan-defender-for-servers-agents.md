@@ -4,7 +4,7 @@ description: Understand how the Defender for Servers plan collects data.
 ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
-ms.date: 06/25/2024
+ms.date: 02/19/2025
 #customer intent: As a reader, I want to understand how to plan the deployment of Defender for Servers agents and extensions.
 ---
 

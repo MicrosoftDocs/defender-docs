@@ -4,7 +4,7 @@ description: Decide which Defender for Servers plan you want to deploy.
 ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
-ms.date: 06/25/2024
+ms.date: 02/19/2025
 #customer intent: As a reader, I want to understand which Defender for Servers plan I want to deploy.
 ---
 
