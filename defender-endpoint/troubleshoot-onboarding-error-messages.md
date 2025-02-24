@@ -50,7 +50,7 @@ For both cases, you should contact Microsoft support at [General Microsoft Defen
 
 If while accessing Microsoft Defender XDR you get a **Your subscription has expired** message, your online service subscription has expired. Microsoft Defender for Endpoint subscription, like any other online service subscription, has an expiration date.
 
-You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date a **Your subscription has expired** message will be presented with an option to download the device offboarding package, should you choose to not renew the license.
+You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date, a message appears that says, "Your subscription has expired." The message includes an option to download the device offboarding package, just in case you choose to not renew your subscription.
 
 > [!NOTE]
 > For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you will be notified of the packages expiry date and it will also be included in the package name.
