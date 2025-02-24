@@ -25,8 +25,6 @@ appliesto:
 
 # Bulk senders insight in Exchange Online Protection
 
-> [!NOTE]
-> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
 
 In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to see how much email was identified as bulk at the current bulk threshold level in anti-spam policies, and to simulate identified vs. allowed bulk email based on changes in the bulk sender threshold and the quality of the bulk sender.
 
