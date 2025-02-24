@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: conceptual
 ms.subservice: ngp
-ms.date: 01/09/2025
+ms.date: 02/24/2025
 ---
 
 # Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
