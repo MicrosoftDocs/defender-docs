@@ -127,4 +127,4 @@ We reserve the right to modify some or all of these parameters in the future, in
 
 ## Next steps
 
-Review [prerequisites](prerequisites.md) to get started with Security Exposure Management.
+Review [integration and licensing](access%20to%20msem.md) for Microsoft Security Exposure Management to understand how to access and use the service.
