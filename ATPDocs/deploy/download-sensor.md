@@ -20,7 +20,7 @@ This article describes how to download the Microsoft Defender for Identity class
 
     [![Screenshot of the Sensors tab.](../media//sensor-page.png)](../media/sensor-page.png#lightbox)
 
-1. Select **Add sensor**. Then, in the **Add a new sensor** pane, select **Download installer** and save the installation package locally. The downloaded zip file includes the following files:
+1. Select **Add sensor**. Then, in the **Add a new sensor** pane, select **Download installer**, and save the installation package locally. The downloaded zip file includes the following files:
 
     - The Defender for Identity sensor installer
 
