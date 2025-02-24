@@ -48,9 +48,12 @@ Download the installation and onboarding packages from Microsoft Defender portal
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, go to **Settings > Endpoints > Device management > Onboarding**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings > Endpoints > Device management > Onboarding**.
+
 2. In Section 1 of the page, set operating system to **macOS** and Deployment method to **Local script**.
+
 3. In Section 2 of the page, select **Download installation package**. Save it as wdav.pkg to a local directory.
+
 4. In Section 2 of the page, select **Download onboarding package**. Save it as WindowsDefenderATPOnboardingPackage.zip to the same directory.
    :::image type="content" source="media/onboarding-package-step4.png" alt-text="Screenshot that shows the options to download the installation and onboarding packages.":::
 
@@ -58,6 +61,7 @@ Download the installation and onboarding packages from Microsoft Defender portal
     - Type *cd Downloads* and press **Enter**.
     - Type *ls* and press **Enter**.
      :::image type="content" source="media/Terminal-image-step5.png" alt-text="Screenshot that displays the two download files.":::
+
 6. Copy the *wdav.pkg* and *MicrosoftDefenderATPOnboardingMacOs.sh* to the device where you want to deploy the Microsoft Defender for Endpoint on macOS.
 
 ## Application installation (macOS 11 and newer versions)
