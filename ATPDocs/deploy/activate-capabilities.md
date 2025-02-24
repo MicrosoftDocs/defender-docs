@@ -12,7 +12,7 @@ Microsoft Defender for Endpoint customers, who have already onboarded their doma
 This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!IMPORTANT]
-> Information in this article relates to a feature that is currently in limited availability for a select set of use cases. If you weren't directed to use the Defender for Identity **Activation** page, use our [main deployment guide](deploy-defender-identity.md) instead.
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor.
 
 ## Prerequisites
 
@@ -29,10 +29,8 @@ Make sure that the domain controller where you're planning to activate Defender 
 
 Direct Defender for Identity capabilities are supported on domain controllers only, using the one of the following operating systems:
 
-- Windows Server 2019
-- Windows Server 2022
-
-You must also have the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) installed.
+- Windows Server 2019 or above
+- [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later
 
 > [!IMPORTANT]
 >After installing the March 2024 Cumulative Update, LSASS might experience a memory leak on domain controllers when on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests.
