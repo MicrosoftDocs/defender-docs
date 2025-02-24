@@ -37,7 +37,7 @@ The analyst can choose which data set to look at and which filters and condition
 
 You can watch this video to get an overview of guided hunting:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW12cm6]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=782ffe97-7528-4bbc-b13a-2fd209dd6d87]
 
 ## Open Query in builder
 
