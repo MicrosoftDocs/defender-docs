@@ -28,11 +28,11 @@ ms.date: 07/18/2024
 
 This page provides detailed steps to troubleshoot issues that might occur when setting up your Microsoft Defender for Endpoint service.
 
-If you receive an error message, Microsoft Defender XDR will provide a detailed explanation on what the issue is and relevant links will be supplied.
+If you receive an error message, Microsoft Defender XDR provides a detailed explanation on what the issue is and relevant links are supplied.
 
 ## No subscriptions found
 
-If while accessing Microsoft Defender XDR you get a **No subscriptions found** message, it means the Microsoft Entra ID used to log in the user to the portal, does not have a Microsoft Defender for Endpoint license.
+If, while you're accessing Microsoft Defender XDR, you get an error message that says, "No subscriptions found," it means that the Microsoft Entra ID used to sign into the Microsoft Defender portal doesn't have a license for Defender for Endpoint.
 
 Potential reasons:
 
