@@ -49,6 +49,11 @@
       "source_path": "defender-office-365/pilot-deploy-defender-office-365.md",
       "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/submissions-error-messages.md",
+      "redirect_url": "/defender-office-365/submissions-result-definitions",
+      "redirect_document_id": false
     }
   ]
 }

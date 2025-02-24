@@ -385,8 +385,6 @@
            href: submissions-submit-files-to-microsoft.md
          - name: Admin review for user reported messages
            href: submissions-admin-review-user-reported-messages.md
-         - name: Errors during submissions
-           href: submissions-error-messages.md
          - name: Submission result definitions
            href: submissions-result-definitions.md
        - name: Threat Explorer and real-time detections
