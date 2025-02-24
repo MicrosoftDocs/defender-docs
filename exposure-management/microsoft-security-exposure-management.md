@@ -82,14 +82,20 @@ Access to the exposure management blade and features in the Microsoft Defender p
 The following licenses allow accessing all Microsoft Security Exposure Management experiences:
 
 - Microsoft 365 E5 or A5
-- Microsoft 365 E3 with the Microsoft Enterprise Mobility + Security E5 add-on
-- Microsoft 365 A3 with the Microsoft 365 A5 security add-on
-- Microsoft Enterprise Mobility + Security E5 or A5
-- Microsoft Defender for Endpoint (Plan 1)
+- Microsoft 365 E3 with the Microsoft 365 E5 Security add-on
+- Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on
+- Microsoft 365 A3 with the Microsoft 365 A5 Security add-on
+- Windows 10 Enterprise E5 or A5
+- Windows 11 Enterprise E5 or A5
+- Enterprise Mobility + Security (EMS) E5 or A5
+- Office 365 E5 or A5
+- Microsoft Defender for Endpoint
 - Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
-- Microsoft Defender for Office 365 (Plan 1)
-- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud Apps or Cloud App Discovery
+- Microsoft Defender for Office 365 (Plan 2)
+- Microsoft 365 Business Premium
+- Microsoft Defender for Business
+- Microsoft Defender for Cloud
 
 Integration of data from the above tools and other Microsoft Security tools like Microsoft Defender for Cloud, Microsoft Defender Cloud Security Posture Management and Microsoft Defender External Attack Surface Management is available with those licenses.
 
@@ -98,6 +104,7 @@ Integration of non-Microsoft security tools will be a consumption-based cost bas
 The following licenses will allow access to Microsoft Secure Score experience only:
 
 - Microsoft 365 E3
+- Microsoft 365 A3
 - Microsoft Defender for Endpoint (Plan 2)
 - Microsoft Defender for Office 365 (Plan 2)
 
