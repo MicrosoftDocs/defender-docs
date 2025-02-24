@@ -23,7 +23,6 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
