@@ -131,7 +131,7 @@ The following tables list, per cloud app, which abilities are supported with App
 |  [GitHub](protect-github.md)             |                           |                                          |                           |                           |                                            |
 | [GCP](protect-gcp.md)               | Not applicable            | Not applicable                           | Not applicable            | Not applicable            | Not applicable                             |
 | [Google  Workspace](protect-google-workspace.md) | ✔                         | ✔ - requires Google Business  Enterprise | ✔                         | ✔                         | ✔                                          |
-| [Okta](protect-okta.md)               | Not applicable            | Not applicable                           | Not applicable            | Not applicable            | Not applicable                             |
+| [Microsoft 365](protect-office-365.md)        | ✔                                    | ✔                                    | ✔                                    | ✔                                    | ✔                                           |
 | [Miro](protect-miro.md)   |  |  |  |  |  |
 | [Mural](protect-mural.md)   |  |  |  |  |  |
 | [NetDocuments](protect-netdocuments.md)  |  |  |  |  |  |
