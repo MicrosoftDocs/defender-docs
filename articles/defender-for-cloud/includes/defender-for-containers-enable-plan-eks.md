@@ -19,7 +19,7 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
 
 1. Select the AWS connector.
 
-    :::image type="content" source="../media/defender-for-kubernetes-intro/select-aws-connector.png" alt-text="Screenshot of an AWS connector in the Defender for Cloud environment settings.":::
+    :::image type="content" source="../media/defender-for-kubernetes-intro/select-aws-connector.png" alt-text="Screenshot of an AWS connector in the Defender for Cloud environment settings." lightbox="../media/defender-for-kubernetes-intro/select-aws-connector.png":::
 
 1. Select the **Defender plans** page and verify that the toggle for the **Containers** plan is set to **On**.
 
@@ -57,7 +57,7 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
  
     Follow the remediation steps provided by the recommendation:
     
-    :::image type="content" source="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png" alt-text="Screenshot explaining how to remediate the EKS clusters recommendation by installing the required Defender for Containers components.":::
+    :::image type="content" source="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png" alt-text="Screenshot explaining how to remediate the EKS clusters recommendation by installing the required Defender for Containers components." lightbox="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png":::
 
 ### View recommendations and alerts for your EKS clusters
 

@@ -39,7 +39,7 @@ To protect your EKS clusters, you need to enable the Containers plan on the rele
 
 1. Select the relevant AWS account.
 
-    :::image type="content" source="media/tutorial-enable-containers-aws/aws-account.png" alt-text="Screenshot of Defender for Cloud's environment settings page showing an AWS connector.":::
+    :::image type="content" source="media/tutorial-enable-containers-aws/aws-account.png" alt-text="Screenshot of Defender for Cloud's environment settings page showing an AWS connector." lightbox="media/tutorial-enable-containers-aws/aws-account.png":::
 
 1. Set the toggle for the **Containers** plan to **On**.
 
@@ -47,7 +47,7 @@ To protect your EKS clusters, you need to enable the Containers plan on the rele
 
 1. To change optional configurations for the plan, select **Settings**.
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
 
     - The [Agentless threat protection](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) feature provides runtime protection to your cluster containers. The feature sends Kubernetes audit logs to Microsoft Defender. Set the **Agentless threat protection** toggle to **On** and set the retention period of your audit logs.
 
