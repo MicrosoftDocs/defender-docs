@@ -59,8 +59,8 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 
 5. Two new zip files are produced:
 
-   - **SupportToolLinuxBinary.zip** : For all Linux devices
-   - **SupportToolMacOSBinary.zip** : For Mac devices
+   - **SupportToolLinuxBinary.zip**: For all Linux devices
+   - **SupportToolMacOSBinary.zip**: For Mac devices
 
 6. Unzip `SupportToolLinuxBinary.zip` file.
 
@@ -95,7 +95,7 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
-3. Extract the contents of XMDEClientAnalyzer.zip on the machine.
+3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.
 
     ```bash
     unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
@@ -189,7 +189,7 @@ optional arguments:
 
 ### Diagnostics mode
 
-Diagnostics mode is used to collect extensive set of machine information, such as memory, disk, MDATP logs, etc.
+Diagnostics mode is used to collect extensive set of machine information, such as memory, disk, and MDATP logs.
 This set of files gives the primary set of information required to debug any issue related to Defender For Endpoint.
 
 The options supported are as follows:
@@ -344,7 +344,7 @@ The output printed on the screen shows if the URLs are reachable or not.
 
 #### Collect different installation/onboarding reports
 
-This mode collects installation related information like distro, system requirements, etc.
+This mode collects installation related information like distro and system requirements.
 
 ```console
 
@@ -368,7 +368,7 @@ A single report `installation_report.json` is generated. The keys in the file ar
 
 #### Exclude mode
 
-This mode adds exclusions for audit-d monitoring.
+This mode adds exclusions for `audit-d` monitoring.
 
 ```console
 
