@@ -44,7 +44,7 @@ ms.date: 02/12/2025
 
 The following steps guide you on how to create roles in the Microsoft Defender portal. It assumes that you have already created Microsoft Entra user groups.
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security Administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security Administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -105,7 +105,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Edit roles
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -119,7 +119,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Delete roles
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security Administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security Administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
