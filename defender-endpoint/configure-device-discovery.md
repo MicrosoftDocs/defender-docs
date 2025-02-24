@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/19/2024
+ms.date: 02/24/2025
 ---
 
 # Configure device discovery in Defender for Endpoint
