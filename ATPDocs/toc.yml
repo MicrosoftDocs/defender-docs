@@ -158,8 +158,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
-  - name: Hybrid Security
-    href: hybrid-security.md
+  - name: "Hybrid Security"
+
     items:
     - name: Change password for Microsoft Entra seamless SSO account
       href: change-password-microsoft-entra-seamless-single-sign-on.md
@@ -170,8 +170,9 @@ items:
     - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
       href: remove-replication-permissions-microsoft-entra-connect.md
       displayName: Microsoft Entra Connect
+
       - name: Identity Infrastructure
-        href: identity-infrastructure.md
+      
       items:
     - name: Built-in Active Directory Guest account is enabled
       href: built-in-active-directory-guest-account-is-enabled.md
