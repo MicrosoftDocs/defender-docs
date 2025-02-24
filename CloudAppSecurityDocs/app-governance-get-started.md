@@ -21,7 +21,8 @@ Before you start, verify that you satisfy the following prerequisites:
 
 - You must have [one of the appropriate roles](#roles) to turn on app governance and access it.
 
-- Your organization's billing address must be in a region **other than** Brazil, Singapore, Latin America, South Korea, Switzerland, Norway, South Africa, Sweden, or United Arab Emirates.
+
+- Your organization's billing address must be in a region **other than** Brazil, Singapore, Latin America, South Korea, Switzerland, Norway, Poland, Italy, Qatar, Israel, Spain, Mexico, South Africa, Sweden, or United Arab Emirates.
 
 ## Turn on app governance
 
