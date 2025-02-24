@@ -28,7 +28,7 @@ The goal is to improve the accuracy of alert origins, facilitating better identi
 
 To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
 
-To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0)
+To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0&preserve-view=true)
 
 ### Network requirement updates
 

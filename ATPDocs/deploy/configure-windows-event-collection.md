@@ -328,7 +328,7 @@ To configure auditing on Microsoft Entra Connect servers:
 <a name="enable-auditing-on-an-exchange-object"></a>
 
 >[!NOTE]
-> The configuration container audit is requried only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
+> The configuration container audit is required only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
 
 **Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
 
@@ -339,6 +339,8 @@ To configure auditing on Microsoft Entra Connect servers:
 1. In the **Connection Settings** dialog, under **Select a well known Naming Context**, select **Configuration** > **OK**.
 
 1. Expand the **Configuration** container to show the **Configuration** node, which begins with **"CN=Configuration,DC=..."**.
+
+    :::image type="content" source="../media/cn-configuration.png" alt-text="Screenshot of selections for opening properties for the CN Configuration node.":::
 
 1. Right-click the **Configuration** node and select **Properties**.
 
