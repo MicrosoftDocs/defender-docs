@@ -5,7 +5,7 @@ ms.date: 06/13/2023
 ms.topic: how-to
 ---
 > [!IMPORTANT]
-> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](https://learn.microsoft.com/defender-for-identity/deploy/activate-capabilities)
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
 
 # Download the Microsoft Defender for Identity classic sensor
 
