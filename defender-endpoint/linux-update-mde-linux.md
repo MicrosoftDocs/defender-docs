@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/16/2024
+ms.date: 01/24/2025
 ---
 
 # Schedule an update for Microsoft Defender for Endpoint on Linux
@@ -27,9 +27,9 @@ ms.date: 12/16/2024
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
-Linux (and Unix) have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
+Linux and Unix have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
 
-## Pre-requisite
+## Prerequisite
 
 > [!NOTE]
 > To get a list of all the time zones, run the following command:
@@ -53,7 +53,7 @@ sudo crontab -l > /var/tmp/cron_backup_201118.dat
 ```
 
 > [!NOTE]
-> Where 201118 == YYMMDD
+> In our example, `201118` == `YYMMDD`.
 
 > [!TIP]
 > Do this before you edit or remove.
@@ -108,7 +108,9 @@ CRON_TZ=America/Los_Angeles
 > ```
 
 > [!NOTE]
-> In the examples above, we are setting it to 00 minutes, 6 a.m.(hour in 24 hour format), any day of the month, any month, on Sundays.[$(date +\%d) -le 15] == Won't run unless it's equal or less than the 15th day (3rd week). Meaning it will run every 3rd Sundays(7) of the month at 6:00 a.m. Pacific (UTC -8).
+> In the previous examples, we specified `00` minutes, 6 a.m. (hour using the 24-hour format), any day of the month, any month, on Sundays. 
+> `[$(date +\%d) -le 15]` doesn't run unless it's equal or less than the 15th day (third week). 
+> This means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
 
 Press "Esc"
 

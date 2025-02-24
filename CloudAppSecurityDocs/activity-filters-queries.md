@@ -15,13 +15,16 @@ This article provides descriptions and instructions for Defender for Cloud Apps 
 
 Below is a list of the activity filters that can be applied. Most filters support multiple values as well as *NOT* to provide you with a powerful tool for policy creation.
 
-- Activity ID - Search only for specific activities by their ID. This filter is useful when you connect Microsoft Defender for Cloud Apps to your SIEM (using the SIEM agent) and you want to further investigate alerts within the Defender for Cloud Apps portal.
+- Activity ID - Search only for specific activities by their ID. This filter is useful when you connect Microsoft Defender for Cloud Apps to your SIEM (using the SIEM agent) and you want to further investigate alerts using Defender for Cloud Apps.
 
 - Activity objects – Search for the objects the activity was done on. This filter applies to files, folders, users, or app objects.
     - Activity object ID - the ID of the object (file, folder, user, or app ID).
 
-    - Item - Enables you to search by the name or ID of any activity object (for example, user names, files, parameters, sites). For the **Activity object Item** filter, you can select whether to filter for items that **Contain**, **Equal**, or **Starts with** the specific item.
+    - Item - Enables you to search by the name or ID of any activity object (for example, user names, files, parameters, sites). For the **Activity object Item** filter, you can select whether to filter for items that **Contains**, **Equals**, or **Starts with** the specific item.
 
+    > [!NOTE]
+    > Activity-Policy's **Activity object Item** filter supports the **Equals** operator only.
+  
 - Action type - Search for a more specific action performed in an app.
 
 - Activity type - Search for the app activity.
@@ -67,33 +70,33 @@ Below is a list of the activity filters that can be applied. Most filters suppor
     - Tor exit nodes
     - Zscaler
 
-- Impersonated activity – Search only for activities that were performed in the name of another user.
+- Impersonated activity - Search only for activities that were performed in the name of another user.
 
 - Instance - The app instance where the activity was or wasn't performed.
 
-- Location – The country/region from which the activity was performed.
+- Location - The country/region from which the activity was performed.
 
-- Matched Policy – Search for activities that matched a specific policy that was set in the portal.
+- Matched Policy - Search for activities that matched a specific policy that was set in the portal.
 
-- Registered ISP – The ISP from which the activity was performed.
+- Registered ISP - The ISP from which the activity was performed.
 
 - Source - Search by the source from which the activity was detected. The source can be any of the following:
-  - App connector - logs coming directly from the app's API connector.
+  - App connector - Logs coming directly from the app's API connector.
   - App connector analysis - Defender for Cloud Apps enrichments based on information scanned by the API connector.
 
-- User – The user who performed the activity, which can be filtered into domain, group, name, or organization. In order to filter activities with no specific user, you can use the 'is not set' operator.
+- User - The user who performed the activity, which can be filtered into domain, group, name, or organization. In order to filter activities with no specific user, you can use the 'is not set' operator.
   - User domain - Search for a specific user domain.
-  - User organization – The organizational unit of the user who performed the activity, for example, all activities performed by EMEA_marketing users. This is only relevant for connected Google Workspace instances using organizational units.
-  - User group – Specific user groups that you can import from connected apps, for example, Microsoft 365 administrators.
+  - User organization - The organizational unit of the user who performed the activity, for example, all activities performed by EMEA_marketing users. This is only relevant for connected Google Workspace instances using organizational units.
+  - User group - Specific user groups that you can import from connected apps, for example, Microsoft 365 administrators.
   - User name - Search for a specific username. To see a list of users in a specific user group, in the **Activity drawer**, select the name of the user group. Clicking will take you to the Accounts page, which lists all the users in the group. From there, you can drill down into the details of the accounts of specific users in the group.
   - The **User group** and **User name** filters can be further filtered by using the **As** filter and selecting the role of the user, which can be any of the following:
     - Activity object only - meaning that the user or user group selected didn't perform the activity in question; they were the object of the activity.
     - Actor only - meaning that the user or user group performed the activity.
     - Any role - Meaning that the user or user group was involved in the activity, either as the person who performed the activity or as the object of the activity.
 
-- User agent – The user agent of from with the activity was performed.
+- User agent - The user agent of from with the activity was performed.
 
-- User agent tag – Built-in user agent tag, for example, all activities from outdated operating systems or outdated browsers.
+- User agent tag - Built-in user agent tag, for example, all activities from outdated operating systems or outdated browsers.
 
 ## Activity queries
 
@@ -101,7 +104,7 @@ To make investigation even simpler, you can now create custom queries and save t
 
 1. In the **Activity log** page, use the filters as described above to drill down into your apps as necessary.
 
-  :::image type="content" source="media/activity-log-query.png" alt-text="Use filters to make query.":::
+   :::image type="content" source="media/activity-log-query.png" alt-text="Use filters to make query.":::
 
 1. After you've finished building your query, select the **Save as** button.
 
@@ -115,23 +118,23 @@ To make investigation even simpler, you can now create custom queries and save t
    
 Defender for Cloud Apps also provides you with **Suggested queries**. Suggested queries provide you with recommended avenues of investigation that filter your activities. You can edit these queries and save them as custom queries. The following are optional suggested queries:
 
-- Admin activities - filters all your activities to display only those activities that involve admins.
+- Admin activities - Filters all your activities to display only those activities that involve admins.
 
-- Download activities - filters all your activities to display only those activities that were download activities, including downloading user list as a .csv file, downloading shared content, and downloading a folder.
+- Download activities - Filters all your activities to display only those activities that were download activities, including downloading user list as a .csv file, downloading shared content, and downloading a folder.
 
-- Failed log-in - filters all your activities to display only failed sign-in and failed sign-ins via SSO
+- Failed log-in - Filters all your activities to display only failed sign-in and failed sign-ins via SSO
 
-- File and folder activities - filters all your activities to display only those involving files and folders. The filter includes uploading, download, and accessing folders, along with creating, deleting, uploading, downloading, quarantining, and accessing files and transferring content.
+- File and folder activities - Filters all your activities to display only those involving files and folders. The filter includes uploading, download, and accessing folders, along with creating, deleting, uploading, downloading, quarantining, and accessing files and transferring content.
 
-- Impersonation activities - filters all your activities to display only impersonation activities.
+- Impersonation activities - Filters all your activities to display only impersonation activities.
 
-- Password changes and reset requests - filters all your activities to display only those activities that involve password reset, change password, and force a user to change the password on the next sign-in.
+- Password changes and reset requests - Filters all your activities to display only those activities that involve password reset, change password, and force a user to change the password on the next sign-in.
 
-- Sharing activities - filters all your activities to display only those activities that involve sharing folders and files, including creating a company link, creating an anonymous link, and granting read/write permissions.
+- Sharing activities - Filters all your activities to display only those activities that involve sharing folders and files, including creating a company link, creating an anonymous link, and granting read/write permissions.
 
-- Successful log-in - filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
+- Successful log-in - Filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
 
-![query activities.](media/queries-activity.png)
+  ![query activities.](media/queries-activity.png)
 
 Additionally, you can use the suggested queries as a starting point for a new query. First, select one of the suggested queries. Then, make changes as needed and finally select **Save as** to create a new **Saved query**.
 
