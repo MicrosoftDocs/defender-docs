@@ -149,9 +149,9 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     The default user reporting mailbox is the Exchange Online mailbox of the global admin. Currently, the global admin isn't _shown_ as the user reported mailbox on the **User reported settings** page until _after_ the first user in the organization reports a message from Outlook.
 
-    To specify a different mailbox, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to send reported messages to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.  [Learn more about how Microsoft handle and analyze the reports](#what-do-you-need-to-know-before-you-begin?).
+    To specify a different mailbox, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to send reported messages to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.  [Learn more about how Microsoft handle and analyze the reports](#what-do-you-need-to-know-before-you-begin).
 
-  - **Microsoft only**: User reported messages go directly to Microsoft for analysis. [Learn more about how Microsoft handle and analyze the reports](#what-do-you-need-to-know-before-you-begin?).
+  - **Microsoft only**: User reported messages go directly to Microsoft for analysis. [Learn more about how Microsoft handle and analyze the reports](#what-do-you-need-to-know-before-you-begin).
 
 
   - **My reporting mailbox only**: User reported messages go only to the specified reporting mailbox for an admin or the security operations team to analyze.
@@ -203,7 +203,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     -  **My reporting mailbox only** : Microsoft pulls the metadata about the user reports from the third party reporting mailbox. Messages will appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. The **Result** value for these messages is **Not Submitted to Microsoft**.
 
-    - **Microsoft and My reporting mailbox** : Microsoft pulls the metadata and the email content about the user reports from the third party reporting mailbox. Messages will appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. [Learn more about how Microsoft handle and analyze the reports](#what-do-you-need-to-know-before-you-begin?).
+    - **Microsoft and My reporting mailbox** : Microsoft pulls the metadata and the email content about the user reports from the third party reporting mailbox. Messages will appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. [Learn more about how Microsoft handle and analyze the reports](#what-do-you-need-to-know-before-you-begin).
 
     For both the configurations, to specify the existing internal exchange online reporting mailbox that holds user-reported messages from third-party reporting tools, use **Add an Exchange Online mailbox to send reported messages to**. Alerts will be fired for these user reports. In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response to threats](air-about.md), is triggered which automatically carries out the analysis and clean up actions for you.
 
