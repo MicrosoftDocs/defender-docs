@@ -30,7 +30,7 @@ ms.date: 06/27/2024
 
 
 
-With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured endpoints. This is made possible by customizable detection rules that automatically trigger alerts and response actions.
+With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured endpoints. Custom detections are customizable detection rules that automatically trigger alerts and response actions.
 
 Custom detections work with [advanced hunting](advanced-hunting-overview.md), which provides a powerful, flexible query language that covers a broad set of event and system information from your network. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
@@ -39,7 +39,7 @@ Custom detections provide:
 - Alerts for rule-based detections built from advanced hunting queries
 - Automatic response actions
 
-Optimizing your queries in custom detection rules is very important to avoid timeouts and ensure efficiency. There are several resources available that provide guidance on optimizing your KQL queries in  [Advanced hunting query best practices](advanced-hunting-best-practices.md).
+Optimizing your queries in custom detection rules is important in avoiding time-outs and ensuring efficiency. There are several resources available that provide guidance on optimizing your queries in  [Advanced hunting query best practices](advanced-hunting-best-practices.md).
 
 ## See also
 
