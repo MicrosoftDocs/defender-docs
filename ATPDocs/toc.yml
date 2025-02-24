@@ -167,7 +167,7 @@ items:
       displayName: Microsoft Entra connect
     - name: "Rotate password for Microsoft Entra Connect connector account "
       href: rotate-password-microsoft-entra-connect.md
-      displayName: Microsoft Entra Connect
+      displayName: "Microsoft Entra Connect"
     - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
       href: remove-replication-permissions-microsoft-entra-connect.md
       displayName: Microsoft Entra Connect
