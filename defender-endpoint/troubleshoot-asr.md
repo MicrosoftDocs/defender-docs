@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
-ms.date: 01/10/2025
+ms.date: 02/24/2025
 ms.reviewer:
 manager: deniseb
 ms.custom: asr
@@ -22,7 +22,6 @@ search.appverid: met150
 # Troubleshoot attack surface reduction rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Applies to:**
 
