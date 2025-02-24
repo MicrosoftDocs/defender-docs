@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 02/05/2025
 ---
 
 # Microsoft Defender Experts for XDR
@@ -44,6 +44,7 @@ Apart from the constantly updated research and intelligence tailored for the thr
 
 - **Managed detection and response** - Expert analysts manage your Microsoft Defender XDR incident queue and handle triage and investigation on your behalf; they partner with you and your team to take action or guide you to respond to incidents
 - **Proactive threat hunting** - [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats
+- **Ask Defender Experts** - Select [Ask Defender Experts](experts-on-demand.md) in the Microsoft Defender portal to get expert advice about threats your organization is facing. You can ask for help on a specific incident, nation-state actor, or attack vector-related notifications
 - **Live dashboards and reports** - Transparent view of our operations on your behalf and noise free, actionable view into what matters for you coupled with detailed analytics
 - **Proactive check-ins for continuous security improvements** - Periodic check-ins with your named service delivery team to guide your Defender Experts for XDR experience and improve your security posture
 

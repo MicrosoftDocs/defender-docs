@@ -33,7 +33,7 @@ As an email sender from outside Microsoft 365, are you getting an **Access denie
 > [!TIP]
 > There are good reasons for senders to wind up on the blocked senders list, but mistakes can happen. Take a look at this video for a balanced explanation of blocked senders and delisting:
 >
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvD]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=74e1b7cf-3d15-4b69-b201-7b9220406244]
 >
 > For more information about best practices for sending messages to Microsoft 365, see the following articles:
 >

@@ -88,7 +88,7 @@ AIR capabilities in Defender for Office 365 Plan 2 include [reports and details]
 
 Use the [Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference) for integration with these solutions.
 
-For an example of a custom solution that integrates alerts from user-reported phishing messages that were already processed by AIR into a SIEM server and case management system, see [Tech Community blog: Improve the Effectiveness of your SOC with Microsoft Defender for Office 365 and the Office 365 Management API](https://techcommunity.microsoft.com/t5/microsoft-security-and/improve-the-effectiveness-of-your-soc-with-office-365-atp-and/ba-p/1525185).
+For an example of a custom solution that integrates alerts from user-reported phishing messages that were already processed by AIR into a SIEM server and case management system, see [Microsoft Security Blog - Improve the Effectiveness of your SOC with Microsoft Defender for Office 365 and the Office 365 Management API](https://techcommunity.microsoft.com/blog/microsoftsecurityandcompliance/improve-the-effectiveness-of-your-soc-with-office-365-atp-and-the-o365-managemen/1525185).
 
 The integrated solution greatly reduces the number of false positives, which allows the SecOps team to focus their time and effort on real threats.
 

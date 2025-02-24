@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 12/30/2024
+ms.date: 02/06/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -36,7 +36,7 @@ search.appverid: met150
 > In Defender for Endpoint Plan 1 and Defender for Business, you can create an indicator to block or allow a file. In Defender for Business, your indicator is applied across your environment and cannot be scoped to specific devices.
 
 > [!NOTE]
-> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2). 
+> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). 
 > Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced antimalware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
@@ -53,7 +53,7 @@ Understand the following prerequisites before you create indicators for files:
 
 - [Behavior Monitoring is enabled](behavior-monitor.md)
 
-- [Cloud-based protection is turned on](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- [Cloud-based protection is turned on](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus).
 
 - [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
 

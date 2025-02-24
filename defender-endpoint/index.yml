@@ -41,7 +41,7 @@ landingContent:
       - linkListType: video
         links:
           - text: Overview video
-            url:  https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0
+            url:  https://learn-video.azurefd.net/vod/player?id=95c63786-0382-413d-8a75-eb373e825fa6
 
 
 # Card
@@ -68,7 +68,7 @@ landingContent:
       - linkListType: video
         links:
           - text: Onboarding video
-            url:  https://www.microsoft.com/videoplayer/embed/RE4bGqr
+            url:  https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60
 
 # Card
   - title: Security operations
