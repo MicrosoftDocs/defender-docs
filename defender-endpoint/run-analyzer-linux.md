@@ -1,15 +1,15 @@
 ---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 01/08/2024
+ms.date: 02/24/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -28,46 +28,46 @@ f1.keywords: NOCSH
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-If you're experiencing reliability or device health issues with Defender for Endpoint on Linux, and you contact support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool. This article describes how to use the client analyzer tool locally on the device or together with live response. In either case, you can use a Python-based solution or a binary version that has no external Python dependency. 
+If you have issues with Microsoft Defender for Endpoint on Linux and need support, you might be asked to provide the output from the Client Analyzer tool. This article explains how to use the tool on your device or with live response. You can use either a Python-based solution or a binary version that doesn't need Python.
 
 
 ## Running the binary version of the client analyzer
 
-1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
+1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the Linux machine that you're to investigating. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
     wget --quiet -O XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
     ```
 
-1. Verify the download.
+2. Verify the download.
 
     ```bash
     echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
-2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
+3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
 
     ```bash
     unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
     ```
 
-3. Change the directory:
+4. Change the directory:
 
     ```bash
     cd XMDEClientAnalyzerBinary
     ```
 
-4. Two new zip files are produced:
+5. Two new zip files are produced:
 
    - **SupportToolLinuxBinary.zip** : For all Linux devices
    - **SupportToolMacOSBinary.zip** : For Mac devices
 
-5. Unzip `SupportToolLinuxBinary.zip` file.
+6. Unzip `SupportToolLinuxBinary.zip` file.
 
      ```bash
      unzip -q SupportToolLinuxBinary.zip
      ```
-6. Run the tool as _root_ to generate diagnostic package:
+7. Run the tool as _root_ to generate diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -76,14 +76,14 @@ If you're experiencing reliability or device health issues with Defender for End
 ## Running the Python-based client analyzer
 
 > [!NOTE]
-> - The analyzer depends on few extra PIP packages (`decorator`, `sh`, `distro`, `lxml`, and `psutil`) which are installed in the operating system when in root to produce the result output. If not installed, the analyzer attempts to fetch it from the [official repository for Python packages](https://pypi.org/search/?q=lxml).
+> - The analyzer depends on a few extra PIP packages (`decorator`, `sh`, `distro`, `lxml`, and `psutil`) which are installed in the operating system when in root to produce the result output. If not installed, the analyzer attempts to fetch it from the [official repository for Python packages](https://pypi.org/search/?q=lxml).
 > - In addition, the tool currently requires Python version 3 or later to be installed on your device.
 > - If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
-> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it's recommended that you install the packages into a user PIP environment.
+> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, we recommend that you install the packages into a user PIP environment.
 
-1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
+1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on the Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
     wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
@@ -119,7 +119,7 @@ If you're experiencing reliability or device health issues with Defender for End
     ./mde_support_tool.sh
     ```
 
-7. To collect diagnostic package and generate the result archive file, run again as root.
+7. To collect the diagnostic package and generate the result archive file, run again as root.
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -147,7 +147,7 @@ positional arguments:
                         analysis of a performance scenario that can be
                         reproduced on demand
     installation        Collect different installation/onboarding reports
-    exclude             Exclude specific process(es) from audit-d monitoring.
+    exclude             Exclude specific processes from audit-d monitoring.
     ratelimit           Set the rate limit for auditd events. Rate limit will
                         update the limits for auditd events for all the
                         applications using auditd, which could impact
@@ -190,7 +190,7 @@ optional arguments:
 ### Diagnostics mode
 
 Diagnostics mode is used to collect extensive set of machine information, such as memory, disk, MDATP logs, etc.
-This set of files give us primary set of information required to debug any issue related to Defender For Endpoint.
+This set of files gives the primary set of information required to debug any issue related to Defender For Endpoint.
 
 The options supported are as follows:
 
@@ -225,7 +225,7 @@ optional arguments:
 Usage example: `sudo ./MDESupportTool -d`
 
 > [!NOTE]
-> The log level autoreset feature is available only on agent version 101.24052.0002 or above.
+> The log level autoreset feature is available only in agent version 101.24052.0002 or above.
 
 The files generated when using this mode are summarized in the following table:
 
@@ -245,7 +245,7 @@ The files generated when using this mode are summarized in the following table:
 | `ebpf_enabled_func.txt`  | List of all the kernel functions that are currently enabled for tracing |
 | `ebpf_syscalls.zip` | Information about system call tracing  |
 | `ebpf_raw_syscalls.zip`  | Tracing events related to raw system calls  |
-| `ebpf_maps_info.txt`  | eBPF maps' id and size info  |
+| `ebpf_maps_info.txt`  | eBPF maps' ID and size info  |
 | `syslog.zip`  | The files under /var/log/syslog  |
 | `messages.zip`  | The files under /var/log/messages  |
 | `conflicting_processes_information.txt`  | Defender for Endpoint Conflicting Processes |
@@ -274,7 +274,7 @@ The files generated when using this mode are summarized in the following table:
 | `uptime_info.txt` | Time since last restart |
 | `last_info.txt` | Listing of last logged in users |
 | `locale_info.txt` | Show current locale |
-| `tmp_files_owned_by_mdatp.txt` | /tmp files owned by group:mdatp <br/>(Present only when Defender for Endpoint is installed) |
+| `tmp_files_owned_by_mdatp.txt` | /tmp files owned by group: mdatp <br/>(Present only when Defender for Endpoint is installed) |
 | `mdatp_config.txt` | All the Defender for Endpoint configurations <br/>(Present only when Defender for Endpoint is installed) |
 | `mpenginedb.db`<br/>`mpenginedb.db-wal`<br/> `mpenginedb.db-shm` | Antivirus definitions file <br/>(Present only when Defender for Endpoint is installed) |
 | `iptables_rules.txt` | Linux iptables rules |
@@ -290,7 +290,7 @@ The files generated when using this mode are summarized in the following table:
 | `top_output.txt `| Process running in the machine when the tool was run |
 | `top_summary.txt` | Memory and CPU usage analytics of the process running |
 
-### Optional argumets for Client Analyzer
+### Optional arguments for Client Analyzer
 Client Analyzer provides the following optional arguments for extra data collection:
 
 #### Collect performance info
@@ -339,12 +339,12 @@ Usage example:
 ```console
 sudo ./MDESupportTool connectivitytest -o ~/MicrosoftDefenderATPOnboardingLinuxServer.py`
 ```
-The output printed on the screen will show if the URLs are reachable or not.
+The output printed on the screen shows if the URLs are reachable or not.
 
 
 #### Collect different installation/onboarding reports
 
-This mode collects installation related info like distro info, system requirements, etc.
+This mode collects installation related information like distro, system requirements, etc.
 
 ```console
 
@@ -399,7 +399,7 @@ sudo ./MDESupportTool exclude -d /var/foo/bar`
 
 ### AuditD rate limiter
 
-This option sets the rate limit globally for AuditD causing a drop in all the audit events. When the limiter is enabled the number of auditd events are limited to 2500 events/sec. This option can be used in cases where we see high CPU usage from AuditD side.
+This option sets the rate limit globally for AuditD causing a drop in all the audit events. When the limiter is enabled, the auditd events are limited to 2500 events/sec. This option can be used in cases where we see high CPU usage from AuditD side.
 
 ```console
 
@@ -414,7 +414,7 @@ sudo ./mde_support_tool.sh ratelimit -e true
 ```
 
 > [!NOTE]
-> This functionality should be carefully used as it limits the number of events being reported by the auditd subsystem as a whole. This could reduce the number of events for other subscribers as well.
+> This functionality should be carefully used as it limits the number of events the auditd subsystem reports as a whole. This could reduce the number of events for other subscribers as well.
 
 ### AuditD skip faulty rules
 
@@ -433,7 +433,7 @@ sudo ./mde_support_tool.sh skipfaultyrules -e true
 ```
 
 > [!NOTE]
-> This functionality skips faulty rules. Faulty rules must be further identified and fixed.
+> This functionality skips the faulty rules. Faulty rules must be further identified and fixed.
 
 
 ## Use live response in Defender for Endpoint to collect support logs
@@ -444,7 +444,7 @@ The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMD
 - For execution, the `acl` package is required.
 
 > [!IMPORTANT]
-> Window uses the Carriage Return and Line Feed invisible characters to represent the end of one line and beginning of a new line in a file, but Linux systems uses only the Line Feed invisible character at the end of its file lines. When using the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
+> Window uses the Carriage Return and Line Feed invisible characters to represent the end of one line and beginning of a new line in a file, but Linux systems uses only the Line Feed invisible character at the end of its file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
 
 ### Install the XMDE Client Analyzer
 
@@ -456,7 +456,7 @@ Download and extract the XMDE Client Analyzer. You can use either the binary or 
 Due to the limited commands available in live response, the steps detailed must be executed in a bash script. By splitting the installation and execution portion of these commands, it's possible to run the install script once, and run the execution script multiple times.
 
 > [!IMPORTANT]
-> The example scripts assume the machine has direct internet access and can retrieve the XMDE Client Analyzer from Microsoft. If the machine does not have direct internet access, then the installation scripts must be updated to fetch the XMDE Client Analyzer from a location the machines can access successfully.
+> The example scripts assume the machine has direct internet access and can retrieve the XMDE Client Analyzer from Microsoft. If the machine doesn't have direct internet access, then the installation scripts must be updated to fetch the XMDE Client Analyzer from a location the machines can access successfully.
 
 #### Binary client analyzer install script
 
@@ -533,7 +533,7 @@ The following script performs the first six steps of the [Running the Python ver
 Live response doesn't support running the XMDE Client Analyzer or Python directly, so an execution script is necessary.
 
 > [!IMPORTANT]
-> The following scripts assume the XMDE Client Analyzer was installed using the same locations from the scripts mentioned earlier. If your organization has chosen to install the scripts into a different location, then the scripts must be updated to align with your organization's chosen installation location.
+> The following scripts assume the XMDE Client Analyzer was installed using the same locations from the scripts mentioned earlier. If your organization chooses to install the scripts into a different location, then the scripts must be updated to align with your organization's chosen installation location.
 
 #### Script to execute the binary client analyzer
 
@@ -572,7 +572,7 @@ The Python version of the client analyzer accepts command line parameters to per
 #### Run the client analyzer script
 
 > [!NOTE]
-> If you have an active live response session you can skip Step 1.
+> If you have an active live response session, you can skip Step 1.
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate. 
 
