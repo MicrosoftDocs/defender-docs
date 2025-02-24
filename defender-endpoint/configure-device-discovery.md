@@ -47,20 +47,20 @@ Navigate to **Settings** > **Device discovery**
 
 ## Exclude devices from being actively probed in standard discovery
 
-If there are devices on your network that shouldn't be actively scanned (for example, devices used as honeypots for another security tool), you can also define a list of exclusions to prevent them from being scanned. Note that devices can still be discovered using Basic discovery mode and can also be discovered through multicast discovery attempts. Those devices will be passively discovered but won't be actively probed.
+If there are devices on your network that shouldn't be actively scanned (for example, devices used as honeypots for another security tool), you can also define a list of exclusions to prevent them from being scanned. Devices can still be discovered using Basic discovery mode and can also be discovered through multicast discovery attempts. Those devices are passively discovered but won't be actively probed.
 
 You can configure the devices to exclude in the **Exclusions** page.
 
 ## Select networks to monitor
 
-Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a non-corporate network that can be ignored. To identify a network as corporate, we correlate network identifiers across all tenant's clients and if most devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, we assume that this is a corporate network. Corporate networks are typically chosen to be monitored. However, you can override this decision by choosing to monitor non-corporate networks where onboarded devices are found.
+Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a noncorporate network that can be ignored. To identify a network as corporate, we correlate network identifiers across all tenant's clients and if most devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, we assume that this is a corporate network. Corporate networks are typically chosen to be monitored. However, you can override this decision by choosing to monitor noncorporate networks where onboarded devices are found.
 
 You can configure where device discovery can be performed by specifying which networks to monitor. When a network is monitored, device discovery can be performed on it.
 
 A list of networks where device discovery can be performed is shown in the **Monitored networks** page.
 
 > [!NOTE]
-> The list shows networks that were identified as corporate networks. If less than 50 networks are identified as corporate networks, then list will show up to 50 networks with the most onboarded devices.
+> The list shows networks that were identified as corporate networks. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
 
 The list of monitored networks is sorted based upon the total number of devices seen on the network in the last seven days.
 
@@ -74,7 +74,7 @@ You can apply a filter to view any of the following network discovery states:
 
 You control where device discovery takes place. Monitored networks are where device discovery is performed and are typically corporate networks. You can also choose to ignore networks or select the initial discovery classification after modifying a state.
 
-Choosing the initial discovery classification means applying the default system-made network monitor state. Selecting the default system-made network monitor state means that networks that were identified to be corporate, are monitored, and ones identified as non-corporate, are ignored automatically.
+Choosing the initial discovery classification means to apply the default system-made network monitor state. Selecting the default system-made network monitor state means that networks that were identified to be corporate, are monitored, and ones identified as noncorporate, are ignored automatically.
 
 1. Select **Settings > Device discovery**.
 
@@ -88,7 +88,7 @@ Choosing the initial discovery classification means applying the default system-
 
    > [!WARNING]
    >
-   > - Choosing to monitor a network that was not identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and may therefore detect home or other non-corporate devices.
+   > - Choosing to monitor a network that wasn't identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and can, therefore, detect home or other non-corporate devices.
    > - Choosing to ignore a network will stop monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but will no longer be updated, and details will be retained until the data retention period of the Defender for Endpoint expires.
    > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
 
