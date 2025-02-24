@@ -328,7 +328,7 @@ To configure auditing on Microsoft Entra Connect servers:
 <a name="enable-auditing-on-an-exchange-object"></a>
 
 >[!NOTE]
-> The configuration container audit is requried only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
+> The configuration container audit is required only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
 
 **Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
 
