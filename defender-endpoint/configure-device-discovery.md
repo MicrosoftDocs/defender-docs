@@ -30,7 +30,7 @@ ms.date: 02/24/2025
 
 Device discovery can be configured to be on standard or basic mode. Use the standard option to actively find devices in your network, which helps improve the discovery of endpoints and provide richer device classification.
 
-You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability (currently - Windows 10 or later and Windows Server 2019 or later devices only) or select a subset or subsets of your devices by specifying their device tags.
+You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability (currently for devices running Windows 10 and later, or Windows Server 2019 and later). Or, you can select a subset of devices by specifying their device tags.
 
 ## Set up device discovery
 
@@ -38,7 +38,8 @@ To set up device discovery, take the following configuration steps in the [Micro
 
 Navigate to **Settings** > **Device discovery**
 
-1. If you want to configure Basic as the discovery mode to use on your onboarded devices, select **Basic** and then select **Save**
+1. If you want to configure Basic as the discovery mode to use on your onboarded devices, select **Basic** and then select **Save**.
+
 2. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
 
 > [!NOTE]
@@ -76,16 +77,20 @@ You control where device discovery takes place. Monitored networks are where dev
 Choosing the initial discovery classification means applying the default system-made network monitor state. Selecting the default system-made network monitor state means that networks that were identified to be corporate, are monitored, and ones identified as non-corporate, are ignored automatically.
 
 1. Select **Settings > Device discovery**.
+
 2. Select **Monitored networks**.
+
 3. View the list of networks.
+
 4. Select the three dots next to the network name.
+
 5. Choose whether you want to monitor, ignore, or use the initial discovery classification.
 
-    > [!WARNING]
-    >
-    > - Choosing to monitor a network that was not identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and may therefore detect home or other non-corporate devices.
-    > - Choosing to ignore a network will stop monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but will no longer be updated, and details will be retained until the data retention period of the Defender for Endpoint expires.
-    > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
+   > [!WARNING]
+   >
+   > - Choosing to monitor a network that was not identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and may therefore detect home or other non-corporate devices.
+   > - Choosing to ignore a network will stop monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but will no longer be updated, and details will be retained until the data retention period of the Defender for Endpoint expires.
+   > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
 
 6. Confirm that you want to make the change.
 
@@ -118,4 +123,5 @@ DeviceInfo
 
 - [Device discovery overview](device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
