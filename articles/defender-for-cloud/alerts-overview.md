@@ -113,7 +113,7 @@ Learn about [streaming alerts to a SIEM, SOAR, or IT Service Management solution
 
 In this article, you learned about the different types of alerts available in Defender for Cloud. For more information, see:
 
-- [Security alerts in Azure Activity log](https://go.microsoft.com/fwlink/?linkid=2114113) - In addition to being available in the Azure portal or programmatically, Security alerts and incidents are audited as events in Azure Activity Log
+- [Security alerts in Azure Activity log](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Security%20Alerts%20in%20Azure%20Activity%20Log/README.md) - In addition to being available in the Azure portal or programmatically, Security alerts and incidents are audited as events in Azure Activity Log
 - [Reference table of Defender for Cloud alerts](alerts-reference.md)
 - [Respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert)
 - Learn how to [manage security incidents in Defender for Cloud](incidents.md).
