@@ -21,18 +21,6 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## February 2025
 
-### Enhanced Visibility into OAuth Apps Connected to Microsoft 365 - General Availability
-
-Defender for Cloud Apps users who use app governance are now able to gain visibility into the origin of OAuth apps connected to Microsoft 365. You can filter and monitor apps that have external origins, to proactively review such apps and improve the security posture of the organization.
-
-The new *Permissions filter and export capabilities allow you to quickly identify apps with specific permissions to access Microsoft 365. 
-
-You can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enable you to get deeper visibility into apps accessing emails using legacy EWS API.
-
-We are also expanding the coverage of privilege level feature for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification will enable you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365.
-
-For more information, see [detailed insights into OAuth apps](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
-
 ### Enhanced alert source accuracy
 
 Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.   
