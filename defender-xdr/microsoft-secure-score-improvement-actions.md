@@ -115,7 +115,7 @@ Prerequisites include any licenses that are needed or actions to be completed be
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community. We're monitoring the community and will provide help.
+If you have any issues, let us know by posting in the [Defender XDR community](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/discussions/microsoftthreatprotection). We're monitoring the community and will provide help.
 
 ## Related resources
 
