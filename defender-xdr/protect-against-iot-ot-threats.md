@@ -9,6 +9,10 @@ manager: raynew
 audience: ITPro
 ms.topic: conceptual
 ms.date: 01/20/2024
+appliesto:
+    - Microsoft Defender for XDR
+    - Microsoft Defender for Endpoint
+    - Microsoft Defender for IoT
 
 #Customer intent: As a Defender XDR customer, I want to know what IoT/OT protection is included in my license so that I can better protect my IoT/OT assets.
 ---
