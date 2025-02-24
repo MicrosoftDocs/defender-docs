@@ -157,6 +157,7 @@ items:
     - name: Remediation actions
       href: remediation-actions.md
   - name: Security posture
+    items:
    - name: Overview
      href: security-assessment.md
     items:
