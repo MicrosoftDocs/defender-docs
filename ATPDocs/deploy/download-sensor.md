@@ -5,9 +5,12 @@ ms.date: 06/13/2023
 ms.topic: how-to
 ---
 
-# Download the Microsoft Defender for Identity sensor
+# Download the Microsoft Defender for Identity classic sensor
 
-This article describes how to download the Microsoft Defender for Identity sensor for your domain controllers or AD CS / AD FS servers. 
+This article describes how to download the Microsoft Defender for Identity classic sensor for your domain controllers or AD CS / AD FS and Entra Connect servers. 
+
+> [!IMPORTANT]
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
 
 ## Add a sensor and download sensor software
 
@@ -17,7 +20,7 @@ This article describes how to download the Microsoft Defender for Identity senso
 
     [![Screenshot of the Sensors tab.](../media//sensor-page.png)](../media/sensor-page.png#lightbox)
 
-1. Select **Add sensor**. Then, in the **Add a new sensor** pane, select **Download installer** and save the installation package locally. The downloaded zip file includes the following files:
+1. Select **Add sensor**. Then, in the **Add a new sensor** pane, select **Download installer**, and save the installation package locally. The downloaded zip file includes the following files:
 
     - The Defender for Identity sensor installer
 

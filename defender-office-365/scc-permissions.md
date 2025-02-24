@@ -20,7 +20,7 @@ description: Admins can learn about the roles and role groups in Microsoft Defen
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 11/27/2024
+ms.date: 02/20/2025
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
@@ -43,8 +43,10 @@ This article contains the inventory of Defender for Office 365 and Microsoft Pur
 
 > [!NOTE]
 > In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
-> 
-> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal**.
+>
+> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.**
+>
+> :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
 ## Role groups in Microsoft Defender for Office 365 and Microsoft Purview
 

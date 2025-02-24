@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 02/20/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -25,7 +25,7 @@ ms.date: 02/04/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 This article describes how to install, configure, update, and use Microsoft Defender for Endpoint on Linux.
 
@@ -63,7 +63,8 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   - Red Hat Enterprise Linux 7.2 or higher
   - Red Hat Enterprise Linux 8.x
   - Red Hat Enterprise Linux 9.x
-  - CentOS 7.2 or higher
+  - CentOS 7.2 or higher, excluding CentOS Stream
+    
   - Ubuntu 16.04 LTS 
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
@@ -88,20 +89,32 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
 
   - Ubuntu 20.04 ARM64
   - Ubuntu 22.04 ARM64
+  - Ubuntu 24.04 ARM64
+    
   - Amazon Linux 2 ARM64
   - Amazon Linux 2023 ARM64
     
-  > [!IMPORTANT]
+  - RHEL 8.x ARM64
+    
+  - RHEL 9.x ARM64
+    
+  - Oracle Linux 8.x ARM64
+    
+  - Oracle Linux 9.x ARM64
+    
+  - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
+    
+    > [!IMPORTANT]
   > Support for Microsoft Defender for Endpoint on Linux for ARM64-based Linux devices is now in preview. For more information, see [Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md). 
    
-  > [!NOTE]
+    > [!NOTE]
   > The workstation versions of these distributions are unsupported.
   > Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions). 
   > After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that which are listed in this section are provided for technical upgrade support only.
   > Currently, Rocky and Alma distributions aren't supported in Microsoft Defender Vulnerability Management.
   > Microsoft Defender for Endpoint for all other supported distributions and versions is kernel-version agnostic. The minimal requirement for the kernel version to be `3.10.0-327` or later.
   
-  > [!CAUTION]
+    > [!CAUTION]
   > Running Defender for Endpoint on Linux side by side with other `fanotify`-based security solutions isn't supported. It can lead to unpredictable results, including hanging the operating system. If there are any other applications on the system that use `fanotify` in blocking mode, applications are listed in the `conflicting_applications` field of the `mdatp health` command output. The Linux **FAPolicyD** feature uses `fanotify` in blocking mode, and is therefore unsupported when running Defender for Endpoint in active mode. You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to [Passive mode](linux-preferences.md#enforcement-level-for-antivirus-engine).
   
 - List of supported filesystems for RTP, Quick, Full, and Custom Scan.
