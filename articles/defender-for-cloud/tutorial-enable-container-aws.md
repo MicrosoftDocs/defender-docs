@@ -55,7 +55,7 @@ To protect your EKS clusters, you need to enable the Containers plan on the rele
         > If you disable this configuration, then the `Threat detection (control plane)` feature will be disabled. Learn more about [features availability](supported-machines-endpoint-solutions-clouds-containers.md).
 
     - [K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
-    - [Registry access](agentless-vulnerability-assessment-aws.md) sets permissions to allow vulnerability assessment of images stored in ECR To enable, set the **Registry access** toggle to **On**.
+      - [Registry access](agentless-vulnerability-assessment-aws.md) sets permissions to allow vulnerability assessment of images stored in ECR. To enable, set the **Registry access** toggle to **On**.
 
 2. Select **Next: Review and generate**.
 
