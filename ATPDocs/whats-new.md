@@ -24,6 +24,19 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## February 2025
 
+### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
+
+New Features and Improvements:
+- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDIConfiguration.
+- Support for getting, testing, and setting the proxy configuration on new MDI sensor.
+- The Active Directory Certificate Services registry value for audit filtering now properly sets the type.
+- New-MDIConfigurationReport now shows the name of the tested GPO and supports Server and Identity arguments.
+
+Bug Fixes:
+- Improved reliability for DeletedObjects container permissions on non-English operating systems.
+- Fixed extraneous output for KDS root key creation.
+- Other reliability fixes.
+
 ### New attack paths tab on the Identity profile page
 
 This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview) 

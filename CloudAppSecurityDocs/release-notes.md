@@ -21,6 +21,29 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## February 2025
 
+### Enhanced Visibility into OAuth Apps Connected to Microsoft 365 - General Availability
+
+Defender for Cloud Apps users who use app governance will be able to gain visibility into the origin of OAuth apps connected to Microsoft 365. You can filter and monitor apps that have external origins, to proactively review such apps and improve the security posture of the organization. 
+
+The new *Permissions* filter and export capabilities allows you to quickly identify apps with specific permissions to access Microsoft 365. 
+
+You can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights will enable you to get deeper visibility into apps accessing emails using legacy EWS API.
+
+We are also expanding the coverage of privilege level feature for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification will enable you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365. 
+
+For more information, see [detailed insights into OAuth apps](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
+
+### Enhanced alert source accuracy
+
+Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.   
+The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
+
+To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
+
+To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0&preserve-view=true)
+
+### Network requirement updates
+
 Due to improvements being made to Microsoft Defender for Cloud Apps to improve security and performance, you must update network information in your system's firewall and additional third-party services. Make these changes by March 16, 2025 to ensure uninterrupted access to our services:
 
 - Update your firewall rules to allow outbound traffic on port 443 to the following new CDN (Content Delivery Network)  endpoints before March 16, 2025:
@@ -128,7 +151,7 @@ Administrators who understand the power of Edge in-browser protection, can now r
 
 A primary reason is security, since the barrier to circumventing session controls using Edge is much higher than with reverse proxy technology.
 
-For more information see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
+For more information, see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
 
 ### Connect Mural to Defender for Cloud Apps (Preview)
 

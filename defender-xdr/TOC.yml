@@ -55,13 +55,13 @@
     - name: Protect against threats
       items:
       - name: Protect your endpoints
-        href: /defender-endpoint
+        href: /defender-endpoint/microsoft-defender-endpoint?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your identities
-        href: /defender-for-identity
+        href: /defender-for-identity/what-is?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
-        href: /defender-office-365
+        href: /defender-office-365/mdo-about?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your cloud apps
-        href: /defender-cloud-apps
+        href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your IoT/OT assets
         href: protect-against-iot-ot-threats.md
       - name: Microsoft Secure Score
