@@ -44,6 +44,8 @@ For more information on which roles have permission, see [Security Administrator
 
 For general information on admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true).
 
+You must have a Microsoft Defender for Endpoint Plan1 or Plan2 license to open support cases. If you are using only Microsoft Defender for Servers Plan 1/2, you must purchase at least one MDE P1/P2 license to open support cases.
+
 ## Access the widget
 
 Accessing the new support widget can be done in one of two ways:
