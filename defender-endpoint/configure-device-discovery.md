@@ -88,8 +88,8 @@ Choosing the initial discovery classification means to apply the default system-
 
    > [!WARNING]
    >
-   > - Choosing to monitor a network that wasn't identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and can, therefore, detect home or other non-corporate devices.
-   > - Choosing to ignore a network will stop monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but will no longer be updated, and details will be retained until the data retention period of the Defender for Endpoint expires.
+   > - Choosing to monitor a network that wasn't identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and can, therefore, detect home or other noncorporate devices.
+   > - Choosing to ignore a network stops monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but are no longer updated, and details are retained until the data retention period of the Defender for Endpoint expires.
    > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
 
 6. Confirm that you want to make the change.
