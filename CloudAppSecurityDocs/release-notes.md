@@ -35,6 +35,7 @@ To learn more about the Graph API alert resource: [alert resource type - Microso
 Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
 
 To connect to third-party apps and enable Defender for Cloud Apps, use the following IP addresses:
+
 |Data center|IP addresses|DNS name|
 |----|----|----|
 |US1|13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
@@ -82,7 +83,7 @@ Defender for Cloud Apps customers can now query data about discovered apps via t
 For more information, see:
 
 - [Work with discovered apps via Graph API](discovered-apps-api-graph.md)
-- [Microsoft Graph API reference for Microsoft Defender for Cloud Apps](/graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta)
+- [Microsoft Graph API reference for Microsoft Defender for Cloud Apps](/graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta&preserve-view=true)
 
 ### SaaS Security initiative in Exposure Management
 
