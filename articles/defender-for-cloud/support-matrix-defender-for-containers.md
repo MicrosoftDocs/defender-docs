@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: dcurwin
 ms.author: dacurwin
-ms.date: 12/14/2023
+ms.date: 02/25/2025
 ms.custom: references_regions
 ---
 
@@ -75,7 +75,7 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry | Vulnerability assessments for images in container registries | Docker Hub, JFrog | Preview | Preview | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | NA |
+| Container registry | Vulnerability assessments for images in container registries | Docker Hub, JFrog Artifactory | Preview | Preview | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | NA |
 
 ---
 
@@ -92,7 +92,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR |  | GA | GA | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Malware detection | Detection of malware | AKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | Commercial clouds |
 
-### Kubernetes distributions and configurations for Azure - Runtime threat protection
+#### Kubernetes distributions and configurations for Azure - Runtime threat protection
 
 | Aspect | Details |
 |--|--|
@@ -153,6 +153,17 @@ The following are the features provided by Defender for Containers, for the supp
 > [!NOTE]
 > For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
 
+### [Arc enabled Kubernetes clusters](#tab/arcrt)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | Arc enabled K8s clusters | Preview | Preview | Enabled **Defender sensor** | **Defender for Containers** | GCP |
+| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | Arc enabled K8s clusters | Preview | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | GCP |
+| Binary drift detection | Detects binary of runtime container from container image | - | - | - | - | - | - |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | - | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
+| Malware detection | Detection of malware | - | - | - | - | - | - |
+
 ---
 
 ## Security posture management
@@ -198,6 +209,18 @@ The following are the features provided by Defender for Containers, for the supp
 | CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | GKE | GA | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | GCP |
 
 <sup><a name="footnote3spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
+
+### [Arc enabled SPM](#tab/arcspm)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | Arc enabled K8s cluster | - | - | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Arc enabled K8s cluster |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | Arc enabled K8s cluster | - | - | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender CSPM | GCP |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
+| [Control plane hardening](defender-for-containers-architecture.md) | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | - | - | - | - | - | - |
+| [Workload hardening](kubernetes-workload-protections.md) |Protect workloads of your Kubernetes containers with best practice recommendations. | Arc enabled K8s clusters | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Defender for Containers | - |
+| CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | Arc enabled VMs | Preview | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | - |
 
 ### [External registries](#tab/extspm)
 
