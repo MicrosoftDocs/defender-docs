@@ -30,7 +30,7 @@ appliesto:
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 > [!IMPORTANT]
-> The Microsoft Report Message and Report Phishing add-ins are now in maintenance mode and will eventually be deprecated. We recommend transitioning from the add-ins to the built-in **Report** button. The **Report** button is supported in virtuall all consumer and entrprise Outlook clients. For more information, see the [Frequently asked questions](frequently-asked-questions) section in this article.
+> The Microsoft Report Message and Report Phishing add-ins are now in maintenance mode and will eventually be deprecated. We recommend transitioning from the add-ins to the built-in **Report** button. The **Report** button is supported in virtuall all consumer and entrprise Outlook clients. For more information, see the [Frequently asked questions](#frequently-asked-questions) section in this article.
 
 The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
@@ -153,7 +153,8 @@ Therefore, we decided to move to the built-in **Report** button to better serve 
 A: It means that no improvement will be made to the add-ins. The add-ins will remain functional until they're deprecated. Naturally, any new improvement requests for the add-ins will be rejected.
 
 ### Q: Will there be further communication before the add-in are deprecated?
-    Yes there will be further communication as we progress towards the add-in deprecation.
+
+A: Yes. There will be further communication as we progress towards the deprecation.
 
 ### Q: Some users in my organization are on an older client, which prevents us from migrating. What can I do?
 
