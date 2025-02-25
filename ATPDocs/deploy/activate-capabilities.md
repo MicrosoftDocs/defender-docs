@@ -92,8 +92,8 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
    ![Activation Defensor.](media/activate-capabilities/1.png)
    
-       > [!NOTE]
-    > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they are discovered, or manually, where you select specific domain controllers from the list of eligible servers.
+   > [!NOTE]
+   > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they are discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
 ![Sensors page.](media/activate-capabilities/2.png)
