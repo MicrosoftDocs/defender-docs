@@ -29,7 +29,7 @@ In Microsoft 365 organizations with mailboxes in Exchange Online, users can repo
 
 Microsoft provides the following tools for users to report good and bad messages:
 
--  The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) on virtually all outlook platforms. They even work on shared and delegate mailboxes.
+-  The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) on virtually all Outlook platforms, including shared and delegate mailboxes.
 
 For more information about reporting messages to Microsoft, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
@@ -58,7 +58,7 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
 
   If user reporting is turned off and a non-Microsoft add-in button is selected, the **Report** button isn't available in supported versions of Outlook.
 
-- The built-in **Report** button in Outlook on the web, Outlook for Mac, Outlook for Android, Outlook for iOS and the new Outlook for Windows supports reporting messages from shared mailboxes or other mailboxes by a delegate.
+- The built-in **Report** button in Outlook on the web, Outlook for Mac, Outlook for iOS, Outlook for Android, and the new Outlook for Windows supports reporting messages from shared mailboxes or other mailboxes by a delegate.
   - Shared mailboxes require Send As or Send On Behalf permission for the user.
   - Other mailboxes require Send As or Send On Behalf permission _and_ Read and Manage permissions for the delegate.
 
