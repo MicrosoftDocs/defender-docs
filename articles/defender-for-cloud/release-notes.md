@@ -938,7 +938,7 @@ As we approach the agent's retirement in August 2024, the following MMA-related 
 > [!NOTE]
 > We recommend that current customers, who have onboarded on-premises servers using the [legacy approach](quickstart-onboard-machines.md), should now connect these machines via Azure Arc-enabled servers.  We  also recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions to which these servers are connected.
 >
->For those customers who have selectively enabled Defender for Servers Plan 2 on specific Azure VMs through the legacy approach, we recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions of these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
+>If you've selectively enabled Defender for Servers Plan 2 on specific Azure VMs through the legacy approach, enable Defender for Servers Plan 2 on the Azure subscriptions of these machines. Exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
 >
 > These steps will ensure there is no loss of security coverage due to the retirement of the Log Analytics agent.
 
