@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 02/27/2024
+ms.date: 02/25/2025
 ---
 
 # Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
@@ -32,6 +32,12 @@ Besides obvious sensor health issues, MDECA can collect other traces, logs, and 
 
 - Application compatibility (AppCompat), performance, network connectivity, or
 - Unexpected behavior related to [Endpoint Data Loss Prevention](/microsoft-365/compliance/endpoint-dlp-learn-about).
+
+## Use the client analyzer on devices running Windows, Linux, or Mac
+
+- [Run the client analyzer on Windows](run-analyzer-windows.md)
+- [Run the client analyzer on Linux](run-analyzer-linux.md)
+- [Run the client analyzer on macOS](run-analyzer-macos.md)
 
 ## Privacy notice
 
