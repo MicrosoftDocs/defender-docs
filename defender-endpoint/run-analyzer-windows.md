@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 05/05/2024
+ms.date: 02/25/2025
 ---
 
 # Run the client analyzer on Windows
@@ -34,13 +34,14 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
 1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [Beta MDE Client Analyzer tool](https://aka.ms/MDEClientAnalyzerPreview) to the Windows device you want to investigate.
 
-   The file is saved to your Downloads folder by default.
+   The file is saved to your **Downloads** folder by default.
 
-2. Extract the contents of MDEClientAnalyzer.zip to an available folder.
+2. Extract the contents of `MDEClientAnalyzer.zip` to an available folder.
 
 3. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
+
    1. Right-click **Command prompt** and select **Run as administrator**.
 
 4. Type the following command and then press **Enter**:
@@ -86,91 +87,91 @@ Example contents after MDEClientAnalyzer.ps1 is modified:
 > - The start state of the EDR sensor (Sense is stopped if machine is not yet onboarded).
 > - If an advanced troubleshooting parameter was used with the analyzer command.
 
-By default, the unpacked MDEClientAnalyzerResult.zip file contains the following items.
+By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the following items.
 
-- MDEClientAnalyzer.htm
+- `MDEClientAnalyzer.htm`
 
   This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce.
 
-- SystemInfoLogs [Folder]
+- `SystemInfoLogs` (folder)
 
-  - AddRemovePrograms.csv
+  - `AddRemovePrograms.csv`
 
     Description: List of x64 installed software on x64 OS collected from registry.
 
-  - AddRemoveProgramsWOW64.csv
+  - `AddRemoveProgramsWOW64.csv`
 
     Description: List of x86 installed software on x64 OS collected from registry.
 
-    - CertValidate.log
+    - `CertValidate.log`
 
       Description: Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil).
 
-    - dsregcmd.txt
+    - `dsregcmd.txt`
 
       Description: Output from running [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). This provides details about the Microsoft Entra status of the machine.
 
-    - IFEO.txt
+    - `IFEO.txt`
 
       Description: Output of [Image File Execution Options](/previous-versions/windows/desktop/xperf/image-file-execution-options) configured on the machine
 
-    - MDEClientAnalyzer.txt
+    - `MDEClientAnalyzer.txt`
 
       Description: This is verbose text file showing with details of the analyzer script execution.
 
-    - MDEClientAnalyzer.xml
+    - `MDEClientAnalyzer.xml`
 
       Description: XML format containing the analyzer script findings.
 
-    - RegOnboardedInfoCurrent.Json
+    - `RegOnboardedInfoCurrent.Json`
 
       Description: The onboarded machine information gathered in JSON format from the registry.
 
-  - RegOnboardingInfoPolicy.Json
+  - `RegOnboardingInfoPolicy.Json`
 
     Description: The onboarding policy configuration gathered in JSON format from the registry.
 
-    - SCHANNEL.txt
+    - `SCHANNEL.txt`
 
       Description: Details about [SCHANNEL configuration](/windows-server/security/tls/manage-tls) applied to the machine such gathered from registry.
 
-    - SessionManager.txt
+    - `SessionManager.txt`
 
       Description: Session Manager specific settings gather from registry.
 
-    - SSL_00010002.txt
+    - `SSL_00010002.txt`
 
       Description: Details about [SSL configuration](/windows-server/security/tls/manage-tls) applied to the machine gathered from registry.
 
-- EventLogs [Folder]
+- `EventLogs` (folder)
 
-  - utc.evtx
+  - `utc.evtx`
 
     Description: Export of DiagTrack event log
 
-  - senseIR.evtx
+  - `senseIR.evtx`
 
     Description: Export of the Automated Investigation event log
 
-  - sense.evtx
+  - `sense.evtx`
 
     Description: Export of the Sensor main event log
 
-  - OperationsManager.evtx
+  - `OperationsManager.evtx`
 
     Description: Export of the Microsoft Monitoring Agent event log
 
-- MdeConfigMgrLogs [Folder]
+- `MdeConfigMgrLogs` (folder)
 
-  - SecurityManagementConfiguration.json
+  - `SecurityManagementConfiguration.json`
 
     Description: Configurations sent from MEM (Microsoft Endpoint Manager) for enforcement.
 
-  - policies.json
+  - `policies.json`
 
     Description: Policies settings to be enforced on the device.
 
-  - report_xxx.json
+  - `report_xxx.json`
 
     Description: Corresponding enforcement results.
 
