@@ -35,7 +35,7 @@ Retrieve and review the Defender for SQL Servers on Machines protection status r
 
     :::image type="content" source="media/verify-machines-protection/script-results.png" alt-text="Screenshot of the results screen once the script runs." lightbox="media/verify-machines-protection/script-results.png":::
 
-1. If the `ProtectionStatusLastUpdate` field doesn't show a date within the last day, the machine might not be protected. [Verify the protection of the single SQL server VM](#verify-protection-on-a-single-sql-server-VM).
+1. If the `ProtectionStatusLastUpdate` field doesn't show a date within the last day, the machine might not be protected. [Verify the protection of the single SQL server VM](#verify-protection-on-a-single-sql-server-vm).
 
     :::image type="content" source="media/verify-machines-protection/status-update.png" alt-text="Screenshot that shows the last status update for the SQL instance." lightbox="media/verify-machines-protection/status-update.png":::
 
