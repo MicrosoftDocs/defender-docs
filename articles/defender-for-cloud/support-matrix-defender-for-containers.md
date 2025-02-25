@@ -31,7 +31,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Container registry | Vulnerability assessments for images in container registries | ACR | GA | GA | Requires **Registry access** (National clouds are automatically enabled and cannot be toggled) | **Defender for Containers** or **Defender CSPM** | Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
 | Runtime container | Vulnerability assessments of running container images | Agnostic to container registry source | GA | GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** (National clouds are automatically enabled and cannot be disabled) | **Defender for Containers** or **Defender CSPM** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 
-### Registries and images support for vulnerability assessment in Azure
+#### Registries and images support for vulnerability assessment in Azure
 
 | Aspect | Details |
 |--|--|
@@ -62,7 +62,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Container registry | Vulnerability assessments for images in container registries | GAR, GCR | GA | GA | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | AWS |
 | Runtime container | Vulnerability assessments of running container images | GKE | GA | GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
 
-#### Registries and images support for GCP - Vulnerability assessment powered by Microsoft Defender Vulnerability Management
+#### Registries and images support for vulnerability assessment in GCP
 
 | Aspect | Details |
 |--|--|
@@ -92,7 +92,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR |  | GA | GA | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Malware detection | Detection of malware | AKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | Commercial clouds |
 
-#### Kubernetes distributions and configurations for Azure - Runtime threat protection
+#### Kubernetes distributions and configurations for runtime threat protection in Azure
 
 | Aspect | Details |
 |--|--|
@@ -116,7 +116,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | EKS | GA | GA | Enabled with any Defender for Cloud plan | Any plan | AWS |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
-### Kubernetes distributions/configurations support for runtime threat protection in AWS
+#### Kubernetes distributions/configurations support for runtime threat protection in AWS
 
 | Aspect | Details |
 |--|--|
@@ -140,7 +140,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
-### Kubernetes distributions/configurations support for runtime threat protection in GCP
+#### Kubernetes distributions/configurations support for runtime threat protection in GCP
 
 | Aspect | Details |
 |--|--|
@@ -163,6 +163,19 @@ The following are the features provided by Defender for Containers, for the supp
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | - | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
+
+#### Kubernetes distributions/configurations for runtime threat protection in Arc enabled Kubernetes
+
+| Aspect | Details |
+|--|--|
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br> * [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
+
+<sup><a name="footnote1arc"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
+
+<sup><a name="footnote2arc"></a>2</sup> To get [Microsoft Defender for Containers](defender-for-containers-introduction.md) protection for your environments, you need to onboard [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and enable Defender for Containers as an Arc extension.
+
+> [!NOTE]
+> For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
 
 ---
 
@@ -210,7 +223,7 @@ The following are the features provided by Defender for Containers, for the supp
 
 <sup><a name="footnote3spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
 
-### [Arc enabled SPM](#tab/arcspm)
+### [Arc enabled Kubernetes](#tab/arcspm)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
