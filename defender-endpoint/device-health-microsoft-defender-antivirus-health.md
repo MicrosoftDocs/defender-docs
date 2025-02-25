@@ -100,7 +100,7 @@ For the three `updates` cards (also known as up-to-date reporting cards), "**No 
 - Computer is disconnected from the network.
 - Computer is powered down or in a hibernation state.
 - Microsoft Defender Antivirus is disabled.
-- Device is a non-Windows (Mac or Linux) device.
+- Device is a Mac device.
 - Cloud protection isn't enabled.
 - Device doesn't meet pre-requisites for Antivirus engine or platform version.
 
