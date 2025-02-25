@@ -385,8 +385,6 @@
            href: submissions-submit-files-to-microsoft.md
          - name: Admin review for user reported messages
            href: submissions-admin-review-user-reported-messages.md
-         - name: Errors during submissions
-           href: submissions-error-messages.md
          - name: Submission result definitions
            href: submissions-result-definitions.md
        - name: Threat Explorer and real-time detections
@@ -529,8 +527,6 @@
           href: step-by-step-guides/connect-microsoft-defender-for-office-365-to-microsoft-sentinel.md
         - name: How to enable DMARC Reporting for Microsoft Online Email Routing Address (MOERA) and parked Domains
           href: step-by-step-guides/how-to-enable-dmarc-reporting-for-microsoft-online-email-routing-address-moera-and-parked-domains.md
-        - name: How-to deploy and configure the report message add-in
-          href: step-by-step-guides/deploy-and-configure-the-report-message-add-in.md
         - name: Use Microsoft Defender for Office 365 in SharePoint Online
           href: step-by-step-guides/utilize-microsoft-defender-for-office-365-in-sharepoint-online.md
         - name: Tune bulk email filtering

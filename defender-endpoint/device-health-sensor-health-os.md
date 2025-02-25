@@ -53,7 +53,7 @@ To access the Device health and antivirus compliance report in the Microsoft Def
 
 To assign these permissions:
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with Security administrator or Global administrator role assigned.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
