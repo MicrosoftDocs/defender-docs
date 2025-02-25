@@ -106,7 +106,7 @@ Removing the Report Message or Report Phishing add-ins for the organization.
      - **Basic info** section:
        - **Status**
        - **Type**: Add-in
-       - **Test deployment**: **Yes** or **No**, depending on the option you selected when you [deployed the add-in](#get-the-report-message-or-report-phishing-add-in-for-your-organization) or the selection you change on the **Users** tab.
+       - **Test deployment**: **Yes** or **No**, depending on the option you selected when you or the selection you change on the **Users** tab.
        - **Description**
        - **Host product**: Outlook
      - **Actions** section: Select **Remove app** to remove the app.
@@ -114,7 +114,7 @@ Removing the Report Message or Report Phishing add-ins for the organization.
      - **Usage** section: Select **Check usage data** to got to the **Usage** tab.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png" alt-text="The Overview tab on the details flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phishing-add-in-details-overview-tab.png":::
+     > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png" alt-text="The Overview tab on the details flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png":::
 
     > [!div class="mx-imgBorder"]
      > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-remove-overview-tab.png" alt-text="The tab on the removal flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-remove-overview-tab.png":::
