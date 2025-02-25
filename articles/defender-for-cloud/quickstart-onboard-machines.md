@@ -22,7 +22,9 @@ This article describes the methods for onboarding with Azure Arc.
 If you're connecting machines from other cloud providers, see [Connect your AWS account](quickstart-onboard-aws.md) or [Connect your GCP project](quickstart-onboard-gcp.md). The multicloud connectors for Amazon Web Services (AWS) and Google Cloud Platform (GCP) in Defender for Cloud transparently handle the Azure Arc deployment for you.
 
 > [!NOTE]
-> While the instructions outlined below are focused on connecting on-premises machines to Microsoft Defender for Cloud, the same guidance applies to machines in Azure VMware Solution (AVS). To learn more about how to integrate Azure VMware Solution machines with Microsoft Defender for Cloud, please see [this article](/azure/azure-vmware/azure-security-integration).
+> > [!NOTE]
+> The instructions on this page focus on connecting on-premises machines to Microsoft Defender for Cloud. The same guidance applies to machines in Azure VMware Solution (AVS). 
+> Learn more about [integrating Azure VMware Solution machines with Microsoft Defender for Cloud](/azure/azure-vmware/azure-security-integration).
 > 
 
 ## Prerequisites
