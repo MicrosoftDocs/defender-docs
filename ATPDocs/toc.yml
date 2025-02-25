@@ -165,12 +165,11 @@ items:
        - name: Change password for Microsoft Entra seamless SSO account
          href: change-password-microsoft-entra-seamless-single-sign-on.md
          displayName: Microsoft Entra connect
-       - name: "Rotate password for Microsoft Entra Connect connector account "
+       - name: Rotate password for Microsoft Entra Connect connector account
          href: rotate-password-microsoft-entra-connect.md
          displayName: "Microsoft Entra Connect"
        - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
          href: remove-replication-permissions-microsoft-entra-connect.md
-         displayName: Microsoft Entra Connect
      - name: Identity infrastructure
        items:
        - name: Built-in Active Directory Guest account is enabled
@@ -207,7 +206,7 @@ items:
        href: security-assessment-edit-misconfigured-owner.md
      - name: Vulnerable Certificate Authority setting (ESC6)
        href: security-assessment-edit-vulnerable-ca-setting.md
-    
+
      - name: Group policy 
        items: 
       - name: GPO assigns unprivileged identities to local groups with elevated privileges
@@ -216,7 +215,7 @@ items:
         href: modified-unprivileged-accounts-gpo.md
       - name: Reversible passwords found in GPOs
         href: reversible-passwords-group-policy.md
-    
+
      - name: Accounts
        items: 
          - name: Accounts with non-default Primary Group ID
