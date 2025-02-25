@@ -1,10 +1,10 @@
 ---
 title: Verify SQL machine protection
-description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
+description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected, ensuring that all security measures are properly implemented.
 ms.author: dacurwin
 author: dcurwin
 ms.topic: how-to
-ms.date: 02/18/2025
+ms.date: 02/25/2025
 #customer intent: As a customer, I want to verify that my SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
 ---
 
@@ -31,11 +31,11 @@ Retrieve and review the Defender for SQL Servers on Machines protection status r
     | order by ['name'] asc
     ```
 
-1. Review the results, specifically checking the **SQLonArcProtection** status. Any result that doesn't state `Protected` indicates that the SQL Server instance, or Azure Arc-enabled SQL Server isn't protected.
+1. Review the results, specifically checking the **SQLonArcProtection** status. Any result that doesn't state `Protected` indicates that the SQL Server VM, or Azure Arc-enabled SQL Server isn't protected.
 
     :::image type="content" source="media/verify-machines-protection/script-results.png" alt-text="Screenshot of the results screen once the script runs." lightbox="media/verify-machines-protection/script-results.png":::
 
-1. If the `ProtectionStatusLastUpdate` field doesn't show a date within the last day, the machine might not be protected. [Verify the protection of the single SQL server instance.](#verify-protection-on-a-single-sql-server-instance)
+1. If the `ProtectionStatusLastUpdate` field doesn't show a date within the last day, the machine might not be protected. [Verify the protection of the single SQL server instance](#verify-protection-on-a-single-sql-server-instance).
 
     :::image type="content" source="media/verify-machines-protection/status-update.png" alt-text="Screenshot that shows the last status update for the SQL instance." lightbox="media/verify-machines-protection/status-update.png":::
 
@@ -45,7 +45,7 @@ The script can return the following possible protection statuses:
 - **Inactive**: Defender for SQL runs on the machine, but the SQL instance is either paused or stopped.
 - **Empty** or **Unknown**: The protection status couldn't be retrieved or doesn't exist on the machine. In this case, assume that the instance isn't protected by Defender for SQL.
 
-## Verify protection on a single SQL server instance
+## Verify protection on a single SQL server VM
 
 1. Depending on the resources in your environment, search for and select **SQL virtual machines** or **SQL Server - Azure Arc** in the Azure portal.
 
