@@ -174,5 +174,13 @@ Removing the Report Message or Report Phishing add-ins for the organization.
 1. I would like to see further improvements in the inbuild report button. What shall I do?
    You can always raise a Design change request (DCR) via Microsoft support. 
 
+1. Is there a way to keep the add-in but remove the inbuild report button?
+    Unfortunately, due to the reasons stated above, the add-in will have to be deprecated. It is a question of when and how. There is no way to keep the add-in and remove the inbuild report button. You can remove the add-in from the integrated apps on admin center as stated above.
+
+1. What is the recommendation to move from the add-ins to a third-party reporting add-in?
+    You can remove the add-in from the integrated apps on the admin center as above. Than install the third-party add-in as per their instructions. Finally, on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md), you need to select *Monitor reported messages in Outlook*, and then select *Use a non-Microsoft add-in button*. In the *Reported message destination* section, you can either select *Microsoft and my reporting mailbox* or *My reporting mailbox only*, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-ins are being routed to.
+
 1. You still have questions which is not listed here?
     No worries. Just raise a support ticket via Microsoft support and we will get right back to you.
+
+
