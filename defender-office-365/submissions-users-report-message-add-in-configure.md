@@ -109,6 +109,8 @@ After the add-in is installed and enabled, users see the following icons based o
   - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
   - **Grader analysis**: Review done by human graders to confirm whether or not messages are malicious.
 
+[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
+
   So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
 
 - Organizations that use URL filtering or a third-party security solution (for example, a proxy and/or firewall) must be able to reach the following URLs using the HTTPS protocol:
