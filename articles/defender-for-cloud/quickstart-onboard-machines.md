@@ -25,7 +25,6 @@ If you're connecting machines from other cloud providers, see [Connect your AWS 
 > > [!NOTE]
 > The instructions on this page focus on connecting on-premises machines to Microsoft Defender for Cloud. The same guidance applies to machines in Azure VMware Solution (AVS). 
 > Learn more about [integrating Azure VMware Solution machines with Microsoft Defender for Cloud](/azure/azure-vmware/azure-security-integration).
-> 
 
 ## Prerequisites
 
