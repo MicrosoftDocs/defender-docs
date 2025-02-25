@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 manager: deniseb
-ms.date: 07/22/2024
+ms.date: 02/25/2025
 audience: ITPro
 ms.topic: conceptual
 search.appverid: 
@@ -74,7 +74,10 @@ The following section describes the detection and investigation experience in th
 
 Microsoft Sentinel customers [integrating Microsoft Defender XDR incidents](/azure/sentinel/microsoft-365-defender-sentinel-integration) *and* ingesting Defender for Cloud alerts are required to make the following configuration changes to ensure that duplicate alerts and incidents aren't created:
 
-- Connect the **Tenant-based Microsoft Defender for Cloud (Preview)** connector to synchronize collection of alerts from all your subscriptions with tenant-based Defender for Cloud incidents that are streaming through the Microsoft Defender XDR Incidents connector.
+- In Microsoft Sentinel, connect the **Tenant-based Microsoft Defender for Cloud (Preview)** connector. 
+  - This connector synchronizes the collection of alerts from all your subscriptions with the tenant-based Defender for Cloud incidents that are streaming through the Microsoft Defender XDR incidents connector. 
+  - Defender for Cloud incidents are correlated across all subscriptions of the tenant.
+  - For Microsoft Sentinel workspaces in the Defender portal, the correlated Defender for Cloud incidents are streamed to the primary workspace. For more information see, [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
 - Disconnect the **Subscription-based Microsoft Defender for Cloud (Legacy)** alerts connector to prevent alert duplicates.
 - Turn off any analytics rules&mdash;either [*Scheduled* (regular query-type) or *Microsoft security* (incident creation)](/azure/sentinel/detect-threats-built-in) rules&mdash;used to create incidents from Defender for Cloud alerts. Defender for Cloud Incidents are created automatically in the Defender portal and synchronized with Microsoft Sentinel.
 - If necessary, [use automation rules](/azure/sentinel/create-manage-use-automation-rules) to close noisy incidents, or use the [built-in tuning capabilities in the Defender portal](investigate-alerts.md#tune-an-alert) to suppress certain alerts.

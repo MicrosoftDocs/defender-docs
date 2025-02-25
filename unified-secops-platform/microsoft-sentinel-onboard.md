@@ -22,7 +22,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 02/20/2025
+ms.date: 02/25/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -44,7 +44,7 @@ Before you begin, review the feature documentation to understand the product cha
 - [Alerts, incidents, and correlation in Microsoft Defender XDR](/defender-xdr/alerts-incidents-correlation)
 - [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
 
-The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to a primary workspace and multiple secondary workspaces. If you have only one workspace when you onboard Microsoft Sentinel, that workspace will be designated as the primary workspace. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal). In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
+The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to a primary workspace and multiple secondary workspaces. If you have only one workspace when you onboard Microsoft Sentinel, that workspace is designated as the primary workspace. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal). In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
 
 ### Microsoft Sentinel prerequisites
 
@@ -72,6 +72,20 @@ To unify capabilities with Defender XDR in Microsoft's unified SecOps platform, 
 - Licensing for Defender XDR, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites)
 - Account for Defender XDR is a member of the same Microsoft Entra tenant with which Microsoft Sentinel is associated
 - Access to Microsoft Defender XDR in the Defender portal, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites#required-permissions)
+
+If applicable, complete these prerequisites:
+
+- If your organization uses Microsoft Purview Insider Risk Management, integrate that data by enabling the data connector **Microsoft 365 Insider Risk Management** on your primary workspace for Microsoft Sentinel. Disable that connector on any secondary workspaces for Microsoft Sentinel that you plan to onboard to the Defender portal.
+  - For more information about primary and secondary workspaces, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal). 
+  - Install the Microsoft Purview Insider Risk Management solution and configure the data connector on the primary workspace. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). 
+- To stream Defender for Cloud incidents that are correlated across all subscriptions of the tenant to the primary workspaces for Microsoft Sentinel:
+  - Connect the **Tenant-based Microsoft Defender for Cloud (Preview)** data connector in the primary workspace.
+  - Disconnect the **Subscription-based Microsoft Defender for Cloud (Legacy)** alerts connector from all workspaces in the tenant.
+
+  If you don't want to stream correlated tenant data for Defender for Cloud to the primary workspace, continue to use the **Subscription-based Microsoft Defender for Cloud (Legacy)** connector on your workspaces.
+ 
+  For more information, see [Ingest Microsoft Defender for Cloud incidents with Microsoft Defender XDR integration](/azure/sentinel/ingest-defender-for-cloud-incidents) and [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy).
+
 
 ## Onboard Microsoft Sentinel
 
