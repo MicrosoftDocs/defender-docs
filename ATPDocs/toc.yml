@@ -158,33 +158,38 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
-  - name: "Hybrid Security"
+      - name: "Hybrid security"
+        items:
+          - name: Change password for Microsoft Entra seamless SSO account
+            href: change-password-microsoft-entra-seamless-single-sign-on.md
+            displayName: Microsoft Entra connect
+          - name: "Rotate password for Microsoft Entra Connect connector account "
+            href: rotate-password-microsoft-entra-connect.md
+            displayName: "Microsoft Entra Connect"
+          - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
+            href: remove-replication-permissions-microsoft-entra-connect.md
+            displayName: Microsoft Entra Connect
 
-    items:
-    - name: Change password for Microsoft Entra seamless SSO account
-      href: change-password-microsoft-entra-seamless-single-sign-on.md
-      displayName: Microsoft Entra connect
-    - name: "Rotate password for Microsoft Entra Connect connector account "
-      href: rotate-password-microsoft-entra-connect.md
-      displayName: "Microsoft Entra Connect"
-    - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
-      href: remove-replication-permissions-microsoft-entra-connect.md
-      displayName: Microsoft Entra Connect
-
-    - name: "Identity Infrastructure"
+    - name: Identity infrastructure
       items:
-    - name: Built-in Active Directory Guest account is enabled
-      href: built-in-active-directory-guest-account-is-enabled.md
-    - name: Change Domain Controller computer account old password
-      href: domain-controller-account-password-change.md
-    - name: Domain controllers with Print spooler service available assessment
-      href: security-assessment-print-spooler.md
-    - name: Remove local admins on identity assets
-      href: security-assessment-remove-local-admins.md   
-    - name: Unmonitored domain controllers
-      href: security-assessment-unmonitored-domain-controller.md
-    - name: Unsecure domain configurations
-      href: security-assessment-unsecure-domain-configurations.md
+          - name: Built-in Active Directory Guest account is enabled
+            href: built-in-active-directory-guest-account-is-enabled.md
+          - name: Change Domain Controller computer account old password
+            href: domain-controller-account-password-change.md
+          - name: Domain controllers with Print spooler service available assessment
+            href: security-assessment-print-spooler.md
+          - name: Remove local admins on identity assets
+            href: security-assessment-remove-local-admins.md   
+          - name: Unmonitored domain controllers
+            href: security-assessment-unmonitored-domain-controller.md
+          - name: Unsecure domain configurations
+            href: security-assessment-unsecure-domain-configurations.md
+
+    - name: Certificates
+      items: 
+        - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
+          href: security-assessment-insecure-adcs-certificate-enrollment.md
+          
 
     - name: Accounts with non-default Primary Group ID
       href: accounts-with-non-default-pgid.md
