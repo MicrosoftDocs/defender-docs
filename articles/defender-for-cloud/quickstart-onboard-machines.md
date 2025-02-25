@@ -39,7 +39,7 @@ To complete the procedures in this article, you need:
 
 ## Connect on-premises machines by using Azure Arc
 
-A machine that has [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) becomes an Azure resource. As soon as it is connected to an Azure subscription with Defender for Servers enabled, it appears in Defender for Cloud, like your other Azure resources.
+A machine with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) becomes an Azure resource. Once connected to an Azure subscription with Defender for Servers enabled, it appears in Defender for Cloud, like your other Azure resources.
 
 Azure Arc-enabled servers provide enhanced capabilities, such as enabling guest configuration policies on the machine and simplifying deployment with other Azure services. For an overview of the benefits of Azure Arc-enabled servers, see [Supported cloud operations](/azure/azure-arc/servers/overview#supported-cloud-operations).
 
