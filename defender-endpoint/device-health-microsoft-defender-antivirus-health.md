@@ -115,7 +115,7 @@ Up-to-date reporting generates information for devices that meet the following c
 - Windows OS - Windows 10 1809 or later
 
   > [!NOTE]
-  > \* Currently up to date reporting is only available for Windows and Linux devices. Mac devices are listed under “no such data available” /unknown.
+  > \* Currently up to date reporting is only available for Windows and Linux devices. Mac devices are listed under “no such data available or unknown".
   
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 
