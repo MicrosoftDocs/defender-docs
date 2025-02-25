@@ -22,7 +22,7 @@ This article summarizes support information for Container capabilities in Micros
 
 The following are the features provided by Defender for Containers, for the supported cloud environments and container registries.
 
-## Vulnerability Assessment Features
+## Vulnerability assessment features
 
 ### [Azure](#tab/azureva)
 
@@ -31,12 +31,29 @@ The following are the features provided by Defender for Containers, for the supp
 | Container registry | Vulnerability assessments for images in container registries | ACR | GA | GA | Requires **Registry access** (National clouds are automatically enabled and cannot be toggled) | **Defender for Containers** or **Defender CSPM** | Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
 | Runtime container | Vulnerability assessments of running container images | Agnostic to container registry source | GA | GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** (National clouds are automatically enabled and cannot be disabled) | **Defender for Containers** or **Defender CSPM** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 
+### Registries and images support for vulnerability assessment in Azure
+
+| Aspect | Details |
+|--|--|
+| Registries and images | **Supported**<br> * ACR registries <br> * [ACR registries protected with Azure Private Link](/azure/container-registry/container-registry-private-link) (Private registries requires access to Trusted Services) <br> * Container images in Docker V2 format <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images<br> is currently unsupported <br> |
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9. (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12) <br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows Server 2016, 2019, 2022 |
+| Language specific packages <br><br>  | **Supported**<br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
+
 ### [AWS](#tab/awsva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Container registry | Vulnerability assessments for images in container registries | ECR | GA | GA | Requires **Registry access** | **Defender for Containers** or **Defender CSPM** | AWS |
 | Runtime container | Vulnerability assessments of running container images | EKS | GA | GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | AWS |
+
+#### Registries and images support for vulnerability assessment in AWS
+
+| Aspect | Details |
+|--|--|
+| Registries and images | **Supported**<br> * ECR registries <br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows server 2016, 2019, 2022 |
+| Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
+
 
 ### [GCP](#tab/gcpva)
 
@@ -45,11 +62,149 @@ The following are the features provided by Defender for Containers, for the supp
 | Container registry | Vulnerability assessments for images in container registries | GAR, GCR | GA | GA | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | AWS |
 | Runtime container | Vulnerability assessments of running container images | GKE | GA | GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
 
+#### Registries and images support for GCP - Vulnerability assessment powered by Microsoft Defender Vulnerability Management
+
+| Aspect | Details |
+|--|--|
+| Registries and images | **Supported**<br> * Google Registries (GAR, GCR) <br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br> **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-22.04 <br>  * Fedora 31-37<br> * Mariner 1-2<br> * Windows server 2016, 2019, 2022 |
+| Language specific packages <br><br>  | **Supported** <br><br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
+
+
 ### [External Registries](#tab/extva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Container registry | Vulnerability assessments for images in container registries | Docker Hub, JFrog | Preview | Preview | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | NA |
+
+---
+
+## Runtime protection features
+
+### [Azure](#tab/azurert)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | **Defender for Containers** or **Defender CSPM** | Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
+| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | AKS | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Binary drift detection | Detects binary of runtime container from container image | AKS | GA | GA | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | AKS | GA | GA | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR |  | GA | GA | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Malware detection | Detection of malware | AKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | Commercial clouds |
+
+### Kubernetes distributions and configurations for Azure - Runtime threat protection
+
+| Aspect | Details |
+|--|--|
+| Kubernetes distributions and configurations | **Supported**<br> * [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) with [Kubernetes RBAC](/azure/aks/concepts-identity#kubernetes-rbac) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1azrt)</sup> <sup>[2](#footnote2azrt)</sup><br> * [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Kubernetes](https://kubernetes.io/docs/home/)<br> * [AKS Engine](https://github.com/Azure/aks-engine)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br /> |
+
+<sup><a name="footnote1azrt"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested on Azure.
+
+<sup><a name="footnote2azrt"></a>2</sup> To get [Microsoft Defender for Containers](defender-for-containers-introduction.md) protection for your environments, you need to onboard [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and enable Defender for Containers as an Arc extension.
+
+> [!NOTE]
+> For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
+
+### [AWS](#tab/awsrt)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | EKS | GA | GA | Enabled with plan | **Defender for Containers** or **Defender CSPM** | AWS |
+| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | AKS | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | AWS |
+| Binary drift detection | Detects binary of runtime container from container image | EKS | GA | GA | Requires **Defender sensor** | **Defender for Containers** | AWS |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | EKS | GA | GA | Enabled with any Defender for Cloud plan | Any plan | AWS |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | EKS | GA | GA | Enabled with any Defender for Cloud plan | Any plan | AWS |
+| Malware detection | Detection of malware | - | - | - | - | - | - |
+
+### Kubernetes distributions/configurations support for runtime threat protection in AWS
+
+| Aspect | Details |
+|--|--|
+| Kubernetes distributions and configurations | **Supported**<br>*  [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)<br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1awsrt)</sup> <sup>[2](#footnote2awsrt)</sup><br> * [Kubernetes](https://kubernetes.io/docs/home/)<br />**Unsupported**<br /> * EKS private clusters |
+
+<sup><a name="footnote1awsrt"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
+
+<sup><a name="footnote2awsrt"></a>2</sup> To get [Microsoft Defender for Containers](defender-for-containers-introduction.md) protection for your environments, you need to onboard [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and enable Defender for Containers as an Arc extension.
+
+> [!NOTE]
+> For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
+
+### [GCP](#tab/gcprt)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | GKE | GA | GA | Enabled with plan | **Defender for Containers** | GCP |
+| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | GKE | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | GCP |
+| Binary drift detection | Detects binary of runtime container from container image | GKE | GA | GA | Requires **Defender sensor** | **Defender for Containers** | GCP |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | GKE | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
+| Malware detection | Detection of malware | - | - | - | - | - | - |
+
+### Kubernetes distributions/configurations support for runtime threat protection in GCP
+
+| Aspect | Details |
+|--|--|
+| Kubernetes distributions and configurations | **Supported**<br>  * [Google Kubernetes Engine (GKE) Standard](https://cloud.google.com/kubernetes-engine/) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1gcprt)</sup> <sup>[2](#footnote2gcprt)</sup><br> * [Kubernetes](https://kubernetes.io/docs/home/)<br><br />**Unsupported**<br /> * Private network clusters<br /> * GKE autopilot<br /> * GKE AuthorizedNetworksConfig |
+
+<sup><a name="footnote1gcprt"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
+
+<sup><a name="footnote2gcprt"></a>2</sup> To get [Microsoft Defender for Containers](defender-for-containers-introduction.md) protection for your environments, you need to onboard [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and enable Defender for Containers as an Arc extension.
+
+> [!NOTE]
+> For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
+
+---
+
+## Security posture management
+
+### [Azure](#tab/azurespm)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) <sup>[1](#footnote1spm)</sup> | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | AKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | ACR, AKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | ACR, AKS | GA | GA | Activated with plan | Defender CSPM (requires Agentless discovery for Kubernetes to be enabled) | Azure commercial clouds |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | ACR, AKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
+| [Control plane hardening](defender-for-containers-architecture.md) <sup>[1](#footnote1spm)</sup> | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | ACR, AKS | GA | GA | Requires **K8S API access** | Free | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
+| [Workload hardening](kubernetes-workload-protections.md) <sup>[1](#footnote1spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Requires **Azure Policy** | Free | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
+| CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | AKS | GA | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | Commercial clouds<br><br> |
+
+<sup><a name="footnote1spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
+
+### [AWS](#tab/awsspm)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) <sup>[1](#footnote2spm)</sup> | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | ECR, EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | AWS |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | ACR, AKS | GA | GA | Activated with plan | Defender CSPM (requires Agentless discovery for Kubernetes to be enabled) | AWS |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | ECR, EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | AWS |
+| [Control plane hardening](defender-for-containers-architecture.md) <sup>[1](#footnote2spm)</sup> | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | ECR, EKS | GA | GA | Activated with plan | Free | AWS |
+| [Workload hardening](kubernetes-workload-protections.md) <sup>[1](#footnote2spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Free | AWS |
+| CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | EKS | GA | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | AWS |
+
+<sup><a name="footnote2spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
+
+### [GCP](#tab/gcpspm)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) <sup>[1](#footnote3spm)</sup> | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender CSPM | GCP |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
+| [Control plane hardening](defender-for-containers-architecture.md) <sup>[1](#footnote3spm)</sup> | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | GKE | GA | GA | Activated with plan | Free | GCP |
+| [Workload hardening](kubernetes-workload-protections.md) <sup>[1](#footnote3spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. | GKE | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Free | GCP |
+| CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | GKE | GA | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | GCP |
+
+<sup><a name="footnote3spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
+
+### [External registries](#tab/extspm)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | Docker Hub , JFrog Artifactory | Preview | Preview | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | - |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that attackers might use to breach your  environment. | Docker Hub , JFrog Artifactory | Preview | Preview | Requires **K8S API access** | Defender CSPM | - |
 
 ---
 
@@ -67,7 +222,7 @@ The following are the features provided by Defender for Containers, for the supp
 | [Kubernetes data plane hardening](kubernetes-workload-protections.md) <sup>[1](#footnote1spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Enable **Azure Policy for Kubernetes** toggle | Azure Policy | Free | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | AKS | GA | - | Assigned as a security standard | Agentless | Defender for Containers **OR** Defender CSPM | Commercial clouds<br><br> |
 
-<sup><a name="footnote1spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
+<sup><a name="footnote10spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
 
 ### Vulnerability assessment
 
@@ -233,7 +388,6 @@ If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see
 | Security posture management  | Attack path analysis | Docker Hub , JFrog Artifactory| Preview | Preview | Agentless| Defender CSPM |
 | [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless registry scan (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JfFrog Artifactory| Preview | Preview | Agentless | Defender for Containers **OR** Defender CSPM |
 | [Vulnerability assessment](agentless-vulnerability-assessment-gcp.md) | Agentless/sensor-based runtime (powered by Microsoft Defender Vulnerability Management) [supported packages](#registries-and-images-support-for-gcp---vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management)| Docker Hub , JFrog Artifactory| Preview | Preview | Agentless **OR/AND** Defender sensor | Defender for Containers **OR** Defender CSPM |
-
 
 ### Kubernetes distributions and configurations
 
