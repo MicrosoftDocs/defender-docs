@@ -34,6 +34,11 @@ To learn more about the Graph API alert resource: [alert resource type - Microso
 
 Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
 
+New CDN domains have been added and must be included in firewall rules to allow outbound traffic on port 443:
+
+- cdn.cloudappsecurity.com
+- cdn-discovery.cloudappsecurity.com
+
 To connect to third-party apps and enable Defender for Cloud Apps, use the following IP addresses:
 
 |Data center|IP addresses|DNS name|
