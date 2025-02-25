@@ -20,7 +20,8 @@ ms.date: 02/25/2025
 
 # Microsoft Defender for Endpoint on Linux
 
->[!TIP]  We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers in preview. For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
+> [!TIP]
+> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers in preview. For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
