@@ -316,7 +316,7 @@ If you encounter issues during installation, try these self-troubleshooting step
 
 5. For proxy and connectivity issues, refer to [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity)
 
-To get support from Microsoft, raise a support ticket and provide log files by using the [client analyzer](/defender-endpoint/run-analyzer-macos-linux)
+To get support from Microsoft, raise a support ticket and provide log files by using the [client analyzer](/defender-endpoint/overview-client-analyzer)
 
 ## How to configure policies for Microsoft Defender on Linux
 
