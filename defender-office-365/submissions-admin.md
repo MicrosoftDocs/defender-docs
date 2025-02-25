@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 11/08/2024
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -847,7 +847,6 @@ For email messages, admins can see what users are reporting on the **User report
 - The [user reported settings](submissions-user-reported-messages-custom-mailbox.md) are turned on.
 - **Email messages**: You're using supported methods for users to report messages:
   - The [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
-  - The [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md).
   - [Supported third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-third-party-reporting-tools)
 - **Teams messages**: [User reporting settings for Teams messages](submissions-teams.md#user-reporting-settings-for-teams-messages) is turned on.
 
