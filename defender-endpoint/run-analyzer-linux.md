@@ -593,12 +593,6 @@ The Python version of the client analyzer accepts command line parameters to per
 
 - [Client analyzer overview](overview-client-analyzer.md)
 
-- [Download and run the client analyzer](download-client-analyzer.md)
-
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
-
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 
 - [Understand the analyzer HTML report](analyzer-report.md)

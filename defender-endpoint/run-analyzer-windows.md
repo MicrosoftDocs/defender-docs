@@ -184,7 +184,6 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the followi
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
