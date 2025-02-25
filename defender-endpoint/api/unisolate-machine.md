@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 02/25/2025
 ---
 
 # Release device from isolation API
@@ -46,7 +46,7 @@ Undo isolation of a device.
 > [!IMPORTANT]
 >
 > - Full isolation is available for devices on Windows 10, version 1703.
-> - Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](../microsoft-defender-endpoint-linux.md#system-requirements).
+> - Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
 > - Selective isolation is available for devices on Windows 10, version 1709 or later.
 > - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 
