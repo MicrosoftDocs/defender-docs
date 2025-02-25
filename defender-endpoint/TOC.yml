@@ -492,8 +492,6 @@
             href: download-client-analyzer.md
           - name: Run the client analyzer on Windows
             href: run-analyzer-windows.md
-          - name: Run the client analyzer on macOS or Linux
-            href: run-analyzer-macos-linux.md
           - name: Run the client analyzer on Linux
             href: run-analyzer-linux.md
           - name: Run the client analyzer on macOS
