@@ -26,6 +26,11 @@ ms.date: 02/25/2025
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
+You have two options for running the Defender for Endpoint client analyzer on Windows:
+
+- Use live response
+- Run the client analyzer locally on the device
+
 ## Option 1: Live response
 
 You can collect the Defender for Endpoint analyzer support logs remotely using [Live Response](troubleshoot-collect-support-log.md).
