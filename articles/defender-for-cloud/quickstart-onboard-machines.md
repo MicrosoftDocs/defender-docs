@@ -48,7 +48,7 @@ To deploy Azure Arc on multiple machines at scale, follow the instructions in [C
 
 ## Microsoft Defender for Endpoint integration
 
-Microsoft Defender for Servers uses an [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) to provide real-time threat detection, automated response capabilities, vulnerability assessments, software inventory and more. To ensure your servers are secured and receive all security value of Defender for Servers, verify [Defender for Endpoint (MDE) integration](enable-defender-for-endpoint.md) is enabled on your subscriptions.
+Defender for Servers uses an [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) to provide real-time threat detection, automated response capabilities, vulnerability assessments, software inventory, and more. To ensure your servers are secure and receive all the security benefits of Defender for Servers, verify that the [Defender for Endpoint integration](enable-defender-for-endpoint.md) is enabled on your subscriptions.
 
 ## Verify that your machines are connected
 
