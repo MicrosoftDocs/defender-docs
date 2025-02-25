@@ -152,7 +152,7 @@ Newer driver/firmware on a NICs or NIC teaming software could help w/ performanc
 
 The following section provides information on supported Linux versions and recommendations for resources.
 
-For a detailed list of supported Linux distros, see [System requirements](microsoft-defender-endpoint-linux.md#system-requirements).
+For a detailed list of supported Linux distros, see [System requirements](/defender-endpoint/mde-linux-prerequisites).
 
 |Resource|Recommendation|
 |---|---|
