@@ -50,7 +50,7 @@ The following table describes capabilities in Defender for Endpoint:
 
 To deploy Defender for Endpoint on servers, server licenses are required. You can choose from these options:
 
-- Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](https://review.learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction?branch=main)) offering;
+- Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction?branch=main)) offering;
 
 - Microsoft Defender for Endpoint Server
   
@@ -76,16 +76,17 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 
 - To install on Linux Server with SAP, see [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
-If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install). Before you begin, make sure [the Minimum requirements for Microsoft Defender for Endpoint](https://review.learn.microsoft.com/en-us/defender-endpoint/mde-linux-requirements?branch=pr-en-us-2468) are met.
+If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install). Before you begin, make sure [the Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/mde-linux-requirements) are met.
 
->[!important] Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example:  
-mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin.
+> [!IMPORTANT]
+> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
->To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
+To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
 
->- [Set up a configuration profile that uses a json file](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=main&branchFallbackFrom=pr-en-us-2468%22%20%5Cl%20%22configuration-profile)
->- [Use the Microsoft Defender portal (this method is also referred to as Defender for Endpoint security settings management)](/defender-endpoint/mde-security-settings-management)  
->For more information, see [Security policies in Microsoft Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468)
+- [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences?branch=main&branchFallbackFrom=pr-en-us-2468%22%20%5Cl%20%22configuration-profile)
+- [Use the Microsoft Defender portal (this method is also referred to as Defender for Endpoint security settings management)](/defender-endpoint/mde-security-settings-management)  
+
+For more information, see [Security policies in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 
 ## Software updates
 
@@ -108,14 +109,14 @@ The security operations team can remotely connect to a device and execute variou
 
 Additionally, they can use live response for a remote shell connection to perform in-depth investigative work. For more information, see the following articles:
 
-- [Take response actions on a device](https://review.learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts?branch=pr-en-us-2468)
-- [Investigate entities on devices using live response](https://review.learn.microsoft.com/en-us/defender-endpoint/live-response?branch=pr-en-us-2468)
+- [Take response actions on a device](/defender-endpoint/respond-machine-alerts)
+- [Investigate entities on devices using live response](/defender-endpoint/live-response)
 
 ## Privacy
 
   Microsoft is committed to providing you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
   
-   For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-privacy?branch=pr-en-us-2468)
+   For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy)
 
 ## Resources for troubleshooting, diagnostics, and configuration 
 
@@ -132,9 +133,9 @@ If you're using non-Microsoft applications, also see their documentation regardi
 
 ## Next steps
 
-- [Review the requirements for Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/mde-linux-requirements?branch=pr-en-us-2468)
-- [Deploy Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/mde-linux-deployment?branch=pr-en-us-2468)
-- [Configure Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468)
+- [Review the requirements for Defender for Endpoint on Linux](/defender-endpoint/mde-linux-requirements)
+- [Deploy Defender for Endpoint on Linux](/defender-endpoint/mde-linux-deployment)
+- [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
  [!Tip]: Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
