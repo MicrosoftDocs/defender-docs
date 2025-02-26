@@ -35,7 +35,7 @@ By default, when you enable the plan through the Azure portal, [Microsoft Defend
 If you don't want to enable all capabilities of the plans, you can manually select which specific capabilities to enable by selecting **Edit configuration** for the **Containers** plan. Then, on the **Settings & monitoring** page, select the capabilities that you want to enable.
 You can also modify this configuration from the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page after initial configuration of the plan.
 
-For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md#aws).
+For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md).
 
 ### Roles and permissions
 
