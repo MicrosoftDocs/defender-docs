@@ -16,6 +16,7 @@ ms.date: 03/01/2025
 appliesto: 
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+#customer intent: As a security administrator, I want to learn how to manage tenants in other Microsoft cloud environments.
 ---
 
 # Manage tenants in other Microsoft cloud environments
