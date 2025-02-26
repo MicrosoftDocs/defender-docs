@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 01/29/2025
+ms.date: 02/25/2025
 ---
 
 # Defender for Endpoint onboarding Windows Server
