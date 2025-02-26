@@ -121,7 +121,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 |vfat|
 |xfs|
 
->[!NOTE]: For NFS v3 mount points to be scanned thoroughly, it's required to set the no_root_squash export option on these mount points
+>[!NOTE]: NFS v3 mount points to be scanned thoroughly and are required to set the no_root_squash export option on these mount points
 >Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
 # Installation instructions 
@@ -142,7 +142,7 @@ You can use one of the following methods to deploy Microsoft Defender for Endpoi
 
 6. Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm)
 
-If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-install) 
+If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-install)
 
 >[!IMPORTANT]: Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
 >Microsoft Defender for Endpoint on Linux creates a mdatp user with random UID and GID.
@@ -168,9 +168,7 @@ If you experience any installation failures, see [Troubleshooting installation f
 
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-connectivity)
 
- 
-
-## External package dependency 
+## External package dependency
 
 For information on external package dependencies, see the following article:
 
