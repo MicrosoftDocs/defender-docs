@@ -2,20 +2,19 @@
 title: Protecting VM secrets with Microsoft Defender for Cloud
 description: Learn how to protect VM secrets with Defender for Server's agentless secrets scanning in Microsoft Defender for Cloud.
 ms.topic: overview
-ms.date: 02/19/2025
+ms.date: 02/26/2025
 ---
-
 
 # Machine secrets scanning
 
 Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) in a number of scenarios, including scanning for machine secrets.
 
-Machine secrets scanning is provided as one of Defender for Cloud's [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Machine secrets scanning is one of Defender for Cloud's [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't affect machine performance.
 
-- Agentless machine secrets scanning for helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
-- If secrets are detected, findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
-- Scanning machines for [supported secrets](secrets-scanning.md#secrets-support) is available when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is enabled.
-- Machine secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
+- Agentless machine secrets scanning helps you quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
+- If secrets are detected, findings help security teams prioritize actions and remediate to minimize the risk of lateral movement.
+- Scanning machines for [supported secrets](secrets-scanning.md#secrets-support) is available when Defender for Servers Plan 2 or the Defender Cloud Security Posture Management (CSPM) plan is enabled.
+- Machine secrets scanning can scan Azure VMs and AWS/GCP instances connected to Defender for Cloud.
 
 ## Reducing security risk
 
@@ -30,11 +29,11 @@ Secrets scanning helps reduce risk by:
 
 Secrets scanning for VMs is agentless and uses cloud APIs. Here's how it works:
 
-1. Secrets scanning captures disk snapshots and analyses them, with no impact on VM performance.
-2. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud.
-3. The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
-    - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud **Recommendations** page.
-    - Directories recognized as containing test-related content are excluded from scanning.
+1. Secrets scanning captures disk snapshots and analyzes them, with no impact on VM performance.
+2. After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends the data to Defender for Cloud.
+3. The secrets scanning engine verifies if SSH private keys can be used to move laterally in your network.
+    - SSH keys that aren't successfully verified are categorized as unverified on the Defender for Cloud **Recommendations** page.
+    - Directories containing test-related content are excluded from scanning.
 
 ## Machine secrets recommendations
 
@@ -64,7 +63,7 @@ Defender for Cloud provides these predefined queries for investigating secrets s
 
 ## Investigating and remediating machine secrets
 
-You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#secrets-support) for different types of secrets.
+You can investigate machine secrets findings in Defender for Cloud using several methods. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#secrets-support) for different types of secrets.
 
 ## Related content
 
