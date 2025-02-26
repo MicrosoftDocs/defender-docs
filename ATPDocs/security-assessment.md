@@ -25,6 +25,15 @@ Defender for Identity's security posture assessments are available in [Microsoft
 
 Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
 
+### Categorization of MDI security posture assessments
+
+For a deeper understanding of identity security risks and how to address them, Defender for Identity security posture assessments are categorized into five key areas:
+- **Hybrid security**: Addresses the unique challenges and security considerations of integrating on-premises and cloud-based identity systems in hybrid environments including those associated with Entra Connect.
+- **Identity infrastructure**: Focuses on resolving misconfigurations and vulnerabilities in core identity components, such as domain controllers.
+- **Certificates**: Identifies security gaps in Active Directory Certificate Services (AD CS) that could enable unauthorized access due to improper certificate management.
+- **Group policy**: Identifies risky Group Policy configurations that could lead to privilege escalation or lateral movement within the network, ensuring that Group Policy settings are secure and do not introduce additional risks.
+- **Accounts**: Covers security issues related to Active Directory (AD) users, devices, and groups such as old passwords, dormant accounts, and other related vulnerabilities.
+
 ## Access Defender for Identity security posture assessments
 
 You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score.
