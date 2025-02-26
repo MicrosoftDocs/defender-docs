@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to configure connection filtering in Exchange Online Protection (EOP) to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 02/20/2025
+ms.date: 02/26/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -42,7 +42,7 @@ This article describes how to configure the default connection filter policy in 
 > [!NOTE]
 > The IP Allow List, safe list, and the IP Block List are one part of your overall strategy to allow or block email in your organization. For more information, see [Create safe sender lists](create-safe-sender-lists-in-office-365.md) and [Create blocked sender lists](create-block-sender-lists-in-office-365.md).
 >
-> IPv6 ranges aren't supported. You can create and manage entries for IPv6 addresses in the [Allow or block IPv6 addresses using the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
+> IPv6 ranges aren't supported. You can create and manage entries for IPv6 addresses in the [Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
 >
 > Messages from blocked sources in the IP Block List aren't available in [message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
 
