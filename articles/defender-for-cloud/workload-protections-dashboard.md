@@ -27,6 +27,10 @@ Defender for Cloud includes many advanced threat protection capabilities for vir
 
 Insights provide you with news, suggested reading, and high priority alerts that are relevant in your environment.
 
+## Prerequisite
+
+The plan must be enabled at the subscription level to ensure proper functionality. Resources onboarded to Defender for Cloud at the resource level won’t be eligible for the capabilities available through the Workload protection blade.
+
 ## Next steps
 
 [Learn about](defender-for-cloud-introduction.md) workloads you can protect in Defender for Cloud
