@@ -86,7 +86,7 @@ You can use either of the following methods to confirm the attack:
 - Use the [Get-AllTenantRulesAndForms.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) PowerShell script to automatically dump all the mail forwarding rules and custom forms for all the users in your organization. This method is the fastest and safest with the least amount of overhead.
 
   > [!NOTE]
-  > As of January 2021, the script (and everything else in the repository) is read-only and archived. Lines 154 to 158 attempt to connect to Exchange Online PowerShell using a method that's no longer supported due to the [deprecation of remote PowerShell connections](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692) in July 2023. Remove lines 154 to 158 and [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) before you run the script.
+  > As of January 2021, the script (and everything else in the repository) is read-only and archived. Lines 154 to 158 attempt to connect to Exchange Online PowerShell using a method that's no longer supported due to the [deprecation of remote PowerShell connections](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-in-exchange-online-%e2%80%93-re-enabling-or-extending-r/3779692) in July 2023. Remove lines 154 to 158 and [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) before you run the script.
 
 ### Confirm the Rules Attack Using the Outlook client
 
