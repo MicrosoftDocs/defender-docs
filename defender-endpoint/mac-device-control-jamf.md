@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 02/25/2025
 ---
 
 # Deploy and manage Device Control using JAMF
