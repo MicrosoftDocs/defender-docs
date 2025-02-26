@@ -39,14 +39,14 @@ Before you can connect Defender for Cloud's data to Power BI, you must first con
 
 Once Power BI Desktop is connected to Azure Resource Graph, you can use Azure Resource Graph to query various data sources from Defender for Cloud into Power BI.
 
-The queries provided on this page are examples that provide results. Azure Resource Graph allows you to query a wide range of data that you can create and customize to return results that suit your specific requirements. 
+The queries provided on this page are examples that provide results. Azure Resource Graph allows you to query a wide range of data that you can create and customize to return results that suit your specific requirements.
 
 1. Copy and paste one of the provided queries into the query editor in Power BI Desktop.
 
-    ### [Recommendations by risk](#tab/Recommendations-by-risk)
-    
+   ### [Recommendations by risk](#tab/Recommendations-by-risk)
+
     This query retrieves security recommendations by risk from MDC, allowing you to analyze assessments and identify areas that need attention.
-    
+
     ```kusto
     securityresources 
             | where type =~ "microsoft.security/assessments"
@@ -126,10 +126,11 @@ The queries provided on this page are examples that provide results. Azure Resou
                 | project-away assignedResourceId, governanceStatus, isExempt
                            | order by riskLevel desc, attackPaths desc, displayName
     ```
-    ### [Attack Paths](#tab/attack-paths)
-       
+
+   ### [Attack Paths](#tab/attack-paths)
+
     Use this query to fetch attack path data, providing insights into potential attack vectors within your cloud environment.
-    
+
     ```kusto
     securityresources
     | where type == "microsoft.security/attackpaths"
@@ -142,11 +143,11 @@ The queries provided on this page are examples that provide results. Azure Resou
     | summarize Path_Count = count() by Attack_Path = apTemplate, riskCategories
     | project Attack_Path, Path_Count, riskCategories
     ```
-     
-    ### [Secure Score](#tab/secure-score)
-       
+
+   ### [Secure Score](#tab/secure-score)
+
     This query retrieves secure score data, helping you understand your overall security posture and prioritize remediation efforts.
-       
+
     ```Kusto
     securityresources 
     | where type == "microsoft.security/securescores" 
@@ -156,11 +157,11 @@ The queries provided on this page are examples that provide results. Azure Resou
     | extend scopeWeight = toint(properties.weight)
     | extend scopeScorePerc = round(todouble(properties.score.percentage), 0)
     ```
-       
-    ### [Governance](#tab/governance)
-    
+
+   ### [Governance](#tab/governance)
+
     Use this query to get data on governance rules, enabling you to manage compliance and governance policies effectively.
-    
+
     ```kusto
     securityresources         
     | where type == "microsoft.security/assessments"
@@ -176,11 +177,11 @@ The queries provided on this page are examples that provide results. Azure Resou
     | extend assignmentStatus = iif(tostring(properties.status.code) == "Unhealthy",iif(hasAssignment == true, iif(bin(remediationDueDate, 1d) < bin(now(), 1d), "Overdue", "Ontime"), "Unassigned") , "Completed")
     | summarize count() by assignmentStatus
     ```
-    
-    ### [Compliance](#tab/compliance)
-    
+
+   ### [Compliance](#tab/compliance)
+
     This query retrieves compliance data from MDC, which is essential for maintaining and demonstrating adherence to various regulatory requirements.
-    
+
     ```kusto
     securityresources
     | where type == "microsoft.security/regulatorycompliancestandards/regulatorycompliancecontrols/regulatorycomplianceassessments" | extend scope = properties.scope
@@ -189,6 +190,7 @@ The queries provided on this page are examples that provide results. Azure Resou
     | extend complianceStandardId = replace( "-", " ", complianceStandardId)
     | extend Status = properties.state
     ```
+
     ---
 
 1. Select **Ok**.

@@ -4,7 +4,7 @@ description: Learn how to exclude machines from agentless scanning in Microsoft 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/12/2024
+ms.date: 02/19/2025
 ---
 
 # Exclude machines from agentless scanning

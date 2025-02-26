@@ -360,10 +360,10 @@
           href: concept-data-security-posture.md
         - name: Support and prerequisites
           href: concept-data-security-posture-prepare.md
-        - name: Data security dashboard
-          href: data-aware-security-dashboard-overview.md
         - name: Supported sensitive data information types
           href: sensitive-info-types.md
+        - name: Data and AI security dashboard (Preview)
+          href: data-aware-security-dashboard-overview.md
     - name: Improve container security posture
       items:
         - name: Agentless container posture in Defender CSPM
@@ -680,6 +680,48 @@
         - name: Automate responses to alerts
           displayName: workflow
           href: workflow-automation.yml
+
+- name: Protect data
+  items:
+  - name: Overview data and AI security dashboard (Preview)
+    href: data-aware-security-dashboard-overview.md
+  - name: Data security posture
+    items:
+    - name: Overview
+      href: concept-data-security-posture.md
+    - name: Support and prerequisites
+      href: concept-data-security-posture-prepare.md
+    - name: Supported sensitive data information
+      href: sensitive-info-types.md
+    - name: Discover sensitive data
+      href: discover-sensitive-data.md
+  - name: Data security threat protection
+    items:
+    - name: Review data security alerts
+      href: review-data-security-alerts.md
+
+- name: Protect AI workloads
+  items:
+  - name: Overview data and AI security dashboard (Preview)
+    href: data-aware-security-dashboard-overview.md
+  - name: AI security posture
+    items:
+    - name: Overview
+      href: ai-security-posture.md
+    - name: Discover generative AI workloads
+      href: identify-ai-workload-model.md
+    - name: Explore risks to pre-deployment generative AI artifacts
+      href: explore-ai-risk.md
+  - name: AI threat protection
+    items:
+    - name: Overview
+      href: ai-threat-protection.md
+    - name: Enable threat protection for AI workloads (preview)
+      href: ai-onboarding.md
+    - name: Review AI security alerts
+      href: review-ai-alerts.md
+    - name: Gain application and end-user context
+      href: gain-end-user-context-ai.md
 
 - name: Protect workloads
   items:
@@ -1249,6 +1291,8 @@
       href: /training/browse/?term=defender%20for%20cloud&terms=defender%20for%20cloud&expanded=microsoft-defender&products=defender-for-cloud
     - name: Defender for Cloud glossary of terms
       href: defender-for-cloud-glossary.md
+    - name: Defender for Cloud cost calculator
+      href: cost-calculator.md
     - name: Optimize costs with prepurchase plan
       href: prepurchase-plan.md
     - name: Microsoft Defender for Cloud in the field
@@ -1374,6 +1418,15 @@
         - name: Improvements in Container's Posture Management
           DisplayName: Container's Posture Management
           href: episode-fifty-six.md
+        - name: Onboarding Docker Hub and JFrog Artifactory
+          DisplayName: Docker Hub, JFrog Artifactory
+          href: episode-fifty-seven.md
+        - name: AKS security dashboard
+          DisplayName: AKS security dashboard
+          href: episode-fifty-eight.md
+        - name: Integrate CLI with CI/CD pipelines
+          DisplayName: Defender for Cloud CLI, CI/CD pipelines
+          href: episode-fifty-nine.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation

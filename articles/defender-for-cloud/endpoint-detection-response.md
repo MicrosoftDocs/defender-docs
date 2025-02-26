@@ -4,7 +4,7 @@ description: Learn about endpoint detection and response capabilities in Microso
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 12/26/2024
+ms.date: 02/19/2025
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---

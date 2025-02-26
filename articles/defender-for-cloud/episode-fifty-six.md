@@ -36,4 +36,4 @@ ms.date: 01/23/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Onboarding Docker Hub and JFrog Artifactory](episode-fifty-seven.md)
