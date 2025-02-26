@@ -86,6 +86,8 @@ Supported versions of Windows include:
 - Windows 10 Pro
 - Windows 10 Pro Education
 - Windows Server
+  - Windows Server 2008 R2
+    
   - Windows Server 2012 R2
   - Windows Server 2016
   - Windows Server, version 1803 or later
