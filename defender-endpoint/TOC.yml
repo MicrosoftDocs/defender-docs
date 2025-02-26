@@ -275,8 +275,6 @@
               href: linux-install-with-saltack.md
             - name: Manual deployment
               href: linux-install-manually.md
-            - name: Advanced deployment for Defender for Endpoint on Linux
-              href: comprehensive-guidance-on-linux-deployment.md
             - name: Deployment guidance for Defender for Endpoint on Linux for SAP
               href: mde-linux-deployment-on-sap.md
           - name: Configure Defender for Endpoint on Linux
@@ -488,8 +486,6 @@
           items:
           - name: Client analyzer overview
             href: overview-client-analyzer.md
-          - name: Download and run the client analyzer
-            href: download-client-analyzer.md
           - name: Run the client analyzer on Windows
             href: run-analyzer-windows.md
           - name: Run the client analyzer on Linux
