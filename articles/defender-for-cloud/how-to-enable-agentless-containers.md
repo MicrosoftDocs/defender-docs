@@ -34,7 +34,7 @@ Defender CSPM includes [two extensions](faq-defender-for-containers.yml#what-are
 A notification message pops up in the top right corner that verifies that the settings were saved successfully.
 
 > [!NOTE]
-> Agentless discovery for Kubernetes uses AKS trusted access. For more information about about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
+> Agentless discovery for Kubernetes uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
 
 ## Related content
 
