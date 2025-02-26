@@ -86,8 +86,6 @@ Supported versions of Windows include:
 - Windows 10 Pro
 - Windows 10 Pro Education
 - Windows Server
-  - Windows Server 2008 R2
-    
   - Windows Server 2012 R2
   - Windows Server 2016
   - Windows Server, version 1803 or later
@@ -99,7 +97,7 @@ Supported versions of Windows include:
 - Azure Virtual Desktop
 - Windows 365 running one of the previously listed operating systems/versions
 
-The following operating systems require the use of the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA) to work with Defender for Endpoint:
+The following operating systems work with Defender for Endpoint, provided you're using the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA):
 
 - Windows 8.1 Enterprise
 - Windows 8.1 Pro
