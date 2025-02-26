@@ -30,6 +30,9 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 
 This article describes how admins can manage entries for IPv6 addresses in the Microsoft Defender portal and in Exchange Online PowerShell.
 
+> [!NOTE]
+> IPv4 ranges aren't supported yet. Admins can create and manage entries for IPv4 addresses in the [Connection filter policy](connection-filter-policies-configure.md).
+
 ## What do you need to know before you begin?
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
