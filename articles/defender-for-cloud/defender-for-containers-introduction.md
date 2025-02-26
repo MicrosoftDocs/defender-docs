@@ -15,7 +15,7 @@ Defender for Containers assists you with four core domains of container security
 
 - [**Security posture management**](#security-posture-management) runs continuous monitoring of cloud APIs, Kubernetes APIs, and Kubernetes workloads to discover cloud resources, provide comprehensive inventory capabilities, detect misconfigurations with mitigation guidelines, provide contextual risk assessment, and empowers users to perform enhanced risk hunting capabilities through the Defender for Cloud security explorer.
 
-- [**Vulnerability assessment**](#vulnerability-assessment) -  performs agentless vulnerability assessment of [supported K8s nodes and container registries](support-matrix-defender-for-containers.md) with remediation guidelines, zero configuration, daily re-scans, coverage for OS and language packages, and exploitability insights.
+- [**Vulnerability assessment**](#vulnerability-assessment) -  performs agentless vulnerability assessment of [supported K8s nodes and container registries](support-matrix-defender-for-containers.md#vulnerability-assessment-features) with remediation guidelines, zero configuration, daily re-scans, coverage for OS and language packages, and exploitability insights.
 
 - [**Run-time threat protection**](#run-time-protection-for-kubernetes-nodes-and-clusters) - a rich threat detection suite for Kubernetes clusters, nodes, and workloads, powered by Microsoft leading threat intelligence, provides mapping to MITRE ATT&CK framework for easy understanding of risk and relevant context, and automated response. Security operators can also investigate and respond to threats to Kubernetes services through the [Microsoft Defender XDR portal](/defender-xdr/investigate-respond-container-threats).
 
@@ -65,7 +65,7 @@ You can learn more about [Kubernetes data plane hardening](kubernetes-workload-p
 
 ## Vulnerability assessment
 
-Defender for Containers scans the cluster node OS and application software, container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), Google Container Registry (GCR), and [supported external image registries](support-matrix-defender-for-containers.md?tabs=extva) to provide agentless vulnerability assessment.
+Defender for Containers scans the cluster node OS and application software, container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), Google Container Registry (GCR), and [supported external image registries](support-matrix-defender-for-containers.md?tabs=extva#vulnerability-assessment-features) to provide agentless vulnerability assessment.
 
 Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
@@ -81,7 +81,7 @@ Cluster nodes -
 
 ## Run-time protection for Kubernetes nodes and clusters
 
-Defender for Containers provides real-time threat protection for [supported containerized environments](support-matrix-defender-for-containers.md) and generates alerts for suspicious activities. You can use this information to quickly remediate security issues and improve the security of your containers.
+Defender for Containers provides real-time threat protection for [supported containerized environments](support-matrix-defender-for-containers.md#runtime-protection-features) and generates alerts for suspicious activities. You can use this information to quickly remediate security issues and improve the security of your containers.
 
 Threat protection is provided for Kubernetes at the cluster, node, and workload levels. Both sensor based coverage that requires the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor), and agentless coverage that is based on analysis of the Kubernetes audit logs, are used to detect threats. Security alerts are only triggered for actions and deployments that occur after you enabled Defender for Containers on your subscription.
 
