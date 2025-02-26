@@ -14,7 +14,7 @@ search.appverid:
 ms.collection:
 - m365-security
 - tier2
-ms.date: 01/10/2025
+ms.date: 02/24/2025
 description: See examples for how to start automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2.
 ms.custom:
 - air
@@ -39,7 +39,7 @@ This article describes how AIR works through several examples:
 
 ## Example: A user-reported phishing message launches an investigation playbook
 
-A user receives an email that looks like a phishing attempt. The user reports the message using the [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md), which results in an alert that's triggered by the **Email reported by user as malware or phish** [alert policy](/purview/alert-policies#threat-management-alert-policies), which automatically launches the investigation playbook.
+A user receives an email that looks like a phishing attempt. The user reports the message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), which results in an alert that's triggered by the **Email reported by user as malware or phish** [alert policy](/purview/alert-policies#threat-management-alert-policies), which automatically launches the investigation playbook.
 
 Various aspects of the reported email message are assessed. For example:
 
