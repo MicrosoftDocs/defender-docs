@@ -177,6 +177,7 @@ The following are the features provided by Defender for Containers, for the supp
 > [!NOTE]
 > For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
 
+
 ---
 
 ## Security posture management
@@ -199,29 +200,25 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) <sup>[1](#footnote2spm)</sup> | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
+| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | Azure commercial clouds |
 | Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | ECR, EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | AWS |
 | Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | ACR, AKS | GA | GA | Requires **K8S API access** | Defender CSPM (requires Agentless discovery for Kubernetes to be enabled) | AWS |
 | Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | ECR, EKS | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | AWS |
-| [Control plane hardening](defender-for-containers-architecture.md) <sup>[1](#footnote2spm)</sup> | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | ECR, EKS | GA | GA | Requires **K8S API access** | Free | AWS |
-| [Workload hardening](kubernetes-workload-protections.md) <sup>[1](#footnote2spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Free | AWS |
+| [Control plane hardening](defender-for-containers-architecture.md) | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | ECR, EKS | GA | GA | Requires **K8S API access** | Free | AWS |
+| [Workload hardening](kubernetes-workload-protections.md) |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Free | AWS |
 | CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | EKS | GA | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | AWS |
-
-<sup><a name="footnote2spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
 
 ### [GCP](#tab/gcpspm)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) <sup>[1](#footnote3spm)</sup> | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
+| [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
 | Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
 | Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender CSPM | GCP |
 | Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | GCR, GAR, GKE | GA | GA | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | GCP |
-| [Control plane hardening](defender-for-containers-architecture.md) <sup>[1](#footnote3spm)</sup> | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | GKE | GA | GA | Activated with plan | Free | GCP |
-| [Workload hardening](kubernetes-workload-protections.md) <sup>[1](#footnote3spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. | GKE | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Free | GCP |
+| [Control plane hardening](defender-for-containers-architecture.md) | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | GKE | GA | GA | Activated with plan | Free | GCP |
+| [Workload hardening](kubernetes-workload-protections.md) | Protect workloads of your Kubernetes containers with best practice recommendations. | GKE | GA | - | Requires **Auto provision Azure Policy extension for Azure Arc** | Free | GCP |
 | CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | GKE | GA | - | Assigned as a security standard | Defender for Containers **OR** Defender CSPM | GCP |
-
-<sup><a name="footnote3spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
 
 ### [Arc enabled Kubernetes](#tab/arcspm)
 
@@ -244,6 +241,54 @@ The following are the features provided by Defender for Containers, for the supp
 
 ---
 
+## Network restrictions
+
+### [AWS](#tab/awsnet)
+
+| Aspect | Details |
+|--|--|
+| Outbound proxy support | Outbound proxy without authentication and outbound proxy with basic authentication are supported. Outbound proxy that expects trusted certificates is currently not supported. |
+| Clusters with IP restrictions | If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see  [Amazon EKS cluster endpoint access control - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) ), the control plane's IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud. |
+
+### [GCP](#tab/gcpnet)
+
+| Aspect | Details |
+|--|--|
+| Outbound proxy support | Outbound proxy without authentication and outbound proxy with basic authentication are supported. Outbound proxy that expects trusted certificates is currently not supported. |
+| Clusters with IP restrictions | If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see [GKE - Add authorized networks for control plane access](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks) ), the control plane's IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud. |
+
+### [Arc enabled](#tab/arcnet)
+
+| Aspect | Details |
+|--|--|
+| Outbound proxy support | Outbound proxy without authentication and outbound proxy with basic authentication are supported. Outbound proxy that expects trusted certificates is currently not supported. |
+
+---
+
+## Supported host operating systems
+
+Defender for Containers relies on the Defender sensor for several features. The Defender sensor is supported only with Linux Kernel 5.4 and above, on the following host operating systems:
+
+- Amazon Linux 2
+- CentOS 8  (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)
+- Debian 10
+- Debian 11
+- Google Container-Optimized OS
+- Mariner 1.0
+- Mariner 2.0
+- Red Hat Enterprise Linux 8
+- Ubuntu 16.04
+- Ubuntu 18.04
+- Ubuntu 20.04
+- Ubuntu 22.04
+
+Ensure your Kubernetes node is running on one of these verified operating systems. Clusters with unsupported host operating systems don't get the benefits of features relying on Defender sensor.
+
+## Defender sensor limitations
+
+The Defender sensor in AKS V1.28 and below isn't supported on Arm64 nodes.
+
+
 ## Azure
 
 ### Security posture management
@@ -258,7 +303,7 @@ The following are the features provided by Defender for Containers, for the supp
 | [Kubernetes data plane hardening](kubernetes-workload-protections.md) <sup>[1](#footnote1spm)</sup> |Protect workloads of your Kubernetes containers with best practice recommendations. |AKS | GA | - | Enable **Azure Policy for Kubernetes** toggle | Azure Policy | Free | Commercial clouds<br><br> National clouds: Azure Government, Azure operated by 21Vianet |
 | CIS Azure Kubernetes Service | CIS Azure Kubernetes Service Benchmark | AKS | GA | - | Assigned as a security standard | Agentless | Defender for Containers **OR** Defender CSPM | Commercial clouds<br><br> |
 
-<sup><a name="footnote10spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
+<sup><a name="footnote1spm"></a>1</sup> This feature can be enabled for an individual cluster when enabling Defender for Containers at the cluster resource level.
 
 ### Vulnerability assessment
 
