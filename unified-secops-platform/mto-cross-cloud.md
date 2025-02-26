@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - highpri
 - tier1
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/01/2025
 appliesto: 
   - Microsoft Defender XDR
@@ -32,7 +32,64 @@ Cross-cloud visibility is available to government customers who have the applica
 
 In addition, ensure that the trust multi-factor authentication (MFA) from Microsoft Entra tenants is properly configured to successfully access tenants in Microsoft Commercial cloud environments. To configure MFA, see [Change inbound trust settings for MFA and device claims](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims).
 
-Microsoft Entra tenants must also select the **Microsoft Azure Commercial** checkbox in the **cross-tenant settings for external identities** to ensure B2B collaboration. Learn more about B2B settings in [Manage external access with inbound and outbound settings](/entra/external-id/cross-tenant-access-overview#manage-external-access-with-inbound-and-outbound-settings).
+### B2B collaboration settings
+
+Follow these steps to configure B2B collaboration settings.
+
+#### Home tenant settings
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+2. Navigate to **Identity > External identities > Cross-tenant access settings**, then select **Cross-tenant access settings**.
+3. Select **Add organization**. Enter the tenant ID of the organization you want to add, then select **Add**.
+
+Check that default settings and ensure that the following are enabled:
+
+1. For the organization you added, select **Inbound access**.
+2. Set B2B collaboration to **Block** for Access and Users.
+3. On the Application tab, set access to **Block** and **Applies to all applications**, then select **Save**.
+4. Select **B2B direct connect**, set access status to **Block** and **Applies to all users**.
+5. On the Application tab, set access to **Block** and **Applies to all applications**, then select **Save**.
+
+No other MFA Trust settings are required for the home tenant.
+
+You then need to configure outbound access settings for the home tenant by following these steps:
+
+1. In the **Cross-tenant access settings** pane, select **Outbound access**.
+2. Configure B2B collaboration by setting access status to **Allow**.
+3. In the **Applies to**, select any depending on your requirements.
+4. Select **External applications** and set access status to **Allow**.
+5. Set the **Applies to** to **All external applications**. Select **Save**.
+6. Select **B2B direct connect** and set access status to **Block**.
+7. In the **Applies to**, select **All users**. 
+8. Select **External applications** and set access status to **Block**.
+9. Set the **Applies to** to **All external applications**. Select **Save**.
+
+#### Target tenant settings
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+2. Navigate to **Identity > External identities > Cross-tenant access settings**, then select **Cross-tenant access settings**.
+3. Select **Add organization**. Enter the tenant ID of the organization you want to add, then select **Add**.
+
+Check that default settings and ensure that the following are enabled:
+
+1. For the organization you added, select **Inbound access**.
+2. Set B2B collaboration to **Allow** for Access and Users.
+3. On the Application tab, set access to **Allow** and **Applies to all applications**, then select **Save**.
+4. Select **B2B direct connect**, set access status to **Block** and **Applies to all users**.
+5. On the Application tab, set access to **Block** and **Applies to all applications**, then select **Save**.
+6. Select **Trust settings**, then select **Trust multi-factor authentication from Microsoft Entra tenants**.
+
+You then need to configure outbound access settings from the home tenant by following these steps:
+
+1. In the **Cross-tenant access settings** pane, select **Outbound access**.
+2. Configure B2B collaboration by setting access status to **Block**.
+3. In the **Applies to**, select **All users**.
+4. Select **External applications** and set access status to **Block**.
+5. Set the **Applies to** to **All external applications**. Select **Save**.
+6. Select **B2B direct connect** and set access status to **Block**.
+7. In the **Applies to**, select **All users**. 
+8. Select **External applications** and set access status to **Block**.
+9. Set the **Applies to** to **All external applications**. Select **Save**.
 
 ## Cross-cloud tenant management
 
