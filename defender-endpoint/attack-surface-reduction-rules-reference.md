@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 02/04/2025
+ms.date: 02/26/2025
 search.appverid: met150
 ---
 
@@ -436,7 +436,7 @@ Advanced hunting action type:
 - `AsrObfuscatedScriptAudited`
 - `AsrObfuscatedScriptBlocked`
 
-Dependencies: Microsoft Defender Antivirus, AntiMalware Scan Interface (AMSI)
+Dependencies: Microsoft Defender Antivirus, AntiMalware Scan Interface (AMSI), Cloud Protection
 
 ### Block JavaScript or VBScript from launching downloaded executable content
 
