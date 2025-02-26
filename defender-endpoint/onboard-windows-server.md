@@ -69,7 +69,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 - Remove the Defender for Endpoint workspace configuration
 
 > [!NOTE]
-> These offboarding instructions for other Windows server versions also apply if you are running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
+> The offboarding instructions in this article apply to previous versions of Windows Server, such as Windows Server 2016 and Windows Server 2012 R2 using the MMA. To migrate to the new, unified solution, see [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
 ## Related articles
 
