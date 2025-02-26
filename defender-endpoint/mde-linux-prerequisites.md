@@ -79,7 +79,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Alma 9.2 and higher 
 - Mariner 2 
 
-**The following Linux server distributions on Arm64 are now supported in preview: **
+**The following Linux server distributions on Arm64 are now supported in preview:**
 
 - Ubuntu 20.04 Arm64 
 - Ubuntu 22.04 Arm64 
@@ -89,15 +89,16 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 >[!IMPORTANT]: Support for Microsoft Defender for Endpoint on Linux for Arm64-based Linux devices is now in preview. 
 >For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm).
 
->[!NOTE]: The workstation and desktop versions of these distributions are unsupported. Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions). 
->After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than this which are listed in this section are provided for technical upgrade support only. 
->Currently, Rocky and Alma distributions aren't supported in Microsoft Defender Vulnerability Management. Microsoft Defender for Endpoint for all other supported distributions and versions is kernel-version agnostic. 
->The minimal requirement for the kernel version to be 3.10.0-327 or later. 
+>[!NOTE]: The workstation and desktop versions of these distributions are unsupported
+>Distributions and versions that aren't explicitly listed are unsupported.
+>After a new package version is released, support for the previous two versions is reduced to technical support only.
+>Rocky and Alma distributions aren't currently supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
+>The minimal requirement for the kernel version to be 3.10.0-327 or later.
 
->[!WARNING]: Running Defender for Endpoint on Linux side by side with other fanotify-based security solutions isn't supported. It can lead to unpredictable results, including hanging the operating system. 
->If there are any other applications on the system that use fanotify in blocking mode, applications are listed in the conflicting_applications field of the mdatp health command output.
+>[!WARNING]: Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported as It can lead to unpredictable results, including hanging the operating system.
+>If any other applications on the system use fanotify in blocking mode, the conflicting_applications field of the mdatp health command output lists these applications.
 >The Linux FAPolicyD feature uses fanotify in blocking mode, and is unsupported when running Defender for Endpoint in active mode
->You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to passive mode. See [Enforcement level for Microsoft Defender Antivirus](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468#enforcement-level-for-microsoft-defender-antivirus). 
+>After configuring the Real Time Protection to passive mode, you can safely use Defender for Endpoint on Linux EDR. See [Enforcement level for Microsoft Defender Antivirus](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468#enforcement-level-for-microsoft-defender-antivirus). 
 
 ## List of supported filesystems for RTP, Quick, Full, and Custom Scan. 
 
@@ -135,13 +136,13 @@ You can use one of the following methods to deploy Microsoft Defender for Endpoi
 
 3. Ansible, see [Deploy using Ansible configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-ansible) 
 
-4. [To use Chef, see Deploy using Chef configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef) 
+4. Chef, see [Deploy using Chef configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef) 
 
-5. [To use Saltstack, see Deploy using Saltstack configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-saltack)
+5. SaltStack, see [Deploy using SaltStack configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-saltack)
 
-6. To install on Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm)
+6. Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm)
 
-7. If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-install) 
+If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-install) 
 
 >[!IMPORTANT]: Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
 >Microsoft Defender for Endpoint on Linux creates a mdatp user with random UID and GID.
@@ -150,19 +151,20 @@ You can use one of the following methods to deploy Microsoft Defender for Endpoi
 
 ## Network connections
 
-- Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services.
-- To prepare your environment, see Step 1 in the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](https://learn.microsoft.com/en-us/defender-endpoint/configure-environment)
-- Defender for Endpoint on Linux can connect through a proxy server by using the following discovery methods: 
+- Verify that your devices can connect to Microsoft Defender for Endpoint cloud services.
+- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](https://learn.microsoft.com/en-us/defender-endpoint/configure-environment)
+- Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
     1. Transparent proxy
     2. Manual static proxy configuration 
-   
-- If a proxy or firewall is blocking anonymous traffic, make sure that anonymous traffic is permitted in the previously listed URLs. 
-- For transparent proxies, no another configuration is needed for Defender for Endpoint. For static proxy, follow the steps in [Manual Static Proxy Configuration.](https://learn.microsoft.com/en-us/defender-endpoint/linux-static-proxy-configuration)
+- Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
->[!Warning]: PAC, WPAD, and authenticated proxies aren't supported. Ensure that only a static proxy or transparent proxy is being used. 
->SSL inspection and intercepting proxies are also not supported for security reasons. #
->Configure an exception for SSL inspection and your proxy server to directly pass through data from Defender for Endpoint on Linux to the relevant URLs without interception. 
->Adding your interception certificate to the global store won't allow for interception. 
+>[!NOTE] Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](https://learn.microsoft.com/en-us/defender-endpoint/linux-static-proxy-configuration)
+
+>[!Warning]: PAC, WPAD, and authenticated proxies are not supported. 
+>Use only static or transparent proxies. 
+>SSL inspection and intercepting proxies are also not supported for security reasons.
+>Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
+>Adding your interception certificate to the global store will not enable interception.
 
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-connectivity)
 
