@@ -131,7 +131,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Sangria Tempest|Ukraine, Financially motivated|ELBRUS|
 |Sapphire Sleet|North Korea|COPERNICIUM, Genie Spider, BlueNoroff, CageyChameleon, CryptoCore|
 |Satin Typhoon|China|SCANDIUM, COMBINE, TG-0416, SILVERVIPER, DYNAMITE PANDA, Red Wraith, APT18, Elderwood Group, Wekby|
-|Seashell Blizzard|Russia|IRIDIUM, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
+|[Seashell Blizzard](https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/)|Russia|IRIDIUM, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
 |[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|Russia|KRYPTON, VENOMOUS BEAR, Uroburos, Snake, Blue Python, Turla, WRAITH, ATG26|
 |Sefid Flood|Iran, Influence operations||
 |Shadow Typhoon|China|DarkShadow, Oro0lxy|
