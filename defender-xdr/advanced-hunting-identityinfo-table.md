@@ -94,15 +94,15 @@ Defender portal users who have not onboarded a Sentinel workspace that has the U
 ## UEBA-specific columns 
 If you have not onboarded a Microsoft Sentinel workspace with the UEBA service turned on to the Microsoft Defender portal, the following columns are not available in your `IdentityInfo` table:
 
-- BlastRadius
-- CompanyName
-- DeletedDateTime
-- EmployeeId
-- OtherMailAddresses
-- RiskLevel
-- RiskLevelDetails
-- State
-- Tags
+- `BlastRadius`
+- `CompanyName`
+- `DeletedDateTime`
+- `EmployeeId`
+- `OtherMailAddresses`
+- `RiskLevel`
+- `RiskLevelDetails`
+- `State`
+- `Tags`
 
 For more information about UEBA, read [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, read [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
 
