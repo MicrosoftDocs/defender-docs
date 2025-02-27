@@ -31,9 +31,35 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| February 27 | GA | [On-demand malware scanning in Microsoft Defender for Storage](#on-demand-malware-scanning-in-microsoft-defender-for-storage) |
+| February 27 | GA | [Defender for Storage malware scanning for blobs up to 50 GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50-gb) |
 | February 23 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
 | February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
+
+### On-demand malware scanning in Microsoft Defender for Storage 
+
+February 27, 2025
+
+On-demand malware scanning in Microsoft Defender for Storage, now in GA, enables scanning of existing blobs in Azure Storage accounts whenever needed. Scans can be initiated from the Azure portal UI or via the REST API, supporting automation through Logic Apps, Automation playbooks, and PowerShell scripts. This feature uses Microsoft Defender Antivirus with the latest malware definitions for every scan and provides upfront cost estimation in the Azure portal before scanning.
+
+Use cases:
+
+- **Incident response**: Scan specific storage accounts after detecting suspicious activity.
+- **Security baseline**: Scan all stored data when first enabling Defender for Storage.
+- **Compliance**: Set automation to schedule scans that help meet regulatory and data protection standards.
+
+For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
+
+### Defender for Storage malware scanning for blobs up to 50 GB
+
+February 27, 2025
+
+Defender for Storage malware scanning now supports blobs up to 50GB in size (previously limited to 2GB).
+
+Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
+
+To avoid unexpected high charges, you may want to set an appropriate cap on the total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](on-upload-malware-scanning.md).
 
 ### Data and AI security dashboard (Preview)
 
