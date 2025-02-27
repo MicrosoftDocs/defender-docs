@@ -42,7 +42,7 @@ Defender for Endpoint is ending support for Android 8, 8.1 and 9 on April 30, 20
 
 After discontinuing support for deprecated versions, we no longer address bugs or provide maintenance for unsupported operating system versions. Any issues occurring on devices running Android version below 10 will not be investigated by us. 
 
- This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
+This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
 
 #### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
