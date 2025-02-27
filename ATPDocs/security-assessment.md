@@ -28,7 +28,7 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 ### Categorization of MDI security posture assessments
 
 For a deeper understanding of identity security risks and how to address them, Defender for Identity security posture assessments are categorized into five key areas:
-- **Hybrid security**: Addresses the unique challenges and security considerations of integrating on-premises and cloud-based identity systems in hybrid environments including Entra Connect.
+- **Hybrid security**: Addresses security considerations in hybrid environments including Entra Connect.
 - **Identity infrastructure**: Focuses on resolving misconfigurations and vulnerabilities in core identity components, such as domain controllers.
 - **Certificates**: Identifies security gaps in Active Directory Certificate Services (AD CS) that could enable unauthorized access due to improper certificate management.
 - **Group policy**: Identifies risky Group Policy configurations that could lead to privilege escalation or lateral movement within the network, ensuring that Group Policy settings are secure and don't introduce other risks.
