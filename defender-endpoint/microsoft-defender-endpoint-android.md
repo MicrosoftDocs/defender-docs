@@ -60,8 +60,16 @@ This article describes how to install, configure, update, and use Defender for E
 
 ### System Requirements
 
-- Mobile phones and tablets running Android 8.0 and above. **Mobile phones running Android go and other mobile devices running Android are not currently supported.**
+- 
 - Intune Company Portal app should be downloaded from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and installed for seamless onboarding. Device enrollment is required for Intune device compliance policies to be enforced.
+
+- Mobile phones and tablets running Android 8.0 and above. **(Note: Microsoft Defender is ending support for Android 8, 8.1 and 9 versions on April 30, after that device running on Android version < 10 won't be supported)**
+
+**What does it mean devices running on unsupported Android version?** 
+
+**New User:** The application will no longer be available for new installations on devices running on unsupported versions. When users with unsupported versions attempt to download the Microsoft Defender app, Google Play store will notify them that the device is incompatible. 
+
+**Existing User:** Microsoft Defender will continue to function for existing users on unsupported versions, but they will not receive updates from the play store as they do not meet the minimum SDK version requirement, Therefore, any new updates on the app will not be available to devices running on unsupported versions. Our team no longer address bugs or provide maintenance for unsupported operating system versions. Any issues occurring on devices running on unsupported versions will not be investigated by us. 
 
  > [!NOTE]
  > Microsoft Defender for Endpoint on Android isn't supported on userless or shared devices.
@@ -101,7 +109,9 @@ Guidance on how to configure Microsoft Defender for Endpoint on Android features
 ## Related articles
 
 - [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
+
 - [Configure Microsoft Defender for Endpoint on Android features](android-configure.md)
+
 - [Mobile Application Management (MAM) basics](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
