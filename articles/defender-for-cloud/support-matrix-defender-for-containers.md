@@ -157,11 +157,11 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | Arc enabled K8s clusters | Preview | Preview | Enabled **Defender sensor** | **Defender for Containers** | GCP |
-| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | Arc enabled K8s clusters | Preview | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | GCP |
+| Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | Arc enabled K8s clusters | Preview | Preview | Enabled **Defender sensor** | **Defender for Containers** |  |
+| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | Arc enabled K8s clusters | Preview | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** |  |
 | Binary drift detection | Detects binary of runtime container from container image | - | - | - | - | - | - |
-| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | - | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
-| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | GA | GA | Enabled with any Defender for Cloud plan | Any plan | GCP |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | - | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan |  |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR |  | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan |  |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
 #### Kubernetes distributions/configurations for runtime threat protection in Arc enabled Kubernetes
