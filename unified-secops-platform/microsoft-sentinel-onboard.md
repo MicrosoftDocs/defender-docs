@@ -144,7 +144,11 @@ You can only have one primary workspace connected to the Defender portal at a ti
 To change the primary workspace:
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **System** > **Settings** > **Microsoft Sentinel** > **Workspaces**.
-1. ??????
+1. Select **Connect workspace**.
+1. Choose the workspaces you want to connect and select **Next**.
+1. Select the **Primary workspace**.
+1. Read and understand the product changes associated with connecting your workspace. 
+1. Select **Connect**.
 
 When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically.
 

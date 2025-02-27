@@ -27,7 +27,7 @@ Multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the 
 
 ## Microsoft Sentinel support
 
-The Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
+For each tenant, the Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel (preview). In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
 
 If you have tenants with Microsoft Sentinel workspaces onboarded to the Defender portal, you're able to:
 
@@ -38,6 +38,8 @@ For more information, see:
 
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
+
 
 ## Feature availability
 
