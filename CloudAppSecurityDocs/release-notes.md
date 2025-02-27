@@ -44,7 +44,7 @@ To learn more about the Graph API alert resource: [alert resource type - Microso
 
 ### Network requirement updates
 
-Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our portals and services you must apply these changes by March 16, 2025.
+Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our portals and services you must apply these changes by March 27, 2025.
 
 New CDN domains have been added and must be included in firewall rules to allow outbound traffic on port 443:
 - cdn.cloudappsecurity.com
