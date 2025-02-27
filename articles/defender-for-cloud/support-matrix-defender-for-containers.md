@@ -89,7 +89,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Workload detection | Detection of suspicious Kubernetes activity for cluster and node | AKS | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Binary drift detection | Detects binary of runtime container from container image | AKS | GA | GA | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds |
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | AKS | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
-| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR |  | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | AKS  | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Malware detection | Detection of malware | AKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | Commercial clouds |
 
 #### Kubernetes distributions and configurations for runtime threat protection in Azure
