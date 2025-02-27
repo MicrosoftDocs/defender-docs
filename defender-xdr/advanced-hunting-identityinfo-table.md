@@ -37,7 +37,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns below is available for Defender portal users who have onboarded Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
 
-Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA-related columns]
+Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA columns](#ueba-columns]).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -91,7 +91,7 @@ Defender portal users who have not onboarded a Sentinel workspace that has the U
 <a name="mdi-only"></a>* Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps or Microsoft Defender for Endpoint P2 licensing.<br>
 <a name="mdi"></a>** Available only for tenants with Microsoft Defender for Identity.
 
-## UEBA columns
+## UEBA columns 
 If you have not onboarded a Microsoft Sentinel workspace with the UEBA service turned on to the Microsoft Defender portal, the following columns are not available in your `IdentityInfo` table:
 
 - BlastRadius
