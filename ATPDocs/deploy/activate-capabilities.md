@@ -12,7 +12,7 @@ Microsoft Defender for Endpoint customers, who have already onboarded their doma
 This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!IMPORTANT]
-> Information in this article relates to a feature that is currently in limited availability for a select set of use cases. If you weren't directed to use the Defender for Identity **Activation** page, use our [main deployment guide](deploy-defender-identity.md) instead.
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
 
 ## Prerequisites
 
@@ -29,10 +29,8 @@ Make sure that the domain controller where you're planning to activate Defender 
 
 Direct Defender for Identity capabilities are supported on domain controllers only, using the one of the following operating systems:
 
-- Windows Server 2019
-- Windows Server 2022
-
-You must also have the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) installed.
+- Windows Server 2019 or above
+- [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later
 
 > [!IMPORTANT]
 >After installing the March 2024 Cumulative Update, LSASS might experience a memory leak on domain controllers when on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests.
@@ -45,7 +43,7 @@ Your domain controller must be onboarded to Microsoft Defender for Endpoint.
 
 For more information, see [Onboard a Windows server](/microsoft-365/security/defender-endpoint/onboard-windows-server).
 
-### Required permissions
+### Permissions requirements 
 
 To access the Defender for Identity **Activation** page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following Unified RBAC permissions:
 
@@ -82,15 +80,31 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Activate Defender for Identity capabilities
 
-After ensuring that your environment is completely configured, activate the  Microsoft Defender for Identity capabilities on your domain controller.
+After ensuring that your environment is completely configured, activate the Microsoft Defender for Identity capabilities on your domain controller.
 
-1. In the [Defender portal](https://security.microsoft.com), select **Settings > Identities > [Activation](https://security.microsoft.com/settings/identities?tabid=onboarding)**.
+Activate the Defender for Identity from the [Microsoft Defender portal](https://security.microsoft.com).
 
-    The **Activation** page lists any detected and eligible domain controllers.
+1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
-1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted.
+   The Activation page lists servers discovered in Device Inventory and identified as eligible domain controllers. 
 
-When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.
+2. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+
+    > [!NOTE]
+    > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
+
+3. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.
+
+## Onboarding Confirmation 
+
+To confirm the sensor has been onboarded: 
+
+1. Navigate to **System** > **Settings** > **Identities** > **Sensors**. 
+
+2. Check that the onboarded domain controller is listed. 
+
+> [!NOTE]
+>  The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 ## Test activated capabilities
 
@@ -108,9 +122,9 @@ Use the following procedures to test your environment for Defender for Identity 
 
 ### Check the ITDR dashboard
 
-In the Defender portal, select **Identities > Dashboard** and review the details shown, checking for expected results from your environment.
+In the Defender portal, select **Identities** > **Dashboard**, and review the details shown, checking for expected results from your environment.
 
-For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
+For more information, see [Work with Defender for Identity's ITDR dashboard](../dashboard.md).
 
 
 ### Confirm entity page details
@@ -194,10 +208,6 @@ Test remediation actions on a test user. For example:
 1. From the **Options** menu, select any of the available remediation actions.
 
 1. Check Active Directory for the expected activity.
-
-> [!NOTE]
-> The current version doesn't collect the User Account Control (UAC) flags correctly. So disabled users, would still appear as Enabled in the portal.
-
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
