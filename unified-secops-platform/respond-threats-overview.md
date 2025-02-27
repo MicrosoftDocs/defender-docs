@@ -99,7 +99,7 @@ For more information, see [Triage and investigate incidents with guided response
 
 Microsoft Defender Experts for XDR is a managed threat detection and response service that extends the capabilities of Microsoft’s security stack, providing proactive threat hunting and expert-driven analysis. This helps SOC teams focus on the most critical threats while reducing the burden of manual investigation.
 
-Ask Defender Experts in Microsoft Defender XDR further enhances SOC teams’ efficiency by providing direct access to Microsoft’s security analysts. When an incident requires deeper investigation or expert insight, SOC teams can submit inquiries through the Microsoft 365 Defender portal. This feature allows security teams to get clarifications on complex attack patterns, guidance on remediation steps, and insights into emerging threats—all without disrupting their workflow. By leveraging Microsoft’s expertise, organizations can improve their threat response strategies, making their SOC teams more proactive and resilient against evolving cyber threats.
+Ask Defender Experts in Microsoft Defender XDR further enhances SOC teams’ efficiency by providing direct access to Microsoft’s security analysts. When an incident requires deeper investigation or expert insight, SOC teams can submit inquiries through the Defender portal. This feature allows security teams to get clarifications on complex attack patterns, guidance on remediation steps, and insights into emerging threats—all without disrupting their workflow. By leveraging Microsoft’s expertise, organizations can improve their threat response strategies, making their SOC teams more proactive and resilient against evolving cyber threats.
 
 For more information, see:
 
