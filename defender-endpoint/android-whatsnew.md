@@ -32,8 +32,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 February 2025
 
-Defender for Endpoint is ending support for Android 8, 8.1 and 9 on April 30, 2025. Moving forward, only devices running Android 10 and later are supported. 
-
+**Defender for Endpoint is** **ending support for Android 8, 8.1 and 9 on April 30, 2025**. Moving forward, only devices running Android 10 and later are supported. 
 **How will this affect your organization’s users?** 
 
 **New User:** The application will no longer be available for new installations on devices running below Android 10. When users with Android versions below 10 attempt to download the Microsoft Defender app, Google Play store will notify them that the device is incompatible. 
