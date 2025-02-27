@@ -43,7 +43,7 @@ Threat intelligence integrates across Defender portal services to enrich alerts 
 
 Continuous updates to threat intelligence feeds keep security teams ahead of emerging threats and improve the organization's overall resilience.
 
-The following image shows an example of the incidents related to the **Human-operated ransomware** threat type in **Threat intelligence** area of the Defender portal.
+The following image shows an example of the incidents related to a **Human-operated ransomware** Threat analytics report in the **Threat intelligence** area of the Defender portal.
 
 :::image type="content" source="media/respond-threats-overview/threat-analytics.png" alt-text="Screenshot of a list of related incidents to a specific threat." lightbox="media/respond-threats-overview/threat-analytics.png":::
 
@@ -95,6 +95,17 @@ The following image shows a sample of the **Guided response** section of the Cop
 
 For more information, see [Triage and investigate incidents with guided responses from Microsoft Copilot in Microsoft Defender](/defender-xdr/security-copilot-m365d-guided-response).
 
+### Extend response with the help of Microsoft Defender experts
+
+Microsoft Defender Experts for XDR is a managed threat detection and response service that extends the capabilities of Microsoft’s security stack, providing proactive threat hunting and expert-driven analysis. This helps SOC teams focus on the most critical threats while reducing the burden of manual investigation.
+
+Ask Defender Experts in Microsoft Defender XDR further enhances SOC teams’ efficiency by providing direct access to Microsoft’s security analysts. When an incident requires deeper investigation or expert insight, SOC teams can submit inquiries through the Microsoft 365 Defender portal. This feature allows security teams to get clarifications on complex attack patterns, guidance on remediation steps, and insights into emerging threats—all without disrupting their workflow. By leveraging Microsoft’s expertise, organizations can improve their threat response strategies, making their SOC teams more proactive and resilient against evolving cyber threats.
+
+For more information, see:
+
+- [Microsoft Defender Experts for XDR](/defender-xdr/dex-xdr-overview)
+- [Collaborate with experts on demand](/defender-xdr/experts-on-demand)
+
 ## Microsoft Sentinel threat response features
 
 Microsoft Sentinel provides cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your threat detection and response capabilities.
@@ -113,7 +124,7 @@ For more information, see [Automate threat response in Microsoft Sentinel with a
 
 ### Automated playbooks
 
-Microsoft Sentinel playbooks are built using Azure Logic Apps and are automated workflows for streamlining and enhancing threat response in SOC teams. Have your playbooks trigger automatically, in response to specific alerts or incidents through configured automation rules, or run them manually as needed. For example, upon detecting a compromised account and machine, a playbook can isolate the affected machine from the network and block the compromised account before the SOC team is even alerted to the incident.
+Microsoft Sentinel playbooks are built using Azure Logic Apps and are automated workflows for streamlining and enhancing threat response in SOC teams. Have your playbooks trigger automatically in response to specific activity through configured automation rules, or run them manually as needed. For example, upon detecting a compromised account and machine, a playbook can isolate the affected machine from the network and block the compromised account before the SOC team is even alerted to the incident.
 
 Common use cases for Microsoft Sentinel playbooks include data enrichment, bi-directional synchronization with ticketing systems, orchestration of incident management through communication platforms like Microsoft Teams or Slack, and immediate threat response actions. Microsoft Sentinel provides many playbooks out-of-the-box in solutions available from the **Content hub**.
 
