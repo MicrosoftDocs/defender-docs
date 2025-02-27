@@ -24,6 +24,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## February 2025
 
+### New Identity guide tour
+
+Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
+
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
 
 New Features and Improvements:
