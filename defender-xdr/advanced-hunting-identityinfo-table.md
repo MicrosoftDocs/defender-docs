@@ -92,7 +92,7 @@ Defender portal users who have not onboarded a Sentinel workspace that has the U
 <a name="mdi"></a>** Available only for tenants with Microsoft Defender for Identity.
 
 ## UEBA-specific columns
-If you have not onboarded a Microsoft Sentinel workspace with the UEBA service turned on to the Microsoft Defender portal, the following columns are not available in your `IdentityInfo` table:
+If you are using the Microsoft Defender portal but have not onboarded a Microsoft Sentinel workspace with the UEBA service turned on, the following columns are not available in your `IdentityInfo` table:
 
 - `BlastRadius`
 - `CompanyName`
