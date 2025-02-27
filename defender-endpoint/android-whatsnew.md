@@ -28,6 +28,22 @@ ms.date: 02/04/2025
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
+#### Defender for Endpoint on Android now supports Android 10 as the minimum version 
+
+February 2025
+
+Defender for Endpoint is ending support for Android 8, 8.1 and 9 on April 30, 2025. Moving forward, only devices running Android 10 and later are supported. 
+
+**How will this affect your organization’s users?** 
+
+**New User:** The application will no longer be available for new installations on devices running below Android 10. When users with Android versions below 10 attempt to download the Microsoft Defender app, Google Play store will notify them that the device is incompatible. 
+
+**Existing User:** Microsoft Defender will continue to function for existing users on the Android 8,8.1 and 9 versions, but they will not receive updates from the Play store as they do not meet the minimum SDK version requirement, Therefore, any new updates on the app will not be available to users running an Android version below 10. 
+
+After discontinuing support for deprecated versions, we no longer address bugs or provide maintenance for unsupported operating system versions. Any issues occurring on devices running Android version below 10 will not be investigated by us. 
+
+ This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
+
 #### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
 **February 2025:**
