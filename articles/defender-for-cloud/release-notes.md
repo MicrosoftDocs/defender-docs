@@ -31,11 +31,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+|February 27|Change|[Improved AWS EC2 Resource Name display](#improved-aws-ec2-resource-name-display)|
 | February 27 | GA | [On-demand malware scanning in Microsoft Defender for Storage](#on-demand-malware-scanning-in-microsoft-defender-for-storage) |
 | February 27 | GA | [Defender for Storage malware scanning for blobs up to 50 GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50-gb) |
 | February 23 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
 | February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
+
+### Improved AWS EC2 Resource Name display
+
+February 27, 2025
+
+**Estimated date for change:** March 2025
+
+We’re enhancing how resource names are shown for AWS EC2 instances in our platform. If an EC2 instance has a “name” tag defined, the *Resource Name* field will now display the value of that tag. If no “name” tag is present, the *Resource Name* field will continue to show the *instance ID* as before. The *Resource ID* will still be available in the *Resource ID* field for reference.
+
+Using the EC2 “name” tag lets you easily identify your resources with custom, meaningful names instead of IDs. This makes it quicker to locate and manage specific instances, reducing the time and effort spent searching or cross-referencing instance details.
 
 ### On-demand malware scanning in Microsoft Defender for Storage 
 
