@@ -276,6 +276,12 @@ sections:
           **Approve release** has been retired and is now included in :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 
       - question: |
+          **Block sender** button in quarantine notifications or on the **Quarantine page** does not seem to be working. What's going on?
+        answer: |
+          **Block sender** action is not possible for Public folders. 
+           Public folders in Exchange do not have junk email configuration settings like individual mailboxes do. The cmdlet Set-MailboxJunkEmailConfiguration is used to configure junk email settings for mailboxes, not public folders.
+          
+      - question: |
           **Filter** and **Search** aren't working. What's going on?
         answer: |
           The **Search** box applies to the visible results in quarantine. By default, only the first 100 entries are shown until you scroll down to the bottom of the list, which loads more results.
