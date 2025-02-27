@@ -22,6 +22,11 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## March 2025
+
+### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
+New LDAP query events will be added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
+
 ## February 2025
 
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
