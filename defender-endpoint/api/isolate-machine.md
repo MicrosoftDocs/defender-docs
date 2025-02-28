@@ -23,10 +23,9 @@ ms.date: 02/28/2025
 
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/microsoft-defender-endpoint)
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](https://learn.microsoft.com/en-us/defender-business/)
+- [Microsoft Defender for Business](/defender-business/)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
