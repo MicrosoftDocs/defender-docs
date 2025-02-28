@@ -102,11 +102,11 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 - **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
 
-#### How to Resolve Non-Compliance State Due to Silent Auth Failures?
+#### How to resolve the non-compliance state due to silent auth failures
 
-Microsoft Defender for Endpoint has the feature to let the user sign-in according to a set of policies called [Condition Access Policy](/defender-endpoint/configure-conditional-access?view=o365-worldwide)[.](/defender-endpoint/configure-conditional-access?view=o365-worldwide"https://learn.microsoft.com/en-us/defender-endpoint/configure-conditional-access?view=o365-worldwide") If a policy is violated, the Microsoft Defender App auto-signs out and starts failing in silent auth (sign-in attempts in background). This results in the devices being shown as non-compliant on Intune portal.  A user can get the device to compliant by signing in again.
+Microsoft Defender for Endpoint has the feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access). If a policy is violated, the Microsoft Defender app auto-signs out and starts failing in silent auth (sign-in attempts in background). This results in the devices being shown as non-compliant on Intune portal.  A user can get the device to compliant by signing in again.
 
-The user will receive a notification as showed in below scenarios asking the users to sign-in. The user can click on the notification or directly open the app and sign-in to the defender. This will result in a successful interactive authentication which will cause the Intune portal to show the device as compliant.
+The user receives a notification (as shown in the following scenarios) asking them to sign in. The user can tap the notification or open the Microsoft Defender app and sign in. Signing in results in a successful, interactive authentication and causes the Intune portal to show the device as compliant.
 
 **Scenario 1:** The following experience occurs when MFA is configured by the admin through a Conditional Access policy:
 
@@ -118,7 +118,7 @@ The user will receive a notification as showed in below scenarios asking the use
 
 ## How to Configure Microsoft Defender for Endpoint on Android
 
-Guidance on how to configure Microsoft Defender for Endpoint on Android features is available in [Configure Microsoft Defender for Endpoint on Android features](android-configure.md).
+For information on how to configure Defender for Endpoint on Android features, see [Configure Microsoft Defender for Endpoint on Android features](android-configure.md).
 
 ## Related articles
 
