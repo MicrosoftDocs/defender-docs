@@ -28,7 +28,7 @@ These updates are designed to improve usability, streamline navigation, and ensu
 
 We're pleased to introduce the Device Protection feature card for our enterprise users which includes **App Security**, **Web Protection**, **Security History** features are designed to be more user-friendly and accessible.
 
-The updated feature cards also include recommendation cards, which prominently display any active alerts, ensuring you stay informed. Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
+The updated **feature cards** also include recommendation cards, which prominently display any active alerts, ensuring you stay informed. Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
 
 **The primary changes are as follows**:
 
@@ -41,20 +41,32 @@ The updated feature cards also include recommendation cards, which prominently d
 
 The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
 
+    :::image type="content" source="media/mde-dashboard-changes-android.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on Android devices" lightbox="media/mde-dashboard-changes-android.png":::
+
 ## List the features inside one Feature Card
 
 The feature App Security and Web Protection are now listed under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.  
+
+    :::image type="content" source="media/mde-feature-card-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card" lightbox="media/mde-feature-card-android.png":::
 
 ## Detailed Feature Experience
 
 We updated all the subordinating screens associated with the feature
 
 1. Web Protection
-1. App Security
+
+    :::image type="content" source="media/mde-web-protection-android.png" alt-text="The web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android.png":::
+
+    :::image type="content" source="media/mde-web-protection-android-2.png" alt-text="The web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android-2.png":::
+
+2. App Security
+
+
+
     1. App scanning:
-    1. Threat found:
-1. Uninstall threat:
-1. Security History
+    2. Threat found:
+3. Uninstall threat:
+4. Security History
 
 ## Alerts
 
