@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/07/2024
+ms.date: 02/28/2025
 ms.reviewer: nehabha
 f1.keywords: NOCSH
 ms.collection:
@@ -47,7 +47,7 @@ The following table lists the basic requirements you need to configure and use D
 
 > [!NOTE]
 >
-> 1. To onboard servers, we recommend using [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers). Alternately, you could use [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers). To learn more, see [What happens if I have a mix of Microsoft endpoint security subscriptions?](mdb-faq.yml#what-happens-if-i-have-a-mix-of-microsoft-endpoint-security-subscriptions) and [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md).
+> 1. To onboard servers, we recommend using [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers). Alternately, you could use [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers). For more information, see [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md).
 >
 > 2. [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis) is used to manage user permissions and device groups. Microsoft Entra ID is included in your Defender for Business subscription.
 >    - If you don't have a Microsoft 365 subscription before you start your trial, Microsoft Entra ID will be provisioned for you during the activation process.
