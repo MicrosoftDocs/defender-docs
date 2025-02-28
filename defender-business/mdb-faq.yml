@@ -27,7 +27,9 @@ sections:
     questions:
       - question: How do I try or buy Defender for Business?
         answer: |
-          Go to the [Defender for Business](https://www.microsoft.com/security/business/threat-protection/microsoft-defender-business) product page, and select the option to try or buy Defender for Business.
+          We recommend working with a [Microsoft partner](https://www.microsoft.com/security/business/find-a-partner). 
+
+          If you prefer to try or buy Defender for Business on your own, go to the [Defender for Business](https://www.microsoft.com/security/business/threat-protection/microsoft-defender-business) product page, and select the option to try or buy Defender for Business.
 
           For more information, see [Get Defender for Business](get-defender-business.md).
 
@@ -49,18 +51,11 @@ sections:
         answer: |
           Yes. Defender for Business supports protection for Windows, Mac, Android, and iOS/iPadOS devices. See [Onboard devices](mdb-onboard-devices.md).
 
-          - You can onboard Windows and Mac client devices using a local script in the Microsoft Defender portal.
-          - To onboard Android and iOS/iPadOS devices, you can use [Microsoft Intune](/mem/intune/) or [mobile threat defense capabilities](mdb-mtd.md) in Defender for Business.
-
       - question: Does Defender for Business support servers?
         answer: |
-          If you're planning to onboard an instance of Windows Server or Linux Server, you'll need an additional license, such as [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).
+          If you're planning to onboard an instance of Windows Server or Linux Server, you'll need an additional license, such as [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers). This license is available as an add-on to Microsoft 365 Business Premium and the standalone version of Defender for Business. The Microsoft Defender for Business servers license is priced at $3 per server instance. You can either purchase a license for each onboarded server, or choose to offboard servers from Defender for Business.
 
-          Alternately, you could use [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers). To learn more, see [What happens if I have a mix of Microsoft endpoint security subscriptions?](#what-happens-if-i-have-a-mix-of-microsoft-endpoint-security-subscriptions) and [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md).
-
-          [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers) is available as an add-on to Microsoft 365 Business Premium and the standalone version of Defender for Business. The Microsoft Defender for Business servers license is priced at $3 per server instance. You can either purchase a license for each onboarded server, or choose to offboard servers from Defender for Business.
-
-          If you have more than 60 servers, you'll need to get another license, such as Microsoft Defender for Servers Plan 1 or Plan 2.
+          If you have more than 60 servers, you'll need to get another license, such as [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers). 
 
       - question: What is the difference between Microsoft Defender for Business servers and Microsoft Defender for Servers Plan 1 and Plan 2?
         answer: |
