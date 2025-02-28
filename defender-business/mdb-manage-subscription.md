@@ -20,9 +20,7 @@ ms.collection:
 
 # Change your endpoint security subscription
 
-[Microsoft Defender for Business](mdb-overview.md) and [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) are endpoint security subscriptions that your organization can use to protect devices, such as computers, tablets, and phones. As your organization grows, you might have a mix of subscriptions and licenses. For example, you might have some Defender for Business licenses, and some Defender for Endpoint licenses.
-
-This article describes how to apply either Defender for Business or Defender for Endpoint Plan 2 features and capabilities across all your organization's devices. (To learn more about mixed-licensing scenarios with Defender for Endpoint Plan 1 and Plan 2, see [Manage Microsoft Defender for Endpoint subscription settings across client devices](/defender-endpoint/defender-endpoint-subscription-settings).)
+[Microsoft Defender for Business](mdb-overview.md) and [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) are endpoint security subscriptions that your organization can use to protect devices, such as computers, tablets, and phones. As your organization grows, you might be thinking about changing from Defender for Business to Defender for Endpoint. This article describes how to apply *either* Defender for Business *or* Defender for Endpoint Plan 2 features and capabilities across all your organization's devices. 
 
 ## Before you begin
 
@@ -44,16 +42,13 @@ This article describes how to apply either Defender for Business or Defender for
    > - You don't have enough Defender for Endpoint Plan 2 licenses for all users in your organization
    > - The ability to change your subscription settings hasn't rolled out to your organization yet
 
-4. On the **Subscription settings** flyout, choose whether to use only Defender for Business or Defender for Endpoint Plan 2 across your organization's devices.
+4. On the **Subscription settings** flyout, choose whether to use only Defender for Business or Defender for Endpoint Plan 2 across your organization's devices. Keep the following important points in mind before you save your changes:
 
-   > [!IMPORTANT]
-   > Keep the following important points in mind before you save your changes:
-   > - Make sure you have enough licenses for the subscription you're using for all users in your organization.
-   > - If you select **Only Microsoft Defender for Endpoint Plan 2**, the simplified configuration experience for Defender for Business is replaced with advanced settings that you can configure in Defender for Endpoint. If this change is applied, you can't undo it.
-   > - It can take up to six hours for your changes to be applied.
-   > - Make sure to review your security policies and settings. To get help with Defender for Endpoint policies and settings, see [Configure Defender for Endpoint capabilities](/defender-endpoint/onboard-configure). To get help with Defender for Business policies and settings, see [Review and edit your security policies and settings in Defender for Business](mdb-configure-security-settings.md).
+   - Make sure you have enough licenses for the subscription you're using for all users in your organization.
+   - If you select **Only Microsoft Defender for Endpoint Plan 2**, the simplified configuration experience for Defender for Business is replaced with advanced settings that you can configure in Defender for Endpoint. If this change is applied, you can't undo it.
+   - It can take up to six hours for your changes to be applied.
+   - Make sure to review your security policies and settings. To get help with Defender for Endpoint policies and settings, see [Configure Defender for Endpoint capabilities](/defender-endpoint/onboard-configure). To get help with Defender for Business policies and settings, see [Review and edit your security policies and settings in Defender for Business](mdb-configure-security-settings.md).
 
-   
 ## Review license usage
 
 The license usage report is estimated based on sign-in activities on the device. Defender for Endpoint Plan 2 licenses are assigned to users, and each user can have up to five concurrent, onboarded devices. To learn more about license terms, see [Microsoft Licensing](https://www.microsoft.com/licensing/default).
@@ -66,10 +61,9 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 
 3. Review your available and assigned licenses. The calculation is based on detected users who have accessed devices that are onboarded to Defender for Business (or Defender for Endpoint).
 
-## More information
+## See also
 
 - [Licensing and product terms for Microsoft 365 subscriptions](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Business](mdb-overview.md) (endpoint protection for small and medium-sized businesses)
+- [Manage Microsoft Defender for Endpoint Plan 1 and Plan 2 subscription settings across client devices](/defender-endpoint/defender-endpoint-subscription-settings)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
