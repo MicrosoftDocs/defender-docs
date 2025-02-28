@@ -61,9 +61,10 @@ sections:
         answer: |
           The following table compares server options for Defender for Business customers:
 
-          |Microsoft Defender for Business servers |Microsoft Defender for Servers Plan 1 / Plan 2|
-          |---|---|
-          |[Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers) is an add-on to Defender for Business and Microsoft 365 Business Premium. This offering enables small and medium sized businesses (up to 300 users) to onboard and protect servers and client devices in the [Microsoft Defender portal](https://security.microsoft.com). |[Microsoft Defender for Servers Plan 1/Plan 2](/azure/defender-for-cloud/plan-defender-for-servers) is an enterprise-focused offering that can be purchased with any other Microsoft cloud plan. This offering is part of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), and includes advanced threat hunting with six months of data retention and the Microsoft Threat Experts service.<br/><br/>The admin experience for Defender for Cloud resides within the Azure portal ([https://portal.azure.com](https://portal.azure.com)).|
+          | Server license | Description |
+          |--|--|
+          | Microsoft Defender for Business servers | [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers) is an add-on to Defender for Business and Microsoft 365 Business Premium. This offering enables small and medium sized businesses (up to 300 users) to onboard and protect servers and client devices in the [Microsoft Defender portal](https://security.microsoft.com). |
+          | Microsoft Defender for Servers Plan 1 / Plan 2| [Microsoft Defender for Servers Plan 1/Plan 2](/azure/defender-for-cloud/plan-defender-for-servers) is an enterprise-focused offering that can be purchased with any other Microsoft cloud plan. This offering is part of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), and includes advanced threat hunting with six months of data retention and the Microsoft Threat Experts service.<br/><br/>The admin experience for Defender for Cloud resides within the Azure portal ([https://portal.azure.com](https://portal.azure.com)).|
 
           Adding Defender for Cloud to a tenant that has Defender for Business doesn't change the simplified configuration experience that Defender for Business offers. The functionality in Microsoft Defender for Servers Plan 1 or Plan 2 work2 with Defender for Business. 
 
