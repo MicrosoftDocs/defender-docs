@@ -9,13 +9,12 @@ manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
-- tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 09/26/2024
+ms.date: 02/28/2025
 ---
 
 # Isolate machine API
@@ -28,9 +27,6 @@ ms.date: 09/26/2024
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](https://learn.microsoft.com/en-us/defender-business/)
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -47,11 +43,11 @@ Isolates a device from accessing external network.
 [!include[Device actions note](../../includes/machineactionsnote.md)]
 
 > [!IMPORTANT]
-- Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
+> - Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
 > - Full isolation is available for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](../microsoft-defender-endpoint-linux.md#system-requirements).
-- Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
-- When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
-- Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action.
+> - Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
+> - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
+> - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action.
 
 
 ## Permissions
