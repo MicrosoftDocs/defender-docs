@@ -69,7 +69,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 **New users**: The application is longer available for new installations on devices running on unsupported versions. When users with unsupported versions attempt to download the Microsoft Defender app, the Google Play store notifies them that the device is incompatible.
 
-**Existing users**: The Microsoft Defender app continues to function for existing users on unsupported versions, but they won't receive updates from the Google Play store because they don't meet the minimum SDK version requirements. Therefore, any new updates on the app aren't available to devices running unsupported versions. Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running on unsupported versions aren't investigated. 
+**Existing users**: The Microsoft Defender app continues to function for existing users on unsupported versions, but they don't receive updates from the Google Play store because they don't meet the minimum SDK version requirements. Therefore, any new updates on the app aren't available to devices running unsupported versions. Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running on unsupported versions aren't investigated. 
 
  > [!NOTE]
  > Microsoft Defender for Endpoint on Android isn't supported on userless or shared devices.
@@ -98,13 +98,13 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 - **Accessibility**: This feature enhances your browsing experience by providing added security.
 
-- **Permanent Protection**: To ensure continuous protection, Microsoft Defender recommends staying active while running in the background. This helps prevent Android from stopping the app to improve battery life, thereby ensuring your device remains well-protected.
+- **Permanent Protection**: To ensure continuous protection, Microsoft recommends keeping the Microsoft Defender app active while running in the background. This helps prevent Android from stopping the app to improve battery life, thereby ensuring your device remains well protected.
 
-- **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
+- **Location Access**: The Microsoft Defender app uses your location to help secure your Wi-Fi network and enhance device protection.
 
 #### How to resolve the non-compliance state due to silent auth failures
 
-Microsoft Defender for Endpoint has the feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access). If a policy is violated, the Microsoft Defender app auto-signs out and starts failing in silent auth (sign-in attempts in background). This results in the devices being shown as non-compliant on Intune portal.  A user can get the device to compliant by signing in again.
+Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access). If a policy is violated, the Microsoft Defender app auto-signs out and starts failing in silent auth (sign-in attempts in background). This results in the devices being shown as non-compliant on Intune portal.  A user can get the device to compliant by signing in again.
 
 The user receives a notification (as shown in the following scenarios) asking them to sign in. The user can tap the notification or open the Microsoft Defender app and sign in. Signing in results in a successful, interactive authentication and causes the Intune portal to show the device as compliant.
 
