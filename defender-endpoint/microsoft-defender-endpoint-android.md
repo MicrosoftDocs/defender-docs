@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 02/20/2025
+ms.date: 02/28/2025
 ---
 
 # Microsoft Defender for Endpoint on Android
@@ -108,13 +108,13 @@ Microsoft Defender for Endpoint has the feature to let the user sign-in accordin
 
 The user will receive a notification as showed in below scenarios asking the users to sign-in. The user can click on the notification or directly open the app and sign-in to the defender. This will result in a successful interactive authentication which will cause the Intune portal to show the device as compliant.
 
-**Scenario 1:** The following experience occurs when MFA is configured by the admin through a Conditional Access policy
+**Scenario 1:** The following experience occurs when MFA is configured by the admin through a Conditional Access policy:
 
-![image 1_image 2_image 3_image 4_image 5_image 6](media/microsoft-defender-endpoint-android/image-1-image-2-image-3-image-4-image-5-image-6.jpeg)
+:::image type="content" source="media/microsoft-defender-endpoint-android/ca-policy-user-flow.jpeg" alt-text="Series of images showing the user flow when a Conditional Access policy is configured by the security team.":::
 
-**Scenario 2:** The following experience occurs when **MFA is not configured** by the admin through a Conditional Access policy
+**Scenario 2:** The following experience occurs when **MFA is not configured** by the admin through a Conditional Access policy:
 
-![image 1_image 2_image 3_image 6](media/microsoft-defender-endpoint-android/image-1-image-2-image-3-image-6.jpeg)
+:::image type="content" source="media/microsoft-defender-endpoint-android/mfa-not-cong-user-flow.jpeg" alt-text="Screenshot showing the user flow when MFA is not configured by your security team.":::
 
 ## How to Configure Microsoft Defender for Endpoint on Android
 
