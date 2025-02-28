@@ -137,7 +137,9 @@ sections:
         answer: |
           In general, mixed-licensing scenarios aren't supported in Defender for Business or Microsoft 365 Business Premium. 
           
-          If you're using the standalone version of Defender for Business, and you add Defender for Endpoint Plan 2 to your tenant, your experience defaults to the Defender for Business experience. However, if you have enough Defender for Endpoint Plan 2 for all users in your tenant, you can contact support and change your experience to the Defender for Endpoint Plan 2 experience. In this case, you're no longer using your Defender for Business licenses, and the simplified configuration experience in Defender for Business changes to advanced settings in Defender for Endpoint. For more information, see [Manage your subscription settings](mdb-manage-subscription.md).
+          If you're using the standalone version of Defender for Business, and you add Defender for Endpoint Plan 2 to your tenant, your experience defaults to the Defender for Business experience. However, if you have enough Defender for Endpoint Plan 2 for all users in your tenant, you can contact support and change your experience to the Defender for Endpoint Plan 2 experience. In this case, you're no longer using your Defender for Business licenses, and the simplified configuration experience in Defender for Business changes to advanced settings in Defender for Endpoint. 
+          
+          For more information, see [Manage your subscription settings](mdb-manage-subscription.md).
 
           For more information about licenses and product terms, see [Licensing and product terms for Microsoft 365 subscriptions](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 
