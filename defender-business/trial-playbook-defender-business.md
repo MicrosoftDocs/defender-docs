@@ -40,7 +40,7 @@ Defender for Business is a new endpoint security solution designed especially fo
 Here's how to set up your trial subscription:
 
 1. [Visit the Microsoft Defender portal](#step-1-visit-the-microsoft-365-defender-portal).
-2. [Use the setup wizard](#step-2-use-the-setup-wizard-in-defender-for-business-recommended).
+2. [Use the setup wizard](#step-2-use-the-setup-wizard-in-defender-for-business).
 3. [Set up and configure Defender for Business](#step-3-set-up-and-configure-defender-for-business).
 
 ### Step 1: Visit the Microsoft Defender portal
@@ -50,12 +50,12 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 - **[Visit the Microsoft Defender portal](mdb-get-started.md)**.
 - **[Explore the navigation bar](mdb-get-started.md#the-navigation-bar)** on the left side of the screen to access your incidents, view reports, and manage your security policies and settings.
 
-### Step 2: Use the setup wizard in Defender for Business (recommended)
+### Step 2: Use the setup wizard in Defender for Business
 
 Defender for Business was designed to save small and medium-sized businesses time and effort. You can do initial setup and configuration through a setup wizard. The setup wizard helps you grant access to your security team, set up email notifications for your security team, and onboard your company's Windows devices. **[Use the setup wizard](mdb-setup-configuration.md)**.
 
 > [!NOTE]
-> You can only use the setup wizard once.
+> You don't have to use the wizard, but it's highly recommended. You can only use the setup wizard once.
 
 #### Setup wizard flow: what to expect
 
