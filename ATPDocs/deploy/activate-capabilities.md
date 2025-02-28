@@ -7,12 +7,12 @@ ms.topic: how-to
 
 # Activate Microsoft Defender for Identity capabilities directly on a domain controller
 
-Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using a [Microsoft Defender for Identity sensor](deploy-defender-identity.md).
+Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using [Microsoft Defender for Identity classic sensor](deploy-defender-identity.md).
 
 This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!IMPORTANT]
-> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
+> The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Before activating the Defender for Identity capabilities on your domain controll
 
 ### Defender for Identity sensor conflicts
 
-The configuration described in this article doesn't support side-by-side installation with an existing Defender for Identity sensor, and isn't recommended as a replacement for the Defender for Identity sensor.
+The configuration described in this article doesn't support side-by-side installation with an existing Defender for Identity sensor, and isn't recommended as a replacement for the Defender for Identity classic sensor.
 
 Make sure that the domain controller where you're planning to activate Defender for Identity capabilities doesn't have a [Defender for Identity sensor](deploy-defender-identity.md) deployed.
 
