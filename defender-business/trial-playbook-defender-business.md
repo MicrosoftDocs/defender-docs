@@ -112,7 +112,7 @@ Security policies to review and configure include:
 
 For the next 30 days, here's guidance from the product team on key features to try:
 
-1. [Use your Microsoft Defender Vulnerability Management dashboard](#1-use-the-defender-vulnerability-management-dashboard).
+1. [Use your dashboard](#1-use-the-dashboard).
 
 2. [View and respond to detected threats](#2-view-and-respond-to-detected-threats).
 
@@ -120,7 +120,7 @@ For the next 30 days, here's guidance from the product team on key features to t
 
 4. [Prepare for ongoing security management](#4-prepare-for-ongoing-security-management).
 
-### 1. Use the Defender Vulnerability Management dashboard
+### 1. Use the dashboard
 
 Defender for Business includes a dashboard that's designed to save your security team time and effort. Learn how to [use your dashboard](mdb-view-tvm-dashboard.md).
 
