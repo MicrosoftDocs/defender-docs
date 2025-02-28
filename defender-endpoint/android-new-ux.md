@@ -20,41 +20,42 @@ ms.date: 02/28/2025
 
 # New user experiences in Microsoft Defender for Endpoint on Android
 
-As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming enhancements to the user interface and overall experience of our Microsoft Defender for Endpoint (MDE) mobile app. 
+As part of our ongoing commitment to deliver exceptional user experiences, we're excited to announce a series of upcoming changes to the user interface and overall experience of our Microsoft Defender for Endpoint (MDE) mobile app.
 
-These updates are designed to improve usability, streamline navigation, and ensure that app meets the evolving needs of our users.
+These updates are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
 
 ## Key Changes
 
-We're pleased to introduce the Device Protection feature card for our enterprise users which includes **Web Protection**, **Device Health**, and **Jail break** features are designed to be more user-friendly and accessible. The updated cards also include **recommendation cards**, which prominently display any active alerts, keeping you informed. Additionally, a list of features are shown as tiles as a part of L2 screens, making navigation easier.
+We're pleased to introduce the Device Protection feature card for our enterprise users which includes **App Security**, **Web Protection**, **Security History** features are designed to be more user-friendly and accessible.
 
-**The main changes involved are**:
+The updated feature cards also include recommendation cards, which prominently display any active alerts, ensuring you stay informed. Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
+
+**The primary changes are as follows**:
 
 1. Main Dashboard changes
-2. List the features inside one Feature Card
-3. Detailed Feature Experience
-4. Recommendation Cards for Alerts
+1. List the features inside one Feature Card
+1. Detailed Feature Experience
+1. Alerts
 
 ## Main Dashboard changes
 
-This is the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
+The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
 
-## List the features inside one Feature Card 
+## List the features inside one Feature Card
 
-We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.
+The feature App Security and Web Protection are now listed under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.  
 
 ## Detailed Feature Experience
 
-We updated all the subordinating screens associated with the feature 
+We updated all the subordinating screens associated with the feature
 
 1. Web Protection
-2. Device Health
+1. App Security
+    1. App scanning:
+    1. Threat found:
+1. Uninstall threat:
+1. Security History
 
-## Recommendation Cards for Alerts
+## Alerts
 
-Hero cards are implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard.
- 
-Both the Recommendation Cards are attached to the Device Protection feature card:
-
-1. Web Protection
-2. Device Health (iOS Update)
+Added new section to show multiple alerts together on dashboard.
