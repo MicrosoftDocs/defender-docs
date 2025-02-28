@@ -45,7 +45,7 @@ Use the following tabs to learn more about each option.
 
 Microsoft has a list of solution providers who are authorized to sell offerings, including Microsoft 365 Business Premium and Microsoft Defender for Business. If you'd prefer to work with a Microsoft partner, you can follow these steps to find a solution provider in your area:
 
-1. Go to the [Browse Partners](https://appsource.microsoft.com/en-us/marketplace/partner-dir).
+1. Go to [Browse Partners](https://appsource.microsoft.com/en-us/marketplace/partner-dir).
 
 2. In the **Filters** pane, specify search criteria, such as:
 
