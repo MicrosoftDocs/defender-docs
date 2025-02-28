@@ -103,7 +103,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 - **Location Access**: The Microsoft Defender app uses your location to help secure your Wi-Fi network and enhance device protection.
 
 #### How to resolve the non-compliance state due to silent auth failures
-:::image type="content" source="media/microsoft-defender-endpoint-android/mfa-not-cong-user-flow.jpeg" alt-text="":::
+
 Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access). If a policy is violated, the Microsoft Defender app auto-signs out and starts failing in silent auth (sign-in attempts in background). This results in the devices being shown as non-compliant on Intune portal.  A user can get the device to compliant by signing in again.
 
 The user receives a notification (as shown in the following scenarios) asking them to sign in. The user can tap the notification or open the Microsoft Defender app and sign in. Signing in results in a successful, interactive authentication and causes the Intune portal to show the device as compliant.
