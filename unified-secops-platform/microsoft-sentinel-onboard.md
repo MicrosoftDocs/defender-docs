@@ -76,15 +76,16 @@ To unify capabilities with Defender XDR in Microsoft's unified SecOps platform, 
 If applicable, complete these prerequisites:
 
 - If your organization uses Microsoft Purview Insider Risk Management, integrate that data by enabling the data connector **Microsoft 365 Insider Risk Management** on your primary workspace for Microsoft Sentinel. Disable that connector on any secondary workspaces for Microsoft Sentinel that you plan to onboard to the Defender portal.
-  - For more information about primary and secondary workspaces, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal). 
-  - Install the Microsoft Purview Insider Risk Management solution and configure the data connector on the primary workspace. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). 
-- To stream Defender for Cloud incidents that are correlated across all subscriptions of the tenant to the primary workspaces for Microsoft Sentinel:
+  - Install the **Microsoft Purview Insider Risk Management** solution from the **Content hub** on the primary workspace.
+  - Configure the data connector.
+  - For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). 
+- To stream Defender for Cloud incidents that are correlated across all subscriptions of the tenant to the primary workspace for Microsoft Sentinel:
   - Connect the **Tenant-based Microsoft Defender for Cloud (Preview)** data connector in the primary workspace.
   - Disconnect the **Subscription-based Microsoft Defender for Cloud (Legacy)** alerts connector from all workspaces in the tenant.
 
   If you don't want to stream correlated tenant data for Defender for Cloud to the primary workspace, continue to use the **Subscription-based Microsoft Defender for Cloud (Legacy)** connector on your workspaces.
  
-  For more information, see [Ingest Microsoft Defender for Cloud incidents with Microsoft Defender XDR integration](/azure/sentinel/ingest-defender-for-cloud-incidents) and [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy).
+  For more information, see [Ingest Microsoft Defender for Cloud incidents with Microsoft Defender XDR integration](/azure/sentinel/ingest-defender-for-cloud-incidents).
 
 
 ## Onboard Microsoft Sentinel
@@ -144,11 +145,11 @@ You can only have one primary workspace connected to the Defender portal at a ti
 To change the primary workspace:
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **System** > **Settings** > **Microsoft Sentinel** > **Workspaces**.
-1. Select **Connect workspace**.
-1. Choose the workspaces you want to connect and select **Next**.
-1. Select the **Primary workspace**.
-1. Read and understand the product changes associated with connecting your workspace. 
-1. Select **Connect**.
+1. Select the workspace that you want to make primary.
+1. Select the ellipsis "**...**" next to the workspace name.
+1. Select **Set as primary**.
+1. Read and understand the product changes associated with changing the primary workspace.
+1. Select **Confirm and proceed**.
 
 When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically.
 

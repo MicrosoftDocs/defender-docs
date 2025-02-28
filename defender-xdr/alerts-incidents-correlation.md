@@ -39,7 +39,7 @@ The criteria used by the Defender portal to correlate alerts together in a singl
 
 ### Alert correlation by workspace
 
-The Defender portal keeps incident creation and alert correlation separate between the Microsoft Sentinel workspaces. The Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. A primary workspace's alerts are correlated with Microsoft Defender XDR data. So, incidents include alerts from Microsoft Sentinel's primary workspace and Defender XDR in a unified queue. All other onboarded workspaces are considered secondary workspaces. For secondary workspaces, incidents are created based on the workspace’s data and won't include Defender XDR data. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
+The Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. A primary workspace's alerts are correlated with Microsoft Defender XDR data. So, incidents include alerts from Microsoft Sentinel's primary workspace and Defender XDR in a unified queue. All other onboarded workspaces are considered secondary workspaces. For secondary workspaces, incidents are created based on the workspace’s data and won't include Defender XDR data. The Defender portal keeps incident creation and alert correlation separate between the Microsoft Sentinel workspaces. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
 
 ### Manual correlation of alerts
 
