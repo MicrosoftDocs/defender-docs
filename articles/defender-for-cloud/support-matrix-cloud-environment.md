@@ -47,11 +47,11 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Defender for Key Vault](defender-for-key-vault-introduction.md) | GA | NA | NA|
 |[Defender for Resource Manager](defender-for-resource-manager-introduction.md) | GA | GA | GA|
 |[Defender for Servers](plan-defender-for-servers.md)<br/>[Review detailed feature support](support-matrix-defender-for-servers.md). | GA | GA | GA|
-|[Defender for Storage](defender-for-storage-introduction.md) | GA | GA (activity monitoring) | NA|
+|[Defender for Storage](defender-for-storage-introduction.md) | GA | GA | GA|
 | **DEFENDER FOR STORAGE FEATURES** | | | |
-| Activity monitoring (security alerts) | GA | GA for [classic plan](defender-for-storage-classic.md) only. | GA for [classic plan](defender-for-storage-classic.md) only. |
-| [Malware scanning](defender-for-storage-malware-scan.md) | GA<sup>[1](#footnote1)</sup> | NA | NA |
-| Sensitive data threat detection (Sensitive Data Discovery) | GA<sup>[1](#footnote1)</sup> | NA | NA |
+| Activity monitoring (security alerts) | GA | GA| GA|
+| [Malware scanning](defender-for-storage-malware-scan.md) | GA<sup>[1](#footnote1)</sup> | GA | GA |
+| [Sensitive data threat detection (Sensitive Data Discovery)](defender-for-storage-data-sensitivity.md) | GA<sup>[1](#footnote1)</sup> | NA | NA |
 | **DEFENDER FOR DATABASES FEATURES** | | | |
 | [Defender for Azure SQL database servers](defender-for-sql-introduction.md) | GA | GA | GA<br/><br/>A subset of alerts/vulnerability assessments is available.<br/>Behavioral threat protection isn't available.|
 | [Defender for SQL servers on machines](defender-for-sql-servers-introduction.md) | GA | GA | GA |
