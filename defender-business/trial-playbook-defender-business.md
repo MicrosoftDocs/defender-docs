@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.localizationpriority: high
-ms.date: 06/19/2024
+ms.date: 02/28/2025
 ms.service: defender-business
 search.appverid:
 - MOE150
@@ -39,25 +39,18 @@ Defender for Business is a new endpoint security solution designed especially fo
 
 Here's how to set up your trial subscription:
 
-1. [Add users and assign licenses](#step-1-add-users-and-assign-licenses).
-2. [Visit the Microsoft Defender portal](#step-2-visit-the-microsoft-365-defender-portal).
-3. [Use the setup wizard](#step-3-use-the-setup-wizard-in-defender-for-business-recommended).
-4. [Set up and configure Defender for Business](#step-4-set-up-and-configure-defender-for-business).
+1. [Visit the Microsoft Defender portal](#step-2-visit-the-microsoft-365-defender-portal).
+2. [Use the setup wizard](#step-3-use-the-setup-wizard-in-defender-for-business-recommended).
+3. [Set up and configure Defender for Business](#step-4-set-up-and-configure-defender-for-business).
 
-### Step 1: Add users and assign licenses
-
-After you sign up for Defender for Business, the first step is to **[add users and assign licenses](mdb-add-users.md)**.
-
-<a name='step-2-visit-the-microsoft-365-defender-portal'></a>
-
-### Step 2: Visit the Microsoft Defender portal
+### Step 1: Visit the Microsoft Defender portal
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is the one-stop shop where you use and manage Defender for Business. It includes callouts to help you get started, cards that surface relevant information, and a navigation bar that provides easy access to the various features and capabilities.
 
 - **[Visit the Microsoft Defender portal](mdb-get-started.md)**.
 - **[Explore the navigation bar](mdb-get-started.md#the-navigation-bar)** on the left side of the screen to access your incidents, view reports, and manage your security policies and settings.
 
-### Step 3: Use the setup wizard in Defender for Business (recommended)
+### Step 2: Use the setup wizard in Defender for Business (recommended)
 
 Defender for Business was designed to save small and medium-sized businesses time and effort. You can do initial setup and configuration through a setup wizard. The setup wizard helps you grant access to your security team, set up email notifications for your security team, and onboard your company's Windows devices. **[Use the setup wizard](mdb-setup-configuration.md)**.
 
@@ -82,7 +75,7 @@ Defender for Business was designed to save small and medium-sized businesses tim
 
 4. **[View and edit your security policies](mdb-configure-security-settings.md)**. Defender for Business includes default security policies for next-generation protection and firewall protection that can be applied to your company's devices. These preconfigured security policies use recommended settings, so you're protected as soon as your devices are onboarded to Defender for Business. And you can edit the policies or create new ones.
 
-### Step 4: Set up and configure Defender for Business
+### Step 3: Set up and configure Defender for Business
 
 If you choose not to use the setup wizard, see the following diagram that depicts the [overall setup and configuration process](mdb-setup-configuration.md) for Defender for Business.
 
@@ -129,7 +122,7 @@ For the next 30 days, here's guidance from the product team on key features to t
 
 ### 1. Use the Defender Vulnerability Management dashboard
 
-Defender for Business includes a Defender Vulnerability Management dashboard that's designed to save your security team time and effort. Learn how to [use your Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md).
+Defender for Business includes a dashboard that's designed to save your security team time and effort. Learn how to [use your dashboard](mdb-view-tvm-dashboard.md).
 
 - View your exposure score, which is associated with devices in your organization.
 - View your top security recommendations, such as address impaired communications with devices, turn on firewall protection, or update Microsoft Defender Antivirus definitions.
