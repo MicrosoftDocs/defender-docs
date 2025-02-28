@@ -109,11 +109,11 @@ The user receives a notification (as shown in the following scenarios) asking th
 
 **Scenario 1:** The following experience occurs when MFA is configured by the admin through a Conditional Access policy:
 
-:::image type="content" source="media/ca-policy-user-flow.jpeg" alt-text="Series of images showing the user flow when a Conditional Access policy is configured by the security team." lightbox="media/ca-policy-user-flow.jpeg":::
+:::image type="content" source="media/ca-policy-user-flow.png" alt-text="Series of images showing the user flow when a Conditional Access policy is configured by the security team." lightbox="media/ca-policy-user-flow.png":::
 
 **Scenario 2:** The following experience occurs when **MFA is not configured** by the admin through a Conditional Access policy:
 
-:::image type="content" source="media/mfa-not-cong-user-flow.jpeg" alt-text="Screenshot showing the user flow when MFA is not configured by your security team." lightbox="media/mfa-not-cong-user-flow.jpeg":::
+:::image type="content" source="media/mfa-not-cong-user-flow.png" alt-text="Screenshot showing the user flow when MFA is not configured by your security team." lightbox="media/mfa-not-cong-user-flow.png":::
 
 ## How to configure Microsoft Defender for Endpoint on Android
 
