@@ -102,6 +102,20 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 - **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
 
+#### How to Resolve Non-Compliance State Due to Silent Auth Failures?
+
+Microsoft Defender for Endpoint has the feature to let the user sign-in according to a set of policies called [Condition Access Policy](/defender-endpoint/configure-conditional-access?view=o365-worldwide)[.](/defender-endpoint/configure-conditional-access?view=o365-worldwide"https://learn.microsoft.com/en-us/defender-endpoint/configure-conditional-access?view=o365-worldwide") If a policy is violated, the Microsoft Defender App auto-signs out and starts failing in silent auth (sign-in attempts in background). This results in the devices being shown as non-compliant on Intune portal.  A user can get the device to compliant by signing in again.
+
+The user will receive a notification as showed in below scenarios asking the users to sign-in. The user can click on the notification or directly open the app and sign-in to the defender. This will result in a successful interactive authentication which will cause the Intune portal to show the device as compliant.
+
+**Scenario 1:** The following experience occurs when MFA is configured by the admin through a Conditional Access policy
+
+![image 1_image 2_image 3_image 4_image 5_image 6](media/microsoft-defender-endpoint-android/image-1-image-2-image-3-image-4-image-5-image-6.jpeg)
+
+**Scenario 2:** The following experience occurs when **MFA is not configured** by the admin through a Conditional Access policy
+
+![image 1_image 2_image 3_image 6](media/microsoft-defender-endpoint-android/image-1-image-2-image-3-image-6.jpeg)
+
 ## How to Configure Microsoft Defender for Endpoint on Android
 
 Guidance on how to configure Microsoft Defender for Endpoint on Android features is available in [Configure Microsoft Defender for Endpoint on Android features](android-configure.md).
