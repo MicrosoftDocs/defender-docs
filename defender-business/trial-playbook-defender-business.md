@@ -81,7 +81,7 @@ If you choose not to use the setup wizard, see the following diagram that depict
 
 [:::image type="content" source="media/mdb-setup-process-2.png" alt-text="Setup and configuration process for Defender for Business.":::](mdb-setup-configuration.md)
 
-If you used the setup wizard but you need to onboard more devices, such as non-Windows devices, go directly to [step 4](mdb-onboard-devices.md) in the following procedure:
+If you used the setup wizard but you need to onboard more devices, such as non-Windows devices, go directly to [onboard devices](mdb-onboard-devices.md).
 
 1. **[Review the requirements](mdb-requirements.md)** to configure and use Defender for Business.
 
