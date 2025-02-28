@@ -39,9 +39,9 @@ Defender for Business is a new endpoint security solution designed especially fo
 
 Here's how to set up your trial subscription:
 
-1. [Visit the Microsoft Defender portal](#step-2-visit-the-microsoft-365-defender-portal).
-2. [Use the setup wizard](#step-3-use-the-setup-wizard-in-defender-for-business-recommended).
-3. [Set up and configure Defender for Business](#step-4-set-up-and-configure-defender-for-business).
+1. [Visit the Microsoft Defender portal](#step-1-visit-the-microsoft-365-defender-portal).
+2. [Use the setup wizard](#step-2-use-the-setup-wizard-in-defender-for-business-recommended).
+3. [Set up and configure Defender for Business](#step-3-set-up-and-configure-defender-for-business).
 
 ### Step 1: Visit the Microsoft Defender portal
 
