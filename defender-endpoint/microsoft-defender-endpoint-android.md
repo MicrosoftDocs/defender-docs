@@ -10,7 +10,6 @@ manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
-- tier3
 - mde-android
 ms.topic: conceptual
 ms.subservice: android
@@ -58,7 +57,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 - For Microsoft Defender for Endpoint on Android to function when connected to a network, the firewall/proxy must be configured to [enable access to Microsoft Defender for Endpoint service URLs](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
-### System Requirements
+### System requirements
 
 - Intune Company Portal app should be downloaded from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and installed for seamless onboarding. Device enrollment is required for Intune device compliance policies to be enforced.
 
@@ -86,7 +85,7 @@ Microsoft Defender for Endpoint on Android supports installation on both modes o
 >
 > You can connect to Google Play from Intune to deploy Microsoft Defender for Endpoint app, across Device Administrator and Android Enterprise enrollment modes.
 
-### Required Permissions
+### Required permissions
 
 To ensure optimal protection for your device, Microsoft Defender requests access to the following permissions during the device onboarding process:
 
@@ -116,7 +115,7 @@ The user receives a notification (as shown in the following scenarios) asking th
 
 :::image type="content" source="media/mfa-not-cong-user-flow.jpeg" alt-text="Screenshot showing the user flow when MFA is not configured by your security team." lightbox="media/mfa-not-cong-user-flow.jpeg":::
 
-## How to Configure Microsoft Defender for Endpoint on Android
+## How to configure Microsoft Defender for Endpoint on Android
 
 For information on how to configure Defender for Endpoint on Android features, see [Configure Microsoft Defender for Endpoint on Android features](android-configure.md).
 
