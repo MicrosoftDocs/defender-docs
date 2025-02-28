@@ -67,9 +67,9 @@ This article describes how to install, configure, update, and use Defender for E
 
 **What does it mean devices running on unsupported Android version?** 
 
-**New User:** The application will no longer be available for new installations on devices running on unsupported versions. When users with unsupported versions attempt to download the Microsoft Defender app, Google Play store will notify them that the device is incompatible. 
+**New users**: The application is longer available for new installations on devices running on unsupported versions. When users with unsupported versions attempt to download the Microsoft Defender app, the Google Play store notifies them that the device is incompatible.
 
-**Existing User:** Microsoft Defender will continue to function for existing users on unsupported versions, but they will not receive updates from the play store as they do not meet the minimum SDK version requirement, Therefore, any new updates on the app will not be available to devices running on unsupported versions. Our team no longer address bugs or provide maintenance for unsupported operating system versions. Any issues occurring on devices running on unsupported versions will not be investigated by us. 
+**Existing users**: The Microsoft Defender app continues to function for existing users on unsupported versions, but they won't receive updates from the Google Play store because they don't meet the minimum SDK version requirements. Therefore, any new updates on the app aren't available to devices running unsupported versions. Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running on unsupported versions aren't investigated. 
 
  > [!NOTE]
  > Microsoft Defender for Endpoint on Android isn't supported on userless or shared devices.
