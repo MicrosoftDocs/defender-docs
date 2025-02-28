@@ -140,18 +140,15 @@ Find Microsoft Sentinel settings in the Defender portal under **System** > **Set
 
 ## Change the primary workspace  
 
-You can only have one primary workspace connected to the Defender portal at a time. But you can change the primary workspace. If you have Defender XDR, the primary workspace's alerts are correlated with Microsoft Defender XDR data. So, incidents include alerts from Microsoft Sentinel's primary workspace and Defender XDR in a unified incident queue. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
-
-To change the primary workspace:
+You can only have one primary workspace connected to the Defender portal at a time. But you can change the primary workspace.
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **System** > **Settings** > **Microsoft Sentinel** > **Workspaces**.
-1. Select the workspace that you want to make primary.
-1. Select the ellipsis "**...**" next to the workspace name.
+1. Select the name of the workspace that you want to make primary.
 1. Select **Set as primary**.
 1. Read and understand the product changes associated with changing the primary workspace.
 1. Select **Confirm and proceed**.
 
-When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically.
+When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
 
 ## Offboard Microsoft Sentinel
 
