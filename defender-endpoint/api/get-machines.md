@@ -15,7 +15,7 @@ ms.collection:
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 03/01/2025
 ---
 
 # List machines API

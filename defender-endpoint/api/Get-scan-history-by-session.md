@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/15/2022
+ms.date: 03/01/2025
 ---
 
 # Get scan history by session

@@ -14,7 +14,7 @@ ms.topic: conceptual
 ms.custom: api
 ms.subservice: reference
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # MachineAction resource type
