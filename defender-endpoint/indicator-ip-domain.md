@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: 
 search.appverid: met150
-ms.date: 01/03/2025
+ms.date: 03/01/2025
 ---
 
 # Create indicators for IPs and URLs/domains
