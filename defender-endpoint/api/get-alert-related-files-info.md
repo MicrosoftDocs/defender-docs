@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # Get alert related files information API
@@ -26,6 +26,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Business](/defender-business)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
@@ -108,7 +109,7 @@ Here is an example of the response.
             "fileType": null,
             "isPeFile": true,
             "filePublisher": "Microsoft Corporation",
-            "fileProductName": "Microsoft© Windows© Operating System",
+            "fileProductName": "Microsoft&copy; Windows&copy; Operating System",
             "signer": "Microsoft Corporation",
             "issuer": "Microsoft Code Signing PCA",
             "signerHash": "9dc17888b5cfad98b3cb35c1994e96227f061675",
