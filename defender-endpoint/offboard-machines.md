@@ -30,9 +30,13 @@ ms.date: 03/01/2025
 
 **Platforms**
 - macOS
-- Linux
+- Linux Server
 - Windows client devices
-- Windows Server 2012 R2 and later
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
