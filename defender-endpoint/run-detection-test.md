@@ -51,7 +51,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
 
 > [!NOTE]
-> You can also use the EICAR test string to perform this test. Create a text file, paste the EICAR line, and save the file as an executable file to your endpoint's local drive. You will receive a test endpoint notification and an alert in the Microsoft Defender portal.
+> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You will receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 
