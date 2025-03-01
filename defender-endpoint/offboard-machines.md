@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 08/23/2024
+ms.date: 03/01/2025
 ---
 
 # Offboard devices
@@ -31,14 +31,8 @@ ms.date: 08/23/2024
 **Platforms**
 - macOS
 - Linux
-- Windows Server 2012 R2
-- Windows Server 2016
-
-- Windows Server 2019
-
-- Windows Server 2022
-
-- Windows Server 2025
+- Windows client devices
+- Windows Server 2012 R2 and later
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -67,5 +61,3 @@ To offboard an Android or iOS device, uninstall the Microsoft Defender app on th
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
-
