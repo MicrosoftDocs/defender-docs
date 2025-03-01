@@ -29,16 +29,11 @@ ms.date: 03/01/2025
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](/defender-business) (for supported capabilities)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-
-Defender for Endpoint supports a wide variety of options to ensure that customers can easily adopt the platform.
-
-Acknowledging that customer environments and structures can vary, Defender for Endpoint was created with flexibility and granular control to fit varying customer requirements.
+Defender for Endpoint supports a wide variety of deployment, configuration, and reporting options to ensure that customers can easily adopt the platform. Acknowledging that customer environments and structures can vary, Defender for Endpoint was created with flexibility and granular control to fit varying customer requirements. Defender for Business provides similar capabilities, designed especially for small and medium-sized businesses.
 
 ## Endpoint onboarding and portal access
 
-Device onboarding is fully integrated into Microsoft Configuration Manager and Microsoft Intune for client devices and Microsoft Defender for server devices, providing complete end-to-end experience of configuration, deployment, and monitoring. In addition, Microsoft Defender for Endpoint supports Group Policy and other third-party tools used for devices management.
+Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. For servers, you can choose from several options, such as Defender for Endpoint Server, Defender for Servers (as part of the Defender for Cloud offering), or Defender for Business servers (for small and medium-sized businesses). The Microsoft Defender portal provides your security team with a robust, end-to-end experience for configuration, deployment, and monitoring. In addition, Microsoft Defender for Endpoint supports Group Policy and other non-Microosft tools used for managing devices.
 
 Defender for Endpoint provides fine-grained control over what users with access to the portal can see and do through the flexibility of role-based access control (RBAC). The RBAC model supports all flavors of security teams structure:
 
@@ -48,9 +43,9 @@ Defender for Endpoint provides fine-grained control over what users with access 
 
 ## Available APIs
 
-The Microsoft Defender for Endpoint solution is built on top of an integration-ready platform.
+Defender for Endpoint is built on top of an integration-ready platform. 
 
-Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Defender for Endpoint capabilities.
+Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs enable you to automate workflows and innovate based on Defender for Endpoint capabilities. You can also the Defender for Endpoint APIs with Defender for Business, for the capabilities that are supported in Defender for Business.
 
 :::image type="content" source="../media/mdatp-apis.png" alt-text="The available API and integration in Microsoft Defender for Endpoint" lightbox="../media/mdatp-apis.png":::
 
@@ -92,4 +87,6 @@ When you enable security information and event management (SIEM) integration, it
 - [Access the Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Supported APIs](exposed-apis-list.md)
 - [Technical partner opportunities](../partner-integration.md)
+- [Resources for Microsoft partners working with small and medium-sized businesses](/defender-business/mdb-partners)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
