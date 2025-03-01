@@ -24,7 +24,10 @@ ms.date: 04/17/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+**Applies to:** 
+
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
