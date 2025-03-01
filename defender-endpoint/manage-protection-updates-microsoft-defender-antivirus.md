@@ -63,10 +63,8 @@ There are five locations where you can specify where an endpoint should obtain u
 - [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](manage-protection-update-schedule-microsoft-defender-antivirus.md) (See note 2 below)
 
 > [!NOTE]
-> - Intune Internal Definition Update Server. If you use a Software Update Point (SUP) in Microsoft Endpoint Configuration Manager to get definition updates for Microsoft Defender Antivirus, and you must access Windows Update on blocked client devices, you can transition to co-management and offload the endpoint protection workload to Intune. In the antimalware policy configured in Intune there is an "internal definition update server" option that you can set to use on-premises Windows Server Update Service (WSUS) as the update source. This configuration helps you control which updates from the official Windows Update (WU) server are approved for the enterprise and also helps proxy and save network traffic to the official Windows Updates network.
-> 
-- Your policy and registry might have this listed as Microsoft Malware Protection Center (MMPC) security intelligence, its former name.
-
+> Intune Internal Definition Update Server: If you use a Software Update Point (SUP) in Microsoft Endpoint Configuration Manager to get definition updates for Microsoft Defender Antivirus, and you must access Windows Update on blocked client devices, you can transition to co-management and offload the endpoint protection workload to Intune. In the antimalware policy configured in Intune, there's an "internal definition update server" option that you can set to use on-premises Windows Server Update Service (WSUS) as the update source. This configuration helps you control which updates from the official Windows Update (WU) server are approved for enterprise organizations. It also helps proxy and save network traffic to the official Windows Updates network.
+> Your policy and registry might have this listed as Microsoft Malware Protection Center (MMPC) security intelligence, its former name.
 
 To ensure the best level of protection, Microsoft Update allows for rapid releases, which means smaller downloads on a frequent basis. The Windows Server Update Service, Microsoft Endpoint Configuration Manager, Microsoft security intelligence updates, and platform updates sources deliver less frequent updates. Thus, the delta might be larger, resulting in larger downloads.
 
