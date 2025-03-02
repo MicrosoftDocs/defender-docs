@@ -74,7 +74,7 @@ We have added and updated the following events in the `IdentityDirectoryEvents` 
 
 Additionally, the **built-in schema reference** for Advanced Hunting in Microsoft Defender XDR has been updated to include detailed information on all supported event types (**`ActionType`** values) in identity-related tables, ensuring complete visibility into available events. For more information, see [Advanced hunting schema details](/defender-xdr/advanced-hunting-schema-tables).
 
-## January 2024
+## January 2025
 
 ### New Identity guide tour
 
