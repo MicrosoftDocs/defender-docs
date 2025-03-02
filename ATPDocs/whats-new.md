@@ -31,10 +31,6 @@ We recommend that you review your existing custom detections to ensure they alig
 
 ## February 2025
 
-### New Identity guide tour
-
-Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
-
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
 
 New Features and Improvements:
@@ -80,8 +76,9 @@ Additionally, the **built-in schema reference** for Advanced Hunting in Microsof
 
 ## January 2024
 
-### New Identity Guide Tour
-We've added an interactive guide tour to help navigating identity security features, investigate alerts, and enhance your security posture with ease.
+### New Identity guide tour
+
+Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
 
 ## December 2024
 
