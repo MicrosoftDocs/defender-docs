@@ -51,7 +51,7 @@ For more information, see [Connect Microsoft Sentinel to the Defender portal](mi
 
 Use Defender XDR unified RBAC or Microsoft Sentinel roles to grant access to case management features.
 
-| Cases feature | Minimum permissions required in Microsoft Defender XDR Unified RBAC | Microsoft Sentinel role |
+| Cases feature | Microsoft Defender XDR Unified RBAC | Microsoft Sentinel role |
 |---|---|---|
 | View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Security operations > Security data basics (read)| Microsoft Sentinel Reader |
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Security operations > Alerts (manage)</br>**or**</br>Security operations > Response (manage) | Microsoft Sentinel Responder |
