@@ -23,16 +23,6 @@ Threat protection for AI workloads in Microsoft Defender for Cloud protects AI w
 
 - We recommend not opting out of prompt-based triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). Opting out and removing that capability can affect Defender for Cloud's ability to monitor and detect such attacks.
 
-## Enroll in the limited preview
-
-To get started, you must [sign up](https://aka.ms/D4AI/PublicPreviewAccess) and be accepted to the limited preview. Once accepted, you can start onboarding threat protection for AI workloads.
-
-1. Fill out the [registration form](https://aka.ms/D4AI/PublicPreviewAccess).
-
-1. Wait to receive an email confirming your acceptance or rejection from the limited preview.
-
-If you're accepted into the limited preview, you can enable threat protection for AI workloads on your Azure subscription.
-
 ## Enable threat protection for AI workloads
 
 Enable threat protection for AI workloads.
