@@ -12,6 +12,10 @@ ms.date: 02/24/2025
 
 # Integration and licensing for Microsoft Security Exposure Management
 
+Microsoft Security Exposure Management provides a comprehensive consolidation of security posture information from various Microsoft services and external data sources, ensuring robust security management and detailed insights.
+
+
+
 ## What's integrated into Security Exposure Management?
 
 Currently, Security Exposure Management consolidates security posture information and insights from workloads that include:
