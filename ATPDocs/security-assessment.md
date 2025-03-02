@@ -25,14 +25,15 @@ Defender for Identity security posture assessments are available in [Microsoft S
 
 Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
 
-### Categorization of MDI security posture assessments
+### Categorization of Defender for Identity security posture assessments
 
-For a deeper understanding of identity security risks and how to address them, Defender for Identity security posture assessments are categorized into five key areas:
-- **Hybrid security**: Addresses security considerations in hybrid environments including Entra Connect.
-- **Identity infrastructure**: Focuses on resolving misconfigurations and vulnerabilities in core identity components, such as domain controllers.
-- **Certificates**: Identifies security gaps in Active Directory Certificate Services (AD CS) that could enable unauthorized access due to improper certificate management.
-- **Group policy**: Identifies risky Group Policy configurations that could lead to privilege escalation or lateral movement within the network, ensuring that Group Policy settings are secure and don't introduce other risks.
-- **Accounts**: Covers security issues related to Active Directory (AD) users, devices, and groups such as old passwords, dormant accounts, and other related vulnerabilities.
+Defender for Identity security posture assessments are divided into five key categories, each addressing specific identity security risks and providing remediation guidance:
+
+- **Hybrid security**: Identifies misconfigurations in environments that integrate both on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
+- **Identity infrastructure**: Detects misconfigurations and vulnerabilities in core identity components, including domain controllers.
+- **Certificates**: Assesses Active Directory Certificate Services (AD CS) for security gaps, such as misconfigured certificate templates or weak certificate authority settings. Identifying and addressing these issues helps prevent unauthorized access that could arise from certificate-related vulnerabilities.
+- **Group policy**: Analyzes Group Policy configurations to identify settings that might allow privilege escalation or unauthorized lateral movement within the network. Ensuring secure Group Policy settings helps maintain proper access controls and system configurations.
+- **Accounts**: Reviews Active Directory users, devices, and groups to pinpoint security risks such as weak passwords, inactive accounts, or improper permissions.
 
 ## Access Defender for Identity security posture assessments
 
