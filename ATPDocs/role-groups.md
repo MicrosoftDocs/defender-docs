@@ -16,7 +16,7 @@ Users that are already [Global Administrators](/entra/identity/role-based-access
 For other users, enable and use Microsoft 365 role-based access control (RBAC) to create custom roles and to support more Entra ID roles such as Security operator or Security Reader by default to manage access to Defender for Identity.
 
 > [!IMPORTANT]
->Starting March 2, 2025, new Microsoft Defender for Identity tenants will have access only to Unified Role-Based Access Control (URBAC) and will not be able to export roles and permissions from the current model. Tenants with roles assigned or exported before this date will retain their current configuration. Additionally, the creation of MDI security groups will be discontinued, but tenants can still configure the same activities through URBAC.
+>Starting March 2, 2025, new Microsoft Defender for Identity tenants will only be able to configure permissions through Unified Role-Based Access Control (RBAC). Tenants with roles assigned or exported before this date will retain their current configuration. Additionally, the creation of the [Entra ID security groups](role-groups.md#defender-for-identity-security-groups) will be discontinued, but tenants can still configure the same permissions through RBAC.
 
 When creating your custom roles, make sure that you apply the permissions listed in the following table:
 
