@@ -71,10 +71,7 @@ Now for [public preview in the AKS environment](agentless-vulnerability-assessme
 
 Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
-Learn more about [vulnerability assessments for Defender for Containers supported environments with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md)
-
-Cluster nodes -
-- [Cluster nodes vulnerability assessment](kubernetes-nodes-va.md)
+Learn more about [vulnerability assessments for Defender for Containers supported environments](agentless-vulnerability-assessment-azure.md) including [vulnerability assessment for cluster nodes.](kubernetes-nodes-va.md)
 
 ## Run-time protection for Kubernetes nodes and clusters
 
