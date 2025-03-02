@@ -53,7 +53,7 @@ The following list provides a brief description of each endpoint security policy
 
 ## Create an endpoint security policy
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using at least a Security Administrator role.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using at least a Security Administrator role.
 
 2. Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
 
