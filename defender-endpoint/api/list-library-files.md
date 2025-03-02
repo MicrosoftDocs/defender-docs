@@ -17,14 +17,17 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/17/2024
+ms.date: 03/01/2025
 ---
 
 #  List library files 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+**Applies to:** 
+
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 

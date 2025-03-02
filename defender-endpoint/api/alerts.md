@@ -24,6 +24,7 @@ ms.date: 12/18/2020
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Business](/defender-business)
 
 > [!NOTE]
 > For the full available Alerts API experience across all Microsoft Defenders' products, visit: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
