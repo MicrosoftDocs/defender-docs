@@ -25,7 +25,7 @@ Learn how to [discover and manage your IoT/OT devices](manage-devices-inventory.
 
 If you don't yet have a Defender for IoT license, the **Device inventory** page detects your OT devices and lists them with regular device data, but without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible. The device inventory also displays a note at the top of the page that indicates the number of unprotected OT devices.
 
-In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
+To enable protection and get the full security value for your OT devices, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
 
 If you're seeing the message that indicates the number of unprotected OT devices, and you've already set up Defender for IoT, [set up a site](set-up-sites.md) and associate the relevant devices with it.
 
