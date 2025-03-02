@@ -10,14 +10,7 @@ ms.date: 06/04/2023
 
 1. In Defender for Cloud, select **Settings**, and then select the relevant subscription.
 
-1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Containers** > **Settings**.
-
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the page for Defender plans." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
-
-    > [!TIP]
-    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Containers**.
-    >
-    > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernetes and Defender for container registries plans in a deprecated state, along with upgrade information.":::
+1. On the **Defender plans** page, select **Containers** > **Settings**.
 
 1. Turn on the relevant component.
 
@@ -30,7 +23,7 @@ By default, when you enable the plan through the Azure portal, [Microsoft Defend
 
 If you want to disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
 
-You can also modify this configuration from the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page.
+You can also modify this configuration from the **Defender plans** page.
 
 > [!NOTE]
 > If you choose to disable the plan at any time after you enable it through the portal, you'll need to manually remove Defender for Containers components deployed on your clusters.

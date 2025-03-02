@@ -23,20 +23,20 @@ Defender CSPM includes [two extensions](faq-defender-for-containers.yml#what-are
 
 1. Select the scope that's onboarded to the Defender CSPM plan, then select **Settings**.
 
-1. Ensure the **Agentless discovery for Kubernetes** and **Agentless Container vulnerability assessments** extensions are toggled to **On**.
+1. Ensure the **K8S API access** and **Registry access** extensions are toggled to **On**.
 
 1. Select **Continue**.
 
-    :::image type="content" source="media/concept-agentless-containers/select-components.png" alt-text="Screenshot of selecting components." lightbox="media/concept-agentless-containers/select-components.png":::
+    :::image type="content" source="media/concept-agentless-containers/select-components.png" alt-text="Screenshot of selecting components 8S API access and Registry access." lightbox="media/concept-agentless-containers/select-components.png":::
 
 1. Select **Save**.
 
 A notification message pops up in the top right corner that verifies that the settings were saved successfully.
 
 > [!NOTE]
-> Agentless discovery for Kubernetes uses AKS trusted access. For more information about about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
+> Agentless discovery for Kubernetes uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
 
-## Next steps
+## Related content
 
 - Check out [common questions about Defender for Containers](faq-defender-for-containers.yml).
 - Learn more about [Trusted Access](/azure/aks/trusted-access-feature).
