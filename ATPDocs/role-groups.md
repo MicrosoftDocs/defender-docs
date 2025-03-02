@@ -53,7 +53,7 @@ The following table details the specific permissions required for Defender for I
 ## Defender for Identity security groups
 
  > [!IMPORTANT]
-> Starting March 2, Defender for Identity will no longer be providing Microsoft Entra ID security groups. Tenants can still configure the same permissions through Unified RBAC.
+> Starting March 2, Defender for Identity will no longer be providing Microsoft Entra ID security groups. Tenants can still configure the same permissions through  Microsoft Defender XDR [Unified Role-Based Access Control (RBAC)](https://learn.microsoft.com/defender-xdr/manage-rbac?).
 
 Defender for Identity provides the following security groups to help manage access to Defender for Identity resources:
 
