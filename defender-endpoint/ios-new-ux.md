@@ -46,6 +46,7 @@ This is the main Dashboard screen that appears to the enterprise's users as per 
 :::image type="content" source="media/defender-dash-ios-before.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/defender-dash-ios-before.png":::
 
 **Now**:
+
 :::image type="content" source="media/defender_dash_ios.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices" lightbox="media/defender_dash_ios.png":::
 
 ### List the features inside one Feature Card
@@ -53,6 +54,7 @@ This is the main Dashboard screen that appears to the enterprise's users as per 
 We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.
 
 **Before**:
+
 :::image type="content" source="media/mde-list-ios-before.png" alt-text="The Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-list-ios-before.png":::
 
 **Now**:
@@ -103,4 +105,4 @@ Hero cards are implemented to provide a more cohesive user experience. These car
 
 2. **Device Health (iOS Update)**
 
-      :::image type="content" source="media/mde-recommendation-cards-ios.png" alt-text="The recommendation card feature on the MDE iOS app" lightbox="media/mde-recommendation-cards-ios.png":::
+    :::image type="content" source="media/mde-recommendation-cards-ios.png" alt-text="The recommendation card feature on the MDE iOS app" lightbox="media/mde-recommendation-cards-ios.png":::
