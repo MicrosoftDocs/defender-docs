@@ -37,11 +37,11 @@ search.appverid: met150
 
 In endpoint protection solutions, a false positive is an entity, such as a file or a process that was detected and identified as malicious even though the entity isn't actually a threat. A false negative is an entity that wasn't detected as a threat, even though it actually is malicious. False positives/negatives can occur with any threat protection solution, including [Defender for Endpoint](microsoft-defender-endpoint.md).
 
- If you have Microsoft Defender XDR, review the "Alerts sources" as described in [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts?tabs=settings).
+ If you have Microsoft Defender XDR, review the "Alerts sources" as described in [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts?tabs=settings). If the alert source is Defender for Endpoint, continue to read this article. 
 
-Continue here if the "Alert source" is "Microsoft Defender for Endpoint".
+## Identify the detection source
 
-The next step is to review the "detection source":
+When you have a false positive, try to determine its detection source. The following table lists detection sources and potential solutions.
 
 |Detection source| Information|
 | -------- | -------- |
@@ -49,6 +49,8 @@ The next step is to review the "detection source":
 |Antivirus|The alert relates to Microsoft Defender Antivirus in Active mode (Primary) where it blocks. If Microsoft Defender Antivirus is in passive mode, EDR in block mode might just detect.<br/>- Solution: Submit the False Positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add [Indicators - File hash - allow ](/defender-endpoint/defender-endpoint-false-positives-negatives)or an [Antivirus exclusion](/defender-endpoint/defender-endpoint-false-positives-negatives)|
 | Custom TI| Custom indicators (Indicators <br/>- [file hash](/defender-endpoint/indicator-file)<br/>- [ip address or URL](/defender-endpoint/indicator-ip-domain)<br/>- [certificates](/defender-endpoint/indicator-certificates)) <br/><br/>Solution: [Manage indicators](/defender-endpoint/indicator-manage). <br/><br/> Or, if you see `CustomEnterpriseBlock`, your detection source could be one of the following: <br/><br/>1. Automated Investigation and Response (Auto-IR)<br/>-- Solution: Submit the False Positive to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives) <br/>-- Work-around: [Automation folder exclusions  ](/defender-endpoint/manage-automation-folder-exclusions)<br/><br/>2. Custom detection rules deriving from Advanced Hunting (AH) <br/>-- Solution: [Manage existing custom detection rules  ](/defender-xdr/custom-detection-rules)<br/><br/>3. EDR in block mode <br/>-- Solution: Submit the False Positive to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/>-- Work-around: [Indicators – File hash – allow](/defender-endpoint/defender-endpoint-false-positives-negatives) or [Antivirus exclusions](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/><br/>4. Live Response<br/>-- Solution: Submit the False Positive to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/>-- Work-around: [Indicators – File hash – allow](/defender-endpoint/defender-endpoint-false-positives-negatives) or [Antivirus exclusions](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/><br/>5. PUA protection<br/>-- Solution: Submit the False Positive to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/>-- Work-around: [Indicators – File hash – allow](/defender-endpoint/defender-endpoint-false-positives-negatives) or [Antivirus exclusions](/defender-endpoint/defender-endpoint-false-positives-negatives)|
 | Smartscreen|[Smartscreen](https://feedback.smartscreen.microsoft.com/smartscreenfaq.aspx)<br/>- [Report unsafe site](https://www.microsoft.com/en-us/wdsi/support/report-unsafe-site); <br/>or<br/>- It could be related to [Network Protection detection](https://www.microsoft.com/wdsi/support/report-exploit-guard)|
+
+## False positives and how to address them
 
 :::image type="content" source="media/false-positives-overview.png" alt-text="The definition of false positive and negatives in the Microsoft Defender portal" lightbox="media/false-positives-overview.png":::
 
@@ -67,9 +69,6 @@ Fortunately, steps can be taken to address and reduce these kinds of issues. If 
 You can get help if you still have issues with false positives/negatives after performing the tasks described in this article. See [Still need help?](#still-need-help)
 
 :::image type="content" source="media/false-positives-step-diagram.png" alt-text="The steps to address false positives and negatives" lightbox="media/false-positives-step-diagram.png":::
-
-> [!NOTE]
-> This article is intended as guidance for security operators and security administrators who are using [Defender for Endpoint](microsoft-defender-endpoint.md).
 
 ## Part 1: Review and classify alerts
 
