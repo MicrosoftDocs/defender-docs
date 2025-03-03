@@ -65,13 +65,11 @@ We updated all the subordinating screens associated with the feature
 1. **Web Protection**:
 
 **Before**:
-
 :::image type="content" source="media/mde-web-protection-android-before.png" alt-text="Image showing web protection feature on the MDE Android app before the new updates" lightbox="media/mde-web-protection-android-before.png":::
 
-:::image type="content" source="media/mde-web-protection-android-before-2.png" alt-text="Image showing web protection feature on the MDE Android app before the new updates" lightbox="media/mde-web-protection-android-before-2.png":::
+:::image type="content" source="media/mde-web-protection-android-before-2.png" alt-text="Second image showing web protection feature on the MDE Android app before the new updates" lightbox="media/mde-web-protection-android-before-2.png":::
 
 **Now**:
-
 :::image type="content" source="media/mde-web-protection-android.png" alt-text="Image showing web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android.png":::
 
 :::image type="content" source="media/mde-web-protection-android-2.png" alt-text="The web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android-2.png":::
