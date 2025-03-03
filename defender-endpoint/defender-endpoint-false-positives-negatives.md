@@ -144,7 +144,7 @@ When you're done reviewing and undoing actions that were taken as a result of fa
 
 2. On the **History** tab, select an action that you want to undo.
 
-3. In the flyout pane, select **Undo**. If the action can't be undone with this method, you won't see an **Undo** button. (To learn more, see [Undo completed actions](manage-auto-investigation.md#undo-completed-actions).)
+3. In the flyout pane, select **Undo**. If the action can't be undone with this method, you don't see an **Undo** button. (To learn more, see [Undo completed actions](manage-auto-investigation.md#undo-completed-actions).)
 
 ### Undo multiple actions at one time
 
@@ -173,7 +173,7 @@ When you're done reviewing and undoing actions that were taken as a result of fa
 
 ### Restore file from quarantine
 
-You can roll back and remove a file from quarantine if you've determined that it's clean after an investigation. Run the following command on each device where the file was quarantined.
+You can roll back and remove a file from quarantine if you determine that it's clean after an investigation. Run the following command on each device where the file was quarantined.
 
 1. Open Command Prompt as an administrator on the device:
 
