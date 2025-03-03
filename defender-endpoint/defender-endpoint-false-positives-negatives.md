@@ -52,7 +52,7 @@ When you have a false positive, a good first step is to try to determine its det
 
 ## False positives and how to address them
 
-:::image type="content" source="media/false-positives-overview.png" alt-text="The definition of false positive and negatives in the Microsoft Defender portal" lightbox="media/false-positives-overview.png":::
+:::image type="content" source="media/false-positives-overview.png" alt-text="Screenshot displaying the definitions of false positives and false negatives in the Microsoft Defender portal." lightbox="media/false-positives-overview.png":::
 
 Fortunately, steps can be taken to address and reduce these kinds of issues. 
 
