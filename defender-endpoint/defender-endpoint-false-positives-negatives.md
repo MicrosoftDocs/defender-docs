@@ -54,19 +54,7 @@ When you have a false positive, try to determine its detection source. The follo
 
 :::image type="content" source="media/false-positives-overview.png" alt-text="The definition of false positive and negatives in the Microsoft Defender portal" lightbox="media/false-positives-overview.png":::
 
-Fortunately, steps can be taken to address and reduce these kinds of issues. If you're seeing false positives/negatives occurring with Defender for Endpoint, your security operations can take steps to address them by using the following process:
-
-1. [Review and classify alerts](#part-1-review-and-classify-alerts)
-
-2. [Review remediation actions that were taken](#part-2-review-remediation-actions)
-
-3. [Review and define exclusions](#part-3-review-or-define-exclusions)
-
-4. [Submit an entity for analysis](#part-4-submit-a-file-for-analysis)
-
-5. [Review and adjust your threat protection settings](#part-5-review-and-adjust-your-threat-protection-settings)
-
-You can get help if you still have issues with false positives/negatives after performing the tasks described in this article. See [Still need help?](#still-need-help)
+Fortunately, steps can be taken to address and reduce these kinds of issues. 
 
 :::image type="content" source="media/false-positives-step-diagram.png" alt-text="The steps to address false positives and negatives" lightbox="media/false-positives-step-diagram.png":::
 
