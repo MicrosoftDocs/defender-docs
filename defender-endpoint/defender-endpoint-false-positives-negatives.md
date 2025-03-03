@@ -41,7 +41,7 @@ In endpoint protection solutions, a false positive is an entity, such as a file 
 
 ## Identify the detection source
 
-When you have a false positive, try to determine its detection source. The following table lists detection sources and potential solutions.
+When you have a false positive, a good first step is to try to determine its detection source. The following table lists detection sources and potential solutions.
 
 |Detection source| Information|
 | -------- | -------- |
