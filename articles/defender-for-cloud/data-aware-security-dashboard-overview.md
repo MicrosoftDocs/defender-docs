@@ -31,11 +31,13 @@ The Data and AI security dashboard allows you to:
 >
 > You must also register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
 >
->  You must also have the following permissions and role:
+>  You must also have the following:
+>
 > **Permissions**:
 > - Microsoft.Security/assessments/read
 > - Microsoft.Security/assessments/subassessments/read
 > - Microsoft.Security/alerts/read
+> 
 > **Role** - the minimum required privileged role-based access control role of **Security explorer**.
 
 ## Data and AI security overview
