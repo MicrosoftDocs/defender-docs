@@ -50,7 +50,7 @@ landingContent:
             url: quickstart-onboard-machines.md
 
   # Card
-  - title: Workload protections
+  - title: Protect workloads
     linkLists:
       - linkListType: overview
         links:
@@ -72,7 +72,7 @@ landingContent:
             url: defender-for-resource-manager-introduction.md
 
   # Card
-  - title: Protect AI workloads
+  - title: AI security
     linkLists:
       - linkListType: overview
         links:
@@ -108,3 +108,5 @@ landingContent:
             url: alerts-overview.md
           - text: Review security recommendations
             url: review-security-recommendations.md
+          - text: Manage security incidents
+            url: incidents.md
