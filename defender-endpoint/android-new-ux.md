@@ -55,11 +55,11 @@ The feature App Security and Web Protection are now listed under one feature Car
 
 **Before**:
 
-::image type="content" source="media/mde-list-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-list-android.png":::
+:::image type="content" source="media/mde-list-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-list-android.png":::
 
 **Now**:
 
-::image type="content" source="media/mde-feature-card-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card after the new updates" lightbox="media/mde-feature-card-android.png":::
+:::image type="content" source="media/mde-feature-card-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card after the new updates" lightbox="media/mde-feature-card-android.png":::
 
 ### Detailed Feature Experience
 
@@ -117,21 +117,21 @@ We updated all the subordinating screens associated with the feature
 
 **Before**
 
-    :::image type="content" source="media/mde-uninstall-threat-android-before.png" alt-text="Image showing the uninstall threat feature on the MDE Android app before the new updates" lightbox="media/mde-uninstall-threat-android-before.png":::
+:::image type="content" source="media/mde-uninstall-threat-android-before.png" alt-text="Image showing the uninstall threat feature on the MDE Android app before the new updates" lightbox="media/mde-uninstall-threat-android-before.png":::
 
 **Now**
 
-    :::image type="content" source="media/mde-uninstall-threat-android.png" alt-text="The new uninstall threat feature on the MDE Android app" lightbox="media/mde-uninstall-threat-android.png":::
+:::image type="content" source="media/mde-uninstall-threat-android.png" alt-text="The new uninstall threat feature on the MDE Android app" lightbox="media/mde-uninstall-threat-android.png":::
 
 4. **Security History**:
 
 **Before**
 
-     :::image type="content" source="media/mde-security-history-android.png" alt-text="Image dispalying the new uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android.png":::
+:::image type="content" source="media/mde-security-history-android.png" alt-text="Image dispalying the new uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android.png":::
 
 **Now**
 
-     :::image type="content" source="media/mde-security-history-android-2.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android-2.png":::
+:::image type="content" source="media/mde-security-history-android-2.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android-2.png":::
 
 ### Alerts
 
