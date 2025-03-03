@@ -26,7 +26,7 @@ These updates are designed to improve usability, streamline navigation, and ensu
 
 ## Key Changes
 
-We're pleased to introduce the Device Protection feature card for our enterprise users which includes **Web Protection**, **Device Health**, and **Jail break** features are designed to be more user-friendly and accessible. 
+We're pleased to introduce the Device Protection feature card for our enterprise users which includes **Web Protection**, **Device Health**, and **Jail break** features are designed to be more user-friendly and accessible.
 
 The updated cards also include **recommendation cards**, which prominently display any active alerts, keeping you informed.  Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
 
@@ -43,13 +43,11 @@ This is the main Dashboard screen that appears to the enterprise's users as per 
 
 :::image type="content" source="media/defender_dash_ios.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices" lightbox="media/defender_dash_ios.png":::
 
-
-## List the features inside one Feature Card 
+## List the features inside one Feature Card
 
 We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.
 
 :::image type="content" source="media/mde-list-ios.png" alt-text="The Microsoft Defender for Endpoint Feature Card" lightbox="media/mde-list-ios.png":::
-
 
 ## Detailed Feature Experience
 
