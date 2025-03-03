@@ -92,37 +92,34 @@ We updated all the subordinating screens associated with the feature
 
   1.  **App scanning**:
    
-   **Before**
-    :::image type="content" source="media/mde-app-scanning-android-before.png" alt-text="Image showing the app scanning feature on the MDE Android app before the new updates" lightbox="media/mde-app-scanning-android-before.png":::
+**Before**
+:::image type="content" source="media/mde-app-scanning-android-before.png" alt-text="Image showing the app scanning feature on the MDE Android app before the new updates" lightbox="media/mde-app-scanning-android-before.png":::
     
-   **Now**
-    :::image type="content" source="media/mde-app-scanning-android.png" alt-text="The app scanning feature on the MDE Android app" lightbox="media/mde-app-scanning-android.png":::
+**Now**
+ :::image type="content" source="media/mde-app-scanning-android.png" alt-text="The app scanning feature on the MDE Android app" lightbox="media/mde-app-scanning-android.png":::
 
   1. **Threat found**:
     
-    **Before**
-    :::image type="content" source="media/mde-threat-found-android-before.png" alt-text="Image showing the threat found feature on the MDE Android app before the new updates" lightbox="media/mde-threat-found-android-before.png":::
+**Before**
+:::image type="content" source="media/mde-threat-found-android-before.png" alt-text="Image showing the threat found feature on the MDE Android app before the new updates" lightbox="media/mde-threat-found-android-before.png":::
 
-    **Now**
-    :::image type="content" source="media/mde-threat-found-android.png" alt-text="The threat found feature on the MDE Android app" lightbox="media/mde-threat-found-android.png":::
+**Now**
+:::image type="content" source="media/mde-threat-found-android.png" alt-text="The threat found feature on the MDE Android app" lightbox="media/mde-threat-found-android.png":::
    
-1. **Uninstall threat**:
+3. **Uninstall threat**:
 
 **Before**
-
     :::image type="content" source="media/mde-uninstall-threat-android-before.png" alt-text="Image showing the uninstall threat feature on the MDE Android app before the new updates" lightbox="media/mde-uninstall-threat-android-before.png":::
 
-   **Now**
-
+**Now**
     :::image type="content" source="media/mde-uninstall-threat-android.png" alt-text="The new uninstall threat feature on the MDE Android app" lightbox="media/mde-uninstall-threat-android.png":::
 
-2. **Security History**:
+4. **Security History**:
 
 **Before**
      :::image type="content" source="media/mde-security-history-android.png" alt-text="Image dispalying the new uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android.png":::
 
 **Now**
-
      :::image type="content" source="media/mde-security-history-android-2.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android-2.png":::
 
 ### Alerts

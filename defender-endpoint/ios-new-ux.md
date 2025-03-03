@@ -42,7 +42,8 @@ The updated cards also include **recommendation cards**, which prominently displ
 This is the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
 
 **Before**:
-:::image type="content" source="media/defender-dash-ios-before.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/defender_dash_ios_before.png":::
+
+:::image type="content" source="media/defender-dash-ios-before.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/defender-dash-ios-before.png":::
 
 **Now**:
 :::image type="content" source="media/defender_dash_ios.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices" lightbox="media/defender_dash_ios.png":::
@@ -66,12 +67,12 @@ We updated all the subordinating screens associated with the feature
 
 **Before**:
 
-:::image type="content" source="media/mde-web-protection-ios-before.png" alt-text="Image showing the web protection feature on the MDE iOS app" lightbox="media/mde-web-protection-ios-before.png":::
+:::image type="content" source="media/mde-web-protection-ios-before.png" alt-text="Image showing the web protection feature on the MDE iOS app before the new updates" lightbox="media/mde-web-protection-ios-before.png":::
 
-:::image type="content" source="media/mde-web-protection-ios-before-2.png" alt-text="Second image showing the web protection feature on the MDE iOS app" lightbox="media/mde-web-protection-ios-befor2.png":::
+:::image type="content" source="media/mde-web-protection-ios-before-2.png" alt-text="Second image showing the web protection feature on the MDE iOS app before the new updates" lightbox="media/mde-web-protection-ios-before-2.png":::
 
 **Now**:
- 
+
 :::image type="content" source="media/mde-web-protection-ios-1.png" alt-text="Image showing the web protection feature on the MDE iOS app" lightbox="media/mde-web-protection-ios-1.png":::
 
 :::image type="content" source="media/mde-web-protection-ios-2.png" alt-text="The web protection feature on the MDE iOS app" lightbox="media/mde-web-protection-ios-2.png":::
