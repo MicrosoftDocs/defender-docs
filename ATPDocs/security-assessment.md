@@ -27,7 +27,7 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 
 ### Categorization of Defender for Identity security posture assessments
 
-Defender for Identity security posture assessments are divided into five key categories, each addressing specific identity security risks and providing remediation guidance:
+Defender for Identity security posture assessments have five key categories. Each category addresses specific identity security risks and provides remediation guidance.
 
 - **Hybrid security**: Identifies misconfigurations in environments that integrate both on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
 - **Identity infrastructure**: Detects misconfigurations and vulnerabilities in core identity components, including domain controllers.
