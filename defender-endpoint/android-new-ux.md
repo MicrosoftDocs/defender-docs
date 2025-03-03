@@ -41,13 +41,22 @@ The updated **feature cards** also include recommendation cards, which prominent
 
 The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
 
-:::image type="content" source="media/mde-dashboard-changes-android.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on Android devices" lightbox="media/mde-dashboard-changes-android.png":::
+**Before**:
+:::image type="content" source="media/mde-dashboard-changes-android-2.png" alt-text="Image showing the Microsoft Defender for Endpoint Mobile Dashboard on Android devices before the new update" lightbox="media/mde-dashboard-changes-android-2.png":::
+
+**Now**:
+:::image type="content" source="media/mde-dashboard-changes-android.png" alt-text=" Image showing the Microsoft Defender for Endpoint Mobile Dashboard on Android devices after the new updates" lightbox="media/mde-dashboard-changes-android.png":::
 
 ### List the features inside one Feature Card
 
-The feature App Security and Web Protection are now listed under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.  
+The feature App Security and Web Protection are now listed under one feature Card "**Device Protection**", which earlier had a new card on Dashboard screen for each functionality.  
 
-::image type="content" source="media/mde-feature-card-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card" lightbox="media/mde-feature-card-android.png":::
+**Before**:
+
+::image type="content" source="media/mde-list-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-list-android.png":::
+
+**Now**:
+::image type="content" source="media/mde-feature-card-android.png" alt-text="The Microsoft Defender for Endpoint Feature Card after the new updates" lightbox="media/mde-feature-card-android.png":::
 
 ### Detailed Feature Experience
 
@@ -55,40 +64,76 @@ We updated all the subordinating screens associated with the feature
 
 1. **Web Protection**:
 
-    :::image type="content" source="media/mde-web-protection-android.png" alt-text="Image showing web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android.png":::
+**Before**:
 
-    :::image type="content" source="media/mde-web-protection-android-2.png" alt-text="The web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android-2.png":::
+:::image type="content" source="media/mde-web-protection-android-before.png" alt-text="Image showing web protection feature on the MDE Android app before the new updates" lightbox="media/mde-web-protection-android-before.png":::
+
+:::image type="content" source="media/mde-web-protection-android-before-2.png" alt-text="Image showing web protection feature on the MDE Android app before the new updates" lightbox="media/mde-web-protection-android-before-2.png":::
+
+**Now**:
+
+:::image type="content" source="media/mde-web-protection-android.png" alt-text="Image showing web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android.png":::
+
+:::image type="content" source="media/mde-web-protection-android-2.png" alt-text="The web protection feature on the MDE Android app" lightbox="media/mde-web-protection-android-2.png":::
 
 2. **App Security**:
 
-    :::image type="content" source="media/mde-app-security-android.png" alt-text="Image showing the new updates to the app security feature on the MDE Android app" lightbox="media/mde-app-security-android.png":::
-    
-    :::image type="content" source="media/mde-app-security-android-2.png" alt-text="The app security feature on the MDE Android app" lightbox="media/mde-app-security-android-2.png":::
+**Before**:
 
-    1. **App scanning**:
+:::image type="content" source="media/mde-app-security-android-before.png" alt-text="Image showing the app security feature on the MDE Android app before the new updates" lightbox="media/mde-app-security-android-before.png":::
+
+:::image type="content" source="media/mde-app-security-android-before-2.png" alt-text="Second image showing app security feature on the MDE Android app before the new updates" lightbox="media/mde-app-security-android-before-2.png":::
+
+**Now**:
+
+:::image type="content" source="media/mde-app-security-android.png" alt-text="Image showing the new updates to the app security feature on the MDE Android app" lightbox="media/mde-app-security-android.png":::
+    
+:::image type="content" source="media/mde-app-security-android-2.png" alt-text="The app security feature on the MDE Android app" lightbox="media/mde-app-security-android-2.png":::
+
+  1.  **App scanning**:
    
+   **Before**
+    :::image type="content" source="media/mde-app-scanning-android-before.png" alt-text="Image showing the app scanning feature on the MDE Android app before the new updates" lightbox="media/mde-app-scanning-android-before.png":::
+    
+   **Now**
     :::image type="content" source="media/mde-app-scanning-android.png" alt-text="The app scanning feature on the MDE Android app" lightbox="media/mde-app-scanning-android.png":::
 
-    1. **Threat found**:
+  1. **Threat found**:
     
+    **Before**
+    :::image type="content" source="media/mde-threat-found-android-before.png" alt-text="Image showing the threat found feature on the MDE Android app before the new updates" lightbox="media/mde-threat-found-android-before.png":::
+
+    **Now**
     :::image type="content" source="media/mde-threat-found-android.png" alt-text="The threat found feature on the MDE Android app" lightbox="media/mde-threat-found-android.png":::
    
-3. **Uninstall threat**:
+1. **Uninstall threat**:
+
+**Before**
+
+    :::image type="content" source="media/mde-uninstall-threat-android-before.png" alt-text="Image showing the uninstall threat feature on the MDE Android app before the new updates" lightbox="media/mde-uninstall-threat-android-before.png":::
+
+   **Now**
 
     :::image type="content" source="media/mde-uninstall-threat-android.png" alt-text="The new uninstall threat feature on the MDE Android app" lightbox="media/mde-uninstall-threat-android.png":::
 
-4. **Security History**:
+2. **Security History**:
 
+**Before**
      :::image type="content" source="media/mde-security-history-android.png" alt-text="Image dispalying the new uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android.png":::
+
+**Now**
 
      :::image type="content" source="media/mde-security-history-android-2.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android-2.png":::
 
 ### Alerts
 
-Added new section to show multiple alerts together on dashboard.
+**Added new section to show multiple alerts together on dashboard.**
 
 :::image type="content" source="media/mde-alerts-android.png" alt-text="The new updates to the alerts feature on the MDE Android app" lightbox="media/mde-alerts-android.png":::
 
+**List of alerts being shown on the dashboard.**
+
 :::image type="content" source="media/mde-alerts-android-2.png" alt-text="Image showing the alerts feature on the MDE Android app" lightbox="media/mde-alerts-android-2.png":::
 
+**No alerts to show on the dashboard.**
 :::image type="content" source="media/mde-alerts-android-3.png" alt-text="The alerts feature on the MDE Android app" lightbox="media/mde-alerts-android-3.png":::
