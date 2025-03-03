@@ -86,9 +86,9 @@ The following are the features provided by Defender for Containers, for the supp
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | **Defender for Containers** or **Defender CSPM** | Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
-| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | AKS | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | AKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Binary drift detection | Detects binary of runtime container from container image | AKS | GA | GA | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds |
-| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | AKS | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | AKS | Preview - currently supports audit logs & process events | Preview - currently supports audit logs & process events | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | AKS  | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Malware detection | Detection of malware | AKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | Commercial clouds |
 
@@ -110,10 +110,10 @@ The following are the features provided by Defender for Containers, for the supp
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | EKS | GA | GA | Enabled with plan | **Defender for Containers** or **Defender CSPM** | AWS |
-| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | EKS | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | AWS |
+| Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | EKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | AWS |
 | Binary drift detection | Detects binary of runtime container from container image | EKS | GA | GA | Requires **Defender sensor** | **Defender for Containers** | AWS |
-| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | EKS | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | AWS |
-| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | EKS | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | AWS |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | EKS | Preview - currently supports audit logs & process events | Preview - currently supports audit logs & process events | Requires **Defender sensor** | **Defender for Containers** | AWS |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | EKS | Preview | Preview | Requires **Defender sensor** and **K8S access API** | **Defender for Containers** | AWS |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
 #### Kubernetes distributions/configurations support for runtime threat protection in AWS
@@ -134,9 +134,9 @@ The following are the features provided by Defender for Containers, for the supp
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | GKE | GA | GA | Enabled with plan | **Defender for Containers** | GCP |
-| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | GKE | GA | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** | GCP |
+| Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | GKE | GA | - | Requires **Defender sensor** | **Defender for Containers** | GCP |
 | Binary drift detection | Detects binary of runtime container from container image | GKE | GA | GA | Requires **Defender sensor** | **Defender for Containers** | GCP |
-| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | GKE | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | GCP |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | GKE | Preview - currently supports audit logs & process events | Preview - currently supports audit logs & process events | Requires **Defender sensor** | **Defender for Containers** | GCP |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan | GCP |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
@@ -158,10 +158,10 @@ The following are the features provided by Defender for Containers, for the supp
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | Arc enabled K8s clusters | Preview | Preview | Requires **Defender sensor** | **Defender for Containers** |  |
-| Workload detection | Detection of suspicious Kubernetes activity for cluster and node | Arc enabled Kubernetes clusters | Preview | - | Requires **Defender sensor** or manual provision of Defender sensor | **Defender for Containers** |  |
+| Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | Arc enabled Kubernetes clusters | Preview | - | Requires **Defender sensor** | **Defender for Containers** |  |
 | Binary drift detection | Detects binary of runtime container from container image |  | - | - | - | - | - |
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | Arc enabled Kubernetes clusters | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan |  |
-| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | Arc enabled Kubernetes clusters | Preview | Preview | Enabled with any Defender for Cloud plan | Any plan |  |
+| Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | - | - | - | - | - |  |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
 #### Kubernetes distributions/configurations for runtime threat protection in Arc enabled Kubernetes
