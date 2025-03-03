@@ -73,7 +73,7 @@ If you want to focus on the AsrOfficeChildProcess rule and get details on the ac
 
 ```kusto
 DeviceEvents
-| where (Actiontype startswith "AsrOfficechild")
+| where (ActionType startswith "AsrOfficechild")
 | extend RuleId=extractjson("$Ruleid", AdditionalFields, typeof(string))
 | project DeviceName, FileName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
 ```

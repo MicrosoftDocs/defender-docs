@@ -38,7 +38,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 ## Onboard devices
 
-1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
@@ -103,7 +103,7 @@ For security reasons, the package used to offboard devices expires seven days af
 > [!NOTE]
 > Onboarding and offboarding policies must not be deployed on the same device at the same time. Otherwise, unpredictable collisions might occur.
 
-1. Get the offboarding package from <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
    
@@ -138,7 +138,7 @@ Monitoring can also be done directly on the portal, or by using the different de
 
 ### Monitor devices using the portal
 
-1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com).
 
 2. Select **Devices inventory**.
 
