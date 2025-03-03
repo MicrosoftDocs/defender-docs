@@ -329,7 +329,7 @@ If something was detected as malware based on behavior, and you don't have a fil
 
 3. Review the guidelines here: [Submit files for analysis](/unified-secops-platform/submission-guide).
 
-4. Visit the [Microsoft Security Intelligence submission site](https://www.microsoft.com/wdsi/filesubmission) (https://www.microsoft.com/wdsi/filesubmission), and submit your .cab files.
+4. Visit the [Microsoft Security Intelligence submission site](https://www.microsoft.com/wdsi/filesubmission)(https://www.microsoft.com/wdsi/filesubmission), and submit your .cab files.
 
 ### What happens after a file is submitted?
 
