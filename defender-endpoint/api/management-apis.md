@@ -33,7 +33,7 @@ Defender for Endpoint supports a wide variety of deployment, configuration, and 
 
 ## Endpoint onboarding and portal access
 
-Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. For servers, you can choose from several options, such as Defender for Endpoint Server, Defender for Servers (as part of the Defender for Cloud offering), or Defender for Business servers (for small and medium-sized businesses). 
+Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. You can onboard both client and server devices using the Microsoft Defender portal. Or, for servers, you can use Defender for Clout, which integrates with Defender for Endpoint and Defender for Business. 
 
 The Microsoft Defender portal provides your security team with a robust, end-to-end experience for configuration, deployment, and monitoring. In addition, Microsoft Defender for Endpoint supports Group Policy and other non-Microosft tools used for managing devices.
 
