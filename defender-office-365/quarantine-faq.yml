@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 01/28/2025
+  ms.date: 03/02/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -276,10 +276,11 @@ sections:
           **Approve release** has been retired and is now included in :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 
       - question: |
-          **Block sender** button in quarantine notifications or on the **Quarantine page** does not seem to be working. What's going on?
+          The **Block sender** button in quarantine notifications or on the **Quarantine** page doesn't seem to be working. What's going on?
         answer: |
-          **Block sender** action is not possible for Public folders. 
-           Public folders in Exchange do not have junk email configuration settings like individual mailboxes do. The cmdlet Set-MailboxJunkEmailConfiguration is used to configure junk email settings for mailboxes, not public folders.
+          The **Block sender** action isn't possible for public folders.
+
+          Public folders in Exchange don't have junk email configuration settings like individual mailboxes. The **Set-MailboxJunkEmailConfiguration** cmdlet configures junk email settings for mailboxes, not public folders.
           
       - question: |
           **Filter** and **Search** aren't working. What's going on?
