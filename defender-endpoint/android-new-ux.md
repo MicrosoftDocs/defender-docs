@@ -61,13 +61,34 @@ We updated all the subordinating screens associated with the feature
 
 2. App Security
 
-
+    :::image type="content" source="media/mde-app-security-android.png" alt-text="The app security feature on the MDE Android app" lightbox="media/mde-app-security-android.png":::
+    
+    :::image type="content" source="media/mde-app-security-android-2.png" alt-text="The app security feature on the MDE Android app" lightbox="media/mde-app-security-android-2.png":::
 
     1. App scanning:
-    2. Threat found:
+   
+    :::image type="content" source="media/mde-app-scanning-android.png" alt-text="The app scanning feature on the MDE Android app" lightbox="media/mde-app-scanning-android.png":::
+
+    1. Threat found:
+    
+    :::image type="content" source="media/mde-threat-found-android.png" alt-text="The threat found feature on the MDE Android app" lightbox="media/mde-threat-found-android.png":::
+   
 3. Uninstall threat:
+
+    :::image type="content" source="media/mde-uninstall-threat-android.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-uninstall-threat-android.png":::
+
 4. Security History
+
+     :::image type="content" source="media/mde-security-history-android.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android.png":::
+
+     :::image type="content" source="media/mde-security-history-android-2.png" alt-text="The uninstall threat feature on the MDE Android app" lightbox="media/mde-security-history-android-2.png":::
 
 ## Alerts
 
 Added new section to show multiple alerts together on dashboard.
+
+    :::image type="content" source="media/mde-alerts-android.png" alt-text="The alerts feature on the MDE Android app" lightbox="media/mde-alerts-android.png":::
+
+    :::image type="content" source="media/mde-alerts-android-2.png" alt-text="The alerts feature on the MDE Android app" lightbox="media/mde-alerts-android-2.png":::
+
+    :::image type="content" source="media/mde-alerts-android-3.png" alt-text="The alerts feature on the MDE Android app" lightbox="media/mde-alerts-android-3.png":::
