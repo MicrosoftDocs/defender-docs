@@ -220,7 +220,7 @@ To define exclusions across Microsoft Defender for Endpoint, perform the followi
 
 > [!NOTE]
 > Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use [custom indicators](indicators-overview.md) for Microsoft Defender for Endpoint and exclusions for Microsoft Defender Antivirus.
-> ASR Rules can leverage ASR Rule Exclusions - where the exclusions apply to all ASR Rules; ASR per Rule Exclusions; Defender AV exclusions; as well as allow indicators defined in Custom Indicators.
+> ASR Rules can leverage ASR Rule Exclusions where exclusions apply to all ASR Rules, ASR per rule exclusions, Microsoft Defender Antivirus exclusions, and allow indicators defined in Custom Indicators.
 
 The procedures in this section describe how to define indicators and exclusions.
 
