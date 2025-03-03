@@ -32,7 +32,7 @@ Defender for Identity security posture assessments have five key categories. Eac
 - **Hybrid security**: Identifies misconfigurations in environments that integrate both on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
 - **Identity infrastructure**: Detects misconfigurations and vulnerabilities in core identity components, including domain controllers.
 - **Certificates**: Assesses Active Directory Certificate Services (AD CS) for security gaps, such as misconfigured certificate templates or weak certificate authority settings. Identifying and addressing these issues helps prevent unauthorized access that could arise from certificate-related vulnerabilities.
-- **Group policy**: Analyzes Group Policy configurations to identify settings that might allow privilege escalation or unauthorized lateral movement within the network. Ensuring secure Group Policy settings helps maintain proper access controls and system configurations.
+- **Group policy**: Analyzes Group Policy configurations to identify settings that might allow privilege escalation or unauthorized lateral movement within the network. Secure Group Policy settings help maintain proper access controls and system configurations.
 - **Accounts**: Reviews Active Directory users, devices, and groups to pinpoint security risks such as weak passwords, inactive accounts, or improper permissions.
 
 ## Access Defender for Identity security posture assessments
