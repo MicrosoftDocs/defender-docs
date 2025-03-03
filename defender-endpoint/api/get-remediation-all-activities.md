@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/25/2021
+ms.date: 03/01/2025
 ---
 
 # List all remediation activities
@@ -28,6 +28,7 @@ ms.date: 04/25/2021
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Business](/defender-business)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
 
@@ -153,4 +154,5 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/
 - [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
