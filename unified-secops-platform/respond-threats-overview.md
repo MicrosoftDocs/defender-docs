@@ -29,7 +29,7 @@ In the Defender portal, unified support for incident correlation and integrated 
 
 ### Incident correlation
 
-In the Defender portal, related alerts from across multiple attack surfaces are grouped into a single incident, improving the efficiency of incident response. Correlating alerts from various sources such as endpoints, identities, email, and cloud workloads helps security teams gain a holistic view of an attack campaign. This comprehensive perspective allows analysts to understand the full scope of an incident, identify the root cause, and determine the most effective remediation actions.
+Related alerts from across multiple attack surfaces are grouped into a single incident in the Defender portal, improving the efficiency of incident response. Correlating alerts from various sources such as endpoints, identities, email, and cloud workloads helps security teams gain a holistic view of an attack campaign. This comprehensive perspective allows analysts to understand the full scope of an incident, identify the root cause, and determine the most effective remediation actions.
 
 The following image shows a sample collection of alerts collected into a single incident in the Defender portal. In this example, alerts from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender XDR, Microsoft Defender for Office 365, and Microsoft Sentinel are all included in the same incident.
 
@@ -43,7 +43,7 @@ Threat intelligence integrates across Defender portal services to enrich alerts 
 
 Continuous updates to threat intelligence feeds keep security teams ahead of emerging threats and improve the organization's overall resilience.
 
-The following image shows an example of the incidents related to a **Human-operated ransomware** Threat analytics report in the **Threat intelligence** area of the Defender portal.
+The following image shows an example of the incidents related to a **Human-operated ransomware** threat analytics report in the **Threat intelligence** area of the Defender portal.
 
 :::image type="content" source="media/respond-threats-overview/threat-analytics.png" alt-text="Screenshot of a list of related incidents to a specific threat." lightbox="media/respond-threats-overview/threat-analytics.png":::
 
@@ -91,7 +91,7 @@ Guided responses are shown together with other Copilot recommendations, as actio
 
 The following image shows a sample of the **Guided response** section of the Copilot pane for a specific incident. If you have a lot of recommended actions to sort through, select the **Status** filter to show only some of the actions at a time
 
-:::image type="content" source="media/respond-threats-overview/guided-response.png" alt-text="Screenshot of the Guided response section of the Copilot pane for a specific incident.":::
+:::image type="content" source="media/respond-threats-overview/guided-response.png" alt-text="Screenshot of the Guided response section of the Copilot pane for a specific incident." border="false":::
 
 For more information, see [Triage and investigate incidents with guided responses from Microsoft Copilot in Microsoft Defender](/defender-xdr/security-copilot-m365d-guided-response).
 
@@ -108,7 +108,7 @@ For more information, see:
 
 ## Microsoft Sentinel threat response features
 
-Microsoft Sentinel provides cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your threat detection and response capabilities.
+Microsoft Sentinel provides cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) features for intelligent security analytics and threat intelligence across the enterprise. This section describes how Microsoft Sentinel features add to your response capabilities.
 
 ### Automation rules
 
