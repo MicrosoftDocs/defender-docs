@@ -33,6 +33,8 @@ search.appverid: met150
 
 Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
 
+### Using the Windows Security app
+
 1. On your Windows device, open **Windows Security**.
 
 2. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
@@ -41,14 +43,22 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
 
 4. Select an item you want to keep, and choose an action, such as **Restore**.
 
+### Using the MpCmdRun command line
+
 > [!TIP]
 > You can also restore a file from quarantine by using Command Prompt. See [Restore file from quarantine](respond-file-alerts.md#restore-file-from-quarantine). 
 
+
+### Using the Download or collect file in Microsoft Defender for Endpoint Plan 2
+
+[Download or collect file](/defender-endpoint/respond-file-alerts) response action
 
 ## See also
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)
+
+- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
