@@ -55,7 +55,7 @@ sections:
         answer: |
           If you're planning to onboard an instance of Windows Server or Linux Server, you'll need an additional license, such as [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers). This license is available as an add-on to Microsoft 365 Business Premium and the standalone version of Defender for Business. The Microsoft Defender for Business servers license is priced at $3 per server instance. You can either purchase a license for each onboarded server, or choose to offboard servers from Defender for Business.
 
-          If you have more than 60 servers, you'll need to get another license, such as [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers). 
+          If you have more than 60 servers, you'll need to get another license, such as Microsoft Defender for Endpoint Server or Microsoft Defender for Servers Plan 1 or Plan 2. For more information, see [Onboard servers to Microsoft Defender for Endpoint](/defender-endpoint/onboard-server). 
 
       - question: What is the difference between Microsoft Defender for Business servers and Microsoft Defender for Servers Plan 1 and Plan 2?
         answer: |
