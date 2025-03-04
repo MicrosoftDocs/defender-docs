@@ -1,16 +1,22 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title: Troubleshoot agent health issues
+title: Troubleshoot agent health issues with Defender for Endpoint on Mac
 description: Investigate macOS Defender agent health issues
-author:      liam-x # GitHub alias
-ms.author:   lianx # Microsoft alias
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: lianx; joshbregman
+manager: deniseb
+ms.localizationpriority: medium
+audience: ITPro
 ms.service: defender-endpoint
-ms.topic: troubleshooting-general
-ms.date:     03/04/2025
 ms.subservice: macos
+ms.topic: troubleshooting-general
+ms.date: 03/04/2025
+ms.subservice: macos
+ms.collection: 
+- m365-security
+- tier3
+- mde-macos
+search.appverid: met150
 ---
 
 # Troubleshoot agent health issues
@@ -57,7 +63,6 @@ The following table provides information about the values that are returned when
 |`tamper_protection`| Status of tamper protection feature. <br/><br/>Can have one of the following values: <br/>- **disabled** - tamper protection is off.<br/>- **audit** - tamper protection is on but does not block any event.<br/>- **block** - tamper protection is monitoring events and block them as needed. |
 |`troubleshooting_mode`| `True` if defender is in the troubleshooting mode; otherwise, `false`. see [Troubleshooting mode](mac-troubleshoot-mode.md).|
 
-
 ## Component specific health
 
 You can get more detailed health information for different Defender's features with `mdatp health --details <feature>`. For example:
@@ -78,6 +83,10 @@ mdatp health --details help
 
 You can run `mdatp health --help` on recent versions to list all supported features.
 
+## See also
+
+- [What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
