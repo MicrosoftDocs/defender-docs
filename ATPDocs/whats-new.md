@@ -22,6 +22,13 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## March 2025
+
+### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
+New LDAP query events will be added by March 6th to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
+This update may lead to an increase in activity within the Advanced Hunting IdentityQueryEvents table for LDAP queries. If you have custom detections related to these queries, you may see a higher number of triggered alerts.
+We recommend that you review your existing custom detections to ensure they align with your objectives. If needed, you can adjust your query accordingly.
+
 ## February 2025
 
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
@@ -66,6 +73,12 @@ We have added and updated the following events in the `IdentityDirectoryEvents` 
 - Account primary group ID has been changed
 
 Additionally, the **built-in schema reference** for Advanced Hunting in Microsoft Defender XDR has been updated to include detailed information on all supported event types (**`ActionType`** values) in identity-related tables, ensuring complete visibility into available events. For more information, see [Advanced hunting schema details](/defender-xdr/advanced-hunting-schema-tables).
+
+## January 2025
+
+### New Identity guide tour
+
+Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
 
 ## December 2024
 
