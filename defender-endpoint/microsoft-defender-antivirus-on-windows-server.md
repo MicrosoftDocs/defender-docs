@@ -108,7 +108,7 @@ sc query state= all
 
 To get your regular security intelligence updates, the Windows Update service must be running. If you use an update management service, like Windows Server Update Services (WSUS), make sure Microsoft Defender Antivirus Security intelligence updates are approved for the computers you manage.
 
-By default, Windows Update doesn't download and install updates automatically on Windows Server 2016, Windows Server 2019 or Windows Server 2022. You can change this configuration by using one of the following methods:
+By default, Windows Update doesn't download and install updates automatically on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025. You can change this configuration by using one of the following methods:
 
 | Method | Description |
 |---|---|
