@@ -139,12 +139,12 @@ For more information, see [Configure device proxy and Internet connectivity sett
 
 ## API
 
-Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you'll need to use the following URIs:
+Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you need to use the following URIs:
 
 
 |Endpoint type|GCC|GCC High & DoD|
 |---|---|---|
-|Login|`https://login.microsoftonline.com`|`https://login.microsoftonline.us`|
+|Sign in|`https://login.microsoftonline.com`|`https://login.microsoftonline.us`|
 |Defender for Endpoint API|`https://api-gcc.securitycenter.microsoft.us`|`https://api-gov.securitycenter.microsoft.us`|
 
 ## Feature parity with commercial
@@ -178,7 +178,7 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 |Microsoft Defender Vulnerability Management premium capabilities <br/>See note following this table|![Yes](media/svg/check-yes.svg) |![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 
 > [!NOTE]
-> The following Defender Vulnerability Management functionality is not available for GCC, GCC High and DoD customers:
+> The following Defender Vulnerability Management functionality isn't available for GCC, GCC High, and DoD customers:
 > - Report inaccuracy
 > - Request CVE support
 
