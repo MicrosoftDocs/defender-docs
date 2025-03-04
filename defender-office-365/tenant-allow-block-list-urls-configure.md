@@ -125,7 +125,7 @@ Back on the **URLs** tab, the entry is listed.
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-New-TenantAllowBlockListItems -ListType Url -Allow -Entries "Value1","Value2",..."ValueN" <-RemoveAfter 45>  [-Notes <String>]
+New-TenantAllowBlockListItems -ListType Url -Allow -Entries "Value1","Value2",..."ValueN" [-RemoveAfter 45]  [-Notes <String>]
 ```
 
 This example adds an allow entry for the URL abc.contoso.com and all email addresses (for example, xyz@abc.contoso.com). Because we didn't use the ExpirationDate or RemoverAfter parameters, the entry expires after 45 days from last used date.
@@ -152,7 +152,7 @@ To create block entries for URLs, use either of the following methods:
 
 2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add** and than select **Block**.
+3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block URLs** flyout that opens, configure the following settings:
 
@@ -198,9 +198,9 @@ On the **URLs** tab, you can sort the entries by clicking on an available column
 - **Value**: The URL.
 - **Action**: The available values are **Allow** or **Block**.
 - **Override verdicts**: The available values are:
-    - **Upto malware**" for block entries
-    - **Upto regular confidence phishing**: for allow entries created directly from Tenant Allow/Block List
-    - **Upto malware**: for allow entries created via submissions.
+    - **Up to malware** for block entries.
+    - **Up to regular confidence phishing** for allow entries created directly from Tenant Allow/Block List.
+    - **Up to malware** for allow entries created via submissions.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
