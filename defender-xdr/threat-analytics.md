@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 11/12/2024
+ms.date: 02/25/2025
 ---
 
 # Threat analytics in Microsoft Defender XDR
@@ -61,7 +61,7 @@ Each report provides an analysis of a tracked threat and extensive guidance on h
 ## Required roles and permissions
 The following roles and permissions are required to access Threat analytics in the Defender portal: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
-- **Vulnerability management (read)** and **Secure Score (read)**—to see related exposure data and recommended actions
+- **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
 By default, access to services available in the Defender portal are managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
 
