@@ -403,13 +403,13 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
    > 
    > To onboard a device that was previously offboard, you must remove the mdatp_offboard.json file located at /etc/opt/microsoft/mdatp.
    
-   If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`. Run the below command:
+   If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`. Run the following command:
    
    ```bash
    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
    ```
    
-   For the rest of distros and versions, you need to use `python`. Run the below command:
+   For the rest of distros and versions, you need to use `python`. Run the following command:
    
    ```bash
    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
@@ -449,7 +449,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       mdatp config real-time-protection --value enabled
       ```
       
-   1. Open a Terminal window and execute the following command to run a detection test:
+   1. To run a detection test, open a Terminal window. and then run the following command:
    
       ``` bash
       curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
