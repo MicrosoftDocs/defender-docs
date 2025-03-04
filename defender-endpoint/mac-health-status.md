@@ -66,7 +66,7 @@ The following table provides information about the values that are returned when
 
 ## Component specific health
 
-You can get more detailed health information for different Defender's features with `mdatp health --details <feature>`. For example:
+You can get more detailed health information for different features in Defender for Endpoint by using the command, `mdatp health --details <feature>`. Here are some examples:
 
 ```bash
 
