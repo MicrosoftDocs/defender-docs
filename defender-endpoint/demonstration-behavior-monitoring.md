@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/15/2024
+ms.date: 03/04/2025
 ---
 
 # Behavior Monitoring demonstration
