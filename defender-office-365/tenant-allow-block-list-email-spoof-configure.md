@@ -73,13 +73,22 @@ This article describes how admins can manage entries for email senders in the Mi
 
 ### Create allow entries for domains and email addresses
 
-Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
-To create allow entries for domains & email addresses, use either of the following methods:
+To create allow entries for domains and email addresses, use either of the following methods:
 
 - From the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a blocked message as **I've confirmed it's clean** and then select **Allow this message**, an allow entry for the sender is added to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
 
+  This method is required to override malware and high confidence phishing verdicts.
+
 - From the **Domains & addresses** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
+
+  This method is available to override the following verdicts only:
+
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
 
 [!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
 
@@ -146,7 +155,7 @@ Email from these blocked senders is marked as *high confidence phishing* and qua
 
 2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add** and than select **Block**.
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block domains & addresses** flyout that opens, configure the following settings:
 
@@ -192,9 +201,9 @@ On the **Domains & addresses** tab, you can sort the entries by clicking on an a
 - **Value**: The domain or email address.
 - **Action**: The value **Allow** or **Block**.
 - **Override verdicts**: The available values are:
-    - **Upto malware**" for block entries
-    - **Upto regular confidence phishing**: for allow entries created directly from Tenant Allow/Block List
-    - **Upto high confidence phishing**: for allow entries created via submissions.
+    - **Up to malware** for block entries.
+    - **Up to regular confidence phishing** for allow entries created directly in Tenant Allow/Block List.
+    - **Up to high confidence phishing** for allow entries created via submissions.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
