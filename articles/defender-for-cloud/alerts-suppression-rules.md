@@ -84,9 +84,9 @@ To delete a rule, use the same three dots menu and select **Remove**.
 
 You can create, view, or delete alert suppression rules using the Defender for Cloud REST API.
 
-A suppression rule can be created for an alert that has already been triggered. Use the [Alerts REST API](rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress, then create a suppression rule with the [Alerts Suppression Rules REST API](rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true), using the retrieved alert information.
+A suppression rule can be created for an alert that has already been triggered. Use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress, then create a suppression rule with the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true), using the retrieved alert information.
 
-The relevant methods for suppression rules in the [Alerts Suppression Rules REST API](rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) are:
+The relevant methods for suppression rules in the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) are:
 
 - **UPDATE**:
 
