@@ -11,7 +11,6 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.topic: troubleshooting-general
 ms.date: 03/04/2025
-ms.subservice: macos
 ms.collection: 
 - m365-security
 - tier3
