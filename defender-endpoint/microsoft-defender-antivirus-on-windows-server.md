@@ -146,7 +146,7 @@ To enable automatic sample submission, start a Windows PowerShell console as an 
 
 |Setting|Description|
 |---|---|
-| **0** - **Always prompt** | The Microsoft Defender Antivirus service prompts you to confirm submission of all required files. This setting is the default for Microsoft Defender Antivirus, but isn't recommended for installations on Windows Server 2016 or 2019, or Windows Server 2022 without a GUI. |
+| **0** - **Always prompt** | The Microsoft Defender Antivirus service prompts you to confirm submission of all required files. This setting is the default for Microsoft Defender Antivirus, but isn't recommended for installations on Windows Server 2016 or 2019, or Windows Server 2022 and later without a GUI. |
 | **1**  - **Send safe samples automatically** | The Microsoft Defender Antivirus service sends all files marked as "safe" and prompts for the remainder of the files. |
 | **2** - **Never send** | The Microsoft Defender Antivirus service doesn't prompt and doesn't send any files. |
 | **3** - **Send all samples automatically** | The Microsoft Defender Antivirus service sends all files without a prompt for confirmation. |
@@ -156,7 +156,7 @@ To enable automatic sample submission, start a Windows PowerShell console as an 
 
 ## Configure automatic exclusions
 
-To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install when using Microsoft Defender Antivirus on Windows Server 2016 or Windows Server 2019, or Windows Server 2022.
+To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install when using Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
 
 See [Configure exclusions in Microsoft Defender Antivirus on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
 
