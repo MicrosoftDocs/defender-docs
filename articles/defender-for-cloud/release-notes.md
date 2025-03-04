@@ -55,9 +55,10 @@ For information on how to enable FIM over Defender for Endpoint, see [File Integ
 
 |Date | Category | Update|
 |--|--|--|
-|February 27|Change|[Improved AWS EC2 Resource Name display](#improved-aws-ec2-resource-name-display)|
+| February 27 | Change |[Improved AWS EC2 Resource Name display](#improved-aws-ec2-resource-name-display)|
 | February 27 | GA | [On-demand malware scanning in Microsoft Defender for Storage](#on-demand-malware-scanning-in-microsoft-defender-for-storage) |
 | February 27 | GA | [Defender for Storage malware scanning for blobs up to 50 GB](#defender-for-storage-malware-scanning-for-blobs-up-to-50-gb) |
+| February 23 | Preview | [Container registry agnostic agentless vulnerability assessment for AKS runtime containers (Preview)](#container-registry-agnostic-agentless-vulnerability-assessment-for-aks-runtime-containers-preview) |
 | February 23 | Preview | [Data and AI security dashboard (Preview)](#data-and-ai-security-dashboard-preview) |
 | February 19 | Preview | [MDC Cost Calculator (Preview)](#mdc-cost-calculator-preview) |
 | February 19 | Preview | [31 new and enhanced multicloud regulatory standards coverage](#31-new-and-enhanced-multicloud-regulatory-standards-coverage) |
@@ -95,6 +96,12 @@ Defender for Storage malware scanning now supports blobs up to 50GB in size (pre
 Please note that for storage accounts where large blobs are uploaded, the increased blob size limit will result in higher monthly charges.
 
 To avoid unexpected high charges, you may want to set an appropriate cap on the total GB scanned per month. For more information, see [Cost control for on-upload malware scanning](on-upload-malware-scanning.md).
+
+### Container registry agnostic agentless vulnerability assessment for AKS runtime containers (Preview)
+
+February 23, 2025
+
+Defender for Containers and Defender for Cloud Security Posture Management (CSPM) plans, now include container registry agnostic agentless vulnerability assessment for AKS runtime containers. This enhancement extends vulnerability assessment coverage to include running containers with images from any registry (not restricted to supported registries), in addition to scanning Kubernetes add-ons and third party tools running in your AKS clusters. To enable this feature, make sure that **Agentless machine scanning** is enabled for your subscription in the Defender for Cloud environment settings.
 
 ### Data and AI security dashboard (Preview)
 

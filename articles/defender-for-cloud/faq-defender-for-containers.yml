@@ -101,10 +101,16 @@ sections:
       - question: |
           Does Defender for Containers scan images in Microsoft Container Registry?
         answer: |
-          Currently, Defender for Containers can scan images in Azure Container Registry (ACR) and AWS Elastic Container Registry (ECR) only.
-          Docker Registry, Microsoft Artifact Registry/Microsoft Container Registry, and Microsoft Azure Red Hat OpenShift (ARO) built-in container image registry aren't supported.
-          Images should first be imported to ACR. Learn more about [importing container images to an Azure container registry](/azure/container-registry/container-registry-import-images?tabs=azure-cli).
+          Currently, Defender for Containers can scan images in Azure Container Registry (ACR), AWS Elastic Container Registry (ECR), Google Container Registry (GCR), Google Archive Registry (GAR) and supported external registries only.
+          Microsoft Artifact Registry/Microsoft Container Registry, and Microsoft Azure Red Hat OpenShift (ARO) built-in container image registry aren't supported.
 
+      - question: |
+          How does Defender for Containers scan a running container?
+        answer: |
+          Defender for Cloud performs agentless scanning of VMs. Snapshots of VM disks are taken every 24 hours to perform out-of-band analysis, without affecting performance.
+
+          Data plane containers residing in VM disk snapshots, agnostic of the container image registry from which it was pulled, are assessed for vulnerabilities using Microsoft Defender Vulnerability Management (MDVM). MDVM generates security recommendations for any vulnerable container images.
+          
       - question: |
           Can I get the scan results via REST API?
         answer: |
@@ -176,7 +182,7 @@ sections:
           How do I upgrade from the retired Trivy vulnerability assessment to the AWS vulnerability assessment powered by Microsoft Defender Vulnerability Management?
         answer: |
 
-          The following steps will remove the single registry recommendation powered by Trivy and add the [new registry and runtime recommendations that are powered by MDVM](agentless-vulnerability-assessment-aws.md).
+          The following steps will remove the single registry recommendation powered by Trivy and add the [new registry and runtime recommendations that are powered by MDVM](agentless-vulnerability-assessment-azure.md).
 
 
           1. Open the relevant AWS connector.
