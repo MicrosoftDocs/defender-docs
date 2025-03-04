@@ -17,7 +17,7 @@ ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
 ms.topic: how-to
-ms.date: 08/15/2024
+ms.date: 03/04/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 search.appverid: met150
 ---
