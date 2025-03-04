@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 10/09/2024
+ms.date: 03/03/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -73,13 +73,22 @@ This article describes how admins can manage entries for URLs in the Microsoft D
 
 ## Create allow entries for URLs
 
-Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
 To create allow entries for URLs, use either of the following methods:
 
 - From the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a blocked URL as **I've confirmed it's clean**, you can select **Allow this URL** to add and allow entry for the URL on the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
 
+  This method is required to override malware and high confidence phishing verdicts.
+
 - From the **URLs** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
+
+  This method is available to override the following verdicts only:
+
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
 
 [!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
 >
@@ -93,7 +102,7 @@ To create allow entries for URLs, use either of the following methods:
 
 2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add** and than select **Allow**.
+3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Allow**.
 
 4. In the **Allow URLs** flyout that opens, configure the following settings:
 

@@ -98,7 +98,7 @@ To create allow entries for domains and email addresses, use either of the follo
 
 2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add** and than select **Allow**.
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Allow**.
 
 4. In the **Allow domains & addresses** flyout that opens, configure the following settings:
 
