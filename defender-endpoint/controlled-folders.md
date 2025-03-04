@@ -93,7 +93,7 @@ Default folders appear in the user's profile, under **This PC**, as shown in the
 ![Protected Windows default systems folders](media/defaultfolders.png)
 
 > [!NOTE]
-> You can configure additional folders as protected, but you cannot remove the Windows system folders that are protected by default.
+> You can configure more folders as protected, but you can't remove the Windows system folders that are protected by default.
 
 ## Requirements for controlled folder access
 
@@ -103,7 +103,7 @@ Controlled folder access requires enabling [Microsoft Defender Antivirus real-ti
 
 ## Review controlled folder access events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender-xdr/microsoft-365-security-center-mde).
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal. For more information, see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender-xdr/microsoft-365-security-center-mde).
 
 You can query Microsoft Defender for Endpoint data by using [Advanced hunting](/defender-xdr/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use [advanced hunting](/defender-xdr/advanced-hunting-overview) to see how controlled folder access settings would affect your environment if they were enabled.
 
