@@ -27,6 +27,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## March 2025
+
+|Date | Category | Update|
+|--|--|--|
+| March 03 | GA | [General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government](#general-availability-of-file-integrity-monitoring-fim-based-on-microsoft-defender-for-endpoint-in-azure-government) |
+
+### General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government 
+
+March 03, 2025
+
+File Integrity Monitoring based on Microsoft Defender for Endpoint is now GA in Azure Government (GCCH) as part of Defender for Servers Plan 2. 
+- Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
+- Identify potential security issues by detecting suspicious file content changes.
+
+This improved FIM experience replaces the existing one that set for deprecation with the Log Analytics Agent (MMA) retirement. The [FIM experience over MMA](/azure/defender-for-cloud/file-integrity-monitoring-enable-log-analytics) will remain supported in Azure Government until the end of March 2023.
+
+With this release, an in-product experience will be released to allow you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
+
+For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](/azure/defender-for-cloud/file-integrity-monitoring-enable-defender-endpoint). For information on how to disable previous versions and use the migration tool, see [Migrate File Integrity Monitoring from previous versions](/azure/defender-for-cloud/migrate-file-integrity-monitoring).
+
+> [!IMPORTANT]
+> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds is not currently planned to be supported.
+> 
+
 ## February 2025
 
 |Date | Category | Update|
@@ -44,9 +68,9 @@ February 27, 2025
 
 **Estimated date for change:** March 2025
 
-We’re enhancing how resource names are shown for AWS EC2 instances in our platform. If an EC2 instance has a “name” tag defined, the *Resource Name* field will now display the value of that tag. If no “name” tag is present, the *Resource Name* field will continue to show the *instance ID* as before. The *Resource ID* will still be available in the *Resource ID* field for reference.
+We're enhancing how resource names are shown for AWS EC2 instances in our platform. If an EC2 instance has a "name" tag defined, the *Resource Name* field will now display the value of that tag. If no "name" tag is present, the *Resource Name* field will continue to show the *instance ID* as before. The *Resource ID* will still be available in the *Resource ID* field for reference.
 
-Using the EC2 “name” tag lets you easily identify your resources with custom, meaningful names instead of IDs. This makes it quicker to locate and manage specific instances, reducing the time and effort spent searching or cross-referencing instance details.
+Using the EC2 "name" tag lets you easily identify your resources with custom, meaningful names instead of IDs. This makes it quicker to locate and manage specific instances, reducing the time and effort spent searching or cross-referencing instance details.
 
 ### On-demand malware scanning in Microsoft Defender for Storage 
 
