@@ -82,7 +82,7 @@ Although potentially unwanted application protection in Microsoft Edge (Chromium
 3. Under the **Security** section, turn on **Block potentially unwanted apps**.
 
 > [!TIP]
-> If you are running Microsoft Edge (Chromium-based), you can safely explore the URL-blocking feature of PUA protection by testing it out on one of our [Microsoft Defender SmartScreen demo pages](https://demo.smartscreen.msft.net/).
+> If you're running Microsoft Edge (Chromium-based), you can safely explore the URL-blocking feature of PUA protection by testing it out on one of our [Microsoft Defender SmartScreen demo pages](https://demo.smartscreen.msft.net/).
 
 ### Block URLs with Microsoft Defender SmartScreen
 
@@ -96,7 +96,7 @@ Although Microsoft Defender for Endpoint has its own blocklist based upon a data
 
 The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can detect and block PUA on endpoints in your network.
 
-Microsoft Defender Antivirus blocks detected PUA files and any attempts to download, move, run, or install them. Blocked PUA files are then moved to quarantine. When a PUA file is detected on an endpoint, Microsoft Defender Antivirus sends a notification to the user ([unless notifications have been disabled](configure-notifications-microsoft-defender-antivirus.md) in the same format as other threat detections. The notification is prefaced with `PUA:` to indicate its content.
+Microsoft Defender Antivirus blocks detected PUA files and any attempts to download, move, run, or install them. Blocked PUA files are then moved to quarantine. When a PUA file is detected on an endpoint, Microsoft Defender Antivirus sends a notification to the user ([unless notifications are disabled](configure-notifications-microsoft-defender-antivirus.md) in the same format as other threat detections. The notification is prefaced with `PUA:` to indicate its content.
 
 The notification appears in the usual [quarantine list within the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
@@ -123,7 +123,7 @@ See the following articles:
 
 PUA protection is enabled by default in the Microsoft Configuration Manager (Current Branch).
 
-See [How to create and deploy antimalware policies: Scheduled scans settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) for details on configuring Microsoft Configuration Manager (Current Branch).
+See [How to create and deploy anti-malware policies: Scheduled scans settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) for details on configuring Microsoft Configuration Manager (Current Branch).
 
 For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unwanted Application Protection Policy for Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508770(v=technet.10)#BKMK_PUA).
 
@@ -156,7 +156,7 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 Set-MpPreference -PUAProtection Enabled
 ```
 
-Setting the value for this cmdlet to `Enabled` turns on the feature if it has been disabled.
+Setting the value for this cmdlet to `Enabled` turns on the feature if it is disabled.
 
 #### To set PUA protection to audit mode
 
@@ -185,9 +185,9 @@ get-mpPreference | ft PUAProtection
 
 |Value | Description|
 | -------- | -------- |
-| 0 | PUA Protection off (Default).  Microsoft Defender Antivirus won't protect against potentially unwanted applications.  |
-|1 |PUA Protection on. Detected items are blocked. They will show in history along with other threats.|
-|2|Audit mode. Microsoft Defender Antivirus will detect potentially unwanted applications but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer.|
+| `0` | PUA Protection off (Default).  Microsoft Defender Antivirus won't protect against potentially unwanted applications.  |
+| `1` | PUA Protection on. Detected items are blocked. They will show in history along with other threats.|
+| `2` | Audit mode. Microsoft Defender Antivirus will detect potentially unwanted applications but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer.|
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
 
@@ -238,16 +238,14 @@ Sometimes a file is erroneously blocked by PUA protection, or a feature of a PUA
 
 For more information, see [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
-> [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 ## See also
 
 - [Next-generation protection](microsoft-defender-antivirus-windows.md)
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Configure Defender for Endpoint on Android features](android-configure.md)
+- [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
