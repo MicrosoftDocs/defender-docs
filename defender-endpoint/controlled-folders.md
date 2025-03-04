@@ -148,7 +148,7 @@ You can use the Windows Security app to view the list of folders that are protec
 
 3. Under **Ransomware protection**, select **Manage ransomware protection**.
 
-4. If controlled folder access is turned off, you'll need to turn it on. Select **protected folders**.
+4. If controlled folder access is turned off, you need to turn it on. Select **protected folders**.
 
 5. Do one of the following steps:
 
@@ -156,8 +156,8 @@ You can use the Windows Security app to view the list of folders that are protec
    - To remove a folder, select it, and then select **Remove**.
 
    > [!IMPORTANT]
-   > Do not add local share paths (loopbacks) as protected folders. Use the local path instead. For example, if you have shared `C:\demo` as `\\mycomputer\demo`, do not add `\\mycomputer\demo` to the list of protected folders. Instead add `C:\demo`.
+   > Don't add local share paths (loopbacks) as protected folders. Use the local path instead. For example, if you have shared `C:\demo` as `\\mycomputer\demo`, don't add `\\mycomputer\demo` to the list of protected folders. Instead add `C:\demo`.
 
-[Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you cannot remove them from the list. Subfolders are also included in protection when you add a new folder to the list.
+[Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you can't remove them from the list. Subfolders are also included in protection when you add a new folder to the list.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
