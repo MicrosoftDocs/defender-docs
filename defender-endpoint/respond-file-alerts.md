@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 06/26/2024
+ms.date: 03/04/2025
 ---
 
 # Take response actions on a file
