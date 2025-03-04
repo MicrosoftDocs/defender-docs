@@ -1,6 +1,6 @@
 ---
 title: Protect important folders from ransomware from encrypting your files with controlled folder access
-description: Files in default folders can be protected from being changed by malicious apps. Prevent ransomware from encrypting your files.
+description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/04/2025
@@ -43,11 +43,11 @@ Controlled folder access helps protect your valuable data from malicious apps an
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Windows Sever 2016
+- Windows Server 2016
 - Windows Server 2012 R2
 
 > [!NOTE]
-> Scripting engines like PowerShell are not trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](/defender-endpoint/customize-controlled-folders).  
+> Scripting engines like PowerShell aren't trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](/defender-endpoint/customize-controlled-folders).  
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
@@ -58,11 +58,11 @@ Controlled folder access works best with [Microsoft Defender for Endpoint](micro
 
 Controlled folder access works by only allowing trusted apps to access protected folders. Protected folders are specified when controlled folder access is configured. Typically, commonly used folders, such as those used for documents, pictures, downloads, and so on, are included in the list of controlled folders.
 
-Controlled folder access works with a list of trusted apps. Apps that are included in the list of trusted software work as expected. Apps that are not included in the list are prevented from making any changes to files inside protected folders.
+Controlled folder access works with a list of trusted apps. Apps that are included in the list of trusted software work as expected. Apps that aren't included in the list are prevented from making any changes to files inside protected folders.
 
-Apps are added to the list based upon their prevalence and reputation. Apps that are highly prevalent throughout your organization and that have never displayed any behavior deemed malicious are considered trustworthy. Those apps are added to the list automatically.
+Apps are added to the list based upon their prevalence and reputation. Apps that are highly prevalent throughout your organization and that haven't ever displayed any behavior deemed malicious are considered trustworthy. Those apps are added to the list automatically.
 
-Apps can also be added manually to the trusted list by using Configuration Manager or Intune. Additional actions can be performed from the Microsoft Defender portal.
+Apps can also be added manually to the trusted list by using Configuration Manager or Intune. Other actions can be performed in the Microsoft Defender portal.
 
 ## Why controlled folder access is important
 
@@ -76,7 +76,7 @@ You can use [audit mode](overview-attack-surface-reduction.md) to evaluate how c
 
 Windows system folders are protected by default, along with several other folders:
 
-The protected folders include common system folders (including boot sectors), and you can add additional folders. You can also allow apps to give them access to the protected folders.  The Windows systems folders that are protected by default are:
+The protected folders include common system folders (including boot sectors), and you can add other folders. You can also allow apps to give them access to the protected folders. The Windows systems folders that are protected by default are:
 
 - `c:\Users\<username>\Documents`
 - `c:\Users\Public\Documents`
