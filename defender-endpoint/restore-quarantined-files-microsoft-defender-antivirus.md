@@ -45,30 +45,31 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
 
 ### Using the MpCmdRun command line
 
-> [!TIP]
-> You can also restore a file from quarantine by using Command Prompt. See [Restore file from quarantine](respond-file-alerts.md#restore-file-from-quarantine). 
+1. Open Command Prompt as an administrator.
 
+2. Type the following command, and then press **Enter**:
 
-### Using the Download or collect file in Microsoft Defender for Endpoint Plan 2
+   ```dos
+   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name <filename>
+   ```
 
-[Download or collect file](/defender-endpoint/respond-file-alerts) response action
+### Download or collect the file
+
+Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download files that are in quarantine.
+
+The **Download file** button can have the following states:
+
+   - **Active** - You are able to collect the file. 
+   - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
+
+For more details, see [Download or collect file](/respond-file-alerts#download-or-collect-file).
 
 ## See also
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)
-
 - [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
-> [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
