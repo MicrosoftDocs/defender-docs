@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, and Windows Server 2022.
+description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
@@ -28,6 +28,7 @@ ms.collection:
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803 or later
