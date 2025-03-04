@@ -97,7 +97,7 @@ To create block entries for files, use either of the following methods:
 
 2. On the **Tenant Allow/Block Lists** page, select the **Files** tab.
 
-3. On the **Files** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **Files** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add** and than select **Block**.
 
 4. In the **Block files** flyout that opens, configure the following settings:
 
@@ -142,6 +142,7 @@ On the **Files** tab, you can sort the entries by clicking on an available colum
 
 - **Value**: The file hash.
 - **Action**: The available values are  **Allow** or **Block**.
+- **Override verdicts**: The available values are **Upto malware** for both block and allow entries
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
