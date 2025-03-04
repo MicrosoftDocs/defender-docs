@@ -74,7 +74,12 @@ Understand the following prerequisites before you create indicators for files:
 
 ### macOS prerequisites
 
+- Real-Time Protection (RTP) needs to be active.
+
 - [File hash computation is enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line) by running `mdatp config enable-file-hash-computation --value enabled`
+
+> [!NOTE]
+> File indicators for macOS, supports Mach-O files (akin to .exe's and dll's in Windows), scripts such as sh/bash, and AppleScript File (.scpt) files only.
 
 ### Linux prerequisites
 
