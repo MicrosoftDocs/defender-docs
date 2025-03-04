@@ -718,8 +718,6 @@
       href: ai-threat-protection.md
     - name: Enable threat protection for AI workloads (preview)
       href: ai-onboarding.md
-    - name: Review AI security alerts
-      href: review-ai-alerts.md
     - name: Gain application and end-user context
       href: gain-end-user-context-ai.md
 
