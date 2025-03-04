@@ -59,10 +59,10 @@ Selecting **Download file** from the response actions allows you to download a l
 
 The **Download file** button can have the following states:
 
-   - **Active** - You are able to collect the file. 
-   - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
+   - **Active** - You're able to collect the file. 
+   - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate permissions to collect files.
 
-For more details, see [Download or collect file](/respond-file-alerts#download-or-collect-file).
+For more information, see [Download or collect file](/respond-file-alerts#download-or-collect-file).
 
 ## See also
 
