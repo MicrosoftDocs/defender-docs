@@ -54,7 +54,7 @@ The following table provides information about the values that are returned when
 |`real_time_protection_enabled`|`True` if real-time antivirus protection is enabled; otherwise, `false`.defender is in|
 |`real_time_protection_subsystem`|Subsystem used to serve real-time protection. If real-time protection isn't operating as expected, it shows as `unavailable`.|
 |`release_ring`|Release ring. For more information, see [Deployment rings](onboarding.md).|
-|`tamper_protection`| Status of tamper protection feature. <br/><br/>Can have one of the following values: <br/>- **disabled** - tamper protection is off<br/>- **audit** - tamper protection is monitoring event but does not block them.<br/>- **block** - tamper protection is monitoring events and block them as needed. |
+|`tamper_protection`| Status of tamper protection feature. <br/><br/>Can have one of the following values: <br/>- **disabled** - tamper protection is off.<br/>- **audit** - tamper protection is on but does not block any event.<br/>- **block** - tamper protection is monitoring events and block them as needed. |
 |`troubleshooting_mode`| `True` if defender is in the troubleshooting mode; otherwise, `false`. see [Troubleshooting mode](mac-troubleshoot-mode.md).|
 
 
