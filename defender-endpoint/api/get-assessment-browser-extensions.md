@@ -24,8 +24,9 @@ ms.date: 03/04/2025
 
 **Applies to:**
 
+- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities#vulnerability-management-capabilities-for-endpoints) (add-on for Defender for Endpoint Plan 2 or the standalone version)
-- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Cloud Plan 2](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 Returns all known installed browser extensions and their details for all devices, on a per-device basis.
 
