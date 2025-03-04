@@ -15,7 +15,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 search.appverid: met150
-ms.date: 02/12/2024
+ms.date: 03/04/2025
 ---
 
 # Enable attack surface reduction rules
@@ -50,10 +50,11 @@ You can set attack surface reduction rules for devices that are running any of t
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
+- Windows Server 2025
 
 To use the entire feature-set of attack surface reduction rules, you need:
 
-- Microsoft Defender Antivirus as primary AV (real-time protection on)
+- Microsoft Defender Antivirus as primary antivirus (real-time protection on)
 - [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) on (some rules require that)
 - Windows 10 Enterprise E5 or E3 License
 
