@@ -7,7 +7,7 @@ manager: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
-ms.date: 03/19/2024
+ms.date: 03/04/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
