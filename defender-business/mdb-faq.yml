@@ -128,12 +128,37 @@ sections:
 
       - question: What are the differences between Defender for Business and Defender for Endpoint Plans 1 and 2?
         answer: |
-          Both Defender for Business and Defender for Endpoint provide strong threat protection capabilities for your company's devices (computers, phones, and tablets, which are also referred to as endpoints). The following table summarizes some key differences between these plans.
+          Both Defender for Business and Defender for Endpoint provide strong threat protection capabilities for your company's devices (computers, phones, and tablets, which are also referred to as endpoints). The following table summarizes some differences between these plans.
 
-          | Subscription | Description |
-          |--|--|
-          | Defender for Business | [Defender for Business](mdb-overview.md) is designed for small and medium-sized businesses who have up to 300 users. Capabilities in Defender for Business include next-generation protection, attack surface reduction, endpoint detection & response (EDR), and automated investigation and remediation. <br/><br/>Defender for Business also features [simplified configuration](mdb-setup-configuration.md) and [device onboarding options](mdb-onboard-devices.md) that streamline the overall setup and configuration process. | 
-          | Defender for Endpoint | [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) is an enterprise endpoint security platform designed to help organizations prevent, detect, investigate, and respond to advanced threats. <br/><br/>Defender for Endpoint Plan 1 includes next-generation protection and attack surface reduction capabilities. <br/><br/>Defender for Endpoint Plan 2 extends Plan 1 capabilities with threat and vulnerability management, EDR, automated investigation & remediation, threat hunting, and six months of data retention. |
+          |Capabilities|Defender for<br/>Business|Defender for<br/>Endpoint Plan 2|
+          |---|:---:|:---:|
+          |**Vulnerability management**|||
+          |&nbsp;&nbsp;Microsoft secure score|✔|✔|
+          |&nbsp;&nbsp;Vulnerability management (visibility into software and vulnerabilities)|✔|✔|
+          |&nbsp;&nbsp;Vulnerability remediation based on Intune integration|✔|✔|
+          |&nbsp;&nbsp;Attack surface reduction|✔|✔|
+          |&nbsp;&nbsp;Advanced vulnerability and zero-day exploit mitigations|✔|✔|
+          |&nbsp;&nbsp;Attack surface reduction rules|✔|✔|
+          |&nbsp;&nbsp;Application control|✔|✔|
+          |&nbsp;&nbsp;Network firewall|✔|✔|
+          |&nbsp;&nbsp;Device control (for example, USB)|✔|✔|
+          |&nbsp;&nbsp;Network protection|✔|✔|
+          |&nbsp;&nbsp;Device-based Conditional Access|✔|✔|
+          |&nbsp;&nbsp;Web control / category-based URL blocking|✔|✔|
+          |&nbsp;&nbsp;Ransomware mitigation|✔|✔|
+          |**Next generation protection**|✔|✔|
+          |&nbsp;&nbsp;Advanced cloud protection (deep inspection and detonation) BAFS|✔|✔|
+          |&nbsp;&nbsp;Monitoring, analytics and reporting for Next Generation Protection capabilities|✔|✔|
+          |**Endpoint detection and response**|||
+          |&nbsp;&nbsp;Automatic attack disruption|✔|✔|
+          |&nbsp;&nbsp;Behavioral-based detection (post-breach)|✔|✔|
+          |&nbsp;&nbsp;Rich investigation tools||✔|
+          |&nbsp;&nbsp;Custom detections||✔|
+          |&nbsp;&nbsp;6-month searchable data per endpoint||✔|
+          |&nbsp;&nbsp;Advanced hunting||✔|
+          |&nbsp;&nbsp;Evaluation lab||✔|
+          |&nbsp;&nbsp;Manual response actions (run AV scan, machine isolation, file stop and quarantine)|✔|✔|
+          |&nbsp;&nbsp;Live response||✔|
           
       - question: Can I have a mix of Microsoft endpoint security subscriptions?
         answer: |
