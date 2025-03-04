@@ -121,7 +121,7 @@ Back on the **Domains & email addresses** tab, the entry is listed.
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-New-TenantAllowBlockListItems -ListType Sender -Allow -Entries "DomainOrEmailAddress1","DomainOrEmailAddress1",..."DomainOrEmailAddressN" <-RemoveAfter 45>  [-Notes <String>]
+New-TenantAllowBlockListItems -ListType Sender -Allow -Entries "DomainOrEmailAddress1","DomainOrEmailAddress1",..."DomainOrEmailAddressN" [-RemoveAfter 45]  [-Notes <String>]
 ```
 
 This example adds an allow entry for the specified email addresses. Because we didn't use the ExpirationDate or RemoverAfter parameters, the entry expires after 45 days from last used date.
