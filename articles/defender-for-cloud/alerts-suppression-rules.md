@@ -84,16 +84,24 @@ To delete a rule, use the same three dots menu and select **Remove**.
 
 You can create, view, or delete alert suppression rules using the Defender for Cloud REST API.
 
-The relevant HTTP methods for suppression rules in the REST API are:
+A suppression rule can be created for an alert that has already been triggered. Use the [Alerts REST API](rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress, then create a suppression rule with the [Alerts Suppression Rules REST API](rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true), using the retrieved alert information.
 
-- **PUT**: To create or update a suppression rule in a specified subscription.
+The relevant methods for suppression rules in the [Alerts Suppression Rules REST API](rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) are:
+
+- **UPDATE**:
+
+  - To create or update a suppression rule in a specified subscription.
+
 - **GET**:
 
-  - To list all rules configured for a specified subscription. This method returns an array of the applicable rules.
-  - To get the details of a specific rule on a specified subscription. This method returns one suppression rule.
-  - To simulate the impact of a suppression rule still in the design phase. This call identifies which of your existing alerts would have been dismissed if the rule had been active.
+  - To get the details of a specific suppression rule on a specified subscription. This method returns one suppression rule.
 
-- **DELETE**: Deletes an existing rule (but doesn't change the status of alerts already dismissed by it).
+- **LIST**:
+
+  - To list all suppression rules configured for a specified subscription. This method returns an array of the applicable rules.
+
+- **DELETE**:
+  - Deletes an existing suppression rule (but doesn't change the status of alerts already dismissed by it).
 
 For details and usage examples, see the [API documentation](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
