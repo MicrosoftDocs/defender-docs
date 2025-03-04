@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 11/12/2024
+ms.date: 03/04/2025
 ---
 
 # Device discovery frequently asked questions
@@ -56,7 +56,13 @@ Yes, you can apply filters to exclude unmanaged devices from the device inventor
 
 ## Which onboarded devices can perform discovery?
 
-Onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, or Windows Server 2022 can perform discovery.
+Onboarded devices running the following versions of Windows can perform device discovery:
+
+- Windows 11
+- Windows 10, version 1809 or later
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
 
 ## What happens if my onboarded devices is connected to my home network, or to public access point?
 
