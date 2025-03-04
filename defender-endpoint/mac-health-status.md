@@ -21,6 +21,8 @@ search.appverid: met150
 
 # Troubleshoot agent health issues
 
+## Health status
+
 The following table provides information about the values that are returned when you run the `mdatp health` command and their corresponding descriptions.
 
 | Value | Description |
