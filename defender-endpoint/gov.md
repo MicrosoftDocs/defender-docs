@@ -33,7 +33,7 @@ This offering is available to GCC, GCC High, and DoD customers and is based on t
 
 ## Licensing requirements
 
-Microsoft Defender for Endpoint for US Government customers requires one of the following Microsoft volume licensing offers:
+Microsoft Defender for Endpoint for US Government customers requires one of the Microsoft volume licensing offers for desktop and server licensing.
 
 ### Desktop licensing
 
