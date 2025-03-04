@@ -79,7 +79,6 @@ Our approach to information protection can be split into the following phases th
     1. Under **Inspection method**, choose and configure one of the following classification services:
 
         - **[Data Classification Services](dcs-inspection.md)**: Uses classification decisions you've made across Microsoft 365, Microsoft Purview Information Protection, and Defender for Cloud Apps to provide a unified labeling experience. This is the preferred content inspection method as it provides a consistent and unified experience across Microsoft products.
-        - **[Built-in DLP](content-inspection-built-in.md)**: Inspects files for sensitive information using our built-in DLP content inspection engine.
 
     1. For highly sensitive files, select **Create an alert** and choose the alerts you require, so that you're informed when there are files with unprotected sensitive information in your organization.
     1. Select **Create**.

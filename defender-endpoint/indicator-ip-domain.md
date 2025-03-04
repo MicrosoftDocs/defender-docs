@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: 
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 03/04/2025
 ---
 
 # Create indicators for IPs and URLs/domains
@@ -50,6 +50,7 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 
 - Windows 11
 - Windows 10, version 1709 or later
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
