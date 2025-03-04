@@ -7,7 +7,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: jesquive
 ms.localizationpriority: medium
-ms.date: 09/18/2024
+ms.date: 03/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -86,7 +86,7 @@ The following OS versions are supported:
 |Windows 10, version 1803 (with [KB4598245](https://support.microsoft.com/help/4598245) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|
 |Windows 10, version 1709|![No.](media/svg/check-no.svg) <br /> Note: Won't be supported|![Yes](media/svg/check-yes.svg) With [KB4499147](https://support.microsoft.com/help/4499147) <sup>1</sup> <br /> Note: [Deprecated](/lifecycle/announcements/revised-end-of-service-windows-10-1709), please upgrade|![No](media/svg/check-no.svg) <br /> Note: Won't be supported|
 |Windows 10, version 1703 and earlier|![No.](media/svg/check-no.svg) <br /> Note: Won't be supported|![No](media/svg/check-no.svg) <br /> Note: Won't be supported|![No](media/svg/check-no.svg) <br /> Note: Won't be supported|
-|Windows Server 2022|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2022 and later|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2019 (with [KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2016 (Modern) <sup>2</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2012 R2 (Modern) <sup>2</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
