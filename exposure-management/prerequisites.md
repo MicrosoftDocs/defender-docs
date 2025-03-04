@@ -106,6 +106,23 @@ C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the fi
 
     ``` DeviceInfo | project DeviceName, ClientVersion ```
 
+## Data freshness, retention, and related functionality
+
+We currently ingest and process supported data from first-party Microsoft products, making it available within the enterprise exposure graph and applicable Microsoft Security Exposure Management experiences built on top of graph data within 72 hours of its production at the source product.
+
+Microsoft product data is retained for no less than 14 days in the enterprise exposure graph and/or Microsoft Security Exposure Management. Only the latest data snapshot received from Microsoft products is retained; we do not store historical data.
+
+Some enterprise exposure graph and/or Microsoft Security Exposure Management experiences data is available for querying via Advanced Hunting and is subject to Advanced Hunting service limitations.
+
+We reserve the right to modify some or all of these parameters in the future, including:
+
+- Data ingestion frequency and freshness: We may increase the current 72-hour latency (decrease the frequency of data ingestion) for some or all Microsoft data sources.
+- Data retention period: We may decrease the current 14-day data retention period.
+- Service features and functionality: We may alter, limit, or discontinue specific features, capabilities, or functionalities of the service built on top of the enterprise exposure graph and/or Microsoft Security Exposure Management data.
+- Data query limits: We may impose limitations on the number, frequency, or type of data queries that can be performed against enterprise exposure graph or Microsoft Security Exposure Management data.
+
+ We will make reasonable efforts to provide advance notice of any significant changes to the service. However, you acknowledge and agree that you are solely responsible for monitoring any such notifications.
+
 ## Getting support
 
 To get support, select the Help question mark icon in the Microsoft Security toolbar.
