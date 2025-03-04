@@ -32,7 +32,7 @@ The following table provides information about the values that are returned when
 |`cloud_enabled`|`True` if cloud-delivered protection is enabled; otherwise, `false`.|
 |`cloud_pin_certificate_thumbs`| pinned cloud certificate's thumbprints. |
 |`conflicting_applications`|List of applications that are possibly conflicting with Microsoft Defender for Endpoint. This list includes, but isn't limited to, other security products and other applications known to cause compatibility issues.|
-|`data_loss_prevention_status`|Status of data loss prevention. Can have one of the following values: <br/>- **unknown**<br/>- **unsupported_os**<br/>- **unsupported_os_version**<br/>- **disabled**<br/>- **unhealty**<br/>- **dormant**<br/>- **ready**<br/>- **active**|
+|`data_loss_prevention_status`|Status of data loss prevention. Can have one of the following values: <br/>- **unknown**<br/>- **unsupported_os**<br/>- **unsupported_os_version**<br/>- **disabled**<br/>- **unhealthy**<br/>- **dormant**<br/>- **ready**<br/>- **active**|
 |`definitions_status`|Status of antivirus definitions. Can have one of the following values: <br/>- **up_to_date**<br/>- **updating**<br/>- **unavailable**|
 |`definitions_updated`|Date and time of last antivirus definition update.|
 |`definitions_updated_minutes_ago`|Number of minutes since last antivirus definition update.|
@@ -41,7 +41,7 @@ The following table provides information about the values that are returned when
 |`device_control_enforcement_level`| Device control activation statue. |
 |`edr_configuration_version`|EDR configuration version.|
 |`edr_device_tags`|List of tags associated with the device.|
-|`edr_early_preview_enabled`|Setting of edr early preview. Can have one of the following values: <br/>- **disabled** <br/>- **enabled**|
+|`edr_early_preview_enabled`|Setting of EDR early preview. Can have one of the following values: <br/>- **disabled** <br/>- **enabled**|
 |`edr_group_ids`|Group ID that the device is associated with.|
 |`edr_machine_id`|Device identifier used in the Microsoft Defender portal.|
 |`engine_load_status`|Status of antivirus engine to determine whether it's running. <br/><br/>Can have one of the following values: <br/>- **Engine not loaded** - antivirus engine process is down<br/>- **Engine load succeeded** - antivirus engine process is up and running|
@@ -51,7 +51,7 @@ The following table provides information about the values that are returned when
 |`licensed`|`True` if the device is onboarded to a tenant; otherwise, `false`.|
 |`log_level`|Current log level for the product. <br/><br/>Can have one of the following values: <br/>- **info** <br/>- **debug**|
 |`machine_guid`|Unique machine identifier used by the antivirus component.|
-|`network_protection_enforcement_level`|Mode of network protection. <br/><br/>Can have one of the following: <br/>- **disabled** - all components associated with network protection are disabled<br/>- **block** - network protection prevents connection to malicious websites<br/>- **audit** - Check how blocks occur|
+|`network_protection_enforcement_level`|Mode of network protection. <br/><br/>Can have one of the following values: <br/>- **disabled** - all components associated with network protection are disabled<br/>- **block** - network protection prevents connection to malicious websites<br/>- **audit** - Check how blocks occur|
 |`network_protection_status`|Status of the network protection component (macOS only).<br/><br/> Can have one of the following values: <br/>- **starting** - Network protection is starting<br/>- **failed_to_start** - Network protection couldn't be started due to an error<br/>- **started** - Network protection is running on the device<br/>- **restarting** - Network protection is restarting<br/>- **stopping** - Network protection is stopping<br/>- **stopped** - Network protection isn't running|
 |`org_id`|Organization that the device is onboarded to. If the device isn't yet onboarded to any organization, it shows as `unavailable`. For more information on onboarding, see [Onboard to Microsoft Defender for Endpoint](onboarding.md).|
 |`passive_mode_enabled`|`True` if the antivirus component is set to run in passive mode; otherwise, `false`.|
@@ -61,7 +61,7 @@ The following table provides information about the values that are returned when
 |`real_time_protection_subsystem`|Subsystem used to serve real-time protection. If real-time protection isn't operating as expected, it shows as `unavailable`.|
 |`release_ring`|Release ring. For more information, see [Deployment rings](onboarding.md).|
 |`tamper_protection`| Status of tamper protection feature. <br/><br/>Can have one of the following values: <br/>- **disabled** - tamper protection is off.<br/>- **audit** - tamper protection is on but does not block any event.<br/>- **block** - tamper protection is monitoring events and block them as needed. |
-|`troubleshooting_mode`| `True` if defender is in the troubleshooting mode; otherwise, `false`. see [Troubleshooting mode](mac-troubleshoot-mode.md).|
+|`troubleshooting_mode`| `True` if Defender for Endpoint is in troubleshooting mode; otherwise, `false`. see [Troubleshooting mode](mac-troubleshoot-mode.md).|
 
 ## Component specific health
 
