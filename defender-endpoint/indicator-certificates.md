@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 03/04/2025
 ---
 
 # Create indicators based on certificates
