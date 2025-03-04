@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: conceptual
 ms.subservice: ngp
-ms.date: 08/27/2024
+ms.date: 03/04/2025
 ---
 
 # Get started with troubleshooting mode in Microsoft Defender for Endpoint 
@@ -81,7 +81,7 @@ During troubleshooting mode, you can use the PowerShell command `Set-MPPreferenc
 
 ## Prerequisites
 
-- A device running Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, or Windows Server 2022.
+- A device running Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
 
      |Semester/Redstone|OS version|Release|
      |:---|:---|:---|
