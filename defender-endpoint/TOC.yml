@@ -232,6 +232,8 @@
             href: mac-resources.md
           - name: Troubleshoot Microsoft Defender for Endpoint on macOS
             items:
+            - name: Troubleshoot agent health issues
+              href: mac-health-status.md
             - name: Troubleshooting mode on macOS
               href: mac-troubleshoot-mode.md
             - name: Troubleshoot macOS installation issues
