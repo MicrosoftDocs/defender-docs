@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 03/03/2025
+ms.date: 03/04/2025
 ---
 
 # Detect and block potentially unwanted applications
@@ -36,6 +36,7 @@ ms.date: 03/03/2025
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
 
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803 or later
@@ -87,7 +88,7 @@ Although potentially unwanted application protection in Microsoft Edge (Chromium
 
 In Chromium-based Microsoft Edge with PUA protection turned on, Microsoft Defender SmartScreen protects you from PUA-associated URLs.
 
-Security admins can [configure](/DeployEdge/configure-microsoft-edge) how Microsoft Edge and Microsoft Defender SmartScreen work together to protect groups of users from PUA-associated URLs. There are several [group policy settings](/DeployEdge/microsoft-edge-policies#smartscreen-settings) explicitly for Microsoft Defender SmartScreen available, including [one for blocking PUA](/DeployEdge/microsoft-edge-policies#smartscreenpuaenabled). In addition, admins can [configure Microsoft Defender SmartScreen](/microsoft-edge/deploy/available-policies?source=docs#configure-windows-defender-smartscreen) as a whole, using group policy settings to turn Microsoft Defender SmartScreen on or off.
+Security administrators can [configure](/DeployEdge/configure-microsoft-edge) how Microsoft Edge and Microsoft Defender SmartScreen work together to protect groups of users from PUA-associated URLs. There are several [group policy settings](/DeployEdge/microsoft-edge-policies#smartscreen-settings) explicitly for Microsoft Defender SmartScreen available, including [one for blocking PUA](/DeployEdge/microsoft-edge-policies#smartscreenpuaenabled). In addition, admins can [configure Microsoft Defender SmartScreen](/microsoft-edge/deploy/available-policies?source=docs#configure-windows-defender-smartscreen) as a whole, using group policy settings to turn Microsoft Defender SmartScreen on or off.
 
 Although Microsoft Defender for Endpoint has its own blocklist based upon a data set managed by Microsoft, you can customize this list based on your own threat intelligence. If you [create and manage indicators](indicators-overview.md) in the Microsoft Defender for Endpoint portal, Microsoft Defender SmartScreen respects the new settings.
 
