@@ -2,7 +2,7 @@
 title: Data and AI security dashboard (Preview)
 description: Discover the capabilities of the Data and AI Security Dashboard in Microsoft Defender for Cloud. Enhance your security posture and manage risks effectively.
 ms.topic: concept-article
-ms.date: 02/12/2025
+ms.date: 03/03/2025
 #customer intent: As a security professional, I want to understand the information presented to me on the data and AI security dashboard so that I can effectively manage the security of my organization's data and AI estate, risks and insights.
 ---
 
@@ -31,12 +31,14 @@ The Data and AI security dashboard allows you to:
 >
 > You must also register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
 >
->  You must also have the following permissions and role:
-> - **Permissions**:
->  - Microsoft.Security/assessments/read
->  - Microsoft.Security/assessments/subassessments/read
->  - Microsoft.Security/alerts/read
-> - **Role** - the minimum required privileged role-based access control role of **Security explorer**.
+>  You must also have the following:
+>
+> **Permissions**:
+> - Microsoft.Security/assessments/read
+> - Microsoft.Security/assessments/subassessments/read
+> - Microsoft.Security/alerts/read
+> 
+> **Role** - the minimum required privileged role-based access control role of **Security explorer**.
 
 ## Data and AI security overview
 
