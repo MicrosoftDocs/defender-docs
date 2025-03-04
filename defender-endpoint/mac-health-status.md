@@ -66,6 +66,8 @@ You can get more detailed health information for different Defender's features w
 
 mdatp health --details permissions
 
+mdatp health --details system_extensions
+
 mdatp health --details edr
 
 mdatp health --details definitions
