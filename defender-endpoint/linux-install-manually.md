@@ -391,73 +391,72 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 
    > [!NOTE]
    > Initially the client device isn't associated with an organization and the *orgId* attribute is blank.
-
+   
    ```bash
    mdatp health --field org_id
    ```
-
-2. Run `MicrosoftDefenderATPOnboardingLinuxServer.py`.
+   
+1. Run one of the below scenarios.
 
    > [!NOTE]
    > To run this command, you must have `python` or `python3` installed on the device depending on the distro and version. If needed, see [Step-by-step Instructions for Installing Python on Linux](https://opensource.com/article/20/4/install-python-linux).
    > 
    > To onboard a device that was previously offboard, you must remove the mdatp_offboard.json file located at /etc/opt/microsoft/mdatp.
-
-   If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`.
-
+   
+   If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`. Run the below command:
+   
    ```bash
    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
    ```
-
-   For the rest of distros and versions, you need to use `python`.
-
+   
+   For the rest of distros and versions, you need to use `python`. Run the below command:
+   
    ```bash
    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
    ```
-
-3. Verify that the device is now associated with your organization and reports a valid organization identifier:
+   
+1. Verify that the device is now associated with your organization and reports a valid organization identifier:
 
    ```bash
    mdatp health --field org_id
    ```
-
-4. Check the health status of the product by running the following command. A return value of `true` denotes that the product is functioning as expected:
+   
+1. Check the health status of the product by running the following command. A return value of `true` denotes that the product is functioning as expected:
 
    ```bash
    mdatp health --field healthy
    ```
-
+   
    > [!IMPORTANT]
    > When the product starts for the first time, it downloads the latest anti-malware definitions. This process might take up to a few minutes depending on the network connectivity. During this time, the command mentioned earlier returns a value of `false`. You can check the status of the definition update using the following command:
-   >
+   > 
    > ```bash
    > mdatp health --field definitions_status
    > ```
-   >
    > You might also need to configure a proxy after completing the initial installation. See [Configure Defender for Endpoint on Linux for static proxy discovery: Post-installation configuration](linux-static-proxy-configuration.md#post-installation-configuration).
-
-5. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+   
+1. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
    1. Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
-
+   
       ```bash
       mdatp health --field real_time_protection_enabled
       ```
-
+      
       If it isn't enabled, execute the following command:
-
+      
       ```bash
       mdatp config real-time-protection --value enabled
       ```
-
-   2. Open a Terminal window and execute the following command to run a detection test:
+      
+   1. Open a Terminal window and execute the following command to run a detection test:
    
       ``` bash
       curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
       ```
-     
-   3. You can run more detection tests on zip files using either of the following commands:
       
+   1. You can run more detection tests on zip files using either of the following commands:
+   
       ```bash
       curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
       curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
@@ -465,22 +464,22 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
       The files should be quarantined by Defender for Endpoint on Linux. 
       
-   4. Use the following command to list all the detected threats:
+   1. Use the following command to list all the detected threats:
    
       ```bash
       mdatp threat list
       ```
-     
-6. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+      
+1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
    1. Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
-
-   2. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and then run the following command: `./mde_linux_edr_diy.sh`
-
+      
+   1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and then run the following command: `./mde_linux_edr_diy.sh`
+   
       After a few minutes, a detection should be raised in Microsoft Defender XDR.
-
-   3. Look at the alert details, machine timeline, and perform your typical investigation steps.
-
+      
+   1. Look at the alert details, machine timeline, and perform your typical investigation steps.
+      
 ## Microsoft Defender for Endpoint package external package dependencies
 
 The following external package dependencies exist for the `mdatp` package:
