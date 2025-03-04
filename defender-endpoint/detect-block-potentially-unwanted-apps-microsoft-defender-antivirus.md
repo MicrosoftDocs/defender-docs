@@ -7,7 +7,7 @@ author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
 audience: ITPro
-ms.reviewer: mimilone, julih
+ms.reviewer: yongrhee, mimilone, julih
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 05/17/2024
+ms.date: 03/03/2025
 ---
 
 # Detect and block potentially unwanted applications
