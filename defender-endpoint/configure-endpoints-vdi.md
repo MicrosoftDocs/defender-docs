@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 02/04/2025
+ms.date: 03/04/2025
 ms.subservice: onboard
 ---
 
@@ -25,10 +25,13 @@ ms.subservice: onboard
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 - Virtual desktop infrastructure (VDI) devices
-- Windows 10 and Windows 11
-- Windows Server 2019 and Windows Server 2022
+- Windows 11
+- Windows 10
 - Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
-- [Windows Server 2012 R2 and Windows Server 2016](/defender-endpoint/configure-server-endpoints#windows-server-2016-and-windows-server-2012-r2)
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2008
 
 
