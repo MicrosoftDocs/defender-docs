@@ -72,53 +72,54 @@ The discovery engine distinguishes between network events that are received in t
 
 By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025 are capturing and analyzing the following protocols:
 
-- ARP
-- CDP
-- DHCP
-- DHCPv6
-- IP (headers)
-- LLDP
-- LLMNR
-- mDNS
-- MNDP
-- MSSQL
-- NBNS
-- SSDP
-- TCP (SYN headers)
-- UDP (headers)
-- WSD
+- `ARP`
+- `CDP`
+- `DHCP`
+- `DHCPv6`
+- `IP` (headers)
+- `LLDP`
+- LL`MNR
+- `mDNS`
+- `MNDP`
+- `MSSQL`
+- `NBNS`
+- `SSDP`
+- `TCP` (SYN headers)
+- `UDP` (headers)
+- `WSD`
 
 ## Which protocols do you use for active probing in Standard discovery?
+
 When a device is configured to run Standard discovery, exposed services are being probed by using the following protocols:
 
-- AFP
-- ARP
-- DHCP
-- FTP
-- HTTP
-- HTTPS
-- ICMP
-- IphoneSync
-- IPP
-- LDAP
-- LLMNR
-- mDNS
-- NBNS
-- NBSS
-- PJL
-- RDP
-- RPC
-- SIP
-- SLP
-- SMB
-- SMTP
-- SNMP
-- SSH
-- Telnet
-- UPNP
-- VNC
-- WinRM
-- WSD
+- `AFP`
+- `ARP`
+- `DHCP`
+- `FTP`
+- `HTTP`
+- `HTTPS`
+- `ICMP`
+- `IphoneSync`
+- `IPP`
+- `LDAP`
+- `LLMNR`
+- `mDNS`
+- `NBNS`
+- `NBSS`
+- `PJL`
+- `RDP`
+- `RPC`
+- `SIP`
+- `SLP`
+- `SMB`
+- `SMTP`
+- `SNMP`
+- `SSH`
+- `Telnet`
+- `UPNP`
+- `VNC`
+- `WinRM`
+- `WSD`
 
 In addition, device discovery might also scan other commonly used ports to improve classification accuracy & coverage.
 
