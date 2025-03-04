@@ -70,7 +70,7 @@ The discovery engine distinguishes between network events that are received in t
 
 ## What protocols are you capturing and analyzing?
 
-By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, or Windows Server 2022 are capturing and analyzing the following protocols:
+By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025 are capturing and analyzing the following protocols:
 
 - ARP
 - CDP
