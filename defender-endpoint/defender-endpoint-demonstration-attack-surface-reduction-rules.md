@@ -14,7 +14,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: asr
-ms.date: 01/15/2024
+ms.date: 03/04/2025
 ---
 
 # Attack surface reduction rules demonstrations
