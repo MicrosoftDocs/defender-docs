@@ -57,10 +57,10 @@ The following table provides information about the values that are returned when
 |`passive_mode_enabled`|`True` if the antivirus component is set to run in passive mode; otherwise, `false`.|
 |`product_expiration`|Date and time when the current product version reaches end of support.|
 |`real_time_protection_available`|`True` if the real-time protection component is healthy; otherwise, `false`.|
-|`real_time_protection_enabled`|`True` if real-time antivirus protection is enabled; otherwise, `false`.defender is in|
+|`real_time_protection_enabled`|`True` if real-time antivirus protection is enabled; otherwise, `false`. |
 |`real_time_protection_subsystem`|Subsystem used to serve real-time protection. If real-time protection isn't operating as expected, it shows as `unavailable`.|
 |`release_ring`|Release ring. For more information, see [Deployment rings](onboarding.md).|
-|`tamper_protection`| Status of tamper protection feature. <br/><br/>Can have one of the following values: <br/>- **disabled** - tamper protection is off.<br/>- **audit** - tamper protection is on but does not block any event.<br/>- **block** - tamper protection is monitoring events and block them as needed. |
+|`tamper_protection`| Status of tamper protection feature. <br/><br/>Can have one of the following values: <br/>- **disabled** - tamper protection is off.<br/>- **audit** - tamper protection is on but doesn't block any event.<br/>- **block** - tamper protection is monitoring events and block them as needed. |
 |`troubleshooting_mode`| `True` if Defender for Endpoint is in troubleshooting mode; otherwise, `false`. see [Troubleshooting mode](mac-troubleshoot-mode.md).|
 
 ## Component specific health
