@@ -1,7 +1,7 @@
 ---
 title: Support and prerequisites 
 description: Understand support and prerequisites for DevOps security in Microsoft Defender for Cloud
-ms.date: 11/05/2023
+ms.date: 03/02/2025
 ms.topic: article
 ms.custom: ignite-2023
 ---
@@ -46,10 +46,9 @@ DevOps security requires the following permissions:
 
 ## Feature availability
 
-The following tables summarize the availability and prerequisites for each feature within the supported DevOps platforms:
+DevOps security capabilities, such as code-to-cloud contextualization, security explorer, attack path analysis, and pull request annotations for Infrastructure-as-Code security findings, are available when you enable the paid Defender Cloud Security Posture Management (CSPM) plan.
 
-> [!NOTE]
-> Starting March 7, 2024, [Defender CSPM](concept-cloud-security-posture-management.md) must be enabled on at least one subscription or multicloud connector in the tenant to benefit from premium DevOps security capabilities which include code-to-cloud contextualization powering security explorer and attack paths and pull request annotations for Infrastructure-as-Code security findings. See details below to learn more.
+The following tables summarize the availability and prerequisites for each feature within the supported DevOps platforms:
 
 ### Azure DevOps
 

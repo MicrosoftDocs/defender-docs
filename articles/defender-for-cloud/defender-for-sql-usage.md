@@ -27,7 +27,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 | AMA extension (IaaS and Arc) | - Publisher: Microsoft.Azure.Monitor<br>  - Type: AzureMonitorWindowsAgent |
 | **Region requirement** | When you enable the plan, a resource group is created in the East US. Ensure this region isn't blocked in your environment. |
 | **Resource naming conventions** | Defender for SQL uses the following naming convention when creating our resources: <br> - Data Collection Rule: `MicrosoftDefenderForSQL--dcr` <br> - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` <br> - Resource group: `DefaultResourceGroup-` <br> - Log analytics workspace: `D4SQL--` <br> - Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag. <br><br> Ensure that Deny policies don't block this naming convention. |
-| **Operating Systems**| Machines running Windows Server 2012 R2 or later are supported. SQL Server 2012 R2 or later is supported for SQL instances. |
+| **Operating Systems**| SQL Server 2012 R2 or later is supported for SQL instances. |
 
 ## Enable the plan
 
