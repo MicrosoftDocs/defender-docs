@@ -13,7 +13,7 @@ Onboarding agentless container posture in Defender CSPM allows you to gain all i
 > [!NOTE]
 > Agentless container posture is available for Azure, AWS, and GCP clouds.
 
-Defender CSPM includes [two extensions](faq-defender-for-containers.yml#what-are-the-extensions-for-agentless-container-posture-management-) that allow for agentless visibility into Kubernetes and containers registries across your organization's software development lifecycle.
+Defender CSPM includes two extensions that allow for agentless visibility into Kubernetes and containers registries across your organization's software development lifecycle: **K8S API access** for Kubernetes cluster discovery and **Registry access** to access images in a supported container registry.
 
 ## How to onboard agentless container posture in Defender CSPM
 
@@ -34,7 +34,7 @@ Defender CSPM includes [two extensions](faq-defender-for-containers.yml#what-are
 A notification message pops up in the top right corner that verifies that the settings were saved successfully.
 
 > [!NOTE]
-> Agentless discovery for Kubernetes uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
+> K8S API access uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
 
 ## Related content
 

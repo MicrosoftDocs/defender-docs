@@ -718,8 +718,6 @@
       href: ai-threat-protection.md
     - name: Enable threat protection for AI workloads (preview)
       href: ai-onboarding.md
-    - name: Review AI security alerts
-      href: review-ai-alerts.md
     - name: Gain application and end-user context
       href: gain-end-user-context-ai.md
 
@@ -933,12 +931,8 @@
             href: kubernetes-nodes-malware.md
       - name: Container registry protection
         items:
-          - name: Vulnerability assessments for Azure
+          - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
-          - name: Vulnerability assessments for AWS
-            href: agentless-vulnerability-assessment-aws.md
-          - name: Vulnerability assessments for GCP
-            href: agentless-vulnerability-assessment-gcp.md
           - name: Vulnerability assessments for Docker Hub
             href: agentless-vulnerability-assessment-docker-hub.md
           - name: Vulnerability assessments for JFrog Artifactory

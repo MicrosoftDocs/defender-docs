@@ -6,87 +6,107 @@ summary: Microsoft Defender for Cloud provides unified security management and a
 metadata:
   title: Microsoft Defender for Cloud documentation
   description: Get started with Defender for Cloud, learn how to secure your workloads, limit risks, and detect and respond to attacks with our quickstarts & tutorials.
-  author: ElazarK
-  ms.author: elkrieger
-  manager: raynew
   ms.topic: landing-page
-
-  ms.date: 01/08/2023
+  ms.date: 03/02/2025
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card
-  - title: About Defender for Cloud
+  - title: Introduction to Microsoft Defender for Cloud
     linkLists:
       - linkListType: overview
         links:
-          - text: What are the key capabilities of Defender for Cloud?
+          - text: What is Defender for Cloud?
             url: defender-for-cloud-introduction.md
-          - text: Which versions of Windows Server and Linux are supported?
-            url: security-center-os-coverage.md
-          - text: How do I get started with Defender for Cloud?
-            url: get-started.md
-          - text: What are security policies, initiatives, and recommendations?
-            url: security-policy-concept.md
- 
-  # Card
-  - title: Stay current
-    linkLists:
-      - linkListType: whats-new
-        links:
-          - text: Release notes for Defender for Cloud
+          - text: Common questions about Defender for Cloud
+            url: faq-general.yml
+          - text: What's new in Defender for Cloud?
             url: release-notes.md
-          - text: Important upcoming changes
-            url: upcoming-changes.md
-          - text: Overview of DevOps security
-            url: defender-for-devops-introduction.md
-          - text: Microsoft cloud security benchmark in Defender for Cloud
-            url: concept-regulatory-compliance.md
-
+          - text: Microsoft Defender for Cloud product page
+            url: https://azure.microsoft.com/products/defender-for-cloud
+          - text: Microsoft Defender for Cloud - Pricing
+            url: https://azure.microsoft.com/pricing/details/defender-for-cloud
+ 
   # Card
   - title: Get started
     linkLists:
-      - linkListType: get-started
+      - linkListType: deploy
         links:
-          - text: Enable Defender for Cloud on your subscriptions
-            url: get-started.md
-          - text: Enable enhanced security features
-            url: enable-enhanced-security.md
-          - text: Connect hybrid and multicloud machines
+          - text: Planning and operations guide
+            url: defender-for-cloud-planning-and-operations-guide.md
+          - text: Plan multicloud protection
+            url: plan-multicloud-security-get-started.md
+          - text: Connect your Azure subscriptions
+            url: connect-azure-subscription.md
+          - text: Connect your AWS accounts
+            url: quickstart-onboard-aws.md
+          - text: Connect your GCP projects
+            url: quickstart-onboard-gcp.md
+          - text: Onboard non-Azure machines with Defender for Endpoint
+            url: onboard-machines-with-defender-for-endpoint.md
+          - text: Connect on-premises machines
             url: quickstart-onboard-machines.md
-          - text: Set up email notifications
-            url: configure-email-notifications.md
 
   # Card
-  - title: Improve your secure score
+  - title: Protect workloads
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
-          - text: Understanding secure score
+          - text: Defender for Servers
+            url: defender-for-servers-overview.md
+          - text: Defender for Containers
+            url: defender-for-containers-introduction.md
+          - text: Defender for Databases
+            url: defender-for-databases-overview.md
+          - text: Defender for Storage
+            url: defender-for-storage-introduction.md
+          - text: Defender for DevOps  
+            url: defender-for-devops-introduction.md
+          - text: Defender for App Service
+            url: defender-for-app-service-introduction.md
+          - text: Defender for Key Vault
+            url: defender-for-key-vault-introduction.md
+          - text: Defender for Resource Manager
+            url: defender-for-resource-manager-introduction.md
+
+  # Card
+  - title: AI security
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Data and AI security dashboard (Preview)
+            url: data-aware-security-dashboard-overview.md
+          - text: AI security posture management
+            url: ai-security-posture.md
+          - text: AI threat protection
+            url: ai-threat-protection.md
+
+  # Card
+  - title: Security Posture & Compliance
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Cloud Security Posture Management (CSPM)
+            url: concept-cloud-security-posture-management.md
+          - text: Secure score 
             url: secure-score-security-controls.md
-          - text: Remediate security recommendations
-            url: implement-security-recommendations.md
-          - text: Exempt a resource from a recommendation
-            url: exempt-resource.md
-          - text: Track your scores over time
-            url: custom-dashboards-azure-workbooks.md#use-the-secure-score-over-time-workbook
-
-  # Card
-  - title: Mitigate threats
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Manage just-in-time access
+          - text: Regulatory compliance 
+            url: concept-regulatory-compliance-standards.md
+          - text: Enable just-in-time access on VMs
             url: just-in-time-access-usage.yml
-          - text: Use the Workload protections
-            url: workload-protections-dashboard.md
 
   # Card
-  - title: Defend multicloud resources
+  - title: Threat Protection & Response
     linkLists:
-      - linkListType: video
+      - linkListType: overview
         links:
-          - text: Protecting multicloud environments (AWS & GCP)
-            url: https://youtu.be/bVsifz3ZyPY
+          - text: Manage and respond to security alerts
+            url: managing-and-responding-alerts.yml
+          - text: Security alerts and incidents
+            url: alerts-overview.md
+          - text: Review security recommendations
+            url: review-security-recommendations.md
+          - text: Manage security incidents
+            url: incidents.md
