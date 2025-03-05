@@ -16,7 +16,7 @@ The Defender for Servers plan in Microsoft Defender for Cloud protects Windows a
 This article helps you deploy a Defender for Servers plan.
 
 > [!NOTE]
-> After you enable a plan, a 30-day trial period begins. You cannot stop, pause, or extend this trial period. To get the most out of the full 30-day trial, [plan your evaluation goals](plan-defender-for-servers.md).
+> After you enable a plan, a 30-day trial period begins. You can't stop, pause, or extend this trial period. To get the most out of the full 30-day trial, [plan your evaluation goals](plan-defender-for-servers.md).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ This article helps you deploy a Defender for Servers plan.
 **Onboard AWS/GCP machines** | To protect AWS and GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.<br/><br/>By default the connection process onboards machines as Azure Arc-enabled VMs.
 **Onboard on-premises machines** | [Onboard on-premises machines as Azure Arc VMs](quickstart-onboard-machines.md) for full functionality in Defender for Servers.<br/><br> If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md) instead of onboarding Azure Arc, only Plan 1 functionality is available. In Defender for Servers Plan 2, you get only the premium Defender Vulnerability Management features in addition to Plan 1 functionality.
 **Review support requirements** | Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-**Take advantage of 500 MB free data ingestion** | When Defender for Servers Plan 2 is enabled, a benefit of free 500 MB data ingestion is available for specific data types. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
+**Take advantage of 500 MB free data ingestion** | When Defender for Servers Plan 2 is enabled, a benefit of free 500-MB data ingestion is available for specific data types. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
 **Defender integration** | Defender for Endpoint and Defender for Vulnerability Management are integrated by default in Defender for Cloud.<br/><br/> When you enable Defender for Servers, you give consent for the Defender for Servers plan to access Defender for Endpoint data related to vulnerabilities, installed software, and endpoint alerts.
 **Enable at resource level** | Although we recommend enabling Defender for Servers for a subscription, you can [enable Defender for Servers at resource level](#enable-defender-for-servers-at-resource-level) if needed, for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.<br/><br/> You can enable Plan 1 at the resource level.<br/><br/> You can disable Plan 1 and Plan 2 at the resource level.
 
@@ -147,23 +147,23 @@ Enable or disable the plan on specific machines.
 
 1. Sign in to the Azure portal and navigate to the **Policy** dashboard.
 1. In the **Policy** dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select *An external link was removed to protect your privacy.*. This policy enables Defender for Servers Plan 1 on all resources (Azure VMs, VMSS, and Azure Arc-enabled servers) under the assignment scope.
+1. In the **Security Center – Granular Pricing** category, search for and then select [Configure Azure Defender for Servers to be enabled (with 'P1' subplan) for all resources (resource level)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F1b8c0040-b224-4ea1-be6a-47254dd5a207). This policy enables Defender for Servers Plan 1 on all resources (Azure VMs, Azure Virtual Machine Scale Sets, and Azure Arc-enabled servers) under the assignment scope.
 1. Select the policy and review it.
 1. Select **Assign** and edit the assignment details according to your needs. In the **Basics** tab, under **Scope**, select your relevant resource group.
 1. In the **Remediation** tab, select **Create a remediation task**.
-1. Once you have edited all details, select **Review + create**. Then select **Create**.
+1. Edit all details, select **Review + create**, and then select **Create**.
 
 ### Enable Plan 1 using Azure Policy (on resource tag)
 
 1. Sign in to the Azure portal and navigate to the **Policy** dashboard.
 1. In the **Policy** dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select *An external link was removed to protect your privacy.*. This policy enables Defender for Servers Plan 1 on all resources (Azure VMs, VMSS, and Azure Arc-enabled servers) under the assignment scope.
+1. In the **Security Center – Granular Pricing** category, search for and then select [Configure Azure Defender for Servers to be enabled (with 'P1' subplan) for all resources with the selected tag](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F9e4879d9-c2a0-4e40-8017-1a5a5327c843). This policy enables Defender for Servers Plan 1 on all resources (Azure VMs, Virtual Machine Scale Sets, and Azure Arc-enabled servers) under the assignment scope.
 1. Select the policy and review it.
 1. Select **Assign** and edit the assignment details according to your needs.
 1. In the **Parameters** tab, clear **Only show parameters that need input or review**.
 1. In **Inclusion Tag Name**, enter the custom tag name. Enter the tag's value in the **Inclusion Tag Values** array.
 1. In the **Remediation** tab, select **Create a remediation task**.
-1. Once you have edited all details, select **Review + create**. Then select **Create**.
+1. Edit all details, select **Review + create**, and then select **Create**.
 
 ### Disable the plan using a script
 
@@ -176,23 +176,23 @@ Enable or disable the plan on specific machines.
 
 1. Sign in to the Azure portal and navigate to the **Policy** dashboard.
 1. In the **Policy** dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select  [Configure Azure Defender for Servers to be disabled for all resources (resource level)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff6ff485a-7630-4730-854d-cd3ad855435e). This policy disables Defender for Servers on all resources (Azure VMs, VMSS, and Azure Arc-enabled servers) under the assignment scope.
+1. In the **Security Center – Granular Pricing** category, search for and then select  [Configure Azure Defender for Servers to be disabled for all resources (resource level)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff6ff485a-7630-4730-854d-cd3ad855435e). This policy disables Defender for Servers on all resources (Azure VMs, Virtual Machine Scale Sets, and Azure Arc-enabled servers) under the assignment scope.
 1. Select the policy and review it.
 1. Select **Assign** and edit the assignment details according to your needs. In the **Basics** tab, under **Scope**, select your relevant resource group.
 1. In the **Remediation** tab, select **Create a remediation task**.
-1. Once you have edited all details, select **Review + create**. Then select **Create**.
+1. Edit all details, select **Review + create**, and then select **Create**.
 
 ### Disable the plan using Azure Policy (for resource tag)
 
 1. Sign in to the Azure portal and navigate to the **Policy** dashboard.
 1. In the **Policy** dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select  [Configure Azure Defender for Servers to be disabled for resources (resource level) with the selected tag](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F080fedce-9d4a-4d07-abf0-9f036afbc9c8). This policy disables Defender for Servers on all resources (Azure VMs, VMSS, and Azure Arc-enabled servers) under the assignment scope based on the tag you defined.
+1. In the **Security Center – Granular Pricing** category, search for and then select  [Configure Azure Defender for Servers to be disabled for resources (resource level) with the selected tag](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F080fedce-9d4a-4d07-abf0-9f036afbc9c8). This policy disables Defender for Servers on all resources (Azure VMs, Virtual Machine Scale Sets, and Azure Arc-enabled servers) under the assignment scope based on the tag you defined.
 1. Select the policy and review it.
 1. Select **Assign** and edit the assignment details according to your needs.
 1. In the **Parameters** tab, clear **Only show parameters that need input or review**.
 1. In **Inclusion Tag Name**, enter the custom tag name. Enter the tag's value in the **Inclusion Tag Values** array.
 1. In the **Remediation** tab, select **Create a remediation task**.
-1. Once you have edited all details, select **Review + create**. Then select **Create**.
+1. Edit all details, select **Review + create**, and then select **Create**.
 
 ### Remove the per-resource configuration using a script (resource group or tag)
 
