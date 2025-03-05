@@ -468,22 +468,22 @@ items:
         href: api-activities-feedback.md
     - name: Alerts
       items:
-        - name: Overview
-          href: api-alerts.md
-        - name: List alerts
-          href: api-alerts-list.md
-        - name: Close benign
-          href: api-alerts-close-benign.md
-        - name: Close false positive
-          href: api-alerts-close-false-positive.md
-        - name: Close true positive
-          href: api-alerts-close-true-positive.md
-        - name: Fetch alert
-          href: api-alerts-fetch.md
-        - name: Mark alert as read
-          href: api-alerts-mark-read.md
-        - name: Mark alert as unread
-          href: api-alerts-mark-unread.md
+      - name: Overview
+        href: api-alerts.md
+      - name: List alerts
+        href: api-alerts-list.md
+      - name: Close benign
+        href: api-alerts-close-benign.md
+      - name: Close false positive
+        href: api-alerts-close-false-positive.md
+      - name: Close true positive
+        href: api-alerts-close-true-positive.md
+      - name: Fetch alert
+        href: api-alerts-fetch.md
+      - name: Mark alert as read
+        href: api-alerts-mark-read.md
+      - name: Mark alert as unread
+        href: api-alerts-mark-unread.md
     - name: Cloud Discovery
         items:
         - name: Overview
