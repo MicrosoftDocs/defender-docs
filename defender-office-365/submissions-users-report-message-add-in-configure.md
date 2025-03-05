@@ -8,7 +8,7 @@ manager: deniseb
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 02/24/2025
+ms.date: 03/05/2025
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -75,7 +75,6 @@ The rest of this article describes how to remove the Report Message and Report P
 ## Remove the Report Message or Report Phishing add-ins
 
 > [!TIP]
-> It might take up to 24 hours for the add-in to disappear from your organization.
 >
 > If you delete the app registration for the add-in in Microsoft Entra ID, the add-in is also deleted from the organization.
 
@@ -89,51 +88,53 @@ The rest of this article describes how to remove the Report Message and Report P
 2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by doing one of the following steps:
 
    - In the **Name** column, select the icon or text for the add-in. This selection takes you to the **Overview** tab in the details flyout as described in the next steps.
-   - In the **Name** column, select **⋮** **Edit row**, and then select :::image type="icon" source="media/m365-cc-sc-add-internal-icon.png" border="false"::: **Edit users** to go to the **Users** tab in the details flyout as described in the next step.
-   - In the **Name** column, select **⋮** **Edit row**, and then select :::image type="icon" source="media/m365-cc-sc-show-trends-icon.png" border="false"::: **Check usage data** to go to the **Usage** tab in the details flyout as described in the next step.
-
+  
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/microsoft-365-admin-center-select-report-phish-add-in.png" alt-text="Select the Report Phishing add-in on the Integrated apps page in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-select-report-phish-add-in.png":::
 
-3. The details flyout that opens contains the following tabs:
-
-   - **Overview** tab:
-     - **Basic info** section:
-       - **Status**
-       - **Type**: Add-in
-       - **Test deployment**: **Yes** or **No**, depending on the option you selected when you or the selection you change on the **Users** tab.
-       - **Description**
-       - **Host product**: Outlook
-     - **Actions** section: Select **Remove app** to remove the app.
-     - **Assigned users** section: Select **Edit users** to go to the **Users** tab. Use this setting to limit the users who have the add-in.
-     - **Usage** section: Select **Check usage data** to got to the **Usage** tab.
+3. In the details flyout that opens select **Remove app** to remove the app.
 
      > [!div class="mx-imgBorder"]
      > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png" alt-text="The Overview tab on the details flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png":::
 
+4. On the confirmation flyout, select **Yes, I'm sure I want to  remove the app and associated data** and select **Remove** at the bottom of the flyout.
+ 
     > [!div class="mx-imgBorder"]
      > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-remove-overview-tab.png" alt-text="The tab on the removal flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-remove-overview-tab.png":::
 
+5. You should get a confirmation that the add-in has been removed.  It might take up to 24 hours for the add-in to disappear from your organization.
     > [!div class="mx-imgBorder"]
      > :::image type="content" source="media/microsoft-365-admin-center-report-phish-addin-remove-complete-tab.png" alt-text="The flyout showcasing the removal of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-addin-remove-complete-tab.png":::
 
-   - **Users** tab:
-     - **Is this a test deployment?**: Leave the toggle at :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **No**, or set the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Yes**.
-     - **Assign users** section: Select one of the following values:
+   When you're finished viewing the information on the tabs, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** to close the details flyout.
+
+## Scoping the Report Message or Report Phishing add-ins to a set of users.
+
+1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. Or, to go directly to the **Integrated apps** page, use <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
+
+   > [!TIP]
+   > Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High or DoD need to use the Microsoft 365 admin center at https://portal.office365.us/adminportal/home#/Settings/AddIns and than select Settings > Add-ins
+   >
+   > Although the screenshots in the remaining steps show the **Report Phishing** add-in, the steps are identical for the **Report Message** add-in.
+
+2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by doing one of the following steps:
+
+   - In the **Name** column, select the icon or text for the add-in. This selection takes you to the **Overview** tab in the details flyout as described in the next steps.
+  
+   > [!div class="mx-imgBorder"]
+   > :::image type="content" source="media/microsoft-365-admin-center-select-report-phish-add-in.png" alt-text="Select the Report Phishing add-in on the Integrated apps page in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-select-report-phish-add-in.png":::
+
+3. In the details flyout that opens select **Edit users** to define the set of users.
+
+4. It will redirect you to the **Users** tab on the flyout.  In the **Assign users** section, select one of the following values:
        - **Just me**
        - **Entire organization**
        - **Specific users/groups**: Find and select users and groups in the search box. After each selection, the user or group appears in the **Added users** section that appears below the search box. To remove a selection, select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: on the entry.
-
-     - **Email notification** section: **Send email notification to assigned users** and **View email sample** aren't selectable.
 
      If you made any updates on this tab, select **Update** to save your changes.
 
      > [!div class="mx-imgBorder"]
      > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-details-users-tab.png" alt-text="The Users tab on the details flyout of the Report Message add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-details-users-tab.png":::
-
-   - **Usage** tab: The chart and details table shows the number of active users over time.
-     - Filter the **Date range** to **7 days**, **30 days** (default), or **90 days**.
-     - In the **Report** column, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Download** to download the information filtered by **Date range** to the file named **UsageData.csv**.
 
    When you're finished viewing the information on the tabs, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** to close the details flyout.
 
