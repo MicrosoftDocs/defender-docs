@@ -229,7 +229,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
       3. In **Value**, enter the applicable value or value range.
 
-   :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal" lightbox="media/mem07-5-applicability-rules.png":::
+      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal" lightbox="media/mem07-5-applicability-rules.png":::
 
 11. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
 
