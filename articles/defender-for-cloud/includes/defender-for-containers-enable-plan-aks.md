@@ -28,7 +28,7 @@ If you don't want to enable all capabilities of the plans, you can manually sele
 
 You can also modify this configuration from the **Defender plans** page after initial configuration of the plan.
 
-For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md#aws).
+For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md).
 
 ### Roles and permissions
 

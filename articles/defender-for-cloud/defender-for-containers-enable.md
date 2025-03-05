@@ -19,7 +19,7 @@ ms.date: 06/29/2023
 
 - **Google Kubernetes Engine (GKE) in a connected Google Cloud Platform (GCP) project**: Google's managed environment for deploying, managing, and scaling applications by using GCP infrastructure.
 
-- **Other Kubernetes distributions** (using Azure Arc-enabled Kubernetes): Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on infrastructure as a service (IaaS). For more information, see [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md#on-premises-arc-enabled-kubernetes-clusters).
+- **Other Kubernetes distributions** (using Azure Arc-enabled Kubernetes): Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on infrastructure as a service (IaaS). For more information, see [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md).
 
 You can first learn how to connect and help protect your containers in these articles:
 
