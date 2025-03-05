@@ -126,7 +126,26 @@ The following procedures for enabling attack surface reduction rules include ins
 
 ### Intune
 
-#### Device Configuration Profiles
+> [!IMPORTANT]
+> If using Intune on Windows Server 2012 R2 and Windows Server 2016 unified version.
+> You need to set these to "Not Configured", since they are not supported on these OS'es, otherwise, the policies will fail to apply:
+> - Block persistence through Windows Management Instrumentation (WMI) event subscription
+> - Block JavaScript or VBScript from launching downloaded executable content
+> - Use advanced protection against ransomware
+
+#### Endpoint security policy (Preferred)
+
+1. Select **Endpoint Security** > **Attack surface reduction**. Choose an existing attack surface reduction rule or create a new one. To create a new one, select **Create Policy** and enter information for this profile. For **Profile type**, select **Attack surface reduction rules**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
+
+1. In the **Configuration settings** pane, select **Attack Surface Reduction** and then select the desired setting for each attack surface reduction rule.
+
+1. Under **List of additional folders that need to be protected**, **List of apps that have access to protected folders**, and **Exclude files and paths from attack surface reduction rules**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
+
+   `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
+   
+1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
+
+#### Device Configuration Profiles (Alternative 1)
 
 1. Select **Device configuration** > **Profiles**. Choose an existing endpoint protection profile or create a new one. To create a new one, select **Create profile** and enter information for this profile. For **Profile type**, select **Endpoint protection**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
 
@@ -134,23 +153,11 @@ The following procedures for enabling attack surface reduction rules include ins
 
 1. Under **Attack Surface Reduction exceptions**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
 
-   `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
-   
-4. Select **OK** on the three configuration panes. Then select **Create** if you're creating a new endpoint protection file or **Save** if you're editing an existing one.
+`C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
 
-#### Endpoint security policy
+1. Select **OK** on the three configuration panes. Then select **Create** if you're creating a new endpoint protection file or **Save** if you're editing an existing one.
 
-1. Select **Endpoint Security** > **Attack surface reduction**. Choose an existing attack surface reduction rule or create a new one. To create a new one, select **Create Policy** and enter information for this profile. For **Profile type**, select **Attack surface reduction rules**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
-
-2. In the **Configuration settings** pane, select **Attack Surface Reduction** and then select the desired setting for each attack surface reduction rule.
-
-3. Under **List of additional folders that need to be protected**, **List of apps that have access to protected folders**, and **Exclude files and paths from attack surface reduction rules**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
-
-   `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
-   
-4. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
-
-### Custom profile in Intune
+#### Custom profile in Intune (Alternative 2)
 
 You can use Microsoft Intune OMA-URI to configure custom attack surface reduction rules. The following procedure uses the rule [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) for the example.
 
