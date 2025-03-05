@@ -159,7 +159,7 @@ sections:
           | Microsoft Threat Experts | | | ✔ |
           | Microsoft 365 Lighthouse <br/>(optimized; for CSPs only) | ✔ | | |
           | Microsoft Defender MTO for multi-tenant management | ✔ | ✔ | ✔ |
-          | APIs | ✔ <br/>(Defender for Endpoint APIs) | | ✔ <br/>(streaming APIs) |
+          | APIs | ✔ <br/>(Defender for Endpoint APIs) | | ✔ <br/>(Streaming APIs) |
 
       - question: Can I have a mix of Microsoft endpoint security subscriptions?
         answer: |
