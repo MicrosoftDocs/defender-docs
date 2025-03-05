@@ -15,7 +15,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 search.appverid: met150
-ms.date: 03/04/2025
+ms.date: 03/05/2025
 ---
 
 # Enable attack surface reduction rules
@@ -116,7 +116,7 @@ When adding exclusions, keep these points in mind:
 This section provides configuration details for the following configuration methods:
 
 - [Intune](#intune)
-- [Custom profile in Intune](#custom-profile-in-intune)
+- [Custom profile in Intune](#custom-profile-in-intune-alternative-2)
 - [MDM](#mdm)
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
 - [Group policy](#group-policy)
