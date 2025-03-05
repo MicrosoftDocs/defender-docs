@@ -11,3 +11,6 @@
     - name: 'Microsoft Defender for Endpoint'
       tocHref: /defender-xdr/
       topicHref: /defender-xdr/pilot-deploy-defender-endpoint
+    - name: 'Microsoft Defender for Endpoint'
+      tocHref: /defender-xdr/
+      topicHref: /defender-xdr/index
