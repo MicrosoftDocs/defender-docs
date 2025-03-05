@@ -1081,10 +1081,10 @@
       href: /defender-xdr/advanced-hunting-overview
 
     - name: Threat analytics overview
-      href: threat-analytics.md
+      href: /defender-xdr/threat-analytics
       items:
       - name: Read the analyst report
-        href: threat-analytics-analyst-reports.md
+        href: /defender-xdr/threat-analytics-analyst-reports
 
     - name: EDR in block mode
       href: edr-in-block-mode.md
