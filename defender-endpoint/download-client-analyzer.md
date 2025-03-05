@@ -4,10 +4,11 @@ description: Learn how to download the Microsoft Defender for Endpoint Client An
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
+ms.reviewer: yongrhee 
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -33,7 +34,8 @@ Learn how to download the Microsoft Defender for Endpoint client analyzer on sup
 
 ## Download client analyzer for macOS or Linux
 
-1. The latest stable edition will be integrated into the MDE for Endpoint agent. Ensure that you are running the latest edition for either [macOS](mac-whatsnew.md) or [Linux](linux-whatsnew.md).
+1. The latest stable edition will be integrated into the Microsoft Defender for Endpoint agent. Ensure that you are running the latest edition for either [macOS](mac-whatsnew.md) or [Linux](linux-whatsnew.md).
 
 2. The latest preview edition is available for direct download from following URL: <https://aka.ms/XMDEClientAnalyzer>
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -1,8 +1,9 @@
 ---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
@@ -132,7 +133,7 @@ withNames | join kind = fullouter DefUpdate on DeviceId
 
 ## Troubleshooting high CPU usage
 
-Detections related to behavior monitoring start with "[Behavior](/defender-xdr/malware-naming#type)".
+Detections related to behavior monitoring start with "[Behavior](/unified-secops-platform/malware-naming#type)".
 
 When investigating high CPU usage in `MsMpEng.exe`, you can temporarily disable behavior monitoring to see if the issues continue.
 

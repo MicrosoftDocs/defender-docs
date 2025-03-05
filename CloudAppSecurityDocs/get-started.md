@@ -1,13 +1,11 @@
 ---
 title: Get started | Microsoft Defender for Cloud Apps
 description: This quickstart outlines the process for getting Defender for Cloud Apps up and running so you have cloud app use, insight, and control.
-ms.date: 05/15/2024
+ms.date: 11/28/2024
 ms.topic: quickstart
 ---
 
 # Get started with Microsoft Defender for Cloud Apps
-
-
 
 This quickstart describes how to start working with Microsoft Defender for Cloud Apps on the Microsoft Defender Portal. 
 
@@ -22,8 +20,15 @@ To set up Defender for Cloud Apps, you must at least be a Security Administrator
 
 Users with admin roles have the same admin permissions across any cloud apps your organization is subscribed to, regardless of where you've assigned the role. For more information, see [Assign admin roles](/microsoft-365/admin/add-users/assign-admin-roles) and [Assigning administrator roles in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference).
 
+
 Microsoft Defender for Cloud Apps is a security tool and therefore doesn't require Microsoft 365 productivity suite licenses. For Microsoft 365 Cloud App Security (Microsoft Defender for Cloud Apps only for Microsoft 365), see [What are the differences between Microsoft Defender for Cloud Apps and Microsoft 365 Cloud App Security?](editions-cloud-app-security-o365.md).
 
+Microsoft Defender for Cloud Apps depends on the following Microsoft Entra ID applications to function properly. Do not disable these applications in Microsoft Entra ID:
+
+- Microsoft Defender for Cloud Apps - APIs (ID: 972bb84a-1d27-4bd3-8306-6b8e57679e8c)
+- Microsoft Defender for Cloud Apps - Customer Experience (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
+- Microsoft Defender for Cloud Apps - Information Protection (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
+- Microsoft Defender for Cloud Apps - MIP Server (ID: 0858ddce-8fca-4479-929b-4504feeed95e)
 
 ## Access Defender for Cloud Apps
 
@@ -155,7 +160,7 @@ Now the risk scores given to discovered apps are configured precisely according 
 Some features work best when they're customized to your needs.
 Provide a better experience for your users with your own email templates. Decide what notifications you receive and customize your risk score metric to fit your organization's preferences.
 
-## Step 7: Organize the data according to your needs
+## Step 6: Organize the data according to your needs
 
 **How to page**: [Working with IP ranges and tags](ip-tags.md)
 

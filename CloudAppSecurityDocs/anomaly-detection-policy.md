@@ -141,10 +141,6 @@ These policies look for activities within a single session with respect to the b
 
 * This detection identifies users that failed multiple login attempts in a single session with respect to the baseline learned, which could indicate on a breach attempt.
 
-### Data exfiltration to unsanctioned apps
-
-* This policy is automatically enabled to alert you when a user or IP address uses an app that is not sanctioned to perform an activity that resembles an attempt to exfiltrate information from your organization.
-
 ### Multiple delete VM activities
 
 * This policy profiles your environment and triggers alerts when users delete multiple VMs in a single session, relative to the baseline in your organization. This might indicate an attempted breach.

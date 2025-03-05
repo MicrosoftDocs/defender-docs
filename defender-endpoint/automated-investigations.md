@@ -6,7 +6,7 @@ ms.subservice: edr
 author: denisebmsft
 ms.author: deniseb
 ms.localizationpriority: medium
-ms.date: 08/31/2022
+ms.date: 03/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -32,7 +32,7 @@ search.appverid: met150
 
 Want to see how it works? Watch the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bOeh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f7299926-ec86-40f6-9188-372304ab80f9]
 
 The technology in automated investigation uses various inspection algorithms and is based on processes that are used by security analysts. AIR capabilities are designed to examine alerts and take immediate action to resolve breaches. AIR capabilities significantly reduce alert volume, allowing security operations to focus on more sophisticated threats and other high-value initiatives. All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). In the Action center, pending actions are approved (or rejected), and completed actions can be undone if needed.
 
@@ -86,6 +86,7 @@ Currently, AIR only supports the following OS versions:
 - Windows Server 2016 (Preview)
 - Windows Server 2019
 - Windows Server 2022
+- Windows Server 2025
 - Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
 - Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
 - Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later

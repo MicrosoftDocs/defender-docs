@@ -2,8 +2,7 @@
 title: Important considerations related to Defender Experts for XDR
 ms.reviewer:
 description: Additional information and important considerations related to Defender Experts for XDR
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -21,6 +20,8 @@ ms.custom:
 - cx-dex
 search.appverid: met150
 ms.date: 10/30/2024
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Important considerations for Microsoft Defender Experts for XDR

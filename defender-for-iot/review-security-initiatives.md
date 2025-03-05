@@ -67,8 +67,6 @@ If the **More data is required to support this initiative** section is displayed
 1. Select the metric from the **Top metrics** area in the initiative page or from the **Related metrics** area in the small overview. 
     - Review the **Overview** tab to drill down into additional security data and recommendations, including the weight of the metrics, affected assets, and score impact. For example, the **Unprotected OT devices** metric shows 24 affected assets, and 3.81 score impact.
 
-        :::image type="content" source="media/review-security-initiatives/unprotected-ot-devices.png" alt-text="Screenshot showing the Unprotected OT devices metric **Overview** tab in Microsoft Defender for IoT in the Microsoft Defender portal.":::
-
     - Review the recommendations in the **Security recommendations** tab. For example, for the **Site-linked devices using insecure protocols** metric, you're recommended to disable the Telnet administration protocol, and remove the SNMP V1 and SNMP V2 administration protocols.
     
         :::image type="content" source="media/review-security-initiatives/security-recommendations.png" alt-text="Screenshot showing the **Security recommendations** tab for a metric in Microsoft Defender for IoT in the Microsoft Defender portal.":::

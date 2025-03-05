@@ -14,7 +14,7 @@ A cloud discovery anomaly detection policy enables you to set up and configure c
 This article describes how to create and configure a cloud discovery anomaly detection policy in Microsoft Defender for Cloud Apps.
 
 > [!IMPORTANT]
-> Starting August 2024, **cloud discovery anomaly** support for Microsoft Defender for Cloud Apps is retired. As such, the legacy procedure presented in this article is provided for informational purposes only. If you want to receive security alerts similar to anomaly detection, complete the steps in [Create app discovery policy](#create-app-discovery-policy).
+> Starting August 2024, **cloud discovery anomaly** support for Microsoft Defender for Cloud Apps is retired. As such, the legacy procedure presented in this article is provided for informational purposes only. If you want to receive security alerts similar to anomaly detection, complete the steps in [Create app discovery policy](cloud-discovery-policies.md).
 
 ## Create app discovery policy
 

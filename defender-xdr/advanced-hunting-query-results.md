@@ -173,7 +173,24 @@ Select the three dots to the right of any column in the **Inspect record** panel
 - Exclude the selected value from the query (`!=`)
 - Get more advanced operators for adding the value to your query, such as `contains`, `starts with`, and `ends with`
 
-:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="The Action Type pane on the Inspect record page in the Microsoft Defender portal " lightbox="/defender/media/work-with-query-tweak-query.png":::
+:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="/defender/media/work-with-query-tweak-query.png":::
+
+
+
+## Add items to Favorites
+You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
+
+:::image type="content" source="media/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/faves-1.png":::
+
+For instance, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, and select the three dots to the right of the table and select **Add to favorites**. 
+
+:::image type="content" source="media/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/faves-2.png":::
+
+A notification appears to inform you that the item was successfully added to Favorites.
+
+![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/faves-3.png)
+
+You can do the same for your saved functions, queries, and custom detections in their respective Favorites sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
 > [!NOTE]
 > Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).

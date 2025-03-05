@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 10/24/2023
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -37,7 +37,7 @@ search.appverid: met150
 [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, you can turn tamper protection on (or off) tenant wide by using the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
 
 > [!IMPORTANT]
-> If tamper protection is [deployed and managed through Intune](manage-tamper-protection-intune.md), turning tamper protection on or off in the Microsoft Defender portal won't impact the state of tamper protection. It restricts tamper-protected settings to their secure default values. For more information, see [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)?
+> If tamper protection is [deployed and managed through Intune](manage-tamper-protection-intune.md), turning tamper protection on or off in the Microsoft Defender portal doesn't impact the state of tamper protection. It restricts tamper-protected settings to their secure default values. For more information, see [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)?
 
 <a name='requirements-for-managing-tamper-protection-in-the-microsoft-365-defender-portal'></a>
 
@@ -49,12 +49,12 @@ search.appverid: met150
 
 - Devices must be [onboarded to Microsoft Defender for Endpoint](onboarding.md).
 
-- Devices must be using anti-malware platform version `4.18.2010.7` (or above) and anti-malware engine version `1.1.17600.5` (or above). ([Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).)
+- Devices must be using anti-malware platform version `4.18.2010.7` (or later) and anti-malware engine version `1.1.17600.5` (or later). ([Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).)
 
 - [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) must be turned on.
 
 > [!NOTE]
-> When tamper protection is enabled via the Microsoft Defender portal, [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) is required so that the enabled state of tamper protection can be controlled. Starting with the November 2021 update (platform version `4.18.2111.5`), if cloud-delivered protection is not already turned on for a device, when tamper protection is turned on, cloud-delivered protection is turned on automatically on the device.   
+> When tamper protection is enabled via the Microsoft Defender portal, [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) is required so that the enabled state of tamper protection can be controlled. Starting with the November 2021 update (platform version `4.18.2111.5`), if cloud-delivered protection isn't already turned on for a device, when tamper protection is turned on, cloud-delivered protection is turned on automatically on the device.   
 
 <a name='turn-tamper-protection-on-or-off-in-the-microsoft-365-defender-portal'></a>
 

@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 10/14/2024
+ms.date: 11/18/2024
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -88,7 +88,7 @@ To create an incident report with Copilot in Defender, perform the following ste
 
 4. Select the More actions ellipsis (...) located on the upper right of the incident report card. To copy the report, select **Copy to clipboard** and paste the report to your preferred system, **Post to activity log** to add the report to the activity log in the Microsoft Defender portal, or **Export incident as PDF** to [export the incident data to PDF](manage-incidents.md#export-incident-data-to-pdf). Select **Regenerate** to restart report creation. You can also **Open in Security Copilot** to view the results and continue accessing other plugins available in the Security Copilot standalone portal.
 
-   ![Screenshot of additional actions in the incident report results card.](/defender/media/copilot-in-defender/create-report/incident-report-more-actions1.png)
+   ![Screenshot of additional actions in the incident report results card.](/defender/media/copilot-in-defender/create-report/incident-report-options.png)
 
 5. Review the generated incident report. You can provide feedback on the report by selecting the feedback icon found on the bottom of the results  ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
 
@@ -121,7 +121,7 @@ In the Security Copilot standalone portal, you can use the following prompt to c
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it’s crucial for a capability’s continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
 
 ## See also
 

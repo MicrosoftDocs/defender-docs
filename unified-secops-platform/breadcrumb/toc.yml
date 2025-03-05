@@ -1,0 +1,26 @@
+- name: "Microsoft Defender"
+  tocHref: /defender/
+  topicHref: /defender/index
+  items:
+  - name: "Microsoft's unified SecOps platform"
+    tocHref: /unified-secops-platform/
+    topicHref: /unified-secops-platform/index
+  - name: "Microsoft's unified SecOps platform"
+    tocHref: /security/zero-trust/
+    topicHref: /unified-secops-platform/index
+  - name: "Microsoft's unified SecOps platform"
+    tocHref: /defender-for-identity/
+    topicHref: /unified-secops-platform/index
+  - name: "Microsoft's unified SecOps platform"
+    tocHref: /defender-xdr/
+    topicHref: /unified-secops-platform/index
+    
+## Azure override
+- name: "Microsoft Defender"
+  tocHref: /azure/
+  topicHref: /defender/index
+  items:
+  - name: "Microsoft's unified SecOps platform"
+    tocHref: /azure/sentinel/
+    topicHref: /unified-secops-platform/index
+

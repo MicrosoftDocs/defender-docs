@@ -1,15 +1,15 @@
 ---
 title: Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, and Windows Server 2022.
+description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: conceptual
-ms.date: 05/17/2024
+ms.date: 03/04/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -28,6 +28,7 @@ ms.collection:
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803 or later
@@ -56,7 +57,7 @@ By default, Microsoft Defender Antivirus is installed and functional on Windows 
 | Procedure | What to do |
 |:---|:---|
 | Turn on the GUI using the Add Roles and Features Wizard | 1. See [Install roles, role services, and features by using the add Roles and Features Wizard](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard), and use the **Add Roles and Features Wizard**. <br/><br/>2. When you get to the **Features** step of the wizard, under **Windows Defender Features**, select the **GUI for Windows Defender** option. |
-| Turn on the GUI using PowerShell | 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
+| Turn on the GUI using PowerShell (Windows Server 2016 only)| 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
 
 For more information, see [Getting Started with PowerShell](/powershell/scripting/learn/ps101/01-getting-started).
 
@@ -107,7 +108,7 @@ sc query state= all
 
 To get your regular security intelligence updates, the Windows Update service must be running. If you use an update management service, like Windows Server Update Services (WSUS), make sure Microsoft Defender Antivirus Security intelligence updates are approved for the computers you manage.
 
-By default, Windows Update doesn't download and install updates automatically on Windows Server 2019 or Windows Server 2022, or Windows Server 2016. You can change this configuration by using one of the following methods:
+By default, Windows Update doesn't download and install updates automatically on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025. You can change this configuration by using one of the following methods:
 
 | Method | Description |
 |---|---|
@@ -135,7 +136,7 @@ Sample submission allows Microsoft to collect samples of potentially malicious s
 
 ### Submit a file
 
-1. Review the [submission guide](/windows/security/threat-protection/intelligence/submission-guide).
+1. Review the [submission guide](/unified-secops-platform/submission-guide).
 
 2. Visit the [sample submission portal](https://www.microsoft.com/wdsi/filesubmission), and submit your file.
 
@@ -145,7 +146,7 @@ To enable automatic sample submission, start a Windows PowerShell console as an 
 
 |Setting|Description|
 |---|---|
-| **0** - **Always prompt** | The Microsoft Defender Antivirus service prompts you to confirm submission of all required files. This setting is the default for Microsoft Defender Antivirus, but isn't recommended for installations on Windows Server 2016 or 2019, or Windows Server 2022 without a GUI. |
+| **0** - **Always prompt** | The Microsoft Defender Antivirus service prompts you to confirm submission of all required files. This setting is the default for Microsoft Defender Antivirus, but isn't recommended for installations on Windows Server 2016 or 2019, or Windows Server 2022 and later without a GUI. |
 | **1**  - **Send safe samples automatically** | The Microsoft Defender Antivirus service sends all files marked as "safe" and prompts for the remainder of the files. |
 | **2** - **Never send** | The Microsoft Defender Antivirus service doesn't prompt and doesn't send any files. |
 | **3** - **Send all samples automatically** | The Microsoft Defender Antivirus service sends all files without a prompt for confirmation. |
@@ -155,7 +156,7 @@ To enable automatic sample submission, start a Windows PowerShell console as an 
 
 ## Configure automatic exclusions
 
-To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install when using Microsoft Defender Antivirus on Windows Server 2016 or 2019, or Windows Server 2022.
+To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install when using Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
 
 See [Configure exclusions in Microsoft Defender Antivirus on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
 
@@ -173,7 +174,7 @@ The following table describes methods to set Microsoft Defender Antivirus to pas
 | Procedure | Description |
 |---|---|
 | Set Microsoft Defender Antivirus to passive mode by using a registry key | Set the `ForceDefenderPassiveMode` registry key as follows: <br/>- Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection` <br/>- Name: `ForceDefenderPassiveMode` <br/>- Type: `REG_DWORD` <br/>- Value: `1` |
-| Turn off the Microsoft Defender Antivirus user interface using PowerShell | Open Windows PowerShell as an administrator, and run the following PowerShell cmdlet: `Uninstall-WindowsFeature -Name Windows-Defender-GUI`
+| Turn off the Microsoft Defender Antivirus user interface using PowerShell (Windows Server 2016 only)| Open Windows PowerShell as an administrator, and run the following PowerShell cmdlet: `Uninstall-WindowsFeature -Name Windows-Defender-GUI`|
 | Disable Microsoft Defender Antivirus real-time protection using PowerShell | Use the following PowerShell cmdlet: `Set-MpPreference -DisableRealtimeMonitoring $true` |
 | Disable Microsoft Defender Antivirus using the Remove Roles and Features wizard | See [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard), and use the **Remove Roles and Features Wizard**. <br/><br/>When you get to the **Features** step of the wizard, clear the **Windows Defender Features** option. <br/><br/> If you clear **Windows Defender** by itself under the **Windows Defender Features** section, you're prompted to remove the interface option **GUI for Windows Defender**.<br/><br/>Microsoft Defender Antivirus runs normally without the user interface, but the user interface can't be enabled if you disable the core **Windows Defender** feature. |
 | Uninstall Microsoft Defender Antivirus using PowerShell | Use the following PowerShell cmdlet: `Uninstall-WindowsFeature -Name Windows-Defender` |

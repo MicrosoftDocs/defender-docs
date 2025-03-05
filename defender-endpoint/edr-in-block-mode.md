@@ -14,7 +14,7 @@ ms.custom:
 - next-gen
 - mde-edr
 - admindeeplinkDEFENDER
-ms.date: 06/25/2024
+ms.date: 02/10/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -34,7 +34,7 @@ search.appverid: met150
 
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
 
@@ -44,10 +44,12 @@ This article describes EDR in block mode, which helps protect devices that are r
 
 > [!IMPORTANT]
 > EDR in block mode cannot provide all available protection when Microsoft Defender Antivirus real-time protection is in passive mode. Some capabilities that depend on Microsoft Defender Antivirus to be the active antivirus solution will not work, such as the following examples:
-> - Real-time protection, including on-access scanning, and scheduled scan is not available when Microsoft Defender Antivirus is in passive mode. To learn more about real-time protection policy settings, see **[Enable and configure Microsoft Defender Antivirus always-on protection](configure-real-time-protection-microsoft-defender-antivirus.md)**.
+> - Real-time protection, including on-access scanning, is not available when Microsoft Defender Antivirus is in passive mode. To learn more about real-time protection policy settings, see **[Enable and configure Microsoft Defender Antivirus always-on protection](configure-real-time-protection-microsoft-defender-antivirus.md)**.
 > - Features like **[network protection](network-protection.md)** and **[attack surface reduction rules](attack-surface-reduction.md)** and indicators (file hash, ip address, URL, and certificates) are only available when Microsoft Defender Antivirus is running in active mode.
 > It is expected that your non-Microsoft antivirus solution includes these capabilities.
    
+
+
 EDR in block mode works behind the scenes to remediate malicious artifacts that were detected by EDR capabilities. Such artifacts might have been missed by the primary, non-Microsoft antivirus product. EDR in block mode allows Microsoft Defender Antivirus to take actions on post-breach, behavioral EDR detections.
 
 EDR in block mode is integrated with [threat & vulnerability management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Your organization's security team gets a [security recommendation](api/ti-indicator.md) to turn EDR in block mode on if it isn't already enabled. 
@@ -58,7 +60,7 @@ EDR in block mode is integrated with [threat & vulnerability management](/defend
 > To get the best protection, make sure to **[deploy Microsoft Defender for Endpoint baselines](configure-machines-security-baseline.md)**.
 
 Watch this video to learn why and how to turn on endpoint detection and response (EDR) in block mode, enable behavioral blocking, and containment at every stage from pre-breach to post-breach.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4HjW2]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=69b80126-fa43-4f52-b89d-e4ebc3aba0a4]
 
 ## What happens when something is detected?
 
@@ -80,15 +82,31 @@ When EDR in block mode is turned on, and a malicious artifact is detected, Defen
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)) and sign in.
 
-2. Choose **Settings** \> **Endpoints** \> **General** \> **Advanced features**.
+1. Choose **Settings** > **Endpoints** > **General** > **Advanced features**.
 
-3. Scroll down, and then turn on **Enable EDR in block mode**.
+1. Scroll down, and then turn on **Enable EDR in block mode**.
 
 ### Intune
 
 To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/deploy-oma-uris-to-target-csp-via-intune).
 
 For more information on the Defender CSP used for EDR in block mode, see "Configuration/PassiveRemediation" under [Defender CSP](/windows/client-management/mdm/defender-csp).
+
+### Group Policy
+
+You can use Group Policy to enable EDR in block mode.
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+2. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+
+3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
+
+4. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
+
+5. Select **OK**. 
 
 ## Requirements for EDR in block mode
 
@@ -115,4 +133,3 @@ The following table lists requirements for EDR in block mode:
 - [Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)](edr-block-mode-faqs.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

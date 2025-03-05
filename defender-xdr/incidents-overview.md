@@ -1,6 +1,6 @@
 ---
 title: Incidents and alerts in the Microsoft Defender portal
-description: An introduction to incidents and alerts, and the differences between them, in the unified security operations platform in the Microsoft Defender portal.
+description: An introduction to incidents and alerts, and the differences between them, in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -27,7 +27,7 @@ appliesto:
 
 # Incidents and alerts in the Microsoft Defender portal
 
-The Microsoft Defender portal brings together a unified set of security services to reduce your exposure to security threats, improve your organizational security posture, detect security threats, and investigate and respond to breaches. These services collect and produce signals that are displayed in the portal. The two main kinds of signals are:
+Microsoft's unified SecOps platform in the Microsoft Defender portal brings together a unified set of security services to reduce your exposure to security threats, improve your organizational security posture, detect security threats, and investigate and respond to breaches. These services collect and produce signals that are displayed in the portal. The two main kinds of signals are:
 
 **Alerts**: Signals that result from various threat detection activities. These signals indicate the occurrence of malicious or suspicious events in your environment.
 
@@ -53,7 +53,7 @@ Incidents also provide you with a framework for managing and documenting your in
 
 Alerts in the Microsoft Defender portal come from many sources. These sources include the many services that are part of Microsoft Defender XDR, as well as other services with varying degrees of integration with the Microsoft Defender portal. 
 
-For example, when Microsoft Sentinel is [onboarded](/defender-xdr/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
+For example, when Microsoft Sentinel is [onboarded](/unified-secops-platform/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
 
 Microsoft Defender XDR itself also creates alerts. Defender XDR's unique correlation capabilities provide another layer of data analysis and threat detection for all the non-Microsoft solutions in your digital estate. These detections produce Defender XDR alerts, in addition to the alerts already provided by Microsoft Sentinel's analytics rules.
 
@@ -73,6 +73,9 @@ The Microsoft Defender portal includes tools and methods to automate or otherwis
 | **[Configure Microsoft Sentinel automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules)** | Use automation rules to automate triage, assignment, and management of incidents, regardless of their source. Help your team's efficiency even more by configuring your rules to apply tags to incidents based on their content, suppress noisy (false positive) incidents, and close resolved incidents that meet the appropriate criteria, specifying a reason and adding comments. |
 | **[Proactively hunt with advanced hunting](advanced-hunting-overview.md)** | Use Kusto Query Language (KQL) to proactively inspect events in your network by querying the logs collected in the Defender portal. Advanced hunting supports a guided mode for users looking for the convenience of a query builder. |
 | **[Harness AI with Microsoft Copilot for Security](/defender-xdr/security-copilot-in-microsoft-365-defender)** | Add AI to support analysts with complex and time-consuming daily workflows. For example, Microsoft Copilot for Security can help with end-to-end incident investigation and response by providing clearly described attack stories, step-by-step actionable remediation guidance and incident activity summarized reports, natural language KQL hunting, and expert code analysis&mdash;optimizing on SOC efficiency across data from all sources. <br><br>This capability is in addition to the other AI-based functionality that Microsoft Sentinel brings to the unified platform, in the areas of user and entity behavior analytics, anomaly detection, multi-stage threat detection, and more. |
+
+> [!TIP]
+> **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
 
 ## Related items
 

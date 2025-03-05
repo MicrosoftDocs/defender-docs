@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 11/12/2024
+ms.date: 02/25/2025
 ---
 
 # Threat analytics in Microsoft Defender XDR
@@ -61,14 +61,14 @@ Each report provides an analysis of a tracked threat and extensive guidance on h
 ## Required roles and permissions
 The following roles and permissions are required to access Threat analytics in the Defender portal: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
-- **Vulnerability management (read)** and **Secure Score (read)**—to see related exposure data and recommended actions
+- **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
 By default, access to services available in the Defender portal are managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
 
 >[!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 >
-> You'll have visibility to all threat analytics reports even if you have just one of the products supported. However, you're required to have each product and role to see that product’s specific incidents, assets, exposure, and recommended actions associated with the threat. 
+> You'll have visibility to all threat analytics reports even if you have just one of the products supported. However, you're required to have each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat. 
 
 ## View the threat analytics dashboard
 
@@ -206,7 +206,7 @@ You can set up email notifications that will send you updates on threat analytic
 When looking at the threat analytics data, remember the following factors:
 
 - The checklist in the **Recommended actions** tab only displays recommendations tracked in [Microsoft Secure Score](microsoft-secure-score.md). Check the **Analyst report** tab for more recommended actions that aren't tracked in Secure Score.
-- The recommended actions don’t guarantee complete resilience and only reflect the best possible actions needed to improve it.
+- The recommended actions don't guarantee complete resilience and only reflect the best possible actions needed to improve it.
 - Antivirus-related statistics are based on Microsoft Defender Antivirus settings. 
 - The **Misconfigured devices** column in the main Threat analytics page shows the number of devices affected by a threat when the threat's related recommended actions aren't turned on. However, if Microsoft researchers don't link any recommended actions, the **Misconfigured devices** column shows the status *Not available*.  
 - The **Vulnerable devices** column in the main Threat analytics page shows the number of devices running software that are vulnerable to any of the vulnerabilities linked to the threat. However, if Microsoft researchers don't link any vulnerabilities, the **Vulnerable devices** column shows the status *Not available*.

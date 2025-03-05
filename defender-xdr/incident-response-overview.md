@@ -51,7 +51,12 @@ For more information, see [Automated investigation and response in Microsoft Def
 
 It's not enough to respond to attacks as they occur. For extended, multi-phase attacks such as ransomware, you must proactively search for the evidence of an attack in progress and take action to stop it before it completes.
 
-Advanced hunting is a query-based threat hunting tool in Microsoft Defender XDR that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. This flexible access to the Microsoft Defender XDR data enables unconstrained hunting for both known and potential threats.
+Advanced hunting is a query-based threat hunting tool in Microsoft Defender XDR that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. 
+
+> [!TIP]
+> You can extend the 30 days of raw data of advanced hunting using [Microsoft XDR Streaming API](/defender-xdr/streaming-api) and [Microsoft Defender for Endpoint Streaming API](/defender-endpoint/api/raw-data-export).
+
+This flexible access to the Microsoft Defender XDR data enables unconstrained hunting for both known and potential threats.
 
 You can use the same threat hunting queries to build custom detection rules. These rules run automatically to check for and then respond to suspected breach activity, misconfigured machines, and other findings.
 
@@ -61,7 +66,7 @@ See [Proactively hunt for threats with advanced hunting in Microsoft Defender XD
 
 Threat analytics is a threat intelligence capability in Microsoft Defender XDR designed to assist your security team to be as efficient as possible while facing emerging threats. It includes detailed analysis and information on:
 
-- Active [threat actors](/microsoft-365/security/intelligence/microsoft-threat-actor-naming) and their campaigns
+- Active [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) and their campaigns
 - Popular and new attack techniques
 - Critical vulnerabilities
 - Common attack surfaces

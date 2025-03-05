@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/02/2025
 ---
 
 # Network device discovery and vulnerability management
@@ -33,7 +33,7 @@ ms.date: 04/03/2024
 > [!NOTE]
 > The [Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) Blog \(published 04-13-2021\) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how get started using these new capabilities.
 
-Network discovery capabilities are available in the **Device inventory** section of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and Microsoft Defender XDR consoles.
+Network discovery capabilities are available in the **Device inventory** section of the [Microsoft Defender portal](https://security.microsoft.com) and Microsoft Defender XDR consoles.
 
 A designated Microsoft Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Once discovered, vulnerability management capabilities in Defender for Endpoint provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
 
@@ -85,7 +85,6 @@ Your first step is to select a device that performs the authenticated network sc
 
 8. To allow the scanner to be authenticated and work properly, it's essential that you add the following domains/URLs:
 
-    - login.windows.net
     - \*.security.microsoft.com
     - login.microsoftonline.com
     - \*.blob.core.windows.net/networkscannerstable/\*

@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "defender-business/mdb-preview.md",
+      "redirect_url": "/defender-xdr/preview",
+      "redirect_document_id": false
+    }
+  ]
+}

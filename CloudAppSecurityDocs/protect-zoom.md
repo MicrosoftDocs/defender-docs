@@ -11,8 +11,6 @@ ms.topic: how-to
 
 Zoom is an online video conferencing and collaboration tool. Zoom holds critical data of your organization, and this makes it a target for malicious actors.
 
-Connecting Zoom to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections.
-
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 ## SaaS security posture management

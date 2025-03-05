@@ -162,7 +162,7 @@ Because of phishing concerns and less than complete adoption of strong email aut
 - Behavioral analysis.
 - Other advanced techniques.
 
-To see Microsoft's original announcement about implicit authentication, see [A Sea of Phish Part 2 - Enhanced Anti-spoofing in Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Schooling-A-Sea-of-Phish-Part-2-Enhanced-Anti-spoofing/ba-p/176209).
+To see Microsoft's original announcement about implicit authentication, see [A Sea of Phish Part 2 - Enhanced Anti-spoofing in Microsoft 365](https://techcommunity.microsoft.com/blog/microsoftsecurityandcompliance/schooling-a-sea-of-phish-part-2-enhanced-anti-spoofing-technology-in-office-365/176209).
 
 By using these other signals, messages that would otherwise fail traditional email authentication checks can pass implicit authentication and be allowed into Microsoft 365.
 

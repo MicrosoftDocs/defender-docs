@@ -24,6 +24,7 @@ Connecting Google Workspace to Defender for Cloud Apps gives you improved insigh
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
 - [Discover and manage OAuth apps that have access to your environment](manage-app-permissions.md)
@@ -183,7 +184,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     1. Upload the P12 **Certificate** file that you saved earlier.
 
-    1. Enter one **admin account email** of your Google Workspace admin.
+    1. Enter the email address of your **Google Workspace Super Admin**.
+
+        Deploying with an account that is not a Google Workspace Super Admin will lead to failure in the API test and does not allow Defender for Cloud Apps to correctly function. We request specific scopes so even as Super Admin, Defender for Cloud Apps is still limited.
 
     1. If you have a Google Workspace Business or Enterprise account, select the check box. For information about which features are available in Defender for Cloud Apps for Google Workspace Business or Enterprise, see [Enable instant visibility, protection, and governance actions for your apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 

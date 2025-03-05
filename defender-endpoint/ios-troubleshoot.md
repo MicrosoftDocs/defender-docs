@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 06/19/2024
+ms.date: 01/22/2025
 ---
 
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
@@ -26,14 +26,13 @@ ms.date: 06/19/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
- 
 This article provides troubleshooting information to help you address issues that might arise with Microsoft Defender for Endpoint on iOS.
 
 > [!NOTE]
 > - Defender for Endpoint on iOS requires configuring its VPN to activate the Web Protection feature and to send periodic status signals while the app operates in the background. This VPN is local and pass-through, meaning it does not route traffic through a remote VPN server.
-> - Customers who opt not to set up a Defender for Endpoint VPN can disable Web Protection and still deploy Defender for Endpoint. In such cases, Defender for Endpoint will only send status signals to the Microsoft Defender portal when the user opens the app. If the app is not opened for 7 days, the device may be marked as inactive in the Microsoft Defender Portal.
+> - Customers who opt not to set up a Defender for Endpoint VPN can disable Web Protection and still deploy Defender for Endpoint. In such cases, Defender for Endpoint will only send status signals to the Microsoft Defender portal when the user opens the app. If the app is not opened for seven days, the device may be marked as inactive in the Microsoft Defender portal.
 
 ## Apps don't work when VPN is turned on
 
@@ -49,8 +48,8 @@ While enabled by default, there might be some cases that require you to disable 
 
 3. Toggle off **Connect On Demand** to disable VPN.
 
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
+   > [!div class="mx-imgBorder"]
+   > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
 
 > [!NOTE]
 > Web Protection isn't available when VPN is disabled. To re-enable Web Protection, open the Defender for Endpoint app on the device and enable Web Protection.
@@ -88,12 +87,12 @@ In addition, a notification is shown on the iOS device. Tapping on the notificat
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/ios-phish-alert.png" alt-text="The site reported as unsafe notification" lightbox="media/ios-phish-alert.png":::
 
-## Device not seen on the Defender for Endpoint console after onboarding
+## Device not seen in the Microsoft Defender portal after onboarding
 
-After onboarding, it takes few hours for device to show up in the Device inventory in the Defender for Endpoint security console. Also, ensure that device is registered correctly with Microsoft Entra ID and device has internet connectivity. For successful onboarding, the device has to be registered via Microsoft Authenticator or Intune Company Portal and the user needs to sign-in using the same account with which device is registered with Microsoft Entra ID.
+After onboarding, it takes few hours for device to show up in the Device inventory in the Microsoft Defender portal. Also, ensure that device is registered correctly with Microsoft Entra ID and device has internet connectivity. For successful onboarding, the device has to be registered via Microsoft Authenticator or Intune Company Portal and the user needs to sign-in using the same account with which device is registered with Microsoft Entra ID.
 
 > [!NOTE]
-> Sometimes, the device name is not consistent with that in Microsoft Intune admin center. The device name in Defender for Endpoint console is of the format <username_iPhone/iPad model>. You can also use Microsoft Entra device ID to identify the device in the Defender for Endpoint console.
+> Sometimes, the device name is not consistent with that in Microsoft Intune admin center. The device name in the Microsoft Defender portal is of the format <username_iPhone/iPad*>. You can also use your Microsoft Entra device ID to identify the device in the Microsoft Defender portal.
 
 ## Data and Privacy
 
@@ -128,13 +127,11 @@ If a user faces an issue that isn't already addressed in the above sections or i
 
    1. Open the MS Defender app on the iOS/iPadOS device.
    
-   2. Select the menu (profile icon) on the top-left corner, and then select **Send Feedback**.
+   2. Select the menu (profile icon) on the top-left corner, and then select **Help and Feedback**.
    
-   3. Choose from the given options. To report an issue, select **I don't like something**.
+   3. Choose from the given options. Under troubleshooting, select **Send Logs to Microsoft**.
 
-      Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
-
-   4. Select **Submit** to successfully send your feedback.
+   4. Share Incident ID to your support engineer.
 
 2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
 

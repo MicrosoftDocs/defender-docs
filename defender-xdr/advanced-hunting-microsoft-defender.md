@@ -23,12 +23,12 @@ ms.topic: conceptual
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 10/18/2024
+ms.date: 02/10/2025
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
 
-Advanced hunting allows you to view and query all the data sources available within the [unified Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal). The data sources might include Microsoft Defender XDR and various Microsoft security services. If you onboard Microsoft Sentinel to the Defender portal, access and use all your existing Microsoft Sentinel workspace content, including queries and functions.
+Advanced hunting allows you to view and query all the data sources available within the [unified Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), which include Microsoft Defender XDR and various Microsoft security services. If you onboard Microsoft Sentinel to the Defender portal, you can also access and use all your existing Microsoft Sentinel workspace content, including queries and functions.
 
 Querying from a single portal across different data sets makes hunting more efficient and removes the need for context-switching.
 
@@ -90,12 +90,12 @@ In the unified portal, in addition to viewing the schema column names and descri
     - Near real-time detection frequency is not available for detections that include Microsoft Sentinel data. 
     - Custom functions that were created and saved in Microsoft Sentinel are not supported.
     - Defining entities from Sentinel data is not yet supported in custom detections.
-- Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. 
+- Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. Alternatively, you can use the [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature to link query results to new or existing incidents.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the`Timestamp` and `TimeGenerated` columns. In case the data arrives to Log Analytics after 48 hours, it's being overridden upon ingestion to `now()`. Therefore, to get the actual time the event happened, we recommend relying on the `Timestamp` column.
-- When prompting [Copilot for Security](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
+- When prompting [Security Copilot](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
 
 
 ## See also
 
 - [Use advanced hunting functions, saved queries, and custom rules](advanced-hunting-defender-use-custom-rules.md)
-- [Explore advanced hunting results with Microsoft Sentinel data](advanced-hunting-defender-results.md)
+- [Work with results containing Microsoft Sentinel data](advanced-hunting-defender-results.md)
