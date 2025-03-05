@@ -46,7 +46,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 ## Configure and validate exclusions
 
 > [!CAUTION]
-> Use Microsoft Defender Antivirus extensions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+> Use Microsoft Defender Antivirus exclusions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
 > Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format
 
 If you're using Microsoft Intune to manage Microsoft Defender Antivirus or Microsoft Defender for Endpoint, use the following procedures to define exclusions:
