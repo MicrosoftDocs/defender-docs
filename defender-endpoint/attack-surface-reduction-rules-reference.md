@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 02/26/2025
+ms.date: 03/05/2025
 search.appverid: met150
 ---
 
@@ -256,7 +256,7 @@ This rule prevents an application from writing a vulnerable signed driver to dis
 The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a driver already existing on the system from being loaded.
 
 > [!NOTE]
-> You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune) for configuring custom rules.
+> You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune-alternative-2) for configuring custom rules.
 > You can also configure this rule using [PowerShell](enable-attack-surface-reduction.md#powershell).
 > To have a driver examined, use this Web site to [Submit a driver for analysis](https://www.microsoft.com/en-us/wdsi/driversubmission).
 
