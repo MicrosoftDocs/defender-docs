@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 02/20/2025
+ms.date: 03/04/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -237,7 +237,7 @@ For Windows 10 release information, see the [Windows lifecycle fact sheet](https
 To avoid a gap in protection, keep your OS installation images up to date with the latest antivirus and anti-malware updates. Updates are available for:
 
 - Windows 10 and 11 (Enterprise, Pro, and Home editions)
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
+- Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
 - WIM and VHD(x) files 
 
 Updates are released for x86, x64, and Arm64 Windows architecture.

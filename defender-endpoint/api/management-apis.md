@@ -33,7 +33,7 @@ Defender for Endpoint supports a wide variety of deployment, configuration, and 
 
 ## Endpoint onboarding and portal access
 
-Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. For servers, you can choose from several options, such as Defender for Endpoint Server, Defender for Servers (as part of the Defender for Cloud offering), or Defender for Business servers (for small and medium-sized businesses). 
+Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. You can onboard both client and server devices using the Microsoft Defender portal. Or, for servers, you can use Defender for Cloud, which integrates with Defender for Endpoint and Defender for Business. (Server licenses are required; for more information, see [Onboard servers to Defender for Endpoint](/defender-endpoint/onboard-server) and [Onboard devices to Defender for Business](/defender-business/mdb-onboard-devices).)
 
 The Microsoft Defender portal provides your security team with a robust, end-to-end experience for configuration, deployment, and monitoring. In addition, Microsoft Defender for Endpoint supports Group Policy and other non-Microosft tools used for managing devices.
 
@@ -47,7 +47,7 @@ Defender for Endpoint provides fine-grained control over what users with access 
 
 Defender for Endpoint is built on top of an integration-ready platform. 
 
-Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs enable you to automate workflows and innovate based on Defender for Endpoint capabilities. You can also the Defender for Endpoint APIs with Defender for Business, for the capabilities that are supported in Defender for Business.
+Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs enable you to automate workflows and innovate based on Defender for Endpoint capabilities. You can also use the Defender for Endpoint APIs with Defender for Business for the capabilities that are supported in Defender for Business.
 
 :::image type="content" source="../media/mdatp-apis.png" alt-text="The available API and integration in Microsoft Defender for Endpoint" lightbox="../media/mdatp-apis.png":::
 
@@ -73,7 +73,7 @@ The **Response API** exposes the ability to take actions in the service and on d
 
 Defender for Endpoint raw data streaming API provides the ability for customers to ship real-time events and alerts from their instances as they occur within a single data stream, providing a low latency, high throughput delivery mechanism.
 
-The Defender for Endpoint event information is pushed directly to Azure storage for long-term data retention, or to Azure Event Hubs for consumption by visualization services or additional data processing engines.
+The Defender for Endpoint event information is pushed directly to Azure storage for long-term data retention, or to Azure Event Hubs for consumption by visualization services or other data processing engines.
 
 For more information, see [Raw data streaming API](raw-data-export.md).
 
@@ -82,9 +82,9 @@ For more information, see [Microsoft Defender XDR Streaming API](/defender-xdr/s
 
 ## SIEM API
 
-When you enable security information and event management (SIEM) integration, it allows you to pull detections from Microsoft Defender XDR using your SIEM solution or by connecting directly to the detections REST API. This activates the SIEM connector access details section with pre-populated values and an application is created under your Microsoft Entra tenant. 
+When you enable security information and event management (SIEM) integration, you can pull detections from Microsoft Defender XDR using your SIEM solution or by connecting directly to the detections REST API. This activates the SIEM connector access details section with pre-populated values and an application is created under your Microsoft Entra tenant. 
 
-## Related topics
+## Related articles
 
 - [Access the Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Supported APIs](exposed-apis-list.md)
