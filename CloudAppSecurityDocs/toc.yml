@@ -467,7 +467,7 @@ items:
       - name: Feedback on activity
         href: api-activities-feedback.md
     - name: Alerts
-        items:
+      items:
         - name: Overview
           href: api-alerts.md
         - name: List alerts
