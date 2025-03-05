@@ -170,10 +170,10 @@ sections:
           
       - question: Can I have a mix of Microsoft endpoint security subscriptions?
         answer: |
-          In general, mixed-licensing scenarios aren't supported in Defender for Business or Microsoft 365 Business Premium. 
-          
-          If you're using the standalone version of Defender for Business, and you add Defender for Endpoint Plan 2 to your tenant, your experience defaults to the Defender for Business experience. However, if you have enough Defender for Endpoint Plan 2 for all users in your tenant, you can contact support and change your experience to the Defender for Endpoint Plan 2 experience. In this case, you're no longer using your Defender for Business licenses, and the simplified configuration experience in Defender for Business changes to advanced settings in Defender for Endpoint. 
-          
+          Microsoft Defender for Business does not support mixed licensing, so a tenant with Defender for Business (which is included in Microsoft 365 Business Premium) along with Defender for Endpoint Plan 2 (which is included in Microsoft 365 E5 Security) defaults to the Defender for Business experience. 
+
+          For example, if you have 80 users licensed for Defender for Business (as part of a Microsoft 365 Business Premium subscription), and you add Microsoft 365 E5 Security for 30 of those users, the experience for all users defaults to Defender for Business. If you want to change that to the Defender for Endpoint Plan 2 experience, you should license all users for Defender for Endpoint Plan 2 (either through the standalone version of Defender for Endpoint Plan 2 or Microsoft 365 E5 Security), and then contact Microsoft Support to request the switch for your tenant.
+                    
           For more information, see [Manage your subscription settings](mdb-manage-subscription.md).
 
           For more information about licenses and product terms, see [Licensing and product terms for Microsoft 365 subscriptions](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
