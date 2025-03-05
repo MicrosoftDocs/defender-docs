@@ -93,7 +93,7 @@ The following ASR rules DO NOT honor Microsoft Defender Antivirus exclusions:
 | [Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) |
 
 > [!NOTE]
-> For information about configuring per-rule exclusions, see the section titled **Configure ASR rules per-rule exclusions** in the topic [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md).
+> For information about configuring per-rule exclusions, see the section titled **Configure ASR rules per-rule exclusions** in the article [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md).
 
 ## ASR rules and Defender for Endpoint Indicators of Compromise (IOC)
 
@@ -179,10 +179,10 @@ Toast notifications are generated for all rules in Block mode. Rules in any othe
 
 For rules with the "Rule State" specified:
 
-- ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices at cloud block level "High"
-- Devices that not at the high cloud block level don't generate alerts for any `ASR Rule, Rule State` combinations
-- EDR alerts are generated for ASR rules in the specified states, for devices at cloud block level "High+"
-- Toast notifications occur in block mode only and for devices at cloud block level "High"
+- ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices set at the cloud block level `High`.
+- Devices that are not set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
+- EDR alerts are generated for ASR rules in the specified states, for devices set at the cloud block level `High+`.
+- Toast notifications occur in block mode only and for devices set at the cloud block level `High`.
 
 | Rule name | Rule state | EDR alerts | Toast notifications |
 |---|---|---|---|
