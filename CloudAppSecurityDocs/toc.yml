@@ -439,7 +439,7 @@ items:
 - name: Reference
   items:
   - name: Microsoft Graph API reference
-    href: /graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta
+    href: /graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta&preserve-view=true
   - name: REST API reference
     items:
     - name: Introduction
