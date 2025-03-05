@@ -42,6 +42,8 @@ Once the network devices are discovered and classified, security administrators 
 ## Approach
 
 Network devices aren't managed as standard endpoints since Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. Depending on the network topology and characteristics, a single device or a few devices onboarded to Microsoft Defender for Endpoint performs authenticated scans of network devices using SNMP (read-only).
+>[!NOTE]
+>The authenticated scans support SNMPv2, SNMPv3
 
 There are two types of devices to keep in mind:
 
