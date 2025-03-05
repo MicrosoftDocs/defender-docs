@@ -466,7 +466,7 @@ items:
         href: api-activities-fetch.md
       - name: Feedback on activity
         href: api-activities-feedback.md
-      - name: Alerts
+    - name: Alerts
         items:
         - name: Overview
           href: api-alerts.md
@@ -484,7 +484,7 @@ items:
           href: api-alerts-mark-read.md
         - name: Mark alert as unread
           href: api-alerts-mark-unread.md
-      - name: Cloud Discovery
+    - name: Cloud Discovery
         items:
         - name: Overview
           href: api-discovery.md
@@ -500,7 +500,7 @@ items:
           href: api-discovery-list-categories.md
         - name: Generate block script
           href: api-discovery-script.md
-      - name: Data Enrichment
+    - name: Data Enrichment
         items:
         - name: Overview
           href: api-data-enrichment.md
@@ -514,7 +514,7 @@ items:
           href: api-data-enrichment-update.md
         - name: Delete IP address range
           href: api-data-enrichment-delete.md
-      - name: Entities
+    - name: Entities
         items:
         - name: Overview
           href: api-entities.md
@@ -524,7 +524,7 @@ items:
           href: api-entities-fetch.md
         - name: Fetch entity tree
           href: api-entities-fetch-tree.md
-      - name: Files
+    - name: Files
         items:
         - name: Overview
           href: api-files.md
