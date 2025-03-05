@@ -185,7 +185,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
 5. Click **Next**. Step **2 Configuration settings** opens. For OMA-URI Settings, click **Add**. Two options now appear: **Add** and **Export**.
 
-   :::image type="content" source="media/mem04-2-configuration-settings.png" alt-text="The configuration settings in the Microsoft Intune admin center portal." lightbox="media/mem04-2-configuration-settings.png":::
+   :::image type="content" source="media/mem04-2-configuration-settings.png" alt-text="Screenshot showing the configuration settings in the Microsoft Intune admin center portal." lightbox="media/mem04-2-configuration-settings.png":::
 
 6. Click **Add** again. The **Add Row OMA-URI Settings** opens. In **Add Row**, fill in the following information:
 
@@ -223,17 +223,17 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
 10. In step **5 Applicability Rules** for the following settings, do the following:
 
-   1. In **Rule**, select either **Assign profile if**, or **Don't assign profile if**.
+      1. In **Rule**, select either **Assign profile if**, or **Don't assign profile if**.
 
-   2. In **Property**, select the property to which you want this rule to apply.
+      2. In **Property**, select the property to which you want this rule to apply.
 
-   3. In **Value**, enter the applicable value or value range.
+      3. In **Value**, enter the applicable value or value range.
 
    :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal" lightbox="media/mem07-5-applicability-rules.png":::
 
 11. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
 
-   :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
+      :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
 
    Rules are active and live within minutes.
 
