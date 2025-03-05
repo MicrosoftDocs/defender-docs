@@ -486,52 +486,52 @@ items:
         href: api-alerts-mark-unread.md
     - name: Cloud Discovery
       items:
-       - name: Overview
-         href: api-discovery.md
-       - name: Initiate file upload
-         href: api-discovery-initiate.md
-       - name: Perform file upload
-         href: api-discovery-perform.md
-       - name: Finalize file upload
-         href: api-discovery-finalize.md
-       - name: List continuous reports
-         href: api-discovery-list-streams.md
-       - name: List continuous report categories
-         href: api-discovery-list-categories.md
-       - name: Generate block script
-         href: api-discovery-script.md
-    - ame: Data Enrichment
-       items:
-       - name: Overview
-         href: api-data-enrichment.md
-       - name: Manage IP address ranges using the API
-         href: api-data-enrichment-manage-script.md
-       - name: List IP ranges
-         href: api-data-enrichment-list.md
-       - name: Create IP address range
-         href: api-data-enrichment-create.md
-       - name: Update IP address range
-         href: api-data-enrichment-update.md
-       - name: Delete IP address range
-         href: api-data-enrichment-delete.md
-    - ame: Entities
-       items:
-       - name: Overview
-         href: api-entities.md
-       - name: List entities
-         href: api-entities-list.md
-       - name: Fetch entity
-         href: api-entities-fetch.md
-       - name: Fetch entity tree
-         href: api-entities-fetch-tree.md
+      - name: Overview
+        href: api-discovery.md
+      - name: Initiate file upload
+        href: api-discovery-initiate.md
+      - name: Perform file upload
+        href: api-discovery-perform.md
+      - name: Finalize file upload
+        href: api-discovery-finalize.md
+      - name: List continuous reports
+        href: api-discovery-list-streams.md
+      - name: List continuous report categories
+        href: api-discovery-list-categories.md
+      - name: Generate block script
+        href: api-discovery-script.md
+    - name: Data Enrichment
+      items:
+      - name: Overview
+        href: api-data-enrichment.md
+      - name: Manage IP address ranges using the API
+        href: api-data-enrichment-manage-script.md
+      - name: List IP ranges
+        href: api-data-enrichment-list.md
+      - name: Create IP address range
+        href: api-data-enrichment-create.md
+      - name: Update IP address range
+        href: api-data-enrichment-update.md
+      - name: Delete IP address range
+        href: api-data-enrichment-delete.md
+    - name: Entities
+      items:
+      - name: Overview
+        href: api-entities.md
+      - name: List entities
+        href: api-entities-list.md
+      - name: Fetch entity
+        href: api-entities-fetch.md
+      - name: Fetch entity tree
+        href: api-entities-fetch-tree.md
     - name: Files
       items:
-       - name: Overview
-         href: api-files.md
-       - name: List Files
-         href: api-files-list.md
-       - name: Fetch File
-         href: api-files-fetch.md
+      - name: Overview
+        href: api-files.md
+      - name: List Files
+        href: api-files-list.md
+      - name: Fetch File
+        href: api-files-fetch.md
 - name: Resources
   items:
   - name: Licensing datasheet
