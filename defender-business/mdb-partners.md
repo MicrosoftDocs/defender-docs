@@ -24,11 +24,6 @@ Small and medium-sized businesses recognize that security is important, but they
 
 If you're a Microsoft partner, and you're working with customers who have or need [Microsoft Defender for Business](mdb-overview.md), [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview), [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint), or [Microsoft 365 E3](/Microsoft-365/enterprise/microsoft-365-overview), this article is for you!
 
-- [Download our security guide and checklist](#download-our-security-guide-and-checklist-new)
-- [Learn how you can integrate Microsoft endpoint security with your RMM tools and PSA software](#integrate-microsoft-endpoint-security-with-your-rmm-tools-and-psa-software).
-- [See how you can use Microsoft 365 Lighthouse to secure and manage your customers' devices and data](#use-microsoft-365-lighthouse-to-secure-and-manage-your-customers-devices-and-data).
-- [Learn more about Defender for Business and Microsoft 365 Business Premium](#learn-more-about-defender-for-business-and-microsoft-365-business-premium).
-
 ## Download our security guide and checklist
 
 The [practical guide to security using Microsoft 365 Business (Basic, Standard, and Premium)](https://aka.ms/smbsecurityguide) guide is intended to start discussion around your customers' security and compliance options with Microsoft 365 for business. One of the first and most important things that IT leaders and business leaders can do is talk through the possibilities. This guide can help facilitate those discussions. You can also download a [summary checklist](https://aka.ms/smbsecuritychecklist) to use as a companion to the guide.
