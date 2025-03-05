@@ -126,4 +126,4 @@ Each blob contains multiple rows. Each row contains the event name, the time Def
 ## See also
 
 - [Raw Data Streaming API](/defender-endpoint/api/raw-data-export) in Defender for Endpoint
-- [Overview of management and APIs](../defender-endpoint/api/management-apis.md)
+- [Overview of management and APIs](/defender-endpoint/api/management-apis)
