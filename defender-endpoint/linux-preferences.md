@@ -143,6 +143,8 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
+As it is under antivirusEngine this policy is only applicable for `epp` exclusions unless `mergePolicy` under exclusionSettings is configured as (`admin_only`). 
+
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|exclusionsMergePolicy|Exclusions merge|
@@ -151,7 +153,8 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
-> Can also configure exclusions under [exclusionSettings](#exclusion-setting-preferences)
+> We recommend to configure exclusions and the merge policy under [exclusionSettings](#exclusion-setting-preferences)
+> [exclusionSettings](#exclusion-setting-preferences) allows to configure exclusion of both `epp` and `global` scope with a single `mergePolicy`
 
 #### Scan exclusions
 
