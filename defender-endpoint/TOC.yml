@@ -232,6 +232,8 @@
             href: mac-resources.md
           - name: Troubleshoot Microsoft Defender for Endpoint on macOS
             items:
+            - name: Troubleshoot agent health issues
+              href: mac-health-status.md
             - name: Troubleshooting mode on macOS
               href: mac-troubleshoot-mode.md
             - name: Troubleshoot macOS installation issues
@@ -1079,10 +1081,10 @@
       href: /defender-xdr/advanced-hunting-overview
 
     - name: Threat analytics overview
-      href: threat-analytics.md
+      href: /defender-xdr/threat-analytics
       items:
       - name: Read the analyst report
-        href: threat-analytics-analyst-reports.md
+        href: /defender-xdr/threat-analytics-analyst-reports
 
     - name: EDR in block mode
       href: edr-in-block-mode.md
