@@ -26,20 +26,16 @@ Threat protection for AI workloads integrates with the [Defender XDR](concept-in
 
 Security teams can correlate AI workload alerts and incidents in the Defender XDR portal to understand the full scope of an attack, including malicious activities related to their generative AI applications.
 
-## Sign up for the limited public preview
-
-To use threat protection for AI workloads, you must enroll in the limited public preview program by filling out the [registration form](https://aka.ms/D4AI/PublicPreviewAccess).
-
 ## Availability
 
 |Aspect|Details|
 |----|:----|
-|Release state:| Limited preview (PP)|
+|Release state:| Public Preview (PP)|
 |Feature availability:|- Activity monitoring (security alerts) – Preview (PP) <br>- Prompt evidence (security alerts) – Preview (PP) |
 |Pricing:|N/A|
-|Supported AI services:| [Azure OpenAI supported models](/azure/ai-services/openai/overview) <br> [Azure AI Model Inference service supported models](/azure/ai-studio/ai-services/model-inference) |
+|Supported AI services:| [Azure OpenAI supported models](/azure/ai-services/openai/overview) <br> [Azure AI Model Inference service supported models](/azure/ai-studio/ai-services/model-inference) <br> **Defender for cloud supports text tokens only at this phase (image and audio tokens are not scanned) |
 |Required roles and permissions:|To enable threat detection at subscription level, you need Owner roles (subscription owner) or specific roles with corresponding data actions.|
-|Clouds:|:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Connected AWS accounts|
+|Clouds:|:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government <br>:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet <br>:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Connected AWS accounts|
 
 ## Related content
 
