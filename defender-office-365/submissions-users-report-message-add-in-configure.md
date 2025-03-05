@@ -108,7 +108,7 @@ The rest of this article describes how to remove the Report Message and Report P
 
    When you're finished viewing the information on the tabs, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** to close the details flyout.
 
-## Scoping the Report Message or Report Phishing add-ins to a set of users.
+## Scoping the Report Message or Report Phishing add-ins to a set of users
 
 1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. Or, to go directly to the **Integrated apps** page, use <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
 
