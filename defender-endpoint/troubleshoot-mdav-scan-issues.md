@@ -64,21 +64,19 @@ The following table summarizes antivirus settings in Microsoft Intune for Window
 | Scan Schedule | Scheduler Randomization Time | |
 | Scan Schedule | Turn on scan after Security intelligence update | Turn on scan after Security intelligence update. Keep in mind that this setting is only available through Settings Catalog. |
 
-In an Intune policy (inc MDEAttach) you can configure two scanning schedules:
+In an Intune policy and in [Defender for Endpoint Security Settings Management](/defender-endpoint/mde-security-settings-management), you can configure two scanning schedules:
 
-- A daily quick scan: You can configure the time a daily quick scan runs (Disabling or not configuring disables a daily quick scan)
+- **A daily quick scan**: You can configure the time a daily quick scan runs (Disabling or not configuring disables a daily quick scan)
    Setting: `Schedule Quick Scan Time`
 
-- A Scheduled scan: You can configure when a Scheduled scan will run, you can choose the type of scan and when it runs.
+- **A Scheduled scan**: You can configure when a Scheduled scan will run, you can choose the type of scan and when it runs.
    Settings: `Scan Parameter`; `Schedule Scan Day`; and `Schedule Scan Time`
 
+If you are using Group Policy to manage your devices, see [Configure Microsoft Defender Antivirus with Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus#group-policy-settings-and-resources)
 
+For information about troubleshooting antivirus settings, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
 
-
-
-
-
-
+For more information about scan behaviors when Microsoft Defender Antivirus is in passive mode, see [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility?view=o365-worldwide#notes-about-protection-states)
 
 
 
