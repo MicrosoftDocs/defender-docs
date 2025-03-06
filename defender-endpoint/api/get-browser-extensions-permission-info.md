@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/01/2022
+ms.date: 03/05/2025
 ---
 
 # Get browser extensions permission information
