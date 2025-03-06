@@ -48,4 +48,13 @@ The following table summarizes antivirus settings in Microsoft Intune for Window
 | Scan | Allow Scanning Network Files | This policy setting allows you to configure scheduled scans and on-demand (manually initiated) scans for files that are accessed over the network. It is recommended to enable this setting. |
 | Scan | Avg CPU Load Factor | This policy setting allows you to configure the maximum percentage CPU utilization permitted during a scan. Valid values for this setting are a percentage represented by the integers 5 to 100. A value of 0 indicates that there should be no throttling of CPU utilization. The default value is 50. |
 | Scan | Allow Archive Scanning | This policy setting allows you to configure scans for malicious software and unwanted software in archive files such as .ZIP or .CAB files. Keep in mind that configuring this setting can degrade performance on a scan. |
+| Scan | Archive Max Depth | |
+| Scan | Archive Max Size ||
+| Scan | Check For Signatures Before Running Scan | This policy setting allows you to manage whether a check for new virus and spyware security intelligence occurs before running a scan. It applies to scheduled scans, but has no effect on scans initiated manually from the user interface or scans started using Command Prompt with the command, `mpcmdrun -Scan`. |
+| Scan | Disable Catchup Full Scan | This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually, these scheduled scans are missed because the computer was turned off at the scheduled time. <br/><br/>If you disable or don't configure this setting, catch-up scans for scheduled full scans occur. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs into the computer. If there is no scheduled scan configured, no catch-up scan runs. <br/><br/> If you enable this setting, catch-up scans for scheduled full scans are disabled. |
+
+
+
+
+
 
