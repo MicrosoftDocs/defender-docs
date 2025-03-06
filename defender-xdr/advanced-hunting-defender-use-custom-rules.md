@@ -115,7 +115,9 @@ For analytics rules that apply to data ingested through the connected Microsoft 
 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
-You can also create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. In custom detection rule creation, you can only query data from analytics log type tables, otherwise the rule creation won't proceed.
+You can also create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. 
+
+In custom detection rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs, see [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise the rule creation won't proceed.
 
 If your Defender XDR data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
 
