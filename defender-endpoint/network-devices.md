@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 01/02/2025
+ms.date: 03/06/2025
 ---
 
 # Network device discovery and vulnerability management
@@ -23,15 +23,14 @@ ms.date: 01/02/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 > [!NOTE]
-> The [Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) Blog \(published 04-13-2021\) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how get started using these new capabilities.
+> The [Tech Community Blog: Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) (published 04-13-2021) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how get started using these new capabilities.
 
 Network discovery capabilities are available in the **Device inventory** section of the [Microsoft Defender portal](https://security.microsoft.com) and Microsoft Defender XDR consoles.
 
@@ -42,8 +41,9 @@ Once the network devices are discovered and classified, security administrators 
 ## Approach
 
 Network devices aren't managed as standard endpoints since Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. Depending on the network topology and characteristics, a single device or a few devices onboarded to Microsoft Defender for Endpoint performs authenticated scans of network devices using SNMP (read-only).
->[!NOTE]
->The authenticated scans support SNMPv2, SNMPv3
+
+> [!NOTE]
+> Authenticated scans support `SNMPv2` and `SNMPv3`.
 
 There are two types of devices to keep in mind:
 
@@ -87,9 +87,9 @@ Your first step is to select a device that performs the authenticated network sc
 
 8. To allow the scanner to be authenticated and work properly, it's essential that you add the following domains/URLs:
 
-    - \*.security.microsoft.com
-    - login.microsoftonline.com
-    - \*.blob.core.windows.net/networkscannerstable/\*
+    - `*.security.microsoft.com`
+    - `login.microsoftonline.com`
+    - `*.blob.core.windows.net/networkscannerstable/*`
 
     > [!NOTE]
     > Not all URLs are specified in the Defender for Endpoint documented list of allowed data collection.
@@ -111,7 +111,7 @@ The scanner is supported on Windows 10, version 1903 and Windows Server, version
 
 2. Download the scanner and install it on the designated Defender for Endpoint scanning device.
 
-     :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan-new.png" alt-text="Screenshot of the add new authenticated scan screen" lightbox="/defender/media/defender-endpoint/network-authenticated-scan-new.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan-new.png" alt-text="Screenshot of the add new authenticated scan screen" lightbox="/defender/media/defender-endpoint/network-authenticated-scan-new.png":::
 
 ## Scanner installation & registration
 
@@ -124,8 +124,8 @@ To complete the scanner registration process:
 
 1. Copy and follow the URL that appears on the command line and use the provided installation code to complete the registration process.
 
-    > [!NOTE]
-    > You may need to change Command Prompt settings to be able to copy the URL.
+   > [!NOTE]
+   > You may need to change Command Prompt settings to be able to copy the URL.
 
 2. Enter the code and sign in using a Microsoft account that has the Defender for Endpoint permission called "Manage security settings in Defender."
 
@@ -143,7 +143,7 @@ If there's a difference between the two versions, the update process determines 
 
 2. Select **Add new scan** and choose **Network device authenticated scan** and select **Next**.
 
-     :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan.png" alt-text="Screenshot of the add new network device authenticated scan screen" lightbox="/defender/media/defender-endpoint/network-authenticated-scan.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan.png" alt-text="Screenshot of the add new network device authenticated scan screen" lightbox="/defender/media/defender-endpoint/network-authenticated-scan.png":::
 
 3. Choose whether to **Activate scan**.
 
@@ -161,9 +161,9 @@ If there's a difference between the two versions, the update process determines 
 
    |Authentication Method|Azure KeyVault secret value|
    |:----|:----:|
-   |AuthPriv|Username;AuthPassword;PrivPassword|
-   |AuthNoPriv|Username;AuthPassword|
-   |CommunityString |CommunityString|
+   |`AuthPriv`|Username;AuthPassword;PrivPassword|
+   |`AuthNoPriv`|Username;AuthPassword|
+   |`CommunityString` |CommunityString|
 
 9. Select **Next** to run or skip the test scan.
 
@@ -174,7 +174,7 @@ If there's a difference between the two versions, the update process determines 
 
 ### Scan and add network devices
 
-During the set-up process, you can perform a one time test scan to verify that:
+During the setup process, you can perform a one time test scan to verify that:
 
 - There's connectivity between the Defender for Endpoint scanning device and the configured target network devices.
 - The configured SNMP credentials are correct.
