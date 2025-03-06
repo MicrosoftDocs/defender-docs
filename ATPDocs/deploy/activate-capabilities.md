@@ -97,7 +97,7 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
 
-:::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to seethe onboarded servers.":::
+    :::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to seethe onboarded servers.":::
 
 ## Onboarding Confirmation 
 
@@ -142,7 +142,7 @@ In the Defender portal, check for the following details:
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
-    If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
+   If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
@@ -221,7 +221,7 @@ If you want to deactivate Defender for Identity capabilities on your domain cont
 1. In the Defender portal, select **Settings** > **Identities** > **Sensors**.
 2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-:::image type="content" source="media/activate-capabilities/3.jpg" lightbox="media/activate-capabilities/3.jpg" alt-text="Screenshot that shows how to deactivate a server.":::
+    :::image type="content" source="media/activate-capabilities/3.jpg" lightbox="media/activate-capabilities/3.jpg" alt-text="Screenshot that shows how to deactivate a server.":::
 
 Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/).
 
