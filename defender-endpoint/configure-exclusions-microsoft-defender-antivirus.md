@@ -3,7 +3,7 @@ title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/18/2025
+ms.date: 03/06/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
