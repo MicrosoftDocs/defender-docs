@@ -143,7 +143,7 @@ As part of the onboarding process, you choose between two permission types: **De
 
 The following tables show the permissions granted to certain Defender for Containers roles, depending on the permission type you choose.
 
-### AWS Default Access
+### AWS default access
 
 | Role Name                          | Associated Polices / Permissions                             | Capabilities                                                 |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -152,21 +152,21 @@ The following tables show the permissions granted to certain Defender for Contai
 |                                    |                                                              |                                                              |
 |                                    |                                                              |                                                              |
 
-### AWS Least Privileged Access
+### AWS least privileged access
 
 | **Role Name**                      | **Associated Polices / Permissions**                         | **Capabilities**                                             |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | MDCContainersImageAssessmentRole       | AmazonEC2ContainerRegistryReadOnly  [AWS permissions list](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-AmazonEC2ContainerRegistryReadOnly) <br />AmazonElasticContainerRegistryPublicReadOnly [AWS permissions list](https://docs.aws.amazon.com/AmazonECR/latest/public/public-security-iam-awsmanpol.html#public-security-iam-awsmanpol-AmazonElasticContainerRegistryPublicReadOnly) | Agentless container vulnerability assessment.                |
 | MDCContainersAgentlessDiscoveryK8sRole | eks:DescribeCluster<br />eks:UpdateClusterConfig             | Agentless discovery of Kubernetes. <br />Updating EKS clusters to support IP restriction |
 
-### GCP Default Access
+### GCP default access
 
 | Service Account Name           | Associated Roles /  Permissions                              | Capabilities                                                 |
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| mdc-containers-artifact-assess | Roles/storage.objectUser  [GCP permissions list](https://cloud.google.com/iam/docs/understanding-roles#storage.objectUser)<br /><br />Roles/artifactregistry.writer  [GCP permissions list](https://cloud.google.com/iam/docs/understanding-roles#artifactregistry.writer) | Agentless container vulnerability assessment..               |
+| mdc-containers-artifact-assess | Roles/storage.objectUser  [GCP permissions list](https://cloud.google.com/iam/docs/understanding-roles#storage.objectUser)<br /><br />Roles/artifactregistry.writer  [GCP permissions list](https://cloud.google.com/iam/docs/understanding-roles#artifactregistry.writer) | Agentless container vulnerability assessment.               |
 | mdc-containers-k8s-operator    | Roles/container.viewer [GCP permissions list](https://cloud.google.com/iam/docs/understanding-roles#container.viewer)<br />Custom role MDCGkeClusterWriteRole [Custom Role] with permission container.clusters.update | Agentless discovery of Kubernetes<br />Updating GKE clusters to  support IP restriction |
 
-### GCP Least Privileged Access
+### GCP least privileged access
 
 | **Service Account Name**       | **Associated Roles / Permissions**                           | **Current Capabilities**                                     |
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
