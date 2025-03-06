@@ -18,6 +18,34 @@ ms.date: 03/06/2025
 
 # Troubleshoot Microsoft Defender Antivirus scan issues
 
-If you're seeing issues with Microsoft Defender Antivirus scans, such as scans aren't finishing, or scans are causing performance isssues on devices, you might need to troubleshoot the scan process. This article describes how to troubleshoot these kinds of issues.
+If you're seeing issues with Microsoft Defender Antivirus scans, such as scans aren't finishing, or scans are causing performance isssues on devices, you might need to troubleshoot the scan process. This article describes how to troubleshoot these kinds of issues. 
 
+> [!NOTE]
+> To understand differences between antivirus scan types, see [Comparing the quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
+
+## How are scans launched?
+
+Understanding why a scan is launched can help identify what settings are applied to the scan and what can be adjusted. In Microsoft Defender for Endpoint, antivirus scans can be launched in several ways. The following table summarizes these options:
+
+| Method | Description |
+|--|--|
+| Schedule | Defined by policy as per policy table |
+| Scan after update | Defined by policy (Settings catalogue in Intune) |
+| Catch up scan | Launched when a scheduled scan was missed twice |
+| Manually launched | A scan is launched manually by any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
+
+
+## Policies that impact scanning
+
+Understanding the policies applied to the scan will enable you to understand the behaviour of the scan and what can be tuned to remediate the scan challenges.
+
+The following table summarizes antivirus settings in Microsoft Intune for Windows devices:
+
+| Group | Setting | Description |
+|--|--|--|
+| Scan | Allow Full Scan On Mapped Network Drives | This policy setting allows you to configure scanning mapped network drives. Keep in mind that configuring this setting can degrade performance on full scans. |
+| Scan | Allow Full Scan Removable Drive Scanning | This policy setting allows you to manage whether or not to scan for malicious software and unwanted software in the contents of removable drives, such as USB flash drives, when running a full scan. |
+| Scan | Allow Scanning Network Files | This policy setting allows you to configure scheduled scans and on-demand (manually initiated) scans for files that are accessed over the network. It is recommended to enable this setting. |
+| Scan | Avg CPU Load Factor | This policy setting allows you to configure the maximum percentage CPU utilization permitted during a scan. Valid values for this setting are a percentage represented by the integers 5 to 100. A value of 0 indicates that there should be no throttling of CPU utilization. The default value is 50. |
+| Scan | Allow Archive Scanning | This policy setting allows you to configure scans for malicious software and unwanted software in archive files such as .ZIP or .CAB files. Keep in mind that configuring this setting can degrade performance on a scan. |
 
