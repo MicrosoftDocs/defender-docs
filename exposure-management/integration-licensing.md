@@ -66,7 +66,6 @@ The following licenses will allow access to Microsoft Secure Score experience on
 
 - Microsoft 365 E3
 - Microsoft 365 A3
-- Microsoft Defender for Endpoint (Plan 2)
 - Microsoft Defender for Office 365 (Plan 1)
 
 ## Next steps
