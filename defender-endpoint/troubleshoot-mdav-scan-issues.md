@@ -49,9 +49,21 @@ The following table summarizes antivirus settings in Microsoft Intune for Window
 | Scan | Avg CPU Load Factor | This policy setting allows you to configure the maximum percentage CPU utilization permitted during a scan. Valid values for this setting are a percentage represented by the integers 5 to 100. A value of 0 indicates that there should be no throttling of CPU utilization. The default value is 50. |
 | Scan | Allow Archive Scanning | This policy setting allows you to configure scans for malicious software and unwanted software in archive files such as .ZIP or .CAB files. Keep in mind that configuring this setting can degrade performance on a scan. |
 | Scan | Archive Max Depth | |
-| Scan | Archive Max Size ||
+| Scan | Archive Max Size | |
 | Scan | Check For Signatures Before Running Scan | This policy setting allows you to manage whether a check for new virus and spyware security intelligence occurs before running a scan. It applies to scheduled scans, but has no effect on scans initiated manually from the user interface or scans started using Command Prompt with the command, `mpcmdrun -Scan`. |
 | Scan | Disable Catchup Full Scan | This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually, these scheduled scans are missed because the computer was turned off at the scheduled time. <br/><br/>If you disable or don't configure this setting, catch-up scans for scheduled full scans occur. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs into the computer. If there is no scheduled scan configured, no catch-up scan runs. <br/><br/> If you enable this setting, catch-up scans for scheduled full scans are disabled. |
+| Scan | Enable Low CPU Priority | This policy setting allows you to enable or disable low CPU priority for scheduled scans. <br/>- If you enable this setting, low CPU priority is used during scheduled scans. <br/>- If you disable or don't configure this setting, no changes are made to CPU priority for scheduled scans. |
+| General | Excluded Extensions | |
+| General | Excluded Paths |  |
+| General | Excluded Processes | |
+| Scan Schedule | Scan Parameter | This policy setting allows you to specify the scan type to use during a scheduled scan. Scan type options are: <br/>- `1` = Quick Scan (default) <br/>- `2` = Full Scan <br/><br/>If you enable this setting, the scan type is set to the specified value. <br/><br/>If you disable or don't configure this setting, the default scan type is used. |
+| Scan Schedule | Schedule Quick Scan Time | This policy setting allows you to specify the time of day at which to perform a daily quick scan. The time value is represented as the number of minutes past midnight (00:00). For example, 120 (0x78) is equivalent to 02:00 AM. By default, this setting is set to disabled. The schedule is based on local time on the computer where the scan is executing. <br/><br/>If you enable this setting, a daily quick scan runs at the time of day specified. <br/><br/>If you disable or don't configure this setting, daily quick scan controlled by this configuration doesn't run. |
+| Scan Schedule | Schedule Scan Day | This policy setting allows you to specify the day of the week on which to perform a scheduled scan. The scan can also be configured to run every day or to never run at all. <br/><br/>This setting can be configured with the following ordinal number values: <br/>- (`0x0`) Every Day <br/>- (`0x1`) Sunday <br/>- (`0x2`) Monday <br/>- (`0x3`) Tuesday <br/>- (`0x4`) Wednesday <br/>- (`0x5`) Thursday <br/>- (`0x6`) Friday <br/>- (`0x7`) Saturday <br/>- (`0x8`) <br/>- Never (*default*) <br/><br/>If you enable this setting, a scheduled scan runs at the frequency specified. <br/><br/>If you disable or don't configure this setting, a scheduled scan runs at a default frequency. |
+
+
+
+
+
 
 
 
