@@ -76,7 +76,27 @@ If you are using Group Policy to manage your devices, see [Configure Microsoft D
 
 For information about troubleshooting antivirus settings, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
 
-For more information about scan behaviors when Microsoft Defender Antivirus is in passive mode, see [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility?view=o365-worldwide#notes-about-protection-states)
+For more information about scan behaviors when Microsoft Defender Antivirus is in passive mode, see [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility#notes-about-protection-states)
+
+## Frequently asked questions about scans
+
+- **Question**: My quick scans are scheduled for Mondays but they're happening daily. Why is that?
+
+   Answer: If you want the scheduled scans to be the only scans, set `ScheduleQuickScanTime` to `0`.
+
+- **Question**: Why are catch-up scans not running on my machine, even though `DisableCatchupQuickScan` is set to `0`?
+
+   Answer: Catch-up scans don't run when the device is running on battery.
+
+- **Question**: Why are daily quick scans not running on my machine even though I have scheduled them?
+
+   Answer: Check to see if daily quick scans are configured on the machine. If `ScanParameters` is set to `2`, then the default scheduled scan type is `Full Scan`. If `ScheduledQuickScanTime` is set to `0`, then daily quick scans aren't set.
+
+- **Question**: Why is my full scan failing due to memory issues (memory consumption/exceeding constraints)?
+
+   Answer: It's possible that there are a large number of cab/zip files on the machine. We recommend going through high size folders and either cleaning up or removing unused files, and/or implementing exclusions for specific cases (such as files under `C:\Windows`). See [Recommended antivirus exclusions for Configuration Manager](/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions).
+
+
 
 
 
