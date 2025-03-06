@@ -88,10 +88,10 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
    The Activation page lists servers discovered in Device Inventory and identified as eligible domain controllers. 
 
-2. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
 
-   ![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/1.jpg)
-   
+    :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
+
     > [!NOTE]
     > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
@@ -107,7 +107,7 @@ To confirm the sensor has been onboarded:
 2. Check that the onboarded domain controller is listed. 
 
 > [!NOTE]
->  The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
+> The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 ## Test activated capabilities
 
