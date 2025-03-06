@@ -14,7 +14,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 03/05/2025
 ---
 
 # Communicating with experts in the Microsoft Defender Experts for XDR service
@@ -23,7 +23,7 @@ ms.date: 05/01/2024
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-Microsoft Defender Experts for XDR provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your service delivery managers (SDMs).
+Microsoft Defender Experts for XDR provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your service delivery managers (SDMs), if included in your service.
 
 ## Incident and managed response notifications
 
@@ -77,7 +77,9 @@ While the previous scenarios involve our experts initiating communication with y
 
 ## Collaborating with your service delivery manager
 
-The service delivery manager (SDM) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
+The service delivery manager (SDM)* is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
+
+*Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
 
 The SDM provides the following services:
 
