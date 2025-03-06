@@ -1,13 +1,13 @@
 ---
 title: Permissions required by Defender for Containers for EKS and GKE support.
-description: This article lists the permissions required to use Defender for Containers extensions for EKS and GKE .
+description: This article lists the permissions required to use Defender for Containers extensions for EKS and GKE.
 ms.topic: limits-and-quotas
 ms.date: 03/06/2025
 ---
 
-# Permissions to provision Defender for Containers in AWS and GCP
+# Permissions to install Defender for Containers components in AWS and GCP
 
-This article lists the roles and permissions required to provision Defender for Containers components in the AWS Elastic Kubernetes Service (EKS) and GCP Google Kubernetes Engine (GKE) environments.
+This article lists the roles and permissions required to install Defender for Containers components in the AWS Elastic Kubernetes Service (EKS) and GCP Google Kubernetes Engine (GKE) environments.
 
 ## Required permissions
 
