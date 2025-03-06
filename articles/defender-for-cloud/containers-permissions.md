@@ -1,5 +1,5 @@
 ---
-title: Permissions for Defender for Containers extensions
+title: Permissions required by Defender for Containers for EKS and GKE support.
 description: This article lists the permissions required to use Defender for Containers extensions for EKS and GKE .
 ms.topic: limits-and-quotas
 ms.date: 03/06/2025
