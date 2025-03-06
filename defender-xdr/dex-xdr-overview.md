@@ -48,7 +48,8 @@ Apart from the constantly updated research and intelligence tailored for the thr
 - **Live dashboards and reports** - Transparent view of our operations on your behalf and noise free, actionable view into what matters for you coupled with detailed analytics
 - **Proactive check-ins for continuous security improvements** - Periodic check-ins with your named service delivery team to guide your Defender Experts for XDR experience and improve your security posture
 
-*Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
+> [!NOTE] 
+> Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
 
 [Read the Defender Experts for XDR ebook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Defender-Experts-for-XDR-eBook-Final.pdf) and maximize the benefits of this product suite. 
 

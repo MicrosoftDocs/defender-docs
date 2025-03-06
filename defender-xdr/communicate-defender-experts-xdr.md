@@ -77,9 +77,10 @@ While the previous scenarios involve our experts initiating communication with y
 
 ## Collaborating with your service delivery manager
 
-The service delivery manager (SDM)* is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
+The service delivery manager (SDM) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
-*Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
+> [!NOTE]
+> Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
 
 The SDM provides the following services:
 
