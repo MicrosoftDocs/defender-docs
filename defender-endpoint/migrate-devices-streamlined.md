@@ -319,9 +319,7 @@ For macOS and Linux, you can use the following methods:
 
 ### MDATP connectivity test (macOS and Linux)
 
-Run `mdatp health -details features` to confirm simplified_connectivity: "enabled".
-
-Run `mdatp health -details edr` to confirm `edr_partner_geo_location` is available. The value should be `GW_<geo>` where 'geo' is your tenant's geo-location.
+Run `mdatp health --details edr` to confirm `edr_partner_geo_location` is available. The value should be `GW_<geo>` where 'geo' is your tenant's geo-location.
 
 Run mdatp connectivity test. Ensure the streamlined URL pattern is present. You should expect two for '\storage', one for '\mdav', one for '\xplat', and one for '/packages'.
 
