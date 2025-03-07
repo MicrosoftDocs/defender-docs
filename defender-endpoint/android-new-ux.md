@@ -22,7 +22,7 @@ ms.date: 03/07/2025
 
 As part of our ongoing commitment to deliver exceptional user experiences, we're excited to announce a series of upcoming changes to the user interface and overall experience of our **Microsoft Defender for Endpoint (MDE)** mobile app.
 
-These updates are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
+The new updates are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
 
 ## Key Changes
 
