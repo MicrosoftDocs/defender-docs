@@ -71,7 +71,7 @@ The following image shows the app scanning feature before and after the new upda
 
 The following image shows the threat found feature before and after the new update.
 
-:::image type="content" source="media/mde-android-threat-foundd.png" alt-text="The threat found feature on the MDE Android app" lightbox="media/mde-android-threat-found.png":::
+:::image type="content" source="media/mde-android-threat-found.png" alt-text="The threat found feature on the MDE Android app" lightbox="media/mde-android-threat-found.png":::
    
 1. **Uninstall threat**:
 
