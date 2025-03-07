@@ -48,7 +48,7 @@ To learn more about advanced hunting in Microsoft Defender XDR, read [Proactivel
 
 ## View schema tables
 
-You can view the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables.md) in the left pane inside the advanced hunting page under the **Schema** tab. 
+You can view the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables) in the left pane inside the advanced hunting page under the **Schema** tab. 
 
 The schema list is a unified view of all tables from all your tenants regardless of the tenant selected in the upper right tenant selector.
 
