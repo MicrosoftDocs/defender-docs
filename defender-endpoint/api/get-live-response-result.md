@@ -69,6 +69,8 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     
   - **Windows Server 2022**  
 
+  - **Windows Server 2025**
+
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more,
