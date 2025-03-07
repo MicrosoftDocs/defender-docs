@@ -85,6 +85,6 @@ The following image shows the uninstall threat feature before and after the new 
 
 ### Alerts
 
-**We added new section to show multiple alerts together on dashboard.**
+We added new section to show **multiple alerts** together on dashboard.
 
 :::image type="content" source="media/mde-android-alerts.png" alt-text="The new updates to the alerts feature on the MDE Android app" lightbox="media/mde-android-alerts.png":::
