@@ -293,7 +293,7 @@
     {
       "source_path": "defender-xdr/respond-first-incident-remediate.md",
       "redirect_url": "/defender-xdr/incidents-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "defender-xdr/m365d-time-zone.md",
