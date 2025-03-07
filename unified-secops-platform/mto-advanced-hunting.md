@@ -24,6 +24,8 @@ appliesto:
 
 Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants at the same time. If you have tenants with a Microsoft Sentinel workspace onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants.
 
+
+
 ## Run cross-tenant queries
 
 In multitenant management, you can use any of the queries you currently have access to. They're filtered by tenant in the **Queries** tab. Select a tenant to view the queries available under each one.
@@ -44,7 +46,16 @@ The query results contain the tenant ID:
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
-## Custom detection rules
+## View schema tables
+
+You can view the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables.md) in the left pane inside the advanced hunting page under the **Schema** tab. 
+
+The schema list is a unified view of all tables from all your tenants regardless of the tenant selected in the upper right tenant selector.
+
+This could mean that some tables that appear here might only be available for query in some tenants, like custom Microsoft Sentinel tables.
+
+
+## View and manage custom detection rules
 
 Likewise, you can manage custom detection rules from multiple tenants in the custom detection rules page.
 
