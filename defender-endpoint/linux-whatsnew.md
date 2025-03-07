@@ -43,6 +43,26 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### Feb-2025 Build: 101.25012.0000 | Release version: 30.125012.0000.0
+
+| Build:             | **101.25012.0000**    |
+| -------- | -------- |
+|Released:|March 10, 2025|
+|Released:| **March 10, 2025**|
+| Released:          |**March 10, 2025** |
+| Published:         | **March 10, 2025** |
+| Release version:   | **30.125012.0000.0** |
+| Engine version:    | **1.1.24090.13**   |
+| Signature version: | **1.421.226.0**      |
+
+What's new
+
+- The MDATP package rollout into production will be done gradually. This would mean, from the time the release notes are published, it might take upto a week for the package to be pushed to all production machines.
+
+- The vulnerability in curl, CVE-2024-7264, has been addressed.
+
+- Other stability improvements and bug fixes.
+
 ### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
 | Build:             | **101.24122.0008**    |
