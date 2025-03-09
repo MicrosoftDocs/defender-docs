@@ -44,8 +44,8 @@ Microsoft Defender Antivirus with its built-in antivirus capabilities can run wi
 Before you begin, you must meet the following requirements:
 
 - Microsoft Defender Antivirus (active mode)
-- Windows 11 or Windows 10 version 1703 or newer
-- Windows Server 2022 or Windows Server 2019 or Windows Server 2016 or newer
+- Windows client devices must be running Windows 11 or Windows 10 version 1703 or newer
+- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## Why run Microsoft Defender Antivirus in a sandbox?
 
