@@ -64,7 +64,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview) | GA |GA (Only GCCH)<sup>[2](#footnote2)</sup>| NA|
 
 <sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
-<sup><a name="footnote2"></a>2</sup>: File Integrity Monitoring in GCCM clouds is not supported.
+<sup><a name="footnote2"></a>2</sup>: GovCon Cloud Moderate (GCCM) doesn't support File Integrity Monitoring.
 
 
 
