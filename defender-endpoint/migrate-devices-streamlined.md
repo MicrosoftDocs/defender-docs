@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 05/09/2024
+ms.date: 03/06/2025
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -31,12 +31,10 @@ This article describes how to migrate (reonboard) devices that had been previous
 In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
-> Limitations and known issues:
->
-> - We found a back-end issue with populating the `ConnectivityType` column in the `DeviceInfo table` in advanced hunting so that you can track migration progress. We aim to resolve this issue as soon as possible.
-> - For device migrations (reonboarding): Offboarding is not required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
-> - Windows 10 versions 1607, 1703, 1709, and 1803 do not support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
-> - Devices running the MMA agent are not supported and must continue using the MMA onboarding method.
+> Limitations and known issues:- For device migrations (reonboarding): Offboarding is not required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
+- Windows 10 versions 1607, 1703, 1709, and 1803 do not support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
+- Devices running the MMA agent are not supported and must continue using the MMA onboarding method.
+
 
 ## Migrating devices using the streamlined method
 
@@ -333,7 +331,25 @@ For example: `https:mdav.us.endpoint.security.microsoft/com/storage`
 
 ### Tracking with advanced hunting in Microsoft Defender XDR
 
-Follow the same instructions as for Windows.
+To view all devices (limit 30k) and their most recently reported connectivity type:
+
+
+```kusto
+DeviceInfo
+| where OnboardingStatus == "Onboarded"
+| summarize arg_max(ConnectivityType, Timestamp) by DeviceName
+```
+
+To view a count of Devices by OSPlatform and their connectivity type in a bar chart:
+
+
+```kusto
+DeviceInfo
+| where OnboardingStatus == "Onboarded"
+| summarize arg_max(ConnectivityType, Timestamp, OSPlatform) by DeviceName
+| summarize count() by OSPlatform, ConnectivityType
+| render columnchart 
+```
 
 ### Use Defender for Endpoint Client Analyzer (cross-platform) to validate connectivity for newly migrated endpoints
 

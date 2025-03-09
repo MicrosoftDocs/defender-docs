@@ -14,7 +14,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: asr
-ms.date: 10/28/2024
+ms.date: 03/04/2025
 ---
 
 # URL reputation demonstrations
@@ -28,8 +28,8 @@ ms.date: 10/28/2024
 Test how Microsoft Defender SmartScreen helps you identify phishing and malware websites based on URL reputation.
 Scenario requirements and setup
 
-- Windows 11 or Windows
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and Windows Server 2008 R2 SP1.
+- Client devices must be running Windows 11 or Windows 10
+- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 or Windows Server 2008 R2 SP1
 - Microsoft Edge browser required
 - For more information, see [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
 
