@@ -64,8 +64,8 @@ The following table summarizes what to expect:
 |---|---|---|
 |Windows 10 <br/>Windows 11|Microsoft Defender Antivirus|Active mode|
 |Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> In Windows 11, if SmartAppControl is enabled, Microsoft Defender Antivirus goes into passive mode.|
-|Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
-|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
+|Windows Server 2025 <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
+|Windows Server 2025<br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
 
 If the device is onboarded to Microsoft Defender for Endpoint, you can use Microsoft Defender Antivirus in passive mode as described later in this article.
 
@@ -126,7 +126,7 @@ For passive mode to work on endpoints running Windows Server 2016 and Windows Se
 >
 > Notice the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: When Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
-On Windows Server 2016, Windows Server 2012 R2, Windows Server version 1803 or newer, Windows Server 2019, and Windows Server 2022, if you're using a non-Microsoft antivirus product on an endpoint that *isn't* onboarded to Microsoft Defender for Endpoint, disable/uninstall Microsoft Defender Antivirus manually to prevent problems caused by having multiple antivirus products installed on a server. However, Defender for Endpoint includes capabilities that further extend the antivirus protection that is installed on your endpoint. If you have Defender for Endpoint, you can benefit from running Microsoft Defender Antivirus alongside another antivirus solution.
+On Windows Server 2016, Windows Server 2012 R2, Windows Server version 1803 or newer, Windows Server 2019, Windows Server 2022, and Windows Server 2025, if you're using a non-Microsoft antivirus product on an endpoint that *isn't* onboarded to Microsoft Defender for Endpoint, disable/uninstall Microsoft Defender Antivirus manually to prevent problems caused by having multiple antivirus products installed on a server. However, Defender for Endpoint includes capabilities that further extend the antivirus protection that is installed on your endpoint. If you have Defender for Endpoint, you can benefit from running Microsoft Defender Antivirus alongside another antivirus solution.
 
 For example, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) provides added protection from malicious artifacts even if Microsoft Defender Antivirus isn't the primary antivirus product. Such capabilities require Microsoft Defender Antivirus to be installed and running in passive mode or active mode.
 
@@ -137,7 +137,7 @@ For example, [Endpoint detection and response (EDR) in block mode](edr-in-block-
 
 In order for Microsoft Defender Antivirus to run in passive mode, endpoints must meet the following requirements:
 
-- Operating system: Windows 10 or newer; Windows Server 2022, Windows Server 2019, or Windows Server, version 1803, or newer <br/>(Windows Server 2012 R2 and Windows Server 2016 if onboarded using the [modern, unified solution](configure-server-endpoints.md)). 
+- Operating system: Windows 10 or newer; Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server, version 1803, or newer <br/>(Windows Server 2012 R2 and Windows Server 2016 if onboarded using the [modern, unified solution](configure-server-endpoints.md)). 
 
 - Microsoft Defender Antivirus must be installed. 
 
@@ -152,7 +152,7 @@ In order for Microsoft Defender Antivirus to run in passive mode, endpoints must
 > This could lead to conflicts between the Microsoft Defender Antivirus and the third-party Antivirus, as both will attempt to provide active protection. This will impact performance and is not supported.
 
 > [!IMPORTANT]
-> - Microsoft Defender Antivirus is only available on devices running Windows 10 and 11, Windows Server 2022, Windows Server 2016, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, and Windows Server 2012 R2.
+> - Microsoft Defender Antivirus is only available on devices running Windows 10 and 11, Windows Server 2025, Windows Server 2022, Windows Server 2016, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, and Windows Server 2012 R2.
 > - Passive mode is only supported on Windows Server 2012 R2 & 2016 when the device is onboarded using the [modern, unified solution](configure-server-endpoints.md). 
 > - In Windows 8.1, enterprise-level endpoint antivirus protection is offered as [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)), which is managed through Microsoft Endpoint Configuration Manager.
 > - Windows Defender is also offered for [consumer devices on Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), although Windows Defender does not provide enterprise-level management.
@@ -193,9 +193,9 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
    1. "Start the scheduled scan only when computer is on but not in use" is set to "Not configured or enabled". A Windows Task Scheduler is created unless you set "Start the scheduled scan only when computer is on but not in use" to disabled.
    
-   1. "Turn on catch-up quick scan" is set to "Not configured or enabled". Every 30 days (default number of days) a quick catchup scan continues to occur unless "Turn on catch-up quick scan" is set to disabled. Scan tasks that are set up in Windows Task Scheduler continue to run according to their schedule. If you have scheduled tasks, you can remove them, if preferred.
+   2. "Turn on catch-up quick scan" is set to "Not configured or enabled". Every 30 days (default number of days) a quick catchup scan continues to occur unless "Turn on catch-up quick scan" is set to disabled. Scan tasks that are set up in Windows Task Scheduler continue to run according to their schedule. If you have scheduled tasks, you can remove them, if preferred.
    
-   1. "Turn on scan after security intelligence update" is set to "Not configured or enabled". By default, a quick scan occurs after a "Security Intelligence Update" unless you set "Turn on scan after security intelligence update" to disabled.
+   3. "Turn on scan after security intelligence update" is set to "Not configured or enabled". By default, a quick scan occurs after a "Security Intelligence Update" unless you set "Turn on scan after security intelligence update" to disabled.
    
 3. When Microsoft Defender Antivirus is in passive mode, it doesn't remediate threats. However, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) can remediate threats. In this case, you might see alerts showing Microsoft Defender Antivirus as a source, even when Microsoft Defender Antivirus is in passive mode.
 
