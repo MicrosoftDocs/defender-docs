@@ -931,7 +931,7 @@
           - name: Kubernetes node malware detection
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
-      - name: Vulnerability assessment of images and runtime containers
+      - name: Image and runtime container vulnerability assessment
         items:
           - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
