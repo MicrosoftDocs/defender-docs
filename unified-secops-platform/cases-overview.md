@@ -65,6 +65,8 @@ To start using case management, select **Cases** in the Defender portal to acces
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
+The maximum allowed per tenant is 100,000 cases.
+
 ## Case details
 
 Each case has a page which allows analysts to manage the case and displays important details.
@@ -111,6 +113,8 @@ Linking a case and an incident helps your SecOps teams collaborate in the method
 Alternatively, if the IR team needs to escalate one or more incidents to the hunting team, they can create a case and link the incidents from the **Investigation & response** incident details page.
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
+
+Each case has a threshold of 100 linked incidents.
 
 ### Activity log
 
