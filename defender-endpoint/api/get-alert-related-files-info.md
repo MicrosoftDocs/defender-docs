@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # Get alert related files information API
@@ -108,7 +108,7 @@ Here is an example of the response.
             "fileType": null,
             "isPeFile": true,
             "filePublisher": "Microsoft Corporation",
-            "fileProductName": "Microsoft© Windows© Operating System",
+            "fileProductName": "Microsoft&copy; Windows&copy; Operating System",
             "signer": "Microsoft Corporation",
             "issuer": "Microsoft Code Signing PCA",
             "signerHash": "9dc17888b5cfad98b3cb35c1994e96227f061675",
