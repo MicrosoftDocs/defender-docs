@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
-ms.date: 02/24/2025
+ms.date: 03/10/2025
 ms.reviewer:
 manager: deniseb
 ms.custom: asr
@@ -42,7 +42,7 @@ There are four steps to troubleshooting these problems:
 1. [Confirm prerequisites](#confirm-prerequisites)
 2. [Use audit mode to test the rule](#use-audit-mode-to-test-the-rule)
 3. [Add exclusions for the specified rule](#add-exclusions-for-a-false-positive) (for false positives)
-4. [Submit support logs](#collect-diagnostic-data-for-file-submissions)
+4. [Collect and submit support logs](#collect-microsoft-defender-antimalware-protection-diagnostic-data-for-file-submissions)
 
 ## Confirm prerequisites
 
@@ -62,7 +62,6 @@ When setting up the attack surface reduction rules by using Group Policy, here a
 1. Make sure when adding the GUID for attack surface reduction rules, there are **no double quotes** (like this: "ASR Rules GUID") at the beginning or at the end of the GUID.
 
 2. Make sure that there are **no spaces** at the beginning or at the end when adding the GUID for attack surface reduction rules.
-
 
 ### Querying which rules are active
 
@@ -110,7 +109,6 @@ If you've tested the rule with the demo tool and with audit mode, and attack sur
 
 - If the attack surface reduction rule is blocking something that it shouldn't block (also known as a false positive), you can [first add an attack surface reduction rule exclusion](#add-exclusions-for-a-false-positive).
 - If the attack surface reduction rule isn't blocking something that it should block (also known as a false negative), you can proceed immediately to the last step, [collecting diagnostic data and submitting the issue to us](#collect-diagnostic-data-for-file-submissions).
-
 
 ### Querying blocking and auditing events
 
