@@ -155,17 +155,18 @@ Identifying why a scan has been cancelled will enable you to identify what needs
 
 ## Use performance analyzer on the device
 
-If the above has not identified a Misconfiguration / issue on the device, you can use New-MpPerformanceRecording to generate a trace to identify problems on the device.  It will give you:
-*    Top paths that impact scan time
-*    Top files that impact scan time
-*    Top processes that impact scan time
-*    Top file extensions that impact scan time
-*    Combinations – for example:
-o    top files per extension
-o    top paths per extension
-o    top processes per path
-o    top scans per file
-o    top scans per file per process
+If, after following the guidance in this article, you haven't identified a misconfiguration issue on the device, you can use the `New-MpPerformanceRecording` command to generate a trace to identify problems on the device. This performance analyzer gives you the following information: 
+
+- Top paths that impact scan time
+- Top files that impact scan time
+- Top processes that impact scan time
+- Top file extensions that impact scan time
+- Combinations, like these:
+   - Top files per extension
+   - Top paths per extension
+   - Top processes per path
+   - Top scans per file
+   - Top scans per file per process
 
 for details on usage and examples please see: Performance analyzer for Microsoft Defender Antivirus - Microsoft Defender for Endpoint | Microsoft Learn
 One outcome of this process may be identifying Files / Paths that you wish to exclude from the Scan to improve performance. Please review the documentation on options and caveats of exclusions at Exclusions overview - Microsoft Defender for Endpoint | Microsoft Learn .
