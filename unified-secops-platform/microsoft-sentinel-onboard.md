@@ -15,6 +15,8 @@ ms.collection:
 - highpri
 - tier1
 - usx-security
+- zerotrust-solution
+- msftsolution-secops
 ms.topic: how-to
 search.appverid: 
 - MOE150
