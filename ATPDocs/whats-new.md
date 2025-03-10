@@ -25,9 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 ## March 2025
 
 ### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
-New LDAP query events will be added by March 6th to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
-This update may lead to an increase in activity within the Advanced Hunting IdentityQueryEvents table for LDAP queries. If you have custom detections related to these queries, you may see a higher number of triggered alerts.
-We recommend that you review your existing custom detections to ensure they align with your objectives. If needed, you can adjust your query accordingly.
+New LDAP query events were added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
 
 ## February 2025
 
