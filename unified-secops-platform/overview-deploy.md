@@ -8,7 +8,8 @@ ms.topic: how-to #Don't change.
 ms.date: 12/02/2024
 ms.collection:
 - usx-security
-
+- zerotrust-solution
+- msftsolution-secops
 
 #customer intent: As a security administrator, I want to deploy Microosft's unified security operations platform so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
 

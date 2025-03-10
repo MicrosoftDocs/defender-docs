@@ -155,7 +155,7 @@ Guidance for how to configure the product in enterprise environments is availabl
 
 ## macOS kernel and system extensions
 
-Starting with macOS 11 (Significant Sur), Microsoft Defender for Endpoint has been fully migrated from kernel extension to system extensions. 
+Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint has been fully migrated from kernel extension to system extensions.
 
 ## Resources
 
