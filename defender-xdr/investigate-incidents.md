@@ -125,6 +125,11 @@ You can view an incident's details on the right pane of an incident page. The in
 
 :::image type="content" source="/defender/media/investigate-incidents/incident-desc-small.png" alt-text="An example of incident details where the description is highlighted." lightbox="/defender/media/investigate-incidents/incident-desc.png":::
 
+The incident description provides a brief overview of the incident. In some cases, the first alert in the incident is used as the incident description. In this case, the description is only shown in the portal and not stored in the activity log, advanced hunting tables, or the Microsoft Sentinel in Azure portal.
+
+> [!TIP]
+> Microsoft Sentinel customers can also view the same incident description in the Azure portal by setting the incident description through API or automation.
+
 ## Alerts
 
 On the **Alerts** tab, you can view the alert queue for alerts related to the incident and other information about them like the following:
