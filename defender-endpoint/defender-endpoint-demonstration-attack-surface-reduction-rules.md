@@ -4,7 +4,8 @@ description: See how attack surface reduction rules block various known threat t
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: deniseb 
-author: denisebmsft, yongrhee
+author: denisebmsft
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
