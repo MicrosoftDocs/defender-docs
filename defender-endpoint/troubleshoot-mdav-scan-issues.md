@@ -18,7 +18,12 @@ ms.date: 03/06/2025
 
 # Troubleshoot Microsoft Defender Antivirus scan issues
 
-If you're seeing issues with Microsoft Defender Antivirus scans, such as scans aren't finishing, or scans are causing performance isssues on devices, you might need to troubleshoot the scan process. This article describes how to troubleshoot these kinds of issues. 
+If you're seeing issues with Microsoft Defender Antivirus scans, such as scans aren't finishing, or scans are causing performance isssues on devices, you might need to troubleshoot the scan process. This article describes how to identify information to address issues with Microsoft Defender Antivirus scans. You'll learn:
+
+- What launched a scan
+- What policies are applied to the scan
+- Why a scan ended
+- What is most impacting the performance of a scan
 
 > [!NOTE]
 > To understand differences between antivirus scan types, see [Comparing the quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
