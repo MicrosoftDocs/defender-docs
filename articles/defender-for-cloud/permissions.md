@@ -37,7 +37,7 @@ The following table displays roles and allowed actions in Defender for Cloud.
 | Configure email notifications | - | ✔ | ✔| ✔ | ✔ |
 
 > [!NOTE]
-> While the three roles mentioned are sufficient for enabling and disabling Defender plans, the Owner role is required to enable all capabilities of a plan.
+> While the three roles mentioned are sufficient for enabling and disabling Defender for Cloud plans, the Owner role is required to enable all capabilities of a plan.
 
 The specific role required to deploy monitoring components depends on the extension you deploy. Learn more about [monitoring components](monitoring-components.md).
 
