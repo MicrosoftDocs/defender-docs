@@ -97,7 +97,7 @@ For more information about scan behaviors when Microsoft Defender Antivirus is i
 
    **Answer**: It's possible that there are a large number of cab/zip files on the machine. We recommend going through high size folders and either cleaning up or removing unused files, and/or implementing exclusions for specific cases (such as files under `C:\Windows`). See [Recommended antivirus exclusions for Configuration Manager](/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions).
 
-## How to check what has happened
+## How to confirm scan status
 
 Confirming if a scan has been canceled or finished successfully allows you to target devices that have failed scans. To find out what happened, you can use Event Viewer in Windows; reports, advanced hunting, and the Device page in the Microsoft Defender portal; or APIs.
 
