@@ -279,6 +279,8 @@
         - name: Support matrices for Containers
           displayName: Containers, features availability, environment information
           href: support-matrix-defender-for-containers.md
+        - name: Defender for Containers permissions for EKS and GKE
+          href: containers-permissions.md
     - name: Improve cloud security posture
       items:
       - name: Cloud Security Posture Management (CSPM)
@@ -929,7 +931,7 @@
           - name: Kubernetes node malware detection
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
-      - name: Container registry protection
+      - name: Image and runtime container vulnerability assessment
         items:
           - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md

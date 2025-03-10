@@ -60,8 +60,13 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Advanced threat protection](/azure/azure-sql/database/threat-detection-overview?view=azuresql&preserve-view=true) | GA | GA | GA |
 | [Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) | GA | GA | GA |
 | [Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA|
+| **DEFENDER FOR SERVERS FEATURES** | | | |
+| [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview) | GA | GA<sup>[2](#footnote2)</sup> |  NA |
 
 <sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
+<sup><a name="footnote2"></a>2</sup>: GovCon Cloud Moderate (GCCM) doesn't support File Integrity Monitoring.
+
+
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 

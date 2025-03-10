@@ -65,7 +65,7 @@ You can learn more about [Kubernetes data plane hardening](kubernetes-workload-p
 
 ## Vulnerability assessment
 
-Defender for Containers scans the cluster node OS and application software, container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), Google Container Registry (GCR), and [supported external image registries](support-matrix-defender-for-containers.md#external-container-registries) to provide agentless vulnerability assessment.
+Defender for Containers scans the cluster node OS and application software, container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), Google Container Registry (GCR), and [supported external image registries](support-matrix-defender-for-containers.md?tabs=extva#vulnerability-assessment-features) to provide agentless vulnerability assessment.
 
 Now for [public preview in the AKS environment](agentless-vulnerability-assessment-azure.md#how-vulnerability-assessment-for-images-and-containers-works), Defender for Containers also performs a daily scan of all running containers to provide updated vulnerability assessment, agnostic to the container's image registry.
 
@@ -75,7 +75,7 @@ Learn more about [vulnerability assessments for Defender for Containers supporte
 
 ## Run-time protection for Kubernetes nodes and clusters
 
-Defender for Containers provides real-time threat protection for [supported containerized environments](support-matrix-defender-for-containers.md) and generates alerts for suspicious activities. You can use this information to quickly remediate security issues and improve the security of your containers.
+Defender for Containers provides real-time threat protection for [supported containerized environments](support-matrix-defender-for-containers.md#runtime-protection-features) and generates alerts for suspicious activities. You can use this information to quickly remediate security issues and improve the security of your containers.
 
 Threat protection is provided for Kubernetes at the cluster, node, and workload levels. Both sensor based coverage that requires the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor), and agentless coverage that is based on analysis of the Kubernetes audit logs, are used to detect threats. Security alerts are only triggered for actions and deployments that occur after you enabled Defender for Containers on your subscription.
 
