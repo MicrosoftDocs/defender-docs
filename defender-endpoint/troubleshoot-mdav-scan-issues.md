@@ -192,3 +192,20 @@ The following screenshot shows scan logs in Event Viewer:
 Here's an example of Event 1000 in Event Viewer:
 
 :::image type="content" source="media/event-viewer-event1000.png" alt-text="Screenshot showing Event 1000 in Event Viewer on a Windows device." lightbox="media/event-viewer-event1000.png":::
+
+You can also access this inforamtion with PowerShell by using the [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-7.4) cmdlet.
+
+For example, to get all events, use this command:
+
+```powershell
+Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational'
+```
+
+To view scan events, use this command:
+
+```powershell
+Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where id -eq '1000'
+```
+
+
+
