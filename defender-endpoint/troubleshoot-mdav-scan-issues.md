@@ -168,10 +168,12 @@ If, after following the guidance in this article, you haven't identified a misco
    - Top scans per file
    - Top scans per file per process
 
-for details on usage and examples please see: Performance analyzer for Microsoft Defender Antivirus - Microsoft Defender for Endpoint | Microsoft Learn
-One outcome of this process may be identifying Files / Paths that you wish to exclude from the Scan to improve performance. Please review the documentation on options and caveats of exclusions at Exclusions overview - Microsoft Defender for Endpoint | Microsoft Learn .
-Also please review Contextual file and folder exclusions - Microsoft Defender for Endpoint | Microsoft Learn to decrease impact of exclusions.
+For more information, see [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus).
 
+One outcome of this process might be identifying files or paths that you want to exclude from antivirus scans to improve performance. Make sure to review the following articles:
+
+- [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)
+- [Contextual file and folder exclusions](/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus)
 
 ## Reviewing Event logs
 
