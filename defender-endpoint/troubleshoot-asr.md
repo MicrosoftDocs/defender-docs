@@ -159,13 +159,13 @@ To generate the support information, type `MpCmdRun.exe -getfiles`. After a whil
 
 :::image type="content" source="media/malware-prot-logsnew.png" alt-text="The malware protection logs" lightbox="media/malware-prot-logsnew.png":::
 
-Extract that archive and you'll have many files available for troubleshooting purposes.
+Extract that archive and you have many files available for troubleshooting purposes.
 
 The most relevant files are as follows:
 
-- **MPOperationalEvents.txt**: This file contains same level of information found in Event Viewer for Windows Defender's Operational log.
-- **MPRegistry.txt**: In this file you can analyze all the current Windows Defender configurations, from the moment the support logs were captured.
-- **MPLog.txt**: This log contains more verbose information about all the actions/operations of the Windows Defender.
+- `MPOperationalEvents.txt`: This file contains same level of information found in Event Viewer for Windows Defender's Operational log.
+- `MPRegistry.txt`: In this file you can analyze all the current Windows Defender configurations, from the moment the support logs were captured.
+- `MPLog.txt`: This log contains more verbose information about all the actions/operations of the Windows Defender.
 
 ## Related articles
 
