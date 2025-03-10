@@ -28,6 +28,10 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
+The first and most immediate way is to check locally, on a Windows device, which attack surface reduction rules are enabled (and their configuration) is by using the PowerShell cmdlets.
+
+Here are a few other sources of information that Windows offers, to troubleshoot attack surface reduction rules' impact and operation.
+
 When you use [attack surface reduction rules](attack-surface-reduction.md) you might run into issues, such as:
 
 - A rule blocks a file, process, or performs some other action that it shouldn't (false positive); or
@@ -59,10 +63,6 @@ When setting up the attack surface reduction rules by using Group Policy, here a
 
 2. Make sure that there are **no spaces** at the beginning or at the end when adding the GUID for attack surface reduction rules.
 
-
-The first and most immediate way is to check locally, on a Windows device, which attack surface reduction rules are enabled (and their configuration) is by using the PowerShell cmdlets.
-
-Here are a few other sources of information that Windows offers, to troubleshoot attack surface reduction rules' impact and operation.
 
 ### Querying which rules are active
 
