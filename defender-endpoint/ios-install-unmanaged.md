@@ -51,11 +51,11 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 1. **Verify that the Intune connector is enabled in Security portal**. <br> On the [unified security console](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced Features** and ensure that **Microsoft Intune connection** is enabled.
 
-  :::image type="content" source="media/enable-intune-connection.png" alt-text="The Defender for Endpoint - Intune connector" lightbox="media/enable-intune-connection.png":::
+   :::image type="content" source="media/enable-intune-connection.png" alt-text="The Defender for Endpoint - Intune connector." lightbox="media/enable-intune-connection.png":::
 
 2. **Verify that the APP connector is enabled in Intune portal**. <br> In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** > **Microsoft Defender for Endpoint** and ensure that the Connection status is enabled.
 
-  :::image type="content" source="media/app-settings.png" alt-text="The application settings" lightbox="media/app-settings.png":::
+   :::image type="content" source="media/app-settings.png" alt-text="The application settings." lightbox="media/app-settings.png":::
 
 ### Create an app protection policy
 
@@ -65,7 +65,7 @@ Microsoft Defender for Endpoint can be configured to send threat signals to be u
 1. Create a policy <br>
    App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. 
 
-   :::image type="content" source="media/create-policy.png" alt-text="The Create policy tab on the App protection policies menu item" lightbox="media/create-policy.png":::
+   :::image type="content" source="media/create-policy.png" alt-text="The Create policy tab on the App protection policies menu item." lightbox="media/create-policy.png":::
 
 2. Add apps <br>
     a. Choose how you want to apply this policy to apps on different devices. Then add at least one app. <br>
