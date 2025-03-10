@@ -677,10 +677,10 @@
           displayName: threat intelligence reports
           href: threat-intelligence-reports.md
         - name: Validate alert configuration
-          displayName: eicar, Kubernetes, Linux
+          displayName: test, simulate, alerts, alert, eicar, Kubernetes, Linux
           href: alert-validation.md
         - name: Automate responses to alerts
-          displayName: workflow
+          displayName: workflow, alerts, response
           href: workflow-automation.yml
 
 - name: Protect data
@@ -931,7 +931,7 @@
           - name: Kubernetes node malware detection
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
-      - name: Image and container runtime protection
+      - name: Image and runtime container vulnerability assessment
         items:
           - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
