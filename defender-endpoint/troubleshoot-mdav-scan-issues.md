@@ -177,18 +177,8 @@ One outcome of this process might be identifying files or paths that you want to
 
 ## Reviewing Event logs
 
-Local event logs can be reviewed either using the Event Viewer application or using PowerShell.
-MDE AV Scan relevant logs are located at "Application and Service Logs -> Microsoft -> Windows -> Windows Defender -> Operational" 
+Local event logs can be reviewed either using the Event Viewer application or by using PowerShell.
 
+On Windows devices, Microsoft Defender Antivirus logs are located at **Application and Service Logs** > **Microsoft** > **Windows** > **Windows Defender** > **Operational**. 
 
-
-
-
-
-
-
-
-
-
-
-
+:::image type="content" source="media/mdav-scan-logs-event-viewer.png" alt-text="Screenshot showing antivirus scan logs in Windows Event Viewer." lightbox="media/mdav-scan-logs-event-viewer.png":::
