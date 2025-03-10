@@ -116,7 +116,7 @@ The following Event IDs are related to scan operations on a device.
 
 For more information, see [Microsoft Defender Antivirus event IDs and error codes](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 
-Event viewer can be access on the machine by the application or PowerShell. For more information, see (in this article).
+Event viewer can be access on the machine by the application or PowerShell. For more information, see [Review logs in Event Viewer](#review-logs-in-event-viewer) (in this article).
 
 ### Reports in the Microsoft Defender portal
 
