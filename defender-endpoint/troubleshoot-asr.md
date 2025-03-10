@@ -111,6 +111,15 @@ If you've tested the rule with the demo tool and with audit mode, and attack sur
 - If the attack surface reduction rule is blocking something that it shouldn't block (also known as a false positive), you can [first add an attack surface reduction rule exclusion](#add-exclusions-for-a-false-positive).
 - If the attack surface reduction rule isn't blocking something that it should block (also known as a false negative), you can proceed immediately to the last step, [collecting diagnostic data and submitting the issue to us](#collect-diagnostic-data-for-file-submissions).
 
+
+### Querying blocking and auditing events
+
+attack surface reduction rule events can be viewed within the Windows Defender log.
+
+To access it, open Windows Event Viewer, and browse to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
+
+:::image type="content" source="media/eventviewerscrnew.png" alt-text="The Event Viewer page" lightbox="media/eventviewerscrnew.png":::
+
 ## Add exclusions for a false positive
 
 If the attack surface reduction rule is blocking something that it shouldn't block (also known as a false positive), you can add exclusions to prevent attack surface reduction rules from evaluating the excluded files or folders.
