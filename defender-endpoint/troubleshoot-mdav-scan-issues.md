@@ -96,6 +96,46 @@ For more information about scan behaviors when Microsoft Defender Antivirus is i
 
    Answer: It's possible that there are a large number of cab/zip files on the machine. We recommend going through high size folders and either cleaning up or removing unused files, and/or implementing exclusions for specific cases (such as files under `C:\Windows`). See [Recommended antivirus exclusions for Configuration Manager](/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions).
 
+## How to check what has happened
+
+Confirming if a scan has been cancelled or finished successfully allows you to target devices that have failed scans.
+
+### Event viewer 
+
+The following Event IDs are related to scan operations on a device.
+
+- Event ID 1000 - An antimalware scan started.
+- Event ID 1001 - An antimalware scan finished.
+- Event ID 1002 - An antimalware scan was stopped before it finished.
+
+For more information, see [Microsoft Defender Antivirus event IDs and error codes](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
+
+Event viewer can be access on the machine by the application or PowerShell. Please See the Reviewing Event Logs section for further details.
+
+### Reporting
+
+There is also reporting available covering the current Status of scan status.  This can be expanded and exported for device detail. Device health Microsoft Defender Antivirus health report - Microsoft Defender for Endpoint | Microsoft Learn
+ 
+### Advanced Hunting
+
+There is also information about Scan completion and cancellation in advanced hunting.
+ 
+        
+### Device Page
+
+The Device page has detail of the last scans of the device
+ 
+### API 
+
+Data about Scan status can be exported via API using this API.
+ 
+Microsoft Defender Antivirus Device Health export device antivirus health reporting - Microsoft Defender for Endpoint | Microsoft Learn
+
+
+
+
+
+
 
 
 
