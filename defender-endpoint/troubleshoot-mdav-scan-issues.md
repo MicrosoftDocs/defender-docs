@@ -205,7 +205,7 @@ Here's an example of Event 1000 in Event Viewer:
 
 ### Review events using PowerShell
 
-You can also access this information with PowerShell by using the [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-7.4) cmdlet.
+You can also access this information with PowerShell by using the [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-7.4&preserve-view=true) cmdlet.
 
 For example, to get all events, use this command:
 
