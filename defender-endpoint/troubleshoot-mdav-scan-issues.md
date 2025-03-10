@@ -104,15 +104,15 @@ For more information about scan behaviors when Microsoft Defender Antivirus is i
 
 ## How to check what has happened
 
-Confirming if a scan has been cancelled or finished successfully allows you to target devices that have failed scans.
+Confirming if a scan has been canceled or finished successfully allows you to target devices that have failed scans.
 
 ### Event viewer 
 
 The following Event IDs are related to scan operations on a device.
 
-- Event ID `1000` - An antimalware scan started.
-- Event ID `1001` - An antimalware scan finished.
-- Event ID `1002` - An antimalware scan was stopped before it finished.
+- Event ID `1000` - An anti-malware scan started.
+- Event ID `1001` - An anti-malware scan finished.
+- Event ID `1002` - An anti-malware scan was stopped before it finished.
 
 For more information, see [Microsoft Defender Antivirus event IDs and error codes](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 
@@ -120,7 +120,7 @@ Event viewer can be access on the machine by the application or PowerShell. For 
 
 ### Reporting
 
-Reports are available that include current scan status. You can expand the veiw and export details. For more information, see [Device health report](/defender-endpoint/device-health-microsoft-defender-antivirus-health).
+Reports are available that include current scan status. You can expand the view and export details. For more information, see [Device health report](/defender-endpoint/device-health-microsoft-defender-antivirus-health).
  
 ### Advanced hunting
 
@@ -154,9 +154,9 @@ Data about scan status can be exported by using the export health reporting API,
 
 For more information, see [Export device antivirus health report](/defender-endpoint/api/device-health-export-antivirus-health-report-api).
 
-## Reasons why scans are cancelled or terminated
+## Reasons why scans are canceled or terminated
 
-Identifying why a scan has been cancelled will enable you to identify what needs to be reviewed to enable scans to finish successfully. The following table lists reasons why scans didn't complete.
+Identifying why a scan was cancelled enables you to identify what needs to be reviewed to enable scans to finish successfully. The following table lists reasons why scans didn't complete.
 
 | Reason | Details |
 |--|--|
