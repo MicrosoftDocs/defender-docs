@@ -152,7 +152,7 @@ By default, the required extensions are enabled when you enable Defender for Con
 | Policy-based:                                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                             |
 | Clouds:                                              | **Defender sensor**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet<br>**Azure Policy for Kubernetes**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet|**Defender sensor**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet<br>**Azure Policy for Kubernetes**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet|
 
-Learn more about the [roles used to provision Defender for Containers extensions](permissions.md#roles-used-to-automatically-provision-agents-and-extensions).
+Learn more about the [roles used to provision Defender for Containers extensions](permissions.md#roles-used-to-automatically-configure-agents-and-extensions).
 
 ## Troubleshooting
 

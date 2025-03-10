@@ -1,24 +1,24 @@
 ---
 title: User roles and permissions
-description: Learn how Microsoft Defender for Cloud uses role-based access control to assign permissions to users and identify the permitted actions for each role.
+description: Learn how Microsoft Defender for Cloud uses role-based access control to assign permissions and identify permitted actions for each role.
 ms.topic: limits-and-quotas
-ms.date: 08/18/2024
+ms.date: 03/10/2025
 ---
 
 # User roles and permissions
 
-Microsoft Defender for Cloud uses [Azure role-based access control (Azure Role-Based Access Control)](/azure/role-based-access-control/role-assignments-portal) to provide [built-in roles](/azure/role-based-access-control/built-in-roles). You can assign these roles to users, groups, and services in Azure to give users access to resources according to the access defined in the role.
+Microsoft Defender for Cloud uses [Azure role-based access control (Azure Role-Based Access Control)](/azure/role-based-access-control/role-assignments-portal) to provide [built-in roles](/azure/role-based-access-control/built-in-roles). Assign these roles to users, groups, and services in Azure to give them access to resources according to the role's defined access.
 
-Defender for Cloud assesses the configuration of your resources and identifies security issues and vulnerabilities. In Defender for Cloud, you can view information related to a resource when you have one of these roles assigned for the subscription or the resource group the resource belongs to: Owner, Contributor, or Reader.
+Defender for Cloud assesses resource configurations and identifies security issues and vulnerabilities. In Defender for Cloud, view resource information when assigned one of these roles for the subscription or resource group: Owner, Contributor, or Reader.
 
 In addition to the built-in roles, there are two roles specific to Defender for Cloud:
 
-- **Security Reader**: A user that belongs to this role has read-only access to Defender for Cloud. The user can view recommendations, alerts, a security policy, and security states, but can't make changes.
-- **Security Admin**: A user that belongs to this role has the same access as the Security Reader and can also update the security policy, and dismiss alerts and recommendations.
+- **Security Reader**: A user in this role has read-only access to Defender for Cloud. The user can view recommendations, alerts, security policies, and security states but can't make changes.
+- **Security Admin**: A user in this role has the same access as the Security Reader and can also update security policies and dismiss alerts and recommendations.
 
-We recommend assigning the least permissive role needed for users to complete their tasks.
+Assign the least permissive role needed for users to complete their tasks.
 
-For example, you can assign the Reader role to users who only need to view security health information of a resource without taking any action. Users with a Reader role can't apply recommendations or edit policies.
+For example, assign the Reader role to users who only need to view security health information of a resource without taking any action. Users with a Reader role can't apply recommendations or edit policies.
 
 ## Roles and allowed actions
 
@@ -37,13 +37,13 @@ The following table displays roles and allowed actions in Defender for Cloud.
 | Configure email notifications | - | ✔ | ✔| ✔ | ✔ |
 
 > [!NOTE]
-> While the three roles mentioned are sufficient for enabling and disabling Defender plans, to enable all capabilities of a plan the Owner role is required.
+> While the three roles mentioned are sufficient for enabling and disabling Defender for Cloud plans, the Owner role is required to enable all capabilities of a plan.
 
-The specific role required to deploy monitoring components depends on the extension you're deploying. Learn more about [monitoring components](monitoring-components.md).
+The specific role required to deploy monitoring components depends on the extension you deploy. Learn more about [monitoring components](monitoring-components.md).
 
-## Roles used to automatically provision agents and extensions
+## Roles used to automatically configure agents and extensions
 
-To allow the Security Admin role to automatically provision agents and extensions used in Defender for Cloud plans, Defender for Cloud uses policy remediation in a similar way to [Azure Policy](/azure/governance/policy/how-to/remediate-resources). To use remediation, Defender for Cloud needs to create service principals, also called managed identities that assign roles at the subscription level. For example, the service principals for the Defender for Containers plan are:
+To allow the Security Admin role to automatically configure agents and extensions used in Defender for Cloud plans, Defender for Cloud uses policy remediation similar to [Azure Policy](/azure/governance/policy/how-to/remediate-resources). To use remediation, Defender for Cloud needs to create service principals, also called managed identities, that assign roles at the subscription level. For example, the service principals for the Defender for Containers plan are:
 
 | Service Principal                                            | Roles                                                        |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -54,9 +54,9 @@ To allow the Security Admin role to automatically provision agents and extension
 
 ## Permissions on AWS
 
-When you onboard an Amazon Web Services (AWS) connector, Defender for Cloud creates roles and assign permissions on your AWS account. The following table shows the roles and permission assigned by each plan on your AWS account.
+When you onboard an Amazon Web Services (AWS) connector, Defender for Cloud creates roles and assigns permissions on your AWS account. The following table shows the roles and permissions assigned by each plan on your AWS account.
 
-| Defender for Cloud plan                           | Role created                                          | Permission assigned on AWS account                           |
+| Defender for Cloud plan                           | Role created                                          | Permissions assigned on AWS account                           |
 | ------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Defender Cloud Security Posture Management (CSPM) | CspmMonitorAws                                        | To discover AWS resources permissions,  read all resources except:<br> consolidatedbilling:<br> freetier: <br> invoicing:<br> payments: <br> billing:<br> tax: <br> cur: |
 | Defender CSPM <br><br> Defender for Servers       | DefenderForCloud-AgentlessScanner                     | To create and clean up disk snapshots (scoped by tag) "CreatedBy": "Microsoft Defender for Cloud" Permissions:<br> ec2:DeleteSnapshot ec2:ModifySnapshotAttribute<br>  ec2:DeleteTags<br>  ec2:CreateTags<br>  ec2:CreateSnapshots<br>  ec2:CopySnapshot<br>  ec2:CreateSnapshot<br>  ec2:DescribeSnapshots<br>  ec2:DescribeInstanceStatus<br>  Permission to EncryptionKeyCreation kms:CreateKey<br>  kms:ListKeys<br>  Permissions to EncryptionKeyManagement kms:TagResource<br>  kms:GetKeyRotationStatus<br>  kms:PutKeyPolicy<br>  kms:GetKeyPolicy<br>  kms:CreateAlias<br>  kms:TagResource<br>  kms:ListResourceTags<br>  kms:GenerateDataKeyWithoutPlaintext<br>  kms:DescribeKey<br> kms:RetireGrant<br>  kms:CreateGrant<br>  kms:ReEncryptFrom |
@@ -74,7 +74,7 @@ When you onboard an Amazon Web Services (AWS) connector, Defender for Cloud crea
 
 ## Permissions on GCP
 
-When you onboard a Google Cloud Platforms (GCP) connector, Defender for Cloud creates roles and assign permissions on your GCP project. The following table shows the roles and permission assigned by each plan on your GCP project.
+When you onboard a Google Cloud Platforms (GCP) connector, Defender for Cloud creates roles and assigns permissions on your GCP project. The following table shows the roles and permissions assigned by each plan on your GCP project.
 
 | Defender for Cloud plan | Role created | Permission assigned on AWS account |
 |--|--|--|
