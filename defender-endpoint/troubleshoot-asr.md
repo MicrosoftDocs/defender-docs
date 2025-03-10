@@ -59,6 +59,41 @@ When setting up the attack surface reduction rules by using Group Policy, here a
 
 2. Make sure that there are **no spaces** at the beginning or at the end when adding the GUID for attack surface reduction rules.
 
+
+The first and most immediate way is to check locally, on a Windows device, which attack surface reduction rules are enabled (and their configuration) is by using the PowerShell cmdlets.
+
+Here are a few other sources of information that Windows offers, to troubleshoot attack surface reduction rules' impact and operation.
+
+### Querying which rules are active
+
+One of the easiest ways to determine if attack surface reduction rules are already enabled is through a PowerShell cmdlet, Get-MpPreference.
+
+Here's an example:
+
+:::image type="content" source="media/getmpreferencescriptnew.png" alt-text="The get mppreference script" lightbox="media/getmpreferencescriptnew.png":::
+
+There are multiple attack surface reduction rules active, with different configured actions.
+
+To expand the above information on attack surface reduction rules, you can use the properties **AttackSurfaceReductionRules_Ids** and/or **AttackSurfaceReductionRules_Actions**.
+
+Example:
+
+```powershell
+Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Ids
+```
+
+:::image type="content" source="media/getmpref-examplenew.png" alt-text="The get mpreference example" lightbox="media/getmpref-examplenew.png":::
+
+The above shows all the IDs for attack surface reduction rules that have a setting different from 0 (Not Configured).
+
+The next step is then to list the actual actions (Block or Audit) that each rule is configured with.
+
+```powershell
+Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Actions
+```
+
+:::image type="content" source="media/getmpref-example2new.png" alt-text="The get mppreference example2" lightbox="media/getmpref-example2new.png":::
+
 ## Use audit mode to test the rule
 
 Follow these instructions in [Use the demo tool to see how attack surface reduction rules work](attack-surface-reduction-rules-deployment-test.md) to test the specific rule you're encountering problems with.
