@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
-ms.reviewer:
+ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: 
 - mde-asr
@@ -17,7 +17,7 @@ ms.collection:
 - m365-security
 - tier3
 search.appverid: met150
-ms.date: 07/18/2023
+ms.date: 03/10/2025
 ---
 
 # Report and troubleshoot Defender for Endpoint attack surface reduction rules
