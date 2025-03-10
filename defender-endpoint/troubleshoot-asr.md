@@ -73,7 +73,7 @@ Here's an example:
 
 There are multiple attack surface reduction rules active, with different configured actions.
 
-To expand the above information on attack surface reduction rules, you can use the properties **AttackSurfaceReductionRules_Ids** and/or **AttackSurfaceReductionRules_Actions**.
+To expand information on attack surface reduction rules, you can use the properties `AttackSurfaceReductionRules_Ids` and/or `AttackSurfaceReductionRules_Actions`.
 
 Example:
 
