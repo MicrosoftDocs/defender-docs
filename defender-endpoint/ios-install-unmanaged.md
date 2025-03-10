@@ -72,24 +72,24 @@ App protection policies (APP) are rules that ensure an organization's data remai
     Use this option to specify whether this policy applies to unmanaged devices. You can also choose to target your policy to apps on devices of any management state.
 Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
-    b. Select Apps<br>
+    b. Select Apps. <br>
     A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that is integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that are built using these tools and are available for public use.
 
     *Example: Outlook as a managed app*
 
-     :::image type="content" source="media/managed-app.png" alt-text="The Microsoft Outlook menu item on the left navigation pane" lightbox="media/managed-app.png":::
+     :::image type="content" source="media/managed-app.png" alt-text="The Microsoft Outlook menu item on the left navigation pane." lightbox="media/managed-app.png":::
   
      Select the **Platform, Apps, Data protection, Access requirements** settings that your organization requires for your policy.
 
- 3.Set sign-in security requirements for your protection policy. <br>
-Select **Setting > Max allowed device threat level** in **Conditional Launch > Device Conditions** and enter a value. This needs to be configured to either Low, Medium, High, or Secured. The actions available to you are **Block access** or **Wipe data**. Select  **Action:  "Block Access"**. Microsoft Defender for Endpoint on iOS shares this Device Threat Level.
+ 3. Set sign-in security requirements for your protection policy. <br>
+    Select **Setting > Max allowed device threat level** in **Conditional Launch > Device Conditions** and enter a value. This needs to be configured to either Low, Medium, High, or Secured. The actions available to you are **Block access** or **Wipe data**. Select  **Action:  "Block Access"**. Microsoft Defender for Endpoint on iOS shares this Device Threat Level.
 
-   :::image type="content" source="media/conditional-launch.png" alt-text="The Device conditions pane" lightbox="media/conditional-launch.png":::
+    :::image type="content" source="media/conditional-launch.png" alt-text="The Device conditions pane." lightbox="media/conditional-launch.png":::
 
-4.Assign user groups for whom the policy needs to be applied.<br>
-  Select **Included groups**. Then add the relevant groups. 
+4. Assign user groups for whom the policy needs to be applied.<br>
+   Select **Included groups**. Then add the relevant groups. 
 
-For more information on MAM or app protection policy, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
+   For more information on MAM or app protection policy, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
 
 ## Deploy Microsoft Defender for Endpoint for MAM or on unenrolled devices
 
