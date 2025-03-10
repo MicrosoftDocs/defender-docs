@@ -32,7 +32,7 @@ For detailed information on the enablement method for each capability, see the [
 
 ### Roles and permissions
 
-Learn more about the [roles for provisioning Defender for Containers extensions](../permissions.md#roles-used-to-automatically-provision-agents-and-extensions).
+Learn more about the [roles for provisioning Defender for Containers extensions](../permissions.md#roles-used-to-automatically-configure-agents-and-extensions).
 
 ### Assign a custom workspace for the Defender sensor
 

@@ -83,7 +83,7 @@ Enable or disable the plan on specific machines.
 
 ### Enable Plan 1 on a machine using the REST API
 
-1. To enable Plan 1 for the machine, in [Update pricing](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) [Update Pricings](https://learn.microsoft.com/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#update-pricing-on-resource-(example-for-virtualmachines-plan)), create a PUT request with the endpoint.
+1. To enable Plan 1 for the machine, in [Update Pricing](https://learn.microsoft.com/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#update-pricing-on-resource-(example-for-virtualmachines-plan)), create a PUT request with the endpoint.
 1. In the PUT request, replace the subscriptionId, resourceGroupName, and machineName in the endpoint URL with your own settings.
 
     ```rest
