@@ -104,9 +104,9 @@ For more information about scan behaviors when Microsoft Defender Antivirus is i
 
 ## How to check what has happened
 
-Confirming if a scan has been canceled or finished successfully allows you to target devices that have failed scans.
+Confirming if a scan has been canceled or finished successfully allows you to target devices that have failed scans. To find out what happened, you can uuse Event Viewer in Windows; reports, advanced hunting, and the Device page in the Microsoft Defender portal; or APIs.
 
-### Event viewer 
+### Event Viewer 
 
 The following Event IDs are related to scan operations on a device.
 
@@ -118,7 +118,7 @@ For more information, see [Microsoft Defender Antivirus event IDs and error code
 
 Event viewer can be access on the machine by the application or PowerShell. For more information, see (in this article).
 
-### Reporting
+### Reports in the Microsoft Defender portal
 
 Reports are available that include current scan status. You can expand the view and export details. For more information, see [Device health report](/defender-endpoint/device-health-microsoft-defender-antivirus-health).
  
@@ -130,14 +130,14 @@ You can also find information about scan completion and cancellation in [advance
 - [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](/defender-xdr/advanced-hunting-modes)
 - [Learn the advanced hunting query language](/defender-xdr/advanced-hunting-query-language)
         
-### Device Page
+### Device page in the Microsoft Defender portal
 
 In the Microsoft Defender portal, you can view information about scans on the device page. For more information, see the following articles:
 
 - [Device health reports in Microsoft Defender for Endpoint](device-health-reports.md)
 - [Device inventory](machines-view-overview.md)
  
-### API 
+### APIs
 
 Data about scan status can be exported by using the export health reporting API, as follows:
 
