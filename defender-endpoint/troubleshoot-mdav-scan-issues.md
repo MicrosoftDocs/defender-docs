@@ -104,9 +104,9 @@ For more information about scan behaviors when Microsoft Defender Antivirus is i
 
 ## How to check what has happened
 
-Confirming if a scan has been canceled or finished successfully allows you to target devices that have failed scans. To find out what happened, you can uuse Event Viewer in Windows; reports, advanced hunting, and the Device page in the Microsoft Defender portal; or APIs.
+Confirming if a scan has been canceled or finished successfully allows you to target devices that have failed scans. To find out what happened, you can use Event Viewer in Windows; reports, advanced hunting, and the Device page in the Microsoft Defender portal; or APIs.
 
-### Event Viewer 
+### Event Viewer
 
 The following Event IDs are related to scan operations on a device.
 
