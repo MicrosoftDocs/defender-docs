@@ -126,9 +126,9 @@ Reports are available that include current scan status. You can expand the view 
 
 You can also find information about scan completion and cancellation in [advanced hunting](/defender-xdr/advanced-hunting-overview). To get help with advanced hunting, see the following articles:
 
-- [Proactively hunt for threats with advanced hunting in Microsoft Defender](../defender-xdr/advanced-hunting-overview.md)
-- [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](../defender-xdr/advanced-hunting-modes.md)
-- [Learn the advanced hunting query language](../defender-xdr/advanced-hunting-query-language.md)
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview)
+- [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](/defender-xdr/advanced-hunting-modes)
+- [Learn the advanced hunting query language](/defender-xdr/advanced-hunting-query-language)
         
 ### Device Page
 
