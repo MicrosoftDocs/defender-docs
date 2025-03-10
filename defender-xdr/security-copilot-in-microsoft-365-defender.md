@@ -49,7 +49,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
 
-Furthermore, Security Copilot operates using [Microsoft's AI principles](/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
+Furthermore, Security Copilot operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
 
 ## Key features
 
