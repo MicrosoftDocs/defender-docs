@@ -22,14 +22,14 @@ This article summarizes support information for Container capabilities in Micros
 
 The following are the features provided by Defender for Containers, for the supported cloud environments and container registries.
 
-## Vulnerability assessment features
+## Vulnerability assessment (VA) features
 
 ### [Azure](#tab/azureva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry | Vulnerability assessments for images in container registries | ACR | GA | GA | Requires **Registry access** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
-| Runtime container | Vulnerability assessments of running container images | Agnostic to container registry source | Preview<br/> (Container with ACR images are GA)| GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
+| Container registry VA | Vulnerability assessments for images in container registries | ACR | GA | GA | Requires **Registry access** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
+| Runtime container VA | Vulnerability assessments of running container images | Agnostic to container registry source | Preview<br/> (Container with ACR images are GA)| GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
 
 <sup><a name="footnote1azva"></a>1</sup>National clouds are automatically enabled and cannot be disabled.
 
@@ -37,21 +37,21 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry | Vulnerability assessments for images in container registries | ECR | GA | GA | Requires **Registry access** | **Defender for Containers** or **Defender CSPM** | AWS |
-| Runtime container | Vulnerability assessments of running container images | Supported container registries | Preview | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | AWS |
+| Container registry VA | Vulnerability assessments for images in container registries | ECR | GA | GA | Requires **Registry access** | **Defender for Containers** or **Defender CSPM** | AWS |
+| Runtime container VA | Vulnerability assessments of running container images | Supported container registries | Preview | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | AWS |
 
 ### [GCP](#tab/gcpva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry | Vulnerability assessments for images in container registries | GAR, GCR | GA | GA | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | AWS |
-| Runtime container | Vulnerability assessments of running container images | Supported container registries | Preview | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
+| Container registry VA | Vulnerability assessments for images in container registries | GAR, GCR | GA | GA | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | AWS |
+| Runtime container VA | Vulnerability assessments of running container images | Supported container registries | Preview | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
 
 ### [External Registries](#tab/extva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry | Vulnerability assessments for images in container registries | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation  | **Defender for Containers** or **Defender CSPM** | NA |
+| Container registry VA | Vulnerability assessments for images in container registries | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation  | **Defender for Containers** or **Defender CSPM** | NA |
 
 ---
 
@@ -165,7 +165,7 @@ The following are the features provided by Defender for Containers, for the supp
 
 ---
 
-## Security posture management
+## Security posture management features
 
 ### [Azure](#tab/azurespm)
 
@@ -210,7 +210,7 @@ The following are the features provided by Defender for Containers, for the supp
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | [Agentless discovery for Kubernetes](defender-for-containers-introduction.md#security-posture-management) | Provides zero footprint, API-based discovery of Kubernetes clusters, their configurations and deployments. | - | - | - | - | - | - |
-| Comprehensive inventory capabiliti    es | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | - | - | - | - | - | - |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | - | - | - | - | - | - |
 | Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans  expose exploitable paths that attackers might use to breach your  environment. | - | - | - | - | - | - |
 | Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | - | - | - | - | - | - |
 | [Control plane hardening](defender-for-containers-architecture.md) | Continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. | - | - | - | - | - | - |
