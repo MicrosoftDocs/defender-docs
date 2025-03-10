@@ -112,7 +112,7 @@ If you tested the rule with the demo tool and with audit mode, and attack surfac
 
 ### Querying blocking and auditing events
 
-attack surface reduction rule events can be viewed within the Windows Defender log.
+Attack surface reduction rule events can be viewed within the Windows Defender log.
 
 To access it, open Windows Event Viewer, and browse to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
 
@@ -126,13 +126,13 @@ To add an exclusion, see [Customize attack surface reduction](attack-surface-red
 
 > [!IMPORTANT]
 > You can specify individual files and folders to be excluded, but you can't specify individual rules.
-> This means any files or folders that are excluded are excluded from all ASR rules.
+> This means any files or folders that are excluded from all ASR rules.
 
 ## Report a false positive or false negative
 
 Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for network protection. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
 
-## Collect Microsoft Defender Antimalware Protection diagnostic data for file submissions
+## Collect Microsoft Defender Anti-malware Protection diagnostic data for file submissions
 
 When you report a problem with attack surface reduction rules, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
 
@@ -155,7 +155,7 @@ You can also view rule events through the Microsoft Defender Antivirus dedicated
 
 You can find this utility in *%ProgramFiles%\Windows Defender\MpCmdRun.exe*. You must run it from an elevated command prompt (that is, run as Admin).
 
-To generate the support information, type *MpCmdRun.exe -getfiles*. After a while, several logs will be packaged into an archive (MpSupportFiles.cab) and made available in *C:\ProgramData\Microsoft\Windows Defender\Support*.
+To generate the support information, type `MpCmdRun.exe -getfiles`. After a while, several logs will be packaged into an archive (MpSupportFiles.cab) and made available at `C:\ProgramData\Microsoft\Windows Defender\Support`.
 
 :::image type="content" source="media/malware-prot-logsnew.png" alt-text="The malware protection logs" lightbox="media/malware-prot-logsnew.png":::
 
