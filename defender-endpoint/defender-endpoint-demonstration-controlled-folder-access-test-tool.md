@@ -28,7 +28,8 @@ Controlled Folder Access helps you protect valuable data from malicious apps and
 
 ## Scenario requirements and setup
 
-- Windows 10 1709 build 16273
+- Windows 10, version 1709 (build 16273) or newer
+
 - Microsoft Defender Antivirus (active mode)
 
 ## PowerShell commands
