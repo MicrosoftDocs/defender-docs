@@ -183,6 +183,8 @@ One outcome of this process might be identifying files or paths that you want to
 
 Local event logs can be reviewed either using the Event Viewer application or by using PowerShell.
 
+### Review logs in Event Viewer
+
 On Windows devices, Microsoft Defender Antivirus logs are located at **Application and Service Logs** > **Microsoft** > **Windows** > **Windows Defender** > **Operational**. 
 
 The following screenshot shows scan logs in Event Viewer:
@@ -192,6 +194,8 @@ The following screenshot shows scan logs in Event Viewer:
 Here's an example of Event 1000 in Event Viewer:
 
 :::image type="content" source="media/event-viewer-event1000.png" alt-text="Screenshot showing Event 1000 in Event Viewer on a Windows device." lightbox="media/event-viewer-event1000.png":::
+
+### Review events using PowerShell
 
 You can also access this inforamtion with PowerShell by using the [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-7.4) cmdlet.
 
@@ -207,5 +211,9 @@ To view scan events, use this command:
 Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where id -eq '1000'
 ```
 
+## See also
+
+- [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
+- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
 
 
