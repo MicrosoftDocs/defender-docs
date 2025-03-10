@@ -18,7 +18,7 @@ ms.date: 03/06/2025
 
 # Troubleshoot Microsoft Defender Antivirus scan issues
 
-If you're seeing issues with Microsoft Defender Antivirus scans, such as scans aren't finishing, or scans are causing performance isssues on devices, you might need to troubleshoot the scan process. This article describes how to identify information to address issues with Microsoft Defender Antivirus scans. You'll learn:
+If you're seeing issues with Microsoft Defender Antivirus scans, such as scans aren't finishing, or scans are causing performance issues on devices, you might need to troubleshoot the scan process. This article describes how to identify information to address issues with Microsoft Defender Antivirus scans. You learn:
 
 - What launched a scan
 - What policies are applied to the scan
@@ -35,13 +35,13 @@ Understanding why a scan is launched can help identify what settings are applied
 | Method | Description |
 |--|--|
 | Schedule | Defined by policy as per policy table |
-| Scan after update | Defined by policy (Settings catalogue in Intune) |
+| Scan after update | Defined by policy (Settings catalog in Intune) |
 | Catch up scan | Launched when a scheduled scan was missed twice |
-| Manually launched | A scan is launched manually by any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
+| Manually launched | A scan is launched manually by using any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
 
 ## Policies that impact scanning
 
-Understanding the policies applied to the scan will enable you to understand the behaviour of the scan and what can be tuned to remediate the scan challenges.
+Understanding the policies applied to the scan enables you to understand the behavior of the scan and what can be tuned to remediate scan challenges.
 
 The following table summarizes antivirus settings in Microsoft Intune for Windows devices:
 
