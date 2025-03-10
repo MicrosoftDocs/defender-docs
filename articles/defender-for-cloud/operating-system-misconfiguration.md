@@ -4,7 +4,7 @@ description: Learn how to improve operating system baseline configurations in Mi
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 02/19/2025
+ms.date: 03/10/2025
 ---
 
 # Operating system misconfigurations
@@ -17,7 +17,7 @@ Defender for Cloud assesses and enforces best-practice security configurations u
 
 MCSB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
-Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features)
+Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-plans)
 
 - The recommendations are available when Defender for Servers Plan 2 is enabled.
 - When Defender for Servers Plan 2 is enabled, relevant Azure policies are enabled on the subscription:
