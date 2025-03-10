@@ -119,7 +119,7 @@ Selecting an attack path from the list displays the attack path graph, which sho
 > To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
 > To view attack path details with Microsoft Sentinel in the unified security operations platform, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
 
-## Incident details
+### Incident details
 
 You can view an incident's details on the right pane of an incident page. The incident details include incident assignment, ID, classification, categories, and first and last activity date and time. It also includes a description of the incident, impacted assets, active alerts, and where applicable, the related threats, recommendations, and disruption summary and impact. Here's an example of the incident details where the incident description is highlighted.
 
