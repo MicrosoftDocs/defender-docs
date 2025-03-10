@@ -39,7 +39,6 @@ Understanding why a scan is launched can help identify what settings are applied
 | Catch up scan | Launched when a scheduled scan was missed twice |
 | Manually launched | A scan is launched manually by any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
 
-
 ## Policies that impact scanning
 
 Understanding the policies applied to the scan will enable you to understand the behaviour of the scan and what can be tuned to remediate the scan challenges.
@@ -109,13 +108,13 @@ Confirming if a scan has been cancelled or finished successfully allows you to t
 
 The following Event IDs are related to scan operations on a device.
 
-- Event ID 1000 - An antimalware scan started.
-- Event ID 1001 - An antimalware scan finished.
-- Event ID 1002 - An antimalware scan was stopped before it finished.
+- Event ID `1000` - An antimalware scan started.
+- Event ID `1001` - An antimalware scan finished.
+- Event ID `1002` - An antimalware scan was stopped before it finished.
 
 For more information, see [Microsoft Defender Antivirus event IDs and error codes](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 
-Event viewer can be access on the machine by the application or PowerShell. Please See the Reviewing Event Logs section for further details.
+Event viewer can be access on the machine by the application or PowerShell. For more information, see (in this article).
 
 ### Reporting
 
@@ -186,4 +185,10 @@ Local event logs can be reviewed either using the Event Viewer application or by
 
 On Windows devices, Microsoft Defender Antivirus logs are located at **Application and Service Logs** > **Microsoft** > **Windows** > **Windows Defender** > **Operational**. 
 
+The following screenshot shows scan logs in Event Viewer:
+
 :::image type="content" source="media/mdav-scan-logs-event-viewer.png" alt-text="Screenshot showing antivirus scan logs in Windows Event Viewer." lightbox="media/mdav-scan-logs-event-viewer.png":::
+
+Here's an example of Event 1000 in Event Viewer:
+
+:::image type="content" source="media/event-viewer-event1000.png" alt-text="Screenshot showing Event 1000 in Event Viewer on a Windows device." lightbox="media/event-viewer-event1000.png":::
