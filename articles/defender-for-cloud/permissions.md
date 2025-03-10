@@ -7,7 +7,7 @@ ms.date: 03/10/2025
 
 # User roles and permissions
 
-Microsoft Defender for Cloud uses [Azure role-based access control (Azure Role-Based Access Control)](/azure/role-based-access-control/role-assignments-portal) to provide [built-in roles](/azure/role-based-access-control/built-in-roles). Assign these roles to users, groups, and services in Azure to give access to resources according to the role's defined access.
+Microsoft Defender for Cloud uses [Azure role-based access control (Azure Role-Based Access Control)](/azure/role-based-access-control/role-assignments-portal) to provide [built-in roles](/azure/role-based-access-control/built-in-roles). Assign these roles to users, groups, and services in Azure to give them access to resources according to the role's defined access.
 
 Defender for Cloud assesses resource configurations and identifies security issues and vulnerabilities. In Defender for Cloud, view resource information when assigned one of these roles for the subscription or resource group: Owner, Contributor, or Reader.
 
@@ -41,9 +41,9 @@ The following table displays roles and allowed actions in Defender for Cloud.
 
 The specific role required to deploy monitoring components depends on the extension you deploy. Learn more about [monitoring components](monitoring-components.md).
 
-## Roles used to automatically provision agents and extensions
+## Roles used to automatically configure agents and extensions
 
-To allow the Security Admin role to automatically provision agents and extensions used in Defender for Cloud plans, Defender for Cloud uses policy remediation similar to [Azure Policy](/azure/governance/policy/how-to/remediate-resources). To use remediation, Defender for Cloud needs to create service principals, also called managed identities, that assign roles at the subscription level. For example, the service principals for the Defender for Containers plan are:
+To allow the Security Admin role to automatically configure agents and extensions used in Defender for Cloud plans, Defender for Cloud uses policy remediation similar to [Azure Policy](/azure/governance/policy/how-to/remediate-resources). To use remediation, Defender for Cloud needs to create service principals, also called managed identities, that assign roles at the subscription level. For example, the service principals for the Defender for Containers plan are:
 
 | Service Principal                                            | Roles                                                        |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -56,7 +56,7 @@ To allow the Security Admin role to automatically provision agents and extension
 
 When you onboard an Amazon Web Services (AWS) connector, Defender for Cloud creates roles and assigns permissions on your AWS account. The following table shows the roles and permissions assigned by each plan on your AWS account.
 
-| Defender for Cloud plan                           | Role created                                          | Permission assigned on AWS account                           |
+| Defender for Cloud plan                           | Role created                                          | Permissions assigned on AWS account                           |
 | ------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Defender Cloud Security Posture Management (CSPM) | CspmMonitorAws                                        | To discover AWS resources permissions,  read all resources except:<br> consolidatedbilling:<br> freetier: <br> invoicing:<br> payments: <br> billing:<br> tax: <br> cur: |
 | Defender CSPM <br><br> Defender for Servers       | DefenderForCloud-AgentlessScanner                     | To create and clean up disk snapshots (scoped by tag) "CreatedBy": "Microsoft Defender for Cloud" Permissions:<br> ec2:DeleteSnapshot ec2:ModifySnapshotAttribute<br>  ec2:DeleteTags<br>  ec2:CreateTags<br>  ec2:CreateSnapshots<br>  ec2:CopySnapshot<br>  ec2:CreateSnapshot<br>  ec2:DescribeSnapshots<br>  ec2:DescribeInstanceStatus<br>  Permission to EncryptionKeyCreation kms:CreateKey<br>  kms:ListKeys<br>  Permissions to EncryptionKeyManagement kms:TagResource<br>  kms:GetKeyRotationStatus<br>  kms:PutKeyPolicy<br>  kms:GetKeyPolicy<br>  kms:CreateAlias<br>  kms:TagResource<br>  kms:ListResourceTags<br>  kms:GenerateDataKeyWithoutPlaintext<br>  kms:DescribeKey<br> kms:RetireGrant<br>  kms:CreateGrant<br>  kms:ReEncryptFrom |
