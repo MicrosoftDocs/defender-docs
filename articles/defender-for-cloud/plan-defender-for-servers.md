@@ -34,7 +34,7 @@ Before you begin deployment planning:
 - Learn more about [Defender for Cloud](defender-for-cloud-introduction.md) capabilities, and [review pricing details](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - [Get an overview](defender-for-servers-overview.md) of Defender for Servers.
 - If you're deploying for AWS machines or GCP projects, review the [multicloud planning guide](plan-multicloud-security-get-started.md).
-- Onboarding AWS/GCP and on-premises machines as Azure Arc VMs ensures that you can use all features in Defender for Servers. Before you begin planning, learn more about [Azure Arc](https://learn.microsoft.com/azure/azure-arc/overview).
+- Onboarding AWS/GCP and on-premises machines as Azure Arc VMs ensures that you can use all features in Defender for Servers. Before you begin planning, learn more about [Azure Arc](/azure/azure-arc/overview).
 
 ## Deployment steps
 

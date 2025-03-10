@@ -16,7 +16,7 @@ Microsoft Defender for Cloud is a cloud-native application protection platform (
 - A cloud security posture management (CSPM) solution that surfaces actions you can take to prevent breaches.
 - A cloud workload protection platform (CWPP) with specific protections for servers, containers, storage, databases, and other workloads.
 
-Defender for Cloud includes Foundational CSPM capabilities and access to [Microsoft Defender XDR](https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender) for free. You can add other paid plans to secure all aspects of your cloud resources. You can try Defender for Cloud for free for the first 30 days. After 30 days, charges begin in accordance with the plans enabled in your environment. To learn more about these plans and their costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+Defender for Cloud includes Foundational CSPM capabilities and access to [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender) for free. You can add other paid plans to secure all aspects of your cloud resources. You can try Defender for Cloud for free for the first 30 days. After 30 days, charges begin in accordance with the plans enabled in your environment. To learn more about these plans and their costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 > [!IMPORTANT]
 > Malware scanning in Defender for Storage isn't included for free in the first 30-day trial and will be charged from the first day in accordance with the pricing scheme available on the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
@@ -30,7 +30,7 @@ Defender for Cloud helps you find and fix security vulnerabilities. It also appl
 ## Enable Defender for Cloud on your Azure subscription
 
 > [!TIP]
-> To enable Defender for Cloud on all subscriptions within a management group, see [Enable Defender for Cloud on multiple Azure subscriptions](https://learn.microsoft.com/azure/defender-for-cloud/onboard-management-group).
+> To enable Defender for Cloud on all subscriptions within a management group, see [Enable Defender for Cloud on multiple Azure subscriptions](onboard-management-group.md).
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Search for and select **Microsoft Defender for Cloud**.
@@ -50,7 +50,7 @@ Defender for Cloud is now enabled on your subscription, and you have access to t
 - [Secure score](secure-score-security-controls.md).
 - [Regulatory compliance](update-regulatory-compliance-packages.yml) with the [Microsoft cloud security benchmark](concept-regulatory-compliance.md).
 
-The Defender for Cloud overview page provides a unified view into the security posture of your hybrid cloud workloads, helping you discover and assess the security of your workloads and identify and mitigate risks. Learn more in [Microsoft Defender for Cloud's overview page](https://learn.microsoft.com/azure/defender-for-cloud/overview-page).
+The Defender for Cloud overview page provides a unified view into the security posture of your hybrid cloud workloads, helping you discover and assess the security of your workloads and identify and mitigate risks. Learn more in [Microsoft Defender for Cloud's overview page](overview-page.md).
 
 You can view and filter your list of subscriptions from the subscriptions menu to have Defender for Cloud adjust the overview page display to reflect the security posture of the selected subscriptions.
 
@@ -93,7 +93,7 @@ All of the plans are turned on, and the monitoring components required by each p
 If you want to disable any of the plans, toggle the individual plan to **off**. The extensions used by the plan aren't uninstalled, but after a short time, the extensions stop collecting data.
 
 > [!TIP]
-> To enable Defender for Cloud on all subscriptions within a management group, see [Enable Defender for Cloud on multiple Azure subscriptions](https://learn.microsoft.com/azure/defender-for-cloud/onboard-management-group).
+> To enable Defender for Cloud on all subscriptions within a management group, see [Enable Defender for Cloud on multiple Azure subscriptions](onboard-management-group.md).
 
 ## Integrate with Microsoft Defender XDR
 
@@ -101,7 +101,7 @@ When you enable Defender for Cloud, its alerts are automatically integrated into
 
 The integration between Microsoft Defender for Cloud and Microsoft Defender XDR brings your cloud environments into Microsoft Defender XDR. With Defender for Cloud's alerts and cloud correlations integrated into Microsoft Defender XDR, SOC teams can now access all security information from a single interface.
 
-Learn more about Defender for Cloud's [alerts in Microsoft Defender XDR](https://learn.microsoft.com/azure/defender-for-cloud/concept-integration-365).
+Learn more about Defender for Cloud's [alerts in Microsoft Defender XDR](concept-integration-365.md).
 
 ## Next steps
 

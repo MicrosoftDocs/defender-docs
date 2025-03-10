@@ -32,7 +32,7 @@ This article helps you deploy a Defender for Servers plan.
 **Review support requirements** | Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
 **Take advantage of 500 MB free data ingestion** | When Defender for Servers Plan 2 is enabled, a benefit of free 500-MB data ingestion is available for specific data types. [Learn about requirements and set up free data ingestion](data-ingestion-benefit.md)
 **Defender integration** | Defender for Endpoint and Defender for Vulnerability Management are integrated by default in Defender for Cloud.<br/><br/> When you enable Defender for Servers, you give consent for the Defender for Servers plan to access Defender for Endpoint data related to vulnerabilities, installed software, and endpoint alerts.
-**Enable at resource level** | Although we recommend enabling Defender for Servers for a subscription, you can [enable Defender for Servers at resource level](#enable-defender-for-servers-at-resource-level) if needed, for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.<br/><br/> You can enable Plan 1 at the resource level.<br/><br/> You can disable Plan 1 and Plan 2 at the resource level.
+**Enable at resource level** | Although we recommend enabling Defender for Servers for a subscription, you can [enable Defender for Servers at resource level](#enable-defender-for-servers-at-the-resource-level) if needed, for Azure VMs, Azure Arc-enabled servers, and Azure Virtual Machine Scale Sets.<br/><br/> You can enable Plan 1 at the resource level.<br/><br/> You can disable Plan 1 and Plan 2 at the resource level.
 
 ## Enable on Azure, AWS, or GCP
 
@@ -83,7 +83,7 @@ Enable or disable the plan on specific machines.
 
 ### Enable Plan 1 on a machine using the REST API
 
-1. To enable Plan 1 for the machine, in [Update Pricings](https://learn.microsoft.com/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#update-pricing-on-resource-(example-for-virtualmachines-plan)), create a PUT request with the endpoint.
+1. To enable Plan 1 for the machine, in [Update pricing](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) [Update Pricings](https://learn.microsoft.com/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#update-pricing-on-resource-(example-for-virtualmachines-plan)), create a PUT request with the endpoint.
 1. In the PUT request, replace the subscriptionId, resourceGroupName, and machineName in the endpoint URL with your own settings.
 
     ```rest

@@ -1,6 +1,6 @@
 ---
-title: Overview of Defender for Endpoint integration in Defender for Cloud
-description: Learn about Defender for Endpoint integration in Defender for Cloud.
+title: Defender for Endpoint integration in Defender for Cloud
+description: Learn about how Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management integrate with Defender for Cloud to enhance security.
 author: elazark
 ms.author: elkrieger
 ms.topic: concept-article
