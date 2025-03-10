@@ -56,7 +56,7 @@ Defender for Servers provides visibility to the Defender for Endpoint agents ins
 ### Prerequisites
 
 You must have either:
-- Defender for Servers P2
+- Defender for Servers P2 enabled.
   <br> or,
 - Defender CSPM enabled with Defender for Servers plan 1 enabled.
 
