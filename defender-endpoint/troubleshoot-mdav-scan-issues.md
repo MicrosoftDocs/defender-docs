@@ -114,12 +114,11 @@ Event viewer can be access on the machine by the application or PowerShell. Plea
 
 ### Reporting
 
-There is also reporting available covering the current Status of scan status.  This can be expanded and exported for device detail. Device health Microsoft Defender Antivirus health report - Microsoft Defender for Endpoint | Microsoft Learn
+Reports are available that include current scan status. You can expand the veiw and export details. For more information, see [Device health report](/defender-endpoint/device-health-microsoft-defender-antivirus-health).
  
 ### Advanced Hunting
 
 There is also information about Scan completion and cancellation in advanced hunting.
- 
         
 ### Device Page
 
