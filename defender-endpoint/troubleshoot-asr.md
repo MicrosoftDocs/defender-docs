@@ -125,7 +125,7 @@ To add an exclusion, see [Customize attack surface reduction](attack-surface-red
 
 Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for network protection. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
 
-## Collect diagnostic data for file submissions
+## Collect Microsoft Defender Antimalware Protection diagnostic data for file submissions
 
 When you report a problem with attack surface reduction rules, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
 
@@ -142,6 +142,24 @@ When you report a problem with attack surface reduction rules, you're asked to c
    ```
 
 3. By default, they're saved to `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. Attach the file to the submission form.
+
+
+You can also view rule events through the Microsoft Defender Antivirus dedicated command-line tool, called `*mpcmdrun.exe*`, that can be used to manage and configure, and automate tasks if needed.
+
+You can find this utility in *%ProgramFiles%\Windows Defender\MpCmdRun.exe*. You must run it from an elevated command prompt (that is, run as Admin).
+
+To generate the support information, type *MpCmdRun.exe -getfiles*. After a while, several logs will be packaged into an archive (MpSupportFiles.cab) and made available in *C:\ProgramData\Microsoft\Windows Defender\Support*.
+
+:::image type="content" source="media/malware-prot-logsnew.png" alt-text="The malware protection logs" lightbox="media/malware-prot-logsnew.png":::
+
+Extract that archive and you'll have many files available for troubleshooting purposes.
+
+The most relevant files are as follows:
+
+- **MPOperationalEvents.txt**: This file contains same level of information found in Event Viewer for Windows Defender's Operational log.
+- **MPRegistry.txt**: In this file you can analyze all the current Windows Defender configurations, from the moment the support logs were captured.
+- **MPLog.txt**: This log contains more verbose information about all the actions/operations of the Windows Defender.
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 ## Related articles
 
