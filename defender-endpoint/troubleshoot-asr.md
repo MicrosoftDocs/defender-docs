@@ -42,7 +42,7 @@ There are four steps to troubleshooting these problems:
 1. [Confirm prerequisites](#confirm-prerequisites)
 2. [Use audit mode to test the rule](#use-audit-mode-to-test-the-rule)
 3. [Add exclusions for the specified rule](#add-exclusions-for-a-false-positive) (for false positives)
-4. [Collect and submit support logs](#collect-microsoft-defender-antimalware-protection-diagnostic-data-for-file-submissions)
+4. [Collect and submit support logs](#collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions)
 
 ## Confirm prerequisites
 
