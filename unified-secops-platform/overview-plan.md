@@ -8,6 +8,8 @@ ms.topic: concept-article #Don't change.
 ms.date: 02/09/2025
 ms.collection:
 - usx-security
+- zerotrust-solution
+- msftsolution-secops
 
 
 #customer intent: As a security administrator, I want to plan my unified security operations platform deployment so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
