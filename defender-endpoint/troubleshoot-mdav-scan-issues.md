@@ -126,9 +126,68 @@ The Device page has detail of the last scans of the device
  
 ### API 
 
-Data about Scan status can be exported via API using this API.
+Data about scan status can be exported by using the export health reporting API, as follows:
+
+```console
+
+"quickScanResult": "Completed",
+"quickScanError": "",
+"quickScanTime": "2202-08-02T18:40:15.882Z",
+"fullScanResult": "",
+"fullScanError": "",
+"fullScanTime": null,
+
+```
+
+For more information, see [Export device antivirus health report](/defender-endpoint/api/device-health-export-antivirus-health-report-api).
+
  
-Microsoft Defender Antivirus Device Health export device antivirus health reporting - Microsoft Defender for Endpoint | Microsoft Learn
+## Reasons why scans are cancelled or terminated
+
+Identifying why a scan has been cancelled will enable you to identify what needs to be reviewed to enable scans to finish successfully. The following table lists reasons why scans didn't complete.
+
+| Reason | Details |
+|--|--|
+| The device restarts | Details of device restarts can be reviewed from the event viewer on the device. <br/><br/>Event Log:    System  <br/><br/>Event IDs: `6005`, `6006`, `6007`, and `6008` |
+| The scan times out | Scheduled scans use `mpcmdrun`, but if someone uses `mpcmdrun` to run an on-demand scan, the timer still applies. Antivirus scans launched by the Windows Security app (Local) and the Microsoft Defender portal don't use `mpcmdrun`, and each method starts a scan directly by using `mpclient`.
+*    Portal initiated scans (Quick or Full) or Windows Security app (Quick or Full): No time limit
+*    Scheduled Full Scans or MpCmdRun -scan: 7 day limit
+*    Scheduled Quick Scans or MpCmdRun -scan: 1 day limi
+*    If a Device is on battery
+If a device is unplugged and running on battery during a scheduled full scan, the scheduled scan stops with event 1002, which states that the scan stopped before completion. Microsoft Defender Antivirus runs a full scan at the next scheduled time.
+https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/schedule-antivirus-scans?view=o365-worldwide#important-points-to-keep-in-mind
+
+*    Other Power Related events
+The following event ID's (from Kernel-Power) indicate changing of the power state of the device which may impact the scanning finishing in a timely manner.
+*    107: The system has resumed from sleep.
+*    42: The system is entering sleep. Sleep Reason: Hibernate from Sleep - Standby Battery Budget Exceeded
+*    507: The system is exiting Modern Standby. Reason: Sleep, Hibernate, or Shutdown.
+*    506:The system is entering Modern Standby. Reason: Lid.
+*    105:  Power source change.
+
+
+Use performance analyser on the device
+If the above has not identified a Misconfiguration / issue on the device, you can use New-MpPerformanceRecording to generate a trace to identify problems on the device.  It will give you:
+*    Top paths that impact scan time
+*    Top files that impact scan time
+*    Top processes that impact scan time
+*    Top file extensions that impact scan time
+*    Combinations – for example:
+o    top files per extension
+o    top paths per extension
+o    top processes per path
+o    top scans per file
+o    top scans per file per process
+
+for details on usage and examples please see: Performance analyzer for Microsoft Defender Antivirus - Microsoft Defender for Endpoint | Microsoft Learn
+One outcome of this process may be identifying Files / Paths that you wish to exclude from the Scan to improve performance. Please review the documentation on options and caveats of exclusions at Exclusions overview - Microsoft Defender for Endpoint | Microsoft Learn .
+Also please review Contextual file and folder exclusions - Microsoft Defender for Endpoint | Microsoft Learn to decrease impact of exclusions.
+
+
+## Reviewing Event logs
+
+Local event logs can be reviewed either using the Event Viewer application or using PowerShell.
+MDE AV Scan relevant logs are located at "Application and Service Logs -> Microsoft -> Windows -> Windows Defender -> Operational" 
 
 
 
