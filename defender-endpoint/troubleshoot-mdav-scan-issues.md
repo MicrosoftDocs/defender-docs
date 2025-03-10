@@ -120,13 +120,20 @@ Event viewer can be access on the machine by the application or PowerShell. For 
 
 Reports are available that include current scan status. You can expand the veiw and export details. For more information, see [Device health report](/defender-endpoint/device-health-microsoft-defender-antivirus-health).
  
-### Advanced Hunting
+### Advanced hunting
 
-There is also information about Scan completion and cancellation in advanced hunting.
+You can also find information about scan completion and cancellation in [advanced hunting](/defender-xdr/advanced-hunting-overview). To get help with advanced hunting, see the following articles:
+
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender](../defender-xdr/advanced-hunting-overview.md)
+- [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](../defender-xdr/advanced-hunting-modes.md)
+- [Learn the advanced hunting query language](../defender-xdr/advanced-hunting-query-language.md)
         
 ### Device Page
 
-The Device page has detail of the last scans of the device
+In the Microsoft Defender portal, you can view information about scans on the device page. For more information, see the following articles:
+
+- [Device health reports in Microsoft Defender for Endpoint](device-health-reports.md)
+- [Device inventory](machines-view-overview.md)
  
 ### API 
 
@@ -145,14 +152,13 @@ Data about scan status can be exported by using the export health reporting API,
 
 For more information, see [Export device antivirus health report](/defender-endpoint/api/device-health-export-antivirus-health-report-api).
 
- 
 ## Reasons why scans are cancelled or terminated
 
 Identifying why a scan has been cancelled will enable you to identify what needs to be reviewed to enable scans to finish successfully. The following table lists reasons why scans didn't complete.
 
 | Reason | Details |
 |--|--|
-| The device restarts | Details of device restarts can be reviewed from the event viewer on the device. <br/><br/>Event Log:    System  <br/><br/>Event IDs: `6005`, `6006`, `6007`, and `6008` |
+| The device restarts | Details of device restarts can be reviewed using Event Viewer on the device. <br/><br/>Event Log:    System  <br/><br/>Event IDs: `6005`, `6006`, `6007`, and `6008` |
 | The scan times out | Scheduled scans use `mpcmdrun`, but if someone uses `mpcmdrun` to run an on-demand scan, the timer still applies. Antivirus scans launched by the Windows Security app (Local) and the Microsoft Defender portal don't use `mpcmdrun`, and each method starts a scan directly by using `mpclient`. <br/><br/>- Scans initiated in the Microsoft Defender portal or the Windows Security app (Quick or Full): No time limit<br/><br/>- Scheduled Full Scans or `MpCmdRun -scan`: 7 day limit<br/><br/>- Scheduled Quick Scans or `MpCmdRun -scan`: 1 day limit |
 | The device is running on battery | If a device is unplugged and running on battery during a scheduled full scan, the scheduled scan stops with event 1002, which states that the scan stopped before completion. Microsoft Defender Antivirus runs a full scan at the next scheduled time. <br/><br/>For more information, see [Schedule antirivus scans: Important points to keep in mind](/microsoft-365/security/defender-endpoint/schedule-antivirus-scans?#important-points-to-keep-in-mind).
 | Other power-related events | The following event IDs (from Kernel-Power) indicate changing of the power state of the device which may impact the scanning finishing in a timely manner: <br/>- `107`: The system has resumed from sleep.<br/>- `42`: The system is entering sleep. Sleep Reason: Hibernate from Sleep - Standby Battery Budget Exceeded<br/>- `507`: The system is exiting Modern Standby. Reason: Sleep, Hibernate, or Shutdown.<br/>- `506`:The system is entering Modern Standby. Reason: Lid.<br/>- `105`:  Power source change. |
