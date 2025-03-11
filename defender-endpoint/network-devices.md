@@ -179,11 +179,11 @@ During the setup process, you can perform a one time test scan to verify that:
 - There's connectivity between the Defender for Endpoint scanning device and the configured target network devices.
 - The configured SNMP credentials are correct.
 
-Each scanning device can support up to 1,500 successful IP addresses scan. For example, if you scan 10 different subnets where only 100 IP addresses return successful results, you can scan 1,400 IP additional addresses from other subnets on the same scanning device.
+Each scanning device can support up to 1,500 successful IP addresses scan. For example, if you scan 10 different subnets where only 100 IP addresses return successful results, you can scan 1,400 IP more addresses from other subnets on the same scanning device.
 
 If there are multiple IP address ranges/subnets to scan, the test scan results take several minutes to show up. A test scan is available for up to 1,024 addresses.
 
-Once the results show up, you can choose which devices will be included in the periodic scan. If you skip viewing the scan results, all configured IP addresses are added to the network device authenticated scan (regardless of the device's response). The scan results can also be exported.
+Once the results show up, you can choose which devices to include in the periodic scan. If you skip viewing the scan results, all configured IP addresses are added to the network device authenticated scan (regardless of the device's response). The scan results can also be exported.
 
 ## Device inventory
 
