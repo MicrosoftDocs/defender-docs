@@ -156,5 +156,5 @@ Starting March 2025, Defender for Cloud Apps customers can configure Role-Based 
 - [TechCommunity Blog](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/transform-the-way-you-investigate-by-using-behaviors-amp-new/ba-p/3825154)
 - [Tutorial: Detect suspicious user activity with behavioral analytics](tutorial-suspicious-activity.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)].
+[!INCLUDE [Open support ticket](includes/support.md)]
 
