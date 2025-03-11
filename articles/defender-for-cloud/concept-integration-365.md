@@ -23,7 +23,7 @@ Incidents and alerts are now part of [Microsoft Defender XDR's public API](/micr
 - Access to Defender for Cloud alerts in the Microsoft Defender portal depends on which Defender for Cloud plans are enabled. Learn more about the different [Defender for Cloud plan protections](defender-for-cloud-introduction.md#protect-cloud-workloads).
 
 > [!NOTE]
-> The permission to view Defender for Cloud alerts and correlations is automatic for the entire tenant. Viewing for specific subscriptions is not supported. You can use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](/defender-xdr/incident-queue#filters).
+> Permissions to view Defender for Cloud alerts and correlations are automatic for the entire tenant. Viewing specific subscriptions isn't supported. Use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](/defender-xdr/incident-queue#filters).
 
 The integration is available only by applying the appropriate [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) role for Defender for Cloud. To view Defender for Cloud alerts and correlations without Defender XDR Unified RBAC, you must be a Global Administrator or Security Administrator in Azure Active Directory.
 
