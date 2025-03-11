@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwashh
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 02/20/2025
+ms.date: 03/11/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -57,7 +57,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 What's new
 
-- The MDATP package rollout into production will be done gradually. This would mean, from the time the release notes are published, it might take upto a week for the package to be pushed to all production machines.
+- The MDATP package rollout into production will be done gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 
 - The vulnerability in curl, CVE-2024-7264, has been addressed.
 
@@ -116,10 +116,10 @@ What's new
   - Enabled: When eBPF is enabled as working as expected.
   - Disabled: When eBPF is disabled due to one of the following reasons:
     - When MDE is using auditD as a supplementary sensor
-    - When eBPF is not present and we fallback to Netlink as supplementary event provider
-    - There is no supplementary sensor present.
+    - When eBPF isn't present and we fallback to Netlink as supplementary event provider
+    - There's no supplementary sensor present.
 
-- Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast and insiderSlow, are unaffected by this change.
+- Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast, and insiderSlow, are unaffected by this change.
 
 - Stability and performance improvements.
 
@@ -231,7 +231,7 @@ There are multiple fixes and new changes in this release.
 
 There are multiple fixes and new changes in this release.
 
-- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Update to the latest MDE version to avoid any impact.
+- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only affected the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Update to the latest MDE version to avoid any impact.
 
 - We have now simplified the output of `mdatp health --detail features`
 
@@ -1353,7 +1353,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 ##### What's new 
 
-- Added a capability to detect vulnerable log4j jars in use by Java applications. The machine is periodically inspected for running Java processes with loaded log4j jars. The information is reported to the Microsoft Defender for Endpoint backend and is exposed in the Vulnerability Management area of the portal.
+- Added a capability to detect vulnerable Log4j jars in use by Java applications. The machine is periodically inspected for running Java processes with loaded Log4j jars. The information is reported to the Microsoft Defender for Endpoint backend and is exposed in the Vulnerability Management area of the portal.
 
 #### Build: 101.47.76  | Release version: 30.121092.14776.0
 
@@ -1363,7 +1363,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
   
 ##### What's new
 
-- Added a new switch to the command-line tool to control whether archives are scanned during on-demand scans. This can be configured through mdatp config scan-archives --value [enabled/disabled]. By default, this setting is set to enabled.
+- Added a new switch to the command-line tool to control whether archives are scanned during on-demand scans. This can be configured through mdatp config scan-archives--value [enabled/disabled]. By default, this setting is set to enabled.
 
 - Bug fixes
 
