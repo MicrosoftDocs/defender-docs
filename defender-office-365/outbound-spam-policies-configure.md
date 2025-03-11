@@ -71,7 +71,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
    When you're finished on the **Name your policy page**, select **Next**.
 
-4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to (recipient conditions):
+4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to:
    - **Users**: The specified mailboxes, mail users, or mail contacts.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
