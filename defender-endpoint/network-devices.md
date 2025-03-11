@@ -187,7 +187,7 @@ Once the results show up, you can choose which devices to include in the periodi
 
 ## Device inventory
 
-Newly discovered devices are shown under the new **Network devices** tab in the **Device inventory** page. It may take up to two hours after adding a scanning job until the devices are updated.
+Newly discovered devices are shown under the new **Network devices** tab in the **Device inventory** page. It might take up to two hours after adding a scanning job until the devices are updated.
 
 :::image type="content" source="/defender/media/defender-endpoint/network-devices-inventory.png" alt-text="Screenshot of the network device tab in the device inventory" lightbox="/defender/media/defender-endpoint/network-devices-inventory.png":::
 
@@ -197,15 +197,15 @@ Newly discovered devices are shown under the new **Network devices** tab in the 
 
 Verify that the required URLs are added to the allowed domains in your firewall settings. Also, make sure proxy settings are configured as described in [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
-### The Microsoft.com/devicelogin web page did not show up
+### The Microsoft.com/devicelogin web page didn't show up
 
 Verify that the required URLs are added to the allowed domains in your firewall. Also, make sure proxy settings are configured as described in [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
-### Network devices are not shown in the device inventory after several hours
+### Network devices aren't shown in the device inventory after several hours
 
 The scan results should be updated a few hours after the initial scan that took place after completing the network device authenticated scan configuration.
 
-If devices are still not shown, verify that the service 'MdatpNetworkScanService' is running on your devices being scanned, on which you installed the scanner, and perform a "Run scan" in the relevant network device authenticated scan configuration.
+If devices are still not shown, verify that the service `MdatpNetworkScanService` is running on your devices being scanned, on which you installed the scanner, and perform a "Run scan" in the relevant network device authenticated scan configuration.
 
 If you still don't get results after 5 minutes, restart the service.
 
