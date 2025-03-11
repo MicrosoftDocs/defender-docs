@@ -39,6 +39,12 @@ This section describes all the health issues for each component, listing the cau
 
 Sensor-specific health issues are displayed in the **Sensor health issues** tab and domain related or aggregated health issues are displayed in the **Global health issues** tab as detailed in the following tables:
 
+### Network configuration mismatch for sensors running on VMware
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|The virtual machines that the listed Defender for Identity sensors are installed on has a network configuration mismatch. This issue may affect the performance and reliability of the sensors.|Review the network interface settings, including disabling the Large Send Offload (LSO), and follow the instructions in [here](https://aka.ms/mdi/vmware-sensor-issue).|High|Sensors health issues tab|
+
 ### A domain controller is unreachable by a sensor
 
 |Alert|Description|Resolution|Severity|Displayed in|
