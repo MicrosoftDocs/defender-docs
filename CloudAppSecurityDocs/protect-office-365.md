@@ -132,11 +132,10 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - You must [enable auditing in Power BI](/power-bi/admin/service-admin-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 - You must [enable auditing in Dynamics 365](/power-platform/admin/enable-use-comprehensive-auditing#enable-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 
-
 **To connect Microsoft 365 to Defender for Cloud Apps**:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
-1. In the **App connectors** page, select **+Connect an app**, and then Select **Office 365**. 
+1. In the **App connectors** page, select **+Connect an app**, and then select **Office 365**.
 
     ![Select connect an app.](media/connect-an-app.png)
 
@@ -147,7 +146,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     > - For best protection, we recommend selecting all Microsoft 365 components.
     > - The **Microsoft 365 files** component, requires enabling Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
 
-    ![connect Office 365 components.](media/connect-office-365-components.png)
+   :::image type="complex" source="media/connect-office-365-components.png":::
+    :::image-end:::
 
 1. On the **Follow the link** page, select **Connect Microsoft 365**.
 
