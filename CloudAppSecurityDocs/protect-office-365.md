@@ -8,7 +8,7 @@ ms.topic: how-to
 
 
 
-As a major productivity suite providing cloud file storage, collaboration, BI, and CRM tools, Microsoft 365 enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Microsoft 365 may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents might occur due to malicious actor, or by an unaware employee. Microsoft 365 also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
+As a major productivity suite providing cloud file storage, collaboration, BI, and CRM tools, Microsoft 365 enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Microsoft 365 might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents might occur due to malicious actor, or by an unaware employee. Microsoft 365 also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
 
 Connecting Microsoft 365 to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, information protection detections (such as detecting external information sharing), enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
 
@@ -26,7 +26,7 @@ Defender for Cloud Apps has added new file scanning improvements for SharePoint 
 - Better identification for a file's access level in SharePoint: file access level in SharePoint will be marked by default as **Internal**, and not as **Private** (since every file in SharePoint is accessible by the site owner, and not only by the file owner).
 
     >[!NOTE]
-    >This change could impact your file policies (if a file policy is looking for **Internal** or **Private** files in SharePoint).
+    >This change could affect your file policies (if a file policy is looking for **Internal** or **Private** files in SharePoint).
 
 ## Main threats
 
@@ -79,7 +79,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Defender for Cloud Apps integration with Microsoft 365
   
-Defender for Cloud Apps supports the legacy Microsoft 365 Dedicated Platform as well as the latest offerings of Microsoft 365 services, commonly referred as the *vNext* release family of Microsoft 365.
+Defender for Cloud Apps supports the legacy Microsoft 365 Dedicated Platform and the latest offerings of Microsoft 365 services, commonly referred as the *vNext* release family of Microsoft 365.
 
 In some cases, a vNext service release differs slightly at the administrative and management levels from the standard Microsoft 365 offering.
 
@@ -119,6 +119,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 - You must have at least one assigned Microsoft 365 license to connect Microsoft 365 to Defender for Cloud Apps.
 
+- To enable File monitoring of Microsoft 365 files, you are required to use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator, see [Microsoft Entra built-in roles](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference)
+
 - To enable monitoring of Microsoft 365 activities in Defender for Cloud Apps, you are required to enable auditing in [Microsoft Purview](/purview/audit-log-enable-disable).
 
 - Exchange Mailbox audit logging must be turned on for each user mailbox before user activity in Exchange Online is logged, see [Exchange Mailbox activities](https://support.office.com/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c).
@@ -132,7 +134,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 1. In the **App connectors** page, select **+Connect an app**, and then select **Microsoft 365**.
 
-    ![Connect O365 menu option.](media/connect-o365.png)
+    ![Connect Office 365 menu option.](media/connect-o365.png)
 
 1. In the **Select Microsoft 365 components** page, select the options you require, and then select **Connect**.
 
