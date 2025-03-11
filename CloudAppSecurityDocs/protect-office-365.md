@@ -17,7 +17,11 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 
-## File scanning improvements for Microsoft 365
+## File scanning updates for Microsoft 365
+
+To enhance the efficiency and accuracy of file scanning within Microsoft 365 environments, Defender for Cloud Apps has updated the file scanning process for Microsoft 365. Unless you have activated Information protection policies, Defender for Cloud Apps will not scan or store organizational files.
+
+When actively using Information protection policies, organizational files may have significant scanning durations due to high volumes of file scanning activities.
 
 Defender for Cloud Apps has added new file scanning improvements for SharePoint and OneDrive:
 
@@ -132,18 +136,18 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 **To connect Microsoft 365 to Defender for Cloud Apps**:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
-1. In the **App connectors** page, select **+Connect an app**, and then select **Microsoft 365**.
+1. In the **App connectors** page, select **+Connect an app**, and then Select **Office 365**. 
 
-    ![Connect Office 365 menu option.](media/connect-o365.png)
+    ![Select connect an app.](media/connect-an-app.png)
 
 1. In the **Select Microsoft 365 components** page, select the options you require, and then select **Connect**.
 
     > [!NOTE]
     >
     > - For best protection, we recommend selecting all Microsoft 365 components.
-    > - The **Azure AD files** component, requires the **Azure AD activities** component and Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
+    > - The **Microsoft 365 files** component, requires enabling Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
 
-    ![connect O365 components.](media/connect-o365-components.png)
+    ![connect Office 365 components.](media/connect-office-365-components.png)
 
 1. On the **Follow the link** page, select **Connect Microsoft 365**.
 
