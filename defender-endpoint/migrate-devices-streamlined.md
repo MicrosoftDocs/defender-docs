@@ -3,8 +3,8 @@ title: Migrate devices to use the streamlined onboarding method
 description: Learn how to migrate devices to Defender for Endpoint using the streamlined connectivity method.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 03/06/2025
+ms.date: 03/11/2025
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -31,9 +31,9 @@ This article describes how to migrate (reonboard) devices that had been previous
 In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
-> Limitations and known issues:- For device migrations (reonboarding): Offboarding is not required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
-- Windows 10 versions 1607, 1703, 1709, and 1803 do not support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
-- Devices running the MMA agent are not supported and must continue using the MMA onboarding method.
+> Limitations and known issues:- For device migrations (reonboarding): Offboarding isn't required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
+- Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
+- Devices running the MMA agent aren't supported and must continue using the MMA onboarding method.
 
 
 ## Migrating devices using the streamlined method
@@ -66,7 +66,7 @@ The following table lists migration instructions for the available onboarding to
 ### Windows 10 and 11
 
 > [!IMPORTANT]
-> Windows 10 version 1607, 1703, 1709, and 1803 do not support reonboarding. To migrate existing devices, you will need to fully offboard and onboard using the streamlined onboarding package.
+> Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. To migrate existing devices, you need to fully offboard and onboard using the streamlined onboarding package.
 
 For general information on onboarding Windows client devices, see [Onboarding Windows Client](onboard-windows-client.md).
 
@@ -220,7 +220,7 @@ Once a device is migrated to use the streamlined method and the device establish
 
 If you move the device back to the regular method, the value is "standard".
 
-For devices that haven't yet attempted reonboard, the value remains blank.
+For devices that have not attempted to reonboard, the value remains empty.
 
 ### Tracking locally on a device through Windows Event Viewer
 
@@ -252,7 +252,7 @@ Open the Defender for Endpoint service event log using the following steps:
 
 > [!NOTE]
 > SENSE is the internal name used to refer to the behavioral sensor that powers Microsoft Defender for Endpoint. <br>
-> Events recorded by the service will appear in the log. <br>
+> Events recorded by the service appear in the log. <br>
 > For more information, see [Review events and error using Event Viewer](event-error-codes.md).
 
 ### Run tests to confirm connectivity with Defender for Endpoint services
@@ -286,7 +286,7 @@ For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluation
    ```
 
   > [!NOTE]
-  > This command will only work on Windows 10, version 1703 or higher, or Windows 11.
+  > This command only works on Windows 10, version 1703 or higher, or Windows 11.
   > For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Test Block at First Sight
