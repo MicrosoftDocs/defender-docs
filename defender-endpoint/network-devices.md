@@ -111,7 +111,7 @@ The scanner is supported on Windows 10, version 1903 and Windows Server, version
 
 2. Download the scanner and install it on the designated Defender for Endpoint scanning device.
 
-   :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan-new.png" alt-text="Screenshot of the add new authenticated scan screen" lightbox="/defender/media/defender-endpoint/network-authenticated-scan-new.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan-new.png" alt-text="Screenshot of the add new authenticated scan screen." lightbox="/defender/media/defender-endpoint/network-authenticated-scan-new.png":::
 
 ## Scanner installation & registration
 
@@ -143,7 +143,7 @@ If there's a difference between the two versions, the update process determines 
 
 2. Select **Add new scan** and choose **Network device authenticated scan** and select **Next**.
 
-   :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan.png" alt-text="Screenshot of the add new network device authenticated scan screen" lightbox="/defender/media/defender-endpoint/network-authenticated-scan.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan.png" alt-text="Screenshot of the add new network device authenticated scan screen." lightbox="/defender/media/defender-endpoint/network-authenticated-scan.png":::
 
 3. Choose whether to **Activate scan**.
 
@@ -189,7 +189,7 @@ Once the results show up, you can choose which devices to include in the periodi
 
 Newly discovered devices are shown under the new **Network devices** tab in the **Device inventory** page. It might take up to two hours after adding a scanning job until the devices are updated.
 
-:::image type="content" source="/defender/media/defender-endpoint/network-devices-inventory.png" alt-text="Screenshot of the network device tab in the device inventory" lightbox="/defender/media/defender-endpoint/network-devices-inventory.png":::
+:::image type="content" source="/defender/media/defender-endpoint/network-devices-inventory.png" alt-text="Screenshot of the network device tab in the device inventory." lightbox="/defender/media/defender-endpoint/network-devices-inventory.png":::
 
 ## Troubleshooting
 
