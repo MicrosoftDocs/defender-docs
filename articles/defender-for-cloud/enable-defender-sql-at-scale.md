@@ -1,5 +1,5 @@
 ---
-title: Enable Microsoft Defender for SQL servers on machines at scale
+title: Enable Microsoft Defender for SQL Servers on Machines at scale
 description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud at scale.
 ms.topic: how-to
 ms.author: dacurwin
@@ -8,11 +8,11 @@ ms.date: 12/17/2024
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ---
 
-# Enable Microsoft Defender for SQL servers on machines at scale
+# Enable Microsoft Defender for SQL Servers on Machines at scale
 
-Microsoft Defender for Cloud's SQL servers on machines component of the Defender for Databases plan protects SQL IaaS and Defender for SQL extensions. The SQL servers on machines component identify and mitigates potential database vulnerabilities while detecting anomalous activity that could indicate threats to your databases.
+Microsoft Defender for Cloud's SQL Servers on Machines component of the Defender for Databases plan protects SQL IaaS and Defender for SQL extensions. The SQL Servers on Machines component identify and mitigates potential database vulnerabilities while detecting anomalous activity that could indicate threats to your databases.
 
-When [you enable the SQL Server on machines](tutorial-enable-databases-plan.md#enable-specific-plans-database-protections) component of the Defender for Databases plan, the auto-provision process is automatically initiated. The auto-provision process installs and configures all the necessary components for the plan to function, including the Azure Monitor Agent (AMA), SQL IaaS extension, and Defender for SQL extensions. The auto-provision process also sets up the workspace configuration, Data Collection Rules, identity (if needed), and the SQL IaaS extension.
+When you enable the SQL Server on machines component of the Defender for Databases plan, the auto-provision process is automatically initiated. The auto-provision process installs and configures all the necessary components for the plan to function, including the Azure Monitor Agent (AMA), SQL IaaS extension, and Defender for SQL extensions. The auto-provision process also sets up the workspace configuration, Data Collection Rules, identity (if needed), and the SQL IaaS extension.
 
 This page explains how you can enable the auto-provision process for Defender for SQL across multiple subscriptions simultaneously using a PowerShell script. This process applies to SQL servers hosted on Azure Virtual Machines (VM), on-premises environments, and Azure Arc-enabled SQL servers. This article also discusses how to utilize extra functionalities that can accommodate various configurations such as:
 
@@ -51,7 +51,7 @@ The PowerShell script that enables Microsoft Defender for SQL on Machines on a g
 
 | Parameter name | Required | Description |
 |--|--|--|
-| SubscriptionId: | Required | The Azure subscription ID that you want to enable Defender for SQL servers on machines for. |
+| SubscriptionId: | Required | The Azure subscription ID that you want to enable Defender for SQL Servers on Machines for. |
 | RegisterSqlVmAgnet | Required | A flag indicating whether to register the SQL VM Agent in bulk. <br><br> Learn more about [registering multiple SQL VMs in Azure with the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk). |
 | WorkspaceResourceId | Optional | The resource ID of the Log Analytics workspace, if you want to use a custom workspace instead of the default one. |
 | DataCollectionRuleResourceId | Optional | The resource ID of the data collection rule, if you want to use a custom Data Collection Rule (DCR) instead of the default one. |
@@ -77,9 +77,9 @@ $UserAssignedIdentityResourceId = "/subscriptions/<SubscriptionID>/resourceGroup
 .\EnableDefenderForSqlOnMachines.ps1 -SubscriptionId $SubscriptionId -RegisterSqlVmAgnet $RegisterSqlVmAgnet -WorkspaceResourceId $WorkspaceResourceId -DataCollectionRuleResourceId $DataCollectionRuleResourceId -UserAssignedIdentityResourceId $UserAssignedIdentityResourceId
 ```
 
-## Enable Defender for SQL servers on machines at scale
+## Enable Defender for SQL Servers on Machines at scale
 
-You can enable Defender for SQL servers on machines at scale by following these steps.
+You can enable Defender for SQL Servers on Machines at scale by following these steps.
 
 1. Open a PowerShell window.
 

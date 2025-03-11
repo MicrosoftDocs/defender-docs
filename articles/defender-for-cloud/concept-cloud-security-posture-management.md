@@ -2,25 +2,25 @@
 title: Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 01/14/2025
+ms.date: 03/02/2025
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
 # Cloud security posture management (CSPM)
 
-One of Microsoft Defender for Cloud's main pillars is cloud security posture management (CSPM). CSPM provides detailed visibility into the security state of your assets and workloads, and provides hardening guidance to help you efficiently and effectively improve your security posture.
+One of the main features of Microsoft Defender for Cloud is cloud security posture management (CSPM). CSPM provides detailed visibility into the security state of your assets and workloads and offers hardening guidance to help you improve your security posture.
 
-Defender for Cloud continually assesses your resources against security standards that are defined for your Azure subscriptions, AWS accounts, and GCP projects. Defender for Cloud issues security recommendations based on these assessments.
+Defender for Cloud continually assesses your resources against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations based on these assessments.
 
-By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) compliance standard is turned on. It provides recommendations. Defender for Cloud provides an aggregated [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations. The higher the score, the lower the identified risk level.
+By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) compliance standard is enabled and provides recommendations to secure your multicloud environments. Defender for Cloud provides an aggregated [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations. A higher score indicates a lower identified risk level.
 
-## CSPM features
+## CSPM plans
 
-Defender for Cloud provides the following CSPM offerings:
+Defender for Cloud offers two CSPM plan options:
 
-- **Foundational CSPM** - Defender for Cloud offers foundational multicloud CSPM capabilities for free. These capabilities are automatically enabled by default for subscriptions and accounts that onboard to Defender for Cloud.
+- **Foundational CSPM** - A free plan enabled by default for subscriptions and accounts that onboard to Defender for Cloud.
 
-- **Defender Cloud Security Posture Management (CSPM) plan** - The optional, paid Defender for Cloud Secure Posture Management plan provides more, advanced security posture features.
+- **Defender CSPM** - A paid plan that provides extra capabilities beyond the foundational CSPM plan. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
 
 ## Plan availability
 
@@ -44,9 +44,9 @@ The following table summarizes each plan and their cloud availability.
 | [Attack path analysis](how-to-manage-attack-path.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [Risk prioritization](risk-prioritization.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP , Docker Hub, JFrog Artifactory |
 | [Risk hunting with security explorer](how-to-manage-cloud-security-explorer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP , Docker Hub, JFrog Artifactory |
-| [Code-to-cloud mapping for containers](container-image-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps , Docker Hub, JFrog Artifactory|
-| [Code-to-cloud mapping for IaC](iac-template-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure DevOps, , Docker Hub, JFrog Artifactory |
-| [PR annotations](review-pull-request-annotations.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps |
+| [Code-to-cloud mapping for containers](container-image-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps<sup>[2](#footnote1)</sup> , Docker Hub, JFrog Artifactory|
+| [Code-to-cloud mapping for IaC](iac-template-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure DevOps<sup>[2](#footnote1)</sup>, , Docker Hub, JFrog Artifactory |
+| [PR annotations](review-pull-request-annotations.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps<sup>[2](#footnote1)</sup> |
 | [Internet exposure analysis](internet-exposure-analysis.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [External attack surface management](concept-easm.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [Permissions Management (CIEM)](permissions-management.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
@@ -63,23 +63,21 @@ The following table summarizes each plan and their cloud availability.
 
 
 <sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
-
-> [!NOTE]
-> Starting March 7, 2024, Defender CSPM must be enabled to have premium DevOps security capabilities that include code-to-cloud contextualization powering security explorer and attack paths and pull request annotations for Infrastructure-as-Code security findings. See DevOps security [support and prerequisites](devops-support.md) to learn more.
+<sup><a name="footnote1"></a>2</sup>: DevOps security capabilities, such as code-to-cloud contextualization powering security explorer, attack paths, and pull request annotations for Infrastructure-as-Code security findings, are only available when you enable the paid Defender CSPM plan. Learn more about DevOps security [support and prerequisites](devops-support.md).
 
 ## Integrations
 
-Microsoft Defender for Cloud now has built-in integrations to help you use partner systems to seamlessly manage and track tickets, events, and customer interactions. You can push recommendations to a partner ticketing tool, and assign responsibility to a team for remediation.
+Microsoft Defender for Cloud now has built-in integrations to help you use partner systems to seamlessly manage and track tickets, events, and customer interactions. You can push recommendations to a partner ticketing tool and assign responsibility to a team for remediation.
 
-Integration streamlines your incident response process, and improves your ability to manage security incidents. You can track, prioritize, and resolve security incidents more effectively.
+Integration streamlines your incident response process and improves your ability to manage security incidents. You can track, prioritize, and resolve security incidents more effectively.
 
-You can choose which ticketing system to integrate. For preview, only ServiceNow integration is supported. For more information about how to configure ServiceNow integration, see [Integrate ServiceNow with Microsoft Defender for Cloud (preview)](integration-servicenow.md).
+You can choose which ticketing system to integrate. For preview, only ServiceNow integration is supported. For more information about configuring ServiceNow integration, see [Integrate ServiceNow with Microsoft Defender for Cloud (preview)](integration-servicenow.md).
 
 ## Plan pricing
 
 - Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender CSPM pricing.
 
-- From March 7, 2024, advanced DevOps security posture capabilities will only be available through the paid Defender CSPM plan. Free foundational security posture management in Defender for Cloud continues providing many Azure DevOps recommendations. Learn more about [DevOps security features](devops-support.md#azure-devops).
+- DevOps security posture capabilities such as Pull request annotations, code to cloud mapping, attack path analysis, and cloud security explorer are only available through the paid Defender CSPM plan. The free foundational security posture management plan provides Azure DevOps recommendations. Learn more about the features provided by [Azure DevOps security features](devops-support.md#azure-devops).
 
 - For subscriptions that use both Defender CSPM and Defender for Containers plans, free vulnerability assessment is calculated based on free image scans provided via the Defender for Containers plan, as summarized [in the Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 

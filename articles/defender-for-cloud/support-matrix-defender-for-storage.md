@@ -22,9 +22,8 @@ This article lists the prerequisites and permissions required to [enable Defende
     
   - Azure Files (over REST API and SMB): Activity monitoring.
 
-- The following resource group names are not supported: App_Browsers, App_Code, App_Data, App_GlobalResources, App_LocalResources, App_Themes, App_WebReferences, Bin
+- Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`. 
 
-    
 ## Permissions required to enable Defender for Storage
 
 Depending on the scenario, you need different levels of permissions to enable Defender for Storage and its features. You can enable and configure Defender for Storage at the subscription level or at the storage account level. You can also use built-in Azure policies to enable Defender for Storage and enforce its enablement on a desired scope.

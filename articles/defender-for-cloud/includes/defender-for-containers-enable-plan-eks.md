@@ -1,7 +1,7 @@
 ---
 ms.service: defender-for-cloud
 ms.topic: include
-ms.date: 12/11/2023
+ms.date: 02/24/2025
 ms.author: dacurwin
 author: dcurwin
 ---
@@ -16,29 +16,28 @@ author: dcurwin
 To help protect your EKS clusters, enable the Defender for Containers plan on the relevant account connector:
 
 1. In Defender for Cloud, open **Environment settings**.
+
 1. Select the AWS connector.
 
-    :::image type="content" source="../media/defender-for-kubernetes-intro/select-aws-connector.png" alt-text="Screenshot of an AWS connector in the Defender for Cloud environment settings.":::
+    :::image type="content" source="../media/defender-for-kubernetes-intro/select-aws-connector.png" alt-text="Screenshot of an AWS connector in the Defender for Cloud environment settings." lightbox="../media/defender-for-kubernetes-intro/select-aws-connector.png":::
 
-1. Verify that the toggle for the **Containers** plan is set to **On**.
-
-    :::image type="content" source="../media/defender-for-kubernetes-intro/enable-containers-plan-on-aws-connector.png" alt-text="Screenshot of turning on Defender for Containers for an AWS connector.":::
+1. Select the **Defender plans** page and verify that the toggle for the **Containers** plan is set to **On**.
 
 1. To change optional configurations for the plan, select **Settings**.
 
-    :::image type="content" source="../media/tutorial-enable-containers-aws/containers-settings.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings." lightbox="../media/tutorial-enable-containers-aws/containers-settings.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="../media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
 
-    - Defender for Containers requires control plane audit logs to provide [runtime threat protection](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, set the toggle for that feature to **On**. To change the retention period for your audit logs, enter the required time frame.
+    - The [**Agentless threat protection**](../defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) feature provides runtime protection to your cluster containers. The feature sends Kubernetes audit logs to Microsoft Defender. Set the **Agentless threat protection** toggle to **On** and set the retention period of your audit logs.
 
         > [!NOTE]
-        > If you disable this configuration, the **Threat detection (control plane)** feature is also disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
+        > If you disable this configuration, control plane threat detection is disabled. Learn more about [feature availability](../supported-machines-endpoint-solutions-clouds-containers.md).
 
-    - The [Agentless discovery for Kubernetes](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) feature provides API-based discovery of your Kubernetes clusters. To enable the feature, set its toggle to **On**.
-    - The [Agentless Container Vulnerability Assessment](../agentless-vulnerability-assessment-aws.md) feature provides vulnerability management for images stored in ECR and for running images on your EKS clusters. To enable the feature, set its toggle to **On**.
+    - [**K8S API access**](../defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+    - [**Registry access**](../agentless-vulnerability-assessment-aws.md) sets permissions to allow vulnerability assessment of images stored in ECR. To enable, set the **Registry access** toggle to **On**.
 
 1. Continue through the remaining pages of the connector wizard.
 
-1. If you're enabling the **Agentless Discovery for Kubernetes** feature, you need to grant control plane permissions on the cluster. You can grant permissions in one of the following ways:
+1. If you're enabling the **Agentless discovery for Kubernetes** feature, you need to grant control plane permissions on the cluster. You can grant permissions in one of the following ways:
 
     - Run [this Python script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/AWS/ReadMe.md). The script adds the Defender for Cloud role `MDCContainersAgentlessDiscoveryK8sRole` to `aws-auth ConfigMap` for the EKS clusters that you want to onboard.
     - Grant each Amazon EKS cluster the `MDCContainersAgentlessDiscoveryK8sRole` role with the ability to interact with the cluster. Sign in to all existing and newly created clusters by using [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html) and run the following script:
@@ -58,7 +57,7 @@ To help protect your EKS clusters, enable the Defender for Containers plan on th
  
     Follow the remediation steps provided by the recommendation:
     
-    :::image type="content" source="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png" alt-text="Screenshot explaining how to remediate the EKS clusters recommendation by installing the required Defender for Containers components.":::
+    :::image type="content" source="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png" alt-text="Screenshot explaining how to remediate the EKS clusters recommendation by installing the required Defender for Containers components." lightbox="../media/defender-for-kubernetes-intro/install-eks-components-recommendation.png":::
 
 ### View recommendations and alerts for your EKS clusters
 

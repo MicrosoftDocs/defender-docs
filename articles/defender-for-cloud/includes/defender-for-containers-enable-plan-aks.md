@@ -8,38 +8,31 @@ ms.date: 06/01/2023
 
 ## Enable the plan
 
-1. In Defender for Cloud, select **Settings**, and then select the relevant subscription.
+1. In Defender for Cloud, select **Environment Settings**, and then select the relevant subscription.
 
-1. On the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page, select **Containers** > **Settings**.
+2. On the **Defender plans** page, toggle the Containers plan to **On** and then select its **Settings** link.
 
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/containers-settings.png" alt-text="Screenshot of the page for Defender plans." lightbox="../media/defender-for-containers-enable-plan-gke/containers-settings.png":::
+3. Turn on the relevant component.
 
-    > [!TIP]
-    > If the subscription already has Defender for Kubernetes or Defender for container registries enabled, an update notice appears. Otherwise, the only option is **Containers**.
-    >
-    > :::image type="content" source="../media/release-notes/defender-plans-deprecated-indicator.png" alt-text="Screenshot that shows Defender for Kubernetes and Defender for container registries plans in a deprecated state, along with upgrade information.":::
-
-1. Turn on the relevant component.
-
-    :::image type="content" source="../media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="../media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+    :::image type="content" source="../media/defender-for-containers-enable-plan-aks/containers-settings-aks.png" alt-text="Screenshot that shows turning on Defender for Containers components." lightbox="../media/defender-for-containers-enable-plan-aks/containers-settings-aks.png":::
 
     > [!NOTE]
-    >
-    > - Defender for Containers customers who joined before August 2023 and don't have **Agentless discovery for Kubernetes** turned on as part of Defender cloud security posture management (CSPM) when they enabled the plan must manually enable the **Agentless discovery for Kubernetes** extension within the Defender for Containers plan.
+    > - Defender for Containers customers who joined before August 2023 and don't have **K8S API access** turned on as part of Defender cloud security posture management (CSPM) when they enabled the plan must manually enable the **K8S API access** toggle within the Defender for Containers plan.
     > - When you turn off Defender for Containers, the components are set to **Off**. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
 
 ### Enablement method per capability
 
 By default, when you enable the plan through the Azure portal, [Microsoft Defender for Containers](../defender-for-containers-introduction.md) is configured to automatically enable all capabilities and install all required components to provide the protections that the plan offers. This configuration includes the assignment of a default workspace.
 
-If you don't want to enable all capabilities of the plans, you can manually select which specific capabilities to enable by selecting **Edit configuration** for the **Containers** plan. Then, on the **Settings & monitoring** page, select the capabilities that you want to enable.
-You can also modify this configuration from the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) page after initial configuration of the plan.
+If you don't want to enable all capabilities of the plans, you can manually select which specific capabilities to enable by selecting the **Settings** link for the **Containers** plan. Then, on the **Settings & monitoring** page, select the capabilities that you want to enable.
 
-For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md#aws).
+You can also modify this configuration from the **Defender plans** page after initial configuration of the plan.
+
+For detailed information on the enablement method for each capability, see the [support matrix](../support-matrix-defender-for-containers.md).
 
 ### Roles and permissions
 
-Learn more about the [roles for provisioning Defender for Containers extensions](../permissions.md#roles-used-to-automatically-provision-agents-and-extensions).
+Learn more about the [roles for provisioning Defender for Containers extensions](../permissions.md#roles-used-to-automatically-configure-agents-and-extensions).
 
 ### Assign a custom workspace for the Defender sensor
 

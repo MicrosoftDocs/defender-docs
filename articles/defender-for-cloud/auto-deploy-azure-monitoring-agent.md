@@ -4,7 +4,7 @@ description: Learn about using the Azure Monitor Agent in Microsoft Defender for
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 02/28/2024
+ms.date: 02/19/2025
 ms.custom: template-how-to
 ---
 

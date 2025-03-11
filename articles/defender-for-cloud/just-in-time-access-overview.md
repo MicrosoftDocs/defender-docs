@@ -2,42 +2,40 @@
 title: Understand just-in-time virtual machine access
 description: This document explains how just-in-time VM access in Microsoft Defender for Cloud helps you control access to your Azure virtual machines
 ms.topic: how-to
-ms.date: 06/29/2023
+ms.date: 02/25/2025
+#customer intent: As a security administrator, I want to understand just-in-time VM access so that I can control access to my Azure virtual machines.
 ---
 
 # Just-in-time machine access
 
-Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time machine access feature.
+Microsoft Defender for Cloud's Defender for Servers Plan 2 offers the just-in-time machine access feature. Just-in-time protects your resources from threat actors actively hunting for machines with open management ports, such as Remote Desktop Protocol (RDP) or Secure Shell (SSH). All machines are potential targets for attacks. Once compromised, a machine can serve as an entry point to further attack resources in the environment.
 
-Threat actors actively hunt accessible machines with open management ports, like RDP or SSH. All of your machines are potential targets for an attack. When a machine is successfully compromised, it's used as the entry point to attack further resources in the environment.
+To reduce attack surfaces, minimize open ports, especially management ports. However, legitimate users also need these ports, making it impractical to keep them closed.
 
-To reduce attack surfaces, we want fewer open ports, especially management ports. Legitimate users also use these ports, so it's not practical to keep them closed.
-
-To solve this dilemma, Defender for Cloud offers just-in-time machine access so that you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed. Just-in-time access is available when Defender for Servers Plan 2 is enabled.
+Defender for Cloud's just-in-time machine access feature locks down inbound traffic to your virtual machines (VMs), reducing exposure to attacks while ensuring easy access when needed.
 
 ## Just-in-time access and network resources
 
 ### Azure
 
-In Azure, you can block inbound traffic on specific ports, by enabling just-in-time access.
+In Azure, enable just-in-time access to block inbound traffic on specific ports.
 
 - Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview#security-rules) and [Azure Firewall rules](/azure/firewall/rule-processing).
-- These rules restrict access to your Azure VMs’ management ports and defend them from attack.
-- If other rules already exist for the selected ports, then those existing rules take priority over the new "deny all inbound traffic" rules.
-- If there are no existing rules on the selected ports, then the new rules take top priority in the NSG and Azure Firewall.
+- These rules restrict access to your Azure VMs' management ports and defend them from attack.
+- If other rules already exist for the selected ports, those existing rules take priority over the new "deny all inbound traffic" rules.
+- If no existing rules are on the selected ports, the new rules take top priority in the NSG and Azure Firewall.
 
-### AWS
+### Amazon Web Services
 
-In AWS, by enabling just-in-time access, the relevant rules in the attached EC2 security groups (for the selected ports) are revoked, blocking inbound traffic on those specific ports.
+In Amazon Web Services (AWS), enable just-in-time access to revoke the relevant rules in the attached EC2 security groups (for the selected ports), blocking inbound traffic on those specific ports.
 
 - When a user requests access to a VM, Defender for Servers checks that the user has [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal) permissions for that VM.
-- If the request is approved, Defender for Cloud configures the NSGs and Azure Firewall to allow inbound traffic to the selected ports from the relevant IP address (or range), for the amount of time that was specified.
+- If the request is approved, Defender for Cloud configures the NSGs and Azure Firewall to allow inbound traffic to the selected ports from the relevant IP address (or range) for the specified amount of time.
 - In AWS, Defender for Cloud creates a new EC2 security group that allows inbound traffic to the specified ports.
-- After the time has expired, Defender for Cloud restores the NSGs to their previous states
+- After the time expires, Defender for Cloud restores the NSGs to their previous states.
 - Connections that are already established aren't interrupted.
 
 > [!NOTE]
->
 > - Just-in-time access doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).
 > - The Azure Firewall must be configured with Rules (Classic) and can't use Firewall policies.
 
@@ -57,8 +55,9 @@ The following diagram shows the logic that Defender for Servers applies when dec
 
 When Defender for Cloud finds a machine that can benefit from just-in-time access, it adds that machine to the recommendation's **Unhealthy resources** tab.
 
-![Just-in-time (JIT) virtual machine (VM) access recommendation.](./media/just-in-time-explained/unhealthy-resources.png)
+:::image type="content" source="media/just-in-time-explained/unhealthy-resources.png" alt-text="Screenshot that shows an unhealthy resource." lightbox="media/just-in-time-explained/unhealthy-resources.png":::
 
-## Next steps
+## Next step
 
-[Enable just-in-time access on VMs](just-in-time-access-usage.yml).
+> [!div class="nextstepaction"]
+> [Enable just-in-time access on VMs](just-in-time-access-usage.yml)

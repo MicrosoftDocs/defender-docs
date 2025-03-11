@@ -19,7 +19,7 @@ ms.date: 06/29/2023
 
 - **Google Kubernetes Engine (GKE) in a connected Google Cloud Platform (GCP) project**: Google's managed environment for deploying, managing, and scaling applications by using GCP infrastructure.
 
-- **Other Kubernetes distributions** (using Azure Arc-enabled Kubernetes): Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on infrastructure as a service (IaaS). For more information, see [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md#on-premises-arc-enabled-kubernetes-clusters).
+- **Other Kubernetes distributions** (using Azure Arc-enabled Kubernetes): Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on infrastructure as a service (IaaS). For more information, see [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md).
 
 You can first learn how to connect and help protect your containers in these articles:
 
@@ -105,17 +105,9 @@ To simulate a security alert:
 [!INCLUDE [Remove the sensor](./includes/defender-for-containers-remove-profile.md)]
 ::: zone-end
 
-## Related content
+## Next steps
 
-Now that you've enabled Defender for Containers, you can:
+Now that you enabled Defender for Containers, you can:
 
-- [Scan your Azure Container Registry images for vulnerabilities](agentless-vulnerability-assessment-azure.md)
-- [Scan your AWS images for vulnerabilities with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-aws.md)
-- [Scan your GCP images for vulnerabilities with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-gcp.md)
+- [Scan your supported environment images for vulnerabilities with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md)
 - Check out [common questions](faq-defender-for-containers.yml) about Defender for Containers.
-
-To learn more about Defender for Cloud and Defender for Containers, check out the following blogs:
-
-- [Protect your Google Cloud workloads with Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/protect-your-google-cloud-workloads-with-microsoft-defender-for/ba-p/3073360)
-- [Introducing Microsoft Defender for Containers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/introducing-microsoft-defender-for-containers/ba-p/2952317)
-- [A new name for multicloud security: Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/a-new-name-for-multi-cloud-security-microsoft-defender-for-cloud/ba-p/2943020)
