@@ -7,17 +7,17 @@ ms.localizationpriority: medium
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
-ms.reviewer: sugamar
+ms.reviewer: sugamar, yongrhee
 manager: deniseb
 ms.custom: asr
 ms.topic: conceptual
 ms.collection: 
- - m365-security
- - m365solution-asr-rules
- - highpri
- - tier1
- - mde-asr
-ms.date: 08/29/2023
+- m365-security
+- m365solution-asr-rules
+- highpri
+- tier1
+- mde-asr
+ms.date: 03/10/2025
 search.appverid: met150
 ---
 
