@@ -146,7 +146,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     > - For best protection, we recommend selecting all Microsoft 365 components.
     > - The **Microsoft 365 files** component, requires enabling Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
 
-   :::image type="complex" source="media/connect-office-365-components.png":::
+   :::image type="content" source="media/connect-office-365-components.png"alt-text="Connect Office 365 components":::
     :::image-end:::
 
 1. On the **Follow the link** page, select **Connect Microsoft 365**.
