@@ -19,6 +19,17 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+## March 2025
+
+### RBAC scoping for "Behaviors" (Preview)
+
+Defender for Cloud Apps customers can now configure Role-Based Access Control (RBAC) scoping for 'Behaviors'. This new capability empowers administrators to define and manage access permissions more precisely, ensuring that users have the appropriate level of access to specific application data based on their roles and responsibilities. By leveraging RBAC scoping, organizations can enhance their security posture, streamline operations, and reduce the risk of unauthorized access.
+
+For more information, see:
+
+- [Configure admin access](https://learn.microsoft.com/defender-cloud-apps/manage-admins)
+- [Investigate behaviors with advanced hunting (Preview)](https://learn.microsoft.com/defender-cloud-apps/behaviors)
+
 ## November 2024
 
 ### Internal Session Controls application notice
