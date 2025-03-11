@@ -304,11 +304,11 @@
       "source_path": "defender-xdr/feedback.md",
       "redirect_url": "/defender-xdr/m365d-enable-faq",
       "redirect_document_id": false
-    }
+    },
     {
       "source_path": "defender-xdr/microsoft-365-defender-integration-with-azure-sentinel.md",
       "redirect_url": "/azure/sentinel/microsoft-365-defender-sentinel-integration",
       "redirect_document_id": false
-    },                                            
+    }                                            
   ]
 }
