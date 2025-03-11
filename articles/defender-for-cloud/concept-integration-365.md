@@ -64,7 +64,7 @@ Then, enable the **Tenant-based Microsoft Defender for Cloud (Preview)** data co
 
 The **Tenant-based Microsoft Defender for Cloud (Preview)** data connector is available through the Microsoft Defender for Cloud solution, version 3.0.0, from the Microsoft Sentinel **Content hub**. If you have an earlier version of this solution, we recommend that you update your solution version. If you still have the **Subscription-based Microsoft Defender for Cloud (Legacy)** data connector enabled, we recommend that you disconnect the connector to prevent duplicating alerts in your logs.
 
-We also recommend that you disable any analytics rules that create incidents from your Microsoft Defender for Cloud alerts directly. Use Microsoft Sentinel automation rules to close incidents immediately and prevent specific types of Defender for Cloud alerts from becoming incidents, or use the [built-in tuning capabilities in the Microsoft Defender portal](/defender-xdr/investigate-alerts#tune-an-alert) to prevent alerts from becoming incidents.
+We recommend disabling any analytics rules that create incidents from your Microsoft Defender for Cloud alerts directly. Use Microsoft Sentinel automation rules to close incidents immediately and prevent specific types of Defender for Cloud alerts from becoming incidents. Alternatively, use the [built-in tuning capabilities in the Microsoft Defender portal](/defender-xdr/investigate-alerts#tune-an-alert) to prevent alerts from becoming incidents.
 
 If you've integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep their subscription-based settings and avoid tenant-based syncing, you can opt out of syncing incidents and alerts using the Microsoft Defender XDR connector. To opt out:
 
