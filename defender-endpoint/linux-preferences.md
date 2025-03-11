@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 03/05/2025
+ms.date: 03/11/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -662,6 +662,20 @@ Determines whether module load events (file open events on shared libraries) are
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version `101.68.80` or later.||
 
+#### Remediate Infected File feature
+
+Determines whether infected processes that open or load any infected file will get remediated or not.
+
+> [!NOTE]
+> When enabled the processes that open or load any infected file will be remediated in RTP mode. These processes will not appear in the threat list as these are not malicious but are only being terminated because they were loading the threat file in memory. 
+
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|remediateInfectedFile|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version `101.24122.0001` or later.||
+
 #### Supplementary sensor configurations
 
 The following settings can be used to configure certain advanced supplementary sensor features.
@@ -963,7 +977,8 @@ The following configuration profile contains entries for all settings described 
         "sendLowfiEvents":"disabled"
       },
       "ebpfSupplementaryEventProvider":"enabled",
-      "offlineDefinitionUpdateVerifySig": "disabled"
+      "offlineDefinitionUpdateVerifySig": "disabled",
+      "remediateInfectedFile": "enabled"
    },
    "networkProtection":{
       "enforcementLevel":"disabled",
