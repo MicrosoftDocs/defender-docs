@@ -75,4 +75,4 @@ Hero cards are implemented to provide a more cohesive user experience. These car
 
 2. **Device Health (iOS Update)**
 
-    :::image type="content" source="media/mde-recommendation-cards-ios.png" alt-text="The recommendation card feature on the MDE iOS app" lightbox="media/mde-recommendation-cards-ios.png":::
+    :::image type="content" source="media/mde-ios-device-health-new.png" alt-text="The recommendation card feature on the MDE iOS app" lightbox="media/mde-ios-device-health-new.png":::
