@@ -71,8 +71,8 @@ Hero cards are implemented to provide a more cohesive user experience. These car
 
 1. **Web Protection**
 
-    :::image type="content" source="media/mde-recommendation-cards-ios.png" alt-text="The recommendation card feature on the MDE iOS app" lightbox="media/mde-recommendation-cards-ios.png":::
+    :::image type="content" source="media/mde-recommendation-cards-ios.png" alt-text="Image showing the web protection  recommendation card feature on the MDE iOS app" lightbox="media/mde-recommendation-cards-ios.png":::
 
 2. **Device Health (iOS Update)**
 
-    :::image type="content" source="media/mde-ios-device-health-new.png" alt-text="The recommendation card feature on the MDE iOS app" lightbox="media/mde-ios-device-health-new.png":::
+    :::image type="content" source="media/mde-ios-device-health-new.png" alt-text="Image showing the device health recommendation card feature on the MDE iOS app" lightbox="media/mde-ios-device-health-new.png":::
