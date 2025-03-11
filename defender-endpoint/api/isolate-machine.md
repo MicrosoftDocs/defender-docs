@@ -41,10 +41,10 @@ Isolates a device from accessing external network.
 [!include[Device actions note](../../includes/machineactionsnote.md)]
 
 > [!IMPORTANT]
-- Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
-- Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
-- Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
-- When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
+> - Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
+> - Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
+> - Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
+> - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 > - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action. The IsolationType value should be set to 'Unmanaged.'
 
 ## Permissions
@@ -58,11 +58,11 @@ Delegated (work or school account)|Machine.Isolate|'Isolate machine'
 
 > [!NOTE]
 > When obtaining a token using user credentials:
-> > - The user needs to have at least the following role permission: 'Active remediation actions.' For more information, see [Create and manage roles](../user-roles.md).
+> - The user needs to have at least the following role permission: 'Active remediation actions.' For more information, see [Create and manage roles](../user-roles.md).
 > - The user needs to have access to the device, based on device group settings. See [Create and manage device groups](../machine-groups.md) for more information.
 > 
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
-> 
+
 ## HTTP request
 
 ```http
