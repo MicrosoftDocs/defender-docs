@@ -45,7 +45,7 @@ Isolates a device from accessing external network.
 > - Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
 > - Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
 > - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
-> - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action.
+> - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action.The IsolationType value should be set to 'Unmanaged'.
 
 
 ## Permissions
@@ -85,12 +85,13 @@ In the request body, supply a JSON object with the following parameters:
 Parameter|Type|Description
 :---|:---|:---
 Comment|String|Comment to associate with the action. **Required**.
-IsolationType|String|Type of the isolation. Allowed values are: 'Full' or 'Selective'.
+IsolationType|String|Type of the isolation. Allowed values are: 'Full', 'Selective', or 'Unmanaged'.
 
 **IsolationType** controls the type of isolation to perform and can be one of the following:
 
-- Full: Full isolation
-- Selective: Restrict only limited set of applications from accessing the network (see [Isolate devices from the network](../respond-machine-alerts.md#isolate-devices-from-the-network) for more details)
+- Full: Full isolation. Works for managed devices.
+- Selective: Restrict only limited set of applications from accessing the network on managed devices. See [Isolate devices from the network](../respond-machine-alerts.md#isolate-devices-from-the-network) for more details.
+- Unmanaged: The isolation targets unmanaged devices only.
 
 ## Response
 
