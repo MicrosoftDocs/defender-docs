@@ -219,7 +219,7 @@ As the authenticated scanner currently uses an encryption algorithm that isn't c
 
 To allow algorithms that aren't compliant with FIPS, set the following value in the registry for the devices where the scanner will run:
 
-Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy with a DWORD value named **Enabled** and value of **0x0**
+Computer`\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy` with a DWORD value named `Enabled` and value of `0x0`.
 
 FIPS compliant algorithms are only used in relation to departments and agencies of the United States federal government.
 
