@@ -30,7 +30,7 @@ ms.date: 03/11/2025
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 > [!NOTE]
-> The [Tech Community Blog: Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) (published 04-13-2021) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how get started using these new capabilities.
+> The [Tech Community Blog: Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) (published 04-13-2021) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how to get started using these new capabilities.
 
 Network discovery capabilities are available in the **Device inventory** section of the [Microsoft Defender portal](https://security.microsoft.com) and Microsoft Defender XDR consoles.
 
@@ -98,7 +98,7 @@ Your first step is to select a device that performs the authenticated network sc
 
 To configure scan jobs, the following user permission option is required: **Manage security settings in Defender**. You can find the permission by going to **Settings** \> **Roles**. For more information, see [Create and manage roles for role-based access control](user-roles.md).
 
-## Windows version pre-requisite for the scanner
+## Windows version prerequisite for the scanner
 
 The scanner is supported on Windows 10, version 1903 and Windows Server, version 1903 and later. For more information, see [Windows 10, version 1903 and Windows Server, version 1903](https://support.microsoft.com/topic/windows-10-update-history-e6058e7c-4116-38f1-b984-4fcacfba5e5d).
 
@@ -153,7 +153,7 @@ If there's a difference between the two versions, the update process determines 
 
 6. Enter the **Target (range):** The IP address ranges or hostnames you want to scan. You can either enter the addresses or import a CSV file. Importing a file overrides any manually added addresses.
 
-7. Select the **Scan interval:** By default, the scan runs every four hours, you can change the scan interval or have it only run once, by selecting **Don't repeat**.
+7. Select the **Scan interval:** By default, the scan runs every four hours. You can change the scan interval or have it only run once, by selecting **Don't repeat**.
 
 8. Choose your **Authentication method**.
 
