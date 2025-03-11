@@ -418,6 +418,8 @@
         href: mde-sec-ops-guide.md
       - name: Troubleshoot
         items:
+        - name: Troubleshoot antivirus scan issues
+          href: troubleshoot-mdav-scan-issues.md
         - name: Troubleshoot onboarding issues
           items:
           - name: Troubleshoot issues during onboarding
