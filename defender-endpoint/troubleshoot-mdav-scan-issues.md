@@ -105,9 +105,9 @@ Confirming if a scan has been canceled or finished successfully allows you to ta
 
 The following Event IDs are related to scan operations on a device.
 
-- Event ID `1000` - An anti-malware scan started.
-- Event ID `1001` - An anti-malware scan finished.
-- Event ID `1002` - An anti-malware scan was stopped before it finished.
+- Event ID 1000 - An anti-malware scan started.
+- Event ID 1001 - An anti-malware scan finished.
+- Event ID 1002 - An anti-malware scan was stopped before it finished.
 
 For more information, see [Microsoft Defender Antivirus event IDs and error codes](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 
