@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 03/04/2025
+ms.date: 03/11/2025
 ms.subservice: onboard
 ---
 
@@ -55,8 +55,8 @@ Defender for Endpoint supports non-persistent VDI session onboarding. There migh
 - In a VDI environment, VDI instances can have short lifespans. VDI devices can appear in the Microsoft Defender portal as either single entries for each VDI instance or multiple entries for each device. 
 
    - Single entry for each VDI instance. If the VDI instance was already onboarded to Microsoft Defender for Endpoint, and at some point deleted, and then recreated with the same host name, a new object representing this VDI instance is NOT be created in the portal. In this case, the *same* device name must be configured when the session is created, for example using an unattended answer file.
-
    - Multiple entries for each device - one for each VDI instance.
+   - For all VDI machines, when they onboard for the first time, there's a client delay of approximately 3-4 hours.
 
 > [!IMPORTANT]
 > If you're deploying non-persistent VDIs through cloning technology, make sure that your internal template VMs are not onboarded to Defender for Endpoint. This recommendation is to avoid cloned VMs from being onboarded with the same senseGuid as your template VMs, which could prevent VMs from showing up as new entries in the Devices list. 
