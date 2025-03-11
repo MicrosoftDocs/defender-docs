@@ -193,7 +193,7 @@ Newly discovered devices are shown under the new **Network devices** tab in the 
 
 ## Troubleshooting
 
-### Scanner installation has failed
+### Scanner installation failed
 
 Verify that the required URLs are added to the allowed domains in your firewall settings. Also, make sure proxy settings are configured as described in [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
@@ -217,7 +217,7 @@ Validate that the scanner is running properly. Then go to the scan definition an
 
 As the authenticated scanner currently uses an encryption algorithm that isn't compliant with [Federal Information Processing Standards (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing/), the scanner can't operate when an organization enforces the use of FIPS compliant algorithms.
 
-To allow algorithms that aren't compliant with FIPS, set the following value in the registry for the devices where the scanner will run:
+To allow algorithms that aren't compliant with FIPS, set the following value in the registry for the devices where the scanner runs:
 
 Computer`\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy` with a DWORD value named `Enabled` and value of `0x0`.
 
