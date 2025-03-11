@@ -4,9 +4,9 @@ description: Resources and sample code to troubleshoot issues with attack surfac
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
-ms.date: 03/10/2025
+author: emmwalshh
+ms.author: ewalsh
+ms.date: 03/11/2025
 ms.reviewer:
 manager: deniseb
 ms.custom: asr
@@ -69,7 +69,7 @@ One of the easiest ways to determine if attack surface reduction rules are alrea
 
 Here's an example:
 
-:::image type="content" source="media/getmpreferencescriptnew.png" alt-text="The get mppreference script" lightbox="media/getmpreferencescriptnew.png":::
+:::image type="content" source="media/getmpreferencescriptnew.png" alt-text="Screenshot showing the get mppreference script" lightbox="media/getmpreferencescriptnew.png":::
 
 There are multiple attack surface reduction rules active, with different configured actions.
 
@@ -81,7 +81,7 @@ Example:
 Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Ids
 ```
 
-:::image type="content" source="media/getmpref-examplenew.png" alt-text="The get mpreference example" lightbox="media/getmpref-examplenew.png":::
+:::image type="content" source="media/getmpref-examplenew.png" alt-text="Screenshot showing the get mpreference example" lightbox="media/getmpref-examplenew.png":::
 
 The preceding image shows all the IDs for attack surface reduction rules that have a setting different from 0 (Not Configured).
 
@@ -91,7 +91,7 @@ The next step is then to list the actual actions (Block or Audit) that each rule
 Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Actions
 ```
 
-:::image type="content" source="media/getmpref-example2new.png" alt-text="The get mppreference example2" lightbox="media/getmpref-example2new.png":::
+:::image type="content" source="media/getmpref-example2new.png" alt-text="Screenshot that shows the get mppreference example2" lightbox="media/getmpref-example2new.png":::
 
 ## Use audit mode to test the rule
 
@@ -116,7 +116,7 @@ Attack surface reduction rule events can be viewed within the Windows Defender l
 
 To access it, open Windows Event Viewer, and browse to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
 
-:::image type="content" source="media/eventviewerscrnew.png" alt-text="The Event Viewer page" lightbox="media/eventviewerscrnew.png":::
+:::image type="content" source="media/eventviewerscrnew.png" alt-text="Image that shows the Event Viewer page" lightbox="media/eventviewerscrnew.png":::
 
 ## Add exclusions for a false positive
 
@@ -157,14 +157,14 @@ You can find this utility in *%ProgramFiles%\Windows Defender\MpCmdRun.exe*. You
 
 To generate the support information, type `MpCmdRun.exe -getfiles`. After a while, several logs will be packaged into an archive (MpSupportFiles.cab) and made available at `C:\ProgramData\Microsoft\Windows Defender\Support`.
 
-:::image type="content" source="media/malware-prot-logsnew.png" alt-text="The malware protection logs" lightbox="media/malware-prot-logsnew.png":::
+:::image type="content" source="media/malware-prot-logsnew.png" alt-text="Screenshot that shows the malware protection logs" lightbox="media/malware-prot-logsnew.png":::
 
 Extract that archive and you have many files available for troubleshooting purposes.
 
 The most relevant files are as follows:
 
 - `MPOperationalEvents.txt`: This file contains same level of information found in Event Viewer for Windows Defender's Operational log.
-- `MPRegistry.txt`: In this file you can analyze all the current Windows Defender configurations, from the moment the support logs were captured.
+- `MPRegistry.txt`: In this file you can analyze all the current Windows Defender configurations, from the moment, the support logs were captured.
 - `MPLog.txt`: This log contains more verbose information about all the actions/operations of the Windows Defender.
 
 ## Related articles
