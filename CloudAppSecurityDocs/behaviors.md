@@ -147,6 +147,10 @@ BehaviorEntities
 | project Timestamp, BehaviorId, ActionType, Categories, ServiceSource, AccountUpn, AccountObjectId, EntityType, EntityRole, RemoteIP, AccountName, AccountDomain
 ```
 
+### Role-Based Access Control (RBAC) scoping for 'Behaviors'
+
+Starting March 2025, Defender for Cloud Apps customers can configure Role-Based Access Control (RBAC) scoping for 'Behaviors'. This new capability empowers administrators to define and manage access permissions more precisely, ensuring that users have the appropriate level of access to specific application data based on their roles and responsibilities. Read more here on how to configure - [Configure admin access](https://learn.microsoft.com/defender-cloud-apps/manage-admins).
+
 ## Next steps
 
 - [TechCommunity Blog](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/transform-the-way-you-investigate-by-using-behaviors-amp-new/ba-p/3825154)
