@@ -66,7 +66,7 @@ To access the Device health and antivirus compliance report in the Microsoft Def
 
 To assign permissions, follow these steps:
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with Security administrator or Global administrator role assigned.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -100,7 +100,7 @@ For the three `updates` cards (also known as up-to-date reporting cards), "**No 
 - Computer is disconnected from the network.
 - Computer is powered down or in a hibernation state.
 - Microsoft Defender Antivirus is disabled.
-- Device is a non-Windows (Mac or Linux) device.
+- Device is a Mac device.
 - Cloud protection isn't enabled.
 - Device doesn't meet pre-requisites for Antivirus engine or platform version.
 
@@ -115,8 +115,8 @@ Up-to-date reporting generates information for devices that meet the following c
 - Windows OS - Windows 10 1809 or later
 
   > [!NOTE]
-  > \* Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under "No data available"/Unknown.
-
+  > \* Currently up to date reporting is only available for Windows and Linux devices. Mac devices are listed under “no such data available or unknown".
+  
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 
 ### Card functionality

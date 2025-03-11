@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 02/20/2025
+ms.date: 03/05/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,11 +98,11 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### January-2025 (Platform: 4.18.25010.xxxx | Engine: 1.1.25010.7)
+### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
 - Security intelligence update version: **1.423.21.0**
-- Release date: **February 20, 2025** (Engine) / **TBD** (Platform)
-- Platform: **4.18.225010.xxxx** (*Platform release is pending*)
+- Release date: **February 20, 2025** (Engine) / **March 5, 2025** (Platform)
+- Platform: **4.18.25010.11**
 - Engine: **1.1.25010.7**
 - Support phase: **Security and Critical Updates**
 
@@ -165,23 +165,6 @@ Updates contain:
 - Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
 - Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and reached their end-of-servicing date.
 
-### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
-
-- Security intelligence update version: **1.417.14.0**
-- Release date: **August 7, 2024** (Engine and Platform)
-- Platform: **4.18.24070.5**
-- Engine: **1.1.24070.3**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- False positive detections are no longer reported as `ThreatNotFound` in the Microsoft Defender portal. 
-- Optimized [network protection](network-protection.md) calls to the backend that occurs as a result of suspicious connection checks.
-- Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in the [Defender CSP](/windows/client-management/mdm/defender-csp) so that changing this value in the console takes effect on the endpoint. 
-- Resolved an issue where file evidence location wasn't always captured in scenarios where the remote location is inaccessible. 
-- New event log added (`5016`) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
-- Fixed a prioritization issue with [full scans](mdav-scan-best-practices.md) initiated from the portal that resulted in longer than expected full scan duration.
-
 ### Previous version updates: Technical upgrade support only
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
@@ -237,7 +220,7 @@ For Windows 10 release information, see the [Windows lifecycle fact sheet](https
 To avoid a gap in protection, keep your OS installation images up to date with the latest antivirus and anti-malware updates. Updates are available for:
 
 - Windows 10 and 11 (Enterprise, Pro, and Home editions)
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
+- Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
 - WIM and VHD(x) files 
 
 Updates are released for x86, x64, and Arm64 Windows architecture.

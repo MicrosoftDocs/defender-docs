@@ -23,13 +23,13 @@ ms.date: 01/15/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
+**Windows Server**
 - Windows Server 2012 R2
 - Windows Server 2016
-- [Microsoft Defender XDR](/defender-xdr)
+- Windows Server 2019 and later
 
 You might need to troubleshoot the Microsoft Defender for Endpoint onboarding process if you encounter issues.
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.
@@ -328,7 +328,7 @@ You might also need to check the following:
 
 There may be instances when onboarding is deployed on a newly built device but not completed.
 
-The steps below provide guidance for the following scenario:
+The steps in this article provide guidance for the following scenario:
 
 - Onboarding package is deployed to newly built devices
 - Sensor doesn't start because the Out-of-box experience (OOBE) or first user logon hasn't been completed
@@ -337,10 +337,12 @@ The steps below provide guidance for the following scenario:
 
 > [!NOTE]
 > User Logon after OOBE is no longer required for SENSE service to start on the following or more recent Windows versions: 
-> Windows 10, version 1809 or Windows Server 2019, or Windows Server 2022 with [April 22 2021 update rollup](https://support.microsoft.com/kb/5001384). 
-> Windows 10, version 1909 with [April 2021 update rollup](https://support.microsoft.com/kb/5001396). 
-> Windows 10, version 2004/20H2 with [April 28 2021 update rollup](https://support.microsoft.com/kb/5001391). 
+> - Windows 10, version 1809 or newer
+> - Windows Server 2025
+> - Windows Server 2022
+> - Windows Server 2019 
 
+## Troubleshoot onboarding with Microsoft Endpoint Configuration Manager
 
 > [!NOTE]
 > The following steps are only relevant when using Microsoft Endpoint Configuration Manager. For more information about onboarding using Microsoft Endpoint Configuration Manager, see [Microsoft Defender for Endpoint](/mem/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection).
