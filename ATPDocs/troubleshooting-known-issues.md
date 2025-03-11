@@ -224,7 +224,7 @@ Suggested possible workarounds:
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts: **Some network traffic is not being analyzed** and **Network configuratuin mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuratuin mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -272,8 +272,6 @@ The domain controller hasn't been granted permission to retrieve the password of
 **Resolution 1**:
 
 Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password).
-
-
 
 ### Cause 2
 
