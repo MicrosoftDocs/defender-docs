@@ -135,7 +135,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 **To connect Microsoft 365 to Defender for Cloud Apps**:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
-1. In the **App connectors** page, select **+Connect an app**, and then select **Office 365**.
+1. In the **App connectors** page, select **+Connect an app**, and then select **Microsoft 365**.
 
     :::image type="content" source= "media/connect-an-app.png" alt-text="Select connect an app" lightbox="media/connect-office-365-components.png":::
 
