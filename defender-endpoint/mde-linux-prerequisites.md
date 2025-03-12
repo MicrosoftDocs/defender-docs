@@ -15,12 +15,12 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/26/2025
+ms.date: 03/12/2025
 ---
 
 # Requirements for Microsoft Defender for Endpoint on Linux
 
->[!TIP] We're excited to share that Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm)
+>[!TIP] We're excited to share that Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -37,7 +37,7 @@ This article lists hardware and software requirements for Microsoft Defender for
 3. Administrative privileges on the Linux endpoint are required for installation.
 
 >[!NOTE]: Linux distribution using system manager supports both SystemV and Upstart.
-> Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
+> Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 >Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
 ## System Requirements
@@ -49,7 +49,7 @@ This article lists hardware and software requirements for Microsoft Defender for
 3. **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
 
 >[!NOTE]: Performance tuning might be needed based on workloads.
->For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-perf)
+>For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
 
 ## List of Supported Linux distributions
 
@@ -87,7 +87,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Amazon Linux 2023 Arm64 
 
 >[!IMPORTANT]: Support for Microsoft Defender for Endpoint on Linux for Arm64-based Linux devices is now in preview. 
->For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm).
+>For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
 
 >[!NOTE]: The workstation and desktop versions of these distributions are unsupported
 >Distributions and versions that aren't explicitly listed are unsupported.
@@ -126,23 +126,23 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 # Installation instructions 
 
-There are several methods and deployment tools that you can use to install and configure Microsoft Defender for Endpoint on Linux. Before you begin, make sure the [Minimum requirements for Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/minimum-requirements) are met.
+There are several methods and deployment tools that you can use to install and configure Microsoft Defender for Endpoint on Linux. Before you begin, make sure the [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements) are met.
 
 You can use one of the following methods to deploy Microsoft Defender for Endpoint on Linux: 
 
-1. Command-line tool, see [Manual deployment](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-manually)
+1. Command-line tool, see [Manual deployment](/defender-endpoint/linux-install-manually)
 
-2. Puppet, see [Deploy using Puppet configuration management too](Vhttps://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-puppet)
+2. Puppet, see [Deploy using Puppet configuration management too](V/defender-endpoint/linux-install-with-puppet)
 
-3. Ansible, see [Deploy using Ansible configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-ansible) 
+3. Ansible, see [Deploy using Ansible configuration management tool](/defender-endpoint/linux-install-with-ansible) 
 
-4. Chef, see [Deploy using Chef configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef) 
+4. Chef, see [Deploy using Chef configuration management tool](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef) 
 
-5. SaltStack, see [Deploy using SaltStack configuration management tool](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-saltack)
+5. SaltStack, see [Deploy using SaltStack configuration management tool](/defender-endpoint/linux-install-with-saltack)
 
-6. Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-arm)
+6. Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 
-If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-install)
+If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install)
 
 >[!IMPORTANT]: Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
 >Microsoft Defender for Endpoint on Linux creates a mdatp user with random UID and GID.
@@ -152,13 +152,13 @@ If you experience any installation failures, see [Troubleshooting installation f
 ## Network connections
 
 - Verify that your devices can connect to Microsoft Defender for Endpoint cloud services.
-- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](https://learn.microsoft.com/en-us/defender-endpoint/configure-environment)
+- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
 - Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
     1. Transparent proxy
     2. Manual static proxy configuration 
 - Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
->[!NOTE] Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](https://learn.microsoft.com/en-us/defender-endpoint/linux-static-proxy-configuration)
+>[!NOTE] Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
 
 >[!Warning]: PAC, WPAD, and authenticated proxies are not supported. 
 >Use only static or transparent proxies. 
@@ -166,7 +166,7 @@ If you experience any installation failures, see [Troubleshooting installation f
 >Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
 >Adding your interception certificate to the global store will not enable interception.
 
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-connectivity)
+For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
 
 ## External package dependency
 
