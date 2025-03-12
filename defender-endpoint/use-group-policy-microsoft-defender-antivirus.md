@@ -36,16 +36,16 @@ search.appverid: met150
 We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
 
 > [!IMPORTANT]
-> If [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled in your organization, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. In addition, you cannot turn off tamper protection by using Group Policy. 
+> If [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled in your organization, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. In addition, you can't turn off tamper protection by using Group Policy. 
 > 
-> If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+> If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
 > 
 
 ## Configure Microsoft Defender Antivirus using Group Policy
 
 In general, you can use the following procedure to configure or change some settings for Microsoft Defender Antivirus.
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
+1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
 
 2. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
@@ -81,7 +81,7 @@ The following table lists commonly used Group Policy settings that are available
 |MAPS|Join Microsoft MAPS|[Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)|
 |MAPS|Send file samples when further analysis is required|[Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)|
 |MAPS|Configure local setting override for reporting to Microsoft MAPS|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
-|MpEngine|Configure extended cloud check|[Configure the cloud block timeout period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md)|
+|MpEngine|Configure extended cloud check|[Configure the cloud block time-out period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md)|
 | MpEngine | Disable gradual rollout of Microsoft Defender updates | [Configure updates: Group Policy](configure-updates.md#group-policy) | [Create indicators for files](indicator-file.md) |
 | MpEngine | Enable file hash computation feature | 
 |MpEngine|Select cloud protection level|[Specify the cloud-delivered protection level](specify-cloud-protection-level-microsoft-defender-antivirus.md)|
@@ -112,7 +112,7 @@ The following table lists commonly used Group Policy settings that are available
 |Remediation|Specify the time of day to run a scheduled full scan to complete remediation|[Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)|
 | Reporting | Configure time interval for service health reports  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) | 
 | Reporting | Configure time out for detections in critically failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)|
-| Reporting | Configure time out for detections in non-critical failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure time out for detections in noncritical failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in recently remediated state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in requiring additional action | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure Watson events  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
@@ -126,8 +126,8 @@ The following table lists commonly used Group Policy settings that are available
 |Root|Define proxy server for connecting to the network|[Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus)|
 | Root | Define the directory path to copy support log files  | 
 |Root|Configure local administrator merge behavior for lists|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
-|Root|Allow antimalware service to start up with normal priority|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
-|Root|Allow antimalware service to remain running always|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
+|Root|Allow anti-malware service to start up with normal priority|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
+|Root|Allow anti-malware service to remain running always|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Root|Turn off routine remediation|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Root|Randomize scheduled task times|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
 | Root | Select the channel for Microsoft Defender daily security intelligence updates | [Update channels for security intelligence updates](manage-gradual-rollout.md#update-channels-for-security-intelligence-updates) |
@@ -184,21 +184,11 @@ The following table lists commonly used Group Policy settings that are available
 |Security intelligence updates|Specify the interval to check for security intelligence updates|[Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Specify the time to check for security intelligence updates|[Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Turn on scan after Security intelligence update|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
-|Threats|Specify threat alert levels at which default action should not be taken when detected|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
-|Threats|Specify threats upon which default action should not be taken when detected|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
+|Threats|Specify threat alert levels at which default action shouldn't be taken when detected|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
+|Threats|Specify threats upon which default action shouldn't be taken when detected|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 
 > [!TIP]
 > Instead of using "Run full scan on mapped network drives", if you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaption Protocol (ICAP) scanning with the Microsoft Defender Antivirus engine. For more information, see **[Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234)**.
-
-> [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 > [!TIP]
 > **Performance tip** Due to a variety of factors (examples listed below) Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues; some examples are:
@@ -222,5 +212,10 @@ The following table lists commonly used Group Policy settings that are available
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Reference topics for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
+- [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
+- [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+- [Configure Defender for Endpoint on Android features](android-configure.md)
+- [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
