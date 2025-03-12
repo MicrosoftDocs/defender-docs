@@ -124,7 +124,7 @@ The following table lists commonly used Group Policy settings that are available
 |Root|Define addresses to bypass proxy server|[Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus)|
 |Root|Define proxy autoconfig (.pac) for connecting to the network|[Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus)|
 |Root|Define proxy server for connecting to the network|[Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus)|
-| Root | Define the directory path to copy support log files  | 
+| Root | Define the directory path to copy support log files  | [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md)| |
 |Root|Configure local administrator merge behavior for lists|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
 |Root|Allow anti-malware service to start up with normal priority|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Root|Allow anti-malware service to remain running always|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
