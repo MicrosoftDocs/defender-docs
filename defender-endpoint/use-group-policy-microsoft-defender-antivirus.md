@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 03/11/2025
+ms.date: 03/12/2025
 ms.reviewer: ksarens, jtoole, pahuijbr
 manager: deniseb
 ms.subservice: ngp
@@ -143,6 +143,9 @@ The following table lists commonly used Group Policy settings that are available
 |Scan|Configure local setting override for scheduled quick scan time|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
 |Scan|Configure local setting override for scheduled scan time|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
 |Scan|Configure local setting override for the scan type to use for a scheduled scan|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
+| Scan | Configure low CPU priority for scheduled scans | [Configure Microsoft Defender Antivirus scanning options](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
+| Scan | Configure scanning of network files | [Configure Microsoft Defender Antivirus scanning options](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
+| Scan | CPU throttling type | [Configure Microsoft Defender Antivirus scanning options](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 |Scan|Create a system restore point|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Scan|Turn on removal of items from scan history folder|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Scan|Turn on heuristics|[Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md)|
