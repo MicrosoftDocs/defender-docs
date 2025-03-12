@@ -104,28 +104,11 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 | `SystemInfoLogs` | `SSL_00010002.txt` | Details about [SSL configuration](/windows-server/security/tls/manage-tls) applied to the machine gathered from registry |
 | `EventLogs` | `utc.evtx` | Export of DiagTrack event log |
 | `EventLogs` | `senseIR.evtx` | Export of the Automated Investigation event log |
-
-  - sense.evtx
-
-    Description: Export of the Sensor main event log
-
-  - OperationsManager.evtx
-
-    Description: Export of the Microsoft Monitoring Agent event log
-
-- MdeConfigMgrLogs [Folder]
-
-  - SecurityManagementConfiguration.json
-
-    Description: Configurations sent from MEM (Microsoft Endpoint Manager) for enforcement.
-
-  - policies.json
-
-    Description: Policies settings to be enforced on the device.
-
-  - report_xxx.json
-
-    Description: Corresponding enforcement results.
+| `EventLogs` | `sense.evtx` | Export of the Sensor main event log |
+| `EventLogs` | `OperationsManager.evtx` | Export of the Microsoft Monitoring Agent event log |
+| `MdeConfigMgrLogs` | `SecurityManagementConfiguration.json` | Configurations sent from MEM (Microsoft Endpoint Manager) for enforcement |
+| `MdeConfigMgrLogs` | `policies.json` | Policies settings to be enforced on the device |
+| `MdeConfigMgrLogs` | `report_xxx.json` | Corresponding enforcement results |
 
 
 ## See also
