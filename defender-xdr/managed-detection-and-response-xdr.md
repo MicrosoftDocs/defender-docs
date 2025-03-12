@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: 
 - cx-ti
-- cx-ean
+- cx-dex
 search.appverid: met150
 ms.date: 10/31/2024
 ---
