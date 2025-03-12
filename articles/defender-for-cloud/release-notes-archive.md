@@ -909,7 +909,7 @@ December 12, 2023
 
 Container vulnerability assessments powered by Microsoft Defender Vulnerability Management have been extended with more coverage for Linux OS packages, now supporting Google Distroless.
 
-For a list of all supported operating systems, see [Registries and images support for Azure - Vulnerability assessment powered by Microsoft Defender Vulnerability Management](support-matrix-defender-for-containers.md?tabs=azureva#registries-and-images-support-for-vulnerability-assessment-in-azure).
+For a list of all supported operating systems, see [Registries and images support for Azure - Vulnerability assessment powered by Microsoft Defender Vulnerability Management](support-matrix-defender-for-containers.md?tabs=azureva#registries-and-images-support-for-vulnerability-assessment).
 
 ## November 2023
 
