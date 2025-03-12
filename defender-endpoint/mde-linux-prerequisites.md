@@ -130,7 +130,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > NFS v3 mount points to be scanned thoroughly and are required to set the no_root_squash export option on these mount points
 > Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
-# Installation instructions 
+## Installation instructions 
 
 There are several methods and deployment tools that you can use to install and configure Microsoft Defender for Endpoint on Linux. Before you begin, make sure the [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements) are met.
 
