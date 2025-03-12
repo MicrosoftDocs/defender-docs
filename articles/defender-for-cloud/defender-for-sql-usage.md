@@ -1,22 +1,22 @@
 ---
-title: Enable Microsoft Defender for SQL servers on machines
-description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud.
+title: Enable Microsoft Defender for SQL Servers on Machines
+description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 02/17/2025
+ms.date: 03/12/2025
 #customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ---
 
 # Enable Defender for SQL Servers on Machines
 
-The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL servers on machines to protect SQL Server databases hosted on Azure VMs and Azure Arc-enabled VMs.
+The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL Servers on Machines to protect SQL Server databases hosted on Azure VMs and Azure Arc-enabled VMs.
 
 ## Prerequisites
 
 | Requirement | Details |
 |-------------|---------|
-| **Permissions** | To deploy the plan on a subscription including Azure Policy, you need **Subscription owner** permissions. <br> <br> The Windows user on the SQL VM must have the **Sysadmin** role on the database. |
+| **Permissions** | To deploy the plan on a subscription including Azure Policy, you need **Subscription Owner** permissions. <br> <br> The Windows user on the SQL VM must have the **Sysadmin** role on the database. |
 | **Multicloud machines** | Multicloud machines (AWS and GCP) must be onboarded as Azure Arc-enabled VMs. They can be automatically onboarded as Azure Arc machines when onboarded with the connector. <br> [Onboard your AWS connector](quickstart-onboard-aws.md) and automatically provision Azure Arc. <br> [Onboard your GCP connector](quickstart-onboard-gcp.md) and automatically provision Azure Arc. |
 | **On-premises machines** | On-premises machines must be onboarded as Azure Arc-enabled VMs. [Onboard on-premises machines and install Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). |
 | **Azure Arc** | Review Azure Arc deployment requirements <br> - [Plan and deploy Azure Arc-enabled servers](/azure/azure-arc/servers/plan-at-scale-deployment) <br> - [Connected Machine agent prerequisites](/azure/azure-arc/servers/prerequisites) <br> - [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements) <br> - [Roles specific to SQL Server enabled by Azure Arc](/sql/relational-databases/security/authentication-access/server-level-roles#roles-specific-to-sql-server-enabled-by-azure-arc) |
@@ -41,7 +41,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
     :::image type="content" source="media/tutorial-enabledatabases-plan/select-types.png" alt-text="Screenshot that shows you where to select types on the Defender plans page." lightbox="media/tutorial-enabledatabases-plan/select-types.png":::
 
-1. In the Resource types selection window, toggle the **SQL servers on machines** plan to **On**.
+1. In the Resource types selection window, toggle the **SQL Servers on Machines** plan to **On**.
 
 1. Select **Continue** > **Save**.
 
@@ -49,13 +49,13 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 Select a Log Analytics workspace to work with the Defender for SQL on Machines plan.
 
-1. In the **Defender plans** page, in **Databases**, **Monitoring Coverage** column select **settings**.
+1. In the **Defender plans** page, in **Databases**, **Monitoring Coverage** column select **Settings**.
 
-1. In the **Azure Monitoring Agent for SQL server on machines** section, in the **configurations** column select **Edit configurations**.
+1. In the **Azure Monitoring Agent for SQL Server on Machines** section, in the **Configurations** column select **Edit Configurations**.
 
-1. In the **Autoprovisioning configuration** page, select the **Default workspace** or specify a **Custom workspace**.
+1. In the **Autoprovisioning Configuration** page, select the **Default Workspace** or specify a **Custom Workspace**.
 
-1. In SQL server automatic registration make sure that you leave the **Register Azure SQL Server instances by enabling SQL IaaS extension automatic registration** option enabled.
+1. In SQL Server automatic registration, make sure that you leave the **Register Azure SQL Server instances by enabling SQL IaaS extension automatic registration** option enabled.
 
     :::image type="content" source="media/defender-for-sql-usage/leave-enabled.png" alt-text="Screenshot that shows where to leave the register Azure SQL Server instances enabled." lightbox="media/defender-for-sql-usage/leave-enabled.png":::
 
