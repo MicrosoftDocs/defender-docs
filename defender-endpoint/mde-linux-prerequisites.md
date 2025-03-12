@@ -103,7 +103,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported as It can lead to unpredictable results, including hanging the operating system.
 > If any other applications on the system use fanotify in blocking mode, the conflicting_applications field of the mdatp health command output lists these applications.
 > The Linux FAPolicyD feature uses fanotify in blocking mode, and is unsupported when running Defender for Endpoint in active mode
-> After configuring the Real Time Protection to passive mode, you can safely use Defender for Endpoint on Linux EDR. See [Enforcement level for Microsoft Defender Antivirus](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468#enforcement-level-for-microsoft-defender-antivirus). 
+> After configuring the Real Time Protection to passive mode, you can safely use Defender for Endpoint on Linux EDR. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus). 
 
 ## List of supported filesystems for RTP, Quick, Full, and Custom Scan. 
 
