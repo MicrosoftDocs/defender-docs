@@ -167,6 +167,7 @@ The following table lists commonly used Group Policy settings that are available
 |Scan|Specify the time for a daily quick scan|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
 |Scan|Specify the time of day to run a scheduled scan|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
 |Scan|Start the scheduled scan only when computer is on but not in use|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
+| Scan | Trigger a quick scan after X days without any scans | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
 |Security intelligence updates|Allow security intelligence updates from Microsoft Update|[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Allow security intelligence updates when running on battery power|[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Allow notifications to disable definitions-based reports to Microsoft MAPS|[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)|
