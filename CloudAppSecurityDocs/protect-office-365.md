@@ -132,7 +132,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 1. In the **App connectors** page, select **+Connect an app**, and then select **Microsoft 365**.
 
-    ![Connect O365 menu option.](media/connect-o365.png)
+    :::image type="content" source="media/connect-an-app.png" alt-text="Screenshot that shows the connect an app button." lightbox="media/connect-an-app.png":::
 
 1. In the **Select Microsoft 365 components** page, select the options you require, and then select **Connect**.
 
@@ -141,7 +141,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     > - For best protection, we recommend selecting all Microsoft 365 components.
     > - The **Azure AD files** component, requires the **Azure AD activities** component and Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
 
-    ![connect O365 components.](media/connect-o365-components.png)
+    :::image type="content" source="media/connect-office-365-components.png" alt-text="Connect Office 365 components" lightbox="media/connect-office-365-components.png":::
 
 1. On the **Follow the link** page, select **Connect Microsoft 365**.
 
