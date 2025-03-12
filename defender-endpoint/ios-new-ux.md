@@ -39,7 +39,7 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 ### Main Dashboard changes
 
-This is the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
+This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application.
 
 :::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/mde-ios-main-dash.png":::
 
