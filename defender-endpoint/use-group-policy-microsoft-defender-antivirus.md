@@ -87,6 +87,7 @@ The following table lists commonly used Group Policy settings that are available
 |MpEngine|Select cloud protection level|[Specify the cloud-delivered protection level](specify-cloud-protection-level-microsoft-defender-antivirus.md)|
 | Network inspection system | Convert warn verdict to block | [Network protection: Warn experience](network-protection.md#warn-experience) |
 |Network inspection system|Specify more definition sets for network traffic inspection| Not used (deprecated) |
+| Network inspection system | Turn on asynchronous inspection | [Optimizing network protection performance](network-protection.md#optimizing-network-protection-performance) |
 |Network inspection system|Turn on definition retirement| Not used (deprecated)|
 |Network inspection system|Turn on protocol recognition| Not used (deprecated)|
 |Quarantine|Configure local setting override for the removal of items from Quarantine folder|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
