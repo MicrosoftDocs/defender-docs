@@ -39,7 +39,7 @@ This article lists hardware and software requirements for Microsoft Defender for
 > [!NOTE] 
 > Linux distribution using system manager supports both SystemV and Upstart.
 > Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
->Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
+> Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
 ## System Requirements
 
@@ -49,8 +49,9 @@ This article lists hardware and software requirements for Microsoft Defender for
 
 3. **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
 
->[!NOTE]: Performance tuning might be needed based on workloads.
->For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+> [!NOTE]
+> Performance tuning might be needed based on workloads.
+> For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
 
 ## List of Supported Linux distributions
 
