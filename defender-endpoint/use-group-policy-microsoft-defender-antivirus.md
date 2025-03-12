@@ -131,7 +131,9 @@ The following table lists commonly used Group Policy settings that are available
 |Root|Turn off routine remediation|[Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md)|
 |Root|Randomize scheduled task times|[Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md)|
 | Root | Select the channel for Microsoft Defender daily security intelligence updates | [Update channels for security intelligence updates](manage-gradual-rollout.md#update-channels-for-security-intelligence-updates) |
-|Scan|Allow users to pause scan|[Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) (Not supported on Windows 10)|
+| Root | Select the channel for Microsoft Defender monthly engine updates | [Update channels for monthly updates](manage-gradual-rollout.md#update-channels-for-monthly-updates) |
+| Root | Select the channel for Microsoft Defender monthly platform updates | [Update channels for monthly updates](manage-gradual-rollout.md#update-channels-for-monthly-updates) |
+|Scan|Allow users to pause scan|[Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) (Not supported on Windows 10 or newer, and Windows Server 2016 and newer)|
 |Scan|Check for the latest virus and spyware definitions before running a scheduled scan|[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)|
 |Scan|Define the number of days after which a catch-up scan is forced|[Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)|
 |Scan|Turn on catch up full scan|[Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)|
