@@ -30,7 +30,7 @@ This section describes how to configure email notifications for Defender for Ide
 Whenever Defender for Identity detects a health issue, configured recipients receive an email notification with the details, with a link to Microsoft Defender XDR for more details.
 
 > [!NOTE]
-> To receive email notifications about Incidents, please use the '[Email Notifications](https://security.microsoft.com/securitysettings/defender/email_notifications)' page under Defender XDR Settings for new and existing notifications rules. [Learn more](https://aka.ms/IncidentsNotificationsDefenderXdr)
+> To receive email notifications about Incidents, please use the [Email Notifications](https://security.microsoft.com/securitysettings/defender/email_notifications) page under Defender XDR Settings for new and existing notifications rules. [Learn more](https://aka.ms/IncidentsNotificationsDefenderXdr).
 
 ## Configure Syslog notifications
 
@@ -42,13 +42,13 @@ Events aren't sent from the Defender for Identity service to your Syslog server 
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), select **Settings** > **Identities**.
 
-1. Under **Notifications**, select **Syslog notifications** and then toggle on the **Syslog service** option.
+1. Under **Notifications**, select **Syslog notifications**, and then toggle on the **Syslog service** option.
 
 1. Select **Configure service** to open the **Syslog service** pane.
 
 1. Enter the following details:
 
-    - **Sensor**: Select the sensor you want to send notifications to the Syslog server
+    - **Sensor**: Select the sensor you want to send notifications to the Syslog server.
     - **Service endpoint** and **Port**: Enter the IP address or fully qualified domain name (FQDN) for the Syslog server, and then enter the port number. You can configure only one Syslog endpoint.
     - **Transport**: Select the **Transport** protocol (TCP or UDP).
     - **Format**: Select the format (RFC 3164 or RFC 5424).
