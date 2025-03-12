@@ -41,13 +41,13 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application.
 
-:::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/mde-ios-main-dash-new.png":::
+:::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update." lightbox="media/mde-ios-main-dash-new.png":::
 
 ### List the features inside one Feature Card
 
 We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.
 
-:::image type="content" source="media/mde-ios-list-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Feature Card" lightbox="media/mde-ios-list-new.png":::
+:::image type="content" source="media/mde-ios-list-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Feature Card." lightbox="media/mde-ios-list-new.png":::
 
 ### Detailed Feature Experience
 
@@ -55,11 +55,11 @@ We updated all the subordinating screens associated with the feature
 
 1. **Web Protection**
 
-:::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the MDE iOS app" lightbox="media/mde-ios-web-protection-new.png":::
+:::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the MDE iOS app." lightbox="media/mde-ios-web-protection-new.png":::
 
 1. **Device Health**
 
-:::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app" lightbox="media/mde-device-health-new.png":::
+:::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app." lightbox="media/mde-device-health-new.png":::
 
 ### Recommendation Cards for Alerts
 
@@ -69,8 +69,8 @@ Hero cards are implemented to provide a more cohesive user experience. These car
 
 1. **Web Protection**
 
-    :::image type="content" source="media/mde-ios-web-protection-rec-card.png" alt-text="Screenshot that shows the web protection  recommendation card feature on the MDE iOS app" lightbox="media/mde-ios-web-protection-rec-card.png":::
+    :::image type="content" source="media/mde-ios-web-protection-rec-card.png" alt-text="Screenshot that shows the web protection  recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-web-protection-rec-card.png":::
 
 2. **Device Health (iOS Update)**
 
-    :::image type="content" source="media/mde-ios-device-health-rec-card.png" alt-text="Screenshot that shows the device health recommendation card feature on the MDE iOS app" lightbox="media/mde-ios-device-health-rec-card.png":::
+    :::image type="content" source="media/mde-ios-device-health-rec-card.png" alt-text="Screenshot that shows the device health recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-device-health-rec-card.png":::
