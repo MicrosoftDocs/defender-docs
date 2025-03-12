@@ -13,6 +13,9 @@ ms.collection:
   - tier1
   - essentials-manage
 ms.topic: conceptual
+ms.custom: 
+- cx-ti
+- cx-dex
 search.appverid: met150
 ms.date: 03/05/2025
 ---
