@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 01/23/2025
+ms.date: 03/11/2025
 ms.reviewer: ksarens, jtoole, pahuijbr
 manager: deniseb
 ms.subservice: ngp
@@ -71,6 +71,7 @@ The following table lists commonly used Group Policy settings that are available
 |Client interface|Suppress all notifications|[Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)|
 |Client interface|Suppresses reboot notifications|[Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)|
 |Exclusions|Extension Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
+| Exclusions | IP Address Exclusions | [Add exclusions](troubleshoot-np.md#add-exclusions) |
 |Exclusions|Path Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
 |Exclusions|Process Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
 |Exclusions|Turn off Auto Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
