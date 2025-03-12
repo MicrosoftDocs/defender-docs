@@ -181,5 +181,5 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 For information on external package dependencies, see the following articles:
 
-- [Microsoft Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux?branch=main)
-- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=main)
+- [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
