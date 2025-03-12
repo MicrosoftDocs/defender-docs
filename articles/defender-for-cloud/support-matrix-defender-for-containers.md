@@ -177,7 +177,6 @@ The following are the features provided by Defender for Containers, for the supp
 > [!NOTE]
 > For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
 
-
 ---
 
 ## Security posture management
@@ -238,6 +237,34 @@ The following are the features provided by Defender for Containers, for the supp
 |--|--|--|--|--|--|--|--|
 | Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | Docker Hub , JFrog Artifactory | Preview | Preview | Requires **K8S API access** | Defender for Containers **OR** Defender CSPM | - |
 | Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that attackers might use to breach your  environment. | Docker Hub , JFrog Artifactory | Preview | Preview | Requires **K8S API access** | Defender CSPM | - |
+
+---
+
+## Containers software supply chain protection features
+
+### [Azure](#tab/azurecssc)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | AKS | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
+
+### [AWS](#tab/awscssc)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | EKS | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | EKS |
+
+### [GCP](#tab/gcpcssc)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | GKE | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | GKE |
+
+### [Arc enabled](#tab/arccssc)
+
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+|--|--|--|--|--|--|--|--|
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | Arc enabled cluster | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | Arc enabled cluster |
 
 ---
 
