@@ -108,14 +108,16 @@ For the three `updates` cards (also known as up-to-date reporting cards), "**No 
 
 Up-to-date reporting generates information for devices that meet the following criteria:
 
-- Engine version: 1.1.19300.2+
-- Platform version: 4.18.2202.1+
-- Cloud protection enabled
-- Sense (MsSense.exe): **10.8210.** \*+
-- Windows OS - Windows 10 1809 or later
+* **Windows:**
+  * OS - Windows 10 1809 or later  
+  * Engine version: 1.1.19300.2+  
+  * Platform version: 4.8.2202.1+  
+  * Sense (MsSense.exe): 10.8210.*+  
 
-  > [!NOTE]
-  > \* Currently up to date reporting is only available for Windows and Linux devices. Mac devices are listed under “no such data available or unknown".
+* **Linux and Mac:**
+  * Platform version: 101.23112.*+  
+
+* **Cloud Protection enabled**
   
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 
