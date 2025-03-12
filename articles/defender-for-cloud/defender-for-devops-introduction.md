@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Cloud DevOps security benefits
 description: Learn about the benefits and features of Microsoft Defender for Cloud DevOps security, including visibility, posture management, and threat protection.
-ms.date: 01/26/2025
+ms.date: 03/12/2025
 ms.topic: overview
 ms.custom: references_regions
 #customer intent: As a security administrator, I want to understand the benefits and features of Microsoft Defender for Cloud DevOps security so that I can protect applications and resources effectively.
@@ -9,21 +9,21 @@ ms.custom: references_regions
 
 # Overview of Microsoft Defender for Cloud DevOps security
 
-Microsoft Defender for Cloud enables comprehensive visibility, posture management, and threat protection across multicloud environments, including Azure, Amazon Web Service (AWS), Google Cloud Project (GCP), and on-premises resources.
+Microsoft Defender for Cloud enables comprehensive visibility, posture management, and threat protection across multicloud environments, including Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises resources.
 
-DevOps security within Defender for Cloud uses a central console to empower security teams to protect applications and resources from code to cloud across multi-pipeline environments, including Azure DevOps, GitHub, and GitLab. DevOps security recommendations can be correlated with other contextual cloud security insights to prioritize remediation in code. Key DevOps security capabilities include:
+DevOps security in Defender for Cloud uses a central console to help security teams protect applications and resources from code to cloud across multi-pipeline environments, including Azure DevOps, GitHub, and GitLab. DevOps security recommendations can be correlated with other contextual cloud security insights to prioritize remediation in code. Key DevOps security capabilities include:
 
-- **Unified visibility into DevOps security posture**: Security administrators now have full visibility into DevOps inventory and the security posture of preproduction application code across multi-pipeline and multicloud environments, including findings from code, secrets, and open-source dependency vulnerability scans. They can also [assess the security configurations of their DevOps environment](concept-devops-posture-management-overview.md).
+- **Unified visibility into DevOps security posture**: Security administrators have full visibility into DevOps inventory and the security posture of preproduction application code across multi-pipeline and multicloud environments. They can see findings from code, secrets, and open-source dependency vulnerability scans. They can also [assess the security configurations of their DevOps environment](concept-devops-posture-management-overview.md).
 
-- **Strengthen cloud resource configurations throughout the development lifecycle**: You can enable security of Infrastructure as Code (IaC) templates and container images to minimize cloud misconfigurations reaching production environments, allowing security administrators to focus on critical evolving threats.
+- **Strengthen cloud resource configurations throughout the development lifecycle**: You can secure Infrastructure as Code (IaC) templates and container images to minimize cloud misconfigurations reaching production environments, allowing security administrators to focus on critical evolving threats.
 
-- **Prioritize remediation of critical issues in code**: Apply comprehensive code-to-cloud contextual insights within Defender for Cloud. Security admins can help developers prioritize critical code fixes with pull request annotations and assign developer ownership by triggering custom workflows that feed directly into the tools developers use.
+- **Prioritize remediation of critical issues in code**: Apply comprehensive code-to-cloud contextual insights within Defender for Cloud. Security admins help developers prioritize critical code fixes with pull request annotations and assign developer ownership by triggering custom workflows that feed directly into the tools developers use.
 
 These features help unify, strengthen, and manage multi-pipeline DevOps resources.
 
 ## Manage your DevOps environments in Defender for Cloud
 
-DevOps security in Defender for Cloud allows you to manage your connected environments and provides your security teams with a high-level overview of issues discovered in those environments through the [DevOps security console](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity).
+DevOps security in Defender for Cloud lets you manage your connected environments. It provides your security teams with a high-level overview of issues discovered in those environments through the [DevOps security console](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/DevOpsSecurity).
 
 :::image type="content" source="media/defender-for-devops-introduction/devops-security-overview-2.png" alt-text="Screenshot of the top of the DevOps security page that shows all of your onboarded environments and their metrics." lightbox="media/defender-for-devops-introduction/devops-metrics.png":::
 
@@ -56,7 +56,7 @@ In this section, you see:
   - `N/A` - Defender for Cloud doesn't have information about enablement.
 
     > [!NOTE]
-    > Currently, this information is available only for Azure DevOps and GitHub repositories.
+    > This information is currently available only for Azure DevOps and GitHub repositories.
 
 - **Pull request annotation status** -  Indicates whether PR annotations are enabled for the repository.
   - `On` - PR annotations are enabled.
@@ -64,11 +64,11 @@ In this section, you see:
   - `N/A` - Defender for Cloud doesn't have information about enablement.
 
     > [!NOTE]
-    > Currently, this information is available only for Azure DevOps repositories.
+    > This information is currently available only for Azure DevOps repositories.
 
 - **Findings** - Indicates the total number of codes, secrets, dependency, and infrastructure-as-code findings identified in the DevOps resource.
 
-You can view this table as a flat view at the DevOps resource level (repositories for Azure DevOps and GitHub, projects for GitLab) or in a grouping view showing organizations/projects/groups hierarchy. You can also filter the table by subscription, resource type, finding type, or severity
+You can view this table as a flat view at the DevOps resource level (repositories for Azure DevOps and GitHub, projects for GitLab) or in a grouping view showing organizations, projects, and groups hierarchy. You can also filter the table by subscription, resource type, finding type, or severity.
 
 ## Learn more
 
