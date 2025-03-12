@@ -1,9 +1,9 @@
 ---
 title: Protect important folders from ransomware from encrypting your files with controlled folder access
-description: Files in default folders can be protected from being changed by malicious apps. Prevent ransomware from encrypting your files.
+description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 11/19/2024
+ms.date: 03/04/2025
 author: denisebmsft
 ms.author: deniseb
 audience: ITPro
@@ -37,10 +37,17 @@ search.appverid: met150
 
 ## What is controlled folder access?
 
-Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using the Windows Security App, Microsoft Endpoint Configuration Manager, or Intune (for managed devices). Controlled folder access is supported on Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11, 
+Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using the Windows Security App, Microsoft Endpoint Configuration Manager, or Intune (for managed devices). Controlled folder access is supported on:
+- Windows 11
+- Windows 10
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
 
 > [!NOTE]
-> Scripting engines like PowerShell are not trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](/defender-endpoint/customize-controlled-folders).  
+> Scripting engines like PowerShell aren't trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](/defender-endpoint/customize-controlled-folders).  
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
@@ -51,11 +58,11 @@ Controlled folder access works best with [Microsoft Defender for Endpoint](micro
 
 Controlled folder access works by only allowing trusted apps to access protected folders. Protected folders are specified when controlled folder access is configured. Typically, commonly used folders, such as those used for documents, pictures, downloads, and so on, are included in the list of controlled folders.
 
-Controlled folder access works with a list of trusted apps. Apps that are included in the list of trusted software work as expected. Apps that are not included in the list are prevented from making any changes to files inside protected folders.
+Controlled folder access works with a list of trusted apps. Apps that are included in the list of trusted software work as expected. Apps that aren't included in the list are prevented from making any changes to files inside protected folders.
 
-Apps are added to the list based upon their prevalence and reputation. Apps that are highly prevalent throughout your organization and that have never displayed any behavior deemed malicious are considered trustworthy. Those apps are added to the list automatically.
+Apps are added to the list based upon their prevalence and reputation. Apps that are highly prevalent throughout your organization and that haven't ever displayed any behavior deemed malicious are considered trustworthy. Those apps are added to the list automatically.
 
-Apps can also be added manually to the trusted list by using Configuration Manager or Intune. Additional actions can be performed from the Microsoft Defender portal.
+Apps can also be added manually to the trusted list by using Configuration Manager or Intune. Other actions can be performed in the Microsoft Defender portal.
 
 ## Why controlled folder access is important
 
@@ -69,7 +76,7 @@ You can use [audit mode](overview-attack-surface-reduction.md) to evaluate how c
 
 Windows system folders are protected by default, along with several other folders:
 
-The protected folders include common system folders (including boot sectors), and you can add additional folders. You can also allow apps to give them access to the protected folders.  The Windows systems folders that are protected by default are:
+The protected folders include common system folders (including boot sectors), and you can add other folders. You can also allow apps to give them access to the protected folders. The Windows systems folders that are protected by default are:
 
 - `c:\Users\<username>\Documents`
 - `c:\Users\Public\Documents`
@@ -86,7 +93,7 @@ Default folders appear in the user's profile, under **This PC**, as shown in the
 ![Protected Windows default systems folders](media/defaultfolders.png)
 
 > [!NOTE]
-> You can configure additional folders as protected, but you cannot remove the Windows system folders that are protected by default.
+> You can configure more folders as protected, but you can't remove the Windows system folders that are protected by default.
 
 ## Requirements for controlled folder access
 
@@ -96,7 +103,7 @@ Controlled folder access requires enabling [Microsoft Defender Antivirus real-ti
 
 ## Review controlled folder access events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender-xdr/microsoft-365-security-center-mde).
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal. For more information, see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender-xdr/microsoft-365-security-center-mde).
 
 You can query Microsoft Defender for Endpoint data by using [Advanced hunting](/defender-xdr/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use [advanced hunting](/defender-xdr/advanced-hunting-overview) to see how controlled folder access settings would affect your environment if they were enabled.
 
@@ -141,7 +148,7 @@ You can use the Windows Security app to view the list of folders that are protec
 
 3. Under **Ransomware protection**, select **Manage ransomware protection**.
 
-4. If controlled folder access is turned off, you'll need to turn it on. Select **protected folders**.
+4. If controlled folder access is turned off, you need to turn it on. Select **protected folders**.
 
 5. Do one of the following steps:
 
@@ -149,8 +156,8 @@ You can use the Windows Security app to view the list of folders that are protec
    - To remove a folder, select it, and then select **Remove**.
 
    > [!IMPORTANT]
-   > Do not add local share paths (loopbacks) as protected folders. Use the local path instead. For example, if you have shared `C:\demo` as `\\mycomputer\demo`, do not add `\\mycomputer\demo` to the list of protected folders. Instead add `C:\demo`.
+   > Don't add local share paths (loopbacks) as protected folders. Use the local path instead. For example, if you have shared `C:\demo` as `\\mycomputer\demo`, don't add `\\mycomputer\demo` to the list of protected folders. Instead add `C:\demo`.
 
-[Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you cannot remove them from the list. Subfolders are also included in protection when you add a new folder to the list.
+[Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you can't remove them from the list. Subfolders are also included in protection when you add a new folder to the list.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

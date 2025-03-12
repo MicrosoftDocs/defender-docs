@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 02/04/2025
+ms.date: 03/12/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -170,11 +170,11 @@ The following preonboarding checks can be run on both Windows and Xplat MDE Clie
 
 To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
 
-- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within MDEClientAnalyzer folder. The command uses parameters from onboarding package to test connectivity.
+- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within the MDEClientAnalyzer folder. The command uses parameters from onboarding package to test connectivity.
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: https://aka.ms/MDEClientAnalyzerPreview
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip]{https://aka.ms/MDEClientAnalyzerPreview}.
  
 
 > [!NOTE]

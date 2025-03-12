@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 02/25/2025
+ms.date: 03/12/2025
 ---
 
 # Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
@@ -26,7 +26,7 @@ ms.date: 02/25/2025
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-The Microsoft Defender for Endpoint Client Analyzer (MDECA) can be useful when diagnosing sensor health or reliability issues on [onboarded devices](onboard-configure.md) running either Windows, Linux, or macOS. For example, you may want to run the analyzer on a machine that appears to be unhealthy according to the displayed [sensor health status](fix-unhealthy-sensors.md) (Inactive, No Sensor Data or Impaired Communications) in the security portal.
+The [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/MDEClientAnalyzer) (MDECA) can be useful when diagnosing sensor health or reliability issues on [onboarded devices](onboard-configure.md) running either Windows, Linux, or macOS. For example, you may want to run the analyzer on a machine that appears to be unhealthy according to the displayed [sensor health status](fix-unhealthy-sensors.md) (Inactive, No Sensor Data or Impaired Communications) in the security portal.
 
 Besides obvious sensor health issues, MDECA can collect other traces, logs, and diagnostic information for troubleshooting complex scenarios such as:
 

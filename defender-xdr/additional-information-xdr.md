@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 03/05/2025
 appliesto:
   - Microsoft Defender XDR
 ---
@@ -34,7 +34,7 @@ To realize the benefits of Microsoft Defender Experts for XDR, you and your secu
 
 - **Engage actively through the readiness assessment process** – The [readiness assessment](get-started-xdr.md#prepare-your-environment-for-the-defender-experts-service) when onboarding for Defender Experts for XDR is an integral part of the offering. Completing it successfully ensures prompt service coverage and protects your organization against known threats.
 - **Act on managed responses in a timely manner** – For any suspicious incidents and alerts, our experts provide a detailed investigation summary and managed responses for remediation. We expect your SOC team to act on these managed responses in a timely manner to prevent further impact from any malicious attempts.
-- **Configure recommended settings and follow best practices to improve security posture** – As part of our service, your service delivery manager and security analyst team share ongoing recommendations to strengthen your security posture. These recommendations are based on incidents investigated in your organization. Your SOC team should review these recommendations and implement them as soon as possible to protect your organization against future threats.
+- **Configure recommended settings and follow best practices to improve security posture** – As part of our service, we will share ongoing recommendations to strengthen your security posture. These recommendations are based on incidents investigated in your organization. Your SOC team should review these recommendations and implement them as soon as possible to protect your organization against future threats.
 
 ### Note about incident response
 
