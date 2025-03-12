@@ -163,6 +163,16 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: Medium
 
+### Suspicious invocation of a high-risk 'Initial Access' operation by a service principal detected (AI resources)
+
+(AI.Azure_AnomalousOperation.InitialAccess)
+
+**Description**: This alert detects a suspicious invocation of a high-risk operation in your subscription, which might indicate an attempt to access restricted resources. The identified AI-resource related operations are designed to allow administrators to efficiently access their environments. While this activity might be legitimate, a threat actor might utilize such operations to gain initial access to restricted AI resources in your environment. This can indicate that the service principal is compromised and is being used with malicious intent.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
+
+**Severity**: Medium
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
