@@ -51,7 +51,7 @@ For more information, see:
  The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
  
  To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
- @@ -32,49 +44,49 @@
+ 
  
  ### Network requirement updates
  
