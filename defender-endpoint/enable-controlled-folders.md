@@ -37,18 +37,13 @@ ms.date: 03/12/2025
 
 You can enable controlled folder access by using any of these methods:
 
-- [Windows Security app *](#windows-security-app)
 - [Enable controlled folder access](#enable-controlled-folder-access)
-  - [Microsoft Intune](#microsoft-intune)
+- [Enable controlled folder access](#enable-controlled-folder-access)
   - [Mobile Device Management (MDM)](#mobile-device-management-mdm)
   - [Microsoft Configuration Manager](#microsoft-configuration-manager)
   - [Group Policy](#group-policy)
   - [PowerShell](#powershell)
   - [See also](#see-also)
-
-1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com) and open **Endpoint Security**.
-
-2. Go to **Attack Surface Reduction** > **Policy**.
 
 3. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
 
