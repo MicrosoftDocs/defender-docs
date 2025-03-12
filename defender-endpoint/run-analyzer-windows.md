@@ -91,27 +91,19 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 |--|--|--|
 | | `MDEClientAnalyzer.htm` | This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce. |
 | `SystemInfoLogs` | `AddRemovePrograms.csv` | List of x64 installed software on x64 OS collected from registry |
-| | `AddRemoveProgramsWOW64.csv` | List of x86 installed software on x64 OS collected from registry |
-| | `CertValidate.log` | Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil) |
-| | `dsregcmd.txt` | Output from running [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). This provides details about the Microsoft Entra status of the machine. |
-| | `IFEO.txt` | Output of [Image File Execution Options](/previous-versions/windows/desktop/xperf/image-file-execution-options) configured on the machine |
-| | `MDEClientAnalyzer.txt` | This is verbose text file showing with details of the analyzer script execution. |
-| | `MDEClientAnalyzer.xml` | XML format containing the analyzer script findings |
-| | `RegOnboardedInfoCurrent.Json` | The onboarded machine information gathered in JSON format from the registry |
-| | `RegOnboardingInfoPolicy.Json` | The onboarding policy configuration gathered in JSON format from the registry |
-| | `SCHANNEL.txt` | Details about [SCHANNEL configuration](/windows-server/security/tls/manage-tls) applied to the machine such gathered from registry | 
-| | `SessionManager.txt` | Session Manager specific settings gather from registry |
-| | `SSL_00010002.txt` | Details about [SSL configuration](/windows-server/security/tls/manage-tls) applied to the machine gathered from registry |
-
-- EventLogs [Folder]
-
-  - utc.evtx
-
-    Description: Export of DiagTrack event log
-
-  - senseIR.evtx
-
-    Description: Export of the Automated Investigation event log
+| `SystemInfoLogs` | `AddRemoveProgramsWOW64.csv` | List of x86 installed software on x64 OS collected from registry |
+| `SystemInfoLogs` | `CertValidate.log` | Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil) |
+| `SystemInfoLogs` | `dsregcmd.txt` | Output from running [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). This provides details about the Microsoft Entra status of the machine. |
+| `SystemInfoLogs` | `IFEO.txt` | Output of [Image File Execution Options](/previous-versions/windows/desktop/xperf/image-file-execution-options) configured on the machine |
+| `SystemInfoLogs` | `MDEClientAnalyzer.txt` | This is verbose text file showing with details of the analyzer script execution. |
+| `SystemInfoLogs` | `MDEClientAnalyzer.xml` | XML format containing the analyzer script findings |
+| `SystemInfoLogs` | `RegOnboardedInfoCurrent.Json` | The onboarded machine information gathered in JSON format from the registry |
+| `SystemInfoLogs` | `RegOnboardingInfoPolicy.Json` | The onboarding policy configuration gathered in JSON format from the registry |
+| `SystemInfoLogs` | `SCHANNEL.txt` | Details about [SCHANNEL configuration](/windows-server/security/tls/manage-tls) applied to the machine such gathered from registry | 
+| `SystemInfoLogs` | `SessionManager.txt` | Session Manager specific settings gather from registry |
+| `SystemInfoLogs` | `SSL_00010002.txt` | Details about [SSL configuration](/windows-server/security/tls/manage-tls) applied to the machine gathered from registry |
+| `EventLogs` | `utc.evtx` | Export of DiagTrack event log |
+| `EventLogs` | `senseIR.evtx` | Export of the Automated Investigation event log |
 
   - sense.evtx
 
