@@ -129,7 +129,7 @@ If you're using non-Microsoft applications, also see their documentation regardi
 ## Next steps
 
 - [Review the requirements for Defender for Endpoint on Linux](/defender-endpoint/mde-linux-requirements)
-- [Deploy Defender for Endpoint on Linux](/defender-endpoint/mde-linux-deployment)
+- [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
