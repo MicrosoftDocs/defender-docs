@@ -19,9 +19,9 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 
 ## File scanning updates for Microsoft 365
 
-To enhance the efficiency and accuracy of file scanning within Microsoft 365 environments, Defender for Cloud Apps has updated the file scanning process for Microsoft 365. Unless you have activated Information protection policies, Defender for Cloud Apps will not scan or store organizational files.
+To enhance file scanning efficiency and accuracy within Microsoft 365 environments, Defender for Cloud Apps has updated the file scanning process for Microsoft 365. Unless you activate information protection policies, Defender for Cloud Apps won't scan or store organizational files.
 
-When actively using Information protection policies, organizational files may have significant scanning durations due to high volumes of file scanning activities.
+When you actively use information protection policies, organizational files might have significant scanning durations due to high volumes of file scanning activities.
 
 Defender for Cloud Apps has added new file scanning improvements for SharePoint and OneDrive:
 
@@ -123,7 +123,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 - You must have at least one assigned Microsoft 365 license to connect Microsoft 365 to Defender for Cloud Apps.
 
-- To enable File monitoring of Microsoft 365 files, you are required to use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
+- To enable file monitoring of Microsoft 365 files, you must use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
 
 - To enable monitoring of Microsoft 365 activities in Defender for Cloud Apps, you are required to enable auditing in [Microsoft Purview](/purview/audit-log-enable-disable).
 
