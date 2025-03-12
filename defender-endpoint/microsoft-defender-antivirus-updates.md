@@ -100,7 +100,7 @@ Updates contain:
 
 ### February-2025 (Engine: 1.1.x.x)
 
-- Security intelligence update version: **1.x.x.x**
+- Security intelligence update version: **1.425.1.0**
 - Release date: **February 20, 2025** (Engine)
 - Platform: **4.18.25010.11**
 - Engine: **1.1.x.x**
