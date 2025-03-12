@@ -64,6 +64,7 @@ The following table lists commonly used Group Policy settings that are available
 > [!TIP]
 > For the most current settings, get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
 
+
 | Location | Setting | Article |
 |---|---|---|
 | Client interface| Enable headless UI mode | [Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) |
@@ -186,6 +187,7 @@ The following table lists commonly used Group Policy settings that are available
 | Security intelligence updates| Turn on scan after Security intelligence update| [Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md) |
 | Threats| Specify threat alert levels at which default action shouldn't be taken when detected| [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
 | Threats| Specify threats upon which default action shouldn't be taken when detected| [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
+
 
 > [!TIP]
 > Instead of using "Run full scan on mapped network drives", if you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaption Protocol (ICAP) scanning with the Microsoft Defender Antivirus engine. For more information, see **[Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234)**.
