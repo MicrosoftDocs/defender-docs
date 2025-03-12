@@ -80,7 +80,7 @@ The following table lists commonly used Group Policy settings that are available
 | Features | Enable EDR in Block Mode | [EDR in block mode: Group Policy](edr-in-block-mode.md#group-policy) |
 | MAPS |  Configure the "Block at First Sight" feature| [Enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) |
 | MAPS | Join Microsoft MAPS| [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) |
-| MAPS | Send file samples when further analysis is required| [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) |
+| MAPS | Send file samples when further analysis is required | [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) |
 | MAPS |  Configure local setting override for reporting to Microsoft MAPS| [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | MpEngine | Configure extended cloud check| [Configure the cloud block time-out period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) |
 | MpEngine | Disable gradual rollout of Microsoft Defender updates | [Configure updates: Group Policy](configure-updates.md#group-policy) |
@@ -105,7 +105,7 @@ The following table lists commonly used Group Policy settings that are available
 | Real-time protection | Scan all downloaded files and attachments| [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Real-time protection | Turn off real-time protection | [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Real-time protection | Turn on behavior monitoring| [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
-| Real-time protection | Turn on process scanning whenever real-time protection is enabled| [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
+| Real-time protection | Turn on process scanning whenever real-time protection is enabled | [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Real-time protection | Turn on raw volume write notifications| [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Real-time protection | Configure monitoring for incoming and outgoing file and program activity| [Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Remediation | Configure local setting override for the time of day to run a scheduled full scan to complete remediation | [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
@@ -125,7 +125,7 @@ The following table lists commonly used Group Policy settings that are available
 | Root| Define addresses to bypass proxy server | [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus) |
 | Root| Define proxy autoconfig (.pac) for connecting to the network| [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus) |
 | Root| Define proxy server for connecting to the network| [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus) |
-| Root | Define the directory path to copy support log files  | [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) | |
+| Root | Define the directory path to copy support log files  | [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) |
 | Root| Configure local administrator merge behavior for lists| [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | Root|Allow anti-malware service to start up with normal priority| [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
 | Root|Allow anti-malware service to remain running always| [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
@@ -136,7 +136,7 @@ The following table lists commonly used Group Policy settings that are available
 | Root | Select the channel for Microsoft Defender monthly platform updates | [Update channels for monthly updates](manage-gradual-rollout.md#update-channels-for-monthly-updates) |
 | Scan |Allow users to pause scan | [Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) (Not supported on Windows 10 or newer, and Windows Server 2016 and newer) |
 | Scan | Check for the latest virus and spyware definitions before running a scheduled scan | [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md) |
-| Scan | Define the number of days after which a catch-up scan is forced| [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
+| Scan | Define the number of days after which a catch-up scan is forced | [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 | Scan | Turn on catch up full scan | [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 | Scan | Turn on catch up quick scan | [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 | Scan | Configure local setting override for maximum percentage of CPU utilization | [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
@@ -160,7 +160,7 @@ The following table lists commonly used Group Policy settings that are available
 | Scan | Scan removable drives| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Specify the maximum depth to scan archive files| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Specify the maximum percentage of CPU utilization during a scan | [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
-| Scan | Specify the maximum size of archive files to be scanned| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
+| Scan | Specify the maximum size of archive files to be scanned | [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Specify the day of the week to run a scheduled scan | [Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md) |
 | Scan | Specify the interval to run quick scans per day| [Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md) |
 | Scan | Specify the scan type to use for a scheduled scan | [Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md) |
@@ -176,7 +176,7 @@ The following table lists commonly used Group Policy settings that are available
 | Security intelligence updates| Check for the latest virus and spyware security intelligence on startup| [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md) |
 | Security intelligence updates| Define file shares for downloading security intelligence updates| [Manage Microsoft Defender Antivirus protection and security intelligence updates](manage-protection-updates-microsoft-defender-antivirus.md) |
 | Security intelligence updates | Define security intelligence location for VDI clients | [Configure Microsoft Defender Antivirus on a remote desktop or VDI: Group Policy](deployment-vdi-microsoft-defender-antivirus.md#group-policy) |
-| Security intelligence updates| Define the number of days after which a catch up security intelligence update is required| [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
+| Security intelligence updates| Define the number of days after which a catch up security intelligence update is required | [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 | Security intelligence updates| Define the number of days before spyware security intelligence are considered out of date | [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 | Security intelligence updates| Define the number of days before virus security intelligence are considered out of date | [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 | Security intelligence updates| Define the order of sources for downloading security intelligence updates| [Manage Microsoft Defender Antivirus protection and security intelligence updates](manage-protection-updates-microsoft-defender-antivirus.md) |
@@ -185,8 +185,8 @@ The following table lists commonly used Group Policy settings that are available
 | Security intelligence updates| Specify the interval to check for security intelligence updates| [Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) |
 | Security intelligence updates| Specify the time to check for security intelligence updates| [Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) |
 | Security intelligence updates| Turn on scan after Security intelligence update| [Configure scheduled scans for Microsoft Defender Antivirus](schedule-antivirus-scans.md) |
-| Threats| Specify threat alert levels at which default action shouldn't be taken when detected| [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
-| Threats| Specify threats upon which default action shouldn't be taken when detected| [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
+| Threats| Specify threat alert levels at which default action shouldn't be taken when detected | [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
+| Threats| Specify threats upon which default action shouldn't be taken when detected | [Configure remediation for Microsoft Defender Antivirus scans](configure-remediation-microsoft-defender-antivirus.md) |
 
 
 > [!TIP]
