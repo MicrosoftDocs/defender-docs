@@ -71,7 +71,7 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 
 - To install on Linux Server with SAP, see [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
-If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install). Before you begin, make sure [the Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/mde-linux-requirements) are met.
+If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install). Before you begin, make sure [the Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/mde-linux-prerequisites) are met.
 
 > [!IMPORTANT]
 > Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
@@ -128,7 +128,7 @@ If you're using non-Microsoft applications, also see their documentation regardi
 
 ## Next steps
 
-- [Review the requirements for Defender for Endpoint on Linux](/defender-endpoint/mde-linux-requirements)
+- [Review the requirements for Defender for Endpoint on Linux](/defender-endpoint/prerequisites)
 - [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
