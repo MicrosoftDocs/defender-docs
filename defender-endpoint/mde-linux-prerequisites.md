@@ -138,7 +138,7 @@ You can use one of the following methods to deploy Microsoft Defender for Endpoi
 
 1. Command-line tool, see [Manual deployment](/defender-endpoint/linux-install-manually)
 
-2. Puppet, see [Deploy using Puppet configuration management too](V/defender-endpoint/linux-install-with-puppet)
+2. Puppet, see [Deploy using Puppet configuration management too](/defender-endpoint/linux-install-with-puppet)
 
 3. Ansible, see [Deploy using Ansible configuration management tool](/defender-endpoint/linux-install-with-ansible) 
 
