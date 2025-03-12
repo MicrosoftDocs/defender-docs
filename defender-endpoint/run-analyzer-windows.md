@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 05/05/2024
+ms.date: 03/12/2025
 ---
 
 # Run the client analyzer on Windows
@@ -32,15 +32,14 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
 ## Option 2: Run MDE Client Analyzer locally
 
-1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [Beta MDE Client Analyzer tool](https://aka.ms/MDEClientAnalyzerPreview) to the Windows device you want to investigate.
+1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [MDE Client Analyzer tool (preview)](https://aka.ms/MDEClientAnalyzerPreview) to the Windows device you want to investigate. The file is saved to your Downloads folder by default.
 
-   The file is saved to your Downloads folder by default.
-
-2. Extract the contents of MDEClientAnalyzer.zip to an available folder.
+2. Extract the contents of `MDEClientAnalyzer.zip` to an available folder.
 
 3. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
+   
    1. Right-click **Command prompt** and select **Run as administrator**.
 
 4. Type the following command and then press **Enter**:
@@ -86,61 +85,23 @@ Example contents after MDEClientAnalyzer.ps1 is modified:
 > - The start state of the EDR sensor (Sense is stopped if machine is not yet onboarded).
 > - If an advanced troubleshooting parameter was used with the analyzer command.
 
-By default, the unpacked MDEClientAnalyzerResult.zip file contains the following items.
+By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items listed in the following table:
 
-- MDEClientAnalyzer.htm
-
-  This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce.
-
-- SystemInfoLogs [Folder]
-
-  - AddRemovePrograms.csv
-
-    Description: List of x64 installed software on x64 OS collected from registry.
-
-  - AddRemoveProgramsWOW64.csv
-
-    Description: List of x86 installed software on x64 OS collected from registry.
-
-    - CertValidate.log
-
-      Description: Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil).
-
-    - dsregcmd.txt
-
-      Description: Output from running [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). This provides details about the Microsoft Entra status of the machine.
-
-    - IFEO.txt
-
-      Description: Output of [Image File Execution Options](/previous-versions/windows/desktop/xperf/image-file-execution-options) configured on the machine
-
-    - MDEClientAnalyzer.txt
-
-      Description: This is verbose text file showing with details of the analyzer script execution.
-
-    - MDEClientAnalyzer.xml
-
-      Description: XML format containing the analyzer script findings.
-
-    - RegOnboardedInfoCurrent.Json
-
-      Description: The onboarded machine information gathered in JSON format from the registry.
-
-  - RegOnboardingInfoPolicy.Json
-
-    Description: The onboarding policy configuration gathered in JSON format from the registry.
-
-    - SCHANNEL.txt
-
-      Description: Details about [SCHANNEL configuration](/windows-server/security/tls/manage-tls) applied to the machine such gathered from registry.
-
-    - SessionManager.txt
-
-      Description: Session Manager specific settings gather from registry.
-
-    - SSL_00010002.txt
-
-      Description: Details about [SSL configuration](/windows-server/security/tls/manage-tls) applied to the machine gathered from registry.
+| Folder | Item | Description |
+|--|--|--|
+| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce. |
+| `SystemInfoLogs` | `AddRemovePrograms.csv` | List of x64 installed software on x64 OS collected from registry |
+| | `AddRemoveProgramsWOW64.csv` | List of x86 installed software on x64 OS collected from registry |
+| | `CertValidate.log` | Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil) |
+| | `dsregcmd.txt` | Output from running [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). This provides details about the Microsoft Entra status of the machine. |
+| | `IFEO.txt` | Output of [Image File Execution Options](/previous-versions/windows/desktop/xperf/image-file-execution-options) configured on the machine |
+| | `MDEClientAnalyzer.txt` | This is verbose text file showing with details of the analyzer script execution. |
+| | `MDEClientAnalyzer.xml` | XML format containing the analyzer script findings |
+| | `RegOnboardedInfoCurrent.Json` | The onboarded machine information gathered in JSON format from the registry |
+| | `RegOnboardingInfoPolicy.Json` | The onboarding policy configuration gathered in JSON format from the registry |
+| | `SCHANNEL.txt` | Details about [SCHANNEL configuration](/windows-server/security/tls/manage-tls) applied to the machine such gathered from registry | 
+| | `SessionManager.txt` | Session Manager specific settings gather from registry |
+| | `SSL_00010002.txt` | Details about [SSL configuration](/windows-server/security/tls/manage-tls) applied to the machine gathered from registry |
 
 - EventLogs [Folder]
 
