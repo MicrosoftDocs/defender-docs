@@ -154,7 +154,6 @@ The following table lists commonly used Group Policy settings that are available
 |Scan|Run full scan on mapped network drives|[Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)|
 |Scan|Scan archive files|[Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)|
 | Scan | Scan excluded files and directories during quick scan | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
-|Scan|Scan network files|[Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)|
 |Scan|Scan packed executables|[Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)|
 | Scan | Scan scripts | [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) <p>Also see [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender).|
 |Scan|Scan removable drives|[Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)|
@@ -170,6 +169,7 @@ The following table lists commonly used Group Policy settings that are available
 | Scan | Trigger a quick scan after X days without any scans | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
 |Security intelligence updates|Allow security intelligence updates from Microsoft Update|[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Allow security intelligence updates when running on battery power|[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)|
+| Security intelligence updates | Allow Microsoft Defender Antivirus to update and communicate over a metered connection | [Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
 |Security intelligence updates|Allow notifications to disable definitions-based reports to Microsoft MAPS|[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Allow real-time security intelligence updates based on reports to Microsoft MAPS|[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)|
 |Security intelligence updates|Check for the latest virus and spyware definitions on startup|[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)|
