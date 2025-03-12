@@ -29,12 +29,11 @@ Want to experience Microsoft Defender for Endpoint?
 
 This article lists hardware and software requirements for Microsoft Defender for Endpoint on Linux.
 
-## Software Requirements
+## Software requirements
 
-1. Linux endpoint should be able to access Microsoft Defender portal. Configure proxy if necessary.
-2. Linux endpoint should have systemd (system manager) installed.
-
-3. Administrative privileges on the Linux endpoint are required for installation.
+- Linux server endpoints should be able to access the Microsoft Defender portal. Configure proxy if necessary.
+- Linux server endpoints should have systemd (system manager) installed.
+- Administrative privileges on the Linux endpoint are required for installation.
 
 >[!NOTE]: Linux distribution using system manager supports both SystemV and Upstart.
 > Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
