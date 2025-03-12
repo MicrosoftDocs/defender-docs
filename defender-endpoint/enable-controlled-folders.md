@@ -108,10 +108,12 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
    > [!NOTE]
    > Wildcard is supported for applications, but not for folders. Allowed apps will continue to trigger events until they are restarted.
-
+   
 1. Review the settings and select **Next** to create the policy.
 
-6. After the policy is created, **Close**.
+1. After the policy is created, **Close**.
+
+For more information about Microsoft Configuration Manager and Controlled Folder Access, please visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 ## Group Policy
 
