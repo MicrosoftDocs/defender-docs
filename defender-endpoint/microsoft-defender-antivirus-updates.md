@@ -108,7 +108,7 @@ Updates contain:
 
 #### What's new
 
-- Product improvments
+- Product improvements
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
