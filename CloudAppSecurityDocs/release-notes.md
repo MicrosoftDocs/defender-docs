@@ -27,8 +27,8 @@ Defender for Cloud Apps customers can now configure Role-Based Access Control (R
 
 For more information, see:
 
-- [Configure admin access](https://learn.microsoft.com/defender-cloud-apps/manage-admins)
-- [Investigate behaviors with advanced hunting (Preview)](https://learn.microsoft.com/defender-cloud-apps/behaviors)
+- [Configure admin access](/CloudAppSecurityDocs/manage-admins.md)
+- [Investigate behaviors with advanced hunting (Preview)](/CloudAppSecurityDocs/behaviors.md)
 
 ## February 2025
  
