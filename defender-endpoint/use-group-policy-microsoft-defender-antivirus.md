@@ -110,7 +110,16 @@ The following table lists commonly used Group Policy settings that are available
 |Remediation|Configure local setting override for the time of day to run a scheduled full scan to complete remediation|[Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md)|
 |Remediation|Specify the day of the week to run a scheduled full scan to complete remediation|[Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)|
 |Remediation|Specify the time of day to run a scheduled full scan to complete remediation|[Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)|
-|Reporting|Turn off enhanced notifications|[Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)
+| Reporting | Configure time interval for service health reports  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) | 
+| Reporting | Configure time out for detections in critically failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)|
+| Reporting | Configure time out for detections in non-critical failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure time out for detections in recently remediated state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure time out for detections in requiring additional action | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure Watson events  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure whether to report Dynamic Signature dropped events  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure Windows software trace preprocessor components  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+| Reporting | Configure WPP tracing level | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
+|Reporting|Turn off enhanced notifications|[Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 |Root|Turn off Microsoft Defender Antivirus|Not used. If you're using or planning to use a non-Microsoft antivirus product, see [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md).|
 |Root|Define addresses to bypass proxy server|[Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus)|
 |Root|Define proxy autoconfig (.pac) for connecting to the network|[Configure device proxy and Internet connectivity settings](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus)|
