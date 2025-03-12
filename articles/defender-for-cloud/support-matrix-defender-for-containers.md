@@ -221,9 +221,9 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | Docker Hub , JFrog Artifactory | Preview | Preview | Connector creation |  Foundational CSPM  **OR** Defender CSPM **OR** Defender for Containers  | - |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets. | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation |  Foundational CSPM  **OR** Defender CSPM **OR** Defender for Containers  | - |
 | Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that attackers might use to breach your  environment. | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation | Defender CSPM | - |
-| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | Docker Hub, JFrog | Preview | Preview | Connector create | Defender for Containers **OR** Defender CSPM | GCP |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | Docker Hub, JFrog | Preview | Preview | Connector creation | Defender for Containers **OR** Defender CSPM |  |
 
 ---
 
