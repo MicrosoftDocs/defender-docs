@@ -20,7 +20,8 @@ ms.date: 03/12/2025
 
 # Requirements for Microsoft Defender for Endpoint on Linux
 
->[!TIP] We're excited to share that Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
+> [!TIP] 
+> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -35,7 +36,8 @@ This article lists hardware and software requirements for Microsoft Defender for
 - Linux server endpoints should have systemd (system manager) installed.
 - Administrative privileges on the Linux endpoint are required for installation.
 
->[!NOTE]: Linux distribution using system manager supports both SystemV and Upstart.
+> [!NOTE] 
+> Linux distribution using system manager supports both SystemV and Upstart.
 > Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 >Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
@@ -85,19 +87,22 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Amazon Linux 2 Arm64 
 - Amazon Linux 2023 Arm64 
 
->[!IMPORTANT]: Support for Microsoft Defender for Endpoint on Linux for Arm64-based Linux devices is now in preview. 
->For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
+> [!IMPORTANT]
+> Support for Microsoft Defender for Endpoint on Linux for Arm64-based Linux devices is now in preview. 
+> For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
 
->[!NOTE]: The workstation and desktop versions of these distributions are unsupported
->Distributions and versions that aren't explicitly listed are unsupported.
->After a new package version is released, support for the previous two versions is reduced to technical support only.
->Rocky and Alma distributions aren't currently supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
->The minimal requirement for the kernel version to be 3.10.0-327 or later.
+> [!NOTE]
+> The workstation and desktop versions of these distributions are unsupported
+> Distributions and versions that aren't explicitly listed are unsupported.
+> After a new package version is released, support for the previous two versions is reduced to technical support only.
+> Rocky and Alma distributions aren't currently supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
+> The minimal requirement for the kernel version to be 3.10.0-327 or later.
 
->[!WARNING]: Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported as It can lead to unpredictable results, including hanging the operating system.
->If any other applications on the system use fanotify in blocking mode, the conflicting_applications field of the mdatp health command output lists these applications.
->The Linux FAPolicyD feature uses fanotify in blocking mode, and is unsupported when running Defender for Endpoint in active mode
->After configuring the Real Time Protection to passive mode, you can safely use Defender for Endpoint on Linux EDR. See [Enforcement level for Microsoft Defender Antivirus](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468#enforcement-level-for-microsoft-defender-antivirus). 
+> [!WARNING]
+> Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported as It can lead to unpredictable results, including hanging the operating system.
+> If any other applications on the system use fanotify in blocking mode, the conflicting_applications field of the mdatp health command output lists these applications.
+> The Linux FAPolicyD feature uses fanotify in blocking mode, and is unsupported when running Defender for Endpoint in active mode
+> After configuring the Real Time Protection to passive mode, you can safely use Defender for Endpoint on Linux EDR. See [Enforcement level for Microsoft Defender Antivirus](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=pr-en-us-2468#enforcement-level-for-microsoft-defender-antivirus). 
 
 ## List of supported filesystems for RTP, Quick, Full, and Custom Scan. 
 
@@ -120,8 +125,9 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 |vfat|
 |xfs|
 
->[!NOTE]: NFS v3 mount points to be scanned thoroughly and are required to set the no_root_squash export option on these mount points
->Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
+> [!NOTE]
+> NFS v3 mount points to be scanned thoroughly and are required to set the no_root_squash export option on these mount points
+> Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
 # Installation instructions 
 
@@ -143,10 +149,11 @@ You can use one of the following methods to deploy Microsoft Defender for Endpoi
 
 If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install)
 
->[!IMPORTANT]: Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
->Microsoft Defender for Endpoint on Linux creates a mdatp user with random UID and GID.
->If you want to control the UID and GID, create a mdatp user before installation using the /usr/sbin/nologin shell option.
->Here's an example: mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin.
+> [!IMPORTANT]
+> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
+> Microsoft Defender for Endpoint on Linux creates a mdatp user with random UID and GID.
+> If you want to control the UID and GID, create a mdatp user before installation using the /usr/sbin/nologin shell option.
+> Here's an example: mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin.
 
 ## Network connections
 
@@ -157,19 +164,21 @@ If you experience any installation failures, see [Troubleshooting installation f
     2. Manual static proxy configuration 
 - Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
->[!NOTE] Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
+> [!NOTE] 
+> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
 
->[!Warning]: PAC, WPAD, and authenticated proxies are not supported. 
->Use only static or transparent proxies. 
->SSL inspection and intercepting proxies are also not supported for security reasons.
->Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
->Adding your interception certificate to the global store will not enable interception.
+> [!WARNING]
+> PAC, WPAD, and authenticated proxies are not supported. 
+> Use only static or transparent proxies. 
+> SSL inspection and intercepting proxies are also not supported for security reasons.
+> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
+> Adding your interception certificate to the global store will not enable interception.
 
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
 
 ## External package dependency
 
-For information on external package dependencies, see the following article:
+For information on external package dependencies, see the following articles:
 
 - [Microsoft Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux?branch=main)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](https://review.learn.microsoft.com/en-us/defender-endpoint/linux-preferences?branch=main)
