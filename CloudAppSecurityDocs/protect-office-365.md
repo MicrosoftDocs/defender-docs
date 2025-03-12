@@ -119,7 +119,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
-**Prerequisites**:
+#### Prerequisites:
 
 - You must have at least one assigned Microsoft 365 license to connect Microsoft 365 to Defender for Cloud Apps.
 
