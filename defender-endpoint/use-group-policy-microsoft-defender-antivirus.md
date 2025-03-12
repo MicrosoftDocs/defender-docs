@@ -75,6 +75,7 @@ The following table lists commonly used Group Policy settings that are available
 |Exclusions|Path Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
 |Exclusions|Process Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
 |Exclusions|Turn off Auto Exclusions|[Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)|
+| Features | Device Control | [Deploy and manage device control in Microsoft Defender for Endpoint using Group Policy](device-control-deploy-manage-gpo.md) |
 |MAPS|Configure the "Block at First Sight" feature|[Enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md)|
 |MAPS|Join Microsoft MAPS|[Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)|
 |MAPS|Send file samples when further analysis is required|[Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)|
