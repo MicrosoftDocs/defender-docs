@@ -274,7 +274,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
     
 > [!NOTE]
 > Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
-> It is recommended to also use [scheduled scans](/defender-endpoint/mde-linux-antivirus-scan-crontab) as per requirement.
+> It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
 ### Enable or disable behavior monitoring (if RTP is enabled)
 
