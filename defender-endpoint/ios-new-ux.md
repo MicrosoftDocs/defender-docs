@@ -41,13 +41,13 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application.
 
-:::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/mde-ios-main-dash.png":::
+:::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="The Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update" lightbox="media/mde-ios-main-dash-new.png":::
 
 ### List the features inside one Feature Card
 
 We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.
 
-:::image type="content" source="media/mde-ios-list-new.png" alt-text="The Microsoft Defender for Endpoint Feature Card" lightbox="media/mde-ios-list.png":::
+:::image type="content" source="media/mde-ios-list-new.png" alt-text="The Microsoft Defender for Endpoint Feature Card" lightbox="media/mde-ios-list-new.png":::
 
 ### Detailed Feature Experience
 
@@ -55,11 +55,11 @@ We updated all the subordinating screens associated with the feature
 
 1. **Web Protection**
 
-:::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Image showing the web protection feature on the MDE iOS app" lightbox="media/mde-ios-web-protection.png":::
+:::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Image showing the web protection feature on the MDE iOS app" lightbox="media/mde-ios-web-protection-new.png":::
 
 2. **Device Health**
 
-:::image type="content" source="media/mde-device-health-new.png" alt-text="Image showing the new device health feature on the MDE iOS app" lightbox="media/mde-device-health.png":::
+:::image type="content" source="media/mde-device-health-new.png" alt-text="Image showing the new device health feature on the MDE iOS app" lightbox="media/mde-device-health-new.png":::
 
 ### Recommendation Cards for Alerts
 
