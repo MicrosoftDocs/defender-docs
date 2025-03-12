@@ -348,17 +348,15 @@ This mode collects installation related information like distro and system requi
 
 ```console
 
-  -h, --help            show this help message and exit
-  -d, --distro          Check for distro support
-  -m, --min-requirement
-                        Check for the system info against offical minimum
-                        requirements
-  -e, --external-dep    Check for externel package dependency
-  -c, --connectivity    Check for connectivity for services used by MDE
-  -a, --all             Run all checks
+  -h, --help                show this help message and exit
+  -d, --distro              Check for distro support
+  -m, --min-requirement     Check for the system info against offical minimum requirements
+  -e, --external-dep        Check for externel package dependency
+  -c, --connectivity        Check for connectivity for services used by MDE
+  -a, --all                 Run all checks
   -o ONBOARDING_SCRIPT, --onboarding-script ONBOARDING_SCRIPT
-                        Path to onboarding script
-  -g GEO, --geo GEO     Geo string to test <US|UK|EU|AU|CH|IN>
+                            Path to onboarding script
+  -g GEO, --geo GEO         Geo string to test <US|UK|EU|AU|CH|IN>
 
 ```
 
