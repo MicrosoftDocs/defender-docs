@@ -854,6 +854,20 @@ Determines whether module load events (file open events on shared libraries) are
 |**Possible values**|`disabled` (default) <br/> `enabled`|*n/a*|
 |**Comments**|Available in Defender for Endpoint version `101.68.80` or later.||
 
+#### Remediate Infected File feature
+ 
+Determines whether infected processes that open or load any infected file will get remediated or not.
+ 
+> [!NOTE]
+> When enabled the processes that open or load any infected file will get remediated but these processes will not appear in the threat list.
+ 
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|remediateInfectedFile|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version `101.24122.0001` or later.||
+
 ### Supplementary sensor configurations
 
 The following settings can be used to configure certain advanced supplementary sensor features.
