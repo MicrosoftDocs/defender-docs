@@ -1,12 +1,12 @@
 ---
-title: New user experiences in Microsoft Defender for Endpoint on iOS
+title: User experiences in Microsoft Defender for Endpoint on iOS
 description: Learn about major user experience changes for versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/11/2025
+ms.date: 03/12/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -18,7 +18,7 @@ ms.subservice: ios
 search.appverid: met150
 ---
 
-# New user experiences in Microsoft Defender for Endpoint on iOS
+# User experiences in Microsoft Defender for Endpoint on iOS
 
 As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming enhancements to the user interface and overall experience of our **Microsoft Defender for Endpoint (MDE)** mobile app.
 
@@ -58,7 +58,7 @@ We updated all the subordinating screens associated with the feature
 
 :::image type="content" source="media/mde-ios-web-protection.png" alt-text="Image showing the web protection feature on the MDE iOS app" lightbox="media/mde-ios-web-protection.png":::
 
-1. **Device Health**
+2. **Device Health**
 
 :::image type="content" source="media/mde-device-health.png" alt-text="Image showing the new device health feature on the MDE iOS app" lightbox="media/mde-device-health.png":::
 
