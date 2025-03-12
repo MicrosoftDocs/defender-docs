@@ -21,9 +21,9 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## March 2025
 
-### RBAC scoping for "Behaviors" (Preview)
+### Role-Based Access Control scoping for "Behaviors" (Preview)
 
-Defender for Cloud Apps customers can now configure Role-Based Access Control (RBAC) scoping for 'Behaviors'. This new capability empowers administrators to define and manage access permissions more precisely, ensuring that users have the appropriate level of access to specific application data based on their roles and responsibilities. By leveraging RBAC scoping, organizations can enhance their security posture, streamline operations, and reduce the risk of unauthorized access.
+Defender for Cloud Apps customers can now configure Role-Based Access Control (RBAC) scoping for 'Behaviors.' This new capability allows administrators to define and manage access permissions more precisely. Administrators can ensure that users have the appropriate level of access to specific application data based on their roles and responsibilities. By using RBAC scoping, organizations can enhance their security posture, streamline operations, and reduce the risk of unauthorized access.
 
 For more information, see:
 
@@ -46,8 +46,8 @@ For more information, see:
  
  ### Enhanced alert source accuracy
  
- Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
- Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
  The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
  
  To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
