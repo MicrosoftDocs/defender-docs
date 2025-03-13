@@ -126,7 +126,6 @@ items:
     items:
     - name: Identity inventory
       href: identity-inventory.md
-  displayName: "Defender for Identity "
     - name: Investigate assets
       href: investigate-assets.md
   - name: Lateral movement paths
