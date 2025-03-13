@@ -28,7 +28,7 @@ These updates are designed to improve usability, streamline navigation, and ensu
 
 We're pleased to introduce the Device Protection feature card for our enterprise users which includes **Web Protection**, **Device Health**, and **Jail break** features are designed to be more user-friendly and accessible.
 
-The updated cards also include **recommendation cards**, which prominently display any active alerts, keeping you informed. Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
+The updated cards also include **recommendation cards**, which prominently display any active alerts, keeping you informed. Features are now displayed as tiles to improve user experience and navigation efficiency.
 
 **The main changes involved are**:
 
