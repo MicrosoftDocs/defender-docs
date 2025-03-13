@@ -39,7 +39,7 @@ Direct onboarding is a seamless integration between Defender for Endpoint and De
 
 ## Enable direct onboarding
 
-Enabling direct onboarding is an opt-in setting at the tenant level. It affects both existing and new servers onboarded to Defender for Endpoint in the same Microsoft Entra tenant. Shortly after you enable this setting, your server devices will show under the designated subscription. Alerts, software inventory, and vulnerability data are integrated with Defender for Cloud, in a similar way to how it works with Azure VMs.
+Enabling direct onboarding is an opt-in setting at the tenant level. It affects both existing and new servers onboarded to Defender for Endpoint in the same Microsoft Entra tenant. Shortly after you enable this setting, your server devices show up under the designated subscription. Alerts, software inventory, and vulnerability data are integrated with Defender for Cloud in a similar way to how it works with Azure VMs.
 
 Before you begin:
 
