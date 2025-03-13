@@ -39,33 +39,31 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 ### Main Dashboard changes
 
-This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application.
+This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application. Left screen represents the earlier experience of the dashboard screen, while right screen is going to be the new experience.
 
 :::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update." lightbox="media/mde-ios-main-dash-new.png":::
 
 ### List the features inside one Feature Card
 
-We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality.
+We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality. Experience is only going to be change for device protection, For rest feature card it's going to be the same as earlier.
 
 :::image type="content" source="media/mde-ios-list-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Feature Card." lightbox="media/mde-ios-list-new.png":::
 
 ### Detailed Feature Experience
 
-We updated all the subordinating screens associated with the feature
+We updated all the subordinating screens associated with the **Device Protection** feature
 
-1. **Web Protection**
+**1. Web Protection**
 
 :::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the MDE iOS app." lightbox="media/mde-ios-web-protection-new.png":::
 
-1. **Device Health**
+**2. Device Health**
 
 :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app." lightbox="media/mde-device-health-new.png":::
 
 ### Recommendation Cards for Alerts
 
-Hero cards are implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard.
- 
-**Both the Recommendation Cards are attached to the Device Protection feature card**:
+The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, few of the examples are as shown below -
 
 1. **Web Protection**
 
