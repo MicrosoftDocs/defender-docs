@@ -119,7 +119,8 @@ You can use this information to help you prioritize devices for security posture
 
 ### Navigate to the Identity inventory page
 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Assets > Identities. Or, to navigate directly to the identity inventory page use [https://security.microsoft.com/ identity-inventory.](https://security.microsoft.com/%20identity-inventory.)
+Use relative links instead of absolute links. 
+In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Assets > Identities. Or, to navigate directly to the (identity inventory) [/defender-for-identity/identity-inventory] page.
 
 ### Related Articles
 
