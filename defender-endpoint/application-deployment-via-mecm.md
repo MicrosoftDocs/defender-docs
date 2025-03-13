@@ -33,7 +33,7 @@ This article guides you in migrating servers running Windows Server 2016 or Wind
 - Active Microsoft Defender portal with devices onboarded.
 - A **Device Collection** containing down-level servers such as Windows Server 2012 R2 or Windows Server 2016 using MMA agent is set up in your MECM instance.
 
-For more information on installing the listed prerequisites, see [related topics](#related-topics) section.
+For more information on installing the listed prerequisites, see [related articles](#related-articles) section.
 
 ## Gather required files
 
