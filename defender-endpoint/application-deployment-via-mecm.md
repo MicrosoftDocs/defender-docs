@@ -20,8 +20,8 @@ ms.date: 06/27/2022
 
 **Applies to:**
 
-- Windows Server 2012 R2
-- Windows Server 2016
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article guides you in migrating down-level servers from Microsoft Monitoring Agent (MMA) to the unified solution.
 

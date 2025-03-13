@@ -19,10 +19,10 @@ search.appverid: met150
 
 # Migrating servers from Microsoft Defender for Endpoint to Microsoft Defender for Cloud
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article guides you in migrating servers from Microsoft Defender for Endpoint Server to Defender for Servers (part of Defender for Cloud).
 
