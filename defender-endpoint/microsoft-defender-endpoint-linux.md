@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/25/2025
+ms.date: 03/13/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -35,7 +35,7 @@ The following table describes capabilities in Defender for Endpoint:
 
 |Category|Description|
 |---|---|
-|Posture management| -Defender for Endpoint combines asset discovery & monitoring, risk-based vulnerability management with intelligent prioritization, remediation, and tracking to help effectively manage and secure your Linux servers. <br>- With a single pane-of-glass experience, your security team gains a comprehensive view of your organization's exposure score, recommendations, remediations, inventories, and more.|
+|Posture management| -Defender for Endpoint combines asset discovery & monitoring, risk-based vulnerability management with intelligent prioritization, remediation, and tracking to help effectively manage and secure your Linux servers. <br>- With a single pane-of-glass experience, your security team gains a comprehensive view of your organization's exposure score, recommendations, remediation, inventories, and more.|
 |Threat protection| - Defender for Endpoint includes next-generation antivirus protection using local & cloud-based machine learning models, behavior analysis, and heuristics. <br>- Cloud protection provides near-instant detection and blocking of new/emerging threats. <br>- You get dedicated, continuous protection with regular security intelligence and product updates. <br>- You can also investigate and define policies for customer IP- and URL-based indicators of compromise.|
 |Endpoint detection and response| - Defender for Endpoint uses AI and advanced analytics to detect and respond to threats close to real time. <br> - In the Microsoft Defender portal, you have a central location to view detections across the Microsoft Defender suite and your organization's devices. <br>- You can use advanced hunting to view raw data and get more insight into your network events. <br>- Response actions are available to act swiftly and nimbly on security alerts.|
 |Streamlined management and operations| - Defender for Endpoint offers broad coverage across a breadth of Linux distributions while making operations easier for your security team. <br>- You can manage your security policies and settings in the Microsoft Defender portal and plan your update cycles in advance, while supporting your Linux servers where they are, with offline and multicloud options.|
