@@ -1,14 +1,14 @@
 ---
-title: Onboard non-Azure machines with Defender for Endpoint
+title: Onboard non-Azure servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
-ms.date: 09/17/2024
+ms.date: 03/13/2025
 author: dcurwin
 ms.author: dacurwin
 
 ---
 
-# Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint
+# Connect your non-Azure servers to Microsoft Defender for Cloud with Defender for Endpoint
 
 Defender for Cloud allows you to directly onboard your non-Azure servers by deploying the Defender for Endpoint agent. This provides protection for both your cloud and non-cloud assets under a single, unified offering.
 
@@ -29,7 +29,13 @@ This tenant-level setting allows you to automatically and natively onboard any n
 
 ## How it works
 
-Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn’t require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. To enable server management capabilities, refer to the deployment of Azure Arc.
+Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn't require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. To enable server management capabilities, you have several options:
+
+- For servers (Windows Server and Linux), you can use:
+   - Defender for Endpoint security settings management
+   - Microsoft Intune
+   - Non-Microsoft tools 
+- For Windows Server devices, you can also use [Microsoft Configuration Manager](/mem/configmgr/)
 
 ## Enable direct onboarding
 
