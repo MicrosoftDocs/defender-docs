@@ -29,6 +29,28 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
+#### Improving Usability: Key Updates to the MDE Mobile App Interface on iOS
+
+**March 2025**
+
+As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of our MDE mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
+
+**Key Changes:**
+
+We are pleased to introduce the **Device Protection** feature card for our enterprise users which includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed.
+
+**The main changes involved are**:
+
+1. Main Dashboard changes
+
+1. List the features inside one Feature Card
+
+1. Detailed Feature Experience
+
+1. Recommendation Cards for Alerts
+
+To know more about the changes please visit this link - [User Experience in Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-new-ux)
+
 #### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
 **February 2025:**
