@@ -43,7 +43,8 @@ There are several options you can choose from to customize the identities list v
 - Copy list link with the included filters configured. 
 
 ## ![A screenshot of identity inventory page.](media/identity-inventory/inventory11.png)  
-Identity details 
+
+### Identity details 
 
 The **Identities** list offers a consolidated view of identities across Active Directory and Entra ID. It highlights key details, including the following columns by default:
 
