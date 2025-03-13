@@ -24,7 +24,7 @@ __Applies to:__
 
 The __Identity inventory__ provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention.
 
-The Identities inventory page, includes the following tabs:
+The Identities inventory page includes the following tabs:
 
 - **Identities**: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
 
