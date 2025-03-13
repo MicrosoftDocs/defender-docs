@@ -120,9 +120,9 @@ Additionally, they can use live response for a remote shell connection to perfor
 
 ## Privacy
 
-  Microsoft is committed to providing you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
+Microsoft is committed to providing you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
   
-   For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy)
+For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy)
 
 ## Resources for troubleshooting, diagnostics, and configuration 
 
