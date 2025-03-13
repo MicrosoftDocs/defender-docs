@@ -124,8 +124,8 @@ items:
   items:
   - name: Assets
     items:
-- name: Identity inventory
-  href: identity-inventory.md
+    - name: Identity inventory
+      href: identity-inventory.md
   displayName: "Defender for Identity "
     - name: Investigate assets
       href: investigate-assets.md
