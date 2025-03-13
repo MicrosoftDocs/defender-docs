@@ -72,7 +72,7 @@ To verify that your machines are connected:
 
 When you enable Defender for Cloud, Defender for Cloud's alerts are automatically integrated into the Microsoft Defender Portal.
 
-The integration between Microsoft Defender for Cloud and Microsoft Defender XDR brings your cloud environments into Microsoft Defender XDR. With Defender for Cloud's alerts and cloud correlations integrated into Microsoft Defender XDR, SOC teams can now access all security information from a single interface.
+The integration between Microsoft Defender for Cloud and Microsoft Defender XDR brings cloud environments into Microsoft Defender XDR. With Defender for Cloud's alerts and cloud correlations integrated into Microsoft Defender XDR, SOC teams can now access all security information from a single interface.
 
 Learn more about Defender for Cloud's [alerts in Microsoft Defender XDR](concept-integration-365.md).
 
