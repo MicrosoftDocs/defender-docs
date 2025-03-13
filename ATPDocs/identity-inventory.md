@@ -127,7 +127,7 @@ In the Defender XDR portal at [https://security.microsoft.com](https://security.
 
 - [Investigate cloud application accounts](/defender-cloud-apps/accounts)
 
-- [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users) 
+- [Investigate users in Microsoft Defender XDR](/defender-xdr/investigate-users) 
 
 - [Investigate assets in Microsoft Defender for Identity](/defender-for-identity/investigate-assets)
 
