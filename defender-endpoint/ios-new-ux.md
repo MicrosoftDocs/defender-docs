@@ -18,7 +18,7 @@ ms.subservice: ios
 search.appverid: met150
 ---
 
-# User experiences in Microsoft Defender for Endpoint on iOS
+# User Experiences in Microsoft Defender for Endpoint on iOS
 
 As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming enhancements to the user interface and overall experience of our **Microsoft Defender for Endpoint (MDE)** mobile app.
 
