@@ -100,7 +100,7 @@ Sort option applies to Display name, Domain and Created time columns.
 
 ### Identity inventory insights 
 
-- The __Classify critical assets__ card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Managment](/security-exposure-management/microsoft-security-exposure-management). 
+- The __Classify critical assets__ card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). 
 
 - **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Entra ID security administrators and Global admin users.
 
@@ -121,7 +121,7 @@ You can use this information to help you prioritize devices for security posture
 ### Navigate to the Identity inventory page
 
 Use relative links instead of absolute links. 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Assets > Identities. Or, to navigate directly to the (identity inventory) [/defender-for-identity/identity-inventory] page.
+In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Assets > Identities. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
 
 ### Related Articles
 
