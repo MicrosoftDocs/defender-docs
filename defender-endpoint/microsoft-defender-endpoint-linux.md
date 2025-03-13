@@ -54,25 +54,17 @@ See [Product Terms: Microsoft Defender for Endpoint](https://www.microsoft.com/l
   
 ## Deploy and configure policies for Defender for Endpoint on Linux 
 
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux, for example:
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux:
 
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
-
 - [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
-
 - [Chef based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef)
-
 - [Puppet based deployment](/defender-endpoint/linux-install-with-puppet)
-
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
-
 - [Manual deployment](/defender-endpoint/linux-install-manually)
-
-- To use Microsoft Defender for Cloud, see [Enable Defender for Endpoint integration](/azure/defender-for-cloud/enable-defender-for-endpoint)
-
-- To install on Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
-
-- To install on Linux Server with SAP, see [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
+- [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+- For Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
+- For Linux Server with SAP, see [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install). Before you begin, make sure [the Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/mde-linux-prerequisites) are met.
 
