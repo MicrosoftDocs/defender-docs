@@ -71,18 +71,28 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 
 ### Troubleshoot installation issues
 
+If you experience any installation issues, for self-troubleshooting, follow these steps:
 
+1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install). Before you begin, make sure [the Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/mde-linux-prerequisites) are met.
+2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
 
+3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
 
+4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+
+5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+
+### Configure policies for Defender for Endpoint on Linux
 
 To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
 
+- [Enroll in Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management) and use the Microsoft Defender portal to configure and manage your policies
 - [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences?branch=main&branchFallbackFrom=pr-en-us-2468%22%20%5Cl%20%22configuration-profile)
-- [Use the Microsoft Defender portal (this method is also referred to as Defender for Endpoint security settings management)](/defender-endpoint/mde-security-settings-management)  
 
-For more information, see [Security policies in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
+For more information, see [Configure security settings and policies for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 
 ## Software updates
 
