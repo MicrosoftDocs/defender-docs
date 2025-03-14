@@ -30,6 +30,16 @@ Want to experience Microsoft Defender for Endpoint?
 
 This article lists hardware and software requirements for Microsoft Defender for Endpoint on Linux.
 
+## License requirements
+
+To onboard servers to Defender for Endpoint, server licenses are required. You can choose from the following options:
+
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender for Endpoint for servers
+- [Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
+
+- 
+
 ## Software requirements
 
 - Linux server endpoints should be able to access the [Microsoft Defender portal](https://security.microsoft.com). If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
