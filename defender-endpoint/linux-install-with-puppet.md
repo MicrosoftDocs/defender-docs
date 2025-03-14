@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/08/2025
+ms.date: 03/14/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
@@ -306,17 +306,17 @@ org_id                                  : "[your organization identifier]"
 
 If you encounter issues during installation, try these self-troubleshooting steps:
 
-1. Refer to [Log installation issues](linux-resources.md#log-installation-issues) for more information on how to find the automatically generated log that is created by the installer when an error occurs.
+1. See [Log installation issues](linux-resources.md#log-installation-issues) for more information on how to find the automatically generated log that is created by the installer when an error occurs.
 
-2. Refer to [Installation issues](/defender-endpoint/linux-support-install) for more information on commonly occurring installation issues
+2. see [Installation issues](/defender-endpoint/linux-support-install) for more information on commonly occurring installation issues
 
-3. If health of the device is false, refer to [MDE agent health issues](/defender-endpoint/health-status)
+3. If health of the device is false, see [MDE agent health issues](/defender-endpoint/health-status)
 
-4. For product performance issues, refer to [Troubleshoot performance issues](/defender-endpoint/linux-support-perf), [performance tuning](/defender-endpoint/linux-support-perf?branch=main)
+4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf), [performance tuning](/defender-endpoint/linux-support-perf?branch=main)
 
-5. For proxy and connectivity issues, refer to [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity)
+5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity)
 
-To get support from Microsoft, raise a support ticket and provide log files by using the [client analyzer](/defender-endpoint/overview-client-analyzer)
+To get support from Microsoft, raise a support ticket and provide log files by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
 ## How to configure policies for Microsoft Defender on Linux
 
