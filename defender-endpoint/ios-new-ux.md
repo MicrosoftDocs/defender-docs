@@ -20,7 +20,7 @@ search.appverid: met150
 
 # User Experiences in Microsoft Defender for Endpoint on iOS
 
-As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming enhancements to the user interface and overall experience of our **Microsoft Defender for Endpoint (MDE)** mobile app.
+As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming enhancements to the user interface and overall experience of our **Microsoft Defender for Endpoint** mobile app.
 
 These updates are designed to improve usability, streamline navigation, and ensure that app meets the evolving needs of our users.
 
