@@ -279,6 +279,8 @@
                 href: linux-install-with-saltack.md
               - name: Manual deployment
                 href: linux-install-manually.md
+              - name: Direct onboarding with Defender for Cloud
+                href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint
               - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
                 href: mde-linux-arm.md
               - name: Deployment guidance for Defender for Endpoint on Linux for SAP
