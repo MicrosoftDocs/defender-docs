@@ -63,7 +63,7 @@ We updated all the subordinating screens associated with the **Device Protection
 
 ### Recommendation Cards for Alerts
 
-The structure of the dashboard is updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards are implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, few of the examples are as shown below -
+The structure of the dashboard is updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards are implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard. Here are a few examples:
 
 1. **Web Protection**
 
