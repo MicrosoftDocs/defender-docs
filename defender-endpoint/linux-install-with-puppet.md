@@ -308,9 +308,9 @@ If you encounter issues during installation, try these self-troubleshooting step
 
 1. See [Log installation issues](linux-resources.md#log-installation-issues) for more information on how to find the automatically generated log that is created by the installer when an error occurs.
 
-2. see [Installation issues](/defender-endpoint/linux-support-install) for more information on commonly occurring installation issues
+2. see [Installation issues](/defender-endpoint/linux-support-install) for more information on commonly occurring installation issues.
 
-3. If health of the device is false, see [MDE agent health issues](/defender-endpoint/health-status)
+3. If health of the device is false, see [Defender for Endpoing agent health issues](/defender-endpoint/health-status).
 
 4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf), [performance tuning](/defender-endpoint/linux-support-perf?branch=main)
 
