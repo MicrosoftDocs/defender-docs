@@ -32,20 +32,20 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 **The main changes involved are**:
 
-1. Main Dashboard changes
-2. List the features inside one Feature Card
-3. Detailed Feature Experience
-4. Recommendation Cards for Alerts
+- Main dashboard changes
+- List the features inside one feature card
+- Detailed features experience
+- Recommendation cards for alerts
 
 ### Main Dashboard changes
 
-This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application. Left screen represents the earlier experience of the dashboard screen, while right screen is going to be the new experience.
+This is the main dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application. The screen on the left side represents the earlier experience, and the right screen depicts the new experience.
 
 :::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update." lightbox="media/mde-ios-main-dash-new.png":::
 
-### List the features inside one Feature Card
+### List the features inside one feature card
 
-We list the feature Web Protection, Device Health, and Jail Break under one feature Card "Device Protection," which earlier had a new card on Dashboard screen for each functionality. Experience is only going to be change for device protection, For rest feature card it's going to be the same as earlier.
+One feature card called **Device Protection** lists Web Protection, Device Health, and Jail Break. Previously, the dashboard had one card for each set of capabilities. In the new experience, only the Device Protection card changes.
 
 :::image type="content" source="media/mde-ios-list-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Feature Card." lightbox="media/mde-ios-list-new.png":::
 
@@ -53,13 +53,13 @@ We list the feature Web Protection, Device Health, and Jail Break under one feat
 
 We updated all the subordinating screens associated with the **Device Protection** feature
 
-**1. Web Protection**
+1. **Web Protection**
 
-:::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the MDE iOS app." lightbox="media/mde-ios-web-protection-new.png":::
+   :::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the Defender for Endpoint iOS app." lightbox="media/mde-ios-web-protection-new.png":::
 
-**2. Device Health**
+2. **Device Health**
 
-:::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app." lightbox="media/mde-device-health-new.png":::
+   :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app." lightbox="media/mde-device-health-new.png":::
 
 ### Recommendation Cards for Alerts
 
