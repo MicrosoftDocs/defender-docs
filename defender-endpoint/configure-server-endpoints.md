@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 02/04/2025
+ms.date: 03/14/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -45,7 +45,7 @@ You need to complete the following general steps to successfully onboard servers
 > [!NOTE]
 > Windows Hyper-V Server editions aren't supported.
 
-**Integration with Microsoft Defender for Servers**:
+### Integration with Microsoft Defender for Servers
 
 Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers. You can onboard servers automatically, have servers monitored by Microsoft Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Microsoft Defender for Cloud customer. For more information please go to [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
 
@@ -58,13 +58,13 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 > - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
 > - Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
 
-**Windows Server 2016 and Windows Server 2012 R2**:
+### Windows Server 2016 and Windows Server 2012 R2**
 
 - Download installation and onboarding packages
 - Apply the installation package
 - Follow the onboarding steps for the corresponding tool
 
-**Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, Windows Server 2022, and Windows 2025**:
+### Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, Windows Server 2022, and Windows 2025**
 
 - Download the onboarding package
 - Follow the onboarding steps for the corresponding tool
@@ -129,7 +129,7 @@ You need to download both the **installation** and **onboarding** packages from 
 :::image type="content" alt-text="Image of onboarding dashboard" source="media/install-agent-onboard.png" lightbox="media/install-agent-onboard.png":::
 
 > [!NOTE]
-> On Windows Server 2016 and Windows Server 2012 R2, Microsoft Defender Antivirus must be installed as a feature (see [Switch to MDE](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
+> On Windows Server 2016 and Windows Server 2012 R2, Microsoft Defender Antivirus must be installed as a feature (see [Switch to Defender for Endpoint](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
 > 
 > If you're running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
@@ -258,9 +258,7 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 #### Known issues and limitations in the new, unified solution package for Windows Server 2016 and Windows Server 2012 R2
 
-> [!IMPORTANT]
->
-> Always download the latest installer package from the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) before performing a new installation and ensure prerequisites have been met. After installation, ensure to regularly update using component updates described in the section [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016-and-windows-server-2012-r2).
+- Always download the latest installer package from the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) before performing a new installation and ensure prerequisites are met. After installation, ensure to regularly update using component updates described in the section [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016-and-windows-server-2012-r2).
 
 - An operating system update can introduce an installation issue on machines with slower disks due to a time out with service installation. Installation fails with the message "Couldn't find c:\program files\windows defender\mpasdesc.dll, - 310 WinDefend". Use the latest installation package, and the latest [install.ps1](https://github.com/microsoft/mdefordownlevelserver) script to help clear the failed installation if necessary.
 
