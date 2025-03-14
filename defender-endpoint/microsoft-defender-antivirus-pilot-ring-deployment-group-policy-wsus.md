@@ -27,6 +27,7 @@ ms.date: 07/21/2023
 
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender Antivirus
 
 **Platforms**
 
