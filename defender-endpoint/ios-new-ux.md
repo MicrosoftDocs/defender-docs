@@ -55,11 +55,11 @@ We updated all the subordinating screens associated with the **Device Protection
 
 1. **Web Protection**
 
-   :::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the Defender for Endpoint iOS app." lightbox="media/mde-ios-web-protection-new.png":::
+   :::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the Defender for Endpoint on iOS app." lightbox="media/mde-ios-web-protection-new.png":::
 
 2. **Device Health**
 
-   :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app." lightbox="media/mde-device-health-new.png":::
+   :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the Defender for Endpoint on iOS app." lightbox="media/mde-device-health-new.png":::
 
 ### Recommendation Cards for Alerts
 
@@ -67,7 +67,7 @@ The structure of the dashboard is updated to include a recommendation card that 
 
 1. **Web Protection**
 
-    :::image type="content" source="media/mde-ios-web-protection-rec-card.png" alt-text="Screenshot that shows the web protection  recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-web-protection-rec-card.png":::
+    :::image type="content" source="media/mde-ios-web-protection-rec-card.png" alt-text="Screenshot that shows the web protection  recommendation card feature on the Defender for Endpoint on iOS app." lightbox="media/mde-ios-web-protection-rec-card.png":::
 
 2. **Device Health (iOS Update)**
 
