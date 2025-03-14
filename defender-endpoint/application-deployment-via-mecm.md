@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.topic: conceptual
-ms.date: 06/27/2022
+ms.date: 03/14/2025
 ---
 
 # Migrating servers from Microsoft Monitoring Agent to the unified solution
@@ -27,17 +27,17 @@ This article guides you in migrating servers running Windows Server 2016 or Wind
 
 ## Prerequisites
 
-- Microsoft Endpoint Configuration Manager (MECM) higher than 2207.
+- Microsoft Configuration Manager higher than 2207.
 - Down-level OS devices in your environment onboarded with Microsoft Monitoring Agent. To confirm, verify that `MsSenseS.exe` is running in Task Manager.
 - Presence of the MMA agent. You can verify it by checking if the correct Workspace ID is present in the Control Panel> Microsoft Monitoring Agent.
 - Active Microsoft Defender portal with devices onboarded.
-- A **Device Collection** containing down-level servers such as Windows Server 2012 R2 or Windows Server 2016 using MMA agent is set up in your MECM instance.
+- A **Device Collection** containing down-level servers such as Windows Server 2012 R2 or Windows Server 2016 using MMA agent is set up in your Configuration Manager instance.
 
 For more information on installing the listed prerequisites, see [related articles](#related-articles) section.
 
 ## Gather required files
 
-Copy the unified solution package, onboarding script and migration script to the same content source you deploy other apps with MECM.
+Copy the unified solution package, onboarding script and migration script to the same content source you deploy other apps with Configuration Manager.
 
 1. Download Onboarding Script and the unified solution from [Microsoft Defender portal settings page](https://sip.security.microsoft.com/preferences2/onboarding).
 
@@ -48,13 +48,13 @@ Copy the unified solution package, onboarding script and migration script to the
 
 2. Download the migration script from the document: [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](server-migration.md). This script can also be found on GitHub: [GitHub - microsoft/mdefordownlevelserver](https://github.com/microsoft/mdefordownlevelserver).
 
-3. Save all three files in a shared folder used by MECM as a Software Source.
+3. Save all three files in a shared folder used by Configuration Manager as a Software Source.
 
-   :::image type="content" source="media/ua-migration.png" alt-text="Screenshot of saving the shared folder by MECM.":::
+   :::image type="content" source="media/ua-migration.png" alt-text="Screenshot of saving the shared folder by Configuration Manager.":::
 
 ## Create the package as an application
 
-1. In the MECM console, go to **Software Library** > **Applications** > **Create Application**.
+1. In the Configuration Manager console, go to **Software Library** > **Applications** > **Create Application**.
 
 2. Select **Manually specify the application information**.
    :::image type="content" source="media/manual-application-information.png" alt-text="Screenshot of manually specifying the application information selection." lightbox="media/manual-application-information.png":::
@@ -117,7 +117,7 @@ Copy the unified solution package, onboarding script and migration script to the
 
    :::image type="content" source="media/deploy-application.png" alt-text="Screenshot that shows deployment of created application." lightbox="media/deploy-application.png":::
 
-17. Verify the status of the migration at **MECM** > **Monitoring** > **Deployments**.
+17. Verify the status of the migration in Configuration Manager by going to **Monitoring** > **Deployments**.
 
    :::image type="content" source="media/deployment-status.png" alt-text="Screenshot that shows deployment status check." lightbox="media/deployment-status.png":::
 
