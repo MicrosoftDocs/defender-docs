@@ -87,7 +87,7 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
     You can also export the alert to an Excel file. To do this, select **Export.**
 
     > [!NOTE]
-    > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft Defender XDR**. Each link will bring you to the relevant portal, and provide information about the alert there.
+    > Alert export option is limited to Microsoft Defender for Identity Alerts with the "aa" prefix, for more information refer to [XDR Alert Sources](https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts?tabs=settings#alert-sources).
 
 ## Tuning alerts
 
