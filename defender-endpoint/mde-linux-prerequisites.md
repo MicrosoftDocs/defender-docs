@@ -196,3 +196,22 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
 To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+
+## Next steps
+
+- [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
+- [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
+- [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
+- [Run the client analyzer on Linux](run-analyzer-linux.md)
+
+## See also
+
+- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
+- [Linux Resources](linux-resources.md)
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
+- [Investigate agent health issues](health-status.md)
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
+
+ > [!TIP]
+> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
