@@ -42,7 +42,7 @@ For more detailed information about licensing requirements for Microsoft Defende
 
 For detailed licensing information, see [Product Terms: Microsoft Defender for Endpoint]( https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS) and work with your account team to learn more about the terms and conditions.
 
-## System Requirements
+## System requirements
 
 - **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
 - **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
