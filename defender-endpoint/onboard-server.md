@@ -17,7 +17,7 @@ search.appverid: met150
 ms.date: 03/14/2025
 ---
 
-# Onboard servers to Microsoft Defender for Endpoint
+# Onboard servers through Microsoft Defender for Endpoint's device onboarding experience
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
