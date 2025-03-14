@@ -1,5 +1,5 @@
 ---
-title: Requirements for Microsoft Defender for Endpoint on Linux
+title: Prerequisites for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes the requirements needed to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
@@ -15,13 +15,13 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 03/14/2025
 ---
 
-# Requirements for Microsoft Defender for Endpoint on Linux
+# Prerequisites for Microsoft Defender for Endpoint on Linux
 
 > [!TIP] 
-> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
+> Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -32,28 +32,25 @@ This article lists hardware and software requirements for Microsoft Defender for
 
 ## Software requirements
 
-- Linux server endpoints should be able to access the Microsoft Defender portal. Configure proxy if necessary.
+- Linux server endpoints should be able to access the [Microsoft Defender portal](https://security.microsoft.com). If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
 - Linux server endpoints should have systemd (system manager) installed.
-- Administrative privileges on the Linux endpoint are required for installation.
+- Administrative privileges on the Linux server endpoint are required for installation.
 
 > [!NOTE] 
-> Linux distribution using system manager supports both SystemV and Upstart.
-> Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
+> Linux distributions using system manager support both SystemV and Upstart.
+> The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
 ## System Requirements
 
-1. **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
-
-2. **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
-
-3. **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
+- **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
+- **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
+- **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
 
 > [!NOTE]
-> Performance tuning might be needed based on workloads.
-> For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+> Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
 
-## List of Supported Linux distributions
+## Supported Linux distributions
 
 The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
 
@@ -88,16 +85,14 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Amazon Linux 2 Arm64 
 - Amazon Linux 2023 Arm64 
 
-> [!IMPORTANT]
-> Support for Microsoft Defender for Endpoint on Linux for Arm64-based Linux devices is now in preview. 
-> For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
+Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/defender-endpoint/mde-linux-arm) is now in preview. 
 
 > [!NOTE]
 > The workstation and desktop versions of these distributions are unsupported
-> Distributions and versions that aren't explicitly listed are unsupported.
+> Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions).
 > After a new package version is released, support for the previous two versions is reduced to technical support only.
 > Rocky and Alma distributions aren't currently supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
-> The minimal requirement for the kernel version to be 3.10.0-327 or later.
+> The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
 > Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported as It can lead to unpredictable results, including hanging the operating system.
