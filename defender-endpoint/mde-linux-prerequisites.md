@@ -42,6 +42,14 @@ For more detailed information about licensing requirements for Microsoft Defende
 
 For detailed licensing information, see [Product Terms: Microsoft Defender for Endpoint]( https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS) and work with your account team to learn more about the terms and conditions.
 
+## System Requirements
+
+- **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
+- **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
+- **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
+
+> [!NOTE]
+> Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
 
 ## Software requirements
 
@@ -53,15 +61,6 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 > Linux distributions using system manager support both SystemV and Upstart.
 > The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
-
-## System Requirements
-
-- **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
-- **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
-- **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
-
-> [!NOTE]
-> Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
 
 ## Supported Linux distributions
 
@@ -112,30 +111,58 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 > If there are any other applications on the system that use fanotify in blocking mode, applications are listed in the conflicting_applications field of the mdatp health command output. 
 > The Linux FAPolicyD feature uses fanotify in blocking mode, and is therefore unsupported when running Defender for Endpoint in active mode. You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to passive mode. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus). 
 
-## List of supported filesystems for RTP, Quick, Full, and Custom Scan. 
+## Supported filesystems for real-time protection and quick, full, and custom scans 
 
-|RTP, Quick, Full Scan|Custom Scan|
+|Real-time protection and quick/full scans|Custom scans|
 |---|---|
-|btrfs|All filesystems supported for RTP, Quick, Full Scan|
-|ecryptfs|Efs|
-|ext2|S3fs|
-|ext3|Blobfuse|
-|ext4|Lustr|
-|fuse|glustrefs|
-|fuseblk|Afs|
-|jfs|sshfs|
-|nfs (v3 only)|cifs|
-|overlay|smb|
-|ramfs|gcsfuse|
-|reiserfs|sysfs|
-|tmpfs|
-|udf|
-|vfat|
-|xfs|
+|`btrfs`|All filesystems are supported for real-time protection and quick/full scans|
+|`ecryptfs`|`Efs`|
+|`ext2`|`S3fs`|
+|`ext3`|`Blobfuse`|
+|`ext4`|`Lustr`|
+|`fuse`|`glustrefs`|
+|`fuseblk`|`Afs`|
+|`jfs`|`sshfs`|
+|`nfs` (v3 only)|`cifs`|
+|`overlay`|`smb`|
+|`ramfs`|`gcsfuse`|
+|`reiserfs`|`sysfs`|
+|`tmpfs`|
+|`udf`|
+|`vfat`|
+|`xfs`|
 
 > [!NOTE]
-> NFS v3 mount points to be scanned thoroughly and are required to set the no_root_squash export option on these mount points
+> NFS v3 mount points to be scanned thoroughly and are required to set the `no_root_squash` export option on these mount points.
 > Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
+
+## Network connections
+
+- Verify that your devices can connect to Microsoft Defender for Endpoint cloud services.
+- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
+- Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
+   1. Transparent proxy
+   2. Manual static proxy configuration 
+- Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
+
+> [!NOTE] 
+> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
+
+> [!WARNING]
+> PAC, WPAD, and authenticated proxies are not supported. 
+> Use only static or transparent proxies. 
+> SSL inspection and intercepting proxies are also not supported for security reasons.
+> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
+> Adding your interception certificate to the global store will not enable interception.
+
+For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+
+## External package dependency
+
+For information on external package dependencies, see the following articles:
+
+- [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 
 ## Installation instructions 
 
@@ -163,30 +190,3 @@ If you experience any installation failures, see [Troubleshooting installation f
 > If you want to control the UID and GID, create a mdatp user before installation using the /usr/sbin/nologin shell option.
 > Here's an example: mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin.
 
-## Network connections
-
-- Verify that your devices can connect to Microsoft Defender for Endpoint cloud services.
-- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
-- Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
-    1. Transparent proxy
-    2. Manual static proxy configuration 
-- Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
-
-> [!NOTE] 
-> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
-
-> [!WARNING]
-> PAC, WPAD, and authenticated proxies are not supported. 
-> Use only static or transparent proxies. 
-> SSL inspection and intercepting proxies are also not supported for security reasons.
-> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
-> Adding your interception certificate to the global store will not enable interception.
-
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
-
-## External package dependency
-
-For information on external package dependencies, see the following articles:
-
-- [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux)
-- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
