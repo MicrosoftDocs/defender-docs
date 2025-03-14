@@ -166,30 +166,6 @@ For information on external package dependencies, see the following articles:
 
 ## Installation instructions 
 
-There are several methods and deployment tools that you can use to install and configure Microsoft Defender for Endpoint on Linux. Before you begin, make sure the [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements) are met.
-
-You can use one of the following methods to deploy Microsoft Defender for Endpoint on Linux: 
-
-1. Command-line tool, see [Manual deployment](/defender-endpoint/linux-install-manually)
-
-2. Puppet, see [Deploy using Puppet configuration management too](/defender-endpoint/linux-install-with-puppet)
-
-3. Ansible, see [Deploy using Ansible configuration management tool](/defender-endpoint/linux-install-with-ansible) 
-
-4. Chef, see [Deploy using Chef configuration management tool](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef) 
-
-5. SaltStack, see [Deploy using SaltStack configuration management tool](/defender-endpoint/linux-install-with-saltack)
-
-6. Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
-
-> [!IMPORTANT]
-> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
-> Microsoft Defender for Endpoint on Linux creates a mdatp user with random UID and GID.
-> If you want to control the UID and GID, create a mdatp user before installation using the /usr/sbin/nologin shell option.
-> Here's an example: mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin.
-
-## Installation instructions 
-
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux:
 
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
