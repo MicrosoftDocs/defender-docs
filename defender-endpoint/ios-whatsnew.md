@@ -29,7 +29,7 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
-#### Improving Usability: Key Updates to the MDE Mobile App Interface on iOS
+#### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
 **March 2025**
 
@@ -48,7 +48,7 @@ We are pleased to introduce the **Device Protection** feature card for our enter
 
 For more information, see [User Experience in Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-new-ux).
 
-#### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
+#### Microsoft Defender for Endpoint: Open Wi-Fi Detection Update
 
 **February 2025:**
 
@@ -61,7 +61,7 @@ As part of our Microsoft Defender application, we offer open Wi-Fi detection wit
 
 Based on our research insights and inputs from Microsoft and other SOC teams, we're implementing a caching behavior to ensure the value of the alerts remains and also doesn't cause fatigue to SOC teams due to sheer volume.
 
-**New behavior:** 
+**New behavior:**
 
 - Every time the end user connects to an open Wi-Fi network, an alert is raised.
 - If a user reconnects to the same open wi-fi in the next seven days, another alert won't be raised.
