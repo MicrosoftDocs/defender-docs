@@ -37,7 +37,7 @@ For more information on installing the listed prerequisites, see [related articl
 
 ## Gather required files
 
-Copy the unified solution package, onboarding script and migration script to the same content source you deploy other apps with Configuration Manager.
+Copy the unified solution package, onboarding script, and migration script to the same content source you deploy other apps with Configuration Manager.
 
 1. Download Onboarding Script and the unified solution from [Microsoft Defender portal settings page](https://sip.security.microsoft.com/preferences2/onboarding).
 
@@ -61,7 +61,7 @@ Copy the unified solution package, onboarding script and migration script to the
 
 3. Select **Next** on the Software Center screen of the wizard.
 
-4. On the Deployment Types, click **Add**.
+4. On the Deployment Types, select **Add**.
 
 5. Select **Manually to specify the deployment type information** and select **Next**.
 
@@ -73,7 +73,7 @@ Copy the unified solution package, onboarding script and migration script to the
 
    :::image type="content" source="media/deployment-type-wizard.png" alt-text="Screenshot that shows UNC path copy.":::
 
-8. Set the installation program by using the follow command:
+8. Set the installation program by using the following command:
 
      ```powershell
       Powershell.exe -ExecutionPolicy ByPass -File install.ps1 -RemoveMMA <workspace ID> -OnboardingScript .\WindowsDefenderATPOnboardingScript.cmd
@@ -90,7 +90,7 @@ Copy the unified solution package, onboarding script and migration script to the
    :::image type="content" source="media/detection-wizard.png" alt-text="Screenshot that shows detection type wizard":::
 
    > [!TIP]
-   > The registry key value was obtained by running the Powershell command shown below on a device that has the unified solution installed. Other creative methods of detection can also be used. The goal is to identify whether the unified solution has already been installed on a specific device. You can leave the Value and Data Type fields as blank.
+   > The registry key value was obtained by running the following PowerShell command on a device that has the unified solution installed. Other creative methods of detection can also be used. The goal is to identify whether the unified solution has already been installed on a specific device. You can leave the Value and Data Type fields as blank.
 
    ```powershell
    get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
