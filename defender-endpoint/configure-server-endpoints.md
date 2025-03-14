@@ -274,8 +274,6 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 ## Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019, and Windows Server 2022, and Windows Server 2025
 
-Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
-
 ### Download package
 
 1. In Microsoft Defender XDR, go to **Settings** > **Endpoints** > **Device Management** > **Onboarding**.
