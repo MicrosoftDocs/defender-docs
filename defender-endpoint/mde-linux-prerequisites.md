@@ -90,8 +90,8 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 > [!NOTE]
 > The workstation and desktop versions of these distributions are unsupported
 > Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions).
-> After a new package version is released, support for the previous two versions is reduced to technical support only.
-> Rocky and Alma distributions aren't currently supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
+> After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that which are listed in this section are provided for technical upgrade support only.
+> Currently, Rocky and Alma distributions aren't supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
 > The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
