@@ -47,7 +47,7 @@ Past data, such as alerts, vulnerablities, and the device timeline, for an offbo
 
 ## Offboard Windows client devices
 
-In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard** and then select an operating system to start the offboarding process.
+In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**, and then select an operating system to start the offboarding process.
 
 You can also use other methods, such as:
 
@@ -57,7 +57,7 @@ You can also use other methods, such as:
 
 ## Offboard servers
 
-In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard** and then select an operating system to start the offboarding process.
+In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**, and then select an operating system to start the offboarding process.
 
 You can also use other methods, such as:
 
