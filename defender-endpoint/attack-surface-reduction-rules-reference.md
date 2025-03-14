@@ -138,7 +138,6 @@ The following table lists the supported operating systems for rules that are cur
 > [!NOTE]
 > - For Windows Server 2012 R2 and Windows Server 2016, use the [modern, unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
 > - For Windows client devices, "version 1809 or later" and "version 1903 (build 18362)" apply to Windows 10 only.
-> - Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 
 ## ASR rules supported configuration management systems
 
