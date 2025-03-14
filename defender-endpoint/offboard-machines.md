@@ -25,8 +25,8 @@ ms.date: 03/14/2025
 
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - Microsoft Defender for Endpoint for servers
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
-- [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers)
+- [Microsoft Defender for Servers Plan 1 and Plan 2](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- [Microsoft Defender for Business](/defender-business/get-defender-business)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
