@@ -76,7 +76,7 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
    
 3. Remove policies for [Tamper Protection](/defender-endpoint/tamperprotection-macos). See [Set preferences on Mac: Tamper protection](/defender-endpoint/mac-preferences#tamper-protection) or use manual configuration.
 
-4. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard** > **Select Operating System to start the offboarding Process**. 
+4. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**, and then select an operating system to start the offboarding process. 
 
    Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
 
