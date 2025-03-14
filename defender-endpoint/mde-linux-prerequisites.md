@@ -95,10 +95,9 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 > The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
-> Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported as It can lead to unpredictable results, including hanging the operating system.
-> If any other applications on the system use fanotify in blocking mode, the conflicting_applications field of the mdatp health command output lists these applications.
-> The Linux FAPolicyD feature uses fanotify in blocking mode, and is unsupported when running Defender for Endpoint in active mode
-> After configuring the Real Time Protection to passive mode, you can safely use Defender for Endpoint on Linux EDR. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus). 
+> Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported. It can lead to unpredictable results, including hanging the operating system.
+> If there are any other applications on the system that use fanotify in blocking mode, applications are listed in the conflicting_applications field of the mdatp health command output. 
+> The Linux FAPolicyD feature uses fanotify in blocking mode, and is therefore unsupported when running Defender for Endpoint in active mode. You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to passive mode. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus). 
 
 ## List of supported filesystems for RTP, Quick, Full, and Custom Scan. 
 
