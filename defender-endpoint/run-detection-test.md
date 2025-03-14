@@ -26,7 +26,7 @@ ms.subservice: onboard
 - Windows Server 2016
 - Windows Server 2019
 - Windows Server 2022
-- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
+- Windows Server 2025
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
