@@ -27,7 +27,7 @@ ms.subservice: onboard
 - Virtual desktop infrastructure (VDI) devices
 - Windows 11
 - Windows 10
-- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
