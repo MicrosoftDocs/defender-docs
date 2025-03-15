@@ -233,12 +233,12 @@ Once you have session policies configured, apply them to your cloud apps to prov
 
 In the illustration:
 
-- Access to sanctioned cloud apps from users and devices in your organization is routed through Defender for Cloud Apps.
+- Access to sanctioned cloud apps from users and devices in your organization is routed through Defender for Cloud Apps where session policies can be applied to specific apps.
 - Cloud apps that you have not sanctioned or explicitly unsanctioned are not affected.
 
 Session policies allow you to apply parameters to how cloud apps are used by your organization. For example, if your organization is using Salesforce, you can configure a session policy that allows only managed devices to access your organization's data at Salesforce. A simpler example could be configuring a policy to monitor traffic from unmanaged devices so you can analyze the risk of this traffic before applying stricter policies.
 
-For more information, see [Conditional access app control in Microsoft Defender for Cloud Apps](/defender-cloud-apps/proxy-intro-aad).
+For more information, see [Create Microsoft Defender for Cloud Apps session policies](/defender-cloud-apps/session-policy-aad).
 
 <a name="step-8"></a>
 
