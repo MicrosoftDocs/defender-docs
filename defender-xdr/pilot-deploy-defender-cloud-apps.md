@@ -229,7 +229,7 @@ For sample policies, see [Recommended Microsoft Defender for Cloud Apps policies
 
 Once you have session policies configured, apply them to your cloud apps to provide controlled access to those apps.
 
-:::image type="content" source="media/eval-defender-xdr/m365-defender-office-architecture.svg" alt-text="A diagram that shows how cloud apps are accessed via session control policies with Defender for Cloud Apps." lightbox="media/eval-defender-xdr/m365-defender-office-architecture.svg":::
+:::image type="content" source="media/eval-defender-xdr/m365-defender-mcas-architecture-d.svg" alt-text="A diagram that shows how cloud apps are accessed via session control policies with Defender for Cloud Apps." lightbox="media/eval-defender-xdr/m365-defender-office-architecture.svg":::
 
 In the illustration:
 
