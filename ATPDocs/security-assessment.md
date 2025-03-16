@@ -38,8 +38,10 @@ Defender for Identity security posture assessments have five key categories. Eac
 ## Access Defender for Identity security posture assessments
 
 > [!NOTE]
-You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score.
-While *certificate template* assessments are available to all customers with AD CS installed in their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](deploy/active-directory-federation-services.md).
+> You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score. 
+> Additionally, while *certificate template* assessments are available to all customers with AD CS installed in their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server.   
+> Hybrid security recommendations will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.  
+> For more information, see [Configuring sensors for AD FS, AD CS and Entra Connect.](https://aka.ms/DeployMdiSensorOnYourIdentityInfrastructure)
 
 **To access identity security posture assessments**:
 
@@ -47,15 +49,16 @@ While *certificate template* assessments are available to all customers with AD 
 1. Select the **Recommended actions** tab. You can search for a particular recommended action, or filter the results (for example, by the category **Identity**).
 
     [![Recommended actions.](media/recommended-actions.png)](media/recommended-actions.png#lightbox)
-
+   
 1. For more details, select the assessment.
 
     [![Select the assessment.](media/select-assessment.png)](media/select-assessment.png#lightbox)
-
+   
 [!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
 
 
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)
+
