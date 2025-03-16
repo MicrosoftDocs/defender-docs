@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 12/03/2024
+ms.date: 03/16/2025
 
 ---
 
@@ -24,7 +24,7 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
-## February 2025
+## March 2025
 
 ### New predefined classifications
 
@@ -39,7 +39,6 @@ The following predefined **Identity** classification rules were added to the cri
 | Senior Executive (Information)     | This rule applies to identities classified as senior executives in the field of Information. |
 | Senior Executive (Execution)       | This rule applies to identities classified as senior executives in the field of Execution. |
 | Senior Executive (Human Resources) | This rule applies to identities classified as senior executives in the field of Resources. |
-| Senior Executive (Unclassified)    | This rule applies to identities classified as senior executives in an unclassified field. |
 
 For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
