@@ -108,7 +108,6 @@ Current asset types are:
 | Senior Executive (Information)     | Identity | Very High | Identities with this classification belong to senior executives in the field of Information. |
 | Senior Executive (Execution)       | Identity | Very High | Identities with this classification belong to senior executives in the field of Execution. |
 | Senior Executive (Human Resources) | Identity | Very High | Identities with this classification belong to senior executives in the field of Human Resources. |
-| Senior Executive (Unclassified)    | Identity | Very High | Identities with this classification belong to senior executives in an unclassified field. |
 
 ##### Cloud resource
 
