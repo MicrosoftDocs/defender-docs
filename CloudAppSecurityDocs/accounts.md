@@ -10,6 +10,15 @@ ms.topic: how-to
 
 Microsoft Defender for Cloud Apps gives you visibility into the accounts from your connected apps. After you connect Defender for Cloud Apps to an app using the App connector, Defender for Cloud Apps reads account information associated with connected apps. The Accounts page enables you to investigate those accounts, permissions, the groups they're members of, their aliases, and the apps they're using. Additionally, when Defender for Cloud Apps detects a new account that wasn't previously seen in one of the connected apps - for example, in activities or file sharing - the account is added to the accounts list of that app. This enables you to have visibility into the activity of external users interacting with your cloud apps.
 
+## Identity Inventory (Preview)
+
+> [!NOTE]
+> The Identities page is in the process of merging into the unified **Identity Inventory (Preview)**.  
+> The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention.  
+> The functionality of the Identities page, as presented in below, will be provided in the new Identity Inventory under the "**Cloud application accounts**" tab, offering the same features as it does today. For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory)
+> 
+## Identities
+
 Admins can search for a specific user's metadata or user's activity. The **Identities** page provides you with comprehensive details about the entities that are pulled from connected cloud applications. It also provides the user's activity history and security alerts related to the user.
 
 The **Identities** page can be [filtered](#identities-filters) to enable you to find specific accounts and to deep dive into different types of accounts, for example, you can filter for all External accounts that haven't been accessed since last year.
@@ -25,7 +34,7 @@ The **Identities** page enables you to easily investigate your accounts, includi
 * You can see which apps are accessed by each account and which apps are deleted for specific accounts
 
     ![accounts screen.](media/accounts-page.png)
-
+  
 ## Identities filters
 
 Following is a list of the account filters that can be applied. Most filters support multiple values as well as NOT, in order to provide you with a powerful tool for policy creation.  
@@ -33,7 +42,7 @@ Following is a list of the account filters that can be applied. Most filters sup
 * **Affiliation**: The affiliation is either **Internal** or **External**. To set which users and accounts are internal, under **Settings** make sure to set the **IP address range** of your internal organization. If the account has admin permissions the icon in the Accounts table appears with the addition of the red tie:
 
     ![accounts admin icon.](media/accounts-admin-icon.png)
-
+  
 * **App**: You can filter for any API connected app being used by accounts in your organization.
 * **Domain**: This enables you to filter for users in specific domains.
 * **Groups**: Enables you to filter for members of user groups in Defender for Cloud Apps - both built-in user groups and imported user groups.
