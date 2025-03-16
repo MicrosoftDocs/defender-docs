@@ -18,6 +18,9 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
 ms.date: 02/10/2025
 ---
@@ -26,8 +29,7 @@ ms.date: 02/10/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 Custom detection rules are rules you can design and tweak using [advanced hunting](advanced-hunting-overview.md) queries. These rules let you proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
@@ -58,7 +60,7 @@ To manage required permissions, a Global Administrator can:
 - Check RBAC settings for Microsoft Defender for Endpoint in [Microsoft Defender XDR](https://security.microsoft.com/) under **Settings** \> **Permissions** > **Roles**. Select the corresponding role to assign the **manage security settings** permission.
 
 > [!NOTE]
-> A user also needs to have the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they are creating or editing before they can proceed. A user can't edit a custom detection rule that is scoped to run on all devices, if the same user does not have permissions for all devices. 
+> A user also needs to have the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they're creating or editing before they can proceed. A user can't edit a custom detection rule that is scoped to run on all devices, if the same user doesn't have permissions for all devices. 
 
 ## Create a custom detection rule
 
@@ -95,14 +97,14 @@ To create a custom detection rule, the query must return the following columns:
       - `InitiatingProcessAccountObjectId`
 
 > [!NOTE]
-> Support for additional entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
+> Support for more entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
 
 Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these common columns.
 
 There are various ways to ensure more complex queries return these columns. For example, if you prefer to aggregate and count by entity under a column such as `DeviceId`, you can still return `Timestamp` and `ReportId` by getting it from the most recent event involving each unique `DeviceId`.
 
 > [!IMPORTANT]
-> Avoid filtering custom detections using the `Timestamp` column. The data used for custom detections is pre-filtered based on the detection frequency.
+> Avoid filtering custom detections using the `Timestamp` column. The data used for custom detections is prefiltered based on the detection frequency.
 
 The sample query below counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
 
@@ -115,7 +117,7 @@ DeviceEvents
 ```
 
 > [!TIP]
-> For better query performance, set a time filter that matches your intended run frequency for the rule. Since the least frequent run is _every 24 hours_, filtering for the past day will cover all new data.
+> For better query performance, set a time filter that matches your intended run frequency for the rule. Since the least frequent run is _every 24 hours_, filtering for the past day covers all new data.
 
 ### 2. Create new rule and provide alert details
 
@@ -123,11 +125,11 @@ With the query in the query editor, select **Create detection rule** and specify
 
 - **Detection name** - Name of the detection rule; should be unique
 - **Frequency** -Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
-- **Alert title** - Title displayed with alerts triggered by the rule; should be unique.
+- **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
-- **Description** - More information about the component or activity identified by the rule.
+- **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
 
 #### Rule frequency
@@ -265,7 +267,7 @@ Only data from devices in the scope will be queried. Also, actions are taken onl
 After reviewing the rule, select **Create** to save it. The custom detection rule immediately runs. It runs again based on configured frequency to check for matches, generate alerts, and take response actions.
 
 > [!IMPORTANT]
-> Custom detections should be regularly reviewed for efficiency and effectiveness. To make sure you are creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in [Manage existing custom detection rules](#manage-existing-custom-detection-rules).
+> Custom detections should be regularly reviewed for efficiency and effectiveness. For guidance on how to optimize your queries, follow the **[Advanced hunting query best practices](advanced-hunting-best-practices.md)**. To make sure you're creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in **[Manage existing custom detection rules](#manage-existing-custom-detection-rules)**.
 >
 > You maintain control over the broadness or specificity of your custom detections so any false alerts generated by custom detections might indicate a need to modify certain parameters of the rules.
 

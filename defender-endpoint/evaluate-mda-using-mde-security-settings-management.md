@@ -12,9 +12,6 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.custom: 
-- cx-ti
-- cx-ean
 ms.subservice: edr
 search.appverid: met150
 ms.date: 02/12/2025
@@ -26,7 +23,7 @@ In Windows 10 or later, and in Windows Server 2016 or later, you can use next-ge
 
 This article outlines the configuration options available in Windows 10 and later versions, as well as in Windows Server 2016 and later versions. It provides step-by-step guidance on how to activate and test the key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender for Endpoint (EG).
 
-If you have any questions about a detection that MDAV makes, or you discover a missed detection, you can submit a file to us at our [sample submission help site](/defender-xdr/submission-guide).
+If you have any questions about a detection that MDAV makes, or you discover a missed detection, you can submit a file to us at our [sample submission help site](/unified-secops-platform/submission-guide).
 
 ## Use Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) to enable the features
 
@@ -244,4 +241,4 @@ If yo find that your settings aren't taking effect, you might have a conflict. F
 To information on how to make False Negatives (FNs) submissions, see:
 
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
-- [Submit files for analysis](/defender-xdr/submission-guide) if you have Microsoft Defender Antivirus.
+- [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.

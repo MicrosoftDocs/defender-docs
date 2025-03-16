@@ -59,7 +59,6 @@ The following table gives information about the supported Microsoft Defender for
 |[Live Response](live-response.md)       | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)      |
 
 > [!NOTE]
-> - Support for Windows Server 2025 is rolling out beginning in February 2025 and over the next several weeks.
 > - For Windows Server 2012 R2 and Windows Server 2016, use the modern, unified solution. See [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
 > - On Linux Server, network protection, web protection, and custom network indicators are currently in preview.
 > - On Linux Server and Mac, [Device response capabilities: collect investigation package ](respond-machine-alerts.md) is currently in preview. You can also use [Live Response](live-response.md).

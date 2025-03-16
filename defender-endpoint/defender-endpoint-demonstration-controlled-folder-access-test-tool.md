@@ -7,6 +7,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
+ms.reviewer: yongrhee
 audience: ITPro
 ms.collection:
 - m365-security
@@ -14,7 +15,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: asr
-ms.date: 10/21/2022
+ms.date: 03/10/2025
 ---
 
 # Controlled folder access (CFA) demonstration test tool (block script)
@@ -28,7 +29,8 @@ Controlled Folder Access helps you protect valuable data from malicious apps and
 
 ## Scenario requirements and setup
 
-- Windows 10 1709 build 16273
+- Windows 10, version 1709 (build 16273) or newer
+
 - Microsoft Defender Antivirus (active mode)
 
 ## PowerShell commands

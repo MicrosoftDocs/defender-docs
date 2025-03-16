@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: 
 search.appverid: met150
-ms.date: 01/03/2025
+ms.date: 03/04/2025
 ---
 
 # Create indicators for IPs and URLs/domains
@@ -50,6 +50,7 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 
 - Windows 11
 - Windows 10, version 1709 or later
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
@@ -61,7 +62,7 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 
 ## Before you begin
 
-It's important to understand the following prerequisites before creating indicators for IPS, URLs, or domains.
+It's important to understand the following prerequisites before creating indicators for IPs, URLs, or domains.
 
 ### Microsoft Defender Antivirus version requirements
 
@@ -87,7 +88,7 @@ For support of indicators on iOS, see [Microsoft Defender for Endpoint on iOS](i
 
 For support of indicators on Android, see [Microsoft Defender for Endpoint on Android](android-configure.md#configure-custom-indicators).
 
-### IoC indicator list limitations
+### Indicator list limitations
 
 Only external IPs can be added to the indicator list. Indicators can't be created for internal IPs. For web protection scenarios, we recommend using the built-in capabilities in Microsoft Edge. Microsoft Edge uses [Network Protection](network-protection.md) to inspect network traffic and allows blocks for TCP, HTTP, and HTTPS (TLS).
 
@@ -136,7 +137,7 @@ When using warn mode, you can configure the following controls:
 
 For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/cloud-app-security/mde-govern).
 
-## IoC IP URL and domain policy conflict handling order
+## Indicator IP URL and domain policy conflict handling order
 
 Policy conflict handling for domains/URLs/IP addresses differ from policy conflict handling for certs.
 

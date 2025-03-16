@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 02/04/2025
+ms.date: 03/05/2025
 search.appverid: met150
 ---
 
@@ -93,7 +93,7 @@ The following ASR rules DO NOT honor Microsoft Defender Antivirus exclusions:
 | [Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) |
 
 > [!NOTE]
-> For information about configuring per-rule exclusions, see the section titled **Configure ASR rules per-rule exclusions** in the topic [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md).
+> For information about configuring per-rule exclusions, see the section titled **Configure ASR rules per-rule exclusions** in the article [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md).
 
 ## ASR rules and Defender for Endpoint Indicators of Compromise (IOC)
 
@@ -138,7 +138,6 @@ The following table lists the supported operating systems for rules that are cur
 > [!NOTE]
 > - For Windows Server 2012 R2 and Windows Server 2016, use the [modern, unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
 > - For Windows client devices, "version 1809 or later" and "version 1903 (build 18362)" apply to Windows 10 only.
-> - Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 
 ## ASR rules supported configuration management systems
 
@@ -179,10 +178,10 @@ Toast notifications are generated for all rules in Block mode. Rules in any othe
 
 For rules with the "Rule State" specified:
 
-- ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices at cloud block level "High"
-- Devices that not at the high cloud block level don't generate alerts for any `ASR Rule, Rule State` combinations
-- EDR alerts are generated for ASR rules in the specified states, for devices at cloud block level "High+"
-- Toast notifications occur in block mode only and for devices at cloud block level "High"
+- ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices set at the cloud block level `High`.
+- Devices that are not set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
+- EDR alerts are generated for ASR rules in the specified states, for devices set at the cloud block level `High+`.
+- Toast notifications occur in block mode only and for devices set at the cloud block level `High`.
 
 | Rule name | Rule state | EDR alerts | Toast notifications |
 |---|---|---|---|
@@ -256,7 +255,7 @@ This rule prevents an application from writing a vulnerable signed driver to dis
 The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a driver already existing on the system from being loaded.
 
 > [!NOTE]
-> You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune) for configuring custom rules.
+> You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune-alternative-2) for configuring custom rules.
 > You can also configure this rule using [PowerShell](enable-attack-surface-reduction.md#powershell).
 > To have a driver examined, use this Web site to [Submit a driver for analysis](https://www.microsoft.com/en-us/wdsi/driversubmission).
 
@@ -436,7 +435,7 @@ Advanced hunting action type:
 - `AsrObfuscatedScriptAudited`
 - `AsrObfuscatedScriptBlocked`
 
-Dependencies: Microsoft Defender Antivirus, AntiMalware Scan Interface (AMSI)
+Dependencies: Microsoft Defender Antivirus, AntiMalware Scan Interface (AMSI), Cloud Protection
 
 ### Block JavaScript or VBScript from launching downloaded executable content
 
