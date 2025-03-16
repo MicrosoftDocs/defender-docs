@@ -1,10 +1,6 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title:       Security assessment: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
-description: This report lists any Entra Connect AD DS Connector account that is an Enterprise Administrator or Domain Administrator.
+title:       'Security assessment: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account'
+description: 'This report lists any Entra Connect AD DS Connector account that is an Enterprise Administrator or Domain Administrator.'
 author:      LiorShapiraa # GitHub alias
 ms.author:   Liorshapira # Microsoft alias
 ms.service:  ms.prod
