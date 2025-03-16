@@ -32,8 +32,7 @@ Entra Connect accounts like AD DS Connector account (also known as MSOL_) and En
 If you click on "Click to expend" you can find more details about the granted permissions. For example:  
 ![Screenshot of report.](media/remove-unsafe-permissions-sensitive-entra-connect/screenshot-2025-03-16-153210.png)
 
-1. For each exposed account, remove problematic permissions that allow unprivileged accounts to takeover critical hybrid assets. In the example below, you can see an AD DS Connector account with problematic permissions that need to be removed.   
-![Screenshot of permissions.](media/remove-unsafe-permissions-sensitive-entra-connect/image.png)
+1. For each exposed account, remove problematic permissions that allow unprivileged accounts to takeover critical hybrid assets.
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
