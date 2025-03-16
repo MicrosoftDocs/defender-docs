@@ -1,4 +1,7 @@
-items:
+- name: Replace Enterprise or Domain Admin account for Entra Connect AD DS
+    Connector account
+  href: replace-entra-connect-default-admin.md
+  displayName: MDI
 - name: Microsoft Defender for Identity Documentation
   href: index.yml
 - name: Overview
