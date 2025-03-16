@@ -172,11 +172,11 @@ items:
          displayName: Microsoft Entra Connect
        - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
          href: remove-replication-permissions-microsoft-entra-connect.md
-     - name: Identity infrastructure
-       items:
        - name: Remove unsafe permissions on sensitive Entra Connect accounts
          href: remove-unsafe-permissions-sensitive-entra-connect.md
          displayName: MDI
+     - name: Identity infrastructure
+       items:
        - name: Built-in Active Directory Guest account is enabled
          href: built-in-active-directory-guest-account-is-enabled.md
        - name: Change Domain Controller computer account old password
