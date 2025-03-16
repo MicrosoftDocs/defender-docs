@@ -8,7 +8,8 @@ ms.topic: how-to #Don't change.
 ms.date: 12/02/2024
 ms.collection:
 - usx-security
-
+- zerotrust-solution
+- msftsolution-secops
 
 #customer intent: As a security administrator, I want to deploy Microosft's unified security operations platform so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
 
@@ -83,7 +84,7 @@ When you onboard Microsoft Sentinel to the Defender portal, you unify capabiliti
 
 1. Install the **Microsoft Defender XDR** solution for Microsoft Sentinel from the **Content hub**. For more information, see [Deploy and manage out-of-the-box-content](/azure/sentinel/sentinel-solutions-deploy).
 1. Enable the **Microsoft Defender XDR** data connector to collect incidents and alerts. For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender).
-1. Onboard to Microsoft's unified SecOps platform. For more information, see [Connect Microsoft Sentinel to Microsoft Defender](/defender-xdr/microsoft-sentinel-onboard).
+1. Onboard to Microsoft's unified SecOps platform. For more information, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
 
 ## Fine-tune system configurations
 
@@ -131,7 +132,7 @@ Enable the out-of-the-box Microsoft Threat Intelligence analytics rule and verif
 
 ### Avoid duplicate incidents
 
-After you [connect Microsoft Sentinel to Microsoft Defender](/defender-xdr/microsoft-sentinel-onboard), a bi-directional sync between Microsoft Defender XDR incidents and Microsoft Sentinel is automatically established. To avoid creating duplicate incidents for the same alerts, we recommend that you turn off all Microsoft incident creation rules for Microsoft Defender XDR-integrated products, including Defender for Endpoint, Defender for Identity, Defender for Office 365, Defender for Cloud Apps, and Microsoft Entra ID Protection.
+After you [connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md), a bi-directional sync between Microsoft Defender XDR incidents and Microsoft Sentinel is automatically established. To avoid creating duplicate incidents for the same alerts, we recommend that you turn off all Microsoft incident creation rules for Microsoft Defender XDR-integrated products, including Defender for Endpoint, Defender for Identity, Defender for Office 365, Defender for Cloud Apps, and Microsoft Entra ID Protection.
 
 For more information, see [Microsoft incident creation ](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=azure-portal).
 

@@ -21,7 +21,7 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointssccm-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can use Configuration Manager to onboard endpoints to the Microsoft Defender for Endpoint service. 
 
@@ -234,7 +234,7 @@ If you use Microsoft Configuration Manager current branch, see [Create an offboa
 
 ### Offboard devices using System Center 2012 R2 Configuration Manager
 
-1. Get the offboarding package from <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
     1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \>  **Offboarding**.
     1. Select Windows 10 or Windows 11 as the operating system.
     1. In the **Deployment method** field, select **System Center Configuration Manager 2012/2012 R2/1511/1602**.

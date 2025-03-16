@@ -26,7 +26,7 @@ ms.subservice: onboard
 - Microsoft Defender for Endpoint Server
 - [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configserver-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
@@ -274,8 +274,6 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 ## Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019, and Windows Server 2022, and Windows Server 2025
 
-Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
-
 ### Download package
 
 1. In Microsoft Defender XDR, go to **Settings** > **Endpoints** > **Device Management** > **Onboarding**.
@@ -328,7 +326,7 @@ After successfully onboarding devices to the service, you'll need to configure t
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks) using the same method available for Windows 10 client devices.
+You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 using the same method available for Windows 10 client devices.
 
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)

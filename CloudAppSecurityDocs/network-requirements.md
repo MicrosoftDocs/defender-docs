@@ -34,37 +34,38 @@ To see which data center you're connecting to, do the following steps:
 
 ## Portal access
 
-To use Defender for Cloud Apps in the Microsoft Defender Portal, add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
+To use Defender for Cloud Apps in the Microsoft Defender Portal:
 
-```ini
-cdn.cloudappsecurity.com
-cdn-discovery.cloudappsecurity.com
-adaproddiscovery.azureedge.net
-*.s-microsoft.com
-*.msecnd.net
-dev.virtualearth.net
-flow.microsoft.com
-static2.sharepointonline.com
-*.blob.core.windows.net
-discoveryresources-cdn-prod.cloudappsecurity.com
-discoveryresources-cdn-gov.cloudappsecurity.com
+1. Add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
 
-```
+    ```ini
+    cdn.cloudappsecurity.com
+    cdn-discovery.cloudappsecurity.com
+    adaproddiscovery.azureedge.net
+    *.s-microsoft.com
+    *.msecnd.net
+    dev.virtualearth.net
+    flow.microsoft.com
+    static2.sharepointonline.com
+    *.blob.core.windows.net
+    discoveryresources-cdn-prod.cloudappsecurity.com
+    discoveryresources-cdn-gov.cloudappsecurity.us    
+    ```
 
-Additionally, the following items should be allowed, depending on which data center you use:
+1. Allow the following items based on your data center:
 
-|Data center|IP addresses|DNS name|
-|----|----|----|
-|US1|13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
-|US2|13.80.125.22, 20.36.222.59, 20.36.222.60, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 52.184.165.82, 20.15.114.156, 172.202.90.196|\*.us2.portal.cloudappsecurity.com|
-|US3|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
-|EU1|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
-|EU2|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
-|Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
-|GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
+  |Data center|IP addresses|DNS name|
+  |----|----|----|
+  |US1|13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
+  |US2|13.80.125.22, 20.36.222.59, 20.36.222.60, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 52.184.165.82, 20.15.114.156, 172.202.90.196|\*.us2.portal.cloudappsecurity.com|
+  |US3|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
+  |EU1|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
+  |EU2|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
+  |Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
+  |GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
 
-> [!NOTE]
-> For portal access, instead of a wildcard (\*), you can choose to open only your specific tenant URL. For example, based on the screenshot above you can open: `contoso.us.portal.cloudappsecurity.com`. To determine your tenant URL, see the earlier section [View your data center](#view-your-data-center), and look for **API URL**.
+  > [!NOTE]
+  > For portal access, instead of a wildcard (\*), you can choose to open only your specific tenant URL. For example, based on the screenshot above you can open: `contoso.us.portal.cloudappsecurity.com`. To determine your tenant URL, see the earlier section [View your data center](#view-your-data-center), and look for **API URL**.
 
 ## Access and session controls
 
@@ -81,9 +82,6 @@ For more information, see [Protect apps with Microsoft Defender for Cloud Apps C
 ### Commercial customers
 
 For commercial customers, to enable Defender for Cloud Apps reverse proxy, add **outbound port 443** for the following IP addresses and DNS names to your firewall's allowlist:
-
-
-
 
 ```ini
 *.cas.ms
@@ -108,9 +106,6 @@ Additionally, the following IP addresses, used by our reverse proxy regions, sho
 ### US Government offerings
 
 For US Government GCC High customers, to enable Defender for Cloud Apps reverse proxy, add **outbound port 443** for the following DNS names to your firewall's allowlist:
-
-
-
 
 ```ini
 *.mcas-gov.us

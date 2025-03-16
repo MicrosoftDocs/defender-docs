@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 01/10/2025
+ms.date: 03/03/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,9 +39,15 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## March 2025
+
+- **User reported messages by third-party add-ins can be sent to Microsoft for analysis**: In [user reported settings](submissions-user-reported-messages-custom-mailbox.md), admins can select **Monitor reported messages in Outlook** \> **Use a non-Microsoft add-in button**. In the **Reported message destination** section, select **Microsoft and my reporting mailbox**, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-in are routed to. Microsoft analyzea these reported messages and provides result on the **User reported** tab of **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+
+- **Create allow entries directly in the Tenant Allow/Block List**: You can now create allow entries for domains & addresses and URLs directly in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). This capability is available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet.
+
 ## January 2025
 
-- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for iOS and Android version 4.2446 or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for iOS version 4.2508 or, later and Android version 4.2446 or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 ## December 2024
 
@@ -53,20 +59,20 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## October 2024
 
-- **Tenant Allow/Block List in Microsoft 365 now supports IPv6 address**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) now supports [allowing and blocking IPv6 addresses] (tenant-allow-block-list-ip-addresses-configure.md). It's available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments.
+- **Tenant Allow/Block List in Microsoft 365 now supports IPv6 address**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) now supports [allowing and blocking IPv6 addresses](tenant-allow-block-list-ip-addresses-configure.md). It's available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments.
 
 ## September 2024
 
 - With one click, SecOps personnel can take a quarantine release action directly from Explorer (Threat Explorer) or the Email entity page (no need to go to the Quarantine page in the Defender portal). For more information, see [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md).
 - [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Mac v16.89 (24090815) or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 - We're updating the end user experience for allow and block list management of their email messages. With one click, users can block email from unwanted senders and prevent those messages from appearing in their default quarantine view and in quarantine notifications. Users can also allow email from trusted and prevent future messages from those senders from being quarantined (if there are no admin overrides). Users also have visibility into any admin overrides that led to a quarantined email message. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
-- Admins can see [policy](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-modify-anti-spam-policies) what-if insights for the bulk complaint level (BCL) threshold, spoof, and impersonation settings, which lets them understand the implication of a setting change based on historical data. This capability lets admins confidently tune their settings without anxiety about possible repurcussions on users.
+- Admins can see [policy](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-modify-anti-spam-policies) what-if insights for the bulk complaint level (BCL) threshold, spoof, and impersonation settings, which let them understand the implication of a setting change based on historical data. This capability lets admins confidently tune their settings without anxiety about possible repercussions on users.
 
 ## August 2024
 
 - (Preview) You can now run [simulations](attack-simulation-training-simulations.md) with QR code payloads in [Attack simulation training](attack-simulation-training-get-started.md). You can track user responses and assign training to end users.
 
-- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 - We're rolling out new details into who or what was responsible for releasing a message from quarantine. These details are included in the email summary flyout that's accessible from the Quarantine page. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
 
@@ -123,12 +129,12 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## January 2024
 
-- **New training modules available in Attack Simulation Training**: Teach your users to recognize and protect themselves against QR code phishing attacks. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/train-your-users-to-be-more-resilient-against-qr-code-phishing/ba-p/4022667).
+- **New training modules available in Attack Simulation Training**: Teach your users to recognize and protect themselves against QR code phishing attacks. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/train-your-users-to-be-more-resilient-against-qr-code-phishing/4022667).
 - **Providing intent while submitting is now generally available**: Admins can identify if they're submitting an item to Microsoft for a second opinion or they're submitting the message because it's malicious and was missed by Microsoft. With this change, Microsoft analyses of admin submitted messages (email and Microsoft Teams), URLs, and email attachments are further streamlined and results in a more accurate analysis. [Learn more](submissions-admin.md).
 
 ## December 2023
 
-- **QR code related phishing protection within Exchange Online Protection and Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/protect-your-organizations-against-qr-code-phishing-with/ba-p/4007041).
+- **QR code related phishing protection within Exchange Online Protection and Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
 - **Microsoft Defender XDR Unified RBAC is now generally available**: Defender XDR Unified RBAC supports all Defender for Office 365 scenarios that were previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!TIP]
@@ -174,8 +180,8 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## April 2023
 
-- [Using machine learning to drive more effective simulations in Attack Simulation and Training](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/attack-simulation-training-using-machine-learning-to-drive-more/ba-p/3791023): Make use of intelligent predicted compromise rate (PCR) and Microsoft Defender for Office 365 payload recommendations for utilizing high-quality payloads in your simulation.
-- [Training only campaigns available with an expanded library](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/training-only-campaign-is-now-available-with-an-expanded/ba-p/3795237): You can now directly assign training content to your organization without needing to tie training to a phishing simulation campaign. We have also expanded our training module library to more than 70 different modules.
+- [Using machine learning to drive more effective simulations in Attack Simulation and Training](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/attack-simulation-training-using-machine-learning-to-drive-more-effective-simula/3791023): Make use of intelligent predicted compromise rate (PCR) and Microsoft Defender for Office 365 payload recommendations for utilizing high-quality payloads in your simulation.
+- [Training only campaigns available with an expanded library](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/training-only-campaign-is-now-available-with-an-expanded-training-module-library/3795237): You can now directly assign training content to your organization without needing to tie training to a phishing simulation campaign. We have also expanded our training module library to more than 70 different modules.
 
 ## March 2023
 
@@ -185,9 +191,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## January 2023
 
-- [Automatic Tenant Allow/Block List expiration management is now available in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/automatic-tenant-allow-block-list-expiration-management-is-now/ba-p/3723447): Microsoft now automatically removes allow entries from the Tenant Allow/Block List once the system has learned from it. Alternatively, Microsoft extends the expiration time of the allow entries if the system hasn't learned yet. This behavior prevents legitimate email from going to junk or quarantine.
+- **Automatic Tenant Allow/Block List expiration management is now available in Microsoft Defender for Office 365**: Microsoft now automatically removes allow entries from the Tenant Allow/Block List once the system has learned from it. Alternatively, Microsoft extends the expiration time of the allow entries if the system hasn't learned yet. This behavior prevents legitimate email from going to junk or quarantine.
 - **Configuring third-party phishing simulations in Advanced Delivery:** We expanded "Simulation URLs to allow" limit to 30 URLs. To learn how to configure, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md)
-- [Enhanced user telemetry in the simulation reports in Attack Simulation Training](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/attack-simulation-training-new-insights-into-targeted-user/ba-p/3673105): As part of our enhanced user telemetry, administrators can now view additional details about how their targeted users are interacting with the phishing payload from phishing simulation campaigns.
+- [Enhanced user telemetry in the simulation reports in Attack Simulation Training](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/attack-simulation-training-new-insights-into-targeted-user-behavior/3673105): As part of our enhanced user telemetry, administrators can now view additional details about how their targeted users are interacting with the phishing payload from phishing simulation campaigns.
 
 ## December 2022
 
@@ -225,7 +231,7 @@ For more information on what's new with other Microsoft Defender security produc
       - From Office 365 Security & Compliance Center URL: scc.protection.apps.mil
       - To Microsoft Defender XDR URL: security.apps.mil
 - Items in the Office 365 Security & Compliance Center that aren't related to security aren't redirected to Microsoft Defender XDR. For compliance solutions redirection to Microsoft 365 Compliance Center, see Message Center post 244886.
-- This change is a continuation of [Microsoft Defender XDR delivers unified XDR experience to GCC, GCC High, and DoD customers - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/public-sector-blog/microsoft-365-defender-delivers-unified-xdr-experience-to-gcc/ba-p/3263702), announced in March 2022.
+- This change is a continuation of [Public Sector Blog - Microsoft Defender XDR delivers unified XDR experience to GCC, GCC High, and DoD customers](https://techcommunity.microsoft.com/blog/publicsectorblog/microsoft-365-defender-delivers-unified-xdr-experience-to-gcc-gcc-high-and-dod-c/3263702), announced in March 2022.
 - This change enables users to view and manage additional Microsoft Defender XDR security solutions in one portal.
 - This change impacts all customers who use the Office 365 Security & Compliance Center (protection.office.com), including Microsoft Defender for Office (Plan 1 or Plan 2), Microsoft 365 E3 / E5, Office 365 E3/ E5, and Exchange Online Protection. For the full list, see [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 - This change impacts all users who sign in to the Office 365 Security and Compliance portal (protection.office.com), including security teams and end-users who access the Email Quarantine experience, at the **Microsoft Defender Portal** \> **Review** \> **Quarantine**.
@@ -252,27 +258,27 @@ For more information on what's new with other Microsoft Defender security produc
 
 - View the associated alerts for [user reported messages](submissions-admin.md#actions-for-user-reported-messages-in-defender-for-office-365) and [admin submissions](submissions-admin.md#actions-for-admin-submissions-in-defender-for-office-365): View the corresponding alert for each user reported phishing message and admin email submission.
 
-- [Configurable impersonation protection custom users and domains and increased scope within Preset policies](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/configurable-impersonation-protection-and-scope-for-preset/ba-p/3294459):
+- [Configurable impersonation protection custom users and domains and increased scope within Preset policies](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/configurable-impersonation-protection-and-scope-for-preset-security-policies/3294459):
   - (Choose to) Apply Preset Strict/Standard policies to entire organization and avoid the hassle of selecting specific recipient users, groups, or domains, thereby securing all recipient users of your organization.
   - Configure impersonation protection settings for custom users and custom domains within Preset Strict/Standard policies and automatically protect your targeted users and targeted domain against impersonation attacks.
 
-- [Simplifying the quarantine experience (part two) in Microsoft Defender XDR for office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience-part-two/ba-p/3354687): Highlights additional features to make the quarantine experience even easier to use.
+- [Simplifying the quarantine experience (part two) in Microsoft Defender XDR for office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/simplifying-the-quarantine-experience---part-two/3354687): Highlights additional features to make the quarantine experience even easier to use.
 
-- [Introducing differentiated protection for priority accounts in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-differentiated-protection-for-priority-accounts-in/ba-p/3283838): Introducing GCC, GCC-H, and DoD availability of differentiated protection for priority accounts.
+- [Introducing differentiated protection for priority accounts in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/introducing-differentiated-protection-for-priority-accounts-in-microsoft-defende/3283838): Introducing GCC, GCC-H, and DoD availability of differentiated protection for priority accounts.
 
 ## April 2022
 
-- [Introducing the URLClickEvents table in Microsoft Defender XDR Advanced Hunting](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-the-urlclickevents-table-in-advanced-hunting-with/ba-p/3295096): Introducing the UrlClickEvents table in advanced hunting with Microsoft Defender for Office 365.
+- [Introducing the URLClickEvents table in Microsoft Defender XDR Advanced Hunting](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/introducing-the-urlclickevents-table-in-advanced-hunting-with-microsoft-defender/3295096): Introducing the UrlClickEvents table in advanced hunting with Microsoft Defender for Office 365.
 - [Manual email remediation enhancements](remediate-malicious-email-delivered-office-365.md): Bringing manual email purge actions taken in Microsoft Defender for Office 365 to the Microsoft Defender XDR (M365D) unified Action Center using a new action-focused investigation.
-- [Introducing differentiated protection for priority accounts in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-differentiated-protection-for-priority-accounts-in/ba-p/3283838): Introducing the general availability of differentiated protection for priority accounts.
+- [Introducing differentiated protection for priority accounts in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/introducing-differentiated-protection-for-priority-accounts-in-microsoft-defende/3283838): Introducing the general availability of differentiated protection for priority accounts.
 
 ## March 2022
 
-- [Streamlined the submission experience in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/streamlining-the-submissions-experience-in-microsoft-defender/ba-p/3152080): Introducing the new unified and streamlined submission process to make your experience simpler.
+- [Streamlined the submission experience in Microsoft Defender for Office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/streamlining-the-submissions-experience-in-microsoft-defender-for-office-365/3152080): Introducing the new unified and streamlined submission process to make your experience simpler.
 
 ## January 2022
 
-- [Updated Hunting and Investigation Experiences for Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/updated-hunting-and-investigation-experiences-for-microsoft/ba-p/3002015): Introducing the email summary panel for experiences in Defender for Office 365, along with experience updates for Threat Explorer and Real-time detections.
+- [Updated Hunting and Investigation Experiences for Microsoft Defender for Office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/updated-hunting-and-investigation-experiences-for-microsoft-defender-for-office-/3002015): Introducing the email summary panel for experiences in Defender for Office 365, along with experience updates for Threat Explorer and Real-time detections.
 
 ## October 2021
 
@@ -281,11 +287,11 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## September 2021
 
-- [Improved reporting experience in Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/improving-the-reporting-experience-in-microsoft-defender-for/ba-p/2760898)
+- [Improved reporting experience in Defender for Office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/improving-the-reporting-experience-in-microsoft-defender-for-office-365/2760898)
 - [Quarantine policies](quarantine-policies.md): Admins can configure granular control for recipient access to quarantined messages and customize end-user spam notifications.
   - [Video of admin experience](https://youtu.be/vnar4HowfpY)
   - [Video of end-user experience](https://youtu.be/s-vozLO43rI)
-  - Other new capabilities coming to the quarantine experience are described in this blog post: [Simplifying the Quarantine experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
+  - Other new capabilities coming to the quarantine experience are described in this blog post: [Simplifying the Quarantine experience](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/simplifying-the-quarantine-experience/2676388).
 - Portal redirection by default begins, redirecting users from Security & Compliance to Microsoft Defender XDR <https://security.microsoft.com>.
 
 ## August 2021

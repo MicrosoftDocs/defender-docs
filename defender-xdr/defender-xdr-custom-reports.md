@@ -9,18 +9,18 @@ author: dansimp
 ms.author: dansimp
 ms.date: 01/03/2023
 manager: dansimp
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to create custom reports using Microsoft Graph security API and Power BI so that I can visualize my data and make informed decisions.
 ---
 # Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 Empowering security professionals to visualize their data enables them to quickly recognize complex patterns, anomalies, and trends that might otherwise be lurking underneath the noise. With visualizations, SOC teams can rapidly identify threats, make informed decisions, and communicate insights effectively across the organization.
 

@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 02/20/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -25,7 +25,7 @@ ms.date: 02/04/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 This article describes how to install, configure, update, and use Microsoft Defender for Endpoint on Linux.
 
@@ -63,7 +63,8 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   - Red Hat Enterprise Linux 7.2 or higher
   - Red Hat Enterprise Linux 8.x
   - Red Hat Enterprise Linux 9.x
-  - CentOS 7.2 or higher
+  - CentOS 7.2 or higher, excluding CentOS Stream
+    
   - Ubuntu 16.04 LTS 
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
@@ -88,9 +89,21 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
 
   - Ubuntu 20.04 ARM64
   - Ubuntu 22.04 ARM64
+  - Ubuntu 24.04 ARM64
+    
   - Amazon Linux 2 ARM64
   - Amazon Linux 2023 ARM64
     
+  - RHEL 8.x ARM64
+    
+  - RHEL 9.x ARM64
+    
+  - Oracle Linux 8.x ARM64
+    
+  - Oracle Linux 9.x ARM64
+    
+  - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
+
   > [!IMPORTANT]
   > Support for Microsoft Defender for Endpoint on Linux for ARM64-based Linux devices is now in preview. For more information, see [Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md). 
    
@@ -133,7 +146,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, then Audit framework (`auditd`) must be enabled on your system.
   > If you're using Auditd, then system events captured by rules added to `/etc/audit/rules.d/` adds to `audit.log`(s) and might affect host auditing and upstream collection. Events added by Microsoft Defender for Endpoint on Linux are tagged with the `mdatp` key.
   
-- /opt/microsoft/mdatp/sbin/wdavdaemon requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
+- `/opt/microsoft/mdatp/sbin/wdavdaemon` requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
 
 ### Installation instructions
 
@@ -169,7 +182,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
 
-The`mde-netfilter` package also has the following package dependencies:
+The `mde-netfilter` package also has the following package dependencies:
 
 - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1`, and `libglib2.0-0`
 - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`

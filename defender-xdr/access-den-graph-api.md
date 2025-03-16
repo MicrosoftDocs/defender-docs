@@ -14,16 +14,14 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: 
 - cx-ti
-- cx-dex
+- cx-ean
 search.appverid: met150
 ms.date: 10/30/2024
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Access incident notifications using Graph API
-
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 [Defender Experts Notifications](onboarding-defender-experts-for-hunting.md#receive-defender-experts-notifications) are incidents that have been generated from hunting conducted by Defender Experts in your environment. They contain information regarding the hunting investigation and recommended actions provided by Defender Experts. You can now access DENs using the [Microsoft Graph security API](/graph/api/resources/security-api-overview).
 

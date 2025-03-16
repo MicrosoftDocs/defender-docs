@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 06/26/2024
+ms.date: 03/04/2025
 ---
 
 # Take response actions on a file
@@ -28,7 +28,7 @@ ms.date: 06/26/2024
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -175,6 +175,10 @@ The **Download file** button can have the following states:
 
 :::image type="content" source="media/atp-download-file-action.png" alt-text="The download file action" lightbox="media/atp-download-file-action.png":::
 
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+
 ### Download quarantined files
 
 Files that were quarantined by Microsoft Defender Antivirus or your security team are saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
@@ -196,7 +200,8 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
-> - Devices have Windows 10 version 1703 or later, or Windows server 2016 or 2019, or Windows Server 2022, or Windows 11
+> - Client devices must be running Windows 11 or Windows 10, version 1703 or later
+> - Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016
 
 ### Collect files
 

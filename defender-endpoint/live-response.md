@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 03/04/2025
 ---
 
 # Investigate entities on devices using live response
@@ -25,7 +25,7 @@ ms.date: 02/04/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Live response gives security operations teams instantaneous access to a device (also referred to as a machine) using a remote shell connection. Live response gives you the power to do in-depth investigative work and take immediate response actions to promptly contain identified threats in real time.
 
@@ -56,9 +56,9 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
     - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
 
-  - **macOS** - Minimum required version: 101.43.84. Supported for Intel-based and ARM-based macOS devices.
+  - **macOS** - Minimum required version: `101.43.84`. Supported for Intel-based and ARM-based macOS devices.
 
-  - **Linux** - Minimum required version: 101.45.13
+  - **Linux** - Minimum required version: `101.45.13`
 
   - **Windows Server 2012 R2** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
 
@@ -73,7 +73,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
   - **Windows Server 2022**
 
-  - **Windows Server 2025** (beginning in February 2025 and rolling out over the next several weeks)
+  - **Windows Server 2025**
 
 - **Enable live response from the advanced settings page**.
 

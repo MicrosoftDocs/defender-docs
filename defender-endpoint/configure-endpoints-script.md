@@ -27,7 +27,7 @@ ms.date: 02/29/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can also manually onboard individual devices to Defender for Endpoint. You might want to onboard some devices when you're testing the service before you commit to onboarding all devices in your network.
 
@@ -38,7 +38,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 ## Onboard devices
 
-1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
@@ -103,7 +103,7 @@ For security reasons, the package used to offboard devices expires seven days af
 > [!NOTE]
 > Onboarding and offboarding policies must not be deployed on the same device at the same time. Otherwise, unpredictable collisions might occur.
 
-1. Get the offboarding package from <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
    
@@ -138,7 +138,7 @@ Monitoring can also be done directly on the portal, or by using the different de
 
 ### Monitor devices using the portal
 
-1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com).
 
 2. Select **Devices inventory**.
 

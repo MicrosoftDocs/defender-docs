@@ -116,7 +116,7 @@ Whenever an attack surface reduction rule is triggered, a notification is displa
 
 Also, when certain attack surface reduction rules are triggered, alerts are generated.
 
-Notifications and any alerts that are generated can be viewed in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+Notifications and any alerts that are generated can be viewed in the [Microsoft Defender portal](https://security.microsoft.com).
 
 For specific details about notification and alert functionality, see: [Per rule alert and notification details](attack-surface-reduction-rules-reference.md#per-asr-rule-alert-and-notification-details), in the article **Attack surface reduction rules reference**.
 
@@ -135,7 +135,7 @@ You can set attack surface reduction rules for devices that are running any of t
 - Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
 - Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
-- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
+- Windows Server 2025
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
@@ -144,7 +144,7 @@ You can set attack surface reduction rules for devices that are running any of t
   > [!NOTE]
   > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) for this feature to work.
 
-Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:
+Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:S
 
 - The monitoring, analytics, and workflows available in [Defender for Endpoint](microsoft-defender-endpoint.md)
 - The reporting and configuration capabilities in [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender).
