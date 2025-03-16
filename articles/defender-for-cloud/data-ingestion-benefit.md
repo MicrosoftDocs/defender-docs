@@ -1,10 +1,10 @@
 ---
 title: Use the data ingestion benefit in Microsoft Defender for Cloud
 description: Learn how to take advantage of the data ingestion benefit in Microsoft Defender for Cloud.
-ms.topic: install-set-up-deploy
+ms.topic: quickstart
 ms.author: elkrieger
 author: elazark
-ms.date: 10/20/2024
+ms.date: 03/16/2025
 ---
 
 # Use the data ingestion benefit
@@ -17,6 +17,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 - The allowance is a daily rate averaged across all machines.
 - You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 - The benefit is granted to the Log Analytics workspace to which the machine reports.
+- The benefit won't appear on your invoice, and billing will start after the free limit is exceeded. Verify the allowance by comparing the usage graph against the actual cost in the Log Analytics Workspace under Usage and estimated costs.
 
 ## Prerequisites
 
