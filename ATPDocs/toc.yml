@@ -164,9 +164,6 @@ items:
        href: security-assessment.md
      - name: Hybrid security
        items:
-       - name: Remove unsafe permissions on sensitive Entra Connect accounts
-         href: remove-unsafe-permissions-sensitive-entra-connect.md
-         displayName: MDI
        - name: Change password for Microsoft Entra seamless SSO account
          href: change-password-microsoft-entra-seamless-single-sign-on.md
          displayName: Microsoft Entra connect
@@ -177,6 +174,9 @@ items:
          href: remove-replication-permissions-microsoft-entra-connect.md
      - name: Identity infrastructure
        items:
+       - name: Remove unsafe permissions on sensitive Entra Connect accounts
+         href: remove-unsafe-permissions-sensitive-entra-connect.md
+         displayName: MDI
        - name: Built-in Active Directory Guest account is enabled
          href: built-in-active-directory-guest-account-is-enabled.md
        - name: Change Domain Controller computer account old password

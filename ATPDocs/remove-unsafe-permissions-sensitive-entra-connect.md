@@ -12,4 +12,35 @@ ms.topic: article
 ms.date:     03/16/2025
 ---
 
-Security assessment: Remove unsafe permissions on sensitive Entra Connect accounts
+# Security assessment: Remove unsafe permissions on sensitive Entra Connect accounts
+
+This article describes Microsoft Defender for Identity's Microsoft Entra Connect accounts unsafe permissions security posture assessment report.
+
+> [!NOTE]
+> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about Microsoft Entra seamless sign-on **[here](/entra/identity/hybrid/connect/how-to-connect-sso)**.
+
+## How can unsafe permissions on Entra Connect accounts expose your hybrid identity to risk?
+
+Entra Connect accounts like AD DS Connector account (also known as MSOL_) and Entra Seamless SSO computer account (AZUREADSSOACC) have powerful privileges, including replication and password reset rights. If these accounts are granted unsafe permissions, attackers could exploit them to gain unauthorized access, escalate privileges, or take control of hybrid identity infrastructure. This could lead to account takeovers, unauthorized directory modifications, and a broader compromise of both on-premises and cloud environments.
+
+## How do I use this security assessment to improve my hybrid organizational security posture?
+
+1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unsafe permissions on sensitive Entra Connect accounts.
+
+1. Review the list of exposed entities to identify accounts with unsafe permissions. For example:![Screenshot of exposed entities.](media/remove-unsafe-permissions-sensitive-entra-connect/screenshot-2025-03-16-153140.png)
+
+If you click on "Click to expend" you can find more details about the granted permissions. For example:  
+![Screenshot of report.](media/remove-unsafe-permissions-sensitive-entra-connect/screenshot-2025-03-16-153210.png)
+
+1. For each exposed account, remove problematic permissions that allow unprivileged accounts to takeover critical hybrid assets. In the example below, you can see an AD DS Connector account with problematic permissions that need to be removed.   
+![Screenshot of permissions.](media/remove-unsafe-permissions-sensitive-entra-connect/image.png)
+
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+
+## Next steps
+
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+
+- [Learn more about Defender for Identity Sensor for Microsoft Entra Connect](https://aka.ms/MdiSensorForMicrosoftEntraConnectInstallation)
+
