@@ -4,7 +4,7 @@ description: This article provides information about reviewing accounts from you
 ms.date: 01/29/2023
 ms.topic: how-to
 ---
-# Accounts
+# Cloud Application Accounts
 
 
 
@@ -15,7 +15,7 @@ Microsoft Defender for Cloud Apps gives you visibility into the accounts from yo
 > [!NOTE]
 > The Identities page is in the process of merging into the unified **Identity Inventory (Preview)**.  
 > The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention.  
-> The functionality of the Identities page, as presented in below, will be provided in the new Identity Inventory under the "**Cloud application accounts**" tab, offering the same features as it does today. For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory)
+> The functionality of the Identities page, as presented below, will be provided in the new Identity Inventory under the "**Cloud application accounts**" tab, offering the same features as it does today. For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory)
 > 
 ## Identities
 
@@ -35,7 +35,7 @@ The **Identities** page enables you to easily investigate your accounts, includi
 
     ![accounts screen.](media/accounts-page.png)
   
-## Identities filters
+### Identities filters
 
 Following is a list of the account filters that can be applied. Most filters support multiple values as well as NOT, in order to provide you with a powerful tool for policy creation.  
 
@@ -54,13 +54,13 @@ Following is a list of the account filters that can be applied. Most filters sup
 * **Type**: This enables you to filter to either the user or the account type.
 * **User name**: Enables you to filter specific users.
 
-## Governance actions
+### Governance actions
 
 From the **Users and account** page, you can take governance actions such as suspending an app or going to the account settings page. For a full list of governance actions, see the [governance log](governance-actions.md).
 
 For example, if you identify a user that is compromised, you can apply the **Confirm user compromised** action to set the user risk level to high, causing the relevant policy actions defined in Microsoft Entra ID to be enforced. The action can be applied manually or using relevant [policies that support governance actions](governance-actions.md).
 
-### To manually apply a user or account governance action
+#### To manually apply a user or account governance action
 
 From the **Users and account** page, on the row where the relevant user or account appears, choose the three dots at the end of the row, then select **Confirm user compromised**.
 
