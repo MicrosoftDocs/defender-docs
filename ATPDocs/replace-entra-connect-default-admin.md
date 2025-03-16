@@ -3,7 +3,6 @@ title:       'Security assessment: Replace Enterprise or Domain Admin account fo
 description: 'This report lists any Entra Connect AD DS Connector account that is an Enterprise Administrator or Domain Administrator.'
 author:      LiorShapiraa # GitHub alias
 ms.author:   Liorshapira # Microsoft alias
-ms.service:  ms.prod
 # ms.prod:   microsoft-defender-for-identity
 ms.topic:    article
 ms.date:     03/16/2025
