@@ -3,13 +3,13 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title:       Security assessment: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
+description: This report lists any Entra Connect AD DS Connector account that is an Enterprise Administrator or Domain Administrator.
 author:      LiorShapiraa # GitHub alias
-ms.author:   t-lshapira # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.author:   Liorshapira # Microsoft alias
+ms.service:  ms.prod
+# ms.prod:   microsoft-defender-for-identity
+ms.topic:    article
 ms.date:     03/16/2025
 ---
 
