@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 03/14/2025
+ms.date: 03/17/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -23,8 +23,8 @@ ms.subservice: onboard
 
 **Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- [Microsoft Defender for Servers Plan 1 and Plan 2](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -47,18 +47,23 @@ You need to complete the following general steps to successfully onboard servers
 
 ### Integration with Microsoft Defender for Servers
 
-Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers. You can onboard servers automatically, have servers monitored by Microsoft Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Microsoft Defender for Cloud customer. For more information please go to [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
+Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers. You can onboard servers automatically, have servers monitored by Microsoft Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Microsoft Defender for Cloud customer. For more information, see [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
 
-> [!NOTE]
-> - For Windows Server 2016 and Windows Server 2012 R2, you can either manually install/upgrade the modern, unified solution on these machines, or use the integration to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. More information about making the switch at [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
-> - When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
-> - If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
-> - Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
-> - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
-> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
-> - Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
+For Windows Server 2016 and Windows Server 2012 R2, you can either manually install/upgrade the modern, unified solution on these machines, or use the integration to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. More information about making the switch at [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
 
-### Windows Server 2016 and Windows Server 2012 R2**
+When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
+
+If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
+
+Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
+
+Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
+
+Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
+
+Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
+
+### Windows Server 2016 and Windows Server 2012 R2
 
 - Download installation and onboarding packages
 - Apply the installation package
