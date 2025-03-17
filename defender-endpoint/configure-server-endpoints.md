@@ -55,9 +55,9 @@ When you use Microsoft Defender for Cloud to monitor servers, a Defender for End
 
 If you start using Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Microsoft Defender for Cloud at a later time. Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
 
-Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
+Server endpoint monitoring utilizing the integration between Defender for Servers and Defender for Endpoint is not available to Office 365 GCC customers.
 
-Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
+Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016, Windows Server 2012 R2, and earlier versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, and Windows 10 or later, doesn't support this gateway.
 
 Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
 
