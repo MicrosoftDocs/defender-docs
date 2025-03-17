@@ -131,9 +131,9 @@ You need to download both the **installation** and **onboarding** packages from 
 :::image type="content" alt-text="Image of onboarding dashboard" source="media/install-agent-onboard.png" lightbox="media/install-agent-onboard.png":::
 
 > [!NOTE]
-> On Windows Server 2016 and Windows Server 2012 R2, Microsoft Defender Antivirus must be installed as a feature (see [Switch to Defender for Endpoint](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
+> On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature (see [Switch to Defender for Endpoint](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
 > 
-> If you're running a non-Microsoft anti-malware solution,  make sure to add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
+> If you're running a non-Microsoft anti-malware solution, make sure to add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
 The **installation package** contains an MSI file that installs the Microsoft Defender for Endpoint agent.
 
@@ -152,7 +152,6 @@ Follow these steps to download the packages:
 5. Install the installation package using any of the options to install Microsoft Defender Antivirus. The installation requires administrative permissions.
 
 > [!IMPORTANT]
->
 > A local onboarding script is suitable for a proof of concept but shouldn't be used for production deployment. For a production deployment, we recommend using Group Policy, or Microsoft Endpoint Configuration Manager.
 
 ### STEP 2: Apply the installation and onboarding package
