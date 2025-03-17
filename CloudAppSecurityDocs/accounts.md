@@ -13,9 +13,11 @@ Microsoft Defender for Cloud Apps gives you visibility into the accounts from yo
 ## Identity Inventory (Preview)
 
 > [!NOTE]
-> The Identities page is in the process of merging into the unified **Identity Inventory (Preview)**.  
-> The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention.  
-> The functionality of the Identities page, as presented below, will be provided in the new Identity Inventory under the "**Cloud application accounts**" tab, offering the same features as it does today. For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory)
+> The Identities page is in the process of merging into the unified **Identity Inventory (Preview)**. 
+> 
+> The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention. 
+> 
+> The functionality of the Identities page, as presented below, will be provided in the new Identity Inventory under the "**Cloud application accounts**" tab, offering the same features as it does today. For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory).
 > 
 ## Identities
 
