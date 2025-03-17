@@ -175,7 +175,7 @@ items:
        - name: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
          href: replace-entra-connect-default-admin.md
        - name: Identity infrastructure
-       items:
+           items:
        - name: Built-in Active Directory Guest account is enabled
          href: built-in-active-directory-guest-account-is-enabled.md
        - name: Change Domain Controller computer account old password
