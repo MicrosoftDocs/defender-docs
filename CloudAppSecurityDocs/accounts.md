@@ -22,7 +22,7 @@ For more details, visit the [Identity Inventory documentation](/defender-for-ide
 
 Admins can search for specific account metadata or account activity. The **Cloud application accounts** tab provides comprehensive details about entities pulled from connected cloud applications, including activity history and security alerts related to the account.
 
-The **Cloud application accounts** tab can be [filtered](#identities-filters) to find specific accounts and deep dive into different types of accounts. For example, you can filter for all External accounts that haven't been accessed since last year.
+The **Cloud application accounts** tab can be filtered to find specific accounts and deep dive into different types of accounts. For example, you can filter for all External accounts that haven't been accessed since last year.
 
 The **Cloud application accounts** tab enables easy investigation of accounts, including:
 
