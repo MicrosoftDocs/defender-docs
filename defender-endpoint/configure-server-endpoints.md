@@ -252,7 +252,7 @@ For more configuration settings, see [Configure sample collection settings](conf
 
 ### STEP 3: Complete the onboarding steps
 
-The following steps are only applicable if you're using a third-party anti-malware solution. You need to apply the following Microsoft Defender Antivirus passive mode setting. Verify that it was configured correctly:
+The following steps are only applicable if you're using a non-Microsoft anti-malware solution. You need to apply the following Microsoft Defender Antivirus passive mode setting. Verify that it was configured correctly:
 
 1. Set the following registry entry:
 
