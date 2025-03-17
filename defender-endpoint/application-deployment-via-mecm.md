@@ -119,8 +119,6 @@ Copy the unified solution package, onboarding script, and migration script to th
 
 17. Verify the status of the migration in Configuration Manager by going to **Monitoring** > **Deployments**.
 
-    :::image type="content" source="media/deployment-status.png" alt-text="Screenshot that shows deployment status check." lightbox="media/deployment-status.png":::
-
 18. Troubleshooting .ETL files are created and automatically saved locally in each server at this location `C:\Windows\ccmcache\#\`. These files can be leveraged by support to troubleshoot onboarding issues.
 
 ## Related articles
