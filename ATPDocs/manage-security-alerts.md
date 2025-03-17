@@ -8,7 +8,7 @@ ms.topic: how-to
 # Investigate Defender for Identity security alerts in Microsoft Defender XDR
 
 > [!NOTE]
-> Defender for Identity is not designed to serve as an auditing or logging solution that captures every single operation or activity on the servers where the sensor is installed. It only captures the data required for its detection and recommendation mechanisms.
+> Defender for Identity isn't designed to serve as an auditing or logging solution that captures every single operation or activity on the servers where the sensor is installed. It only captures the data required for its detection and recommendation mechanisms.
 
 This article explains the basics of how to work with Microsoft Defender for Identity security alerts in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
 
