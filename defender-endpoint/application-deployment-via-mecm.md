@@ -85,25 +85,25 @@ Copy the unified solution package, onboarding script, and migration script to th
 
 10. The detection method is based on this registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense`.
 
-   Select the option: **This registry setting must exit on the target system to indicate presence of this application.**
-
-   :::image type="content" source="media/detection-wizard.png" alt-text="Screenshot that shows detection type wizard":::
-
-   > [!TIP]
-   > The registry key value was obtained by running the following PowerShell command on a device that has the unified solution installed. Other creative methods of detection can also be used. The goal is to identify whether the unified solution has already been installed on a specific device. You can leave the Value and Data Type fields as blank.
-
-   ```powershell
-   get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
-   ```
+     Select the option: **This registry setting must exit on the target system to indicate presence of this application.**
+  
+     :::image type="content" source="media/detection-wizard.png" alt-text="Screenshot that shows detection type wizard":::
+  
+     > [!TIP]
+     > The registry key value was obtained by running the following PowerShell command on a device that has the unified solution installed. Other creative methods of detection can also be used. The goal is to identify whether the unified solution has already been installed on a specific device. You can leave the Value and Data Type fields as blank.
+  
+     ```powershell
+     get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
+     ```
 
 11. In the **User Experience** section, check the recommended settings shown in the screenshot. You can choose what suits your environment, and then select **Next**. 
 
-   For **Installation program visibility**, it's advisable to install with **Normal** during phase testing then change it to **Minimized** for general deployment.
-
-   > [!TIP]
-   > The maximum allowed runtime can be lowered from (default) 120 minutes to 60 minutes.
-
-   :::image type="content" source="media/user-experience-in-deployment-type-wizard.png" alt-text="Screenshot that shows user experience in deployment-type wizard.":::
+     For **Installation program visibility**, it's advisable to install with **Normal** during phase testing then change it to **Minimized** for general deployment.
+  
+     > [!TIP]
+     > The maximum allowed runtime can be lowered from (default) 120 minutes to 60 minutes.
+  
+     :::image type="content" source="media/user-experience-in-deployment-type-wizard.png" alt-text="Screenshot that shows user experience in deployment-type wizard." lightbox="media/user-experience-in-deployment-type-wizard.png":::
 
 12. Add any additional requirements, and then select **Next**.
 
@@ -115,11 +115,11 @@ Copy the unified solution package, onboarding script, and migration script to th
 
 16. Close the wizard, right-click on the recently created application and deploy it to your down-level-server collection. Locally, the installation can be confirmed at Software Center. For details, check the CM logs at `C:\Windows\CCM\Logs\AppEnforce.log`.
 
-   :::image type="content" source="media/deploy-application.png" alt-text="Screenshot that shows deployment of created application." lightbox="media/deploy-application.png":::
+    :::image type="content" source="media/deploy-application.png" alt-text="Screenshot that shows deployment of created application." lightbox="media/deploy-application.png":::
 
 17. Verify the status of the migration in Configuration Manager by going to **Monitoring** > **Deployments**.
 
-   :::image type="content" source="media/deployment-status.png" alt-text="Screenshot that shows deployment status check." lightbox="media/deployment-status.png":::
+    :::image type="content" source="media/deployment-status.png" alt-text="Screenshot that shows deployment status check." lightbox="media/deployment-status.png":::
 
 18. Troubleshooting .ETL files are created and automatically saved locally in each server at this location `C:\Windows\ccmcache\#\`. These files can be leveraged by support to troubleshoot onboarding issues.
 
