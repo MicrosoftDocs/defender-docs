@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
 ms.topic: how-to #Don't change.
-ms.date: 02/27/2025
+ms.date: 03/17/2025
 ms.collection:
 - usx-security
 - zerotrust-solution

@@ -24,7 +24,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 03/10/2025
+ms.date: 03/17/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
