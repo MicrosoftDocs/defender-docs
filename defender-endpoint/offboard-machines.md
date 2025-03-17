@@ -25,6 +25,7 @@ ms.date: 03/17/2025
 
 - Microsoft Defender for Endpoint Plan 1 and 2
 - Microsoft Defender for Endpoint for servers Plan 1 or Plan 2
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender for Business
 - Microsoft Defender Vulnerability Management
 - Microsoft Defender XDR
