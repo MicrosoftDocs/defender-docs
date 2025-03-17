@@ -107,13 +107,13 @@ It's recommended to install the latest available SSU and LCU on the server.
 If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. You must remember to set to passive mode during the installation and onboarding process.
 
 > [!NOTE]
-> If you're installing Microsoft Defender for Endpoint on Servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform may need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see, [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
+> If you're installing Microsoft Defender for Endpoint on Servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
 
 #### Update packages for Microsoft Defender for Endpoint on Windows Server 2016 and Windows Server 2012 R2
 
 To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
-If you're using Windows Server Update Services (WSUS) and/or Microsoft Endpoint Configuration Manager, this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint".
+If you're using Windows Server Update Services (WSUS) and/or Microsoft Endpoint Configuration Manager, this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
 
 ### Onboarding steps summary
 
@@ -134,13 +134,11 @@ You need to download both the **installation** and **onboarding** packages from 
 > [!NOTE]
 > On Windows Server 2016 and Windows Server 2012 R2, Microsoft Defender Antivirus must be installed as a feature (see [Switch to Defender for Endpoint](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
 > 
-> If you're running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
+> If you're running a non-Microsoft anti-malware solution,  make sure to add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
 The **installation package** contains an MSI file that installs the Microsoft Defender for Endpoint agent.
 
-The **onboarding package** contains the following file:
-
-- `WindowsDefenderATPOnboardingScript.cmd` - contains the onboarding script
+The **onboarding package** contains `WindowsDefenderATPOnboardingScript.cmd`, which contains the onboarding script.
 
 Follow these steps to download the packages:
 
