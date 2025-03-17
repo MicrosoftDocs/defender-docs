@@ -46,6 +46,7 @@ The Cloud application accounts tab offers comprehensive filtering capabilities, 
 
 Admins can also enable the "Advanced filters" toggle to filter by additional attributes or create complex filters that include conditions such as "does not equal."  
 ![Advanced filters toggle.](media/accounts/image.png)
+
 Predefined filters include:
 
 - **Account name:** Filter specific accounts.
