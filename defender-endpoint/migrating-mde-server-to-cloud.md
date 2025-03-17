@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: migrationguides
-ms.date: 07/19/2022
+ms.date: 03/17/2025
 search.appverid: met150
 ---
 
