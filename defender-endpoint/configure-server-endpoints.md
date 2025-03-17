@@ -38,7 +38,7 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 ## Windows Server onboarding overview
 
-You need to complete the following general steps to successfully onboard servers.
+The following diagram shows the general steps required to successfully onboard servers.
 
 :::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
 
@@ -67,7 +67,7 @@ Linux servers onboarded through Microsoft Defender for Cloud have their initial 
 - Apply the installation package
 - Follow the onboarding steps for the corresponding tool
 
-### Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, Windows Server 2022, and Windows 2025**
+### Windows Server Semi-Annual Enterprise Channel and Windows Server 2019 or later
 
 - Download the onboarding package
 - Follow the onboarding steps for the corresponding tool
@@ -109,7 +109,7 @@ If you intend to use a non-Microsoft anti-malware solution, you need to run Micr
 > [!NOTE]
 > If you're installing Microsoft Defender for Endpoint on Servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
 
-#### Update packages for Microsoft Defender for Endpoint on Windows Server 2016 and Windows Server 2012 R2
+#### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
 To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
@@ -209,11 +209,19 @@ You can use the [installer helper script](server-migration.md#installer-script) 
 
 This script can be used in various scenarios, including those scenarios described in [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](server-migration.md) and for deployment using Group Policy as described below.
 
-## Apply the Microsoft Defender for Endpoint installation and onboarding packages using Group policy when performing the installation with an installer script
+## Group Policy and an installer script
 
-1. Create a group policy: <br> Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and select **New**. Enter the name of the new GPO in the dialogue box that is displayed and select **OK**.
+If you're using Group Policy, apply Defender for Endpoint installation and onboarding packages with an installer script.
 
-2. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
+1. Create a group policy by following these steps:
+
+   1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11).
+   
+   2. Right-click **Group Policy Objects** you want to configure, and then select **New**. 
+   
+   3. Specify the name of the new Group Policy Object (GPO), and then select **OK**.
+
+2. In your [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the Group Policy Object (GPO) you want to configure, and then select **Edit**.
 
 3. In the **Group Policy Management Editor**, go to **Computer configuration**, then **Preferences**, and then **Control panel settings**.
 
