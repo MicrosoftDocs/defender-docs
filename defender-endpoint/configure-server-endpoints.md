@@ -207,7 +207,7 @@ You can use the [installer helper script](server-migration.md#installer-script) 
 
 This script can be used in various scenarios, including those scenarios described in [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](server-migration.md) and for deployment using Group Policy as described below.
 
-## Group Policy and an installer script
+## Apply installation and onboarding packages using Group Policy
 
 If you're using Group Policy, apply Defender for Endpoint installation and onboarding packages with an installer script.
 
