@@ -28,7 +28,7 @@ ms.subservice: onboard
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
+Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender portal. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
 This article describes how to onboard specific Windows servers to Microsoft Defender for Endpoint.
 
@@ -293,14 +293,14 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 ## Verify the onboarding and installation
 
-Verify that Microsoft Defender Antivirus and Microsoft Defender for Endpoint are running.
+Verify that Microsoft Defender Antivirus and Defender for Endpoint are running.
 
 ## Run a detection test to verify onboarding
 
-After onboarding the device, you can choose to run a detection test to verify that a device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md).
+After onboarding the device, you can choose to run a detection test to verify that a device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md).
 
 > [!NOTE]
-> Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Microsoft Defender for Endpoint sensor (SENSE) is running.
+> Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Defender for Endpoint sensor (SENSE) is running.
 
 1. Run the following command to verify that Microsoft Defender Antivirus is installed:
 
@@ -315,7 +315,7 @@ After onboarding the device, you can choose to run a detection test to verify th
 
    For information on how to use Group Policy to configure and manage Microsoft Defender Antivirus on your Windows servers, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md).
 
-2. Run the following command to verify that Microsoft Defender for Endpoint is running:
+2. Run the following command to verify that Defender for Endpoint is running:
 
    ```cmd
    sc.exe query sense
@@ -329,7 +329,7 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
 
 ## Next steps
 
-After successfully onboarding devices to the service, you'll need to configure the individual components of Microsoft Defender for Endpoint. Follow [Configure capabilities](onboard-configure.md#configure-capabilities) to be guided on enabling the various components.
+After successfully onboarding devices to the service, you'll need to configure the individual components of Defender for Endpoint. Follow [Configure capabilities](onboard-configure.md#configure-capabilities) to be guided on enabling the various components.
 
 ## Offboard Windows servers
 
@@ -348,7 +348,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 - Remove the Defender for Endpoint workspace configuration
 
 > [!NOTE]
-> These offboarding instructions for other Windows Server versions also apply if you're running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
+> These offboarding instructions for other Windows Server versions also apply if you're running the previous Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Defender for Endpoint](server-migration.md).
 
 ## Related articles
 
@@ -358,8 +358,8 @@ For other Windows server versions, you have two options to offboard Windows serv
 - [Onboard non-Windows devices](configure-endpoints-non-windows.md)
 - [Configure proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md)
-- [Troubleshooting Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
+- [Troubleshooting Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso-quick-start)
 - [Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
