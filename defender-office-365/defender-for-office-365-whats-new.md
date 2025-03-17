@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 01/10/2025
+ms.date: 03/03/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,9 +39,15 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## March 2025
+
+- **User reported messages by third-party add-ins can be sent to Microsoft for analysis**: In [user reported settings](submissions-user-reported-messages-custom-mailbox.md), admins can select **Monitor reported messages in Outlook** \> **Use a non-Microsoft add-in button**. In the **Reported message destination** section, select **Microsoft and my reporting mailbox**, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-in are routed to. Microsoft analyzea these reported messages and provides result on the **User reported** tab of **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+
+- **Create allow entries directly in the Tenant Allow/Block List**: You can now create allow entries for domains & addresses and URLs directly in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). This capability is available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet.
+
 ## January 2025
 
-- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for iOS and Android version 4.2446 or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for iOS version 4.2508 or, later and Android version 4.2446 or later now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 ## December 2024
 
@@ -66,7 +72,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (Preview) You can now run [simulations](attack-simulation-training-simulations.md) with QR code payloads in [Attack simulation training](attack-simulation-training-get-started.md). You can track user responses and assign training to end users.
 
-- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 now supports the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 - We're rolling out new details into who or what was responsible for releasing a message from quarantine. These details are included in the email summary flyout that's accessible from the Quarantine page. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
 
@@ -174,7 +180,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## April 2023
 
-- [Using machine learning to drive more effective simulations in Attack Simulation and Training](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/attack-simulation-training-using-machine-learning-to-drive-more/ba-p/3791023): Make use of intelligent predicted compromise rate (PCR) and Microsoft Defender for Office 365 payload recommendations for utilizing high-quality payloads in your simulation.
+- [Using machine learning to drive more effective simulations in Attack Simulation and Training](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/attack-simulation-training-using-machine-learning-to-drive-more-effective-simula/3791023): Make use of intelligent predicted compromise rate (PCR) and Microsoft Defender for Office 365 payload recommendations for utilizing high-quality payloads in your simulation.
 - [Training only campaigns available with an expanded library](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/training-only-campaign-is-now-available-with-an-expanded-training-module-library/3795237): You can now directly assign training content to your organization without needing to tie training to a phishing simulation campaign. We have also expanded our training module library to more than 70 different modules.
 
 ## March 2023

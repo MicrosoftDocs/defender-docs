@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 03/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -26,7 +26,7 @@ ms.subservice: onboard
 - Windows Server 2016
 - Windows Server 2019
 - Windows Server 2022
-- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
+- Windows Server 2025
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
@@ -51,7 +51,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
 
 > [!NOTE]
-> You can also use the EICAR test string to perform this test. Create a text file, paste the EICAR line, and save the file as an executable file to your endpoint's local drive. You will receive a test endpoint notification and an alert in the Microsoft Defender portal.
+> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You will receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 

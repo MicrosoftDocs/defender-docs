@@ -18,7 +18,10 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: best-practice
-ms.date: 04/22/2024
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.date: 02/24/2025
 ---
 
 # Advanced hunting query best practices
@@ -26,10 +29,15 @@ ms.date: 04/22/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
+Get results faster and avoid timeouts while running complex queries by optimizing your queries. For guidance on improving query performance:
+- [General optimization tips](#understand-cpu-resource-quotas) - in this article
+- [Optimize the `join` operator](#optimize-the-join-operator) - in this article
+- [Optimize the `summarize` operator](#optimize-the-summarize-operator) - in this article
+- [Query scenarios](#query-scenarios) - in this article
+- [Kusto query best practices](/azure/kusto/query/best-practices) - includes several scenarios for making your query  more efficient
+- [Optimize log queries in Azure Monitor](/azure/azure-monitor/logs/query-optimization#early-filtering-of-records-prior-to-using-high-cpu-functions) - contains additional guidance for query optimization
+- [Optimizing KQL queries](https://www.youtube.com/watch?v=ceYvRuPp5D8) (video) - most common ways to improve your query
 
-Apply these recommendations to get results faster and avoid timeouts while running complex queries. For more guidance on improving query performance, read [Kusto query best practices](/azure/kusto/query/best-practices).
 
 ## Understand CPU resource quotas
 Depending on its size, each tenant has access to a set amount of CPU resources allocated for running advanced hunting queries. For detailed information about various usage parameters, [read about advanced hunting quotas and usage parameters](advanced-hunting-limits.md).
@@ -40,7 +48,6 @@ After running your query, you can see the execution time and its resource usage 
 
 Customers who run multiple queries regularly should track consumption and apply the optimization guidance in this article to minimize disruption resulting from exceeding quotas or usage parameters.
 
-Watch [Optimizing KQL queries](https://www.youtube.com/watch?v=ceYvRuPp5D8) to see some of the most common ways to improve your queries.  
 
 ## General optimization tips
 

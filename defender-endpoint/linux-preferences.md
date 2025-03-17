@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 02/19/2025
+ms.date: 03/11/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -143,6 +143,8 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
+As it is under `antivirusEngine`, this policy is only applicable for `epp` exclusions, unless `mergePolicy` under `exclusionSettings` is configured as (`admin_only`). 
+
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|exclusionsMergePolicy|Exclusions merge|
@@ -151,7 +153,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
-> Can also configure exclusions under [exclusionSettings](#exclusion-setting-preferences)
+> We recommend to configure exclusions and the merge policy under [exclusionSettings](#exclusion-setting-preferences), which allows you to configure exclusion of both `epp` and `global` scope with a single `mergePolicy`.
 
 #### Scan exclusions
 
@@ -660,6 +662,20 @@ Determines whether module load events (file open events on shared libraries) are
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version `101.68.80` or later.||
 
+#### Remediate Infected File feature
+
+Determines whether infected processes that open or load any infected file will get remediated or not.
+
+> [!NOTE]
+> When enabled the processes that open or load any infected file will be remediated in RTP mode. These processes will not appear in the threat list as these are not malicious but are only being terminated because they were loading the threat file in memory. 
+
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|remediateInfectedFile|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version `101.24122.0001` or later.||
+
 #### Supplementary sensor configurations
 
 The following settings can be used to configure certain advanced supplementary sensor features.
@@ -961,7 +977,8 @@ The following configuration profile contains entries for all settings described 
         "sendLowfiEvents":"disabled"
       },
       "ebpfSupplementaryEventProvider":"enabled",
-      "offlineDefinitionUpdateVerifySig": "disabled"
+      "offlineDefinitionUpdateVerifySig": "disabled",
+      "remediateInfectedFile": "enabled"
    },
    "networkProtection":{
       "enforcementLevel":"disabled",

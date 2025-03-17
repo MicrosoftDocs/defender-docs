@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 02/03/2025
+ms.date: 03/04/2025
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -65,9 +65,10 @@ This article provides instructions on how to run the tool via Live Response on W
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
+
 ### Additional information
 
-- The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/MDEClientAnalyzerPreview>.
+- The latest *preview* version of MDE Client Analyzer can be downloaded at [https://aka.ms/MDEClientAnalyzerPreview](https://aka.ms/MDEClientAnalyzerPreview).
 
 - For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or doesn't appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
