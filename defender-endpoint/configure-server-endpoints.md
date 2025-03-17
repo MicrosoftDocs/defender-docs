@@ -135,13 +135,13 @@ You need to download both the **installation** and **onboarding** packages from 
 > 
 > If you're running a non-Microsoft anti-malware solution, make sure to add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
-The **installation package** contains an MSI file that installs the Microsoft Defender for Endpoint agent.
+The **installation package** contains an MSI file that installs the Defender for Endpoint agent.
 
 The **onboarding package** contains `WindowsDefenderATPOnboardingScript.cmd`, which contains the onboarding script.
 
 Follow these steps to download the packages:
 
-1. In Microsoft Defender XDR, go to **Settings > Endpoint > Onboarding**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings > Endpoint > Onboarding**.
 
 1. Select **Windows Server 2016 and Windows Server 2012 R2**.
 
@@ -156,14 +156,14 @@ Follow these steps to download the packages:
 
 ### STEP 2: Apply the installation and onboarding package
 
-In this step, you'll install the prevention and detection components required before onboarding your device to the Microsoft Defender for Endpoint cloud environment, to prepare the machine for onboarding. Ensure all [prerequisites](#prerequisites) have been met.
+In this step, you'll install the prevention and detection components required before onboarding your device to the Defender for Endpoint cloud environment, to prepare the machine for onboarding. Ensure all [prerequisites](#prerequisites) have been met.
 
 > [!NOTE]
 > Microsoft Defender Antivirus gets installed and will be active unless you set it to passive mode.
 
-#### Options to install the Microsoft Defender for Endpoint packages
+#### Options to install the Defender for Endpoint packages
 
-In the previous section, you downloaded an installation package. The installation package contains the installer for all Microsoft Defender for Endpoint components.
+In the previous section, you downloaded an installation package. The installation package contains the installer for all Defender for Endpoint components.
 
 You can use any of the following options to install the agent:
 
@@ -171,11 +171,11 @@ You can use any of the following options to install the agent:
 - [Install using a script](#install-microsoft-defender-for-endpoint-using-a-script)
 - [Apply the installation and onboarding packages using Group Policy](#group-policy-and-an-installer-script) 
 
-##### Install Microsoft Defender For Endpoint using the command line
+##### Install Defender For Endpoint using the command line
 
-Use the installation package from the previous step to install Microsoft Defender for Endpoint.
+Use the installation package from the previous step to install Defender for Endpoint.
 
-Run the following command to install Microsoft Defender for Endpoint:
+Run the following command to install Defender for Endpoint:
 
 ```console
 Msiexec /i md4ws.msi /quiet
@@ -183,7 +183,7 @@ Msiexec /i md4ws.msi /quiet
 
 To uninstall, ensure the machine is offboarded first using the appropriate offboarding script. Then, use Control Panel \> Programs \> Programs and Features to perform the uninstall.
 
-Alternatively, run the following uninstall command to uninstall Microsoft Defender for Endpoint:
+Alternatively, run the following uninstall command to uninstall Defender for Endpoint:
 
 ```console
 Msiexec /x md4ws.msi /quiet
@@ -198,14 +198,14 @@ The `/quiet` switch suppresses all notifications.
 
 Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
-##### Install Microsoft Defender for Endpoint using a script
+##### Install Defender for Endpoint using a script
 
 You can use the [installer helper script](server-migration.md#installer-script) to help automate installation, uninstallation, and onboarding.
 
 > [!NOTE]
 > The installation script is signed. Any modifications to the script invalidates the signature. When you download the script from GitHub, the recommended approach to avoid inadvertent modification is to download the source files as a zip archive then extract it to obtain the install.ps1 file (on the main Code page, select the Code dropdown menu and select "Download ZIP").
 
-This script can be used in various scenarios, including those scenarios described in [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](server-migration.md) and for deployment using Group Policy as described below.
+This script can be used in various scenarios, including those scenarios described in [Server migration scenarios from the previous, MMA-based Defender for Endpoint solution](server-migration.md) and for deployment using Group Policy as described below.
 
 ## Apply installation and onboarding packages using Group Policy
 
@@ -360,6 +360,6 @@ For other Windows server versions, you have two options to offboard Windows serv
 - [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md)
 - [Troubleshooting Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso-quick-start)
-- [Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
+- [Troubleshoot onboarding issues related to Security Management for Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
