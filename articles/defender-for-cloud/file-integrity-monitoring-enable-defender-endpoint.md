@@ -4,7 +4,8 @@ description: Learn how to enable file integrity monitoring when you collect data
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 03/17/2025
+#customer intent: As a security administrator, I want to enable file integrity monitoring so that I can detect unauthorized changes to critical files.
 ---
 
 # Enable file integrity monitoring
@@ -61,6 +62,26 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 
 1. Select **Save**.
 
+## Review enablement status for FIM
+
+After you enable file integrity monitoring, you can review the status of the feature to ensure all prerequisites are met and that the feature is enabled.
+
+1. Navigate to **Workload protection** > **File integrity monitoring**.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-status.png" alt-text="Screenshot of the file integrity monitoring status button." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-status.png":::
+
+1. Select **Settings**.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-settings.png" alt-text="Screenshot of the File Integrity Monitoring page that shows where the settings button is located." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-settings.png":::
+
+1. Review missing prerequisites.
+
+1. Select a subscription and review any corrective actions to the necessary workspace.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/corrective-actions.png" alt-text="Screenshot of the File Integrity Monitoring page that shows the missing prerequisites." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/corrective-actions.png":::
+
+1. Select **Apply**.
+
 ## Disable file integrity monitoring
 
 If you disable file integrity monitoring, no new events are collected. However, the data collected before you disabled the feature remains in the Log Analytics workspace, in accordance with the workspace retention policy.
@@ -84,7 +105,7 @@ Disable as follows:
 
 1. Select **Save**.
 
-## Next steps
+## Next step
 
 - Events collected for file integrity monitoring are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
 - [Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.
