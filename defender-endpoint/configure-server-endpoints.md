@@ -106,13 +106,13 @@ If you've previously onboarded your servers using MMA, follow the guidance provi
 If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. You must remember to set to passive mode during the installation and onboarding process.
 
 > [!NOTE]
-> If you're installing Microsoft Defender for Endpoint on Servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
+> If you're installing Microsoft Defender for Endpoint on servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
 
 #### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
-To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+To receive regular product improvements and fixes for the Defender for Endpoint component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
-If you're using Windows Server Update Services (WSUS) and/or Microsoft Endpoint Configuration Manager, this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
+If you're using Windows Server Update Services (WSUS) and/or [Microsoft Endpoint Configuration Manager](/mem/configmgr/core/understand/introduction), this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
 
 ### Onboarding steps summary
 
