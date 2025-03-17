@@ -1289,6 +1289,8 @@
       href: defender-for-cloud-glossary.md
     - name: Defender for Cloud cost calculator
       href: cost-calculator.md
+    - name: Chargeback process using Azure Cost Analysis
+      href: chargeback.md
     - name: Optimize costs with prepurchase plan
       href: prepurchase-plan.md
     - name: Microsoft Defender for Cloud in the field
