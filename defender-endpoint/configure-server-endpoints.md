@@ -49,13 +49,11 @@ You need to complete the following general steps to successfully onboard servers
 
 Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers. You can onboard servers automatically, have servers monitored by Microsoft Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Microsoft Defender for Cloud customer. For more information, see [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
 
-For Windows Server 2016 and Windows Server 2012 R2, you can either manually install/upgrade the modern, unified solution on these machines, or use the integration to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. More information about making the switch at [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
+For Windows Server 2016 and Windows Server 2012 R2, you can either manually install/upgrade the [modern unified solution](#functionality-in-the-modern-unified-solution) on these devices, or use the integration to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. More information about making the switch at [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
 
 When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
 
-If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
-
-Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
+If you start using Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Microsoft Defender for Cloud at a later time. Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
 
 Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
 
