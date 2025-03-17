@@ -38,9 +38,12 @@ Defender for Identity security posture assessments have five key categories. Eac
 ## Access Defender for Identity security posture assessments
 
 > [!NOTE]
-> You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score. 
+> You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score.
+> 
 > Additionally, while *certificate template* assessments are available to all customers with AD CS installed in their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server.   
+>
 > Hybrid security recommendations will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.  
+>
 > For more information, see [Configuring sensors for AD FS, AD CS and Entra Connect.](https://aka.ms/DeployMdiSensorOnYourIdentityInfrastructure)
 
 **To access identity security posture assessments**:
