@@ -78,7 +78,7 @@ The previous implementation (before April of 2022) of onboarding Windows Server 
 
 The new unified solution package makes it easier to onboard servers by removing dependencies and installation steps. It also provides a much expanded feature set. For more information, please refer to [Defending Windows Server 2012 R2 and 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292).
 
-Depending on the server that you're onboarding, the unified solution installs Microsoft Defender Antivirus and/or the EDR sensor. The following table indicates what component is installed and what is built in by default.
+Depending on the server that you're onboarding, the unified solution installs Defender for Endpoint and/or the EDR sensor. The following table indicates what component is installed and what is built in by default.
 
 |Server version|AV|EDR|
 |----|----|----|
