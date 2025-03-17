@@ -10,13 +10,13 @@ ms.date: 03/17/2025
 
 # Enable file integrity monitoring
 
-In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure. It scans and analyzes operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
 
 After you enable Defender for Servers Plan 2, follow the instructions in this article to configure file integrity monitoring using the Microsoft Defender for Endpoint agent to collect data.
 
 > [!NOTE]
 >
-> - If you are using a previous version of file integrity monitoring that used the Log Analytics agent (also known as the Microsoft Monitoring agent(MMA)), or the Azure Monitor agent (AMA) you can [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md).
+> - If you use a previous version of file integrity monitoring with the Log Analytics agent (Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA), you can [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md).
 > - From June 2025 onwards, file integrity monitoring requires a minimum version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
 >   - Windows: 10.8760 or later.
 >   - Linux: 30.124082 or later.
@@ -64,9 +64,9 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 
 ## Review enablement status for FIM
 
-After you enable file integrity monitoring, you can review the status of the feature to ensure all prerequisites are met and that the feature is enabled.
+After you enable file integrity monitoring, review the status of the feature to ensure all prerequisites are met and the feature is enabled.
 
-1. Navigate to **Workload protection** > **File integrity monitoring**.
+1. Go to **Workload protection** > **File integrity monitoring**.
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-status.png" alt-text="Screenshot of the file integrity monitoring status button." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-status.png":::
 
@@ -74,9 +74,9 @@ After you enable file integrity monitoring, you can review the status of the fea
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-settings.png" alt-text="Screenshot of the File Integrity Monitoring page that shows where the settings button is located." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-settings.png":::
 
-1. Review missing prerequisites.
+1. Check for missing prerequisites.
 
-1. Select a subscription and review any corrective actions to the necessary workspace.
+1. Select a subscription and review corrective actions for the necessary workspace.
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/corrective-actions.png" alt-text="Screenshot of the File Integrity Monitoring page that shows the missing prerequisites." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/corrective-actions.png":::
 
