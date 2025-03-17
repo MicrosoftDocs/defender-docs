@@ -95,10 +95,9 @@ If you've previously onboarded your servers using MMA, follow the guidance provi
 
 #### Prerequisites for Windows Server 2016 and Windows Server 2012 R2
 
-It's recommended to install the latest available SSU and LCU on the server.
-
-- The Servicing Stack Update (SSU) from September 14, 2021 or later must be installed.
-- The Latest Cumulative Update (LCU) from September 20, 2018 or later must be installed.  
+- It's recommended to install the latest available Servicing Stack Update (SSU) and Least Cumulative Update (LCU) on the server.
+- The SSU from September 14, 2021 or later must be installed.
+- The LCU from September 20, 2018 or later must be installed.  
 - Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
 - Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 
