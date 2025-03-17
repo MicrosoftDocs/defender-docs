@@ -167,9 +167,9 @@ In the previous section, you downloaded an installation package. The installatio
 
 You can use any of the following options to install the agent:
 
-- [Install using the command line](#install-microsoft-defender-for-endpoint-using-the-command-line)
-- [Install using a script](#install-microsoft-defender-for-endpoint-using-a-script)
-- [Apply the installation and onboarding packages using Group Policy](#group-policy-and-an-installer-script) 
+- [Install using the command line](#install-defender-for-endpoint-using-the-command-line)
+- [Install using a script](#install-defender-for-endpoint-using-a-script)
+- [Apply the installation and onboarding packages using Group Policy](#apply-installation-and-onboarding-packages-using-group-policy)
 
 ##### Install Defender For Endpoint using the command line
 
