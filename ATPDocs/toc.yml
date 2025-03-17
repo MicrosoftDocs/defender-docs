@@ -209,7 +209,7 @@ items:
        - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
          href: security-assessment-prevent-users-request-certificate.md
        - name: Vulnerable Certificate Authority setting (ESC6)
-        href: security-assessment-edit-vulnerable-ca-setting.md
+         href: security-assessment-edit-vulnerable-ca-setting.md
      - name: Group policy 
        items: 
         - name: GPO assigns unprivileged identities to local groups with elevated privileges
