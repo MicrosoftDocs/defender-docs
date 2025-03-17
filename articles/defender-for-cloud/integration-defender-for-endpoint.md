@@ -13,7 +13,7 @@ ms.date: 03/10/2025
 Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management integrate natively with Defender for Cloud to provide:
 
 - **Integrated security capabilities**: Security capabilities provided by Defender for Endpoint, Defender Vulnerability Management, and Defender for Cloud come together to provide end-to-end protection for machines protected by the Defender for Servers plan.
-- **Licensing**: Defender for Servers covers licensing for [Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint). Licensing is charged per hour instead of per user, reducing costs by protecting VMs only when they're in use.
+- **Licensing**: Defender for Servers covers licensing for Defender for Endpoint for servers. Licensing is charged per hour instead of per user, reducing costs by protecting VMs only when they're in use.
 - **Agent provisioning**: Defender for Cloud can automatically provision the Defender for Endpoint sensor on supported machines connected to Defender for Cloud.
 - **Unified alerts**: Alerts and vulnerability data from Defender for Endpoint appear in Defender for Cloud in the Azure portal. You can move to the Defender portal to drill down for detailed alert information and context.
 
