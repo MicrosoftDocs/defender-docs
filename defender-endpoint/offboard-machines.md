@@ -38,7 +38,7 @@ ms.date: 03/17/2025
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
-- Mac
+- Mac devices
 - Linux servers
 
 When you offboard a device from Defender for Endpoint, no new detections, vulnerability, or security data are sent to the Microsoft Defender portal. Seven days after offboarding a device, its status changes to [inactive](/defender-endpoint/fix-unhealthy-sensors#inactive-devices). Devices that weren't active within the past 30 days are not factored into your organization's [exposure score](/defender-vulnerability-management/tvm-exposure-score).
