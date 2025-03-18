@@ -25,7 +25,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment. The updated Identities Inventory page now includes the following tabs:
 
-Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
+- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
 
 - Cloud application accounts: Provides insights into accounts from connected applications via Defender for Cloud Apps, allowing investigation of account permissions, group memberships, aliases, and the applications in use.
 
