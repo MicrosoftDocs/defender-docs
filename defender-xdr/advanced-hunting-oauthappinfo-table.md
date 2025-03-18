@@ -59,7 +59,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 
 The `OAuthAppInfo` table updates information on an hourly basis to record any changes in metadata or insights for OAuth apps based on data from Defender for Cloud Apps app governance. 
 
-Additionally, to ensure that `OAuthAppInfo` table retains data for the covered apps, a complete snapshot of all OAuth apps is sent twice a month (every 14th and 28th of the month).
+Additionally, to ensure that `OAuthAppInfo` table retains data for the covered apps, a complete snapshot of all OAuth apps is sent twice a month.
 
 
 
