@@ -34,8 +34,6 @@ ms.date: 12/18/2020
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-[!include[Prerelease information](../../includes/prerelease.md)]
-
 ## API description
 
 Retrieves a list of all vulnerabilities.
