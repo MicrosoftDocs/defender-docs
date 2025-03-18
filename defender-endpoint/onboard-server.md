@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/14/2025
+ms.date: 03/17/2025
 ---
 
 # Onboard servers through Microsoft Defender for Endpoint's device onboarding experience
