@@ -69,8 +69,6 @@ The following image shows the threat found feature before and after the new upda
    
 4. **Uninstall threat**:
 
-The following image shows the uninstall threat feature before and after the new update.
-
 :::image type="content" source="media/mde-android-uninstall.png" alt-text="Screensot showing the new uninstall threat feature on the MDE Android app" lightbox="media/mde-android-uninstall.png":::
 
 5. **Security History**:
