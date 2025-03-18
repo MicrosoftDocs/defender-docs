@@ -20,10 +20,10 @@ ms.date: 10/11/2024
 
 # Schedule scans with Microsoft Defender for Endpoint (Linux)
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 To run a scan for Linux, see [Supported Commands](linux-resources.md#supported-commands).
 

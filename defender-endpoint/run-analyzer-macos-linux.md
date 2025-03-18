@@ -22,6 +22,11 @@ search.appverid: met150
 
 # Run the client analyzer on macOS and Linux
 
+**Applies to:**
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+
 The XMDEClientAnalyzer is used for diagnosing Microsoft Defender for Endpoint health or reliability issues on onboarded devices running either Linux, or macOS.
 
 - [Run the client analyzer on Linux](/defender-endpoint/run-analyzer-linux)

@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 02/04/2025
+ms.date: 03/17/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -23,8 +23,8 @@ ms.subservice: onboard
 
 **Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -38,33 +38,36 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 ## Windows Server onboarding overview
 
-You need to complete the following general steps to successfully onboard servers.
+The following diagram shows the general steps required to successfully onboard servers.
 
 :::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
 
 > [!NOTE]
 > Windows Hyper-V Server editions aren't supported.
 
-**Integration with Microsoft Defender for Servers**:
+### Integration with Microsoft Defender for Servers
 
-Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers. You can onboard servers automatically, have servers monitored by Microsoft Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Microsoft Defender for Cloud customer. For more information please go to [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
+Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers. You can onboard servers automatically, have servers monitored by Microsoft Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Microsoft Defender for Cloud customer. For more information, see [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
 
-> [!NOTE]
-> - For Windows Server 2016 and Windows Server 2012 R2, you can either manually install/upgrade the modern, unified solution on these machines, or use the integration to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. More information about making the switch at [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
-> - When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
-> - If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
-> - Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
-> - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
-> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
-> - Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
+On devices running Windows Server 2016 or Windows Server 2012 R2, you can either manually install/upgrade the [modern unified solution](#functionality-in-the-modern-unified-solution), or use the integration with Defender for Servers to automatically deploy or upgrade servers covered by your respective Microsoft Defender for Server plan. For more information, see [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#enable-the-integration).
 
-**Windows Server 2016 and Windows Server 2012 R2**:
+When you use Microsoft Defender for Cloud to monitor servers, a Defender for Endpoint tenant is automatically created (in the US for US users, in the EU for European users, and in the UK for UK users). Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
+
+If you start using Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Microsoft Defender for Cloud at a later time. Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
+
+Server endpoint monitoring utilizing the integration between Defender for Servers and Defender for Endpoint is not available to Office 365 GCC customers.
+
+Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016, Windows Server 2012 R2, and earlier versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, and Windows 10 or later, doesn't support this gateway.
+
+Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
+
+### Windows Server 2016 and Windows Server 2012 R2
 
 - Download installation and onboarding packages
 - Apply the installation package
 - Follow the onboarding steps for the corresponding tool
 
-**Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, Windows Server 2022, and Windows 2025**:
+### Windows Server Semi-Annual Enterprise Channel and Windows Server 2019 or later
 
 - Download the onboarding package
 - Follow the onboarding steps for the corresponding tool
@@ -86,7 +89,7 @@ Depending on the server that you're onboarding, the unified solution installs Mi
 If you've previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
 
 > [!IMPORTANT]
-> Before proceeding with onboarding, see the section [Known issues and limitations in the new, unified solution package for Windows Server 2012 R2 and Windows Server 2016](#known-issues-and-limitations-in-the-new-unified-solution-package-for-windows-server-2016-and-windows-server-2012-r2).
+> Before proceeding with onboarding, see the section [Known issues and limitations in the new, unified solution package for Windows Server 2012 R2 and Windows Server 2016](#known-issues-and-limitations-in-the-modern-unified-solution).
 
 ### Prerequisites
 
@@ -99,18 +102,18 @@ It's recommended to install the latest available SSU and LCU on the server.
 - Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
 - Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 
-#### Prerequisites for running with third-party security solutions
+#### Prerequisites for running Defender for Endpoint non-Microsoft security solutions
 
-If you intend to use a third-party anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. You must remember to set to passive mode during the installation and onboarding process.
+If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. You must remember to set to passive mode during the installation and onboarding process.
 
 > [!NOTE]
-> If you're installing Microsoft Defender for Endpoint on Servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform may need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see, [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
+> If you're installing Microsoft Defender for Endpoint on Servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
 
-#### Update packages for Microsoft Defender for Endpoint on Windows Server 2016 and Windows Server 2012 R2
+#### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
 To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
-If you're using Windows Server Update Services (WSUS) and/or Microsoft Endpoint Configuration Manager, this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint".
+If you're using Windows Server Update Services (WSUS) and/or Microsoft Endpoint Configuration Manager, this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
 
 ### Onboarding steps summary
 
@@ -124,20 +127,18 @@ You need to download both the **installation** and **onboarding** packages from 
 
 > [!NOTE]
 > The installation package is updated monthly. Be sure to download the latest package before usage.
-> To update after installation, you don't have to run the installer package again. If you do, the installer asks you to offboard first as that is a requirement for uninstallation. See [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016-and-windows-server-2012-r2).
+> To update after installation, you don't have to run the installer package again. If you do, the installer asks you to offboard first as that is a requirement for uninstallation. See [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
 
 :::image type="content" alt-text="Image of onboarding dashboard" source="media/install-agent-onboard.png" lightbox="media/install-agent-onboard.png":::
 
 > [!NOTE]
-> On Windows Server 2016 and Windows Server 2012 R2, Microsoft Defender Antivirus must be installed as a feature (see [Switch to MDE](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
+> On Windows Server 2016 and Windows Server 2012 R2, Microsoft Defender Antivirus must be installed as a feature (see [Switch to Defender for Endpoint](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
 > 
-> If you're running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
+> If you're running a non-Microsoft anti-malware solution,  make sure to add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It's also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
 The **installation package** contains an MSI file that installs the Microsoft Defender for Endpoint agent.
 
-The **onboarding package** contains the following file:
-
-- `WindowsDefenderATPOnboardingScript.cmd` - contains the onboarding script
+The **onboarding package** contains `WindowsDefenderATPOnboardingScript.cmd`, which contains the onboarding script.
 
 Follow these steps to download the packages:
 
@@ -170,7 +171,7 @@ You can use any of the following options to install the agent:
 
 - [Install using the command line](#install-microsoft-defender-for-endpoint-using-the-command-line)
 - [Install using a script](#install-microsoft-defender-for-endpoint-using-a-script)
-- [Apply the installation and onboarding packages using Group Policy](#apply-the-microsoft-defender-for-endpoint-installation-and-onboarding-packages-using-group-policy-when-performing-the-installation-with-an-installer-script)
+- [Apply the installation and onboarding packages using Group Policy](#group-policy-and-an-installer-script)
 
 ##### Install Microsoft Defender For Endpoint using the command line
 
@@ -208,11 +209,19 @@ You can use the [installer helper script](server-migration.md#installer-script) 
 
 This script can be used in various scenarios, including those scenarios described in [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](server-migration.md) and for deployment using Group Policy as described below.
 
-## Apply the Microsoft Defender for Endpoint installation and onboarding packages using Group policy when performing the installation with an installer script
+## Group Policy and an installer script
 
-1. Create a group policy: <br> Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and select **New**. Enter the name of the new GPO in the dialogue box that is displayed and select **OK**.
+If you're using Group Policy, apply Defender for Endpoint installation and onboarding packages with an installer script.
 
-2. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
+1. Create a group policy by following these steps:
+
+   1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11).
+   
+   2. Right-click **Group Policy Objects** you want to configure, and then select **New**. 
+   
+   3. Specify the name of the new Group Policy Object (GPO), and then select **OK**.
+
+2. In your [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the Group Policy Object (GPO) you want to configure, and then select **Edit**.
 
 3. In the **Group Policy Management Editor**, go to **Computer configuration**, then **Preferences**, and then **Control panel settings**.
 
@@ -237,7 +246,7 @@ This script can be used in various scenarios, including those scenarios describe
 
    For scenarios where you want Microsoft Defender Antivirus to coexist with non-Microsoft antimalware solutions, add the $Passive parameter to set passive mode during installation.
 
-9. Select **OK** and close any open GPMC windows.
+9. Select **OK** and close any open Group Policy Management Console windows.
 
 10. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link. Select **OK**.
 
@@ -256,11 +265,11 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
    :::image type="content" source="media/atp-verify-passive-mode.png" alt-text="Screenshot of the passive mode verification result.":::
 
-#### Known issues and limitations in the new, unified solution package for Windows Server 2016 and Windows Server 2012 R2
+#### Known issues and limitations in the modern unified solution
 
-> [!IMPORTANT]
->
-> Always download the latest installer package from the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) before performing a new installation and ensure prerequisites have been met. After installation, ensure to regularly update using component updates described in the section [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016-and-windows-server-2012-r2).
+The following points apply to Windows Server 2016 and Windows Server 2012 R2:
+
+- Always download the latest installer package from the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) before performing a new installation and ensure prerequisites are met. After installation, ensure to regularly update using component updates described in the section [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
 
 - An operating system update can introduce an installation issue on machines with slower disks due to a time out with service installation. Installation fails with the message "Couldn't find c:\program files\windows defender\mpasdesc.dll, - 310 WinDefend". Use the latest installation package, and the latest [install.ps1](https://github.com/microsoft/mdefordownlevelserver) script to help clear the failed installation if necessary.
 
@@ -273,8 +282,6 @@ The following steps are only applicable if you're using a third-party anti-malwa
 - To automatically, deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
 ## Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019, and Windows Server 2022, and Windows Server 2025
-
-Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 
 ### Download package
 
@@ -328,7 +335,7 @@ After successfully onboarding devices to the service, you'll need to configure t
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks) using the same method available for Windows 10 client devices.
+You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 using the same method available for Windows 10 client devices.
 
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
@@ -343,7 +350,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 - Remove the Defender for Endpoint workspace configuration
 
 > [!NOTE]
-> These offboarding instructions for other Windows server versions also apply if you're running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
+> These offboarding instructions for other Windows Server versions also apply if you're running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
 ## Related articles
 
