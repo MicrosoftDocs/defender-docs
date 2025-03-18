@@ -68,7 +68,16 @@ Follow these steps:
 
 <a name="step-1"></a>
 
-## Step 1. Simulate attacks with the Microsoft Defender portal
+## Step 1. Gather threat intelligence to identify adversaries and their infrastructure
+
+Microsoft Defender Threat Intelligence (Defender TI) provides threat intelligence information such as specific indicators of compromise (IOCs) and research and analyses straight from Microsoft experts and other sources. You can read articles or search for threat actors, vulnerabilities, and other IOCs to gain insight on the types of threats that you might want to investigate.
+
+- For a tutorial on how to perform indicator searches and gather threat and adversary intelligence using Defender TI, see: [Tutorial: Gathering threat intelligence and infrastructure chaining](/defender/threat-intelligence/gathering-threat-intelligence-and-infrastructure-chaining)
+- For a tutorial on how to perform indicator searches to gather vulnerability intelligence using Defender TI, see: [Tutorial: Gathering vulnerability intelligence](/defender/threat-intelligence/gathering-vulnerability-intelligence)
+
+For more information, see [What is Microsoft Defender Threat Intelligence (Defender TI)?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+
+## Step 2. Simulate attacks with the Microsoft Defender portal
 
 The Microsoft Defender portal has built-in capabilities to create simulated attacks on your pilot environment:
 
@@ -354,7 +363,7 @@ This wraps up attack simulations for incident analysis, automated investigation,
 
 <a name="step-2"></a>
 
-## Step 2. Prioritize incidents
+## Step 3. Prioritize incidents
 
 You get to the incident queue from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. Here's an example.
 
@@ -376,7 +385,7 @@ For more information, see [Prioritize incidents](incident-queue.md).
 
 <a name="step-3"></a>
 
-## Step 3. Manage incidents
+## Step 4. Manage incidents
 
 You can manage incidents from the **Manage incident** pane for an incident. Here's an example.
 
@@ -417,7 +426,7 @@ For more information, see [Manage incidents](manage-incidents.md).
 
 <a name="step-4"></a>
 
-## Step 4. Examine automated investigation and response with the Action center
+## Step 5. Examine automated investigation and response with the Action center
 
 Depending on how automated investigation and response capabilities are configured for your organization, remediation actions are taken automatically or only upon approval by your security operations team. All actions, whether pending or completed, are listed in the [Action center](m365d-action-center.md), which lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
@@ -436,7 +445,7 @@ For more information, see [Automated investigation and response](m365d-autoir.md
 
 <a name="step-5"></a>
 
-## Step 5. Use advanced hunting
+## Step 6. Use advanced hunting
 
 > [!NOTE]
 > Before we walk you through the advanced hunting simulation, watch the following video to understand advanced hunting concepts, see where you can find it in the portal, and know how it can help you in your security operations.
