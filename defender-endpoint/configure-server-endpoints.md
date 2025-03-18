@@ -203,7 +203,7 @@ Support for Windows Server provides deeper insight into server activities, cover
 You can use the [installer helper script](server-migration.md#installer-script) to help automate installation, uninstallation, and onboarding.
 
 > [!NOTE]
-> The installation script is signed. Any modifications to the script invalidates the signature. When you download the script from GitHub, the recommended approach to avoid inadvertent modification is to download the source files as a zip archive then extract it to obtain the install.ps1 file (on the main Code page, select the Code dropdown menu and select "Download ZIP").
+> The installation script is signed. Any modifications to the script invalidate the signature. When you download the script from GitHub, the recommended approach to avoid inadvertent modification is to download the source files as a zip archive then extract it to obtain the install.ps1 file (on the main Code page, select the Code dropdown menu and select "Download ZIP").
 
 This script can be used in various scenarios, including those scenarios described in [Server migration scenarios from the previous, MMA-based Defender for Endpoint solution](server-migration.md) and for deployment using Group Policy as described below.
 
