@@ -225,11 +225,11 @@ If you're using Group Policy, apply Defender for Endpoint installation and onboa
 
 4. Right-click **Scheduled tasks**, point to **New**, and then select **Immediate Task (At least Windows 7)**.
 
-5. In the **Task** window that opens, go to the **General** tab. Under **Security options** select **Change User or Group** and type SYSTEM and then select **Check Names** then **OK**. NT AUTHORITY\SYSTEM appears as the user account the task runs as.
+5. In the **Task** window that opens, go to the **General** tab. Under **Security options** select **Change User or Group** and type SYSTEM and then select **Check Names** then **OK**. `NT AUTHORITY\SYSTEM` appears as the user account the task runs as.
 
 6. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
 
-7. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
+7. In the Name field, type an appropriate name for the scheduled task (for example, *Defender for Endpoint Deployment*).
 
 8. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. The [installer script](server-migration.md#installer-script) handles the installation, and immediately perform the onboarding step after installation completes. Select *C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe* then provide the arguments:
 
@@ -271,7 +271,7 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 - An operating system update can introduce an installation issue on machines with slower disks due to a time out with service installation. Installation fails with the message "Couldn't find c:\program files\windows defender\mpasdesc.dll, - 310 WinDefend". Use the latest installation package, and the latest [install.ps1](https://github.com/microsoft/mdefordownlevelserver) script to help clear the failed installation if necessary.
 
-- the user interface on Windows Server 2016 and Windows Server 2012 R2 only allows for basic operations. To perform operations on a device locally, refer to [Manage Defender for Endpoint with PowerShell, WMI, and MPCmdRun.exe](preferences-setup.md). As a result, features that specifically rely on user interaction, such as where the user is prompted to make a decision or perform a specific task, may not work as expected. It's recommended to disable or not enable the user interface nor require user interaction on any managed server as it may impact protection capability.
+- The user interface on Windows Server 2016 and Windows Server 2012 R2 only allows for basic operations. To perform operations on a device locally, refer to [Manage Defender for Endpoint with PowerShell, WMI, and MPCmdRun.exe](preferences-setup.md). As a result, features that specifically rely on user interaction, such as where the user is prompted to make a decision or perform a specific task, may not work as expected. It's recommended to disable or not enable the user interface nor require user interaction on any managed server as it may impact protection capability.
 
 - Not all Attack Surface Reduction rules are applicable to all operating systems. See [Attack surface reduction rules](attack-surface-reduction-rules-reference.md).
 
