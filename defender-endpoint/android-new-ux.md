@@ -45,7 +45,7 @@ The following image shows the main Dashboard screen that appears to the enterpri
 
 ### List the features inside one Feature Card
 
-The **App Security** and **Web Protection** features are now consolidated under a single feature card titled **Device Protection**. Previously, each functionality had its own separate card on the Dashboard screen. The image below illustrates the previous and new version of the **Device Protection** feature card.
+The **App Security** and **Web Protection** features are now consolidated under a single feature card titled **Device Protection**. Previously, each functionality had its own separate card on the Dashboard screen. The following image illustrates the previous and new version of the **Device Protection** feature card.
 
 :::image type="content" source="media/mde-android-list.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-android-list.png":::
 
@@ -63,11 +63,11 @@ We updated all the subordinating screens associated with the feature
 
 3. **Threat found**:
 
-The image below illustrates the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
+The following image illustrates the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
 
 :::image type="content" source="media/mde-android-threat-found.png" alt-text="Screensot showing the threat found feature on the MDE Android app" lightbox="media/mde-android-threat-found.png":::
    
-4. **Uninstall threat**:
+1. **Uninstall threat**:
 
 :::image type="content" source="media/mde-android-uninstall.png" alt-text="Screensot showing the new uninstall threat feature on the MDE Android app" lightbox="media/mde-android-uninstall.png":::
 
