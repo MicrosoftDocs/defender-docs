@@ -9,7 +9,7 @@ ms.reviewer: mkaminska, yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 08/20/2024
+ms.date: 03/18/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -21,11 +21,12 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint Plan 1 and Plan 2
+- Microsoft Defender for Endpoint for servers
 - Microsoft Defender Antivirus
 
 **Platforms**
+
 - Windows
 - macOS
 - Linux
@@ -63,7 +64,7 @@ Microsoft Defender Antivirus and cloud protection automatically block most new, 
       - Can be synchronous or asynchronous. For synchronous, the file won't open until the cloud renders a verdict. For asynchronous, the file opens while cloud protection performs its analysis.
       - Metadata can include PE attributes, static file attributes, dynamic and contextual attributes, and more (see [Examples of metadata sent to the cloud protection service](#examples-of-metadata-sent-to-the-cloud-protection-service)).
 
-   1. After examining the metadata, if Microsoft Defender Antivirus cloud protection can't reach a conclusive verdict, it can request a sample of the file for further inspection. This request honors the setting configuration for sample submission, as described in the following table:
+   2. After examining the metadata, if Microsoft Defender Antivirus cloud protection can't reach a conclusive verdict, it can request a sample of the file for further inspection. This request honors the setting configuration for sample submission, as described in the following table:
    
       | Setting | Description |
       |---|---|
