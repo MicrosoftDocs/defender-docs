@@ -28,7 +28,7 @@ ms.date: 03/17/2025
 
 You can choose from several options to onboard a server to Microsoft Defender for Endpoint. Make sure to review the [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). 
 
-## Server licenses
+## Server plans
 
 To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
 
