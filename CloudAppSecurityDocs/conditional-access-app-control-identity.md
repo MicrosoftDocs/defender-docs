@@ -24,6 +24,8 @@ If you don't have Microsoft Entra, check for the presence of client certificates
 
 Make sure that the client certificate is installed in the user store and not the computer store. You then use the presence of those certificates to set access and session policies.
 
+If leveraging Intune to deploy the certificate with the Intune certificate connector, you need to follow PKCS deployment methods and deploy the device certificate. For more information, see [Configure and user PKCS with Intune](/mem/intune-service/protect/certificates-pfx-configure)
+
 Once the certificate is uploaded and a relevant policy is configured, when an applicable session traverses Defender for Cloud Apps and Conditional Access app control,  Defender for Cloud Apps requests the browser to present the SSL/TLS client certificates. The browser serves the SSL/TLS client certificates that are installed with a private key. This combination of certificate and private key is done by using the PKCS #12 file format, typically .p12 or .pfx.
 
 When a client certificate check is performed, Defender for Cloud Apps checks for the following conditions:
