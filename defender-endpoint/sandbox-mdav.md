@@ -32,7 +32,8 @@ audience: ITPro
 
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 This article describes how to run Microsoft Defender Antivirus in a sandbox environment for enhanced protection against tampering. 
 
