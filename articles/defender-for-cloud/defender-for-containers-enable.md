@@ -6,7 +6,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.custom: devx-track-azurecli
 zone_pivot_groups: k8s-host
-ms.date: 06/29/2023
+ms.date: 03/13/2025
 ---
 
 # Configure Microsoft Defender for Containers components

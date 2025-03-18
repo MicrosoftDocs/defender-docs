@@ -31,7 +31,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| March 11 | Upcoming Change | [Upcoming change to the recommendation severity levels](#upcoming-change-to-the-recommendation-severity-levels) |
 | March 03 | GA | [General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government](#general-availability-of-file-integrity-monitoring-fim-based-on-microsoft-defender-for-endpoint-in-azure-government) |
+
+### Upcoming change to the recommendation severity levels
+
+March 11, 2025
+
+We're enhancing the severity levels of recommendations to improve risk assessment and prioritization. As part of this update, we reevaluated all severity classifications and introduced a new level — Critical. Previously, recommendations were categorized into three levels: Low, Medium, and High. With this update, there are now four distinct levels: Low, Medium, High, and Critical, providing a more granular risk evaluation to help customers focus on the most urgent security issues.
+
+As a result, customers might notice changes in the severity of existing recommendations. Additionally, the risk level evaluation, which is available for Defender CSPM customers only, might also be affected as both recommendation severity and asset context are taken into consideration. These adjustments could affect the overall risk level.
+
+**The projected change will take place on March 25, 2025.**
 
 ### General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government 
 
@@ -319,7 +330,7 @@ The scan interval options for cloud connectors associated with AWS, GCP, Jfrog, 
 
 June, 2025
 
-Starting at June 2025, File Integrity Monitoring (FIM) requires a minimum Defender for Endpoint (MDE) client version. Please ensure that you are at the minimum following client versions to continue benefiting from the FIM experience in Microsoft Defender for Cloud: for Windows: 10.8760, for Linux: 30.124082. [Learn more](file-integrity-monitoring-enable-defender-endpoint.md)
+Starting June 2025, File Integrity Monitoring (FIM) requires a minimum Defender for Endpoint (MDE) client version. Please ensure that you are at the minimum following client versions to continue benefiting from the FIM experience in Microsoft Defender for Cloud: for Windows: 10.8760, for Linux: 30.124082. [Learn more](file-integrity-monitoring-enable-defender-endpoint.md)
 
 ## November 2024
 

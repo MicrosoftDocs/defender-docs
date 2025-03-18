@@ -32,7 +32,7 @@ For end-user context, we recommend passing the `EndUserId` and `SourceIP` fields
 
 For application context, simply pass the `applicationName` field, as a simple string.
 
-If a field’s name is misspelled, the Azure OpenAI API call will still succeed. The `UserSecurityContext` schema doesn't require validation to pass through the Azure OpenAI user field. Application developers should ensure that a valid JSON is passed in every request made by the application to Azure OpenAI.
+If a field’s name is misspelled, the Azure OpenAI API call will still succeed. 
 
 ## UserSecurityContext schema
 
@@ -45,13 +45,13 @@ This feature is currently not supported when leveraging models deployed through 
 ## Availability
 
 
-| Source | Version support | Comments |
-|----|----| ----|
-|Azure OpenAI REST API|[2025-01-01 version](/azure/ai-services/openai/reference-preview)|-|
-|Azure .NET SDK| [v2.2.0-beta.1 (2025-02-07) or higher](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.2.0-beta.1/sdk/openai/Azure.AI.OpenAI/CHANGELOG.md)|-|
-|Azure Python SDK|[v1.61.1 or higher](https://github.com/openai/openai-python/releases/tag/v1.61.1)|The support is provided by appending to "extra_body" object|
-|Azure JS/Node SDK|[v4.83.0 or higher](https://github.com/openai/openai-node/releases/tag/v4.83.0)|The support is provided by appending to "extra_body" object|
-|Azure Go SDK|[v0.7.2 or higher ](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/ai/azopenai@v0.7.2#UserSecurityContext)|-|
+| Source | Version support | Code Example | Comments |
+|----|----| ----| ----|
+|Azure OpenAI REST API|[2025-01-01 version](/azure/ai-services/openai/reference-preview)|-|-|
+|Azure .NET SDK| [v2.2.0-beta.1 (2025-02-07) or higher](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.2.0-beta.1/sdk/openai/Azure.AI.OpenAI/CHANGELOG.md)|[Github code example](https://github.com/Azure-Samples/signalr-ai-streaming/blob/main/src/AIStreaming/MsDefenderExtension.cs)|-|
+|Azure Python SDK|[v1.61.1 or higher](https://github.com/openai/openai-python/releases/tag/v1.61.1)|-|The support is provided by appending to "extra_body" object|
+|Azure JS/Node SDK|[v4.83.0 or higher](https://github.com/openai/openai-node/releases/tag/v4.83.0)|[Github code example](https://github.com/Azure-Samples/openai-secure-ui-js/blob/main/packages/api/src/functions/security/ms-defender-utils.ts)|The support is provided by appending to "extra_body" object|
+|Azure Go SDK|[v0.7.2 or higher ](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/ai/azopenai@v0.7.2#UserSecurityContext)|-|-|
 
 
 
