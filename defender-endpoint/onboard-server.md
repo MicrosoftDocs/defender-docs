@@ -24,7 +24,7 @@ ms.date: 03/14/2025
 **Applies to:**
 
 - Microsoft Defender for Endpoint for servers
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 You can choose from several options to onboard a server to Microsoft Defender for Endpoint. Make sure to review the [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). 
 
