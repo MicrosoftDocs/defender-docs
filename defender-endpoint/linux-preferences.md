@@ -75,8 +75,8 @@ The top level of the configuration profile includes product-wide preferences and
 
 This section includes two configuration profile examples:
 
-- **Sample profile** to help you get started with recommended settings
-- **Full configuration profile example** for organizations who want more granular control over security settings
+- **Sample profile** to help you get started with recommended settings.
+- **Full configuration profile example** for organizations who want more granular control over security settings.
 
 To get started, we recommend using the first sample profile for your organization. For more granular control, you can use the [full configuration profile example](#full-configuration-profile-example) instead.
 
@@ -121,7 +121,7 @@ It will help you to take advantage of important protection features that Defende
 The following configuration profile contains entries for all settings described in this document and can be used for more advanced scenarios where you want more control over the product.
   
 > [!NOTE]
-> It is not possible to control all Microsoft Defender for Endpoint communication with only a proxy setting in this JSON.
+> It isn't possible to control all Microsoft Defender for Endpoint communication with only a proxy setting in this JSON.
 
 ```JSON
 {
@@ -421,7 +421,6 @@ Specifies a process for which all file activity is excluded from scanning. The p
 Specifies the behavior of RTP on mount point marked as `noexec`. There are two values for setting are:
 
 - Unmuted (`unmute`): The default value, all mount points are scanned as part of RTP.
-- 
 - Muted (`mute`): Mount points marked as `noexec` aren't scanned as part of RTP, these mount point can be created for:
   - Database files on Database servers for keeping database files.
   - File server can keep data files mountpoints with `noexec` option.
