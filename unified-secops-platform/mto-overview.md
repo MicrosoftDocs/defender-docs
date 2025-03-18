@@ -38,7 +38,7 @@ For more information, see:
 
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
-- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
 
 
 ## Feature availability

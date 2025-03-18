@@ -66,7 +66,7 @@ The first step in using Microsoft Sentinel is to create a Log Analytics workspac
 1. Create a Security resource group for governance purposes, which allows you to isolate Microsoft Sentinel resources and role-based access to the collection.
 1. Create a Log Analytics workspace in the Security resource group and onboard Microsoft Sentinel into it.
 
-For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
+For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
 
 ## Configure roles and permissions
 

@@ -30,7 +30,7 @@ For preview, in the Defender portal, connect to one primary workspace and multip
 
 For more information, see the following articles:
 
-- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
 - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
 
 ## January 2025
