@@ -1,6 +1,6 @@
 ---
 title: OAuthAppInfo table in the advanced hunting schema
-description: Learn about the 
+description: Learn about the OAuthAppInfo table which contains information about Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -17,21 +17,23 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
 ms.topic: reference
-ms.date: 03/12/2025
+ms.date: 04/01/2025
 ---
 
-# OAuthAppInfo
+# OAuthAppInfo (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `DeviceBaselineComplianceAssessment` table in the advanced hunting schema contains baseline compliance assessment snapshot, which indicates the status of various security configurations related to baseline profiles on devices. 
+The `OAuthAppInfo` table in the advanced hunting schema contains information about Microsoft 365-connected OAuth applications in the organization that are registered with Microsoft Entra ID and available in the Microsoft Defender for Cloud Apps app governance capability. 
+
+The	`OAuthAppInfo` table might not include all the app or service principal-related properties that are available on Entra ID. It also does not include data related to Microsoft first-party apps or apps without any OAuth consents. The coverage of the table is based on the existing scope of Microsoft 365-connected apps covered by app governance. 
+
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -50,9 +52,14 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `Permissions` | `dynamic` | Contains an array of permission objects; each permission object includes PermissionName, TargetAppId, TargetAppDisplayName, PermissionType, PrivilegeLevel, UsageStatus|
 | `ConsentedUsersCount` | `integer` | Count of users who have consented to the app; this information is only available when the app is not admin consented|
 | `IsAdminConsented` | `boolean` | Value is True if a user has provided admin consent to the app on behalf of all the users in the org, otherwise the value is False|
-| `AppOrigin` | `string` | Specifies whether was the app is internal to the organization or registered in an external tenant|
+| `AppOrigin` | `string` | Specifies whether the app is internal to the organization or registered in an external tenant|
 | `LastUsedTime` | `datetime` | Date and time when the app was last used|
-| `AppOwnerTenantId` | `string` |Specifies the ID of the tenant where the app was registeredrd|
+| `AppOwnerTenantId` | `string` |Specifies the ID of the tenant where the app was registered|
+
+
+The `OAuthAppInfo` table updates information on an hourly basis to record any changes in metadata or insights for OAuth apps based on data from Defender for Cloud Apps app governance. 
+
+Additionally, to ensure that `OAuthAppInfo` table retains data for the covered apps, a complete snapshot of all OAuth apps is sent twice a month (every 14th and 28th of the month).
 
 
 
