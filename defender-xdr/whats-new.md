@@ -32,6 +32,10 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+
+## March 2025
+- (Preview) The [GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant. 
+
 ## February 2025
 
 - (Preview) IP addresses can now be excluded from automated responses in attack disruption. This feature allows you to exclude specific IPs from automated containment actions triggered by attack disruption. For more information, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
