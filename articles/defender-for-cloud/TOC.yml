@@ -969,6 +969,8 @@
         items:
           - name: Overview
             href: cssc-security-introduction.md
+          - name: Securing a container image
+            href: secure-container-image.md
           - name: Gated deployment
             items:
               - name: Overview
