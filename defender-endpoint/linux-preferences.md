@@ -531,7 +531,7 @@ Type of threat for which the behavior is configured.
 Action to take when coming across a threat of the type specified in the preceding section. Can be:
 
 - **Audit**: The device isn't protected against this type of threat, but an entry about the threat is logged. (Default)
-- **Block**: The device is protected against this type of threat and you're notified in the security console.
+- **Block**: The device is protected against this type of threat and you're notified in the Microsoft Defender portal.
 - **Off**: The device isn't protected against this type of threat and nothing is logged.
 
 |Description|JSON Value|Microsoft Defender portal value|
