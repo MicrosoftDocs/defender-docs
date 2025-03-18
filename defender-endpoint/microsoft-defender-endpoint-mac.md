@@ -159,8 +159,8 @@ Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint has been fully
 
 ## Resources
 
-- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on Mac](mac-resources.md).
-- [Privacy for Microsoft Defender for Endpoint on Mac](mac-privacy.md).
+- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
+- [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
