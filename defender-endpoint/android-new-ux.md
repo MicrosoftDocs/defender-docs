@@ -63,7 +63,7 @@ We updated all the subordinating screens associated with the feature
 
 3. **Threat found**:
 
-The following image shows the threat found feature before and after the new update.
+The image below illustrates the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
 
 :::image type="content" source="media/mde-android-threat-found.png" alt-text="Screensot showing the threat found feature on the MDE Android app" lightbox="media/mde-android-threat-found.png":::
    
@@ -77,6 +77,6 @@ The following image shows the threat found feature before and after the new upda
 
 ### Alerts
 
-We added new section to show **multiple alerts** together on dashboard.
+We added a new section to show **multiple alerts** together on dashboard.
 
 :::image type="content" source="media/mde-android-alerts.png" alt-text="Screensot showing the new updates to the alerts feature on the MDE Android app" lightbox="media/mde-android-alerts.png":::
