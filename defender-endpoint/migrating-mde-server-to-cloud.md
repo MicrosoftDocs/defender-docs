@@ -44,9 +44,9 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 2. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
 
-3. Enable a Defender for Servers plan on your [subscription(s)](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like File Integrity Monitoring, Adaptive Application Controls, and more.
+3. Enable a Defender for Servers plan on your [subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like File Integrity Monitoring, Adaptive Application Controls, and more.
 
-4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows) is enabled on your subscription. If you have pre-existing Azure subscriptions, you might see one (or both) of the two opt-in buttons shown in the image below.
+4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one (or both) of the two opt-in buttons shown in the following image:
 
      :::image type="content" source="media/mde-integration.png" alt-text="Screenshot that shows how to enable MDE integration." lightbox="media/mde-integration.png":::
 
