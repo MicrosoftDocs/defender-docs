@@ -48,7 +48,7 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one (or both) of the two opt-in buttons shown in the following image:
 
-     :::image type="content" source="media/mde-integration.png" alt-text="Screenshot that shows how to enable MDE integration." lightbox="media/mde-integration.png":::
+     :::image type="content" source="media/mde-integration.png" alt-text="Screenshot that shows how to enable Defender for Endpoint integration." lightbox="media/mde-integration.png":::
 
    If you have any of these buttons in your environment, make sure to enable integration for both. On new subscriptions, both options are enabled by default. In this case, you don't see these buttons in your environment.
 
