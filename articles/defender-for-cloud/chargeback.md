@@ -74,9 +74,9 @@ For example, the detailed billing report for the selected period might look like
 Use the Defender for Cloud chargeback process:
 
 1. Retrieve and review this asset's billing details using the API.
-1. Retrieve and review this asset's billing details using the API.
 1. Identify that Finance-Team-A owns this asset based on the tag.
 1. Allocate the $500 cost to Finance-Team-A's budget.
+1. Generate and send a chargeback report to the finance department detailing the allocated costs.
 
 ## Benefits of implementing chargeback
 
