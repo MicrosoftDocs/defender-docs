@@ -22,9 +22,9 @@ ms.date: 06/25/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 **Platforms**
 - macOS

@@ -23,8 +23,9 @@ f1.keywords: NOCSH
 # Run the client analyzer on Linux
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
