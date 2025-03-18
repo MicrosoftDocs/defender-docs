@@ -78,7 +78,7 @@ For instructions on how to migrate using Configuration Manager older than versio
 
 4. Install the Defender for Endpoint package for Windows Server 2012 R2 and Windows Server 2016, and set it to passive mode. 
 
-   See [Install Microsoft Defender Antivirus using command line](configure-server-endpoints.md#install-microsoft-defender-for-endpoint-using-the-command-line).
+   See [Install Microsoft Defender Antivirus using command line](configure-server-endpoints.md#install-defender-for-endpoint-using-the-command-line).
 
 5. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
