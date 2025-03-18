@@ -55,59 +55,65 @@ To facilitate upgrades when Microsoft Endpoint Configuration Manager isn't yet a
 
 6. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
-To use the script, download it to an installation directory where you have also placed the installation and onboarding packages (see [Configure server endpoints](configure-server-endpoints.md)).
+   To use the script, download it to an installation directory where you have also placed the installation and onboarding packages (see [Configure server endpoints](configure-server-endpoints.md)).
 
-EXAMPLE: .\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd"
+   EXAMPLE: `.\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd"`
 
-For more information on how to use the script, use the PowerShell command "get-help .\install.ps1".
+For more information on how to use the script, use the PowerShell command `get-help .\install.ps1`.
 
 ## Microsoft Endpoint Configuration Manager migration scenarios
 
 > [!NOTE]
-> You'll need Microsoft Endpoint Configuration Manager, version 2107 or later to perform Endpoint Protection policy configuration. From [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016) deployment and upgrades can be fully automated.
+> You'll need Configuration Manager, version 2107 or later to perform Endpoint Protection policy configuration. From [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016) deployment and upgrades can be fully automated.
 
-For instructions on how to migrate using Microsoft Endpoint Configuration Manager older than version 2207, see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](application-deployment-via-mecm.md)
+For instructions on how to migrate using Configuration Manager older than version 2207, see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](application-deployment-via-mecm.md)
 
 ## If you are running a non-Microsoft antivirus solution
 
 1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [prerequisites](configure-server-endpoints.md#prerequisites) have been met. For more information on the prerequisites that have to be met, see [Prerequisites for Windows Server 2016](configure-server-endpoints.md#prerequisites-for-windows-server-2016-and-windows-server-2012-r2).
 
-2. Ensure third-party antivirus management no longer pushes antivirus agents to these machines.*
+2. Ensure your non-Microsoft antivirus management solution no longer pushes antivirus agents to these machines.
 
-3. Author your policies for the protection capabilities in Microsoft Defender for Endpoint and target those to the machine in the tool of your choice.
+3. Author your policies for the protection capabilities in Defender for Endpoint and target those to the machine in the tool of your choice.
 
-4. Install the Microsoft Defender for Endpoint for Windows Server 2012 R2 and 2016 package and **enable passive mode**. See [Install Microsoft Defender Antivirus using command line](configure-server-endpoints.md#install-microsoft-defender-for-endpoint-using-the-command-line).
+4. Install the Defender for Endpoint package for Windows Server 2012 R2 and Windows Server 2016, and set it to passive mode. 
 
+   See [Install Microsoft Defender Antivirus using command line](configure-server-endpoints.md#install-microsoft-defender-for-endpoint-using-the-command-line).
 
-   a. Apply the onboarding script **for use with Group Policy** downloaded from [Microsoft Defender XDR](https://security.microsoft.com).
+5. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
-5. Apply updates.
+6. Apply updates.
 
-6. Remove your non-Microsoft antivirus software by either using the non-Microsoft antivirus console or by using Microsoft Endpoint Configuration Manager as appropriate. Make sure to remove passive mode configuration.*
+7. Remove your non-Microsoft antivirus software by either using the non-Microsoft antivirus console or by using Configuration Manager as appropriate. Make sure to remove passive mode configuration.
+
+   To move a machine out of passive mode, set the following key:
+
+   Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
+   Name: `ForceDefenderPassiveMode`
+   Type: `REG_DWORD`
+   Value: `0`
 
 > [!TIP]
-> You can use the [installer-script](server-migration.md#installer script) as part of your application to automate the above steps. To enable passive mode, apply the -Passive flag. For example, .\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd" -Passive
+> You can use the [installer-script](server-migration.md#installer script) as part of your application to automate the above steps. To enable passive mode, apply the -Passive flag. For example, `.\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd" -Passive`.
 
-*These steps only apply if you intend to replace your non-Microsoft antivirus solution. See [Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint](why-use-microsoft-defender-antivirus.md).
+In the preceding procedure, steps 2 and 7 apply only if you intend to replace your non-Microsoft antivirus solution. See [Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint](why-use-microsoft-defender-antivirus.md).
 
-To move a machine out of passive mode, set the following key to 0:
-
-Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
-Name: `ForceDefenderPassiveMode`
-Type: `REG_DWORD`
-Value: `0`
-
-## If you are running System Center Endpoint Protection but aren't managing the machine using Microsoft Endpoint Configuration Manager (MECM/ConfigMgr)
+## If you are running System Center Endpoint Protection but aren't managing the machine using Configuration Manager (MECM/ConfigMgr)
 
 1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [prerequisites](configure-server-endpoints.md#prerequisites) have been met.
-2. Create and apply policies using Group Policy, PowerShell, or a 3rd party management solution.
+
+2. Create and apply policies using Group Policy, PowerShell, or a non-Microsoft management solution.
+
 3. Uninstall System Center Endpoint Protection (Windows Server 2012 R2).
+
 4. Install Microsoft Defender for Endpoint (see [Configure server endpoints](configure-server-endpoints.md).)
-5. Apply the onboarding script **for use with Group Policy** downloaded from [Microsoft Defender XDR](https://security.microsoft.com).
+
+5. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
+
 6. Apply updates.
 
 > [!TIP]
-> You can use the installer script to automate the above steps.
+> You can use the installer script to automate the steps in the preceding procedure.
 
 ## Microsoft Defender for Cloud scenarios
 
@@ -118,4 +124,5 @@ If you're using Microsoft Defender for Cloud, you can use the automated upgrade 
 ## Group Policy configuration
 
 For configuration using Group Policy, ensure you're using the latest ADMX files in your central store to access the correct Defender for Endpoint policy options. For reference, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
