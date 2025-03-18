@@ -132,19 +132,13 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 |Manual file sample collection in the Microsoft Defender portal | When onboarding devices to Defender for Endpoint, you can configure settings for [endpoint detection and response (EDR)](overview-endpoint-detection-response.md). For example, there's a setting to enable sample collections from the device, which can easily be confused with the sample submission settings described in this article. <br/><br/>The EDR setting controls file sample collection from devices when requested through the Microsoft Defender portal, and is subject to the roles and permissions already established. This setting can allow or block file collection from the endpoint for features such as deep analysis in the Microsoft Defender portal. If this setting isn't configured, the default is to enable sample collection. <br/><br/>Learn about Defender for Endpoint configuration settings, see: [Onboarding tools and methods for Windows 10 devices in Defender for Endpoint](onboard-windows-client.md) |
 | Automated investigation and response content analysis | When [automated investigations](automated-investigations.md) are running on devices (when configured to run automatically in response to an alert or manually run), files that are identified as suspicious can be collected from the endpoints for further inspection. If necessary, the file content analysis feature for automated investigations can be disabled in the Microsoft Defender portal. <br/><br/> The file extension names can also be modified to add or remove extensions for other file types that will be automatically submitted during an automated investigation. <br/><br/> To learn more, see [Manage automation file uploads](manage-automation-file-uploads.md). |
 
-> [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 ## See also
 
-[Next-generation protection overview](next-generation-protection.md)
+- [Next-generation protection overview](next-generation-protection.md)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md)
+- [Configure remediation for Microsoft Defender Antivirus detections](configure-remediation-microsoft-defender-antivirus.md)
 
-[Configure remediation for Microsoft Defender Antivirus detections.](configure-remediation-microsoft-defender-antivirus.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
