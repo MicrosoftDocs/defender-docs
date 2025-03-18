@@ -52,7 +52,7 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
    If you have any of these buttons in your environment, make sure to enable integration for both. On new subscriptions, both options are enabled by default. In this case, you don't see these buttons in your environment.
 
-5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected via the Azure Arc agent. In addition, Azure Arc doesn't support all MDE supported operating systems. So, learn how to plan for [Azure Arc deployments here](/azure/azure-arc/servers/plan-at-scale-deployment).
+5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected via the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. So, learn how to plan for [Azure Arc deployments here](/azure/azure-arc/servers/plan-at-scale-deployment).
 
 6. *Recommended:* If you want to see vulnerability findings in Defender for Cloud, make sure to enable [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/enable-data-collection?tabs=autoprovision-va) for Defender for Cloud.
 
@@ -60,7 +60,7 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 ## How do I migrate existing Azure VMs to Defender for Cloud?
 
-For Azure VMs, no extra steps are required, these are automatically onboarded to Defender for Cloud, thanks to the native integration between the Azure platform and Defender for Cloud.
+For Azure VMs, no extra steps are required. These devices are automatically onboarded to Defender for Cloud because of the native integration between the Azure platform and Defender for Cloud.
 
 ## How do I migrate on-premises machines to Defender for Servers?
 
