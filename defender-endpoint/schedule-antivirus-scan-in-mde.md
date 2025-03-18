@@ -34,7 +34,7 @@ To run a scan of Microsoft Defender Antivirus for Linux, see [Supported Commands
 
 See the following system requirements needed to schedule Microsoft Defender Antivirus scan in Microsoft Defender Endpoint on Linux.
 
-- Linux server distributions and versions: Red Hat Enterprise Linux 7.2 or higher.
+- Linux distributions and versions: Red Hat Enterprise Linux 7.2 or higher.
 - The **FANOTIFY** option in kernel must be enabled.
 
 ## Scheduling Microsoft Defender Antivirus scan in Red Hat Linux
