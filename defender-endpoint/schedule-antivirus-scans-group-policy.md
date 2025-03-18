@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 02/18/2025
+ms.date: 03/18/2025
 ms.reviewer: pauhijbr, ksarens
 manager: deniseb
 ms.subservice: ngp
@@ -87,7 +87,7 @@ For more information, see the [Manage when protection updates should be download
 
 | Location | Setting | Description | Default setting (if not configured)|
 |:---|:---|:---|:---|
-| Signature updates | Turn on scan after Security intelligence update | A scan will occur immediately after a new protection update is downloaded | Enabled |
+| Signature updates | Turn on scan after Security intelligence update | A process scan will occur immediately after a new protection update is downloaded | Enabled |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
