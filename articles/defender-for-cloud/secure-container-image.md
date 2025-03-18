@@ -1,10 +1,11 @@
 ---
-title: Securing a container image with a unigue signature
+title: Securing a container image with a unique signature
 description: Learn about securing a container image and vulnerability report with a unique signature.
 author: ehorwitz-ms
 ms.author: a-ehorwitz
 ms.date: 03/16/2025
 ms.topic: conceptual
+---
 
 # Securing a container image with a unique signature
 
