@@ -45,7 +45,7 @@ The following image shows the main Dashboard screen that appears to the enterpri
 
 ### List the features inside one Feature Card
 
-The feature App Security and Web Protection are now listed under one feature Card "**Device Protection**", which earlier had a new card on Dashboard screen for each functionality.  
+The feature App Security and Web Protection are now listed under one feature Card "**Device Protection**", which earlier had a new card on Dashboard screen for each functionality. The following image shows the previous vrsion and new version of the feature card for Device Protection.
 
 :::image type="content" source="media/mde-android-list.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-android-list.png":::
 
