@@ -30,7 +30,6 @@ search.appverid: met150
 - Windows
 - macOS
 - Linux
-
 - Windows Server
 
 Microsoft Defender Antivirus uses many intelligent mechanisms for detecting malware. One of the most powerful capabilities is the ability to apply the power of the cloud to detect malware and perform rapid analysis. Cloud protection and automatic sample submission work together with Microsoft Defender Antivirus to help protect against new and emerging threats. 
