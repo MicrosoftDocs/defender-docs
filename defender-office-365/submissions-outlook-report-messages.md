@@ -46,7 +46,7 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
     - **Semi-Annual Channel (Preview)**: Release 2502, build 16.0.18526.20024 or later.
     - **Semi-Annual Channel**: Release 2502, build 16.0.18526.20024 or later.
   - Outlook for Mac version 16.89 (24090815) or later.
-  - Outlook for iOS version 4.2508 or later.
+  - Outlook for iOS version 4.2511 or later.
   - Outlook for Android version 4.2446 or later.
   - The new Outlook for Windows.
   - Outlook on the web.
