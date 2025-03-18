@@ -151,7 +151,7 @@ You can only have one primary workspace connected to the Defender portal at a ti
 1. Read and understand the product changes associated with changing the primary workspace.
 1. Select **Confirm and proceed**.
 
-When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal).
+When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
 
 ## Offboard Microsoft Sentinel
 
