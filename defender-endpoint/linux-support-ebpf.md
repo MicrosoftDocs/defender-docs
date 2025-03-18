@@ -22,10 +22,10 @@ ms.date: 12/02/2024
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > [!NOTE]
 > Starting with Defender for Endpoint on Linux, version `101.2408.0000`, AuditD is no longer be supported as a supplementary event provider. For more information, see the FAQs at the end of this article.

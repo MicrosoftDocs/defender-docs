@@ -9,7 +9,7 @@ ms.author: ewalsh
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: conceptual
-ms.date: 03/17/2025
+ms.date: 03/18/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -23,8 +23,10 @@ ms.collection:
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender Antivirus
+
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 
