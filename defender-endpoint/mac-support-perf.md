@@ -159,7 +159,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
 
 The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on macOS.
 
-To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](run-analyzer-macos-linux.md).
+To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](overview-client-analyzer.md).
 
 > [!NOTE]
 > The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited    to) IP addresses, PC names that help troubleshoot issues you might be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
