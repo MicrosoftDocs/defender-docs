@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 02/19/2025
+ms.date: 03/13/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -44,14 +44,29 @@ The Device Health report provides information about the devices in your organiza
 
 In the Microsoft Defender portal, in the navigation pane, select **Reports**, and then open **Device health and compliance**. The [**Microsoft Defender Antivirus health** tab](#microsoft-defender-antivirus-health-tab) has eight cards that report on the following aspects of Microsoft Defender Antivirus:
 
-- [Antivirus mode card](#antivirus-mode-card)
-- [Antivirus engine version card](#antivirus-engine-version-card)
-- [Antivirus security intelligence version card](#antivirus-security-intelligence-version-card)
-- [Antivirus platform version card](#antivirus-platform-version-card)
-- [Recent antivirus scan results card](#recent-antivirus-scan-results-card)
-- [Antivirus engine updates card](#antivirus-engine-updates-card)
-- [Security intelligence updates card](#security-intelligence-updates-card)
-- [Antivirus platform updates card](#antivirus-platform-updates-card)
+- [Device health, Microsoft Defender Antivirus health report](#device-health-microsoft-defender-antivirus-health-report)
+  - [View device health cards](#view-device-health-cards)
+  - [Report access permissions](#report-access-permissions)
+  - [Microsoft Defender Antivirus health tab](#microsoft-defender-antivirus-health-tab)
+    - [Prerequisites](#prerequisites)
+    - [Card functionality](#card-functionality)
+      - [New Microsoft Defender Antivirus filter definitions](#new-microsoft-defender-antivirus-filter-definitions)
+      - [Export report](#export-report)
+        - [Top level export](#top-level-export)
+    - [Microsoft Defender Antivirus version and update cards functionality](#microsoft-defender-antivirus-version-and-update-cards-functionality)
+      - [Full report](#full-report)
+    - [Card descriptions](#card-descriptions)
+      - [Antivirus mode card](#antivirus-mode-card)
+      - [Recent antivirus scan results card](#recent-antivirus-scan-results-card)
+      - [Antivirus engine version card](#antivirus-engine-version-card)
+      - [Antivirus security intelligence version card](#antivirus-security-intelligence-version-card)
+        - [Antivirus platform version card](#antivirus-platform-version-card)
+      - [Up-to-date cards](#up-to-date-cards)
+        - [Up-to-date definitions](#up-to-date-definitions)
+        - [Antivirus engine updates card](#antivirus-engine-updates-card)
+      - [Antivirus platform updates card](#antivirus-platform-updates-card)
+        - [Security intelligence updates card](#security-intelligence-updates-card)
+  - [See also](#see-also)
 
 ## Report access permissions
 
@@ -108,14 +123,16 @@ For the three `updates` cards (also known as up-to-date reporting cards), "**No 
 
 Up-to-date reporting generates information for devices that meet the following criteria:
 
-- Engine version: 1.1.19300.2+
-- Platform version: 4.18.2202.1+
-- Cloud protection enabled
-- Sense (MsSense.exe): **10.8210.** \*+
-- Windows OS - Windows 10 1809 or later
+* **Windows:**
+  * OS - Windows 10 1809 or later  
+  * Engine version: 1.1.19300.2+  
+  * Platform version: 4.8.2202.1+  
+  * Sense (MsSense.exe): 10.8210.*+  
 
-  > [!NOTE]
-  > \* Currently up to date reporting is only available for Windows and Linux devices. Mac devices are listed under “no such data available or unknown".
+* **Linux and Mac:**
+  * Platform version: 101.23112.*+  
+
+* **Cloud Protection enabled**
   
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 

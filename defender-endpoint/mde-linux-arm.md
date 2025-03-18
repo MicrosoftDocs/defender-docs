@@ -24,8 +24,10 @@ ai-usage: human-only
 
 # Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+**Applies to:**
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Overview of Defender for Endpoint on Linux for ARM64-based devices
 
