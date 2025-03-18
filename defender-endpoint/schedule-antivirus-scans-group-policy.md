@@ -87,7 +87,7 @@ For more information, see the [Manage when protection updates should be download
 
 | Location | Setting | Description | Default setting (if not configured)|
 |:---|:---|:---|:---|
-| Signature updates | Turn on scan after Security intelligence update | A scan will occur immediately after a new protection update is downloaded | Enabled |
+| Signature updates | Turn on scan after Security intelligence update | A process scan will occur immediately after a new protection update is downloaded | Enabled |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
