@@ -21,6 +21,16 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## March 2025
 
+### Enhanced Identity Inventory (Preview)
+
+The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment. The updated Identities Inventory page now includes the following tabs:
+
+Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
+
+- Cloud application accounts: Provides insights into accounts from connected applications via Defender for Cloud Apps, allowing investigation of account permissions, group memberships, aliases, and the applications in use.
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory), [Cloud application accounts](/defender-cloud-apps/accounts).
+
 ### Role-Based Access Control scoping for "Behaviors" (Preview)
 
 Defender for Cloud Apps customers can now configure Role-Based Access Control (RBAC) scoping for 'Behaviors.' This new capability allows administrators to define and manage access permissions more precisely. Administrators can ensure that users have the appropriate level of access to specific application data based on their roles and responsibilities. By using RBAC scoping, organizations can enhance their security posture, streamline operations, and reduce the risk of unauthorized access.
