@@ -81,7 +81,7 @@ When you onboard a Google Cloud Platforms (GCP) connector, Defender for Cloud cr
 | Defender CSPM | microsoft-defender-ciem  | Permissions to get details about the organization resource.<br> resourcemanager.folders.getIamPolicy<br> resourcemanager.folders.list<br> resourcemanager.organizations.get<br> resourcemanager.organizations.getIamPolicy<br> storage.buckets.getIamPolicy |
 | Defender CSPM <br><br> Defender for Servers | MDCAgentlessScanningRole | Permissions for agentless disk scanning:<br> compute.disks.createSnapshot<br> compute.instances.get |
 | Defender CSPM <br><br> Defender for servers | cloudkms.cryptoKeyEncrypterDecrypter | Permissions to an existing GCP KMS role are granted to support scanning disks that are encrypted with CMEK |
-| Defender for Containers                           |                 | See [AWS permissions](containers-permissions.md) |
+| Defender for Containers                           |                 | See [GCP permissions](containers-permissions.md) |
 
 ## Next steps
 
