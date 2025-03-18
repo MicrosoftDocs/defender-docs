@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
 ms.topic: concept-article #Don't change.
-ms.date: 11/10/2024
+ms.date: 03/11/2025
 ms.collection:
 - usx-security
 
@@ -20,7 +20,10 @@ This article provides information about Microsoft's unified security operations 
 
 ## Feature availability
 
-- All features in Microsoft's SecOps platform that are in general availability are available in both commercial and GCC High and DoD clouds. 
+- All features in Microsoft's SecOps platform that are in general availability are available in commercial and GCC High and DoD clouds. 
+
+  GCC is supported in preview, with the following limitation: The [Advanced hunting](/defender-xdr/advanced-hunting-overview) [JOIN operator](/defender-xdr/advanced-hunting-query-language#learn-common-query-operators) isn't supported between Defender tables and Microsoft Sentinel tables unless you configure per-table retention on your Defender tables in Log Analytics. For more information, see [Advanced hunting event collection](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=defender-portal#advanced-hunting-event-collection).
+  
 - Features still in preview are available only in the commercial cloud.
 
 While [automatic attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Defender XDR is generally available, [SAP support for attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft's unified SecOps platform is available only in the commercial cloud.

@@ -19,6 +19,11 @@ ms.date: 12/10/2024
 
 # Advanced deployment guidance for Microsoft Defender for Endpoint on Linux
 
+**Applies to:**
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+
 > [!TIP]
 > We are excited to share that Microsoft Defender for Endpoint on Linux now extends support for ARM64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md).
 
@@ -176,7 +181,7 @@ This step of the setup process involves adding Defender for Endpoint to the excl
 
   :::image type="content" source="media/mdatp-health-result.png" alt-text="Image of mdatp health result":::
 
-  Under "conflicting_applications", if you see a result other than "unavailable", uninstall the non-Microsoft antimalware.
+  Under "conflicting_applications", if you see a result other than "unavailable," uninstall the non-Microsoft antimalware.
 
 - If you don't uninstall the non-Microsoft antimalware product, you might encounter unexpected behaviors such as performance issues, stability issues such as systems hanging, or kernel panics.
 
@@ -456,13 +461,13 @@ To verify Microsoft Defender for Endpoint on Linux platform updates, run the fol
 sudo yum update mdatp
 ```
 
-or
+Or
 
 ```bash
 apt-get update mdatp
 ```
 
-depending on your package manager.
+Depending on your package manager.
 
 For more information, see [Device health and Microsoft Defender antimalware health report](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/new-device-health-reporting-for-microsoft-defender-for-endpoint/bc-p/3616205#M1963).
 
@@ -483,7 +488,7 @@ Microsoft regularly publishes software updates to improve performance, security,
 With macOS and Linux, you could take a couple of systems and run in the Beta channel.
 
 > [!NOTE]
-> Ideally you should include one of each type of Linux system you are running in the Preview channel so that you are able to find compatibility, performance and reliability issues before the build makes it into the Current channel.
+> Ideally you should include one of each type of Linux system you're running in the Preview channel so that you're able to find compatibility, performance, and reliability issues before the build makes it into the Current channel.
 
 The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in Beta are the first ones to receive updates and new features, followed later by Preview and lastly by Current.
 
@@ -492,7 +497,7 @@ The choice of the channel determines the type and frequency of updates that are 
 In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either Beta or Preview.
 
 > [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
 ## 18. Verify that you're able to get security intelligence updates (signatures/definition updates)
 
@@ -512,7 +517,7 @@ To ensure that the device is correctly onboarded and reported to the service, ru
   curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
   ```
   
-- You can run additional detection tests on zip files using either of the following commands:
+- You can run more detection tests on zip files using either of the following commands:
 
   ```bash
   curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
@@ -520,7 +525,7 @@ To ensure that the device is correctly onboarded and reported to the service, ru
   ```
 
    > [!NOTE]
-   > If the detections do not show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
+   > If the detections don't show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
 
 - Endpoint detection and response (EDR) detections, see [Experience Microsoft Defender for Endpoint through simulated attacks](attack-simulations.md). If the detection doesn't show up, then it could be that we're missing event or alerts in portal. For more information, see [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md).
 
@@ -612,7 +617,7 @@ Then your next step is to uninstall your non-Microsoft antivirus, antimalware, a
 - [Boost protection of Linux estate with behavior monitoring](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/boost-protection-of-your-linux-estate-with-behavior-monitoring/ba-p/2909320)
 
   > [!NOTE]
-  > The behavior monitoring functionality complements existing strong content-based capabilities, however you should carefully evaluate this feature in your environment before deploying it broadly since enabling behavioral monitoring consumes more resources and may cause performance issues.
+  > The behavior monitoring functionality complements existing strong content-based capabilities. However you should carefully evaluate this feature in your environment before deploying it broadly since enabling behavioral monitoring consumes more resources and may cause performance issues.
 
 - [Unified submissions in Microsoft Defender XDR](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770)
 
