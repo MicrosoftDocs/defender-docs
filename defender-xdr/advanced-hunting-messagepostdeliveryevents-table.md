@@ -23,14 +23,14 @@ ms.topic: reference
 ms.date: 03/18/2025
 ---
 
-# MessageEvents (Preview)
+# MessagePosDeliveryEvents (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `MessageEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization. 
+The `MessagePostDeliveryEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization. 
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

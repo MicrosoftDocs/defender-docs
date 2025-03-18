@@ -23,7 +23,7 @@ ms.topic: reference
 ms.date: 03/18/2025
 ---
 
-# MessageEvents (Preview)
+# MessageUrlInfo (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
