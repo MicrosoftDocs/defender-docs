@@ -34,7 +34,7 @@ You can also get product updates and important notifications through the [messag
 
 
 ## March 2025
-- (Preview) The [GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant. 
+- (Preview) The [GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
 ## February 2025
 
