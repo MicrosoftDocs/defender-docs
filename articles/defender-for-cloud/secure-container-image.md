@@ -1,4 +1,3 @@
-# Signing and Verifying Container Images
 ---
 title: Securing a container image with a unigue signature
 description: Learn about securing a container image and vulnerability report with a unique signature.
