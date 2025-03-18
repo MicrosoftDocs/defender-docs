@@ -27,14 +27,14 @@ ms.subservice: onboard
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
 > [!NOTE]
-> Always ensure the operating system, and Microsoft Defender Antivirus on Windows Server 2016, are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](/defender-endpoint/microsoft-defender-antivirus-updates/#platform-and-engine-releases).
+> On Windows Server 2016, always ensure the operating system and Microsoft Defender Antivirus are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](/defender-endpoint/microsoft-defender-antivirus-updates/#platform-and-engine-releases).
 
-These instructions apply to the new unified solution and installer (MSI) package of Microsoft Defender for Endpoint for Windows Server 2012 R2 and Windows Server 2016. This article contains high-level instructions for various possible migration scenarios from the previous to the current solution. These high-level steps are intended as guidelines to be adjusted to the deployment and configuration tools available in your environment.
+These instructions apply to the new unified solution and installer (MSI) package of Defender for Endpoint for Windows Server 2012 R2 and Windows Server 2016. This article contains high-level instructions for various possible migration scenarios from the previous to the current solution. These high-level steps are intended as guidelines to be adjusted to the deployment and configuration tools available in your environment.
 
 **If you are using Microsoft Defender for Cloud to perform deployment, you can automate installation and upgrade. See [Defender for Servers Plan 2 now integrates with MDE unified solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)**
 
 > [!NOTE]
-> Operating system upgrades with Microsoft Defender for Endpoint installed aren't supported. Offboard and uninstall, upgrade the operating system, then proceed with installation.
+> Operating system upgrades with Defender for Endpoint installed aren't supported. Offboard, uninstall, upgrade the operating system, and then proceed with installation.
 
 ## Installer script
 
@@ -43,12 +43,17 @@ These instructions apply to the new unified solution and installer (MSI) package
 
 To facilitate upgrades when Microsoft Endpoint Configuration Manager isn't yet available or updated to perform the automated upgrade, you can use this [upgrade script](https://github.com/microsoft/mdefordownlevelserver/archive/refs/heads/main.zip). Download it by selection the "Code" button and downloading the .zip file, then extracting install.ps1. It can help automate the following required steps:
 
-1. Remove the OMS workspace for Microsoft Defender for Endpoint (OPTIONAL).
+1. Remove the OMS workspace for Defender for Endpoint (OPTIONAL).
+
 2. Remove System Center Endpoint Protection (SCEP) client if installed.
+
 3. Download and install [prerequisites](configure-server-endpoints.md#prerequisites) if necessary.
-4. Enable and update the Defender Antivirus feature on Windows Server 2016
-5. Install Microsoft Defender for Endpoint.
-6. Apply the onboarding script **for use with Group Policy** downloaded from [Microsoft Defender XDR](https://security.microsoft.com).
+
+4. Enable and update the Microsoft Defender Antivirus feature on Windows Server 2016.
+
+5. Install Defender for Endpoint.
+
+6. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
 To use the script, download it to an installation directory where you have also placed the installation and onboarding packages (see [Configure server endpoints](configure-server-endpoints.md)).
 
