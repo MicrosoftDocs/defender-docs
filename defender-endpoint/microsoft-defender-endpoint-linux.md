@@ -20,6 +20,11 @@ ms.date: 02/20/2025
 
 # Microsoft Defender for Endpoint on Linux
 
+**Applies to:**
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+
 > [!TIP]
 > We're excited to share that Microsoft Defender for Endpoint on Linux now extends support for ARM64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md).
 

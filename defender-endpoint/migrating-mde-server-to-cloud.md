@@ -13,16 +13,16 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: migrationguides
-ms.date: 03/16/2025
+ms.date: 03/17/2025
 search.appverid: met150
 ---
 
 # Migrating servers from Microsoft Defender for Endpoint to Microsoft Defender for Cloud
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article guides you in migrating servers from Microsoft Defender for Endpoint Server to Defender for Servers (part of Defender for Cloud).
 
