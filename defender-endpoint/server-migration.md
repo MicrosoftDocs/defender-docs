@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 author: denisebmsft
 ms.author: deniseb
 ms.localizationpriority: medium
-ms.date: 03/17/2025
+ms.date: 03/18/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -72,12 +72,13 @@ For instructions on how to migrate using Microsoft Endpoint Configuration Manage
 3. Author your policies for the protection capabilities in Microsoft Defender for Endpoint and target those to the machine in the tool of your choice.
 
 4. Install the Microsoft Defender for Endpoint for Windows Server 2012 R2 and 2016 package and **enable passive mode**. See [Install Microsoft Defender Antivirus using command line](configure-server-endpoints.md#install-microsoft-defender-for-endpoint-using-the-command-line).
+
+
    a. Apply the onboarding script **for use with Group Policy** downloaded from [Microsoft Defender XDR](https://security.microsoft.com).
 
 5. Apply updates.
 
-6. Remove your non-Microsoft antivirus software by either using the non-Microsoft antivirus console or by using Microsoft Endpoint Configuration Manager as
-appropriate. Make sure to remove passive mode configuration.*
+6. Remove your non-Microsoft antivirus software by either using the non-Microsoft antivirus console or by using Microsoft Endpoint Configuration Manager as appropriate. Make sure to remove passive mode configuration.*
 
 > [!TIP]
 > You can use the [installer-script](server-migration.md#installer script) as part of your application to automate the above steps. To enable passive mode, apply the -Passive flag. For example, .\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd" -Passive
@@ -86,10 +87,10 @@ appropriate. Make sure to remove passive mode configuration.*
 
 To move a machine out of passive mode, set the following key to 0:
 
-Path: HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
-Name: ForceDefenderPassiveMode
-Type: REG_DWORD
-Value: 0
+Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
+Name: `ForceDefenderPassiveMode`
+Type: `REG_DWORD`
+Value: `0`
 
 ## If you are running System Center Endpoint Protection but aren't managing the machine using Microsoft Endpoint Configuration Manager (MECM/ConfigMgr)
 
