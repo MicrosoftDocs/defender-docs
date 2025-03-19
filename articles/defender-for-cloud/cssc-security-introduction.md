@@ -4,7 +4,7 @@ description: Understand how Defender for Containers can secure your containers s
 ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
-ms.date: 3/12/2025
+ms.date: 3/19/2025
 #customer intent: As a devops person, I want to understand how Defender for Containers can secure my containers software supply chain.
 ---
 
@@ -15,7 +15,7 @@ In today's cloud-native environments, securing the container software supply cha
 With Defender for Containers, you can:
 - Scan container images for vulnerabilities and misconfigurations.
 - Sign the container image and its vulnerability report to ensure vulnerabilities were not introduced within your organization's CSSC.
-- Create policies to control deployment of container images based on vulnerabilities detected in the container image.
+- Create security rules to control deployment of container images based on vulnerabilities detected in the container image.
 - Monitor runtime behavior to detect and respond to threats.
 - Enforce security policies to maintain compliance.
 - Gain visibility into your container security posture.
