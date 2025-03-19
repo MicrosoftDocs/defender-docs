@@ -62,6 +62,7 @@ The following table gives information about the supported Microsoft Defender for
 > [!NOTE]
 > - For Windows Server 2012 R2 and Windows Server 2016, use the modern, unified solution. See [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
 > - On Linux Server, network protection, web protection, and custom network indicators are currently in preview.
+> - On Linux, network protection, web protection, and custom network indicators are currently in preview.
 > - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and Windows 11.
 > - Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use System Center Endpoint Protection (SCEP) for the EDR sensor and antivirus protection.
