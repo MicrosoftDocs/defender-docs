@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 02/24/2025
+ms.date: 03/12/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -23,8 +23,9 @@ f1.keywords: NOCSH
 # Run the client analyzer on Linux
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -42,7 +43,7 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 2. Verify the download.
 
     ```bash
-    echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -348,9 +349,15 @@ This mode collects installation related information like distro and system requi
 
 ```console
 
-  -h, --help    show this help message and exit
-  -d, --distro  Check for distro support
-  -a, --all     Run all checks
+  -h, --help                show this help message and exit
+  -d, --distro              Check for distro support
+  -m, --min-requirement     Check for the system info against offical minimum requirements
+  -e, --external-dep        Check for externel package dependency
+  -c, --connectivity        Check for connectivity for services used by MDE
+  -a, --all                 Run all checks
+  -o ONBOARDING_SCRIPT, --onboarding-script ONBOARDING_SCRIPT
+                            Path to onboarding script
+  -g GEO, --geo GEO         Geo string to test <US|UK|EU|AU|CH|IN>
 
 ```
 
@@ -365,6 +372,13 @@ A single report `installation_report.json` is generated. The keys in the file ar
 | ------------- | ------------- |
 | agent_version  | Version of Defender for Endpoint installed  |
 | onboarding_status | The onboarding and ring info |
+| support_status | MDE is supported with the current system configurations |
+| distro | The distro on which the agent is installed in supported or not |
+| connectivitytest | The connectivity test stratus|
+| min_requirement | The minimum requirements for CPU and Memory are met|
+| external_depedency | The external dependencies are satisfied or not |
+| mde_health | Health status of MDE Agent|
+| folder_perm | The required folder permissions are met or not |
 
 #### Exclude mode
 
@@ -592,12 +606,6 @@ The Python version of the client analyzer accepts command line parameters to per
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-
-- [Download and run the client analyzer](download-client-analyzer.md)
-
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 
