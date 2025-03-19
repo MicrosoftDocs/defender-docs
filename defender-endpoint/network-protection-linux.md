@@ -80,7 +80,7 @@ sudo apt install -y mdatp
 
 ### Device Onboarding
 
-To onboard the device, you must download the Python onboarding package for Linux server from Microsoft Defender XDR -> Settings -> Device Management -> Onboarding and run:
+To onboard the device, you must download the Python onboarding package for Linux server from the Microsoft Defender portal. Go to **Settings** > **Device Management** > **Onboarding**, and then run the following command:
 
 ```bash
 sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
