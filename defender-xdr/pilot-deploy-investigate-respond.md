@@ -58,12 +58,12 @@ Here's the workflow for investigating and responding to incidents using Microsof
 
 Follow these steps:
 
-1. [Gather threat intelligence to identify adversaries and their infrastructure](#step-1)
-1. [Simulate attacks with the Microsoft Defender portal](#step-2)
-1. [Prioritize incidents](#step-3)
-1. [Manage incidents](#step-4)
-1. [Examine automated investigation and response with the Action center](#step-5)
-1. [Use advanced hunting](#step-6)
+1. [Gather threat intelligence to identify adversaries and their infrastructure](#step-1-gather-threat-intelligence-to-identify-adversaries-and-their-infrastructure)
+1. [Simulate attacks with the Microsoft Defender portal](#step-2-simulate-attacks-with-the-microsoft-defender-portal)
+1. [Prioritize incidents](#step-3-prioritize-incidents)
+1. [Manage incidents](#step-4-manage-incidents)
+1. [Examine automated investigation and response with the Action center](#step-5-examine-automated-investigation-and-response-with-the-action-center)
+1. [Use advanced hunting](#step-6-use-advanced-hunting)
 
 <a name='simulate-attacks-with-the-microsoft-365-defender-portal'></a>
 
