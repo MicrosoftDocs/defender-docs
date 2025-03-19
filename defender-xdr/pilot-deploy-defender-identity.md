@@ -20,12 +20,11 @@ ms.collection:
   - tier1
 ms.topic: concept-article
 #customerIntent: As a security admin, I want to pilot and deploy Microsoft Defender for Identity to evaluate it's ability to enhance my organization's security posture and protect against identity-based threats.
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Pilot and deploy Microsoft Defender for Identity
-
-**Applies to:**
-- Microsoft Defender XDR
 
 This article provides a workflow for piloting and deploying Microsoft Defender for Identity in your organization. Use these recommendations to onboard Microsoft Defender for Identity as part of an end-to-end solution with Microsoft Defender XDR.
 
