@@ -24,7 +24,7 @@ POST /api/v1/subnet/
 
 | Parameter | Description |
 | --- | --- |
-| filters | Filter objects with all the search filters for the request, see [IP range filters](api-data-enrichment.md#filters) for more details |
+| filters | Filter objects with all the search filters for the request, for more details see [IP range filters](api-data-enrichment.md#filters)  |
 | sortDirection | The sorting direction. Possible values are: `asc` and `desc` |
 | sortField | Fields used to sort IP ranges. Possible values are:<br />- **category**: The category of the IP range<br />- **tags**: The tags of the IP range<br />- **name**: The name of the IP range |
 | skip | Skips the specified number of records |
@@ -34,7 +34,7 @@ POST /api/v1/subnet/
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/subnet/" -d '{
@@ -53,7 +53,7 @@ Returns a list of IP ranges in JSON format. For information about the response f
 
 ```json
 {
-  "total": 1 // total number of records
+  "total": 1 // approximate number of records
   "hasNext": false // whether there is more data to show or not.
   "data": [
     {
