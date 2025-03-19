@@ -10,7 +10,7 @@ ms.date: 3/12/2025
 
 # Containers software supply chain (CSSC) security using Defender for Containers
 
-In today's cloud-native environments, securing the container software supply chain is crucial to protect applications from vulnerabilities and threats. Microsoft Defender for Containers collaborates within the [Microsoft CSSC framework](/security/container-secure-supply-chain.md) to provide comprehensive security capabilities to safeguard your containerized applications throughout their lifecycle. From development to deployment, Defender for Containers helps you identify and mitigate risks, ensuring that your container images and runtime environments are secure.
+In today's cloud-native environments, securing the container software supply chain is crucial to protect applications from vulnerabilities and threats. Microsoft Defender for Containers collaborates within the [Microsoft Containers Secure Supply Chain (CSSC) framework](/azure/security/container-secure-supply-chain.md) to provide comprehensive security capabilities to safeguard your containerized applications throughout their lifecycle. From development to deployment, Defender for Containers helps you identify and mitigate risks, ensuring that your container images and runtime environments are secure.
 
 With Defender for Containers, you can:
 - Scan container images for vulnerabilities and misconfigurations.
