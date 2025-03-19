@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ---
 
-Enable Microsoft Defender for Storage (classic)
+# Enable Microsoft Defender for Storage (classic)
 
 This article explains how to enable and configure Microsoft Defender for Storage (Classic) on your subscriptions using various templates such as PowerShell, REST API, and others.
 
