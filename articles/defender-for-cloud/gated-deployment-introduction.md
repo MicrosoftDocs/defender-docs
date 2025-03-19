@@ -10,6 +10,6 @@ ms.date: 3/12/2025
 
 # Defender for Containers gated deployment of container images to a Kubernetes cluster
 
-Gated deployment is a strategy to ensure that only approved container images are deployed to production. the gated deployment admission controller examines container images using the defined deployment policies applicable to the container image and deployment environment.
+Gated deployment is a strategy to review container images before deployment to a Kubernetes environment against security rules.
 
-Policies generate security alerts if the conditions of the policy are met and can also deny deployment of a container image. The default policy of gated deployment examines the signature of the container image and its vulnerability report for authenticity. If the container image is not authenticated, a security alert is generated which can be examined and used to remediate the container image.
+A security rule defines an action to take if certain conditions are met within a defined resource scope. The gated deployment admissions controller examines a container image and its vulnerability report against the security rules relevant to the resource scope. The action to be taken by the admissions controller is defined by the security rule can be either **audit** (deploy and create a security alert for review), or **deny** (no deployment and create a security alert for review).
