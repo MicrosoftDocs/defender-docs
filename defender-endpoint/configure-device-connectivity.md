@@ -166,7 +166,7 @@ Configure devices to communicate through your connectivity infrastructure. Ensur
 
 For more information, see [Verify client connectivity](verify-connectivity.md).
 
-The following preonboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](download-client-analyzer.md).
+The following preonboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
 
 To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
 

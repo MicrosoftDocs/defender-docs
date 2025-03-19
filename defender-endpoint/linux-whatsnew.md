@@ -371,7 +371,7 @@ There are multiple fixes and new changes in this release:
    | Alma 8.4 and higher | Insiders Slow | https://packages.microsoft.com/config/alma/8/insiders-slow.repo |
    | Alma 9.2 and higher | Insiders Slow | https://packages.microsoft.com/config/alma/9/insiders-slow.repo |
 
-If you already have Defender for Endpoint running on any of these distros and facing any issues in the older versions, upgrade to the latest Defender for Endpoint version from the corresponding ring mentioned above. Refer our [public deployment docs](comprehensive-guidance-on-linux-deployment.md) for more details.
+If you already have Defender for Endpoint running on any of these distros and facing any issues in the older versions, upgrade to the latest Defender for Endpoint version from the corresponding ring mentioned above. 
 
 > [!NOTE]
 > Known issues: 
