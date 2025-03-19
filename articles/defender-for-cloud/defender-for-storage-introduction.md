@@ -22,8 +22,6 @@ Defender for Storage provides comprehensive security by analyzing the data plane
 
 Defender for Storage includes the following features:
 
-- **Activity monitoring** - Detect unusual and potentially harmful activities involving your storage accounts by analyzing access patterns and behaviors. This is valuable for identifying unauthorized access, data exfiltration attempts, and other security threats.
-
 - **Activity monitoring** - Detect unusual and potentially harmful activities involving storage accounts by analyzing access patterns and behaviors. This is valuable for identifying unauthorized access, data exfiltration attempts, and other security threats.
 
 - **Sensitive data threat detection** - Identify and protect sensitive data within storage accounts by detecting suspicious activities that might indicate a potential security threat. Defender for Storage enhances the security of sensitive information stored in Azure by monitoring actions such as unusual data access patterns or potential data exfiltration.
