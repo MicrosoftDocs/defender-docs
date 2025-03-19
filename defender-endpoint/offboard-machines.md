@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/14/2025
+ms.date: 03/17/2025
 ---
 
 # Offboard devices
@@ -23,12 +23,12 @@ ms.date: 03/14/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- [Microsoft Defender for Servers Plan 1 and Plan 2](/azure/defender-for-cloud/integration-defender-for-endpoint)
-- [Microsoft Defender for Business](/defender-business/get-defender-business)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint Plan 1 and 2
+- Microsoft Defender for Endpoint for servers Plan 1 or Plan 2
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender for Business
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender XDR
 
 **Platforms**
 
@@ -38,8 +38,8 @@ ms.date: 03/14/2025
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
-- Mac
-- Linux Server
+- Mac devices
+- Linux servers
 
 When you offboard a device from Defender for Endpoint, no new detections, vulnerability, or security data are sent to the Microsoft Defender portal. Seven days after offboarding a device, its status changes to [inactive](/defender-endpoint/fix-unhealthy-sensors#inactive-devices). Devices that weren't active within the past 30 days are not factored into your organization's [exposure score](/defender-vulnerability-management/tvm-exposure-score).
 

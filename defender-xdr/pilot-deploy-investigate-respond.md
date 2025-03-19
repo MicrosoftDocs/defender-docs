@@ -18,13 +18,13 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: concept-article
+#customer intent: To learn how to investigate and respond to attacks using Microsoft Defender XDR.
+appliesto:
+   - Microsoft Defender XDR
 ---
 
 # Investigate and respond using Microsoft Defender XDR
-
-**Applies to:**
-- Microsoft Defender XDR
 
 This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender XDR](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender XDR.
 

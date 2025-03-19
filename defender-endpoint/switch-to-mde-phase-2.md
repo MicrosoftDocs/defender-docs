@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 09/13/2024
+ms.date: 03/17/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -61,7 +61,7 @@ As you're making the switch to Defender for Endpoint, you might need to take cer
 ### Set Microsoft Defender Antivirus to passive mode on Windows Server
 
 > [!TIP]
-> You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016. For more information, see [Options to install Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
+> You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016. For more information, see [Options to install Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-defender-for-endpoint-packages).
 
 1. Open Registry Editor, and then navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
@@ -78,7 +78,7 @@ If Microsoft Defender Antivirus features and installation files were previously 
 
 ### Are you using Windows Server 2012 R2 or Windows Server 2016?
 
-You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016 using the method described in the previous section. For more information, see [Options to install Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
+You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016 using the method described in the previous section. For more information, see [Options to install Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-defender-for-endpoint-packages).
 
 ## Step 2: Configure Defender for Endpoint Plan 1 or Plan 2
 
