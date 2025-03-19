@@ -22,10 +22,10 @@ ms.date: 02/07/2025
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on Linux.
 
