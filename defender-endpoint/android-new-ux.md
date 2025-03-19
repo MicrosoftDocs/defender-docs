@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/18/2025
+ms.date: 03/19/2025
 ---
 
 # User experiences in Microsoft Defender for Endpoint on Android
@@ -39,13 +39,13 @@ The updated **feature cards** also include recommendation cards, which prominent
 
 ### Main Dashboard changes
 
-The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application.
+The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application. The following image illustrates the previous and new version of the main dashboard.
 
 :::image type="content" source="media/mde-android-dash-changes.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Mobile Dashboard on Android devices before the new update" lightbox="media/mde-android-dash-changes.png":::
 
 ### List the features inside one Feature Card
 
-The **App Security** and **Web Protection** features are now consolidated under a single feature card titled **Device Protection**. Previously, each functionality had its own separate card on the Dashboard screen. The following image illustrates the previous and new version of the **Device Protection** feature card.
+The **App Security** and **Web Protection** features are now consolidated under a single feature card titled **Device Protection**. Previously, each functionality had its own separate card on the Dashboard screen. The following image displays the new version of the **Device Protection** feature card.
 
 :::image type="content" source="media/mde-android-list.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Feature Card before the new updates" lightbox="media/mde-android-list.png":::
 
@@ -63,11 +63,11 @@ We updated all the subordinating screens associated with the feature
 
 3. **Threat found**:
 
-The following image illustrates the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
+The following image highlights the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
 
 :::image type="content" source="media/mde-android-threat-found.png" alt-text="Screensot showing the threat found feature on the MDE Android app" lightbox="media/mde-android-threat-found.png":::
    
-1. **Uninstall threat**:
+4. **Uninstall threat**:
 
 :::image type="content" source="media/mde-android-uninstall.png" alt-text="Screensot showing the new uninstall threat feature on the MDE Android app" lightbox="media/mde-android-uninstall.png":::
 
