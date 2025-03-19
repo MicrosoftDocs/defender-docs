@@ -15,20 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/14/2025
+ms.date: 03/14/2025
 ---
 
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
-
-> [!TIP]
-> Looking for advanced guidance on deploying Microsoft Defender for Endpoint on Linux? See [Advanced deployment guide on Defender for Endpoint on Linux](comprehensive-guidance-on-linux-deployment.md).
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Introduction
 
@@ -220,17 +217,19 @@ The `mde-netfilter` package also has the following package dependencies:
 
 ## Troubleshoot installation issues
 
-- For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](/defender-endpoint/linux-resources#log-installation-issues). 
+If you experience any installation issues, for self-troubleshooting, follow these steps:
 
-- For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install). 
+1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-- If the health of the device is false, see [Investigate agent health issues](health-status.md). 
+2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
 
-- For product performance issues, see [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md). 
+3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
 
-- For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md). 
+4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
 
-- To get support from Microsoft, open a support ticket, and provide the log files created by using the [Microsoft Defender for Endpoint client analyzer tool](run-analyzer-linux.md). 
+5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
 ## How to switch between channels
 
