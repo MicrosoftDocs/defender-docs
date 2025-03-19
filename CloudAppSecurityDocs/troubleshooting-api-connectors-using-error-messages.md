@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot App Connector error messages 
+title: Troubleshoot App Connector errors 
 description: This article provides a list of API App connector error messages as well as resolution recommendations for each.
 ms.date: 01/29/2023
 ms.topic: conceptual
 ---
-# Troubleshooting App Connector error messages
+# Troubleshooting App Connector errors
 
 
 
