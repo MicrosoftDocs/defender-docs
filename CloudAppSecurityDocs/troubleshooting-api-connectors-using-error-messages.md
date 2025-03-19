@@ -15,7 +15,7 @@ This article provides a list of API App connector error messages and resolution 
 App connector errors can be seen in the app connector dialog after attempting to connect a cloud app using the API App connector.
 
 > [!NOTE]
-> If a connector experiences a failure, disconnection, or poor health check, a system alert will be generated. To resume normal operations and maintain connectivity, reconnect the connector on the connectors page.
+> If a connector experiences a failure or disconnection, a system alert will be generated. To resume normal operations and maintain connectivity, reconnect the connector on the connectors page.
 
 > [!div class="mx-tableFixed"]
 >
