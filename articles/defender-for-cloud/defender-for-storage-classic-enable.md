@@ -1,29 +1,32 @@
 ---
 title: Enable and configure Microsoft Defender for Storage (classic)
 description: Learn about how to enable and configure Microsoft Defender for Storage (classic).
-ms.date: 08/01/2023
+ms.date: 03/19/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ---
 
-# Enable Microsoft Defender for Storage (classic)
+Enable Microsoft Defender for Storage (classic)
 
-This article explains how you can enable and configure Microsoft Defender for Storage (Classic) on your subscriptions by using various templates such as PowerShell, REST API, and others.  
-
-You can also [upgrade to the new Microsoft Defender for Storage plan](defender-for-storage-introduction.md) and use advanced security capabilities, including malware scanning and sensitive data threat detection. Benefit from a more predictable and granular pricing structure that charges per storage account, with extra costs for high-volume transactions. This new pricing plan also encompasses all new security features and detections.
+This article explains how to enable and configure Microsoft Defender for Storage (Classic) on your subscriptions using various templates such as PowerShell, REST API, and others.
 
 > [!NOTE]
-> If you're using Defender for Storage (classic) with per-transaction or per-storage account pricing, you'll need to migrate to the new Defender for Storage plan to access these features and pricing. Learn about [migrating to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
+> Defender for Storage (Classic) is unavailable for new subscriptions as of February 5, 2025.
 
-**Microsoft Defender for Storage** is an Azure-native layer of security intelligence that detects unusual and potentially harmful attempts to access or exploit your storage accounts. It uses advanced threat detection capabilities and [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/) data to provide contextual security alerts. Those alerts also include steps to mitigate the detected threats and prevent future attacks.
+You can also [upgrade to the new Microsoft Defender for Storage plan](defender-for-storage-introduction.md) and use advanced security capabilities, including malware scanning and sensitive data threat detection. Benefit from a predictable and granular pricing structure that charges per storage account, with extra costs for high-volume transactions. This new pricing plan also encompasses all new security features and detections.
 
-Microsoft Defender for Storage continuously analyzes the transactions of [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/), [Azure Data Lake Storage](https://azure.microsoft.com/services/storage/data-lake-storage/), and [Azure Files](https://azure.microsoft.com/services/storage/files/) services. When potentially malicious activities are detected, security alerts are generated. Alerts are shown in Microsoft Defender for Cloud with the details of the suspicious activity, appropriate investigation steps, remediation actions, and security recommendations.
+> [!NOTE]
+> If you use Defender for Storage (classic) with per-transaction or per-storage account pricing, you need to migrate to the new Defender for Storage plan to access these features and pricing. Learn about [migrating to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
 
-Analyzed telemetry of Azure Blob Storage includes operation types such as Get Blob, Put Blob, Get Container ACL, List Blobs, and Get Blob Properties. Examples of analyzed Azure Files operation types include Get File, Create File, List Files, Get File Properties, and Put Range.
+**Microsoft Defender for Storage** is an Azure-native security intelligence layer that detects unusual and potentially harmful attempts to access or exploit your storage accounts. It uses advanced threat detection capabilities and [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/) data to provide contextual security alerts. These alerts include steps to mitigate detected threats and prevent future attacks.
 
-Defender for Storage classic doesn’t access the Storage account data and has no impact on its performance.
+Microsoft Defender for Storage continuously analyzes transactions of [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/), [Azure Data Lake Storage](https://azure.microsoft.com/services/storage/data-lake-storage/), and [Azure Files](https://azure.microsoft.com/services/storage/files/) services. When potentially malicious activities are detected, security alerts generate. Microsoft Defender for Cloud shows alerts with details of suspicious activity, appropriate investigation steps, remediation actions, and security recommendations.
+
+Analyzed telemetry of Azure Blob Storage includes operation types like Get Blob, Put Blob, Get Container ACL, List Blobs, and Get Blob Properties. Examples of analyzed Azure Files operation types include Get File, Create File, List Files, Get File Properties, and Put Range.
+
+Defender for Storage classic doesn’t access Storage account data and has no impact on its performance.
 
 Learn more about the [benefits, features, and limitations of Defender for Storage](defender-for-storage-introduction.md). You can also learn more about Defender for Storage in the [Defender for Storage episode](episode-thirteen.md) of the Defender for Cloud in the Field video series.
 
@@ -38,22 +41,17 @@ Learn more about the [benefits, features, and limitations of Defender for Storag
 
 ## Set up Microsoft Defender for Storage (classic)
 
-### Set up per-transaction pricing for a subscription
-
-For the Defender for Storage per-transaction pricing, we recommend that you enable Defender for Storage for each subscription so that all existing and new storage accounts are protected. If you want to only protect specific accounts, [configure Defender for Storage for each account](#set-up-per-transaction-pricing-for-a-storage-account).
-
-You can configure Microsoft Defender for Storage on your subscriptions in several ways:
+### Disable per-transaction pricing for a subscription
 
 - [Terraform template](#terraform-template)
 - [Bicep template](#bicep-template)
 - [ARM template](#arm-template)
 - [PowerShell](#powershell)
-- [Azure CLI](#azure-cli)
 - [REST API](#rest-api)
 
 #### Terraform template
 
-To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using a Terraform template, add this code snippet to your template with your subscription ID as the `parent_id` value:
+To disable Microsoft Defender for Storage (Classic) at the subscription level with per-transaction pricing using a Terraform template, add this code snippet to your template with your subscription ID as the `parent_id` value:
 
 ```terraform
 resource "azapi_resource" "symbolicname" {
@@ -62,14 +60,11 @@ resource "azapi_resource" "symbolicname" {
   parent_id = "<subscriptionId>"
   body = jsonencode({
     properties = {
-      pricingTier = "Standard"
-      subPlan = "PerTransaction"
+      pricingTier = "Free"
     }
   })
 }
 ```
-
-To disable the plan, set the `pricingTier` property value to `Free` and remove the `subPlan` property.
 
 Learn more about the [ARM template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template).
 
