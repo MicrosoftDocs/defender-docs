@@ -5,6 +5,7 @@ author: elazark
 ms.author: elkrieger
 ms.topic: concept-article
 ms.date: 03/16/2025
+#customer intent: I want to understand how Defender for Endpoint integrates with Defender for Cloud.
 ---
 
 # Defender for Endpoint/Defender for Vulnerability Management integration
