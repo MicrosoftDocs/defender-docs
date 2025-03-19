@@ -37,19 +37,19 @@ Gated deployment is a strategy to ensure that only approved container images are
       - **Cloud scope** - the cloud environment(s) this security rule is applied to
       - **Resource scope** - the conditions used to limit the resources in the cloud scope this security rule is applied to
     - Select **Configurations** and define the following:
-      - **Add condition types** - specify the conditions that trigger the action when found in the container image - either a vulnerability level or a specific CVE id.
-      - **Add allowed vulnerabilities** - specify CVE ids that are exempted from triggering the action for this security rule.
+      - **Add condition types** - specify the conditions that trigger the action when found in the container image - either a vulnerability level or a specific CVE id
+      - **Add allowed vulnerabilities** - specify CVE ids that are exempted from triggering the action for this security rule
     - Select **Enable prerequisites**.
     - After reviewing the prerequisites, select **Add rule**.
 
 ## Disable or delete a gated deployment security rule
 
-1. **Disable a gated deployment security rules**
+1. **Disable a gated deployment security rule**
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
     - Select **Vulnerability assessment** to view a list of defined security rules.
     - Select a security rule and then select **Disable**.
 
-1. **Delete a gated deployment security rules**
+1. **Delete a gated deployment security rule**
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
     - Select **Vulnerability assessment** to view a list of defined security rules.
     - Select a security rule and then select **Delete**.
