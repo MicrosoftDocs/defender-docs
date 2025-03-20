@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot App Connector error messages 
+title: Troubleshoot App Connector errors 
 description: This article provides a list of API App connector error messages as well as resolution recommendations for each.
 ms.date: 01/29/2023
 ms.topic: conceptual
 ---
-# Troubleshooting App Connector error messages
+# Troubleshooting App Connector errors
 
 
 
@@ -13,6 +13,9 @@ This article provides a list of API App connector error messages and resolution 
 ## Troubleshooting
 
 App connector errors can be seen in the app connector dialog after attempting to connect a cloud app using the API App connector.
+
+> [!NOTE]
+> If a connector experiences a failure or disconnection, a system alert will be generated. To resume normal operations and maintain connectivity, reconnect the connector on the connectors page.
 
 > [!div class="mx-tableFixed"]
 >
