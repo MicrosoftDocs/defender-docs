@@ -39,6 +39,7 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 ### Main Dashboard changes
 
+
 This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application.
 
 :::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update." lightbox="media/mde-ios-main-dash-new.png":::
@@ -74,3 +75,4 @@ Hero cards are implemented to provide a more cohesive user experience. These car
 2. **Device Health (iOS Update)**
 
     :::image type="content" source="media/mde-ios-device-health-rec-card.png" alt-text="Screenshot that shows the device health recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-device-health-rec-card.png":::
+
