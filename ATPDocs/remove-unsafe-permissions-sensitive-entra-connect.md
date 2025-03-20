@@ -19,7 +19,7 @@ This article describes Microsoft Defender for Identity's Microsoft Entra Connect
 > [!NOTE]
 > This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about Microsoft Entra seamless sign-on **[here](/entra/identity/hybrid/connect/how-to-connect-sso)**.
 
-## How can unsafe permissions on Entra Connect accounts expose your hybrid identity to risk?
+## How can unsafe permissions on Microsoft Entra Connect accounts expose your hybrid identity to risk?
 
 Entra Connect accounts like AD DS Connector account (also known as MSOL_) and Entra Seamless SSO computer account (AZUREADSSOACC) have powerful privileges, including replication and password reset rights. If these accounts are granted unsafe permissions, attackers could exploit them to gain unauthorized access, escalate privileges, or take control of hybrid identity infrastructure. This could lead to account takeovers, unauthorized directory modifications, and a broader compromise of both on-premises and cloud environments.
 
