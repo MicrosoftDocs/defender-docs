@@ -52,6 +52,10 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 
    - **File extension names** - Suspicious files except email attachments will be submitted for additional inspection
 
+> [!NOTE]
+> By default you will see several extension names are automatically filled. One of them is **_double quotes (")_**, this will includes files that don't have any file extensions at all.
+
+
 ## Related topics
 
 - [Manage automation folder exclusions](manage-automation-folder-exclusions.md)
