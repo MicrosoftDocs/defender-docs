@@ -274,7 +274,7 @@ By analyzing the provided logs, you can pinpoint the specific time frame that re
 
   For more information, see [Message trace in the Microsoft Defender portal](message-trace-defender-portal.md).
 
-## After the investigation is complete**
+## After the investigation is complete
 
 1. If you disabled the account during the investigation, reset the password and then enable the account as described [earlier in this article](#step-1-disable-the-affected-user-account)
 
