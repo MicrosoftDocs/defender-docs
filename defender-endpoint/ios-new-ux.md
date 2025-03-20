@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/13/2025
+ms.date: 03/20/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -39,7 +39,7 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 ### Main Dashboard changes
 
-This is the main Dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application.
+The main Dashboard screen that appears for enterprise users as per our latest rollout of enhancements to the application.
 
 :::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update." lightbox="media/mde-ios-main-dash-new.png":::
 
@@ -57,7 +57,7 @@ We updated all the subordinating screens associated with the feature
 
 :::image type="content" source="media/mde-ios-web-protection-new.png" alt-text="Screenshot that shows the web protection feature on the MDE iOS app." lightbox="media/mde-ios-web-protection-new.png":::
 
-1. **Device Health**
+2. **Device Health**
 
 :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the MDE iOS app." lightbox="media/mde-device-health-new.png":::
 
