@@ -96,7 +96,8 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 - Events from **Exchange**, **Power BI**, and **Teams** will only appear after activities from those services are detected in the portal.
 
 
-- [Multi-geo deployments](/microsoft-365/enterprise/microsoft-365-multi-geo) are only supported for OneDrive
+- [Multi-geo deployments](/microsoft-365/enterprise/microsoft-365-multi-geo) are only supported for OneDrive.
+- Events from **Exchange** reflect the actor, which is either the application or the user, that performed the action.
 
 ### Microsoft Entra integration
 
