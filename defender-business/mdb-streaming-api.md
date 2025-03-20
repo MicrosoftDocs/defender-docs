@@ -4,7 +4,7 @@ description:  The Defender for Endpoint streaming API is available for Defender 
 author: chrisda
 ms.author: chrisda
 manager: deniseb
-ms.date: 06/07/2024
+ms.date: 03/05/2025
 ms.topic: how-to
 ms.service:  microsoft-365-security
 ms.localizationpriority: medium
@@ -126,3 +126,4 @@ Each blob contains multiple rows. Each row contains the event name, the time Def
 ## See also
 
 - [Raw Data Streaming API](/defender-endpoint/api/raw-data-export) in Defender for Endpoint
+- [Overview of management and APIs](/defender-endpoint/api/management-apis)

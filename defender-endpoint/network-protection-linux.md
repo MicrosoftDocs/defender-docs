@@ -21,6 +21,11 @@ ms.date: 10/08/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**Applies to:**
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
@@ -75,7 +80,7 @@ sudo apt install -y mdatp
 
 ### Device Onboarding
 
-To onboard the device, you must download the Python onboarding package for Linux server from Microsoft Defender XDR -> Settings -> Device Management -> Onboarding and run:
+To onboard the device, you must download the Python onboarding package for Linux server from the Microsoft Defender portal. Go to **Settings** > **Device Management** > **Onboarding**, and then run the following command:
 
 ```bash
 sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py

@@ -18,14 +18,13 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: concept-article
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: To learn how to pilot and deploy Microsoft Defender for Endpoint in your production Microsoft 365 tenant.
 ---
 
 # Pilot and deploy Microsoft Defender for Endpoint
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 This article provides a workflow for piloting and deploying Microsoft Defender for Endpoint in your organization. You can use these recommendations to onboard Microsoft Defender for Endpoint as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender XDR.
 
@@ -47,7 +46,7 @@ The articles in this series correspond to the following phases of end-to-end dep
 | B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - **Pilot and deploy Defender for Endpoint** (this article) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
-## Pilot and deploy workflow for Defender for Identity
+## Pilot and deploy workflow for Defender for Endpoint
 
 The following diagram illustrates a common process to deploy a product or service in an IT environment.
 
@@ -55,9 +54,9 @@ The following diagram illustrates a common process to deploy a product or servic
 
 You start by evaluating the product or service and how it will work within your organization. Then, you pilot the product or service with a suitably small subset of your production infrastructure for testing, learning, and customization. Then, gradually increase the scope of the deployment until your entire infrastructure or organization is covered.
 
-Here is the workflow for piloting and deploying Defender for Identity in your production environment.
+Here is the workflow for piloting and deploying Defender for Endpoint in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" border="false":::
+:::image type="content" source="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Endpoint." lightbox="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 

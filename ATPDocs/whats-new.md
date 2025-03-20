@@ -22,6 +22,22 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## March 2025
+
+### Enhanced Identity Inventory (Preview)
+
+The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The updated Identities Inventory page now includes the following tabs:
+
+- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
+
+- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). 
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory). 
+
+### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
+New LDAP query events were added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
+
 ## February 2025
 
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
@@ -66,6 +82,12 @@ We have added and updated the following events in the `IdentityDirectoryEvents` 
 - Account primary group ID has been changed
 
 Additionally, the **built-in schema reference** for Advanced Hunting in Microsoft Defender XDR has been updated to include detailed information on all supported event types (**`ActionType`** values) in identity-related tables, ensuring complete visibility into available events. For more information, see [Advanced hunting schema details](/defender-xdr/advanced-hunting-schema-tables).
+
+## January 2025
+
+### New Identity guide tour
+
+Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
 
 ## December 2024
 

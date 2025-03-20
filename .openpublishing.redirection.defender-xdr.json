@@ -259,6 +259,61 @@
       "source_path": "defender-xdr/microsoft-sentinel-onboard.md",
       "redirect_url": "/unified-secops-platform/microsoft-sentinel-onboard",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-xdr/first-incident-path-phishing.md",
+      "redirect_url": "/security/operations/incident-response-playbook-phishing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/first-incident-path-identity.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/incident-response-overview.md",
+      "redirect_url": "/defender-xdr/incidents-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-xdr/respond-first-incident-analyze.md",
+      "redirect_url": "/defender-xdr/investigate-incidents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-xdr/respond-first-incident-365-defender.md",
+      "redirect_url": "/defender-xdr/manage-incidents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-xdr/export-incidents-queue.md",
+      "redirect_url": "/defender-xdr/incident-queue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-xdr/respond-first-incident-remediate.md",
+      "redirect_url": "/defender-xdr/incidents-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/m365d-time-zone.md",
+      "redirect_url": "/defender-xdr/m365d-enable-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-xdr/feedback.md",
+      "redirect_url": "/defender-xdr/m365d-enable-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/microsoft-365-defender-integration-with-azure-sentinel.md",
+      "redirect_url": "/azure/sentinel/microsoft-365-defender-sentinel-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud.md",
+      "redirect_url": "/azure/defender-for-cloud/concept-integration-365",
+      "redirect_document_id": false
+    }                                                
   ]
 }

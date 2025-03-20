@@ -24,7 +24,7 @@ POST /api/v1/activities/
 
 | Parameter | Description |
 | --- | --- |
-| filters | Filter objects with all the search filters for the request, see [activity filters](api-activities.md#filters) for more details |
+| filters | Filter objects with all the search filters for the request, for more details see [activity filters](api-activities.md#filters)  |
 | sortDirection | The sorting direction. Possible values are: `asc` and `desc` |
 | sortField | Fields used to sort activities. Possible values are: <li> **date**: The date when then the activity happened <li> **created**: The [timestamp](api-introduction.md#timestamps) when the activity was saved |
 | skip | Skips the specified number of records |
@@ -34,7 +34,7 @@ POST /api/v1/activities/
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/activities/" -d '{
@@ -53,7 +53,7 @@ Returns a list of activities in JSON format.
 
 ```json
 {
-  "total": 5 // total number of records
+  "total": 5 // approximate number of records
   "hasNext": true // whether there is more data to show or not.
   "data": [
     // returned records

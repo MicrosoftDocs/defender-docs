@@ -94,7 +94,7 @@ Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft I
 
 - Stay informed about upcoming releases by visiting [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md) or our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/bg-p/MicrosoftDefenderATPBlog/label-name/iOS).
 
-- Provide feedback through in-app feedback system or through the [unified security console](https://security.microsoft.com)
+- Provide feedback through in-app feedback system or through the [Microsoft Defender portal](https://security.microsoft.com)
 
 ## Next steps
 
