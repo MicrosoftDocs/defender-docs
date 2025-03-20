@@ -3,11 +3,11 @@ title: "What's new in the Microsoft's unified SecOps platform"
 description: Lists the new features and functionality in the Microsoft unified security operations platform
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-ms.date: 03/17/2025
-manager: dansimp
+ms.date: 03/20/2025
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -22,7 +22,18 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## March 2025
 
+- [Multi workspace support in multi-tenant management (preview)](#multi-workspace-support-in-multi-tenant-management-preview)
 - [Multi workspace support for Microsoft Sentinel (preview)](#multi-workspace-support-for-microsoft-sentinel-preview)
+
+### Multi workspace support in multi-tenant management (preview) 
+
+For preview, multiple workspaces are now supported for multi-tenant management in the Defender portal. This feature allows you to view incidents and alerts, and to hunt for data in Advanced hunting, across multiple workspaces and multiple tenants.
+
+For more information, see:
+
+- [Microsoft Defender multitenant management](mto-overview.md)
+- [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
+- [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
 
 ### Multi workspace support for Microsoft Sentinel (preview)
 
