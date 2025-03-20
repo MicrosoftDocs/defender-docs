@@ -123,14 +123,14 @@ Defender for Endpoint includes Microsoft Secure Score for Devices to help you dy
 
 <a name="mte"></a>
 
-**[Microsoft Threat Experts](endpoint-attack-notifications.md)**
+**[Microsoft Defender Experts](endpoint-attack-notifications.md)**
 
-Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower Security operation centers (SOCs) to identify and respond to threats quickly and accurately.
+Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower security operation centers (SOCs) to identify and respond to threats quickly and accurately.
 
 > [!IMPORTANT]
-> Defender for Endpoint customers need to apply for the Microsoft Threat Experts managed threat hunting service to get proactive Targeted Attack Notifications and to collaborate with experts on demand. Experts on Demand is an add-on service. Targeted Attack Notifications are always included after you have been accepted into Microsoft Threat Experts managed threat hunting service.
+> Defender for Endpoint customers need to apply for the Microsoft's managed threat hunting service to get proactive Endpoint Attack Notifications and to collaborate with experts on demand. Experts on Demand is an add-on service. Endpoint Attack Notifications are always included after you have been accepted into Microsoft Defender Experts managed threat hunting service.
 >
-> If you aren't enrolled yet and would like to experience its benefits, go to **Settings** \> **General** \> **Advanced features** \> **Microsoft Threat Experts** to apply. Once accepted, you'll get the benefits of Targeted Attack Notifications, and start a 90-day trial of Experts on Demand. Contact your Microsoft representative to get a full Experts on Demand subscription.
+> If you aren't enrolled yet and would like to experience its benefits, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Endpoint Attack Notifications** to apply. Once accepted, you'll get the benefits of Endpoint Attack Notifications, and start a 90-day trial of Experts on Demand. Contact your Microsoft representative to get a full Experts on Demand subscription.
 
 <a name="apis"></a>
 
