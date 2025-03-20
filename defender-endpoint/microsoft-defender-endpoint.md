@@ -125,7 +125,7 @@ Defender for Endpoint includes Microsoft Secure Score for Devices to help you dy
 
 **[Microsoft Defender Experts](endpoint-attack-notifications.md)**
 
-Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower security operation centers (SOCs) to identify and respond to threats quickly and accurately.
+Microsoft Defender for Endpoint's managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower security operation centers (SOCs) to identify and respond to threats quickly and accurately.
 
 > [!IMPORTANT]
 > Defender for Endpoint customers need to apply for the Microsoft's managed threat hunting service to get proactive Endpoint Attack Notifications and to collaborate with experts on demand. Experts on Demand is an add-on service. Endpoint Attack Notifications are always included after you have been accepted into Microsoft Defender Experts managed threat hunting service.
