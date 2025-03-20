@@ -30,7 +30,7 @@ appliesto:
 
 You can now start an investigation on data security incidents from the Microsoft Defender portal with the integration of Microsoft Purview Data Security Investigations and Microsoft Defender XDR.
 
-Security operations center (SOC) teams can take advantage of this integration to enhance their investigation and response to potential data security incidents in their environment like data breaches or data leaks. Using AI, Microsoft Purview Data Security Investigations analyzes impacted data, draws connections to identify risks, and provides actionable insights to protect the organization.
+Security operations center (SOC) teams can take advantage of this integration to enhance their investigation and response to potential data security incidents like data breaches or data leaks. Microsoft Purview Data Security Investigations uses generative AI to analyze impacted data, draws connections to identify risks, and provide actionable insights to protect the organization.
 
 SOC teams can start a data security investigation from an incident page where a potentially affected data set is in the Microsoft Defender portal.
 
@@ -49,7 +49,7 @@ Microsoft Defender XDR identifies possibly impacted sensitive data in incidents,
 
 1. Sign in to the Microsoft Defender portal.
 2. Navigate to the incidents queue then select an incident to open the incident page.
-3. When the selected incident has potentially impacted data, the option to **Create investigation** appears on the incident page message banner. Choose **Create investigation**.
+3. When the selected incident contains potentially impacted data, the option to **Create investigation** appears on the incident page message banner. Choose **Create investigation**.
 [SCREENSHOT]
 4. In the pop-up window, provide a name and description for the investigation. 
 [SCREENSHOT]
@@ -60,7 +60,7 @@ Microsoft Defender XDR identifies possibly impacted sensitive data in incidents,
    > You can attach either mailboxes or files and mail messages in an investigation, but not both. If an incident involves both mailboxes and files or mail messages, you need to create separate investigations. For example, create one investigation for all mailboxes and another for all files and mail messages.
 6. Select **Create** to finish creating the data security investigation.
 
-After creating the data security investigation, a link to the Microsoft Purview portal appears on the message banner in the incident page. Here’s an example.
+Once the data security investigation is created, a link to the Microsoft Purview portal appears on the message banner in the incident page. Here’s an example.
 
 [SCREENSHOT]
 
@@ -81,5 +81,4 @@ Each data security investigation created is recorded in the Microsoft Defender p
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Investigate data security incidents in the Microsoft Purview portal](link.md)
-
+> [Investigate data security incidents in the Microsoft Purview portal]
