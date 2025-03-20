@@ -81,6 +81,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-endpoint/linux-support-rhel.md",
+      "redirect_url": "/defender-endpoint/comprehensive-guidance-on-linux-deployment",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/pilot-deploy-defender-endpoint.md",
       "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
       "redirect_document_id": false
