@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: cwatson
 author: cwatson-cat
 ms.localizationpriority: medium
-ms.date: 12/10/2024
+ms.date: 03/17/2025
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -19,6 +19,19 @@ ms.topic: concept-article
 # What's new in Microsoft's unified security operations platform
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
+
+## March 2025
+
+- [Multi workspace support for Microsoft Sentinel (preview)](#multi-workspace-support-for-microsoft-sentinel-preview)
+
+### Multi workspace support for Microsoft Sentinel (preview)
+
+For preview, in the Defender portal, connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. A primary workspace's alerts are correlated with Defender XDR data, which results in incidents that include alerts from Microsoft Sentinel's primary workspace and Defender XDR. All other onboarded workspaces are considered secondary workspaces. Incidents are created based on the workspace’s data and won't include Defender XDR data.
+
+For more information, see the following articles:
+
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
 
 ## January 2025
 

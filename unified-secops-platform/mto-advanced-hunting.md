@@ -79,3 +79,4 @@ Select **Open detection rules** to view this rule in a new tab for the specific 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [View and manage incidents and alerts](mto-incidents-alerts.md)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
