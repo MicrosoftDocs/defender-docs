@@ -122,7 +122,7 @@ Open any remediation item to view details about it, including its remediation na
   > [!TIP]
   > For best results, remediation should be done in batches of 50,000 or fewer.
 
-  Only remediable email messages are acted on during remediation. Nonremediable emails can't be remediated by Microsoft 365, becayse they aren't stored in cloud mailboxes.
+  Only remediable email messages are acted on during remediation. Nonremediable emails can't be remediated by Microsoft 365, because they aren't stored in cloud mailboxes.
 
   Admins can take actions on emails in quarantine if necessary, but those emails expire out of quarantine if they're not manually purged. By default, emails quarantined because of malicious content aren't accessible by users, so security personnel don't have to take any action to get rid of threats in quarantine. If the emails are on-premises or external, the user can be contacted to address the suspicious email. Or the admins can use separate email server/security tools for removal. These emails can be identified by applying the *delivery location = on-premises* external filter in Explorer. For failed or dropped email, or email not accessible by users, there isn't any email to mitigate, since these mails don't reach the mailbox.
 
