@@ -113,7 +113,7 @@ You can capture a Process Monitor (ProcMon) trace by using the MDE Client Analyz
 
 10. To save the capture with a unique name in the `.pml` format, go to **File** then click **Save...**. Ensure you select the radio buttons **All events** and **Native Process Monitor Format (PML)**.
 
-   ![Screenshot showing the save settings page.](media/troubleshoot-av-performance-issues-with-procmon/save-to-file.jpg)
+      ![Screenshot showing the save settings page.](media/troubleshoot-av-performance-issues-with-procmon/save-to-file.jpg)
    
 11. For better tracking, change the default path from `C:\temp\ProcessMonitor\LogFile.PML` to `C:\temp\ProcessMonitor\%ComputerName%_LogFile_MMDDYEAR_Repro_of_issue.PML` where:
 
