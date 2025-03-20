@@ -297,6 +297,8 @@
                   href: schedule-antivirus-scan-in-mde.md
                 - name: Schedule antivirus scans using Crontab
                   href: linux-schedule-scan-mde.md
+              - name: Network protection for Linux
+                href: network-protection-linux.md
               - name: Configure and validate exclusions on Linux
                 href: linux-exclusions.md
               - name: Configure eBPF-based sensor
@@ -701,8 +703,6 @@
           href: evaluate-network-protection.md
         - name: Turn on network protection
           href: enable-network-protection.md
-        - name: Network protection for Linux
-          href: network-protection-linux.md
         - name: Network protection for MacOS
           href: network-protection-macos.md
       - name: Web protection
