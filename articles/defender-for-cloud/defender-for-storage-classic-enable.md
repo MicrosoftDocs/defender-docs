@@ -1,10 +1,11 @@
 ---
 title: Enable and configure Microsoft Defender for Storage (classic)
-description: Learn about how to enable and configure Microsoft Defender for Storage (classic).
-ms.date: 03/19/2025
+description: Learn how to enable and configure Microsoft Defender for Storage (classic) to protect your storage accounts from potential security threats.
+ms.date: 03/20/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
+#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage (classic) so that I can protect my storage accounts from threats.
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ---
 
@@ -38,128 +39,6 @@ Learn more about the [benefits, features, and limitations of Defender for Storag
 |Pricing:|**Microsoft Defender for Storage** is billed as shown in the [pricing details](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and in the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) in the Azure portal |
 |Protected storage types:|[Blob Storage](/azure/storage/blobs/storage-blobs-introduction)  (Standard/Premium StorageV2, Block Blobs) <br>[Azure Files](/azure/storage/files/storage-files-introduction) (over REST API and SMB)<br>[Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) (Standard/Premium accounts with hierarchical namespaces enabled)|
 |Clouds:|:::image type="icon" source="media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="media/icons/yes-icon.png"::: Azure Government (Only for per-transaction plan)<br>:::image type="icon" source="media/icons/yes-icon.png"::: Microsoft Azure operated by 21Vianet<br>:::image type="icon" source="media/icons/no-icon.png"::: Connected AWS accounts|
-
-## Set up Microsoft Defender for Storage (classic)
-
-### Disable per-transaction pricing for a subscription
-
-- [Terraform template](#terraform-template)
-- [Bicep template](#bicep-template)
-- [ARM template](#arm-template)
-- [PowerShell](#powershell)
-- [Azure CLI](#azure-cli)
-- [REST API](#rest-api)
-
-#### Terraform template
-
-To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using a Terraform template, add this code snippet to your template with your subscription ID as the `parent_id` value:
-
-```terraform
-resource "azapi_resource" "symbolicname" {
-  type = "Microsoft.Security/pricings@2022-03-01"
-  name = "StorageAccounts"
-  parent_id = "<subscriptionId>"
-  body = jsonencode({
-    properties = {
-      pricingTier = "Free"
-    }
-  })
-}
-```
-
-Learn more about the [ARM template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template).
-
-#### Bicep template
-
-To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using [Bicep](/azure/azure-resource-manager/bicep/overview), add the following to your Bicep template:
-
-```bicep
-resource symbolicname 'Microsoft.Security/pricings@2022-03-01' = {
-  name: 'StorageAccounts'
-  properties: {
-    pricingTier: 'Free'
-  }
-}
-```
-
-Learn more about the [Bicep template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-bicep&source=docs).
-
-#### ARM template
-
-To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using an ARM template, add this JSON snippet to the resources section of your ARM template:
-
-```json
-{
-  "type": "Microsoft.Security/pricings",
-  "apiVersion": "2022-03-01",
-  "name": "StorageAccounts",
-  "properties": {
-    "pricingTier": "Free",
-  }
-}
-```
-
-Learn more about the [ARM template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template).
-
-#### PowerShell
-
-To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using PowerShell:
-
-1. If you don't have it already, [install the Azure Az PowerShell module](/powershell/azure/install-azure-powershell).
-1. Use the `Connect-AzAccount` cmdlet to sign in to your Azure account. Learn more about [signing in to Azure with Azure PowerShell](/powershell/azure/authenticate-azureps).
-Disable Microsoft Defender for Storage for your subscription with the `Set-AzSecurityPricing` cmdlet:
-
-    ```powershell
-    Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Free"
-    ```
-
-#### Azure CLI
-
-To disable Microsoft Defender for Storage at the subscription level with per-transaction pricing using Azure CLI:
-
-1. If you don't have it already, [install the Azure CLI](/cli/azure/install-azure-cli).
-1. Use the `az login` command to sign in to your Azure account. Learn more about [signing in to Azure with Azure CLI](/cli/azure/authenticate-azure-cli).
-1. Use these commands to set the subscription ID and name:
-
-    ```azurecli
-    az account set --subscription "<subscriptionId or name>"
-    ```
-
-    Replace `<subscriptionId>` with your subscription ID.
-
-1. Disable Microsoft Defender for Storage for your subscription with the `az security pricing create` command:
-
-    ```azurecli
-    az security pricing create -n StorageAccounts --tier "free"
-    ```
-
-> [!TIP]
-> You can use the [`az security pricing show`](/cli/azure/security/pricing#az-security-pricing-show) command to see all of the Defender for Cloud plans that are enabled for the subscription.
-
-To disable the plan, set the `-tier` property value to `free`.
-
-Learn more about the [`az security pricing create`](/cli/azure/security/pricing#az-security-pricing-create) command.
-
-#### REST API
-
-To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using the Microsoft Defender for Cloud REST API, create a PUT request with this endpoint and body:
-
-```http
-PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2022-03-01
-
-{
-"properties": {
-    "pricingTier": "Standard",
-    "subPlan": "PerTransaction"
-    }
-}
-```
-
-Replace `{subscriptionId}` with your subscription ID.
-
-To disable the plan, set the `-pricingTier` property value to `Free` and remove the `subPlan` parameter.
-
-Learn more about the [updating Defender plans with the REST API](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) in HTTP, Java, Go and JavaScript.
 
 ### Set up per-transaction pricing for a storage account
 
@@ -349,6 +228,128 @@ When you create a new Databricks workspace, you have the ability to add a tag th
 1. Continue following the instructions to create your new Azure Databricks workspace.
 
 The Microsoft Defender for Storage account inherits the tag of the Databricks workspace, which prevents Defender for Storage from turning on automatically.
+
+## Disable Microsoft Defender for Storage (classic)
+
+### Disable per-transaction pricing for a subscription
+
+- [Terraform template](#terraform-template)
+- [Bicep template](#bicep-template)
+- [ARM template](#arm-template)
+- [PowerShell](#powershell)
+- [Azure CLI](#azure-cli)
+- [REST API](#rest-api)
+
+#### Terraform template
+
+To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using a Terraform template, add this code snippet to your template with your subscription ID as the `parent_id` value:
+
+```terraform
+resource "azapi_resource" "symbolicname" {
+  type = "Microsoft.Security/pricings@2022-03-01"
+  name = "StorageAccounts"
+  parent_id = "<subscriptionId>"
+  body = jsonencode({
+    properties = {
+      pricingTier = "Free"
+    }
+  })
+}
+```
+
+Learn more about the [ARM template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template).
+
+#### Bicep template
+
+To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using [Bicep](/azure/azure-resource-manager/bicep/overview), add the following to your Bicep template:
+
+```bicep
+resource symbolicname 'Microsoft.Security/pricings@2022-03-01' = {
+  name: 'StorageAccounts'
+  properties: {
+    pricingTier: 'Free'
+  }
+}
+```
+
+Learn more about the [Bicep template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-bicep&source=docs).
+
+#### ARM template
+
+To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using an ARM template, add this JSON snippet to the resources section of your ARM template:
+
+```json
+{
+  "type": "Microsoft.Security/pricings",
+  "apiVersion": "2022-03-01",
+  "name": "StorageAccounts",
+  "properties": {
+    "pricingTier": "Free",
+  }
+}
+```
+
+Learn more about the [ARM template AzAPI reference](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template).
+
+#### PowerShell
+
+To disable Microsoft Defender for Storage (classic) at the subscription level with per-transaction pricing using PowerShell:
+
+1. If you don't have it already, [install the Azure Az PowerShell module](/powershell/azure/install-azure-powershell).
+1. Use the `Connect-AzAccount` cmdlet to sign in to your Azure account. Learn more about [signing in to Azure with Azure PowerShell](/powershell/azure/authenticate-azureps).
+Disable Microsoft Defender for Storage for your subscription with the `Set-AzSecurityPricing` cmdlet:
+
+    ```powershell
+    Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Free"
+    ```
+
+#### Azure CLI
+
+To disable Microsoft Defender for Storage at the subscription level with per-transaction pricing using Azure CLI:
+
+1. If you don't have it already, [install the Azure CLI](/cli/azure/install-azure-cli).
+1. Use the `az login` command to sign in to your Azure account. Learn more about [signing in to Azure with Azure CLI](/cli/azure/authenticate-azure-cli).
+1. Use these commands to set the subscription ID and name:
+
+    ```azurecli
+    az account set --subscription "<subscriptionId or name>"
+    ```
+
+    Replace `<subscriptionId>` with your subscription ID.
+
+1. Disable Microsoft Defender for Storage for your subscription with the `az security pricing create` command:
+
+    ```azurecli
+    az security pricing create -n StorageAccounts --tier "free"
+    ```
+
+> [!TIP]
+> You can use the [`az security pricing show`](/cli/azure/security/pricing#az-security-pricing-show) command to see all of the Defender for Cloud plans that are enabled for the subscription.
+
+To disable the plan, set the `-tier` property value to `free`.
+
+Learn more about the [`az security pricing create`](/cli/azure/security/pricing#az-security-pricing-create) command.
+
+#### REST API
+
+To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using the Microsoft Defender for Cloud REST API, create a PUT request with this endpoint and body:
+
+```http
+PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2022-03-01
+
+{
+"properties": {
+    "pricingTier": "Standard",
+    "subPlan": "PerTransaction"
+    }
+}
+```
+
+Replace `{subscriptionId}` with your subscription ID.
+
+To disable the plan, set the `-pricingTier` property value to `Free` and remove the `subPlan` parameter.
+
+Learn more about the [updating Defender plans with the REST API](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) in HTTP, Java, Go and JavaScript.
 
 ## Next steps
 
