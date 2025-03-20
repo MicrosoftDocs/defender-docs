@@ -109,7 +109,9 @@
         - name: Investigate and respond to container threats
           href: investigate-respond-container-threats.md
         - name: Investigate insider risk threats
-          href: irm-investigate-alerts-defender.md                         
+          href: irm-investigate-alerts-defender.md
+        - name: Create data security investigations
+          href: create-dsi-in-defender.md                                    
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
