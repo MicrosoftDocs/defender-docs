@@ -19,7 +19,7 @@ The **Overview** page shows the following details:
 For example:
 
 > [!div class="mx-imgBorder"]
-> ![Relative number of detected and policy-based incidents.](incidents-summary1.png)
+> ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)
 > 
 > [!div class="mx-imgBorder"]
 > ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
@@ -53,7 +53,7 @@ For sensitivity labeling data, cards show the number apps that have accessed con
 For example:
 
 > [!div class="mx-imgBorder"]
-> ![number apps that have accessed content with sensitivity labels.](sensitive-data-accessed-chart1.png)
+> ![number apps that have accessed content with sensitivity labels.](media/sensitive-data-accessed-chart1.png)
 
 ## Next steps
 
