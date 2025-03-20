@@ -41,7 +41,7 @@ To create data security investigations in the Microsoft Defender portal, you nee
 - Security Administrator
 - Security Operator
 
-The **Data Security Investigations Administrator** permission is required to successfully view and access data security investigations in the Microsoft Purview portal.
+To view and access the investigation in the Microsoft Purview portal, the **Data Security Investigations Administrator** permission is required.
 
 ## Create a data security investigation
 
@@ -51,13 +51,11 @@ Microsoft Defender XDR identifies possibly impacted sensitive data in incidents,
 2. Navigate to the incidents queue then select an incident to open the incident page.
 3. When the selected incident contains potentially impacted data, the option to **Create investigation** appears on the incident page message banner. Choose **Create investigation**.
 [SCREENSHOT]
-4. In the pop-up window, provide a name and description for the investigation. 
+4. In the pop-up window, provide a name and description for the investigation. Investigation names must be unique.
 [SCREENSHOT]
-   > [!TIP]
-   > Investigation names must be unique.
 5. Attach mailboxes or files and mail messages to the investigation.
    > [!NOTE]
-   > You can attach either mailboxes or files and mail messages in an investigation, but not both. If an incident involves both mailboxes and files or mail messages, you need to create separate investigations. For example, create one investigation for all mailboxes and another for all files and mail messages.
+   > You can attach either mailboxes or files and mail messages in an investigation, but not both at the same time. If an incident involves both mailboxes and files or mail messages, you need to create separate investigations. For example, create one investigation for all mailboxes and another for all files and mail messages. Files and mail messages can be attached in one investigation.
 6. Select **Create** to finish creating the data security investigation.
 
 Once the data security investigation is created, a link to the Microsoft Purview portal appears on the message banner in the incident page. Here’s an example.
