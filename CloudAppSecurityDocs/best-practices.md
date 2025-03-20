@@ -30,7 +30,7 @@ The best practices discussed in this article include:
 Integrating Defender for Cloud Apps with Microsoft Defender for Endpoint gives you the ability to use cloud discovery beyond your corporate network or secure web gateways. With the combined user and device information, you can identify risky users or devices, see what apps they are using, and investigate further in the Defender for Endpoint portal.
 
 **Best practice**: Enable Shadow IT Discovery using Defender for Endpoint  
-**Detail**: Cloud discovery analyzes traffic logs collected by Defender for Endpoint and assesses identified apps against the cloud app catalog to provide compliance and security information. By configuring cloud discovery, you gain visibility into cloud use, Shadow IT, and continuous monitoring of the unsanctioned apps being used by your users.  
+**Detail**: Cloud discovery analyzes traffic logs collected by Defender for Endpoint, Firewall and Secure Web Gateways and assesses identified apps against the cloud app catalog to provide compliance and security information. By configuring cloud discovery, you gain visibility into cloud use, Shadow IT, and continuous monitoring of the unsanctioned apps being used by your users.  
 **For more information**:
 
 * [Microsoft Defender for Endpoint integration with Defender for Cloud Apps](mde-integration.md)
@@ -59,7 +59,6 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 * [OAuth app policies](app-permission-policy.md)
 
 ---
-<br/><br/>
 
 ## Apply cloud governance policies
 
@@ -126,18 +125,6 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 
 ---
 
-**Best practice**: Review reports in the **Files** page  
-**Detail**: Once you've connected various SaaS apps using app connectors, Defender for Cloud Apps scans files stored by these apps. In addition, each time a file is modified it is scanned again. You can use the **Files** page to understand and investigate the types of data being stored in your cloud apps. To help you investigate, you can filter by domains, groups, users, creation date, extension, file name and type, file ID, sensitivity label, and more. Using these filters puts you in control of how you choose to investigate files to make sure none of your data is at risk. Once you have a better understanding of how your data is being used, you can create policies to scan for sensitive content in these files.  
-**For more information**:
-
-* [Connect apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md)
-* [File policies](data-protection-policies.md)
-* [Content inspection](content-inspection.md)
-
----
-<br/><br/>
-
-
 ## Enforce DLP and compliance policies for data stored in the cloud
 
 **Best practice**: Protect confidential data from being shared with external users  
@@ -147,8 +134,6 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 * [Governing connected apps](governance-actions.md)
 
 ---
-<br/><br/>
-
 
 ## Block and protect download of sensitive data to unmanaged or risky devices
 
@@ -160,8 +145,6 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 * [Session policies](session-policy-aad.md)
 
 ---
-<br/><br/>
-
 
 ## Secure collaboration with external users by enforcing real-time session controls
 
@@ -173,8 +156,6 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 * [Session policies](session-policy-aad.md)
 
 ---
-<br/><br/>
-
 
 ## Detect cloud threats, compromised accounts, malicious insiders, and ransomware
 
@@ -187,9 +168,7 @@ Anomaly detection policies are triggered when there are unusual activities perfo
 
 * **Set IP Ranges**: Defender for Cloud Apps can identify known IP addresses once IP address ranges are set. With IP address ranges configured, you can tag, categorize, and customize the way logs and alerts are displayed and investigated. Adding IP address ranges helps to reduce false positive detections and improve the accuracy of alerts. If you choose not to add your IP addresses, you may see an increased number of possible false positives and alerts to investigate.
 
-* **Send Feedback for alerts**
-
-    When dismissing or resolving alerts, make sure to send feedback with the reason you dismissed the alert or how it's been resolved. This information assists Defender for Cloud Apps to improve our alerts and reduce false positives.
+* **Send Feedback for alerts**: When dismissing or resolving alerts, make sure to send feedback with the reason you dismissed the alert or how it's been resolved. This information assists Defender for Cloud Apps to improve our alerts and reduce false positives.
 
 **For more information**:
 
@@ -214,8 +193,6 @@ Anomaly detection policies are triggered when there are unusual activities perfo
 * [OAuth app policies](app-permission-policy.md)
 
 ---
-<br/><br/>
-
 
 ## Use the audit trail of activities for forensic investigations
 
@@ -230,8 +207,6 @@ When dismissing alerts, it's important to investigate and understand why they ar
 * [Activities](activity-filters.md)
 
 ---
-<br/><br/>
-
 
 ## Secure IaaS services and custom apps
 
