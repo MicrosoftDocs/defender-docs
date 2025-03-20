@@ -8,7 +8,7 @@ ms.topic: how-to
 
 
 
-As a major productivity suite providing cloud file storage, collaboration, BI, and CRM tools, Microsoft 365 enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Microsoft 365 may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents might occur due to malicious actor, or by an unaware employee. Microsoft 365 also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
+As a major productivity suite providing cloud file storage, collaboration, BI, and CRM tools, Microsoft 365 enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Microsoft 365 might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents might occur due to malicious actor, or by an unaware employee. Microsoft 365 also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
 
 Connecting Microsoft 365 to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, information protection detections (such as detecting external information sharing), enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
 
@@ -17,7 +17,11 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 
-## File scanning improvements for Microsoft 365
+## File scanning updates for Microsoft 365
+
+To enhance file scanning efficiency and accuracy within Microsoft 365 environments, Defender for Cloud Apps has updated the file scanning process for Microsoft 365. Unless you activate information protection policies, Defender for Cloud Apps won't scan or store organizational files.
+
+When you actively use information protection policies, organizational files might have significant scanning durations due to high volumes of file scanning activities.
 
 Defender for Cloud Apps has added new file scanning improvements for SharePoint and OneDrive:
 
@@ -26,7 +30,7 @@ Defender for Cloud Apps has added new file scanning improvements for SharePoint 
 - Better identification for a file's access level in SharePoint: file access level in SharePoint will be marked by default as **Internal**, and not as **Private** (since every file in SharePoint is accessible by the site owner, and not only by the file owner).
 
     >[!NOTE]
-    >This change could impact your file policies (if a file policy is looking for **Internal** or **Private** files in SharePoint).
+    >This change could affect your file policies (if a file policy is looking for **Internal** or **Private** files in SharePoint).
 
 ## Main threats
 
@@ -79,7 +83,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Defender for Cloud Apps integration with Microsoft 365
   
-Defender for Cloud Apps supports the legacy Microsoft 365 Dedicated Platform as well as the latest offerings of Microsoft 365 services, commonly referred as the *vNext* release family of Microsoft 365.
+Defender for Cloud Apps supports the legacy Microsoft 365 Dedicated Platform and the latest offerings of Microsoft 365 services, commonly referred as the *vNext* release family of Microsoft 365.
 
 In some cases, a vNext service release differs slightly at the administrative and management levels from the standard Microsoft 365 offering.
 
@@ -92,7 +96,8 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 - Events from **Exchange**, **Power BI**, and **Teams** will only appear after activities from those services are detected in the portal.
 
 
-- [Multi-geo deployments](/microsoft-365/enterprise/microsoft-365-multi-geo) are only supported for OneDrive
+- [Multi-geo deployments](/microsoft-365/enterprise/microsoft-365-multi-geo) are only supported for OneDrive.
+- Events from **Exchange** reflect the actor, which is either the application or the user, that performed the action.
 
 ### Microsoft Entra integration
 
@@ -115,7 +120,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
-**Prerequisites**:
+#### Prerequisites:
+
+- To enable file monitoring of Microsoft 365 files, you must use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
 
 - You must have at least one assigned Microsoft 365 license to connect Microsoft 365 to Defender for Cloud Apps.
 
@@ -126,34 +133,33 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - You must [enable auditing in Power BI](/power-bi/admin/service-admin-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 - You must [enable auditing in Dynamics 365](/power-platform/admin/enable-use-comprehensive-auditing#enable-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 
-
 **To connect Microsoft 365 to Defender for Cloud Apps**:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 1. In the **App connectors** page, select **+Connect an app**, and then select **Microsoft 365**.
 
-    ![Connect O365 menu option.](media/connect-o365.png)
+    :::image type="content" source="media/connect-an-app.png" alt-text="Screenshot that shows the connect an app button." lightbox="media/connect-an-app.png":::
 
 1. In the **Select Microsoft 365 components** page, select the options you require, and then select **Connect**.
 
     > [!NOTE]
     >
     > - For best protection, we recommend selecting all Microsoft 365 components.
-    > - The **Azure AD files** component, requires the **Azure AD activities** component and Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
+    > - The **Microsoft 365 files** component, requires enabling Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
 
-    ![connect O365 components.](media/connect-o365-components.png)
+    :::image type="content" source="media/connect-office-365-components.png" alt-text="Screenshot showing the Connect Office 365 components page with the Microsoft 365 files box checked." lightbox="media/connect-office-365-components.png":::
 
 1. On the **Follow the link** page, select **Connect Microsoft 365**.
 
 1. After Microsoft 365 is displayed as successfully connected, select **Done**.
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
-SaaS Security Posture Management (SSPM) data is shown in the Microsoft Defender Portal on the **Secure Score** page. For more information, see [Security posture management for SaaS apps](/defender-cloud-apps/security-saas).
+    SaaS Security Posture Management (SSPM) data is shown in the Microsoft Defender Portal on the **Secure Score** page. For more information, see [Security posture management for SaaS apps](/defender-cloud-apps/security-saas).
 
-> [!NOTE]
-> After connecting Microsoft 365, you will see data from a week back including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that weren't pulling APIs prior to connection, you see events from the moment you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that had been off by default.
+    > [!NOTE]
+    > After connecting Microsoft 365, you will see data from a week back including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that weren't pulling APIs prior to connection, you see events from the moment you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that had been off by default.
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
+    If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
 ## Next steps
 

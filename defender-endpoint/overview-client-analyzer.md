@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/04/2025
+ms.date: 03/12/2025
 ---
 
 # Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
@@ -32,6 +32,12 @@ Besides obvious sensor health issues, MDECA can collect other traces, logs, and 
 
 - Application compatibility (AppCompat), performance, network connectivity, or
 - Unexpected behavior related to [Endpoint Data Loss Prevention](/microsoft-365/compliance/endpoint-dlp-learn-about).
+
+## Use the client analyzer on devices running Windows, Linux, or Mac
+
+- [Run the client analyzer on Windows](run-analyzer-windows.md)
+- [Run the client analyzer on Linux](run-analyzer-linux.md)
+- [Run the client analyzer on macOS](run-analyzer-macos.md)
 
 ## Privacy notice
 
@@ -51,7 +57,7 @@ For more information about our privacy statement, see [Microsoft Privacy Stateme
 
 - Before running the analyzer, we recommend ensuring your proxy or firewall configuration allows access to [Microsoft Defender for Endpoint service URLs](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
-- The analyzer can run on supported editions of [Windows](minimum-requirements.md#supported-windows-versions), [Linux](microsoft-defender-endpoint-linux.md#system-requirements), or [macOS](microsoft-defender-endpoint-mac.md#system-requirements) either before of after onboarding to Microsoft Defender for Endpoint.
+- The analyzer can run on supported editions of [Windows](minimum-requirements.md#supported-windows-versions), [Linux](/defender-endpoint/mde-linux-prerequisites), or [macOS](microsoft-defender-endpoint-mac.md#system-requirements) either before of after onboarding to Microsoft Defender for Endpoint.
 
 - For Windows devices, if you are running the analyzer directly on specific machines and not remotely via [Live Response](troubleshoot-collect-support-log.md), then SysInternals [PsExec.exe](/sysinternals/downloads/psexec) should be allowed (at least temporarily) to run. The analyzer calls into PsExec.exe tool to run cloud connectivity checks as Local System and emulate the behavior of the SENSE service.
 
