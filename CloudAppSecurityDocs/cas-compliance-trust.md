@@ -71,4 +71,4 @@ Defender for Cloud Apps shares data, including customer data, among the followin
 
 ## Related content
 
-For more information, see the [Microsoft compliance offerings](compliance/regulatory/offering-home).
+For more information, see the [Microsoft compliance offerings](/compliance/regulatory/offering-nist-sp-800-171)
