@@ -21,7 +21,7 @@ This article describes Microsoft Defender for Identity's Microsoft Entra Connect
 
 ## How can unsafe permissions on Microsoft Entra Connect accounts expose your hybrid identity to risk?
 
-Entra Connect accounts like AD DS Connector account (also known as MSOL_) and Entra Seamless SSO computer account (AZUREADSSOACC) have powerful privileges, including replication and password reset rights. If these accounts are granted unsafe permissions, attackers could exploit them to gain unauthorized access, escalate privileges, or take control of hybrid identity infrastructure. This could lead to account takeovers, unauthorized directory modifications, and a broader compromise of both on-premises and cloud environments.
+Microsoft Entra Connect accounts like AD DS Connector account (also known as MSOL_) and Microsoft Entra Seamless SSO computer account (AZUREADSSOACC) have powerful privileges, including replication and password reset rights. If these accounts are granted unsafe permissions, attackers could exploit them to gain unauthorized access, escalate privileges, or take control of hybrid identity infrastructure. This could lead to account takeovers, unauthorized directory modifications, and a broader compromise of both on-premises and cloud environments.
 
 ## How do I use this security assessment to improve my hybrid organizational security posture?
 
