@@ -2,8 +2,8 @@
 title: Microsoft Defender for Endpoint
 description: Microsoft Defender for Endpoint is an enterprise endpoint security platform that helps defend against advanced persistent threats.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: high
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 09/25/2024
+ms.date: 03/21/2025
 ---
 
 # Microsoft Defender for Endpoint
@@ -45,7 +45,7 @@ Watch the following video to learn more about Defender for Endpoint:
 
 Defender for Endpoint uses the following combination of technology built into Windows 10 and Microsoft's robust cloud service:
 
-- **Endpoint behavioral sensors**: Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and send this sensor data to your private, isolated, cloud instance of Microsoft Defender for Endpoint.
+- **Endpoint behavioral sensors**: These sensors are embedded in Windows 10, collecting and processing behavioral signals from the operating system. The sensor data is then sent to your private, isolated cloud instance of Microsoft Defender for Endpoint.
 
 - **Cloud security analytics**: Using big-data, device learning, and unique Microsoft optics across the Windows ecosystem, enterprise cloud products (such as Office 365), and online assets, behavioral signals are translated into insights, detections, and recommended responses to advanced threats.
 
@@ -76,12 +76,12 @@ Defender for Endpoint uses the following combination of technology built into Wi
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=95c63786-0382-413d-8a75-eb373e825fa6]
 
 > [!TIP]
-> - Learn about the latest enhancements in Defender for Endpoint: [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
+> - Learn about the latest enhancements in Defender for Endpoint: [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)?
 > - Microsoft Defender for Endpoint demonstrated industry-leading optics and detection capabilities in the recent MITRE evaluation. Read: [Insights from the MITRE ATT&CK-based evaluation](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 
 
 > [!IMPORTANT]
-> The capabilities on non-Windows platforms may be different from the ones for Windows. For more information on what capabilities are available for non-Windows platforms, see [Microsoft Defender for Endpoint for non-Windows platforms](non-windows.md).
+> The capabilities on non-Windows platforms might be different from the ones for Windows. For more information on what capabilities are available for non-Windows platforms, see [Microsoft Defender for Endpoint for non-Windows platforms](non-windows.md).
 
 <a name="tvm"></a>
 
@@ -95,7 +95,7 @@ For more information on the different vulnerability management capabilities avai
 
 **[Attack surface reduction](overview-attack-surface-reduction.md)**
 
-The attack surface reduction set of capabilities provides the first line of defense in the stack. By ensuring configuration settings are properly set and exploit mitigation techniques are applied, the capabilities resist attacks and exploitation. This set of capabilities also includes [network protection](network-protection.md) and [web protection](web-protection-overview.md), which regulate access to malicious IP addresses, domains, and URLs.
+The attack surface reduction set of capabilities provides the frontline of defense in the stack. By ensuring configuration settings are properly set and exploit mitigation techniques are applied, the capabilities resist attacks and exploitation. This set of capabilities also includes [network protection](network-protection.md) and [web protection](web-protection-overview.md), which regulate access to malicious IP addresses, domains, and URLs.
 
 <a name="ngp"></a>
 
@@ -113,7 +113,7 @@ Endpoint detection and response capabilities are put in place to detect, investi
 
 **[Automated investigation and remediation](automated-investigations.md)**
 
-In conjunction with being able to quickly respond to advanced attacks, Microsoft Defender for Endpoint offers automatic investigation and remediation capabilities that help reduce the volume of alerts in minutes at scale.
+With being able to quickly, respond to advanced attacks. Microsoft Defender for Endpoint offers automatic investigation and remediation capabilities that help reduce the volume of alerts in minutes at scale.
 
 <a name="ss"></a>
 
@@ -123,14 +123,14 @@ Defender for Endpoint includes Microsoft Secure Score for Devices to help you dy
 
 <a name="mte"></a>
 
-**[Microsoft Threat Experts](endpoint-attack-notifications.md)**
+**[Microsoft Defender Experts](endpoint-attack-notifications.md)**
 
-Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower Security operation centers (SOCs) to identify and respond to threats quickly and accurately.
+Microsoft Defender for Endpoint's managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower security operation centers (SOCs) to identify and respond to threats quickly and accurately.
 
 > [!IMPORTANT]
-> Defender for Endpoint customers need to apply for the Microsoft Threat Experts managed threat hunting service to get proactive Targeted Attack Notifications and to collaborate with experts on demand. Experts on Demand is an add-on service. Targeted Attack Notifications are always included after you have been accepted into Microsoft Threat Experts managed threat hunting service.
+> Defenders for Endpoint customers need to apply for the Microsoft's managed threat hunting service to get proactive Endpoint Attack Notifications and to collaborate with experts on demand. Experts on Demand are an add-on service. Endpoint Attack Notifications are always included after you have been accepted into Microsoft Defender Experts managed threat hunting service.
 >
-> If you aren't enrolled yet and would like to experience its benefits, go to **Settings** \> **General** \> **Advanced features** \> **Microsoft Threat Experts** to apply. Once accepted, you'll get the benefits of Targeted Attack Notifications, and start a 90-day trial of Experts on Demand. Contact your Microsoft representative to get a full Experts on Demand subscription.
+> If you aren't enrolled yet and would like to experience its benefits, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Endpoint Attack Notifications** to apply. Once accepted, you get the benefits of Endpoint Attack Notifications, and start a 90-day trial of Experts on Demand. Contact your Microsoft representative to get a full Expert on Demand subscription.
 
 <a name="apis"></a>
 
