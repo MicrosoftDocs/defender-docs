@@ -2,13 +2,13 @@
 title: "Microsoft 365 alert policies"
 f1.keywords:
 - NOCSH
-ms.author: robmazz
-author: robmazz
-manager: laurawi
+ms.author: diannegali
+author: diannegali
+manager: deniseb
 ms.date: 03/21/2025
 audience: Admin
 ms.topic: article
-ms.service: purview
+ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.collection: 
 - tier1
@@ -20,7 +20,7 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 - admindeeplinkDEFENDER
-description: "Create alert policies in the Microsoft Purview compliance portal or the Microsoft Defender portal to monitor potential threats, data loss, and permissions issues."
+description: "Create alert policies in the Microsoft Defender portal to monitor potential threats."
 ---
 
 # Alert policies in Microsoft 365
