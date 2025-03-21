@@ -67,9 +67,9 @@ Here's a quick overview of how alert policies work and the alerts that are trigg
 
 2. A user performs an activity that matches the conditions of an alert policy. In the case of malware attacks, infected email messages sent to users in your organization trigger an alert.
 
-3. Microsoft 365 generates an alert that's displayed on the **Alerts** page in compliance portal or Defender portal. Also, if email notifications are enabled for the alert policy, Microsoft sends a notification to a list of recipients. The alerts that an admin or other users can see that on the Alerts page is determined by the roles assigned to the user. For more information, see [RBAC permissions required to view alerts](#rbac-permissions-required-to-view-alerts).
+3. Microsoft 365 generates an alert that's displayed on the **Alerts** page in the Microsoft Defender portal. Also, if email notifications are enabled for the alert policy, Microsoft sends a notification to a list of recipients. The alerts that an admin or other users can see that on the Alerts page is determined by the roles assigned to the user. For more information, see [RBAC permissions required to view alerts](#rbac-permissions-required-to-view-alerts).
 
-4. An admin manages alerts in the Microsoft Purview compliance portal. Managing alerts consists of assigning an alert status to help track and manage any investigation.
+4. An admin manages alerts in the Microsoft Defender portal. Managing alerts consists of assigning an alert status to help track and manage any investigation.
 
 ## Alert policy settings
 
