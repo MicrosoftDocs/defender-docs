@@ -59,7 +59,7 @@ One or more of the following activities might indicate an account associated wit
   - Rules that move messages to the **Notes**, **Junk Email**, or **RSS Subscriptions** folders.
 - The **Sent Items** or **Deleted Items** folders contain suspicious messages. For example, "I'm stuck in London, send money."
 - Changes to the user's contact in the Global Address List (GAL). For example, name, telephone number, or postal code.
-- Frequent password changes or unexplained account lockouts
+- Frequent password changes or unexplained account lockouts.
 - Recently added [external email forwarding](outbound-spam-policies-external-email-forwarding.md).
 - Suspicious email message signatures. For example, a fake banking signature or a prescription drug signature.
 
