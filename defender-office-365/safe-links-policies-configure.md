@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete Safe Links policies in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/29/2025
+ms.date: 03/21/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -113,6 +113,9 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
 
      - Multiple **values** of the **same exception** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). If the recipient matches **any** of the specified values, the policy isn't applied to them.
      - Different **types of exceptions** use OR logic (for example, _\<recipient1\>_ or _\<member of group1\>_ or _\<member of domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
+
+     > [!TIP]
+     > If not all users in your organization have Defender for Office 365 licenses, you can use **User** or **Group** exceptions to exclude users who aren't eligible for Safe Links protections.
 
    When you're finished on the **Users and domains** page, select **Next**.
 
