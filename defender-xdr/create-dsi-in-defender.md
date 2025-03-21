@@ -47,12 +47,12 @@ To view and access the investigation in the Microsoft Purview portal, the **Data
 
 Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating a data security investigation. To create a data security investigation in the Microsoft Defender portal, follow these steps:
 
-1. Sign in to the Microsoft Defender portal.
-2. Navigate to the incidents queue then select an incident to open the incident page.
-3. When the selected incident contains potentially impacted data, the option to **Create investigation** appears on the incident page message banner. Choose **Create investigation**.
-[SCREENSHOT]
+1. Sign in to the Microsoft Defender portal at [security.microsoft.com](https://security.microsoft.com).
+2. In the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents** to open the incident queue. Select an incident from the queue to open the incident page.
+3. When the selected incident contains potentially impacted data, the option to create a Data Security investigation appears on the incident page message banner. Choose **Create investigation**.
+   :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-banner-small.png" alt-text="Screenshot of the incident page highlighting the create investigation message banner" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-banner.png":::
 4. In the pop-up window, provide a name and description for the investigation. Investigation names must be unique.
-[SCREENSHOT]
+   :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-popup.png" alt-text="Screenshot of the Data Security investigations pop-up window" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-popup.png":::
 5. Attach mailboxes or files and mail messages to the investigation.
    > [!NOTE]
    > You can attach either mailboxes or files and mail messages in an investigation, but not both at the same time. If an incident involves both mailboxes and files or mail messages, you need to create separate investigations. For example, create one investigation for all mailboxes and another for all files and mail messages. Files and mail messages can be attached in one investigation.
@@ -60,17 +60,17 @@ Microsoft Defender XDR identifies possibly impacted sensitive data in incidents,
 
 Once the data security investigation is created, a link to the Microsoft Purview portal appears on the message banner in the incident page. Here’s an example.
 
-[SCREENSHOT]
+ :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link-small.png" alt-text="Screenshot of highlighting the link to Microsoft Purview portal after successful creation" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link.png":::
 
 You can also create a data security investigation from the Microsoft Defender portal in several ways:
 
-- From the **Incidents** page, select the **More actions** ellipsis to see the options, then choose **Create data security investigation**.
+- From the **Incidents** page, select the **More actions** ellipsis to see the options, then choose **Create Data Security investigation**.
   
-  [SCREENSHOT]
+  :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-create-action-small.png" alt-text="Screenshot highlighting the Create Data Security investigation option from the more actions ellipsis" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-create-action.png":::
 
-- When you select an entity like an email in the incident graph, choose **Create data security investigation** from the entity context menu.
+- When you select an entity like an email in the incident graph, choose **Create Data Security investigation** from the entity context menu.
 
-  [SCREENSHOT]
+  :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-create-entity-small.png" alt-text="Screenshot highlighting the Create Data Security investigation option from an entity in the incident graph" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-create-entity.png":::
 
 Each data security investigation created is recorded in the Microsoft Defender portal activity log. The activity log entry also includes the relevant link to the investigation created in the Microsoft Purview portal.
 
