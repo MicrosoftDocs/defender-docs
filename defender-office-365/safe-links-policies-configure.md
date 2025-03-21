@@ -343,7 +343,7 @@ Creating a Safe Links policy in PowerShell is a two-step process:
 
 To create a safe links policy, use this syntax:
 
-```PowerShell
+```powershell
 New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-EnableSafeLinksForEmail <$true | $false>] [-EnableSafeLinksForOffice <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-AllowClickThrough <$true | $false>] [-TrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
 ```
 
@@ -364,7 +364,7 @@ This example creates a safe links policy named Contoso All with the following va
 - Track user clicks related to Safe Links protection (we aren't using the _TrackUserClicks_ parameter, and the default value is $true).
 - Do not allow users to click through to the original URL.
 
-```PowerShell
+```powershell
 New-SafeLinksPolicy -Name "Contoso All" -EnableSafeLinksForEmail $true -EnableSafeLinksForOffice $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -AllowClickThrough $false
 ```
 
@@ -374,7 +374,7 @@ For detailed syntax and parameter information, see [New-SafeLinksPolicy](/powers
 
 To create a safe links rule, use this syntax:
 
-```PowerShell
+```powershell
 New-SafeLinksRule -Name "<RuleName>" -SafeLinksPolicy "<PolicyName>" <Recipient filters> [<Recipient filter exceptions>] [-Comments "<OptionalComments>"] [-Enabled <$true | $false>]
 ```
 
@@ -409,19 +409,19 @@ For detailed syntax and parameter information, see [New-SafeLinksRule](/powershe
 
 To view existing safe links policies, use the following syntax:
 
-```PowerShell
+```powershell
 Get-SafeLinksPolicy [-Identity "<PolicyIdentity>"] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
 This example returns a summary list of all safe links policies.
 
-```PowerShell
+```powershell
 Get-SafeLinksPolicy | Format-Table Name
 ```
 
 This example returns detailed information for the safe links policy named Contoso Executives.
 
-```PowerShell
+```powershell
 Get-SafeLinksPolicy -Identity "Contoso Executives"
 ```
 
@@ -431,29 +431,29 @@ For detailed syntax and parameter information, see [Get-SafeLinksPolicy](/powers
 
 To view existing safe links rules, use the following syntax:
 
-```PowerShell
+```powershell
 Get-SafeLinksRule [-Identity "<RuleIdentity>"] [-State <Enabled | Disabled] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
 This example returns a summary list of all safe links rules.
 
-```PowerShell
+```powershell
 Get-SafeLinksRule | Format-Table Name,State
 ```
 
 To filter the list by enabled or disabled rules, run the following commands:
 
-```PowerShell
+```powershell
 Get-SafeLinksRule -State Disabled
 ```
 
-```PowerShell
+```powershell
 Get-SafeLinksRule -State Enabled
 ```
 
 This example returns detailed information for the safe links rule named Contoso Executives.
 
-```PowerShell
+```powershell
 Get-SafeLinksRule -Identity "Contoso Executives"
 ```
 
@@ -472,7 +472,7 @@ Otherwise, the same settings are available when you create a safe links policy a
 
 To modify a safe links policy, use this syntax:
 
-```PowerShell
+```powershell
 Set-SafeLinksPolicy -Identity "<PolicyName>" <Settings>
 ```
 
@@ -486,7 +486,7 @@ Otherwise, the same settings are available when you create a rule as described i
 
 To modify a safe links rule, use this syntax:
 
-```PowerShell
+```powershell
 Set-SafeLinksRule -Identity "<RuleName>" <Settings>
 ```
 
@@ -512,19 +512,19 @@ Enabling or disabling a safe links rule in PowerShell enables or disables the wh
 
 To enable or disable a safe links rule in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 <Enable-SafeLinksRule | Disable-SafeLinksRule> -Identity "<RuleName>"
 ```
 
 This example disables the safe links rule named Marketing Department.
 
-```PowerShell
+```powershell
 Disable-SafeLinksRule -Identity "Marketing Department"
 ```
 
 This example enables same rule.
 
-```PowerShell
+```powershell
 Enable-SafeLinksRule -Identity "Marketing Department"
 ```
 
@@ -536,13 +536,13 @@ The highest priority value you can set on a rule is 0. The lowest value you can 
 
 To set the priority of a safe links rule in PowerShell, use the following syntax:
 
-```PowerShell
+```powershell
 Set-SafeLinksRule -Identity "<RuleName>" -Priority <Number>
 ```
 
 This example sets the priority of the rule named Marketing Department to 2. All existing rules that have a priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
 
-```PowerShell
+```powershell
 Set-SafeLinksRule -Identity "Marketing Department" -Priority 2
 ```
 
@@ -557,13 +557,13 @@ When you use PowerShell to remove a safe links policy, the corresponding safe li
 
 To remove a safe links policy in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 Remove-SafeLinksPolicy -Identity "<PolicyName>"
 ```
 
 This example removes the safe links policy named Marketing Department.
 
-```PowerShell
+```powershell
 Remove-SafeLinksPolicy -Identity "Marketing Department"
 ```
 
@@ -575,13 +575,13 @@ When you use PowerShell to remove a safe links rule, the corresponding safe link
 
 To remove a safe links rule in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 Remove-SafeLinksRule -Identity "<PolicyName>"
 ```
 
 This example removes the safe links rule named Marketing Department.
 
-```PowerShell
+```powershell
 Remove-SafeLinksRule -Identity "Marketing Department"
 ```
 
@@ -595,14 +595,10 @@ To verify that you've successfully created, modified, or removed Safe Links poli
 
 - On the **Safe Links** page in the Microsoft Defender portal at <https://security.microsoft.com/safelinksv2>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list, and view the details in the fly out.
 
-- In Exchange Online PowerShell or Exchange Online Protection PowerShell, replace \<Name\> with the name of the policy or rule, run the following command, and verify the settings:
+- In Exchange Online PowerShell or Exchange Online Protection PowerShell, replace \<Name\> with the name of the policy or rule, run the following commands, and verify the settings:
 
-  ```PowerShell
-  Get-SafeLinksPolicy -Identity "<Name>"
-  ```
-
-  ```PowerShell
-  Get-SafeLinksRule -Identity "<Name>"
+  ```powershell
+  Get-SafeLinksPolicy -Identity "<Name>"; Get-SafeLinksRule -Identity "<Name>"
   ```
 
 - Use the URL `http://spamlink.contoso.com` to test Safe Links protection. This URL is similar to the GTUBE text string for testing anti-spam solutions. This URL isn't harmful, but it triggers a Safe Links protection response.
