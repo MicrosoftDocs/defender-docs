@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/02/2021
+ms.date: 03/21/2025
 ---
 
 # Microsoft Defender for Endpoint API release notes

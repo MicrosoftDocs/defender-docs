@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 08/29/2024
+ms.date: 03/21/2025
 ---
 
 # Microsoft Defender for Endpoint API - Hello World

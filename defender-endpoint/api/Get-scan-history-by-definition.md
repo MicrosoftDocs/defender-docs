@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 03/21/2025
 ---
 
 # Get scan history by definition

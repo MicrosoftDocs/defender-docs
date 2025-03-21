@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/14/2022
+ms.date: 03/21/2025
 ---
 
 # Add, update, or delete a scan definition

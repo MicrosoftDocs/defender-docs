@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/15/2021
+ms.date: 03/21/2025
 ---
 
 # Batch update alerts

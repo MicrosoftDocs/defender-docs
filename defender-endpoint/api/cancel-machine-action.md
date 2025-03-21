@@ -17,7 +17,7 @@ ms.collection:
 - must-keep
 ms.topic: reference
 ms.custom: api
-ms.date: 06/03/2021
+ms.date: 03/21/2025
 ---
 
 # Cancel machine action API

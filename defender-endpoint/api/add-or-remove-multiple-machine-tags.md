@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/24/2023
+ms.date: 03/21/2025
 ---
 
 # Add or remove a tag for multiple machines

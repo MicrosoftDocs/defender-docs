@@ -2,8 +2,8 @@
 title: Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 description: Describes how to deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: emmwalsh
+author: ewalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.custom: partner-contribution
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/06/2024
+ms.date: 03/21/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
