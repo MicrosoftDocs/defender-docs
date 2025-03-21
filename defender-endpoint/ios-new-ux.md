@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/13/2025
+ms.date: 03/21/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -39,7 +39,7 @@ The updated cards also include **recommendation cards**, which prominently displ
 
 ### Main Dashboard changes
 
-This is the main dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application. The screen on the left side represents the earlier experience, and the right screen depicts the new experience.
+The main dashboard screen that appears to enterprise users as per our latest rollout of enhancements to the application. The screen on the left side represents the earlier experience, and the right screen depicts the new experience.
 
 :::image type="content" source="media/mde-ios-main-dash-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Mobile Dashboard on iOS devices before the new update." lightbox="media/mde-ios-main-dash-new.png":::
 
