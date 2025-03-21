@@ -29,7 +29,7 @@ Defender for Cloud Apps operates in the Microsoft Azure data centers in the foll
 |---------|---------|
 |**Customers whose tenants are provisioned in the United States**     |  United States       |
 |**Customers whose tenants are provisioned in the European Union or the United Kingdom**     |    Either the European Union and/or the United Kingdom      |
-|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned    |
+|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned.    |
 
 In addition to the locations above, the App Governance features within Defender for Cloud Apps operate in the Microsoft Azure data centers in the following geographical regions listed below. Customer with App Governance enabled will have data stored within the data storage location the customer provisions in above, and in a second data storage location as described below: 
 
@@ -45,7 +45,7 @@ In addition to the locations above, the App Governance features within Defender 
 | **Customers whose tenants are provisioned in Japan** | Japan  |
 | **Customers whose tenants are provisioned in India** | India  |
 | **Customers whose tenants are provisioned in Asia Pacific**  | Asia Pacific  |
-|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned   |
+|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned.   |
 
 Customer data collected by Defender for Cloud Apps is either stored in your tenant location, as described in the previous tables, or in the geographic location of another online service that Defender for Cloud Apps shares data with, as defined by the data storage rules of that online service.
 
@@ -71,4 +71,4 @@ Defender for Cloud Apps shares data, including customer data, among the followin
 
 ## Related content
 
-For more information, see the [Microsoft Service Trust portal](https://www.microsoft.com/en-us/trust-center/product-overview).
+For more information, see the [Microsoft compliance offerings](/compliance/regulatory/offering-nist-sp-800-171).
