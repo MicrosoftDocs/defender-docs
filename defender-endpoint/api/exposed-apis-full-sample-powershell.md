@@ -55,19 +55,19 @@ In this section, we share PowerShell samples to
 
 2. If your policy doesn't allow you to run the PowerShell commands, you can run the following command:
 
-  ```
-  Set-ExecutionPolicy -ExecutionPolicy Bypass
-  ```
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy Bypass
+   ```
 
-For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy)
+For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 ## Get token
 
 Run the following command, using your information as follows:
 
-- `$tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
-- `$appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint)
-- `$appSecret`: Secret of your Microsoft Entra app
+- `$tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant).
+- `$appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint).
+- `$appSecret`: Secret of your Microsoft Entra app.
 - `$suspiciousUrl`: The URL
 
 
