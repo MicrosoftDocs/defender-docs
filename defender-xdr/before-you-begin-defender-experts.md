@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 01/09/2025
+ms.date: 03/20/2025
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -59,6 +59,9 @@ The following product is **not** covered by this service:
 
 - Microsoft Defender for IoT
 - Other Microsoft services not mentioned in the previous lists
+
+> [!NOTE]
+> Licensing for Microsoft Defender Experts for Hunting is applied at the tenant level and all identities and devices will be included in your license.
 
 ### Defender Experts for Hunting coverage
 
@@ -108,9 +111,9 @@ This service is available worldwide for customers in our commercial public cloud
 
 This service is currently delivered in English language only.
 
-## Apply for Microsoft Defender Experts for Hunting service 
+## Apply for Microsoft Defender Experts for Hunting service
 
-You can apply for the Defender Experts for Hunting by performing the following steps: 
+You can apply for the Defender Experts for Hunting by performing the following steps:
 
 1. Complete the [customer interest form](https://aka.ms/DEX4HuntingCustomerInterestForm).  
 2. Enter your name, company name, and company email ID. 

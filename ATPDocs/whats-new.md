@@ -24,10 +24,19 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2025
 
+### Enhanced Identity Inventory (Preview)
+
+The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The updated Identities Inventory page now includes the following tabs:
+
+- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
+
+- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). 
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory). 
+
 ### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
-New LDAP query events will be added by March 6th to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
-This update may lead to an increase in activity within the Advanced Hunting IdentityQueryEvents table for LDAP queries. If you have custom detections related to these queries, you may see a higher number of triggered alerts.
-We recommend that you review your existing custom detections to ensure they align with your objectives. If needed, you can adjust your query accordingly.
+New LDAP query events were added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
 
 ## February 2025
 

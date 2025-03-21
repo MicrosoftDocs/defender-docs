@@ -6,7 +6,7 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 02/04/2025
+ms.date: 03/14/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.topic: conceptual
@@ -20,11 +20,10 @@ search.appverid: met150
 
 # Microsoft Defender Antivirus exclusions on Windows Server
 
-
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -327,7 +326,7 @@ The list of built-in exclusions in Windows is kept up to date as the threat land
 In Windows Server 2016 and later, the predefined exclusions delivered by [Security intelligence updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates) only exclude the default paths for a role or feature. If you installed a role or feature in a custom path, or you want to manually control the set of exclusions, make sure to opt out of the automatic exclusions delivered in Security intelligence updates. But keep in mind that the exclusions that are delivered automatically are optimized for Windows Server 2016 and later. See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) before defining your exclusion lists.
 
 > [!WARNING]
-> Opting out of automatic exclusions might adversely impact performance, or result in data corruption. Automatic server role exclusions are optimized for Windows Server 2016, Windows Server 2019, and Windows Server 2022 and later. 
+> Opting out of automatic exclusions might adversely impact performance, or result in data corruption. Automatic server role exclusions are optimized for Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025. 
 
 
 Because predefined exclusions only exclude **default paths**, if you move NTDS and SYSVOL folders to another drive or path that is *different from the original path*, you must add exclusions manually. See [Configure the list of exclusions based on folder name or file extension](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).

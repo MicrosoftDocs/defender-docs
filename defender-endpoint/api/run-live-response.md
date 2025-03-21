@@ -85,12 +85,16 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
     
   - **Windows Server 2022**
+
+- **Windows Server 2025**
+
   - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
       - 13 (Ventura)
       - 12 (Monterey)
       - 11 (Big Sur)
-  - **Linux**
-      - [Supported Linux server distributions and kernel versions](../microsoft-defender-endpoint-linux.md)
+
+  - **Linux servers**
+      - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
 
 ## Permissions
 

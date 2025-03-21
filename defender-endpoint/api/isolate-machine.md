@@ -14,7 +14,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/28/2025
+ms.date: 03/12/2025
 ---
 
 # Isolate machine API
@@ -36,7 +36,7 @@ Isolates a device from accessing external network.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 [!include[Device actions note](../../includes/machineactionsnote.md)]
 
@@ -45,8 +45,7 @@ Isolates a device from accessing external network.
 > - Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
 > - Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
 > - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
-> - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action.
-
+> - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action. The IsolationType value should be set to 'UnManagedDevice.'
 
 ## Permissions
 
@@ -59,10 +58,9 @@ Delegated (work or school account)|Machine.Isolate|'Isolate machine'
 
 > [!NOTE]
 > When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
+> - The user needs to have at least the following role permission: 'Active remediation actions.' For more information, see [Create and manage roles](../user-roles.md).
+> - The user needs to have access to the device, based on device group settings. See [Create and manage device groups](../machine-groups.md) for more information.
+> 
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
 
 ## HTTP request
@@ -82,15 +80,16 @@ Content-Type|string|application/json. **Required**.
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
-IsolationType|String|Type of the isolation. Allowed values are: 'Full' or 'Selective'.
+|Parameter|Type|Description|
+|:---|:---|:---|
+|Comment|String|Comment to associate with the action. **Required**.|
+|IsolationType|String|Type of the isolation. Allowed values are: **Full**, **Selective**, or **UnManagedDevice**.|
 
 **IsolationType** controls the type of isolation to perform and can be one of the following:
 
-- Full: Full isolation
-- Selective: Restrict only limited set of applications from accessing the network (see [Isolate devices from the network](../respond-machine-alerts.md#isolate-devices-from-the-network) for more details)
+- Full: Full isolation. Works for managed devices.
+- Selective: Restrict only limited set of applications from accessing the network on managed devices. For more information, see [Isolate devices from the network](../respond-machine-alerts.md#isolate-devices-from-the-network).
+- UnManagedDevice: The isolation targets unmanaged devices only.
 
 ## Response
 
@@ -100,7 +99,7 @@ If successful, this method returns 201 - Created response code and [Machine Acti
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/isolate

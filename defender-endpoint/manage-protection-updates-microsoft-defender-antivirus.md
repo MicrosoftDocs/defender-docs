@@ -171,9 +171,9 @@ For example, suppose that Contoso has hired Fabrikam to manage their security so
 
 <a id="unc-share"></a>
 
-## Create a UNC share for security intelligence and platform updates
+## Create a UNC share for security intelligence
 
-On a Windows File Server set up a network file share (UNC/mapped drive) to download security intelligence and platform updates from the MMPC site by using a scheduled task.
+On a Windows File Server set up a network file share (UNC/mapped drive) to download security intelligence from the MMPC site by using a scheduled task.
 
 1. On the system for which you want to provision the share and download the updates, create a folder for the script.
 

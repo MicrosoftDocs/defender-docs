@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 09/04/2024
+ms.date: 03/04/2025
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -27,13 +27,10 @@ ms.date: 09/04/2024
 
 ## Scenario requirements and setup
 
-- Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2 SP1.
-- Linux
-- macOS
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Endpoint on Linux
-<!---- Microsoft Defender for Endpoint on macOS--->
+- Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
+- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2 SP1.
+- Linux servers must be running a supported version (see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md))
+- Devices must be onboarded to Defender for Endpoint
 
 Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 

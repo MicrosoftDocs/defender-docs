@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 02/04/2025
+ms.date: 03/11/2025
 ms.subservice: onboard
 ---
 
@@ -23,12 +23,16 @@ ms.subservice: onboard
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Virtual desktop infrastructure (VDI) devices
-- Windows 10 and Windows 11
-- Windows Server 2019 and Windows Server 2022
-- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
-- [Windows Server 2012 R2 and Windows Server 2016](/defender-endpoint/configure-server-endpoints#windows-server-2016-and-windows-server-2012-r2)
+- Windows 11
+- Windows 10
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2008
 
 
@@ -52,8 +56,8 @@ Defender for Endpoint supports non-persistent VDI session onboarding. There migh
 - In a VDI environment, VDI instances can have short lifespans. VDI devices can appear in the Microsoft Defender portal as either single entries for each VDI instance or multiple entries for each device. 
 
    - Single entry for each VDI instance. If the VDI instance was already onboarded to Microsoft Defender for Endpoint, and at some point deleted, and then recreated with the same host name, a new object representing this VDI instance is NOT be created in the portal. In this case, the *same* device name must be configured when the session is created, for example using an unattended answer file.
-
    - Multiple entries for each device - one for each VDI instance.
+   - For all VDI machines, when they onboard for the first time, there's a client delay of approximately 3-4 hours.
 
 > [!IMPORTANT]
 > If you're deploying non-persistent VDIs through cloning technology, make sure that your internal template VMs are not onboarded to Defender for Endpoint. This recommendation is to avoid cloned VMs from being onboarded with the same senseGuid as your template VMs, which could prevent VMs from showing up as new entries in the Devices list. 
