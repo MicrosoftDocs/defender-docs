@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 4/15/2024
+ms.date: 03/21/2025
 audience: Admin
 ms.topic: article
 ms.service: purview
@@ -25,7 +25,7 @@ description: "Create alert policies in the Microsoft Purview compliance portal o
 
 # Alert policies in Microsoft 365
 
-You can use alert policies and the alert dashboard in the Microsoft Purview compliance portal or the Microsoft Defender portal to create alert policies and then view the alerts generated when users perform activities that match the conditions of an alert policy. There are several default alert policies that help you monitor activities such as assigning admin privileges in Exchange Online, malware attacks, phishing campaigns, and unusual levels of file deletions and external sharing.
+You can use alert policies and the alerts dashboard in the Microsoft Defender portal to create alert policies and then view the alerts that are generated when users perform activities that match the conditions of an alert policy. There are several default alert policies that help you monitor activities, such as assigning admin privileges in Exchange Online, malware attacks, phishing campaigns, and unusual levels of file deletions or external sharing.
 
 > [!TIP]
 > Go to the [Default alert policies](#default-alert-policies) section in this article for a list and description of the available alert policies.
@@ -35,23 +35,22 @@ Alert policies let you categorize the alerts that are triggered by a policy, app
 > [!NOTE]
 > Alert policies are available in the following organizations:
 >
-> - Microsoft 365 Enterprise.
-> - Office 365 Enterprise.
-> - Office 365 U.S. Government E1/F1/G1, E3/F3/G3, or E5/G5.
+> - Microsoft 365 Enterprise
+> - Office 365 Enterprise
+> - Office 365 U.S. Government E1/F1/G1, E3/F3/G3, or E5/G5
 >
 > Advanced functionality is available only in the following organizations:
 >
-> - E5/G5.
-> - E1/F1/G1 or E3/F3/G3 and one of the following add-on subscriptions:
->   - Microsoft Defender for Office 365 Plan 2.
->   - Microsoft 365 E5 Compliance.
->   - E5 eDiscovery and Audit add-on.
+> - Microsoft 365 E5/G5
+> - Microsoft 365 E1/F1/G1 or Microsoft 365 E3/F3/G3 plus one of the following add-on subscriptions:
+>   - Microsoft Defender for Office 365 Plan 2
+>   - Microsoft 365 E5 Security
+>   - Microsoft 365 E5 Compliance
+>   - E5 eDiscovery and Audit add-on
 >
-> Advanced functionality that requires E5/G5 or an add-on subscription is highlighted in this article.
+> Advanced functionality that requires Microsoft 365 E5/G5 or an add-on subscription is highlighted in this article.
 >
 > Alert policies are available in U.S. Government organizations (Office 365 GCC, GCC High, and DoD).
-
-[!INCLUDE [purview-preview](includes/purview-preview.md)]
 
 ## How alert policies work
 
@@ -76,22 +75,12 @@ Here's a quick overview of how alert policies work and the alerts that are trigg
 
 An alert policy consists of a set of rules and conditions that define the user or admin activity that generates an alert, a list of users who trigger the alert if they perform the activity, and a threshold that defines how many times the activity has to occur before an alert is triggered. You also categorize the policy and assign it a severity level. These two settings help you manage alert policies (and the alerts that are triggered when the policy conditions are matched) because you can filter on these settings when managing policies and viewing alerts in the Microsoft Purview compliance portal. For example, you can view alerts that match the conditions from the same category or view alerts with the same severity level.
 
-To view and create alert policies:
-
-- **Microsoft Purview compliance portal**:
-
-  Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">compliance portal</a>, and then select **Policies** \> **Alert** \> **Alert policies**.
-
-  ![In the Microsoft Purview compliance portal, select Policies,and under Alert, select Alert policies to view and create alert policies.](media/LaunchAlertPoliciesMCC.png)
-
-- **Microsoft Defender portal**:
-
-  Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and under **Email & collaboration** select **Policies & rules** \> **Alert policy**. Alternatively, you can go directly to <https://security.microsoft.com/alertpolicies>.
+To view and create alert policies, in the [Microsoft Defender portal](https://security.microsoft.com), under **Email & collaboration** select **Policies & rules** \> **Alert policy**. Alternatively, you can go directly to <https://security.microsoft.com/alertpolicies>.
 
   ![In the Defender portal, select Policies & rules under Email & collaboration, and then select Alert policy to view and create alert policies.](media/LaunchAlertPoliciesDefenderPortal.png)
 
 > [!NOTE]
-> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Purview compliance portal or the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Permissions in the Microsoft Purview compliance portal](purview-compliance-portal-permissions.md).
+> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
 
 An alert policy consists of the following settings and conditions.
 
@@ -199,9 +188,9 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 |**Malware not zapped because ZAP is disabled**| Generates an alert when Microsoft detects delivery of a malware message to a mailbox because Zero-Hour Auto Purge for Phish messages is disabled.|Informational|No|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
 |**Messages containing malicious entity not removed after delivery**|Generates an alert when any message containing malicious content (file, URL, campaign, no entity), is delivered to mailboxes in your organization. If this event occurs, Microsoft attempted to remove the infected messages from Exchange Online mailboxes using [Zero-hour auto purge](/microsoft-365/security/office-365-security/zero-hour-auto-purge), but the message wasn't removed due to a failure. Additional investigation is recommended. This policy automatically triggers [automated investigation and response in Office 365](/microsoft-365/security/office-365-security/air-about).|Medium|Yes|Microsoft 365 Business Premium, Defender for Office 365 Plan 1 add-on, E5/G5, or Defender for Office 365 Plan 2 add-on.|
 |**MIP AutoLabel simulation completed**|Generates an alert when an[service-side auto-labeling policy in simulation mode](mip-easy-trials.md#service-side-auto-labeling) has completed.|Low|No|E5/G5.|
-|**Phish delivered due to an ETR override**¹|Generates an alert when Microsoft detects an Exchange transport rule (also known as a mail flow rule) that allowed delivery of a high confidence phishing message to a mailbox. For more information about Exchange Transport Rules (Mail flow rules), see [Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).|Informational|No|E1/F1/G1, E3/F3/G3, or E5/G5|
-|**Phish delivered due to an IP allow policy**¹|Generates an alert when Microsoft detects an IP allow policy that allowed delivery of a high confidence phishing message to a mailbox. For more information about the IP allow policy (connection filtering), see [Configure the default connection filter policy - Office 365](/microsoft-365/security/office-365-security/connection-filter-policies-configure).|Informational|No|E1/F1/G1, E3/F3/G3, or E5/G5|
-|**Phish not zapped because ZAP is disabled**¹|Generates an alert when Microsoft detects delivery of a high confidence phishing message to a mailbox because Zero-Hour Auto Purge for Phish messages is disabled.|Informational|No|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
+|**Phish delivered due to an ETR override**<sup>1</sup>|Generates an alert when Microsoft detects an Exchange transport rule (also known as a mail flow rule) that allowed delivery of a high confidence phishing message to a mailbox. For more information about Exchange Transport Rules (Mail flow rules), see [Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).|Informational|No|E1/F1/G1, E3/F3/G3, or E5/G5|
+|**Phish delivered due to an IP allow policy**<sup>1</sup>|Generates an alert when Microsoft detects an IP allow policy that allowed delivery of a high confidence phishing message to a mailbox. For more information about the IP allow policy (connection filtering), see [Configure the default connection filter policy - Office 365](/microsoft-365/security/office-365-security/connection-filter-policies-configure).|Informational|No|E1/F1/G1, E3/F3/G3, or E5/G5|
+|**Phish not zapped because ZAP is disabled**<sup>1</sup>|Generates an alert when Microsoft detects delivery of a high confidence phishing message to a mailbox because Zero-Hour Auto Purge for Phish messages is disabled.|Informational|No|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
 |**Potential nation-state activity**|Microsoft Threat Intelligence Center detected an attempt to compromise accounts from your tenant.|High|No|Microsoft 365 Business Premium, Defender for Office 365 Plan 1 add-on, E5/G5, or Defender for Office 365 Plan 2 add-on.|
 |**Purview policy simulation completed**|Generates an alert to notify admins when simulation is complete for any Purview policy that supports simulation mode.|Low|No|E5/G5|
 |**Remediation action taken by admin on emails or URL or sender**|**Note**: This alert policy wasn replaced by **Administrative action submitted by an Administrator**. This alert policy will eventually go away, so we recommend disabling it and using **Administrative action submitted by an Administrator** instead. <br/><br/> This alert is triggered when an admin takes remediation action on the selected entity|Informational|Yes|Microsoft 365 Business Premium, Defender for Office 365 Plan 1 add-on, E5/G5, or Defender for Office 365 Plan 2 add-on.|
@@ -220,7 +209,7 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 |**User restricted from sending email**|Generates an alert when someone in your organization is restricted from sending outbound mail. This alert typically indicates a compromised account where the user is listed on the **Restricted entities** page at <https://security.microsoft.com/restrictedentities>. For more information about restricted users, see [Remove blocked users from the Restricted entities page](/microsoft-365/security/office-365-security/outbound-spam-restore-restricted-users).|High|Yes|Microsoft Business Basic, Microsoft Business Standard, Microsoft Business Premium, E1/F1/G1, E3/F3/G3, or E5/G5|
 |**User restricted from sharing forms and collecting responses**|Generates an alert when someone in your organization is restricted from sharing forms and collecting responses using Microsoft Forms due to detected repeated phishing attempt behavior.|High|No|E1, E3/F3, or E5|
 
-¹ This alert policy is part of the replacement functionality for the **Phish delivered due to tenant or user override** and **User impersonation phish delivered to inbox/folder** alert policies that were removed based on user feedback. For more information about anti-phishing in Office 365, see [Anti-phishing policies](/microsoft-365/security/office-365-security/anti-phishing-policies-about).
+<sup>1</sup> This alert policy is part of the replacement functionality for the **Phish delivered due to tenant or user override** and **User impersonation phish delivered to inbox/folder** alert policies that were removed based on user feedback. For more information about anti-phishing in Office 365, see [Anti-phishing policies](/microsoft-365/security/office-365-security/anti-phishing-policies-about).
 
 <!---
 |**Administrative action submitted by an Administrator**|Admins can take manual email actions on email entities using various surfaces. For example, Threat Explorer, advanced hunting or through custom detection. When the remediation starts, it generates an alert. This alert shows up in the alerts queue with the name **Administrative action submitted by an Administrator** to indicate that an admin took the action of remediating an entity. The alert contains details like the action type, supporting investigation link, time, etc. It's helpful to know whenever a sensitive action like remediation is performed on entities.|Informational|Yes|E5/G5 or Defender for Office 365 P2 add-on subscription.|
@@ -235,17 +224,7 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 
 When an activity performed by users in your organization matches the settings of an alert policy, an alert is generated and displayed on the **Alerts** page in the Microsoft Purview portal or the Defender portal. Depending on the settings of an alert policy, an email notification is also sent to a list of specified users when an alert is triggered. For each alert, the dashboard on the **Alerts** page displays the name of the corresponding alert policy, the severity and category for the alert (defined in the alert policy), and the number of times an activity has occurred that resulted in the alert being generated. This value is based on the threshold setting of the alert policy. The dashboard also shows the status for each alert. For more information about using the status property to manage alerts, see [Managing alerts](#manage-alerts).
 
-To view alerts:
-
-### Microsoft Purview compliance portal
-
- Go to <https://compliance.microsoft.com> and then select **Alerts**. Alternatively, you can go directly to <https://compliance.microsoft.com/compliancealerts>.
-
-![In the compliance portal, select Alerts.](media/ViewAlertsMCC.png)
-
-### Microsoft Defender portal
-
-Go to <https://security.microsoft.com> and then select **Incidents & alerts** \> **Alerts**. Alternatively, you can go directly to <https://security.microsoft.com/alerts>.
+To view alerts, in the [Microsoft Defender portal](https://security.microsoft.com), select **Incidents & alerts** \> **Alerts**. Alternatively, you can go directly to <https://security.microsoft.com/alerts>.
 
 ![In the Microsoft Defender portal, select Incidents & alerts and then select Alerts.](media/ViewAlertsDefenderPortal.png)
 
