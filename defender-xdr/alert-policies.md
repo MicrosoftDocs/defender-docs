@@ -346,13 +346,10 @@ Alerts that are triggered by Defender for Cloud Apps policies are now displayed 
 
 Organizations that have Microsoft Defender for Cloud Apps as part of an Enterprise Mobility + Security E5 subscription or as a standalone service can also view Defender for Cloud Apps alerts that are related to Microsoft 365 apps and services in the Microsoft Defender portal.
 
-To display only Defender for Cloud Apps alerts in the Microsoft Purview portal or the Defender portal, use the **Source** filter and select **Defender for Cloud Apps**.
+To display only Defender for Cloud Apps alerts in the Microsoft Defender portal, use the **Source** filter and select **Defender for Cloud Apps**.
 
 ![Use the Source filter to display only Defender for Cloud Apps alerts.](media/FilterCASAlerts.png)
 
-Similar to an alert triggered by an alert policy in the Microsoft Purview portal, you can select a Defender for Cloud Apps alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Defender for Cloud Apps portal and a link to the corresponding Defender for Cloud Apps policy that triggered the alert. See [Monitor alerts in Defender for Cloud Apps](/cloud-app-security/monitor-alerts).
+Similar to an alert triggered by an alert policy in the Microsoft Defender portal, you can select a Defender for Cloud Apps alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Defender for Cloud Apps portal and a link to the corresponding Defender for Cloud Apps policy that triggered the alert. See [Monitor alerts in Defender for Cloud Apps](/cloud-app-security/monitor-alerts).
 
 ![Alert details contain links to the Defender for Cloud Apps portal.](media/CASAlertDetail.png)
-
-> [!IMPORTANT]
-> Changing the status of a Defender for Cloud Apps alert in the Microsoft Purview portal won't update the resolution status for the same alert in the Defender for Cloud Apps portal. For example, if you mark the status of the alert as **Resolved** in the Microsoft Purview portal, the status of the alert in the Defender for Cloud Apps portal is unchanged. To resolve or dismiss a Defender for Cloud Apps alert, manage the alert in the Defender for Cloud Apps portal.
