@@ -90,6 +90,9 @@ Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft I
 - For information on deploying on enrolled devices through Microsoft Configuration Manager or Intune, see [Deploy Microsoft Defender for Endpoint on iOS](ios-install.md).
 - For information on using Defender for Endpoint in app protection policy (MAM), see [Configure app protection policy to include Defender for Endpoint risk signals (MAM)](ios-install-unmanaged.md)
 
+> [!NOTE]
+> If a user has valid MDE license and registered in Authenticator App or Company Portal App along with sing-in to Defender App, then the device will show up in the Defender Portal.
+
 ## Resources
 
 - Stay informed about upcoming releases by visiting [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md) or our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/bg-p/MicrosoftDefenderATPBlog/label-name/iOS).
