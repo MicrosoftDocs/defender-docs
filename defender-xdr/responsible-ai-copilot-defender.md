@@ -69,9 +69,9 @@ Now that it is released, user feedback is critical in helping Microsoft improve 
 
 - Matches with Public Code: Security Copilot is capable of generating new code, which it does in a probabilistic way. While the probability that it might produce code that matches code in the training set is low, a Security Copilot suggestion might contain some code snippets that match code in the training set. Users should always take the same precautions as they would with any code they write that uses material developers didn't independently originate, including precautions to ensure its suitability. These include rigorous testing, IP scanning, and checking for security vulnerabilities.
 
-The system might not be able to process long prompts, such as hundreds of thousands of characters.
+- The system might not be able to process long prompts, such as hundreds of thousands of characters.
 
-Use of the platform might be subject to usage limits or capacity throttling. Even with shorter prompts, choosing a plugin, making API calls, generating responses, and checking them before displaying them to the user can take time (up to several minutes) and require high GPU capacity. 
+- Use of the platform might be subject to usage limits or capacity throttling. Even with shorter prompts, generating responses, and checking them before displaying them to the user can take time (up to several minutes) and require high GPU capacity.
 
 ### How is Microsoft approaching responsible AI for Copilot in Defender?
 
