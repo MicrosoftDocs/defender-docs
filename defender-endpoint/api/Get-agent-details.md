@@ -4,7 +4,7 @@ description: Learn how to use the "Get-Agent-Details" api.
 keywords: apis, graph api, supported apis, agent details, definition
 ms.service: defender-endpoint
 ms.author: deniseb
-author: denisemsft
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
