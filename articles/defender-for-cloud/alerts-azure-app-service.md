@@ -20,6 +20,8 @@ This article lists the security alerts you might get for Azure App Service from 
 
 > [!NOTE]
 > Alerts from different sources might take different amounts of time to appear. For example, alerts that require analysis of network traffic might take longer to appear than alerts related to suspicious processes running on virtual machines.
+> 
+> In Microsoft Defender for App Services, alerts are generated no more than once per week for the same resource and alert type. This applies to all alert types, including EICAR test alerts.
 
 ## Azure App Service alerts
 
