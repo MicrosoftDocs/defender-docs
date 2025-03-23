@@ -63,6 +63,16 @@ For full access, users need one of the following Microsoft Entra ID roles:
 - **Global Reader** (read permissions)
 - **Security Reader** (read permissions)
 
+- **Service Support** Administrator (read permissions)
+
+- **User Administrator** (read permissions)
+
+- **Helpdesk Administrator** (read permissions)
+
+- **Exchange Administrator** (read and write permissions)
+
+- **SharePoint Administrator** (read and write permissions)
+
 Permission levels are summarized in the table.
 
 | Action| Global Admin |Global Reader | Security Admin  | Security Operator | Security Reader |
