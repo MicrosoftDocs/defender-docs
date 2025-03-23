@@ -29,10 +29,10 @@ Microsoft Entra Connect accounts like AD DS Connector account (also known as MSO
 
 1. Review the list of exposed entities to identify accounts with unsafe permissions. For example:
 
-![Screenshot of exposed entities.](media/remove-unsafe-permissions-sensitive-entra-connect/image1.png)
+![Screenshot of exposed entities.](media/remove-unsafe-permissions-sensitive-entra-connect/Screenshot of exposed entities.png)
 
 If you click on "Click to expend" you can find more details about the granted permissions. For example:  
-![Screenshot of excessive permissions.](media/remove-unsafe-permissions-sensitive-entra-connect/image.png)
+![Screenshot of excessive permissions.](media/remove-unsafe-permissions-sensitive-entra-connect/Screenshot of excessive permissions.png)
 
 
 
