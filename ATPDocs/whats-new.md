@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 ## March 2025
 
 ### New Health Issue
-* New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where the sensors running on VMware has network configuration mismattch.
+* New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where the sensors running on VMware has network configuration mismatch.
 
 ### Enhanced Identity Inventory (Preview)
 
