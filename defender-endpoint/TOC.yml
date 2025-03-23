@@ -263,46 +263,56 @@
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
-            - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
-              href: mde-linux-arm.md
-            - name: Installer script based deployment
-              href: linux-installer-script.md
-            - name: Ansible based deployment
-              href: linux-install-with-ansible.md
-            - name: Chef based deployment
-              href: linux-deploy-defender-for-endpoint-with-chef.md
-            - name: Puppet based deployment
-              href: linux-install-with-puppet.md
-            - name: Saltstack-based deployment
-              href: linux-install-with-saltack.md
-            - name: Manual deployment
-              href: linux-install-manually.md
-            - name: Advanced deployment for Defender for Endpoint on Linux
-              href: comprehensive-guidance-on-linux-deployment.md
-            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-              href: mde-linux-deployment-on-sap.md
-          - name: Configure Defender for Endpoint on Linux
-            items:
-            - name: Configure and validate exclusions on Linux
-              href: linux-exclusions.md
-            - name: Static proxy configuration
-              href: linux-static-proxy-configuration.md
-            - name: Set preferences
-              href: linux-preferences.md
-            - name: Detect and block Potentially Unwanted Applications
-              href: linux-pua.md
-            - name: Schedule scans with Microsoft Defender for Endpoint on Linux
-              href: linux-schedule-scan-mde.md
-            - name: Schedule antivirus scan in Defender for Endpoint on Linux
-              href: schedule-antivirus-scan-in-mde.md
-            - name: Schedule an update for Microsoft Defender for Endpoint on Linux
-              href: linux-update-MDE-Linux.md
-            - name: Configure eBPF-based sensor
-              href: linux-support-ebpf.md 
-            - name: Configure Offline Security Intelligence Update
-              href: linux-support-offline-security-intelligence-update.md
+            - name: 1 - Prerequisites
+              href: mde-linux-prerequisites.md
+            - name: 2 - Choose a deployment method
+              items:
+              - name: Installer script based deployment
+                href: linux-installer-script.md
+              - name: Ansible based deployment
+                href: linux-install-with-ansible.md
+              - name: Chef based deployment
+                href: linux-deploy-defender-for-endpoint-with-chef.md
+              - name: Puppet based deployment
+                href: linux-install-with-puppet.md
+              - name: Saltstack-based deployment
+                href: linux-install-with-saltack.md
+              - name: Manual deployment
+                href: linux-install-manually.md
+              - name: Direct onboarding with Defender for Cloud
+                href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+              - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
+                href: mde-linux-arm.md
+              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+                href: mde-linux-deployment-on-sap.md
+            - name: 3 - Configuration
+              items:
+              - name: Configure security policies and settings
+                href: linux-preferences.md
+              - name: Static proxy configuration
+                href: linux-static-proxy-configuration.md
+              - name: Configure antivirus scans
+                items:
+                - name: Schedule antivirus scans using Anacron
+                  href: schedule-antivirus-scan-anacron.md
+                - name: Schedule antivirus scans using Crontab
+                  href: schedule-antivirus-scan-crontab.md
+              - name: Network protection for Linux
+                href: network-protection-linux.md
+              - name: Configure and validate exclusions on Linux
+                href: linux-exclusions.md
+              - name: Configure eBPF-based sensor
+                href: linux-support-ebpf.md 
+              - name: Detect and block Potentially Unwanted Applications
+                href: linux-pua.md
+              - name: Configure Offline Security Intelligence Update
+                href: linux-support-offline-security-intelligence-update.md
           - name: Update Defender for Endpoint on Linux
-            href: linux-updates.md
+            items: 
+            - name: Update Defender for Endpoint on Linux
+              href: linux-updates.md
+            - name: Schedule an update for Defender for Endpoint on Linux
+              href: linux-update-mde-linux.md
           - name: Privacy for Defender for Endpoint on Linux
             href: linux-privacy.md
           - name: Resources for Microsoft Defender for Endpoint on Linux
@@ -321,8 +331,9 @@
                 href: ios-install-unmanaged.md
             - name: Configure Mobile Threat Defense
               items:
-              - name: New user experiences in Defender for Endpoint on iOS
-                href: ios-new-ux.md
+              - name: User experiences in Defender for Endpoint on Android
+                href: android-new-ux.md
+              - name: User experiences in Defender for Endpoint on iOS
               - name: Mobile device resources for Defender for Endpoint 
                 href: mobile-resources-defender-endpoint.md
               - name: Configure Defender for Endpoint on Android features
@@ -494,12 +505,8 @@
           items:
           - name: Client analyzer overview
             href: overview-client-analyzer.md
-          - name: Download and run the client analyzer
-            href: download-client-analyzer.md
           - name: Run the client analyzer on Windows
             href: run-analyzer-windows.md
-          - name: Run the client analyzer on macOS or Linux
-            href: run-analyzer-macos-linux.md
           - name: Run the client analyzer on Linux
             href: run-analyzer-linux.md
           - name: Run the client analyzer on macOS
@@ -696,8 +703,6 @@
           href: evaluate-network-protection.md
         - name: Turn on network protection
           href: enable-network-protection.md
-        - name: Network protection for Linux
-          href: network-protection-linux.md
         - name: Network protection for MacOS
           href: network-protection-macos.md
       - name: Web protection

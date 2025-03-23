@@ -20,10 +20,10 @@ ms.date: 01/24/2025
 
 # Schedule an update for Microsoft Defender for Endpoint on Linux
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
@@ -79,7 +79,7 @@ And
 0 2 * * sat /bin/mdatp scan quick>~/mdatp_cron_job.log
 ```
 
-See [Schedule scans with Microsoft Defender for Endpoint (Linux)](linux-schedule-scan-mde.md)
+See [Schedule scans with Microsoft Defender for Endpoint (Linux)](schedule-antivirus-scan-crontab.md)
 
 Press "Insert"
 
