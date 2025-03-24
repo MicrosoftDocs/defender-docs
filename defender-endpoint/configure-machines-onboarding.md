@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2023
+ms.date: 03/24/2025
 ---
 
 # Get devices onboarded to Microsoft Defender for Endpoint
@@ -50,7 +50,7 @@ The **Onboarding** card provides a high-level overview of your onboarding rate b
 
 ## Onboard more devices with Intune profiles
 
-Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboard-configure.md). For Intune-managed devices, however, you can leverage Intune profiles to conveniently deploy the Defender for Endpoint sensor to select devices, effectively onboarding these devices to the service.
+Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboarding.md). For Intune-managed devices, however, you can leverage Intune profiles to conveniently deploy the Defender for Endpoint sensor to select devices, effectively onboarding these devices to the service.
 
 From the **Onboarding** card, select **Onboard more devices** to create and assign a profile on Intune. The link takes you to the device compliance page on Intune, which provides a similar overview of your onboarding state.
 
