@@ -34,9 +34,7 @@ While both Defender for Endpoint for servers and Defender for Servers offer serv
 
 ## How do I migrate my servers from Defender for Endpoint to Defender for Cloud?
 
-If you have servers onboarded to Defender for Endpoint, the migration process varies depending on machine type, but there's a set of shared prerequisites. 
-
-Defender for Cloud is a subscription-based service in the Microsoft Azure portal. Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 2 need to be enabled on Azure subscriptions.
+If you have servers onboarded to Defender for Endpoint (or Defender for Endpoint for servers), the migration process varies depending on machine type, but there's a set of shared prerequisites. Defender for Cloud is a subscription-based service in the Microsoft Azure portal. Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 2 need to be enabled on Azure subscriptions.
 
 To enable Defender for Servers for Azure VMs and non-Azure machines connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
 
@@ -44,9 +42,9 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 2. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
 
-3. Enable a Defender for Servers plan on your [subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like File Integrity Monitoring, Adaptive Application Controls, and more.
+3. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like File Integrity Monitoring, Adaptive Application Controls, and more.
 
-4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one (or both) of the two opt-in buttons shown in the following image:
+4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one or both of the two opt-in buttons shown in the following image:
 
    :::image type="content" source="media/mde-integration.png" alt-text="Screenshot that shows how to enable Defender for Endpoint integration." lightbox="media/mde-integration.png":::
 
@@ -54,7 +52,7 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected via the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. For help with your planning process, see [Azure Arc deployments](/azure/azure-arc/servers/plan-at-scale-deployment).
 
-6. *Recommended:* If you want to see vulnerability findings in Defender for Cloud, make sure to enable [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/enable-data-collection?tabs=autoprovision-va) for Defender for Cloud.
+6. (*Recommended*) If you want to see vulnerability findings in Defender for Cloud, make sure to enable [vulnerability assessment](/azure/defender-for-cloud/monitoring-components?tabs=autoprovision-va#vulnerability-assessment) in Defender for Cloud.
 
    :::image type="content" source="media/enable-threat-and-vulnerability-management.png" alt-text="Screenshot that shows how to enable vulnerability management." lightbox="media/enable-threat-and-vulnerability-management.png"::: 
 
