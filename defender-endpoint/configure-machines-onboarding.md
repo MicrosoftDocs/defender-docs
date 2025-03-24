@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2023
+ms.date: 03/24/2025
 ---
 
 # Get devices onboarded to Microsoft Defender for Endpoint
