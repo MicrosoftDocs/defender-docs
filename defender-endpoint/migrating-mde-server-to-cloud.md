@@ -1,5 +1,5 @@
 ---
-title: Migrating servers from Microsoft Defender for Endpoint for servers to Microsoft Defender for Servers
+title: Migrate servers to Microsoft Defender for Servers
 description: Learn how to migrate servers from Microsoft Defender for Endpoint for servers to Microsoft Defender for Servers.
 author: denisebmsft
 ms.author: deniseb
@@ -17,20 +17,20 @@ ms.date: 03/24/2025
 search.appverid: met150
 ---
 
-# Migrating servers from Microsoft Defender for Endpoint for servers to Microsoft Defender for Servers
+# Migrate servers to Microsoft Defender for Servers
 
 **Applies to:**
 
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
+This article describes how to migrate your servers from Defender for Endpoint for servers to Defender for Servers.
+
 [Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. The Defender for Endpoint for servers license enables you to onboard a server to Defender for Endpoint.
 
 [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) is part of the [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering, a solution for cloud security posture management (CSPM) and cloud workload protection (CWP) that finds weak spots across your cloud configuration. Defender for Cloud also helps strengthen the overall security posture of your environment, and can protect workloads across multicloud and hybrid environments from evolving threats.
 
 While both Defender for Endpoint and Defender for Servers offer server protection capabilities, Defender for Servers is our primary solution to protect servers.
-
-This article guides you in migrating your servers from Defender for Endpoint for servers to Defender for Servers (part of Defender for Cloud).
 
 ## How do I migrate my servers from Defender for Endpoint to Defender for Cloud?
 
