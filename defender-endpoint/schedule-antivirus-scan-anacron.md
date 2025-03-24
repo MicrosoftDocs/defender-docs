@@ -1,5 +1,5 @@
 ---
-title: How to schedule an antivirus scan using Anacron in Microsoft Defender for Endpoint on Linux
+title: Schedule an antivirus scan using Anacron in Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux for better protection of your organization's assets.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -21,9 +21,9 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender Antivirus
 
 To run a scan of Microsoft Defender Antivirus for Linux, see [Supported Commands](linux-resources.md#supported-commands).
 
@@ -34,12 +34,12 @@ To run a scan of Microsoft Defender Antivirus for Linux, see [Supported Commands
 
 See the following system requirements needed to schedule Microsoft Defender Antivirus scan in Microsoft Defender Endpoint on Linux.
 
-- Linux server distributions and versions: Red Hat Enterprise Linux 7.2 or higher.
+- Linux distributions and versions: Red Hat Enterprise Linux 7.2 or higher.
 - The **FANOTIFY** option in kernel must be enabled.
 
 ## Scheduling Microsoft Defender Antivirus scan in Red Hat Linux
 
-You can schedule cron jobs to initiate Microsoft Defender Antivirus scans on a schedule. For more information, see [How to schedule scans with Microsoft Defender for Endpoint on Linux](linux-schedule-scan-mde.md). This process works well if the device is always up and running.
+You can schedule cron jobs to initiate Microsoft Defender Antivirus scans on a schedule. For more information, see [How to schedule scans with Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-crontab.md). This process works well if the device is always up and running.
 
 But if the Linux devices are shut down or offline during the cron schedule, the scan won't run. In these situations, you can use **anacron** to read the timestamp and find the last executed job. If the device was shut down during the scheduled cron job, it needs to wait until the next scheduled time. By using **anacron**, the system will detect the last time the scan was run. If the device didn't run the cron job, it will automatically start it.
 

@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365 Plan 2.
 ms.service: defender-office-365
-ms.date: 4/8/2024
+ms.date: 03/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased. Microsoft Defender for Office 365 already provides time of click protection for URLs and files in Teams messages through [Safe Links for Microsoft Teams](safe-links-about.md#safe-links-settings-for-microsoft-teams) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
+With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased. Microsoft Defender for Office 365 already provides time of click protection for URLs and files in Teams messages through [Safe Links for Microsoft Teams](safe-links-about.md#safe-links-settings-for-microsoft-teams) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md). You can allow/block [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using Tenant Allow Block Lists.
 
 In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams protection with a set of capabilities that are designed to disrupt the attack chain:
 
@@ -160,3 +160,5 @@ For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRul
 - [Microsoft Teams](/microsoftteams/teams-overview)
 - [Managing Teams quarantined messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages)
 - [Get started using Attack simulation training in Defender for Office 365](attack-simulation-training-get-started.md)
+- [Get started with Defender for Cloud Apps for Microsoft Teams] (/defender-cloud-apps/what-is-defender-for-cloud-apps)
+- [Get started with Compliance and DLP protection for Microsoft Teams](/microsoftteams/security-compliance-overview)

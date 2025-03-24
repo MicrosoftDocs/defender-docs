@@ -351,7 +351,7 @@ DeviceInfo
 
 ### Use Defender for Endpoint Client Analyzer (cross-platform) to validate connectivity for newly migrated endpoints
 
-Download and run the client analyzer for macOS or Linux. For more information, see [Download and run the client analyzer](download-client-analyzer.md).
+Download and run the client analyzer for macOS or Linux. For more information, see [Download and run the client analyzer](overview-client-analyzer.md).
 
 1. Run `mdeclientanalyzer.cmd -o <path to cmd file>` from within the MDEClientAnalyzer folder. The command uses parameters from the onboarding package to test connectivity.
 

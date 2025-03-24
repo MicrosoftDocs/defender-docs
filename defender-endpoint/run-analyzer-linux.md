@@ -23,8 +23,9 @@ f1.keywords: NOCSH
 # Run the client analyzer on Linux
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -605,12 +606,6 @@ The Python version of the client analyzer accepts command line parameters to per
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-
-- [Download and run the client analyzer](download-client-analyzer.md)
-
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 
