@@ -191,5 +191,10 @@ Use the following steps to schedule scans:
     [root@redhat7 cron.weekly] #
     ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+## See also
 
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
