@@ -17,7 +17,7 @@ ms.subservice: linux
 search.appverid: met150
 ---
 
-# Schedule an antivirus scan using Anacron in Microsoft Defender for Endpoint on Linux
+# Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux
 
 **Applies to:**
 
