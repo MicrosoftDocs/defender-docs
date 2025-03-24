@@ -227,4 +227,11 @@ crontab -u username -r
 | | | | +—- day of week (values: 0 - 6) (Sunday=0 or 7) (special characters: , \- \* / L W C) <br>
 | | | | |*****command to be executed
 ```
+
+## See also
+
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
