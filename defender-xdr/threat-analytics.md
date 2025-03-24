@@ -59,7 +59,9 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
 
 ## Required roles and permissions
-The following roles and permissions are required to access Threat analytics in the Defender portal: 
+To access Thraet analytics in the Defender portal, you need to have a license for at least one Microsoft Defender product except Microsoft Defender for Endpoint P1.
+
+The following roles and permissions are also required to access Threat analytics: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
 - **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
@@ -192,6 +194,10 @@ In the **Recommended actions** tab, review the list of specific actionable recom
   - Real-time protection
 
 :::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
+
+## Set up custom detections and link them to Threat analytics reports
+
+You can set up [custom detection rules](custom-detections-overview.md) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. [Learn more about creating and managing custom detections rules](custom-detection-rules.md)
 
 ## Set up email notifications for report updates
 
