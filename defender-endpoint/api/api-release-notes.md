@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/02/2021
+ms.date: 03/21/2025
 ---
 
 # Microsoft Defender for Endpoint API release notes
@@ -24,7 +24,7 @@ ms.date: 02/02/2021
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The following information lists the updates made to the Microsoft Defender for Endpoint APIs and the dates they were made.
 

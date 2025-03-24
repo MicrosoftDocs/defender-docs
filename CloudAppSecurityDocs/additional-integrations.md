@@ -27,6 +27,6 @@ The Defender for Cloud Apps robust platform allows you to integrate with a wide 
 
     Defender for Cloud Apps allows security teams to automatically or manually confirm a user as compromised to ensure fast remediation of compromised users.
 
-    For more information, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback) and [Governance actions](accounts.md#governance-actions).
+    For more information, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback).
 
 [!INCLUDE [Open support ticket](includes/support.md)]
