@@ -15,7 +15,7 @@ ms.custom: partner-contribution
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 03/24/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
@@ -105,9 +105,9 @@ Follow the steps below to add Microsoft Defender for Endpoint app into your mana
 
    :::image type="content" source="media/0f79cb37900b57c3e2bb0effad1c19cb.png" alt-text="The Managed Google Play page in the Microsoft Intune admin center portal" lightbox="media/0f79cb37900b57c3e2bb0effad1c19cb.png":::
 
-3. In the **App description** page, you should be able to see app details about the Defender for Endpoint app. Review the information on the page, and then select **Approve**.
+3. In the **App description** page, you should be able to see app details about the Defender for Endpoint app. Review the information on the page, tap **Select** to select the app, and then select **Sync** at the top of the blade to sync the app.
 
-   :::image type="content" source="media/07e6d4119f265037e3b80a20a73b856f.png" alt-text="The page of Managed Google Play in the Microsoft Intune admin center portal" lightbox="media/07e6d4119f265037e3b80a20a73b856f.png":::
+   :::image type="content" source="media/app-description-page.png" alt-text="Screenshot of the Microsoft Defender app page in the store." lightbox="media/app-description-page.png":::
 
 4. When you're prompted to approve permissions for Defender for Endpoint obtains, review the information, and then select **Approve**.
 
