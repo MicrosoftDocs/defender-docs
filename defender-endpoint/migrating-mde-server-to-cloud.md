@@ -60,6 +60,9 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 For Azure VMs, no extra steps are required. These devices are automatically onboarded to Defender for Cloud because of the native integration between the Azure platform and Defender for Cloud.
 
+See [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint).
+
+
 ## How do I migrate on-premises machines to Defender for Servers?
 
 You have several options. 
@@ -76,8 +79,12 @@ You have several options.
 3. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, Vulnerability Assessment and, optionally, Log Analytics extension.
 
    :::image type="content" source="media/select-plans-aws-gcp.png" alt-text="Screenshot that shows how to enable autoprovisioning for Azure Arc agent." lightbox="media/select-plans-aws-gcp.png":::
+   
+For more information, see the following resources:
 
-   For more information, see [Defender for Cloud's multicloud capabilities](https://aka.ms/mdcmc).
+- [Defender for Cloud's multicloud capabilities](https://aka.ms/mdcmc)
+- For direct onboarding, see [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+- To create a connection to Azure using Azure Arc, see [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines)
 
 ## What happens once all migration steps are completed?
 
