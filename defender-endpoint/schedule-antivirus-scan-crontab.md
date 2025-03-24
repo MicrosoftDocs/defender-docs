@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 03/23/2025
 ---
 
-# Schedule an antivirus scan using crobtab with Microsoft Defender for Endpoint on Linux
+# Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 
 **Applies to:**
 
