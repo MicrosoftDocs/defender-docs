@@ -1008,7 +1008,7 @@
     {
       "source_path": "CloudAppSecurityDocs/troubleshooting-api-connectors-using-error-messages.md",
       "redirect_url": "/defender-cloud-apps/troubleshooting-api-connectors-errors",
-      "redirect_document_id": false
+      "redirect_document_id": true
     }
   ]
 }
