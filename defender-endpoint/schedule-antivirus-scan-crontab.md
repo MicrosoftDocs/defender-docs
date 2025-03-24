@@ -1,5 +1,5 @@
 ---
-title: How to schedule scans with Microsoft Defender for Endpoint (Linux)
+title: Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint (Linux) to better protect your organization's assets.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/11/2024
+ms.date: 03/23/2025
 ---
 
 # Schedule an antivirus scan using crobtab with Microsoft Defender for Endpoint on Linux
