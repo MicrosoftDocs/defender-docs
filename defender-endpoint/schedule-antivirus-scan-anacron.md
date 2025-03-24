@@ -70,7 +70,7 @@ Use the following steps to schedule scans:
    Notice the following items in the file:
 
    - **Shell** is referred as `/bin/sh`, and not as `/bin/bash`. Remember this when you're configuring jobs.
-   - **RANDOM_DELAY** describes the maximum time in minutes for the job. This value is used to offset the jobs so there aren't be too many jobs running at the same time. Using this delay is ideal for VDI solutions.
+   - **RANDOM_DELAY** describes the maximum time in minutes for the job. This value is used to offset the jobs so there aren't too many jobs running at the same time. Using this delay is ideal for VDI solutions.
    - **START_HOURS_RANGE** describes the time range to run the job.
    - **cron.daily** describes `1` as the period of days required for the frequency of job executions. `5 is the delay in minutes that anacron waits after the device restarts.
 
