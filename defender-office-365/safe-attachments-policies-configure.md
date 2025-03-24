@@ -18,7 +18,7 @@ ms.collection:
 description: Learn about how to define Safe Attachments policies to protect your organization from malicious files in email.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 01/29/2025
+ms.date: 03/21/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -116,6 +116,9 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
      - Multiple **values** of the **same exception** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). If the recipient matches **any** of the specified values, the policy isn't applied to them.
      - Different **types of exceptions** use OR logic (for example, _\<recipient1\>_ or _\<member of group1\>_ or _\<member of domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
 
+     > [!TIP]
+     > If not all users in your organization have Defender for Office 365 licenses, you can use **User** or **Group** exceptions to exclude users who aren't eligible for Safe Attachments protections.
+
    When you're finished on the **Users and domains** page, select **Next**.
 
 5. On the **Settings** page, configure the following settings:
@@ -181,22 +184,22 @@ Select a policy by clicking anywhere in the row other than the check box next to
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. To go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select the Safe Attachments policy by using either of the following methods:
+On the **Safe Attachments** page, select the Safe Attachments policy by using either of the following methods:
 
-   - Select the policy from the list by selecting the check box next to the name. The following actions are available in the :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** dropdown list that appears:
-     - **Enable selected policies**.
-     - **Disable selected policies**.
-     - **Delete selected policies**.
+- Select the policy from the list by selecting the check box next to the name. The following actions are available in the :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** dropdown list that appears:
+  - **Enable selected policies**.
+  - **Disable selected policies**.
+  - **Delete selected policies**.
 
-     :::image type="content" source="media/safe-attachments-policies-main-page.png" alt-text="The Safe Attachments page with a policy selected and the More actions control expanded." lightbox="media/safe-attachments-policies-main-page.png":::
+  :::image type="content" source="media/safe-attachments-policies-main-page.png" alt-text="The Safe Attachments page with a policy selected and the More actions control expanded." lightbox="media/safe-attachments-policies-main-page.png":::
 
-   - Select the policy from the list by clicking anywhere in the row other than the check box next to the name. Some or all following actions are available in the details flyout that opens:
-     - Modify policy settings by clicking **Edit** in each section (custom policies or the default policy)
-     - :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** or :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** (custom policies only)
-     - :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** or :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** (custom policies only)
-     - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** (custom policies only)
+- Select the policy from the list by clicking anywhere in the row other than the check box next to the name. Some or all following actions are available in the details flyout that opens:
+  - Modify policy settings by clicking **Edit** in each section (custom policies or the default policy)
+  - :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** or :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** (custom policies only)
+  - :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** or :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** (custom policies only)
+  - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** (custom policies only)
 
-     :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom Safe Attachments policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
+  :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom Safe Attachments policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
 The actions are described in the following subsections.
 
@@ -299,7 +302,7 @@ Creating a Safe Attachments policy in PowerShell is a two-step process:
 
 To create a safe attachment policy, use this syntax:
 
-```PowerShell
+```powershell
 New-SafeAttachmentPolicy -Name "<PolicyName>" -Enable $true [-AdminDisplayName "<Comments>"] [-Action <Allow | Block | DynamicDelivery>] [-Redirect <$true | $false>] [-RedirectAddress <SMTPEmailAddress>] [-QuarantineTag <QuarantinePolicyName>]
 ```
 
@@ -308,7 +311,7 @@ This example creates a safe attachment policy named Contoso All with the followi
 - Block messages that are found to contain malware by Safe Documents scanning (we aren't using the _Action_ parameter, and the default value is `Block`).
 - The default quarantine policy is used (AdminOnlyAccessPolicy), because we aren't using the _QuarantineTag_ parameter.
 
-```PowerShell
+```powershell
 New-SafeAttachmentPolicy -Name "Contoso All" -Enable $true
 ```
 
@@ -321,7 +324,7 @@ For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/p
 
 To create a safe attachment rule, use this syntax:
 
-```PowerShell
+```powershell
 New-SafeAttachmentRule -Name "<RuleName>" -SafeAttachmentPolicy "<PolicyName>" <Recipient filters> [<Recipient filter exceptions>] [-Comments "<OptionalComments>"] [-Enabled <$true | $false>]
 ```
 
@@ -342,19 +345,19 @@ For detailed syntax and parameter information, see [New-SafeAttachmentRule](/pow
 
 To view existing safe attachment policies, use the following syntax:
 
-```PowerShell
+```powershell
 Get-SafeAttachmentPolicy [-Identity "<PolicyIdentity>"] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
 This example returns a summary list of all safe attachment policies.
 
-```PowerShell
+```powershell
 Get-SafeAttachmentPolicy
 ```
 
 This example returns detailed information for the safe attachment policy named Contoso Executives.
 
-```PowerShell
+```powershell
 Get-SafeAttachmentPolicy -Identity "Contoso Executives" | Format-List
 ```
 
@@ -364,29 +367,29 @@ For detailed syntax and parameter information, see [Get-SafeAttachmentPolicy](/p
 
 To view existing safe attachment rules, use the following syntax:
 
-```PowerShell
+```powershell
 Get-SafeAttachmentRule [-Identity "<RuleIdentity>"] [-State <Enabled | Disabled>] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
 This example returns a summary list of all safe attachment rules.
 
-```PowerShell
+```powershell
 Get-SafeAttachmentRule
 ```
 
 To filter the list by enabled or disabled rules, run the following commands:
 
-```PowerShell
+```powershell
 Get-SafeAttachmentRule -State Disabled
 ```
 
-```PowerShell
+```powershell
 Get-SafeAttachmentRule -State Enabled
 ```
 
 This example returns detailed information for the safe attachment rule named Contoso Executives.
 
-```PowerShell
+```powershell
 Get-SafeAttachmentRule -Identity "Contoso Executives" | Format-List
 ```
 
@@ -400,7 +403,7 @@ Otherwise, the same settings are available when you create a safe attachment pol
 
 To modify a safe attachment policy, use this syntax:
 
-```PowerShell
+```powershell
 Set-SafeAttachmentPolicy -Identity "<PolicyName>" <Settings>
 ```
 
@@ -417,7 +420,7 @@ Otherwise, the same settings are available when you create a rule as described i
 
 To modify a safe attachment rule, use this syntax:
 
-```PowerShell
+```powershell
 Set-SafeAttachmentRule -Identity "<RuleName>" <Settings>
 ```
 
@@ -429,19 +432,19 @@ Enabling or disabling a safe attachment rule in PowerShell enables or disables t
 
 To enable or disable a safe attachment rule in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 <Enable-SafeAttachmentRule | Disable-SafeAttachmentRule> -Identity "<RuleName>"
 ```
 
 This example disables the safe attachment rule named Marketing Department.
 
-```PowerShell
+```powershell
 Disable-SafeAttachmentRule -Identity "Marketing Department"
 ```
 
 This example enables same rule.
 
-```PowerShell
+```powershell
 Enable-SafeAttachmentRule -Identity "Marketing Department"
 ```
 
@@ -453,13 +456,13 @@ The highest priority value you can set on a rule is 0. The lowest value you can 
 
 To set the priority of a safe attachment rule in PowerShell, use the following syntax:
 
-```PowerShell
+```powershell
 Set-SafeAttachmentRule -Identity "<RuleName>" -Priority <Number>
 ```
 
 This example sets the priority of the rule named Marketing Department to 2. All existing rules that have a priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
 
-```PowerShell
+```powershell
 Set-SafeAttachmentRule -Identity "Marketing Department" -Priority 2
 ```
 
@@ -473,13 +476,13 @@ When you use PowerShell to remove a safe attachment policy, the corresponding sa
 
 To remove a safe attachment policy in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 Remove-SafeAttachmentPolicy -Identity "<PolicyName>"
 ```
 
 This example removes the safe attachment policy named Marketing Department.
 
-```PowerShell
+```powershell
 Remove-SafeAttachmentPolicy -Identity "Marketing Department"
 ```
 
@@ -491,13 +494,13 @@ When you use PowerShell to remove a safe attachment rule, the corresponding safe
 
 To remove a safe attachment rule in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 Remove-SafeAttachmentRule -Identity "<PolicyName>"
 ```
 
 This example removes the safe attachment rule named Marketing Department.
 
-```PowerShell
+```powershell
 Remove-SafeAttachmentRule -Identity "Marketing Department"
 ```
 
@@ -509,14 +512,10 @@ To verify that you've successfully created, modified, or removed Safe Attachment
 
 - On the **Safe Attachments** page in the Microsoft Defender portal at <https://security.microsoft.com/safeattachmentv2>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list by clicking on the name, and view the details in the fly out.
 
-- In Exchange Online PowerShell, replace \<Name\> with the name of the policy or rule, run the following command, and verify the settings:
+- In Exchange Online PowerShell, replace \<Name\> with the name of the policy or rule, run the following commands, and verify the settings:
 
-  ```PowerShell
-  Get-SafeAttachmentPolicy -Identity "<Name>" | Format-List
-  ```
-
-  ```PowerShell
-  Get-SafeAttachmentRule -Identity "<Name>" | Format-List
+  ```powershell
+  Get-SafeAttachmentPolicy -Identity "<Name>" | Format-List; Get-SafeAttachmentRule -Identity "<Name>" | Format-List
   ```
 
 - To verify that Safe Attachments is scanning messages, check the available Defender for Office 365 reports. For more information, see [View reports for Defender for Office 365](reports-defender-for-office-365.md) and [Use Explorer in the Microsoft Defender portal](threat-explorer-real-time-detections-about.md).
