@@ -170,7 +170,7 @@ A: We recommend you update clients in the Microsoft admin center or ask users to
 
 A: This design was finalized after partnership with more than 50 customers and a Private Preview of approximately two and half years. Many customers who had this question are actually much more comfortable with the built-in **Report** button. They have transitioned completely to the built-in **Report** button.
 
-The built-in report button is a split button. Simply clicking on the icon without using the drop down will report the message as Phish. The drop down can be used optionally by the users if they would like to report as other types (Junk or Not junk).
+The built-in **Report** button is a split button. Clicking on the button without using the dropdown list reports the message as phishing. Use the dropdown list to report messages as junk or not junk.
 
 We recommend that you try the built-in **Report** button. If you're still facing issues, you can always reach out to us via Microsoft Support.
 
