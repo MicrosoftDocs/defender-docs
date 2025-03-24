@@ -158,15 +158,15 @@ Follow the steps below to add Microsoft Defender for Endpoint app into your mana
 
        The app configuration policy for Defender for Endpoint is now assigned to the selected user group.
 
-9. Select **Microsoft Defender** app in the list \> **Properties** \> **Assignments** \> **Edit**.
+6. Select **Microsoft Defender** app in the list \> **Properties** \> **Assignments** \> **Edit**.
 
     :::image type="content" source="media/mda-properties.png" alt-text="The Edit option on the Properties page" lightbox="media/mda-properties.png":::
 
-10. Assign the app as a required app to a user group. It's automatically installed in the work profile during the next sync of the device via Company Portal app. Navigate to the **Required** section, select **Add group**, select the appropriate user group, and then choose **Select**.
+7. Assign the app as a required app to a user group. It's automatically installed in the work profile during the next sync of the device via Company Portal app. Navigate to the **Required** section, select **Add group**, select the appropriate user group, and then choose **Select**.
 
     :::image type="content" source="media/ea06643280075f16265a596fb9a96042.png" alt-text="The Edit application page" lightbox="media/ea06643280075f16265a596fb9a96042.png":::
 
-11. In the **Edit Application** page, review all the information that was specified earlier. Select **Review + Save**, and then select **Save** to commence assignment.
+8. In the **Edit Application** page, review all the information that was specified earlier. Select **Review + Save**, and then select **Save** to commence assignment.
 
 ### Auto setup of always-on VPN
 
