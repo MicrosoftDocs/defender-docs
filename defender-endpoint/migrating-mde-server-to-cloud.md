@@ -24,13 +24,13 @@ search.appverid: met150
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
-This article guides you in migrating servers from Defender for Endpoint for servers to Defender for Servers (part of Defender for Cloud).
+[Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. The Defender for Endpoint for servers license enables you to onboard a server to Defender for Endpoint.
 
-[Defender for Endpoint](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint) is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. The Defender for Endpoint Server license enables you to onboard servers to Defender for Endpoint.
+[Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) is part of the [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering, a solution for cloud security posture management (CSPM) and cloud workload protection (CWP) that finds weak spots across your cloud configuration. Defender for Cloud also helps strengthen the overall security posture of your environment, and can protect workloads across multicloud and hybrid environments from evolving threats.
 
-[Defender for Cloud](https://azure.microsoft.com/services/defender-for-cloud/) is a solution for cloud security posture management (CSPM) and cloud workload protection (CWP) that finds weak spots across your cloud configuration. It also helps strengthen the overall security posture of your environment, and can protect workloads across multicloud and hybrid environments from evolving threats.
+While both Defender for Endpoint and Defender for Servers offer server protection capabilities, Defender for Servers is our primary solution to protect servers.
 
-While both products offer server protection capabilities, Defender for Cloud is our primary solution to protect infrastructure resources, such as servers.
+This article guides you in migrating your servers from Defender for Endpoint for servers to Defender for Servers (part of Defender for Cloud).
 
 ## How do I migrate my servers from Defender for Endpoint to Defender for Cloud?
 
@@ -52,7 +52,7 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
    If you have any of these buttons in your environment, make sure to enable integration for both. On new subscriptions, both options are enabled by default. In this case, you don't see these buttons in your environment.
 
-5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected via the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. So, learn how to plan for [Azure Arc deployments here](/azure/azure-arc/servers/plan-at-scale-deployment).
+5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected via the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. To help with your planning process, see [Azure Arc deployments](/azure/azure-arc/servers/plan-at-scale-deployment).
 
 6. *Recommended:* If you want to see vulnerability findings in Defender for Cloud, make sure to enable [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/enable-data-collection?tabs=autoprovision-va) for Defender for Cloud.
 
@@ -64,7 +64,10 @@ For Azure VMs, no extra steps are required. These devices are automatically onbo
 
 ## How do I migrate on-premises machines to Defender for Servers?
 
-Once all prerequisites are met, [connect](/azure/defender-for-cloud/quickstart-onboard-machines?pivots=azure-arc) your on-premises machines via Azure Arc-connected servers or enable direct onboarding.
+You have several options. 
+
+- Use direct onboarding in Defender for Cloud. See [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint).
+- Create a connection to Azure using Azure Arc. See [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines).
 
 ## How do I migrate VMs from AWS or GCP environments?
 
@@ -74,7 +77,7 @@ Once all prerequisites are met, [connect](/azure/defender-for-cloud/quickstart-o
 
 3. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, Vulnerability Assessment and, optionally, Log Analytics extension.
 
-     :::image type="content" source="media/select-plans-aws-gcp.png" alt-text="Screenshot that shows how to enable autoprovisioning for Azure Arc agent." lightbox="media/select-plans-aws-gcp.png":::
+   :::image type="content" source="media/select-plans-aws-gcp.png" alt-text="Screenshot that shows how to enable autoprovisioning for Azure Arc agent." lightbox="media/select-plans-aws-gcp.png":::
 
    For more information, see [Defender for Cloud's multicloud capabilities](https://aka.ms/mdcmc).
 
