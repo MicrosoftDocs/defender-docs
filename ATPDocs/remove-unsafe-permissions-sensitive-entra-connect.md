@@ -25,6 +25,9 @@ Microsoft Entra Connect accounts like AD DS Connector account (also known as MSO
 
 ## How do I use this security assessment to improve my hybrid organizational security posture?
 
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+
 1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unsafe permissions on sensitive Entra Connect accounts.
 
 1. Review the list of exposed entities to identify accounts with unsafe permissions. For example:
@@ -37,8 +40,6 @@ Microsoft Entra Connect accounts like AD DS Connector account (also known as MSO
 
 1. For each exposed account, remove problematic permissions that allow unprivileged accounts to takeover critical hybrid assets.
 
-> [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
 
 ## Next steps
 
