@@ -59,7 +59,7 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
 
 ## Required roles and permissions
-To access Thraet analytics in the Defender portal, you need to have a license for at least one Microsoft Defender product except Microsoft Defender for Endpoint P1.
+To access Threat analytics in the Defender portal, you need to have a license for at least one Microsoft Defender product except Microsoft Defender for Endpoint P1.
 
 The following roles and permissions are also required to access Threat analytics: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
