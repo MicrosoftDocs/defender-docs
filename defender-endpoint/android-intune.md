@@ -109,11 +109,11 @@ Follow the steps below to add Microsoft Defender for Endpoint app into your mana
 
    :::image type="content" source="media/app-description-page.png" alt-text="Screenshot of the Microsoft Defender app page in the store." lightbox="media/app-description-page.png":::
 
-4. When you're prompted to approve permissions for Defender for Endpoint obtains, review the information, and then select **Approve**.
-
-   :::image type="content" source="media/206b3d954f06cc58b3466fb7a0bd9f74.png" alt-text="The permissions approval page in the Microsoft Defender portal" lightbox="media/206b3d954f06cc58b3466fb7a0bd9f74.png":::
-
    The sync completes in a few minutes.
+
+4. Select the **Refresh** button in the Android apps screen. Microsoft Defender for Endpoint should be visible in the apps list.
+
+   :::image type="content" source="media/fa4ac18a6333335db3775630b8e6b353.png" alt-text="Screenshot showing the Microsoft Defender for Endpoint app in a list." lightbox="media/fa4ac18a6333335db3775630b8e6b353.png":::
 
 5. On the **Approval settings** page, review your preference to handle new app permissions that Defender for Endpoint on Android might ask. Review the choices, and then select your preferred option. Then, select **Done**.
 
