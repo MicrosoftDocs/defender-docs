@@ -95,7 +95,7 @@ For more information on the enrollment options supported by Microsoft Intune, se
 
 ## Add Microsoft Defender for Endpoint on Android as a Managed Google Play app
 
-Follow the steps below to add Microsoft Defender for Endpoint app into your managed Google Play Store.
+To add the Microsoft Defender for Endpoint app into your managed Google Play Store, follow these steps:
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Apps** \> **Android Apps** \> **Add** and select **Managed Google Play app**.
 
