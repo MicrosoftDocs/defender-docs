@@ -43,7 +43,7 @@ For Linux (and Unix), you can use a tool called **crontab** (similar to Task Sch
 
 ## Set the Cron job
 
-to set the Cron job, use the commands in this article.
+To set the cron job, use the commands in this article.
 
 ### Backup crontab entries
 
