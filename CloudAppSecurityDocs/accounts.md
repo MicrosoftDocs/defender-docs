@@ -38,14 +38,14 @@ The **Cloud application accounts** tab enables easy investigation of accounts, i
 
 - Seeing which apps are accessed by each account and which apps are deleted for specific accounts.
 
-![Cloud application accounts](media/accounts/cloud-application-accounts.png)
+[![Screenshot that shows the Cloud application accounts](media/accounts/cloud-application-accounts.png)](media/accounts/cloud-application-accounts.png#lightbox)
 
 ### Accounts filters
 
 The Cloud application accounts tab offers comprehensive filtering capabilities, with pre-defined filters for a quick and easy experience.
 
 Admins can also enable the "Advanced filters" toggle to filter by additional attributes or create complex filters that include conditions such as "does not equal."  
-![Advanced filters toggle.](media/accounts/image.png)
+![Screenshot that shows the Advanced filters toggle.](media/accounts/image.png)
 
 Predefined filters include:
 
