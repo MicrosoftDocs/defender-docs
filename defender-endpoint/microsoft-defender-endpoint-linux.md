@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/17/2025
+ms.date: 03/20/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -127,11 +127,7 @@ Additionally, they can use live response for a remote shell connection to perfor
 
 Microsoft is committed to providing you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
   
-For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy)
-
-## Resources for troubleshooting, diagnostics, and configuration 
-
-If you run into any issues with Defender for Endpoint on Linux, or you just want some tips on configuring capabilities or exclusions, see [Resources](/defender-endpoint/linux-resources)
+For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy).
 
 ## Common applications that Defender for Endpoint impacts 
 

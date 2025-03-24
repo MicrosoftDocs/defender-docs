@@ -294,9 +294,9 @@
               - name: Configure antivirus scans
                 items:
                 - name: Schedule antivirus scans using Anacron
-                  href: schedule-antivirus-scan-in-mde.md
+                  href: schedule-antivirus-scan-anacron.md
                 - name: Schedule antivirus scans using Crontab
-                  href: linux-schedule-scan-mde.md
+                  href: schedule-antivirus-scan-crontab.md
               - name: Network protection for Linux
                 href: network-protection-linux.md
               - name: Configure and validate exclusions on Linux
