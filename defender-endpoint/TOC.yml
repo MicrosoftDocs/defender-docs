@@ -294,9 +294,11 @@
               - name: Configure antivirus scans
                 items:
                 - name: Schedule antivirus scans using Anacron
-                  href: schedule-antivirus-scan-in-mde.md
+                  href: schedule-antivirus-scan-anacron.md
                 - name: Schedule antivirus scans using Crontab
-                  href: linux-schedule-scan-mde.md
+                  href: schedule-antivirus-scan-crontab.md
+              - name: Network protection for Linux
+                href: network-protection-linux.md
               - name: Configure and validate exclusions on Linux
                 href: linux-exclusions.md
               - name: Configure eBPF-based sensor
@@ -329,8 +331,9 @@
                 href: ios-install-unmanaged.md
             - name: Configure Mobile Threat Defense
               items:
-              - name: New user experiences in Defender for Endpoint on iOS
-                href: ios-new-ux.md
+              - name: User experiences in Defender for Endpoint on Android
+                href: android-new-ux.md
+              - name: User experiences in Defender for Endpoint on iOS
               - name: Mobile device resources for Defender for Endpoint 
                 href: mobile-resources-defender-endpoint.md
               - name: Configure Defender for Endpoint on Android features
@@ -700,8 +703,6 @@
           href: evaluate-network-protection.md
         - name: Turn on network protection
           href: enable-network-protection.md
-        - name: Network protection for Linux
-          href: network-protection-linux.md
         - name: Network protection for MacOS
           href: network-protection-macos.md
       - name: Web protection

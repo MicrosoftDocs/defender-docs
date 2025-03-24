@@ -93,13 +93,9 @@ The different tags have equivalent filters that assist you in efficiently review
 
 The Microsoft Threat Intelligence team adds threat tags to each threat report. The following threat tags are currently available:
   - Ransomware
-  - Extortion
   - Phishing
-  - Hands on keyboard
   - Activity group
   - Vulnerability
-  - Attack campaign
-  - Tool or technique
 
 Threat tags are presented at the top of the threat analytics page. There are counters for the number of available reports under each tag.
 
