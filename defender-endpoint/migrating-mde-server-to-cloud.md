@@ -30,7 +30,7 @@ This article describes how to migrate your servers from Defender for Endpoint fo
 
 [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) is part of the [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering, a solution for cloud security posture management (CSPM) and cloud workload protection (CWP) that finds weak spots across your cloud configuration. Defender for Cloud also helps strengthen the overall security posture of your environment, and can protect workloads across multicloud and hybrid environments from evolving threats.
 
-While both Defender for Endpoint and Defender for Servers offer server protection capabilities, Defender for Servers is our primary solution to protect servers.
+While both Defender for Endpoint for servers and Defender for Servers offer server protection capabilities, Defender for Servers is our primary solution to protect servers.
 
 ## How do I migrate my servers from Defender for Endpoint to Defender for Cloud?
 
