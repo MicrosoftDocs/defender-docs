@@ -38,7 +38,7 @@ If you have servers onboarded to Defender for Endpoint, the migration process va
 
 Defender for Cloud is a subscription-based service in the Microsoft Azure portal. Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 2 need to be enabled on Azure subscriptions.
 
-To enable Defender for Servers for Azure VMs and non-Azure machines connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guideline:
+To enable Defender for Servers for Azure VMs and non-Azure machines connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
 
 1. If you aren't already using Azure, plan your environment following the [Azure Well-Architected Framework](/azure/architecture/framework/).
 
