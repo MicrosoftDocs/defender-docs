@@ -1,21 +1,21 @@
 ---
 title: Service Account Discovery
 description: The Service Accounts page provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience.
-ms. topic: conceptual
+ms.topic: conceptual
 ms.date: 03/25/2025
 ---
 
 # What are Service Accounts?
 
-Service accounts are specialized identities within the Active Directory that are used to run applications, services, and automated tasks. They can be broadly classified into several types, including:
+Service accounts are specialized identities within the Active Directory that are used to run applications, services, and automated tasks. These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate in the same way as human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
+
+The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then surfaced, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
+
+They can be broadly classified into several types, including:
 
 - gMSA (Group Managed Service Accounts): gMSAs provide a single identity solution for multiple services that require mutual authentication across multiple servers, as they allow Windows to handle password management, reducing administrative overhead.
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
 - User Account: These standard user accounts are typically used for interactive logins but can also be configured to run services.
-
-These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate in the same way as human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
-
-The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then surfaced, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 In addition to the inventory views, each of the accounts also has its own details page which is enriched with other data from across the Defender experience. Things like account creation date, last sign-in, recent activities, privileges, and criticality level provide valuable insights into the service accounts themselves. You can also take direct action on these identities, like disabling a user, directly within this view.
 
