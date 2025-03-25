@@ -1,0 +1,55 @@
+---
+title: Troubleshoot issues in Microsoft Defender multitenant management
+description: Learn about issues in Microsoft Defender multitenant management and how to fix or troubleshoot them.
+search.appverid: met150
+ms.service: unified-secops-platform
+ms.author: diannegali
+author: diannegali
+ms.localizationpriority: medium
+manager: dansimp
+audience: ITPro
+ms.collection: 
+  - m365-security
+  - highpri
+  - tier1
+  - usx-security
+ms.topic: concept-article
+ms.date: 03/25/2025
+appliesto:
+  - Microsoft Defender XDR
+  - Microsoft Sentinel in the Microsoft Defender portal
+#customer intent: To learn how to troubleshoot issues in Microsoft Defender multitenant management.
+---
+
+# Troubleshoot multitenant management service issues
+
+This article addresses potential issues that might arise as you use the multitenant management in Microsoft Defender. It provides guidance on how to troubleshoot these issues.
+
+## Problem adding or removing tenants
+
+When adding or removing tenants, you might encounter the following issues:
+
+:::image type="content" source="media/mto-troubleshoot/add-tenants-error-small.png" alt-text="Screenshot of error message while adding a tenant" lightbox="media/mto-tenants/add-tenants-error.png":::
+
+:::image type="content" source="media/mto-troubleshoot/remove-tenants-error-small.png" alt-text="Screenshot of error message while removing a tenant" lightbox="media/mto-tenants/remove-tenants-error.png":::
+
+This is resolved by refreshing the page and trying again.
+
+## Some tenants are missing from the list
+
+When loading the tenant list on the Settings page, you get the following error message:
+
+:::image type="content" source="media/mto-troubleshoot/partial-tenants-error-small.png" alt-text="Screenshot of error message where only some of the tenants are correctly loaded on the page" lightbox="media/mto-tenants/partial-tenants-error.png":::
+
+This is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multi-factor authentication (MFA) on your Azure Resource Manager app.
+
+To resolve this, we recommend adding the Microsoft Defender portal first party app to the same conditional access policy as your Azure Resource Manager app. This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
+
+Here’s an example of the policy setting in the Microsoft Entra admin center.
+
+:::image type="content" source="media/mto-troubleshoot/CAP-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-tenants/CAP-policy.png":::
+
+## Related content
+
+- [Set up Microsoft Defender multitenant management](mto-requirements.md)
+- - [Manage tenants](mto-tenants.md)
