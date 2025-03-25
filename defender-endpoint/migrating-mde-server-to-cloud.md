@@ -54,7 +54,7 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 
 2. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
 
-3. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like File Integrity Monitoring, Adaptive Application Controls, and more.
+3. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview), Adaptive Application Controls, and more.
 
 4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one or both of the two opt-in buttons shown in the following image:
 
@@ -73,7 +73,6 @@ To enable Defender for Servers for Azure VMs and non-Azure machines connected th
 For Azure VMs, no extra steps are required. These devices are automatically onboarded to Defender for Cloud because of the native integration between the Azure platform and Defender for Cloud.
 
 See [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint).
-
 
 ## How do I migrate on-premises machines to Defender for Servers?
 
