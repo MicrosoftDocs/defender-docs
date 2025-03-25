@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 alert policies"
+title: Alert policies in the Microsoft Defender portal
 f1.keywords:
 - NOCSH
 ms.author: diannegali
