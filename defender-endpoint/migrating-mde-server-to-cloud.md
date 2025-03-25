@@ -42,7 +42,9 @@ Before you enable Defender for Cloud, it's important to know how to manage antiv
 
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Managing exclusions reference](managing-exclusions.md)
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
+- [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml)
 
 ### Enable Defender for Servers for Azure VMs and non-Azure machines
 
