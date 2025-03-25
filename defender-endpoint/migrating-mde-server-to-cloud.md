@@ -83,6 +83,8 @@ You have several options.
 
 ## How do I migrate VMs from AWS or GCP environments?
 
+If you're using Amazon Web Services or Google Cloud Platform, follow these steps to migrate those VMs:
+
 1. Create a new multicloud connector on your subscription. For more information about this connector, see [AWS accounts](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings) or [GCP projects](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings).
 
 2. On your multicloud connector, enable Defender for Servers on [AWS](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings#prerequisites) or [GCP](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings#configure-the-servers-plan) connectors.
@@ -104,5 +106,11 @@ After you complete the relevant migration steps, Defender for Cloud deploys the 
 The extension acts as a management and deployment interface, which orchestrates and wraps the Defender for Endpoint installation scripts inside the operating system and reflect its provisioning state to the Azure management plane. The installation process recognizes an existing Defender for Endpoint installation and connects it to Defender for Cloud by automatically adding Defender for Endpoint service tags.
 
 In case you have devices running Windows Server 2012 R2 or Windows Server 2016, and those devices are provisioned with the legacy, Log Analytics-based Defender for Endpoint solution, Defender for Cloud's deployment process deploys the Defender for Endpoint [unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution). After successful deployment, it stops and disables the legacy Defender for Endpoint process on these machines.
+
+## See also
+
+- [Enable Defender for Endpoint integration](/azure/defender-for-cloud/enable-defender-for-endpoint)
+- [Agentless machine scanning](/azure/defender-for-cloud/concept-agentless-data-collection)
+- [Remediate Defender for Endpoint misconfigurations (agentless)](/azure/defender-for-cloud/endpoint-detection-misconfiguration)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
