@@ -28,8 +28,9 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry VA | Vulnerability assessments for images in container registries | ACR | GA | GA | Requires **Registry access** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
-| Runtime container VA | Vulnerability assessments of running container images | Agnostic to container registry source | Preview<br/> (Container with ACR images are GA)| GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
+| Container registry VA | VA for images in container registries | ACR | GA | GA | Requires **Registry access** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
+| Runtime container VA | VA of containers running images from supported registries | Supported registries | GA | GA | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
+| Runtime container VA | VA of container running images from unsupported container registries | Agnostic to container registry source | Preview | - | Requires **Agentless scanning for machines** <sup>[1](#footnote1azva)</sup> | **Defender for Containers** or **Defender CSPM** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
 
 <sup><a name="footnote1azva"></a>1</sup>National clouds are automatically enabled and cannot be disabled.
 
@@ -38,20 +39,22 @@ The following are the features provided by Defender for Containers, for the supp
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Container registry VA | Vulnerability assessments for images in container registries | ECR | GA | GA | Requires **Registry access** | **Defender for Containers** or **Defender CSPM** | AWS |
-| Runtime container VA | Vulnerability assessments of running container images | Supported container registries | Preview | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | AWS |
+| Runtime container VA | VA of containers running images from supported registries | Supported container registries | GA | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | AWS |
+| Runtime container VA | VA of container running images from unsupported container registries | - | - | - | - | - | - |
 
 ### [GCP](#tab/gcpva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Container registry VA | Vulnerability assessments for images in container registries | GAR, GCR | GA | GA | Enable **Registry access** toggle | **Defender for Containers** or **Defender CSPM** | AWS |
-| Runtime container VA | Vulnerability assessments of running container images | Supported container registries | Preview | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
+| Runtime container VA | VA of containers running images from supported registries | Supported container registries | GA | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
+| Runtime container VA | VA of container running images from unsupported container registries | - | - | - | - | - | - |
 
 ### [External Registries](#tab/extva)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Container registry VA | Vulnerability assessments for images in container registries | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation  | **Defender for Containers** or **Defender CSPM** | NA |
+| Container registry VA | VA for images in container registries | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation  | **Defender for Containers** or **Defender CSPM** | NA |
 
 ---
 
