@@ -38,7 +38,7 @@ If you have servers onboarded to Defender for Endpoint (or Defender for Endpoint
 
 ### Before you enable Defender for Cloud
 
-Before you enable Defender for Cloud, it's important to know how to manage antivirus policies and exclusions for your organization. See the following articles:
+Before you enable Defender for Cloud, it's important to know how to manage antivirus policies and define any needed exclusions. See the following articles:
 
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
