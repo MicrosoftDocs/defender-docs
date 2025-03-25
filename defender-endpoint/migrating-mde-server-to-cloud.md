@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: migrationguides
-ms.date: 03/24/2025
+ms.date: 03/25/2025
 search.appverid: met150
 ---
 
@@ -34,7 +34,17 @@ While both Defender for Endpoint for servers and Defender for Servers offer serv
 
 ## How do I migrate my servers from Defender for Endpoint to Defender for Cloud?
 
-If you have servers onboarded to Defender for Endpoint (or Defender for Endpoint for servers), the migration process varies depending on machine type, but there's a set of shared prerequisites. Defender for Cloud is a subscription-based service in the Microsoft Azure portal. Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 2 need to be enabled on Azure subscriptions.
+If you have servers onboarded to Defender for Endpoint (or Defender for Endpoint for servers), the migration process varies depending on machine type, but there's a set of shared prerequisites. Defender for Cloud is a subscription-based service in the [Microsoft Azure portal](https://portal.azure.com). Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 2 need to be enabled on Azure subscriptions.
+
+### Before you enable Defender for Cloud
+
+Before you enable Defender for Cloud, it's important to know how to manage antivirus policies and exclusions for your organization. See the following articles:
+
+- [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
+- [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
+
+### Enable Defender for Servers for Azure VMs and non-Azure machines
 
 To enable Defender for Servers for Azure VMs and non-Azure machines connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
 
