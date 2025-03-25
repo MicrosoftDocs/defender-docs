@@ -52,4 +52,4 @@ Here’s an example of the policy setting in the Microsoft Entra admin center.
 ## Related content
 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
-- - [Manage tenants](mto-tenants.md)
+- [Manage tenants](mto-tenants.md)
