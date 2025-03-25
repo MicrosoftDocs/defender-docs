@@ -29,9 +29,9 @@ This article addresses potential issues that might arise as you use the multiten
 
 When adding or removing tenants, you might encounter the following issues:
 
-:::image type="content" source="media/mto-troubleshoot/add-tenants-error-small.png" alt-text="Screenshot of error message while adding a tenant" lightbox="media/mto-tenants/add-tenants-err.png":::
+:::image type="content" source="media/mto-troubleshoot/add-tenants-error-small.png" alt-text="Screenshot of error message while adding a tenant" lightbox="media/mto-troubleshoot/add-tenants-error.png":::
 
-:::image type="content" source="media/mto-troubleshoot/remove-tenants-error-small.png" alt-text="Screenshot of error message while removing a tenant" lightbox="media/mto-tenants/remove-tenants-err.png":::
+:::image type="content" source="media/mto-troubleshoot/remove-tenants-error-small.png" alt-text="Screenshot of error message while removing a tenant" lightbox="media/mto-troubleshoot/remove-tenants-error.png":::
 
 This issue is resolved by refreshing the page and trying again.
 
@@ -39,7 +39,7 @@ This issue is resolved by refreshing the page and trying again.
 
 When loading the tenant list on the Settings page, you get the following error message:
 
-:::image type="content" source="media/mto-troubleshoot/partial-tenants-error-small.png" alt-text="Screenshot of error message where only some of the tenants are correctly loaded on the page" lightbox="media/mto-tenants/partial-tenants-err.png":::
+:::image type="content" source="media/mto-troubleshoot/partial-tenants-error-small.png" alt-text="Screenshot of error message where only some of the tenants are correctly loaded on the page" lightbox="media/mto-troubleshoot/partial-tenants-error.png":::
 
 The issue is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multifactor authentication (MFA) on your Azure Resource Manager app.
 
@@ -47,7 +47,7 @@ To resolve this issue, we recommend adding the Microsoft Defender portal first p
 
 Here’s an example of the policy setting in the Microsoft Entra admin center.
 
-:::image type="content" source="media/mto-troubleshoot/CAP-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-tenants/CAP-pol.png":::
+:::image type="content" source="media/mto-troubleshoot/CAP-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-troubleshoot/CAP-policy.png":::
 
 ## Related content
 
