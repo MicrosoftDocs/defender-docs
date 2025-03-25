@@ -21,6 +21,14 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## March 2025
 
+### New Applications page in Defender XDR
+
+The Applications page, now accessible under Assets in the Defender XDR portal, provides a unified inventory of all SaaS and OAuth-connected apps within your organization. This centralized view enables efficient discovery, monitoring, and management of applications, enhancing overall visibility and control.​
+
+Detailed insights—including app risk scores, usage metrics, publisher statuses, and privilege levels—facilitate the swift identification of high-risk or untagged applications requiring attention.​
+
+For more information, see [Application inventory overview](applications-inventory.md)
+
 ### Enhanced Identity Inventory (Preview)
 
 The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment. The updated Identities Inventory page now includes the following tabs:
