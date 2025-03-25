@@ -486,6 +486,21 @@ The issue can come up when a Defender for Identity workspace license expires and
    - "Azure ATP workspaceName Users" -> "Azure ATP workspaceName Users - old"
 1. Then you can go back in the [Microsoft Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
 
+## Entra Connect sensor experiences loss of database permissions following the update to Microsoft Entra Connect 
+**Cause:**
+
+Updating Microsoft Entra Connect may cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to  [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](https://learn.microsoft.com/defender-for-identity/troubleshooting-using-logs) for log locations and further details. 
+
+Sample logs that may indicate the issue:
+
+`GetEntraConnectGlobalSettingsAsync GetEntraConnectGlobalSettingsAsync failed. Exception - The EXECUTE permission was denied on the object 'mms_get_globalsettings', database Contoso', schema 'dbo'`
+
+`GetEntraConnectConnectivityParametersAsync GetEntraConnectConnectivityParametersAsync failed. Exception - The EXECUTE permission was denied on the object 'mms_get_connectors', database Contoso, schema 'dbo'`
+
+**Resolution:**
+
+If permissions need to be reconfigured, please follow the steps outlined in this [guide](https://learn.microsoft.com/defender-for-identity/deploy/active-directory-federation-services#configure-permissions-for-the-microsoft-entra-connect-adsync-database). 
+
 ## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
