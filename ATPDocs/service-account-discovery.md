@@ -1,10 +1,12 @@
+---
 title: Service Account Discovery
 description: The Service Accounts page provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience.
 author:
 ms.author:
 ms.service: microsoft-defender-for-identity
-ms.topic: article
+m.s topic: conceptual
 ms.date: 03/25/2025
+---
 
 # What are Service Accounts?
 
