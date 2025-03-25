@@ -12,7 +12,7 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.collection: 
 - tier1
-- purview-compliance
+- M365-security-compliance
 search.appverid:
 - MET150
 - MOE150
@@ -77,7 +77,7 @@ An alert policy consists of a set of rules and conditions that define the user o
 
 To view and create alert policies, in the [Microsoft Defender portal](https://security.microsoft.com), under **Email & collaboration** select **Policies & rules** \> **Alert policy**. Alternatively, you can go directly to <https://security.microsoft.com/alertpolicies>.
 
-  ![In the Microsoft Defender portal, select Policies & rules under Email & collaboration, and then select Alert policy to view and create alert policies.](media/LaunchAlertPoliciesDefenderPortal.png)
+  :::image type="content" source="/defender/media/alert-policies/policies-rules-page-small.png" alt-text="Highlighting Alert policy in the Policies and rules page":::
 
 > [!NOTE]
 > You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
@@ -111,7 +111,7 @@ You can also define user tags as a condition of an alert policy. This definition
   - Threat management
   - Others
 
-  When an activity occurs that matches the conditions of the alert policy, the generated alert is tagged with the category defined in this setting. This allows you to track and manage alerts that have the same category setting on the **Alerts** page in the Microsoft Purview portal because you can sort and filter alerts based on category.
+  When an activity occurs that matches the conditions of the alert policy, the generated alert is tagged with the category defined in this setting. This allows you to track and manage alerts that have the same category setting on the **Alerts** page in the Microsoft Defender portal because you can sort and filter alerts based on category.
 
 - **Alert severity**. Similar to the alert category, you assign a severity attribute (**Low**, **Medium**, **High**, or **Informational**) to alert policies. Like the alert category, when an activity occurs that matches the conditions of the alert policy, the alert that's generated is tagged with the same severity level that's set for the alert policy. Again, this allows you to track and manage alerts that have the same severity setting on the **Alerts** page. For example, you can filter the list of alerts so that only alerts with a **High** severity are displayed.
 
@@ -222,7 +222,7 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 
 ## View alerts
 
-When an activity performed by users in your organization matches the settings of an alert policy, an alert is generated and displayed on the **Alerts** page in the Microsoft Purview portal or the Defender portal. Depending on the settings of an alert policy, an email notification is also sent to a list of specified users when an alert is triggered. For each alert, the dashboard on the **Alerts** page displays the name of the corresponding alert policy, the severity and category for the alert (defined in the alert policy), and the number of times an activity has occurred that resulted in the alert being generated. This value is based on the threshold setting of the alert policy. The dashboard also shows the status for each alert. For more information about using the status property to manage alerts, see [Managing alerts](#manage-alerts).
+When an activity performed by users in your organization matches the settings of an alert policy, an alert is generated and displayed on the [**Alerts**](investigate-alerts.md) page in the Microsoft Defender portal. Depending on the settings of an alert policy, an email notification is also sent to a list of specified users when an alert is triggered. For each alert, the dashboard on the **Alerts** page displays the name of the corresponding alert policy, the severity and category for the alert (defined in the alert policy), and the number of times an activity has occurred that resulted in the alert being generated. This value is based on the threshold setting of the alert policy. The dashboard also shows the status for each alert. For more information about using the status property to manage alerts, see [Managing alerts](#manage-alerts).
 
 To view alerts, in the [Microsoft Defender portal](https://security.microsoft.com), select **Incidents & alerts** \> **Alerts**. Alternatively, you can go directly to <https://security.microsoft.com/alerts>.
 
@@ -230,16 +230,19 @@ To view alerts, in the [Microsoft Defender portal](https://security.microsoft.co
 
 You can use the following filters to view a subset of all the alerts on the **Alerts** page:
 
-- **Status**: Show alerts that are assigned a particular status. The default status is **Active**. You or other administrators can change the status value.
-- **Policy**: Show alerts that match the setting of one or more alert policies. Or you can display all alerts for all alert policies.
-- **Time range**: Show alerts that were generated within a specific date and time range.
 - **Severity**: Show alerts that are assigned a specific severity.
-- **Category**: Show alerts from one or more alert categories.
-- **Tags**:Show alerts from one or more user tags. Tags are reflected based on tagged mailboxes or users that appear in the alerts. See [User tags in Defender for Office 365](/microsoft-365/security/office-365-security/user-tags-about) to learn more.
-- **Source**: Use this filter to show alerts triggered by alert policies in the Microsoft Purview portal or alerts triggered by Microsoft Defender for Cloud Apps policies, or both. For more information about Defender for Cloud Apps alerts, see the [View Defender for Cloud Apps alerts](#view-defender-for-cloud-apps-alerts) section in this article.
-
-> [!IMPORTANT]
-> Filtering and sorting by user tags is currently in Public Preview, and might be substantially modified before it's generally available. Microsoft makes no warranties, express or implied, with respect to the information provided about it.
+- **Status**: Show alerts that are assigned a particular status. The default status is **New**. You or other administrators can change the status value.
+- **Categories**: Show alerts from one or more alert categories.
+- **Service/detection sources**: Use this filter to show alerts triggered by alert policies in a specific service or detection source. For example, you can show alerts triggered by alert policies in Microsoft Defender for Office 365 or Microsoft Defender for Identity.
+- **Tags**:Show alerts from one or more user tags.
+- **Policy/policy rule**: Show alerts that match the setting of one or more alert policies. Or you can display all alerts for all alert policies.
+- **Alert type**: Show alerts that were generated based on a specific alert type.
+- **Product name**: Show alerts from a specific Microsoft security product.
+- **Alert subscription ID**: Show alerts that were generated by a specific alert subscription ID.
+- **Entities**: Show alerts that are associated with a specific entity.
+- **Automated investigation state**: Show alerts that are in a specific automated investigation state.
+- **Workspace**: Show alerts that are associated with a specific workspace. This only applies if you have one or more workspaces in your organization.
+- **Data stream**: Show alerts that are associated with a specific data stream. For example, you can show alerts that are associated with the Microsoft OneDrive and Microsoft Exchange data streams.
 
 ## Alert aggregation
 
@@ -325,7 +328,11 @@ After alerts are generated and displayed on the **Alerts** page in the Microsoft
 
 Here are some tasks you can perform to manage alerts.
 
-- **Assign a status to alerts**: You can assign one of the following statuses to alerts: **Active** (the default value), **Investigating**, **Resolved**, or **Dismissed**. Then, you can filter on this setting to display alerts with the same status setting. This status setting can help track the process of managing alerts.
+- **Assign a status to alerts**: You can assign one of the following statuses to alerts: **New** (the default value), **In progress**, or **Resolved**. Then, you can filter on this setting to display alerts with the same status setting. This status setting can help track the process of managing alerts.
+
+- **Assign an alert to a user**: You can assign an alert to a user in your organization. This action can help ensure that the alert is reviewed and resolved by the appropriate person.
+
+- [**Classify alerts**](investigate-alerts.md#manage-alerts): You can assign a classification to an alert. Classifications are used to categorize alerts based on the type of activity that triggered the alert. For example, you can classify an alert as **True positive** or **Informational**.
 
 - **View alert details**: You can select an alert to display a flyout page with details about the alert. The detailed information depends on the corresponding alert policy, but it typically includes the following information:
 
@@ -335,21 +342,6 @@ Here are some tasks you can perform to manage alerts.
   - The number of times the activity tracked by the alert was performed. This number might not match that actual number of related alerts listed on the Alerts page because more alerts might have been triggered.
   - A link to an activity list that includes an item for each activity that was performed that triggered the alert. Each entry in this list identifies when the activity occurred, the name of the actual operation (such as "FileDeleted"), the user who performed the activity, the object (such as a file, an eDiscovery case, or a mailbox) that the activity was performed on, and the IP address of the user's computer. For malware-related alerts, this links to a message list.
   - The name (and link) of the corresponding alert policy.
+  - The incident where the alert is aggregated.
 
-- **Suppress email notifications**: You can turn off (or suppress) email notifications from the flyout page for an alert. When you suppress email notifications, Microsoft won't send notifications when activities or events that match the conditions of the alert policy occur. But alerts will be triggered when activities performed by users match the conditions of the alert policy. You can also turn off email notifications by editing the alert policy.
-
-- **Resolve alerts**: You can mark an alert as resolved on the flyout page for an alert (which sets the status of the alert to **Resolved**). Unless you change the filter, resolved alerts aren't displayed on the **Alerts** page.
-
-## View Defender for Cloud Apps alerts
-
-Alerts that are triggered by Defender for Cloud Apps policies are now displayed on the **Alerts** page in the Microsoft Purview portal. This includes alerts that are triggered by activity policies and alerts that are triggered by anomaly detection policies in Defender for Cloud Apps. This means you can view all alerts in the Microsoft Purview portal. Defender for Cloud Apps is only available for organizations with an Office 365 Enterprise E5 or Office 365 US Government G5 subscription. For more information, see [Overview of Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security).
-
-Organizations that have Microsoft Defender for Cloud Apps as part of an Enterprise Mobility + Security E5 subscription or as a standalone service can also view Defender for Cloud Apps alerts that are related to Microsoft 365 apps and services in the Microsoft Defender portal.
-
-To display only Defender for Cloud Apps alerts in the Microsoft Defender portal, use the **Source** filter and select **Defender for Cloud Apps**.
-
-![Use the Source filter to display only Defender for Cloud Apps alerts.](media/FilterCASAlerts.png)
-
-Similar to an alert triggered by an alert policy in the Microsoft Defender portal, you can select a Defender for Cloud Apps alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Defender for Cloud Apps portal and a link to the corresponding Defender for Cloud Apps policy that triggered the alert. See [Monitor alerts in Defender for Cloud Apps](/cloud-app-security/monitor-alerts).
-
-![Alert details contain links to the Defender for Cloud Apps portal.](media/CASAlertDetail.png)
+- [**Tune an alert**](investigate-alerts.md#tune-an-alert): You can set properties, conditions, and actions to hide or resolve an alert.
