@@ -6,8 +6,6 @@ ms.topic: conceptual
 ---
 # Troubleshooting App Connector errors
 
-
-
 This article provides a list of API App connector error messages and resolution recommendations for each error.
 
 ## Troubleshooting
