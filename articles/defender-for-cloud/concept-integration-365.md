@@ -59,21 +59,27 @@ The [CloudProcessEvents table](/defender-xdr/advanced-hunting-cloudauditevents-t
 
 ## Microsoft Sentinel customers
 
-Microsoft Sentinel customers [integrating Microsoft Defender XDR incidents](/azure/sentinel/microsoft-365-defender-sentinel-integration) *and* ingesting Defender for Cloud alerts are required to make the following configuration changes to ensure that duplicate alerts and incidents aren't created:
+Microsoft Sentinel customers who are [integrating Microsoft Defender XDR incidents](/azure/sentinel/microsoft-365-defender-sentinel-integration) *and* are ingesting Defender for Cloud alerts must take the following steps to prevent duplicate alerts and incidents.
 
-- In Microsoft Sentinel, from the content hub, connect the **Tenant-based Microsoft Defender for Cloud (Preview)** connector. 
-  - This connector synchronizes the collection of alerts from all your subscriptions with the tenant-based Defender for Cloud incidents that are streaming through the Microsoft Defender XDR incidents connector. 
-  - Defender for Cloud incidents are correlated across all subscriptions of the tenant.
-  - For Microsoft Sentinel workspaces in the Defender portal, the correlated Defender for Cloud incidents are streamed to the primary workspace. For more information see, [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
-- Disconnect the **Subscription-based Microsoft Defender for Cloud (Legacy)** alerts connector to prevent alert duplicates.
-- Turn off any analytics rules&mdash;either [*Scheduled* (regular query-type) or *Microsoft security* (incident creation)](/azure/sentinel/detect-threats-built-in) rules&mdash;used to create incidents from Defender for Cloud alerts. Defender for Cloud Incidents are created automatically in the Defender portal and synchronized with Microsoft Sentinel.
-- If necessary, [use automation rules](/azure/sentinel/create-manage-use-automation-rules) to close noisy incidents, or use the [built-in tuning capabilities in the Defender portal](/defender-xdr/investigate-alerts#tune-an-alert) to suppress certain alerts.
+1. In Microsoft Sentinel, configure the **Tenant-based Microsoft Defender for Cloud (Preview)** data connector. This data connector is included in the **Microsoft Defender for Cloud** solution, available from the Microsoft Sentinel **Content hub**.
 
-If you've integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep the subscription-based settings and avoid tenant-based syncing, opt out of syncing incidents and alerts by using the Microsoft Defender XDR connector. To opt out:
+    The **Tenant-based Microsoft Defender for Cloud (Preview)** data connector synchronizes alert collection from all your subscriptions with the tenant-based Defender for Cloud incidents that are streaming through the Microsoft Defender XDR incidents connector. Defender for Cloud incidents are correlated across all subscriptions of the tenant.
+
+    If you're working with multiple Microsoft Sentinel workspaces in the Defender portal, the correlated Defender for Cloud incidents are streamed to the primary workspace. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
+
+1. Disconnect the **Subscription-based Microsoft Defender for Cloud (Legacy)** data connector to prevent duplicate alerts.
+
+1. Turn off any analytics rules used to create incidents from Defender for Cloud alerts, either [*Scheduled* (regular query-type) or *Microsoft security* (incident creation)](/azure/sentinel/detect-threats-built-in) rules.
+
+    If necessary, [use automation rules](/azure/sentinel/create-manage-use-automation-rules) to close noisy incidents, or use the [built-in tuning capabilities in the Defender portal](/defender-xdr/investigate-alerts#tune-an-alert) to suppress certain alerts.
+
+If you've integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep the subscription-based settings and avoid tenant-based syncing, opt out of syncing incidents and alerts from Microsoft Defender XDR:
 
 1. In the Microsoft Defender portal, go to **Settings > Microsoft Defender XDR**.
-2. In **Alert service settings**, look for Microsoft Defender for Cloud alerts.
-3. Select **No alerts** to turn off all Defender for Cloud alerts. Selecting this option stops the ingestion of new Defender for Cloud alerts to the portal. Alerts previously ingested remain in an alert or incident page.
+
+1. In **Alert service settings**, look for Microsoft Defender for Cloud alerts.
+
+1. Select **No alerts** to turn off all Defender for Cloud alerts. Selecting this option stops the ingestion of new Defender for Cloud alerts to Microsoft Defender XDR. Alerts previously ingested remain in an alert or incident page.
 
 For more information, see:
 
