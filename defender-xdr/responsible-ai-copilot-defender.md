@@ -18,7 +18,7 @@ ms.topic: concept-article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 03/21/2025
+ms.date: 03/25/2025
 #customer intent: I want to learn about how Microsoft applies responsible AI principles to Microsoft Copilot in Microsoft Defender.
 ---
 
@@ -32,9 +32,9 @@ Responsible AI FAQs are part of a broader effort to put Microsoft's AI principle
 
 ## Responsible AI FAQs
 
-### What is Microsoft Copilot in Defender?
+### What is Microsoft Copilot in Microsoft Defender?
 
-Microsoft Copilot in Defender is a security solution that uses AI to help security analysts investigate and respond to threats. Copilot in Defender is designed to help security analysts work more efficiently and effectively by providing them with relevant information and recommendations. 
+Microsoft Copilot in Defender is the integration of Security Copilot in the Microsoft Defender portal. It is a security solution that uses AI to help security analysts investigate and respond to threats. Copilot in Defender is designed to help security analysts work more efficiently and effectively by providing them with relevant information and recommendations. 
 
 Copilot in Defender draws context from the data in the workloads that it monitors, and uses that context to provide recommendations to security analysts.
 
@@ -59,10 +59,6 @@ Now that it is released, user feedback is critical in helping Microsoft improve 
 
 ### What are the limitations of Copilot in Defender? How can users minimize the impact of Copilot in Defender’s limitations when using the system?
 
-- The Early Access Program is designed to give customers the opportunity to get early access to Copilot in Defender and provide feedback about the platform. Preview features aren’t meant for production use and might have limited functionality.
-
-- Like any AI-powered technology, Copilot in Defender doesn’t get everything right. However, you can help improve its responses by providing your observations using the feedback tool, which is built into the platform.
-
 - The system is designed to generate responses and respond to prompts related to the security domain like incident investigation and threat intelligence. Prompts outside the scope of security might result in responses that lack accuracy and comprehensiveness.
 
 - Copilot in Defender might generate code or include code in responses, which could potentially expose sensitive information or vulnerabilities if not used carefully. Responses might appear to be valid but might not actually be semantically or syntactically correct or might not accurately reflect the intent of the developer. Users should always take the same precautions as they would with any code they write that uses material users didn't independently originate, including precautions to ensure its suitability. These include rigorous testing, IP scanning, and checking for security vulnerabilities.
@@ -72,6 +68,8 @@ Now that it is released, user feedback is critical in helping Microsoft improve 
 - The system might not be able to process long prompts, such as hundreds of thousands of characters.
 
 - Use of the platform might be subject to usage limits or capacity throttling. Even with shorter prompts, generating responses, and checking them before displaying them to the user can take time (up to several minutes) and require high GPU capacity.
+
+- Like any AI-powered technology, Copilot in Defender doesn’t get everything right. However, you can help improve its responses by providing your observations using the feedback tool, which is built into the platform.
 
 ### How is Microsoft approaching responsible AI for Copilot in Defender?
 
