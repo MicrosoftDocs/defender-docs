@@ -45,14 +45,16 @@ To view and access the investigation in the Microsoft Purview portal, the **Data
 
 ## Create a data security investigation
 
-Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating a data security investigation. To create a data security investigation in the Microsoft Defender portal, follow these steps:
+Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating a data security investigation. Investigations support mailboxes, files, and mail messages as the scope of the investigation.
+
+To create a data security investigation in the Microsoft Defender portal, follow these steps:
 
 1. Sign in to the Microsoft Defender portal at [security.microsoft.com](https://security.microsoft.com).
 2. In the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents** to open the incident queue. Select an incident from the queue to open the incident page.
 3. When the selected incident contains potentially impacted data, the option to create a Data Security investigation appears on the incident page message banner. Choose **Create investigation**.
    :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-banner-small.png" alt-text="Screenshot of the incident page highlighting the create investigation message banner" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-banner.png":::
 4. In the pop-up window, provide a name and description for the investigation. Investigation names must be unique.
-   :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-popup.png" alt-text="Screenshot of the Data Security investigations pop-up window" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-popup.png":::
+   :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-popup-small.png" alt-text="Screenshot of the Data Security investigations pop-up window" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-popup.png":::
 5. In the Investigation scope, attach mailboxes or files and mail messages to the investigation.
    > [!NOTE]
    > You can attach either mailboxes or files and mail messages in an investigation, but not both at the same time. If an incident involves both mailboxes and files or mail messages, you need to create separate investigations. For example, create one investigation for all mailboxes and another for all files and mail messages. Files and mail messages can be attached in one investigation.
