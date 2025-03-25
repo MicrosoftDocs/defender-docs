@@ -105,6 +105,7 @@ It's important to understand how user allows and blocks, tenant allows and block
 - After the filtering stack determines a verdict, only then are tenant policies and their configured actions evaluated.
 - If the same email address or domain exists in a user's Safe Senders list and Blocked Senders list, the Safe Senders list takes precedence.
 - If the same entity (email address, domain, spoofed sending infrastructure, file, or URL) exists in an allow entry and a block entry in the Tenant Allow/Block List, the block entry takes precedence.
+- If a file type is used in [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies), allowing the same file in the Tenant Allow/Block list or Exchange Transport rules does not override the verdict.
 
 ### User allows and blocks
 
