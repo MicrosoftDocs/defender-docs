@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: deniseb 
 author: denisebmsft
 ms.localizationpriority: medium 
-ms.date: 02/19/2025
+ms.date: 03/21/2025
 manager: deniseb 
 ms.reviewr: mkaminska
 audience: ITPro 
@@ -27,7 +27,7 @@ search.appverid: met150
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 

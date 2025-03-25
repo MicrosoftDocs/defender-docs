@@ -56,7 +56,7 @@ You start by evaluating the product or service and how it will work within your 
 
 Here is the workflow for piloting and deploying Defender for Endpoint in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.png" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Endpoint." lightbox="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.png" border="false":::
+:::image type="content" source="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Endpoint." lightbox="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 

@@ -8,63 +8,62 @@ ms.topic: how-to
 
 
 
-Microsoft Defender for Cloud Apps gives you visibility into the accounts from your connected apps. After you connect Defender for Cloud Apps to an app using the App connector, Defender for Cloud Apps reads account information associated with connected apps. The Accounts page enables you to investigate those accounts, permissions, the groups they're members of, their aliases, and the apps they're using. Additionally, when Defender for Cloud Apps detects a new account that wasn't previously seen in one of the connected apps - for example, in activities or file sharing - the account is added to the accounts list of that app. This enables you to have visibility into the activity of external users interacting with your cloud apps.
+Microsoft Defender for Cloud Apps gives you visibility into the accounts from your connected applications. After you connect Defender for Cloud Apps to an app using the [App connector](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps), Defender for Cloud Apps reads account information associated with connected applications. The Cloud application accounts tab within the Identity inventory enables you to investigate those accounts, permissions, the groups they're members of, their aliases, and the apps they're using. Additionally, when Defender for Cloud Apps detects a new account that wasn't previously seen in one of the connected apps - for example, in activities or file sharing - the account is added to the accounts list of that app. This enables you to have visibility into the activity of external users interacting with your cloud apps.
 
-## Identity Inventory (Preview)
+## Identity Inventory
 
-> [!NOTE]
-> The Identities page is in the process of merging into the unified **Identity Inventory (Preview)**. 
-> 
-> The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention. 
-> 
-> The functionality of the Identities page, as presented below, will be provided in the new Identity Inventory under the "**Cloud application accounts**" tab, offering the same features as it does today. For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory).
-> 
-## Identities
+The visibility into cloud application accounts, as described above, is provided in the Identity Inventory under the "**Cloud application accounts**" tab.
 
-Admins can search for a specific user's metadata or user's activity. The **Identities** page provides you with comprehensive details about the entities that are pulled from connected cloud applications. It also provides the user's activity history and security alerts related to the user.
+The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention. 
 
-The **Identities** page can be [filtered](#identities-filters) to enable you to find specific accounts and to deep dive into different types of accounts, for example, you can filter for all External accounts that haven't been accessed since last year.
+For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory).
 
-The **Identities** page enables you to easily investigate your accounts, including the following issues:
+## Cloud Application Accounts
 
-* Check if any accounts have been inactive in a particular service for a long time (Maybe you should revoke the license for that user to that service)
+Admins can search for specific account metadata or account activity. The **Cloud application accounts** tab provides comprehensive details about entities pulled from connected cloud applications, including activity history and security alerts related to the account.
 
-* You can filter for the list of users with admin permissions
-* You can search for users who are no longer part of your organization but may still have active accounts
-* You can take [governance actions](#governance-actions) on the accounts, such as suspending an app or going to the account settings page.
-* You can see which accounts are included in each user group  
-* You can see which apps are accessed by each account and which apps are deleted for specific accounts
+The **Cloud application accounts** tab can be filtered to find specific accounts and deep dive into different types of accounts. For example, you can filter for all External accounts that haven't been accessed since last year.
 
-    ![accounts screen.](media/accounts-page.png)
-  
-### Identities filters
+The **Cloud application accounts** tab enables easy investigation of accounts, including:
 
-Following is a list of the account filters that can be applied. Most filters support multiple values as well as NOT, in order to provide you with a powerful tool for policy creation.  
+- Checking if any accounts have been inactive in a particular service for a long time (consider revoking the license for that user to that service).
 
-* **Affiliation**: The affiliation is either **Internal** or **External**. To set which users and accounts are internal, under **Settings** make sure to set the **IP address range** of your internal organization. If the account has admin permissions the icon in the Accounts table appears with the addition of the red tie:
+- Filtering for accounts with admin permissions.
+
+- Searching for accounts that are no longer part of your organization but may still have active accounts.
+
+- Taking governance actions on accounts, such as suspending an app or accessing the account settings page.
+
+- Viewing which accounts are included in each user group.
+
+- Seeing which apps are accessed by each account and which apps are deleted for specific accounts.
+
+[![Screenshot that shows the Cloud application accounts](media/accounts/cloud-application-accounts.png)](media/accounts/cloud-application-accounts.png#lightbox)
+
+### Accounts filters
+
+The Cloud application accounts tab offers comprehensive filtering capabilities, with pre-defined filters for a quick and easy experience.
+
+Admins can also enable the "Advanced filters" toggle to filter by additional attributes or create complex filters that include conditions such as "does not equal."  
+![Screenshot that shows the Advanced filters toggle.](media/accounts/image.png)
+
+Predefined filters include:
+
+- **Account name:** Filter specific accounts.
+
+- **Affiliation:** Internal or External. Set internal accounts under **Settings** by defining the **IP address range of your organization**. Admin accounts are marked with a red tie icon.
 
     ![accounts admin icon.](media/accounts-admin-icon.png)
   
-* **App**: You can filter for any API connected app being used by accounts in your organization.
-* **Domain**: This enables you to filter for users in specific domains.
-* **Groups**: Enables you to filter for members of user groups in Defender for Cloud Apps - both built-in user groups and imported user groups.
-* **Instance**: This enables you to filter for members of a specific app instance.
-* **Last seen**: The **last seen** filter enables you to find accounts that are dormant and whose users haven't performed any activities in a while.
-* **Organization**: This enables you to filter for members of specific organizational groups defined in your connected apps.
-* **Show Admins only**: Filters for accounts and users that are admins.
-* **Status**: Filter based on user account status of N/A, staged, active, suspended, or deleted. A status of not available (N/A) is normal and may appear, for example, for anonymous accounts.
-* **Type**: This enables you to filter to either the user or the account type.
-* **User name**: Enables you to filter specific users.
+- **App:** Filter for any connected app used by accounts in your organization.
 
-### Governance actions
+- **Groups:** Filter for members of user groups in Defender for Cloud Apps—both built-in and imported user groups.
 
-From the **Users and account** page, you can take governance actions such as suspending an app or going to the account settings page. For a full list of governance actions, see the [governance log](governance-actions.md).
+- **Show Admins only:** Filter for admin accounts.
 
-For example, if you identify a user that is compromised, you can apply the **Confirm user compromised** action to set the user risk level to high, causing the relevant policy actions defined in Microsoft Entra ID to be enforced. The action can be applied manually or using relevant [policies that support governance actions](governance-actions.md).
+### Additional actions
 
-#### To manually apply a user or account governance action
-
-From the **Users and account** page, on the row where the relevant user or account appears, choose the three dots at the end of the row, then select **Confirm user compromised**.
+Additional actions for further investigation, such as viewing related activities and incidents, are available through the Cloud application accounts tab. Click the three dots at the end of the relevant account's row to view available actions, or click on the account row to see additional accounts related to a single user. Additional actions are also available via the three dots at the end of the table in this view.
 
 ## Next steps
 
