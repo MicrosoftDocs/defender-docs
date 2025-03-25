@@ -37,7 +37,7 @@ The following table highlights what a user can access or perform with each of th
 |Permission name|Actions|
 | -------- | -------- |
 |**Exposure Management (read)** |Access to all Exposure Management experiences and read access to all available data|
-|**Exposure Management (manage)**|In addition to the read access, the user can set initiative target score, edit metric values, manage recommendations (might require additional permissions related to the specific actions needed to be taken)|
+|**Exposure Management (manage)**|In addition to the read access, the user can set initiative target score and edit metric values, as long as the user has access to all Defender for Endpoint [device groups](/microsoft-365/security//defender-endpoint/machine-groups).|
 |**Core security settings (manage)**|Connect or change vendor to the External Attack Surface Management initiative|
 
 For full Microsoft Security Exposure Management access, user roles need access to all Defender for Endpoint [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
