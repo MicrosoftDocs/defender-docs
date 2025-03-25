@@ -238,19 +238,19 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to you Kubernetes environment | EKS | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | EKS |
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | - | - | - | - | - | - |
 
 ### [GCP](#tab/gcpcssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to you Kubernetes environment | GKE | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | GKE |
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | - | - | - | - | - | - |
 
 ### [Arc enabled](#tab/arccssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to you Kubernetes environment | Arc enabled cluster | Preview | Preview | Enabled with plan | **Defender for Containers** or **Defender CSPM** | Arc enabled cluster |
+| Gated deployment | Gated deployment of container images to you Kubernetes environment | - | - | - | - | - | - |
 
 ---
 
