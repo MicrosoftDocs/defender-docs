@@ -61,7 +61,7 @@ Each report provides an analysis of a tracked threat and extensive guidance on h
 ## Required roles and permissions
 To access Threat analytics in the Defender portal, you need to have a license for at least one Microsoft Defender XDR. For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md). 
 
->![NOTE] The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and will not grant Threat analytics access.
+>[!NOTE] The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and will not grant Threat analytics access.
 
 The following roles and permissions are also required to access Threat analytics: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
