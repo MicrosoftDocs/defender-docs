@@ -14,11 +14,11 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 10/18/2024
+ms.date: 03/24/2025
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices
 
-Microsoft Defender for Endpoint provides multiple capabilities on mobile devices. Some of these capabilities are set to default, and some require admin configuration. The following table shows how to configure the resources related to Microsoft Defender for Endpoint on Android and iOS.
+Microsoft Defender for Endpoint provides multiple capabilities on mobile devices. Some of these capabilities are set to default, and some require administrator configuration. The following table shows how to configure the resources related to Microsoft Defender for Endpoint on Android and iOS.
 
 ## Feature configurations
 
@@ -61,23 +61,21 @@ Suspicious certificates |Informational| | |
 
 [Complete privacy information for iOS](ios-privacy.md)
 
-## Microsoft Defender Mobile App exclusion from Conditional Access(CA) Policies
+## Microsoft Defender mobile app exclusion from Conditional Access (CA) Policies
 
-Microsoft Defender Mobile app is a security app that needs to constantly be running in the background to report the device security posture. This security posture is used in the Compliance and App Protection policies to secure the managed apps and ensure that corporate data is accessed only in a secured device.  However, with restrictive Conditional Access policies such as having Block policies based on certain locations, or enforcing frequent sign ins can result in Defender blocked from reporting posture. If the Defender app fails to report the device posture this can lead to situation where the device is under a threat, leading to vulnerability of corporate data on the device. To ensure seamless protection, we recommend excluding the Defender app from the blocking Conditional Access Policy.
+The Microsoft Defender mobile app is a security app that needs to constantly be running in the background to report the device security posture. This security posture is used in the Compliance and App Protection policies to secure the managed apps and ensure that corporate data is accessed only in a secured device. However, with restrictive Conditional Access policies such as having Block policies based on certain locations, or enforcing frequent sign ins can result in Defender blocked from reporting posture. If the Defender app fails to report the device posture this can lead to situation where the device is under a threat, leading to vulnerability of corporate data on the device. To ensure seamless protection, we recommend excluding the Defender app from the blocking Conditional Access Policy.
 
 ### Apps required to exclude
 
-1. **Xplat Broker App ( a0e84e36-b067-4d5c-ab4a-3db38e598ae2)**
-Xplat Broker App is the application responsible for forwarding Defender risk signals to the Defender backend. However, the presence of restrictive CA policies     can result in Defender blocked from reporting signals. In these scenarios, we recommend excluding the Xplat Broker App. Note, that **Xplat Broker App** is also used by other platforms like Mac and Linux. So if the policy is same for these platforms, it is better to create a separate Conditional Access policy for Mobile.
+1. **MicrosoftDefenderATP XPlat app (a0e84e36-b067-4d5c-ab4a-3db38e598ae2)**: MicrosoftDefenderATP XPlat app is the application responsible for forwarding Defender risk signals to the Defender backend. However, the presence of restrictive CA policies can result in Defender blocked from reporting signals. In these scenarios, we recommend excluding the MicrosoftDefenderATP XPlat app. Note, that **MicrosoftDefenderATP XPlat app** is also used by other platforms like Mac and Linux. So if the policy is same for these platforms, it is better to create a separate Conditional Access policy for Mobile.
 
-2. **TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**
-Microsoft Defender for Mobile TVM (Threat and Vulnerability Management) is the service, which provides the vulnerability assessment for the installed apps on the iOS devices. However, the presence of restrictive CA policies can result in Defender blocked from communicating the onboarding requests to the TVM backend services. This service should be excluded if MDVM (Vulnerability Assessment) is used in the organization.
+2. **Microsoft Defender for Mobile TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**: Microsoft Defender for Mobile TVM (Threat and Vulnerability Management) is the service, which provides the vulnerability assessment for the installed apps on the iOS devices. However, the presence of restrictive CA policies can result in Defender blocked from communicating the onboarding requests to the TVM backend services. This service should be excluded if MDVM (Vulnerability Assessment) is used in the organization.
 
 ### Steps to exclude
 
 1. Create service principal for the apps that needs to be excluded. [Steps to create service principal.](/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0&tabs=powershell#request&preserve-view=true).
 
-1. While creating the service principal object above, use these app IDs: **Xplat Broker App ( a0e84e36-b067-4d5c-ab4a-3db38e598ae2), TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**. 
+1. While creating the service principal object above, use these app IDs: **MicrosoftDefenderATP XPlat app (a0e84e36-b067-4d5c-ab4a-3db38e598ae2), Microsoft Defender for Mobile TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**. 
 
 1. After the object is successfully created the two apps are visible in the CA screen and can be excluded.
 

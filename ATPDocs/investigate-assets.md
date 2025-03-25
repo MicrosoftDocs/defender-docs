@@ -63,9 +63,10 @@ When you investigate a specific identity, you'll see the following details on an
 |[Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)      |     Respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the Microsoft Defender XDR **Action center.|
 
 > [!NOTE]
-> **Investigation Priority Score** has been deprecated on December 3, 2025. As a result, both the Investigation Priority Score breakdown and the scored activity timeline cards have been removed from the UI. 
+> **Investigation Priority Score** has been deprecated on December 3, 2024. As a result, both the Investigation Priority Score breakdown and the scored activity timeline cards have been removed from the UI. 
 
-  
+
+
 For more information, see [Investigate users](/microsoft-365/security/defender/investigate-users) in the Microsoft Defender XDR documentation.
 
 ## Investigation steps for suspicious groups
