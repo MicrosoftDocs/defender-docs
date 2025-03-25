@@ -44,7 +44,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `SenderDisplayName` | `string` | Name of the sender displayed in the address book, typically a combination of a first name, a middle initial, and a last name or surname |
 | `SenderObjectId` | `string` | Unique identifier for the sender’s account  |
 | `SenderType` | `string` | Type of user that sent the message, for example, User, Group, Anonymous  |
-| `RecipientDetails` | `dynamic` | Array of recipient data (RecipientEmailAddress, RecipientDisplayName, RecipientType, RecipientObjectId) |
+| `RecipientDetails` | `dynamic` | Array of recipient data (RecipientSmtpAddress, RecipientDisplayName, RecipientType, RecipientObjectId) |
 | `IsOwnedThread` | `boolean` | Boolean value indicating whether the message is owned by your organization or not (only the messages owned by your organization can be remediated)|
 | `MessageId` | `string` | Identifier for the message (non-unique)|
 | `ParentMessageId` | `string` | Identifier for the message that the current message was a reply to, otherwise this is the same as the MessageId|

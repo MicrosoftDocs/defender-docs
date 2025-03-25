@@ -43,7 +43,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ActionTrigger` | `string` | Indicates whether an action was triggered by an administrator (manually or through approval of a pending automated action), or by some special mechanism, such as a ZAP or Dynamic Delivery |
 | `ActionResult` | `string` | Result of the action |
 | `SenderEmailAddress` | `string` | Email address of the sender |
-| `RecipientDetails` | `dynamic` | Array of recipient data (RecipientEmailAddress, RecipientDisplayName, RecipientType, RecipientObjectId) |
+| `RecipientDetails` | `dynamic` | Array of recipient data (RecipientSmtpAddress, RecipientDisplayName, RecipientType, RecipientObjectId) |
 | `ThreatTypes` | `string` |Verdict from the filtering stack on whether the message contains malware, phishing, or other threats|
 | `ConfidenceLevel` | `dynamic` |List of confidence levels for each threat type identified|
 | `DetectionMethods` | `string` |Methods used to detect malware, phishing, or other threats found in the message|
