@@ -65,6 +65,8 @@ In order to view and manage the data you have access to in Microsoft Defender mu
 
 ### Verify your tenant access with GDAP
 
+This procedure is not supported for unified SecOps platform customers. <!--where else should this go then?-->
+
 1. Go to the [Microsoft Partner Center](https://partner.microsoft.com/commerce/granularadminaccess/list).
 2. Under **Customers** you can find the list of organizations you have guest access to.
 3. Verify all the tenants you plan to manage appear in the list.

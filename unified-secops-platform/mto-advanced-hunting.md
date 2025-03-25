@@ -1,6 +1,6 @@
 ---
-title: Advanced hunting in Microsoft Defender multitenant management
-description: Learn about advanced hunting in Microsoft Defender multitenant management
+title: Advanced hunting in Microsoft Defender multi-tenant management
+description: Learn about advanced hunting in Microsoft Defender multi-tenant management
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: deniseb
@@ -14,42 +14,42 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: conceptual
-ms.date: 03/20/2025
+ms.date: 03/25/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Advanced hunting in Microsoft Defender multitenant management
+# Advanced hunting in Microsoft Defender multi-tenant management
 
-Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
+Advanced hunting in Microsoft Defender multi-tenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
 
-Multiple workspaces per tenant are supported in multitenant Advanced hunting as preview.
+Multiple workspaces per tenant are supported in multi-tenant Advanced hunting as preview.
 
 ## Run cross-tenant queries
 
-In multitenant management, you can use any of the queries you currently have access to. They're filtered by tenant in the **Queries** tab. Select a tenant to view the queries available under each one.
+You can run any query that you already have access to in the multi-tenant management **Advanced hunting** page.
 
-1. Load a query in the query editor, and then select **Tenant scope** to specify the scope of the query by tenant and workspace.
+1. Queries listed on the **Queries** tab are filtered by tenant. Select a tenant to view the queries available for each one.
+
+1. Load a query in the query editor and select the tenant selector to specify the tenants and workspaces you want to run the query against.
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-query.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query page" lightbox="media/mto-advanced-hunting/mto-cross-tenants-query.png":::
 
-1. In the side pane that opens, specify the tenants you want to include in the query. 
+1. In the side pane that opens, select the tenants you want to include in the query. Each tenant supports a single workspace. If you have multiple workspaces onboarded to the Defender portal in your tenant, select **Edit selection** to select the workspace you want to use.
 
-   Each tenant supports a single workspace for each tenant in the query. Select **Edit selection** to change the workspace you want to use.
-
-   <!--:::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png":::-->
+   :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png":::
 
 1. When you're done, select **Apply** > **Run query**.
 
-   <!--:::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png":::-->
+   :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png":::
 
-   The query results contain a column named **TenantId**, but the values in this column show the workspace ID. We recommend that you use your query to rename the column in your results from **TenantId** to **WorkspaceId** to make it simpler to read. For example:
+   The query results contain a column named **TenantId**. The values in this column show the workspace ID. We recommend that you use your query to rename the column in your results from **TenantId** to **WorkspaceId** to make it simpler to read. For example: <!--does this happen even if you don't have mult workspaces? also - is this actually true? also - what's w the query for the tenant name up at the top?-->
 
    ```kusto
    DeviceEvents
    | take 10
-   project TenantId = WorkspaceID
+   | project TenantId = WorkspaceID
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 

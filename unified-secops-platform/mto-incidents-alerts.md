@@ -22,7 +22,7 @@ appliesto:
 
 # View and manage incidents and alerts in Microsoft Defender multitenant management
 
-multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal enables security operation center (SOC) analysts to access and analyze data from multiple tenants and workspaces in one place, allowing them to quickly identify and respond to threats. Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data for tenants that onboarded a Microsoft Sentinel workspace to the Defender platform.
+Multi-tenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal enables security operation center (SOC) analysts to access and analyze data from multiple tenants and workspaces in one place, allowing them to quickly identify and respond to threats. Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data for tenants that onboarded a Microsoft Sentinel workspace to the Defender platform.
 
 Manage incidents & alerts originating from multiple tenants and workspaces under **Incidents & alerts**.
 
@@ -32,7 +32,7 @@ Multiple workspaces per tenant are supported in multitenant management as previe
 
 To view or investigate an incident: 
 
-1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in Microsoft Defender multitenant management. The **Tenant name** and **Workspace name** columns show which tenant the incident originates from:
+1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in Microsoft Defender multitenant management. The **Tenant name** and **Workspaces** columns show which tenant the incident originates from:
 
    :::image type="content" source="media/mto-incidents-alerts/mto-incidents.png" alt-text="Screenshot of the Microsoft Defender multitenant incidents page." lightbox="media/mto-incidents-alerts/mto-incidents.png":::
 
@@ -77,16 +77,18 @@ To learn more, see [Investigate alerts](/defender-endpoint/investigate-alerts).
 
 ## Manage multiple alerts
 
-To manage alerts across multiple tenants:
+To manage alerts across multiple tenants and workspaces:
 
 1. Go to the [Alerts page](https://mto.security.microsoft.com/alerts) in Microsoft Defender multitenant management.
-2. Choose the alerts you want to manage from the alerts list and select **Manage alerts**.
+
+1. Select the alerts you want to manage from the alerts list, and then select **Manage alerts**.
 
    :::image type="content" source="media/mto-incidents-alerts/mto-manage-alerts.png" alt-text="Screenshot that highlights the manage alerts option for selected alerts in Microsoft Defender multitenant management." lightbox="media/mto-incidents-alerts/mto-manage-alerts.png":::
 
-On the alert fly-out you can assign alerts, set the alert status, and classify the alerts for multiple tenants and workspaces simultaneously.
+<!--there's also move alerts here? what does that do? need perms-->
+Select any specific alert to view the alert fly-out, where you can assign alerts, set the alert status, and classify the alerts for multiple tenants and workspaces.
 
-To learn more about alerts in the Microsoft Defender portal, see [Manage alerts](/defender-endpoint/manage-alerts).
+For more information, see [Manage alerts](/defender-endpoint/manage-alerts).
 
 ## Related content
 
