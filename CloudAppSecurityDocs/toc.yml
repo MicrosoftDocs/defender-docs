@@ -424,8 +424,8 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-  - name: Investigate and respond 
-    items:
+- name: Investigate and respond 
+  items:
     - name: Assets
       items:
       - name: Applications inventory
