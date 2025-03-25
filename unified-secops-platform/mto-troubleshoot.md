@@ -27,19 +27,19 @@ This article addresses potential issues that might arise as you use the multiten
 
 ## Problem adding or removing tenants
 
-When adding or removing tenants, you might encounter the following issues:
+When adding or removing tenants, you might encounter errors like the following:
 
 :::image type="content" source="media/mto-troubleshoot/add-tenants-error-small.png" alt-text="Screenshot of error message while adding a tenant" lightbox="media/mto-troubleshoot/add-tenants-error.png":::
 
 :::image type="content" source="media/mto-troubleshoot/remove-tenants-error-small.png" alt-text="Screenshot of error message while removing a tenant" lightbox="media/mto-troubleshoot/remove-tenants-error.png":::
 
-This issue is resolved by refreshing the page and trying again.
+The issue is resolved by refreshing the page and trying again.
 
 ## Some tenants are missing from the list
 
 When loading the tenant list on the Settings page, you get the following error message:
 
-:::image type="content" source="media/mto-troubleshoot/partial-tenants-error-small.png" alt-text="Screenshot of error message where only some of the tenants are correctly loaded on the page" lightbox="media/mto-troubleshoot/partial-tenants-error.png":::
+:::image type="content" source="media/mto-troubleshoot/partial-tenants-error-small.png" alt-text="Screenshot of error message where only some of the tenants are correctly loaded on the page":::
 
 The issue is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multifactor authentication (MFA) on your Azure Resource Manager app.
 
