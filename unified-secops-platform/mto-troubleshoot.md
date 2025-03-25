@@ -33,7 +33,7 @@ When adding or removing tenants, you might encounter the following issues:
 
 :::image type="content" source="media/mto-troubleshoot/remove-tenants-error-small.png" alt-text="Screenshot of error message while removing a tenant" lightbox="media/mto-tenants/remove-tenants-error.png":::
 
-This is resolved by refreshing the page and trying again.
+This issue is resolved by refreshing the page and trying again.
 
 ## Some tenants are missing from the list
 
@@ -41,9 +41,9 @@ When loading the tenant list on the Settings page, you get the following error m
 
 :::image type="content" source="media/mto-troubleshoot/partial-tenants-error-small.png" alt-text="Screenshot of error message where only some of the tenants are correctly loaded on the page" lightbox="media/mto-tenants/partial-tenants-error.png":::
 
-This is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multi-factor authentication (MFA) on your Azure Resource Manager app.
+The issue is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multifactor authentication (MFA) on your Azure Resource Manager app.
 
-To resolve this, we recommend adding the Microsoft Defender portal first party app to the same conditional access policy as your Azure Resource Manager app. This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
+To resolve this issue, we recommend adding the Microsoft Defender portal first party app to the same conditional access policy as your Azure Resource Manager app. This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
 
 Here’s an example of the policy setting in the Microsoft Entra admin center.
 
