@@ -233,16 +233,16 @@ After this, the device starts reporting to the Microsoft Defender portal again.Â
 
 > [!NOTE]
 > - Zero touch setup can take up to 5 minutes to complete in the background. 
-> - For supervised devices, administrators can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). In thise case, the Defender for Endpoint VPN Profile isn't installed on the device, and Web protection is provided by the Control Filter Profile.
+> - For supervised devices, administrators can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). In this case, the Defender for Endpoint VPN Profile isn't installed on the device, and Web protection is provided by the Control Filter Profile.
 
 ### Auto-Onboarding of VPN profile (Simplified Onboarding)
 
 > [!NOTE]
-> This step simplifies the onboarding process by setting up the VPN profile. If you are using Zero touch, you do not need to perform this step. 
+> This step simplifies the onboarding process by setting up the VPN profile. If you're using Zero touch, you don't need to perform this step. 
 
 For unsupervised devices, a VPN is used to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
 
-Administrators can configure auto-setup of VPN profile. This will automatically set up the Defender for Endpoint VPN profile without having the user to do so while onboarding.
+Administrators can configure auto-setup of VPN profile. This automatically sets up the Defender for Endpoint VPN profile without having the user to do so while onboarding.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration Profiles** > **Create Profile**.
 
