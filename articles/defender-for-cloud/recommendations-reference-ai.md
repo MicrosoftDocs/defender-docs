@@ -21,11 +21,41 @@ To learn about actions that you can take in response to these recommendations, s
 
 ## Azure recommendations
 
+### Microsoft Entra ID should be used when connecting Azure AI Foundry to default storage account
+
+**Description:** Defender for Cloud identified Credential-based access when connecting to the default storage account in Azure AI Foundry. This poses a risk of unauthorized access. To reduce the risk of unauthorized access, you should disable key-based authorization, and instead use Microsoft Entra ID.
+
+**Severity**: High
+
+### Microsoft Entra ID should be used when connecting to data stores on Azure AI Foundry project
+
+**Description:** Defender for Cloud identified Credential-based access when connecting to the storage account in Azure AI Foundry project. This poses a risk of unauthorized access. To reduce the risk of unauthorized access, you should disable key-based authorization, and instead use Microsoft Entra ID.
+
+**Severity**: High
+
+### Application Insights should be used on Azure AI Foundry
+
+**Description:** Defender for Cloud identified that Application insights is not configured in Azure AI Foundry. The AI Foundry uses Azure Application Insights to store monitoring information about your deployed models. This poses a risk of delayed threat detection and ineffective incident response.
+
+**Severity**: Medium
+
+### Network connections should be limited on Azure AI Foundry
+
+**Description:** Defender for Cloud identified public network access enabled for all networks in Azure AI Foundry. This poses a risk of exposure to external threats and can result in unauthorized access and data breaches. By restricting network access, you can ensure that only allowed networks can access the service.
+
+**Severity**: Medium
+
+### (Enable if required) Customer-managed keys should be used to encrypt data on Azure AI Foundry
+
+**Description:** Defender for Cloud identified that Microsoft-managed keys are used to encrypt data in Azure AI Foundry. This poses a risk of not complying with regulations for organizations with related compliance requirements. Using customer-managed keys (CMK) to encrypt data at rest provides more control over the key lifecycle, including rotation and management, and is often required to meet compliance standards. This is not assessed by default and should only be applied when required by compliance or restrictive policy requirements. If not enabled, the data will be encrypted using Microsoft-managed keys. To implement this recommendation, update the 'Effect' parameter in the Security Policy for the applicable scope.
+
+**Severity**: Medium
+
 ### Azure AI Services resources should have key access disabled (disable local authentication)
 
-**Description**: Key access (local authentication) is recommended to be disabled for security. Azure OpenAI Studio, typically used in development/testing, requires key access and will not function if key access is disabled. After the setting is disabled, Microsoft Entra ID becomes the only access method, which allows maintaining minimum privilege principle and granular control. [Learn more](/azure/ai-services/authentication).
+**Description**: Key access (local authentication) is recommended to be disabled for security. Azure OpenAI Studio, typically used in development/testing, requires key access, and will not function if key access is disabled. After the setting is disabled, Microsoft Entra ID becomes the only access method, which allows maintaining minimum privilege principle and granular control. [Learn more](/azure/ai-services/authentication).
 
-This recommendation replaces the old recommendation *Cognitive Services accounts should have local authentication methods disabled*. It was formerly in category Cognitive Services and Cognitive Search, and was updated to comply with the Azure AI Services naming format and align with the relevant resources. 
+This recommendation replaces the old recommendation *Cognitive Services accounts should have local authentication methods disabled*. It was formerly in the category Cognitive Services and Cognitive Search and was updated to comply with the Azure AI Services naming format and align with the relevant resources. 
 
 **Severity**: Medium
 
