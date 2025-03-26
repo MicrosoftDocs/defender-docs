@@ -40,6 +40,7 @@ If you have servers onboarded to Defender for Endpoint, the migration process va
 
 Before you enable Defender for Cloud, it's important to know how to manage antivirus policies and define any needed exclusions. See the following articles:
 
+- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
 - [Managing exclusions reference](managing-exclusions.md)
