@@ -427,6 +427,9 @@ Defender for Endpoint on iOS enables bulk tagging the mobile devices during onbo
 
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
+> [!NOTE]
+> Configuring more than one device tags from Intune is not supported. Only one device tag will reflect when configured. However, Multiple device tags can be added manually in the XDR portal.
+
 ### Configure device tags using MDM
 
 **For enrolled devices (MDM)**
