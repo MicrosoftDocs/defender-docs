@@ -385,6 +385,9 @@ When you select multiple quarantined messages on the **Email** tab by selecting 
 
 ## Manage quarantined messages in Microsoft Teams
 
+> [!NOTE]
+> Our current quarantine policy for Teams is only set to AdminOnlyAccess. End users will not have access to Quarantine for Teams messages. We are actively working on adding updates to quarantine policy configurations.
+
 When a potentially malicious chat message is detected in Microsoft Teams, zero-hour auto purge (ZAP) removes the message and quarantines it. Users can now view and manage these quarantined Teams messages in the Microsoft Defender portal. Quarantine notifications aren't supported for quarantined Teams messages.
 
 ### View your quarantined messages in Microsoft Teams
