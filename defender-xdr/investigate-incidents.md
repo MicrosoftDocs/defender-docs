@@ -113,7 +113,7 @@ The incident graph also contains information about **attack paths**. These paths
 
 :::image type="content" source="/defender/media/investigate-incidents/attack-path-small.png" alt-text="Highlighting a critical asset and a top attack path in the incident graph" lightbox="/defender/media/investigate-incidents/attack-path.png":::
 
-To view all the possible attack paths, select **View attack paths** on the incident graph. A flyout pane opens containing the list of all possible attack paths for the selected entity. The attack paths can be filtered based on the attack path name, entry point, entry point type, target, target type, and target criticality. Here's an example.
+To view all the possible attack paths, select **View all attack paths** on the incident graph. A flyout pane opens containing the list of all possible attack paths for the selected entity. The attack paths can be filtered based on the attack path name, entry point, entry point type, target, target type, and target criticality. Here's an example.
 
 :::image type="content" source="/defender/media/investigate-incidents/attack-paths-flyout-small.png" alt-text="Screenshot highlighting the view attack paths option and the flyout pane list of attack paths" lightbox="/defender/media/investigate-incidents/attack-paths-flyout.png":::
 
