@@ -34,6 +34,7 @@ You can also get product updates and important notifications through the [messag
 
 ## March 2025
 
+- The Microsoft 365 alert policies can now only be managed in the Microsoft Defender portal. For more information, see [Alert policies in Microsoft 365](alert-policies.md).
 - You can now link Threat analytics reports when setting up custom detections. [Learn more](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports)
 
 ## February 2025
@@ -42,8 +43,6 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) The `PrivilegedEntraPimRoles` column is available for preview in the advanced hunting [IdentityInfo](advanced-hunting-identityinfo-table.md) table. 
 - (GA) You can now view how Security Copilot came up with the query suggestion in its [responses](advanced-hunting-security-copilot.md#try-your-first-request) in Microsoft Defender advanced hunting. Select **See the logic behind the query** below the query text to validate that the query aligns with your intent and needs, even if you don't have an expert-level understanding of KQL.
-
-
 
 ## January 2025
 
