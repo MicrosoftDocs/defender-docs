@@ -255,7 +255,7 @@ You can use protected users to add internal and external sender email addresses 
 > [!NOTE]
 > You can specify a maximum of 350 users for user impersonation protection in each anti-phishing policy.
 >
-> User impersonation protection doesn't work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt.
+> When both **Enable mailbox intelligence** and **Enable intelligence for impersonation protection** are turned on, User impersonation protection doesn't work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt.
 >
 > You might get the error "The email address already exists" if you try to add a user to user impersonation protection when that email address is already specified for user impersonation protection in another anti-phishing policy. This error occurs only in the Defender portal. You don't get the error if you use the corresponding _TargetedUsersToProtect_ parameter in the **New-AntiPhishPolicy** or **Set-AntiPhishPolicy** cmdlets in Exchange Online PowerShell.
 
@@ -284,6 +284,8 @@ Domain impersonation protection prevents specific domains **in the sender's emai
 
 > [!NOTE]
 > You can specify a maximum of 50 custom domains for domain impersonation protection in each anti-phishing policy.
+>
+> When both **Enable mailbox intelligence** and **Enable intelligence for impersonation protection** are turned on, domain impersonation protection doesn't work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt.
 
 Messages from **senders** in the specified domains are subject to impersonation protection checks. The message is checked for impersonation **if** the message is sent to a **recipient** that the policy applies to (all recipients for the default policy; **Users, groups, and domains** recipients in custom policies). If impersonation is detected in the domain of the sender's email address, the action for domain impersonation is applied to the message.
 
