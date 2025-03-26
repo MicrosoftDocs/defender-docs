@@ -4,8 +4,8 @@ description: Enable Conditional Access to prevent applications from running if a
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwaslhh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: conceptual
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Enable Conditional Access to better protect users, devices, and data

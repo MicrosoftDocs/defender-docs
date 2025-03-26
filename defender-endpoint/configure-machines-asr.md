@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 12/18/2023
+ms.date: 03/26/2025
 ---
 
 # Optimize ASR rule deployment and detections

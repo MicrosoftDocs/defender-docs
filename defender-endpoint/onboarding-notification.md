@@ -3,8 +3,8 @@ title: Create an onboarding or offboarding notification rule
 description: Get a notification when a local onboarding or offboarding script is used.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: emwalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 ms.subservice: onboard
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Create a notification rule when a local onboarding or offboarding script is used
