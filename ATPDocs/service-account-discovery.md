@@ -86,6 +86,6 @@ For a deeper dive into what's happening in your service account select on the do
 - The destination is the resource or system the account is trying to access, such as a domain controller or remote desktop session.
 - The connection shows the flow of activity, where the service account is used from the source device to reach and operate on the destination.
 
-For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths** see: [Investigate assets](defender-for-identity/investigate-assets#identity-details)
+For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths** see: [Investigate assets](../ATPDocs/investigate-assets.md#identity-details)
 
 
