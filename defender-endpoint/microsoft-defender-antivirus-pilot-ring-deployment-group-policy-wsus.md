@@ -136,7 +136,7 @@ The Windows Server Update Services Configuration Wizard is complete.
 #### To determine if updates are synchronized
 
 1. In the **Update Services** console, go > **Update Services** > **YR2K19** > **Updates** > **All Updates**.
-1. In **Approval**, select **Any Except Declined**, and the select **Refresh**.
+1. In **Approval**, select **Any Except Declined**, and then select **Refresh**.
 
    The **All Updates** view lists "Platform Updates" and "Security Intelligence Updates" (also known as signatures/definitions). For example, KB4052623 platform updates. KB4052623 platform update is shown in the following figure:
 
@@ -151,11 +151,11 @@ The Windows Server Update Services Configuration Wizard is complete.
 
 #### Approve and deploy updates in WSUS
 
-1. In the **Update Services** console, go > **Update Services** > **YR2K19** > **Computers** > **Options**. The **Options** window opens
+1. In the **Update Services** console, go to **Update Services** > **YR2K19** > **Computers** > **Options**. The **Options** window opens.
 1. Select **Automatic Approvals** to launch the **Automatic Approvals** configuration wizard. 
 1. In **Automatic Approvals** page, on the **Update Rules** tab, select **OK**.
 1. On the **Add Rule** page, is **Step 1**, select **When an update is in a specific classification** and **When an update is in a specific product**.
-1. In **Choose Products**, scroll to **Forefront**, and then select **Forefront Client Security**.  Scroll to **Windows**, and then select **Microsoft Defender Antivirus**, and then select **OK**. The workflow returns you to the **Add Rule** page.
+1. In **Choose Products**, scroll to **Forefront**, and then select **Forefront Client Security**. Scroll to **Windows**, and then select **Microsoft Defender Antivirus**, and then select **OK**. The workflow returns you to the **Add Rule** page.
 1. On the **Add Rule** page, in **Step 1: Select Properties**, ensure the following are selected:
    - **When an update is in a specific classification**
    - **When an updates is in a specific product**
@@ -176,7 +176,7 @@ The Windows Server Update Services Configuration Wizard is complete.
 
 1. On your Group Policy management computer, open the **Group Policy Management Console**, right-click the _Group Policy Object_ you want to configure and select **Edit**.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**, select **Policies**, then select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**, select **Policies**, then select **Administrative templates**.
 
 1. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
 
