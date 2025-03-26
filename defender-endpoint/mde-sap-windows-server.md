@@ -266,7 +266,7 @@ Here's a list of what to check:
 
    [EDR in Defender for Endpoint](overview-endpoint-detection-response.md) on Windows might scan SMB shared network file systems. The EDR sensor scans certain files that are identified as interesting for EDR analysis during file modification, delete, and move operations.
 
-   Defender for Endpoint on Linux doesn't scan NFS file systems during [scheduled scans](linux-schedule-scan-mde.md).
+   Defender for Endpoint on Linux doesn't scan NFS file systems during [scheduled scans](schedule-antivirus-scan-crontab.md).
 
 8. **Troubleshoot sense health or reliability issues**. To troubleshoot such issues, use the [Defender for Endpoint client analyzer tool](overview-client-analyzer.md). The Defender for Endpoint client analyzer can be useful when diagnosing sensor health or reliability issues on onboarded Windows, Linux, or Mac devices. Get the latest version of the Defender for Endpoint client analyzer here: [https://aka.ms/MDEClientAnalyzer](https://aka.ms/MDEClientAnalyzer).
 
