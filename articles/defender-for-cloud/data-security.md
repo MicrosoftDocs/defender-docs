@@ -18,7 +18,8 @@ This article explains how data is managed and safeguarded in Defender for Cloud.
 
 Defender for Cloud analyzes data from the following sources to provide visibility into your security state, identify vulnerabilities and recommend mitigations, and detect active threats:
 
-- **Azure services**: Uses information about the configuration of Azure services you have deployed by communicating with that service’s resource provider.
+- **Azure services**: Uses information about the configuration of Azure services you have deployed by communicating with that service’s resource provider. For Azure AI resources this includes AI prompts and responses.
+
 - **Network traffic**: Uses sampled network traffic metadata from Microsoft’s infrastructure, such as source/destination IP/port, packet size, and network protocol.
 - **Partner solutions**: Uses security alerts from integrated partner solutions, such as firewalls and antimalware solutions.
 - **Your machines**: Uses configuration details and information about security events, such as Windows event and audit logs, and syslog messages from your machines.
@@ -41,13 +42,15 @@ Data is kept logically separate on each component throughout the service. All da
 
 ### Data access
 
-To provide security recommendations and investigate potential security threats, Microsoft personnel might access information collected or analyzed by Azure services, including process creation events, and other artifacts, which might unintentionally include customer data or personal data from your machines.
+To provide security recommendations and investigate potential security threats, Microsoft personnel might access information collected or analyzed by Azure services, including process creation events, AI prompts and other artifacts, which might unintentionally include customer data or personal data from your machines.
 
 We adhere to the [Microsoft Online Services Data Protection Addendum](https://www.microsoftvolumelicensing.com/Downloader.aspx?DocumentId=17880), which states that Microsoft won't use Customer Data or derive information from it for any advertising or similar commercial purposes. We only use Customer Data as needed to provide you with Azure services, including purposes compatible with providing those services. You retain all rights to Customer Data.
 
 ### Data use
 
-Microsoft uses patterns and threat intelligence seen across multiple tenants to enhance our prevention and detection capabilities; we do so in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement).
+Microsoft uses patterns and threat intelligence seen across multiple tenants to enhance our prevention and detection capabilities; we do so in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement). 
+
+Microsoft Defender for Cloud does not use Customer Data to train AI models without user consent. As per the Microsoft Product Terms: Microsoft Defender for Cloud or Microsoft Generative AI Services do not use Customer Data to train any generative AI foundation model, unless pursuant to the Customer’s documented instructions.
 
 ## Manage data collection from machines
 
@@ -96,6 +99,8 @@ When the cloud security graph collects data from Azure and multicloud environmen
 Calculated data, such as attack paths, might be kept for an additional 14 days. Calculated data consist of data that is derived from the raw data collected from the environment. For example, the attack path is derived from the raw data collected from the environment.
 
 This information is collected in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement).
+
+Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securely and retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
 
 ## Defender for Cloud and Microsoft Defender 365 Defender integration
 
