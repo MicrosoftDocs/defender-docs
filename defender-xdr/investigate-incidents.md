@@ -128,7 +128,7 @@ You can view an incident's details on the right pane of an incident page. The in
 The incident description provides a brief overview of the incident. In some cases, the first alert in the incident is used as the incident description. In this case, the description is only shown in the portal and not stored in the activity log, advanced hunting tables, or the Microsoft Sentinel in Azure portal.
 
 > [!TIP]
-> Microsoft Sentinel customers can also view the same incident description in the Azure portal by setting the incident description through API or automation.
+> Microsoft Sentinel customers can also view and overwrite the same incident description in the Azure portal by setting the incident description through API or automation.
 
 ## Alerts
 
