@@ -182,28 +182,28 @@ Administrators can configure Microsoft Defender for Endpoint to deploy and activ
 1. Select **Custom VPN** for Connection Type and in the **Base VPN** section, enter the following:
 
    - Connection Name: Microsoft Defender for Endpoint
-   - VPN server address: 127.0.0.1
+   - VPN server address: `127.0.0.1`
    - Auth method: "Username and password"
-   - Split Tunneling: Disable
-   - VPN identifier: com.microsoft.scmx
-   - In the key-value pairs, enter the key **SilentOnboard** and set the value to **True**.
-   - Type of Automatic VPN: On-demand VPN
-   - Select **Add** for **On Demand Rules** and select **I want to do the following: Connect VPN**, **I want to restrict to: All domains**.
+   - Split Tunneling: `Disable`
+   - VPN identifier: `com.microsoft.scmx`
+   - In the key-value pairs, enter the key `SilentOnboard` and set the value to `True`.
+   - Type of Automatic VPN: `On-demand VPN`
+   - Select **Add** for **On Demand Rules**, and then select **I want to do the following: Connect VPN**, and then set **I want to restrict to: All domains**.
 
    :::image type="content" source="media/ios-deploy-9.png" alt-text="The VPN profile Configuration page" lightbox="media/ios-deploy-9.png":::
 
-   - To mandate that VPN can't be disabled in users device, Administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, it's not configured and users can disable VPN only in the Settings.
-   - To allow Users to Change the VPN toggle from within the app, add **EnableVPNToggleInApp = TRUE**, in the key-value pairs. By default, users can't change the toggle from within the app.
+   - To mandate that VPN can't be disabled in users device, administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, it's not configured and users can disable VPN only in **Settings**.
+   - To allow users to change the VPN toggle from within the app, add `EnableVPNToggleInApp = TRUE`, in the key-value pairs. By default, users can't change the toggle from within the app.
 
 1. Select **Next** and assign the profile to targeted users.
 
-1. In the *Review + Create* section, verify that all the information entered is correct and then select **Create**.
+1. In the **Review + Create** section, verify that all the information entered is correct, and then select **Create**.
 
-Once the above configuration is done and synced with the device, the following actions take place on the targeted iOS devices:
+After this configuration is done and synced with the device, the following actions take place on the targeted iOS devices:
 
-- Microsoft Defender for Endpoint will be deployed and silently onboarded and the device will be seen in the Defender for Endpoint portal.
-- A provisional notification will be sent to the user device.
-- Web Protection and other features will be activated.
+- Defender for Endpoint is deployed and silently onboarded. The device is visible in the Microsoft Defender portal after it is onboarded.
+- A provisional notification is sent to the user's device.
+- Web Protection and other features are activated.
 
 In some cases, for security reasons like password changes, Multi Factor Authentication etc, zero-touch onboarding might require end user to manually sign-in in the Microsoft Defender app. 
 
@@ -211,7 +211,7 @@ In some cases, for security reasons like password changes, Multi Factor Authenti
 
 <!---image needed--->
 
-In order to remediate the same, end users must take the following steps: 
+End users should take the following steps: 
 
 1. Open the Microsoft Defender app or tap on the notification message.
 
@@ -225,11 +225,11 @@ After this, the device will get onboarded and start reporting to security portal
 
 <!---image file needed here--->
 
-1. Open the Microsoft Defender app or click the notification thrown 
+1. Open the Microsoft Defender app, or tap the notification.  
 
-1. Provide their sign-in credentials when prompted by Microsoft Defender app 
+1. When prompted by the Microsoft Defender app, sign in.
 
-After this, the device will start reporting to the Microsoft Defender portal again. 
+After this, the device starts reporting to the Microsoft Defender portal again. 
 
 > [!NOTE]
 > - Zero touch setup can take up to 5 minutes to complete in the background. 
