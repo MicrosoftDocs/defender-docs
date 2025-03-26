@@ -32,6 +32,10 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## March 2025
+
+- You can now link Threat analytics reports when setting up custom detections. [Learn more](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports)
+
 ## February 2025
 
 - (Preview) IP addresses can now be excluded from automated responses in attack disruption. This feature allows you to exclude specific IPs from automated containment actions triggered by attack disruption. For more information, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
