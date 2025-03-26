@@ -87,7 +87,7 @@ Deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal.
 
 ## Complete deployment for supervised devices
 
-The Microsoft Defender for Endpoint on iOS app has specialized ability on supervised iOS/iPadOS devices, given the increased management capabilities provided by the platform on these types of devices. It can also provide Web Protection **without setting up a local VPN on the device**. This gives end-users a seamless experience while still being protected from phishing and other web-based attacks.
+The Microsoft Defender for Endpoint on iOS app has specialized ability on supervised iOS/iPadOS devices, given the increased management capabilities provided by the platform on these types of devices. It can also provide Web Protection **without setting up a local VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
 
 Admins can use the following steps to configure supervised devices.
 
@@ -133,7 +133,7 @@ Configure the supervised mode for Defender for Endpoint app through an App confi
 #### Device configuration profile (Control Filter)
 
 > [!NOTE]
-> For devices that run iOS/iPadOS (in Supervised Mode), there is  custom **.mobileconfig** profile, called the **ControlFilter** profile available. This profile enables Web Protection **without setting up the local loopback VPN on the device**. This gives end-users a seamless experience while still being protected from phishing and other web-based attacks.
+> For devices that run iOS/iPadOS (in Supervised Mode), there is  custom **.mobileconfig** profile, called the **ControlFilter** profile available. This profile enables Web Protection **without setting up the local loopback VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
 >
 > However, the **ControlFilter** profile does not work with Always-On VPN (AOVPN) due to platform restrictions.
 
@@ -203,15 +203,17 @@ Once the above configuration is done and synced with the device, the following a
 - A provisional notification will be sent to the user device.
 - Web Protection and other features will be activated.
 
-In some cases, for security reasons like password changes, Multi Factor Authentication etc, zero-touch onboarding might require end-user to manually sign-in in the MDE app. 
+In some cases, for security reasons like password changes, Multi Factor Authentication etc, zero-touch onboarding might require end user to manually sign-in in the Microsoft Defender app. 
 
-**A.** **For first time onboarding scenarios, end-user will see the following silent notification:**
+**A: For first time onboarding scenarios, end users receive a silent notification**.
 
-In order to remediate the same, the end-user will need to follow the following steps: 
+<!---image needed--->
 
-1. Open the MDE App or click on the notification thrown 
+In order to remediate the same, the end user will need to follow the following steps: 
 
-1. Select the enrolled enterprise account from the account picker screen 
+1. Open the Microsoft Defender app or tap on the notification message.
+
+1. Select the enrolled enterprise account from the account picker screen.
 
 1. Provide their sign-in credentials 
 
@@ -221,9 +223,9 @@ After this, the device will get onboarded and start reporting to security portal
 
 <!---image file needed here--->
 
-1. Open the MDE App or click the notification thrown 
+1. Open the Microsoft Defender app or click the notification thrown 
 
-1. Provide their sign-in credentials when prompted by MDE app 
+1. Provide their sign-in credentials when prompted by Microsoft Defender app 
 
 After this, the device will start reporting to security portal again. 
 
@@ -311,7 +313,7 @@ Defender app is installed into the user's device. User signs in and completes th
 
    :::image type="icon" source="media/41627a709700c324849bf7e13510c516.png":::
 
-2. Tap the Defender for Endpoint app icon (MSDefender) and follow the on-screen instructions to complete the onboarding steps. The details include end-user acceptance of iOS permissions required by Defender for Endpoint on iOS.
+2. Tap the Defender for Endpoint app icon (MSDefender) and follow the on-screen instructions to complete the onboarding steps. The details include end users acceptance of iOS permissions required by Defender for Endpoint on iOS.
 
 > [!NOTE] 
 > Skip this step if you configure zero touch (silent) onboarding. Manually launching application is not necessary if zero touch (silent) onboarding is configured.
