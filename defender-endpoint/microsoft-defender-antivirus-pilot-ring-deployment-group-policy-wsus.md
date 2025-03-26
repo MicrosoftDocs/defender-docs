@@ -118,9 +118,9 @@ The Windows Server Update Services Configuration Wizard is complete.
 
      Follow the link in the error message to install the Microsoft Report Viewer 2012 Redistributable before proceeding to the next numbered step of this procedure.
 
-    - If **Microsoft Report Viewer 2012 Redistributable** installed, **Update Report for YR2k19** opens, presenting a report with information related to the KB you previously selected.  An example report is shown in the following image. 
+    - If **Microsoft Report Viewer 2012 Redistributable** is installed, the **Update Report for YR2k19** opens, presenting a report with information related to the KB you previously selected. An example report is shown in the following image: 
 
-     :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png" alt-text="Screenshot that shows a screen capture with details about a KB update reported in **Update Report for Yr2k19**." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png":::
+      :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png" alt-text="Screenshot that shows a screen capture with details about a KB update reported in Update Report for Yr2k19." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png":::
 
     To learn more about the different Microsoft Defender Antivirus Update channels, see [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md)
 
