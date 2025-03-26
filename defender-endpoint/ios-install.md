@@ -29,32 +29,34 @@ ms.date: 03/26/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article describes deploying Defender for Endpoint on iOS on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll).
+This article describes deploying the Defender for Endpoint on iOS (using the Microsoft Defender app) with Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll).
 
 ## Before you begin
 
-- Ensure you have access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Ensure you have access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the [Microsoft Defender portal](https://security.microsoft.com).
 
-- Ensure iOS enrollment is done for your users. Users need to have a Defender for Endpoint license assigned in order to use Defender for Endpoint on iOS. Refer to [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign) for instructions on how to assign licenses.
+- Ensure iOS enrollment is done for your users. Users need to have a Defender for Endpoint license assigned in order to use the Microsoft Defender app. Refer to [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign) for instructions on how to assign licenses.
 
-- Ensure the end users have company portal app installed, signed inC, and enrollment completed.
+- Ensure that end users have the Company Portal app installed, have signed in, and have completed enrollment.
 
 > [!NOTE]
-> Microsoft Defender for Endpoint on iOS is available in the [Apple App Store](https://aka.ms/mdatpiosappstore).
+> The Microsoft Defender app is available in the [Apple App Store](https://aka.ms/mdatpiosappstore).
 
 This section covers:
 
-1. **Deployment steps** (applicable for both **Supervised** and **Unsupervised** devices)- Admins can deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal. This step isn't needed for VPP (volume purchase) apps.
+1. **Deployment steps** (applicable for both **Supervised** and **Unsupervised** devices)- Administrators can deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal. This step isn't needed for VPP (volume purchase) apps.
 
-1. **Complete deployment** (only for Supervised devices)- Admins can select to deploy any one of the given profiles.
-    1. **Zero touch (Silent) Control Filter** - Provides Web Protection without the local loopback VPN and also enables silent onboarding for users. App is automatically installed  and activated without the need for user to open the app.
-    1. **Control Filter** - Provides Web Protection without the local loopback VPN.
+1. **Complete deployment** (only for Supervised devices)- Administrators can select to deploy any one of the given profiles.
+
+   - **Zero touch (Silent) Control Filter** - Provides Web Protection without the local loopback VPN and also enables silent onboarding for users. App is automatically installed  and activated without the need for user to open the app.
+   - **Control Filter** - Provides Web Protection without the local loopback VPN.
   
-1. **Automated Onboarding setup** (only for **Unsupervised** devices) - Admins can automate the Defender for Endpoint onboarding for users in two different ways:
-    1. **Zero touch (Silent) Onboarding** - App is automatically installed and activated without the need for users to open the app.
-    1. **Auto Onboarding of VPN** - Defender for Endpoint VPN profile is automatically set up without having the user to do so during onboarding. This step isn't recommended in Zero touch configurations.
+1. **Automated Onboarding setup** (only for **Unsupervised** devices) - Administrators can automate the Defender for Endpoint onboarding for users in two different ways:
 
-1. **User Enrollment setup** (only for Intune User Enrolled devices) - Admins can deploy and configure the Defender for Endpoint app on the Intune User Enrolled devices also.
+   - **Zero touch (Silent) Onboarding** - The Microsoft Defender app is automatically installed and activated without the need for users to open the app.
+   - **Auto Onboarding of VPN** - Defender for Endpoint VPN profile is automatically set up without having the user to do so during onboarding. This step isn't recommended in Zero touch configurations.
+
+1. **User Enrollment setup** (only for Intune User Enrolled devices) - Administrators can deploy and configure the Defender for Endpoint app on the Intune User Enrolled devices also.
 
 1. **Complete onboarding and check status** -  This step is applicable for all enrollment types to ensure app is installed on the device, onboarding is completed, and device is visible in the Microsoft Defender portal. It can be skipped for the zero touch (silent) onboarding.
 
@@ -137,7 +139,7 @@ Configure supervised mode for the Microsoft Defender app through an App configur
 >
 > However, the **ControlFilter** profile doesn't work with Always-On VPN (AOVPN) due to platform restrictions.
 
-Admins deploy any one of the given profiles.
+Administrators deploy any one of the given profiles.
 
 1. **Zero touch (Silent) Control Filter** - This profile enables silent onboarding for users. Download the config profile from [ControlFilterZeroTouch](https://download.microsoft.com/download/f/8/e/f8ed3484-b665-4c3c-9ae9-272c8a04159b/Microsoft_Defender_for_Endpoint_Control_Filter_Zerotouch.mobileconfig).
 
@@ -169,7 +171,7 @@ Administrators can automate the Defender onboarding for users in two different w
 > [!NOTE]
 > Zero-touch cannot be configured on iOS devices that are enrolled without user affinity (user-less devices or shared devices).
 
-Admins can configure Microsoft Defender for Endpoint to deploy and activate silently. In this flow, the administrator creates a deployment profile and the user is simply notified of the installation. Defender for Endpoint is automatically installed without the need for the user to open the app. Follow the steps below to set up zero-touch or silent deployment of Defender for Endpoint on enrolled iOS devices:
+Administrators can configure Microsoft Defender for Endpoint to deploy and activate silently. In this flow, the administrator creates a deployment profile and the user is simply notified of the installation. Defender for Endpoint is automatically installed without the need for the user to open the app. Follow the steps below to set up zero-touch or silent deployment of Defender for Endpoint on enrolled iOS devices:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration Profiles** > **Create Profile**.
 
@@ -190,7 +192,7 @@ Admins can configure Microsoft Defender for Endpoint to deploy and activate sile
 
    :::image type="content" source="media/ios-deploy-9.png" alt-text="The VPN profile Configuration page" lightbox="media/ios-deploy-9.png":::
 
-   - To mandate that VPN can't be disabled in users device, Admins can select **Yes** from **Block users from disabling automatic VPN**. By default, it's not configured and users can disable VPN only in the Settings.
+   - To mandate that VPN can't be disabled in users device, Administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, it's not configured and users can disable VPN only in the Settings.
    - To allow Users to Change the VPN toggle from within the app, add **EnableVPNToggleInApp = TRUE**, in the key-value pairs. By default, users can't change the toggle from within the app.
 
 1. Select **Next** and assign the profile to targeted users.
@@ -231,7 +233,7 @@ After this, the device will start reporting to the Microsoft Defender portal aga
 
 > [!NOTE]
 > - Zero touch setup can take up to 5 minutes to complete in the background. 
-> - For supervised devices, admins can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). Defender for Endpoint VPN Profile will not be installed on the device and Web protection will be provided by the Control Filter Profile.
+> - For supervised devices, Administrators can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). Defender for Endpoint VPN Profile will not be installed on the device and Web protection will be provided by the Control Filter Profile.
 
 ### Auto-Onboarding of VPN profile (Simplified Onboarding)
 
@@ -240,7 +242,7 @@ After this, the device will start reporting to the Microsoft Defender portal aga
 
 For unsupervised devices, a VPN is used to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
 
-Admins can configure auto-setup of VPN profile. This will automatically set up the Defender for Endpoint VPN profile without having the user to do so while onboarding.
+Administrators can configure auto-setup of VPN profile. This will automatically set up the Defender for Endpoint VPN profile without having the user to do so while onboarding.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration Profiles** > **Create Profile**.
 
@@ -261,7 +263,7 @@ Admins can configure auto-setup of VPN profile. This will automatically set up t
 
    :::image type="content" source="media/ios-deploy-8.png" alt-text="The VPN profile Configuration settings tab." lightbox="media/ios-deploy-8.png":::
 
-   - To require that VPN cannot be disabled on a users' device, Admins can select **Yes** from **Block users from disabling automatic VPN**. By default, this setting not configured and users can disable VPN only in the Settings.
+   - To require that VPN cannot be disabled on a users' device, Administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, this setting not configured and users can disable VPN only in the Settings.
    - To allow Users to Change the VPN toggle from within the app, add **EnableVPNToggleInApp = TRUE**, in the key-value pairs. By default, users cannot change the toggle from within the app.
 
 1. Click **Next** and assign the profile to targeted users.
@@ -302,7 +304,7 @@ Defender app is installed into the user's device. User signs in and completes th
 ### Supported features and limitations
 
 - Supports all the current capabilities of Defender for Endpoint on iOS. These capabilities include Web protection, Network Protection, Jailbreak detection, Vulnerabilities in OS and Apps, and Alerting in the Microsoft Defender portal. 
-- Zero touch (silent) deployment and auto onboarding of VPN is not supported with User Enrollment since admins cannot push a device wide VPN profile with User Enrollment.
+- Zero touch (silent) deployment and auto onboarding of VPN is not supported with User Enrollment since Administrators cannot push a device wide VPN profile with User Enrollment.
 - For vulnerability management of apps, only apps in the work profile will be visible.
 - It can take up to 10 minutes for newly onboarded devices to become compliant if targeted by compliance policies.  
 - For more information, see [User Enrollment limitations and capabilities](/mem/intune/enrollment/ios-user-enrollment-supported-actions#limitations-and-capabilities-not-supported).
@@ -313,7 +315,7 @@ Defender app is installed into the user's device. User signs in and completes th
 
    :::image type="icon" source="media/41627a709700c324849bf7e13510c516.png":::
 
-2. Tap the Defender for Endpoint app icon (MSDefender) and follow the on-screen instructions to complete the onboarding steps. The details include end users acceptance of iOS permissions required by Defender for Endpoint on iOS.
+2. Tap the Defender for Endpoint app icon (MSDefender) and follow the on-screen instructions to complete the onboarding steps. The details include end users acceptance of iOS permissions required by the Microsoft Defender app.
 
 > [!NOTE] 
 > Skip this step if you configure zero touch (silent) onboarding. Manually launching application is not necessary if zero touch (silent) onboarding is configured.
