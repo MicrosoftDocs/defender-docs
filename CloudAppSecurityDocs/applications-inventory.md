@@ -34,7 +34,7 @@ There are several options you can choose from to customize the SaaS apps and OAu
 >When exporting the applications list to a CSV file, a maximum of 1000 SaaS or OAuth apps are displayed.
 
 The following image depicts the SaaS apps list:
-:::image type="content" source="media/applications-tab-in-the-defender-portal.png" alt-text="Screenshot of the applications tab in the Defender portal" lightbox="media/applications-tab-in-the-defender-portal.png" lightbox="media/applications-tab-in-the-defender-portal.png":::
+:::image type="content" source="media/applications-tab-in-the-defender-portal.png" alt-text="Screenshot of the applications tab in the Defender portal" lightbox="media/applications-tab-in-the-defender-portal.png"
 
 
 ## SaaS app details
