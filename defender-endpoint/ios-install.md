@@ -124,7 +124,7 @@ Configure supervised mode for the Microsoft Defender app through an App configur
 
 1. On the **Assignments** page, select the groups that receive this profile. For this scenario, it's best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
-   When deploying to user groups, a user must sign in to a device before the policy applies.
+   When deploying to user groups, users must sign in to their devices before the policy is applied.
 
    Select **Next**.
 
