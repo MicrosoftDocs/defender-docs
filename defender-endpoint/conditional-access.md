@@ -5,7 +5,7 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: ewalsh
-author: emmwaslhh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2025
+ms.date: 03/26/2025
 ---
 
 # Connected applications in Microsoft Defender for Endpoint

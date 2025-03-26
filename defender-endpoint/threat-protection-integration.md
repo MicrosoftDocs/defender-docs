@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 13/26/2025
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender for Endpoint and other Microsoft solutions
