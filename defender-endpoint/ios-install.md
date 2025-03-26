@@ -253,26 +253,26 @@ Administrators can configure auto-setup of VPN profile. This will automatically 
 1. Select **Custom VPN** for Connection Type and in the **Base VPN** section, enter the following:
 
    - Connection Name: Microsoft Defender for Endpoint
-   - VPN server address: 127.0.0.1
+   - VPN server address: `127.0.0.1`
    - Auth method: "Username and password"
-   - Split Tunneling: Disable
-   - VPN identifier: com.microsoft.scmx
-   - In the key-value pairs, enter the key **AutoOnboard** and set the value to **True**.
+   - Split Tunneling: `Disable`
+   - VPN identifier: `com.microsoft.scmx`
+   - In the key-value pairs, enter the key `AutoOnboard` and set the value to `True`.
    - Type of Automatic VPN: On-demand VPN
    - Select **Add** for **On Demand Rules** and select **I want to do the following: Connect VPN**, **I want to restrict to: All domains**.
 
    :::image type="content" source="media/ios-deploy-8.png" alt-text="The VPN profile Configuration settings tab." lightbox="media/ios-deploy-8.png":::
 
-   - To require that VPN cannot be disabled on a users' device, Administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, this setting not configured and users can disable VPN only in the Settings.
-   - To allow Users to Change the VPN toggle from within the app, add **EnableVPNToggleInApp = TRUE**, in the key-value pairs. By default, users cannot change the toggle from within the app.
+   - To require that VPN cannot be disabled on a users' device, administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, this setting not configured and users can disable VPN only in **Settings**.
+   - To allow users to change the VPN toggle from within the app, add `EnableVPNToggleInApp = TRUE`, in the key-value pairs. By default, users cannot change the toggle from within the app.
 
-1. Click **Next** and assign the profile to targeted users.
+1. Select **Next**, and assign the profile to targeted users.
 
-1. In the *Review + Create* section, verify that all the information entered is correct and then select **Create**.
+1. In the **Review + Create** section, verify that all the information entered is correct, and then select **Create**.
 
 ##  **User Enrollment setup** (only for Intune User Enrolled devices)
 
-Microsoft Defender iOS app can be deployed on the Intune User Enrolled devices using the following steps.
+Microsoft Defender app can be deployed to iOS devices with Intune User Enrolled devices using the following steps.
 
  ### Admin
 
@@ -283,23 +283,26 @@ Microsoft Defender iOS app can be deployed on the Intune User Enrolled devices u
 
  1. Set up SSO Plugin. Authenticator app with SSO extension is a pre-requisite for user enrollment in an iOS device.
    
-   - Create is Device configuration Profile in Intune-  Configure iOS/iPadOS Enterprise SSO plug-in with MDM | Microsoft Learn. 
+   - Create a Device configuration Profile in Intune. See [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). 
    - Ensure to add these two keys in the above configuration:
-   - App bundle ID: Include the Defender App bundle ID in this list **com.microsoft.scmx**
-   - Additional configuration: Key - **device_registration** ; Type - **String** ; Value- **{{DEVICEREGISTRATION}}**
+      - App bundle ID: Include the Defender App bundle ID in this list `com.microsoft.scmx`
+      - Additional configuration: Key: `device_registration`; Type: `String`; Value: `{{DEVICEREGISTRATION}}`
 
  1. Set up the MDM Key for User Enrollment.
    
-   - In Intune, go to Go to Apps \> App configuration policies \> Add \> Managed devices
-   - Give the policy a name, select Platform \> iOS/iPadOS, 
-   - Select Microsoft Defender for Endpoint as the target app. 
-   - In Settings page, select Use configuration designer and add **UserEnrolmentEnabled** as the key, value type as **String**, value as **True**.
+   1. In the [Intune admin center](https://intune.microsoft.com/#home), go to Go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
- 1. Admin can push Defender as a required VPP app from Intune. 
+   2. Give the policy a name, and then select **Platform** \> **iOS/iPadOS**.
+
+   3. Select **Microsoft Defender for Endpoint** as the target app.
+
+   4. On the **Settings** page, select **Use configuration designer**, and add `UserEnrollmentEnabled` as the key, with the value type as `String`, and the value set to `True`.
+
+ 1. Administrators can push the Microsoft Defender app as a required VPP app from Intune. 
 
 ### End User
 
-Defender app is installed into the user's device. User signs in and completes the onboarding. Once the device is successfully onboarded, it will be visible in the Microsoft Defender portal, under Device Inventory.
+The Microsoft Defender app is installed into the users' devices. Each user signs in and completes the onboarding process. Once the device is successfully onboarded, it is visible in the Microsoft Defender portal, under **Device Inventory**.
 
 ### Supported features and limitations
 
