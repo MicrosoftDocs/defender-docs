@@ -108,8 +108,10 @@ In case you have devices running Windows Server 2012 R2 or Windows Server 2016, 
 
 ## See also
 
-- [Enable Defender for Endpoint integration](/azure/defender-for-cloud/enable-defender-for-endpoint)
-- [Agentless machine scanning](/azure/defender-for-cloud/concept-agentless-data-collection)
-- [Remediate Defender for Endpoint misconfigurations (agentless)](/azure/defender-for-cloud/endpoint-detection-misconfiguration)
+- [Defender for Cloud: Enable Defender for Endpoint integration](/azure/defender-for-cloud/enable-defender-for-endpoint)
+- [Defender for Cloud: Agentless machine scanning](/azure/defender-for-cloud/concept-agentless-data-collection)
+- [Defender for Cloud: Remediate Defender for Endpoint misconfigurations (agentless)](/azure/defender-for-cloud/endpoint-detection-misconfiguration)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
