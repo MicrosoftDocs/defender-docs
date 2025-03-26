@@ -39,7 +39,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 March 26, 2025
 
-Agentless scanning for Azure VMs with CMK encrypted disks is now Generally Available. Agentless scanning is now available across Azure, AWS, GCP. Both the Defender CSPM plan, and the Defender for Servers P2 provide support for agentless scanning for VMs with CMK encrypted disks.
+Agentless scanning for Azure VMs with CMK encrypted disks is now Generally Available. Both the Defender CSPM plan, and the Defender for Servers P2 provide support for agentless scanning for VMs, now with CMK support across all clouds
 
 Learn how to [enable agentless scanning for Azure VMs with CMK encrypted disks](enable-agentless-scanning-vms.md#enable-for-azure-vms-with-cmk-encrypted-disks).
 
