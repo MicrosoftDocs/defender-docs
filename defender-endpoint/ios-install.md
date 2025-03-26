@@ -135,7 +135,7 @@ Configure supervised mode for the Microsoft Defender app through an App configur
 > [!NOTE]
 > For devices that run iOS/iPadOS (in Supervised Mode), there's a custom `.mobileconfig` profile available, called the **ControlFilter** profile. This profile enables Web Protection **without setting up the local loopback VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
 >
-> However, the **ControlFilter** profile does not work with Always-On VPN (AOVPN) due to platform restrictions.
+> However, the **ControlFilter** profile doesn't work with Always-On VPN (AOVPN) due to platform restrictions.
 
 Admins deploy any one of the given profiles.
 
@@ -143,7 +143,7 @@ Admins deploy any one of the given profiles.
 
 2. **Control Filter** - Download the config profile from [ControlFilter](https://download.microsoft.com/download/f/8/e/f8ed3484-b665-4c3c-9ae9-272c8a04159b/Microsoft_Defender_for_Endpoint_Control_Filter_1.mobileconfig).
 
-Once the profile has been downloaded, deploy the custom profile. Follow the steps below:
+Once the profile is downloaded, deploy the custom profile. Follow the steps below:
 
 1. Navigate to **Devices** > **iOS/iPadOS** > **Configuration profiles** > **Create Profile**.
 
@@ -162,7 +162,7 @@ Once the profile has been downloaded, deploy the custom profile. Follow the step
 
 ## Automated Onboarding setup (only for Unsupervised devices)
 
-Admins can automate the Defender onboarding for users in two different ways with Zero touch(Silent) Onboarding or Auto Onboarding of VPN.
+Administrators can automate the Defender onboarding for users in two different ways with Zero touch (Silent) Onboarding or Auto Onboarding of VPN.
 
 ### Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint
 
@@ -209,13 +209,13 @@ In some cases, for security reasons like password changes, Multi Factor Authenti
 
 <!---image needed--->
 
-In order to remediate the same, the end user will need to follow the following steps: 
+In order to remediate the same, end users must take the following steps: 
 
 1. Open the Microsoft Defender app or tap on the notification message.
 
 1. Select the enrolled enterprise account from the account picker screen.
 
-1. Provide their sign-in credentials 
+1. Sign in. 
 
 After this, the device will get onboarded and start reporting to security portal.
 
@@ -227,7 +227,7 @@ After this, the device will get onboarded and start reporting to security portal
 
 1. Provide their sign-in credentials when prompted by Microsoft Defender app 
 
-After this, the device will start reporting to security portal again. 
+After this, the device will start reporting to the Microsoft Defender portal again. 
 
 > [!NOTE]
 > - Zero touch setup can take up to 5 minutes to complete in the background. 
@@ -297,11 +297,11 @@ Microsoft Defender iOS app can be deployed on the Intune User Enrolled devices u
 
 ### End User
 
-Defender app is installed into the user's device. User signs in and completes the onboarding. Once the device is successfully onboarded, it will be visible in the Defender Security Portal under Device Inventory.
+Defender app is installed into the user's device. User signs in and completes the onboarding. Once the device is successfully onboarded, it will be visible in the Microsoft Defender portal, under Device Inventory.
 
 ### Supported features and limitations
 
-- Supports all the current capabilities of Defender for Endpoint iOS like – Web protection, Network Protection, Jailbreak detection, Vulnerabilities in OS and Apps, Alerting in Defender Security Portal and Compliance policies. 
+- Supports all the current capabilities of Defender for Endpoint on iOS. These capabilities include Web protection, Network Protection, Jailbreak detection, Vulnerabilities in OS and Apps, and Alerting in the Microsoft Defender portal. 
 - Zero touch (silent) deployment and auto onboarding of VPN is not supported with User Enrollment since admins cannot push a device wide VPN profile with User Enrollment.
 - For vulnerability management of apps, only apps in the work profile will be visible.
 - It can take up to 10 minutes for newly onboarded devices to become compliant if targeted by compliance policies.  
