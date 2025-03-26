@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: migrationguides
-ms.date: 03/25/2025
+ms.date: 03/26/2025
 search.appverid: met150
 ---
 
@@ -24,7 +24,7 @@ search.appverid: met150
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
-This article describes how to migrate your servers from Defender for Endpoint for servers to Defender for Servers.
+This article describes how to migrate your servers from Defender for Endpoint to Defender for Servers.
 
 [Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. The Defender for Endpoint for servers license enables you to onboard a server to Defender for Endpoint.
 
