@@ -164,9 +164,9 @@ Once the profile is downloaded, deploy the custom profile. Follow the steps belo
 
 ## Automated Onboarding setup (only for Unsupervised devices)
 
-Administrators can automate the Defender onboarding for users in two different ways with Zero touch (Silent) Onboarding or Auto Onboarding of VPN.
+Administrators can automate onboarding to Defender for Endpoint for users in two different ways with Zero touch (Silent) Onboarding or Auto Onboarding of VPN.
 
-### Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint
+### Zero-touch (Silent) onboarding to Defender for Endpoint
 
 > [!NOTE]
 > Zero-touch cannot be configured on iOS devices that are enrolled without user affinity (user-less devices or shared devices).
@@ -181,14 +181,14 @@ Administrators can configure Microsoft Defender for Endpoint to deploy and activ
 
 1. Select **Custom VPN** for Connection Type and in the **Base VPN** section, enter the following:
 
-   - Connection Name = Microsoft Defender for Endpoint
-   - VPN server address = 127.0.0.1
-   - Auth method = "Username and password"
-   - Split Tunneling = Disable
-   - VPN identifier = com.microsoft.scmx
+   - Connection Name: Microsoft Defender for Endpoint
+   - VPN server address: 127.0.0.1
+   - Auth method: "Username and password"
+   - Split Tunneling: Disable
+   - VPN identifier: com.microsoft.scmx
    - In the key-value pairs, enter the key **SilentOnboard** and set the value to **True**.
-   - Type of Automatic VPN = On-demand VPN
-   - Select **Add** for **On Demand Rules** and select **I want to do the following = Connect VPN**, **I want to restrict to = All domains**.
+   - Type of Automatic VPN: On-demand VPN
+   - Select **Add** for **On Demand Rules** and select **I want to do the following: Connect VPN**, **I want to restrict to: All domains**.
 
    :::image type="content" source="media/ios-deploy-9.png" alt-text="The VPN profile Configuration page" lightbox="media/ios-deploy-9.png":::
 
@@ -252,14 +252,14 @@ Administrators can configure auto-setup of VPN profile. This will automatically 
 
 1. Select **Custom VPN** for Connection Type and in the **Base VPN** section, enter the following:
 
-   - Connection Name = Microsoft Defender for Endpoint
-   - VPN server address = 127.0.0.1
-   - Auth method = "Username and password"
-   - Split Tunneling = Disable
-   - VPN identifier = com.microsoft.scmx
+   - Connection Name: Microsoft Defender for Endpoint
+   - VPN server address: 127.0.0.1
+   - Auth method: "Username and password"
+   - Split Tunneling: Disable
+   - VPN identifier: com.microsoft.scmx
    - In the key-value pairs, enter the key **AutoOnboard** and set the value to **True**.
-   - Type of Automatic VPN = On-demand VPN
-   - Select **Add** for **On Demand Rules** and select **I want to do the following = Connect VPN**, **I want to restrict to = All domains**.
+   - Type of Automatic VPN: On-demand VPN
+   - Select **Add** for **On Demand Rules** and select **I want to do the following: Connect VPN**, **I want to restrict to: All domains**.
 
    :::image type="content" source="media/ios-deploy-8.png" alt-text="The VPN profile Configuration settings tab." lightbox="media/ios-deploy-8.png":::
 
