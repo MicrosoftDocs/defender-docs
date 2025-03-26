@@ -49,7 +49,7 @@ Before you enable Defender for Cloud, it's important to know how to manage antiv
 
 ### Enable Defender for Servers for Azure VMs and non-Azure machines
 
-To enable Defender for Servers for Azure servers and non-Azure servers connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
+To enable Defender for Servers for Azure VMs and non-Azure servers connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
 
 1. If you aren't already using Azure, plan your environment following the [Azure Well-Architected Framework](/azure/architecture/framework/).
 
