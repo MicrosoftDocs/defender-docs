@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 02/25/2025
+ms.date: 03/26/2025
 ---
 
 # Threat analytics in Microsoft Defender XDR
@@ -59,7 +59,12 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
 
 ## Required roles and permissions
-The following roles and permissions are required to access Threat analytics in the Defender portal: 
+To access Threat analytics in the Defender portal, you need to have a license for at least one Microsoft Defender XDR product. For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md). 
+
+>[!NOTE]
+> The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and will not grant Threat analytics access.
+
+The following roles and permissions are also required to access Threat analytics: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
 - **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
@@ -93,13 +98,9 @@ The different tags have equivalent filters that assist you in efficiently review
 
 The Microsoft Threat Intelligence team adds threat tags to each threat report. The following threat tags are currently available:
   - Ransomware
-  - Extortion
   - Phishing
-  - Hands on keyboard
   - Activity group
   - Vulnerability
-  - Attack campaign
-  - Tool or technique
 
 Threat tags are presented at the top of the threat analytics page. There are counters for the number of available reports under each tag.
 
@@ -197,9 +198,17 @@ In the **Recommended actions** tab, review the list of specific actionable recom
 
 :::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
 
+## Set up custom detections and link them to Threat analytics reports
+
+You can set up [custom detection rules](custom-detections-overview.md) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
+
+:::image type="content" source="/defender/media/threat-analytics/ta-custom-detection.png" alt-text="Screenshot of custom detection setup page with Threat analytics option highlighted." lightbox="/defender/media/threat-analytics/ta-custom-detection.png":::
+
+[Learn more about creating and managing custom detections rules](custom-detection-rules.md)
+
 ## Set up email notifications for report updates
 
-You can set up email notifications that will send you updates on threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
+You can set up email notifications that will send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
 
 ## Other report details and limitations
 
