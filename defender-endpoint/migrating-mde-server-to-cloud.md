@@ -26,7 +26,7 @@ search.appverid: met150
 
 This article describes how to migrate your servers from Defender for Endpoint to Defender for Servers.
 
-[Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. The Defender for Endpoint for servers license enables you to onboard a server to Defender for Endpoint.
+[Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform designed to help organizations prevent, detect, investigate, and respond to advanced threats. The Defender for Endpoint for servers license enables you to onboard a server to Defender for Endpoint.
 
 [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) is part of the [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering, a solution for cloud security posture management (CSPM) and cloud workload protection (CWP) that finds weak spots across your cloud configuration. Defender for Cloud also helps strengthen the overall security posture of your environment, and can protect workloads across multicloud and hybrid environments from evolving threats.
 
@@ -34,7 +34,7 @@ While both Defender for Endpoint for servers and Defender for Servers offer serv
 
 ## How do I migrate my servers from Defender for Endpoint to Defender for Cloud?
 
-If you have servers onboarded to Defender for Endpoint (or Defender for Endpoint for servers), the migration process varies depending on machine type, but there's a set of shared prerequisites. Defender for Cloud is a subscription-based service in the [Microsoft Azure portal](https://portal.azure.com). Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 2 need to be enabled on Azure subscriptions.
+If you have servers onboarded to Defender for Endpoint, the migration process varies depending on machine type, but there's a set of shared prerequisites. Defender for Cloud is a subscription-based service in the [Microsoft Azure portal](https://portal.azure.com). Therefore, Defender for Cloud and underlying plans like Defender for Servers Plan 1 or Plan 2 need to be enabled on Azure subscriptions.
 
 ### Before you enable Defender for Cloud
 
@@ -48,13 +48,13 @@ Before you enable Defender for Cloud, it's important to know how to manage antiv
 
 ### Enable Defender for Servers for Azure VMs and non-Azure machines
 
-To enable Defender for Servers for Azure VMs and non-Azure machines connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
+To enable Defender for Servers for Azure servers and non-Azure servers connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
 
 1. If you aren't already using Azure, plan your environment following the [Azure Well-Architected Framework](/azure/architecture/framework/).
 
 2. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
 
-3. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview), Adaptive Application Controls, and more.
+3. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features, like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview).
 
 4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one or both of the two opt-in buttons shown in the following image:
 
