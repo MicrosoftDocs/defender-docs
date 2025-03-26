@@ -109,11 +109,11 @@ If the incident or related alerts were the result of an analytics rule you've se
 > To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
 > To view attack path details with Microsoft Sentinel in the unified security operations platform, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
 
-The incident graph also contains information about **attack paths**. These paths allow security analysts to identify what other entities an attacker is likely to target next. To view an attack path, you can click on an entity in the incident graph and select **View attack paths**. The top attack paths are shown within the incident graph. Attack paths are available for entities with the **critical asset** tag. Here's an example.
+The incident graph also contains information about **attack paths**. These paths allow security analysts to identify what other entities an attacker is likely to target next. To view an attack path, you can click on an entity in the incident graph and select **View attack paths**. The top attack paths are shown within the incident graph. Here's an example.
 
 :::image type="content" source="/defender/media/investigate-incidents/attack-path-small.png" alt-text="Highlighting a critical asset and a top attack path in the incident graph" lightbox="/defender/media/investigate-incidents/attack-path.png":::
 
-When you select **View attack paths** on the incident graph, a flyout pane opens containing a list of all possible attack paths for the selected entity. The attack paths can be filtered based on the attack path name, entry point, entry point type, target, target type, and target criticality. Here's an example.
+To view all the possible attack paths, select **View attack paths** on the incident graph. A flyout pane opens containing the list of all possible attack paths for the selected entity. The attack paths can be filtered based on the attack path name, entry point, entry point type, target, target type, and target criticality. Here's an example.
 
 :::image type="content" source="/defender/media/investigate-incidents/attack-paths-flyout-small.png" alt-text="Screenshot highlighting the view attack paths option and the flyout pane list of attack paths" lightbox="/defender/media/investigate-incidents/attack-paths-flyout.png":::
 
