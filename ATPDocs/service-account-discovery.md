@@ -52,7 +52,7 @@ There are several options you can choose from to customize the identities list v
 
 - Managed: The total number of service accounts that are gMSA (Group Managed Service Accounts) or sMSA (Managed Service Accounts)
 
-- User: 
+- User: The total number of standard user accounts used for interactive logins or configured to run services.
 
 - Critical: The total number of service accounts identified as critical.
 
@@ -66,9 +66,9 @@ You can use the sort and filter functionality on each service account tab to get
 - Domain: The Active Directory domain to which the identity belongs.
 - Type: Specifies if the identity is a user account or service account.
 - Criticality level: Indicates the critical level of the identity.
-- Tags: 
+- Tags: Sensitive or Honey Token
 - Auth protocols: Lists the available methods for verifying user identities, for example, Kerberos and NTLM (New Technology LAN Manager).
-- Service classes:
+- Service classes: Lists 
 - Sources: Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Microsoft Entra ID) or Hybrid (synced from AD to Microsoft Entra ID).
 - Destinations -The number of resources the account is trying to access, such as a Domain Controller or remote desktop session.
 - Connections: 
@@ -77,13 +77,21 @@ You can use the sort and filter functionality on each service account tab to get
 
 ### Service accounts overview
 
-For a deeper dive into what's happening in your service account select on the domain name and see the following information:
+For a deeper dive into what's happening in your service account click on the domain name to see the following information:
 
 **Connections**
  Explore the connections made by these accounts, see insights into which machines were involved, their potential risk level, and identify abnormal interactions.
 
-- The source is the physical device where the service account was initially executed.
-- The destination is the resource or system the account is trying to access, such as a domain controller or remote desktop session.
-- The connection shows the flow of activity, where the service account is used from the source device to reach and operate on the destination.
+In order to capture network traffic we need to gather data from various places such as the device, service account, destination and what resource was requested.
+ 
+Source: Where the network traffic or request originates from.
+Source type: What kind of device or system is initiating the request. For example, server ,workstation, domain controller.
+Source risk: Identicates the risk posed to the source from no risk to high risk.
+Destination: Where the request is being directed to. The target system that the service account is trying to access. For example, when trying to access a destination server, there can be multiple resources on that server (e.g. a database and a file-server).
+Destination type:
+Auth protocols:
+Service Class: A category of services within a network that defines the type of service being provided, often used for authentication and resource management. These include: Lightweight Directory Access Protoco (LDAP), Common Internet File System (CIFS), Remote Procedure Call (RPC), Remote Procedure Call Subsystem (RPCSS), "HTTP", Terminal Services (TERMSRV), and "HOST"
+Count: 
+Last seen: 
 
 For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths** see: [Investigate assets](/ATPDocs/investigate-assets.md#identity-details)
