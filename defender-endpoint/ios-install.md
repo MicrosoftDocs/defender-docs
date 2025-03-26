@@ -169,9 +169,9 @@ Administrators can automate onboarding to Defender for Endpoint for users in two
 ### Zero-touch (Silent) onboarding to Defender for Endpoint
 
 > [!NOTE]
-> Zero-touch cannot be configured on iOS devices that are enrolled without user affinity (user-less devices or shared devices).
+> Zero-touch can't be configured on iOS devices that are enrolled without user affinity (user-less devices or shared devices).
 
-Administrators can configure Microsoft Defender for Endpoint to deploy and activate silently. In this flow, the administrator creates a deployment profile and the user is simply notified of the installation. Defender for Endpoint is automatically installed without the need for the user to open the app. Follow the steps below to set up zero-touch or silent deployment of Defender for Endpoint on enrolled iOS devices:
+Administrators can configure Microsoft Defender for Endpoint to deploy and activate silently. In this flow, the administrator creates a deployment profile and the user is notified of the installation. Defender for Endpoint is automatically installed without the need for the user to open the app. Follow the steps in this article to set up zero-touch or silent deployment of Defender for Endpoint on enrolled iOS devices:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration Profiles** > **Create Profile**.
 
