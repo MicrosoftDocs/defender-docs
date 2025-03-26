@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/17/2025
+ms.date: 03/11/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -118,6 +118,17 @@ Selecting an attack path from the list displays the attack path graph, which sho
 > [!NOTE]
 > To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
 > To view attack path details with Microsoft Sentinel in the unified security operations platform, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
+
+### Incident details
+
+You can view an incident's details on the right pane of an incident page. The incident details include incident assignment, ID, classification, categories, and first and last activity date and time. It also includes a description of the incident, impacted assets, active alerts, and where applicable, the related threats, recommendations, and disruption summary and impact. Here's an example of the incident details where the incident description is highlighted.
+
+:::image type="content" source="/defender/media/investigate-incidents/incident-desc-small.png" alt-text="An example of incident details where the description is highlighted." lightbox="/defender/media/investigate-incidents/incident-desc.png":::
+
+The incident description provides a brief overview of the incident. In some cases, the first alert in the incident is used as the incident description. In this case, the description is only shown in the portal and not stored in the activity log, advanced hunting tables, or the Microsoft Sentinel in Azure portal.
+
+> [!TIP]
+> Microsoft Sentinel customers can also view and overwrite the same incident description in the Azure portal by setting the incident description through API or automation.
 
 ## Alerts
 
