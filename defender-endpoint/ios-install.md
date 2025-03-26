@@ -29,7 +29,7 @@ ms.date: 03/26/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This topic describes deploying Defender for Endpoint on iOS on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll).
+This article describes deploying Defender for Endpoint on iOS on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll).
 
 ## Before you begin
 
@@ -72,7 +72,7 @@ Deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal.
 
 1. Select **iOS 15.0** as the Minimum operating system. Review the rest of information about the app and select **Next**.
 
-1. In the **Assignments** section, go to the **Required** section and select **Add group**. You can then choose the user groups that you would like to target Defender for Endpoint on iOS app. Click **Select** and then **Next**.
+1. In the **Assignments** section, go to the **Required** section and select **Add group**. You can then choose the user groups that you would like to target Defender for Endpoint on iOS app. Click **Select**, and then select **Next**.
 
     > [!NOTE]
     > The selected user group should consist of Microsoft Intune enrolled users.
@@ -81,19 +81,19 @@ Deploy Defender for Endpoint on iOS via Microsoft Intune Company Portal.
 
 1. In the *Review + Create* section, verify that all the information entered is correct and then select **Create**. In a few moments, the Defender for Endpoint app should be created successfully, and a notification should show up at the top-right corner of the page.
 
-1. In the app information page that is displayed, in the **Monitor** section, select **Device install status** to verify that the device installation has completed successfully.
+1. In the app information page that is displayed, in the **Monitor** section, select **Device install status** to verify that the device installation completed successfully.
 
    :::image type="content" source="media/ios-deploy-3.png" alt-text="The Device install status page" lightbox="media/ios-deploy-3.png":::
 
 ## Complete deployment for supervised devices
 
-The Microsoft Defender for Endpoint on iOS app has specialized ability on supervised iOS/iPadOS devices, given the increased management capabilities provided by the platform on these types of devices. It can also provide Web Protection **without setting up a local VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
+The Microsoft Defender app has a specialized ability on supervised iOS/iPadOS devices, due to the increased management capabilities provided by the platform on these types of devices. It can also provide Web Protection **without setting up a local VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
 
-Admins can use the following steps to configure supervised devices.
+Administrators can use the following steps to configure supervised devices.
 
 ### Configure Supervised Mode via Microsoft Intune
 
-Configure the supervised mode for Defender for Endpoint app through an App configuration policy and Device configuration profile.
+Configure supervised mode for the Microsoft Defender app through an App configuration policy and a Device configuration profile.
 
 #### App configuration policy
 
@@ -104,7 +104,7 @@ Configure the supervised mode for Defender for Endpoint app through an App confi
 
    :::image type="content" source="media/ios-deploy-4.png" alt-text="Image of Microsoft Intune admin center4." lightbox="media/ios-deploy-4.png":::
 
-1. In the *Create app configuration policy* page, provide the following information:
+1. In the **Create app configuration policy** page, provide the following information:
 
    - Policy Name
    - Platform: Select iOS/iPadOS
