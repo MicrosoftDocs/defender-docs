@@ -5,7 +5,9 @@ ms.topic: conceptual
 ms.date: 03/25/2025
 ---
 
-# What are Service Accounts?
+# Investigate and protect Service Accounts | Microsoft Defender for Identity
+
+### What are Service Accounts?
 
 Service accounts are specialized identities within the Active Directory that are used to run applications, services, and automated tasks. These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate in the same way as human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
 
@@ -77,10 +79,6 @@ You can use the sort and filter functionality on each service account tab to get
 
 For a deeper dive into what's happening in your service account select on the domain name and see the following information:
 
-**Overview**
-
-**Incidents and alerts**
-
 **Connections**
  Explore the connections made by these accounts, see insights into which machines were involved, their potential risk level, and identify abnormal interactions.
 
@@ -88,10 +86,6 @@ For a deeper dive into what's happening in your service account select on the do
 - The destination is the resource or system the account is trying to access, such as a domain controller or remote desktop session.
 - The connection shows the flow of activity, where the service account is used from the source device to reach and operate on the destination.
 
-**Observed in organization**
-
-**Timeline**
-
-**Attack paths**
+For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths** see: [Investigate assets](defender-for-identity/investigate-assets#identity-details)
 
 
