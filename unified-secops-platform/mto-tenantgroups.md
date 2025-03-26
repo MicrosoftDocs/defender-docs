@@ -24,7 +24,7 @@ Content distribution helps you manage content at scale, across tenants in multit
 Distributing content in this manner, across tenants, enables you to organize tenants and content based on categories like business groups or location.
 
 > [!NOTE]
-> Multitenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future.
+> Multitenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future. 
 
 ## Requirements
 
@@ -50,7 +50,7 @@ To create a new tenant group:
     :::image type="content" source="media/mto-tenantgroups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="media/mto-tenantgroups/mto-add-content.png":::
 
 > [!NOTE]
-> The content type selection is currently limited to adding custom detection rules to a tenant group. Adding other content types will be available in the future. 
+> The content type selection is currently limited to adding custom detection rules to a tenant group. 
 
 4. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
 
@@ -83,6 +83,9 @@ Check the sync results under the **Last sync result** column. If the result is *
 :::image type="content" source="media/mto-tenantgroups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="media/mto-tenantgroups/mto-sync-results.png":::
 
 ## Syncing content among tenant groups
+
+> [!NOTE]
+> Syncing is limited to a maximum of 9,500 sync units. For example, you'll reach the maximum sync units limit if you are publishing 10 assignments each to 10 tenants and 95 templates.
 
 To sync content across tenant groups for the tenants you have permission for:
 
