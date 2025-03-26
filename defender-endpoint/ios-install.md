@@ -126,14 +126,14 @@ Configure supervised mode for the Microsoft Defender app through an App configur
 
    When deploying to user groups, a user must sign in to a device before the policy applies.
 
-   Click **Next**.
+   Select **Next**.
 
 1. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles.
 
 #### Device configuration profile (Control Filter)
 
 > [!NOTE]
-> For devices that run iOS/iPadOS (in Supervised Mode), there is  custom **.mobileconfig** profile, called the **ControlFilter** profile available. This profile enables Web Protection **without setting up the local loopback VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
+> For devices that run iOS/iPadOS (in Supervised Mode), there's a custom `.mobileconfig` profile available, called the **ControlFilter** profile. This profile enables Web Protection **without setting up the local loopback VPN on the device**. This gives end users a seamless experience while still being protected from phishing and other web-based attacks.
 >
 > However, the **ControlFilter** profile does not work with Always-On VPN (AOVPN) due to platform restrictions.
 
