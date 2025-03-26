@@ -35,6 +35,7 @@ You can also get product updates and important notifications through the [messag
 ## March 2025
 
 - The Microsoft 365 alert policies can now only be managed in the Microsoft Defender portal. For more information, see [Alert policies in Microsoft 365](alert-policies.md).
+- You can now link Threat analytics reports when setting up custom detections. [Learn more](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports)
 
 ## February 2025
 
