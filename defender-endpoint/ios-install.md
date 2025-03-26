@@ -201,11 +201,11 @@ Administrators can configure Microsoft Defender for Endpoint to deploy and activ
 
 After this configuration is done and synced with the device, the following actions take place on the targeted iOS devices:
 
-- Defender for Endpoint is deployed and silently onboarded. The device is visible in the Microsoft Defender portal after it is onboarded.
+- Defender for Endpoint is deployed and silently onboarded. The device is visible in the Microsoft Defender portal after it's onboarded.
 - A provisional notification is sent to the user's device.
 - Web Protection and other features are activated.
 
-In some cases, for security reasons like password changes, Multi Factor Authentication etc, zero-touch onboarding might require end user to manually sign-in in the Microsoft Defender app. 
+In some cases, for security reasons like password changes, multifactor authentication, and so on, zero-touch onboarding might require end user to manually sign-in in the Microsoft Defender app. 
 
 **A: For first time onboarding scenarios, end users receive a silent notification**.
 
@@ -219,7 +219,7 @@ End users should take the following steps: 
 
 1. Sign in. 
 
-After this, the device will get onboarded and start reporting to security portal.
+The device is onboarded and starts reporting to the Microsoft Defender portal.
 
 **B: For already onboarded devices, end users see a silent notification**.
 
@@ -233,7 +233,7 @@ After this, the device starts reporting to the Microsoft Defender portal again.�
 
 > [!NOTE]
 > - Zero touch setup can take up to 5 minutes to complete in the background. 
-> - For supervised devices, Administrators can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). Defender for Endpoint VPN Profile will not be installed on the device and Web protection will be provided by the Control Filter Profile.
+> - For supervised devices, administrators can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). In thise case, the Defender for Endpoint VPN Profile isn't installed on the device, and Web protection is provided by the Control Filter Profile.
 
 ### Auto-Onboarding of VPN profile (Simplified Onboarding)
 
