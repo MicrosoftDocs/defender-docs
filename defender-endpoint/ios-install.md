@@ -145,7 +145,7 @@ Administrators deploy any one of the given profiles.
 
 2. **Control Filter** - Download the config profile from [ControlFilter](https://download.microsoft.com/download/f/8/e/f8ed3484-b665-4c3c-9ae9-272c8a04159b/Microsoft_Defender_for_Endpoint_Control_Filter_1.mobileconfig).
 
-Once the profile is downloaded, deploy the custom profile. Follow the steps below:
+Once the profile is downloaded, deploy the custom profile. Follow these steps:
 
 1. Navigate to **Devices** > **iOS/iPadOS** > **Configuration profiles** > **Create Profile**.
 
