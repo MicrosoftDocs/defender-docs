@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 02/15/2024
+ms.date: 03/26/2025
 ---
 
 # Provide feedback on the Microsoft Defender for Endpoint client analyzer tool

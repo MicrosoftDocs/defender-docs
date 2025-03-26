@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/18/2024
+ms.date: 03/26/2025
 ---
 
 # Configure behavioral, heuristic, and real-time protection

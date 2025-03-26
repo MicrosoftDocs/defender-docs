@@ -17,7 +17,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 10/10/2023
+ms.date: 03/26/2025
 ---
 
 # Better together: Microsoft Defender Antivirus and Office 365

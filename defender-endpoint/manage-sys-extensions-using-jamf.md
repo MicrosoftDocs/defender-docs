@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/21/2024
+ms.date: 03/26/2025
 ---
 
 # Manage system extensions using Jamf

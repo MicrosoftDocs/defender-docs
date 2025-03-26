@@ -16,7 +16,7 @@ metadata:
   - tier1
   - mde-ngp
   search.appverid: met150
-  ms.date: 03/24/2023
+  ms.date: 03/26/2025
 title: Troubleshoot Microsoft Defender Antivirus while migrating from a non-Microsoft solution
 summary: |
   [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]

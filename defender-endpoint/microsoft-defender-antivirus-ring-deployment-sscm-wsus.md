@@ -16,7 +16,7 @@ ms.custom: intro-overview
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender Antivirus ring deployment using System Center Configuration Manager and Windows Server Update Services

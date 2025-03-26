@@ -15,7 +15,7 @@ ms.collection:
 - tier1
 - mde-ngp
 search.appverid: met150
-ms.date: 02/28/2024
+ms.date: 03/26/2025
 ---
 
 # Next-generation protection overview
