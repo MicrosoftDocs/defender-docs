@@ -703,6 +703,9 @@ When you select multiple quarantined files on the **Files** tab by selecting the
 > [!TIP]
 > [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) is currently in Preview, isn't available in all organizations, and is subject to change.
 
+> [!NOTE]
+> Our current quarantine policy for Teams is only set to AdminOnlyAccess. End users will not have access to Quarantine for Teams messages. We are actively working on adding updates to quarantine policy configurations.
+
 Quarantine in Microsoft Teams is available only in organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5).
 
 When a potentially malicious chat message is detected in Microsoft Teams, zero-hour auto purge (ZAP) removes the message and quarantines it. Admins can view and manage these quarantined Teams messages. The message is quarantined for 30 days. After that the Teams message is permanently removed.
