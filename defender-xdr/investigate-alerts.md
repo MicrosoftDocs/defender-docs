@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - met150
-ms.date: 1/27/2025
+ms.date: 3/25/2025
 appliesto:
 - Microsoft Defender XDR
 ---
@@ -58,6 +58,7 @@ You can filter alerts according to these criteria:
 - Product name
 - Entities (the impacted assets)
 - Automated investigation state
+- Workspace
 - Data stream (workload or location)
 
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot App Connector errors 
+title: Troubleshoot App connector errors 
 description: This article provides a list of API App connector error messages as well as resolution recommendations for each.
 ms.date: 01/29/2023
 ms.topic: conceptual
@@ -33,7 +33,8 @@ App connector errors can be seen in the app connector dialog after attempting to
 > |HttpRequestFailure: Server returned: 401 Unauthorized|Exchange Online|User or password are incorrect|Make sure the username and password are correct and Follow the process to connect Exchange Online to Defender for Cloud Apps again.|
 > |HttpRequestFailure: Server returned: 404 Not Found|Exchange Online|The user you are using to log into Exchange Online does not have a primary mailbox in Exchange Online (for example, a user who does not exist in Microsoft Entra ID or a user exists in Microsoft Entra ID, but does not have an Exchange Online license).|Follow the process to connect Exchange Online to Defender for Cloud Apps again using a new admin account.|
 > |GoogleJsonResponseException: 401 Unauthorized|Google Workspace|Access denied. You are not authorized to read activity records. The user you log into Google Workspace with must be an admin user.|Follow the process to connect Google Workspace to Defender for Cloud Apps again using an admin account.|
-> |GoogleJsonResponseException: 403 Forbidden|Google Workspace|Problem running the Google Workspace API.|If you just deployed the Defender for Cloud Apps App Connector for Google Workspace, check the following: If you clicked Unlimited, make sure that your Google Workspace account is really unlimited. If it is not, run the App Connector again and un-select the option for an unlimited account. Check that the scopes you defined during setup are correct. If this is not a new deployment and you see this error, it may be that you reached the API limit for today and Google Workspace events will be renewed tomorrow.|
+> |GoogleJsonResponseException: 403 Forbidden|Google Workspace|
+Problem running the Google Workspace API.|If you just deployed the Defender for Cloud Apps App Connector for Google Workspace, check the following: If you clicked Unlimited, make sure that your Google Workspace account is really unlimited. If it is not, run the App Connector again and un-select the option for an unlimited account. Check that the scopes you defined during setup are correct. If this is not a new deployment and you see this error, it may be that you reached the API limit for today and Google Workspace events will be renewed tomorrow.|
 > |TokenResponseException: 400 Bad Request|Google Workspace|Either the connection to Google Workspace did not complete or is expired.|Follow the process to connect Google Workspace to Defender for Cloud Apps again.|
 > |HttpRequestFailure: Server returned: 401 Unauthorized|Okta|The Okta token is not valid.|Follow the process to connect Okta to Defender for Cloud Apps again.|
 > |IOException:|Okta|Internal error|Contact support|

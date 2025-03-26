@@ -1,11 +1,11 @@
 ---
-title: Schedule an antivirus scan using Anacron in Microsoft Defender for Endpoint on Linux
+title: Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux for better protection of your organization's assets.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 12/02/2023
+ms.date: 03/24/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -17,7 +17,7 @@ ms.subservice: linux
 search.appverid: met150
 ---
 
-# Schedule an antivirus scan using Anacron in Microsoft Defender for Endpoint on Linux
+# Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux
 
 **Applies to:**
 
@@ -25,10 +25,7 @@ search.appverid: met150
 - Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender Antivirus
 
-To run a scan of Microsoft Defender Antivirus for Linux, see [Supported Commands](linux-resources.md#supported-commands).
-
-> [!NOTE]
-> This article supports Microsoft Defender for Endpoint on Linux for Red Hat Enterprise Linux distributions (RHEL).
+To run a scan of Microsoft Defender Antivirus for Linux, see [Supported commands](linux-resources.md#supported-commands).
 
 ## System requirements
 
@@ -37,23 +34,27 @@ See the following system requirements needed to schedule Microsoft Defender Anti
 - Linux distributions and versions: Red Hat Enterprise Linux 7.2 or higher.
 - The **FANOTIFY** option in kernel must be enabled.
 
+Also see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md).
+
 ## Scheduling Microsoft Defender Antivirus scan in Red Hat Linux
 
-You can schedule cron jobs to initiate Microsoft Defender Antivirus scans on a schedule. For more information, see [How to schedule scans with Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-crontab.md). This process works well if the device is always up and running.
+You can [schedule cron jobs to initiate Microsoft Defender Antivirus scans on a schedule](schedule-antivirus-scan-crontab.md). This process works well if the device is always up and running.
 
-But if the Linux devices are shut down or offline during the cron schedule, the scan won't run. In these situations, you can use **anacron** to read the timestamp and find the last executed job. If the device was shut down during the scheduled cron job, it needs to wait until the next scheduled time. By using **anacron**, the system will detect the last time the scan was run. If the device didn't run the cron job, it will automatically start it.
+But if the Linux devices are shut down or offline during the cron schedule, scans don't run. In these situations, you can use **anacron** to read the timestamp and find the last executed job. If the device was shut down during the scheduled cron job, it needs to wait until the next scheduled time. By using **anacron**, the system will detect the last time the scan was run. If the device didn't run the cron job, it will automatically start it.
 
 ### Schedule Microsoft Defender Antivirus scans in Red Hat Linux
 
 Use the following steps to schedule scans:
 
 1. Connect to the RedHat server using PuTTY.
-1. Edit the anacron file:
+
+2. Edit the anacron file as follows:
+
    ```shell
    vi /etc/anacron
    ```
 
-1.  :::image type="content" source="media/vi-etc-anacron.png" alt-text="Sample Anacron Job Linux." lightbox="media/vi-etc-anacron.png" link="media/vi-etc-anacron.png":::
+3. Review and edit your Anacron file, which contains the following information:
 
    ```shell
    # /etc/anacrontab: configuration file for anacron
@@ -66,19 +67,24 @@ Use the following steps to schedule scans:
    # delay will be 5 minutes + RANDOM_DELAY for cron.daily
    ```
 
-1. Note the following items in the file.
-   1. **Shell:** Shell is referred as `/bin/sh`, and not as `/bin/bash`. Remember when writing the jobs.
-   1. **RANDOM_DELAY:** Describes the maximum time in minutes for the job. This value is used to offset the jobs so there wouldn't be too many jobs running at the same time. Using this delay is ideal for VDI solutions.
-   1. **START_HOURS_RANGE:** Describes the time range to run the job.
-   1. **cron.daily:** Describes 1 as the period of days required for the frequency of job executions. 5 is the delay in minutes that anacron waits after the device restarts.
+   Notice the following items in the file:
 
-1. Review look at the anacron jobs:
+   - **Shell** is referred as `/bin/sh`, and not as `/bin/bash`. Remember this when you're configuring jobs.
+   - **RANDOM_DELAY** describes the maximum time in minutes for the job. This value is used to offset the jobs so there aren't too many jobs running at the same time. Using this delay is ideal for VDI solutions.
+   - **START_HOURS_RANGE** describes the time range to run the job.
+   - **cron.daily** describes `1` as the period of days required for the frequency of job executions. `5 is the delay in minutes that anacron waits after the device restarts.
+
+4. Review your anacron jobs by using the following command:
 
    ```shell
    ls -lh /etc/cron*
    ```
 
-    :::image type="content" source="media/vi-etc-anacron.png" alt-text="Sample Anacron Job Linux." lightbox="media/vi-etc-anacron.png" link="media/vi-etc-anacron.png":::
+   You should see information similar to what's shown in the following screenshot:
+
+   :::image type="content" source="media/vi-etc-anacron.png" alt-text="Sample Anacron Job Linux." lightbox="media/vi-etc-anacron.png" link="media/vi-etc-anacron.png":::
+
+   The following code example provides a more detailed view:
 
    ```shell
    [root@redhat7 /] # ls -lh /etc/cron*
@@ -117,9 +123,9 @@ Use the following steps to schedule scans:
    total 0
    ```
 
-1. Ignore the `/etc/cron.d` directory, you will see `/etc/cron.daily, hourly, monthly, and weekly`.
+   Ignore the `/etc/cron.d` directory; instead, review `/etc/cron.daily, hourly, monthly, and weekly`.
 
-1. To schedule a weekly antivirus scan, you can create a file (Job) under the ```/etc/cron.weekly``` directory.
+5. To schedule a weekly antivirus scan, you can create a file (Job) under the ```/etc/cron.weekly``` directory.
 
    ```shell
    cd /etc/cron.weekly
@@ -145,7 +151,7 @@ Use the following steps to schedule scans:
    Type: wq!
    ```
 
-1. Change the file permissions to allow the file to be executed.
+6. Change the file permissions to allow the file to be executed by using this command: 
 
    ```shell
    Chmod 755 mdavfullscan
@@ -168,13 +174,13 @@ Use the following steps to schedule scans:
    [root@redhat7 cron.weekly] #
    ```
 
-1. Use the command to test the weekly anacron job.
+7. Use the following command to test the weekly anacron job:
 
    ```shell
    ./mdavfullscan
    ```
 
-1. Use the command to verify the job ran successfully.
+8. Use the following command to verify the job ran successfully:
 
    ```shell
    cat /logs/mdav_avacron_full_scan.log
@@ -192,5 +198,10 @@ Use the following steps to schedule scans:
     [root@redhat7 cron.weekly] #
     ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+## See also
 
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -160,5 +160,5 @@ For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRul
 - [Microsoft Teams](/microsoftteams/teams-overview)
 - [Managing Teams quarantined messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages)
 - [Get started using Attack simulation training in Defender for Office 365](attack-simulation-training-get-started.md)
-- [Get started with Defender for Cloud Apps for Microsoft Teams] (/defender-cloud-apps/what-is-defender-for-cloud-apps)
+- [Get started with Defender for Cloud Apps for Microsoft Teams](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 - [Get started with Compliance and DLP protection for Microsoft Teams](/microsoftteams/security-compliance-overview)
