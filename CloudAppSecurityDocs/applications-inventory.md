@@ -5,12 +5,12 @@ ms.topic: overview
 description: The Application Inventory provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience. The new "Applications" page, located under Assets in Defender XDR portal.
 #customer intent: As a security administrator, I want to discover, monitor, and manage all SaaS and OAuth connected apps in my organization so that I can ensure security and compliance.
 ---
-# Application inventory overview
+# Application inventory
 
-Protecting your environment requires taking inventory of all SaaS and OAuth connected apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Defender for Cloud apps Applications page provides a centralized view of all SaaS and OAuth connected apps in your organization, enabling efficient monitoring and management.
-At a glance you can see information such as app name, number of devices, risk score, privilege level, publisher information and other details for easy identification of SaaS and OAuth apps most at risk.
+Protecting your SaaS ecosystem requires taking inventory of all SaaS and OAuth connected apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Defender for Cloud apps Applications page provides a centralized view of all SaaS and connected OAuth apps in your organization, enabling efficient monitoring and management.
+At a glance you can see information such as app name, risk score, privilege level, publisher information and other details for easy identification of SaaS and OAuth apps most at risk.
 
-The applications page includes the following tabs:
+The Application page includes the following tabs:
 
 * SaaS apps: A consolidated view of all SaaS applications in your network. This tab highlights key details, including app name, status (unprotected/protected app) and whether the app is marked as sanctioned or unsanctioned.
 * OAuth apps: Displays a list of OAuth apps such as Microsoft Entra ID, Google workspace and Salesforce.
@@ -34,7 +34,7 @@ There are several options you can choose from to customize the SaaS apps and OAu
 >When exporting the applications list to a CSV file, a maximum of 1000 SaaS or OAuth apps are displayed.
 
 The following image depicts the SaaS apps list:
-:::image type="content" source="media/applications-tab-in-the-defender-portal.png" alt-text="Screenshot of the applications tab in the Defender portal" lightbox="media/applications-tab-in-the-defender-portal.png":::
+:::image type="content" source="media/applications-tab-in-the-defender-portal.png" alt-text="Screenshot of the applications tab in the Defender portal" lightbox="media/applications-tab-in-the-defender-portal.png" lightbox="media/applications-tab-in-the-defender-portal.png":::
 
 
 ## SaaS app details
