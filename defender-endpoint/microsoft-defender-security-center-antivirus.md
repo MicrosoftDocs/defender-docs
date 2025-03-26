@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/03/2025
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender Antivirus in the Windows Security app
