@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 02/11/2025
+ms.date: 03/26/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -700,11 +700,10 @@ When you select multiple quarantined files on the **Files** tab by selecting the
 
 ## Use the Microsoft Defender portal to manage Microsoft Teams quarantined messages
 
-> [!TIP]
-> [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) is currently in Preview, isn't available in all organizations, and is subject to change.
-
 > [!NOTE]
-> Our current quarantine policy for Teams is only set to AdminOnlyAccess. End users will not have access to Quarantine for Teams messages. We are actively working on adding updates to quarantine policy configurations.
+> [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) is currently in Preview, isn't available in all organizations, and is subject to change.
+>
+> Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
 
 Quarantine in Microsoft Teams is available only in organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5).
 
