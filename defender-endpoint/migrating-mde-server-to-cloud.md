@@ -60,9 +60,9 @@ To enable Defender for Servers for Azure servers and non-Azure servers connected
 
    :::image type="content" source="media/mde-integration.png" alt-text="Screenshot that shows how to enable Defender for Endpoint integration." lightbox="media/mde-integration.png":::
 
-   If you have any of these buttons in your environment, make sure to enable integration for both. On new subscriptions, both options are enabled by default. In this case, you don't see these buttons in your environment.
+   If you have either of these buttons in your environment, make sure to enable integration for both. On new subscriptions, both options are enabled by default, and you don't see these buttons in your environment.
 
-5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected via the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. For help with your planning process, see [Azure Arc deployments](/azure/azure-arc/servers/plan-at-scale-deployment).
+5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected using the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. For help with your planning process, see [Azure Arc deployments](/azure/azure-arc/servers/plan-at-scale-deployment).
 
 6. (*Recommended*) If you want to see vulnerability findings in Defender for Cloud, make sure to enable [vulnerability assessment](/azure/defender-for-cloud/monitoring-components?tabs=autoprovision-va#vulnerability-assessment) in Defender for Cloud.
 
@@ -83,21 +83,20 @@ You have several options.
 
 ## How do I migrate VMs from AWS or GCP environments?
 
-If you're using Amazon Web Services or Google Cloud Platform, follow these steps to migrate those VMs:
+If you're using Amazon Web Services (AWS) or Google Cloud Platform (GCP), follow these steps to migrate those VMs:
 
 1. Create a new multicloud connector on your subscription. For more information about this connector, see [AWS accounts](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings) or [GCP projects](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings).
 
 2. On your multicloud connector, enable Defender for Servers on [AWS](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings#prerequisites) or [GCP](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings#configure-the-servers-plan) connectors.
 
-3. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, Vulnerability Assessment and, optionally, Log Analytics extension.
+3. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, and Vulnerability Assessment. For Defender for Servers Plan 2, enable agentless machine scanning.
 
    :::image type="content" source="media/select-plans-aws-gcp.png" alt-text="Screenshot that shows how to enable autoprovisioning for Azure Arc agent." lightbox="media/select-plans-aws-gcp.png":::
    
 For more information, see the following resources:
 
 - [Defender for Cloud's multicloud capabilities](https://aka.ms/mdcmc)
-- For direct onboarding, see [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- To create a connection to Azure using Azure Arc, see [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines)
 
 ## What happens once all migration steps are completed?
 
