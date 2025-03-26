@@ -240,15 +240,15 @@ After this, the device starts reporting to the Microsoft Defender portal again.Â
 > [!NOTE]
 > This step simplifies the onboarding process by setting up the VPN profile. If you're using Zero touch, you don't need to perform this step. 
 
-For unsupervised devices, a VPN is used to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
+For unsupervised devices, a VPN is used to provide the Web Protection feature. This isn't a regular VPN and is a local/self-looping VPN that doesn't take traffic outside the device.
 
 Administrators can configure auto-setup of VPN profile. This automatically sets up the Defender for Endpoint VPN profile without having the user to do so while onboarding.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration Profiles** > **Create Profile**.
 
-1. Choose **Platform** as **iOS/iPadOS** and **Profile type** as **VPN**. Click **Create**.
+1. Choose **Platform** as **iOS/iPadOS** and **Profile type** as **VPN**. Select **Create**.
 
-1. Type a name for the profile and click **Next**.
+1. Type a name for the profile and select **Next**.
 
 1. Select **Custom VPN** for Connection Type and in the **Base VPN** section, enter the following:
 
@@ -263,8 +263,8 @@ Administrators can configure auto-setup of VPN profile. This automatically sets 
 
    :::image type="content" source="media/ios-deploy-8.png" alt-text="The VPN profile Configuration settings tab." lightbox="media/ios-deploy-8.png":::
 
-   - To require that VPN cannot be disabled on a users' device, administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, this setting not configured and users can disable VPN only in **Settings**.
-   - To allow users to change the VPN toggle from within the app, add `EnableVPNToggleInApp = TRUE`, in the key-value pairs. By default, users cannot change the toggle from within the app.
+   - To require that VPN can't be disabled on a users' device, administrators can select **Yes** from **Block users from disabling automatic VPN**. By default, this setting not configured and users can disable VPN only in **Settings**.
+   - To allow users to change the VPN toggle from within the app, add `EnableVPNToggleInApp = TRUE`, in the key-value pairs. By default, users can't change the toggle from within the app.
 
 1. Select **Next**, and assign the profile to targeted users.
 
@@ -281,12 +281,12 @@ Microsoft Defender app can be deployed to iOS devices with Intune User Enrolled 
    - [Set up user enrollment with Company Portal](/mem/intune/enrollment/apple-user-enrollment-with-company-portal)
    - [Set up account driven user enrollment](/mem/intune/enrollment/apple-account-driven-user-enrollment)
 
- 1. Set up SSO Plugin. Authenticator app with SSO extension is a pre-requisite for user enrollment in an iOS device.
+ 1. Set up SSO Plugin. Authenticator app with SSO extension is a prerequisite for user enrollment in an iOS device.
    
    - Create a Device configuration Profile in Intune. See [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). 
-   - Ensure to add these two keys in the above configuration:
+   - Ensure to add these two keys in the the device configurationi profile:
       - App bundle ID: Include the Defender App bundle ID in this list `com.microsoft.scmx`
-      - Additional configuration: Key: `device_registration`; Type: `String`; Value: `{{DEVICEREGISTRATION}}`
+      - Another configuration: Key: `device_registration`; Type: `String`; Value: `{{DEVICEREGISTRATION}}`
 
  1. Set up the MDM Key for User Enrollment.
    
@@ -302,7 +302,7 @@ Microsoft Defender app can be deployed to iOS devices with Intune User Enrolled 
 
 ### End User
 
-The Microsoft Defender app is installed into the users' devices. Each user signs in and completes the onboarding process. Once the device is successfully onboarded, it is visible in the Microsoft Defender portal, under **Device Inventory**.
+The Microsoft Defender app is installed into the users' devices. Each user signs in and completes the onboarding process. Once the device is successfully onboarded, it's visible in the Microsoft Defender portal, under **Device Inventory**.
 
 ### Supported features and limitations
 
