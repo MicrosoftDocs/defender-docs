@@ -41,7 +41,7 @@ The following table lists the requirements for content distribution in multitena
 To create a new tenant group:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups) in multitenant management in Microsoft Defender XDR.
-2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.:
+2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.
 
     :::image type="content" source="media/mto-tenantgroups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="media/mto-tenantgroups/mto-add-tenants.png":::
 
