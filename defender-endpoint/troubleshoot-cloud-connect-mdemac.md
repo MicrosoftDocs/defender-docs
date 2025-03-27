@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 03/25/2021
+ms.date: 03/26/2025
 ---
 
 # Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS
