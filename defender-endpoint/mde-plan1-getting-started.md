@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: deniseb 
 audience: ITPro
 ms.topic: overview
-ms.date: 08/22/2023
+ms.date: 03/21/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
