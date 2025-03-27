@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 02/06/2025
+ms.date: 03/27/2025
 ---
 
 # Configure Microsoft Defender for Endpoint on iOS features
@@ -319,7 +319,7 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 > [!NOTE]
 > Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on iOS. 
 > 
-> IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
+> IP `245.245.0.1` is an internal Defender IP and shouldn't be included in custom indicators by customers to avoid any functionality issues.
 > 
 > For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
 
@@ -428,7 +428,7 @@ Defender for Endpoint on iOS enables bulk tagging the mobile devices during onbo
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
 > [!NOTE]
-> Configuring more than one device tags from Intune is not supported. Only one device tag will reflect when configured. However, Multiple device tags can be added manually in the XDR portal.
+> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the XDR portal.
 
 ### Configure device tags using MDM
 
