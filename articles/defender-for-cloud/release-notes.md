@@ -31,14 +31,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| March 30 | Preview | [Kubernetes gated deployment](#kubernetes-gated-deployment-preview) |
+| March 27 | Preview | [Kubernetes gated deployment](#kubernetes-gated-deployment-preview) |
+| March 27 | Preview | [Customizable On-upload Malware Scanning Filters in Defender for Storage (Preview)](#customizable-on-upload-malware-scanning-filters-in-defender-for-storage-preview) |
 | March 26 | GA | [General Availability for agentless VM scanning support for CMK in Azure](#general-availability-for-agentless-vm-scanning-support-for-cmk-in-azure) |
 | March 11 | Upcoming Change | [Upcoming change to the recommendation severity levels](#upcoming-change-to-the-recommendation-severity-levels) |
 | March 03 | GA | [General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government](#general-availability-of-file-integrity-monitoring-fim-based-on-microsoft-defender-for-endpoint-in-azure-government) |
 
 ### Kubernetes gated deployment (Preview)
 
-March 30, 2025
+March 27, 2025
 
 We're introducing the Kubernetes gated deployment (Preview) feature to the Defender for Containers plan. Kubernetes gated deployment is a mechanism for enhancing Kubernetes security by controlling the deployment of container images that violate organizational security policies. 
 
@@ -60,6 +61,14 @@ This capability is based on two new functionalities:
 **Future Enhancements**: Customers will be able to apply a wider range of security rules and best practices to restrict the deployment of vulnerable container images. 
 
 For more information about this feature, see [Gated Deployment solution overview](gated-deployment-introduction.md).
+
+### Customizable On-upload Malware Scanning Filters in Defender for Storage (Preview)
+
+March 27, 2025
+
+On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes as well as by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
+
+Learn how to configure customizable on-upload malware scanning filters.
 
 ### General Availability for agentless VM scanning support for CMK in Azure
 
