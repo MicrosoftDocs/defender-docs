@@ -58,8 +58,6 @@ This capability is based on two new functionalities:
 
 **End-to-End Security**: Defining protection from deployment of vulnerable container images as the first security rule, we introduce the end-to-end Kubernetes secure gating mechanism, ensuring that vulnerable containers don't enter the customer's Kubernetes environment. 
 
-**Future Enhancements**: Customers will be able to apply a wider range of security rules and best practices to restrict the deployment of vulnerable container images. 
-
 For more information about this feature, see [Gated Deployment solution overview](gated-deployment-introduction.md).
 
 ### Customizable on-upload malware scanning filters in Defender for Storage (Preview)
