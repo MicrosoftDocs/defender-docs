@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/26/2025
+ms.date: 03/27/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -42,7 +42,7 @@ March 27, 2025
 
 On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes as well as by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
 
-Learn how to configure customizable on-upload malware scanning filters.
+Learn how to [configure customizable on-upload malware scanning filters](on-upload-malware-scanning.md#customizable on-upload-malware-scanning-filters).
 
 ### General Availability for agentless VM scanning support for CMK in Azure
 
