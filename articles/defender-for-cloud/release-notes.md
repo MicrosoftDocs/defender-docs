@@ -39,24 +39,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 March 30, 2025
 
-We are introducing the Kubernetes gated deployment (Preview) feature to the Defender for Containers plan. Kubernetes gated deployment is a mechanism for enhancing Kubernetes security by controlling the deployment of container images that violate organizational security policies. 
+We're introducing the Kubernetes gated deployment (Preview) feature to the Defender for Containers plan. Kubernetes gated deployment is a mechanism for enhancing Kubernetes security by controlling the deployment of container images that violate organizational security policies. 
 
-This capability is based on 2 new functionalities: 
+This capability is based on two new functionalities: 
 
 - **Vulnerability findings artifact**: Generation of findings for each container image scanned for vulnerability assessment.
 - **Security rules**: Addition of security rules to alert or prevent the deployment of vulnerable container images into Kubernetes clusters. 
 
-**Customized security rules**: Customers can customize security rules for various environments or Kubernetes clusters within their organization, enabling security controls tailored to specific needs and compliance requirements.
+**Customized security rules**: Customers can customize security rules for various environments, for Kubernetes clusters within their organization, or for namespaces, to enable security controls tailored to specific needs and compliance requirements.
 
 **Configurable actions for a security rule**:
 
-- **Audit**: Attempting to deploy a vulnerable container image will trigger an "Audit" action, generating a recommendation with violation details on the container image. 
+- **Audit**: Attempting to deploy a vulnerable container image triggers an "Audit" action, generating a recommendation with violation details on the container image. 
 
-- **Deny**: Attempting to deploy a vulnerable container image will trigger a "Deny" action to prevent deployment of the container image, ensuring that only secure and compliant images are deployed. 
+- **Deny**: Attempting to deploy a vulnerable container image triggers a "Deny" action to prevent deployment of the container image, ensuring that only secure and compliant images are deployed. 
 
-**End-to-End Security**: Defining protection from deployment of vulnerable container images as the first security rule, we introduce the end-to-end Kubernetes secure gating mechanism, ensuring that vulnerable containers do not enter the customer's Kubernetes environment. 
+**End-to-End Security**: Defining protection from deployment of vulnerable container images as the first security rule, we introduce the end-to-end Kubernetes secure gating mechanism, ensuring that vulnerable containers don't enter the customer's Kubernetes environment. 
 
-**Future Enhancements**: Customers will be able to leverage a wider range of security rules and best practices to restrict the deployment of vulnerable container images. 
+**Future Enhancements**: Customers will be able to apply a wider range of security rules and best practices to restrict the deployment of vulnerable container images. 
 
 For more information about this feature, see [Gated Deployment solution overview](gated-deployment-introduction.md).
 
