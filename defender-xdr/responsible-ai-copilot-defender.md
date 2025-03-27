@@ -79,7 +79,7 @@ Responsible AI is a journey, and we'll continually improve our systems along the
 
 ### Do you comply with the EU AI Act?
 
-We are committed to compliance with the EU AI Act. Our multi-year effort to define, evolve, and implement our Responsible AI Standard and internal governance has strengthened our readiness.
+We are committed to compliance with the EU AI Act. Our multi-year effort to define, evolve, and implement our Responsible AI Standard and internal governance has strengthened our readiness. To find out more, see [Microsoft's compliance with the EU AI Act](https://www.microsoft.com/trust-center/compliance/eu-ai-act).
 
 At Microsoft, we recognize the importance of regulatory compliance as a cornerstone of trust and reliability in AI technologies. We're committed to creating responsible AI by design. Our goal is to develop and deploy AI that will have a beneficial impact on and earn trust from society.
 
