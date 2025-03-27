@@ -224,7 +224,7 @@ Suggested possible workarounds:
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuratuin mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
