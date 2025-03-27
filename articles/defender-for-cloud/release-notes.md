@@ -36,7 +36,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | March 11 | Upcoming Change | [Upcoming change to the recommendation severity levels](#upcoming-change-to-the-recommendation-severity-levels) |
 | March 03 | GA | [General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government](#general-availability-of-file-integrity-monitoring-fim-based-on-microsoft-defender-for-endpoint-in-azure-government) |
 
-### Enhanced co ntainer protection with vulnerability assessment and malware detection for AKS nodes is now GA
+### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes is now GA
  
 March 30, 2025
  
