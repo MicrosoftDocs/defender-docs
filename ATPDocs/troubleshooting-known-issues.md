@@ -422,7 +422,7 @@ Uninstall the certificate management client, install the Defender for Identity s
 
 >[!NOTE]
 >
->The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation.
+> The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation.
 > This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
 
 ## Sensor installation fails due to network connectivity issues
@@ -445,7 +445,6 @@ For more information, see [Run a silent installation with a proxy configuration]
 
 > [!IMPORTANT]
 > Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that aren't present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
->
 
 ## Sensor service couldn't run and remains in Starting state
 
@@ -487,9 +486,10 @@ The issue can come up when a Defender for Identity workspace license expires and
 1. Then you can go back in the [Microsoft Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
 
 ## Entra Connect sensor experiences loss of database permissions following the update to Microsoft Entra Connect 
+
 **Cause:**
 
-Updating Microsoft Entra Connect may cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to  [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](https://learn.microsoft.com/defender-for-identity/troubleshooting-using-logs) for log locations and further details. 
+Updating Microsoft Entra Connect may cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](troubleshooting-using-logs.md) for log locations and further details.
 
 Sample logs that may indicate the issue:
 
@@ -499,7 +499,7 @@ Sample logs that may indicate the issue:
 
 **Resolution:**
 
-If permissions need to be reconfigured, please follow the steps outlined in this [guide](https://learn.microsoft.com/defender-for-identity/deploy/active-directory-federation-services#configure-permissions-for-the-microsoft-entra-connect-adsync-database). 
+If permissions need to be reconfigured, please follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
 
 ## Next steps
 
