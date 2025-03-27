@@ -44,12 +44,20 @@ You can run any query that you already have access to in the multi-tenant manage
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png":::
 
-   The query results contain a column named **TenantId**. The values in this column show the workspace ID. We recommend that you use your query to rename the column in your results from **TenantId** to **WorkspaceId** to make it simpler to read. For example: <!--does this happen even if you don't have mult workspaces? also - is this actually true? also - what's w the query for the tenant name up at the top?-->
+   The query results contain a column named **TenantId**. If you're using multiple workspaces, the values in this column show the workspace ID instead of the tenant ID. In such cases, we recommend that you use your query to rename the column in your results from **TenantId** to **WorkspaceId** to make it simpler to read. For example: 
 
    ```kusto
    DeviceEvents
    | take 10
    | project TenantId = WorkspaceID
+
+   Or, to query multiple workspaces in the same tenant, use a query similar to the following:
+
+   ```kusto
+   Usage
+   | union workspace("WorkpaceA").Usage
+   | take 10
+   ```
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
