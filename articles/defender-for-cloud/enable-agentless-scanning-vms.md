@@ -1,10 +1,11 @@
 ---
-title: Enable agentless scanning for VMs in Microsoft Defender for Cloud
+title: Enable agentless scanning for VMs
 description: Run agentless scanning on VMs for vulnerabilities and threats in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 01/22/2025
+ms.date: 03/26/2025
+#customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
 ---
 
 # Enable agentless machine scanning
@@ -46,7 +47,7 @@ When you turn on Defender for Servers Plan 2 or the Defender Cloud Security Post
 
 1. Select **Save**.
 
-## Enable for Azure VMs with CMK encrypted disks (preview)
+## Enable for Azure VMs with CMK encrypted disks
 
 For agentless scanning of Azure VMs with CMK encrypted disks, you need to grant Defender for Cloud additional permissions on Key Vaults used for CMK encryption for the VMs, to create a secure copy of the disks.
 
