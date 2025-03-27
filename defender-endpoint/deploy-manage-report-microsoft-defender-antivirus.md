@@ -3,7 +3,7 @@ title: Deploy, manage, and report on Microsoft Defender Antivirus
 description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/23/2023
+ms.date: 03/26/2025
 ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
@@ -32,11 +32,13 @@ search.appverid: met150
 
 Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later (Windows Server 2012 requires Microsoft Defender for Endpoint). You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
 
-- [Microsoft Intune](#microsoft-intune)
-- [Configuration Manager](#configuration-manager)
-- [PowerShell](#powershell)
-- [Group Policy and Microsoft Entra ID](#powershell)
-- [Windows Management Instrumentation](#windows-management-instrumentation)
+- [Deploy, manage, and report on Microsoft Defender Antivirus](#deploy-manage-and-report-on-microsoft-defender-antivirus)
+  - [Microsoft Intune](#microsoft-intune)
+  - [Configuration Manager](#configuration-manager)
+  - [PowerShell](#powershell)
+  - [Group Policy and Microsoft Entra ID](#group-policy-and-microsoft-entra-id)
+  - [Windows Management Instrumentation](#windows-management-instrumentation)
+  - [See also](#see-also)
 
 This article describes these options for deployment, management, and reporting.
 
