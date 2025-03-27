@@ -12,7 +12,7 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: conceptual
-ms.date: 03/26/2025
+ms.date: 03/27/2025
 appliesto: 
 - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -82,10 +82,10 @@ Check the sync results under the **Last sync result** column. If the result is *
 
 :::image type="content" source="media/mto-tenantgroups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="media/mto-tenantgroups/mto-sync-results.png":::
 
-## Syncing content among tenant groups
-
 > [!NOTE]
-> Syncing is limited to a maximum of 9,500 sync units. For example, you'll reach the maximum sync units limit if you are publishing 10 assignments each to 10 tenants and 95 templates.
+> The maximum number of published items per publish operation is 9,500. Published items are calculated as the number of tenants multiplied by the number of templates. For example, if you publish 10 tenant groups with 10 target tenants and 95 content templates, then the published items equals to 9,500.
+
+## Syncing content among tenant groups
 
 To sync content across tenant groups for the tenants you have permission for:
 
