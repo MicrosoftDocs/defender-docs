@@ -19,15 +19,17 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
-## March 2025
+## April 2025
 
 ### New Applications page in Defender XDR
 
-The Applications page, now accessible under Assets in the Defender XDR portal, provides a unified inventory of all SaaS and OAuth-connected apps within your organization. This centralized view enables efficient discovery, monitoring, and management of applications, enhancing overall visibility and control.​
+The Applications page, now accessible under Assets in the Defender XDR portal, provides a unified inventory of all SaaS and connected OAuth apps within your environment. This centralized view enables efficient discovery, monitoring, and management of applications, enhancing overall visibility and control.​
 
 Detailed insights—including app risk scores, usage metrics, publisher statuses, and privilege levels—facilitate the swift identification of high-risk or untagged applications requiring attention.​
 
 For more information, see [Application inventory overview](applications-inventory.md)
+
+## March 2025
 
 ### Enhanced Identity Inventory (Preview)
 
