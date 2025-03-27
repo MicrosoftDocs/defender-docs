@@ -10,8 +10,6 @@ ms.date: 3/12/2025
 
 # Enable gated deployment in Defender for Containers
 
-## Overview
-
 Gated deployment is an important practice to ensure that only container images meeting the organization's security policies are deployed to Kubernetes environments, based on the definition of security rules. A security rule defines the action to take if certain conditions are met for the associated scope. The gated deployment admissions controller examines a container image and its vulnerability findings artifact against the relevant security rules. This page describes the steps to configure the security rules used by the gated deployment admission controller. 
 
 ## Prerequisites
@@ -36,11 +34,11 @@ While gated deployment is available when the prerequisites are fulfilled, the pr
       - **Rule name** - a name to identify this security rule
       - **Action** - the action to take when the conditions of the security rule are met (**Audit** or **Deny**)
       - **Scope name** - a name to identify the scope of this security rule
-      - **Cloud scope** - the cloud environment(s) this security rule is applied to
+      - **Cloud scope** - the cloud environments this security rule is applied to
       - **Resource scope** - the conditions used to limit the resources in the cloud scope this security rule is applied to
     - Select **Configurations** and define the following:
-      - **Add condition types** - specify the conditions that trigger the action when found in the container image - either a vulnerability level or a specific CVE id.
-      - **Add allowed vulnerabilities** - specify the CVE ids that are exempted from triggering the action for this security rule
+      - **Add condition types** - specify the conditions that trigger the action when found in the container image - either a vulnerability level or a specific CVE ID.
+      - **Add allowed vulnerabilities** - specify the CVE IDs that are exempted from triggering the action for this security rule
     - Select **Enable prerequisites**.
     - After reviewing the prerequisites, select **Add rule**.
 

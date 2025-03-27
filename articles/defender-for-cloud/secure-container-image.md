@@ -7,7 +7,7 @@ ms.date: 03/16/2025
 ms.topic: conceptual
 ---
 
-# Securing a container image by signing the vulnerability findings artifact
+# Secure a container image by signing the vulnerability findings artifact
 
 Container images are essential for deploying applications consistently across different environments. However, ensuring the integrity and authenticity of these images is crucial to prevent tampering and security breaches. This is where signing and verifying a container image vulnerability findings artifact comes into play.
 

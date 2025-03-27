@@ -968,7 +968,7 @@
       - name: Container software supply chain (CSSC) security
         items:
           - name: Overview
-            href: cssc-security-introduction.md
+            href: containers-software-supply-chain-security-introduction.md
           - name: Securing a container image
             href: secure-container-image.md
           - name: Gated deployment

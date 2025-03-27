@@ -14,10 +14,10 @@ In today's cloud-native environments, securing the container software supply cha
 
 With Defender for Containers, you can:
 - Scan container images for vulnerabilities and security threats.
-- Sign the vulnerability findings artifact upon each image re-scan to ensure vulnerabilities were not introduced within your organization's CSSC. The vulnerability findings artifact is signed with a Microsoft certificate for integrity and authenticity and is associated with the container image in the registry for validation needs.
+- Sign the vulnerability findings artifact upon each image rescan to ensure vulnerabilities weren't introduced within your organization's CSSC. The vulnerability findings artifact is signed with a Microsoft certificate for integrity and authenticity and is associated with the container image in the registry for validation needs.
 - Create security rules to control deployment of container images based on vulnerabilities detected in the container image.
 - Assess container images during deployment against security rules that implement organizational security policies.
-- Enforce security policies to maintain compliance.
+- Maintain compliance by using security policies.
 - Gain visibility into your container security posture.
 
 By integrating Defender for Containers into your DevOps processes and applying the security guardrails it offers, you can enhance the security of your container software supply chain and build resilient, secure applications.
