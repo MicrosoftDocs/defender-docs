@@ -1,8 +1,8 @@
 ---
 title: Migration and setup guides to move to Microsoft Defender for Endpoint
 description: Learn how to make the switch from a non-Microsoft Defender XDR solution to Microsoft Defender for Endpoint
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: migrationguides
 ms.reviewer: chriggs, depicker, yongrhee
 f1.keywords: NOCSH
-ms.date: 01/27/2023
+ms.date: 03/26/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
