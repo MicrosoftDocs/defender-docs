@@ -2,7 +2,7 @@
 title: Application inventory
 ms.date: 03/20/2025
 ms.topic: overview
-description: The Application Inventory provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience. The new "Applications" page, located under Assets in Defender XDR portal.
+description: The new Applications page located under Assets in Microsoft Defender XDR portal provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience
 #customer intent: As a security administrator, I want to discover, monitor, and manage all SaaS and OAuth connected apps in my organization so that I can ensure security and compliance.
 ---
 # Application inventory
@@ -15,9 +15,9 @@ The Application page includes the following tabs:
 * SaaS apps: A consolidated view of all SaaS applications in your network. This tab highlights key details, including app name, status (unprotected/protected app) and whether the app is marked as sanctioned or unsanctioned.
 * OAuth apps: Displays a list of OAuth apps such as Microsoft Entra ID, Google workspace and Salesforce.
 
-## Navigate to the Applications inventory page
+## Navigate to the Application inventory page
 
-In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Applications**. Or, to go directly to the **Applications inventory** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
+In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Applications**. Or, to go directly to the **Application inventory** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
 
 :::image type="content" source="media/banner-on-cloud-discovery-pages.png" alt-text="Screenshot of the Cloud Discovery page with a banner about the new unified application inventory experience" lightbox="media/banner-on-cloud-discovery-pages.png":::
 
