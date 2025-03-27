@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 08/03/2023
+ms.date: 09/21/2024
 ---
 
 # Technological partners of Microsoft Defender XDR
