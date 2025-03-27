@@ -4,8 +4,8 @@ description: Learn how to migrate down-level servers from Microsoft Monitoring A
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.topic: conceptual
-ms.date: 03/14/2025
+ms.date: 03/27/2025
 ---
 
 # Migrating servers from Microsoft Monitoring Agent to the unified solution
