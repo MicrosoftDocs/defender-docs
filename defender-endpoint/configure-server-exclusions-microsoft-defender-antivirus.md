@@ -34,7 +34,7 @@ search.appverid: met150
 > [!IMPORTANT]
 > ## Important notes about automatic exclusions on Windows Server
 >
-> - [Custom exclusions](configure-exclusions-microsoft-defender-antivirus) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
+> - [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
 > - Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
 > - Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
 > - Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
@@ -56,7 +56,7 @@ For a more detailed overview of exclusions, see [Manage exclusions for Microsoft
 Automatic server role exclusions will apply specific sets of automatic path and process exclusions based on the roles that you select for the server. 
 
 > [!NOTE]
-> - Please see [Important Notes]([#important-notes-about-automatic-exclusions-on-windows-server)
+> - Please see [Important Notes](#important-notes-about-automatic-exclusions-on-windows-server)
 > - Default locations could be different than the locations that are described in this article.
 > - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the automatic server role exclusions. 
 > - To set exclusions for software that isn't included as a Windows feature or server role, refer to the software manufacturer's documentation.
@@ -241,7 +241,7 @@ This section lists the folder exclusions that are delivered automatically when y
 ## Built-in exclusions
 
 > [!NOTE]
-> - Please see [Important Notes]([#important-notes-about-automatic-exclusions-on-windows-server)
+> - Please see [Important Notes](#important-notes-about-automatic-exclusions-on-windows-server)
 > - Default locations could be different than the locations that are described in this article.
 > - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
 
