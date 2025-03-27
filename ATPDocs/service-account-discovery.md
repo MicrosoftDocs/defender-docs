@@ -9,9 +9,9 @@ ms.date: 03/25/2025
 
 ### What are Service Accounts?
 
-Service accounts are specialized identities within Active Directory used to run applications, services, and automated tasks. These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate like human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
+Service accounts are specialized identities within Active Directory used to run applications, services, and automated tasks. These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate in the same way as human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
 
-The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then surfaced, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
+The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 Service accounts can be broadly classified into several types, including:
 
@@ -40,7 +40,7 @@ There are several options you can choose from to customize the identities list v
 - Export the list to a CSV file.
 
 > [!NOTE]
-> When exporting the Service accounts list to a CSV file, a maximum of 2000 Service accounts are displayed.
+> When exporting the service accounts list to a CSV file, a maximum of 2,000 service accounts are displayed.
 
 ### Service account details
 
@@ -85,9 +85,9 @@ When you investigate a specific Service account, you'll see the following detail
 |Source type    | What kind of device or system is initiating the request. For example, server, workstation or domain controller.        |
 |Source risk   | Identicates the risk posed to the source from no risk to high risk.         |
 |Destination   | Where the request is being directed to. The target system that the service account is trying to access. For example, when trying to access a destination server, there can be multiple resources on that server (for example, a database and a file-server).        |
-|Destination type    | Server, Workstation or Domain controller.         |
+|Destination type    | Server, Workstation, or Domain controller.         |
 |Auth protocols   | Kerberos and NTLM        |
-|Service Class     | The services within a network that define the type of service being provided, often used for authentication and resource management. These include: Lightweight Directory Access Protocol (LDAP), Common Internet File System (CIFS), Remote Procedure Call (RPC), Remote Procedure Call Subsystem (RPCSS), "HTTP", Terminal Services (TERMSRV), and "HOST"        |
+|Service Class     | The services within a network that define the type of service being provided, often used for authentication and resource management. These include: Lightweight Directory Access Protocol (LDAP), Common Internet File System (CIFS), Remote Procedure Call (RPC), Remote Procedure Call Subsystem (RPCSS), "HTTP," Terminal Services (TERMSRV), and "HOST"        |
 |Count | How many sign in events occurred over this connection in the last 180 days.
 Last seen   | The date and time of the most recent sign in event over this connection.        |
 
