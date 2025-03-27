@@ -296,7 +296,7 @@
                 - name: Schedule antivirus scans using Anacron
                   href: schedule-antivirus-scan-anacron.md
                 - name: Schedule antivirus scans using Crontab
-                  href: linux-schedule-scan-mde.md
+                  href: schedule-antivirus-scan-crontab.md
               - name: Network protection for Linux
                 href: network-protection-linux.md
               - name: Configure and validate exclusions on Linux
@@ -563,7 +563,7 @@
     items:
     - name: Migration guides overview
       href: migration-guides.md
-    - name: Migrate Defender for Endpoint servers to Defender for Cloud
+    - name: Migrate servers to Defender for Cloud
       href: migrating-mde-server-to-cloud.md
     - name: Migrate to Defender for Endpoint
       href: switch-to-mde-overview.md

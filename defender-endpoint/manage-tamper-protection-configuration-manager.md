@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off using tenant attach with Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 09/05/2023
+ms.date: 03/26/2025
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh

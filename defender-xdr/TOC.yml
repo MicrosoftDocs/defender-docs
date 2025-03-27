@@ -462,6 +462,8 @@
       items:
         - name: Microsoft Defender XDR FAQs
           href: m365d-enable-faq.md      
+        - name: Alert policies
+          href: alert-policies.md
         - name: Audit activities and events
           href: microsoft-xdr-auditing.md
         - name: Configure email notifications

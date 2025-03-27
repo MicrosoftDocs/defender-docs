@@ -172,6 +172,9 @@ items:
          displayName: Microsoft Entra Connect
        - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
          href: remove-replication-permissions-microsoft-entra-connect.md
+       - name: Remove unsafe permissions on sensitive Entra Connect accounts
+         href: remove-unsafe-permissions-sensitive-entra-connect.md
+         displayName: MDI
        - name: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
          href: replace-entra-connect-default-admin.md
      - name: Identity infrastructure

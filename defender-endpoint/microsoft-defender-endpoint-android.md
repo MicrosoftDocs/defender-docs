@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 02/28/2025
+ms.date: 03/21/2025
 ---
 
 # Microsoft Defender for Endpoint on Android
@@ -65,7 +65,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 **What does it mean devices running on unsupported Android version?** 
 
-**New users**: The application is longer available for new installations on devices running on unsupported versions. When users with unsupported versions attempt to download the Microsoft Defender app, the Google Play store notifies them that the device is incompatible.
+**New users**: The application is no longer available for new installations on devices running on unsupported versions. When users with unsupported versions attempt to download the Microsoft Defender app, the Google Play store notifies them that the device is incompatible.
 
 **Existing users**: The Microsoft Defender app continues to function for existing users on unsupported versions, but they don't receive updates from the Google Play store because they don't meet the minimum SDK version requirements. Therefore, any new updates on the app aren't available to devices running unsupported versions. Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running on unsupported versions aren't investigated. 
 
@@ -81,9 +81,11 @@ Microsoft Defender for Endpoint on Android supports installation on both modes o
 - Installation of Microsoft Defender for Endpoint on devices that aren't enrolled using Intune mobile device management (MDM), see [Configure Microsoft Defender for Endpoint risk signals in app protection policy (MAM)](android-configure-mam.md).
 
 > [!NOTE]
+> If a user has a valid MDE license and is registered in the Authenticator App or Company Portal App, and has signed in to the Defender App, the device appears in the Defender Portal.
+
+> [!NOTE]
 > **Microsoft Defender for Endpoint on Android is available on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx) now.**
->
-> You can connect to Google Play from Intune to deploy Microsoft Defender for Endpoint app, across Device Administrator and Android Enterprise enrollment modes.
+> > You can connect to Google Play from Intune to deploy the Microsoft Defender for Endpoint app across Device Administrator and Android Enterprise enrollment modes.
 
 ### Required permissions
 
@@ -103,9 +105,15 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 #### How to resolve the noncompliance state due to silent auth failures
 
-Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access). If a policy is violated, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background). This process results in the devices being shown as non-compliant in the Intune portal. A user can get the device to compliant status by signing in again.
+- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access).
 
-The user receives a notification (as shown in the following scenarios) asking them to sign in. The user can tap the notification or open the Microsoft Defender app and sign in. Signing in results in a successful, interactive authentication and causes the Intune portal to show the device as compliant.
+- If a policy is violated, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
+
+- This process results in the devices being shown as noncompliant in the Intune portal. A user can get the device to compliant status by signing in again.
+
+- Users receive a notification (as shown in the following scenarios) prompting them to sign in.
+
+- They can tap the notification or open the Microsoft Defender app and sign in, which results in a successful, interactive authentication and causes the Intune portal to show the device as compliant.
 
 **Scenario 1:** The following experience occurs when MFA is configured by the admin through a Conditional Access policy:
 
@@ -113,7 +121,7 @@ The user receives a notification (as shown in the following scenarios) asking th
 
 **Scenario 2:** The following experience occurs when **MFA is not configured** by the admin through a Conditional Access policy:
 
-:::image type="content" source="media/mfa-not-cong-user-flow.png" alt-text="Screenshot showing the user flow when MFA is not configured by your security team." lightbox="media/mfa-not-cong-user-flow.png":::
+:::image type="content" source="media/mfa-not-cong-user-flow.png" alt-text="Screenshot showing the user flow when MFA isn't configured by your security team." lightbox="media/mfa-not-cong-user-flow.png":::
 
 ## How to configure Microsoft Defender for Endpoint on Android
 
