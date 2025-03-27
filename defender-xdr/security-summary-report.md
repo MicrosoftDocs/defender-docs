@@ -1,0 +1,62 @@
+---
+title: Visualize security impact with the unified security summary
+description: Learn how to use the unified security summary in the Microsoft Defender portal to visualize your security impact and achievements.
+ms.service: defender-xdr
+ms.localizationpriority: medium
+audience: ITPro
+author: diannegali
+ms.author: diannegali
+ms.date: 04/02/2025
+manager: deniseb
+ms.topic: how-to
+ms.collection:
+- m365-security
+- tier2
+search.appverid: met150
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to showcase security achievements and impact using data from the Microsoft Defender portal.
+---
+# Highlight security impact and achievements with the unified security summary
+
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+Security operations center (SOC) teams can easily showcase their security achievements and the impact of Microsoft Defender using the unified security summary. Having the summary readily available in the Microsoft Defender portal streamlines the process for SOC teams to generate security reports, saving time usually spent on collecting data from various sources and creating reports tailored to their audiences. SOC teams can readily communicate performance and achievements to their stakeholders with the summary.
+
+The unified security summary highlights the following information:
+
+- **Posture**: Your organization’s posture includes data from Microsoft Secure Score, threat protection information related to ransomware and phishing prevention, exposure score based on Microsoft Defender Vulnerability Management, and the number of onboarded devices to Microsoft Defender for Endpoint
+- **Detection**: This section contains the number of alerts and incidents, including how many alerts were consolidated into incidents, the number of alerts grouped into incidents,  and information on active detection rules and the corresponding response actions produced by those rules
+- **Protection**: Cards under this section include data from Microsoft’s automatic investigation and response features like the total number of attacks disrupted, a list of the disruption incidents, the number of malicious activities blocked by Microsoft Defender Antivirus, and the number of malicious emails and URLs blocked
+- **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of automated investigation and remediation actions taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)
+- **Copilot-powered investigation and response**: This section contains the number of analyzed files and scripts where Microsoft Copilot in Defender was used.
+
+SOC teams can use the security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption stopping attacks before it becomes widespread.
+
+## Prerequisites
+
+The following licenses are required to generate a complete security summary:
+
+- TBA
+
+> [!NOTE]
+> Data for the unified security summary is based on the Microsoft security products and services present in the organization. Data is limited only to the products relevant to the user.
+
+Users must have the following permissions to view the unified security summary:
+
+- Security data basics (read)
+- Vulnerability management (read)
+
+## View the unified security summary
+
+To access and share the unified security summary, follow these steps:
+
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+2. In the navigation, select **Reports**. Under General, select **Unified security summary**.
+3. The report page automatically generates data from the last 90 days by default. You can adjust the data to show the last 30 days if needed.
+4. Once the summary is generated, you can check the details of each card under each section.
+   > [!TIP]
+   > Select a card's title to know more about each card. Selecting the title opens the related Microsoft documentation page. 
+5. You can export the summary as a PDF or CSV file. To export, select the dropdown menu on the upper right corner of the page and choose the format.
+6. If you choose to export the summary as a PDF, an option to customize by adding a logo of your choice is available. Select **Upload** logo to do this. Otherwise, you can select **Generate PDF** to proceed exporting the summary to a PDF file.
+7. When exporting the summary as a CSV file, the file is automatically saved to your device as *Unified security summary_{date and time exported}.csv*. The file contains three columns for the card name, the field name in the card, and the value of the field. Here’s an example.
