@@ -141,7 +141,7 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 - Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
 - Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
    1. Transparent proxy
-   2. Manual static proxy configuration 
+   2. [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration) 
 - Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE] 
