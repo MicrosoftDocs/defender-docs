@@ -203,7 +203,7 @@ On the **Domains & addresses** tab, you can sort the entries by clicking on an a
 - **Override verdicts**: The available values are:
     - **Up to malware** for block entries.
     - **Up to regular confidence phishing** for allow entries created directly in Tenant Allow/Block List.
-    - **Up to high confidence phishing** for allow entries created via submissions. Allows created via submissions will automatically update existing directly created allow entries.
+    - **Up to high confidence phishing** for allow entries created via submissions. Allow entries created via submissions automatically update directly created allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
