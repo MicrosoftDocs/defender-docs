@@ -34,6 +34,8 @@ Each row in the `DeviceTvmSecureConfigurationAssessment` table contains an asses
 
 You can join this table with the [DeviceTvmSecureConfigurationAssessmentKB](advanced-hunting-devicetvmsecureconfigurationassessmentkb-table.md) table using `ConfigurationId` so you can, for example, view the text description of the configuration from the `ConfigurationDescription` column of the `DeviceTvmSecureConfigurationAssessmentKB` table, in the configuration assessment results.
 
+This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Endpoint in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
