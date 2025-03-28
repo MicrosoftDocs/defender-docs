@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/14/2025
+ms.date: 03/28/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -53,7 +53,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-- Linux server endpoints should be able to access the [Microsoft Defender portal](https://security.microsoft.com). If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
+- Linux server endpoints should be able to access the `*.endpoint.security.microsoft.com`. If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
 - Linux server endpoints should have systemd (system manager) installed.
 - Administrative privileges on the Linux server endpoint are required for installation.
 
