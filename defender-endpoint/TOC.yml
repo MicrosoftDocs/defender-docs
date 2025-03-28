@@ -27,9 +27,9 @@
           href: mde-p1-setup-configuration.md
         - name: Get started
           href: mde-plan1-getting-started.md
-    - name: Zero Trust for Microsoft Defender for Endpoint
+    - name: Zero Trust for Defender for Endpoint
       href: zero-trust-with-microsoft-defender-endpoint.md
-    - name: Trial user guide - Microsoft Defender for Endpoint
+    - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
       href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
