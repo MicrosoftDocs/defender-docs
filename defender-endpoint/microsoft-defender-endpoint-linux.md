@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/20/2025
+ms.date: 03/28/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -48,12 +48,15 @@ The following table describes capabilities in Defender for Endpoint:
 
 ## Server licenses 
 
-To deploy Defender for Endpoint on servers, server licenses are required. You can choose from these options:
+To onboard servers to Defender for Endpoint, server licenses are required. You can choose from the following options:
 
-- Microsoft Defender for Servers Plan 1 or Plan 2 as part of [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (recommended); or
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender for Endpoint for servers
+- [Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
 
-See [Product Terms: Microsoft Defender for Endpoint](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS)
+For more detailed information about licensing requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint licensing information](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
+
+For detailed licensing information, see [Product Terms: Microsoft Defender for Endpoint]( https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS) and work with your account team to learn more about the terms and conditions.
 
 <!---If/when we add a page about server licensing, let's add that link here.--->
   
