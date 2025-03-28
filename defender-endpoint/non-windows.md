@@ -2,8 +2,8 @@
 title: Microsoft Defender for Endpoint on other platforms
 description: Learn about Microsoft Defender for Endpoint capabilities on other platforms
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender for Endpoint on other platforms
