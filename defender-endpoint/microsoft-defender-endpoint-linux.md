@@ -77,7 +77,7 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 > [!IMPORTANT]
 > Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
-If you experience any installation issues, self-troubleshooting resources are available. See the ilnks in the [See also](#see-also) section.
+If you experience any installation issues, self-troubleshooting resources are available. See the links in the [See also](#see-also) section.
 
 ### Configure policies for Defender for Endpoint on Linux
 
