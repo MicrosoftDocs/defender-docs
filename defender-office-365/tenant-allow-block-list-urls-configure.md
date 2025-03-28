@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 03/03/2025
+ms.date: 03/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -200,7 +200,7 @@ On the **URLs** tab, you can sort the entries by clicking on an available column
 - **Override verdicts**: The available values are:
     - **Up to malware** for block entries.
     - **Up to regular confidence phishing** for allow entries created directly from Tenant Allow/Block List.
-    - **Up to malware** for allow entries created via submissions.
+    - **Up to malware** for allow entries created via submissions.  Allows created via submissions will automatically update existing directly created allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
