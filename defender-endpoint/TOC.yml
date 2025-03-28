@@ -24,6 +24,8 @@
       href: microsoft-defender-endpoint-ios.md
     - name: Microsoft Defender for Endpoint for US Government customers
       href: gov.md
+    - name: Supported Microsoft Defender for Endpoint capabilities by platform
+      href: supported-capabilities-by-platform.md
     - name: Zero Trust for Microsoft Defender for Endpoint
       href: zero-trust-with-microsoft-defender-endpoint.md
     - name: Trial user guide - Microsoft Defender for Endpoint
@@ -32,8 +34,6 @@
       href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
     - name: Minimum requirements
       href: minimum-requirements.md
-    - name: Supported Microsoft Defender for Endpoint capabilities by platform
-      href: supported-capabilities-by-platform.md
     - name: What's new in Defender for Endpoint
       href: whats-new-in-microsoft-defender-endpoint.md
       items: 
