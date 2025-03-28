@@ -93,12 +93,12 @@ Warn mode is supported on devices running the following versions of Windows:
 
 Microsoft Defender Antivirus must be running with real-time protection in [Active mode](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility#functionality-and-features-available-in-each-state).
 
-Also, make sure [Microsoft Defender Antivirus and antimalware updates](/windows/security/threat-protection/microsoft-defender-antivirus/manage-updates-baselines-microsoft-defender-antivirus#platform-and-engine-releases) are installed.
+Also, make sure [Microsoft Defender Antivirus and anti-malware updates](/windows/security/threat-protection/microsoft-defender-antivirus/manage-updates-baselines-microsoft-defender-antivirus#platform-and-engine-releases) are installed.
 
 - Minimum platform release requirement: `4.18.2008.9`
 - Minimum engine release requirement: `1.1.17400.5`
 
-For more information and to get your updates, see [Update for Microsoft Defender antimalware platform](https://support.microsoft.com/help/4052623/update-for-microsoft-defender-antimalware-platform).
+For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](https://support.microsoft.com/help/4052623/update-for-microsoft-defender-antimalware-platform).
 
 ### Cases where warn mode isn't supported
 
@@ -124,7 +124,7 @@ For specific details about notification and alert functionality, see: [Per rule 
 
 You can use advanced hunting to view attack surface reduction events. To streamline the volume of incoming data, only unique processes for each hour are viewable with advanced hunting. The time of an attack surface reduction event is the first time that event is seen within the hour.
 
-For example, suppose that an attack surface reduction event occurs on 10 devices during the 2:00 PM hour. Suppose that the first event occurred at 2:15, and the last at 2:45. With advanced hunting, you see one instance of that event (even though it actually occurred on 10 devices), and its timestamp will be 2:15 PM.
+For example, suppose that an attack surface reduction event occurs on 10 devices during the 2:00 PM hour. Suppose that the first event occurred at 2:15, and the last at 2:45. With advanced hunting, you see one instance of that event (even though it actually occurred on 10 devices), and its timestamp is 2:15 PM.
 
 For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
