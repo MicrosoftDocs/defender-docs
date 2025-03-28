@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 02/16/2024
+ms.date: 03/26/2025
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint live response issues
