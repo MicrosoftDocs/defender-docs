@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 03/28/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune
@@ -209,21 +209,21 @@ In some cases, for security reasons like password changes, multifactor authentic
 
 **A: For first time onboarding scenarios, end users receive a silent notification**.
 
-<!---image needed--->
+    :::image type="content" source="media/mde-ios-notification.png" alt-text="Screenshot showing the MDE silent notification" lightbox="media/mde-ios-notification.png":::
 
-End users should take the following steps: 
+End users should take the following steps:
 
 1. Open the Microsoft Defender app or tap on the notification message.
 
 1. Select the enrolled enterprise account from the account picker screen.
 
-1. Sign in. 
+1. Sign in.
 
 The device is onboarded and starts reporting to the Microsoft Defender portal.
 
 **B: For already onboarded devices, end users see a silent notification**.
 
-<!---image file needed here--->
+    :::image type="content" source="media/mde-ios-notification-2.png" alt-text="Screenshot showing the MDE app silent notification" lightbox="media/mde-ios-notification-2.png":::
 
 1. Open the Microsoft Defender app, or tap the notification.  
 
