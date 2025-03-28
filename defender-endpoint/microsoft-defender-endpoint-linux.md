@@ -135,7 +135,6 @@ If you're using non-Microsoft applications, also see their documentation regardi
 - [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
-- [Run the client analyzer on Linux](run-analyzer-linux.md)
 
 ## See also
 
