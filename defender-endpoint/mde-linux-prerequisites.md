@@ -56,6 +56,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 - Linux server endpoints should be able to access the `*.endpoint.security.microsoft.com`. If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
 - Linux server endpoints should have systemd (system manager) installed.
 - Administrative privileges on the Linux server endpoint are required for installation.
+- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
 
 > [!NOTE] 
 > Linux distributions using system manager support both SystemV and Upstart.
