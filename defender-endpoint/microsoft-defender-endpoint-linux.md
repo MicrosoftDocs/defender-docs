@@ -44,7 +44,7 @@ The following table describes capabilities in Defender for Endpoint on Linux:
 |Threat protection| Defender for Endpoint on Linux includes next-generation antivirus protection using local & cloud-based machine learning models, behavior analysis, and heuristics. <br><br>Cloud protection provides near-instant detection and blocking of new/emerging threats.<br><br>You get dedicated, continuous protection with regular security intelligence and product updates. <br><br>You can also investigate and define policies for customer IP- and URL-based indicators of compromise.|
 |Endpoint detection and response| Defender for Endpoint on Linux uses AI and advanced analytics to detect and respond to threats close to real time. <br><br> In the Microsoft Defender portal, you have a central location to view detections across the Microsoft Defender suite and your organization's devices. <br><br>You can use advanced hunting to view raw data and get more insight into your network events. <br><br>Response actions are available to act swiftly and nimbly on security alerts.|
 |Streamlined management and operations| Defender for Endpoint on Linux offers broad coverage across a breadth of Linux distributions while making operations easier for your security team. <br><br>You can manage your security settings in the Microsoft Defender portal and plan your update cycles in advance, while supporting your Linux servers where they are, with offline and multicloud options.|
-|Enterprise-grade scale, performance, and reliability| Microsoft Defender for Endpoint ensures stable and durable performance with a rich sensor framework that operates without kernel modules and integrates eBPF for operational stability. <br><br>Defender for Endpoint seamlessly integrates with the larger Microsoft Defender suite, offering extensibility through API integration, SIEM connectors, Power BI support, role-based access control (RBAC), and MSPP support.|
+|Enterprise-grade scale, performance, and reliability| Microsoft Defender for Endpoint on Linux ensures stable and durable performance with a rich sensor framework that operates without kernel modules and integrates eBPF for operational stability. <br><br>Defender for Endpoint seamlessly integrates with the larger Microsoft Defender suite, offering extensibility through API integration, SIEM connectors, Power BI support, role-based access control (RBAC), and MSPP support.|
 
 ## Server licenses 
 
@@ -71,8 +71,8 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
 - [Manual deployment](/defender-endpoint/linux-install-manually)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- For Arm64-based Linux servers, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
-- For Linux Server with SAP, see [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
+- [Deployment guidance for Defender for Endpoint on Linux on Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
+- [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
 > Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
