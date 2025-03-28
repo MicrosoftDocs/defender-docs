@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/20/2025
+ms.date: 03/28/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
