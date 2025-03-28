@@ -26,21 +26,22 @@ Security operations center (SOC) teams can easily showcase their security achiev
 The unified security summary highlights the following information:
 
 - **Posture**: Your organization’s posture includes data from Microsoft Secure Score, threat protection information related to ransomware and phishing prevention, exposure score based on Microsoft Defender Vulnerability Management, and the number of onboarded devices to Microsoft Defender for Endpoint
+  :::image type="content" source="/defender/media/security-summary/summary-posture-small.png" alt-text="Screenshot of the Posture section in the security summary report" lightbox="/defender/media/security-summary/summary-posture.png":::
 - **Detection**: This section contains the number of alerts and incidents, including how many alerts were consolidated into incidents, the number of alerts grouped into incidents,  and information on active detection rules and the corresponding response actions produced by those rules
+  :::image type="content" source="/defender/media/security-summary/summary-detection-small.png" alt-text="Screenshot of the Detection section in the security summary report" lightbox="/defender/media/security-summary/summary-detection.png":::
 - **Protection**: Cards under this section include data from Microsoft’s automatic investigation and response features like the total number of attacks disrupted, a list of the disruption incidents, the number of malicious activities blocked by Microsoft Defender Antivirus, and the number of malicious emails and URLs blocked
+  :::image type="content" source="/defender/media/security-summary/summary-protection-small.png" alt-text="Screenshot of the Protection section in the security summary report" lightbox="/defender/media/security-summary/summary-protection.png":::
 - **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of automated investigation and remediation actions taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)
+  :::image type="content" source="/defender/media/security-summary/summary-investigation-small.png" alt-text="Screenshot of the Investigation and Response section in the security summary report" lightbox="/defender/media/security-summary/summary-investigation.png":::
 - **Copilot-powered investigation and response**: This section contains the number of analyzed files and scripts where Microsoft Copilot in Defender was used.
+  :::image type="content" source="/defender/media/security-summary/summary-copilot-small.png" alt-text="Screenshot of the Copilot section in the security summary report" lightbox="/defender/media/security-summary/summary-copilot.png":::
 
-SOC teams can use the security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption stopping attacks before it becomes widespread.
+SOC teams can use the unified security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption stopping attacks before it becomes widespread.
 
 ## Prerequisites
 
-The following licenses are required to generate a complete security summary:
-
-- TBA
-
-> [!NOTE]
-> Data for the unified security summary is based on the Microsoft security products and services present in the organization. Data is limited only to the products relevant to the user.
+> [!IMPORTANT]
+> Data for the unified security summary is based on the Microsoft security products and services present in the organization. Data is limited only to the Microsoft products which the user has provisioned access to. For example, if the organization has Microsoft Defender for Endpoint and Microsoft Defender for Office 365, the summary will only show data from these two products.
 
 Users must have the following permissions to view the unified security summary:
 
@@ -54,9 +55,19 @@ To access and share the unified security summary, follow these steps:
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 2. In the navigation, select **Reports**. Under General, select **Unified security summary**.
 3. The report page automatically generates data from the last 90 days by default. You can adjust the data to show the last 30 days if needed.
+   :::image type="content" source="/defender/media/security-summary/duration-picker.png" alt-text="Screenshot highlighting the report data duration options in the security summary report":::
 4. Once the summary is generated, you can check the details of each card under each section.
    > [!TIP]
-   > Select a card's title to know more about each card. Selecting the title opens the related Microsoft documentation page. 
+   > Select a card's title to know more about each card. Selecting the title opens the related Microsoft documentation page.
 5. You can export the summary as a PDF or CSV file. To export, select the dropdown menu on the upper right corner of the page and choose the format.
+   :::image type="content" source="/defender/media/security-summary/export-picker.png" alt-text="Screenshot highlighting the export options in the security summary report":::
 6. If you choose to export the summary as a PDF, an option to customize by adding a logo of your choice is available. Select **Upload** logo to do this. Otherwise, you can select **Generate PDF** to proceed exporting the summary to a PDF file.
+   :::image type="content" source="/defender/media/security-summary/pdf-dialog.png" alt-text="Screenshot of the export to PDF dialog box":::
 7. When exporting the summary as a CSV file, the file is automatically saved to your device as *Unified security summary_{date and time exported}.csv*. The file contains three columns for the card name, the field name in the card, and the value of the field. Here’s an example.
+   :::image type="content" source="/defender/media/security-summary/csv-sample-values.png" alt-text="Screenshot of the CSV output of the security summary report":::
+
+## Related content
+
+- [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md)
+- [Automated investigation and response in Microsoft Defender XDR](m365d-autoir.md)
+- [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
