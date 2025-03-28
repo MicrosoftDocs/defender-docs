@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 02/07/2025
+ms.date: 03/28/2025
 ---
 
 # Configure offline security intelligence update for Microsoft Defender for Endpoint on Linux 
@@ -165,15 +165,16 @@ To manually execute the downloader script, configure the parameters in the `sett
 
 Once the script is executed, the latest signatures get downloaded to the folder configured in the `settings.json` file (`updates.zip`).
 
-Once the signatures zip is downloaded, the mirror server can be used to host it. The mirror server can be hosted using any of the HTTP/HTTPS/network share servers.
+Once the signatures zip is downloaded, the mirror server can be used to host it. The mirror server can be hosted using any of the HTTP/HTTPS/network share servers, or a local/remote mount point.
 
 Once hosted, copy the absolute path of the hosted server (up to and not including the `arch_*` directory).
 
-For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (`www.example.server.com:8000`) is hosting the `/tmp/wdav-update` path, the corresponding URI is: `www.example.server.com:8000/linux/production/`.
+> [!NOTE]
+> For example, if the downloader script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (`www.example.server.com:8000`) is hosting the `/tmp/wdav-update` path, then the corresponding URI is: `www.example.server.com:8000/linux/production/` (verify that this within this directory, there are the `arch_*` directories).
+> 
+> We can also use the absolute path of directory (local/remote mount point). For example, if the files were downloaded by the script into a directory `/tmp/wdav-update`, then the corresponding URI is:`/tmp/wdav-update/linux/production`.
 
-We can also use the absolute path of directory (local/remote mount point) like `/tmp/wdav-update/linux/production`.
-
-Once the mirror server is set up, we need to propagate this URL to the Linux endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
+Once the mirror server is set up, we need to propagate this URI to the Linux endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
 
 ## Configure the endpoints
 
@@ -200,7 +201,7 @@ Use the following sample `mdatp_managed.json` and update the parameters as per t
 |-------------------------------------------|----------------------|-----------------------------------------------------|
 | `automaticDefinitionUpdateEnabled`        | `True`/`False`         | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
 | `definitionUpdatesInterval`               | Numeric              | Time of interval between each automatic update of signatures (in seconds). |
-| `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). |
+| `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). See the previous section for information about how to specify this path.|
 | `offlineDefinitionUpdate`                 | `enabled`/`disabled`   | When set to `enabled`, the "offline security intelligence update" feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud`  | `True`/`False`         | Determine Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
 | `offlineDefinitionUpdateVerifySig`        | `enabled`/`disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. |
