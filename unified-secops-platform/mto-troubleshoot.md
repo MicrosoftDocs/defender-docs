@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: concept-article
-ms.date: 03/25/2025
+ms.date: 03/28/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
