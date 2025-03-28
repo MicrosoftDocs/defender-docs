@@ -120,7 +120,9 @@ For more information, see [Privacy for Microsoft Defender for Endpoint on Linu
 
 ## Common applications that Defender for Endpoint impacts 
 
-High I/O workloads from certain applications can experience performance issues when Microsoft Defender for Endpoint is installed. Such applications for developer scenarios include Jenkins and Jira, and database workloads like OracleDB and Postgres. If you see performance degradation, consider setting exclusions for trusted applications. See the following articles:
+High I/O workloads from certain applications can experience performance issues when Defender for Endpoint is installed. Such applications for developer scenarios include Jenkins and Jira, and database workloads like OracleDB and Postgres. 
+
+If you see performance degradation, consider setting exclusions for trusted applications. See the following articles:
 
 - [Configure and validate exclusions for Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions)
 - [Review common Exclusion Mistakes for Microsoft Defender Antivirus](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus)
