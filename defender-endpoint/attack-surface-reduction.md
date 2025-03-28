@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 03/28/2025
 ---
 
 # Attack surface reduction rules overview
@@ -79,7 +79,7 @@ For information about configuring per-rule exclusions, see the section titled **
 
 ## Warn mode for users
 
-Whenever content is blocked by an attack surface reduction rule, users see a dialog box that indicates the content is blocked. The dialog box also offers the user an option to unblock the content. The user can then retry their action, and the operation completes. When a user unblocks content, the content remains unblocked for 24 hours, and then blocking resumes.
+Whenever an attack surface reduction rule blocks content, users see a dialog box that indicates the content is blocked. The dialog box also offers the user an option to unblock the content. The user can then retry their action, and the operation completes. When a user unblocks content, the content remains unblocked for 24 hours, and then blocking resumes.
 
 Warn mode helps your organization have attack surface reduction rules in place without preventing users from accessing the content they need to perform their tasks.
 
