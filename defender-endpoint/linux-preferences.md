@@ -55,11 +55,11 @@ If you prefer to use command line, you can use that to configure certain setting
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) through functionality known as Security Settings Management. For more information, including how to create, edit, and verify your security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) through functionality known as Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
 
 ### Configuration profile
 
-You can configure Defender for Endpoint on Linux through a configuration profile that uses a `.json` file. After you have set up your profile, you can deploy it by using your management tool of choice. Preferences managed by the enterprise take precedence over the ones set locally on the device. In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions that were added locally.
+You can configure settings in Defender for Endpoint on Linux through a configuration profile that uses a `.json` file. After you have set up your profile, you can deploy it by using your management tool of choice. Preferences managed by the enterprise take precedence over the ones set locally on the device. In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions that were added locally.
 
 This article describes the structure of this profile (including a recommended profile that you can use to get started) and instructions on how to deploy the profile.
 
