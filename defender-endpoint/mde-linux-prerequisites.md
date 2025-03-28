@@ -136,9 +136,8 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 > NFS v3 mount points to be scanned thoroughly and are required to set the `no_root_squash` export option on these mount points.
 > Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
-## Network connections
+## Verify that devices can connect to Defender for Endpoint cloud services
 
-- Verify that your devices can connect to Microsoft Defender for Endpoint cloud services.
 - Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
 - Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
    1. Transparent proxy
