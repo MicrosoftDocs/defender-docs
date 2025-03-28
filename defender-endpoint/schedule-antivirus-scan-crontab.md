@@ -1,5 +1,5 @@
 ---
-title: How to schedule scans with Microsoft Defender for Endpoint (Linux)
+title: Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint (Linux) to better protect your organization's assets.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -15,17 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/11/2024
+ms.date: 03/24/2025
 ---
 
-# Schedule scans with Microsoft Defender for Endpoint (Linux)
+# Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 
 **Applies to:**
 
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
-To run a scan for Linux, see [Supported Commands](linux-resources.md#supported-commands).
+To run a scan for Linux, see [Supported commands](linux-resources.md#supported-commands).
 
 For Linux (and Unix), you can use a tool called **crontab** (similar to Task Scheduler in Windows) to run scheduled tasks.
 
@@ -41,9 +41,9 @@ For Linux (and Unix), you can use a tool called **crontab** (similar to Task Sch
 > - `America/Chicago`
 > - `America/Denver`
 
-## To set the Cron job
+## Set the Cron job
 
-Use the following commands:
+To set the cron job, use the commands in this article.
 
 ### Backup crontab entries
 
@@ -72,9 +72,7 @@ You might see:
 0 * * * * /etc/opt/microsoft/mdatp/logrorate.sh
 ```
 
-Press "Insert"
-
-Add the following entries:
+Press **Insert**, and then add the following entries:
 
 ```bash
 CRON_TZ=America/Los_Angeles
@@ -85,9 +83,7 @@ CRON_TZ=America/Los_Angeles
 > [!NOTE]
 > In this example, we have  set it to 00 minutes, 2 a.m. (hour in 24 hour format), any day of the month, any month, on Saturdays. Meaning it will run Saturdays at 2:00 a.m. Pacific (UTC -8).
 
-Press "Esc"
-
-Type "`:wq`" without the double quotes.
+Press **Esc**, and then type "`:wq`" without the double quotes.
 
 > [!NOTE]
 > w == write, q == quit
@@ -134,7 +130,7 @@ For more information, see [Chef documentation](https://docs.chef.io/resources/cr
 Resource Type: cron
 ```
 
-See <https://puppet.com/docs/puppet/5.5/types/cron.html> for more information.
+For more information, see [Puppet documentation: Resource Type: cron](https://puppet.com/docs/puppet/5.5/types/cron.html). 
 
 **Automating with Puppet: Cron jobs and scheduled tasks**
 
@@ -231,4 +227,11 @@ crontab -u username -r
 | | | | +—- day of week (values: 0 - 6) (Sunday=0 or 7) (special characters: , \- \* / L W C) <br>
 | | | | |*****command to be executed
 ```
+
+## See also
+
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
