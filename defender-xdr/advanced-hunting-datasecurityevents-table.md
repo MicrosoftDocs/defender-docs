@@ -16,18 +16,17 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/11/2025
+ms.date: 03/28/2025
 ---
 
 # DataSecurityEvents (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Purview
 
 
 

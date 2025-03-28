@@ -17,8 +17,11 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 09/06/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceRegistryEvents
@@ -26,9 +29,6 @@ ms.date: 09/06/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
 
 The `DeviceRegistryEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about the creation and modification of registry entries. Use this reference to construct queries that return information from this table.
 

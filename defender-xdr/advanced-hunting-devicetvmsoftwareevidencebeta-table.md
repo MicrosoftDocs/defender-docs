@@ -17,18 +17,17 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceTvmSoftwareEvidenceBeta
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
 
 > [!IMPORTANT]
 > The `DeviceTvmSoftwareEvidenceBeta` table is currently in beta. Once it leaves beta, the final table name will change and column names may also change. The modifications will then likely break queries that are still using previous names. Users are advised to review and adjust their queries when this table is finalized. 

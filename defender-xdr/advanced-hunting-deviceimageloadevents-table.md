@@ -17,8 +17,11 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 09/06/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceImageLoadEvents
@@ -26,9 +29,6 @@ ms.date: 09/06/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
 
 The `DeviceImageLoadEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about DLL loading events. Use this reference to construct queries that return information from this table.
 

@@ -19,11 +19,11 @@ ms.custom:
 - cx-ah
 - seo-marvel-apr2020
 ms.topic: overview
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 search.appverid: met150
-ms.date: 10/18/2024
-appliesto: 
-- Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+ms.date: 03/28/2025
 ---
 
 # Proactively hunt for threats with advanced hunting in Microsoft Defender

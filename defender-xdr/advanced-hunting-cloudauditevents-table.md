@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 12/29/2023
+ms.date: 03/28/2025
 ---
 
 # CloudAuditEvents (Preview)

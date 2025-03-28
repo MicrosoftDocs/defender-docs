@@ -17,18 +17,17 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceFileCertificateInfo
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
 
 The `DeviceFileCertificateInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about file signing certificates. This table uses data obtained from certificate verification activities regularly performed on files on endpoints.
 

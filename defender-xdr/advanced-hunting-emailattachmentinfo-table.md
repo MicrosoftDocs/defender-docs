@@ -17,17 +17,18 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 12/29/2023
+ms.date: 03/28/2025
 ---
 
 # EmailAttachmentInfo
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- Microsoft Defender XDR
 
 
 The `EmailAttachmentInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about attachments on emails processed by Microsoft Defender for Office 365. Use this reference to construct queries that return information from this table.

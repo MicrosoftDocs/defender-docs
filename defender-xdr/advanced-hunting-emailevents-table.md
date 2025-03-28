@@ -17,17 +17,18 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 03/28/2025
 ---
 
 # EmailEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- Microsoft Defender XDR
 
 
 The `EmailEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about events involving the processing of emails on Microsoft Defender for Office 365. Use this reference to construct queries that return information from this table.

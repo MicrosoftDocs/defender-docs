@@ -17,8 +17,11 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 04/22/2024
+ms.date: 03/28/2025
 ---
 
 # Hunt for threats across devices, emails, apps, and identities
@@ -26,8 +29,6 @@ ms.date: 04/22/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
 [Advanced hunting](advanced-hunting-overview.md) in Microsoft Defender XDR allows you to proactively hunt for threats across:
 
