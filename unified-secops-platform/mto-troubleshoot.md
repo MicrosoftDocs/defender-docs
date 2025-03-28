@@ -47,7 +47,7 @@ To resolve this issue, we recommend adding the Microsoft Defender portal first p
 
 Here’s an example of the policy setting in the Microsoft Entra admin center.
 
-:::image type="content" source="media/mto-troubleshoot/CAP-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-troubleshoot/CAP-policy.png":::
+:::image type="content" source="media/mto-troubleshoot/cap-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-troubleshoot/cap-policy.png":::
 
 ## Related content
 
