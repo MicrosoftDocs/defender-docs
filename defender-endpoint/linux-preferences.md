@@ -456,6 +456,7 @@ By default, NFS and Fuse are unmonitored from RTP, Quick, and Full scans. Howeve
   }
 }
 ```
+
 To remove both NFS and Fuse from unmonitored list of filesystems, use the following snippet:
 
 ```JSON
