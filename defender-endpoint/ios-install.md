@@ -283,8 +283,8 @@ Microsoft Defender app can be deployed to iOS devices with Intune User Enrolled 
 
  1. Set up SSO Plugin. Authenticator app with SSO extension is a prerequisite for user enrollment in an iOS device.
    
-   - Create a Device configuration Profile in Intune. See [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). 
-   - Ensure to add these two keys in the device configuration profile:
+    - Create a Device configuration Profile in Intune. See [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). 
+    - Ensure to add these two keys in the device configuration profile:
       - App bundle ID: Include the Defender App bundle ID in this list `com.microsoft.scmx`
       - Another configuration: Key: `device_registration`; Type: `String`; Value: `{{DEVICEREGISTRATION}}`
 
