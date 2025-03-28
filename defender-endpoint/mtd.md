@@ -7,7 +7,7 @@ ms.subservice: onboard
 ms.author: deniseb
 author: denisebmsft  
 ms.localizationpriority: medium
-ms.date: 03/10/2025
+ms.date: 03/28/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -109,7 +109,7 @@ iOS Dedicated/shared/kiosk device enrollment isn't supported.
 
 ### End-user onboarding
 
-- [Configure Zero-touch onboard for iOS enrolled devices](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint): Admins can configure zero-touch install to silently onboard Microsoft Defender for Endpoint on enrolled iOS devices without requiring the user to open the app. 
+- [Configure Zero-touch onboard for iOS enrolled devices](https://learn.microsoft.com/en-us/defender-endpoint/ios-install?view=o365-worldwide#zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview): Admins can configure zero-touch install to silently onboard Microsoft Defender for Endpoint on enrolled iOS devices without requiring the user to open the app. 
 
 - [Configure Conditional Access to enforce user onboarding](android-configure.md#conditional-access-with-defender-for-endpoint-on-android): This can be applied to ensure end-users onboard to the Microsoft Defender for Endpoint app after deploying. Watch this video for a quick demo on configuring conditional access with Defender for Endpoint risk signals. 
 
