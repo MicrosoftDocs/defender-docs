@@ -166,7 +166,7 @@ Once the profile is downloaded, deploy the custom profile. Follow these steps:
 
 Administrators can automate onboarding to Defender for Endpoint for users in two different ways with Zero touch (Silent) Onboarding or Auto Onboarding of VPN.
 
-### Zero-touch (Silent) onboarding to Defender for Endpoint
+### Zero touch (Silent) onboarding to Defender for Endpoint
 
 > [!NOTE]
 > Zero-touch can't be configured on iOS devices that are enrolled without user affinity (user-less devices or shared devices).
