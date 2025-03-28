@@ -238,19 +238,19 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to you Kubernetes environment | - | - | - | - | - | - |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | - | - | - | - | - | - |
 
 ### [GCP](#tab/gcpcssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to you Kubernetes environment | - | - | - | - | - | - |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | - | - | - | - | - | - |
 
 ### [Arc enabled](#tab/arccssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to you Kubernetes environment | - | - | - | - | - | - |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | - | - | - | - | - | - |
 
 ---
 
