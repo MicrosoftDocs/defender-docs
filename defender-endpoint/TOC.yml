@@ -25,8 +25,8 @@
         href: microsoft-defender-endpoint-ios.md
       - name: Microsoft Defender for Endpoint for US Government customers
         href: gov.md
-    - name: Supported Microsoft Defender for Endpoint capabilities by platform
-      href: supported-capabilities-by-platform.md
+      - name: Supported Microsoft Defender for Endpoint capabilities by platform
+        href: supported-capabilities-by-platform.md
     - name: Zero Trust for Microsoft Defender for Endpoint
       href: zero-trust-with-microsoft-defender-endpoint.md
     - name: Trial user guide - Microsoft Defender for Endpoint
