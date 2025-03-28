@@ -7,14 +7,6 @@
     - name: What is Microsoft Defender for Endpoint?
       href: microsoft-defender-endpoint.md
       items: 
-      - name: Defender for Endpoint Plan 1
-        items:
-        - name: Overview of Defender for Endpoint Plan 1
-          href: defender-endpoint-plan-1.md
-        - name: Setup and configuration
-          href: mde-p1-setup-configuration.md
-        - name: Get started
-          href: mde-plan1-getting-started.md
       - name: Defender for Endpoint on macOS
         href: microsoft-defender-endpoint-mac.md
       - name: Defender for Endpoint on Linux
@@ -27,6 +19,14 @@
         href: gov.md
       - name: Supported Microsoft Defender for Endpoint capabilities by platform
         href: supported-capabilities-by-platform.md
+      - name: Defender for Endpoint Plan 1
+        items:
+        - name: Overview of Defender for Endpoint Plan 1
+          href: defender-endpoint-plan-1.md
+        - name: Setup and configuration
+          href: mde-p1-setup-configuration.md
+        - name: Get started
+          href: mde-plan1-getting-started.md
     - name: Zero Trust for Microsoft Defender for Endpoint
       href: zero-trust-with-microsoft-defender-endpoint.md
     - name: Trial user guide - Microsoft Defender for Endpoint
