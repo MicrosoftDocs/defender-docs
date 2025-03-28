@@ -200,7 +200,7 @@ On the **URLs** tab, you can sort the entries by clicking on an available column
 - **Override verdicts**: The available values are:
     - **Up to malware** for block entries.
     - **Up to regular confidence phishing** for allow entries created directly from Tenant Allow/Block List.
-    - **Up to malware** for allow entries created via submissions.  Allows created via submissions will automatically update existing directly created allow entries.
+    - **Up to malware** for allow entries created via submissions. Allow entries created via submissions automatically update directly created allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
