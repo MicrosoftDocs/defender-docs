@@ -209,7 +209,7 @@ In some cases, for security reasons like password changes, multifactor authentic
 
 **A: For first time onboarding scenarios, end users receive a silent notification**.
 
-    :::image type="content" source="media/mde-ios-notification.png" alt-text="Screenshot showing the MDE silent notification" lightbox="media/mde-ios-notification.png":::
+:::image type="content" source="media/mde-ios-notification.png" alt-text="Screenshot showing the MDE silent notification" lightbox="media/mde-ios-notification.png":::
 
 End users should take the following steps:
 
@@ -223,7 +223,7 @@ The device is onboarded and starts reporting to the Microsoft Defender portal.
 
 **B: For already onboarded devices, end users see a silent notification**.
 
-    :::image type="content" source="media/mde-ios-notification-2.png" alt-text="Screenshot showing the MDE app silent notification" lightbox="media/mde-ios-notification-2.png":::
+:::image type="content" source="media/mde-ios-notification-2.png" alt-text="Screenshot showing the MDE app silent notification" lightbox="media/mde-ios-notification-2.png":::
 
 1. Open the Microsoft Defender app, or tap the notification.  
 
