@@ -161,7 +161,7 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 ## 1.1.28250101
 
 - **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/mem/intune/protect/microsoft-tunnel-overview).
-- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint][(ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint)](https://learn.microsoft.com/en-us/defender-endpoint/ios-install?view=o365-worldwide#zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview).
+- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
 - Bug fixes.
 
 ## 1.1.24210103
@@ -172,7 +172,7 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 ## 1.1.23250104
 
 - Performance optimizations - Test battery performance with this version and let us know your feedback.
-- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboards for devices enrolled through Microsoft Intune has been added. For more information, see this [Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/ios-install?view=o365-worldwide#zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview).
+- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboards for devices enrolled through Microsoft Intune has been added. For more information, see this [Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
 - **Privacy Controls** - Configure privacy controls for phish alert report. For more information, see [Configure iOS features](ios-configure-features.md).
 
 ## 1.1.23010101
