@@ -2,11 +2,14 @@
   href: index.yml
   expanded: true
   items:
+  - name: Zero Trust with Defender for Endpoint
+    href: zero-trust-with-microsoft-defender-endpoint.md
   - name: Overview
     items:
     - name: What is Microsoft Defender for Endpoint?
-      href: microsoft-defender-endpoint.md
       items: 
+      - name: Defender for Endpoint on Windows
+        href: microsoft-defender-endpoint.md
       - name: Defender for Endpoint on macOS
         href: microsoft-defender-endpoint-mac.md
       - name: Defender for Endpoint on Linux
@@ -17,8 +20,10 @@
         href: microsoft-defender-endpoint-ios.md
       - name: Defender for Endpoint for US Government customers
         href: gov.md
-      - name: Supported Microsoft Defender for Endpoint capabilities by platform
+      - name: Supported Defender for Endpoint capabilities by platform
         href: supported-capabilities-by-platform.md
+      - name: Antivirus solution compatibility with Defender for Endpoint
+        href: defender-compatibility.md
       - name: Defender for Endpoint Plan 1
         items:
         - name: Overview of Defender for Endpoint Plan 1
@@ -27,14 +32,6 @@
           href: mde-p1-setup-configuration.md
         - name: Get started
           href: mde-plan1-getting-started.md
-    - name: Minimum requirements
-      href: minimum-requirements.md
-    - name: Zero Trust with Defender for Endpoint
-      href: zero-trust-with-microsoft-defender-endpoint.md
-    - name: Trial user guide - Defender for Endpoint
-      href: defender-endpoint-trial-user-guide.md
-    - name: Pilot and deploy Defender for Endpoint
-      href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
     - name: What's new in Defender for Endpoint
       href: whats-new-in-microsoft-defender-endpoint.md
       items: 
@@ -50,13 +47,17 @@
         href: ios-whatsnew.md
       - name: Previous Defender for Endpoint releases (archive)
         href: whats-new-mde-archive.md
+    - name: Minimum requirements
+      href: minimum-requirements.md
+    - name: Trial user guide - Defender for Endpoint
+      href: defender-endpoint-trial-user-guide.md
+    - name: Pilot and deploy Defender for Endpoint
+      href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
 
     - name: Preview features
       href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
-    - name: Antivirus solution compatibility with Defender for Endpoint
-      href: defender-compatibility.md
 
   - name: Microsoft Defender for Endpoint demonstrations and evaluation
     items:
