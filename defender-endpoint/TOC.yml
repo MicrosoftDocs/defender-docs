@@ -2,6 +2,8 @@
   href: index.yml
   expanded: true
   items:
+  - name: Zero Trust with Defender for Endpoint
+    href: zero-trust-with-microsoft-defender-endpoint.md
   - name: Overview
     items:
     - name: What is Microsoft Defender for Endpoint?
@@ -30,8 +32,6 @@
           href: mde-plan1-getting-started.md
     - name: Minimum requirements
       href: minimum-requirements.md
-    - name: Zero Trust with Defender for Endpoint
-      href: zero-trust-with-microsoft-defender-endpoint.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
