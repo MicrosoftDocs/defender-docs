@@ -18,7 +18,7 @@
         href: microsoft-defender-endpoint-ios.md
       - name: Defender for Endpoint for US Government customers
         href: gov.md
-      - name: Supported Microsoft Defender for Endpoint capabilities by platform
+      - name: Supported Defender for Endpoint capabilities by platform
         href: supported-capabilities-by-platform.md
       - name: Defender for Endpoint Plan 1
         items:
