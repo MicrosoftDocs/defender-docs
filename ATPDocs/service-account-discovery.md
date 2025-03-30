@@ -11,13 +11,13 @@ ms.date: 03/25/2025
 
 Service accounts are specialized identities within Active Directory used to run applications, services, and automated tasks. These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate in the same way as human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
 
-The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
-
 Service accounts can be broadly classified into several types, including:
 
 - gMSA (Group Managed Service Accounts): gMSAs provide a single identity solution for multiple services that require mutual authentication across multiple servers, as they allow Windows to handle password management, reducing administrative overhead.
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
 - User Account: These standard user accounts are typically used for interactive logins but can also be configured to run services.
+
+The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 > [!NOTE]
 > Service account tags are exposed within the Identity Info table within Advanced Hunting.
@@ -44,7 +44,6 @@ There are several options you can choose from to customize the identities list v
 
 ### Service account details
 
-
 - Total: The total number of service accounts listed.
 
 - Managed: The total number of service accounts that are gMSA (Group Managed Service Accounts) or sMSA (Managed Service Accounts)
@@ -66,8 +65,8 @@ You can use the sort and filter functionality on each service account tab to get
 - Tags: Sensitive or Honey Token
 - Auth protocols: Lists the available methods for verifying user identities, for example, Kerberos and NTLM (New Technology LAN Manager).
 - Sources: The number of potential source logins.
-- Destinations: The number of destinations the service account tried to access, such as a Domain Controller or remote desktop session.
-- Connections: The number of connections made by the service account.
+- Destinations: When a service account is trying to access a destination server, the request is directed to the target system, which can include a number of resources on that server. These resources might be a database, a file server, or other services hosted on the server.
+- Connections: The number of unique connections made between sources and destinations.
 - Created: The timestamp when the service account was first created.
 - Last updated: The timestamp of the most recent update to the service account.
 
@@ -90,6 +89,9 @@ When you investigate a specific Service account, you'll see the following detail
 |Service Class     | The services within a network that define the type of service being provided, often used for authentication and resource management. These include: Lightweight Directory Access Protocol (LDAP), Common Internet File System (CIFS), Remote Procedure Call (RPC), Remote Procedure Call Subsystem (RPCSS), "HTTP," Terminal Services (TERMSRV), and "HOST"        |
 |Count | How many sign in events occurred over this connection in the last 180 days.
 Last seen   | The date and time of the most recent sign in event over this connection.        |
+
+:::image type="content" source="media/Screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page" lightbox="media/Screenshot-of-the-connections-page.png":::
+
 
 For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details)
 

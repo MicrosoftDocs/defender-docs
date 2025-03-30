@@ -33,7 +33,7 @@ This update provides:
 
 - Automatic identification of Group Managed Service Accounts, Managed Service Accounts, and user accounts operating as service accounts.
 
-- A centralized Service Accounts inventory, displaying key attributes like account type, authentication activity, privileges, and criticality.
+- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
 
 For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md)
 
