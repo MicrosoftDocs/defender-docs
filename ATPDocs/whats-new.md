@@ -35,6 +35,8 @@ This update provides:
 
 - A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
 
+- A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
+
 For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
 
 
