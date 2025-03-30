@@ -2,7 +2,7 @@
 title: Supported resource and service types for multicloud in Foundational CSPM
 description: Learn more about the supported resource and service types for multicloud in Microsoft Defender for Cloud's Foundational CSPM.
 ms.topic: conceptual
-ms.date: 08/18/2024
+ms.date: 03/30/2025
 ---
 
 # Supported resource and service types for multicloud in foundational CSPM
@@ -201,8 +201,6 @@ ms.date: 08/18/2024
 | Provider Namespace | Resource Type Name |
 |----|----|
 | ApiKeys | Key |
-| ArtifactRegistry | Image |
-| ArtifactRegistry | Repository |
 | ArtifactRegistry | RepositoryPolicy |
 | Bigquery | Dataset |
 | Bigquery | DatasetData |
@@ -266,7 +264,6 @@ ms.date: 08/18/2024
 | OsConfig | OSPolicyAssignment |
 | OsConfig | OSPolicyAssignmentReport |
 | SQLAdmin | DatabaseInstance |
-| SecretManager | Secret |
 | SecretManager | SecretPolicy |
 | Storage | Bucket |
 | Storage | BucketPolicy |
