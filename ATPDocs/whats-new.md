@@ -22,6 +22,23 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## April 2025
+
+Microsoft Defender for Identity introduces seamless integration with Privileged Access Management (PAM) solutions, enhancing security and management of privileged identities.
+
+Key Features:
+
+- Sync admin and privileged users managed in PAM solutions to Defender XDR.
+- Prioritize investigations and responses using privileged identity information.
+- Build custom detections with "privileged identity" as a condition.
+- Enforce password rotation via integrated PAM solutions in case of suspected identity compromise.
+
+Supported PAM Solutions:
+
+- CyberArk 
+- Delinea 
+- BeyondTrust 
+
 ## March 2025
 
 ### New Health Issue
