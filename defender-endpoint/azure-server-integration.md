@@ -4,8 +4,8 @@ description: Learn about Microsoft Defender for Endpoint integration with Micros
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: conceptual
-ms.date: 05/03/2021
+ms.date: 03/27/2025
 ---
 
 # Integration with Microsoft Defender for Cloud
