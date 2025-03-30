@@ -85,8 +85,10 @@ items:
         displayName: standalone
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
-  - name: Integrate with partnerSystem services
-    href: integrate-microsoft-and-pam-services.md
+  - name: Integrate with partner system services
+    items:
+      name: Integration catalog
+      href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard

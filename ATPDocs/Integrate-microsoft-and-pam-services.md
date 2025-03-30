@@ -9,13 +9,15 @@ ms.topic: concept-article
 #customerIntent: As a SOC engineer, I want to understand how to integrate Microsoft Defender for Identity with my PAM (Prvileged Access Management) system to manage privileged access and detect threats.
 ---
 
+# Integrate Defender for Identity with your PAM services.
+
 # What are PAM services?
 
 Privileged Access Management (PAM) is an identity security solution designed to protect organizations from cyber threats by monitoring, detecting, and preventing unauthorized privileged access to critical resources.
 PAM works through a combination of people, processes, and technology. It provides visibility into who is using privileged accounts and what they're doing while logged in.
 Key features include automated password management, multifactor authentication, session monitoring, and anomaly detection.
 
-## Defender for Identity and PAM 
+## Defender for Identity and PAM
 
 Microsoft Defender for Identity integrates with PAM solutions to enhance security by providing advanced threat detection and response capabilities.
 Defender for Identity helps identify and investigate suspicious activities related to privileged accounts, such as unusual sign in patterns or privilege escalation attempts. 
@@ -32,4 +34,4 @@ This integration ensures a comprehensive approach to identity security, combinin
 
 ### Next steps 
 
-Fore more information see:
+For more information see:
