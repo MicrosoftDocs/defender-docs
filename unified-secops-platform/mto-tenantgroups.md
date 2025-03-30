@@ -12,7 +12,7 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: conceptual
-ms.date: 01/02/2025
+ms.date: 03/27/2025
 appliesto: 
 - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -24,7 +24,7 @@ Content distribution helps you manage content at scale, across tenants in multit
 Distributing content in this manner, across tenants, enables you to organize tenants and content based on categories like business groups or location.
 
 > [!NOTE]
-> Multitenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future.
+> Multitenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future. 
 
 ## Requirements
 
@@ -41,7 +41,7 @@ The following table lists the requirements for content distribution in multitena
 To create a new tenant group:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups) in multitenant management in Microsoft Defender XDR.
-2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.:
+2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.
 
     :::image type="content" source="media/mto-tenantgroups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="media/mto-tenantgroups/mto-add-tenants.png":::
 
@@ -50,7 +50,7 @@ To create a new tenant group:
     :::image type="content" source="media/mto-tenantgroups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="media/mto-tenantgroups/mto-add-content.png":::
 
 > [!NOTE]
-> The content type selection is currently limited to adding custom detection rules to a tenant group. Adding other content types will be available in the future. 
+> The content type selection is currently limited to adding custom detection rules to a tenant group. 
 
 4. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
 
@@ -81,6 +81,9 @@ Your newly created tenant group appears in the Tenant groups page after creation
 Check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When selecting the result, a side pane containing the errors, recommendations, and impacted assets appears. Here's an example.
 
 :::image type="content" source="media/mto-tenantgroups/mto-sync-results-small.png" alt-text="Screenshot of sync results side pane." lightbox="media/mto-tenantgroups/mto-sync-results.png":::
+
+> [!NOTE]
+> The maximum number of published items per publish operation is 9,500. Published items are calculated as the number of tenants multiplied by the number of templates. For example, if you publish 10 tenant groups with 10 target tenants and 95 content templates, then the published items equals to 9,500.
 
 ## Syncing content among tenant groups
 

@@ -2,8 +2,8 @@
 title: Create and manage device groups in Microsoft Defender for Endpoint
 description: Create device groups and set automated remediation levels on them by confirming the rules that apply on the group
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/12/2023
+ms.date: 03/26/2025
 ---
 
 # Create and manage device groups
