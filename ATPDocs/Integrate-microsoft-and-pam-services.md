@@ -35,3 +35,5 @@ This integration ensures a comprehensive approach to identity security, combinin
 ### Next steps 
 
 For more information see:
+
+[How to integrate Defender for Identity with Delinea](https://docs.delinea.com/online-help/integrations/microsoft/mdi/integrating-mdi.htm)
