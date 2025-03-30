@@ -965,6 +965,18 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
+      - name: Container software supply chain (CSSC) security
+        items:
+          - name: Overview
+            href: containers-software-supply-chain-security-introduction.md
+          - name: Securing a container image
+            href: secure-container-image.md
+          - name: Gated deployment
+            items:
+              - name: Overview
+                href: gated-deployment-introduction.md
+              - name: Enable gated deployment
+                href: enable-gated-deployment.md
       - name: Protect clusters with AKS Security Dashboard
         displayName: k8s, containers
         href: cluster-security-dashboard.md
