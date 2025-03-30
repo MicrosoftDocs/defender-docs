@@ -89,6 +89,7 @@ items:
     items:
     - name: Integration catalog
     - href: integrate-microsoft-and-pam-services.md
+    - displayName: Integration catalog
 - name: Manage
   items:
   - name: View the ITDR dashboard
