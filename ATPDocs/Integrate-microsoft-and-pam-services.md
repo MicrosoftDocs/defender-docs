@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 # Integrate Defender for Identity with your PAM services.
 
-# What are PAM services?
+## What are PAM services?
 
 Privileged Access Management (PAM) is an identity security solution designed to protect organizations from cyber threats by monitoring, detecting, and preventing unauthorized privileged access to critical resources.
 PAM works through a combination of people, processes, and technology. It provides visibility into who is using privileged accounts and what they're doing while logged in.

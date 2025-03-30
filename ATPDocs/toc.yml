@@ -87,8 +87,8 @@ items:
       href: deploy/activate-capabilities.md
   - name: Integrate with partner system services
     items:
-      name: Integration catalog
-      href: integrate-microsoft-and-pam-services.md
+    - name: Integration catalog
+    - href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
