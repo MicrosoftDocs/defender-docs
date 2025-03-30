@@ -11,7 +11,7 @@ ms.date: 03/25/2025
 
 Service accounts are specialized identities within Active Directory used to run applications, services, and automated tasks. These accounts often require elevated privileges to perform their designated job. However, because they can't authenticate in the same way as human accounts, they typically don't benefit from the increased security of modern authentication methods like MFA (multifactor authentication). Given their potential elevated privilege and the inherent limitations of the access policies that govern them, careful management and monitoring are crucial to ensure they don't become a security vulnerability.
 
-Service accounts can be broadly classified into several types, including:
+Service accounts are classified into several types:
 
 - gMSA (Group Managed Service Accounts): gMSAs provide a single identity solution for multiple services that require mutual authentication across multiple servers, as they allow Windows to handle password management, reducing administrative overhead.
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
@@ -19,17 +19,19 @@ Service accounts can be broadly classified into several types, including:
 
 The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
-> [!NOTE]
-> Service account types are exposed in the Identity Info table within Advanced Hunting.
+Service account types are displayed in the Identity Info table within Advanced Hunting.
 
+## Service accounts page
 
-### Navigate to the Identity inventory page
+#### Navigate to the Service accounts page
 
 In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Identities > Service Accounts.
 
 The following image depicts the Service accounts page
 
 :::image type="content" source="media/service-accounts-page.png" alt-text="Screenshot of the Service accounts page in the Defender portal" lightbox="media/service-accounts-page.png":::
+
+### Customize the page view
 
 There are several options you can choose from to customize the identities list view. On the top navigation you can:
 
@@ -38,6 +40,8 @@ There are several options you can choose from to customize the identities list v
 - Apply filters.
 
 - Export the list to a CSV file.
+
+- Sort and filter the Service accounts list.
 
 > [!NOTE]
 > When exporting the service accounts list to a CSV file, a maximum of 2,000 service accounts are displayed.
@@ -52,31 +56,32 @@ There are several options you can choose from to customize the identities list v
 
 - Critical: The total number of service accounts identified as critical.
 
-### Sort and filter the Service accounts list
-
-
 You can use the sort and filter functionality on each service account tab to get a more focused view.
 
-- Display name: The full name of the identity as shown in the directory.
-- SID: The Security Identifier, a unique value used to identify the identity in Active Directory.
-- Domain: The Active Directory domain to which the identity belongs.
-- Type: Specifies if the service account is gMSA (Group Managed Service Accounts), sMSA (Managed Service Accounts) or a user account.
-- Criticality level: Indicates the critical level of the service account, ranging from low to very high.
-- Tags: Sensitive or Honey Token
-- Auth protocols: Lists the available methods for verifying user identities, for example, Kerberos and NTLM (New Technology LAN Manager).
-- Sources: The number of potential source logins.
-- Destinations: When a service account is trying to access a destination server, the request is directed to the target system, which can include a number of resources on that server. These resources might be a database, a file server, or other services hosted on the server.
-- Connections: The number of unique connections made between sources and destinations.
-- Created: The timestamp when the service account was first created.
-- Last updated: The timestamp of the most recent update to the service account.
+| Service account details   |  Description |
+|---------|---------|
+|**Display name** | The full name of the service account as shown in the directory.
+|**SID**     | The Security Identifier, a unique value used to identify the identity in Active Directory.         |
+|**Domain**    | The Active Directory domain to which the identity belongs.         |
+|**Type**    | Specifies if the service account is gMSA (Group Managed Service Accounts), sMSA (Managed Service Accounts) or a user account.         |
+|**Criticality level**     | Indicates the critical level of the service account, ranging from low to very high.         |
+|**Tags**    | Sensitive or Honey Token        |
+|**Auth protocols**   | Lists the available methods for verifying user identities, for example, Kerberos and NTLM (New Technology LAN Manager).         |
+|**Sources**     |  The number of potential source logins.        |
+|**Destinations**    | When a service account is trying to access a destination server, the request is directed to the target system, which can include a number of resources on that server. These resources might be a database, a file server, or other services hosted on the server.        |
+|**Connections**   | The number of unique connections made between sources and destinations.         |
+|**Created**    |The timestamp when the service account was first created.         |
+|**Last updated**    | The timestamp of the most recent update to the service account.        |
+|
 
-### Service accounts overview
+### Connections
+
 
 For a deeper dive into what's happening in your service account click on the domain name to see the following information:
 
-**Connections**
-
 When you investigate a specific Service account, you'll see the following details under the connections tab:
+
+:::image type="content" source="media/Screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page" lightbox="media/Screenshot-of-the-connections-page.png":::
 
 |Service account connection details  |Description |
 |---------|---------|
@@ -90,7 +95,6 @@ When you investigate a specific Service account, you'll see the following detail
 |Count | How many sign in events occurred over this connection in the last 180 days.
 Last seen   | The date and time of the most recent sign in event over this connection.        |
 
-:::image type="content" source="media/Screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page" lightbox="media/Screenshot-of-the-connections-page.png":::
 
 
 For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details)

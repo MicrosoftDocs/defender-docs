@@ -24,7 +24,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2025
 
-### New: Service Account Discovery in Defender for Identity
+### New Service Account Discovery page
 
 
 Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
@@ -35,7 +35,7 @@ This update provides:
 
 - A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
 
-For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md)
+For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
 
 
 ### New Health Issue
