@@ -8,7 +8,7 @@ description: The new Applications page located under Assets in Microsoft Defende
 # Application inventory
 
 Protecting your SaaS ecosystem requires taking inventory of all SaaS and OAuth connected apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Defender for Cloud apps Applications page provides a centralized view of all SaaS and connected OAuth apps in your organization, enabling efficient monitoring and management.
-At a glance you can see information such as app name, risk score, privilege level, publisher information and other details for easy identification of SaaS and OAuth apps most at risk.
+At a glance you can see information such as app name, risk score, privilege level, publisher information, and other details for easy identification of SaaS and OAuth apps most at risk.
 
 The Application page includes the following tabs:
 
@@ -39,7 +39,7 @@ The following image depicts the SaaS apps list:
 
 ## SaaS app details
 
-At the top of the tabs, you can find actionable insights that allow you to quickly identify apps that need your attention and focus. In case of SaaS apps, the following details are available:
+At the top of the tabs, you can find actionable insights that allow you to quickly identify apps that need your attention and focus. In the SaaS apps tab, the following details are available:
 
 * **Untagged high risk apps** – Shows apps that aren't tagged and have a high-risk.
 * **Untagged high traffic apps** – Shows apps that aren't tagged and have a high usage traffic (greater than 1 GB of data traffic).
@@ -83,19 +83,19 @@ You can apply the following filters to get a more focused view:
 
 |Column name  |Description  |
 |---------|---------|
-| **App name** | The display name of the app as registered on Microsoft Entra ID |
-| **App status** | Shows whether the app is enabled or disabled, and if disabled by whom |
-| **Graph API access**| Shows whether the app has at least one Graph API permission |
-| **Permission type**| Shows whether the app has application (app only), delegated, or mixed permissions |
-| **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant |
-| **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app |
-| **Publisher**| Publisher of the app and their verification status |
+| **App name** | The display name of the app as registered on Microsoft Entra ID. |
+| **App status** | Shows whether the app is enabled or disabled, and if disabled by whom. |
+| **Graph API access**| Shows whether the app has at least one Graph API permission. |
+| **Permission type**| Shows whether the app has application (app only), delegated, or mixed permissions. |
+| **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant. |
+| **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app. |
+| **Publisher**| Publisher of the app and their verification status. |
 | **Last modified**| Date and time when registration information was last updated on Microsoft Entra ID |
-| **Added on**| Shows the date and time when the app was registered to Microsoft Entra ID and assigned a service principal |
-| **Permission usage**| Shows whether the app has any unused Graph API permissions in the last 90 days |
-| **Data usage**| Total data downloaded or uploaded by the app in the last 30 days |
-| **Privilege level**  | The app's privilege level |
-| **Certification**| Indicates if an app meets stringent security and compliance standards set by Microsoft 365 or if its publisher has publicly attested to its safety  |
+| **Added on**| Shows the date and time when the app was registered to Microsoft Entra ID and assigned a service principal. |
+| **Permission usage**| Shows whether the app has any unused Graph API permissions in the last 90 days. |
+| **Data usage**| Total data downloaded or uploaded by the app in the last 30 days. |
+| **Privilege level**  | The app's privilege level. |
+| **Certification**| Indicates if an app meets stringent security and compliance standards set by Microsoft 365 or if its publisher has publicly attested to its safety.  |
 | **Sensitivity label accessed**| Sensitivity labels on content accessed by the app  |
 | **Service accessed**| Microsoft 365 services accessed by the app  
 |
