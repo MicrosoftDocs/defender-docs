@@ -20,7 +20,7 @@ Service accounts can be broadly classified into several types, including:
 The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 > [!NOTE]
-> Service account tags are exposed within the Identity Info table within Advanced Hunting.
+> Service account types are exposed in the Identity Info table within Advanced Hunting.
 
 
 ### Navigate to the Identity inventory page
