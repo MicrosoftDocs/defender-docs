@@ -88,8 +88,7 @@ items:
   - name: Integrate with partner system services
     items:
     - name: Integration catalog
-    - href: integrate-microsoft-and-pam-services.md
-    - displayName: Integration catalog
+      href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
