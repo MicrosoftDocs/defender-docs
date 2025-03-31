@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.date: 03/23/2025
 ---
 
-# Investigate OAuth application attack paths in Defender for Cloud Apps 
+# Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)
 
 [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) helps you to manage your company's attack surface and exposure risk effectively. By combining assets and techniques, [attack paths](/security-exposure-management/review-attack-paths) illustrate the end-to-end paths that attackers can use to move from an entry point within your organization to your critical assets. This enables you to identify, prioritize, and mitigate the most significant risks to your exposed assets enhancing your organization overall security posture.
 Microsoft Defender for Cloud Apps detected an increase in attackers using OAuth applications to access critical data in business-critical applications like Microsoft Teams, SharePoint, Outlook, and more. To support investigation and mitigation, these applications are integrated into the attack path and attack surface map views in Microsoft Security Exposure Management. By identifying, reducing, and managing these paths, you can minimize your attack surface. This will strengthen the security of your Microsoft 365 services.
