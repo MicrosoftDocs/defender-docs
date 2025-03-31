@@ -136,6 +136,22 @@ Use the [Microsoft Security Intelligence web-based submission form](https://www.
 
 When you report a problem with attack surface reduction rules, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
 
+### Using the MDE Client Analyzer
+
+1. Download the [MDE Client Analyzer](/defender-endpoint/overview-client-analyzer).
+
+2. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
+
+   > [!TIP]
+   > Before starting the trace, please make sure that the issue is reproducible. Additionally, close any applications that do not contribute to the reproduction of the issue.
+
+3. Run the MDE Client Analyzer with the `-v` switches:
+
+   ```powershell
+   C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v
+   ```
+
+### Manual process
 1. Open Command Prompt as an administrator and open the Windows Defender directory:
 
    ```console
