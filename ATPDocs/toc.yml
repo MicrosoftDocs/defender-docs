@@ -132,6 +132,8 @@ items:
       href: identity-inventory.md
     - name: Investigate assets
       href: investigate-assets.md
+    - name: Service accounts
+      href: service-account-discovery.md
   - name: Lateral movement paths
     items:
     - name: Understand and investigate lateral movement paths
