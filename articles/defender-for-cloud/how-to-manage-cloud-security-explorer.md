@@ -3,23 +3,24 @@ title: Build queries with cloud security explorer
 description: Learn how to build queries with cloud security explorer in Microsoft Defender for Cloud to proactively identify security risks in your cloud environment.
 ms.topic: how-to
 ms.date: 03/31/2025
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: elazark
 ai-usage: ai-assisted
 # Customer Intent: As a security professional, I want to learn how to build queries with cloud security explorer in Microsoft Defender for Cloud so that I can proactively identify security risks in my cloud environment and improve my security posture.
 ---
 
 # Build queries with cloud security explorer
 
-Defender for Cloud's contextual security capabilities help security teams reduce the risk of significant breaches. Defender for Cloud uses environmental context to assess security issues, identify the biggest risks, and distinguish them from less risky issues. The cloud security explorer uses snapshot publishing, a method of publishing data at regular intervals known as snapshots. This ensures that the workload configuration data is refreshed daily, keeping it fresh and accurate.
+Defenders for Cloud's contextual security capabilities help security teams reduce the risk of significant breaches. Defender for Cloud uses environmental context to assess security issues, identify the biggest risks, and distinguish them from less risky issues. The cloud security explorer uses snapshot publishing, a method of publishing data at regular intervals known as snapshots. Snapshots ensure that the workload configuration data is refreshed daily, keeping it fresh and accurate.
 
-Use the cloud security explorer to identify security risks in your cloud environment by running graph-based queries on the cloud security graph, Defender for Cloud's context engine. Prioritize your security team's concerns while considering your organization's specific context and conventions.
+Use the cloud security explorer to identify security risks in your cloud environment. Run graph-based queries on the cloud security graph, Defender for Cloud's context engine. Prioritize your security team's concerns while considering your organization's specific context and conventions.
 
-With the cloud security explorer, query all security issues and environment context such as asset inventory, internet exposure, permissions, and lateral movement between resources across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
+Use the cloud security explorer to query security issues and environment context. Including asset inventory, internet exposure, permissions, and lateral movement between resources across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
+
 
 ## Prerequisites
 
-- You must [enable Defender CSPM](enable-enhanced-security.md)
+- You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md)
   - You must [enable agentless scanning](enable-vulnerability-assessment-agentless.md).
   
   For agentless container posture, you must enable the following extensions:
@@ -62,17 +63,17 @@ The cloud security explorer lets you build queries to proactively hunt for secur
 
     :::image type="content" source="media/how-to-manage-cloud-security/cloud-security-explorer-select-resource.png" alt-text="Screenshot of the resource drop-down menu." lightbox="media/how-to-manage-cloud-security/cloud-security-explorer-select-resource.png":::
 
-1. Click **+** to add more filters to your query.
+1. Select **+** to add more filters to your query.
 
     :::image type="content" source="media/how-to-manage-cloud-security/cloud-security-explorer-query-search.png" alt-text="Screenshot that shows a full query and where to select on the screen to perform the search." lightbox="media/how-to-manage-cloud-security/cloud-security-explorer-query-search.png":::
 
 1. Add subfilters if necessary.
 
-1. After building your query, click **Search** to run it.
+1. After building your query, select **Search** to run it.
 
     :::image type="content" source="media/how-to-manage-cloud-security/cloud-security-explorer-query-search-populated.png" alt-text="Screenshot that shows where to select search to run the query and results populated." lightbox="media/how-to-manage-cloud-security/cloud-security-explorer-query-search-populated.png":::
 
-1. To save a copy of your results locally, click the **Download CSV report** button to save your search results as a CSV file.
+1. To save a copy of your results locally, select the **Download CSV report** button to save your search results as a CSV file.
 
     :::image type="content" source="media/how-to-manage-cloud-security/download-csv-report.png" alt-text="Screenshot that shows where the download CSV report button is located on the screen.":::
 
