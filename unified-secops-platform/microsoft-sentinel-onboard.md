@@ -4,10 +4,10 @@ description: Learn how to connect your Microsoft Sentinel environment to the Def
 ms.service: unified-secops-platform
 f1.keywords: 
   - NOCSH
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: high
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
