@@ -297,3 +297,6 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 
 ## See also
 
+- [Linux resources](linux-resources.md)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
