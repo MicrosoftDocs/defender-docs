@@ -1,5 +1,5 @@
 ---
-title: Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux (preview)
+title: Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux
 description: Offline Security Intelligence Update in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.subservice: linux
@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 03/28/2025
+ms.date: 03/31/2025
 ---
 
 # Configure offline security intelligence update for Microsoft Defender for Endpoint on Linux 
@@ -266,33 +266,34 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ## Troubleshooting and diagnostics
 
-### Issues: MDATP update failure
+If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 
-- Update stuck, or update didn't trigger.
-- Update failed.
+1. Check the status of offline security intelligence updates by using the following command:
 
-### Common troubleshooting steps
+   ```bash
+   mdatp health --details definitions
+   ```
 
-- Check the status of the "offline security intelligence update" feature by using the following command:
+   Look for information in the `definitions_update_fail_reason` section.
 
-  ```bash
-  mdatp health --details definitions
-  ```
+2. Make sure that `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
 
-  - This command should provide us with some user-friendly message in the `definitions_update_fail_reason` section.
-  - Check if `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
-  - Check if `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
-    - `definitions_update_source_uri` is the source from where the signatures were downloaded.
-    - `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
+3. Make sure that `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
 
-- Try performing the connectivity test to check if mirror server is reachable from the host:
+   - `definitions_update_source_uri` is the source from where the signatures were downloaded.
+   - `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
 
-  ```bash
-  mdatp connectivity test
-  ```
+4. Try performing the connectivity test to check if mirror server is reachable from the host:
 
-- Try to trigger a manual update using the following command:
+   ```bash
+   mdatp connectivity test
+   ```
 
-  ```bash
-  mdatp definitions update
-  ```
+5. Try to initiate a manual update using the following command:
+
+   ```bash
+   mdatp definitions update
+   ```
+
+## See also
+
