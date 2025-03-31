@@ -1,8 +1,8 @@
 ---
 title: Supported resource and service types for multicloud in Foundational CSPM
 description: Learn more about the supported resource and service types for multicloud in Microsoft Defender for Cloud's Foundational CSPM.
-ms.topic: conceptual
-ms.date: 03/30/2025
+ms.topic: concept-article
+ms.date: 03/31/2025
 ---
 
 # Supported resource and service types for multicloud in foundational CSPM
@@ -200,73 +200,38 @@ ms.date: 03/30/2025
 
 | Provider Namespace | Resource Type Name |
 |----|----|
-| ApiKeys | Key |
-| ArtifactRegistry | RepositoryPolicy |
-| Bigquery | Dataset |
-| Bigquery | DatasetData |
-| Bigquery | Table |
-| Bigquery | TablePolicy |
-| Bigquery | TablesData |
-| CloudKMS | CryptoKey |
-| CloudKMS | CryptoKeyPolicy |
-| CloudKMS | KeyRing |
-| CloudKMS | KeyRingPolicy |
-| CloudResourceManager | Project |
-| CloudResourceManager | Ancestor |
-| CloudResourceManager | AncestorPolicy |
-| CloudResourceManager | EffectiveOrgPolicy |
-| CloudResourceManager | Folder |
-| CloudResourceManager | FolderPolicy |
-| CloudResourceManager | Organization |
-| CloudResourceManager | OrganizationPolicy |
-| CloudResourceManager | Policy |
-| Compute | Instance |
-| Compute | BackendService |
-| Compute | BackendService |
-| Compute | Disk |
-| Compute | EffectiveFirewalls |
-| Compute | Firewall |
-| Compute | ForwardingRule |
-| Compute | GlobalForwardingRule |
-| Compute | InstanceGroup |
-| Compute | InstanceGroupInstance |
-| Compute | InstanceGroupManager |
-| Compute | InstanceGroupManager |
-| Compute | InstanceTemplate |
-| Compute | MachineType |
-| Compute | ManagedInstance |
-| Compute | ManagedInstance |
-| Compute | Network |
-| Compute | NetworkEffectiveFirewalls |
-| Compute | Project |
-| Compute | SslPolicy |
-| Compute | Subnetwork |
-| Compute | TargetHttpProxy |
-| Compute | TargetHttpsProxy |
-| Compute | TargetPool |
-| Compute | TargetSslProxy |
-| Compute | TargetTcpProxy |
-| Compute | UrlMap |
-| Container | Cluster |
-| Dns | ManagedZone |
-| Dns | Policy |
-| IAM | OrganizationRole |
-| IAM | ProjectRole |
-| IAM | Role |
-| IAM | ServiceAccount |
-| IAM | ServiceAccountKey |
-| Internal | GcpSecurityConnector |
-| Logging | AncestorLogSink |
-| Logging | LogEntry |
-| Logging | LogMetric |
-| Logging | LogSink |
-| Monitoring | AlertPolicy |
-| OsConfig | OSPolicyAssignment |
-| OsConfig | OSPolicyAssignmentReport |
-| SQLAdmin | DatabaseInstance |
-| SecretManager | SecretPolicy |
-| Storage | Bucket |
-| Storage | BucketPolicy |
+| Bigquery | tables |
+| Bigquery | datasets |
+| CloudKMS | keyrings |
+| CloudKMS | cryptoKeys |
+| CloudResourceManager | projects |
+| CloudResourceManager | organizations |
+| Compute | firewalls |
+| Compute | projects |
+| Compute | instances |
+| Compute | networks |
+| Compute | disks |
+| Compute | subnetworks |
+| Compute | targetHttpsProxies |
+| Compute | targetHttpProxies |
+| Compute | targetSslProxies |
+| Container | clusters |
+| Containers | Container |
+| Dns | managedZones |
+| EKS | cluster |
+| GCP | ServiceAccount |
+| GCP | User |
+| GCP | Serverless |
+| GCP | Group |
+| IAM | keys |
+| Microsoft.Compute | virtualMachines |
+| SQLAdmin | instances |
+| Storage | buckets |
+| ec2 | instance |
+| gar | .containerimage |
+| gar | repository |
+| gcr | repository |
+| gcr | .containerimage |
 
 ## Learn More
 
