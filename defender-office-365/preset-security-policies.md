@@ -16,7 +16,7 @@ ms.custom:
 description: Admins can learn how to apply Standard and Strict policy settings across the protection features of Exchange Online Protection (EOP) and Microsoft Defender for Office 365
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 03/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -33,9 +33,9 @@ Depending on your organization, preset security policies provide many of the pro
 
 The following preset security policies are available:
 
-- **Standard** preset security policy
-- **Strict** preset security policy
-- **Built-in protection** preset security policy (default policies for Safe Attachments and Safe Links protection in Defender for Office 365)
+- **Standard** preset security policy.
+- **Strict** preset security policy.
+- **Built-in protection** preset security policy (default policies for Safe Attachments and Safe Links protection in Defender for Office 365; applied to all users who aren't specifically excluded, or who aren't included in the **Standard** or **Strict** preset security policies, or in custom Safe Attachments or Safe Links policies).
 
 For details about these preset security policies, see the [Appendix](#appendix) section at the end of this article.
 
@@ -190,7 +190,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
 > [!TIP]
 > The **Built-in protection** preset security policy is applied to all users in organizations with any amount of licenses for Defender for Office 365. Application of this protection is in the spirit of securing the broadest set of users until admins specifically configure Defender for Office 365 protections. Because **Built-in protection** is enabled by default, customers don't need to worry about violating product licensing terms. However, we recommend purchasing enough Defender for Office 365 licenses to ensure **Built-in protection** continues for all users.
 >
-> The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy, unless you want to exclude users who aren't eligible for Safe Links and Safe Attachments protections (users who lack Defender for Office 365 licenses).
+> <u>The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies</u>. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy, unless you want to exclude users who aren't eligible for Safe Links and Safe Attachments protections (users who lack Defender for Office 365 licenses).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 

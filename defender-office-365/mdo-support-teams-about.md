@@ -83,7 +83,7 @@ If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to
 - There's only one Teams protection policy in an organization. By default, that policy is named Teams Protection Policy.
 - Using the **New-TeamsProtectionPolicy** cmdlet is meaningful only if there's no Teams protection policy in the organization (the **Get-TeamsProtectionPolicy** cmdlet returns nothing). You can run the cmdlet without error, but no new Teams protection policies are created if one already exists.
 - You can't remove an existing Teams protection policy or Teams protection policy rule (there's no **Remove-TeamsProtectionPolicy** or **Remove-TeamsProtectionPolicyRule** cmdlet).
-- By default, there's no Teams protection policy rule (the **Get-TeamsProtectionPolicyRule** cmdlet returns nothing). Specifying quarantine policies or exceptions for ZAP for Teams in the Defender portal creates the rule automatically. Or, you can use the **New-TeamsProtectionPolicyRule** cmdlet to create the rule in PowerShell if it doesn't already exist.
+- By default, there's a Teams protection policy rule named Teams Protection Policy Rule in an organization as returned by the **Get-TeamsProtectionPolicyRule** cmdlet. You can use the Defender portal or the **Set-TeamsProtectionPolicyRule** cmdlet to modify the quarantine policies or exceptions for ZAP for Teams.
 
 #### Use PowerShell to view the Teams protection policy and Teams protection policy rule
 
@@ -160,5 +160,5 @@ For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRul
 - [Microsoft Teams](/microsoftteams/teams-overview)
 - [Managing Teams quarantined messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages)
 - [Get started using Attack simulation training in Defender for Office 365](attack-simulation-training-get-started.md)
-- [Get started with Defender for Cloud Apps for Microsoft Teams] (/defender-cloud-apps/what-is-defender-for-cloud-apps)
+- [Get started with Defender for Cloud Apps for Microsoft Teams](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 - [Get started with Compliance and DLP protection for Microsoft Teams](/microsoftteams/security-compliance-overview)
