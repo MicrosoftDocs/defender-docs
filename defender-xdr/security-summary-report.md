@@ -25,15 +25,15 @@ Security operations center (SOC) teams can easily showcase their security achiev
 
 The unified security summary highlights the following information:
 
-- **Posture**: Your organization’s posture includes data from Microsoft Secure Score, threat protection information related to ransomware and phishing prevention, exposure score based on Microsoft Defender Vulnerability Management, and the number of onboarded devices to Microsoft Defender for Endpoint
+- **Posture**: Your organization’s posture includes data from [Microsoft Secure Score](microsoft-secure-score.md), threat protection information related to ransomware and phishing prevention, [exposure score](/defender-vulnerability-management/tvm-exposure-score) based on Microsoft Defender Vulnerability Management, and the number of onboarded devices to Microsoft Defender for Endpoint
   :::image type="content" source="/defender/media/security-summary/summary-posture-small.png" alt-text="Screenshot of the Posture section in the security summary report" lightbox="/defender/media/security-summary/summary-posture.png":::
-- **Detection**: This section contains the number of alerts and incidents, including how many alerts were consolidated into incidents, the number of alerts grouped into incidents,  and information on active detection rules and the corresponding response actions produced by those rules
+- **Detection**: This section contains the number of [alerts and incidents](incidents-overview.md), including how many alerts were consolidated into incidents, the number of alerts grouped into incidents, and information on active detection rules and the corresponding response actions produced by those rules
   :::image type="content" source="/defender/media/security-summary/summary-detection-small.png" alt-text="Screenshot of the Detection section in the security summary report" lightbox="/defender/media/security-summary/summary-detection.png":::
-- **Protection**: Cards under this section include data from Microsoft’s automatic investigation and response features like the total number of attacks disrupted, a list of the disruption incidents, the number of malicious activities blocked by Microsoft Defender Antivirus, and the number of malicious emails and URLs blocked
+- **Protection**: Cards under this section include data from Microsoft’s automatic investigation and response features like the total number of [attacks disrupted](automatic-attack-disruption.md), a list of the disruption incidents, the number of malicious activities blocked by Microsoft Defender Antivirus, and the number of malicious emails and URLs blocked
   :::image type="content" source="/defender/media/security-summary/summary-protection-small.png" alt-text="Screenshot of the Protection section in the security summary report" lightbox="/defender/media/security-summary/summary-protection.png":::
-- **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of automated investigation and remediation actions taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)
+- **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of [automated investigation and response actions](m365d-autoir.md) taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through [Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)](/defender-office-365/zero-hour-auto-purge)
   :::image type="content" source="/defender/media/security-summary/summary-investigation-small.png" alt-text="Screenshot of the Investigation and Response section in the security summary report" lightbox="/defender/media/security-summary/summary-investigation.png":::
-- **Copilot-powered investigation and response**: This section contains the number of analyzed files and scripts where Microsoft Copilot in Defender was used.
+- **Copilot-powered investigation and response**: This section contains the number of [analyzed files](copilot-in-defender-file-analysis.md) and [scripts](security-copilot-m365d-script-analysis.md) where Microsoft Copilot in Defender was used.
   :::image type="content" source="/defender/media/security-summary/summary-copilot-small.png" alt-text="Screenshot of the Copilot section in the security summary report" lightbox="/defender/media/security-summary/summary-copilot.png":::
 
 SOC teams can use the unified security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption stopping attacks before it becomes widespread.
@@ -47,6 +47,8 @@ Users must have the following permissions to view the unified security summary:
 
 - Security data basics (read)
 - Vulnerability management (read)
+
+Additionally, users must have permissions to view all devices in the organization.
 
 ## View the unified security summary
 
@@ -68,6 +70,5 @@ To access and share the unified security summary, follow these steps:
 
 ## Related content
 
-- [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md)
-- [Automated investigation and response in Microsoft Defender XDR](m365d-autoir.md)
+- [Microsoft Defender Antivirus overview](/defender-endpoint/microsoft-defender-antivirus-window)
 - [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
