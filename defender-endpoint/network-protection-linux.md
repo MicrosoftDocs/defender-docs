@@ -51,17 +51,17 @@ You can use web content filtering for testing with network protection for Linux.
 - Currently, the block/warn end-user experience isn't available.
 
 > [!NOTE]
-> Most server installations of Linux lack a graphical user interface and web browser. To evaluate the effectiveness of Linux Web Threat Protection with Linux, we recommend testing on a non-production server with a graphical user interface and web browser.
+> Most server installations of Linux lack a graphical user interface and web browser. To evaluate the effectiveness of web threat protection with Linux, we recommend testing on a non-production server with a graphical user interface and web browser.
 
 ### Prerequisites
 
-- Licensing: Microsoft Defender for Endpoint tenant (can be trial) and platform specific requirements found in [Microsoft Defender for Endpoint for non-Windows platforms](non-windows.md#licensing-requirements)
-- Onboarded Machines:
-  - **Minimum Linux version**: For a list of supported distributions, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
-  - **Microsoft Defender for Endpoint Linux client version**: 101.78.13 or later on Insiders-Slow or insiders-Fast channel.
+- Licensing: You must have a paid or trial subscription of Defender for Endpoint tenant. 
+- Prerequisites: [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- **Microsoft Defender for Endpoint Linux client version**: 101.78.13 or later on Insiders-Slow or insiders-Fast channel.
     
 > [!IMPORTANT]
-> In order to evaluate network protection for Linux, please send email to "xplatpreviewsupport@microsoft.com" with your Org ID. We will enable the feature on your tenant per request basis.
+> In order to evaluate network protection for Linux, please send email to `xplatpreviewsupport@microsoft.com` with your Org ID. We will enable the feature on your tenant per request basis.
+
 ## Instructions
 
 Deploy Linux manually, see [Deploy Microsoft Defender for Endpoint on Linux manually](linux-install-manually.md)
@@ -89,6 +89,7 @@ sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
 ### Validation
 
 1. Check Network Protection has effect on always blocked sites:
+
    - <http://smartscreentestratings2.net>
    - <https://smartscreentestratings2.net>
 
@@ -141,7 +142,9 @@ Also, make sure that in **Microsoft Defender** \> **Settings** \> **Endpoints** 
 
 1. Learn how to [Protect your organization against web threats](web-threat-protection.md) using web threat protection.
    - Web threat protection is part of web protection in Microsoft Defender for Endpoint. It uses network protection to secure your devices against web threats.
+
 2. Run through the [Custom Indicators of Compromise](indicator-ip-domain.md) flow to get blocks on the Custom Indicator type.
+
 3. Explore [Web content filtering](web-content-filtering.md).
 
    > [!NOTE]
@@ -169,7 +172,7 @@ Web threat protection is part of Web protection in Microsoft Defender for Endpoi
 - untrusted or low-reputation sites
 - sites you've blocked in your custom indicator list
 
->:::image type="content" source="media/network-protection-reports-web-protection.png" alt-text="Web Protection reports web threat detections." lightbox="media/network-protection-reports-web-protection.png":::
+:::image type="content" source="media/network-protection-reports-web-protection.png" alt-text="Web Protection reports web threat detections." lightbox="media/network-protection-reports-web-protection.png":::
 
 For more information, see [Protect your organization against web threat](web-threat-protection.md)
 
