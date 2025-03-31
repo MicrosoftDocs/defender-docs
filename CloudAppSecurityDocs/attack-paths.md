@@ -123,7 +123,7 @@ In the [Attack surface map](/security-exposure-management/cross-workload-attack-
 
 Use the following Advanced Hunting query to identify all OAuth applications with critical permissions:
 
-`
+```
 let RelevantNodes = ExposureGraphNodes
 | where NodeLabel == "Microsoft Entra OAuth App" or NodeLabel == "serviceprincipal"
 | project NodeId, NodeLabel, NodeName, NodeProperties;
@@ -144,10 +144,8 @@ ExposureGraphEdges
          hasPermissionTo=hasPermissionTo.EdgeLabel, Target=Target.NodeName,
          AppPerm=hasPermissionTo.EdgeProperties["rawData"]["applicationPermissions"]["permissions"]
 | mv-apply AppPerm on (summarize AppPerm = make_list(AppPerm.permissionValue))
-| project AppReg, canAuthAs, DisplayName, Enabled, AppTenantID, hasPermissionTo, Target, AppPerm`
-`
-
- 
+| project AppReg, canAuthAs, DisplayName, Enabled, AppTenantID, hasPermissionTo, Target, AppPerm
+```
 
 ## Next steps
 
