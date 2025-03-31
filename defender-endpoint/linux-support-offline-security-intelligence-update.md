@@ -47,7 +47,7 @@ Key benefits include:
 
 - You set up a mirror server, which is a local Web or NFS server that's reachable by the Microsoft cloud.
 - Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job or task scheduler on the local server.
-- Linux endpoints running Defender for Endpoint pull the downloaded signatures from the mirror server at a pre-defined time interval.
+- Linux endpoints running Defender for Endpoint pull the downloaded signatures from the mirror server at a predefined time interval.
 - Signatures pulled onto Linux devices from the local server are first verified before they're loaded into the antivirus engine.
 - To start and configure the update process, you can update the managed configuration json file on your Linux devices.
 - You can view the status of updates in the mdatp CLI.
@@ -70,8 +70,8 @@ The mirror server can run any of the following operating systems:
 
 - Defender for Endpoint version `101.24022.0001` or later must be installed on the Linux endpoints.
 - The Linux endpoints need to have connectivity to the mirror server.
-- The Linux endpoint must be running any of the Defender for Endpoint-supported distributions.
-- The mirror server can be either an HTTP/HTTPS server or a network share server, for example, an NFS Server.
+- The Linux endpoint must be running any of the Defender for Endpoint-supported distributions. (see [Supported Linux distributions](mde-linux-prerequisites.md#supported-linux-distributions).)
+- The mirror server can be either an HTTP/HTTPS server or a network share server, such as an NFS Server.
 - The mirror server needs to have access to the following URLs:
   - `https://github.com/microsoft/mdatp-xplat.git`
   - `https://go.microsoft.com/fwlink/?linkid=2144709`
@@ -99,22 +99,25 @@ Perform the following steps to get the downloader script:
 
 #### Option 1: Clone the repo (Preferred)
 
-- [Install git](https://kinsta.com/knowledgebase/install-git/) on the mirror server.
-- Navigate to the directory where you want to clone the repo.
-- Execute the command: `git clone https://github.com/microsoft/mdatp-xplat.git`
+1. [Install git](https://kinsta.com/knowledgebase/install-git/) on the mirror server.
 
-#### Option 2: Download the zip file
+2. Navigate to the directory where you want to clone the repo.
 
-- Download the zip file of the repo [from here](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip).
+3. Run the following command: `git clone https://github.com/microsoft/mdatp-xplat.git`
 
-- Copy the zip file to the folder where you want to keep the script.
+#### Option 2: Download the zipped file
 
-- Extract the zip.
+1. [Download the zipped file](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip).
 
-> [!NOTE]
-> Schedule a [cron job](linux-update-mde-linux.md#to-set-the-cron-job) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
+2. Copy the downloaded file to the folder where you want to keep the script.
 
-After cloning the repo/downloaded zip file, the local directory structure should be as follows:
+3. Extract the zipped folder.
+
+4. Schedule a task or a [cron job](linux-update-mde-linux.md#to-set-the-cron-job) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
+
+#### Local directory structure after cloning the repo or downloading the zipped file
+
+After cloning the repo or downloading the zipped file, the local directory structure should be as follows:
 
 ```console
 user@vm:~/mdatp-xplat$ tree linux/definition_downloader/
