@@ -2,9 +2,9 @@
 title: "include file" 
 description: "include file" 
 ms.date: 10/16/2024
-manager: dansimp
-ms.author: cwatson
-author: cwatson-cat
+manager: orspodek
+ms.author: bagol
+author: batamig
 ms.service: microsoft-365-security
 ms.topic: include
 ms.custom: "include file"
