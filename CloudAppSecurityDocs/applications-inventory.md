@@ -5,7 +5,7 @@ ms.topic: overview
 description: The new Applications page located under Assets in Microsoft Defender XDR portal provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience
 #customer intent: As a security administrator, I want to discover, monitor, and manage all SaaS and OAuth connected apps in my organization so that I can ensure security and compliance.
 ---
-# Application inventory
+# Applications inventory
 
 Protecting your SaaS ecosystem requires taking inventory of all SaaS and OAuth connected apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Defender for Cloud apps Applications page provides a centralized view of all SaaS and connected OAuth apps in your organization, enabling efficient monitoring and management.
 At a glance you can see information such as app name, risk score, privilege level, publisher information, and other details for easy identification of SaaS and OAuth apps most at risk.
@@ -15,9 +15,9 @@ The Application page includes the following tabs:
 * SaaS apps: A consolidated view of all SaaS applications in your network. This tab highlights key details, including app name, status (unprotected/protected app) and whether the app is marked as sanctioned or unsanctioned.
 * OAuth apps: Displays a list of OAuth apps such as Microsoft Entra ID, Google workspace and Salesforce.
 
-## Navigate to the Application inventory page
+## Navigate to the Applications page
 
-In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Applications**. Or, to go directly to the **Application inventory** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
+In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Applications**. Or, to go directly to the **Applications** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
 
 :::image type="content" source="media/banner-on-cloud-discovery-pages.png" alt-text="Screenshot of the Cloud Discovery page with a banner about the new unified application inventory experience" lightbox="media/banner-on-cloud-discovery-pages.png":::
 
@@ -39,7 +39,7 @@ The following image depicts the SaaS apps list:
 
 ## SaaS app details
 
-At the top of the tabs, you can find actionable insights that allow you to quickly identify apps that need your attention and focus. In the SaaS apps tab, the following details are available:
+At the top of Saas app tab, you can find actionable insights that allow you to quickly identify apps that need your attention and focus. The following details are displayed:
 
 * **Untagged high risk apps** – Shows apps that aren't tagged and have a high-risk.
 * **Untagged high traffic apps** – Shows apps that aren't tagged and have a high usage traffic (greater than 1 GB of data traffic).
@@ -47,7 +47,7 @@ At the top of the tabs, you can find actionable insights that allow you to quick
 
 ## Sort and filter the SaaS apps list
 
-You can use the sort and filter functionality on each application inventory tab to get a more focused view. These controls also help you assess and manage the SaaS applications in your organization.
+You can use the sort and filter functionality to get a more focused view. These controls also help you assess and manage the SaaS applications in your organization.
 
 |Filter  |Description  |
 |---------|---------|
