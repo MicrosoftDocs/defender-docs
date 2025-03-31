@@ -54,7 +54,7 @@ Key benefits include:
 
 :::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
 
-Fig. 1: Process flow diagram on the Mirror Server for downloading the security intelligence updates
+Fig. 1: Process flow diagram on the mirror server for downloading the security intelligence updates
 
 :::image type="content" source="./media/offline-update-diag-2.png" alt-text="Process flow diagram on the Linux endpoint for security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
 
@@ -83,13 +83,13 @@ The mirror server can run any of the following operating systems:
   | 2 cores (Preferred 4 Core) | 1 GB Min (Preferred 4 GB)  | 2 GB  | System Dependent|
   
   > [!NOTE]
-  > This configuration may vary depending on the number of requests that are served and the load each server must process.
+  > This configuration might vary depending on the number of requests that are served and the load each server must process.
 
 ## Configuring the mirror server
 
 > [!NOTE]
 > - The management and ownership of the Mirror Server lies solely with the customer as it resides in the customer's private environment.
-> - The Mirror Server does not need to have Defender for Endpoint installed.
+> - The Mirror Server doesn't need to have Defender for Endpoint installed.
 
 ### Get the offline security intelligence downloader script
 
