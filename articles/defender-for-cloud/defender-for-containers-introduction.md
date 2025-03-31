@@ -42,7 +42,7 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 - **Agentless vulnerability assessment** - provides vulnerability assessment for [cluster nodes](kubernetes-nodes-va.md) and for [all container images](agentless-vulnerability-assessment-azure.md), including recommendations for registry and runtime, quick scans of new images, daily refresh of results, exploitability insights, and more. Vulnerability information is added to the security graph for contextual risk assessment and calculation of attack paths, and hunting capabilities.
 
-- **Comprehensive inventory capabilities**  - enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets.
+- **Comprehensive inventory capabilities**  - enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets.
 
 - **[Enhanced risk-hunting](how-to-manage-cloud-security-explorer.md)** - enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md)
 
