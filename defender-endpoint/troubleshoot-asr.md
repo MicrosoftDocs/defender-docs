@@ -143,7 +143,7 @@ When you report a problem with attack surface reduction rules, you're asked to c
 2. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
 
    > [!TIP]
-   > Before starting the trace, please make sure that the issue is reproducible. Additionally, close any applications that do not contribute to the reproduction of the issue.
+   > The log collection should occur during the repro attempt. Additionally, close any applications that do not contribute to the reproduction of the issue.
 
 3. Run the MDE Client Analyzer with the `-v` switches:
 
