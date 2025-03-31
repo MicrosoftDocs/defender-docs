@@ -20,6 +20,12 @@ ms.topic: concept-article
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
 
+## April 2025
+
+### Case management now generally available
+
+The Microsoft Defender portal's case management feature is now generally available. For more information on this feature, see the preview announcement [Manage SecOps work natively with case management (Preview)](#case-management-preview) in the January 2025 section below.
+
 ## January 2025
 
 - [Unified threat intelligence](#unified-threat-intelligence)
