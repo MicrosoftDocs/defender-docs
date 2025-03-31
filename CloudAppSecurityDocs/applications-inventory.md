@@ -5,7 +5,7 @@ ms.topic: overview
 description: The new Applications page located under Assets in Microsoft Defender XDR portal provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience
 #customer intent: As a security administrator, I want to discover, monitor, and manage all SaaS and OAuth connected apps in my organization so that I can ensure security and compliance.
 ---
-# Applications inventory
+# Applications inventory (Preview)
 
 Protecting your SaaS ecosystem requires taking inventory of all SaaS and OAuth connected apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Defender for Cloud apps Applications page provides a centralized view of all SaaS and connected OAuth apps in your organization, enabling efficient monitoring and management.
 At a glance you can see information such as app name, risk score, privilege level, publisher information, and other details for easy identification of SaaS and OAuth apps most at risk.
