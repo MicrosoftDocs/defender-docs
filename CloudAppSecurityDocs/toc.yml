@@ -206,6 +206,8 @@ items:
       href: posture-overview.md
     - name: SaaS security initiative
       href: saas-security-initiative.md
+    - name: Investigate attack paths
+      href: attack-paths.md
 - name: Threat protection
   items:
   - name: Control cloud apps with policies
