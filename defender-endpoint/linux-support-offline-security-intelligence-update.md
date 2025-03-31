@@ -173,11 +173,11 @@ Once the signatures zip is downloaded, the mirror server can be used to host it.
 Once hosted, copy the absolute path of the hosted server (up to and not including the `arch_*` directory).
 
 > [!NOTE]
-> For example, if the downloader script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (`www.example.server.com:8000`) is hosting the `/tmp/wdav-update` path, then the corresponding URI is: `www.example.server.com:8000/linux/production/` (verify that this within this directory, there are the `arch_*` directories).
+> For example, if the downloader script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (`www.example.server.com:8000`) is hosting the `/tmp/wdav-update` path, then the corresponding URI is: `www.example.server.com:8000/linux/production/` (verify that within the directory, there are `arch_*` directories).
 > 
-> We can also use the absolute path of directory (local/remote mount point). For example, if the files were downloaded by the script into a directory `/tmp/wdav-update`, then the corresponding URI is:`/tmp/wdav-update/linux/production`.
+> You can also use the absolute path of directory (local/remote mount point). For example, if the files are downloaded by the script into a directory `/tmp/wdav-update`, then the corresponding URI is:`/tmp/wdav-update/linux/production`.
 
-Once the mirror server is set up, we need to propagate this URI to the Linux endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
+Once the mirror server is set up, you need to propagate this URI to the Linux endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
 
 ## Configure the endpoints
 
@@ -205,12 +205,12 @@ Use the following sample `mdatp_managed.json` and update the parameters as per t
 | `automaticDefinitionUpdateEnabled`        | `True`/`False`         | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
 | `definitionUpdatesInterval`               | Numeric              | Time of interval between each automatic update of signatures (in seconds). |
 | `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). See the previous section for information about how to specify this path.|
-| `offlineDefinitionUpdate`                 | `enabled`/`disabled`   | When set to `enabled`, the "offline security intelligence update" feature is enabled, and vice versa. |
-| `offlineDefinitionUpdateFallbackToCloud`  | `True`/`False`         | Determine Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
+| `offlineDefinitionUpdate`                 | `enabled`/`disabled`   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
+| `offlineDefinitionUpdateFallbackToCloud`  | `True`/`False`         | Determine Defender for Endpoint security intelligence update approach when offline mirror server fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when offline security intelligence update failed; else, vice versa. |
 | `offlineDefinitionUpdateVerifySig`        | `enabled`/`disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. |
 
 > [!NOTE]
-> As of today, the "offline security intelligence update" feature can be configured on Linux endpoints via managed json only. Integration with security settings management on the security portal is in our roadmap.
+> Currently, offline security intelligence updates can be configured on Linux endpoints via managed json only. Integration with Defender for Endpoint security settings management in the Microsoft Defender portal is on the roadmap, but isn't available yet.
 
 ### Verify the configuration
 
@@ -246,7 +246,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ### Manual update
 
-- To trigger the "offline security intelligence update" manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
+- To trigger the offline security intelligence update manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
 
   ```bash
   mdatp definitions update
@@ -254,7 +254,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ### Check update status
 
-- After triggering the "offline security intelligence update" by either the automatic or manual method, verify that the update was successful by running the command: `mdatp health --details --definitions`.
+- After triggering offline security intelligence updates by using either the automatic or manual method, verify that the update was successful by running the command: `mdatp health --details --definitions`.
 
 - Verify the following fields:
 
