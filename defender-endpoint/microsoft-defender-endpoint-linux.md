@@ -62,7 +62,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
   
 ## Deploy and configure policies for Defender for Endpoint on Linux 
 
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux. Make sure to [review the prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md).
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux. Make sure to meet the [prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md).
 
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
 - [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
