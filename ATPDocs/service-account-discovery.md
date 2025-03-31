@@ -27,9 +27,9 @@ Service account types are displayed in the Identity Info table within Advanced H
 
 In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Identities > Service Accounts.
 
-The following image depicts the Service accounts page
+The following image depicts the Service accounts page:
 
-:::image type="content" source="media/service-accounts-page.png" alt-text="Screenshot of the Service accounts page in the Defender portal" lightbox="media/service-accounts-page.png":::
+:::image type="content" source="media/service-accounts-page.png" alt-text="Screenshot of the Service accounts page in the Defender portal." lightbox="media/service-accounts-page.png":::
 
 ### Customize the page view
 
@@ -50,7 +50,7 @@ There are several options you can choose from to customize the identities list v
 
 - Total: The total number of service accounts listed.
 
-- Managed: The total number of service accounts that are gMSA (Group Managed Service Accounts) or sMSA (Managed Service Accounts)
+- Managed: The total number of service accounts that are gMSA (Group Managed Service Accounts) or sMSA (Managed Service Accounts).
 
 - User: The total number of standard user accounts used for interactive logins or configured to run services.
 
@@ -81,7 +81,7 @@ For a deeper dive into what's happening in your service account click on the dom
 
 When you investigate a specific Service account, you'll see the following details under the connections tab:
 
-:::image type="content" source="media/Screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page" lightbox="media/Screenshot-of-the-connections-page.png":::
+:::image type="content" source="media/Screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page." lightbox="media/Screenshot-of-the-connections-page.png":::
 
 |Service account connection details  |Description |
 |---------|---------|
@@ -97,7 +97,7 @@ Last seen   | The date and time of the most recent sign in event over this conne
 
 
 
-For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details)
+For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
 
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, see how to open a support ticket at [Microsoft Defender for Identity support](support.md)
+If you run into any problems, we're here to help. To get assistance or support for your product issue, see how to open a support ticket at [Microsoft Defender for Identity support](support.md).
