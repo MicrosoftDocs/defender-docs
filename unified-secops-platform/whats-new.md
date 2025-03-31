@@ -22,9 +22,9 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## April 2025
 
-- [Multi workspace support for Microsoft Sentinel (preview)](#multi-workspace-support-for-microsoft-sentinel-preview)
+- [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
 
-### Multi workspace and multiple tenant support for Microsoft Sentinel (preview)
+### Multi workspace and multi tenant support for Microsoft Sentinel (preview)
 
 Microsoft Sentinel now supports multiple workspaces in the Defender portal, using one primary workspace per tenant and multiple secondary workspaces.
 
