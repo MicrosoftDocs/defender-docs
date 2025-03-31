@@ -1,6 +1,6 @@
 ---
-title: Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux
-description: Offline Security Intelligence Update in Microsoft Defender for Endpoint on Linux.
+title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux
+description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.subservice: linux
 ms.author: deniseb
@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 03/31/2025
 ---
 
-# Configure offline security intelligence update for Microsoft Defender for Endpoint on Linux 
+# Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -27,30 +27,30 @@ ms.date: 03/31/2025
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
-This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on Linux.
+## How offline security intelligence updates work
 
-This feature enables an organization to update the security intelligence (also referred to as "definitions" or "signatures" in this document) on Linux endpoints with limited or no exposure to the internet using a local hosting server (termed as *mirror server* in this document).
+This article describes how to configure offline security intelligence updates in Defender for Endpoint on Linux. This capability enables you to update security intelligence (also referred to as *definitions* or *signatures*) on Linux devices that have limited or no exposure to the internet. With this configuration, you use a local hosting server, called a *mirror server*, that connects to the Microsoft cloud to download security intelligence updates. Other Linux devices pull these updates from your mirror server at predefined intervals.
 
-Mirror server is any server in the customer's environment that can connect to the Microsoft cloud to download the signatures. Other Linux endpoints pull the signatures from the mirror server at a predefined interval.
+## Benefits of using offline security intelligence updates
 
 Key benefits include:
 
-- Ability to control and manage the frequency of signature downloads on the local server and the frequency at which endpoints pull the signatures from the local server.
-- Addition of an extra layer of protection and control as the downloaded signatures can be tested on a test device before being propagated to the entire fleet.
-- Reduction of network bandwidth as now only one local server will poll MS cloud to get the latest signatures on behalf of your entire fleet.
-- Ability of the local server to run any of the three OS - Windows, Mac, Linux; no requirement to install Defender for Endpoint.
-- Provision for the most up-to-date antivirus protection as signatures are always downloaded along with the latest compatible AV engine.
-- Migration of signature with n-1 version to a backup folder on the local server, in each iteration. Provision to pull the n-1 signature version from the backup folder to your endpoints, if there's any issue with the latest signature.
-- Option to fall back to online updates from Microsoft cloud (traditional method), in the event of a rare occasion of an offline update failure.
+- Your security team can control and manage the frequency of signature downloads on the local server and the frequency at which endpoints pull signatures from the local server.
+- You have an extra layer of protection and control as the downloaded signatures can be tested on a test device before they're propagated to the entire fleet.
+- You need less network bandwidth, because only one local server gets the latest updates from the Microsoft cloud on behalf of your entire fleet.
+- Your mirror server can run Windows, Mac, or Linux, and you don't have to install Defender for Endpoint on that server.
+- You get the most up-to-date antivirus protection, because signatures are always downloaded along with the latest compatible antivirus engine.
+- Older versions of signatures (`n-1`) are moved to a backup folder on your mirror server in each iteration. If there's an issue with the latest updates, you can pull the `n-1` signature version from the backup folder to your devices.
+- In the rare event an offline update fails, you can configure a fallback option to get online updates from the Microsoft cloud.
 
 ## How offline security intelligence update works
 
-- Organizations need to set up a mirror server, which is a local Web/NFS server that's reachable by the Microsoft cloud.
-- Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job/task scheduler on the local server.
-- Linux endpoints running Defender for Endpoint pull the downloaded signatures from this mirror server at a user-defined time interval.
-- Signatures pulled on the Linux endpoints from the local server are first verified before getting loaded into the AV engine.
-- To trigger and configure the update process, update the managed config json file on the Linux endpoints.
-- The status of the update can be seen on the mdatp CLI.
+- You set up a mirror server, which is a local Web or NFS server that's reachable by the Microsoft cloud.
+- Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job or task scheduler on the local server.
+- Linux endpoints running Defender for Endpoint pull the downloaded signatures from the mirror server at a pre-defined time interval.
+- Signatures pulled onto Linux devices from the local server are first verified before they're loaded into the antivirus engine.
+- To start and configure the update process, you can update the managed configuration json file on your Linux devices.
+- You can view the status of updates in the mdatp CLI.
 
 :::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
 
