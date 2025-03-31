@@ -3,8 +3,8 @@ title: Microsoft Defender XDR in the Defender portal
 description: Learn about the services and features available with Microsoft Defender XDR in the Microsoft Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 11/18/2024
 audience: ITPro
