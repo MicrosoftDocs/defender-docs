@@ -7,7 +7,7 @@ ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
 ms.date: 12/10/2024
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
