@@ -3,11 +3,11 @@ title: "What's new in the Microsoft's unified SecOps platform"
 description: Lists the new features and functionality in the Microsoft unified security operations platform
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 12/10/2024
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
