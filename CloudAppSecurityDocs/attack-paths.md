@@ -79,7 +79,7 @@ For smaller organizations with a manageable number of attack paths, we recommend
    
 1. Click on the app name to investigate permissions and usage, for example, used or high privilege permissions.
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" alt-text="Screenshot of the permissions assigned to the Oauth app" lightbox="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" lightbox="media/saas-securty-initiative/Screenshot-of-the-permissions-set-for-service-principal.png":::
+    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" alt-text="Screenshot of the permissions assigned to the Oauth app" lightbox="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" :::
 
 If you determine the OAuth application should be disabled, you can disable it from the App Governance portal.
 
