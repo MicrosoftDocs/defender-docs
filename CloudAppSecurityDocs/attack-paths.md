@@ -57,11 +57,11 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-attack-paths-aad-service-principal.png" alt-text="Screenshot of the attack paths service add pricipal target type" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-paths-aad-service-principal.png":::
  
-1. Select the attack titled: "Device with high severity vulnerabilities allows lateral movement to service principal with sensitive permissions"
+1. Select the attack path titled: "Device with high severity vulnerabilities allows lateral movement to service principal with sensitive permissions"
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png" alt-text="Screenshot of the attack path name" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png":::
 
-1. Select View in map to see the attack path.
+1. Click on the View in map button to see the attack path.
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png" alt-text="Screenshot of the view in map button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png":::
   
@@ -69,7 +69,7 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
     :::image type="content" source="media/saas-securty-initiative/attack-surface-map.png" alt-text="Screenshot of the attack surface map" lightbox="media/saas-securty-initiative/attack-surface-map.png":::
   
-1. Hover or select on nodes and edges to explore extra data such as which permissions this service principal has.
+1. Hover or select on nodes and edges to explore extra data such as which permissions this OAuth app has.
 
    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-permissions-set-for-service-principal.png" alt-text="Screenshot of the permissions assigned to the OAuth app as show in the attack surface map":::
 
@@ -77,11 +77,11 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
      :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png" alt-text="Screenshot of the OAuth applications page" lightbox="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png":::
    
-1. Click on the app name to investigate permissions and usage, for example, used or high privilege permissions.
+1. Click on the app name to investigate permissions and usage. For example, used or high privilege permissions.
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" alt-text="Screenshot of the permissions assigned to the Oauth app" lightbox="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" :::
 
-If you determine the OAuth application should be disabled, you can disable it from the App Governance portal.
+1. Optional: If you determine the OAuth application should be disabled, you can disable it from the App Governance portal.
 
 ### Investigate choke points
 
@@ -107,7 +107,7 @@ To get started:
 
 1. Select an OAuth app that is displayed in the attack surface map.
 1. Copy the OAuth app name.
-1. Navigate to the Applications page in the Defender portal to explore OAuth apps and get details on API permissions, privilege level, app origin, publisher, permission type, and services accessed. 
+1. Go to the Applications page in the Defender portal to review your OAuth apps and see details like API permissions, privilege levels, app origin, publisher, permission types, and accessed services.
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-microsoft-365-oauth-apps.png" alt-text="Screenshot of Microsoft 365 OAuth app details" lightbox="media/saas-securty-initiative/Screenshot-of-microsoft-365-oauth-apps.png":::
 
