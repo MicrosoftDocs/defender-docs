@@ -24,7 +24,7 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 - [Multi workspace support for Microsoft Sentinel (preview)](#multi-workspace-support-for-microsoft-sentinel-preview)
 
-### Multi workspace support for Microsoft Sentinel (preview)
+### Multi workspace and multiple tenant support for Microsoft Sentinel (preview)
 
 Microsoft Sentinel now supports multiple workspaces in the Defender portal, using one primary workspace per tenant and multiple secondary workspaces.
 
@@ -39,15 +39,6 @@ For more information, see:
 - [Microsoft Defender multitenant management](mto-overview.md)
 - [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
 - [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
-
-### Multi workspace support for Microsoft Sentinel (preview)
-
-For preview, in the Defender portal, connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. A primary workspace's alerts are correlated with Defender XDR data, which results in incidents that include alerts from Microsoft Sentinel's primary workspace and Defender XDR. All other onboarded workspaces are considered secondary workspaces. Incidents are created based on the workspace’s data and won't include Defender XDR data.
-
-For more information, see the following articles:
-
-- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
-- [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
 
 ## January 2025
 
