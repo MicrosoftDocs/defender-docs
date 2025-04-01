@@ -63,6 +63,8 @@ After you connect an app, you can gain deeper visibility so you can investigate 
 
 **Recommended task**: Enable file monitoring and create file policies
 
+To enable File monitoring of Microsoft 365 files, you are required to use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
 1. Under **Information Protection**, select **Files**.
 1. Select **Enable file monitoring** and then select **Save**.
