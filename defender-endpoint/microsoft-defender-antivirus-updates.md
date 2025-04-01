@@ -115,9 +115,7 @@ Updates contain:
 - Improved logic for handling restore from quarantine
 - Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature?view=windowsserver2025-ps)
 - Increased [device control policy](device-control-policies.md) limits
-
-
-
+- Improved reslience for Defender update process
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
