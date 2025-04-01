@@ -36,13 +36,16 @@ There are several options you can choose from to customize the identities list v
 
 - Apply filters.
 
-- Search for an identity by name or full UPN, Sid and Object ID. 
+- Search for an identity by name or full UPN, SID and Object ID. 
 
 - Export the list to a CSV file.
 
 - Copy list link with the included filters configured. 
 
-## ![A screenshot of identity inventory page.](media/identity-inventory/inventory11.png)  
+> [!NOTE]
+> When exporting the identities list to a CSV file, a maximum of 5,000 identities are displayed.
+
+## ![A screenshot of identity inventory page.](media/identity-inventory/inventory11.png)
 
 ### Identity details 
 
@@ -120,7 +123,7 @@ You can use this information to help you prioritize devices for security posture
 
 ### Navigate to the Identity inventory page
 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Assets > Identities. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
+In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Assets** > **Identities**. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
 
 ### Related Articles
 
