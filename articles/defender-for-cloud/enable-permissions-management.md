@@ -150,7 +150,3 @@ List of GCP recommendations:
 
 - Permissions of inactive identities in your GCP project should be revoked
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Microsoft Entra Permissions Management](/entra/permissions-management/).
