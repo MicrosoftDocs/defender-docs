@@ -22,7 +22,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 ## Prerequisites
 
 - The benefit is available for every machine running the Azure Monitor agent (AMA) that's located in a subscription that has Defender for Servers Plan 2 enabled.
-- Defender for Servers Plan 2 must be specifically enabled on the workspace to which machines report.
+- Defender for Servers Plan 2 must be enabled on the workspace to which machines report.
 - If the machine reports to more than one workspace, the benefit is only granted to one of them.
 
 The following subset of [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:
@@ -36,6 +36,10 @@ The following subset of [security data types](/azure/azure-monitor/reference/tab
 - [ProtectionStatus](/azure/azure-monitor/reference/tables/protectionstatus)
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
+- MaliciousIPCommunication
+- [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
+- [LinuxAuditLog](/azure/azure-monitor/reference/tables/linuxauditlog)
+- SysmonEvent
 
 ## Configure a workspace
 
