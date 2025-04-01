@@ -69,7 +69,7 @@ You can also find various SSPM recommendations under other initiatives:
 - Business Email Compromise (financial fraud)
 - Zero Trust (foundational)
 
-[Preview] Once you've finished setting up your SaaS posture recommendations, we recommend utilizing the attack paths capability. The Attack path capability helps you identify how an attacker might move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges in your Microsoft 365 SaaS applications. With this information you can investigate and remediate potential threats.
+[Preview] Once you've finished setting up your SaaS posture recommendations, we recommend utilizing the attack paths capability. The Attack path capability helps you identify how an attacker might move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges to your Microsoft 365 SaaS applications. With this information you can investigate and remediate potential threats.
 
 ## Next step
 
