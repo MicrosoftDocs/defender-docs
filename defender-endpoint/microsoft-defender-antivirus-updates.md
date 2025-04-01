@@ -101,7 +101,7 @@ Updates contain:
 ### February-2025 (Platform 4.18.25xxx.xxx | Engine: 1.1.25xxx.xx)
 
 - Security intelligence update version: **1.425.1.0**
-- Release date: **March 12, 2025** (Engine) / **April 1, 2025** (Platform)
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
 - Platform: **4.18.25010.11**
 - Engine: **1.1.25020.1007**
 - Support phase: **Security and Critical Updates**
