@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 03/12/2025
+ms.date: 04/01/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -31,6 +31,8 @@ f1.keywords: NOCSH
 
 If you have issues with Microsoft Defender for Endpoint on Linux and need support, you might be asked to provide the output from the Client Analyzer tool. This article explains how to use the tool on your device or with live response. You can use either a Python-based solution or a binary version that doesn't need Python.
 
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
 
 ## Running the binary version of the client analyzer
 
@@ -125,6 +127,9 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
     ```bash
     sudo ./mde_support_tool.sh -d
     ```
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
 
 ## Command line options
 Below are the command line options provided by client analyzer
@@ -525,7 +530,8 @@ The following script performs the first six steps of the [Running the Python ver
    ./mde_support_tool.sh
 
    ```
-
+> [!TIP]
+> Watch this video to learn more about endpoint settings: [Defender for Endpoint client analyzer endpoint settings](https://www.youtube.com/watch?v=Frw2xFjzphE)
 #### Run the client analyzer install scripts
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate.

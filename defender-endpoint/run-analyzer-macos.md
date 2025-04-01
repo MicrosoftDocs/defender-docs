@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 01/08/2025
+ms.date: 04/01/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -26,6 +26,9 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 
 1. Using a binary version (no external Python dependency)
 2. Using a Python-based solution
+
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
 
 ## Use the binary version of the client analyzer
 
@@ -141,7 +144,10 @@ The tool currently requires Python version 3 or later to be installed on your de
    ```bash
    sudo ./mde_support_tool.sh -d
    ```
-      
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
+
 ## Command line options
 
 ### Primary command lines

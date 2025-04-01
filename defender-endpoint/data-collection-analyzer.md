@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 04/01/2025
 ---
 
 # Data collection for advanced troubleshooting on Windows
@@ -25,10 +25,11 @@ ms.date: 03/26/2025
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 - Microsoft Defender for Business
-
 - Microsoft Defender Antivirus
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
 
 When collaborating with Microsoft support professionals, you might be asked to use the client analyzer to collect data for troubleshooting of more complex scenarios. The analyzer script supports other parameters for that purpose and can collect a specific log set based on the observed symptoms that need to be investigated.
 
