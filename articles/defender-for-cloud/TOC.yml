@@ -316,8 +316,6 @@
       - name: Internet exposure analysis
         displayName: internet, exposure, analysis
         href: internet-exposure-analysis.md
-      - name: Supported resource types for multicloud in Foundational CSPM
-        href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection
         items:
         - name: Overview
@@ -935,10 +933,12 @@
         items:
           - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
-          - name: Vulnerability assessments for Docker Hub
-            href: agentless-vulnerability-assessment-docker-hub.md
-          - name: Vulnerability assessments for JFrog Artifactory
-            href: agentless-vulnerability-assessment-jfrog-artifactory.md
+          - name: Vulnerability assessments for external registries
+            items:
+            - name: Vulnerability assessments for Docker Hub
+              href: agentless-vulnerability-assessment-docker-hub.md
+            - name: Vulnerability assessments for JFrog Artifactory
+              href: agentless-vulnerability-assessment-jfrog-artifactory.md
           - name: Enable vulnerability assessments
             href: enable-vulnerability-assessment.md
           - name: Remediate vulnerabilities for registry images (risk-based)
