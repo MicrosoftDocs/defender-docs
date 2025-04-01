@@ -121,7 +121,6 @@ Updates contain:
 #### What's new
 
 - Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
-- Shared root signature setting updates are now applied without a service restart (only applies to the first update to the setting and removes the restart requirement).
 - Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
 - If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
 - Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
