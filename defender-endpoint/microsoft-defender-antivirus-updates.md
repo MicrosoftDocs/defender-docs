@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 03/12/2025
+ms.date: 04/01/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,17 +98,36 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### February-2025 (Engine: 1.1.25020.1007)
+### March-2025 (Engine 1.1.25030.1)
 
-- Security intelligence update version: **1.425.1.0**
-- Release date: **March 12, 2025** (Engine only)
-- Platform: **4.18.25010.11**
-- Engine: **1.1.25020.1007**
+- Security intelligence update version: **1.427.3.0**
+- Release date: **April 1, 2025** (Engine only)
+- Platform: **4.18.25020.1009**
+- Engine: **1.1.25030.1**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
 - Product improvements
+
+### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
+
+- Security intelligence update version: **1.425.1.0**
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
+- Platform: **4.18.25020.1009**
+- Engine: **1.1.25020.1007**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Shared root signature setting updates are now applied without a service restart (only applies to the first update to the setting and removes the restart requirement).
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
+- Increased [device control policy](device-control-policies.md) limits.
+- Improved security resilience for Defender update process.
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
@@ -124,8 +143,8 @@ Updates contain:
 - Improved AMSI scan performance with changes to exclusion handling.
 - Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
 - Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
-- Fixed ASR warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
-- Fixed ASR warn mode processing when exclusions are applied.
+- Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
+- Fixed attack surface reduction warn mode processing when exclusions are applied.
 - Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
 - Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
 - Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
@@ -160,22 +179,6 @@ Updates contain:
 > [!IMPORTANT]
 > On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
 
-
-### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
-
-- Security intelligence update version: **1.419.1.0**
-- Release date: **September 17, 2024** (Engine and Platform)
-- Platform: **4.18.24080.9**
-- Engine: **1.1.24080.9**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
-- Fixed an issue with device control regarding printer security checks.
-- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
-- Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
-- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and reached their end-of-servicing date.
 
 ### Previous version updates: Technical upgrade support only
 
