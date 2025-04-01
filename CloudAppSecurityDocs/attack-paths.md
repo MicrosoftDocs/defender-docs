@@ -42,7 +42,7 @@ To access all Exposure Management features in the Defender portal, ensure you ha
 
 ### Critical OAuth permissions 
 
-Microsoft Defender for Cloud Apps defines a specific set of OAuth permissions as the organization’s crown jewels—permissions that, if misused, can lead to severe compromise. OAuth applications granted these critical privileges pose a significant risk if accessed by attackers. To help prevent this risk, Service Principals with these permissions are predefined as target goals in attack paths. 
+Microsoft Defender for Cloud Apps has predefined a set of critical privilege OAuth permissions. If an attacker gains access to these OAuth applications, they can cause significant damage to the organization, as these are considered the crown jewels. To help prevent this risk, Service Principals with these permissions are predefined as target goals in attack paths. 
 
 To view the full list of these critical permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
 
@@ -76,7 +76,7 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-permissions-set-for-service-principal.png" alt-text="Screenshot of the permissions assigned to the OAuth app as show in the attack surface map":::
 
-1. Copy the OAuth application's name and paste it into the search bar in the Applications page.
+1. Copy the OAuth application's name and paste it into the search bar in the Applications page. 
 
      :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png" alt-text="Screenshot of the OAuth applications page" lightbox="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png":::
    
@@ -104,9 +104,8 @@ To get started:
 1. To further investigate the choke point in the Attack Surface Map, click View blast radius.
      :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png" alt-text="Screenshot of the view blast radius button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png":::
 
-1. If the choke point is an OAuth application, continue your investigation in the Applications page of the Defender portal, where you can review your OAuth apps and examine details such as API permissions, privilege levels, origin, publisher, permission types, and accessed services.
+If the choke point is an OAuth application, we recommend continuing your investigation in the Applications page in the Defender portal.
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-microsoft-365-oauth-apps.png" alt-text="Screenshot of Microsoft 365 OAuth app details" lightbox="media/saas-securty-initiative/Screenshot-of-microsoft-365-oauth-apps.png":::
 
 ## Analyze attack surface map and hunt with queries
 

@@ -11,7 +11,8 @@ One of the pillars of Microsoft Defender for Cloud Apps is SaaS security posture
 
 Defender for Cloud Apps provides security configuration assessments to help you identify and mitigate potential risks in your SaaS application environments. These recommendations appear in [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) after you have a connector to an application.
 
-In addition, Microsoft Defender for Cloud apps now includes OAuth applications in the Attack Path and Attack Surface Map experiences. For more information, see: [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md) (Preview)
+In addition, Microsoft Defender for Cloud apps now includes OAuth applications in the Attack Path and Attack Surface Map experiences.
+For more information, see: [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md) (Preview)
 
 >[!NOTE]
 > Microsoft Security Exposure Management data and capabilities are currently unavailable in US government clouds: GCC, GCC High, and DoD. For these environments, we recommend consuming SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation). 
@@ -68,7 +69,7 @@ You can also find various SSPM recommendations under other initiatives:
 - Business Email Compromise (financial fraud)
 - Zero Trust (foundational)
 
-[Preview] Once you've finished setting up the suggested SaaS posture recommendations, tackle the newly added attack paths capabilities. Investigating attack paths helps to reduce critical exposure points in your organization that attackers might use to move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges in your Microsoft 365 SaaS applications.
+[Preview] Once you've finished setting up your SaaS posture recommendations, we recommend utilizing the attack paths capability. The Attack path capability helps you identify how an attacker might move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges in your Microsoft 365 SaaS applications. With this information you can investigate and remediate potential threats.
 
 ## Next step
 
