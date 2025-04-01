@@ -102,7 +102,7 @@ Updates contain:
 
 - Security intelligence update version: **1.425.379.0**
 - Release date: **April 1, 2025** (Engine only)
-- Platform: **4.18.25010.11**
+- Platform: **4.18.25020.1009**
 - Engine: **1.1.25030.1**
 - Support phase: **Security and Critical Updates**
 
