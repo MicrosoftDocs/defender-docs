@@ -316,8 +316,6 @@
       - name: Internet exposure analysis
         displayName: internet, exposure, analysis
         href: internet-exposure-analysis.md
-      - name: Supported resource types for multicloud in Foundational CSPM
-        href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection
         items:
         - name: Overview
