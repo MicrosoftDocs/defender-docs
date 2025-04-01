@@ -370,6 +370,8 @@ This rule blocks email opened within the Microsoft Outlook application, or Outlo
 - Executable files (such as .exe, .dll, or .scr)
 - Script files (such as a PowerShell .ps1, Visual Basic .vbs, or JavaScript .js file)
 
+- Archive files (such as .zip and others)
+
 Intune name: `Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
 
 Microsoft Configuration Manager name: `Block executable content from email client and webmail`
