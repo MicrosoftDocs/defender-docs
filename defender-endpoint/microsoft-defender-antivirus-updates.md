@@ -143,8 +143,8 @@ Updates contain:
 - Improved AMSI scan performance with changes to exclusion handling.
 - Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
 - Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
-- Fixed ASR warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
-- Fixed ASR warn mode processing when exclusions are applied.
+- Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
+- Fixed attack surface reduction warn mode processing when exclusions are applied.
 - Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
 - Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
 - Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
