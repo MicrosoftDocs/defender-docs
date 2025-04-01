@@ -123,6 +123,7 @@ Updates contain:
 - Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
 - Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
 - If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
 - Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
 - Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
 - Increased [device control policy](device-control-policies.md) limits.
