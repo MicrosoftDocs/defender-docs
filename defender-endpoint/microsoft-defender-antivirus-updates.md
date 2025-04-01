@@ -98,17 +98,25 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### February-2025 (Engine: 1.1.25020.1007)
+### February-2025 (Platform 4.18.25xxx.xxx | Engine: 1.1.25xxx.xx)
 
 - Security intelligence update version: **1.425.1.0**
-- Release date: **March 12, 2025** (Engine only)
+- Release date: **March 12, 2025** (Engine) / **April 1, 2025** (Platform)
 - Platform: **4.18.25010.11**
 - Engine: **1.1.25020.1007**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Product improvements
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share
+- Shared root signature setting updates are now applied without a service restart (only applies to the first update to the setting and removes the restart requirement)
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user experience to update to latest drops in your signature update shares
+- Improved logic for handling restore from quarantine
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature?view=windowsserver2025-ps)
+
+
+
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
