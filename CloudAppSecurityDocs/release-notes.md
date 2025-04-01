@@ -23,9 +23,9 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### New Applications page in Defender XDR
 
-The Applications page, now accessible under Assets in the Defender XDR portal, provides a unified inventory of all SaaS and connected OAuth apps within your environment. This centralized view enables efficient discovery, monitoring, and management of applications, enhancing overall visibility and control.​
+The new Applications page consolidates all SaaS and connected OAuth applications into a single, unified inventory. This centralized view streamlines application discovery, monitoring, and management, providing greater visibility and control across your environment.
 
-Detailed insights—including app risk scores, usage metrics, publisher statuses, and privilege levels—facilitate the swift identification of high-risk or untagged applications requiring attention.​
+The page surfaces key insights such as risk scores, usage patterns, publisher verification status, and privilege levels. These insights help you quickly identify and address high-risk or untagged applications.
 
 For more information, see [Application inventory overview](applications-inventory.md)
 
