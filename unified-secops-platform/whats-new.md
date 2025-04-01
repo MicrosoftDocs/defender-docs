@@ -23,6 +23,7 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 ## April 2025
 
 - [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
+- [Case management now generally available](#case-management-now-generally-available)
 
 ### Multi workspace and multi tenant support for Microsoft Sentinel (preview)
 
@@ -39,6 +40,10 @@ For more information, see:
 - [Microsoft Defender multitenant management](mto-overview.md)
 - [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
 - [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
+
+### Case management now generally available
+
+The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
 
 ## January 2025
 
