@@ -4,7 +4,7 @@ description: Learn how to take advantage of the data ingestion benefit in Micros
 ms.topic: quickstart
 ms.author: elkrieger
 author: elazark
-ms.date: 03/16/2025
+ms.date: 04/01/2025
 ---
 
 # Use the data ingestion benefit
@@ -17,7 +17,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 - The allowance is a daily rate averaged across all machines.
 - You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 - The benefit is granted to the Log Analytics workspace to which the machine reports.
-- The benefit won't appear on your invoice, and billing will start after the free limit is exceeded. Verify the allowance by comparing the usage graph against the actual cost in the Log Analytics Workspace under Usage and estimated costs.
+- The benefit might not appear on your invoice, since a benefit has zero cost. The benefit is visible in the product, and in exports from Azure Cost Management. Learn how to [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage.md#view-data-allocation-benefits).
 
 ## Prerequisites
 
