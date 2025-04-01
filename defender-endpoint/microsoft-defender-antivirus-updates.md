@@ -114,6 +114,7 @@ Updates contain:
 - If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user experience to update to latest drops in your signature update shares
 - Improved logic for handling restore from quarantine
 - Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature?view=windowsserver2025-ps)
+- Increased [device control policy](device-control-policies.md) limits
 
 
 
