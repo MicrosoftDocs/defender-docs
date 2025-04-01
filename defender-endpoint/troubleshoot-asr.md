@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: emmwalshh
 ms.author: ewalsh
-ms.date: 03/11/2025
+ms.date: 04/01/2025
 ms.reviewer:
 manager: deniseb
 ms.custom: asr
@@ -143,7 +143,7 @@ When you report a problem with attack surface reduction rules, you're asked to c
 2. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
 
    > [!TIP]
-   > The log collection should occur during the repro attempt. Additionally, close any applications that do not contribute to the reproduction of the issue.
+   > Ensure that log collection takes place during the reproduction attempt. Also, close any applications that aren't essential to reproducing the issue.
 
 3. Run the MDE Client Analyzer with the `-v` switches:
 
@@ -152,6 +152,7 @@ When you report a problem with attack surface reduction rules, you're asked to c
    ```
 
 ### Manual process
+
 1. Open Command Prompt as an administrator and open the Windows Defender directory:
 
    ```console
