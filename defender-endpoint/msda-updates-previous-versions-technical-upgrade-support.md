@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 03/05/2025
+ms.date: 04/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,22 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
+
+- Security intelligence update version: **1.419.1.0**
+- Release date: **September 17, 2024** (Engine and Platform)
+- Platform: **4.18.24080.9**
+- Engine: **1.1.24080.9**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
+- Fixed an issue with device control regarding printer security checks.
+- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
+- Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
+- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and reached their end-of-servicing date.
 
 ### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
 
