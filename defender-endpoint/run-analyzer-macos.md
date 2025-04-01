@@ -84,7 +84,7 @@ The client analyzer depends on few extra PIP packages (`decorator`, `sh`, `distr
 The tool currently requires Python version 3 or later to be installed on your device. If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
-> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it is recommended that you install the packages into a user PIP environment.
+> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it's recommended that you install the packages into a user PIP environment.
 
 1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool to the Mac machine you're investigating.
 
@@ -127,7 +127,7 @@ The tool currently requires Python version 3 or later to be installed on your de
    ./mde_support_tool.sh
    ```
    
-7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you will want to remove this extended attribute:
+7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you'll want to remove this extended attribute:
 
    ```bash
    xattr -c MDESupportTools
@@ -137,7 +137,7 @@ The tool currently requires Python version 3 or later to be installed on your de
 
       "You might get a "MDESupportTool" Not Opened
 
-      Apple could not verify "MDESupportTool" is free of malware that may harm your Mac or compromise your privacy"
+      Apple couldn't verify "MDESupportTool" is free of malware that might harm your Mac or compromise your privacy"
 
 8. To collect actual diagnostic package and generate the result archive file, run again as root:
 

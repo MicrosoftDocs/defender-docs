@@ -379,7 +379,7 @@ A single report `installation_report.json` is generated. The keys in the file ar
 | onboarding_status | The onboarding and ring info |
 | support_status | MDE is supported with the current system configurations |
 | distro | The distro on which the agent is installed in supported or not |
-| connectivitytest | The connectivity test stratus|
+| connectivitytest | The connectivity tests stratus|
 | min_requirement | The minimum requirements for CPU and Memory are met|
 | external_depedency | The external dependencies are satisfied or not |
 | mde_health | Health status of MDE Agent|

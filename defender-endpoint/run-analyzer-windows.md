@@ -89,18 +89,18 @@ Example contents after MDEClientAnalyzer.ps1 is modified:
 ## Result package contents on Windows
 
 > [!NOTE]
-> The exact files captured may change depending on factors such as:
+> The exact files captured might change depending on factors such as:
 >
 > - The version of windows on which the analyzer is run.
 > - Event log channel availability on the machine.
-> - The start state of the EDR sensor (Sense is stopped if machine is not yet onboarded).
+> - The start state of the EDR sensor (Sense is stopped if machine isn't yet onboarded).
 > - If an advanced troubleshooting parameter was used with the analyzer command.
 
 By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items listed in the following table:
 
 | Folder | Item | Description |
 |--|--|--|
-| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce. |
+| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which contains the findings and guidance that the analyzer script run on the machine can produce. |
 | `SystemInfoLogs` | `AddRemovePrograms.csv` | List of x64 installed software on x64 OS collected from registry |
 | `SystemInfoLogs` | `AddRemoveProgramsWOW64.csv` | List of x86 installed software on x64 OS collected from registry |
 | `SystemInfoLogs` | `CertValidate.log` | Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil) |

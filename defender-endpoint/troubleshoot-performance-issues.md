@@ -30,7 +30,7 @@ ms.collection:
 - Windows
 - Windows Server
 
-If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Antimalware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
+If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Anti-malware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
 
 As an admin, you can also troubleshoot these issues on your own.
 
