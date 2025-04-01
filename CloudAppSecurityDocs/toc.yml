@@ -428,7 +428,7 @@ items:
   items:
     - name: Assets
       items:
-      - name: Application inventory
+      - name: Applications inventory
         href: applications-inventory.md
 - name: Operations guide
   items:
