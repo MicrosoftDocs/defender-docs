@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 04/01/2025
 ---
 
 # Data collection for advanced troubleshooting on Windows
@@ -25,10 +25,11 @@ ms.date: 03/26/2025
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 - Microsoft Defender for Business
-
 - Microsoft Defender Antivirus
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
 
 When collaborating with Microsoft support professionals, you might be asked to use the client analyzer to collect data for troubleshooting of more complex scenarios. The analyzer script supports other parameters for that purpose and can collect a specific log set based on the observed symptoms that need to be investigated.
 
@@ -48,7 +49,7 @@ Run `MDEClientAnalyzer.cmd /?` to see the list of available parameters and their
 |`-v`|Uses antivirus [MpCmdRun.exe command line argument](/windows/security/threat-protection/microsoft-defender-antivirus/command-line-arguments-microsoft-defender-antivirus) with most verbose -trace flags. |Anytime an advanced troubleshooting is needed. Such as when troubleshooting Cloud Protection (MAPS) reporting failures, Platform Update failures, Engine update failures, Security Intelligence Update failures, False negatives, etc. Can also be used with `-b`, `-c`, `-h`, or `-l`.|`MsMpEng.exe` |
 |`-t` |Starts verbose trace of all client-side components relevant to Endpoint DLP, which is useful for scenarios where [DLP actions](/microsoft-365/compliance/endpoint-dlp-learn-about#endpoint-activities-you-can-monitor-and-take-action-on) aren't happening as expected for files. |When running into issues where the Microsoft Endpoint Data Loss Prevention (DLP) actions expected aren't occurring.|`MpDlpService.exe` |
 |`-q`|Calls into DLPDiagnose.ps1 script from the analyzer `Tools` directory that validates the basic configuration and requirements for Endpoint DLP. |Checks the basic configuration and requirements for Microsoft Endpoint DLP|`MpDlpService.exe`|
-|`-d`|Collects a memory dump of `MsSenseS.exe` (the sensor process on Windows Server 2016 or older OS) and related processes. - \* This flag can be used with above mentioned flags. - \*\* Capturing a memory dump of [PPL protected processes](/windows-hardware/drivers/install/early-launch-antimalware) such as `MsSense.exe` or `MsMpEng.exe` isn't supported by the analyzer at this time.|On Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, Windows Server 2012 R2 or Windows Server 2016 running w/ the MMA agent and having performance (high cpu or high memory usage) or application compatibility issues. |`MsSenseS.exe`|
+|`-d`|Collects a memory dump of `MsSenseS.exe` (the sensor process on Windows Server 2016 or older OS) and related processes. - \* This flag can be used with above mentioned flags. - \*\* Capturing a memory dump of [PPL protected processes](/windows-hardware/drivers/install/early-launch-antimalware) such as `MsSense.exe` or `MsMpEng.exe` isn't supported by the analyzer at this time.|On Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, Windows Server 2012 R2, or Windows Server 2016 running w/ the MMA agent and having performance (high cpu or high memory usage) or application compatibility issues. |`MsSenseS.exe`|
 |`-z` |Configures registry keys on the machine to prepare it for full machine memory dump collection via [CrashOnCtrlScroll](/windows-hardware/drivers/debugger/forcing-a-system-crash-from-the-keyboard). This would be useful for analysis of computer freeze issues. \* Hold down the rightmost CTRL key, then press the SCROLL LOCK key twice. |Machine hanging or being unresponsive or slow. High memory usage (Memory leak): a) User mode: Private bytes b) Kernel mode: paged pool or nonpaged pool memory, handle leaks.|`MSSense.exe` or `MsMpEng.exe` |
 |`-k` |Uses [NotMyFault](/sysinternals/downloads/notmyfault) tool to force the system to crash and generate a machine memory dump. This would be useful for analysis of various OS stability issues. |Same as above.|`MSSense.exe` or `MsMpEng.exe` |
 
@@ -65,7 +66,7 @@ The analyzer, and all of the scenario flags listed in this article, can be initi
 
 When you use `RemoteMDEClientAnalyzer.cmd`, it calls into `psexec` to download the tool from the configured file share and then run it locally via `PsExec.exe`.
 
-The CMD script uses the `-r` flag to specify that it is running remotely within SYSTEM context, and so no prompt is presented to the user.
+The CMD script uses the `-r` flag to specify that it's running remotely within SYSTEM context, and so no prompt is presented to the user.
 
 That same flag can be used with `MDEClientAnalyzer.cmd` to avoid a prompt to the user to specify the number of minutes for data collection. For example, consider `MDEClientAnalyzer.cmd -r -i -m 5`.
 
@@ -73,6 +74,6 @@ That same flag can be used with `MDEClientAnalyzer.cmd` to avoid a prompt to the
 - `-i` is the scenario flag for collection of network trace along with other related logs.
 - `-m #` denotes the number of minutes to run (we used 5 minutes in our example).
 
-When using `MDEClientAnalyzer.cmd`, the script checks for privileges using `net session`, which requires the service `Server` to be running. If it's not, you will get the error message _Script is running with insufficient privileges_. Run it with administrator privileges if ECHO is off.
+When using `MDEClientAnalyzer.cmd`, the script checks for privileges using `net session`, which requires the service `Server` to be running. If it's not, you'll get the error message _Script is running with insufficient privileges_. Run it with administrator privileges if ECHO is off.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
