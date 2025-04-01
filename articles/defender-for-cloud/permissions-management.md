@@ -10,6 +10,13 @@ ms.date: 05/08/2024
 
 # Permissions Management (CIEM)
 
+> [!NOTE]
+> Effective April 1, 2025, Microsoft Entra Permissions Management will no longer be available for purchase.
+>
+> On October 1, 2025, Microsoft will retire and discontinue support for this product. Learn more about the **[Microsoft Entra Permissions Management retirement](https://aka.ms/MEPMretire"https://aka.ms/mepmretire")**.
+>
+> The deprecation of Microsoft Entra Permissions Management doesn't affect any existing CIEM capabilities in Microsoft Defender for Cloud. Learn more about **[the deprecation of Microsoft Entra Permissions Management](https://aka.ms/MDC-CIEM"https://aka.ms/mdc-ciem")**.
+
 Microsoft Defender for Cloud's integration with [Microsoft Entra Permissions Management](/entra/permissions-management/overview) (Permissions Management) provides a Cloud Infrastructure Entitlement Management (CIEM) security model that helps organizations manage and control user access and entitlements in their cloud infrastructure. CIEM is a critical component of the Cloud Native Application Protection Platform (CNAPP) solution that provides visibility into who or what has access to specific resources. CIEM ensures that access rights adhere to the principle of least privilege (PoLP), where users or workload identities, such as apps and services, receive only the minimum levels of access necessary to perform their tasks. CIEM also helps organizations to monitor and manage permissions across multiple cloud environments, including Azure, AWS, and GCP.
 
 Integrating Permissions Management with Defender for Cloud (CNAPP) strengthens cloud security by preventing security breaches caused by excessive permissions or misconfigurations. Permissions Management continuously monitors and manages cloud entitlements, helping to discover attack surfaces, detect threats, right-size access permissions, and maintain compliance. This integration enhances the capabilities of Defender for Cloud in securing cloud-native applications and protecting sensitive data.
