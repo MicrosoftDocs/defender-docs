@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 03/04/2025
+ms.date: 04/01/2025
 ---
 
 # Detect and block potentially unwanted applications
@@ -106,6 +106,12 @@ You can enable PUA protection with Microsoft Defender for Endpoint Security Sett
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
+| Operating systems |Potentially Unwanted Protection (PUA) by default is set to:|
+| -------- | -------- |
+|Windows 11, Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016|Audit mode (2)|
+|Windows 11, Windows 10 + Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Block mode (1)|
+|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client + Microsoft Defender for Servers Plan 1 or Microsoft Defender for Servers Plan 2 or Microsoft Defender for Endpoint for servers|Block mode (1)   |
+
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
 
 See the following articles:
@@ -156,7 +162,7 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 Set-MpPreference -PUAProtection Enabled
 ```
 
-Setting the value for this cmdlet to `Enabled` turns on the feature if it is disabled.
+Setting the value for this cmdlet to `Enabled` turns on the feature if it's disabled.
 
 #### To set PUA protection to audit mode
 
@@ -186,8 +192,8 @@ get-mpPreference | ft PUAProtection
 |Value | Description|
 | -------- | -------- |
 | `0` | PUA Protection off (Default).  Microsoft Defender Antivirus won't protect against potentially unwanted applications.  |
-| `1` | PUA Protection on. Detected items are blocked. They will show in history along with other threats.|
-| `2` | Audit mode. Microsoft Defender Antivirus will detect potentially unwanted applications but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer.|
+| `1` | PUA Protection on. Detected items are blocked. They'll show in history along with other threats.|
+| `2` | Audit mode. Microsoft Defender Antivirus detects potentially unwanted applications but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer.|
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
 
