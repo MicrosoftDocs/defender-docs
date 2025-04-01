@@ -11,7 +11,12 @@ One of the pillars of Microsoft Defender for Cloud Apps is SaaS security posture
 
 Defender for Cloud Apps provides security configuration assessments to help you identify and mitigate potential risks in your SaaS application environments. These recommendations appear in [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) after you have a connector to an application.
 
-However, Microsoft Security Exposure Management data and capabilities are currently unavailable in US government clouds: GCC, GCC High, and DoD. For these environments, we recommend consuming SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation). The following example shows Secure Score recommendations for a Salesforce app.
+In addition, Microsoft Defender for Cloud apps now includes OAuth applications in the Attack Path and Attack Surface Map experiences. For more information, see: [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md) (Preview)
+
+>[!NOTE]
+> Microsoft Security Exposure Management data and capabilities are currently unavailable in US government clouds: GCC, GCC High, and DoD. For these environments, we recommend consuming SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation). 
+
+The following example shows Secure Score recommendations for a Salesforce app.
 
 :::image type="content" source="media/security-saas-sspm-in-secure-score-salesforce-filter.png" alt-text="Screenshot of Salesforce recommendations in Secure Score." lightbox="media/security-saas-sspm-in-secure-score-salesforce-filter.png" :::
 
@@ -55,13 +60,15 @@ To effectively manage your organization's SaaS security posture, we recommend be
 
 :::image type="content" source="media/posture-overview/screenshot-of-the-saas-security-initiative-home-page.png" alt-text="Screenshot of metrics from the SaaS Security Initiative." lightbox="media/posture-overview/screenshot-of-the-saas-security-initiative-home-page.png":::
 
-You can also find a variety of SSPM recommendations under other initiatives:
+You can also find various SSPM recommendations under other initiatives:
 
 - CIS Microsoft 365 Foundations Benchmark
 - Ransomware Protection
 - Identity Security
 - Business Email Compromise (financial fraud)
 - Zero Trust (foundational)
+
+[Preview] Once you've finished setting up the suggested SaaS posture recommendations, tackle the newly added attack paths capabilities. Investigating attack paths helps to reduce critical exposure points in your organization that attackers might use to move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges in your Microsoft 365 SaaS applications.
 
 ## Next step
 

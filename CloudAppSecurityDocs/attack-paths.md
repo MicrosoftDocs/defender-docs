@@ -7,9 +7,8 @@ ms.date: 03/23/2025
 
 # Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)
 
-[Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) helps you to manage your company's attack surface and exposure risk effectively. By combining assets and techniques, [attack paths](/security-exposure-management/review-attack-paths) illustrate the end-to-end paths that attackers can use to move from an entry point within your organization to your critical assets. This enables you to identify, prioritize, and mitigate the most significant risks to your exposed assets enhancing your organization overall security posture.
-Microsoft Defender for Cloud Apps detected an increase in attackers using OAuth applications to access critical data in business-critical applications like Microsoft Teams, SharePoint, Outlook, and more. To support investigation and mitigation, these applications are integrated into the attack path and attack surface map views in Microsoft Security Exposure Management. By identifying, reducing, and managing these paths, you can minimize your attack surface. This will strengthen the security of your Microsoft 365 services.
-
+[Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) helps you to manage your company's attack surface and exposure risk effectively. By combining assets and techniques, [attack paths](/security-exposure-management/review-attack-paths) illustrate the end-to-end paths that attackers can use to move from an entry point within your organization to your critical assets.
+Microsoft Defender for Cloud Apps observed an increase in attackers using OAuth applications to access senstive data in business-critical applications like Microsoft Teams, SharePoint, Outlook, and more. To support investigation and mitigation, these applications are integrated into the attack path and attack surface map views in Microsoft Security Exposure Management.
 
 ### Prerequisites
 
@@ -19,20 +18,15 @@ To get started with OAuth application attack path features in Exposure Managemen
 
 - Microsoft 365 app connector must be activated. For information about connecting and about which of the app connectors provide security recommendations, see [Connect apps to get visibility and control with Microsoft Defender for Cloud Apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
-- Optional: For full functionality and visibility into attack path data, an E5 or Defender for Endpoint and Defender for Identity license are recommended.
+- Optional: For full functionality and visibility into attack path data, an E5 security license, Defender for Endpoint or Defender for Identity license are recommended.
 
 ### Required roles and permissions
 
-
-To access all Exposure Management features in the Defender portal, make sure you have the following permission enabled.
- 
+To access all Exposure Management features in the Defender portal, ensure you have one of the following roles enabled.
 
 |Permission |Actions |
 |---------|---------|
-|**Unified Role Based Access Control role**: “Exposure Management  |(read permissions) |
-
-
-Esure you have one of the following Microsoft Entra ID roles:
+|**Unified Role Based Access Control role**: Exposure Management  |(read permissions) |
 
 |Permission |Actions |
 |---------|---------|
@@ -46,6 +40,15 @@ Esure you have one of the following Microsoft Entra ID roles:
 >[!NOTE]
 > Currently available in commercial cloud environments only. Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, DoD, and China Gov.
 
+### Critical OAuth permissions 
+
+Microsoft Defender for Cloud Apps defines a specific set of OAuth permissions as the organization’s crown jewels—permissions that, if misused, can lead to severe compromise. OAuth applications granted these critical privileges pose a significant risk if accessed by attackers. To help prevent this risk, Service Principals with these permissions are predefined as target goals in attack paths. 
+
+To view the full list of these critical permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
+
+:::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Defender XDR portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
+
+Once you understand which permissions represent high-value targets, use the following steps to investigate how these applications appear in your environment’s attack paths.
 
 ## View attack paths involving OAuth applications
 
@@ -61,15 +64,15 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png" alt-text="Screenshot of the attack path name" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png":::
 
-1. Click on the View in map button to see the attack path.
+1. Click the View in map button to see the attack path.
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png" alt-text="Screenshot of the view in map button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png":::
   
-1. Click on the + sign to expand nodes and view detailed connections.
+1. Select the + sign to expand nodes and view detailed connections.
 
     :::image type="content" source="media/saas-securty-initiative/attack-surface-map.png" alt-text="Screenshot of the attack surface map" lightbox="media/saas-securty-initiative/attack-surface-map.png":::
   
-1. Hover or select on nodes and edges to explore extra data such as which permissions this OAuth app has.
+1. Hover or select nodes and edges to explore extra data such as which permissions this OAuth app has.
 
    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-permissions-set-for-service-principal.png" alt-text="Screenshot of the permissions assigned to the OAuth app as show in the attack surface map":::
 
@@ -77,13 +80,13 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
      :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png" alt-text="Screenshot of the OAuth applications page" lightbox="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png":::
    
-1. Click on the app name to investigate permissions and usage. For example, used or high privilege permissions.
+1. Select the app name to review assigned permissions and usage insights, including whether high-privilege permissions are actively used.
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" alt-text="Screenshot of the permissions assigned to the Oauth app" lightbox="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" :::
 
-1. Optional: If you determine the OAuth application should be disabled, you can disable it from the App Governance portal.
+1. Optional: If you determine the OAuth application should be disabled, you can disable it from the Applications page.
 
-### Investigate choke points
+### Prioritize attack path investigations with choke points
 
 For larger organizations with numerous attack paths that can't be manually investigated, we recommend using attack path data and utilizing the Choke Points experience as a prioritization tool. This approach allows you to:
 
@@ -97,21 +100,13 @@ To get started:
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-choke-point-page.png" alt-text="Screenshot of the choke points page" lightbox="media/saas-securty-initiative/Screenshot-of-the-choke-point-page.png":::
     
-1. Click on a choke point name to see more details about the top attack paths such as the name, entry point and target.
-1. After you decide which Choke point to focus on, you can further investigate with the view blast radius.
-1. Click on the View blast radius button.
+1. Select a choke point name to see more details about the top attack paths such as the name, entry point, and target.
+1. To further investigate the choke point in the Attack Surface Map, click View blast radius.
      :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png" alt-text="Screenshot of the view blast radius button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png":::
-1. Use the attack surface map to explore the data, check what assets are at risk, contextualize them in a broader network framework, and prioritize security focus.
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-connections-in-the-attack-surface-map.png" alt-text="Screenshot of connections in the attack surface map" lightbox="media/saas-securty-initiative/Screenshot-of-connections-in-the-attack-surface-map.png":::
-
-1. Select an OAuth app that is displayed in the attack surface map.
-1. Copy the OAuth app name.
-1. Go to the Applications page in the Defender portal to review your OAuth apps and see details like API permissions, privilege levels, app origin, publisher, permission types, and accessed services.
+1. If the choke point is an OAuth application, continue your investigation in the Applications page of the Defender portal, where you can review your OAuth apps and examine details such as API permissions, privilege levels, origin, publisher, permission types, and accessed services.
 
     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-microsoft-365-oauth-apps.png" alt-text="Screenshot of Microsoft 365 OAuth app details" lightbox="media/saas-securty-initiative/Screenshot-of-microsoft-365-oauth-apps.png":::
-
-    
 
 ## Analyze attack surface map and hunt with queries
 
