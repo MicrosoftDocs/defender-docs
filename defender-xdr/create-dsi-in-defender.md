@@ -32,7 +32,7 @@ You can now start an investigation on data security incidents from the Microsoft
 
 Security operations center (SOC) teams can take advantage of this integration to enhance their investigation and response to potential data security incidents like data breaches or data leaks. Data Security Investigations (preview) uses generative AI to analyze impacted data, draws connections to identify risks, and provide actionable insights to protect the organization.
 
-SOC teams can start a data security investigation from an incident page where a potentially affected data set is in the Microsoft Defender portal.
+SOC teams can start an investigation in Data Security Investigations (preview) from an incident page where a potentially affected data set is in the Microsoft Defender portal.
 
 ## Prerequisites
 
