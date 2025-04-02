@@ -36,6 +36,8 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) You can now highlight your security operations achievements and the impact of Microsoft Defender using the **unified security summary**. The unified security summary is available in the Microsoft Defender portal and streamlines the process for SOC teams to generate security reports, saving time usually spent on collecting data from various sources and creating reports. For more information, see [Visualize security impact with the unified security summary](security-summary-report.md).
 
+- (Preview) The [OAuthAppInfo](advanced-hunting-oauthappinfo-table.md) table is now available for preview in advanced hunting. The table contains information about Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability.
+
 ## March 2025
 
 - (Preview) The incident description has moved within the incident page. The incident description is now displayed after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).
