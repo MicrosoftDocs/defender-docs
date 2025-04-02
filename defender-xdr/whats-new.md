@@ -32,10 +32,6 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
-## April 2025
-
-- (Preview) Multitenant management in Microsoft Defender now supports managing tenants in other Microsoft cloud environments. Security operations teams operating in government cloud environments can now manage their entire security operations, including tenants in other Microsoft cloud environments, in a single pane of glass. For more information, see [Manage tenants in other Microsoft cloud environments](/unified-secops-platform/mto-cross-cloud).
-
 ## March 2025
 
 - (Preview) The incident description has moved within the incident page. The incident description is now displayed after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).
