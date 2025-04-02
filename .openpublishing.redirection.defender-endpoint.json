@@ -124,6 +124,11 @@
       "source_path": "defender-endpoint/non-windows.md",
       "redirect_url": "/defender-endpoint/microsoft-defender-endpoint",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-endpoints-non-windows.md",
+      "redirect_url": "/defender-endpoint/onboarding",
+      "redirect_document_id": true
     } 
   ]
 }
