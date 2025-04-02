@@ -74,7 +74,7 @@ You can also create an investigation in Data Security Investigations (preview) f
 
   :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-create-entity-small.png" alt-text="Screenshot highlighting the Create Data Security investigation option from an entity in the incident graph" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-create-entity.png":::
 
-Each data security investigation created is recorded in the Microsoft Defender portal activity log. The activity log entry also includes the relevant link to the investigation created in the Microsoft Purview portal.
+Each investigation in Data Security Investigations (preview) created is recorded in the Microsoft Defender portal activity log. The activity log entry also includes the relevant link to the investigation created in the Microsoft Purview portal.
 
 :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-activity-log-small.png" alt-text="Screenshot highlighting the link to Microsoft Purview portal in the activity log" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-activity-log.png":::
 
