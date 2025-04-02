@@ -12,7 +12,7 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: how-to
-ms.date: 03/01/2025
+ms.date: 04/02/2025
 appliesto: 
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
