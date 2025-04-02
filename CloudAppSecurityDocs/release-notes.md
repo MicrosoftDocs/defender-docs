@@ -21,7 +21,6 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## April 2025
 
-
 ### OAuth app information is now available in attack paths (Preview)
 
 Microsoft Defender for Cloud Apps has added OAuth applications to the Security Exposure Management experience. This enhancement enables you to visualize how attackers could use OAuth apps to move laterally within your organization to access critical SaaS applications. By identifying, reducing, and managing the number of attack paths, you can significantly reduce your attack surface and enhance the security of your Microsoft 365 services.
