@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 11/18/2024
+ms.date: 04/02/2025
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -28,6 +28,7 @@ This article summarizes what's new in security recommendations, alerts, and inci
   - [DevOps recommendations](recommendations-reference-devops.md)
   - [Identity and access recommendations](recommendations-reference-identity-access.md)
   - [IoT recommendations](recommendations-reference-iot.md)
+  - [Keyvault recommendations](recommendations-reference-keyvault.md)
   - [Networking recommendations](recommendations-reference-networking.md)
   - [Deprecated recommendations](recommendations-reference-deprecated.md)
   - [Security alerts](alerts-reference.md).

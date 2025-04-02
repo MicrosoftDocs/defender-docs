@@ -409,6 +409,9 @@
         - name: IoT recommendations
           displayName: IoT, recommendations
           href: recommendations-reference-iot.md
+        - name: Keyvault recommendations
+          displayName: keyvault, recommendations
+          href: recommendations-reference-keyvault.md
         - name: Networking recommendations
           displayName: networking, recommendations
           href: recommendations-reference-networking.md
