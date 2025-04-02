@@ -102,6 +102,8 @@
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution with tenant groups
               href: mto-tenantgroups.md
+            - name: Manage tenants in other Microsoft clouds
+              href: mto-cross-cloud.md              
             - name: Troubleshoot issues
               href: mto-troubleshoot.md              
         - name: Configure notifications
