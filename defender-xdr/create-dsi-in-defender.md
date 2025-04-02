@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-You can now start an investigation on data security incidents from the Microsoft Defender portal with the integration of Microsoft Purview Data Security Investigations and Microsoft Defender XDR.
+You can now start an investigation on data security incidents from the Microsoft Defender portal with the integration of [Microsoft Purview Data Security Investigations (preview)](/purview/data-security-investigations) and Microsoft Defender XDR.
 
 Security operations center (SOC) teams can take advantage of this integration to enhance their investigation and response to potential data security incidents like data breaches or data leaks. Microsoft Purview Data Security Investigations uses generative AI to analyze impacted data, draws connections to identify risks, and provide actionable insights to protect the organization.
 
