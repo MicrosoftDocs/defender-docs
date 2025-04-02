@@ -32,7 +32,7 @@ ms.date: 04/01/2025
 
 The `OAuthAppInfo` table in the advanced hunting schema contains information about Microsoft 365-connected OAuth applications in the organization that are registered with Microsoft Entra ID and available in the Microsoft Defender for Cloud Apps app governance capability. 
 
-The	`OAuthAppInfo` table might not include all the app or service principal-related properties that are available on Entra ID. It also does not include data related to Microsoft first-party apps or apps without any OAuth consents. The coverage of the table is based on the existing scope of Microsoft 365-connected apps covered by app governance. 
+The `OAuthAppInfo` table might not include all the app or service principal-related properties that are available on Entra ID. It also does not include data related to Microsoft first-party apps or apps without any OAuth consents. The coverage of the table is based on the existing scope of Microsoft 365-connected apps covered by app governance. 
 
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
