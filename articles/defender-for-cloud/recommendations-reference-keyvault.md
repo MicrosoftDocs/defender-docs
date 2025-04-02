@@ -26,7 +26,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### Role-Based Access Control should be used on Keyvault Services
 
-**Description**: To provide granular filtering on the actions that users can perform, use [Role-Based Access Control (RBAC)](/azure/key-vault/general/rbac-guide?branch=main&tabs=azure-cli) to manage permissions in Keyvault Service and configure relevant authorization policies. (Related policy: Azure Key Vault should use RBAC permission model - Microsoft Azure).
+**Description**: To provide granular filtering on the actions that users can perform, use [Role-Based Access Control (RBAC)](/azure/key-vault/general/rbac-guide?branch=main&tabs=azure-cli) to manage permissions in Keyvault Service and configure relevant authorization policies. (Related policy: [Azure Key Vault should use RBAC permission model - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F12d4fa5e-1f9f-4c21-97a9-b99b3c6611b5)).
 
 **Severity**: High
 
