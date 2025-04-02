@@ -22,6 +22,10 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## April 2025
 
+### Cross-cloud multitenant management (Preview)
+
+Multitenant management in Microsoft Defender now supports managing tenants in other Microsoft cloud environments. Security operations teams operating in government cloud environments can now manage their entire security operations, including tenants in other Microsoft cloud environments, in a single pane of glass. For more information, see [Manage tenants in other Microsoft cloud environments](mto-cross-cloud.md).
+
 ### Case management now generally available
 
 The Microsoft Defender portal's case management feature is now generally available. For more information on this feature, see the preview announcement [Manage SecOps work natively with case management (Preview)](#case-management-preview) in the January 2025 section below.
