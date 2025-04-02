@@ -127,6 +127,5 @@ The `*.blob.core.windows.net` URL endpoint can be replaced with the URLs shown i
 
 ## Next step
 
-[Onboard Windows Client](onboard-windows-client.md)
-[Onboard Windows Server](onboard-windows-server.md)
-[Onboard non-Windows devices](configure-endpoints-non-windows.md)
+- [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)

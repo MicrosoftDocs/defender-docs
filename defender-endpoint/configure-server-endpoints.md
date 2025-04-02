@@ -352,14 +352,11 @@ For other Windows server versions, you have two options to offboard Windows serv
 
 ## Related articles
 
-- [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
-- [Onboard previous versions of Windows](onboard-downlevel.md)
-- [Onboard Windows 10 devices](onboard-windows-client.md)
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+- [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
 - [Configure proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md)
 - [Troubleshooting Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
-- [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso-quick-start)
 - [Troubleshoot onboarding issues related to Security Management for Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
