@@ -19,7 +19,14 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+
 ## April 2025
+
+### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
+
+The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
+
+This table provides details on Microsoft 365-connected OAuth applications that are registered with Microsoft Entra ID and accessible through the Defender for Cloud Apps app governance capability.
 
 ### New Applications page in Defender XDR (Preview)
 
@@ -28,6 +35,7 @@ The new Applications page consolidates all SaaS and connected OAuth applications
 The page surfaces key insights such as risk scores, usage patterns, publisher verification status, and privilege levels. These insights help you quickly identify and address high-risk or untagged applications.
 
 For more information, see [Application inventory overview](applications-inventory.md)
+
 
 ## March 2025
 
