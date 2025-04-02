@@ -24,7 +24,7 @@ search.appverid:
   - MET150
 description: Learn how to recognize and respond to a compromised email account using tools available in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 03/19/2025
+ms.date: 03/31/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -146,22 +146,16 @@ This step immediately invalidates any active access using the stolen credentials
    Connect-MgGraph -Scopes User.RevokeSessions.All
    ```
 
-4. To store the details of the user account in the variable named `$user`, replace \<UPN\> with the user's account (user principal name or UPN), and then run the following command:
-
-     ```powershell
-     $user = Get-MgUser -Search UserPrincipalName:'<UPN>' -ConsistencyLevel Eventual
-     ```
-
-     For example:
-
-     ```powershell
-     $user = Get-MgUser -Search UserPrincipalName:'jason@contoso.onmicrosoft.com' -ConsistencyLevel Eventual
-     ```
-
-5. Revoke the user's sign-in sessions by running the following command:
+4. Replace \<UPN\> with the user's account (user principal name or UPN), and then run the following command:
 
    ```powershell
-   Revoke-MgUserSignInSession -UserId $user.Id
+   Revoke-MgUserSignInSession -UserId <UPN>
+   ```
+
+   For example:
+
+   ```powershell
+   Revoke-MgUserSignInSession -UserId jason@contoso.onmicrosoft.com
    ```
 
 For more information, see [Revoke user access in an emergency in Microsoft Entra ID](/entra/identity/users/users-revoke-access).
