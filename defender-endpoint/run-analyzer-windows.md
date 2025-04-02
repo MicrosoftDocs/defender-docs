@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 04/01/2025
 ---
 
 # Run the client analyzer on Windows
@@ -25,6 +25,9 @@ ms.date: 03/12/2025
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
 
 You have two options for running the Defender for Endpoint client analyzer on Windows:
 
@@ -66,6 +69,9 @@ In addition to the previous procedure, you can also [collect the analyzer suppor
 >
 > On Windows 8.1, Windows Server 2016 or any previous OS edition where Microsoft Monitoring Agent (MMA) is used for onboarding, the client analyzer script calls into an executable file called `MDEClientAnalyzerPreviousVersion.exe` to run connectivity tests for Command and Control (CnC) URLs while also calling into Microsoft Monitoring Agent connectivity tool `TestCloudConnection.exe` for Cyber Data channel URLs.
 
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
+
 ## Important points to keep in mind
 
 All the PowerShell scripts and modules included with the analyzer are Microsoft-signed. If files were modified in any way, then the analyzer is expected to exit with the following error:
@@ -83,18 +89,18 @@ Example contents after MDEClientAnalyzer.ps1 is modified:
 ## Result package contents on Windows
 
 > [!NOTE]
-> The exact files captured may change depending on factors such as:
+> The exact files captured might change depending on factors such as:
 >
 > - The version of windows on which the analyzer is run.
 > - Event log channel availability on the machine.
-> - The start state of the EDR sensor (Sense is stopped if machine is not yet onboarded).
+> - The start state of the EDR sensor (Sense is stopped if machine isn't yet onboarded).
 > - If an advanced troubleshooting parameter was used with the analyzer command.
 
 By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items listed in the following table:
 
 | Folder | Item | Description |
 |--|--|--|
-| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce. |
+| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which contains the findings and guidance that the analyzer script run on the machine can produce. |
 | `SystemInfoLogs` | `AddRemovePrograms.csv` | List of x64 installed software on x64 OS collected from registry |
 | `SystemInfoLogs` | `AddRemoveProgramsWOW64.csv` | List of x86 installed software on x64 OS collected from registry |
 | `SystemInfoLogs` | `CertValidate.log` | Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil) |
