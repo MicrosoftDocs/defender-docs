@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 02/16/2025
-manager: dansimp
+ms.date: 04/09/2025
+manager: deniseb
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -31,6 +31,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Purview](/purview/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## April 2025
+
+- (Preview) You can now create data security investigations in the Microsoft Defender portal with the integration of Microsoft Purview Data Security Investigations (preview) and Microsoft Defender XDR. This integration allows security operations center (SOC) teams to enhance their investigation and response to potential data security incidents like data breaches or data leaks. For more information, see [Create data security investigations in the Microsoft Defender portal](create-dsi-in-defender.md).
 
 ## March 2025
 
