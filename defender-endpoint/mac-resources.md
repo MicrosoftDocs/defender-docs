@@ -185,15 +185,15 @@ All of the uninstall of Microsoft Defender for Endpoint on macOS require the fol
    
 1. Remove the "Set Preferences" policies that contain [Tamper Protection](/defender-endpoint/tamperprotection-macos) or through the manual configuration.
 
-1. Offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+1. In the Microsoft Defender portal, in the navigation pane, select **Settings** > **Offboard**, and then select the operating system to start the process.
 
-1. Uninstall the Microsoft Defender for Endpoint for macOS apps
+1. Uninstall the Microsoft Defender for Endpoint app.
 
 1. Remove the device from the *group* for *system extension* policies if an MDM was used to set them.
 
 ### Interactive uninstallation
 
-- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
+- Open **Finder** > **Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
 
 ### From the command line
 
