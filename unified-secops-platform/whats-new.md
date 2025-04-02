@@ -3,11 +3,11 @@ title: "What's new in the Microsoft's unified SecOps platform"
 description: Lists the new features and functionality in the Microsoft unified security operations platform
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 12/10/2024
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -19,6 +19,12 @@ ms.topic: concept-article
 # What's new in Microsoft's unified security operations platform
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
+
+## April 2025
+
+### Case management now generally available
+
+The Microsoft Defender portal's case management feature is now generally available. For more information on this feature, see the preview announcement [Manage SecOps work natively with case management (Preview)](#case-management-preview) in the January 2025 section below.
 
 ## January 2025
 

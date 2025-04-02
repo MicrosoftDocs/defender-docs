@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your tenant using the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/24/2023
+ms.date: 03/26/2025
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
