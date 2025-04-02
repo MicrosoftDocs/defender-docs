@@ -22,14 +22,14 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 ## April 2025
 
 
-### OAuth app information is now available in attack paths
+### OAuth app information is now available in attack paths (Preview)
 
 Microsoft Defender for Cloud Apps has added OAuth applications to the Security Exposure Management experience. This enhancement enables you to visualize how attackers could use OAuth apps to move laterally within your organization to access critical SaaS applications. By identifying, reducing, and managing the number of attack paths, you can significantly reduce your attack surface and enhance the security of your Microsoft 365 services.
 
 For more information see, [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
 
 
-### New Applications page in Defender XDR
+### New Applications page in Defender XDR (Preview)
 
 The new Applications page consolidates all SaaS and connected OAuth applications into a single, unified inventory. This centralized view streamlines application discovery, monitoring, and management, providing greater visibility and control across your environment.
 

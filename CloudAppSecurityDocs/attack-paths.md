@@ -104,7 +104,7 @@ To get started:
 1. To further investigate the choke point in the Attack Surface Map, click View blast radius.
      :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png" alt-text="Screenshot of the view blast radius button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png":::
 
-If the choke point is an OAuth application, we recommend continuing your investigation in the Applications page in the Defender portal.
+If the choke point is an OAuth application, we recommend continuing the investigation in the Applications page in the Defender portal. Follow steps 8 and 9 above for further instructions.
 
 
 ## Analyze attack surface map and hunt with queries
