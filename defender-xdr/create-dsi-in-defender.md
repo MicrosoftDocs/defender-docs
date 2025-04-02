@@ -64,7 +64,7 @@ Once the data security investigation is created, a link to the Microsoft Purview
 
 :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link-small.png" alt-text="Screenshot highlighting the link to Microsoft Purview portal after successful creation" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link.png":::
 
-You can also create a Data Security investigation from the incident page in the following ways:
+You can also create an investigation in Data Security Investigations (preview) from the incident page in the following ways:
 
 - From the **Incidents** page, select the **More actions** ellipsis to see the options, then choose **Create Data Security investigation**.
   
