@@ -1,5 +1,5 @@
 ---
-title: Create data security investigations in the Microsoft Defender portal
+title: Create investigations in Data Security Investigations (preview) from the Microsoft Defender portal
 description: Learn how to create data security investigations in the Microsoft Defender portal with the Microsoft Purview Data Security Investigations (preview) integration.
 ms.service: defender-xdr
 f1.keywords: 
