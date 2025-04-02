@@ -8,7 +8,7 @@ manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 02/18/2025
+ms.date: 04/02/2025
 ms.collection: 
 - m365-security
 - tier2
