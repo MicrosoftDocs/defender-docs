@@ -62,7 +62,8 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 > - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
 > - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016, Windows Server 2012 R2, and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Microsoft Defender cloud services. The new solution, such as Defender for Endpoint on Windows Server 2019 (and later) and Windows 10 (and later) doesn't support this gateway.
 > - Linux servers onboarded through Defender for Cloud have their initial configuration set to run Microsoft Defender Antivirus in passive mode. 
-> - For Windows Server 2012 R6 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](configure-server-endpoints.md). 
+> - For Windows Server 2012 R6 and Windows Server 2016, you can either manually install/upgrade the modern, unified solution on these servers, or use the integration to automatically deploy or upgrade servers covered by your respective Defender for Server plans. For more inforamtion, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
+> - To onboard Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](configure-server-endpoints.md). 
 
 ### Windows Server 2012 R2 and Windows Server 2016
 
