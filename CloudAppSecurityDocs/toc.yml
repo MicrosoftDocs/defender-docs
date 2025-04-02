@@ -118,8 +118,6 @@ items:
         href: protect-zendesk.md
       - name: Zoom
         href: protect-zoom.md
-      - name: Troubleshooting API connectors using error messages
-        href: troubleshooting-api-connectors-using-error-messages.md
 - name: Cloud app discovery
   items:
   - name: Overview
@@ -157,6 +155,8 @@ items:
         href: log-collector-advanced-management.md
       - name: Use the custom log parser
         href: custom-log-parser.md
+      - name: Troubleshooting API connector errors
+        href: troubleshooting-api-connectors-errors.md
     - name: Integrate with Microsoft Defender for Endpoint
       items:
       - name: Overview
@@ -424,6 +424,12 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
+- name: Investigate and respond 
+  items:
+    - name: Assets
+      items:
+      - name: Applications inventory
+        href: applications-inventory.md
 - name: Operations guide
   items:
   - name: Operations guide overview
