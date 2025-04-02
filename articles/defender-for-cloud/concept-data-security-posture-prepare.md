@@ -5,25 +5,25 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 11/27/2024
+ms.date: 03/31/2025
 ms.custom: references_regions
 #customer intent: As a security administrator, I want to understand the prerequisites for data security posture management so that I can set it up correctly.
 ---
 
 # Support and prerequisites for data security posture management
 
-Review the requirements on this page before setting up [data security posture management](concept-data-security-posture.md) in Microsoft Defender for Cloud.
+Review the requirements on this page before you set up [data security posture management](concept-data-security-posture.md) in Microsoft Defender for Cloud.
 
 ## Enable sensitive data discovery
 
-Sensitive data discovery is available in the Defender CSPM, Defender for Storage and Defender for Databases plans.
+Sensitive data discovery is available in the Defender Cloud Security Posture Management (CSPM), Defender for Storage, and Defender for Databases plans.
 
-- When you enable one of the plans, the sensitive data discovery extension is turned on as part of the plan.
-- If you have existing plans running, the extension is available, but turned off by default.
+- When you enable one of the plans, the sensitive data discovery extension turns on as part of the plan.
+- If you have existing plans running, the extension is available, but turns off by default.
 - Existing plan status shows as "Partial" rather than "Full" if one or more extensions aren't turned on.
-- The feature is turned on at the subscription level.
-- If sensitive data discovery is turned on, but Defender CSPM isn't enabled, only storage resources are scanned.
-- If a subscription is enabled with Defender CSPM and in parallel you scanned the same resources with Purview, Purview's scan result is ignored and defaults to displaying the Microsoft Defender for Cloud's scanning results for the supported resource type.
+- The feature turns on at the subscription level.
+- If sensitive data discovery turns on, but Defender CSPM isn't enabled, only storage resources are scanned.
+- When a subscription enables Defender CSPM and you scan the same resources with Purview, Purview's scan result is ignored. It defaults to displaying the Microsoft Defender for Cloud's scanning results for the supported resource type.
 
 ## What's supported
 
@@ -41,6 +41,7 @@ The table summarizes availability and supported scenarios for sensitive data dis
 |What GCP regions are supported? | europe-west1, us-east1, us-west1, us-central1, us-east4, asia-south1, northamerica-northeast1|
 |Do I need to install an agent? | No, discovery requires no agent installation. |
 |What's the cost? | The feature is included with the Defender CSPM and Defender for Storage plans, and doesn’t incur extra costs except for the respective plan costs. |
+| Other costs | Sensitive data discovery for Azure Storage accounts relies on other Azure services. This reliance might result in extra costs, including Azure Storage read operations. |
 |What permissions do I need to view/edit data sensitivity settings? | You need one of these Microsoft Entra roles:<br> <li>Compliance Data Administrator, Compliance Administrator, or higher <br> <li>Security Operator, Security Administrator, or higher|
 | What permissions do I need to perform onboarding? | You need one of these [Azure role-based access control (Azure RBAC) roles](/azure/role-based-access-control/role-assignments-portal): Security Admin, Contributor, Owner on the subscription level (where the GCP project/s reside). For consuming the security findings: Security Reader, Security Admin, Reader, Contributor, Owner on the subscription level (where the GCP project/s reside). |
 
@@ -56,34 +57,34 @@ The main steps for configuring data sensitivity settings include:
 
 ## Discovery
 
-Defender for Cloud starts discovering data immediately after enabling a plan, or after turning on the feature in plans that are already running.
+Defender for Cloud starts discovering data immediately after you enable a plan, or after you turn on plan features.
 
 For object storage:
 
-- It takes up to 24 hours to see the results for a first-time discovery.
-- After files are updated in the discovered resources, data is refreshed within eight days.
-- A new Azure storage account that's added to an already discovered subscription is discovered within 24 hours or less.
-- A new AWS S3 bucket or GCP storage bucket that's added to an already discovered AWS account or Google account is discovered within 48 hours or less.
-- Sensitive data discovery for storage is conducted locally within your region. This ensures that your data doesn't leave your region. Only resource metadata, such as files, blobs, buckets names, detected sensitivity labels, and the names of identified Sensitive Information Types (SITs), are transferred to Defender for Cloud.
+- Results are available for first-time discovery within 24 hours.
+- After you update files in the discovered resources, data refreshes within eight days.
+- A new Azure storage account added to an already discovered subscription is discovered within 24 hours or less.
+- A new AWS S3 bucket or GCP storage bucket added to an already discovered AWS account or Google account is discovered within 48 hours or less.
+- Sensitive data discovery for storage conducts locally within your region. This ensures that your data doesn't leave your region. Only resource metadata, such as files, blobs, buckets names, detected sensitivity labels, and the names of identified Sensitive Information Types (SITs), transfer to Defender for Cloud.
 
 For databases:
 
-- Databases are scanned on a weekly basis.
+- Are scanned on a weekly basis.
 - For newly enabled subscriptions, results appear within 24 hours.
 
 ### Cloud Security Explorer
 
 We display all storage types, including Azure Storage Accounts, AWS Buckets, and GCP Buckets, regardless of their associated insights. For Azure Storage Accounts, which include Blob Containers and File Shares, the following rules apply:
 
-- **Blob Containers** are displayed if they meet any of the following criteria:
+- Blob Containers display if they meet any of the following criteria:
 
-  - They have the **Contains Sensitive Data** insight.
+  - They have the Contains Sensitive Data insight.
 
-  - They have the **Public Access** insight.
+  - They have the Public Access insight.
 
   - They have a replication rule to or from another blob.
 
-- **File Shares** are displayed only if they have the “Contains Sensitive Data” insight.
+- File Shares display only if they have the "Contains Sensitive Data" insight.
 
 ### Discover and scan Azure storage accounts
 
@@ -96,10 +97,10 @@ For storage accounts behind private networks, we include the `StorageDataScanner
 
 ### Discover and scan AWS S3 buckets
 
-In order to protect AWS resources in Defender for Cloud, you set up an AWS connector, using a CloudFormation template to onboard the AWS account.
+To protect AWS resources in Defender for Cloud, set up an AWS connector using a CloudFormation template to onboard the AWS account.
 
 - To discover AWS data resources, Defender for Cloud updates the CloudFormation template.
-- The CloudFormation template creates a new role in AWS IAM, to allow permission for the Defender for Cloud scanner to access data in the S3 buckets.
+- The CloudFormation template creates a new role in AWS IAM to allow permission for the Defender for Cloud scanner to access data in the S3 buckets.
 - To connect AWS accounts, you need Administrator permissions on the account.
 - The role allows these permissions: S3 read only; KMS decrypt.
 
@@ -108,7 +109,7 @@ In order to protect AWS resources in Defender for Cloud, you set up an AWS conne
 To protect AWS resources in Defender for Cloud, set up an AWS connector using a CloudFormation template to onboard the AWS account.
 
 - To discover AWS RDS instances, Defender for Cloud updates the CloudFormation template.
-- The CloudFormation template creates a new role in AWS IAM, to allow permission for the Defender for Cloud scanner to take the last available automated snapshot of your instance and bring it online in an isolated scanning environment within the same AWS region.
+- The CloudFormation template creates a new role in AWS IAM to allow permission for the Defender for Cloud scanner to take the last available automated snapshot of your instance and bring it online in an isolated scanning environment within the same AWS region.
 - To connect AWS accounts, you need Administrator permissions on the account.
 - Automated snapshots need to be enabled on the relevant RDS Instances/Clusters.
 - The role allows these permissions (review the CloudFormation template for exact definitions):
@@ -123,7 +124,7 @@ To protect AWS resources in Defender for Cloud, set up an AWS connector using a 
 
 ### Discover and scan GCP storage buckets
 
-In order to protect GCP resources in Defender for Cloud, you can set up a Google connector using a script template to onboard the GCP account.
+To protect GCP resources in Defender for Cloud, set up a Google connector using a script template to onboard the GCP account.
 
 - To discover GCP storage buckets, Defender for Cloud updates the script template.
 - The script template creates a new role in the Google account to allow permission for the Defender for Cloud scanner to access data in the GCP storage buckets.
@@ -160,9 +161,9 @@ AWS:
 
 > [!NOTE]
 >
-> - Exposure rules that include 0.0.0.0/0 are considered “excessively exposed”, meaning that they can be accessed from any public IP.
+> - Exposure rules that include 0.0.0.0/0 are considered "excessively exposed", meaning that they can be accessed from any public IP.
 >
-- Azure resources with the exposure rule “0.0.0.0” are accessible from any resource in Azure (regardless of tenant or subscription).
+- Azure resources with the exposure rule "0.0.0.0" are accessible from any resource in Azure (regardless of tenant or subscription).
 
 ## Related content
 
