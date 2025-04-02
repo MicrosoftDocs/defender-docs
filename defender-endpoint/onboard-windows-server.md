@@ -1,6 +1,6 @@
 ---
-title: Defender for Endpoint onboarding Windows Server
-description: Onboard Windows Server to Microsoft Defender for Endpoint.
+title: Onboard Windows Server, version 1803, Windows Server 2019, and later to Microsoft Defender for Endpoint
+description: Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025 to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
@@ -16,7 +16,7 @@ search.appverid: met150
 ms.date: 02/25/2025
 ---
 
-# Defender for Endpoint onboarding Windows Server
+# Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025 to Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -37,9 +37,18 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 ## Windows Server onboarding overview
 
-You'll need to complete the following general steps to successfully onboard Windows Server. Supported versions include Windows Server 2008 R2, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
+You'll need to complete the general steps depicted in the following image to successfully onboard Windows servers. 
 
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
+
+For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+
+> [!NOTE]
+> Windows Hyper-V server editions aren't supported.
+
+## Integration with Microsoft Defender for Servers
+
+
 
 ### Windows Server 2012 R2 and Windows Server 2016
 

@@ -1,6 +1,6 @@
 ---
-title: Onboard Windows servers to the Microsoft Defender for Endpoint service
-description: Onboard Windows servers so that they can send sensor data to the Microsoft Defender for Endpoint sensor.
+title: Onboard Windows Server 2012 R2 or Windows Server 2016 to Microsoft Defender for Endpoint
+description: Learn how to onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint.
 search.appverid: met150
 ms.service: defender-endpoint
 author: denisebmsft
@@ -17,7 +17,7 @@ ms.topic: conceptual
 ms.subservice: onboard
 ---
 
-# Onboard Windows servers to the Microsoft Defender for Endpoint service
+# Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -30,7 +30,9 @@ ms.subservice: onboard
 
 Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender portal. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
-This article describes how to onboard specific Windows servers to Defender for Endpoint.
+This article describes how to onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint.
+
+For Windows Server, version 1803, Windows Server 2019, and later, see [Onboard Windows Server 2019 and later to Defender for Endpoint](onboard-windows-server.md).
 
 For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
 
