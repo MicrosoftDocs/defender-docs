@@ -22,7 +22,7 @@ appliesto:
 #customer intent: As a security administrator, I want to create data security investigations from the Microsoft Defender portal.
 ---
 
-# Create data security investigations in the Microsoft Defender portal
+# Create investigations in Data Security Investigations (preview) from the Microsoft Defender portal
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
