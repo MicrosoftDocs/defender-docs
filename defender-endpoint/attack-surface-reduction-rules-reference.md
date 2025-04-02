@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: sugamar, yongrhee
 manager: deniseb
 ms.custom: asr
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 03/05/2025
+ms.date: 04/02/2025
 search.appverid: met150
 ---
 
@@ -179,7 +179,7 @@ Toast notifications are generated for all rules in Block mode. Rules in any othe
 For rules with the "Rule State" specified:
 
 - ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices set at the cloud block level `High`.
-- Devices that are not set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
+- Devices that aren't set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
 - EDR alerts are generated for ASR rules in the specified states, for devices set at the cloud block level `High+`.
 - Toast notifications occur in block mode only and for devices set at the cloud block level `High`.
 
@@ -326,14 +326,14 @@ This rule helps prevent credential stealing by locking down Local Security Autho
 
 LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
 
-By default the state of this rule is set to block. In most cases, many processes make calls to LSASS for access rights that are not needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which subsequently succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
+By default the state of this rule is set to block. In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
 
-Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection cannot be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
+Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection can't be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
 > [!TIP]
 >
 > 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
-> 2. The rule is designed to suppress block reports/toasts for friendly processes. It is also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
+> 2. The rule is designed to suppress block reports/toasts for friendly processes. It's also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
 > 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
 
 > [!NOTE]
@@ -341,7 +341,7 @@ Enabling this rule doesn't provide additional protection if you have LSA protect
 >
 > The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support WARN mode.
 >
-> In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate a lot of noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
+> In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
 Intune name: `Flag credential stealing from the Windows local security authority subsystem`
 
 Configuration Manager name: `Block credential stealing from the Windows local security authority subsystem`
@@ -437,7 +437,7 @@ Advanced hunting action type:
 - `AsrObfuscatedScriptAudited`
 - `AsrObfuscatedScriptBlocked`
 
-Dependencies: Microsoft Defender Antivirus, AntiMalware Scan Interface (AMSI), Cloud Protection
+Dependencies: Microsoft Defender Antivirus, Anti-malware Scan Interface (AMSI), Cloud Protection
 
 ### Block JavaScript or VBScript from launching downloaded executable content
 
@@ -458,7 +458,7 @@ Dependencies: Microsoft Defender Antivirus, AMSI
 
 ### Block Office applications from creating executable content
 
-This rule prevents Office apps, including Word, Excel, and PowerPoint, from creating potentially malicious executable content, by blocking malicious code from being written to disk. Malware that abuses Office as a vector might attempt to break out of Office and save malicious components to disk. These malicious components would survive a computer reboot and persist on the system. Therefore, this rule defends against a common persistence technique. This rule also blocks execution of untrusted files that may have been saved by Office macros that are allowed to run in Office files.
+This rule prevents Office apps, including Word, Excel, and PowerPoint, from creating potentially malicious executable content, by blocking malicious code from being written to disk. Malware that abuses Office as a vector might attempt to break out of Office and save malicious components to disk. These malicious components would survive a computer reboot and persist on the system. Therefore, this rule defends against a common persistence technique. This rule also blocks execution of untrusted files that might have been saved by Office macros that are allowed to run in Office files.
 
 Intune name: `Office apps/macros creating executable content`
 
@@ -576,7 +576,7 @@ Dependencies: Microsoft Defender Antivirus
 This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
 
 > [!NOTE]
-> This capability is currently in preview. Additional upgrades to improve efficacy are under development.
+> This capability is currently in preview. Extra upgrades to improve efficacy are under development.
 
 Intune Name: `[PREVIEW] Block rebooting machine in Safe Mode`
 
@@ -597,7 +597,7 @@ Dependencies: Microsoft Defender Antivirus
 With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards. Blocked file types include executable files (such as .exe, .dll, or .scr)
 
 > [!IMPORTANT]
-> Files copied from the USB to the disk drive will be blocked by this rule if and when it's about to be executed on the disk drive.
+> Files copied from the USB to the disk drive is blocked by this rule if and when it's about to be executed on the disk drive.
 
 Intune name: `Untrusted and unsigned processes that run from USB`
 
@@ -614,7 +614,7 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block use of copied or impersonated system tools (preview)
 
-This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs may try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
+This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
 
 > [!NOTE]
 > This capability is currently in preview. Additional upgrades to improve efficacy are under development.
@@ -637,7 +637,9 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block Webshell creation for Servers
 
-This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a specifically crafted script that allows an attacker to control the compromised server. A web shell may include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, and identifying potential targets.
+This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a crafted script that allows an attacker to control the compromised server. 
+
+A web shell might include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, and identifying potential targets.
 
 Intune name: `Block Webshell creation for Servers`
 
@@ -666,7 +668,7 @@ Dependencies: Microsoft Defender Antivirus, AMSI
 
 This rule provides an extra layer of protection against ransomware. It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
 
-- The file has already been found to be unharmful in the Microsoft cloud.
+- The file is found to be unharmful in the Microsoft cloud.
 - The file is a valid signed file.
 - The file is prevalent enough to not be considered as ransomware.
 
