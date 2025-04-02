@@ -1,15 +1,12 @@
- ---
-title: Integrate Defender for Identity with your PAM services.
+---
+title: Integrate Defender for Identity with your PAM services
 ms.service: microsoft-defender-for-identity
-ms.author: bagol
-author: batamig
 ms.date: 03/30/2025
 ms.topic: concept-article
-#customerIntent: As a SOC engineer, I want to understand how to integrate Microsoft Defender for Identity with my PAM (Prvileged Access Management) system to manage privileged access and detect threats.
+#customerIntent: As a SOC engineer, I want to understand how to integrate Microsoft Defender for Identity with my PAM (Privilege Access Management) system to manage privileged access and detect threats.
+---
 
---- 
-
-# Integrate Defender for Identity with your PAM services.
+# Integrate Defender for Identity with your PAM services
 
 ## What are PAM services?
 
@@ -18,7 +15,6 @@ PAM solutions secure privileged accounts by storing their credentials in a secur
 
 ## Defender for Identity and PAM
 
-Microsoft Defender for Identity integrates with PAM solutions to enhance security by providing advanced threat detection and response capabilities.
 Defender for Identity helps identify and investigate suspicious activities related to privileged accounts, such as unusual sign in patterns or privilege escalation attempts. 
 This integration ensures a comprehensive approach to identity security, combining PAM's control over privileged access with Defender for Identity's threat detection and response.
 
@@ -34,13 +30,13 @@ To reset a password using the integrated PAM system:
 1. Go to **Assets > Identities**.
 2. Select the relevant identity.
 3. Click the three-dot menu (**⋯**) in the top-right corner.
-4. Select **Reset password**. The label may vary based on the vendor (e.g., **Reset password by CyberArk**, **Reset password by BeyondTrust**).
+4. Select **Reset password**. The label may vary based on the vendor (for example, **Reset password by CyberArk**, **Reset password by BeyondTrust**).
 
 This capability streamlines containment and response workflows by embedding privileged access controls directly into the investigation experience.
 
 ## Integration catalog
 
-Microsoft Defender for Identity currently supports integration with the following PAM vendors. Dedicated integration for each partner are now available in the Microsoft 365 Defender partner catalog for streamlined onboarding and visibility.
+Microsoft Defender for Identity currently supports integration with the following PAM vendors. Dedicated integrations for each partner are now available in the Microsoft 365 Defender partner catalog for streamlined onboarding and visibility.
 
 :::image type="content" source="media/Integrate with partner system services/Screenshot-of-mdi-technology-partners.png" alt-text="Screenshot of Defender for Identity PAM partners":::
 
@@ -53,7 +49,7 @@ Microsoft Defender for Identity currently supports integration with the followin
 
 ### Next steps 
 
-For more information see:
+For more information, see:
 
 [How to integrate Defender for Identity with Delinea](https://docs.delinea.com/online-help/integrations/microsoft/mdi/integrating-mdi.htm)
 
