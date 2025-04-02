@@ -4,7 +4,7 @@ description: Learn how to enable file integrity monitoring when you collect data
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/17/2025
+ms.date: 04/02/2025
 #customer intent: As a security administrator, I want to enable file integrity monitoring so that I can detect unauthorized changes to critical files.
 ---
 
@@ -24,8 +24,8 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 ## Prerequisites
 
 - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) should be enabled.
-- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent should be installed on machines you want to monitor.
-- Non-Azure machines must be connected with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent must be installed through the Defender for Servers [extensions](faq-defender-for-servers.yml#what-s-the--mde-windows-----mde-linux--extension-running-on-my-machines-) on machines you want to monitor.
+- Non-Azure machines must be connected with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm.yml#).
 
 - You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
 
@@ -64,7 +64,7 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 
 ## Review enablement status for FIM
 
-After you enable file integrity monitoring, review the status of the feature to ensure all prerequisites are met and the feature is enabled.
+Review the FIM enablement to ensure it is correct and all prerequisites are met.
 
 1. Go to **Workload protection** > **File integrity monitoring**.
 
