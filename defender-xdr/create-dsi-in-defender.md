@@ -45,7 +45,7 @@ To view and access the investigation in Data Security Investigations (preview) i
 
 ## Create a data security investigation
 
-Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating a data security investigation. Investigations support mailboxes, files, and mail messages as the scope of the investigation.
+Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating an investigation in Data Security Investigations (preview). Investigations support mailboxes, files, and mail messages as the scope of the investigation.
 
 To create a data security investigation in the Microsoft Defender portal, follow these steps:
 
