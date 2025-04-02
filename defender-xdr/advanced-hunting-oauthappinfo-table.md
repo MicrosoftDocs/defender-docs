@@ -7,7 +7,7 @@ ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
 ms.author: maccruz
-author: schmmurky
+author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
