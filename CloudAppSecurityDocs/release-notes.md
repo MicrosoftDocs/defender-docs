@@ -19,7 +19,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+
 ## April 2025
+
 
 ### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
 
@@ -34,6 +36,7 @@ The new Applications page consolidates all SaaS and connected OAuth applications
 The page surfaces key insights such as risk scores, usage patterns, publisher verification status, and privilege levels. These insights help you quickly identify and address high-risk or untagged applications.
 
 For more information, see [Application inventory overview](applications-inventory.md)
+
 
 ## March 2025
 
