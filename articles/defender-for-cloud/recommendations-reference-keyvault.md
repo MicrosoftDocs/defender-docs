@@ -26,19 +26,11 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### Role-Based Access Control should be used on Keyvault Services
 
-**Evaluated resource**: Azure Keyvault
+**Description**: To provide granular filtering on the actions that users can perform, use [Role-Based Access Control (RBAC)](/azure/key-vault/general/rbac-guide?branch=main&tabs=azure-cli) to manage permissions in Keyvault Service and configure relevant authorization policies. (Related policy: Azure Key Vault should use RBAC permission model - Microsoft Azure).
 
-**Recommendation purpose**: When using the Access Policy permission model, a user with the Contributor, Key Vault Contributor, or any other role that includes Microsoft.KeyVault/vaults/write permissions for the key vault management plane can grant themselves data plane access by setting a Key Vault access policy. To prevent unauthorized access and management of your key vaults, keys, secrets, and certificates, it's essential to limit Contributor role access to key vaults under the Access Policy permission model. To mitigate this risk, we recommend you use the Role-Based Access Control (RBAC) permission model, which restricts permission management to the 'Owner' and 'User Access Administrator' roles, allowing a clear separation between security operations and administrative duties. It is observed that recent SSIRP'S Charcoal bratwurst and Forestry Speed Bump cases keyvaults compromised are using access policies. Having this recommendation will prevent such incidents.
+**Severity**: High
 
-**Description**: To provide granular filtering on the actions that users can perform, use Role-Based Access Control (RBAC) to manage permissions in Keyvault Service and configure relevant authorization policies.
-
-**Remediation steps**: [Migrate from vault access policy to an Azure role-based access control permission model](../key-vault/general/rbac-migration.md)
-
-**Quick fix type**: Azure Policy
-
-**Recommendation logic**: Prerequisites Changing a key vault's permission model requires two permissions: The 'Microsoft.Authorization/roleAssignments/write' permission, which is included in the Owner role and User Access Administrator role. The 'Microsoft.KeyVault/vaults/write' permission, which is included in the Key Vault Contributor role. Classic subscription administrator roles like 'Service Administrator' and 'Co-Administrator' are not supported.
-
-**MCSB control**: Privileged Access (PA)
+**Type**: Control plane
 
 ## Related content
 
