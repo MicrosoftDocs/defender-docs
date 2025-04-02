@@ -21,7 +21,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## April 2025
 
-### New Applications page in Defender XDR
+### New Applications page in Defender XDR (Preview)
 
 The new Applications page consolidates all SaaS and connected OAuth applications into a single, unified inventory. This centralized view streamlines application discovery, monitoring, and management, providing greater visibility and control across your environment.
 
