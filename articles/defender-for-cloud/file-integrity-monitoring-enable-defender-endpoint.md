@@ -24,8 +24,8 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 ## Prerequisites
 
 - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) should be enabled.
-- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent must be installed through the Defender for Servers [extensions](https://learn.microsoft.com/azure/defender-for-cloud/faq-defender-for-servers#what-s-the--mde-windows-----mde-linux--extension-running-on-my-machines-) on machines you want to monitor.
-- Non-Azure machines must be connected with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm.yml#).
+- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent must be installed through the Defender for Servers [extensions](faq-defender-for-servers.yml) on machines you want to monitor.
+- Non-Azure machines must be connected with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 - You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
 
