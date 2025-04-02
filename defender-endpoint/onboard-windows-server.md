@@ -31,13 +31,18 @@ You'll need to go through the onboarding section of the Defender for Endpoint po
 
 Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
-This topic describes how to onboard specific Windows servers to Microsoft Defender for Endpoint.
+This article describes how to onboard Windows Server, version 1803, Windows Server 2109, and Windows Server 2025 to Defender for Endpoint.
+
+For guidance on how to onboard Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](configure-server-endpoints.md).
 
 For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines.](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines)
 
+> [!TIP]
+> As a companion to this article, see our [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268522) to review best practices and learn to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. For a customized experience based on your environment, you can access the [Security Analyzer automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615) in the Microsoft 365 admin center.
+> 
 ## Windows Server onboarding overview
 
-You'll need to complete the general steps depicted in the following image to successfully onboard Windows servers. 
+You need to complete the general steps depicted in the following image to successfully onboard Windows servers. 
 
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
@@ -48,7 +53,16 @@ For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers
 
 ## Integration with Microsoft Defender for Servers
 
+Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers and Microsoft Defender for Cloud. You can onboard servers automatically, have servers that are monitored by Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Defender for Cloud customer. For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
 
+> [!NOTE]
+> - When you use Defender for Cloud to monitor servers, a Defender for Endpoint tenant is created automatically. Data collected by Defender for Endpoint is stored in the geographical location of the tenant, identified during provisioning. (For example, in the US for customers in the USA; in EU for European customers; and in the UK for customers in the United Kingdom.)
+> - If you use Defender for Endpoint before using Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Defender for Cloud at a later time.
+> - Once configured, you can't change the location of where your data is stored. To move your data to another location, [contact support](contact-support.md) to reset your tenant.
+> - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
+> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016, Windows Server 2012 R2, and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Microsoft Defender cloud services. The new solution, such as Defender for Endpoint on Windows Server 2019 (and later) and Windows 10 (and later) doesn't support this gateway.
+> - Linux servers onboarded through Defender for Cloud have their initial configuration set to run Microsoft Defender Antivirus in passive mode. 
+> - For Windows Server 2012 R6 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](configure-server-endpoints.md). 
 
 ### Windows Server 2012 R2 and Windows Server 2016
 
