@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/20/2025
+ms.date: 03/28/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -74,21 +74,7 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 > [!IMPORTANT]
 > Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
-### Troubleshoot installation issues
-
-If you experience any installation issues, for self-troubleshooting, follow these steps:
-
-1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
-
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
-
-3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
-
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
-
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
-
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+If you experience any installation issues, self-troubleshooting resources are available. See the ilnks in the [See also](#see-also) section.
 
 ### Configure policies for Defender for Endpoint on Linux
 

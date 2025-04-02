@@ -1,6 +1,6 @@
 ---
-title: Create data security investigations in the Microsoft Defender portal
-description: Learn how to create data security investigations in the Microsoft Defender portal with the Microsoft Purview Data Security Investigations integration.
+title: Create investigations in Data Security Investigations (preview) from the Microsoft Defender portal
+description: Learn how to create data security investigations in the Microsoft Defender portal with the Microsoft Purview Data Security Investigations (preview) integration.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -22,30 +22,30 @@ appliesto:
 #customer intent: As a security administrator, I want to create data security investigations from the Microsoft Defender portal.
 ---
 
-# Create data security investigations in the Microsoft Defender portal
+# Create investigations in Data Security Investigations (preview) from the Microsoft Defender portal
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-You can now start an investigation on data security incidents from the Microsoft Defender portal with the integration of Microsoft Purview Data Security Investigations and Microsoft Defender XDR.
+You can now start an investigation on data security incidents from the Microsoft Defender portal with the integration of [Microsoft Purview Data Security Investigations (preview)](/purview/data-security-investigations) and Microsoft Defender XDR.
 
-Security operations center (SOC) teams can take advantage of this integration to enhance their investigation and response to potential data security incidents like data breaches or data leaks. Microsoft Purview Data Security Investigations uses generative AI to analyze impacted data, draws connections to identify risks, and provide actionable insights to protect the organization.
+Security operations center (SOC) teams can take advantage of this integration to enhance their investigation and response to potential data security incidents like data breaches or data leaks. Data Security Investigations (preview) uses generative AI to analyze impacted data, draws connections to identify risks, and provide actionable insights to protect the organization.
 
-SOC teams can start a data security investigation from an incident page where a potentially affected data set is in the Microsoft Defender portal.
+SOC teams can start an investigation in Data Security Investigations (preview) from an incident page where a potentially affected data set is in the Microsoft Defender portal.
 
 ## Prerequisites
 
-To create data security investigations in the Microsoft Defender portal, you need to have the  following permissions:
+To create investigations in Data Security Investigations (preview) in the Microsoft Defender portal, you must have the following permissions:
 
 - Security Administrator
 - Security Operator
 
-To view and access the investigation in the Microsoft Purview portal, the **Data Security Investigations Administrator** permission is required.
+To view and access the investigation in Data Security Investigations (preview) in the Microsoft Purview portal, the *Data Security Investigations Administrator* [permission](/purview/data-security-investigations-permissions) is required.
 
 ## Create a data security investigation
 
-Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating a data security investigation. Investigations support mailboxes, files, and mail messages as the scope of the investigation.
+Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating an investigation in Data Security Investigations (preview). Investigations support mailboxes, files, and mail messages as the scope of the investigation.
 
 To create a data security investigation in the Microsoft Defender portal, follow these steps:
 
@@ -64,7 +64,7 @@ Once the data security investigation is created, a link to the Microsoft Purview
 
 :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link-small.png" alt-text="Screenshot highlighting the link to Microsoft Purview portal after successful creation" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link.png":::
 
-You can also create a Data Security investigation from the incident page in the following ways:
+You can also create an investigation in Data Security Investigations (preview) from the incident page in the following ways:
 
 - From the **Incidents** page, select the **More actions** ellipsis to see the options, then choose **Create Data Security investigation**.
   
@@ -74,7 +74,7 @@ You can also create a Data Security investigation from the incident page in the 
 
   :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-create-entity-small.png" alt-text="Screenshot highlighting the Create Data Security investigation option from an entity in the incident graph" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-create-entity.png":::
 
-Each data security investigation created is recorded in the Microsoft Defender portal activity log. The activity log entry also includes the relevant link to the investigation created in the Microsoft Purview portal.
+Each investigation in Data Security Investigations (preview) created is recorded in the Microsoft Defender portal activity log. The activity log entry also includes the relevant link to the investigation created in the Microsoft Purview portal.
 
 :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-activity-log-small.png" alt-text="Screenshot highlighting the link to Microsoft Purview portal in the activity log" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-activity-log.png":::
 
