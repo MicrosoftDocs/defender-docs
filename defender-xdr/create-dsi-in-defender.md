@@ -36,7 +36,7 @@ SOC teams can start a data security investigation from an incident page where a 
 
 ## Prerequisites
 
-To create data security investigations in the Microsoft Defender portal, you need to have the  following permissions:
+To create investigations in Data Security Investigations (preview) in the Microsoft Defender portal, you must have the following permissions:
 
 - Security Administrator
 - Security Operator
