@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: concept-article
-ms.date: 03/28/2025
+ms.date: 03/31/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
@@ -43,11 +43,19 @@ When loading the tenant list on the Settings page, you get the following error m
 
 The issue is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multifactor authentication (MFA) on your Azure Resource Manager app.
 
-To resolve this issue, we recommend adding the Microsoft Defender portal first party app to the same conditional access policy as your Azure Resource Manager app. This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
+To resolve this issue, add *Microsoft 365 Security and Compliance Center app (80ccca67-54bd-44ab-8625-4b79c4dc7775)* to the same conditional access policy as your Azure Resource Manager app. This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
 
 Here’s an example of the policy setting in the Microsoft Entra admin center.
 
 :::image type="content" source="media/mto-troubleshoot/ca-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-troubleshoot/ca-policy.png":::
+
+## Content assignment failure due to missing permissions
+
+When you try to assign content to tenants, you might see the following error message:
+
+:::image type="content" source="media/mto-troubleshoot/tenant-perms-error-small.png" alt-text="Screenshot of permissions error when assigning content to tenants" lightbox="media/mto-troubleshoot/tenant-perms-error.png":::
+
+This error means you have limited permissions on the tenant. To resolve this issue, review the requirements and tenant access permissions. See [Set up Microsoft Defender multitenant management](mto-requirements.md) for more information.
 
 ## Related content
 
