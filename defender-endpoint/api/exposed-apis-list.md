@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 04/17/2024
+ms.date: 03/21/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -33,7 +33,7 @@ search.appverid: met150
 > Advanced hunting capabilities are not included in Defender for Business. 
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Endpoint URI and versioning
 

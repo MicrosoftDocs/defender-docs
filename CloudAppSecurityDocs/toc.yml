@@ -57,45 +57,8 @@ items:
       href: activity-privacy.md
     - name: Work with IP ranges and tags
       href: ip-tags.md
-- name: Cloud app discovery
-  items:
-  - name: Overview
-    displayName: cloud discovery, best practices
-    href: set-up-cloud-discovery.md
-  - name: Govern discovered apps
-    href: governance-discovery.md
-  - name: Enrich cloud discovery
-    href: cloud-discovery-aad-enrichment.md
-  - name: Anonymize cloud discovery data
-    href: cloud-discovery-anonymizer.md
-  - name: Configure cloud discovery
+  - name: Connect apps for visibility and protection
     items:
-    - name: Find your cloud app and calculate risk scores
-      href: risk-score.md
-    - name: Add custom apps to cloud discovery
-      href: cloud-discovery-custom-apps.md
-    - name: Attest your app
-      href: attest-your-app.md
-    - name: Collect logs
-      items:
-      - name: Configure automatic log upload for continuous reports
-        href: discovery-docker.md
-      - name: Podman on Linux on-premises
-        href: discovery-linux-podman.md
-      - name: Docker on Linux on-premises
-        href: discovery-docker-ubuntu.md
-      - name: Docker on Linux in Azure
-        href: discovery-docker-ubuntu-azure.md
-      - name: Docker on Azure Kubernetes Service
-        href: discovery-kubernetes.md
-      - name: Docker on Windows on-premises
-        href: discovery-docker-windows.md
-      - name: Advanced log collector management
-        href: log-collector-advanced-management.md
-      - name: Use the custom log parser
-        href: custom-log-parser.md
-    - name: Connect apps for visibility and protection
-      items:
       - name: Overview
         displayName: connect apps
         href: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
@@ -155,8 +118,45 @@ items:
         href: protect-zendesk.md
       - name: Zoom
         href: protect-zoom.md
-      - name: Troubleshooting API connectors using error messages
-        href: troubleshooting-api-connectors-using-error-messages.md
+- name: Cloud app discovery
+  items:
+  - name: Overview
+    displayName: cloud discovery, best practices
+    href: set-up-cloud-discovery.md
+  - name: Govern discovered apps
+    href: governance-discovery.md
+  - name: Enrich cloud discovery
+    href: cloud-discovery-aad-enrichment.md
+  - name: Anonymize cloud discovery data
+    href: cloud-discovery-anonymizer.md
+  - name: Configure cloud discovery
+    items:
+    - name: Find your cloud app and calculate risk scores
+      href: risk-score.md
+    - name: Add custom apps to cloud discovery
+      href: cloud-discovery-custom-apps.md
+    - name: Attest your app
+      href: attest-your-app.md
+    - name: Collect logs
+      items:
+      - name: Configure automatic log upload for continuous reports
+        href: discovery-docker.md
+      - name: Podman on Linux on-premises
+        href: discovery-linux-podman.md
+      - name: Docker on Linux on-premises
+        href: discovery-docker-ubuntu.md
+      - name: Docker on Linux in Azure
+        href: discovery-docker-ubuntu-azure.md
+      - name: Docker on Azure Kubernetes Service
+        href: discovery-kubernetes.md
+      - name: Docker on Windows on-premises
+        href: discovery-docker-windows.md
+      - name: Advanced log collector management
+        href: log-collector-advanced-management.md
+      - name: Use the custom log parser
+        href: custom-log-parser.md
+      - name: Troubleshooting API connector errors
+        href: troubleshooting-api-connectors-errors.md
     - name: Integrate with Microsoft Defender for Endpoint
       items:
       - name: Overview
@@ -424,6 +424,12 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
+- name: Investigate and respond 
+  items:
+    - name: Assets
+      items:
+      - name: Applications inventory
+        href: applications-inventory.md
 - name: Operations guide
   items:
   - name: Operations guide overview

@@ -16,7 +16,7 @@ ms.custom: intro-overview
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender Antivirus ring deployment using System Center Configuration Manager and Windows Server Update Services
@@ -83,7 +83,7 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
    
    These settings are shown in the following image:
    
-   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings for the Software Updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png":::
+     :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings for the Software Updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png":::
    
    > [!TIP]
    > Click **Preview** - to make sure "Security Intelligence Update for Windows Defender Antivirus" is listed. You should see **KB2267602**.
@@ -131,7 +131,7 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
    
 1. On the **Distribution location** page, under **Specify the update languages for product**, under **product**, select **Windows Update**. 
    
-1. Select **Next**. On the **Download Settings** page, under **Specify the software updates download behavior for clients on slow site boundaries**,  select the following:
+1. Select **Next**. On the **Download Settings** page, under **Specify the software updates download behavior for clients on slow site boundaries**, select the following:
    
    | In: | Change: |
    |:---|:---|

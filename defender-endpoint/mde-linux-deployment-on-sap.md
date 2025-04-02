@@ -79,7 +79,7 @@ The default configuration option for deployment as an Azure Extension for Antivi
 
 Online Kernel patching tools, such as Ksplice or similar, can lead to unpredictable OS stability if Defender for Endpoint is running. It's recommended to temporarily stop the Defender for Endpoint daemon before performing online Kernel patching. After the Kernel is updated, Defender for Endpoint on Linux can be safely restarted. This action is especially important on large SAP HANA VMs with huge memory contexts.
 
-When Microsoft Defender Antivirus is running with real-time protection, it's no longer required to schedule scans. You should run a scan at least once to set a baseline. Then, if necessary, the Linux crontab is typically used to schedule Microsoft Defender Antivirus scans and log rotation tasks. For more information, see [How to schedule scans with Microsoft Defender for Endpoint (Linux)](linux-schedule-scan-mde.md).
+When Microsoft Defender Antivirus is running with real-time protection, it's no longer required to schedule scans. You should run a scan at least once to set a baseline. Then, if necessary, the Linux crontab is typically used to schedule Microsoft Defender Antivirus scans and log rotation tasks. For more information, see [How to schedule scans with Microsoft Defender for Endpoint (Linux)](schedule-antivirus-scan-crontab.md).
 
 [Endpoint detection and response](overview-endpoint-detection-response.md) (EDR) functionality is active whenever Microsoft Defender for Endpoint on Linux is installed. EDR functionality can be disabled through command line or configuration by using [global exclusions](/defender-endpoint/linux-exclusions#supported-exclusion-scopes). For more information on troubleshooting EDR, see the sections [Useful Commands](#useful-commands) and [Useful Links](#useful-links) (in this article).
 
@@ -173,7 +173,7 @@ The recommended configuration for SAP applications enables real-time interceptio
 
 SAP applications running on older versions of Linux or on hardware that's overloaded might consider using `real_time_protection_enabled = false`. In this case, antivirus scans should be scheduled.
 
-For more information, see [How to schedule scans with Microsoft Defender for Endpoint (Linux)](linux-schedule-scan-mde.md).
+For more information, see [How to schedule scans with Microsoft Defender for Endpoint (Linux)](schedule-antivirus-scan-crontab.md).
 
 Large SAP systems might have more than 20 SAP application servers, each with a connection to the SAPMNT NFS share. Twenty or more application servers simultaneously scanning the same NFS server will likely overload the NFS server. By default, Defender for Endpoint on Linux doesn't scan NFS sources.
 

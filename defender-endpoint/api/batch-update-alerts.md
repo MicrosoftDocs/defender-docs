@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/15/2021
+ms.date: 03/21/2025
 ---
 
 # Batch update alerts
@@ -27,7 +27,7 @@ ms.date: 03/15/2021
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
