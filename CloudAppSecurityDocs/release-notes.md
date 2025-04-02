@@ -22,6 +22,13 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## April 2025
 
+
+### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
+
+The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
+
+This table provides details on Microsoft 365-connected OAuth applications that are registered with Microsoft Entra ID and accessible through the Defender for Cloud Apps app governance capability.
+
 ### New Applications page in Defender XDR (Preview)
 
 The new Applications page consolidates all SaaS and connected OAuth applications into a single, unified inventory. This centralized view streamlines application discovery, monitoring, and management, providing greater visibility and control across your environment.
