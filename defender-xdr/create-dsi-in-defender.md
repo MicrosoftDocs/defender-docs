@@ -41,7 +41,7 @@ To create investigations in Data Security Investigations (preview) in the Micros
 - Security Administrator
 - Security Operator
 
-To view and access the investigation in the Microsoft Purview portal, the **Data Security Investigations Administrator** permission is required.
+To view and access the investigation in Data Security Investigations (preview) in the Microsoft Purview portal, the *Data Security Investigations Administrator* [permission](/purview/data-security-investigations-permissions) is required.
 
 ## Create a data security investigation
 
