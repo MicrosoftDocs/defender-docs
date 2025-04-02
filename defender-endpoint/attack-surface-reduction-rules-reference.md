@@ -478,7 +478,7 @@ Dependencies: Microsoft Defender Antivirus, RPC
 This rule blocks code injection attempts from Office apps into other processes.
 
 > [!NOTE]
-> The Block applications from injecting code into other processes ASR rule doesn't support WARN mode.
+> The Block applications from injecting code into other processes ASR rule don't support WARN mode.
 
 > [!IMPORTANT]
 > This rule requires restarting Microsoft 365 Apps (Office applications) for the configuration changes to take effect.
@@ -597,7 +597,7 @@ Dependencies: Microsoft Defender Antivirus
 With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards. Blocked file types include executable files (such as .exe, .dll, or .scr)
 
 > [!IMPORTANT]
-> Files copied from the USB to the disk drive is blocked by this rule if and when it's about to be executed on the disk drive.
+> Files copied from the USB to the disk drive are blocked by this rule if and when it's about to be executed on the disk drive.
 
 Intune name: `Untrusted and unsigned processes that run from USB`
 
