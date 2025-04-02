@@ -168,8 +168,7 @@ For more information, see [Configure Microsoft Defender Antivirus scanning optio
 |Description|Setting|
 |---|---|
 |Signature Update Interval|Configured, 4|
-|Signature Update Fallback Order|InternalDefinitionUpdateServer |
-|MicrosoftUpdateServer | MMPC|
+|Signature Update Fallback Order| MicrosoftUpdateServer <br/> InternalDefinitionUpdateServer <br/> MMPC <br/>|
 |Signature Update File Shares Sources | Not configured|
 |Metered Connection Updates | Not allowed (default)|
 |Security Intelligence Updates Channel | Not configured|
@@ -443,4 +442,3 @@ To information on how to make False Negatives (FNs) submissions, see:
 - [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
 
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
-  
