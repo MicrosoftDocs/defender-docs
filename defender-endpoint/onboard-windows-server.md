@@ -86,6 +86,13 @@ For more information, see [Protect your endpoints with Defender for Endpoint int
 > - For Windows Server 2012 R6 and Windows Server 2016, you can either manually install/upgrade the modern, unified solution on these servers, or use the integration to automatically deploy or upgrade servers covered by your respective Defender for Server plans. For more inforamtion, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
 > - To onboard Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md). 
 
+## Important information for non-Microsoft antivirus/anti-malware solutions
+
+If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. Make sure to set passive mode during the installation and onboarding process. For more information, see [Windows Server and passive mode](/defender-endpoint/microsoft-defender-antivirus-compatibility#windows-server-and-passive-mode).
+
+> [!IMPORTANT]
+> If you're installing Defender for Endpoint on servers running McAfee Endpoint Security or VirusScan Enterprise, the McAfee platform version might need to be updated to ensure that Microsoft Defender Antivirus isn't removed or disabled. For more information on specific version numbers required, see the [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
+
 ## Offboard Windows servers
 
 You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 with the same method available for Windows 10 client devices.
