@@ -129,6 +129,11 @@
       "source_path": "defender-endpoint/configure-endpoints-non-windows.md",
       "redirect_url": "/defender-endpoint/onboarding",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-server-endpoints.md",
+      "redirect_url": "/defender-endpoint/onboard-windows-server-2012r2-2016",
+      "redirect_document_id": true
     } 
   ]
 }
