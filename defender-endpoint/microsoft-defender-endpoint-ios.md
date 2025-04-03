@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 03/27/2025
 ---
 
 # Microsoft Defender for Endpoint on iOS
@@ -44,10 +44,12 @@ ms.date: 03/21/2025
 
    Intune Company Portal app can be downloaded from the [Apple App Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
 
-   > [!NOTE]
-   > Apple doesn't allow redirecting users to download other apps from the app store so this step needs to be done by the user before onboarding to Microsoft Defender for Endpoint app.
-
-   Devices are registered with Microsoft Entra ID. This configuration requires the end user to be signed in through [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
+  > [!NOTE]
+  > Apple doesn't permit redirecting users to download other apps (Company Portal/Authenticator) from the App Store. Therefore, users need to complete this step themselves before onboarding to the Microsoft Defender for Endpoint app.
+  > Due to iOS platform restrictions, the MDE app allows onboarding without device registration, enabling MDE protections but leaving the device invisible on the security portal. For enrolled scenarios (MDM), the Company Portal or Authenticator app handles registration. For unenrolled scenarios (MAM), this is managed via the Authenticator app.
+  > If a user has a valid MDE license and is registered in the Authenticator App or Company Portal App, signing in to the Defender App allows the device appear in the Defender Portal.
+  
+     Devices are registered with Microsoft Entra ID. This configuration requires the end user to be signed in through [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
 - **For unenrolled devices**: Devices are registered with Microsoft Entra ID. This requires the end user to be signed in through [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
@@ -78,7 +80,7 @@ ms.date: 03/21/2025
 - The device should be either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account to seamlessly onboard the device.
 
 > [!IMPORTANT]
-> Microsoft Defender for Endpoint is ending support for devices running iOS/iPadOS 15 on January 31, 2025. Moving forward, only devices running iOS/iPadOS 16 and later are supported.
+> Microsoft Defender for Endpoint is ending support for devices running iOS/iPadOS 15 on January 31, 2025. Only devices running iOS/iPadOS 16 and later are supported.
 
 > [!NOTE]
 > - Microsoft Defender for Endpoint on iOS isn't supported on user-less or shared devices.
@@ -88,10 +90,7 @@ ms.date: 03/21/2025
 Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft Intune and both supervised and unsupervised devices are supported. End-users can also directly install the app from the [Apple app store](https://aka.ms/mdatpiosappstore).
 
 - For information on deploying on enrolled devices through Microsoft Configuration Manager or Intune, see [Deploy Microsoft Defender for Endpoint on iOS](ios-install.md).
-- For information on using Defender for Endpoint in app protection policy (MAM), see [Configure app protection policy to include Defender for Endpoint risk signals (MAM)](ios-install-unmanaged.md)
-
-> [!NOTE]
-> If a user has a valid MDE license and is registered in the Authenticator App or Company Portal App, and signs in to the Defender App, the device appears in the Defender Portal.
+- For information on using Defender for Endpoint in app protection policy (MAM), see [Configure app protection policy to include Defender for Endpoint risk signals (MAM)](ios-install-unmanaged.md). 
 
 ## Resources
 
