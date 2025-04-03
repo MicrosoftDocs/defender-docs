@@ -113,7 +113,8 @@ To help discover threats and anomalous behaviors in your environment, you can cr
 - Custom detection rules - to generate detections from rules that query data from Defender XDR or from both Microsoft Sentinel and Defender XDR
 
 
-### Analytics rules
+##### Analytics rules
+
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
 :::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
@@ -121,7 +122,7 @@ For analytics rules that apply to data ingested through the connected Microsoft 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
 
-### Custom detection rules
+##### Custom detection rules
 You can create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. 
 
 
