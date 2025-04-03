@@ -6,7 +6,7 @@ ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
-ms.reviewer: thdoucet
+ms.reviewer: 
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 12/10/2024
+ms.date: 04/03/2025
 ---
 
 # Overview of indicators in Microsoft Defender for Endpoint
@@ -157,13 +157,13 @@ The IoC API schema and the threat IDs in advance hunting are updated to align wi
 
 Customers might experience issues with alerts for Indicators of Compromise. The following scenarios are situations where alerts aren't created or are created with inaccurate information. Each issue is investigated by our engineering team.
 
-- **Block indicators**: Generic alerts with informational severity only will be fired. Custom alerts (that is, custom title and severity) aren't fired in these cases.
-- **Warn indicators**: Generic alerts and custom alerts are possible in this scenario, however, the results aren't deterministic due to an issue with the alert detection logic. In some cases, customers might see a generic alert, whereas a custom alert might show in other cases.
+- **Block indicators**: Generic alerts with informational severity only are created. Custom alerts (that is, custom title and severity) aren't fired in these cases.
+- **Warn indicators**: Generic alerts and custom alerts are possible in this scenario; however, the results aren't deterministic due to an issue with the alert detection logic. In some cases, customers might see a generic alert, whereas a custom alert might show in other cases.
 - **Allow**: No alerts are generated (by design).
 - **Audit**: Alerts are generated based on the severity provided by the customer.
 - In some cases, alerts coming from EDR detections might take precedence over alerts stemming from antivirus blocks, in which case an information alert is generated.
 
-Microsoft Store apps cannot be blocked by Defender because they're signed by Microsoft.
+Microsoft Store apps cannot be blocked by Microsoft Defender because they're signed by Microsoft.
 
 ## Related articles
 
