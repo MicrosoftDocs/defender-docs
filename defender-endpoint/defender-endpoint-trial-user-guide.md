@@ -73,6 +73,10 @@ To make sure your Defender for Endpoint subscription is properly provisioned, yo
 
 ## Step 2: Set up role-based access control and grant permissions to your security team
 
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+
 Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. [Review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles might need to be applied temporarily and removed after the trial is finished.
 
 Use [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide extra auditing, control, and access review for users with directory permissions.
@@ -101,7 +105,7 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 
 This section outlines the general steps you to onboard devices (endpoints).
 
-1. [Watch this video](https://www.microsoft.com/videoplayer/embed/RE4bGqr) for a quick overview of the onboarding process and learn about the available tools and methods.
+1. [Watch this video](https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60) for a quick overview of the onboarding process and learn about the available tools and methods.
 
 2. Review your [device onboarding tool options](onboarding.md) and select the most appropriate option for your environment. 
 

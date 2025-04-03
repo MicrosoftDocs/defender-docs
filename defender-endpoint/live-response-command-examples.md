@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/24/2025
 ---
 
 # Live response command examples
@@ -27,7 +27,7 @@ ms.date: 04/03/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Learn about common commands used in live response and see examples on how they're typically used.
 
@@ -107,12 +107,12 @@ getfile c:\Users\user\Desktop\work.txt -auto
 
 > [!NOTE]
 >
-> The following file types *cannot* be downloaded using this command from within Live Response:
+> The following file types *can't* be downloaded using this command from within Live Response:
 >
 > - [Reparse point files](/windows-hardware/drivers/ifs/reparse-points)
 > - [Sparse files](/windows-server/administration/windows-commands/fsutil-sparse)
 > - Empty files
-> - Virtual files, or files that are not fully present locally
+> - Virtual files, or files that aren't fully present locally
 >
 > These file types *are* supported by [PowerShell](/powershell/scripting/overview).
 >
@@ -199,6 +199,9 @@ remediate process 7960
 remediate list
 ```
 
+> [!NOTE]
+> Currently, `HKEY_USERS` reg hive isn't supported for `remediate`. This is a known issue, and we're looking into it. 
+
 ## `run`
 
 ```console
@@ -214,9 +217,9 @@ run get-process-by-name.ps1 -parameters "-processName Registry"
 > [!NOTE]
 >
 > For long running commands such as '**run**' or '**getfile**', you may want to use the '**&**' symbol at the end of the command to perform that action in the background.
-> This will allow you to continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
+> This allows you to continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
 >
-> When passing parameters to a live response script, do not include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
+> When passing parameters to a live response script, don't include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
 
 ## `scheduledtask`
 

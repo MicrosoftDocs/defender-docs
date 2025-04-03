@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 06/25/2024
+ms.date: 03/25/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -22,12 +22,11 @@ ms.reviewer: mkaminska
 **Applies to:**
 
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
@@ -66,7 +65,7 @@ To access the Device health and antivirus compliance report in the Microsoft Def
 
 To Assign these permissions:
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with Security administrator or Global administrator role assigned.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 

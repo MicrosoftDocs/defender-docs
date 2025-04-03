@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 12/30/2024
+ms.date: 03/11/2025
 ms.subservice: onboard
 ---
 
@@ -22,14 +22,21 @@ ms.subservice: onboard
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Virtual desktop infrastructure (VDI) devices
-- Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
+- Windows 11
+- Windows 10
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
+- Windows Server 2008
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets end users access enterprise virtual desktops instances from almost any device (such as your personal computer, smartphone, or tablet), eliminating the need for organization to provide users with physical machines. Using VDI devices reduces costs, as IT departments are no longer responsible for managing, repairing, and replacing physical endpoints. Authorized users can access the same company servers, files, apps, and services from any approved device through a secure desktop client or browser. 
 
@@ -49,8 +56,8 @@ Defender for Endpoint supports non-persistent VDI session onboarding. There migh
 - In a VDI environment, VDI instances can have short lifespans. VDI devices can appear in the Microsoft Defender portal as either single entries for each VDI instance or multiple entries for each device. 
 
    - Single entry for each VDI instance. If the VDI instance was already onboarded to Microsoft Defender for Endpoint, and at some point deleted, and then recreated with the same host name, a new object representing this VDI instance is NOT be created in the portal. In this case, the *same* device name must be configured when the session is created, for example using an unattended answer file.
-
    - Multiple entries for each device - one for each VDI instance.
+   - For all VDI machines, when they onboard for the first time, there's a client delay of approximately 3-4 hours.
 
 > [!IMPORTANT]
 > If you're deploying non-persistent VDIs through cloning technology, make sure that your internal template VMs are not onboarded to Defender for Endpoint. This recommendation is to avoid cloned VMs from being onboarded with the same senseGuid as your template VMs, which could prevent VMs from showing up as new entries in the Devices list. 
@@ -63,7 +70,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
 ### Onboarding steps
 
 > [!NOTE]
-> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2) for this feature to work.
+> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) for this feature to work.
 
 1. Open the VDI configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 

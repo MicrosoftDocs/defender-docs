@@ -22,12 +22,11 @@ ms.date: 12/18/2020
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
-Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -37,7 +36,7 @@ Want to experience Defender for Endpoint? [Sign up for a free trial.](https://si
 
 ## Methods
 
-<br>
+<br/>
 
 ****
 
@@ -52,7 +51,7 @@ Want to experience Defender for Endpoint? [Sign up for a free trial.](https://si
 
 ## Properties
 
-<br>
+<br/>
 
 ****
 
@@ -80,7 +79,6 @@ Want to experience Defender for Endpoint? [Sign up for a free trial.](https://si
 |exposedMachinesCount|Long|Number of installed devices that are exposed to vulnerabilities|
 |nonProductivityImpactedAssets|Long|Number of devices that aren't affected|
 |relatedComponent|String|Related software component|
-|exposedCriticalDevices|Numeric|The sum of critical devices in all levels of criticality except “not critical" for a particular recommendation|
-
+|exposedCriticalDevices|Numeric|The sum of critical devices in all levels of criticality except "not critical" for a particular recommendation|
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

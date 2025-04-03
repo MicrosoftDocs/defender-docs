@@ -9,7 +9,7 @@ ms.topic: how-to
 
 The Microsoft Defender for Cloud Apps [integration with Microsoft Defender for Endpoint](mde-integration.md) provides a seamless Shadow IT visibility and control solution. Our integration enables Defender for Cloud Apps administrators to block access of end users to cloud apps, by natively integrating Defender for Cloud Apps app governance controls with Microsoft Defender for Endpoint's network protection. Alternatively, administrators can take a gentler approach of warning users when they access risky cloud apps.
 
-Defender for Cloud Apps uses the built-in [**Unsanctioned**](governance-discovery.md#sanctioningunsanctioning-an-app) app tag to mark cloud apps as prohibited for use, available in both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly block access to unsanctioned apps with a single click in the Defender for Cloud Apps portal.
+Defender for Cloud Apps uses the built-in [**Unsanctioned**](governance-discovery.md#sanctioningunsanctioning-an-app) app tag to mark cloud apps as prohibited for use, available in both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly block access to unsanctioned apps with a single click in Defender for Cloud Apps.
 
 Apps marked as **Unsanctioned** in Defender for Cloud Apps are automatically synced to Defender for Endpoint. More specifically, the domains used by these unsanctioned apps are propagated to endpoint devices to be blocked by Microsoft Defender Antivirus within the Network Protection SLA.
 
@@ -62,7 +62,7 @@ Use the following steps to enable access control for cloud apps:
 
 Admins can now configure and embed a support/help URL for block pages. With this configuration, admins can educate users when they access blocked apps. Users are prompted with a custom redirect link to a company page listing apps blocked for use and necessary steps to be followed to secure an exception on block pages. End users will be redirected to this URL that is configured by admin when they click on "Visit the Support page” on the block page.
 
-Defender for Cloud Apps uses the built-in **Unsanctioned** app tag to mark cloud apps as blocked for use. The tag is available on both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly educate users on apps blocked for use and steps to secure an exception with a single click in the Defender for Cloud Apps portal.
+Defender for Cloud Apps uses the built-in **Unsanctioned** app tag to mark cloud apps as blocked for use. The tag is available on both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly educate users on apps blocked for use and steps to secure an exception with a single click in  Defender for Cloud Apps.
 
 Apps marked as **Unsanctioned** are automatically synced to Defender for Endpoint's custom URL indicators, usually within a few minutes. More specifically, the domains used by blocked apps are propagated to endpoint devices to provide a message by Microsoft Defender Antivirus within the Network Protection SLA.
 
@@ -74,7 +74,7 @@ Use the following steps to configure a custom help/support URL pointing to a com
 1. In the **Alerts** dropdown, select **Informational**.
 1. Under **User warnings** > **Notification URL for blocked apps**, enter your URL. For example:
 
-[ ![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png) ](media/mde-govern/mda-custom-block-url-config.png#lightbox)
+    [ ![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png) ](media/mde-govern/mda-custom-block-url-config.png#lightbox)
 
 ## Block apps for specific device groups
 
@@ -126,7 +126,7 @@ To block an app, do the following steps:
 
 Admins have the option to warn users when they access risky apps. Rather than blocking users, they're prompted with a message providing a custom redirect link to a company page listing apps approved for use. The prompt provides options for users to bypass the warning and continue to the app. Admins are also able to monitor the number of users that bypass the warning message.
 
-Defender for Cloud Apps uses the built-in **Monitored** app tag to mark cloud apps as risky for use. The tag is available on both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly warn users on access to monitored apps with a single click in the Defender for Cloud Apps portal.
+Defender for Cloud Apps uses the built-in **Monitored** app tag to mark cloud apps as risky for use. The tag is available on both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly warn users on access to monitored apps with a single click in Defender for Cloud Apps.
 
 Apps marked as **Monitored** are automatically synced to Defender for Endpoint's custom URL indicators, usually within a few minutes. More specifically, the domains used by monitored apps are propagated to endpoint devices to provide a warning message by Microsoft Defender Antivirus within the Network Protection SLA.
 

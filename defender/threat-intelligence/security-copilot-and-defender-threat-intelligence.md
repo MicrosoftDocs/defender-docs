@@ -16,13 +16,10 @@ ms.custom:
 - cx-ti
 - cx-mdti
 ms.topic: conceptual
-ms.date: 12/04/2024
+ms.date: 01/15/2025
 ---
 
 # Microsoft Security Copilot in Microsoft Defender Threat Intelligence
-
->[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (`https://ti.defender.microsoft.com`) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Security Copilot](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Security Copilot is a cloud-based AI platform that provides natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, read [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot).
 

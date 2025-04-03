@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/08/2025
+ms.date: 01/22/2025
 ---
 
 # Information gathering assessment per device
@@ -29,7 +29,7 @@ ms.date: 01/08/2025
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink) <br/>
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630) <br/>
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 This API response returns all information gathering assessments for all devices, on a per-device basis. It returns a table with a separate entry for every DeviceId.
@@ -69,12 +69,16 @@ Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerab
 GET /api/Machines/InfoGatheringExport
 ```
 
-### 1.4 Properties
+### 1.4 Parameters
+
+- `sasValidHours`: The number of hours that the download URLs are valid for Maximum is 6 hours.
+
+### 1.5 Properties
 
 > [!NOTE]
 > 
-> - The files are gzip compressed & in multiline Json format.
-> - The download URLs are only valid for 1 hour.
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
 > - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
@@ -83,15 +87,15 @@ Property (ID)|Data type|Description
 |Export files|String[array]|A list of download URLs for files holding the current snapshot of the organization.
 |GeneratedTime|DateTime|The time the export was generated.
 
-### 1.5 Examples
+### 1.6 Examples
 
-#### 1.5.1 Request example
+#### 1.6.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$sasValidHours=1
 ```
 
-#### 1.5.2 Response example
+#### 1.6.2 Response example
 
 ```json
 {

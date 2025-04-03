@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 01/12/2024
+ms.date: 02/10/2025
 ---
 
 # Create a custom gradual rollout process for Microsoft Defender updates
@@ -49,11 +49,9 @@ The following table lists the available group policy settings for configuring up
 ## Group Policy
 
 > [!NOTE]
-> An updated Defender ADMX template are published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
+> An updated Defender ADMX template is published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
 
-You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints.
-
-In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
+You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints. In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
 
 1. On your Group Policy management machine, open the **Group Policy Management Console**, right-click the **Group Policy Object** (GPO) you want to configure and select **Edit**.
 
@@ -61,7 +59,7 @@ In general, you can use the following procedure to configure or change Microsoft
 
 3. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components > Microsoft Defender Antivirus**.
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
 5. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
@@ -88,15 +86,22 @@ Set-MpPreference
 -DisableGradualRelease 1|0
 -DefinitionUpdatesChannel Staged|Broad|NotConfigured
 ```
-
 Example:
 
 Use `Set-MpPreference -PlatformUpdatesChannel Beta` to configure platform updates to arrive from the Beta Channel.
 
 For more information on the parameters and how to configure them, see [Set-MpPreference](/powershell/module/defender/set-mppreference) (Microsoft Defender Antivirus).
 
+## Registry
+
+These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
+
+- `EngineRing`
+- `PlatformRing`
+- `SignaturesRing`
+
 > [!NOTE]
-> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts) for guidance on this topic.
+> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

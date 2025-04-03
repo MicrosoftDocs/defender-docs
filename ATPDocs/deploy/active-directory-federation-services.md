@@ -55,9 +55,6 @@ Configure the SQL server to allow the Directory Service Account with the followi
 - *read*
 - *select*
 
-> [!NOTE]
-> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group Managed Service Account (gMSA) as the Directory Service Account, make sure that you grant the SQL server the [required permissions](create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
-
 ### Grant access to the AD FS database
 
 Grant access to the AD FS database by using SQL Server Management Studio, Transact-SQL (T-SQL), or PowerShell.

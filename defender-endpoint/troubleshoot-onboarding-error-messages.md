@@ -26,15 +26,13 @@ ms.date: 07/18/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-troublshootonboarding-abovefoldlink)
-
 This page provides detailed steps to troubleshoot issues that might occur when setting up your Microsoft Defender for Endpoint service.
 
-If you receive an error message, Microsoft Defender XDR will provide a detailed explanation on what the issue is and relevant links will be supplied.
+If you receive an error message, Microsoft Defender XDR provides a detailed explanation on what the issue is and relevant links are supplied.
 
 ## No subscriptions found
 
-If while accessing Microsoft Defender XDR you get a **No subscriptions found** message, it means the Microsoft Entra ID used to log in the user to the portal, does not have a Microsoft Defender for Endpoint license.
+If, while you're accessing Microsoft Defender XDR, you get an error message that says, "No subscriptions found," it means that the Microsoft Entra ID used to sign into the Microsoft Defender portal doesn't have a license for Defender for Endpoint.
 
 Potential reasons:
 
@@ -52,31 +50,30 @@ For both cases, you should contact Microsoft support at [General Microsoft Defen
 
 If while accessing Microsoft Defender XDR you get a **Your subscription has expired** message, your online service subscription has expired. Microsoft Defender for Endpoint subscription, like any other online service subscription, has an expiration date.
 
-You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date a **Your subscription has expired** message will be presented with an option to download the device offboarding package, should you choose to not renew the license.
+You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date, a message appears that says, "Your subscription has expired." The message includes an option to download the device offboarding package, just in case you choose to not renew your subscription.
 
 > [!NOTE]
-> For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you will be notified of the packages expiry date and it will also be included in the package name.
+> For security reasons, the package used to Offboard devices will expire seven days after the date it was downloaded. Expired offboarding packages sent to a device are rejected. When downloading an offboarding package, you're notified of the package's expiry date and it is also included in the package name.
 
 :::image type="content" source="media/atp-subscription-expired.png" alt-text="The subscription expired notification message" lightbox="media/atp-subscription-expired.png":::
 
 ## You are not authorized to access the portal
 
-If you receive a **You are not authorized to access the portal**, be aware that Microsoft Defender for Endpoint is a security monitoring, incident investigation and response product, and as such, access to it is restricted and controlled by the user.
-For more information, see, [**Assign user access to the portal**](/windows/threat-protection/windows-defender-atp/assign-portal-access-windows-defender-advanced-threat-protection).
+If you receive a message that says, "You are not authorized to access the portal," it's most likely because you haven't been granted access to the Microsoft Defender portal. Defender for Endpoint is a security monitoring, incident investigation and response product, and as such, access to it's restricted and controlled by your organization's security team. For more information, see, [**Assign user access to the portal**](/windows/threat-protection/windows-defender-atp/assign-portal-access-windows-defender-advanced-threat-protection).
 
 :::image type="content" source="media/atp-not-authorized-to-access-portal.png" alt-text="The access disallowed notification message" lightbox="media/atp-not-authorized-to-access-portal.png":::
 
 ## Data currently isn't available on some sections of the portal
 
-If the portal dashboard and other sections show an error message such as "Data currently isn't available":
+If the portal dashboard and other sections show an error message, such as "Data currently isn't available," you might need to allow subdomains.
 
 :::image type="content" source="media/atp-data-not-available.png" alt-text="The data unavailability notification message" lightbox="media/atp-data-not-available.png":::
 
-You'll need to allow the `security.windows.com` and all subdomains under it on your web browser. For example, `*.security.windows.com`.
+You need to allow the `security.windows.com` and all subdomains under it on your web browser. For example, `*.security.windows.com`.
 
 ## Portal communication issues
 
-If you encounter issues with accessing the portal, missing data, or restricted access to portions of the portal, you'll need to verify that the following URLs are accessible through the browser for authorized users:
+If you encounter issues with accessing the portal, missing data, or restricted access to portions of the portal, you need to verify that the following URLs are accessible through the browser for authorized users:
 
 - `*.blob.core.windows.net`
 - `crl.microsoft.com`

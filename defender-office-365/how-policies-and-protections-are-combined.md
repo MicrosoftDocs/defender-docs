@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 09/16/2024
+ms.date: 03/25/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -105,6 +105,7 @@ It's important to understand how user allows and blocks, tenant allows and block
 - After the filtering stack determines a verdict, only then are tenant policies and their configured actions evaluated.
 - If the same email address or domain exists in a user's Safe Senders list and Blocked Senders list, the Safe Senders list takes precedence.
 - If the same entity (email address, domain, spoofed sending infrastructure, file, or URL) exists in an allow entry and a block entry in the Tenant Allow/Block List, the block entry takes precedence.
+- If you use a file type in the [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies), allowing the same file in the Tenant Allow/Block list or Exchange mail flow rules (also known as transport rules) doesn't override the verdict.
 
 ### User allows and blocks
 
@@ -186,8 +187,8 @@ Tenant allows and blocks are able to override some filtering stack verdicts as d
   |Not spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
 
 - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list): There are two types of allow entries:
-  - Message level allow entries act on the entire message, regardless of the entities in the message. Allow entries for email address and domains are message level allow entries. 
-  - Entity level allow entries act on the filtering verdict of entities. Allow entries for URLs, spoofed senders, and files are entity level allow entries. To override malware and high confidence phishing verdicts, you need to use entity level allow entries, which you can create by submission only due to [Secure by default in Microsoft 365](secure-by-default.md).
+  - **Message level** allow entries act on the entire message, regardless of the entities in the message. Allow entries for email address and domains are message level allow entries. These allow entries override bulk and spam verdicts, and high confidence phishing verdicts from machine learning models.
+  - **Entity level** allow entries act on the filtering verdict of entities. Allow entries for URLs, spoofed senders, and files are entity level allow entries. To override malware and high confidence phishing verdicts, you need to use entity level allow entries, which you can create by submission only due to [Secure by default in Microsoft 365](secure-by-default.md).
 
   |Filtering stack verdict|Email address/domain|
   |---|---|

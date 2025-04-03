@@ -387,7 +387,7 @@ For this page, we recommend that your organization uses a basic SharePoint site.
 
 1. It can take up to two hours (typically less) for app domains to propagate and to be update in the endpoint devices, after it's marked as _Monitored_.
 
-2. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps portal for all the onboarded endpoints in the organization.
+2. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps for all the onboarded endpoints in the organization.
 
 3. Full URLs are currently not supported and aren't sent from Microsoft Defender for Cloud Apps to Microsoft Defender for Endpoint. If any full URLs are listed under Microsoft Defender for Cloud Apps as monitored apps, users aren't warned when they attempt to access a site. (For example, `google.com/drive` isn't supported, while `drive.google.com` is supported.)
 

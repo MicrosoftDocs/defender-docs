@@ -12,11 +12,11 @@ audience: ITPro
 ms.collection: 
 - m365-security-compliance
 - tier3
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - MET150
-ms.date: 10/23/2024
+ms.date: 02/19/2025
 appliesto:
   - Microsoft Defender XDR
 ---
@@ -43,21 +43,17 @@ If you have Microsoft Defender for Identity deployed in your environment but you
 
 For more information, see [Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration).
 
-## How do I turn on Microsoft Defender XDR??
-
-To turn on Microsoft Defender XDR, access **Settings** from the navigation pane in the Microsoft Defender portal. This navigation item is visible only if you have the [prerequisite permissions and licenses](m365d-enable.md#check-license-eligibility-and-required-permissions).
-
-## How do I create an exception for my file/URL?
+## My legitimate file/URL is being detected as malicious
 
 A false positive is a file or URL that is detected as malicious but isn't a threat. You can create indicators and define exclusions to unblock and allow certain files/URLs. See [Address false positives/negatives in Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives).
 
-## How can I integrate ServiceNow tickets into the Microsoft Defender portal?
+## My ServiceNow tickets are no longer available in the Microsoft Defender portal
 
 The Microsoft Defender XDR-ServiceNow connector is no longer available in the Microsoft Defender portal. However, you can still integrate Microsoft Defender XDR with ServiceNow by using the Microsoft Security Graph API. For more information, see [Security solution integrations using the Microsoft Graph Security API](/graph/security-integration).
 
 The Microsoft Defender XDR-ServiceNow integration was previously available in the Microsoft Defender portal for preview and feedback. This integration allowed you to create ServiceNow incidents from Microsoft Defender XDR incidents.
 
-## Why can't I submit files?
+## I can't submit files
 
 In some instances, an administrator block might cause submission issues when you try to submit a potentially infected file to the [Microsoft Security intelligence website](https://www.microsoft.com/wdsi) for analysis. The following process shows how to resolve this problem.
 

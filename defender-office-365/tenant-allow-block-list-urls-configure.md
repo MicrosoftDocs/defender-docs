@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 10/09/2024
+ms.date: 03/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -73,9 +73,22 @@ This article describes how admins can manage entries for URLs in the Microsoft D
 
 ## Create allow entries for URLs
 
-You can't create allow entries for URLs directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
-Instead, you use the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a blocked URL as **I've confirmed it's clean**, you can select **Allow this URL** to add and allow entry for the URL on the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+To create allow entries for URLs, use either of the following methods:
+
+- From the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a blocked URL as **I've confirmed it's clean**, you can select **Allow this URL** to add and allow entry for the URL on the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+
+  This method is required to override malware and high confidence phishing verdicts.
+
+- From the **URLs** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
+
+  This method is available to override the following verdicts only:
+
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
 
 [!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
 >
@@ -83,13 +96,51 @@ Instead, you use the **URLs** tab on the **Submissions** page at <https://securi
 >
 > A URL allow entry doesn't prevent the URL from being wrapped by Safe Links protection in Defender for Office 365. For more information, see [Do not rewrite list in SafeLinks](safe-links-about.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).
 
+### Use the Microsoft Defender portal to create allow entries for URLs in the Tenant Allow/Block List
+
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+
+2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
+
+3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Allow**.
+
+4. In the **Allow URLs** flyout that opens, configure the following settings:
+
+   - **Add URLs with wildcards**: Enter one URL per line, up to a maximum of 20. For details about the syntax for URL entries, see the [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list) section later in this article.
+
+   - **Remove allow entry after**: Select from the following values:
+     - **45 days after last used date**  (default)
+     - **1 day**
+     - **7 days**
+     - **Specific date**: The maximum value is 30 days from today.
+
+   - **Optional note**: Enter descriptive text for why you're allowing the URLs.
+
+   When you're finished in the **Allow URLs** flyout, select **Add**.
+
+Back on the **URLs** tab, the entry is listed.
+
+#### Use PowerShell to create allow entries for URLs in the Tenant Allow/Block List
+
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+
+```powershell
+New-TenantAllowBlockListItems -ListType Url -Allow -Entries "Value1","Value2",..."ValueN" [-RemoveAfter 45]  [-Notes <String>]
+```
+
+This example adds an allow entry for the URL abc.contoso.com and all email addresses (for example, xyz@abc.contoso.com). Because we didn't use the ExpirationDate or RemoverAfter parameters, the entry expires after 45 days from last used date.
+
+```powershell
+New-TenantAllowBlockListItems -ListType Url -Allow -Entries abc.contoso.com
+```
+
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+
 ## Create block entries for URLs
 
 Email messages that contain these blocked URLs are blocked as *high confidence phishing*. Messages that contain the blocked URLs are quarantined.
 
 To create block entries for URLs, use either of the following methods:
-
-You have the following options to create block entries for URLs:
 
 - From the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a message as **I've confirmed it's a threat**, you can select **Block this URL** to add a block entry to the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report questionable URLs to Microsoft](submissions-admin.md#report-questionable-urls-to-microsoft).
 
@@ -101,7 +152,7 @@ You have the following options to create block entries for URLs:
 
 2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block URLs** flyout that opens, configure the following settings:
 
@@ -146,6 +197,10 @@ On the **URLs** tab, you can sort the entries by clicking on an available column
 
 - **Value**: The URL.
 - **Action**: The available values are **Allow** or **Block**.
+- **Override verdicts**: The available values are:
+    - **Up to malware** for block entries.
+    - **Up to regular confidence phishing** for allow entries created directly from Tenant Allow/Block List.
+    - **Up to malware** for allow entries created via submissions. Allow entries created via submissions automatically update directly created allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
@@ -159,6 +214,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
+- **Modified by**: Provide an incomplete or complete email address to search by it. 
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 

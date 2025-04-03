@@ -13,6 +13,9 @@ Microsoft Defender for Cloud Apps enables you to natively use the Microsoft Data
 >[!NOTE]
 > This feature is currently available in the US, Europe, Australia, India, Canada, Japan, and APAC.
 
+>[!NOTE]
+> To enable the Data Classification Service option in File Policies, the "Microsoft 365" App Connector is required.
+
 ## Enable content inspection with Data Classification Services
 
 You can set the **Inspection method** to use the **Microsoft Data Classification Service** with no additional configuration required. This option is useful when creating a data leak prevention policy for your files in Microsoft Defender for Cloud Apps.

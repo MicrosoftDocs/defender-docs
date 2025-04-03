@@ -2,8 +2,9 @@
 title: Deploy and manage Device Control using Intune 
 description: Learn how to deploy and manage device control policies using Intune.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -29,7 +30,7 @@ ms.date: 07/25/2024
 - [Microsoft Defender for Business](/defender-business)
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 Microsoft Defender for Endpoint Device Control feature enables you to audit, allow, or prevent the read, write, or execute access to removable storage, and allows you to manage iOS and Portable device and Bluetooth media with or without exclusions.
 
@@ -44,7 +45,7 @@ Before you get started with Removable Storage Access Control, you must confirm y
 Now, you have `groups`, `rules`, and `settings`, replace the mobileconfig file with those values and put it under the Device Control node. Here's the demo file: [mdatp-devicecontrol/demo.mobileconfig at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/mobileconfig/demo.mobileconfig). Make sure validate your policy with the JSON schema and make sure your policy format is correct: [mdatp-devicecontrol/device_control_policy_schema.json at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
 
 > [!NOTE]
-> See [Device Control for macOS](mac-device-control-overview.md) for information about settings, rules and groups.
+> See [Device Control for macOS](mac-device-control-overview.md) for information about settings, rules, and groups.
 
 ### Deploy the mobileconfig file using Intune
 

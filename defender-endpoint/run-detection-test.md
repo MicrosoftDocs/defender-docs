@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 03/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -22,18 +22,15 @@ ms.subservice: onboard
 
 
 **Applies to:**
-- Windows 11
-- Supported Windows 10 versions
 - Windows Server 2012 R2
 - Windows Server 2016
-- Windows Server, version 1803
 - Windows Server 2019
 - Windows Server 2022
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Windows Server 2025
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
 
@@ -54,7 +51,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
 
 > [!NOTE]
-> You can also use the EICAR test string to perform this test. Create a text file, paste the EICAR line, and save the file as an executable file to your endpoint's local drive. You will receive a test endpoint notification and an alert in the Microsoft Defender portal.
+> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You will receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 

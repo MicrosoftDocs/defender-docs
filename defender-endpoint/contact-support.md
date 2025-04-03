@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 02/24/2025
 ---
 
 # Contact Microsoft Defender for Endpoint support
@@ -24,8 +24,6 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 Defender for Endpoint has recently upgraded the support process to offer a more modern and advanced support experience.
 
@@ -43,6 +41,8 @@ At a minimum, you must have a Service Support Administrator **OR** Helpdesk Admi
 For more information on which roles have permission, see [Security Administrator permissions](/azure/active-directory/roles/permissions-reference#security-administrator). 
 
 For general information on admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true).
+
+You must have a Microsoft Defender for Endpoint Plan 1 or Plan 2 license to open support cases. If you're using only Microsoft Defender for Servers Plan 1 or Plan 2, you must purchase at least one Defender for Endpoint Plan 1 or Plan 2 as well to open a support case.
 
 ## Access the widget
 
@@ -81,11 +81,14 @@ Learn how to open support tickets by contacting Defender for Endpoint support.
 :::image type="content" source="/defender/media/contactsupport2.png" alt-text="The contact support 2" lightbox="/defender/media/contactsupport2.png"::: </br>
 
 1. Fill in a title and description for the issue you are facing, the phone number and email address where we may reach you.
+
 2. (Optional) Include up to five attachments that are relevant to the issue to provide additional context for the support case.
+
 3. Select your time zone and an alternative language, if applicable. The request will be sent to Microsoft Support Team. The team will respond to your service request shortly.
 
 ## Related topics
 
 - [Troubleshoot service issues](troubleshoot-mdatp.md)
 - [Check service health](/microsoft-365/enterprise/view-service-health)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
