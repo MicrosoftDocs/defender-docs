@@ -52,14 +52,10 @@ To manage incidents across multiple tenants and workspaces:
 
    :::image type="content" source="media/mto-incidents-alerts/mto-manage-incidents.png" alt-text="Screenshot that highlights the manage incidents option on the incidents page in Microsoft Defender multitenant management." lightbox="media/mto-incidents-alerts/mto-manage-incidents.png":::
 
-<<<<<<< HEAD
 On the incidents flyout pane you can assign incidents, assign incidents tags, set the incident status, and classify multiple incidents for multiple tenants simultaneously.
 
 >[!Note]
 > Currently, you can only assign multiple incidents from same tenant.
-=======
-On the incidents fly-out you can set severity, assign incident tags, assign incidents, set the incident status, and classify multiple incidents for multiple tenants and workspaces simultaneously.
->>>>>>> 7110ab741930ab332b7cefb90e2061482b8486a5
 
 To learn more about incidents in the Microsoft Defender portal, see [Manage incidents](/defender-endpoint/manage-incidents).
 
