@@ -22,7 +22,12 @@ To get started with OAuth application attack path features in Exposure Managemen
 
 ### Required roles and permissions
 
-To access all Exposure Management features in the Microsoft Defender portal, ensure you have one of the following Entra ID roles enabled.
+To access all Exposure Management experiences, you must have one of the following roles.
+Only a single role is required—either a Unified RBAC role or an Entra ID role. Assigning both is not necessary.
+
+- **Exposure Management (read)** (Unified RBAC)
+
+Alternatively, you can use one of the following **Entra ID roles**:
 
 |Permission |Actions |
 |---------|---------|
@@ -36,7 +41,7 @@ To access all Exposure Management features in the Microsoft Defender portal, ens
 >[!NOTE]
 > Currently available in commercial cloud environments only. Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, DoD, and China Gov.
 
-### Critical OAuth permissions 
+### Critical Asset Management - Service Principals
 
 Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered the crown jewels. If compromised, they can cause significant damage to the organization. To reflect this risk, attack paths treat Service Principals with these permissions as target goals.
 
