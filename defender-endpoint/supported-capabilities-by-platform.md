@@ -4,6 +4,7 @@ description: Get to know the Microsoft Defender for Endpoint capabilities suppor
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
+ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 04/03/2025
 ---
 
 # Supported Microsoft Defender for Endpoint capabilities by platform
