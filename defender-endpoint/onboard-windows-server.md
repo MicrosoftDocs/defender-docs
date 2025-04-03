@@ -59,7 +59,12 @@ For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers
 
 ## Integration with Microsoft Defender for Servers
 
-Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers and Microsoft Defender for Cloud. You can onboard servers automatically, have servers that are monitored by Defender for Cloud appear in Defender for Endpoint, and conduct detailed investigations as a Defender for Cloud customer. For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
+Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers and Microsoft Defender for Cloud. If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
+- Onboard servers automatically
+- Have servers that are monitored by Defender for Cloud appear in Defender for Endpoint
+- Conduct detailed investigations as a Defender for Cloud customer
+
+For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
 
 > [!NOTE]
 > - When you use Defender for Cloud to monitor servers, a Defender for Endpoint tenant is created automatically. Data collected by Defender for Endpoint is stored in the geographical location of the tenant, identified during provisioning. (For example, in the US for customers in the USA; in EU for European customers; and in the UK for customers in the United Kingdom.)
