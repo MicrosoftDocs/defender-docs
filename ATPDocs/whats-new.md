@@ -28,23 +28,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
 
-Key Features:
-
-- Privileged user sync: Automatically import and sync privileged identities managed by PAM solutions into Microsoft Defender XDR.
-
-- Investigation prioritization: Enrich identity-based incidents with PAM role data to prioritize high-risk accounts during triage.
-
-- Custom detections: Use “privileged identity” as a condition when building custom detection rules in advanced hunting or analytics.
-
-- Integrated response actions: Trigger password rotation or session termination for privileged accounts directly via PAM systems when compromise is suspected.
-
 **Supported PAM vendors**:
 
 - CyberArk
 - Delinea
 - BeyondTrust
 
-Fore more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
 
 ## March 2025
 

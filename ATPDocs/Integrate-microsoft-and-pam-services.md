@@ -21,11 +21,11 @@ This integration ensures a comprehensive approach to identity security, combinin
 
 ### Visibility and response actions
 
-Once PAM integration is enabled, Microsoft XDR surfaces privileged identity data and enables direct response actions:
+Once PAM integration is enabled, Microsoft Defender XDR surfaces privileged identity data and enables direct response actions:
 
 - Privileged accounts managed by a PAM solution are automatically tagged, providing clear context during investigations.
 
-- You can initiate a password reset directly from the Microsoft XDR console for high-risk or compromised privileged accounts.
+- You can initiate a password reset directly from the Microsoft Defender XDR console for high-risk or compromised privileged accounts.
 
 To reset a password using the integrated PAM system:
 1. Go to **Assets > Identities**.
