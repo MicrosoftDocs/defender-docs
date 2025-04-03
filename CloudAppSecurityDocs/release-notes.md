@@ -22,7 +22,6 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## April 2025
 
-
 ### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
 
 The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
