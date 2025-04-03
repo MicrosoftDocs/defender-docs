@@ -30,7 +30,7 @@ ms.date: 12/10/2024
 
 ## Indicator of compromise (IoC) overview
 
-An Indicator of compromise (IoC) is a forensic artifact, observed on the network or host. An IoC indicates -- with high confidence -- that a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
+An Indicator of compromise (IoC) is a forensic artifact, observed on the network or host. An IoC indicates--with high confidence--that a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
 
 - hashes of known malware
 - signatures of malicious network traffic
@@ -115,8 +115,8 @@ When your security team creates a new indicator (IoC), the following actions are
 - **Allow**: the IoC is allowed to run on your devices.
 - **Audit**: an alert is triggered when the IoC runs.
 - **Warn**: the IoC prompts a warning that the user can bypass
-- **Block execution**: the IoC won't be allowed to run.
-- **Block and remediate**: the IoC won't be allowed to run and a remediation action will be applied to the IoC.
+- **Block execution**: the IoC isn't allowed to run.
+- **Block and remediate**: the IoC isn't allowed to run and a remediation action is applied to the IoC.
 
 > [!NOTE]
 > Using Warn mode will prompt your users with a warning if they open a risky app or website. The prompt won't block them from allowing the application or website to run, but you can provide a custom message and links to a company page that describes appropriate usage of the app. Users can still bypass the warning and continue to use the app if they need. For more information, see Govern apps discovered by Microsoft Defender for Endpoint.
