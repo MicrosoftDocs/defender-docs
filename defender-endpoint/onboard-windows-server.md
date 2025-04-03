@@ -62,7 +62,7 @@ You need to complete the general steps depicted in the following image to succes
    - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
    - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
-For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
+For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint](onboard-windows-server-2012r2-2016.md).
 
 > [!NOTE]
 > Windows Hyper-V server editions aren't supported.
