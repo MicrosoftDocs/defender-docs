@@ -7,7 +7,7 @@ ms.date: 02/10/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
-ms.reviewer: 
+ms.reviewer: ericlaw
 manager: deniseb
 ms.custom: asr
 ms.subservice: asr
@@ -37,9 +37,9 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](h
 
 ## Overview of network protection
 
-Network protection helps protect devices from certain Internet-based events by preventing connections to malicious or suspicious sites. Network protection is an attack surface reduction capability that helps prevent people in your organization from accessing domains that are considered dangerous through applications. Examples of dangerous domains are domains that host phishing scams, exploits, and other malicious content on the Internet. Network protection expands the scope of [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(S) traffic that attempts to connect to low-reputation sources (based on the domain or hostname).
+Network protection helps protect devices by preventing connections to malicious or suspicious sites. Examples of dangerous domains are domains that host phishing scams, malicious downloads, tech scams, or other malicious content. Network protection expands the scope of [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(S) traffic that attempts to connect to poor-reputation sources (based on the domain or hostname).
 
-Network protection extends the protection in [Web protection](web-protection-overview.md) to the operating system level, and is a core component for [Web Content Filtering](web-content-filtering.md) (WCF). It provides the web protection functionality found in Microsoft Edge to other supported browsers and nonbrowser applications. Network protection also provides visibility and blocking of indicators of compromise (IOCs) when used with [Endpoint detection and response](overview-endpoint-detection-response.md). For example, network protection works with your [custom indicators](indicators-overview.md) that you can use to block specific domains or host names.
+Network protection extends the protection in [Web protection](web-protection-overview.md) to the operating system level, and is a core component for [Web Content Filtering](web-content-filtering.md) (WCF). It provides the web protection functionality found in Microsoft Edge to other supported browsers and nonbrowser applications. Network protection also provides visibility and blocking of indicators of compromise (IOCs) when used with [Endpoint detection and response](overview-endpoint-detection-response.md). For example, network protection works with your [custom indicators](indicators-overview.md) to block specific domains or host names.
 
 ### Network protection coverage
 
@@ -56,14 +56,13 @@ The following table summarizes network protection areas of coverage.
 > On Windows, network protection doesn't monitor Microsoft Edge. For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage network protection for inspection and enforcement.
 
 ### Known issues & limitations
-
-- IP is supported for all three protocols (`TCP`, `HTTP`, and `HTTPS` (TLS)).
-- Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
-- Encrypted URLs (full path) are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge).
-- Encrypted URLs (FQDN only) are blocked in non-Microsoft browsers.
-- URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
-- Network Protection will block connections on both standard and non-standard ports.
-- Full URL path blocks are applied for unencrypted URLs.
+- IP addresses are supported for all three protocols (TCP, HTTP, and HTTPS (TLS))
+- Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators
+- HTTP URLs (including a full URL path) can be blocked for any browser or process
+- HTTPS fully-qualified domain names (FQDN) can be blocked in non-Microsoft browsers (indicators specifying a full URL path can only be blocked in Microsoft Edge)
+- Blocking FQDNs in non-Microsoft browsers requires that QUIC and Encrypted Client Hello be disabled in those browsers 
+- FQDNs loaded via HTTP2 connection coalescing can only be blocked in Microsoft Edge
+- Network Protection will block connections on all ports (not just 80 and 443).
 
 There might be up to two hours of latency (usually less) between the time when the action is taken and the URL/IP is blocked.
  
@@ -89,20 +88,18 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 
 ## Why network protection is important
 
-Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block URLs and IP addresses. Network protection can block URLs from being accessed by using certain browsers and standard network connections. By default, network protection guards your computers from known malicious URLs using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in Microsoft Edge browser. The network protection functionality can be extended to:
+Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in Microsoft Edge browser. The network protection functionality can be extended to:
 
 - Block IP/URL addresses from your own threat intelligence ([indicators](indicator-ip-domain.md))
 - Block unsanctioned services from [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 - Block browser access to websites based on category ([Web content filtering](web-content-filtering.md))
-
-Network protection is a critical part of the Microsoft protection and response stack.
 
 > [!TIP]
 > For details about network protection for Windows Server, Linux, MacOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ### Block Command and Control attacks
 
-Command and Control (C2) server computers are used by malicious users to send commands to systems previously compromised by malware. C2 attacks typically hide in cloud-based services such as file-sharing and webmail services, enabling the C2 servers to avoid detection by blending in with typical traffic.
+Command and Control (C2) servers are used to send commands to systems previously compromised by malware.
 
 C2 servers can be used to initiate commands that can:
 
@@ -111,7 +108,7 @@ C2 servers can be used to initiate commands that can:
 - Disrupt legitimate applications
 - Spread malware, such as ransomware
 
-The network protection component of Defender for Endpoint identifies and blocks connections to C2 infrastructures used in human-operated ransomware attacks, using techniques like machine learning and intelligent indicator-of-compromise (IoC) identification.
+The network protection component of Defender for Endpoint identifies and blocks connections to C2 servers used in human-operated ransomware attacks, using techniques like machine learning and intelligent indicator-of-compromise (IoC) identification.
 
 #### Network protection: C2 detection and remediation
 
@@ -136,7 +133,7 @@ Support for Command and Control servers (C2) is an important part of this ransom
 
 ### New notifications for network protection determination
 
-New capabilities in network protection use functions in SmartScreen to block phishing activities from malicious command and control sites. When an end user attempts to visit a website in an environment in which network protection is enabled, three scenarios are possible, as outlined in the following table:
+When an end user attempts to visit a website in an environment in which network protection is enabled, three scenarios are possible, as outlined in the following table:
 
 | Scenario | What happens |
 |--|--|
@@ -179,7 +176,7 @@ By enabling this setting, network protection blocks network traffic instead of d
 
 #### Block experience
 
-A user visits a website. If the url has a bad reputation, a toast notification presents the user with the following options:
+When a user visits a website whose url has a bad reputation, a toast notification presents the user with the following options:
 
 - **Ok**: The toast notification is released (removed), and the attempt to access the site is ended.
 - **Feedback**: The toast notification presents the user with a link to submit a ticket, which the user can use to submit feedback to the administrator in an attempt to justify access to the site.
@@ -296,11 +293,14 @@ After you've enabled network protection, you might need to configure your networ
 - `.smartscreen.microsoft.com`
 - `.smartscreen-prod.microsoft.com`
 
+## Required Browser Configuration
+In non-Microsoft Edge processes, Network Protection determines the fully qualified domain name for each HTTPS connection by examining the content of the TLS handshake that occurs after a TCP/IP handshake. This requires that the HTTPS connection use TCP/IP (not UDP/QUIC) and that the ClientHello message not be encrypted. To disable QUIC and Encrypted Client Hello in Google Chrome, see [QuicAllowed](https://chromeenterprise.google/policies/#QuicAllowed) and [EncryptedClientHelloEnabled](https://chromeenterprise.google/policies/#EncryptedClientHelloEnabled). For Mozilla Firefox, see [Disable EncryptedClientHello](https://mozilla.github.io/policy-templates/#disableencryptedclienthello) and [network.http.http3.enable](https://support.mozilla.org/ml/questions/1408003#answer-1571474).
+
 ## Viewing network protection events
 
 Network protection works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into exploit protection events and blocks as part of [alert investigation scenarios](investigate-alerts.md).
 
-When network protection blocks a connection, a notification is displayed from the Action Center. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information. In addition, individual attack surface reduction rules can be enabled and customized to suit certain techniques to monitor.
+When network protection blocks a connection, a notification is displayed from the Action Center. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information.
 
 You can also use [audit mode](overview-attack-surface-reduction.md) to evaluate how network protection would impact your organization if it were enabled.
 
@@ -328,13 +328,13 @@ This procedure creates a custom view that filters to only show the following eve
 
 ## Network protection and the TCP three-way handshake
 
-With network protection, the determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip). Thus, when network protection blocks a site, you might see an action type of `ConnectionSuccess` under [`DeviceNetworkEvents`](/defender-xdr/advanced-hunting-devicenetworkevents-table) in the Microsoft Defender portal, even though the site was blocked. `DeviceNetworkEvents` are reported from the TCP layer, and not from network protection. After the three-way handshake has completed, access to the site is allowed or blocked by network protection.
+With network protection, the determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip). Thus, when network protection blocks a site, you might see an action type of `ConnectionSuccess` under [`DeviceNetworkEvents`](/defender-xdr/advanced-hunting-devicenetworkevents-table) in the Microsoft Defender portal, even though the site was blocked. `DeviceNetworkEvents` are reported from the TCP layer, and not from network protection. After the completion of the TCP/IP handshake and any TLS handshake, access to the site is allowed or blocked by network protection.
 
 Here's an example of how that works:
 
-1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
+1. Suppose that a user attempts to access a website. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-2. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's when the three-way handshake completes that a determination is made, and access to a site is either blocked or allowed.
+2. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly.
 
 3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](/defender-xdr/advanced-hunting-alertevidence-table). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
 
@@ -433,16 +433,13 @@ Set-MpPreference -AllowDatagramProcessingOnWinServer 1
 Due to the environment where network protection runs, the feature might not be able to detect operating system proxy settings. In some cases, network protection clients are unable to reach the cloud service. To resolve the connectivity problem, [configure a static proxy for Microsoft Defender Antivirus](configure-proxy-internet.md#configure-a-static-proxy-for-microsoft-defender-antivirus).
 
 > [!NOTE]
-> Before starting troubleshooting, make sure to set the QUIC protocol to `disabled` in browsers that are used. QUIC protocol is not supported with network protection functionality.
+> Encrypted Client Hello and the QUIC protocol are not supported with network protection functionality. Ensure that these protocols are disabled in browsers as described in **Required Browser Configuration** above.
 
-<!--- Would be helpful for customer if we provide instructions to disable--->
-
-Because Global Secure Access doesn't currently support UDP traffic, UDP traffic to port `443` can't be tunneled. You can disable the QUIC protocol so that Global Secure Access clients fall back to using HTTPS (TCP traffic on port 443). You must make this change if the servers that you're trying to access do support QUIC (for example, through Microsoft Exchange Online). To disable QUIC, you can take one of the following actions:
+To disable QUIC in all clients, you can block QUIC traffic via the Windows Firewall.
 
 ### Disable QUIC in Windows Firewall
 
-The most generic method to disable QUIC is to disable that feature in Windows Firewall. This method affects all applications, including browsers and client apps (such as Microsoft Office). In PowerShell, run the `New-NetFirewallRule` cmdlet to add a new firewall rule that disables QUIC for all outbound traffic from the device:
-
+This method affects all applications, including browsers and client apps (such as Microsoft Office). In PowerShell, run the `New-NetFirewallRule` cmdlet to add a new firewall rule that disables QUIC by blocking all outbound traffic UDP traffic to port 443:
 
 ```powershell
 
@@ -458,15 +455,6 @@ $ruleParams = @{
 New-NetFirewallRule @ruleParams
 
 ```
-
-### Disable QUIC in a web browser
-
-You can disable QUIC at the web browser level. However, this method of disabling QUIC means that QUIC continues to work on nonbrowser applications. To disable QUIC in Microsoft Edge or Google Chrome, open the browser, locate the Experimental QUIC protocol setting (`#enable-quic` flag), and then change the setting to `Disabled`. The following table shows which URI to enter in the browser's address bar so that you can access that setting.
-
-| Browser | URI |
-|---|---|
-| Microsoft Edge | `edge://flags/#enable-quic` |
-| Google Chrome | `chrome://flags/#enable-quic` |
 
 ## Optimizing network protection performance
 
