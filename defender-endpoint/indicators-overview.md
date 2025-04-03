@@ -137,7 +137,7 @@ The table below shows exactly which actions are available per indicator (IoC) ty
 | [URLs and domains](indicator-ip-domain.md) | Allow <br> Audit <br> Warn <br> Block execution |
 | [Certificates](indicator-certificates.md) | Allow <br> Block and remediate |
 
-The functionality of pre-existing IoCs won't change. However, the indicators were renamed to match the current supported response actions:
+The functionality of preexisting IoCs doesn't change. However, the indicators are renamed to match the current supported response actions:
 
 - The *alert only* response action was renamed to *audit* with the generated alert setting enabled.
 - The *alert and block* response was renamed to *block and remediate* with the optional generate alert setting.
