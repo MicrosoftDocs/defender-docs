@@ -27,8 +27,6 @@ ms.date: 07/01/2024
 - Defender for Endpoint for servers
 - Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
-
 > [!IMPORTANT]
 > Devices that are configured for IPv6-only traffic are not supported.
 
