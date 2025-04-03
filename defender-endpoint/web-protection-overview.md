@@ -5,9 +5,9 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
-ms.reviewer: tdoucette
+ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 12/18/2024
+ms.date: 04/02/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -49,39 +49,41 @@ Web threat protection includes:
 
 > [!NOTE]
 > For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage Network Protection for inspection and enforcement:
-> - IP is supported for all three protocols (TCP, HTTP, and HTTPS (TLS)).
+> - IP addresses are supported for all three protocols (TCP, HTTP, and HTTPS (TLS)).
 > - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators.
-> - Encrypted URLs (full path) can only be blocked on first party browsers (Internet Explorer, Edge).
-> - Encrypted URLs (FQDN only) can be blocked in third party browsers (i.e. other than Internet Explorer, Edge).
-> - URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
-> - Network Protection will block connections on both standard and non-standard ports.
-> - Full URL path blocks can be applied for unencrypted URLs.
+> - HTTP URLs (including a full URL path) can be blocked for any browser or process
+> - HTTPS fully-qualified domain names (FQDN) can be blocked in non-Microsoft browsers (indicators specifying a full URL path can only be blocked in Microsoft Edge)
+> - Blocking FQDNs in non-Microsoft browsers requires that QUIC and Encrypted Client Hello be disabled in those browsers 
+> - FQDNs loaded via HTTP2 connection coalescing can only be blocked in Microsoft Edge.
+> - Network Protection will block connections on all ports (not just 80 and 443).
 
-There might be up to two hours of latency (usually less) between the time the action is taken, and the URL and IP being blocked. For more information, see [Web threat protection](web-threat-protection.md).
+In non-Microsoft Edge processes, Network Protection determines the fully qualified domain name for each HTTPS connection by examining the content of the TLS handshake that occurs after a TCP/IP handshake. This requires that the HTTPS connection use TCP/IP (not UDP/QUIC) and that the ClientHello message not be encrypted. To disable QUIC and Encrypted Client Hello in Google Chrome, see [QuicAllowed](https://chromeenterprise.google/policies/#QuicAllowed) and [EncryptedClientHelloEnabled](https://chromeenterprise.google/policies/#EncryptedClientHelloEnabled). For Mozilla Firefox, see [Disable EncryptedClientHello](https://mozilla.github.io/policy-templates/#disableencryptedclienthello) and [network.http.http3.enable](https://support.mozilla.org/ml/questions/1408003#answer-1571474).
+
+There might be up to two hours of latency (usually less) between the time an indicator is added and it being enforced on the client. For more information, see [Web threat protection](web-threat-protection.md).
 
 ### Custom indicators
 
-Custom indicator detections are also summarized in your organizations web threat reports under **Web threat detections over time** and **Web threat summary**.
+Custom indicator detections are summarized in web threat reports under **Web threat detections over time** and **Web threat summary**.
 
-Custom indicator includes:
+Custom indicators provide:
 
-- Ability to create IP and URL-based indicators of compromise to protect your organization against threats.
-- Investigation capabilities over activities related to your custom IP/URL profiles and the devices that access these URLs.
-- The ability to create Allow, Block, and Warn policies for IPs and URLs.
+- The ability to create IP and URL-based indicators of compromise to protect your organization against threats.
+- The ability to specify Allow, Block, or Warn behavior.
+- Investigative capabilities over activities related to your custom IP/URL indicators and the devices that access these URLs.
 
 For more information, see [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 
 ### Web content filtering
 
-Web content filtering includes **Web activity by category**, **Web content filtering summary**, and **Web activity summary**.
+Web content filtering blocks are summarized under **Web activity by category**, **Web content filtering summary**, and **Web activity summary**.
 
-Web content filtering includes:
+Web content filtering provides:
 
-- Users are prevented from accessing websites in blocked categories, whether they're browsing on-premises or away.
-- You can conveniently deploy varied policies to various sets of users using the device groups defined in the [Microsoft Defender for Endpoint role-based access control settings](rbac.md).
+- The ability to block users from accessing websites in blocked categories, whether they're browsing on-premises or away.
+- Support for targeting different policies to different device groups defined in the [Microsoft Defender for Endpoint role-based access control settings](rbac.md).
     > [!NOTE]
     > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
-- You can access web reports in the same central location, with visibility over actual blocks and web usage.
+- Web reporting in the same central location, with visibility into both blocks and web usage.
 
 For more information, see [Web content filtering](web-content-filtering.md).
 
@@ -95,8 +97,7 @@ Web protection is made up of the following components, listed in order of preced
   - Block
 
 - Web threats (malware, phish)
-  - SmartScreen Intel, including Exchange Online Protection (EOP)
-  - Escalations
+  - SmartScreen Intel
 
 - Web Content Filtering (WCF)
 
@@ -121,13 +122,11 @@ Internal IP addresses aren't supported by custom indicators. For a warn policy w
 
 In all web protection scenarios, SmartScreen and Network Protection can be used together to ensure protection across both Microsoft and non-Microsoft browsers and processes. SmartScreen is built directly into Microsoft Edge, while Network Protection monitors traffic in non-Microsoft browsers and processes. The following diagram illustrates this concept. This diagram of the two clients working together to provide multiple browser/app coverages is accurate for all features of Web Protection (Indicators, Web Threats, Content Filtering).
 
-> [!NOTE]
-> Custom Indicators of Compromise and Web Content Filtering features are currently not supported in Application Guard sessions of Microsoft Edge. These containerized browser sessions can only enforce web threat blocks via the built-in SmartScreen protection. They cannot enforce any enterprise web protection policies.
 > :::image type="content" source="/defender/media/web-protection-protect-browsers.png" alt-text="The usage of smartScreen and Network Protection together" lightbox="/defender/media/web-protection-protect-browsers.png":::
 
 ## Troubleshoot endpoint blocks
 
-Responses from the SmartScreen cloud are standardized. Tools like Fiddler can be used to inspect the response from the cloud service, which helps determine the source of the block.
+Responses from the SmartScreen cloud are standardized. Tools like Telerik Fiddler can be used to inspect the response from the cloud service, which helps determine the source of the block.
 
 When the SmartScreen cloud service responds with an allow, block, or warn response, a response category and server context is relayed back to the client. In Microsoft Edge, the response category is what is used to determine the appropriate block page to show (malicious, phishing, organizational policy).
 
@@ -167,7 +166,7 @@ To list blocks that are due to other features (like Custom Indicators), refer to
 
 ## User experience
 
-If a user visits a web page that poses a risk of malware, phishing, or other web threats, Microsoft Edge triggers a block page that resembles the following image:
+If a user visits a web page that poses a risk of malware, phishing, or other web threats, Microsoft Edge displays a block page that resembles the following image:
 
 :::image type="content" source="media/web-protection-indicators-new-block-page.jpg" alt-text="Screenshot showing new block notification for a website." lightbox="media/web-protection-indicators-new-block-page.jpg":::
 
@@ -175,13 +174,13 @@ Beginning with Microsoft Edge 124, the following block page is shown for all Web
 
 :::image type="content" source="media/web-protection-new-content-blocked-page.jpg" alt-text="Screenshot showing content blocked." lightbox="media/web-protection-new-content-blocked-page.jpg":::
 
-In any case, no block pages are shown in non-Microsoft browsers, and the user sees a "Secure Connection Failed" page along with a toast notification. Depending on the policy responsible for the block, a user sees a different message in the toast notification. For example, web content filtering displays the message, "This content is blocked."
+In any case, no block pages are shown in non-Microsoft browsers, and the user instead sees a "Secure Connection Failed" page along with a Windows toast notification. Depending on the policy responsible for the block, a user sees a different message in the toast notification. For example, web content filtering displays the message, "This content is blocked."
 
 ## Report false positives
 
 To report a false positive for sites that have been deemed dangerous by SmartScreen, use the link that appears on the block page in Microsoft Edge (as shown earlier in this article).
 
-For WCF, you can dispute the category of a domain. Navigate to the **Domains** tab of the WCF reports. You see an ellipsis beside each of the domains. Hover over this ellipsis and select **Dispute Category**. A flyout opens. Set the priority of the incident and provide some other details, such as the suggested category. For more information on how to turn on WCF and how to dispute categories, see [Web content filtering](web-content-filtering.md).
+For WCF, you can override a block using an Allow indicator, and optionally dispute the category of a domain. Navigate to the **Domains** tab of the WCF reports. You see an ellipsis beside each of the domains. Hover over this ellipsis and select **Dispute Category**. A flyout opens. Set the priority of the incident and provide some other details, such as the suggested category. For more information on how to turn on WCF and how to dispute categories, see [Web content filtering](web-content-filtering.md).
 
 For more information on how to submit false positives/negatives, see [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
