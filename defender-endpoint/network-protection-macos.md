@@ -394,7 +394,7 @@ Upon facing an unexpected behavior, users' confusion might be reduced by providi
 4. Administrators need to ensure that Encrypted Client Hello and QUIC are disabled when testing to ensure sites are blocked correctly. See instructions above.
 
 > [!TIP]
-> No end-user notifications are appearing on third party browsers? Check your toast message settings.
+> No end-user notifications are appearing on third party browsers? Ensure you've allowed notifications from Microsoft Defender in **System Settings** > **Notifications**.
 
 ## See also
 
