@@ -411,7 +411,7 @@ For more information, see: [Turn on network protection](enable-network-protectio
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
-For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
+For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
 
 ```powershell
 
