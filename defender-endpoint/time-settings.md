@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: reference
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 09/21/2024
 ---
 
 # Microsoft Defender XDR time zone settings

@@ -8,7 +8,7 @@ f1.keywords:
 ms.localizationpriority: medium
 ms.author: dansimp
 author: dansimp
-ms.date: 05/31/2024
+ms.date: 03/20/2025
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -18,20 +18,20 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: concept-article
+#customer intent: To learn how to investigate and respond to attacks using Microsoft Defender XDR.
+appliesto:
+   - Microsoft Defender XDR
 ---
 
 # Investigate and respond using Microsoft Defender XDR
-
-**Applies to:**
-- Microsoft Defender XDR
 
 This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender XDR](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender XDR.
 
 An incident in Microsoft Defender XDR is a collection of correlated alerts and associated data that make up the story of an attack. Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
 
 > [!NOTE]
-> If you are brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](respond-first-incident-365-defender.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
+> If you're brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](respond-first-incident-365-defender.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
 
 
 ## End-to-end deployment for Microsoft Defender XDR
@@ -52,23 +52,33 @@ At any time during your pilot and deployment, you can test Microsoft Defender XD
 
 ## Workflow for incident investigation and response using Microsoft Defender XDR
 
-Here is the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
+Here's the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to do incident investigation and response." lightbox="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
-1. [Simulate attacks with the Microsoft Defender portal](#step-1)
-1. [Prioritize incidents](#step-2)
-1. [Manage incidents](#step-3)
-1. [Examine automated investigation and response with the Action center](#step-4)
-1. [Use advanced hunting](#step-5)
+1. [Gather threat intelligence to identify adversaries and their infrastructure](#step-1-gather-threat-intelligence-to-identify-adversaries-and-their-infrastructure)
+1. [Simulate attacks with the Microsoft Defender portal](#step-2-simulate-attacks-with-the-microsoft-defender-portal)
+1. [Prioritize incidents](#step-3-prioritize-incidents)
+1. [Manage incidents](#step-4-manage-incidents)
+1. [Examine automated investigation and response with the Action center](#step-5-examine-automated-investigation-and-response-with-the-action-center)
+1. [Use advanced hunting](#step-6-use-advanced-hunting)
 
 <a name='simulate-attacks-with-the-microsoft-365-defender-portal'></a>
 
 <a name="step-1"></a>
 
-## Step 1. Simulate attacks with the Microsoft Defender portal
+## Step 1. Gather threat intelligence to identify adversaries and their infrastructure
+
+Microsoft Defender Threat Intelligence (Defender TI) provides threat intelligence information such as specific indicators of compromise (IOCs) and research and analyses straight from Microsoft experts and other sources. You can read articles or search for threat actors, vulnerabilities, and other IOCs to gain insight on the types of threats that you might want to investigate.
+
+- For a tutorial on how to perform indicator searches and gather threat and adversary intelligence using Defender TI, see: [Tutorial: Gathering threat intelligence and infrastructure chaining](/defender/threat-intelligence/gathering-threat-intelligence-and-infrastructure-chaining)
+- For a tutorial on how to perform indicator searches to gather vulnerability intelligence using Defender TI, see: [Tutorial: Gathering vulnerability intelligence](/defender/threat-intelligence/gathering-vulnerability-intelligence)
+
+For more information, see [What is Microsoft Defender Threat Intelligence (Defender TI)?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+
+## Step 2. Simulate attacks with the Microsoft Defender portal
 
 The Microsoft Defender portal has built-in capabilities to create simulated attacks on your pilot environment:
 
@@ -96,7 +106,7 @@ Defender for Office 365 with Microsoft 365 E5 or Microsoft Defender for Office 3
 
    For step by step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
 
-   > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvB]
+   > [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 For more information, see [Simulations](/defender-office-365/attack-simulation-training-get-started#simulations).
 
@@ -107,7 +117,7 @@ Here are the Defender for Endpoint simulations from Microsoft:
 - Document drops backdoor
 - Automated investigation (backdoor)
 
-There are additional simulations from third-party sources. There is also a set of tutorials.
+There are additional simulations from third-party sources. There's also a set of tutorials.
 
 For each simulation or tutorial:
 
@@ -136,20 +146,20 @@ First, you need to add an isolated AD DS domain controller and a Windows device 
    - Runs Windows Server 2008 R2 or a later version.
    - Reports to [Microsoft Defender for Identity](/azure/security-center/security-center-wdatp) and has enabled [remote management](/windows-server/administration/server-manager/configure-remote-management-in-server-manager).
    - Has [Microsoft Defender for Identity and Microsoft Defender for Cloud Apps integration](/cloud-app-security/mdi-integration) enabled.
-   - Has a test user is created in the test domain. Administrator-level permissions are not needed.
+   - Has a test user is created in the test domain. Administrator-level permissions aren't needed.
 
 3. Verify that your test device:
 
    - Runs Windows 10 version 1903 or a later version.
    - Is joined to the AD DS domain controller domain.
-   - Has [Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features) enabled. If you are having trouble enabling Microsoft Defender Antivirus, see this [troubleshooting topic](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
+   - Has [Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features) enabled. If you're having trouble enabling Microsoft Defender Antivirus, see this [troubleshooting topic](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
    - Is [onboarded to Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 If you use tenant and device groups, create a dedicated device group for the test device and push it to top level.
 
 One alternative is to host your AD DS domain controller and test device as virtual machines in Microsoft Azure infrastructure services. You can use the instructions in [Phase 1 of the simulated enterprise Test Lab Guide](/microsoft-365/enterprise/simulated-ent-base-configuration-microsoft-365-enterprise#phase-1-create-a-simulated-intranet), but skip the creation of the APP1 virtual machine.
 
-Here is the result.
+Here's the result.
 
 :::image type="content" source="/defender/media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png" alt-text="A diagram of the evaluation environment using the simulated enterprise Test Lab Guide." lightbox="/defender/media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png":::
 
@@ -209,7 +219,7 @@ To see the Automated Incident and Response feature in action, keep the notepad.e
 > [!NOTE]
 > Before we walk you through this simulation, watch the following video to see how incident management helps you piece the related alerts together as part of the investigation process, where you can find it in the portal, and how it can help you in your security operations:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Bzwz?]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=208a5393-24b6-4f17-8523-e78bdb5a34cc?]
 
 Switching to the SOC analyst point of view, you can now start to investigate the attack in the Microsoft Defender portal.
 
@@ -241,7 +251,7 @@ To view the incident:
 
    In the **Incident** page, you can see all the alerts and information related to the incident. The information includes the entities and assets that are involved in the alert, the detection source of the alerts (such as Microsoft Defender for Identity or Microsoft Defender for Endpoint), and the reason they were linked together. Reviewing the incident alert list shows the progression of the attack. From this view, you can see and investigate the individual alerts.
 
-   You can also click **Manage incident** from the right-hand menu, to tag the incident, assign it to yourself, and add comments.
+   You can also select **Manage incident** from the right-hand menu, to tag the incident, assign it to yourself, and add comments.
 
 #### Review generated alerts
 
@@ -256,7 +266,7 @@ Let's look at some of the alerts generated during the simulated attack.
 
 Advanced attackers use sophisticated and stealthy methods to persist in memory and hide from detection tools. One common technique is to operate from within a trusted system process rather than a malicious executable, making it hard for detection tools and security operations to spot the malicious code.
 
-To allow the SOC analysts to catch these advanced attacks, deep memory sensors in Microsoft Defender for Endpoint provide our cloud service with unprecedented visibility into a variety of cross-process code injection techniques. The following figure shows how Defender for Endpoint detected and alerted on the attempt to inject code to <i>notepad.exe</i>.
+To allow the SOC analysts to catch these advanced attacks, deep memory sensors in Microsoft Defender for Endpoint provide our cloud service with unprecedented visibility into various cross-process code injection techniques. The following figure shows how Defender for Endpoint detected and alerted on the attempt to inject code to <i>notepad.exe</i>.
 
 :::image type="content" source="/defender/media/mtp/fig7.png" alt-text="A screenshot of an example of the alert for injection of a potentially malicious code." lightbox="/defender/media/mtp/fig7.png":::
 
@@ -318,7 +328,7 @@ Select the user name to open the user's profile page where further investigation
 > [!NOTE]
 > Before we walk you through this simulation, watch the following video to get familiar with what automated self-healing is, where to find it in the portal, and how it can help in your security operations:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4BzwB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-562206a4bc23]
 
 Navigate back to the incident in the Microsoft Defender portal. The **Investigations** tab in the **Incident** page shows the automated investigations that were triggered by Microsoft Defender for Identity and Microsoft Defender for Endpoint. The screenshot below displays only the automated investigation triggered by Defender for Endpoint. By default, Defender for Endpoint automatically remediates the artifacts found in the queue, which requires remediation.
 
@@ -327,7 +337,7 @@ Navigate back to the incident in the Microsoft Defender portal. The **Investigat
 Select the alert that triggered an investigation to open the **Investigation details** page. You'll see the following details:
 
 - Alert(s) that triggered the automated investigation.
-- Impacted users and devices. If indicators are found on additional devices, these additional devices will be listed as well.
+- Impacted users and devices. If indicators are found on other devices, these other devices will be listed as well.
 - List of evidence. The entities found and analyzed, such as files, processes, services, drivers, and network addresses. These entities are analyzed for possible relationships to the alert and rated as benign or malicious.
 - Threats found. Known threats that are found during the investigation.
 
@@ -346,7 +356,7 @@ After the investigation is complete and confirmed to be remediated, you resolve 
 
 From the **Incident** page, select **Manage incident**. Set the status to **Resolve incident** and select **True alert** for the classification and **Security testing** for the determination.
 
-:::image type="content" source="/defender/media/mtp/fig16.png" alt-text="A screenshot of an example of the incidents page with the open Manage incident panel where you can click the switch to resolve incident." lightbox="/defender/media/mtp/fig16.png":::
+:::image type="content" source="/defender/media/mtp/fig16.png" alt-text="A screenshot of an example of the incidents page with the open Manage incident panel where you can select the switch to resolve incident." lightbox="/defender/media/mtp/fig16.png":::
 
 When the incident is resolved, it resolves all of the associated alerts in the Microsoft Defender portal and the related portals.
 
@@ -354,7 +364,7 @@ This wraps up attack simulations for incident analysis, automated investigation,
 
 <a name="step-2"></a>
 
-## Step 2. Prioritize incidents
+## Step 3. Prioritize incidents
 
 You get to the incident queue from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. Here's an example.
 
@@ -376,7 +386,7 @@ For more information, see [Prioritize incidents](incident-queue.md).
 
 <a name="step-3"></a>
 
-## Step 3. Manage incidents
+## Step 4. Manage incidents
 
 You can manage incidents from the **Manage incident** pane for an incident. Here's an example.
 
@@ -417,7 +427,7 @@ For more information, see [Manage incidents](manage-incidents.md).
 
 <a name="step-4"></a>
 
-## Step 4. Examine automated investigation and response with the Action center
+## Step 5. Examine automated investigation and response with the Action center
 
 Depending on how automated investigation and response capabilities are configured for your organization, remediation actions are taken automatically or only upon approval by your security operations team. All actions, whether pending or completed, are listed in the [Action center](m365d-action-center.md), which lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
@@ -436,14 +446,14 @@ For more information, see [Automated investigation and response](m365d-autoir.md
 
 <a name="step-5"></a>
 
-## Step 5. Use advanced hunting
+## Step 6. Use advanced hunting
 
 > [!NOTE]
 > Before we walk you through the advanced hunting simulation, watch the following video to understand advanced hunting concepts, see where you can find it in the portal, and know how it can help you in your security operations.
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Bp7O]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=197cbd32-a06e-4efc-ade0-0c9875d7b105]
 
 
 If the [optional fileless PowerShell attack simulation](pilot-deploy-investigate-respond.md#simulate-an-attack-with-an-isolated-domain-controller-and-client-device-optional) were a real attack that had already reached the credential access stage, you can use advanced hunting at any point in the investigation to proactively search through events and records in the network using what you already know from the generated alerts and affected entities. 
@@ -464,17 +474,17 @@ There's a single internal mailbox and device required for this simulation. You'l
 
 3. Configure a test device:
 
-    a. Make sure you are using Windows 10 version 1903 or later version.
+    a. Make sure you're using Windows 10 version 1903 or later version.
 
     b. Join the test device to the test domain.
 
-    c. [Turn on Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features). If you are having trouble enabling Microsoft Defender Antivirus, see [this troubleshooting topic](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
+    c. [Turn on Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features). If you're having trouble enabling Microsoft Defender Antivirus, see [this troubleshooting topic](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
 
     d. [Onboard to Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### Run the simulation
 
-1. From an external email account, send an email to the mailbox identified in step 2 of the hunting environment requirements section. Include an attachment that will be allowed through any existing email filter policies. This file does not need to be malicious or an executable. Suggested file types are <i>.pdf</i>, <i>.exe</i> (if allowed), or an Office document type such as a Word file.
+1. From an external email account, send an email to the mailbox identified in step 2 of the hunting environment requirements section. Include an attachment that will be allowed through any existing email filter policies. This file doesn't need to be malicious or an executable. Suggested file types are <i>.pdf</i>, <i>.exe</i> (if allowed), or an Office document type such as a Word file.
 
 2. Open the sent email from the device configured as defined in step 3 of the hunting environment requirements section. Either open the attachment or save the file to the device.
 
@@ -496,7 +506,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
    1. Change the time frame of the query to the last 24 hours. Assuming the email you sent when you ran the simulation above was in the past 24 hours, otherwise change the time frame as needed.
 
-   1. Select **Run query**. You may have differing results depending on your pilot environment.
+   1. Select **Run query**. You might have differing results depending on your pilot environment.
 
       > [!NOTE]
       > See the next step for filtering options to limit data return.
@@ -506,14 +516,14 @@ There's a single internal mailbox and device required for this simulation. You'l
         > [!NOTE]
         > Advanced hunting displays query results as tabular data. You can also opt to view the data in other format types such as charts.
 
-   1. Look at the results and see if you can identify the email you opened. It may take up to two hours for the message to show up in advanced hunting. To narrow down the results, you can add the **where** condition to your query to only look for emails that have "yahoo.com" as their SenderMailFromDomain. Here's an example.
+   1. Look at the results and see if you can identify the email you opened. It might take up to two hours for the message to show up in advanced hunting. To narrow down the results, you can add the **where** condition to your query to only look for emails that have "yahoo.com" as their SenderMailFromDomain. Here's an example.
 
       ```console
       EmailEvents
       | where SenderMailFromDomain == "yahoo.com"
       ```
 
-   1. Click the resulting rows from the query so you can inspect the record.
+   1. Select the resulting rows from the query so you can inspect the record.
 
       :::image type="content" source="/defender/media/advanced-hunting-incident-response-try-2.png" alt-text="A screenshot of the Inspect record section of the Advanced Hunting page in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-incident-response-try-2.png":::
 
@@ -528,7 +538,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
 5. Next, include the information about the attachment (such as: file name, hashes) to your result set. To do so, join the **EmailAttachmentInfo** table. The common fields to use for joining, in this case are **NetworkMessageId** and **RecipientObjectId**.
 
-   The following query also includes an additional line "| **project-rename EmailTimestamp=Timestamp**" that'll help identify which timestamp was related to the email versus timestamps related to file actions that you'll add in the next step.
+   The following query also includes an additional line "| **project-rename EmailTimestamp=Timestamp**" that will help identify which timestamp was related to the email versus timestamps related to file actions that you'll add in the next step.
 
    ```console
    EmailEvents
@@ -550,7 +560,7 @@ There's a single internal mailbox and device required for this simulation. You'l
    | where ActionType == "FileCreated"
    ```
 
-   You've now created a query that'll identify all inbound emails where the user opened or saved the attachment. You can also refine this query to filter for specific sender domains, file sizes, file types, and so on.
+   You've now created a query that will identify all inbound emails where the user opened or saved the attachment. You can also refine this query to filter for specific sender domains, file sizes, file types, and so on.
 
 7. Functions are a special kind of join, which let you pull more TI data about a file like its prevalence, signer and issuer info, etc. To get more details on the file, use the **FileProfile()** function enrichment:
 
@@ -571,12 +581,12 @@ Once you have created a query that identifies information that you'd like to **g
 
 Custom detections will run the query according to the frequency you set, and the results of the queries will create security alerts, based on the impacted assets you choose. Those alerts will be correlated to incidents and can be triaged as any other security alert generated by one of the products.
 
-1. On the query page, remove lines 7 and 8 that were added in step 7 of the Go hunting instructions and click **Create detection rule**.
+1. On the query page, remove lines 7 and 8 that were added in step 7 of the Go hunting instructions and select **Create detection rule**.
 
    :::image type="content" source="/defender/media/advanced-hunting-incident-response-try-3.png" alt-text="A screenshot of the Query editing section of the Advanced Hunting page in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-incident-response-try-3.png":::
 
    > [!NOTE]
-   > If you click **Create detection rule** and you have syntax errors in your query, your detection rule won't be saved. Double-check your query to ensure there's no errors.
+   > If you select **Create detection rule** and you have syntax errors in your query, your detection rule won't be saved. Double-check your query to ensure there's no errors.
 
 2. Fill in the required fields with the  information that will allow the security team to understand the alert, why it was generated, and what actions you expect them to take.
 
@@ -592,7 +602,7 @@ Custom detections will run the query according to the frequency you set, and the
 
    :::image type="content" source="/defender/media/mtp/fig25.png" alt-text="A screenshot of the Actions page in the Microsoft Defender portal." lightbox="/defender/media/mtp/fig25.png":::
 
-5. Select the scope for the alert rule. Since this query involves devices, the device groups are relevant in this custom detection according to Microsoft Defender for Endpoint context. When creating a custom detection that does not include devices as impacted entities, scope does not apply.
+5. Select the scope for the alert rule. Since this query involves devices, the device groups are relevant in this custom detection according to Microsoft Defender for Endpoint context. When creating a custom detection that doesn't include devices as impacted entities, scope doesn't apply.
 
    :::image type="content" source="/defender/media/mtp/fig26.png" alt-text="A screenshot of the Scope page in the Microsoft Defender portal." lightbox="/defender/media/mtp/fig26.png":::
 
@@ -601,7 +611,7 @@ Custom detections will run the query according to the frequency you set, and the
 
 6. Select **Create**. Then, select **Custom detection rules** from the navigation panel.
 
-   :::image type="content" source="/defender/media/mtp/fig27a.png" alt-text="A screenshot of the Custom detection rules rules option in the Microsoft Defender portal." lightbox="/defender/media/mtp/fig27a.png":::
+   :::image type="content" source="/defender/media/mtp/fig27a.png" alt-text="A screenshot of the Custom detection rules option in the Microsoft Defender portal." lightbox="/defender/media/mtp/fig27a.png":::
 
    :::image type="content" source="/defender/media/mtp/fig27b.png" alt-text="A screenshot of the page displaying the detection rules and execution details in the Microsoft Defender portal." lightbox="/defender/media/mtp/fig27b.png":::
 

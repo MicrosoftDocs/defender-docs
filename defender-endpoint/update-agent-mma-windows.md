@@ -3,10 +3,10 @@ title: Update your agent on devices for Microsoft Defender for Endpoint
 description: Learn about your options for updating or replacing your MMA agent on Windows devices for Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 10/05/2023
+ms.date: 03/26/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -74,7 +74,7 @@ A new agent was released in April 2022 for Windows Server 2012 R2 and Windows Se
 >
 > Devices running Windows Server 2012 R2 or Windows Server 2016 should be upgraded to the [new, unified solution](application-deployment-via-mecm.md) so that they no longer require the use of MMA. 
 >
-> [AMA](/azure/azure-monitor/agents/agents-overview) cannot be used as a substitute for Defender for Endpoint. 
+> [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) cannot be used as a substitute for Defender for Endpoint. 
 
 ## See also
 

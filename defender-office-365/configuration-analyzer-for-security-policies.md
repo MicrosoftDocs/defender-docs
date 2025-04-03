@@ -189,7 +189,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 
 When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the ::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the entries by a specific **Modified by**, **Setting name**, or **Type** value.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the entries by a specific **Modified by**, **Setting name**, or **Type** value.
 
 To export the entries shown on the **Configuration drift analysis and history** tab to a .csv file, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
 

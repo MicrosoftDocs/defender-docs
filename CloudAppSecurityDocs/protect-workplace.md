@@ -96,7 +96,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
    > - The first connection can take up to 4 hours to get all users and their activities.
    > - The activities that will show are the activities that were generated from the moment the connector is connected.
    > - After the connector's **Status** is marked as **Connected**, the connector is live and works.
-   > - Before deleting the app in Workplace, make sure to disconnect the connector in the Defender for Cloud Apps portal.
+   > - Before deleting the app in Workplace, make sure to disconnect the connector in Defender for Cloud Apps.
 
 ## Next steps
 

@@ -2,8 +2,8 @@
 title: Use Microsoft Defender for Endpoint sensitivity labels to protect your data and prioritize security incident response
 description: Learn how to use Defender for Endpoint sensitivity labels to protect, prioritize, and investigate incidents that involve data loss, dlp, security incidents.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender for Endpoint sensitivity labels protect and prioritize incident response
@@ -27,7 +27,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 A typical advanced persistent threat lifecycle (or APT) involves some data exfiltration -- the point at which data is *taken* from the organization. In those situations, sensitivity labels can tell security operations where to start by spelling out what data is highest priority to protect.
 

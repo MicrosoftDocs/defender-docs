@@ -44,7 +44,7 @@ Unknown and unmanaged devices introduce significant risks to your network - whet
 - Reduce the attack surface by identifying and assessing vulnerabilities, and detecting configuration gaps.
 
 Watch this video for a quick overview of how to assess and onboard unmanaged devices that Defender for Endpoint discovered.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4RwQz]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a101261e-87ab-4aa6-a1e1-c1463e797ca2]
 
 With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
 
@@ -98,7 +98,7 @@ To address the challenge of gaining enough visibility to locate, identify, and s
 - **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal (Preview) to secure:
 
     - OT devices, such as servers or packaging systems. For more information, see [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started).
-    - Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs). For more information, see [Enable Enterprise IoT security with Defender for Endpoint](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint).
+    - Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs). For more information, see [Get started with Enterprise IoT security](/defender-for-iot/enterprise-iot-get-started).
 
 ## Vulnerability assessment on discovered devices
 

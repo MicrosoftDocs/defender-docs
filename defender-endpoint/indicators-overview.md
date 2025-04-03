@@ -47,7 +47,7 @@ Organizations can create indicators that define the detection, prevention, and e
 
 This video shows a walkthrough of creating and adding indicators:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qLVw]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a4469df9-4f31-4ed0-9577-8b26ac5293ad]
 
 ### About Microsoft indicators
 

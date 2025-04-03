@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 11/18/2024
+ms.date: 03/10/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -42,10 +42,14 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 - [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
 - [Understand authentication in Security Copilot](/security-copilot/authentication)
 - [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
+- [Responsible AI](/copilot/security/responsible-ai-overview-security-copilot)
+- [FAQs on Responsible AI](/copilot/security/rai-faqs-security-copilot)
 
 ## Microsoft Copilot integration in Microsoft Defender
 
 [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
+
+Furthermore, Security Copilot operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
 
 ## Key features
 
@@ -85,7 +89,7 @@ Copilot helps security teams quickly assess and understand suspicious files with
 
 #### Investigate identities immediately
 
-Quickly assess a user’s risk by generating an [identity summary](security-copilot-defender-identity-summary.md) with Copilot. Identify when an identity is at risk or suspicious with contextualized information about a user’s role and role changes, sign in behaviors, devices signed in to, and relevant contact information.
+Quickly assess a user's risk by generating an [identity summary](security-copilot-defender-identity-summary.md) with Copilot. Identify when an identity is at risk or suspicious with contextualized information about a user's role and role changes, sign in behaviors, devices signed in to, and relevant contact information.
 
 :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph.png":::
 

@@ -45,11 +45,13 @@ Our approach to information protection can be split into the following phases th
 1. **Define which information is sensitive**: Before looking for sensitive information in your files, you first need to define what counts as sensitive for your organization. As part of our [data classification service](dcs-inspection.md), we offer over 100 out-of-the-box sensitive information types, or you can [create your own](/microsoft-365/compliance/create-a-custom-sensitive-information-type) to suit to your company policy. **Defender for Cloud Apps is natively integrated with Microsoft Purview Information Protection** and the same sensitive types and labels are available throughout both services. So when you want to define sensitive information, head over to the Microsoft Purview Information Protection portal to create them, and once defined they'll be available in Defender for Cloud Apps. You can also use advanced classifications types such as fingerprint or Exact Data Match (EDM).
 
     For those of you that have already done the hard work of identifying sensitive information and applying the appropriate sensitivity labels, you can use those labels in your policies without having to scan the contents again.
+
 1. **Enable Microsoft Information Protection integration**
     1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
     1. Under **Information Protection**,  go to **Microsoft Information Protection**. Select **Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings**.
 
     For more information, see [Microsoft Purview Information Protection integration](azip-integration.md).
+
 1. **Create policies to identify sensitive information in files**: Once you know the kinds of information you want to protect, it's time to create policies to detect them. Start by creating the following policies:
 
     **File policy**  
@@ -77,7 +79,6 @@ Our approach to information protection can be split into the following phases th
     1. Under **Inspection method**, choose and configure one of the following classification services:
 
         - **[Data Classification Services](dcs-inspection.md)**: Uses classification decisions you've made across Microsoft 365, Microsoft Purview Information Protection, and Defender for Cloud Apps to provide a unified labeling experience. This is the preferred content inspection method as it provides a consistent and unified experience across Microsoft products.
-        - **[Built-in DLP](content-inspection-built-in.md)**: Inspects files for sensitive information using our built-in DLP content inspection engine.
 
     1. For highly sensitive files, select **Create an alert** and choose the alerts you require, so that you're informed when there are files with unprotected sensitive information in your organization.
     1. Select **Create**.
@@ -115,7 +116,7 @@ In conclusion, managing sensitive information in this way ensures that data save
 ## See also
 
 > [!div class="nextstepaction"]
-> [Understanding file data and filters](file-filters.md)
+> [Understanding file data and policies](data-protection-policies.md)
 
 > [!div class="nextstepaction"]
 > [File policies](data-protection-policies.md)

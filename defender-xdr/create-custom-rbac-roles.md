@@ -3,7 +3,7 @@ title: Create custom roles with Microsoft Defender XDR Unified role-based access
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: diannegali
-author: siosulli
+author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,24 +12,24 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 10/31/2024
+ms.date: 11/17/2024
 ms.reviewer: 
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365 P2
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud
+- Microsoft Security Exposure Management
+- Microsoft Defender for Cloud Apps
+#customer intent: As a security administrator, I want to create custom roles in Microsoft Defender XDR Unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
 ---
 
 # Create custom roles with Microsoft Defender XDR Unified RBAC
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
-- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Security Exposure Management](/security-exposure-management/)
 
 ## Create a custom role
 

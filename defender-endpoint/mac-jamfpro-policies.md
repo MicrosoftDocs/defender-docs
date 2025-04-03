@@ -2,10 +2,10 @@
 title: Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
 description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
-ms.reviewer: yongrhee
+ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -107,7 +107,7 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 
 ## Step 3: Configure Microsoft Defender for Endpoint settings
 
-In this step, we go over *Preferences* so you can configure anti-malware and EDR policies using Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)) or Jamf.
+In this step, we go over *Preferences* so you can configure anti-malware and EDR policies using the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) or Jamf.
 
 > [!IMPORTANT]
 > Microsoft Defender for Endpoint Security Settings Management policies take precedence over Jamf set (and other 3rd party MDM) policies.

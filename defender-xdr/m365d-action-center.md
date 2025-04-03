@@ -9,7 +9,7 @@ ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 ms.date: 5/9/2024
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -19,12 +19,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand how to view and approve automated investigation and remediation tasks in the Action center.
 ---
 
 # The Action center
-
-**Applies to:**
-- Microsoft Defender XDR
 
 The Action center provides a "single pane of glass" experience for incident and alert tasks such as:
 

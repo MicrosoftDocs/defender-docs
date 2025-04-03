@@ -4,7 +4,7 @@ description: Defender for Endpoint on Linux now supports ARM devices. Learn how 
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb 
-ms.date: 12/09/2024
+ms.date: 03/12/2025
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: linux
@@ -24,8 +24,10 @@ ai-usage: human-only
 
 # Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+**Applies to:**
+
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Overview of Defender for Endpoint on Linux for ARM64-based devices
 
@@ -43,15 +45,27 @@ Initially, the following Linux distributions are supported in preview:
 
 - Ubuntu 20.04 ARM64
 - Ubuntu 22.04 ARM64
+- Ubuntu 24.04 ARM64
+
 - Amazon Linux 2 ARM64
 - Amazon Linux 2023 ARM64
+
+- RHEL 8.x ARM64
+
+- RHEL 9.x ARM64
+
+- Oracle Linux 8.x ARM64
+
+- Oracle Linux 9.x ARM64
+
+- SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
 
 > [!NOTE]
 > Support for more Linux distributions is planned as part of this preview program.
 
-The installation procedures in this article install the agent version `101.24102.0002` from the insiders-slow channel on the ARM64-based device. (See [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md).) 
-
 ## Deploy Defender for Endpoint on Linux for ARM64-based devices
+
+The deployment procedures in this article installs the agent version `101.24102.0003` from the insiders-slow channel on the ARM64-based device. (See [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md).) 
 
 You can choose from several methods to deploy Defender for Endpoint on Linux to your ARM64-based device:
 
@@ -62,12 +76,12 @@ You can choose from several methods to deploy Defender for Endpoint on Linux to 
 
 ### Before you begin
 
-- Make sure the [prerequisites](microsoft-defender-endpoint-linux.md#prerequisites) are met for Defender for Endpoint on Linux
+- Make sure the [prerequisites](mde-linux-prerequisites.md) are met for Defender for Endpoint on Linux.
 
 - To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
 
    - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering; or
-   - Microsoft Defender for Endpoint Server
+   - Microsoft Defender for Endpoint for servers
 
 ### Deploy using the installer script
 
@@ -351,7 +365,7 @@ See these articles:
 
 ## Troubleshoot deployment issues
 
-If you run into any issues deploying Defender for Endpoint on Linux to your ARM64-based devices, help is available. First, review our list of common issues and how to resolve them. If the problem persists, contact us.
+If you run into any issues deploying Defender for Endpoint on Linux to your ARM64-based devices, help is available. First, review our list of common issues and how to resolve them. If the problem persists, [contact us](#contact-us-if-you-need-help).
 
 ### Common issues and how to resolve them
 

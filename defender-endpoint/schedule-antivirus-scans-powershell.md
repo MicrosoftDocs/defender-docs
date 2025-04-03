@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 10/18/2021
+ms.date: 03/26/2025
 ms.reviewer: pauhijbr, ksarens
 manager: deniseb
 ms.subservice: ngp
@@ -22,9 +22,8 @@ search.appverid: met150
 
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender for Business
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**

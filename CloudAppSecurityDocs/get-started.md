@@ -25,10 +25,10 @@ Microsoft Defender for Cloud Apps is a security tool and therefore doesn't requi
 
 Microsoft Defender for Cloud Apps depends on the following Microsoft Entra ID applications to function properly. Do not disable these applications in Microsoft Entra ID:
 
-- Microsoft Defender for Cloud Apps - APIs
-- Microsoft Defender for Cloud Apps - Customer Experience
-- Microsoft Defender for Cloud Apps - Information Protection
-- Microsoft Defender for Cloud Apps - MIP Server
+- Microsoft Defender for Cloud Apps - APIs (ID: 972bb84a-1d27-4bd3-8306-6b8e57679e8c)
+- Microsoft Defender for Cloud Apps - Customer Experience (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
+- Microsoft Defender for Cloud Apps - Information Protection (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
+- Microsoft Defender for Cloud Apps - MIP Server (ID: 0858ddce-8fca-4479-929b-4504feeed95e)
 
 ## Access Defender for Cloud Apps
 
@@ -61,7 +61,11 @@ After you connect an app, you can gain deeper visibility so you can investigate 
 
 **How to page**: [Protect sensitive information with DLP policies](policies-information-protection.md)
 
-**Recommended task**: Enable file monitoring and create file policies
+**Recommended tasks**
+
+-  Enable file monitoring and create file policies
+
+- To enable File monitoring of Microsoft 365 files, you are required to use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
 1. Under **Information Protection**, select **Files**.
@@ -70,8 +74,6 @@ After you connect an app, you can gain deeper visibility so you can investigate 
 1. Select the required settings and then select **Save**.
 1. In [Step 3](#step-3-control-cloud-apps-with-policies), create [File policies](data-protection-policies.md) to meet your organizational requirements.
 
-> [!TIP]
-> You can view files from your connected apps by browsing to **Cloud Apps** > **Files** in the Microsoft Defender Portal.
 
 **Migration recommendation**  
 We recommend using Defender for Cloud Apps sensitive information protection in parallel with your current Cloud Access Security Broker (CASB) solution. Start by [connecting the apps you want to protect](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md) to Microsoft Defender for Cloud Apps. Since API connectors use out-of-band connectivity, no conflict will occur. Then progressively migrate your [policies](control-cloud-apps-with-policies.md) from your current CASB solution to Defender for Cloud Apps.
@@ -160,7 +162,7 @@ Now the risk scores given to discovered apps are configured precisely according 
 Some features work best when they're customized to your needs.
 Provide a better experience for your users with your own email templates. Decide what notifications you receive and customize your risk score metric to fit your organization's preferences.
 
-## Step 7: Organize the data according to your needs
+## Step 6: Organize the data according to your needs
 
 **How to page**: [Working with IP ranges and tags](ip-tags.md)
 

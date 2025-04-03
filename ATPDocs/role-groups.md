@@ -15,6 +15,9 @@ Users that are already [Global Administrators](/entra/identity/role-based-access
 
 For other users, enable and use Microsoft 365 role-based access control (RBAC) to create custom roles and to support more Entra ID roles such as Security operator or Security Reader by default to manage access to Defender for Identity.
 
+> [!IMPORTANT]
+>Starting March 2, 2025, new Microsoft Defender for Identity tenants can only configure permissions through Microsoft Defender XDR [Unified Role-Based Access Control (RBAC)](/defender-xdr/manage-rbac). Tenants with roles assigned or exported before this date will retain their current configuration.
+
 When creating your custom roles, make sure that you apply the permissions listed in the following table:
 
 |Defender for Identity access level | Minimum required Microsoft 365 unified RBAC permissions      |
@@ -28,7 +31,7 @@ For more information, see [Custom roles in role-based access control for Microso
 > [!NOTE]
 > Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data. This content adheres to existing Defender for Cloud Apps permissions.
 > 
-> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in the Microsoft Defender for Cloud Apps portal, these permissions do not carry over and you will have to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
+> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in Microsoft Defender for Cloud Apps, these permissions do not carry over and you will have to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
 
 ## Required permissions Defender for Identity in Microsoft Defender XDR
 
@@ -41,14 +44,16 @@ The following table details the specific permissions required for Defender for I
 | ------------------- | ---------------------- |
 | **Onboard Defender for Identity** (create workspace)   |  [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) |
 | **Configure Defender for Identity settings**      | One of the following Microsoft Entra roles:<br>- [Security Administrator](/entra/identity/role-based-access-control/permissions-reference)<br>- [Security Operator](/entra/identity/role-based-access-control/permissions-reference)<br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Authorization and settings/Security settings/Read`<br/>- `Authorization and settings/Security settings/All permissions`<br/>- `Authorization and settings/System settings/Read`<br/>- `Authorization and settings/System settings/All permissions` |
-|**View Defender for Identity settings**      | One of the following Microsoft Entra roles:<br>- [Global Reader](/entra/identity/role-based-access-control/permissions-reference)<br>- [Security Reader](/entra/identity/role-based-access-control/permissions-reference) <br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Authorization and settings/Security settings/Read` <br/>- `Authorization and settings/System settings/Read`|
+|**View Defender for Identity settings**      | Microsoft Entra roles:<br>- [Security Reader](/entra/identity/role-based-access-control/permissions-reference) <br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Authorization and settings/Security settings/Read` <br/>- `Authorization and settings/System settings/Read`|
 |**Manage Defender for Identity security alerts and activities**                           | One of the following Microsoft Entra roles:<br>- [Security Operator](/entra/identity/role-based-access-control/permissions-reference)<br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Security operations/Security data/Alerts (Manage)`<br/>- `Security operations/Security data /Security data basics (Read)` |
 | **View Defender for Identity security assessments** <br> (now part of Microsoft Secure Score) | [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> The following [Unified RBAC permissions](#unified-role-based-access-control-rbac): `Security operations/Security data /Security data basics (Read)`|
 |**View the Assets / Identities page**|[Permissions](/defender-cloud-apps/manage-admins) to access Defender for Cloud Apps <br> **Or** <br> One of the Microsoft Entra roles required by [Microsoft Defender XDR](/microsoft-365/security/defender/m365d-permissions) |
 |**Perform Defender for Identity response actions** |A [custom role](/microsoft-365/security/defender/create-custom-rbac-roles) defined with permissions for **Response (manage)**<br> **Or** <br> One of the following Microsoft Entra roles:<br>- [Security Operator](/entra/identity/role-based-access-control/permissions-reference) |
 
-
 ## Defender for Identity security groups
+
+ > [!IMPORTANT]
+> Starting March 2, Defender for Identity will no longer create Microsoft Entra ID security groups. Tenants can still configure the same permissions through  Microsoft Defender XDR [Unified Role-Based Access Control (RBAC)](/defender-xdr/manage-rbac)
 
 Defender for Identity provides the following security groups to help manage access to Defender for Identity resources:
 

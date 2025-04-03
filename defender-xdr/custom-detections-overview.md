@@ -18,6 +18,9 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: overview
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.date: 06/27/2024
 ---
 
@@ -26,10 +29,8 @@ ms.date: 06/27/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
-With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured endpoints. This is made possible by customizable detection rules that automatically trigger alerts and response actions.
+With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured endpoints. Custom detections are customizable detection rules that automatically trigger alerts and response actions.
 
 Custom detections work with [advanced hunting](advanced-hunting-overview.md), which provides a powerful, flexible query language that covers a broad set of event and system information from your network. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
@@ -38,10 +39,12 @@ Custom detections provide:
 - Alerts for rule-based detections built from advanced hunting queries
 - Automatic response actions
 
+Optimizing your queries in custom detection rules is important in avoiding time-outs and ensuring efficiency. There are several resources available that provide guidance on optimizing your queries in  [Advanced hunting query best practices](advanced-hunting-best-practices.md).
+
 ## See also
 
 - [Create and manage custom detection rules](custom-detection-rules.md)
-- [Advanced hunting overview](advanced-hunting-overview.md)
+- [Advanced hunting query best practices](advanced-hunting-best-practices.md)
 - [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md)
 - [Microsoft Graph security API for custom detections](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections)
 

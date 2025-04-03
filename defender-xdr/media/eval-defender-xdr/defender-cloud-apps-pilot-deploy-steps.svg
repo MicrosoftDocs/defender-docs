@@ -262,7 +262,7 @@
 		</g>
 		<g id="shape1022-93" v:mID="1022" v:groupContext="shape" v:layerMember="1;2" transform="translate(23.4012,-115.289)">
 			<title>Sheet.1022</title>
-			<desc>Connect to the Defender for Cloud Apps portal</desc>
+			<desc>Connect to Defender for Cloud Apps</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(23000):26"/>
 			</v:userDefs>

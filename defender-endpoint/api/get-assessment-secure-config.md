@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/06/2025
+ms.date: 01/23/2025
 ---
 
 # Export secure configuration assessment per device
@@ -29,7 +29,7 @@ ms.date: 01/06/2025
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Returns all of the configurations and their status, on a per-device basis.
 
@@ -238,12 +238,16 @@ Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerab
 GET /api/machines/SecureConfigurationsAssessmentExport
 ```
 
-### 2.4 Properties
+### 2.4 Parameters
+
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
+
+### 2.5 Properties
 
 > [!NOTE]
 >
 > - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are only valid for 1 hour.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
 
 
@@ -257,15 +261,15 @@ Export files|array[string]|A list of download URLs for files holding the current
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
-### 2.5 Examples
+### 2.6 Examples
 
-#### 2.5.1 Request example
+#### 2.6.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentExport
 ```
 
-#### 2.5.2 Response example
+#### 2.6.2 Response example
 
 ```json
 {

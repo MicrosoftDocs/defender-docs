@@ -44,7 +44,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
 ## What do you need to know before you begin?
 
-- In Microsoft 365 operated by 21Vianet, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
+- In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Quarantine policies** page, use <https://security.microsoft.com/quarantinePolicies>.
 
@@ -515,6 +515,9 @@ Even if you don't customize quarantine notifications for different languages, se
 - **Specify sender address**: Select an existing user for the sender email address of quarantine notifications. The default sender is `quarantine@messaging.microsoft.com`.
 
 - **Use my company logo**: Select this option to replace the default Microsoft logo that's used at the top of quarantine notifications. Before you do this step, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](/Microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
+
+  > [!TIP]
+  > PNG or JPEG logos are the most compatible in quarantine notifications in all versions of Outlook. For the best compatibility with SVG logos in quarantine notifications, use a URL link to the SVG logo instead of directly uploading the SVG file when you customize the Microsoft 365 theme.
 
   A custom logo in a quarantine notification is shown in the following screenshot:
 

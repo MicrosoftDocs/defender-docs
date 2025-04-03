@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.collection:
 - tier2
 - m365-security
-ms.date: 6/14/2023
+ms.date: 02/13/2025
 ms.localizationpriority: medium
 search.appverid:
   - MET150
 description: Learn how to recognize and remediate the illicit consent grant attacks in Microsoft 365.
 ms.custom:
   - seo-marvel-apr2020
-  - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
+  - no-azure-ad-ps-ref
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -35,7 +34,7 @@ An illicit consent grant attack presumes the entity calling the information is a
 - The attacker then uses a phishing attack or injects illicit code into a trusted website to trick users into granting the app consent to access their data.
 - After a user grants consent to the illicit application, it has account-level access to data without the need for an account in the organization.
 
-Normal remediation steps (for example, resetting passwords or requiring multi-factor authentication (MFA)) aren't effective against this type of attack, because the illict apps are external to the organization.
+In an illicit consent grant attack, the attacker creates a registered application in Microsoft Entra ID that requests access to data such as contact information, email, or documents. The attacker then tricks an end user into granting that application consent to access their data either through a phishing attack, or by injecting illicit code into a trusted website. After the illicit application is granted consent, it has account-level access to data without the need for an organizational account. Normal remediation steps (for example, resetting passwords or requiring multifactor authentication (MFA)) aren't effective against this type of attack, because these apps are external to the organization.
 
 This article explains the steps to identify illicit consent grants in your organization, and how to remediate them.
 
@@ -75,17 +74,17 @@ You need to search the audit log in Microsoft Purview Audit (Standard) or Audit 
 >
 > It can take from 30 minutes up to 24 hours for the corresponding audit log entry to be displayed in the search results after an event occurs.
 >
-> The length of time that an audit record is retained and searchable in the audit log depends on your Microsoft 365 subscription, and specifically the type of the license that is assigned to a specific user. For more information, see [Audit log](/purview/audit-log-search).
+> The length of time that an audit record is retained and searchable in the audit log depends on your Microsoft 365 subscription. Specifically, the licenses assigned to specific users. For more information, see [Audit log](/purview/audit-log-search).
 >
-> The value is true indicates that someone with Global Administrator access might have granted broad access to data. If this value is unexpected, take steps to [confirm an attack](#how-to-confirm-an-attack).
+> The value True indicates that someone with Global Administrator access might have granted broad access to data. If this value is unexpected, take steps to [confirm an attack](#how-to-confirm-an-attack).
 
 ## How to confirm an attack
 
 If you have one or more instances of the IOCs previously listed, you need to do further investigation to positively confirm that the attack occurred. You can use any of these three methods to confirm the attack:
 
-- Inventory applications and their permissions using the Microsoft Entra admin center. This method is thorough, but you can only check one user at a time that can be very time consuming if you have many users to check.
-- Inventory applications and their permissions using PowerShell. This is the fastest and most thorough method, with the least amount of overhead.
-- Have your users individually check their apps and permissions and report the results back to the administrators for remediation.
+- Inventory applications and their permissions using the Microsoft Entra admin center. This method is thorough, but you can only check one user at a time. This method can be very time consuming if you have many users to check.
+- Inventory applications and their permissions using PowerShell. This method is the fastest, most method, and has the least amount of overhead.
+- Have users individually check their apps and permissions and report the results back to the admins for remediation.
 
 ## Inventory apps with access in your organization
 
@@ -93,7 +92,7 @@ You have the following options to inventory apps for your users:
 
 - The Microsoft Entra admin center.
 - PowerShell.
-- Have your users individually enumerate their own application access.
+- Have users individually enumerate their own application access.
 
 ### Steps for using the Microsoft Entra admin center
 
@@ -111,20 +110,18 @@ Have your users go to <https://myapps.microsoft.com> and review their own applic
 
 ### Steps in PowerShell
 
-The simplest way to verify the Illicit Consent Grant attack is to run [Get-AzureADPSPermissions.ps1](https://gist.github.com/psignoret/41793f8c6211d2df5051d77ca3728c09), which dumps all the OAuth consent grants and OAuth apps for all users in your tenancy into one .csv file.
+The simplest way to verify the Illicit Consent Grant attack is to run [the Get-AzureADPSPermissions.ps1 script](https://gist.github.com/psignoret/41793f8c6211d2df5051d77ca3728c09), which dumps all the OAuth consent grants and OAuth apps for all users in your tenancy into one .csv file.
 
 #### Prerequisites
 
-- The Azure AD PowerShell library installed.
+- The [Microsoft Graph PowerShell SDK is installed](/powershell/microsoftgraph/installation).
 - Global Administrator permissions in the organization where the script is run.
 - Local Administrator permissions on the computer where you run the scripts.
 
 > [!IMPORTANT]
-> We ***highly recommend*** that you require multi-factor authentication on your admin account. This script supports MFA authentication.
+> We ***highly recommend*** that you require multifactor authentication on your admin account. This script supports MFA authentication.
 >
 > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-[!INCLUDE [Azure AD PowerShell deprecation note](../includes/aad-powershell-deprecation-note.md)]
 
 1. Sign in to the computer where you want to run the scripts with local administrator rights.
 
@@ -155,7 +152,7 @@ The script produces one file named Permissions.csv. Follow these steps to look f
 After you finished inventorying application access, review the **audit log** to determine the full scope of the breach. Search on the affected users, the time frames that the illicit application had access to your organization, and the permissions the app had. You can search the **audit log** in the [Microsoft Defender portal](audit-log-search-defender-portal.md).
 
 > [!IMPORTANT]
-> [Mailbox auditing](/purview/audit-mailboxes) and [Activity auditing for admins and users](/purview/audit-log-enable-disable) must have been enabled prior to the attack for you to get this information.
+> Getting this information requires [Mailbox auditing](/purview/audit-mailboxes) and [Activity auditing for admins and users](/purview/audit-log-enable-disable) to be turned on before the attack.
 
 ## How to stop and remediate an illicit consent grant attack
 

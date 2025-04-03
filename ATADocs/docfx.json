@@ -48,7 +48,13 @@
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": ["ATA"],
       "contributors_to_exclude": [
-        "beccarobins"
+        "beccarobins",
+        "rjagiewich",
+        "claydetels19",
+        "garycentric",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
       ]
     },
     "markdownEngineName": "markdig"

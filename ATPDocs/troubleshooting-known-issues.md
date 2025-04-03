@@ -224,7 +224,7 @@ Suggested possible workarounds:
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -272,8 +272,6 @@ The domain controller hasn't been granted permission to retrieve the password of
 **Resolution 1**:
 
 Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password).
-
-
 
 ### Cause 2
 
@@ -424,7 +422,7 @@ Uninstall the certificate management client, install the Defender for Identity s
 
 >[!NOTE]
 >
->The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation.
+> The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation.
 > This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
 
 ## Sensor installation fails due to network connectivity issues
@@ -446,16 +444,15 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration) and [Install the Microsoft Defender for Identity sensor](deploy/install-sensor.md).
 
 > [!IMPORTANT]
-> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
->
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that aren't present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
-## Sensor service could not run and remains in Starting state
+## Sensor service couldn't run and remains in Starting state
 
 The following errors will appear in the **System log** in **Event viewer**:
 
 - The Open procedure for service ".NETFramework" in DLL "C:\Windows\system32\mscoree.dll" failed with error code Access is denied. Performance data for this service won't be available.
-- The Open procedure for service "Lsa" in DLL "C:\Windows\System32\Secur32.dll" failed with error code Access is denied. Performance data for this service will not be available.
-- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code "The device is not ready". Performance data for this service won't be available.
+- The Open procedure for service "Lsa" in DLL "C:\Windows\System32\Secur32.dll" failed with error code Access is denied. Performance data for this service won't be available.
+- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code "The device isn't ready". Performance data for this service won't be available.
 
 The Microsoft.TriSensorError.log will contain an error similar to this:
 
@@ -487,6 +484,22 @@ The issue can come up when a Defender for Identity workspace license expires and
    - "Azure ATP workspaceName Viewers" -> "Azure ATP workspaceName Viewers - old"
    - "Azure ATP workspaceName Users" -> "Azure ATP workspaceName Users - old"
 1. Then you can go back in the [Microsoft Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
+
+## Entra Connect sensor experiences loss of database permissions following the update to Microsoft Entra Connect 
+
+**Cause:**
+
+Updating Microsoft Entra Connect may cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](troubleshooting-using-logs.md) for log locations and further details.
+
+Sample logs that may indicate the issue:
+
+`GetEntraConnectGlobalSettingsAsync GetEntraConnectGlobalSettingsAsync failed. Exception - The EXECUTE permission was denied on the object 'mms_get_globalsettings', database Contoso', schema 'dbo'`
+
+`GetEntraConnectConnectivityParametersAsync GetEntraConnectConnectivityParametersAsync failed. Exception - The EXECUTE permission was denied on the object 'mms_get_connectors', database Contoso, schema 'dbo'`
+
+**Resolution:**
+
+If permissions need to be reconfigured, please follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
 
 ## Next steps
 

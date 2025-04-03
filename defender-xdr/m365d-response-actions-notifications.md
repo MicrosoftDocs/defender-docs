@@ -1,5 +1,5 @@
 ---
-title: Get email notifications for response actions in Microsoft Defender XDR
+title: Get email notifications for response actions
 description: Set up email notifications to get notified of manual and automated response actions in Microsoft Defender XDR.
 ms.service: defender-xdr
 f1.keywords: 
@@ -16,24 +16,22 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/08/2024
+ms.date: 01/17/2025
+appliesto:
+- Microsoft Defender XDR
 ---
 
-# Get email notifications for response actions in Microsoft Defender XDR
+# Get email notifications for response actions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-You can set up Microsoft Defender XDR to notify you through email about manual or automated response actions.
+You can set up email notifications in the Microsoft Defender portal to notify you about manual or automated response actions.
 
-[Manual response actions](respond-first-incident-remediate.md#manual-remediation) are actions that security teams can use to stop threats or aid in investigation of attacks. These actions vary depending on the Defender workload enabled in your environment.
+Manual response actions are actions that security teams can use to stop threats or aid in investigation of attacks. These actions vary depending on the Defender workload enabled in your environment.
 
-[Automated response actions](respond-first-incident-remediate.md#automatic-remediation), on the other hand, are capabilities in Microsoft Defender XDR that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
+Automated response actions are capabilities in Microsoft Defender XDR that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
 
 > [!NOTE]
 > You need the **Manage security settings** permission to configure email notification settings. If you've chosen to use basic permissions management, users with Security Administrator or Global Administrator roles can configure email notifications. Likewise, if your organization is using [role-based access control (RBAC)](manage-rbac.md), you can only create, edit, delete, and receive notifications based on device groups that you are allowed to manage.
@@ -48,7 +46,7 @@ You can set up Microsoft Defender XDR to notify you through email about manual o
 
 To create a rule for email notifications, perform the following steps:
 
-1. In the navigation pane of Microsoft Defender XDR, select **Settings > Microsoft Defender XDR**.  Under **General**, select **Email notifications**. Go to the **Actions** tab.
+1. In the navigation pane of the Microsoft Defender portal, select **Settings > Microsoft Defender XDR**.  Under **General**, select **Email notifications**. Go to the **Actions** tab.
 :::image type="content" source="/defender/media/m35d-response-actions-notifications/fig1-response-notifications.png" alt-text="Actions tab in the Microsoft Defender XDR Settings page" lightbox="/defender/media/m35d-response-actions-notifications/fig1-response-notifications.png":::
 2. Select **Add notification rule**. Add a rule name and description under Basics. Both Name and Description fields accept letters, numbers, and spaces only.
 :::image type="content" source="/defender/media/m35d-response-actions-notifications/fig2-response-notifications.png" alt-text="Basics section of the add notification rule" lightbox="/defender/media/m35d-response-actions-notifications/fig2-response-notifications.png":::

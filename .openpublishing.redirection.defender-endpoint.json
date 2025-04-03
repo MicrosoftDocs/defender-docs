@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/threat-analytics-analyst-reports.md",
+      "redirect_url": "/defender-xdr/threat-analytics-analyst-reports",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "defender-endpoint/threat-analytics.md",
+      "redirect_url": "/defender-xdr/threat-analytics",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "defender-endpoint/configure-microsoft-threat-experts.md",
       "redirect_url": "/defender-xdr/defender-experts-for-hunting",
       "redirect_document_id": false
@@ -72,13 +82,48 @@
     },
     {
       "source_path": "defender-endpoint/linux-support-rhel.md",
-      "redirect_url": "/defender-endpoint/comprehensive-guidance-on-linux-deployment",
-      "redirect_document_id": true
+      "redirect_url": "/defender-endpoint/linux-installer-script",
+      "redirect_document_id": false
     },
     {
       "source_path": "defender-endpoint/pilot-deploy-defender-endpoint.md",
       "redirect_url": "/defender-xdr/pilot-deploy-defender-endpoint",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-endpoint/monthly-security-summary-report.md",
+      "redirect_url": "/defender-endpoint/threat-protection-reports#monthly-security-summary",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/run-analyzer-macos-linux.md",
+      "redirect_url": "/defender-endpoint/overview-client-analyzer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/download-client-analyzer.md",
+      "redirect_url": "/defender-endpoint/overview-client-analyzer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/schedule-antivirus-scan-in-mde.md",
+      "redirect_url": "/defender-endpoint/schedule-antivirus-scan-anacron",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/comprehensive-guidance-on-linux-deployment.md",
+      "redirect_url": "/defender-endpoint/linux-installer-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/linux-schedule-scan-mde.md",
+      "redirect_url": "/defender-endpoint/schedule-antivirus-scan-crontab",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/non-windows.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint",
+      "redirect_document_id": true
+    } 
   ]
 }
