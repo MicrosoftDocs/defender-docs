@@ -30,14 +30,13 @@ ms.date: 12/10/2024
 
 ## Indicator of compromise (IoC) overview
 
-An Indicator of compromise (IoC) is a forensic artifact, observed on the network or host. An IoC indicates - with high confidence - a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
+An Indicator of compromise (IoC) is a forensic artifact, observed on the network or host. An IoC indicates -- with high confidence -- that a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
 
 - hashes of known malware
 - signatures of malicious network traffic
 - URLs or domains that are known malware distributors
 
-To halt other compromise or prevent breaches of known IoCs, successful IoC tools should be able to detect all malicious data that is enumerated by the tool's rule set. 
-IoC matching is an essential feature in every endpoint protection solution. This capability gives SecOps the ability to set a list of indicators for detection and for blocking (prevention and response).
+To halt other compromise or prevent breaches of known IoCs, successful IoC tools should be able to detect all malicious data that is enumerated by the tool's rule set. IoC matching is an essential feature in every endpoint protection solution. This capability gives SecOps the ability to set a list of indicators for detection and for blocking (prevention and response).
 
 Organizations can create indicators that define the detection, prevention, and exclusion of IoC entities. You can define the action to be taken as well as the duration for when to apply the action, and the scope of the device group to apply it to.
 
@@ -49,7 +48,7 @@ This video shows a walkthrough of creating and adding indicators:
 
 As a general rule, you should only create indicators for known bad IoCs, or for any files / websites that should be explicitly allowed in your organization. For more information on the types of sites that Defender for Endpoint can block by default, see [Microsoft Defender SmartScreen overview](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
 
-False Positive (FP) refers to a SmartScreen false positive, such that it's considered to be malware or phish, but actually isn't a threat, so you want to create an allow policy for it.
+A false positive (FP) refers to a SmartScreen false positive. It's considered to be malware or phish, but actually isn't a threat, so you might want to create an allow policy for it.
 
 You can also help drive improvements to Microsoft's security intelligence by submitting false positives, and suspicious or known-bad IoCs for analysis. If a warning or block is incorrectly shown for a file or application, or if you suspect an undetected file is malware, you can submit a file to Microsoft for review. For more information, see [Submit files for analysis](https://www.microsoft.com/en-us/wdsi/filesubmission/).
 
