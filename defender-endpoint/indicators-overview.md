@@ -100,11 +100,11 @@ The cloud detection engine of Defender for Endpoint regularly scans collected da
 
 ## Endpoint prevention engine
 
-The same list of indicators is honored by the prevention agent. Meaning, if Microsoft Defender Antivirus is the primary antivirus configured, the matched indicators are treated according to the settings. For example, if the action is "Alert and Block", Microsoft Defender Antivirus prevents file executions (block and remediate) and a corresponding alert appears. On the other hand, if the Action is set to "Allow", Microsoft Defender Antivirus doesn't detect or block the file.
+The same list of indicators is honored by the prevention agent. Meaning, if Microsoft Defender Antivirus is the primary antivirus configured, the matched indicators are treated according to the settings. For example, if the action is *Alert and Block*, Microsoft Defender Antivirus prevents file executions (block and remediate) and a corresponding alert appears. On the other hand, if the Action is set to *Allow*, Microsoft Defender Antivirus doesn't detect or block the file.
 
 ## Automated investigation and remediation engine
 
-The automated investigation and remediation behave similarly to the endpoint prevention engine. If an indicator is set to "Allow", automated investigation and remediation ignores a "bad" verdict for it. If set to "Block", automated investigation and remediation treats it as "bad".
+The automated investigation and remediation behave similarly to the endpoint prevention engine. If an indicator is set to *Allow*, automated investigation and remediation ignores a *bad* verdict for it. If set to *Block*, automated investigation and remediation treats it as *bad*.
 
 The `EnableFileHashComputation` setting computes the file hash for the cert and file IoC during file scans. It supports IoC enforcement of hashes and certs belong to trusted applications. It's concurrently enabled with the allow or block file setting. `EnableFileHashComputation` is enabled manually through Group Policy, and is disabled by default.
 
@@ -139,8 +139,8 @@ The table below shows exactly which actions are available per indicator (IoC) ty
 
 The functionality of pre-existing IoCs won't change. However, the indicators were renamed to match the current supported response actions:
 
-- The "alert only" response action was renamed to "audit" with the generated alert setting enabled.
-- The "alert and block" response was renamed to "block and remediate" with the optional generate alert setting.
+- The *alert only* response action was renamed to *audit* with the generated alert setting enabled.
+- The *alert and block* response was renamed to *block and remediate* with the optional generate alert setting.
 
 The IoC API schema and the threat IDs in advance hunting are updated to align with the renaming of the IoC response actions. The API scheme changes apply to all IoC Types.
 
