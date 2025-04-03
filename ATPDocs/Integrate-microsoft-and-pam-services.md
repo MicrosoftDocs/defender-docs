@@ -4,6 +4,7 @@ ms.service: microsoft-defender-for-identity
 ms.date: 03/30/2025
 ms.topic: concept-article
 #customerIntent: As a SOC engineer, I want to understand how to integrate Microsoft Defender for Identity with my PAM (Privilege Access Management) system to manage privileged access and detect threats.
+description: Learn how to integrate Microsoft Defender for Identity with your Privileged Access Management (PAM) services to enhance identity threat detection and streamline privileged account investigations.
 ---
 
 # Integrate Defender for Identity with your PAM services
@@ -25,7 +26,6 @@ Once PAM integration is enabled, Microsoft XDR surfaces privileged identity data
 - Privileged accounts managed by a PAM solution are automatically tagged, providing clear context during investigations.
 
 - You can initiate a password reset directly from the Microsoft XDR console for high-risk or compromised privileged accounts.
-
 
 To reset a password using the integrated PAM system:
 1. Go to **Assets > Identities**.
