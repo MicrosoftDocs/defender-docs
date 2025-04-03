@@ -16,7 +16,7 @@ search.appverid: met150
 ms.date: 02/25/2025
 ---
 
-# Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025 to Defender for Endpoint
+# Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025 to the Microsoft Defender for Endpoint service
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -27,9 +27,15 @@ ms.date: 02/25/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
+Defender for Endpoint extends support to include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
-
+> [!NOTE]
+> To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
+> 
+> - [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) (as part of the Defender for Cloud) offering
+> - Microsoft Defender for Endpoint for servers
+> - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
+> 
 
 This article describes how to onboard Windows Server, version 1803, Windows Server 2109, and Windows Server 2025 to Defender for Endpoint.
 
