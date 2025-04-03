@@ -103,14 +103,14 @@ You can **Run**, **Turn off**, and **Delete** detection rules from Microsoft Def
 
 To manage detection rules:
 
-1. Go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management
-2. Choose the detection rule you want to manage
+1. Go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management.
+1. Choose the detection rule you want to manage.
 
-When you select a single detection rule, a flyout panel opens with the detection rule details:
+   When you select a single detection rule, a flyout panel opens with the detection rule details:
 
    :::image type="content" source="media/mto-advanced-hunting/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="media/mto-advanced-hunting/custom-detection-rule-details.png":::
 
-Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](/defender-xdr/custom-detection-rules).
+1. Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](/defender-xdr/custom-detection-rules).
 
 ## Related content
 
