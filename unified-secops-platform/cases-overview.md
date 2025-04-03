@@ -23,10 +23,9 @@ Case management is the first installment of new capabilities for managing securi
 
 This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
-> [!IMPORTANT]
-> Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+<a name="what-is-case-management-preview"></a>
 
-## What is case management (Preview)?
+## What is case management?
 
 Case management enables you to manage SecOps cases natively in the Defender portal. Here's the initial set of scenarios and features supported.
 
@@ -45,7 +44,7 @@ As we build on this foundation of case management, we're prioritizing these addi
 
 ## Requirements
 
-Case management is available in the Defender portal, and to use it, you must have a Microsoft Sentinel workspace connected. There's no access to cases from the Azure portal.
+Case management is available in the Defender portal, and to use it, you must have a Microsoft Sentinel workspace connected. Cases are accessible only from the Defender portal; you can't see them in the Azure portal.
 
 For more information, see [Connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md).
 

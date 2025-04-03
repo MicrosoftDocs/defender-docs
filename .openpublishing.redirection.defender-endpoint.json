@@ -119,6 +119,11 @@
       "source_path": "defender-endpoint/linux-schedule-scan-mde.md",
       "redirect_url": "/defender-endpoint/schedule-antivirus-scan-crontab",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/non-windows.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint",
+      "redirect_document_id": true
     } 
   ]
 }
