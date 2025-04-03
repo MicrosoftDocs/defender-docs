@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 10/09/2023
+ms.date: 03/26/2025
 ---
 
 # Overview of endpoint detection and response
