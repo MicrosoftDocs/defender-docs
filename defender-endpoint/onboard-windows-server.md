@@ -54,13 +54,13 @@ You need to complete the general steps depicted in the following image to succes
 
 1. Download the onboarding package.
 
-2. Follow the onboarding steps for the corresponding tool:
+2. Follow the guidance for your preferred tool:
 
-   - Local script
-   - Group Policy
-   - Microsoft Configuration Manager
-   - VDI scripts
-   - Defender for Cloud
+   - **Local script**: [Onboard Windows devices using a local script](configure-endpoints-script.md)
+   - **Group Policy**: [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
+   - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
+   - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
+   - **Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
 For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
 
@@ -86,17 +86,6 @@ For more information, see [Protect your endpoints with Defender for Endpoint int
 > - For Windows Server 2012 R6 and Windows Server 2016, you can either manually install/upgrade the modern, unified solution on these servers, or use the integration to automatically deploy or upgrade servers covered by your respective Defender for Server plans. For more inforamtion, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
 > - To onboard Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md). 
 
-### Windows Server 2012 R2 and Windows Server 2016
-
-- Download installation and onboarding packages.
-- Apply the installation package.
-- Follow the onboarding steps for the corresponding tool.
-
-### Windows Server Semi-Annual Enterprise Channel and Windows Server 2019
-
-- Download the onboarding package.
-- Follow the onboarding steps for the corresponding tool.
-
 ## Offboard Windows servers
 
 You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 with the same method available for Windows 10 client devices.
@@ -118,8 +107,8 @@ For other Windows server versions, you have two options to offboard Windows serv
 
 ## Related articles
 
-- [Onboard Windows devices using Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
-- [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
-- [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
+- [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+- [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
