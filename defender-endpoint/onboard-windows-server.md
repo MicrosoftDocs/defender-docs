@@ -52,6 +52,16 @@ You need to complete the general steps depicted in the following image to succes
 
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
+1. Download the onboarding package.
+
+2. Follow the onboarding steps for the corresponding tool:
+
+   - Local script
+   - Group Policy
+   - Microsoft Configuration Manager
+   - VDI scripts
+   - Defender for Cloud
+
 For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
 
 > [!NOTE]
