@@ -68,7 +68,7 @@ Type: `REG_DWORD`
 Value: `1`
 
 > [!NOTE]
-> For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded using the instructions in [Onboard Windows servers](/defender-endpoint/onboard-windows-server-2012r2-2016#functionality-in-the-modern-unified-solution).
+> For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md).
 
 For more information, see [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md).
 
