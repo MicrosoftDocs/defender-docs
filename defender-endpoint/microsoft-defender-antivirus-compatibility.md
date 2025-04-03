@@ -118,7 +118,7 @@ On Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server
 
 You can view your protection status in PowerShell by using the command [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus). Check the value for `AMRunningMode`. You should see **Normal**, **Passive**, or **EDR Block Mode** if Microsoft Defender Antivirus is enabled on the endpoint. 
 
-For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded with the modern, unified solution described in [Onboard Windows servers](/defender-endpoint/onboard-windows-server-2012r2-2016#functionality-in-the-modern-unified-solution). 
+For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution). 
 
 
 > [!IMPORTANT]
