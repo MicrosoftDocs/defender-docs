@@ -53,8 +53,8 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
-- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016) (requires installation through MSI)
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016) (requires installation through MSI)
 - macOS
 - Linux
 - iOS 

@@ -52,7 +52,7 @@ The process of setting up and running Microsoft Defender Antivirus on Windows Se
 ## Enable the user interface on Windows Server
 
 > [!IMPORTANT]
-> If you're using Windows Server 2012 R2, see [Options to install Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-defender-for-endpoint-packages).
+> If you're using Windows Server 2012 R2, see [Options to install Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md#options-to-install-the-defender-for-endpoint-packages).
 
 By default, Microsoft Defender Antivirus is installed and functional on Windows Server. Sometimes, the user interface (GUI) is installed by default. The GUI isn't required; you can use PowerShell, Group Policy, or other methods to manage Microsoft Defender Antivirus. However, many organizations prefer to use the GUI for Microsoft Defender Antivirus. To install the GUI, use one of the procedures in the following table:
 
@@ -188,7 +188,7 @@ For more information, see [Working with Registry Keys](/powershell/scripting/sam
 
 If your Windows Server is onboarded to Microsoft Defender for Endpoint, you can run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and Windows Server 2016. See the following articles:
 
-- [Options to install Microsoft Defender for Endpoint](configure-server-endpoints.md#options-to-install-the-defender-for-endpoint-packages)
+- [Options to install Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md#options-to-install-the-defender-for-endpoint-packages)
 
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
 

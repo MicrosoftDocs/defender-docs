@@ -119,7 +119,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## October 2021
 
-- [Updated onboarding and feature parity for Windows Server 2012 R2 and Windows Server 2016 (preview)](configure-server-endpoints.md)<br> The new unified solution package makes it easier to onboard servers by removing dependencies and installation steps. In addition, this unified solution package comes with many new feature improvements.
+- [Updated onboarding and feature parity for Windows Server 2012 R2 and Windows Server 2016 (preview)](onboard-windows-server-2012r2-2016.md)<br> The new unified solution package makes it easier to onboard servers by removing dependencies and installation steps. In addition, this unified solution package comes with many new feature improvements.
 
 - Windows 11 support added to Microsoft Defender for Endpoint and Microsoft 365 Defender.
 
@@ -226,7 +226,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [Evaluation lab](evaluate-microsoft-defender-antivirus.md) <BR> The Microsoft Defender for Endpoint evaluation lab is designed to eliminate the complexities of device and environment configuration so that you can
  focus on evaluating the capabilities of the platform; running simulations; and seeing the prevention, detection, and remediation features in action.
 
-- [Windows Server 2008 R2 SP1](configure-server-endpoints.md) <BR> You can now onboard Windows Server 2008 R2 SP1.
+- [Windows Server 2008 R2 SP1](onboard-windows-server-2012r2-2016.md) <BR> You can now onboard Windows Server 2008 R2 SP1.
 
 ## June 2019
 
@@ -264,7 +264,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Custom detection](/defender-xdr/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by leveraging the power of advanced hunting through the creation of custom detection rules.
 
-- [Integration with Azure Security Center](configure-server-endpoints.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can leverage the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
+- [Integration with Azure Security Center](onboard-windows-server-2012r2-2016.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can leverage the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
 
 - [Managed security service provider](mssp-support.md) (MSSP) support<BR> Microsoft Defender for Endpoint adds support for this scenario by providing MSSP integration. The integration allows MSSPs to take the following actions: Get access to MSSP customer's Microsoft Defender Security Center portal, fetch email notifications, and fetch alerts through security information and event management (SIEM) tools.
 
