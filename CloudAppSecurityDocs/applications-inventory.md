@@ -7,17 +7,17 @@ description: The new Applications page located under Assets in Microsoft Defende
 ---
 # Applications inventory (Preview)
 
-Protecting your SaaS ecosystem requires taking inventory of all SaaS and OAuth connected apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Defender for Cloud apps Applications page provides a centralized view of all SaaS and connected OAuth apps in your organization, enabling efficient monitoring and management.
+Protecting your SaaS ecosystem requires taking inventory of all SaaS and connected OAuth apps that are in your environment. With the increasing number of applications, having a comprehensive inventory is crucial to ensure security and compliance. The Applications page provides a centralized view of all SaaS and connected OAuth apps in your organization, enabling efficient monitoring and management.
 At a glance you can see information such as app name, risk score, privilege level, publisher information, and other details for easy identification of SaaS and OAuth apps most at risk.
 
-The Application page includes the following tabs:
+The Applications page includes the following tabs:
 
 * SaaS apps: A consolidated view of all SaaS applications in your network. This tab highlights key details, including app name, status (unprotected/protected app) and whether the app is marked as sanctioned or unsanctioned.
-* OAuth apps: Displays a list of OAuth apps such as Microsoft Entra ID, Google workspace and Salesforce.
+* OAuth apps: A comprehensive view of OAuth apps registered on Microsoft Entra ID, Google workspace and Salesforce. This tab highlights OAuth apps metadata, publisher info and app origin, permissions used, data accessed and other insights.
 
 ## Navigate to the Applications page
 
-In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Applications**. Or, to go directly to the **Applications** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
+In the Defender portal at <https://security.microsoft.com>, go to **Assets** > **Applications**. Or, go directly to the **Applications** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
 
 :::image type="content" source="media/banner-on-cloud-discovery-pages.png" alt-text="Screenshot of the Cloud Discovery page with a banner about the new unified application inventory experience" lightbox="media/banner-on-cloud-discovery-pages.png":::
 
