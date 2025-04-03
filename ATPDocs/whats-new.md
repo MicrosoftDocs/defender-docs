@@ -24,7 +24,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## April 2025
 
-### New Integration: Defender for Identity and PAM Platforms
+### New Defender for Identity and PAM Integration
 
 Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
 
