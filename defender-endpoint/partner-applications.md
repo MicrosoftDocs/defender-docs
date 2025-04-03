@@ -27,7 +27,7 @@ ms.date: 09/20/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 Defender for Endpoint supports third-party applications to help enhance the detection, investigation, and threat intelligence capabilities of the platform.
 
@@ -56,7 +56,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |![Logo for Micro Focus ArcSight.](media/arcsight-logo.png)|[Micro Focus ArcSight](https://go.microsoft.com/fwlink/?linkid=2113548)|Use Micro Focus ArcSight to pull Defender for Endpoint detections |
 |![Logo for RSA NetWitness.](media/rsa-netwitness-logo.png)|[RSA NetWitness](https://go.microsoft.com/fwlink/?linkid=2118566)|Stream Defender for Endpoint Alerts to RSA NetWitness using Microsoft Graph Security API |
 |![Logo for SafeBreach.](media/safebreach-logo.png)|[SafeBreach](https://go.microsoft.com/fwlink/?linkid=2114114)|Gain visibility into Defender for Endpoint security events that are automatically correlated with SafeBreach simulations |
-|![Logo for Skybox Vulnerability Control.](media/skybox-logo.png)|[Skybox Vulnerability Control](https://go.microsoft.com/fwlink/?linkid=2127467)|Skybox Vulnerability Control cuts through the noise of vulnerability management, correlating business, network, and threat context to uncover your riskiest vulnerabilities |
+|![Logo for Skybox Vulnerability Control.](media/skybox-logo.png)|[Skybox Vulnerability Control](https://www.skyboxsecurity.com/products/vulnerability-control/)|Skybox Vulnerability Control cuts through the noise of vulnerability management, correlating business, network, and threat context to uncover your riskiest vulnerabilities |
 |![Logo for Splunk.](media/splunk-logo.png)|[Splunk](https://go.microsoft.com/fwlink/?linkid=2129805)|The Defender for Endpoint Add-on allows Splunk users to ingest all of the alerts and supporting information to their Splunk |
 |![Logo for XM Cyber.](media/xmcyber-logo.png)|[XM Cyber](/microsoft-365/compliance/insider-risk-management-configure)|Prioritize your response to an alert based on risk factors and high value assets|
 
@@ -86,7 +86,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |---|---|---|
 |![Logo for Aruba ClearPass Policy Manager.](media/aruba-logo.png)|[Aruba ClearPass Policy Manager](https://go.microsoft.com/fwlink/?linkid=2127544)|Ensure Defender for Endpoint is installed and updated on each endpoint before allowing access to the network |
 |![Logo for Blue Hexagon for Network.](media/bluehexagon-logo.png)|[Blue Hexagon for Network](/training/modules/explore-malware-threat-protection/)|Blue Hexagon has built the industry's first real-time deep learning platform for network threat protection |
-|![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2135620)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment |
+|![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://www.forescout.com/press-releases/forescout-acquires-cybermdx-to-expand-healthcare-cybersecurity-focus/)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment |
 |![Logo for HYAS Protect.](media/hyas-logo.png)|[HYAS Protect](https://go.microsoft.com/fwlink/?linkid=2156763)|HYAS Protect utilizes authoritative knowledge of attacker infrastructure to proactively protect Microsoft Defender for Endpoint endpoints from cyberattacks |
 |![Logo for Vectra Network Detection and Response (NDR).](media/vectra-logo.png)|[Vectra Network Detection and Response (NDR)](https://go.microsoft.com/fwlink/?linkid=866934)|Vectra applies AI & security research to detect and respond to cyber-attacks in real time |
 

@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.topic: troubleshooting
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 02/24/2025
 ---
 
 # Troubleshoot service issues
@@ -24,8 +24,6 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This section addresses issues that might arise as you use the Microsoft Defender for Endpoint service.
 

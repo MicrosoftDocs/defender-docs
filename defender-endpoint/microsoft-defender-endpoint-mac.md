@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 10/15/2024
+ms.date: 03/24/2025
 ---
 
 # Microsoft Defender for Endpoint on Mac
@@ -24,9 +24,8 @@ ms.date: 10/15/2024
 
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
@@ -79,7 +78,7 @@ These three most recent major releases of macOS are supported.
 - Beta versions of macOS aren't supported.
 
 > [!IMPORTANT]
-> On macOS 11 (Large Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
+> On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
 
 After you've enabled the service, you might need to configure your network or firewall to allow outbound connections between it and your endpoints.
 
@@ -155,12 +154,12 @@ Guidance for how to configure the product in enterprise environments is availabl
 
 ## macOS kernel and system extensions
 
-Starting with macOS 11 (Significant Sur), Microsoft Defender for Endpoint has been fully migrated from kernel extension to system extensions. 
+Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint has been fully migrated from kernel extension to system extensions.
 
 ## Resources
 
-- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on Mac](mac-resources.md).
-- [Privacy for Microsoft Defender for Endpoint on Mac](mac-privacy.md).
+- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
+- [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

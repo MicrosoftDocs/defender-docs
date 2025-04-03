@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: conceptual
 ms.subservice: ngp
-ms.date: 08/27/2024
+ms.date: 03/04/2025
 ---
 
 # Get started with troubleshooting mode in Microsoft Defender for Endpoint 
@@ -81,13 +81,13 @@ During troubleshooting mode, you can use the PowerShell command `Set-MPPreferenc
 
 ## Prerequisites
 
-- A device running Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, or Windows Server 2022.
+- A device running Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
 
      |Semester/Redstone|OS version|Release|
      |:---|:---|:---|
      | 21H2/SV1|>=22000.593|[KB5011563: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5019275) |
      | 20H1/20H2/21H1|>=19042.1620<br/> >=19041.1620<br/> >=19043.1620|[KB5011543: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011543) |
-     | Windows Server 2022|>=20348.617|[KB5011558: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011558) |
+     | Windows Server 2022 or later|>=20348.617|[KB5011558: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011558) |
      | Windows Server 2019 (RS5)|>=17763.2746|[KB5011551: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011551) |
 
 - Troubleshooting mode is also available for machines running the modern, unified solution for Windows Server 2012 R2 and Windows Server 2016. Before you use troubleshooting mode, make sure all of the following components are up to date:

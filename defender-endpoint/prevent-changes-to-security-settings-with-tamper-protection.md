@@ -5,7 +5,7 @@ manager: deniseb
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 02/28/2025
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
@@ -71,7 +71,7 @@ Tamper protection doesn't prevent you from viewing your security settings. And, 
 Tamper protection is available for devices that are running one of the following versions of Windows:
 
 - Windows 10 and 11 (including Enterprise multi-session)
-- Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
+- Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
 - Windows Server 2016 and Windows Server 2012 R2 (using the modern, unified solution)
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
@@ -94,7 +94,7 @@ If you're using Windows Server 2012 R2 using the modern unified solution, Window
 
 2. Use the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?preserve-view=true&view=win10-ps) PowerShell cmdlet.
 
-3. In the list of results, look for `IsTamperProtected` or `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
+1. In the list of results, look for `IsTamperProtected` and `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
 
 ## How do I configure or manage tamper protection?
 

@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 10/25/2024
+ms.date: 04/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,39 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
+
+- Security intelligence update version: **1.419.1.0**
+- Release date: **September 17, 2024** (Engine and Platform)
+- Platform: **4.18.24080.9**
+- Engine: **1.1.24080.9**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
+- Fixed an issue with device control regarding printer security checks.
+- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
+- Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
+- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and reached their end-of-servicing date.
+
+### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
+
+- Security intelligence update version: **1.417.14.0**
+- Release date: **August 7, 2024** (Engine and Platform)
+- Platform: **4.18.24070.5**
+- Engine: **1.1.24070.3**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- False positive detections are no longer reported as `ThreatNotFound` in the Microsoft Defender portal. 
+- Optimized [network protection](network-protection.md) calls to the backend that occurs as a result of suspicious connection checks.
+- Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in the [Defender CSP](/windows/client-management/mdm/defender-csp) so that changing this value in the console takes effect on the endpoint. 
+- Resolved an issue where file evidence location wasn't always captured in scenarios where the remote location is inaccessible. 
+- New event log added (`5016`) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
+- Fixed a prioritization issue with [full scans](mdav-scan-best-practices.md) initiated from the portal that resulted in longer than expected full scan duration.
 
 ### June-2024 (Platform: 4.18.24060.7 | Engine: 1.1.24060.5)
 

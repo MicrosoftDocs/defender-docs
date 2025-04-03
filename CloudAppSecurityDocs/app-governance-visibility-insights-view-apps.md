@@ -31,7 +31,7 @@ On the **Microsoft 365** tab, the apps in your tenant are listed with the follow
 | **App status** | Shows whether the app is enabled or disabled, and if disabled by whom |
 | **Graph API access**| Shows whether the app has at least one Graph API permission |
 | **Permission type**| Shows whether the app has application (app only), delegated, or mixed permissions |
-| **App origin** (Preview)| Shows whether the app originated within the tenant or was registered in an external tenant |
+| **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant |
 | **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app |
 | **Publisher**| Publisher of the app and their verification status |
 | **Last modified**| Date and time when registration information was last updated on Microsoft Entra ID |
@@ -69,10 +69,10 @@ In the details pane, select any of the following tabs to view more details:
 
 - Select the **Users** tab to see a list of users who are using the app, whether they're a priority account, and the amount of data downloaded and uploaded. For example:
 
-    :::image type="content" source="media/app-governance-visibility-insights-view-apps/users.png" alt-text="Screenshot of the Users tab.":::
-
-    If an app is *admin consented*, the **Total consented users** are all users in the tenant.
-
+  ![Screenshot 2025-02-24 005703](media/app-governance-visibility-insights-view-apps/screenshot-2025-02-24-005703.png)
+  
+   If an app is *admin consented*, the **Total consented users** are all users in the tenant.
+  
 - Select the **Permissions** tab to see a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level and whether they are in use. For example:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/permissions.png" alt-text="Screenshot of the Permissions tab.":::

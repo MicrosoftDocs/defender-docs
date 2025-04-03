@@ -52,18 +52,17 @@ The following table gives information about the supported Microsoft Defender for
 |[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg) <br/>(preview)|
 |**Response**     |         |         |         ||
 |[Automated Investigation & Response (AIR)](automated-investigations.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)  |  ![No](media/svg/check-no.svg)       |  ![No](media/svg/check-no.svg)        |
-|[Device response capabilities: collect investigation package ](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) <br/>(preview)  |  ![Yes.](media/svg/check-yes.svg) <br/>(preview) |
+|[Device response capabilities: collect investigation package ](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)  |  ![Yes.](media/svg/check-yes.svg)  |
 |[Device response capabilities: run antivirus scan](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)        |  ![Yes.](media/svg/check-yes.svg)         |
 |[Device isolation](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)    |
-|File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) <br/>(preview) |  ![Yes.](media/svg/check-yes.svg) <br/>(preview) |
+|File response capabilities: collect file, deep analysis  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg) |
+|File response capabilities: block file, stop, and quarantine processes  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![No](media/svg/check-no.svg) |  ![No](media/svg/check-no.svg) |
 |[Live Response](live-response.md)       | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)      |
 
 > [!NOTE]
-> - Support for Windows Server 2025 is rolling out beginning in February 2025 and over the next several weeks.
 > - For Windows Server 2012 R2 and Windows Server 2016, use the modern, unified solution. See [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
 > - On Linux Server, network protection, web protection, and custom network indicators are currently in preview.
-> - On Linux Server and Mac, [Device response capabilities: collect investigation package ](respond-machine-alerts.md) is currently in preview. You can also use [Live Response](live-response.md).
-> - On Linux Server and Mac, [File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes](respond-file-alerts.md) are currently in preview. You can also use [Live Response](live-response.md).
+> - On Linux, network protection, web protection, and custom network indicators are currently in preview.
 > - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and Windows 11.
 > - Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use System Center Endpoint Protection (SCEP) for the EDR sensor and antivirus protection.

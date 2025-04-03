@@ -4,10 +4,10 @@ description: Learn how to connect your Microsoft Sentinel environment to the Def
 ms.service: unified-secops-platform
 f1.keywords: 
   - NOCSH
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: high
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,6 +15,8 @@ ms.collection:
 - highpri
 - tier1
 - usx-security
+- zerotrust-solution
+- msftsolution-secops
 ms.topic: how-to
 search.appverid: 
 - MOE150
@@ -53,7 +55,7 @@ To onboard and use Microsoft Sentinel in the Defender portal, you must have the 
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
 - The data connector for Microsoft Defender XDR enabled in Microsoft Sentinel for incidents and alerts. Install the Defender XDR solution and configure the data connector to connect Microsoft Sentinel to the Defender portal. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy). Within the Defender XDR data connector, the configuration option to connect incident and alerts is turned off and disabled after you onboard Microsoft Sentinel to the Defender portal.
-- An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the unified SecOps portal that you don't have permissions to onboard. The following table highlights some of the key roles needed.
+- An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the Defender portal to onboard where you don't have the required permissions. The following table highlights some of the key roles needed.
 
   |Task |Microsoft Entra or Azure built-in role required |Scope  |
   |---------|---------|---------|
@@ -66,7 +68,7 @@ To onboard and use Microsoft Sentinel in the Defender portal, you must have the 
 
   After you connect Microsoft Sentinel to the Defender portal, your existing Azure role-based access control (RBAC) permissions allow you to work with the Microsoft Sentinel features that you have access to. Continue to manage roles and permissions for your Microsoft Sentinel users from the Azure portal. Any Azure RBAC changes are reflected in the Defender portal. For more information about Microsoft Sentinel permissions, see [Roles and permissions in Microsoft Sentinel | Microsoft Learn](/azure/sentinel/roles) and [Manage access to Microsoft Sentinel data by resource | Microsoft Learn](/azure/sentinel/resource-context-rbac).
 
-### Microsoft's unified SecOps platform prerequisites 
+### Microsoft's unified SecOps platform prerequisites
 
 To unify capabilities with Defender XDR in Microsoft's unified SecOps platform, you must have the following resources and access:
 

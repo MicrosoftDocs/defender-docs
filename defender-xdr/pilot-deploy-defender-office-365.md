@@ -17,15 +17,14 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 05/31/2024
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: To learn how to pilot and deploy Microsoft Defender for Office 365 in your production Microsoft 365 tenant. 
 ---
 
 # Pilot and deploy Defender for Office 365
-
-**Applies to:**
-- Microsoft Defender XDR
-
 
 This article provides a workflow for piloting and deploying Microsoft Defender for Office 365 in your organization. You can use these recommendations to onboard Microsoft Defender for Office 365 as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender XDR.
 

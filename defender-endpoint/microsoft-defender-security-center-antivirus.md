@@ -14,14 +14,14 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 08/28/2023
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender Antivirus in the Windows Security app
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender Antivirus
 
 Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus settings are viewable in the Windows Security app. See [Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) for more information about security features and settings that are built into Windows.
 

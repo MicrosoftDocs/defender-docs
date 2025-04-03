@@ -2,8 +2,8 @@
 title: Respond to web threats in Microsoft Defender for Endpoint
 description: Respond to alerts related to malicious and unwanted websites. Understand how web threat protection informs end users through their web browsers and Windows notifications
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 09/21/2024
 ---
 
 # Respond to web threats

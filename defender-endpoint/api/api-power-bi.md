@@ -16,7 +16,7 @@ ms.topic: conceptual
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/24/2024
+ms.date: 03/21/2025
 ---
 
 # Create custom reports using Power BI
@@ -28,7 +28,7 @@ ms.date: 04/24/2024
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 

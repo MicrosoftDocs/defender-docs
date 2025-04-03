@@ -121,7 +121,7 @@ This article lists prerequisites required for a basic installation. Additional p
 
 For more information, see:
 
-- [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
+- [Deploying Microsoft Defender for Identity on AD FS, AD CS and Entra Connect servers](active-directory-federation-services.md)
 - [Microsoft Defender for Identity multi-forest support](multi-forest.md)
 - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 - [Defender for Identity architecture](../architecture.md)

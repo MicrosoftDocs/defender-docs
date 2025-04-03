@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 02/13/2025
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -1108,7 +1108,7 @@ The **URL protection report** is available only in Microsoft Defender for Office
 > [!IMPORTANT]
 > In order for the **User reported messages** report to work correctly, **audit logging must be turned on** in your Microsoft 365 organization (it's on by default). For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
-The **User reported messages** report shows information about email messages that users reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
+The **User reported messages** report shows information about email messages that users reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **User reported messages**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/userSubmissionReport>.
 

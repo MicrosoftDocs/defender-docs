@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender multitenant management
-description: Learn about multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Microsoft unified security operations platform.
+description: Learn about multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Microsoft Defender portal.
 ms.service: unified-secops-platform
 ms.author: deniseb
 author: denisebmsft
@@ -23,14 +23,14 @@ appliesto:
 
 # Microsoft Defender multitenant management
 
-Multitenant management for Microsoft Defender XDR and the Microsoft unified security operations platform provides your security operation teams with a single, unified view of all the tenants you manage. This view enables your teams to quickly investigate incidents and perform advanced hunting across data from multiple tenants, improving your security operations.
+Multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal provides your security operation teams with a single, unified view of all the tenants you manage. This view enables your teams to quickly investigate incidents and perform advanced hunting across data from multiple tenants, improving your security operations.
 
-If you have tenants with a Microsoft Sentinel workspace onboarded to the unified security operations platform, you're able to:
+If you have tenants with a Microsoft Sentinel workspace onboarded to the Defender portal, you're able to:
 
 - Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data.
 - Proactively search for SIEM and XDR data across multiple tenants.
 
-Only one Microsoft Sentinel workspace per tenant is currently supported in the unified security operations platform. So in Microsoft Defender multitenant management, you have SIEM data from one Microsoft Sentinel workspace per tenant.
+Only one Microsoft Sentinel workspace per tenant is currently supported in the Defender portal. So in Microsoft Defender multitenant management, you have SIEM data from one Microsoft Sentinel workspace per tenant.
 
 For more information, see:
 
@@ -46,7 +46,7 @@ Multitenant management is also available to US government customers. Refer to th
 
 ## Benefits of multitenant management
 
-Some of the key benefits you get with multitenant management for Defender XDR and the Microsoft unified security operations platform include:
+Some of the key benefits you get with multitenant management for Defender XDR and the Microsoft Sentinel in the Defender portal include:
 
 - **A centralized place to manage incidents across tenants**: A unified view provides SOC analysts with all the information they need to investigate incidents across multiple tenants, eliminating the need to sign in and out of each one.
 
@@ -58,7 +58,7 @@ Some of the key benefits you get with multitenant management for Defender XDR an
 
 ## What's included in multitenant management
 
-The following key capabilities are available for each tenant you have access to in multitenant management for Microsoft Defender XDR and the Microsoft unified security operations platform:
+The following key capabilities are available for each tenant you have access to in multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal:
 
 | Capability | Description |
 | ------ | ------ |

@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use the advanced delivery policy in Exchange Online Protection (EOP) to identify messages that shouldn't be filtered in specific supported scenarios (third-party phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
-ms.date: 02/11/2025
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -42,7 +42,7 @@ Use the _advanced delivery policy_ in EOP to prevent inbound messages _in these 
 - [AIR and clustering in Defender for Office 365](air-about.md) ignores these messages.
 - Specifically for third-party phishing simulations:
   - [Admin submission](submissions-admin.md) generates an automatic response saying that the message is part of a phishing simulation campaign and isn't a real threat. Alerts and AIR aren't triggered. The admin submissions experience shows these messages as a simulated threat.
-  - When a user reports a phishing simulation message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook), the system doesn't generate an alert, investigation, or incident. The links or files aren't detonated, but the message appears on the **User reported** tab of the **Submissions** page.
+  - When a user reports a phishing simulation message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), the system doesn't generate an alert, investigation, or incident. The links or files aren't detonated, but the message appears on the **User reported** tab of the **Submissions** page.
 
 Messages that are identified by the advanced delivery policy aren't security threats, so the messages are marked with system overrides. Admin experiences show these messages as **Phishing simulation** or **SecOps mailbox** system overrides. Admins can use these values to filter and analyze messages in the following experiences:
 

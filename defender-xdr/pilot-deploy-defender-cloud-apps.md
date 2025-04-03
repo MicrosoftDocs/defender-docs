@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: bcarter
 author: brendacarter
-ms.date: 01/12/2025
+ms.date: 03/14/2025
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -20,14 +20,11 @@ ms.collection:
   - tier1
 ms.topic: concept-article
 #customerIntent: As a security admin, I want to pilot and deploy Microsoft Defender for Cloud Apps to evaluate it's ability to enhance my organization's security posture and protect against cloud application-based threats.
-
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Pilot and deploy Microsoft Defender for Cloud Apps
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 This article provides a workflow for piloting and deploying Microsoft Defender for Cloud Apps in your organization. Use these recommendations to onboard Microsoft Defender for Cloud Apps as part of an end-to-end solution with Microsoft Defender XDR.
 
@@ -201,13 +198,13 @@ In this illustration, some apps are sanctioned for use. Sanctioning is a simple 
 
 One of the most powerful protections you can configure is Conditional access app control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned.
 
-You might already have SaaS apps added to your Microsoft Entra tenant to enforce multi-factor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you must do is configure a policy in Microsoft Entra ID to use conditional access app control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
+You might already have SaaS apps added to your Microsoft Entra tenant to enforce multifactor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you must do is configure a policy in Microsoft Entra ID to use conditional access app control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
 
 :::image type="content" source="media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg" alt-text="A diagram that shows the architecture for Defender for Cloud Apps conditional access app control." lightbox="media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg":::
 
 In this illustration:
 
-- SaaS apps are integrated with the Microsoft Entra tenant. This integration allows Microsoft Entra ID to enforce conditional access policies, including multi-factor authentication.
+- SaaS apps are integrated with the Microsoft Entra tenant. This integration allows Microsoft Entra ID to enforce conditional access policies, including multifactor authentication.
 - A policy is added to Microsoft Entra ID to direct traffic for SaaS apps to Defender for Cloud Apps. The policy specifies which SaaS apps to apply this policy to. After Microsoft Entra ID enforces any conditional access policies that apply to these SaaS apps, Microsoft Entra ID then directs (proxies) the session traffic through Defender for Cloud Apps.
 - Defender for Cloud Apps monitors this traffic and applies any session control policies that have been configured by administrators.
 
@@ -229,16 +226,16 @@ For sample policies, see [Recommended Microsoft Defender for Cloud Apps policies
 
 Once you have session policies configured, apply them to your cloud apps to provide controlled access to those apps.
 
-:::image type="content" source="media/eval-defender-xdr/m365-defender-office-architecture.svg" alt-text="A diagram that shows how cloud apps are accessed via session control policies with Defender for Cloud Apps." lightbox="media/eval-defender-xdr/m365-defender-office-architecture.svg":::
+:::image type="content" source="media/eval-defender-xdr/m365-defender-mcas-architecture-d.svg" alt-text="A diagram that shows how cloud apps are accessed via session control policies with Defender for Cloud Apps." lightbox="media/eval-defender-xdr/m365-defender-office-architecture.svg":::
 
 In the illustration:
 
-- Access to sanctioned cloud apps from users and devices in your organization is routed through Defender for Cloud Apps.
+- Access to sanctioned cloud apps from users and devices in your organization is routed through Defender for Cloud Apps where session policies can be applied to specific apps.
 - Cloud apps that you have not sanctioned or explicitly unsanctioned are not affected.
 
 Session policies allow you to apply parameters to how cloud apps are used by your organization. For example, if your organization is using Salesforce, you can configure a session policy that allows only managed devices to access your organization's data at Salesforce. A simpler example could be configuring a policy to monitor traffic from unmanaged devices so you can analyze the risk of this traffic before applying stricter policies.
 
-For more information, see [Conditional access app control in Microsoft Defender for Cloud Apps](/defender-cloud-apps/proxy-intro-aad).
+For more information, see [Create Microsoft Defender for Cloud Apps session policies](/defender-cloud-apps/session-policy-aad).
 
 <a name="step-8"></a>
 
@@ -259,9 +256,9 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 ## SIEM integration
 
-You can integrate Defender for Cloud Apps with Microsoft Sentinel as part of Microsoft's [unified security operations platform](/unified-secops-platform/) or a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Cloud Apps with Microsoft Sentinel as part of Microsoft's [unified security operations platform](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
-Microsoft Sentinel includes a Microsoft Defender for XDR data connector to bring all signals from Defender XDR, including Defender for Cloud Apps, to Microsoft Sentinel. Use the unified security operations platform in the Defender portal as a single platform for end-to-end security operations (SecOps).
+Microsoft Sentinel includes a Microsoft Defender for XDR data connector to bring all signals from Defender XDR, including Defender for Cloud Apps, to Microsoft Sentinel. Use the Defender portal as a unified security operations (SecOps) platform.
 
 For more information, see:
 

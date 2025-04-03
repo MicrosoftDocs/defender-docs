@@ -20,10 +20,10 @@ ms.date: 12/24/2024
 
 # Deploy Microsoft Defender for Endpoint on Linux with Saltstack
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -290,7 +290,7 @@ To troubleshoot issues:
 
 5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/run-analyzer-macos-linux).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
 ## How to configure policies for Microsoft Defender on Linux
 
