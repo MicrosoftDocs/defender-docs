@@ -1,7 +1,7 @@
 ---
 title: Connect Zoom | Microsoft Defender for Cloud Apps
 description: This article provides information about how to connect your Zoom environment  to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 06/18/2023
+ms.date: 03/04/2025
 ms.topic: how-to
 ---
 
@@ -20,7 +20,7 @@ To see security posture recommendations for Zoom in Microsoft Secure Score, crea
 For example, recommendations for Zoom include: 
 
 - *Enable multi-factor authentication (MFA)*
-- *Enable session timeout for web users*
+- *Enable session timeout for web users
 - *Enforce end to end encryption in all Zoom meetings*
 
 If a connector already exists and you don't see Zoom recommendations yet, refresh the connection by disconnecting the API connector, and then reconnecting it with the `“account:read:admin`, `chat_channel:read:admin` and `user:read:admin”` permissions.
@@ -38,6 +38,10 @@ Before connecting Zoom to Defender for Cloud Apps, make sure that you have the f
 - Access to Zoom as an account owner or admin, which is required to access the Zoom API.
 
     The admin account is used only for initial consent while connecting Zoom to Defender for Cloud Apps. Defender for Cloud Apps uses an OAuth app for daily transactions.
+
+  >[!NOTE]
+  > The authentication mechanism utilized in the Zoom connector doesn't support two separate connectors utilizing the same user credentials.
+  > When a new instance with an existing authentication token is used, this revokes the old connector token and will cause a "Bad credentials" error.
 
 ## How to connect Zoom to Defender for Cloud Apps
 
