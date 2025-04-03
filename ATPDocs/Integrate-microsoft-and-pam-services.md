@@ -18,7 +18,7 @@ PAM solutions secure privileged accounts by storing their credentials in a secur
 Defender for Identity helps identify and investigate suspicious activities related to privileged accounts, such as unusual sign in patterns or privilege escalation attempts. 
 This integration ensures a comprehensive approach to identity security, combining PAM's control over privileged access with Defender for Identity's threat detection and response.
 
-### XDR experience: Visibility and response actions
+### Visibility and response actions
 
 Once PAM integration is enabled, Microsoft XDR surfaces privileged identity data and enables direct response actions:
 
@@ -26,11 +26,14 @@ Once PAM integration is enabled, Microsoft XDR surfaces privileged identity data
 
 - You can initiate a password reset directly from the Microsoft XDR console for high-risk or compromised privileged accounts.
 
+
 To reset a password using the integrated PAM system:
 1. Go to **Assets > Identities**.
 2. Select the relevant identity.
 3. Click the three-dot menu (**⋯**) in the top-right corner.
 4. Select **Reset password**. The label may vary based on the vendor (for example, **Reset password by CyberArk**, **Reset password by BeyondTrust**).
+
+:::image type="content" source="media/Screenshot-of-privilege-access-management-tags-for-identities.png" alt-text="Screenshot of the priviledge access management tags assigned to identity accounts":::
 
 This capability streamlines containment and response workflows by embedding privileged access controls directly into the investigation experience.
 
