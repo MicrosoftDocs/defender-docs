@@ -85,7 +85,7 @@ To manage alerts across multiple tenants and workspaces:
 
    :::image type="content" source="media/mto-incidents-alerts/mto-manage-alerts.png" alt-text="Screenshot that highlights the manage alerts option for selected alerts in Microsoft Defender multitenant management." lightbox="media/mto-incidents-alerts/mto-manage-alerts.png":::
 
-Select any specific alert to view the alert fly-out, where you can assign alerts, set the alert status, and classify the alerts for multiple tenants and workspaces.
+1. Select any specific alert to view the alert fly-out, where you can assign alerts, set the alert status, and classify the alerts for multiple tenants and workspaces.
 
 For more information, see [Manage alerts](/defender-endpoint/manage-alerts).
 
