@@ -60,7 +60,7 @@ You need to complete the general steps depicted in the following image to succes
    - **Group Policy**: [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
    - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
    - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
-   - **Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+   - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
 For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
 
