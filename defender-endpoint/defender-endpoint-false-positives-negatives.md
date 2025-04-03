@@ -257,7 +257,7 @@ Before you create indicators for application certificates, make sure the followi
 
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/onboard-windows-server-2012r2-2016#functionality-in-the-modern-unified-solution) [Functionality in the modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), or Windows Server 2019, Windows Server 2022, or Windows Server 2025
+- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), or Windows Server 2019, Windows Server 2022, or Windows Server 2025
 - Virus and threat protection definitions are up to date
 
 > [!TIP]
