@@ -119,7 +119,7 @@ When your security team creates a new indicator (IoC), the following actions are
 - **Block and remediate**: the IoC isn't allowed to run and a remediation action is applied to the IoC.
 
 > [!NOTE]
-> Using Warn mode will prompt your users with a warning if they open a risky app or website. The prompt won't block them from allowing the application or website to run, but you can provide a custom message and links to a company page that describes appropriate usage of the app. Users can still bypass the warning and continue to use the app if they need. For more information, see Govern apps discovered by Microsoft Defender for Endpoint.
+> Using Warn mode prompts users with a warning if they open a risky app or website. The prompt doesn't block them from allowing the application or website to run, but you can provide a custom message and links to a company page that describes appropriate usage of the app. Users can still bypass the warning and continue to use the app if necessary. For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/defender-cloud-apps/mde-govern).
 
 You can create an indicator for:
 
