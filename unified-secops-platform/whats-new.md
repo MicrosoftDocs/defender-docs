@@ -41,6 +41,10 @@ For more information, see:
 - [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
 - [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
 
+### Cross-cloud multitenant management (Preview)
+
+Multitenant management in Microsoft Defender now supports managing tenants in other Microsoft cloud environments. Security operations teams operating in government cloud environments can now manage their entire security operations, including tenants in other Microsoft cloud environments, in a single pane of glass. For more information, see [Manage tenants in other Microsoft cloud environments](mto-cross-cloud.md).
+
 ### Case management now generally available
 
 The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
