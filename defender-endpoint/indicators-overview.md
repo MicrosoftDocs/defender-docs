@@ -28,10 +28,6 @@ ms.date: 12/10/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> [!TIP]
->
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
-
 ## Indicator of compromise (IoC) overview
 
 An Indicator of compromise (IoC) is a forensic artifact, observed on the network or host. An IoC indicates - with high confidence - a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
