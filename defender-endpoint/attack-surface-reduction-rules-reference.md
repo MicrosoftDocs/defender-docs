@@ -331,15 +331,15 @@ By default the state of this rule is set to block. In most cases, many processes
 Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection can't be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
 > [!TIP]
->
 > 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
 > 2. The rule is designed to suppress block reports/toasts for friendly processes. It's also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
 > 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
+> 4. This rule is designed to block the processes from accessing LSASS.EXE process memory. It does not block them from running.  If you see processes like svchost.exe being blocked, it is only blocking from accessing LSASS process memory.  Thus, svchost.exe and other processes can be safely ignored.  The 1 exception is in the known issues below. 
 
 > [!NOTE]
 > In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal.
 >
-> The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support WARN mode.
+> The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support warn mode.
 >
 > In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
 Intune name: `Flag credential stealing from the Windows local security authority subsystem`
