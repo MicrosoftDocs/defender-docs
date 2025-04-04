@@ -143,12 +143,12 @@ The custom configuration profile enables the network extension and grants Full D
     </plist>
     ```
 
-Verify that the above content was copied into the file correctly. From terminal, run the following command and verify that it outputs to the result as shown in the following example:
+1. Verify that the above content was copied into the file correctly. From terminal, run the following command and verify that it outputs to the result as shown in the following example:
 
-```powershell-interactive
-$ plutil -lint sysext.xml
-sysext.xml: OK
-```
+   ```powershell-interactive
+   $ plutil -lint sysext.xml
+   sysext.xml: OK
+   ```
 
 ### Deploy this custom configuration profile
 
