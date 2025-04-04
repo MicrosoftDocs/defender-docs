@@ -37,7 +37,9 @@ Defender for Endpoint extends support to also include the Windows Server operati
 > - Microsoft Defender for Endpoint for servers
 > - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
 
-This article describes how to onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint.
+This article describes how to onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint. 
+
+For Windows Server 2012 R6 and Windows Server 2016, you can either manually install/upgrade the modern, unified solution on these servers, or use Defender for Endpoint and Defender for Cloud integration to automatically deploy or upgrade servers covered by your respective Defender for Server plans. For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
 
 - For Windows Server, version 1803, Windows Server 2019, and later, see [Onboard Windows Server 2019 and later to Defender for Endpoint](onboard-windows-server.md).
 - For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
