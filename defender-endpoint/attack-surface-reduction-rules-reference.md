@@ -160,7 +160,7 @@ Links to information about configuration management system versions referenced i
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y |  |Y | Y  |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| Y | | Y  |  Y |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y |Y <br><br> CB 1802 | Y  | Y  |
-|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools-preview)| Y | | Y  |  Y |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| Y | | Y  |  Y |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) | Y | | Y | Y |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y |Y <br><br> CB 1710  | Y  |  Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y |Y <br><br> CB 1802 | Y  | Y  |
@@ -334,7 +334,7 @@ Enabling this rule doesn't provide additional protection if you have LSA protect
 > 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
 > 2. The rule is designed to suppress block reports/toasts for friendly processes. It's also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
 > 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
-> 4. This rule is designed to block the processes from accessing LSASS.EXE process memory. It does not block them from running.  If you see processes like svchost.exe being blocked, it is only blocking from accessing LSASS process memory.  Thus, svchost.exe and other processes can be safely ignored.  The 1 exception is in the known issues below. 
+> 4. This rule is designed to block the processes from accessing LSASS.EXE process memory. It doesn't block them from running.  If you see processes like svchost.exe being blocked, it's only blocking from accessing LSASS process memory.  Thus, svchost.exe and other processes can be safely ignored.  The one exception is in the known issues below. 
 
 > [!NOTE]
 > In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal.
@@ -368,7 +368,7 @@ For technical support, contact the software vendor.
 This rule blocks email opened within the Microsoft Outlook application, or Outlook.com and other popular webmail providers from propagating the following file types:
 
 - Executable files (such as .exe, .dll, or .scr)
-- Script files (such as a PowerShell .ps1, Visual Basic .vbs, or JavaScript .js file)
+- Script files (such as a PowerShell.ps1, Visual Basic .vbs, or JavaScript .js file)
 
 - Archive files (such as .zip and others)
 
