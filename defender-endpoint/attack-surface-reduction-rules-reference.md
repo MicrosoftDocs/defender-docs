@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/02/2025
+ms.date: 04/04/2025
 search.appverid: met150
 ---
 
@@ -128,9 +128,9 @@ The following table lists the supported operating systems for rules that are cur
 | [Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) | Y | Y | Y |
 | [Block persistence through Windows Management Instrumentation (WMI) event subscription](#block-persistence-through-wmi-event-subscription) | Y <br> version 1903 (build 18362) or later | Y <br> version 1903 (build 18362) or later | N |
 | [Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y <br> version 1803 or later | Y | Y |
-| [Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode-preview)| Y | Y | Y |
+| [Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| Y | Y | Y |
 | [Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y |
-| [Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools-preview)| Y | Y | Y |
+| [Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| Y | Y | Y |
 | [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange role only  | Y <br>Exchange role only |
 | [Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y | N  |  N |
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
@@ -158,7 +158,7 @@ Links to information about configuration management system versions referenced i
 |[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) | Y |Y <br><br> CB 1710 | Y  | Y  |
 |[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |Y  |  |Y   | Y  |
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y |  |Y | Y  |
-|[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode-preview)| Y | | Y  |  Y |
+|[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| Y | | Y  |  Y |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y |Y <br><br> CB 1802 | Y  | Y  |
 |[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools-preview)| Y | | Y  |  Y |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) | Y | | Y | Y |
@@ -198,9 +198,9 @@ For rules with the "Rule State" specified:
 |[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) |  |  N | Y |
 |[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) |
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
-|[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode-preview)| | N | N |
+|[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
-|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools-preview)| | N | N |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
