@@ -92,22 +92,12 @@ If you intend to use a non-Microsoft anti-malware solution, you need to run Micr
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 with the same method available for Windows 10 client devices.
+You can offboard Windows servers by using the same methods that are available for Windows client devices:
 
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
 - [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
-
-After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2012 R2 and Windows Server 2016.
-
-For other Windows server versions, you have two options to offboard Windows servers from the service:
-
-- Uninstall the MMA agent
-- Remove the Defender for Endpoint workspace configuration
-
-> [!NOTE]
-> The offboarding instructions in this article apply to previous versions of Windows Server, such as Windows Server 2016 and Windows Server 2012 R2 using the MMA. To migrate to the new, unified solution, see [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
 ## Related articles
 
