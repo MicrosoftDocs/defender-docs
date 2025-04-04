@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 03/17/2025
+ms.date: 04/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -30,11 +30,17 @@ ms.subservice: onboard
 
 Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender portal. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
+> [!NOTE]
+> To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
+> 
+> - [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) (as part of the Defender for Cloud) offering
+> - Microsoft Defender for Endpoint for servers
+> - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
+
 This article describes how to onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint.
 
-For Windows Server, version 1803, Windows Server 2019, and later, see [Onboard Windows Server 2019 and later to Defender for Endpoint](onboard-windows-server.md).
-
-For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
+- For Windows Server, version 1803, Windows Server 2019, and later, see [Onboard Windows Server 2019 and later to Defender for Endpoint](onboard-windows-server.md).
+- For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
