@@ -188,8 +188,7 @@ For more information, see [Working with Registry Keys](/powershell/scripting/sam
 
 If your Windows Server is onboarded to Microsoft Defender for Endpoint, you can run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and Windows Server 2016. See the following articles:
 
-- [Options to install Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md#options-to-install-the-defender-for-endpoint-packages)
-
+- [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md)
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
 
 ### What happens if a non-Microsoft antivirus product is uninstalled?
