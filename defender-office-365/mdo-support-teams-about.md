@@ -45,7 +45,7 @@ In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams pro
 
 - **Attack simulation training using Teams messages**: To ensure users are resilient to phishing attacks in Microsoft Teams, admins can configure phishing simulations using Teams messages instead of email messages. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
 
-- **Hunting on Teams messages with URLs**: You can now hunt on Teams messages containing URL across three new advanced hunting tables: MessageEvents, MessagePostDeliveryEvents, and MessageURLInfo.
+- **Hunting on Teams messages with URLs**: You can now hunt on Teams messages containing URL across three new advanced hunting tables: [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table), [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table), and [MessageURLInfo](/defender-xdr/advanced-hunting-messageurlinfo-table).
 
 ## Configure ZAP for Teams protection in Defender for Office 365 Plan 2
 
