@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: sugamar, yongrhee
 manager: deniseb
 ms.custom: asr
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 03/05/2025
+ms.date: 04/04/2025
 search.appverid: met150
 ---
 
@@ -70,9 +70,9 @@ For the easiest method to enable the standard protection rules, see [Simplified 
 | Block Office communication application from creating child processes | | Yes |
 | Block persistence through WMI event subscription | Yes | |
 | Block process creations originating from PSExec and WMI commands | | Yes |
-| Block rebooting machine in Safe Mode (preview) | | Yes |
+| Block rebooting machine in Safe Mode| | Yes |
 | Block untrusted and unsigned processes that run from USB | | Yes |
-| Block use of copied or impersonated system tools (preview) | | Yes |
+| Block use of copied or impersonated system tools| | Yes |
 | Block Webshell creation for Servers | | Yes |
 | Block Win32 API calls from Office macros | | Yes |
 | Use advanced protection against ransomware | | Yes |
@@ -128,9 +128,9 @@ The following table lists the supported operating systems for rules that are cur
 | [Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) | Y | Y | Y |
 | [Block persistence through Windows Management Instrumentation (WMI) event subscription](#block-persistence-through-wmi-event-subscription) | Y <br> version 1903 (build 18362) or later | Y <br> version 1903 (build 18362) or later | N |
 | [Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y <br> version 1803 or later | Y | Y |
-| [Block rebooting machine in Safe Mode (preview)](#block-rebooting-machine-in-safe-mode-preview) | Y | Y | Y |
+| [Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| Y | Y | Y |
 | [Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y |
-| [Block use of copied or impersonated system tools (preview)](#block-use-of-copied-or-impersonated-system-tools-preview) | Y | Y | Y |
+| [Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| Y | Y | Y |
 | [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange role only  | Y <br>Exchange role only |
 | [Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y | N  |  N |
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
@@ -149,7 +149,7 @@ Links to information about configuration management system versions referenced i
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes) | Y |  | Y  | Y  |
 |[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes) | Y |Y <br><br> CB 1710 | Y  | Y  |
 |[Block credential stealing from the Windows local security authority subsystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y  | Y <br><br>CB 1802 | Y  | Y  |
-|[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail) | Y | Y <br><br> CB 1710 | Y  |
+|[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail) | Y | Y <br><br> CB 1710 | Y  ||
 |[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | Y | Y <br><br> CB 1802 |  Y |  Y |
 |[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts) | Y |Y  <br><br> CB 1710 | Y  | Y  |
 |[Block JavaScript or VBScript from launching downloaded executable content](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Y |Y <br><br> CB 1710 | Y  | Y  |
@@ -158,9 +158,9 @@ Links to information about configuration management system versions referenced i
 |[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) | Y |Y <br><br> CB 1710 | Y  | Y  |
 |[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |Y  |  |Y   | Y  |
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y |  |Y | Y  |
-|[Block rebooting machine in Safe Mode (preview)](#block-rebooting-machine-in-safe-mode-preview) | Y | | Y  |  Y |
+|[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| Y | | Y  |  Y |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y |Y <br><br> CB 1802 | Y  | Y  |
-|[Block use of copied or impersonated system tools (preview)](#block-use-of-copied-or-impersonated-system-tools-preview) | Y | | Y  |  Y |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| Y | | Y  |  Y |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) | Y | | Y | Y |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y |Y <br><br> CB 1710  | Y  |  Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y |Y <br><br> CB 1802 | Y  | Y  |
@@ -179,7 +179,7 @@ Toast notifications are generated for all rules in Block mode. Rules in any othe
 For rules with the "Rule State" specified:
 
 - ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices set at the cloud block level `High`.
-- Devices that are not set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
+- Devices that aren't set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
 - EDR alerts are generated for ASR rules in the specified states, for devices set at the cloud block level `High+`.
 - Toast notifications occur in block mode only and for devices set at the cloud block level `High`.
 
@@ -196,11 +196,11 @@ For rules with the "Rule State" specified:
 |[Block Office applications from creating executable content](#block-office-applications-from-creating-executable-content) |   | N | Y |
 |[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)  |   | N | Y |
 |[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) |  |  N | Y |
-|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) | 
+|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) |
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
-|[Block rebooting machine in Safe Mode (preview)](#block-rebooting-machine-in-safe-mode-preview) | | N | N |
+|[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
-|[Block use of copied or impersonated system tools (preview)](#block-use-of-copied-or-impersonated-system-tools-preview) | | N | N |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
@@ -222,9 +222,9 @@ For rules with the "Rule State" specified:
 | Block Office communication application from creating child processes | 26190899-1602-49e8-8b27-eb1d0a1ce869 |
 | Block persistence through WMI event subscription <br>* File and folder exclusions not supported. | e6db77e5-3df2-4cf1-b95a-636979351e5b |
 | Block process creations originating from PSExec and WMI commands | d1e49aac-8f56-4280-b9ba-993a6d77406c |
-| Block rebooting machine in Safe Mode (preview) | 33ddedf1-c6e0-47cb-833e-de6133960387 |
+| Block rebooting machine in Safe Mode| 33ddedf1-c6e0-47cb-833e-de6133960387 |
 | Block untrusted and unsigned processes that run from USB | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 |
-| Block use of copied or impersonated system tools (preview) | c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb |
+| Block use of copied or impersonated system tools| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb |
 | Block Webshell creation for Servers | a8f5898e-1dc8-49a9-9878-85004b8a61e6 |
 | Block Win32 API calls from Office macros | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
 | Use advanced protection against ransomware | c1db55ab-c21a-4637-bb3f-a12568109d35 |
@@ -326,22 +326,22 @@ This rule helps prevent credential stealing by locking down Local Security Autho
 
 LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
 
-By default the state of this rule is set to block. In most cases, many processes make calls to LSASS for access rights that are not needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which subsequently succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
+By default the state of this rule is set to block. In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
 
-Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection cannot be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
+Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection can't be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
 > [!TIP]
->
 > 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
-> 2. The rule is designed to suppress block reports/toasts for friendly processes. It is also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
+> 2. The rule is designed to suppress block reports/toasts for friendly processes. It's also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
 > 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
+> 4. This rule is designed to block the processes from accessing LSASS.EXE process memory. It doesn't block them from running.  If you see processes like svchost.exe being blocked, it's only blocking from accessing LSASS process memory.  Thus, svchost.exe and other processes can be safely ignored.  The one exception is in the known issues below. 
 
 > [!NOTE]
 > In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal.
 >
-> The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support WARN mode.
+> The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support warn mode.
 >
-> In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate a lot of noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
+> In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
 Intune name: `Flag credential stealing from the Windows local security authority subsystem`
 
 Configuration Manager name: `Block credential stealing from the Windows local security authority subsystem`
@@ -368,7 +368,9 @@ For technical support, contact the software vendor.
 This rule blocks email opened within the Microsoft Outlook application, or Outlook.com and other popular webmail providers from propagating the following file types:
 
 - Executable files (such as .exe, .dll, or .scr)
-- Script files (such as a PowerShell .ps1, Visual Basic .vbs, or JavaScript .js file)
+- Script files (such as a PowerShell.ps1, Visual Basic .vbs, or JavaScript .js file)
+
+- Archive files (such as .zip and others)
 
 Intune name: `Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
 
@@ -435,7 +437,7 @@ Advanced hunting action type:
 - `AsrObfuscatedScriptAudited`
 - `AsrObfuscatedScriptBlocked`
 
-Dependencies: Microsoft Defender Antivirus, AntiMalware Scan Interface (AMSI), Cloud Protection
+Dependencies: Microsoft Defender Antivirus, Anti-malware Scan Interface (AMSI), Cloud Protection
 
 ### Block JavaScript or VBScript from launching downloaded executable content
 
@@ -456,7 +458,7 @@ Dependencies: Microsoft Defender Antivirus, AMSI
 
 ### Block Office applications from creating executable content
 
-This rule prevents Office apps, including Word, Excel, and PowerPoint, from creating potentially malicious executable content, by blocking malicious code from being written to disk. Malware that abuses Office as a vector might attempt to break out of Office and save malicious components to disk. These malicious components would survive a computer reboot and persist on the system. Therefore, this rule defends against a common persistence technique. This rule also blocks execution of untrusted files that may have been saved by Office macros that are allowed to run in Office files.
+This rule prevents Office apps, including Word, Excel, and PowerPoint, from creating potentially malicious executable content, by blocking malicious code from being written to disk. Malware that abuses Office as a vector might attempt to break out of Office and save malicious components to disk. These malicious components would survive a computer reboot and persist on the system. Therefore, this rule defends against a common persistence technique. This rule also blocks execution of untrusted files that might have been saved by Office macros that are allowed to run in Office files.
 
 Intune name: `Office apps/macros creating executable content`
 
@@ -476,7 +478,7 @@ Dependencies: Microsoft Defender Antivirus, RPC
 This rule blocks code injection attempts from Office apps into other processes.
 
 > [!NOTE]
-> The Block applications from injecting code into other processes ASR rule doesn't support WARN mode.
+> The Block applications from injecting code into other processes ASR rule don't support WARN mode.
 
 > [!IMPORTANT]
 > This rule requires restarting Microsoft 365 Apps (Office applications) for the configuration changes to take effect.
@@ -569,14 +571,11 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
-### Block rebooting machine in Safe Mode (preview)
+### Block rebooting machine in Safe Mode
 
 This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
 
-> [!NOTE]
-> This capability is currently in preview. Additional upgrades to improve efficacy are under development.
-
-Intune Name: `[PREVIEW] Block rebooting machine in Safe Mode`
+Intune Name: ` Block rebooting machine in Safe Mode`
 
 Configuration Manager name: Not yet available
 
@@ -595,7 +594,7 @@ Dependencies: Microsoft Defender Antivirus
 With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards. Blocked file types include executable files (such as .exe, .dll, or .scr)
 
 > [!IMPORTANT]
-> Files copied from the USB to the disk drive will be blocked by this rule if and when it's about to be executed on the disk drive.
+> Files copied from the USB to the disk drive are blocked by this rule if and when it's about to be executed on the disk drive.
 
 Intune name: `Untrusted and unsigned processes that run from USB`
 
@@ -610,14 +609,11 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
-### Block use of copied or impersonated system tools (preview)
+### Block use of copied or impersonated system tools
 
-This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs may try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
+This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
 
-> [!NOTE]
-> This capability is currently in preview. Additional upgrades to improve efficacy are under development.
-
-Intune Name: `[PREVIEW] Block use of copied or impersonated system tools`
+Intune Name: `Block use of copied or impersonated system tools`
 
 Configuration Manager name: Not yet available
 
@@ -635,7 +631,9 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block Webshell creation for Servers
 
-This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a specifically crafted script that allows an attacker to control the compromised server. A web shell may include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, and identifying potential targets.
+This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a crafted script that allows an attacker to control the compromised server. 
+
+A web shell might include functionalities such as receiving and executing malicious commands, downloading and executing malicious files, stealing and exfiltrating credentials and sensitive information, and identifying potential targets.
 
 Intune name: `Block Webshell creation for Servers`
 
@@ -664,7 +662,7 @@ Dependencies: Microsoft Defender Antivirus, AMSI
 
 This rule provides an extra layer of protection against ransomware. It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
 
-- The file has already been found to be unharmful in the Microsoft cloud.
+- The file is found to be unharmful in the Microsoft cloud.
 - The file is a valid signed file.
 - The file is prevalent enough to not be considered as ransomware.
 
@@ -696,5 +694,7 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
+- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
