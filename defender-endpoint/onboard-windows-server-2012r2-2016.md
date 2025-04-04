@@ -53,14 +53,13 @@ This article describes how to onboard Windows Server 2012 R2 and Windows Server 
 - Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 - On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. See [information for Windows Server 2012 R2 and Windows Server 2016](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016).
 
-
 ## Onboarding Windows Server 2016 and Windows Server 2012 R2
 
 The following diagram shows the general steps required to successfully onboard servers.
 
 :::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
 
-1. Download the installation package and onboarding package.
+1. Download the installation package and onboarding package by following these steps:
 
    1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Onboarding**.
    2. **Windows Server 2016 and Windows Server 2012 R2**.
@@ -69,7 +68,7 @@ The following diagram shows the general steps required to successfully onboard s
 
 2. Follow the guidance for your preferred tool to install Defender for Endpoint:
 
-   - **Modern, unified solution**: [Migrating servers from Microsoft Monitoring Agent to the modern, unified solution](application-deployment-via-mecm.md)
+   - **Migrate from MMA to the modern unified solution**: [Migrating servers from Microsoft Monitoring Agent to the modern unified solution](server-migration.md)
    - **Local script**: [Onboard Windows devices using a local script](configure-endpoints-script.md)
    - **Group Policy**:  [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
    - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
@@ -96,16 +95,6 @@ Depending on the server that you're onboarding, the unified solution installs De
 |Windows Server 2016|Built-in|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2019 and later|Built-in|Built-in|
 
-> [!IMPORTANT]
-> Before proceeding with onboarding, see the section [Known issues and limitations in the new, unified solution package for Windows Server 2012 R2 and Windows Server 2016](#known-issues-and-limitations-in-the-modern-unified-solution).
-
-## Important information about running Defender for Endpoint with non-Microsoft security solutions
-
-If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. You must remember to set to passive mode during the installation and onboarding process.
-
-> [!NOTE]
-> If you're installing Defender for Endpoint on servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
-
 ### Known issues and limitations in the modern unified solution
 
 The following points apply to Windows Server 2016 and Windows Server 2012 R2:
@@ -122,16 +111,18 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 - To automatically, deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
+## Important information about running Defender for Endpoint with non-Microsoft security solutions
+
+If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. You must remember to set to passive mode during the installation and onboarding process.
+
+> [!NOTE]
+> If you're installing Defender for Endpoint on servers with McAfee Endpoint Security (ENS) or VirusScan Enterprise (VSE), the version of the McAfee platform might need to be updated to ensure Microsoft Defender Antivirus isn't removed or disabled. For more information including the specific version numbers required, see [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
+
 ## Update packages for Windows Server 2016 or Windows Server 2012 R2
 
 To receive regular product improvements and fixes for the Defender for Endpoint component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
 If you're using Windows Server Update Services (WSUS) and/or [Microsoft Endpoint Configuration Manager](/mem/configmgr/core/understand/introduction), this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
-
-
-## Verify the onboarding and installation
-
-Verify that Microsoft Defender Antivirus and Defender for Endpoint are running.
 
 ## Run a detection test to verify onboarding
 
@@ -149,9 +140,7 @@ After onboarding the device, you can choose to run a detection test to verify th
    sc.exe query Windefend
    ```
 
-   If the result is 'The specified service doesn't exist as an installed service', then you need to install Microsoft Defender Antivirus.
-
-   For information on how to use Group Policy to configure and manage Microsoft Defender Antivirus on your Windows servers, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md).
+   If the result is, "The specified service doesn't exist as an installed service," then you need to install Microsoft Defender Antivirus.
 
 2. Run the following command to verify that Defender for Endpoint is running:
 
@@ -160,10 +149,6 @@ After onboarding the device, you can choose to run a detection test to verify th
    ```
 
    The result should show it's running. If you encounter issues with onboarding, see [Troubleshoot onboarding](troubleshoot-onboarding.md).
-
-## Run a detection test
-
-Follow the steps in [Run a detection test on a newly onboarded device](run-detection-test.md) to verify that the server is reporting to Defender for the Endpoint service.
 
 ## Next steps
 
@@ -178,9 +163,7 @@ You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SA
 - [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
-After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2016 and Windows Server 2012 R2.
-
-For other Windows server versions, you have two options to offboard Windows servers from the service:
+After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2016 and Windows Server 2012 R2. For other Windows server versions, you have two options to offboard Windows servers from the service:
 
 - Uninstall the MMA agent
 - Remove the Defender for Endpoint workspace configuration
