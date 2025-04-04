@@ -46,7 +46,7 @@ This article describes how to onboard Windows Server 2012 R2 and Windows Server 
 
 ## Prerequisites for Windows Server 2016 and Windows Server 2012 R2
 
-- It's recommended to install the latest available Servicing Stack Update (SSU) and Least Cumulative Update (LCU) on the server.
+- It's recommended to install the latest available Servicing Stack Update (SSU) and Latest Cumulative Update (LCU) on the server.
 - The SSU from September 14, 2021 or later must be installed.
 - The LCU from September 20, 2018 or later must be installed.  
 - Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
@@ -65,6 +65,10 @@ The following diagram shows the general steps required to successfully onboard s
    2. **Windows Server 2016 and Windows Server 2012 R2**.
    3. Select **Download installation package** and save it on the device. The installation package contains an MSI file that installs the Defender for Endpoint agent.
    4. Select **Download onboarding package** and save the zipped folder on the device. The onboarding package contains `WindowsDefenderATPOnboardingScript.cmd`, which contains the onboarding script.
+
+   > [!NOTE]
+   > The installation package is updated monthly. Be sure to download the latest package before usage.
+   > To update after installation, you don't have to run the installer package again. If you do, the installer asks you to offboard first as that is a requirement for uninstallation. See [Update packages for Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
 
 2. Follow the guidance for your preferred tool to install Defender for Endpoint:
 
@@ -122,7 +126,7 @@ If you intend to use a non-Microsoft anti-malware solution, you need to run Micr
 
 To receive regular product improvements and fixes for the Defender for Endpoint component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
-If you're using Windows Server Update Services (WSUS) and/or [Microsoft Endpoint Configuration Manager](/mem/configmgr/core/understand/introduction), this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
+If you're using Windows Server Update Services (WSUS) and/or [Microsoft Configuration Manager](/mem/configmgr/core/understand/introduction), this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
 
 ## Run a detection test to verify onboarding
 
