@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: migrationguides
 ms.reviewer: chriggs, depicker, yongrhee
 f1.keywords: NOCSH
-ms.date: 03/26/2025
+ms.date: 04/04/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
@@ -35,7 +35,7 @@ If you're considering moving to Defender for Endpoint, we have guidance to help.
 |Scenario|Guidance|
 |---|---|
 |You don't have an endpoint protection solution in place yet, and you want to know more about Defender for Endpoint. You want to see how Defender for Endpoint works before rolling it out in your environment.|[Microsoft Defender for Endpoint evaluation lab](evaluate-microsoft-defender-antivirus.md)|
-|You're just getting started with your deployment but are unsure which guidance to use and need a wizard-driven approach to help you make the right deployment decisions.|[Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365?view=o365-worldwide)|
+|You're just getting started with your deployment but are unsure which guidance to use and need a wizard-driven approach to help you make the right deployment decisions.|[Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365?)|
 |You already have Defender for Endpoint, and you want some help getting everything set up and configured.|[Microsoft Defender for Endpoint deployment guide](mde-planning-guide.md)|
 |You're planning to switch from a non-Microsoft endpoint protection solution to Defender for Endpoint, which includes Microsoft Defender Antivirus. You want to get an overview of the migration process and how to make the switch.|[Make the switch to Microsoft Defender for Endpoint](switch-to-mde-overview.md)|
 |You've already migrated or onboarded to Defender for Endpoint. You want some help with next steps, such as managing your security settings, configuring more features, or fine-tuning your security policies.| [Configure general Defender for Endpoint settings](preferences-setup.md) |
