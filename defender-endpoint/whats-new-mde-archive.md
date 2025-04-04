@@ -4,10 +4,10 @@ description: See what features were available for Microsoft Defender for Endpoin
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 03/25/2024
+ms.date: 04/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -57,7 +57,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
     1. Microsoft Intune support for removable storage access control is now available. See [Deploy and manage device control with Intune](device-control-deploy-manage-intune.md).
 
-    2. The new default enforcement policy of removable storage access control is designed for all device control features. Printer Protection is now available for this policy. If you create a Default Deny policy, printers will be blocked in your organization.
+    2. The new default enforcement policy of removable storage access control is designed for all device control features. Printer Protection is now available for this policy. If you create a Default Deny policy, printers are blocked in your organization.
 
         - Intune: *./Vendor/MSFT/Defender/Configuration/DefaultEnforcement* <br> See [Deploy and manage device control using Intune](device-control-deploy-manage-intune.md)
 
@@ -71,7 +71,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## October 2022
 
-[Network protection C2 detection and remediation is now generally available](network-protection.md#block-command-and-control-attacks). <br/>Attackers often compromise existing internet-connected servers to become their command and control servers. Attackers can use the compromised servers to hide malicious traffic and deploy malicious bots that are used to infect endpoints. Network protection detection and remediation helps improve the time it takes for the security operations (SecOps) teams to pinpoint and respond to malicious network threats that are looking to compromise endpoints.
+[Network protection C2 detection and remediation is now generally available](network-protection.md#block-command-and-control-attacks). <br/>Attackers often compromise existing internet-connected servers to become their command and control servers. Attackers can use the compromised servers to hide malicious traffic and deploy malicious bots that are used to infect endpoints. Network protection detection and remediation help improve the time it takes for the security operations (SecOps) teams to pinpoint and respond to malicious network threats that are looking to compromise endpoints.
 
 ## September 2022
 
@@ -91,11 +91,11 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Device health reporting (Preview)](device-health-reports.md)<br> The devices status report provides high-level information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, and Windows 10 versions.
 
-- [Tamper protection on macOS is now generally available](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-on-macOS-is-now-generally-available/ba-p/3595422)<br> This feature will be released with audit mode enabled by default, and you can decide whether to enforce (block) or turn off the capability. Later this year, we'll offer a gradual rollout mechanism that will automatically switch endpoints to "block" mode;  this mechanism applies only if you haven't made a choice to either enable ("block" mode) or disable the capability.
+- [Tamper protection on macOS is now generally available](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-on-macOS-is-now-generally-available/ba-p/3595422)<br> This feature is released with audit mode enabled by default, and you can decide whether to enforce (block) or turn off the capability. Later this year, we offer a gradual rollout mechanism that will automatically switch endpoints to "block" mode;  this mechanism applies only if you haven't made a choice to either enable ("block" mode) or disable the capability.
 
-- [Network Protection and Web Protection for macOS and Linux is now in Public Preview!](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-protection-and-web-protection-for-macOS-and-linux-is-now/ba-p/3601576)<br>Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet. It's the foundation on which our Web Protection for Microsoft Defender for Endpoint is built. These capabilities include Web threat protection, Web content filtering, and IP/URL Custom indicators. Web protection enables you to secure your devices against web threats and helps to regulate unwanted content.
+- [Network Protection and Web Protection for macOS and Linux is now in Public Preview!](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-protection-and-web-protection-for-macOS-and-linux-is-now/ba-p/3601576)<br>Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. It's the foundation on which our Web Protection for Microsoft Defender for Endpoint is built. These capabilities include Web threat protection, Web content filtering, and IP/URL Custom indicators. Web protection enables you to secure your devices against web threats and helps to regulate unwanted content.
 
-- [Improved Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016)<br>Configuration Manager version 2207 now supports automatic deployment of modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016. Devices running Windows Server 2012 R2 or Windows Server 2016 that are targeted by the Defender for Endpoint onboarding policy now use the unified agent instead of the Microsoft Monitoring Agent-based solution, if configured through client settings.
+- [Improved Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016)<br>Configuration Manager version 2207 now supports automatic deployment of modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016. Devices running Windows Server 2012 R2 or Windows Server 2016 that is targeted by the Defender for Endpoint onboarding policy now use the unified agent instead of the Microsoft Monitoring Agent-based solution, if configured through client settings.
 
 ## July 2022
 
@@ -105,7 +105,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Introducing the new alert suppression experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/introducing-the-new-alert-suppression-experience/ba-p/3562719)<br>We're excited to share that the new and advanced alert suppression experience is now Generally Available. The new experience provides tighter granularity and control, allowing users to tune Microsoft Defender for Endpoint alerts.
 
-- [Prevent compromised unmanaged devices from moving laterally in your organization with "Contain](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/prevent-compromised-unmanaged-devices-from-moving-laterally-in/ba-p/3482134)<br>Starting today, when a device that isn't enrolled in Microsoft Defender for Endpoint is suspected of being compromised, as an SOC analyst, you'll be able to "Contain" it. As a result, any device enrolled in Microsoft Defender for Endpoint will now block any incoming/outgoing communication with the suspected device.
+- [Prevent compromised unmanaged devices from moving laterally in your organization with "Contain](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/prevent-compromised-unmanaged-devices-from-moving-laterally-in/ba-p/3482134)<br>Starting today, when a device that isn't enrolled in Microsoft Defender for Endpoint is suspected of being compromised, as an SOC analyst, you're able to "Contain" it. As a result, any device enrolled in Microsoft Defender for Endpoint will now block any incoming/outgoing communication with the suspected device.
 
 - [Mobile device support is now available for US Government Customers using Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/mobile-device-support-is-now-available-for-us-government/ba-p/3472590)<br>Microsoft Defender for Endpoint for US Government customers is built in the Azure US Government environment and uses the same underlying technologies as Defender in Azure Commercial. This offering is available to GCC, GCC High, and DoD customers, and it further extends our platform availability from Windows, macOS, and Linux, to Android and iOS devices.
 
@@ -157,7 +157,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Mobile Application management support](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> This enhancement enables Microsoft Defender for Endpoint protect an organization's data within a managed application when Intune is being used to manage mobile applications. For more information about mobile application management, see [this documentation](/mem/intune/apps/mam-faq).
 
-- [Microsoft Tunnel VPN integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN capabilities are now integrated with Microsoft Defender for Endpoint app for Android. This unification enables organizations to offer a simplified end-user experience with one security app – offering both mobile threat defense and the ability to access on-prem resources from their mobile device – while security and IT teams are able to maintain the same admin experiences they are familiar with.
+- [Microsoft Tunnel VPN integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN capabilities are now integrated with Microsoft Defender for Endpoint app for Android. This unification enables organizations to offer a simplified end-user experience with one security app – offering both mobile threat defense and the ability to access on-prem resources from their mobile device – while security and IT teams are able to maintain the same admin experiences they're familiar with.
 
 - [Jailbreak detection on iOS](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios) <br> Jailbreak detection capability in Microsoft Defender for Endpoint on iOS is now generally available. This adds to the phishing protection that already exists. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
 
@@ -181,7 +181,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## August 2020
 
-- [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md) <br> Microsoft Defender for Endpoint now adds support for Android. The article [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md) enables you learn how to install, configure, and use Microsoft Defender for Endpoint for Android.
+- [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md) <br> Microsoft Defender for Endpoint now adds support for Android. The article [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md) Details how to install, configure, and use Microsoft Defender for Endpoint for Android.
 
 ## July 2020
 
@@ -189,9 +189,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## June 2020
 
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) <br> Microsoft Defender for Endpoint now adds support for Linux. This article [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) enables you learn how to install, configure, update, and use Microsoft Defender for Endpoint for Linux.
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) <br> Microsoft Defender for Endpoint now adds support for Linux. This article [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) Details how to install, configure, update, and use Microsoft Defender for Endpoint for Linux.
 
-- [Attack simulators in the evaluation lab](evaluate-microsoft-defender-antivirus.md) <br> Microsoft Defender for Endpoint has partnered with various threat simulation platforms to give you convenient access to test the capabilities of the platform right from within the portal.
+- [Attack simulators in the evaluation lab](evaluate-microsoft-defender-antivirus.md) <br> Microsoft Defender for Endpoint partnered with various threat simulation platforms to give you convenient access to test the capabilities of the platform right from within the portal.
 
 ## April 2020
 
@@ -201,7 +201,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md) <BR> Microsoft Defender for Endpoint for Mac brings the next-generation protection to Mac devices. Core components of the unified endpoint security platform will now be available for Mac devices, including [endpoint detection and response](overview-endpoint-detection-response.md).
 
-- [Threat & Vulnerability Management application and application version end-of-life information](/defender-vulnerability-management/tvm-security-recommendation) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
+- [Threat & Vulnerability Management application and application version end-of-life information](/defender-vulnerability-management/tvm-security-recommendation) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you're aware that they'll no longer be supported, and can take action to either uninstall or replace. Doing so helps lessen the risks related to various vulnerability exposures due to unpatched applications.
 
 - [Threat & Vulnerability Management Advanced Hunting Schemas](/defender-xdr/advanced-hunting-schema-tables) <BR>Use the Threat & Vulnerability Management tables in the Advanced hunting schema to query about software inventory, vulnerability knowledgebase, security configuration assessment, and security configuration knowledgebase.
 
@@ -248,7 +248,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Threat Experts Targeted Attack Notification capability](endpoint-attack-notifications.md) <BR> Microsoft Threat Experts' Targeted Attack Notification alerts are tailored for organizations to provide as much information as can be quickly delivered, including the timeline, scope of breach, and the methods of intrusion, thus bringing attention to critical threats in their network.
 
-- [Microsoft Defender for Endpoint API](/defender-vulnerability-management/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
+- [Microsoft Defender for Endpoint API](/defender-vulnerability-management/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
 
 ## February 2019
 
@@ -262,9 +262,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Controlled folder access](enable-controlled-folders.md)<BR> Controlled folder access is now supported on Windows Server 2019.
 
-- [Custom detection](/defender-xdr/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by leveraging the power of advanced hunting through the creation of custom detection rules.
+- [Custom detection](/defender-xdr/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by using the power of advanced hunting through the creation of custom detection rules.
 
-- [Integration with Azure Security Center](configure-server-endpoints.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can leverage the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
+- [Integration with Azure Security Center](configure-server-endpoints.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can use the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
 
 - [Managed security service provider](mssp-support.md) (MSSP) support<BR> Microsoft Defender for Endpoint adds support for this scenario by providing MSSP integration. The integration allows MSSPs to take the following actions: Get access to MSSP customer's Microsoft Defender Security Center portal, fetch email notifications, and fetch alerts through security information and event management (SIEM) tools.
 
@@ -283,7 +283,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
-- Antimalware Scan Interface (AMSI) was extended to cover Office VBA macros as well. [Office VBA + AMSI: Parting the veil on malicious macros](https://cloudblogs.microsoft.com/microsoftsecure/2018/09/12/office-vba-amsi-parting-the-veil-on-malicious-macros/).
+- Anti-malware Scan Interface (AMSI) was extended to cover Office VBA macros as well. [Office VBA + AMSI: Parting the veil on malicious macros](https://cloudblogs.microsoft.com/microsoftsecure/2018/09/12/office-vba-amsi-parting-the-veil-on-malicious-macros/).
 
   - Microsoft Defender Antivirus, new in Windows 10 version 1809, can now [run within a sandbox](https://www.microsoft.com/security/blog/2018/10/26/windows-defender-antivirus-can-now-run-in-a-sandbox) (preview), increasing its security.
 
@@ -316,10 +316,10 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Controlled folder access](enable-controlled-folders.md)<BR>You can now block untrusted processes from writing to disk sectors using Controlled Folder Access.
 
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)<BR>Microsoft Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms. You'll be able to see alerts from various supported operating systems (OS) in Microsoft Defender Security Center and better protect your organization's network.
+- [Onboard non-Windows devices](configure-endpoints-non-windows.md)<BR>Microsoft Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms. You're able to see alerts from various supported operating systems (OS) in Microsoft Defender Security Center and better protect your organization's network.
 
 - [Role-based access control (RBAC)](rbac.md)<BR>Using role-based access control (RBAC), you can create roles and groups within your security operations team to grant appropriate access to the portal.
 
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)<BR>Microsoft Defender Antivirus now shares detection status between M365 services and interoperates with Microsoft Defender for Endpoint. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)<BR>Microsoft Defender Antivirus now shares detection status between Microsoft 365 services and interoperates with Microsoft Defender for Endpoint. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
-- Block at first sight can now block non-portable executable files (such as JS, VBS, or macros) and executable files. For more information, see [Enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
+- Block at first sight can now block nonportable executable files (such as JS, VBS, or macros) and executable files. For more information, see [Enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
