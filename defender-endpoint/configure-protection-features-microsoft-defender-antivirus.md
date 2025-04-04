@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 04/04/2025
 ---
 
 # Configure behavioral, heuristic, and real-time protection
@@ -38,15 +38,15 @@ Microsoft Defender Antivirus uses several methods to provide threat protection:
 
 You can configure how Microsoft Defender Antivirus uses these methods with [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration), [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md), Microsoft Configuration Manager, [Group Policy](use-group-policy-microsoft-defender-antivirus.md), [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md), and [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md).
 
-This section covers configuration for always-on scanning, including how to detect and block apps that are deemed unsafe, but may not be detected as malware.
+This section covers configuration for always-on scanning, including how to detect and block apps that are deemed unsafe, but might not be detected as malware.
 
 See [Use next-gen Microsoft Defender Antivirus technologies through cloud protection](cloud-protection-microsoft-defender-antivirus.md) for how to enable and configure Microsoft Defender Antivirus cloud protection.
 
 ## In this section
 
-| Topic|Description |
+| Article|Description |
 |---|---|
-| [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Detect and block apps that may be unwanted in your network, such as adware, browser modifiers and toolbars, and rogue or fake antivirus apps |
+| [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Detect and block apps that mighty be unwanted in your network, such as adware, browser modifiers and toolbars, and rogue or fake antivirus apps |
 | [Enable and configure Microsoft Defender Antivirus protection capabilities](configure-real-time-protection-microsoft-defender-antivirus.md)|Enable and configure real-time protection, heuristics, and other always-on Microsoft Defender Antivirus monitoring features |
 
 > [!TIP]
