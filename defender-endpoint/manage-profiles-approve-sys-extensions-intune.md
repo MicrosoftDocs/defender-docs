@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 03/21/2024
+ms.date: 04/04/2025
 ---
 
 # Manage profiles and approve extensions using Intune
