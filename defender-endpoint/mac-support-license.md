@@ -56,7 +56,7 @@ You encounter this message in a different way: If you're using the terminal to e
 
 ### Cause
 
-- You can encounter an error if you've deployed and/or installed the Microsoft Defender for Endpoint on macOS package [Download installation packages](mac-install-manually.md#download-installation-and-onboarding-packages), but you might not have run the configuration script [Download the onboarding package](mac-install-with-intune.md#step-15-download-the-onboarding-package) that contains the license settings. For information on troubleshooting in this scenario, see [If you didn't run the configuration script](##if-you-didnt-run-the-configuration-script).
+- You can encounter an error if you've deployed and/or installed the Microsoft Defender for Endpoint on macOS package [Download installation packages](mac-install-manually.md#download-installation-and-onboarding-packages), but you might not have run the configuration script [Download the onboarding package](mac-install-with-intune.md#step-15-download-the-onboarding-package) that contains the license settings. For information on troubleshooting in this scenario, see [If you didn't run the configuration script](#if-you-didnt-run-the-configuration-script).
 
 - You can encounter an error message when the Microsoft Defender for Endpoint on macOS agent isn't up to date. For information on troubleshooting in this scenario, see [If Microsoft Defender for Endpoint on macOS isn't up to date](#if-microsoft-defender-for-endpoint-on-macos-isnt-up-to-date).
 
@@ -90,7 +90,7 @@ For scenarios where Microsoft Defender for Endpoint on macOS isn't up to date, y
 
 When the offboarding script is executed on the macOS, it saves a file in `/Library/Application Support/Microsoft/Defender/` and it's named `com.microsoft.wdav.atp.offboarding.plist`.
 
-If the file exists, it prevents the macOS from being onboarded again.  Delete the **com.microsoft.wdav.atp.offboarding.plist** running the onboarding script again.
+If the file exists, it prevents the macOS from being onboarded again. Delete the **com.microsoft.wdav.atp.offboarding.plist** running the onboarding script again.
 
 #### If a license isn't assigned to a user
 
