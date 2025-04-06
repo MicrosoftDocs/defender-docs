@@ -22,7 +22,7 @@ To get started with OAuth application attack path features in Exposure Managemen
 
 ### Required roles and permissions
 
-To access all Exposure Management experiences, you need either a Unified RBAC role or an Entra ID role. Only one is required.
+To access all Exposure Management experiences, you need either a Unified Role-Based-Access-Control (RBAC) role or an Entra ID role. Only one is required.
 
 - **Exposure Management (read)** (Unified RBAC)
 
@@ -42,7 +42,7 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 ### Critical Asset Management - Service Principals
 
-Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to Microsoft 365 SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
+Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
 
 To view the full list of critical permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
 
