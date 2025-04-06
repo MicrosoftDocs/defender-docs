@@ -95,4 +95,4 @@ Depending on your environment, it can take a few hours to discover and protect S
 
 ## Next steps
 
-- [Learn about Defender for SQL servers on machines](defender-for-sql-servers-on-machines.md)
+- [Verify that all machines are protected](verify-machine-protection.md)
