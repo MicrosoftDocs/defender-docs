@@ -162,9 +162,11 @@ For example:
 
 ![Filter after selecting investigate 6 months back.](media/filter-six-months-back.png)
 
-#### Export activities six months back (Preview)
 
-You can export all activities from up to six months by clicking the Export button in the top-left corner  of the Activity log page.
+### Export activities six months back (Preview)
+
+
+You can export all activities from the past six months by clicking the Export button in the top-left corner  of the Activity log page.
 
 ![Click the export icon to export records.](media/activity-filters-queries/export-button-of-activity-logs.png)
 
@@ -183,7 +185,7 @@ Reports that include private activities are marked with an Eye icon in the repor
 ![eye-icon](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
 
 > [!NOTE] 
->Exporting and viewing activity data up to six months back is restricted to specific roles with elevated permissions. Group administrators do not have access to this feature.
+>Exporting and viewing activity data up to six months back is restricted to specific roles with elevated permissions.
 
 The following roles are supported:
 
