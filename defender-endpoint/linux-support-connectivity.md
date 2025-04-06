@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 03/28/2025
 ---
 
 # Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux
@@ -56,7 +56,7 @@ Testing connection with https://uk-v20.events.data.microsoft.com/ping ... [OK]
 Testing connection with https://v20.events.data.microsoft.com/ping ... [OK]
 ```
 
-If the connectivity test fails, check if the device has Internet access and if [network connections](mde-linux-prerequisites.md#network-connections) are blocked by a proxy or firewall.
+If the connectivity test fails, check if the device has Internet access. Also check to see if network connections are blocked by a proxy or firewall. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-that-devices-can-connect-to-defender-for-endpoint-cloud-services).
 
 Failures with curl error 35 or 60, indicate certificate pinning rejection. Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allowlist.
 
@@ -95,7 +95,6 @@ To set the proxy for mdatp, use the following command:
 ```bash
 mdatp config proxy set --value http://address:port 
 ```
-
 
 Upon success, attempt another connectivity test from the command line:
 

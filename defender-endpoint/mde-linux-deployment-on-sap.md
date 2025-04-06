@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 03/28/2025
 ms.custom: 
 - partner-contribution
 ---
@@ -65,7 +65,7 @@ Here are some important point about SAP applications on Linux Server:
 
 - Microsoft Defender for Endpoint [Build: 101.24082.0004 | Release version: 30.124082.0004.0](/defender-endpoint/linux-whatsnew#oct-2024-build-101240820004--release-version-3012408200040) or later must be deployed.
 - Microsoft Defender for Endpoint on Linux supports [Linux releases](/defender-endpoint/mde-linux-prerequisites) used by SAP applications.
-- Microsoft Defender for Endpoint on Linux requires connectivity to specific Internet endpoints from VMs to update antivirus definitions. For more information, see [Network connections](mde-linux-prerequisites.md#network-connections).
+- Microsoft Defender for Endpoint on Linux requires connectivity to specific Internet endpoints from VMs to update antivirus definitions. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-that-devices-can-connect-to-defender-for-endpoint-cloud-services).
 - Microsoft Defender for Endpoint on Linux requires some `crontab` (or other task scheduler) entries to schedule scans, log rotation, and Microsoft Defender for Endpoint updates. Enterprise security teams normally manage these entries. For more information, see [How to schedule an update for Microsoft Defender for Endpoint on Linux](linux-update-mde-linux.md).
 
 As of December  2024, Defender for Endpoint on Linux can safely be configured with real-time protection enabled. 
