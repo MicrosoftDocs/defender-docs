@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
 ms.localizationpriority: medium
-ms.date: 04/04/2025
+ms.date: 04/06/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -98,7 +98,7 @@ In the preceding procedure, steps 2 and 7 apply only if you intend to replace yo
 
 ## If you are running System Center Endpoint Protection but aren't managing the machine using Configuration Manager (MECM/ConfigMgr)
 
-1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [prerequisites](onboard-windows-server-2012r2-2016.md#prerequisites) have been met.
+1. Fully update the device, including Microsoft Defender Antivirus (on Windows Server 2016) ensuring [prerequisites](onboard-windows-server-2012r2-2016.md#prerequisites-for-windows-server-2016-and-windows-server-2012-r2) are met.
 
 2. Create and apply policies using Group Policy, PowerShell, or a non-Microsoft management solution.
 
