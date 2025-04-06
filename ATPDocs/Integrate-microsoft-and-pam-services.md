@@ -19,7 +19,20 @@ PAM solutions secure privileged accounts by storing their credentials in a secur
 Defender for Identity helps identify and investigate suspicious activities related to privileged accounts, such as unusual sign in patterns or privilege escalation attempts. 
 When integrated with a PAM solution, Microsoft Defender for Identity can detect and investigate suspicious activity involving privileged accounts—such as abnormal sign-ins or privilege escalation attempts. The integration combines PAM’s access controls with Defender for Identity’s behavioral analytics for enhanced threat detection and containment.
 
-### Visibility and response actions
+## Technology partners
+
+Microsoft Defender for Identity currently supports integration with the following PAM vendors. Dedicated integrations for each partner are now available in the Microsoft 365 Defender partner catalog for streamlined onboarding and visibility.
+
+:::image type="content" source="media/Integrate with partner system services/Screenshot-of-mdi-technology-partners.png" alt-text="Screenshot of Defender for Identity PAM partners":::
+
+
+|Vendor |Description |
+|---------|---------|
+|CyberArk    | Provides credential vaulting, session monitoring, and threat remediation for privileged identities.       |
+|BeyondTrust     | BeyondTrust Offers identity-centric controls to manage the privilege attack surface and mitigate internal and external threats.        |
+|Delinea     | Delivers centralized authorization and session control for privileged identities across enterprise environments.       |
+
+### Reset password
 
 Once PAM integration is enabled, Microsoft Defender XDR automatically tags identities managed by your PAM solution, providing critical context during investigations.
 
@@ -36,18 +49,6 @@ To reset a password:
 
 This capability streamlines containment and response workflows by embedding privileged access controls directly into the investigation experience.
 
-## Integration catalog
-
-Microsoft Defender for Identity currently supports integration with the following PAM vendors. Dedicated integrations for each partner are now available in the Microsoft 365 Defender partner catalog for streamlined onboarding and visibility.
-
-:::image type="content" source="media/Integrate with partner system services/Screenshot-of-mdi-technology-partners.png" alt-text="Screenshot of Defender for Identity PAM partners":::
-
-
-|Vendor |Description |
-|---------|---------|
-|CyberArk    | Provides credential vaulting, session monitoring, and threat remediation for privileged identities.       |
-|BeyondTrust     | BeyondTrust Offers identity-centric controls to manage the privilege attack surface and mitigate internal and external threats.        |
-|Delinea     | Delivers centralized authorization and session control for privileged identities across enterprise environments.       |
 
 ### Next steps 
 
