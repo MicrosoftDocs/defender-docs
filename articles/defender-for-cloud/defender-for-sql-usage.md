@@ -97,6 +97,7 @@ Don't skip this step, as it's important to verify your deployment is protected.
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
 
-## Next steps
+## Next step
 
-- [Verify that all machines are protected](verify-machine-protection.md)
+> [!div class="nextstepaction"]
+> [Verify that all machines are protected](verify-machine-protection.md)
