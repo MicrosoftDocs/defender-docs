@@ -306,6 +306,14 @@
             href: advanced-hunting-identitylogonevents-table.md
           - name: IdentityQueryEvents
             href: advanced-hunting-identityqueryevents-table.md
+          - name: MessageEvents
+            href: advanced-hunting-messageevents-table.md
+          - name: MessagePostDeliveryEvents
+            href: advanced-hunting-messagepostdeliveryevents-table.md
+          - name: MessageUrlInfo
+            href: advanced-hunting-messageurlinfo-table.md                                    
+          - name: OAuthAppInfo
+            href: advanced-hunting-oauthappinfo-table.md            
           - name: UrlClickEvents
             href: advanced-hunting-urlclickevents-table.md
         - name: Custom detections
