@@ -174,43 +174,44 @@ When exporting data:
 - You can choose to exclude private activities.  
 - The exported file is limited to 100,000 records and is delivered in CSV format.
 
-The results file is accessible under the **Exported reports**.
+Once the export is complete, the file is available under **Exported reports**.
 
-Navigate to **Reports -> Cloud Apps** in Microsoft 365 Defender portal to view the status of the export process and access past exports.  
+To access exported files and check export status, navigate to **Reports -> Cloud Apps** in Microsoft 365 Defender portal to view the status of the export process and access past exports.  
+
 Reports that include private activities are marked with an Eye icon in the reports page.  
 
 ![eye-icon](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
 
 > [!NOTE] 
->The ability to view and export activity data up to six months back is available to a limited set of roles with elevated permissions. Group administrators don't have access to this feature.
+>Exporting and viewing activity data up to six months back is restricted to specific roles with elevated permissions. Group administrators do not have access to this feature.
 
 The following roles are supported:
 
-- INVITED_ADMIN
+- `INVITED_ADMIN`
 
-- GLOBAL_ADMINISTRATOR
+- `GLOBAL_ADMINISTRATOR`
 
-- SECURITY_ADMINISTRATOR
+- `SECURITY_ADMINISTRATOR`
 
-- MCAS_ADMINISTRATOR
+- `MCAS_ADMINISTRATOR`
 
-- DISCOVERY_ADMIN
+- `DISCOVERY_ADMIN`
 
-- SECURITY_OPERATOR
+- `SECURITY_OPERATOR`
 
-- COMPLIANCE_ADMIN
+- `COMPLIANCE_ADMIN`
 
-- SECURITY_READER
+- `SECURITY_READER`
 
-- GLOBAL_READER
+- `GLOBAL_READER`
 
-- URBAC_ROLES_GLOBAL_ADMINISTRATOR
+- `URBAC_ROLES_GLOBAL_ADMINISTRATOR`
 
-- URBAC_ROLES_COMPLIANCE_ADMINISTRATOR
+- `URBAC_ROLES_COMPLIANCE_ADMINISTRATOR`
 
-- URBAC_ROLES_SECURITY_READER
+- `URBAC_ROLES_SECURITY_READER`
 
-- URBAC_ROLES_SECURITY_OPERATOR
+- `URBAC_ROLES_SECURITY_OPERATOR`
 
 ## Next steps
 
