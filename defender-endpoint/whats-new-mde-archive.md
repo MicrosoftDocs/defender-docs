@@ -119,7 +119,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## October 2021
 
-- [Updated onboarding and feature parity for Windows Server 2012 R2 and Windows Server 2016 (preview)](configure-server-endpoints.md)<br> The new unified solution package makes it easier to onboard servers by removing dependencies and installation steps. In addition, this unified solution package comes with many new feature improvements.
+- [Updated onboarding and feature parity for Windows Server 2012 R2 and Windows Server 2016 (preview)](onboard-windows-server-2012r2-2016.md)<br> The new unified solution package makes it easier to onboard servers by removing dependencies and installation steps. In addition, this unified solution package comes with many new feature improvements.
 
 - Windows 11 support added to Microsoft Defender for Endpoint and Microsoft 365 Defender.
 
@@ -226,7 +226,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [Evaluation lab](evaluate-microsoft-defender-antivirus.md) <BR> The Microsoft Defender for Endpoint evaluation lab is designed to eliminate the complexities of device and environment configuration so that you can
  focus on evaluating the capabilities of the platform; running simulations; and seeing the prevention, detection, and remediation features in action.
 
-- [Windows Server 2008 R2 SP1](configure-server-endpoints.md) <BR> You can now onboard Windows Server 2008 R2 SP1.
+- [Windows Server 2008 R2 SP1](onboard-windows-server-2012r2-2016.md) <BR> You can now onboard Windows Server 2008 R2 SP1.
 
 ## June 2019
 
@@ -264,13 +264,13 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Custom detection](/defender-xdr/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by using the power of advanced hunting through the creation of custom detection rules.
 
-- [Integration with Azure Security Center](configure-server-endpoints.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can use the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
+- [Integration with Azure Security Center](onboard-windows-server-2012r2-2016.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can leverage the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
 
 - [Managed security service provider](mssp-support.md) (MSSP) support<BR> Microsoft Defender for Endpoint adds support for this scenario by providing MSSP integration. The integration allows MSSPs to take the following actions: Get access to MSSP customer's Microsoft Defender Security Center portal, fetch email notifications, and fetch alerts through security information and event management (SIEM) tools.
 
 - [Removable device control](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/19/windows-defender-atp-has-protections-for-usb-and-removable-devices/)<BR>Microsoft Defender for Endpoint provides multiple monitoring and control features to help prevent threats from removable devices, including new settings to allow or block specific hardware IDs.
 
-- [Support for iOS and Android devices](configure-endpoints-non-windows.md)<BR> iOS and Android devices are now supported and can be onboarded to the service.
+- Support for iOS and Android devices<BR> iOS and Android devices are now supported and can be onboarded to the service.
 
 - [Threat analytics](threat-analytics.md)<BR>
 Threat Analytics is a set of interactive reports published by the Microsoft Defender for Endpoint research team as soon as emerging threats and outbreaks are identified. The reports help security operations teams assess impact on their environment and provide recommended actions to contain the impact, increase organizational resilience, and prevent specific threats.
@@ -316,7 +316,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Controlled folder access](enable-controlled-folders.md)<BR>You can now block untrusted processes from writing to disk sectors using Controlled Folder Access.
 
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)<BR>Microsoft Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms. You're able to see alerts from various supported operating systems (OS) in Microsoft Defender Security Center and better protect your organization's network.
+- [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)<BR>Microsoft Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms. You'll be able to see alerts from various supported operating systems (OS) in Microsoft Defender Security Center and better protect your organization's network.
 
 - [Role-based access control (RBAC)](rbac.md)<BR>Using role-based access control (RBAC), you can create roles and groups within your security operations team to grant appropriate access to the portal.
 
