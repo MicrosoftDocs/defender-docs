@@ -256,7 +256,7 @@ items:
   - name: Exposure management
     items: 
     - name: Identity security initiative
-      href: idenitity-security-initiative.md
+      href: identity-security-initiative.md
 - name: Reference
   items:
   - name: Operations guide
