@@ -700,7 +700,7 @@
     - name: Review data security alerts
       href: review-data-security-alerts.md
 
-- name: Protect AI workloads
+- name: Protect AI services
   items:
   - name: Overview data and AI security dashboard (Preview)
     href: data-aware-security-dashboard-overview.md
@@ -716,7 +716,7 @@
     items:
     - name: Overview
       href: ai-threat-protection.md
-    - name: Enable threat protection for AI workloads (preview)
+    - name: Enable threat protection for AI services
       href: ai-onboarding.md
     - name: Gain application and end-user context
       href: gain-end-user-context-ai.md
@@ -1262,12 +1262,12 @@
             href: review-pull-request-annotations.md
       - name: Common questions about DevOps security
         href: faq-defender-for-devops.yml
-  - name: Threat protection for AI workloads (preview)
+  - name: Defender for AI services
     items:
       - name: Overview
         displayName: AI, Defender for AI
         href: ai-threat-protection.md
-      - name: Enable threat protection for AI workloads (preview)
+      - name: Enable threat protection for AI services
         displayName: AI, Defender for AI
         href: ai-onboarding.md
       - name: Gain end-user context for AI alerts
