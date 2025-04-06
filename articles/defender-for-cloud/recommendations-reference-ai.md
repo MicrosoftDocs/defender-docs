@@ -179,37 +179,37 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 ## GCP AI recommendations
 
-### A Private Service endpoint should be used for Vertex AI Online endpoints.
+### A Private Service endpoint should be used for Vertex AI Online endpoints (Preview).
 
 **Description:** Defender for Cloud has identified that a Private Service endpoint is not configured on Vertex AI Online endpoints. Private endpoint connections enforce secure communication by enabling private connectivity to the Online prediction's endpoint. Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses.
 
 **Severity** Medium
 
-### Root access should be disabled on Workbench instances.
+### Root access should be disabled on Workbench instances (Preview).
 
 **Description:** Defender for Cloud has identified that root access is not disabled on the GCP Workbench instance. To reduce the risk of accidental or malicious system damage, it is essential to disable root access on your Google Cloud Vertex AI notebook instances. This measure limits administrative privileges within the instances, ensuring a more secure environment.
 
 **Severity** Medium
 
-### Public IP addresses should be disabled on Workbench instances.
+### Public IP addresses should be disabled on Workbench instances (Preview).
 
 **Description:** Defender for Cloud has identified that external IP addresses have been configured on the GCP Workbench instance. To reduce your attack surface, Workbench instances shouldn't have public IP addresses. Instead, instances should be configured behind load balancers to minimize the instance's exposure to the internet
 
 **Severity** Medium
 
-### (Enable if required) Customer-managed keys should be used to encrypt data at rest in Vertex AI DataSets.
+### (Enable if required) Customer-managed keys should be used to encrypt data at rest in Vertex AI DataSets (Preview).
 
 **Description:** Defender for Cloud has identified that customer-managed keys are not being used on Vertex AI DataSets. Using customer-managed keys to encrypt data at rest provides more control over the key lifecycle, including rotation and management. This is particularly relevant for organizations with related compliance requirements. By using customer-managed keys, you can ensure that your data is encrypted with keys that you control, giving you the ability to manage and rotate these keys as needed. This added control can help meet compliance requirements and enhance the security of your data.
 
 **Severity** Medium
 
-### Cloud Monitoring should be used on GCP Workbench instance.
+### Cloud Monitoring should be used on GCP Workbench instance (Preview).
 
 **Description** Defender for Cloud has identified that Cloud Monitoring is not enabled on the GCP Workbench instance. Enabling Cloud Monitoring for Google Cloud Vertex AI notebook instances is essential for tracking performance metrics, detecting issues early, and ensuring optimal operation through proactive monitoring and alerts.
 
 **Severity** Low
 
-### Idle shutdown should be enabled on Workbench instances.
+### Idle shutdown should be enabled on Workbench instances (Preview).
 
 **Description** Defender for Cloud has identified that idle shutdown is not configured on the GCP Workbench instance. To optimize costs and enhance security, ensure that the Idle Shutdown feature is enabled for your Google Cloud Vertex AI notebook instances.
 
