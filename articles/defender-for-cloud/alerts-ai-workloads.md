@@ -1,18 +1,15 @@
 ---
-title: Alerts for AI workloads (Preview)
-description: This article lists the security alerts for AI workloads visible in Microsoft Defender for Cloud.
+title: Alerts for AI services
+description: This article lists the security alerts for AI services visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 11/03/2024
+ms.date: 05/01/2025
 ai-usage: ai-assisted
 ---
 
-# Alerts for AI workloads (Preview)
+# Alerts for AI services
 
-This article lists the security alerts you might get for AI workloads from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration.  
-
-> [!NOTE]
-> Some of the recently added alerts powered by Microsoft Defender Threat Intelligence and Microsoft Defender for Endpoint might be undocumented.
+This article lists the security alerts you might get for AI services from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration. 
 
 [Learn how to respond to these alerts](managing-and-responding-alerts.yml).
 
@@ -21,7 +18,7 @@ This article lists the security alerts you might get for AI workloads from Micro
 > [!NOTE]
 > Alerts from different sources might take different amounts of time to appear. For example, alerts that require analysis of network traffic might take longer to appear than alerts related to suspicious processes running on virtual machines.
 
-## AI workload alerts
+## AI services alerts
 
 ### Detected credential theft attempts on an Azure AI model deployment
 
