@@ -31,12 +31,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| April 9 | Upcoming Change| [Enhanced Defender for app service alerts](#Enhanced-app-service-alerts) |
+| April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#Enhanced-app-service-alerts) |
 
-### Enhanced Defender for app service alerts
+### Enhancements for Defender for app service alerts
 
-Defender for App Service now features enhanced alerting capabilities! We have added alerts for suspicious code executions and access to internal or remote endpoints. Additionally, we have improved coverage and reduced noise from relevant alerts by expanding our logic and removing alerts that were causing unnecessary noise. As part of this process, the alert "Suspicious WordPress theme invocation detected" will be deprecated within 30 days.
-
+On the 31 of April 2025, Defender for App Service alerting capabilities will be enhanced! We will add alerts for suspicious code executions and access to internal or remote endpoints. Additionally, we have improved coverage and reduced noise from relevant alerts by expanding our logic and removing alerts that were causing unnecessary noise. As part of this process, the alert "Suspicious WordPress theme invocation detected" will be deprecated.
 
 ## March 2025
 
