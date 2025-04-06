@@ -33,14 +33,34 @@ Navigate to Microsoft Defender XDR > Exposure Management > Exposure insights > I
 | **Related initiatives**| Number of security initiatives impacted by this recommendation.                 |
 | **Related metrics**    | Number of security metrics that this recommendation contributes to.             |
 
+Security Exposure Management categorizes recommendations by compliance status, as follows:
+
+Compliant: Indicates that the recommendation was implemented successfully.
+Not complaint: Indicates that the recommendation wasn't fixed.
+Mitigated by organization: Displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
+Not available: Means there isn't enough information to determine the compliance status.
+
 ### Review security metrics
 
-Security metrics are measurable indicators used to assess how well your organization is implementing identity-related security best practices. These metrics help identify gaps in your security posture and track progress toward remediation goals.
+Metrics in security initiatives help you to measure exposure risk for different areas within the initiative. Each metric gathers together one or more recommendations for similar assets.
+Metrics can be associated with one or more initiatives.
+
+On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
+
+Review metrics properties, including:
+
+- Metric name: The name of the metric.
+- Progress: Shows the improvement of the exposure level for the metric from 0 (high exposure) to 100 (no exposure).
+- State: Shows if the metric needs attention. In some cases, the risk was mitigated outside Security Exposure Management and shouldn't affect the initiative score. In others, the risk was mitigated and the initiative score should be adjusted accordingly.
+- Affected assets: The number of assets within the metric. In most cases, these would be assets that are exposed or that create a risk factor. In other cases, affected assets would be the number of missing Microsoft secure score points to effectively implement recommended controls.
+- Total assets: Total number of assets under the metric scope.
+- Recommendations: Security recommendations associated with the metric.
+- Weight: The relative weight (importance) of the metric within the initiative, and its effect on the initiative score. Shown as High, Medium, and Low. It can also be defined as Risk accepted.
+- 14-day trend: Shows the metric value changes over the last 14 days.
+- Last updated shows the last date the metric was updated.
 
 ### Set target scores
 
 Set a customized target score for this initiative, taking your organization’s unique set of circumstances, priorities, and risk appetite into account.
-
-
 
 ## Next steps
