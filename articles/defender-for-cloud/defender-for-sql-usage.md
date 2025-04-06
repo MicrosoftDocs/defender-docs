@@ -45,9 +45,9 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 To enable the Defender for SQL servers on machines plan, you need to enable the Defender for Databases plan on your subscription. The Defender for SQL servers on machines plan is included in the Defender for Databases plan.
 
-1. In the Azure portal, search for and select **Microsoft Defender for Cloud**.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Select **Environment settings**.
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant subscription.
 
