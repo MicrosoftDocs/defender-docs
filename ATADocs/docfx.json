@@ -41,6 +41,9 @@
     "template": "docs.html",
     "globalMetadata": {
       "feedback_system": "Standard",
+      "author": "AbbyMSFT",
+      "manager": "AbbyMSFT",
+      "ms.author": "abbyweisberg"
       "feedback_github_repo": "MicrosoftDocs/atadocs",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection",
       "layout": "Conceptual",

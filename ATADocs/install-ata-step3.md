@@ -3,10 +3,6 @@
 
 title: Install Advanced Threat Analytics - Step 3
 description: Step three of installing ATA helps you download the ATA Gateway setup package.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

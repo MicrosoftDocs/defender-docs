@@ -3,10 +3,6 @@
 
 title: Advanced Threat Analytics resources and readiness roadmap
 description: Provides a list of ATA resources, videos, getting started, deployment and readiness roadmap links.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

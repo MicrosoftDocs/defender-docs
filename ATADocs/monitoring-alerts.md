@@ -3,10 +3,6 @@
 
 title: Understanding ATA health alerts
 description: Describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.collection: M365-security-compliance

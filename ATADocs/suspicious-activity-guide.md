@@ -3,10 +3,6 @@
 
 title: ATA suspicious activity guide
 description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

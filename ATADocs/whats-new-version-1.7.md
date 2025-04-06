@@ -3,10 +3,6 @@
 
 title: What's new in ATA version 1.7
 description: Lists what was new in ATA version 1.7 along with known issues
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
