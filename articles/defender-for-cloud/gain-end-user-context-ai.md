@@ -2,13 +2,13 @@
 title: Gain end-user context for AI alerts
 description: Learn how to enhance AI security by adding user context for alerts with Microsoft Defender for Cloud threat protection.
 ms.topic: how-to
-ms.date: 11/25/2024
-#Customer intent: I want to learn how to enhance the security of my AI workloads by adding end-user context for AI alerts with Microsoft Defender for Cloud threat protection for AI workloads.
+ms.date: 05/01/2024
+#Customer intent: I want to learn how to enhance the security of my AI services by adding end-user context for AI alerts with Microsoft Defender for Cloud threat protection for AI services.
 ---
 
 # Gain application and end-user context for AI alerts
 
-Microsoft Defender for Cloud's threat protection for AI workloads allows you to enhance the actionability and security value of the generated AI alerts by providing both end-user and application  context.
+Microsoft Defender for Cloud's threat protection for AI services allows you to enhance the actionability and security value of the generated AI alerts by providing both end-user and application  context.
 
 In most cases, scenarios leveraging AI services are built as part of an application, so the API calls to the AI service originate from a web application, compute instance, or an AI gateway. This architecture setup introduces complexity due to a lack of context when investigating AI requests to determine the business application or the end-user involved.
 
@@ -20,7 +20,7 @@ Defender for Cloud, together with Azure AI, enables adding parameters to your Az
 
 - Read up on [Overview - AI threat protection](ai-threat-protection.md).
 
-- [Enable threat protection for AI workloads (preview)](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure OpenAI Service. Note, this feature is currently not supported when leveraging models consumed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
+- [Enable threat protection for AI services](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure OpenAI Service. Note, this feature is currently not supported when leveraging models consumed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
 ## Add security parameters to your Azure OpenAI call
 
