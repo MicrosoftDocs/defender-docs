@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 02/02/2025
+ms.date: 05/01/2025
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -39,6 +39,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [AI security posture management](ai-security-posture.md) | GA | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | ||
 |[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
+| [Defender for AI Services](ai-threat-protection.md) | GA | NA | NA |
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
 |[Defender for Containers](defender-for-containers-introduction.md)<br/>[Review detailed feature support](support-matrix-defender-for-containers.md) | GA | GA | GA|
