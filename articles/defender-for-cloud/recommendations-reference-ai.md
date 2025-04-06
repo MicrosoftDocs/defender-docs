@@ -201,7 +201,7 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Description:** Defender for Cloud has identified that customer-managed keys are not being used on Vertex AI DataSets. Using customer-managed keys to encrypt data at rest provides more control over the key lifecycle, including rotation and management. This is particularly relevant for organizations with related compliance requirements. By using customer-managed keys, you can ensure that your data is encrypted with keys that you control, giving you the ability to manage and rotate these keys as needed. This added control can help meet compliance requirements and enhance the security of your data.
 
-**Severity** Medium
+**Severity** Low
 
 ### Cloud Monitoring should be used on GCP Workbench instance (Preview).
 
