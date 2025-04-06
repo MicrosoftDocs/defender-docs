@@ -22,8 +22,7 @@ To get started with OAuth application attack path features in Exposure Managemen
 
 ### Required roles and permissions
 
-To access all Exposure Management experiences, you must have one of the following roles.
-Only a single role is required—either a Unified RBAC role or an Entra ID role. Assigning both is not necessary.
+To access all Exposure Management experiences, you need either a Unified RBAC role or an Entra ID role. Only one is required.
 
 - **Exposure Management (read)** (Unified RBAC)
 
