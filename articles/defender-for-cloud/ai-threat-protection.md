@@ -28,7 +28,7 @@ Security teams can correlate AI workload alerts and incidents in the Defender XD
 |----|:----|
 |Release state:| General availability (GA)|
 |Feature availability:|- Activity monitoring (security alerts) <br>- Prompt evidence (security alerts) |
-|Pricing:|Defender for AI Services is billed as shown on the [pricing page](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/)|
+|Pricing:|Defender for AI Services is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)|
 |Supported AI services:| [Azure OpenAI supported models](/azure/ai-services/openai/overview) <br> [Azure AI Model Inference service supported models](/azure/ai-studio/ai-services/model-inference) <br> **Defender for cloud supports text tokens only at this phase (image and audio tokens are not scanned) |
 |Required roles and permissions:|To enable threat detection at subscription level, you need Owner roles (subscription owner) or specific roles with corresponding data actions.|
 |Clouds:|:::image type="icon" source="../defender-for-cloud/media/icons/yes-icon.png"::: Commercial clouds <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Azure Government <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet <br>:::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: Connected AWS accounts|
