@@ -51,6 +51,10 @@ To view the full list of critical permissions, go to the  [Microsoft Defender po
 
 Once you understand which permissions represent high-value targets, use the following steps to investigate how these applications appear in your environment’s attack paths.
 
+> [!NOTE]  
+> OAuth apps appear in the attack path surface map only when specific conditions are detected.  
+> For example, an OAuth app may appear in the attack path only if a vulnerable component with an easily exploitable entry point is detected that allows lateral movement to service principals with high privileges.
+
 ## Investigation user flow: View attack paths involving OAuth applications
 
 For smaller organizations with a manageable number of attack paths, we recommend following this structured approach to investigate each attack path:
