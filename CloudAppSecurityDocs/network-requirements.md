@@ -1,7 +1,7 @@
 ---
 title: Network requirements 
 description: This article describes the IP addresses and ports you need to open to work with Defender for Cloud Apps.
-ms.date: 04/04/2024
+ms.date: 04/06/2025
 ms.topic: reference
 ---
 
@@ -9,7 +9,8 @@ ms.topic: reference
 
 >[!IMPORTANT]
 >
-> **Take Immediate Action by April, 21 2025**, to ensure optimal service quality and prevent the interruption of some services: Please update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively, if you currently allow outbound traffic based on Azure service tags, please add the new Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’ to your allowlist. This tag  will be adjusted to reflect the above range by April 21, 2025.
+> **Take Immediate Action by April, 21 2025**, to ensure optimal service quality and prevent the interruption of some services. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively, if you currently allow outbound traffic based on Azure service tags, please add the new Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’ to your allowlist. This tag  will be adjusted to reflect the above range by April 21, 2025.
+> This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.
 
 This article provides a list of ports and IP addresses you need to allow and allowlist to work with Microsoft Defender for Cloud Apps.
 
