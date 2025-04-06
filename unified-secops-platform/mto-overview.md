@@ -25,17 +25,25 @@ appliesto:
 
 Multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal provides your security operation teams with a single, unified view of all the tenants you manage. This view enables your teams to quickly investigate incidents and perform advanced hunting across data from multiple tenants, improving your security operations.
 
-If you have tenants with a Microsoft Sentinel workspace onboarded to the Defender portal, you're able to:
+## Microsoft Sentinel support
+
+For each tenant, the Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel (preview). In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
+
+If you have tenants with Microsoft Sentinel workspaces onboarded to the Defender portal, you're able to:
 
 - Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data.
 - Proactively search for SIEM and XDR data across multiple tenants.
 
-Only one Microsoft Sentinel workspace per tenant is currently supported in the Defender portal. So in Microsoft Defender multitenant management, you have SIEM data from one Microsoft Sentinel workspace per tenant.
+You must onboard each workspace to the Defender portal for each of your tenants separately, as you would for a single-tenant.
 
 For more information, see:
 
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
+
+
+## Feature availability
 
 Multitenant management is also available to US government customers. Refer to the table below for specific scenarios for GCC, GCC High, DoD, and Commercial customers.
 
@@ -62,13 +70,13 @@ The following key capabilities are available for each tenant you have access to 
 
 | Capability | Description |
 | ------ | ------ |
-|**Incidents & alerts** > **Incidents** | Manage incidents originating from multiple tenants.|
-|**Incidents & alerts** > **Alerts** | Manage alerts originating from multiple tenants. |
-|**Hunting** > **Advanced hunting**| Proactively hunt for intrusion attempts and breach activity across multiple tenants at the same time.|
-|**Hunting** > **Custom detection rules**|View and manage custom detection rules across multiple tenants.|
-|**Assets** > **Devices** > **Tenants**| For all tenants and at a tenant-specific level, explore the device counts across different values such as device type, device value, onboarding status, and risk status.|
-|**Endpoints** >**Vulnerability Management** > **Dashboard** |The Microsoft Defender Vulnerability Management dashboard provides both security administrators and security operations teams with aggregated vulnerability management information across multiple tenants. |
-|**Endpoints** > **Vulnerability management** > **Tenants** |For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
+|**Incidents & alerts** > **[Incidents](mto-incidents-alerts.md)** | Manage incidents originating from multiple tenants.|
+|**Incidents & alerts** > **[Alerts](mto-incidents-alerts.md)** | Manage alerts originating from multiple tenants. |
+|**Hunting** > **[Advanced hunting](mto-advanced-hunting.md)**| Proactively hunt for intrusion attempts and breach activity across multiple tenants at the same time.|
+|**Hunting** > **[Custom detection rules](/defender-xdr/custom-detections-overview)**|View and manage custom detection rules across multiple tenants.|
+|**Assets** > **Devices** > **[Tenants](mto-tenant-devices.md)**| For all tenants and at a tenant-specific level, explore the device counts across different values such as device type, device value, onboarding status, and risk status.|
+|**Endpoints** >**Vulnerability Management** > **[Dashboard](mto-dashboard.md)** |The Microsoft Defender Vulnerability Management dashboard provides both security administrators and security operations teams with aggregated vulnerability management information across multiple tenants. |
+|**Endpoints** > **Vulnerability management** > **[Tenants](mto-dashboard.md)** |For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
 |**Configuration** > **Settings**|Lists the tenants you have access to. Use this page to view and manage your tenants.|
 
 ## Next steps

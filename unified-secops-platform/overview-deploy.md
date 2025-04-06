@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
 ms.topic: how-to #Don't change.
-ms.date: 12/02/2024
+ms.date: 03/17/2025
 ms.collection:
 - usx-security
 - zerotrust-solution
@@ -61,12 +61,12 @@ For more information, see [Get started with Security Copilot](/copilot/security/
 
 ## Architect your workspace and onboard to Microsoft Sentinel
 
-The first step in using Microsoft Sentinel is to create a Log Analytics workspace, if you don't have one already. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. Microsoft's unified security operations platform supports only a single workspace.
+The first step in using Microsoft Sentinel is to create a Log Analytics workspace, if you don't have one already. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. Microsoft's unified security operations platform supports a primary workspace and multiple secondary workspaces (preview).
 
 1. Create a Security resource group for governance purposes, which allows you to isolate Microsoft Sentinel resources and role-based access to the collection.
 1. Create a Log Analytics workspace in the Security resource group and onboard Microsoft Sentinel into it.
 
-For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard).
+For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
 
 ## Configure roles and permissions
 
@@ -80,11 +80,7 @@ For more information, see:
 
 ## Onboard to unified SecOps
 
-When you onboard Microsoft Sentinel to the Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting, creating a unified SecOps platform.
-
-1. Install the **Microsoft Defender XDR** solution for Microsoft Sentinel from the **Content hub**. For more information, see [Deploy and manage out-of-the-box-content](/azure/sentinel/sentinel-solutions-deploy).
-1. Enable the **Microsoft Defender XDR** data connector to collect incidents and alerts. For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender).
-1. Onboard to Microsoft's unified SecOps platform. For more information, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
+When you onboard Microsoft Sentinel to the Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting, creating a unified SecOps platform. To onboard to Microsoft's unified SecOps platform, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
 
 ## Fine-tune system configurations
 

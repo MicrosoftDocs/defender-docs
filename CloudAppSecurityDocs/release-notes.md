@@ -7,6 +7,10 @@ ms.topic: overview
 
 # What's new in Microsoft Defender for Cloud Apps
 
+>[!IMPORTANT]
+>
+> **Take Immediate Action by April, 21 2025**,  to ensure optimal service quality and prevent the interruption of some services. This change will only affect your organization if you are using a firewall allowlist that restricts outbound traffic based on IP addresses or Azure service tags. Please update your firewall rules to allow outbound traffic on port 443 for the following IP addresses:13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively use as an additional Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’, that will be adjusted to reflect the above range by April 21, 2025. This update should be completed and the IP addresses or new Azure service tag added to your firewall's allowlist by April 21, 2025. Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
+>
 *Applies to: Microsoft Defender for Cloud Apps*
 
 This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
@@ -21,6 +25,12 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 
 ## April 2025
+
+### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
+
+The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
+
+This table provides details on Microsoft 365-connected OAuth applications that are registered with Microsoft Entra ID and accessible through the Defender for Cloud Apps app governance capability.
 
 ### New Applications page in Defender XDR (Preview)
 
