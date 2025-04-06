@@ -79,7 +79,11 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 ## Enable the plan at the SQL Server resource level
 
-1. In the Azure portal, search for and select **Azure Arc SQL Server instances**, or **SQL virtual machines**.
+1. In the Azure portal, search for and select:
+    - **Azure Arc** > **Data services** > **SQL Server instances**.
+    <br> 
+    or
+    - **SQL virtual machines**.
 
 1. Select the relevant SQL Server instance. 
 
