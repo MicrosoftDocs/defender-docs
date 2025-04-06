@@ -61,7 +61,7 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 1. Select **Continue** > **Save**.
 
-### ### Enable the plan on an AWS or GCP subscription
+### Enable the plan on an AWS or GCP subscription
 
 To enable the Defender for SQL servers on machines plan, you need to enable the Defender for Databases plan on your subscription. The Defender for SQL servers on machines plan is included in the Defender for Databases plan.
 
