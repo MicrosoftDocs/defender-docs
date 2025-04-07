@@ -75,6 +75,9 @@ This initiative focuses on displaying the current state of SaaS (software as a s
 
 This initiative serves as a central hub for security managers to continuously assess and analyze vulnerabilities and misconfigurations across the organization's digital landscape. In the Vulnerability Assessment initiative users can actively identify, prioritize, track, and delegate vulnerabilities with in the IT infrastructure and the cloud. Users gain real-time visibility into the security posture of their organization, enabling data-driven decision-making for resource investment and placement. This collaborative environment ensures a holistic approach to vulnerability management, empowering stakeholders to proactively strengthen their security defenses, reduce the attack surface, and enhance overall resilience against evolving cyber threats.
 
+> [!NOTE]
+> The Vulnerability Assessment initiative will be deprecated soon, as it is now part of the new Cloud initiative. Use the new Cloud initiative for updates and support.
+
 ## Zero Trust (Foundational)
 
 Zero Trust is a security strategy that follows three principles, verify explicitly, use least privilege access, and assume breach. This initiative follows Microsoft's Zero Trust adoption framework to help you identify next steps in your Zero Trust strategy. You can learn more about the Zero Trust adoption framework here.
