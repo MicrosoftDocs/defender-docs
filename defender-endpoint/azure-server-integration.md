@@ -44,8 +44,9 @@ The following capabilities are included in this integration:
 > - Once configured, you cannot change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
 >   Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
 
-## Related topics
+## Related articles
 
 - [Onboard previous versions of Windows](onboard-downlevel.md)
-- [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](configure-server-endpoints.md)
+- [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](onboard-windows-server-2012r2-2016.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

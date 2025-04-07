@@ -44,7 +44,11 @@
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
     - name: Reduce security risk
-      href: reduce-risk-overview.md
+      items:
+      - name: Improve security posture and reduce risk"
+        href: reduce-risk-overview.md
+      - name: Protect your environment with Exposure Management
+        href: overview-msem-strategy.md  
     - name: Detect threats
       href: detect-threats-overview.md
     - name: Uncover adversaries with threat intel

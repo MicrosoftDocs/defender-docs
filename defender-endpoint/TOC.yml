@@ -162,10 +162,12 @@
         - name: Onboard server devices
           href: onboard-server.md
           items:
-          - name: Onboarding Windows Server overview
+          - name: Onboard Windows Server version 1803, Windows Server 2019, and later
             href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019 and later
-            href: configure-server-endpoints.md
+          - name: Onboard Windows Server 2012 R2 and Windows Server 2016
+            href: onboard-windows-server-2012r2-2016.md
+          - name: Defender for Endpoint on Windows Server with SAP
+            href: mde-sap-windows-server.md
           - name: Onboard Windows devices using Configuration Manager
             href: configure-endpoints-sccm.md
           - name: Onboard Windows devices using Group Policy
@@ -174,10 +176,8 @@
             href: configure-endpoints-script.md
           - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
             href: configure-endpoints-vdi.md
-          - name: Defender for Endpoint on Windows Server with SAP
-            href: mde-sap-windows-server.md
-        - name: Onboard non-Windows devices
-          href: configure-endpoints-non-windows.md
+          - name: Direct onboarding with Defender for Cloud
+            href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
         - name: Defender for Endpoint on macOS
           items:
           - name: Deploy Defender for Endpoint on macOS
