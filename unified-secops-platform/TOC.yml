@@ -43,7 +43,7 @@
         href: overview-deploy.md
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
-    - name: Secure
+    - name: Reduce security risk
       items:
       - name: Reduce security risk
         href: reduce-risk-overview.md
