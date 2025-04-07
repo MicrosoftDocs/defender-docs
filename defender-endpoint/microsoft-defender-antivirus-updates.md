@@ -108,14 +108,14 @@ Updates contain:
 
 #### What's new
 
-- Improved caching of Device Control settings to improve reliability in occasionally connected environments. 
-- Performance improvement when performing on access scanning of files on network locations.
-- Fixed Defender service description to match with the latest installed version.
-- Improved Defender engine update logic when update is included in a custom image.
-- Fix in Health reporting where signature up to date may have been incorrect.
-- Fixed reporting Controlled Folder Access (CFA) protected folders using Get-MpPreference Powershell Cmd-let when CFA is disabled.
+- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
+- Performance improvement in on-access scans of files in network locations.
+- Fixed the Defender service description to match the latest installed version.
+- Improved Defender engine update logic when the update is included in a custom image.
+- Fix in health reporting where signature update data might have been incorrect.
+- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
 - Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
-- Added support for distinguishing regular cloud allow signatures versus clean Indicators of Compromise (IoC) in Attack Surface Reduction (ASR).
+- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
 
 ### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
 
@@ -161,31 +161,6 @@ Updates contain:
 - Added support for wildcards in [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) trusted process.
 - Improved device control policy enforcement in offline environments.
 - Fixed issue in the `WDNisDrv.sys` driver that caused system hangs during shutdown.
-
-### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
-
-- Security intelligence update version: **1.421.12.0**
-- Release date: **October 30, 2024** (Engine and Platform)
-- Platform: **4.18.24090.11**
-- Engine: **1.1.24090.11**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
-- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
-- Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
-- Fixed `SharedSignatureRoot` processing when an empty value was set.
-- Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
-- Improved performance in specific scenarios where network files were accessed.
-- Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
-- Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
-- Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
-- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
-
-> [!IMPORTANT]
-> On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
-
 
 ### Previous version updates: Technical upgrade support only
 
