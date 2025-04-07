@@ -49,13 +49,13 @@ Here’s an example of the policy setting in the Microsoft Entra admin center.
 
 :::image type="content" source="media/mto-troubleshoot/ca-policy-small.png" alt-text="Screenshot of a conditional access policy settings page" lightbox="media/mto-troubleshoot/ca-policy.png":::
 
-## Content assignment failure due to missing permissions
+## Content assignment failure in cross-cloud tenant management
 
-When you try to assign content to tenants, you might see the following error message:
+You see the following error when assigning content to tenant groups:
 
 :::image type="content" source="media/mto-troubleshoot/tenant-perms-error-small.png" alt-text="Screenshot of permissions error when assigning content to tenants" lightbox="media/mto-troubleshoot/tenant-perms-error.png":::
 
-This error means you have limited permissions on the tenant. To resolve this issue, review the requirements and tenant access permissions. See [Set up Microsoft Defender multitenant management](mto-requirements.md) for more information.
+When a cross-cloud tenant is added to a tenant group and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won't be available for content management, which causes the error. This is a recognized limitation of cross-cloud tenant management and is currently under review.
 
 ## Related content
 
