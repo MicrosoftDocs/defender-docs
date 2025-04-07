@@ -48,7 +48,7 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 To view the full list of permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
 
-:::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Defender XDR portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
+:::image type="content" source="media/saas-securty-initiative/screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Defender XDR portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
 
 > [!NOTE]  
 > OAuth apps appear in the attack path surface map only when specific conditions are detected.  
@@ -67,11 +67,11 @@ For smaller organizations with a manageable number of attack paths, we recommend
  
 1. Select the attack path titled: "Device with high severity vulnerabilities allows lateral movement to service principal with sensitive permissions"
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png" alt-text="Screenshot of the attack path name" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png":::
+    :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-attack-path-name.png" alt-text="Screenshot of the attack path name" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-path-name.png":::
 
 1. Click the View in map button to see the attack path.
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png" alt-text="Screenshot of the view in map button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png":::
+    :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-view-in-map-button.png" alt-text="Screenshot of the view in map button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-in-map-button.png":::
   
 1. Select the + sign to expand nodes and view detailed connections.
 
@@ -79,15 +79,15 @@ For smaller organizations with a manageable number of attack paths, we recommend
   
 1. Hover or select nodes and edges to explore extra data such as which permissions this OAuth app has.
 
-   :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-permissions-set-for-service-principal.png" alt-text="Screenshot showing the permissions assigned to the OAuth app as shown in the attack surface map":::
+   :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-permissions-set-for-service-principal.png" alt-text="Screenshot showing the permissions assigned to the OAuth app as shown in the attack surface map":::
 
 1. Copy the OAuth application's name and paste it into the search bar in the Applications page.
 
-     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png" alt-text="Screenshot showing the OAuth applications tab" lightbox="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png":::
+     :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-oauth-applications-page.png" alt-text="Screenshot showing the OAuth applications tab" lightbox="media/saas-securty-initiative/Screenshot-of-the-oauth-applications-page.png":::
    
 1. Select the app name to review assigned permissions and usage insights, including whether high-privilege permissions are actively used.
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" alt-text="Screenshot showing the permissions assigned to the Oauth app" lightbox="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" :::
+    :::image type="content" source="media/saas-securty-initiative/screenshot-of-permissions-assigned-to-the-oauth-app.png" alt-text="Screenshot showing the permissions assigned to the Oauth app" lightbox="media/saas-securty-initiative/Screenshot-of-permissions-assigned-to-the-oauth-app.png" :::
 
 1. Optional: If you determine the OAuth application should be disabled, you can disable it from the Applications page.
 
@@ -103,11 +103,11 @@ For larger organizations with numerous attack paths that can't be manually inves
 To get started:
 1. Go to the Attack Paths > Choke Points page.
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-choke-point-page.png" alt-text="Screenshot showing the choke points page" lightbox="media/saas-securty-initiative/Screenshot-of-the-choke-point-page.png":::
+    :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-choke-point-page.png" alt-text="Screenshot showing the choke points page" lightbox="media/saas-securty-initiative/Screenshot-of-the-choke-point-page.png":::
     
 1. Select a choke point name to see more details about the top attack paths such as the name, entry point, and target.
 1. Click View blast radius to further investigate the choke point in the Attack Surface Map.
-     :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png" alt-text="Screenshot showing the view blast radius button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png":::
+     :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-view-blast-radius-button.png" alt-text="Screenshot showing the view blast radius button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png":::
 
 If the choke point is an OAuth application, continue the investigation in Applications page, as described in steps 7–9 above.
 
