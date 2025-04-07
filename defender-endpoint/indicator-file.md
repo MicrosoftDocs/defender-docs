@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 12/30/2024
+ms.date: 03/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -29,14 +29,11 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
-
 > [!IMPORTANT]
 > In Defender for Endpoint Plan 1 and Defender for Business, you can create an indicator to block or allow a file. In Defender for Business, your indicator is applied across your environment and cannot be scoped to specific devices.
 
 > [!NOTE]
-> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2). 
+> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution). 
 > Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced antimalware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
@@ -52,21 +49,15 @@ There are three ways you can create indicators for files:
 Understand the following prerequisites before you create indicators for files:
 
 - [Behavior Monitoring is enabled](behavior-monitor.md)
-
-- [Cloud-based protection is turned on](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
-
+- [Cloud-based protection is turned on](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus).
 - [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
-
 - To start blocking files, [turn on the "block or allow" feature](advanced-features.md) in Settings (in the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **General** > **Advanced features** > **Allow or block file**).
 
 ### Windows prerequisites
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
-
-- The Antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
-
-- This feature is supported on devices running Windows 10, version 1703 or later, Windows 11, Windows Server 2012 R2, Windows Server 2016 or later, Windows Server 2019, or Windows Server 2022.
-
+- The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
+- This feature is supported on devices running Windows 10, version 1703 or later, Windows 11, Windows Server 2012 R2, Windows Server 2016 or later, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
 - File hash computation is enabled, by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\` to **Enabled**
 
 > [!NOTE]
@@ -74,15 +65,17 @@ Understand the following prerequisites before you create indicators for files:
 
 ### macOS prerequisites
 
-- [File hash computation is enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line) by running `mdatp config enable-file-hash-computation --value enabled`
+- Real-time protection (RTP) needs to be active.
+- [File hash computation must be enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line). Run the following command: `mdatp config enable-file-hash-computation --value enabled`
+
+> [!NOTE]
+> On Mac, file indicators support Mach-O files (akin to `.exe` and `.dll` in Windows) scripts, such as sh/bash and AppleScript File (`.scpt`) files only.
 
 ### Linux prerequisites
 
-- Available in Defender for Endpoint version 101.85.27 or later.
-
-- [File hash computation is enabled](/defender-endpoint/linux-preferences#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
-
-- Behavior monitoring is preferred, but this will work with any other scan (RTP or Custom).
+- Available in Defender for Endpoint version `101.85.27` or later.
+- [File hash computation must be enabled](/defender-endpoint/linux-preferences#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
+- Behavior monitoring enabled is preferred, but this feature works with any other scan (RTP or Custom).
 
 ## Create an indicator for files from the settings page
 
@@ -95,9 +88,7 @@ Understand the following prerequisites before you create indicators for files:
 4. Specify the following details:
 
    - Indicator: Specify the entity details and define the expiration of the indicator.
-
    - Action: Specify the action to be taken and provide a description.
-   
    - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
 
    > [!NOTE]
@@ -156,7 +147,7 @@ Timestamp > ago(30d)
 
 For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-Below are other thread names that can be used in the sample query from above:
+Here are other thread names that can be used in the sample query:
 
 Files:
 

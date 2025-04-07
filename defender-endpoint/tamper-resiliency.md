@@ -1,13 +1,13 @@
 ---
 title: Tamper resiliency with Microsoft Defender for Endpoint
 description: Learn about the anti-tampering capabilities of Microsoft Defender for Endpoint.
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.date: 07/04/2023
+ms.date: 03/26/2025
 ms.topic: overview
 ms.collection:
 - tier1

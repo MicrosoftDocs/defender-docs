@@ -4,9 +4,9 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 11/21/2024
-author: denisebmsft
-ms.author: deniseb
+ms.date: 01/27/2025
+author: emmwalshh
+ms.author: ewalsh
 ms.topic: conceptual
 ms.custom: nextgen
 ms.reviewer: thdoucet
@@ -22,8 +22,10 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -39,6 +41,7 @@ You can define exclusions for Microsoft Defender Antivirus that apply to [schedu
 > Microsoft Defender Antivirus exclusions do apply to some Microsoft Defender for Endpoint capabilities, such as [attack surface reduction rules](attack-surface-reduction.md). Some Microsoft Defender Antivirus exclusions are applicable to some ASR rule exclusions. See [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and ASR rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
 > Files that you exclude using the methods described in this article can still trigger Endpoint Detection and Response (EDR) alerts and other detections.
 > To exclude files broadly, add them to the Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
+> Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format.
 
 ## Before you begin
 

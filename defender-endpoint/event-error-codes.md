@@ -2,17 +2,18 @@
 title: Review events and errors using Event Viewer
 description: Get descriptions and further troubleshooting steps (if necessary) for all events reported by the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
+ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
 ms.topic: conceptual
-ms.date: 10/27/2023
+ms.date: 03/25/2025
 ms.subservice: ngp
 search.appverid: met150
 ---
@@ -27,7 +28,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## View events in the Defender for Endpoint service event log
 
@@ -213,7 +214,7 @@ You can use this table for more information on the Defender for Endpoint events 
 
    |Event ID|Message|Description|Action|
    |---|---|---|---|
-   |1|The backing-file for the real-time session "SenseNdrPktmon" has reached its maximum size. As a result, new events will not be logged to this session until space becomes available.|This real-time session, between Pktmon - the built-in Windows service that captures network traffic, and our agent (SenseNDR) - that analyzes packets asynchronously, is configured to limited to prevent potential performance issues. As a result, this alert may appear if too many packets are intercepted in a short time period, causing some packets to be skipped. This alert is more common with high network traffic.|Normal operating notification; no action required.|
+   |1|The backing-file for the real-time session "SenseNdrPktmon" has reached its maximum size. As a result, new events will not be logged to this session until space becomes available.|This real-time session, between Pktmon - the built-in Windows service that captures network traffic, and our agent (SenseNDR) - that analyzes packets asynchronously, is configured to be limited to prevent potential performance issues. As a result, this alert may appear if too many packets are intercepted in a short time period, causing some packets to be skipped. This alert is more common with high network traffic.|Normal operating notification; no action required.|
 
 ## See also
 
@@ -221,6 +222,6 @@ You can use this table for more information on the Defender for Endpoint events 
 - [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Troubleshoot Microsoft Defender for Endpoint](troubleshoot-onboarding.md)
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

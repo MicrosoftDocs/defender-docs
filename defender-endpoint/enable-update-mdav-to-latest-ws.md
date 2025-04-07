@@ -2,10 +2,11 @@
 title: Enable and update Microsoft Defender Antivirus on Windows Server
 description: Learn how to enable and update Microsoft Defender Antivirus on Windows Server
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: yongrhee
 ms.localizationpriority: high
-ms.date: 05/08/2024
+ms.date: 03/14/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -22,8 +23,9 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender Antivirus
 
 If you wish to use Microsoft Defender Antivirus on your Windows Server, and it had been previously disabled or uninstalled, you may need to take further steps to re-enable it and ensure it's fully updated.
 

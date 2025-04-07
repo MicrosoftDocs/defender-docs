@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view, create, modify, and delete outbound spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 08/01/2024
+ms.date: 03/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -71,12 +71,15 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
    When you're finished on the **Name your policy page**, select **Next**.
 
-4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to (recipient conditions):
+4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to (sender conditions):
    - **Users**: The specified mailboxes, mail users, or mail contacts.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups.
    - **Domains**: All senders in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
+
+     > [!TIP]
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
@@ -91,7 +94,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      The policy is applied to `romain@contoso.com` _only_ if he's also a member of the Executives group. Otherwise, the policy isn't applied to him.
 
-   - **Exclude these users, groups, and domains**: To add exceptions for the internal senders that the policy applies to, select this option and configure the exceptions.
+   - **Exclude these users, groups, and domains**: To add exceptions for the internal senders that the policy applies to, select this option and configure the exceptions (sender exceptions).
 
      You can use an exception only once, but the exception can contain multiple values:
 
@@ -125,9 +128,9 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      Select one of the following actions from the **Automatic forwarding rules** dropdown list:
 
-     - **Automatic - System-controlled**: This is the default value. This value is now the same as **Off**. When this value was originally introduced, it was equivalent to **On**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
-     - **On**: Automatic external email forwarding isn't disabled by the policy.
-     - **Off**: All automatic external email forwarding is disabled by the policy.
+     - **Automatic - System-controlled**: This is the default value. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
+     - **On - Forwarding is enabled**: Automatic external email forwarding isn't disabled by the policy.
+     - **Off - Forwarding is disabled**: All automatic external email forwarding is disabled by the policy.
 
      > [!NOTE]
      >

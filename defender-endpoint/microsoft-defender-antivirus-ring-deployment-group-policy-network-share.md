@@ -2,8 +2,8 @@
 title: Production ring deployment using Group Policy and network share
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy over a network share.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: yongrhee
 ms.localizationpriority: high
 manager: deniseb
@@ -15,7 +15,7 @@ ms.custom: intro-overview
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/25/2024
+ms.date: 03/12/2025
 ---
 
 # Microsoft Defender Antivirus production ring deployment using Group Policy and network share
@@ -33,7 +33,7 @@ ms.date: 07/25/2024
 - Windows
 - Windows Server
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
@@ -55,7 +55,7 @@ Review the _read me_ article at [Readme](https://github.com/microsoft/defender-u
 
 1. Copy the latest .admx and .adml to the [Domain Controller Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
 
-1. [Create a UNC share for security intelligence and platform updates](manage-protection-updates-microsoft-defender-antivirus.md#create-a-unc-share-for-security-intelligence-and-platform-updates)
+1. [Create a UNC share for security intelligence and platform updates](manage-protection-updates-microsoft-defender-antivirus.md#create-a-unc-share-for-security-intelligence)
 
 ## Setting up the pilot environment
 

@@ -11,7 +11,7 @@ Microsoft Defender for Identity mapping for [potential lateral movement paths](/
 
 > [!NOTE]
 > This feature can potentially be exploited by an adversary to obtain the Net-NTLM hash of the DSA account due to a Windows limitation in the SAM-R calls that allows downgrading from Kerberos to NTLM.
-> The new Defender for Identity sensor is not affected by this issue as it uses different detection methods.
+> The new Defender for Identity sensor (version 3.x) is not affected by this issue as it uses different detection methods.
 > 
 > It is recommended to use a [low privileged DSA account](directory-service-accounts.md#grant-required-dsa-permissions). You can also [contact support](../support.md) to open a case and request to completely disable the [Lateral Movement Paths](../security-assessment-riskiest-lmp.md) data collection capability.
 > Please note that this will result in reduced data available for the [attack path feature in Exposure Management](/security-exposure-management/review-attack-paths).
@@ -34,11 +34,15 @@ To ensure that Windows clients and servers allow your Defender for Identity Dire
 
 **To configure required permissions**:
 
-1. Locate the policy. In your **Computer configuration > Windows settings > Security settings > Local policies > Security options**, select the **Network access - Restrict clients allowed to make remote calls to SAM** policy. For example:
+1. Create a new group policy or use an existing one. 
+1. In your **Computer configuration > Windows settings > Security settings > Local policies > Security options**, select the **Network access - Restrict clients allowed to make remote calls to SAM** policy. For example:
 
     :::image type="content" source="../media/samr-policy-location.png" alt-text="Screenshot of the Network access policy selected." lightbox="../media/samr-policy-location.png":::
 
 1. Add the DSA to the list of approved accounts able to perform this action, together with any other account that you've discovered during audit mode.
+
+   :::image type="content" source="../media/restrict-clients-allowed-to-make-remote-calls-to-sam.png" alt-text="Screenshot of the Network access policy settings." lightbox="../media/restrict-clients-allowed-to-make-remote-calls-to-sam.png":::
+
 
    For more information, see [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
@@ -59,6 +63,8 @@ To ensure that Windows clients and servers allow your Defender for Identity Dire
     > When configuring user rights assignments in group policies, it's important to note that the setting *replaces* the previous one rather than adding to it. Therefore, make sure to include *all* the desired accounts in the effective group policy. By default, workstations and servers include the following accounts: Administrators, Backup Operators, Users, and Everyone.
     >
     > The [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) recommends replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connections from performing network sign-ins. Review your local policy settings before managing the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
+
+     :::image type="content" source="../media/define-security-policy-setting.png" alt-text="Screenshot of Security Policy Settings." lightbox="../media/define-security-policy-setting.png":::
 
 ## Configure a Device profile for Microsoft Entra hybrid joined devices only
 

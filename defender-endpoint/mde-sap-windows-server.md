@@ -1,8 +1,8 @@
 ---
 title: "Microsoft Defender Endpoint on Windows Server with SAP"
 description: Understand how Microsoft Defender for Endpoint with EDR and other advanced security capabilities interacts with SAP applications.
-author: cgardin
-ms.author: cgardin
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.date: 01/06/2025
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ms.collection:
 ms.custom:
 - partner-contribution
-ms.reviewer: cgardin; shlomiakirav
+ms.reviewer: cgardin
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
@@ -20,10 +20,10 @@ audience: ITPro
 
 # Microsoft Defender for Endpoint on Windows Server with SAP
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 If your organization uses SAP, it's essential to understand the compatibility and support between [antivirus](microsoft-defender-antivirus-on-windows-server.md) and [endpoint detection and response (EDR)](overview-endpoint-detection-response.md) capabilities in Microsoft Defender for Endpoint and your SAP applications. This article helps you understand the support provided by SAP for endpoint protection security solutions like Defender for Endpoint and how they interact with SAP applications.
 
@@ -41,7 +41,7 @@ Defender for Endpoint is a component of [Microsoft Defender XDR](/defender-xdr/)
 
 Before you begin to plan or deploy Defender for Endpoint on Windows Server with SAP, take a moment to get an overview of Defender for Endpoint. The following video provides an overview:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=88c39a8e-5b13-418e-9093-f8d6100ca728]
 
 For more detailed information about Defender for Endpoint and Microsoft security offerings, see the following resources:
 
@@ -266,7 +266,7 @@ Here's a list of what to check:
 
    [EDR in Defender for Endpoint](overview-endpoint-detection-response.md) on Windows might scan SMB shared network file systems. The EDR sensor scans certain files that are identified as interesting for EDR analysis during file modification, delete, and move operations.
 
-   Defender for Endpoint on Linux doesn't scan NFS file systems during [scheduled scans](linux-schedule-scan-mde.md).
+   Defender for Endpoint on Linux doesn't scan NFS file systems during [scheduled scans](schedule-antivirus-scan-crontab.md).
 
 8. **Troubleshoot sense health or reliability issues**. To troubleshoot such issues, use the [Defender for Endpoint client analyzer tool](overview-client-analyzer.md). The Defender for Endpoint client analyzer can be useful when diagnosing sensor health or reliability issues on onboarded Windows, Linux, or Mac devices. Get the latest version of the Defender for Endpoint client analyzer here: [https://aka.ms/MDEClientAnalyzer](https://aka.ms/MDEClientAnalyzer).
 

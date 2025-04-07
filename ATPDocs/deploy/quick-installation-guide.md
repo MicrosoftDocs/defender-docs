@@ -67,16 +67,19 @@ During installation, if .NET Framework 4.7 or later isn't installed, the .NET Fr
 
 When installing your sensors, consider scheduling a maintenance window for your domain controllers.
 
-## Install Defender for Identity
+> [!IMPORTANT]
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
+
+## Install Defender for Identity classic sensor
 
 
 This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minimum system requirements](#minimum-system-requirements).
 
 > [!NOTE]
-> Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS farm or cluster, we recommend installing the sensor on each AD FS / AD CS server.
+> Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS / Entra Connect farm or cluster, we recommend installing the sensor on each AD FS / AD CS / Entra Connect server.
 >
 
-**To download and install the sensor**:
+**To download and install the classic sensor**:
 
 1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com).
 1. Browse to **System** > **Settings** > **Identities** > **Sensors** > **Add sensor**

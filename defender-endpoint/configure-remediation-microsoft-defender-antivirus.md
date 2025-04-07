@@ -4,12 +4,12 @@ description: Configure what Microsoft Defender Antivirus should do when it detec
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 09/15/2023
-ms.reviewer:
+ms.date: 03/26/2025
+ms.reviewer: yongrhee
 manager: deniseb
 ms.collection: 
 - m365-security
@@ -32,10 +32,12 @@ search.appverid: met150
 
 When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices. You can choose from several methods, such as:
 
-- [Microsoft Intune](#configure-remediation-options-using-intune)
-- [Microsoft Configuration Manager](#configure-remediation-options-using-configuration-manager)
-- [Group Policy](#configure-remediation-options-using-group-policy)
-- [PowerShell or Windows Management Instrumentation (WMI)](#configure-remediation-options-using-powershell-or-wmi)
+- [Configure remediation for Microsoft Defender Antivirus detections](#configure-remediation-for-microsoft-defender-antivirus-detections)
+  - [Configure remediation options using Intune](#configure-remediation-options-using-intune)
+  - [Configure remediation options using Configuration Manager](#configure-remediation-options-using-configuration-manager)
+  - [Configure remediation options using Group Policy](#configure-remediation-options-using-group-policy)
+  - [Configure remediation options using PowerShell or WMI](#configure-remediation-options-using-powershell-or-wmi)
+  - [See also](#see-also)
 
 > [!IMPORTANT]
 > Microsoft Defender Antivirus detects and remediates files based on many factors. Sometimes, completing a remediation requires a reboot. Even if the detection is later determined to be a false positive, the reboot must be completed to ensure all additional remediation steps have been completed.

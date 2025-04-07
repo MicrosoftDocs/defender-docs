@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 11/24/2022
+ms.date: 01/22/2025
 ---
 
 # Export Hardware and firmware assessment inventory per device
@@ -155,20 +155,17 @@ GET /api/machines/HardwareFirmwareInventoryExport
 
 ### 2.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours).
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
 
 ### 2.5 Properties (JSON response)
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
 >
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
@@ -176,8 +173,7 @@ Property (ID)|Data type|Description
 |GeneratedTime|DateTime|The time the export was generated.
 
 
-
-## 2.6 Example
+## 2.6 Examples
 
 ### 2.6.1 Request example
 

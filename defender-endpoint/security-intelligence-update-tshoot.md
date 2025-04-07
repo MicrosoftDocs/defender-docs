@@ -1,8 +1,8 @@
 ---
 title: Security Intelligence update troubleshooting from Microsoft Update source
 description: Learn how to troubleshoot security intelligence updates from your Microsoft Update source.
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb 
 ms.date: 04/10/2024
 ms.topic: troubleshooting
@@ -74,7 +74,7 @@ Use this article to learn how to troubleshoot security intelligence updates for 
 
 4. If you're using a [Fallback order](manage-protection-updates-microsoft-defender-antivirus.md) policy, make sure that *Microsoft Update* (`MicrosoftUpdateServer`) is the first item in the list.
 
-5. Gather diagnostic data from the [Microsoft Defender for Endpoint Client Analyzer tool](download-client-analyzer.md). 
+5. Gather diagnostic data from the [Microsoft Defender for Endpoint Client Analyzer tool](overview-client-analyzer.md). 
 
    - If you have Microsoft Defender for Endpoint Plan 2 and access to Live Response, you can gather the diagnostic data remotely. See [Collect support logs in Microsoft Defender for Endpoint using live response](troubleshoot-collect-support-log.md).
 

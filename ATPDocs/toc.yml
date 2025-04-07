@@ -11,8 +11,8 @@ items:
     href: zero-trust.md
   - name: System architecture
     href: architecture.md
-  - name: Defender for Identity in Microsoft Defender XDR
-    href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/bread/toc.json&toc=/defender-for-identity/TOC.json
+  - name: Defender for Identity in the Microsoft Defender portal
+    href: microsoft-365-security-center-mdi.md
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
 - name: Deploy
@@ -20,7 +20,9 @@ items:
   items:
   - name: Quick installation guide
     href: deploy/quick-installation-guide.md
-  - name: Deployment overview
+  - name: Pilot and deploy Microsoft Defender XDR
+    href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: Defender for Identity deployment overview
     href: deploy/deploy-defender-identity.md
   - name: Plan and prepare
     items:
@@ -83,6 +85,10 @@ items:
         displayName: standalone
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
+  - name: Integrate with PAM services
+    items:
+    - name: Integrate Defender for Identity with PAM services
+      href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
@@ -122,8 +128,12 @@ items:
   items:
   - name: Assets
     items:
+    - name: Identity inventory
+      href: identity-inventory.md
     - name: Investigate assets
       href: investigate-assets.md
+    - name: Service accounts
+      href: service-account-discovery.md
   - name: Lateral movement paths
     items:
     - name: Understand and investigate lateral movement paths
@@ -156,88 +166,97 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
-    - name: Accounts with non-default Primary Group ID
-      href: accounts-with-non-default-pgid.md
-    - name: Built-in Active Directory Guest account is enabled
-      href: built-in-active-directory-guest-account-is-enabled.md
-    - name: Ensure privileged accounts are not delegated
-      href: ensure-privileged-accounts-with-sensitive-flag.md
-    - name: Change Domain Controller computer account old password
-      href: domain-controller-account-password-change.md
-    - name: Change password of built-in domain Administrator account
-      href: change-password-domain-administrator-account.md
-    - name: GPO assigns unprivileged identities to local groups with elevated privileges
-      href: gpo-assigns-unprivileged-identities.md
-    - name: Overview
-      href: security-assessment.md
-      displayName: security posture, security assessment
-    - name: Reversible passwords found in GPOs
-      href: reversible-passwords-group-policy.md
-    - name: GPO can be modified by unprivileged accounts
-      href: modified-unprivileged-accounts-gpo.md
-    - name: Change password for krbtgt account
-      href: change-password-krbtgt-account.md
-    - name: Unsafe permissions on the DnsAdmins group
-      href: unsafe-permissions-dns-admins-group.md
-    - name: Change password for Microsoft Entra seamless SSO account
-      href: change-password-microsoft-entra-seamless-single-sign-on.md
-      displayName: Microsoft Entra connect
-    - name: "Rotate password for Microsoft Entra Connect connector account "
-      href: rotate-password-microsoft-entra-connect.md
-      displayName: Microsoft Entra Connect
-    - name: Admin SDHolder permissions
-      href: security-assessment-remove-suspicious-access-rights.md
-    - name: DCSync permissions
-      href: security-assessment-non-admin-accounts-dcsync.md
-    - name: Deploy Defender for Identity
-      href: security-assessment-deploy-defender-for-identity.md
-    - name: Domain controllers with Print spooler service available assessment
-      href: security-assessment-print-spooler.md
-    - name: Dormant entities in sensitive groups assessment
-      href: security-assessment-dormant-entities.md
-    - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
-      href: security-assessment-enforce-encryption-rpc.md
-    - name: Entities exposing credentials in clear text assessment
-      href: security-assessment-clear-text.md
-    - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
-      href: remove-replication-permissions-microsoft-entra-connect.md
-      displayName: Microsoft Entra Connect
-    - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
-      href: security-assessment-insecure-adcs-certificate-enrollment.md
-    - name: LAPS usage assessment
-      href: security-assessment-laps.md
-    - name: Misconfigured Certificate Authority ACL  (ESC7)
-      href: security-assessment-edit-misconfigured-ca-acl.md
-    - name: Misconfigured certificate templates ACL (ESC4)
-      href: security-assessment-edit-misconfigured-acl.md
-    - name: Misconfigured certificate templates owner  (ESC4)
-      href: security-assessment-edit-misconfigured-owner.md
-    - name: Misconfigured enrollment agent certificate template  (ESC3)
-      href: security-assessment-edit-misconfigured-enrollment-agent.md
-    - name: Overly permissive certificate template with privileged EKU (ESC2)
-      href: security-assessment-edit-overly-permissive-template.md
-    - name: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
-      href: prevent-certificate-enrollment-esc15.md
-    - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
-      href: security-assessment-prevent-users-request-certificate.md
-    - name: Remove local admins on identity assets
-      href: security-assessment-remove-local-admins.md      
-    - name: Riskiest lateral movement paths
-      href: security-assessment-riskiest-lmp.md
-    - name: Unmonitored domain controllers
-      href: security-assessment-unmonitored-domain-controller.md
-    - name: Unsecure account attributes
-      href: security-assessment-unsecure-account-attributes.md
-    - name: Unsecure domain configurations
-      href: security-assessment-unsecure-domain-configurations.md
-    - name: Unsecure Kerberos delegation assessment
-      href: security-assessment-unconstrained-kerberos.md
-    - name: Unsecure SID History attributes
-      href: security-assessment-unsecure-sid-history-attribute.md
-    - name: Vulnerable Certificate Authority setting (ESC6)
-      href: security-assessment-edit-vulnerable-ca-setting.md
-    - name: Weak cipher usage assessment
-      href: security-assessment-weak-cipher.md
+     - name: Overview
+       href: security-assessment.md
+     - name: Hybrid security
+       items:
+       - name: Change password for Microsoft Entra seamless SSO account
+         href: change-password-microsoft-entra-seamless-single-sign-on.md
+         displayName: Microsoft Entra connect
+       - name: Rotate password for Microsoft Entra Connect connector account
+         href: rotate-password-microsoft-entra-connect.md
+         displayName: Microsoft Entra Connect
+       - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
+         href: remove-replication-permissions-microsoft-entra-connect.md
+       - name: Remove unsafe permissions on sensitive Entra Connect accounts
+         href: remove-unsafe-permissions-sensitive-entra-connect.md
+         displayName: MDI
+       - name: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
+         href: replace-entra-connect-default-admin.md
+     - name: Identity infrastructure
+       items:
+       - name: Built-in Active Directory Guest account is enabled
+         href: built-in-active-directory-guest-account-is-enabled.md
+       - name: Change Domain Controller computer account old password
+         href: domain-controller-account-password-change.md
+       - name: Domain controllers with Print spooler service available assessment
+         href: security-assessment-print-spooler.md
+       - name: Remove local admins on identity assets
+         href: security-assessment-remove-local-admins.md   
+       - name: Unmonitored domain controllers
+         href: security-assessment-unmonitored-domain-controller.md
+       - name: Unsecure domain configurations
+         href: security-assessment-unsecure-domain-configurations.md
+     - name: Certificates
+       items: 
+       - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
+         href: security-assessment-enforce-encryption-rpc.md
+       - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
+         href: security-assessment-insecure-adcs-certificate-enrollment.md
+       - name: Misconfigured certificate templates owner  (ESC4)
+         href: security-assessment-edit-misconfigured-owner.md
+       - name: Misconfigured Certificate Authority ACL  (ESC7)
+         href: security-assessment-edit-misconfigured-ca-acl.md
+       - name: Misconfigured certificate templates ACL (ESC4)
+         href: security-assessment-edit-misconfigured-acl.md
+       - name: Misconfigured enrollment agent certificate template  (ESC3)
+         href: security-assessment-edit-misconfigured-enrollment-agent.md    
+       - name: Overly permissive certificate template with privileged EKU (ESC2)
+         href: security-assessment-edit-overly-permissive-template.md
+       - name: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
+         href: prevent-certificate-enrollment-esc15.md
+       - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
+         href: security-assessment-prevent-users-request-certificate.md
+       - name: Vulnerable Certificate Authority setting (ESC6)
+         href: security-assessment-edit-vulnerable-ca-setting.md
+     - name: Group policy 
+       items: 
+        - name: GPO assigns unprivileged identities to local groups with elevated privileges
+          href: gpo-assigns-unprivileged-identities.md
+        - name: GPO can be modified by unprivileged accounts
+          href: modified-unprivileged-accounts-gpo.md
+        - name: Reversible passwords found in GPOs
+          href: reversible-passwords-group-policy.md
+     - name: Accounts
+       items: 
+         - name: Accounts with non-default Primary Group ID
+           href: accounts-with-non-default-pgid.md 
+         - name: Admin SDHolder permissions
+           href: security-assessment-remove-suspicious-access-rights.md
+         - name: Change password for krbtgt account
+           href: change-password-krbtgt-account.md
+         - name: Change password of built-in domain Administrator account
+           href: change-password-domain-administrator-account.md
+         - name: Dormant entities in sensitive groups assessment
+           href: security-assessment-dormant-entities.md
+         - name: DCSync permissions
+           href: security-assessment-non-admin-accounts-dcsync.md
+         - name: Ensure privileged accounts are not delegated
+           href: ensure-privileged-accounts-with-sensitive-flag.md
+         - name: Entities exposing credentials in clear text assessment
+           href: security-assessment-clear-text.md
+         - name: LAPS usage assessment
+           href: security-assessment-laps.md
+         - name: Riskiest lateral movement paths
+           href: security-assessment-riskiest-lmp.md
+         - name: Unsecure Kerberos delegation assessment
+           href: security-assessment-unconstrained-kerberos.md
+         - name: Unsecure SID History attributes
+           href: security-assessment-unsecure-sid-history-attribute.md
+         - name: Unsecure account attributes
+           href: security-assessment-unsecure-account-attributes.md
+         - name: Weak cipher usage assessment
+           href: security-assessment-weak-cipher.md
 - name: Reference
   items:
   - name: Operations guide

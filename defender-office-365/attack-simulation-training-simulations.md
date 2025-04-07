@@ -199,7 +199,7 @@ When you're finished on  the **Configure OAuth payload** page, select **Next**.
 
 On the **Target users** page, select who receives the simulation. Use the following options to select users:
 
-- **Include all users in your organization**: The unmodifiable list of users is show in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
+- **Include all users in your organization**: The unmodifiable list of users is shown in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
 
   > [!TIP]
   > Although you can't remove users from the list on this page, you can use the next **Exclude users** page to exclude specific users.
@@ -381,7 +381,7 @@ Select one of the following options:
 
   - **Global landing pages** tab: Contains the built-in landing pages. When you select a built-in landing page to use by selecting the check box next to name, an **Edit layout** section appears with the following options:
     - **Add logo**: Select **Browse logo image** to find and select a .png, .jpeg, or .gif file. The logo size should be a maximum of 210 x 70 to avoid distortion. To remove the logo, select **Remove uploaded logo image**.
-    - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese, or **Russian**.
+    - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese**, or **Russian**.
 
   - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Phish landing pages** \> **Tenant landing pages** tab. For instructions, see [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
 

@@ -4,8 +4,9 @@ description: Run and configure on-demand scans using PowerShell, Windows Managem
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
 ms.date: 07/25/2024
@@ -21,8 +22,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)

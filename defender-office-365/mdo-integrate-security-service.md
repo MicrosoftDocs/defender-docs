@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Learn about the considerations for integrating non-Microsoft security services with Exchange Online Protection and Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 11/06/2024
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -91,7 +91,7 @@ For these reasons, we strongly recommend avoiding this configuration, and workin
 
 ## Integrating non-Microsoft message reporting tools
 
-Defender for Office 365 has [user reported settings](submissions-user-reported-messages-custom-mailbox.md) that work with the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), or the [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md).
+Defender for Office 365 has [user reported settings](submissions-user-reported-messages-custom-mailbox.md) that work with the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
 Knowing that non-Microsoft security services might include their own tools and processes for reporting false positives and false negatives (including user education/awareness efforts), Defender for Office 365 supports submissions from [third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-third-party-reporting-tools). This support helps streamline reporting [false positives and false negatives to Microsoft](submissions-admin.md), and empowers your SecOps team to take advantage of Microsoft Defender XDR [incident management](/defender-xdr/incidents-overview) and [automated investigations and response (AIR)](air-about.md).
 

@@ -15,19 +15,19 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/24/2024
+ms.date: 03/13/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Ansible
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes how to deploy Defender for Endpoint on Linux using Ansible. A successful deployment requires the completion of all of the following tasks:
 
@@ -35,7 +35,6 @@ This article describes how to deploy Defender for Endpoint on Linux using Ansibl
 - [Download the onboarding package](#download-the-onboarding-package-applicable-to-both-the-methods)
 - [Deploy Defender for Endpoint on Linux using mde_installer.sh with Ansible](#deploy-defender-for-endpoint-using-mde_installersh-with-ansible)
 - [Deploy Defender for Endpoint on Linux using Ansible by configuring repositories manually](#deploy-defender-for-endpoint-using-ansible-by-configuring-repositories-manually)
-
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
@@ -45,7 +44,7 @@ Deploy Microsoft Defender for Endpoint on Linux Servers using Ansible to automat
 
 - Use the installer script (recommended). This method greatly simplifies the automation process and helps to install the Defender for Endpoint agent and onboard the device to the Microsoft Defender portal using just a few steps without having to configure for different distros separately.
 
-- Manually configure repositories for each distro. This method allows you to automate the deployment process by manually configuring repositories, installing the agent, and onboarding the device for each distro. This method  gives more granular control over the deployment process.
+- Manually configure repositories for each distro. This method allows you to automate the deployment process by manually configuring repositories, installing the agent, and onboarding the device for each distro. This method gives more granular control over the deployment process.
 
 ## Prerequisites and system requirements applicable to both the methods
 
@@ -163,7 +162,6 @@ ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/install_mdatp.yml
 2. Perform the following post-installation checks, which include checks like health, connectivity, antivirus, and EDR detection tests to ensure successful deployment and working of Defender for Endpoint.
 
 ```bash
-
 - name: Run post-installation basic MDE test
   hosts: myhosts
   tasks:
@@ -217,16 +215,13 @@ ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/install_mdatp.yml
     - name: MDE Deployed
       debug:
       msg: "MDE succesfully deployed"
-
-
 ```
 
 ### How to uninstall Microsoft Defender for Endpoint on Linux Servers
 
-First, create an uninstallation YAML file (for example: /etc/ansible/playbooks/uninstall_mdatp.yml) which uses `mde_installer.sh`. You can also download the file directly from [GitHub](/defender-endpoint/linux-support-events)
+First, create an uninstallation YAML file (for example: /etc/ansible/playbooks/uninstall_mdatp.yml) which uses `mde_installer.sh`. You can also download the file directly from [GitHub](/defender-endpoint/linux-support-events)
 
 ```bash
-
 - name: Uninstall MDE
   hosts: myhosts
   tasks:
@@ -244,13 +239,12 @@ First, create an uninstallation YAML file (for example: /etc/ansible/playbooks/u
 - name: Display any installation errors
   debug:
     msg: "{{ script_output.stderr }}"
-
 ```
 
 Run the following command to uninstall Defender for Endpoint by using the playbook:
 
 ```bash
-ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/uninstall_mdatp.yml --extra-vars "mde_installer_script=<path to mde_installer.sh>"
+ansible-playbook -i /etc/ansible/hosts /etc/ansible/playbooks/uninstall_mdatp.yml --extra-vars "mde_installer_script=<path to mde_installer.sh>"
 ```
 
 ## Deploy Defender for Endpoint using Ansible by configuring repositories manually
@@ -349,7 +343,7 @@ Create a subtask or role files that contribute to a playbook or task.
       ```bash
       cat install_mdatp.yml
       ```
-      
+
       ```Output
       - hosts: servers
         tasks:
@@ -369,7 +363,7 @@ Create a subtask or role files that contribute to a playbook or task.
       ```bash
       cat uninstall_mdatp.yml
       ```
-      
+
       ```Output
       - hosts: servers
         tasks:
@@ -384,7 +378,7 @@ Create a subtask or role files that contribute to a playbook or task.
       ```bash
       cat install_mdatp_dnf.yml
       ```
-      
+
       ```Output
       - hosts: servers
         tasks:
@@ -404,7 +398,7 @@ Create a subtask or role files that contribute to a playbook or task.
       ```bash
       cat uninstall_mdatp_dnf.yml
       ```
-      
+
       ```Output
       - hosts: servers
         tasks:
@@ -445,7 +439,7 @@ In this step, you apply the playbook. Run the tasks files under `/etc/ansible/pl
 
 ## Troubleshoot installation issues
 
-For self-troubleshooting, follow these steps:
+If you experience any installation issues, for self-troubleshooting, follow these steps:
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
@@ -457,7 +451,7 @@ For self-troubleshooting, follow these steps:
 
 5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
-6. To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/run-analyzer-macos-linux).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
 ## How to configure policies for Microsoft Defender on Linux
 

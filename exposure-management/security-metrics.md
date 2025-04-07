@@ -37,16 +37,17 @@ Security initiative metrics in [Microsoft Security Exposure Management](microsof
 
     - **Description**: Metric description.
     - **State**: Current state of metric.
+    - **Progress**: Shows the improvement of the exposure level for the metric from 0 (high exposure) to 100 (no exposure).
     - **Last state update**: The last time metric state was updated.
-    - **Current value**: Current exposure score from significant to no/low exposure.
     - **Affected assets**. The number of affected assets out of the total assets.
     - **Weight**: Metric weight which affects the metric impact on initiative score.
-    - **Score impact**: Possible score gain.
     - **Security recommendations**: Recommendations associated with the metric.
 
 ## Edit the metric weight
 
 You can customize metric weight according to your business needs.
+> [!NOTE]
+> You must have **Exposure managment (manage)** permissions and access to all assets on the tenant level to edit the weight. For more information, see, [Permissions](prerequisites.md#permissions)
 
 1. To edit the metric weight, select a specific metric.
 1. In the metric properties side panel, select Edit metric, then change the metric weight and apply.

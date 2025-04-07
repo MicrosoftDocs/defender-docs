@@ -8,7 +8,7 @@ manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/20/2024
+ms.date: 03/03/2025
 search.appverid:
 - MET150
 ms.collection:
@@ -59,7 +59,7 @@ Use the **Submissions** page (also known as *admin submission*) at <https://secu
   - Users in the organization can't send email to these blocked domains and addresses. They receive the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
   > [!TIP]
-  > To block only spam from a specific sender, add the email address or domain to the block list in [anti-spam policies](anti-spam-policies-configure.md). To block all email from the sender, use **Domains and email addresses** in the Tenant Allow/Block List.
+  > Blocking a specific sender or domain in the Tenant Allow/Block List treats those messages as high confidence phishing. To treat those messages as spam, add the sender to the blocked senders list or blocked domains list in [anti-spam policies](anti-spam-policies-configure.md). 
 
 - **[Files](submissions-admin.md#report-questionable-email-attachments-to-microsoft)**: Email messages that contain these blocked files are blocked as *malware*. Messages containing the blocked files are quarantined.
 
@@ -79,9 +79,17 @@ Block entries for [spoofed senders](tenant-allow-block-list-email-spoof-configur
 
 ## Allow entries in the Tenant Allow/Block List
 
-In most cases, you can't directly create allow entries in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that could have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that could have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List:
 
-- **Domains and email addresses**, **files**, and **URLs**: You can't create allow entries directly in the Tenant Allow/Block List. Instead you use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email](submissions-admin.md#report-good-email-to-microsoft)**, **[email attachment](submissions-admin.md#report-good-email-attachments-to-microsoft)**, or **[URL](submissions-admin.md#report-good-urls-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message**, **Allow this file**, or **Allow this URL** to create an allow entry for the domains and email addresses, files, or URLs.
+- **Domains and email addresses** and **URLs**: You can create allow entries directly in the Tenant Allow/Block List to override the following verdicts:
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
+
+  For malware and high confidence phishing verdicts, you can't create allow entries directly in the Tenant Allow/Block List. Instead, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email](submissions-admin.md#report-good-email-to-microsoft)** or **[URL](submissions-admin.md#report-good-urls-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message** or **Allow this URL** to create an allow entry for the domains and email addresses or URLs.
+
+- **Files**: You can't create allow entries directly in the Tenant Allow/Block List. Instead, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email attachment](submissions-admin.md#report-good-email-attachments-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this file** to create an allow entry for the files.
 
 - **Spoofed senders**:
   - If spoof intelligence already blocked the message as spoofing, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to [report the email to Microsoft](submissions-admin.md#report-good-email-to-microsoft) as **I've confirmed it's clean**, and then select **Allow this message**.

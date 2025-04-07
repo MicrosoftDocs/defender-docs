@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb
@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/29/2024
+ms.date: 03/26/2025
 ---
 
 # Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint

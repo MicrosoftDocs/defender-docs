@@ -5,11 +5,11 @@ manager: deniseb
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 02/28/2025
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -55,12 +55,12 @@ When tamper protection is turned on, these tamper-protected settings can't be ch
 - Automatic actions are taken on detected threats.
 - Notifications are visible in the Windows Security app on Windows devices.
 - Archived files are scanned.
-- [Exclusions cannot be modified or added ](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions) (Applies to devices managed by Intune only or by Configuration Manager only. Co-Managed devices are not supported)
+- [Exclusions can't be modified or added ](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions) (Applies to devices managed by Intune only or by Configuration Manager only. Co-Managed devices aren't supported)
 
 *As of signature release `1.383.1159.0`, due to confusion around the default value for "Allow Scanning Network Files", tamper protection no longer locks this setting to its default value. In managed environments, the default value is `enabled`.*
 
 > [!IMPORTANT]
-> When tamper protection is turned on, tamper-protected settings cannot be changed. To avoid breaking management experiences, including [Intune](manage-tamper-protection-intune.md) and [Configuration Manager](manage-tamper-protection-configuration-manager.md), keep in mind that changes made to tamper-protected settings might appear to succeed but are actually blocked by tamper protection. Depending on your particular scenario, you have several options available: 
+> When tamper protection is turned on, tamper-protected settings can't be changed. To avoid breaking management experiences, including [Intune](manage-tamper-protection-intune.md) and [Configuration Manager](manage-tamper-protection-configuration-manager.md), keep in mind that changes made to tamper-protected settings might appear to succeed but are actually blocked by tamper protection. Depending on your particular scenario, you have several options available: 
 > - If you must make changes to a device and those changes are blocked by tamper protection, you can use [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device.
 > - You can use Intune or Configuration Manager to exclude devices from tamper protection. 
 
@@ -71,7 +71,7 @@ Tamper protection doesn't prevent you from viewing your security settings. And, 
 Tamper protection is available for devices that are running one of the following versions of Windows:
 
 - Windows 10 and 11 (including Enterprise multi-session)
-- Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
+- Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
 - Windows Server 2016 and Windows Server 2012 R2 (using the modern, unified solution)
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
@@ -79,7 +79,7 @@ Tamper protection is also available for Mac, although it works a little differen
 > [!TIP]
 > [Built-in protection](built-in-protection.md) includes turning tamper protection on by default. For more information, see:
 > - [Built-in protection helps guard against ransomware](built-in-protection.md) (article)
-> - [Tamper protection will be turned on for all enterprise customers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-will-be-turned-on-for-all-enterprise-customers/ba-p/3616478) (Tech Community blog post)
+> - [Tamper protection is turned on for all enterprise customers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-will-be-turned-on-for-all-enterprise-customers/ba-p/3616478) (Tech Community blog post)
 
 ### Tamper protection on Windows Server 2012 R2, 2016, or Windows version 1709, 1803, or 1809
 
@@ -94,7 +94,7 @@ If you're using Windows Server 2012 R2 using the modern unified solution, Window
 
 2. Use the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?preserve-view=true&view=win10-ps) PowerShell cmdlet.
 
-3. In the list of results, look for `IsTamperProtected` or `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
+1. In the list of results, look for `IsTamperProtected` and `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
 
 ## How do I configure or manage tamper protection?
 
@@ -134,6 +134,5 @@ To learn more about Microsoft Defender Vulnerability Management, see [Dashboard 
 - [Built-in protection helps guard against ransomware](built-in-protection.md)
 - [Frequently asked questions on tamper protection](faqs-on-tamper-protection.yml)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
-- [Defender for Endpoint on non-Windows devices](configure-endpoints-non-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

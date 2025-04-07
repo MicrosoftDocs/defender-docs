@@ -3,8 +3,9 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yonghree
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +16,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/15/2024
+ms.date: 03/04/2025
 ---
 
 # Behavior Monitoring demonstration
@@ -32,11 +33,9 @@ Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to
 
 ## Scenario requirements and setup
 
-- Windows 11, Windows 10, Windows 8.1, Windows 7 SP1
+- Client devices must be running Windows 11, Windows 10, Windows 8.1, Windows 7 SP1, or macOS
 
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012, and Windows Server 2008 R2
-
-- macOS
+- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2
 
 - [Microsoft Defender Real-time protection is enabled](#verify-microsoft-defender-real-time-protection-is-enabled)
 

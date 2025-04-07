@@ -29,7 +29,7 @@ ms.date: 06/04/2021
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## API description
 
@@ -105,7 +105,7 @@ Returns all of the installed software and their details on each device.
 |Method|Data type|Description|
 |:---|:---|:---|
 |Export software inventory assessment **(JSON response)**|Software inventory by device collection. See: [2.2 Properties (JSON response)](#22-properties-json-response)|Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion. The API pulls all data in your organization as JSON responses. This method is best for small organizations with less than 100-K devices. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results. |
-| Export software inventory assessment **(via files)**|Software inventory by device files. See: [2.3 Properties (via files)](#23-properties-via-files)|Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion. This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download data from Azure Storage as follows: <ol><li>Call the API to get a list of download URLs with your organization data</li><li>Download the files using the download URLs and process the data as you like.</li></ol> |
+|Export software inventory assessment **(via files)**|Software inventory by device files. See: [2.3 Properties (via files)](#23-properties-via-files)|Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion. This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download data from Azure Storage as follows: <ol><li>Call the API to get a list of download URLs with your organization data</li><li>Download the files using the download URLs and process the data as you like.</li></ol> |
 
 ### 2.2 Properties (JSON response)
 

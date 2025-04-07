@@ -5,11 +5,11 @@ manager: deniseb
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/07/2023
+ms.date: 03/26/2025
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER

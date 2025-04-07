@@ -3,11 +3,11 @@ title: What's new in Microsoft Defender for Endpoint
 description: See what features are generally available (GA) in the latest release of Microsoft Defender for Endpoint, and security features in Windows 10 and Windows Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 08/26/2024
+ms.date: 04/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -26,22 +26,9 @@ ms.topic: conceptual
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint.
-
-For more information on preview features, see [Preview features](/defender-xdr/preview).
-
-For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
-[What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
-
-For more information on what's new with other Microsoft Defender security products, see:
-
-- [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
-- [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
-- [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
-- [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
+The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint. For more information on preview features, see [Preview features](/defender-xdr/preview).
 
 For more information on Microsoft Defender for Endpoint on specific operating systems:
 
@@ -51,9 +38,34 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+For more information on what's new with other Microsoft Defender security products, see:
+
+- [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
+- [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
+- [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
+- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
+
+## February 2025
+
+- (GA) **Aggregated reporting in Microsoft Defender for Endpoint** is now generally available. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
+
+## January 2025
+
+- (Preview) **Aggregated reporting in Microsoft Defender for Endpoint**: Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties. This feature is available for Microsoft Defender for Endpoint Plan 2. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
+
+## November-December 2024
+
+- [Five new demonstration scenarios](defender-endpoint-demonstrations.md) were added:
+   - [AMSI demos](mde-demonstration-amsi.md)
+   - [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)
+   - [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)
+   - [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)
+   - [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)
+
 ## August 2024
 
-- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users are able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
     
 ## July 2024
 
@@ -95,8 +107,8 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 Two new ASR rules are now in public preview:
 
-- [Block rebooting machine in Safe Mode (preview)](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode-preview): This rule prevents the execution of commands to restart machines in Safe Mode.
-- [Block use of copied or impersonated system tools (preview)](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools-preview): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+- [Block rebooting machine in Safe Mode](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode): This rule prevents the execution of commands to restart machines in Safe Mode.
+- [Block use of copied or impersonated system tools](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
 
 **Microsoft Defender for Endpoint on macOS** features are in public preview:
 
@@ -112,7 +124,6 @@ Two new ASR rules are now in public preview:
    - If you close Defender Boxed and you want to reopen it, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
    - Act quickly! Defender Boxed is available only for a short period of time.
 - (GA) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using [Automatic Attack Disruption](/defender-xdr/automatic-attack-disruption).
-
 
 ## November 2023
 

@@ -1,12 +1,13 @@
 ---
 title: Advanced technologies at the core of Microsoft Defender Antivirus
 description: Microsoft Defender Antivirus engines and advanced technologies
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 02/28/2024
+ms.date: 01/24/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
@@ -52,6 +53,7 @@ When the client encounters unknown threats, it sends metadata or the file itself
 |**Heuristics engine** <br/> Heuristic rules identify file characteristics that have similarities with known malicious characteristics to catch new threats or modified versions of known threats.|**Detonation-based ML engine** <br/> Suspicious files are detonated in a sandbox. Deep learning classifiers analyze the observed behaviors to block attacks.|
 |**Emulation engine** <br/> The emulation engine dynamically unpacks malware and examines how they would behave at runtime. The dynamic emulation of the content and scanning both the behavior during emulation and the memory content at the end of emulation defeat malware packers and expose the behavior of polymorphic malware.|**Reputation ML engine** <br/> Domain-expert reputation sources and models from across Microsoft are queried to block threats that are linked to malicious or suspicious URLs, domains, emails, and files. Sources include Windows Defender SmartScreen for URL reputation models and Defender for Office 365 for email attachment expert knowledge, among other Microsoft services through the Microsoft Intelligent Security Graph.|
 |**Network engine** <br/> Network activities are inspected to identify and stop malicious activities from threats.|**Smart rules engine** <br/> Expert-written smart rules identify threats based on researcher expertise and collective knowledge of threats.|
+|**CommandLine scanning engine** <br/> This engine scans the commandlines of all processes before they execute. If the commandline for a process is found to be malicious it is blocked from execution.|**CommandLine ML engine** <br/> Multiple advanced ML models scan the suspicious commandlines in the cloud. If a commandline is found to be malicious, cloud sends a signal to the client to block the corresponding process from starting.|
 
 For more information, see [Microsoft 365 Defender demonstrates 100 percent protection coverage in the 2023 MITRE Engenuity ATT&CK&reg; Evaluations: Enterprise](https://www.microsoft.com/security/blog/2023/09/20/microsoft-365-defender-demonstrates-100-percent-protection-coverage-in-the-2023-mitre-engenuity-attck-evaluations-enterprise/).
 
@@ -96,6 +98,6 @@ We focus on every industry.
 
 ### Do your detection/protection require a human analyst?
 
-When you're pen-testing, you should demand where no human analysts are engaged on detect/protect, to see how the actual antivirus engine (prebreach) efficacy truly is, and a separate one where human analysts are engaged.You can add [Microsoft Defender Experts for XDR](/defender-xdr/dex-xdr-overview) a managed extended detection and response service to augment your SOC.
+When you're pen-testing, you should demand where no human analysts are engaged on detect/protect, to see how the actual antivirus engine (prebreach) efficacy truly is, and a separate one where human analysts are engaged. You can add [Microsoft Defender Experts for XDR](/defender-xdr/dex-xdr-overview) a managed extended detection and response service to augment your SOC.
 
 The ***continuous iterative enhancement*** each of these engines to be increasingly effective at catching the latest strains of malware and attack methods. These enhancements show up in consistent [top scores in industry tests](/defender-xdr/top-scoring-industry-tests), but more importantly, translate to [threats and malware outbreaks](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign/) stopped and [more customers protected](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise/).

@@ -3,14 +3,14 @@ title: Cloud protection and Microsoft Defender Antivirus
 description: Learn about cloud protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: mkaminska
 manager: deniseb
 ms.custom: nextgen
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 11/03/2023
+ms.date: 03/26/2025
 ms.collection: 
 - m365-security
 - tier2

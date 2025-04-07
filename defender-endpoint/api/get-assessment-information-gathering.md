@@ -15,8 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-
-ms.date: 07/26/2022
+ms.date: 01/22/2025
 ---
 
 # Information gathering assessment per device
@@ -30,7 +29,7 @@ ms.date: 07/26/2022
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink) <br/>
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630) <br/>
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 This API response returns all information gathering assessments for all devices, on a per-device basis. It returns a table with a separate entry for every DeviceId.
@@ -72,18 +71,16 @@ GET /api/Machines/InfoGatheringExport
 
 ### 1.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours)
+- `sasValidHours`: The number of hours that the download URLs are valid for Maximum is 6 hours.
 
 ### 1.5 Properties
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> 
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---

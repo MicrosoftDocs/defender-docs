@@ -4,8 +4,8 @@ description: Get an overview of next-generation protection in Microsoft Defender
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
@@ -15,7 +15,7 @@ ms.collection:
 - tier1
 - mde-ngp
 search.appverid: met150
-ms.date: 02/28/2024
+ms.date: 03/26/2025
 ---
 
 # Next-generation protection overview

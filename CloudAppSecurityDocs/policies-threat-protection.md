@@ -88,7 +88,7 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 ## Detect and alert when Admin activity is detected on risky IP addresses
 
-Detect admin activities performed from and IP address that is considered a risky IP address, and notify the system admin for further investigation or set a governance action on the admin's account.
+Detect admin activities performed from and IP address that is considered a risky IP address, and notify the system admin for further investigation or set a governance action on the admin's account. Learn more [how to work with IP ranges and Risky IP](/defender-cloud-apps/ip-tags).
 
 ### Prerequisites
 

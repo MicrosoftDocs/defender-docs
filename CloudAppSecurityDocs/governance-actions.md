@@ -34,11 +34,11 @@ The following governance actions can be taken for connected apps either on a spe
     - **Apply label** - Ability to add a Microsoft Purview Information Protection sensitivity label.
     - **Remove label** - Ability to remove a Microsoft Purview Information Protection sensitivity label.
   - **Change sharing**
-
+  
     - **Remove public sharing** – Allow access only to named collaborators, for example: *Remove public access* for Google Workspace, and *Remove direct shared link* for Box and Dropbox.
 
-    - **Remove external users** – Allow access only to company users.
-
+    - **Remove external users** – Allow access only to company users. When a group, containing both internal and external members, is added as a collaborator, the action removes members at the group level instead of individually. 
+        
     - **Make private** – Only Site Admins can access the file, all shares are removed.
 
     - **Remove a collaborator** – Remove a specific collaborator from the file.
@@ -60,7 +60,7 @@ The following governance actions can be taken for connected apps either on a spe
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint, Cisco Webex)
 
    ![policy_create alerts.](media/policy_create-alerts.png)
-
+  
 ## Malware governance actions (Preview)
 
 The following governance actions can be taken for connected apps either on a specific file, user or from a specific policy. For security reasons, this list is limited only to malware related actions that don't imply risk for the user or the tenant.
@@ -104,7 +104,7 @@ The following governance actions can be taken for connected apps either on a spe
 
 - **Governance actions in apps** - Granular actions can be enforced per app, specific actions vary depending on app terminology.
 
-  - **Suspend user** – Suspend the user from the application.
+- **Suspend user** – Suspend the user from the application.
     > [!NOTE]
     > If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment the settings in the on-premises environment will override the Microsoft Entra settings and this governance action will be reverted.
 
@@ -113,7 +113,7 @@ The following governance actions can be taken for connected apps either on a spe
   - **Confirm user compromised** - Set the user's risk level to high. This causes the relevant policy actions defined in Microsoft Entra ID to be enforced. For more information How Microsoft Entra ID works with risk levels, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback).
 
   ![Defender for Cloud Apps activity policy governance actions.](media/activity-policy-ref6.png)
-
+  
 ## Revoke an OAuth app and notify user
 
 For Google Workspace and Salesforce, it's possible to revoke permission to an OAuth app or to notify the user that they should change the permission. When you revoke permission it removes all permissions that were granted to the application under "Enterprise Applications" in Microsoft Entra ID.
@@ -144,7 +144,7 @@ The Governance log provides a status record of each task that you set Defender f
 
 To view the governance log, in the Microsoft Defender Portal, under **Cloud Apps**, select **Governance log**.
 
-The following table is the full list of actions the Defender for Cloud Apps portal enables you to take. These actions are enabled in various places throughout the console as described in the **Location** column. Each governance action taken is listed in the Governance Log.
+The following table is the full list of actions Microsoft Defender for Cloud Apps enables you to take. These actions are enabled in various places throughout the console as described in the **Location** column. Each governance action taken is listed in the Governance Log.
 For information about how governance actions are treated when there are policy conflicts, see [Policy Conflicts](control-cloud-apps-with-policies.md).
 
 | Location | Target object type | Governance action |Description| Related connectors|

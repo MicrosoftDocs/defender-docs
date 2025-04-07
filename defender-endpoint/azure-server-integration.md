@@ -4,8 +4,8 @@ description: Learn about Microsoft Defender for Endpoint integration with Micros
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: conceptual
-ms.date: 05/03/2021
+ms.date: 03/27/2025
 ---
 
 # Integration with Microsoft Defender for Cloud
@@ -44,8 +44,9 @@ The following capabilities are included in this integration:
 > - Once configured, you cannot change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
 >   Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
 
-## Related topics
+## Related articles
 
 - [Onboard previous versions of Windows](onboard-downlevel.md)
-- [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](configure-server-endpoints.md)
+- [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](onboard-windows-server-2012r2-2016.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

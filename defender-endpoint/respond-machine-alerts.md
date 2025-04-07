@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 12/03/2024
+ms.date: 03/12/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -114,6 +114,9 @@ Or, use this alternate procedure:
 4. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
+
+   > [!NOTE]
+   > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
    
 ### Investigation package contents for Windows devices
 
@@ -208,8 +211,8 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 **Important points to keep in mind**: 
 
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
-- Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012 R2.
-- You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](microsoft-defender-endpoint-linux.md#system-requirements). Ensure that the following prerequisites are enabled:
+- Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012 R2.
+- You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](mde-linux-prerequisites.md). Ensure that the following prerequisites are enabled:
    - `iptables`
    - `ip6tables`
    - Linux kernel with `CONFIG_NETFILTER`, `CONFID_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER`
@@ -320,7 +323,7 @@ You'll be able to stop containing a device at any time.
 
 ## Contain user from the network
 
-When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (termination the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity.
+When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity.
 
 > [!NOTE]
 > Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.

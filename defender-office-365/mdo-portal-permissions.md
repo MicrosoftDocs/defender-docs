@@ -19,7 +19,7 @@ description: Admins can learn how to manage Microsoft Defender for Office 365 (E
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 08/12/2024
+ms.date: 02/20/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -38,7 +38,10 @@ You need to be member of the **Global Administrator**<sup>\*</sup> role in Micro
 
 - Some Defender for Office 365 features require additional permissions in Exchange Online. For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 - Microsoft Defender XDR has its own Unified role-based access control (RBAC). This model provides a single permissions management experience in one central location where admins can control permissions across different security solutions. These permissions are different from the permissions described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
-- **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal**.
+- **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.**
+
+  :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
+
 - For information about permissions in the Microsoft Purview compliance portal, see [Permissions in the Microsoft Purview compliance portal](/purview/microsoft-365-compliance-center-permissions).
 
 > [!IMPORTANT]

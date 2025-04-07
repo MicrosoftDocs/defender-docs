@@ -4,17 +4,17 @@ description: Manage how mobile devices, such as laptops, should be updated with 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.reviewer:
+ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/08/2021
+ms.date: 03/26/2025
 ---
 
 # Manage updates for mobile devices and virtual machines (VMs)

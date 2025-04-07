@@ -3,10 +3,10 @@ title: Schedule antivirus scans using Windows Management Instrumentation
 description: Schedule antivirus scans using WMI
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 02/21/2024
+ms.date: 03/26/2025
 ms.reviewer: pauhijbr, ksarens, yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -22,9 +22,8 @@ search.appverid: met150
 
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Business
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -46,7 +45,7 @@ RandomizeScheduleTaskTimes
 
 For more information and allowed parameters, see [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## WMI for scheduling scans when an endpoint is not in use
+## WMI for scheduling scans when an endpoint isn't in use
 
 Use the [Set method of the MSFT_MpPreference class](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) for the following properties:
 
@@ -57,7 +56,7 @@ ScanOnlyIfIdleEnabled
 For more information about APIs and allowed parameters, see [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
 > [!NOTE]
-> When you schedule scans for times when endpoints are not in use, scans do not honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
+> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
 
 
 ## WMI for scheduling scans to complete remediation

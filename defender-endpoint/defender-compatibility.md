@@ -3,8 +3,9 @@ title: Antivirus solution compatibility with Defender for Endpoint
 description: Learn about how Windows Defender works with Microsoft Defender for Endpoint. Also learn how Defender for Endpoint works when a third-party anti-malware client is used.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +14,7 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.topic: conceptual
-ms.date: 02/18/2024
+ms.date: 03/25/2025
 ms.subservice: ngp
 ---
 
@@ -26,7 +27,7 @@ ms.subservice: ngp
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-defendercompat-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The Microsoft Defender for Endpoint agent depends on Microsoft Defender Antivirus for some capabilities such as file scanning.
 

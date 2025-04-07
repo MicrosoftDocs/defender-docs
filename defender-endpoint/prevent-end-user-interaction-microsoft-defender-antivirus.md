@@ -3,10 +3,10 @@ title: Hide the Microsoft Defender Antivirus interface
 description: You can hide virus and threat protection tile in the Windows Security app.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 07/26/2023
+ms.date: 03/26/2025
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.subservice: ngp

@@ -37,7 +37,7 @@ Defender for Cloud Apps currently supports Micro Focus ArcSight and generic CEF.
 
 Integrating with your SIEM is accomplished in three steps:
 
-1. Set it up in the Defender for Cloud Apps portal.
+1. Set it up in Defender for Cloud Apps.
 2. Download the JAR file and run it on your server.
 3. Validate that the SIEM agent is working.
 
@@ -54,7 +54,7 @@ Integrating with your SIEM is accomplished in three steps:
 
 ## Integrating with your SIEM
 
-### Step 1: Set it up in the Defender for Cloud Apps portal
+### Step 1: Set it up in Defender for Cloud Apps
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
 
@@ -84,7 +84,7 @@ Integrating with your SIEM is accomplished in three steps:
 
 ### Step 2: Download the JAR file and run it on your server
 
-1. In the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=838596), after accepting the [software license terms](https://go.microsoft.com/fwlink/?linkid=862491), download the .zip file and unzip it.
+1. In the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=838596), after accepting the software license terms, download the .zip file and unzip it.
 
 1. Run the extracted file on your server:
 
