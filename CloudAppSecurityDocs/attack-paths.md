@@ -46,7 +46,7 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 ## View permissions for critical assets
 
-To view the full list of critical permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
+To view the full list of permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
 
 :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Defender XDR portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
 
