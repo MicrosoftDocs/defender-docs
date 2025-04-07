@@ -16,7 +16,7 @@ ms.topic: concept-article
 # customer intent: As a security administrator, I want to learn how to proactively improve security posture and reduce risk exposure in my organization.
 ---
 
-# Improve security posture management and rduce risk
+# Improve security posture management and reduce risk
 
 Security teams need a comprehensive strategy to reduce vulnerabilities, prevent breaches, and mitigate threats in real time.
 
