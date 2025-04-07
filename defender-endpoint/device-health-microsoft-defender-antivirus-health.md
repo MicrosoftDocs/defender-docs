@@ -119,20 +119,6 @@ For the three `updates` cards (also known as up-to-date reporting cards), "**No 
 - Cloud protection isn't enabled.
 - Device doesn't meet pre-requisites for Antivirus engine or platform version.
 
-### Prerequisites
-
-Up-to-date reporting generates information for devices that meet the following criteria:
-
-* **Windows:**
-  * OS - Windows 10 1809 or later  
-  * Engine version: 1.1.19300.2+  
-  * Platform version: 4.8.2202.1+  
-  * Sense (MsSense.exe): 10.8210.*+  
-
-* **Linux and Mac:**
-  * Platform version: 101.23112.*+  
-
-* **Cloud Protection enabled**
   
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 
@@ -288,14 +274,15 @@ For more information about the aforementioned terms, refer back to the section: 
 
 > [!NOTE]
 >
-> Up to date reporting generates information for devices that meet the following criteria:
->
-> - Engine version: `1.1.19300.2` or later
-> - Platform version: `4.18.2202.1` or later
-> - Cloud protection enabled
-> - Windows OS
->
-> Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under `no data available`.>
+> Up-to-date reporting generates information for devices that meet the following criteria:
+> * **Windows:**
+>    * OS - Windows 10 1809 or later
+>    * Engine version: 1.1.19300.2+  
+>    * Platform version: 4.8.2202.1+  
+>    * Sense (MsSense.exe): 10.8210.*+  
+> * **Linux and Mac:**
+>    * Platform version: 101.23112.*+  
+> * **Cloud Protection enabled**
 
 ##### Up-to-date definitions
 
