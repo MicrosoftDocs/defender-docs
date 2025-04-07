@@ -205,7 +205,7 @@ None
 
 An attacker can create a straightforward path to a Domain Admin user in an Active Directory environment that isn't patched. This escalation attack allows attackers to easily elevate their privilege to that of a Domain Admin once they compromise a regular user in the domain.
 
-When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC attemptS to search it again with a trailing &dollar;.
+When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC attempts to search it again with a trailing &dollar;.
 
 When processing the TGS request, the KDC fails its lookup for the requestor machine *DC1* the attacker created. Therefore, the KDC performs another lookup appending a trailing &dollar;. The lookup succeeds. As a result, the KDC issues the ticket using the privileges of *DC1$*.
 
