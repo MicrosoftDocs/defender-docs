@@ -17,7 +17,7 @@ ms.topic: overview
 # customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, specifically tools like Microsoft Security Exposure Management can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
 ---
 
-# How Exposure Management helps with security posture
+# Microsoft Security Exposure Management for enhanced security posture
 
 Security posture refers to an organization’s strength of protection over its networks, data, and systems (hardware and software). It measures how vulnerable your organization is to cyber-attacks or data breaches.
 
