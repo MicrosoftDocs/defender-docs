@@ -47,7 +47,7 @@
       items:
       - name: Improve security posture and reduce risk"
         href: reduce-risk-overview.md
-      - name: Protect your environment
+      - name: Protect your environment with Exposure Management
         href: overview-msem-strategy.md  
     - name: Detect threats
       href: detect-threats-overview.md
