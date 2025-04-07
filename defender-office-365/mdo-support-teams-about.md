@@ -31,7 +31,7 @@ With the increased use of collaboration tools like Microsoft Teams, the possibil
 
 In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams protection with a set of capabilities that are designed to disrupt the attack chain:
 
-- **Report suspicious Teams messages**: Users can report malicious Teams messages. Depending on the reported message settings in the organization, the reported messages go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md).
+- **Report suspicious Teams messages**: Users can report malicious Teams messages. Depending on the reported message settings in the organization, the reported messages go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md) and [MC 1037768](https://admin.cloud.microsoft/?ref=MessageCenter/:/messages/MC1037768).
 
 - **Zero-hour auto protection (ZAP) for Teams**: ZAP is an existing email protection feature that detects and neutralizes spam, phishing, and malware messages after delivery by moving the messages to the Junk Email folder or quarantine.
 
