@@ -111,7 +111,7 @@ The following table lists the supported operating systems for rules that are cur
 
 > [!NOTE]
 > Unless otherwise indicated, the minimum Windows 10 build is version 1709 (RS3, build 16299) or later; the minimum Windows Server build is version 1809 or later.
-> Attack surface reduction rules in Windows Server 2012 R2 and Windows Server 2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> Attack surface reduction rules in Windows Server 2012 R2 and Windows Server 2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution).
 
 | Rule name| Windows 10 and 11 | Windows Server version 1803, 2019, and later | Windows Server 2016 and 2012 R2 |
 |---|---|---|---|
@@ -136,7 +136,8 @@ The following table lists the supported operating systems for rules that are cur
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
 
 > [!NOTE]
-> - For Windows Server 2012 R2 and Windows Server 2016, use the [modern, unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
+> - For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md). 
+> - If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
 > - For Windows client devices, "version 1809 or later" and "version 1903 (build 18362)" apply to Windows 10 only.
 
 ## ASR rules supported configuration management systems
@@ -249,6 +250,13 @@ For rules with the "Rule State" specified:
 ## Per rule descriptions
 
 ### Block abuse of exploited vulnerable signed drivers
+
+> [!NOTE]
+> To protect your environment from vulnerable drivers, you should first implement these:
+> For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and are not known to be vulnerable.
+> For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and are not known to be vulnerable.
+> For Windows 11 or later, and Windows Server core 1809 or later, or Windows Server 2019 or later, you should also enable [Microsoft Windows vulnerable driver blocklist](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), 
+> Then as another layer of defense, you should enable this attack surface reduction rule.
 
 This rule prevents an application from writing a vulnerable signed driver to disk. In-the-wild, vulnerable signed drivers can be exploited by local applications \- _that have sufficient privileges_ \- to gain access to the kernel. Vulnerable signed drivers enable attackers to disable or circumvent security solutions, eventually leading to system compromise.
 
