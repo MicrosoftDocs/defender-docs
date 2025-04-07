@@ -9,7 +9,7 @@ ms.reviewer: mkaminska, yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 03/18/2025
+ms.date: 04/07/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -69,7 +69,7 @@ Microsoft Defender Antivirus and cloud protection automatically block most new, 
       |---|---|
       | **Send safe samples automatically** | - Safe samples are samples considered to not commonly contain PII data. Examples include `.bat`, `.scr`, `.dll`, and `.exe`. <br/>- If file is likely to contain PII, the user gets a request to allow file sample submission.<br/>- This option is the default configuration on Windows, macOS, and Linux. |
       | **Always Prompt** | - If configured, the user is always prompted for consent before file submission<br/>- This setting isn't available in macOS and Linux cloud protection |
-      | **Send all samples automatically** | - If configured, all samples are sent automatically<br/>- If you would like sample submission to include macros embedded in Word docs, you must choose **Send all samples automatically**<br/>- "Send all samples automatically" is the equivalent to "All" setting in macOS policy |
+      | **Send all samples automatically** | - If configured, all samples are sent automatically<br/>- If you would like sample submission to include macros embedded in Word docs, you must choose **Send all samples automatically**<br/>- "Send all samples automatically" is the equivalent to the "Enable" setting in macOS policy |
       | **Do not send** | - Prevents "block at first sight" based on file sample analysis<br/>- "Don't send" is the equivalent to the "Disabled" setting in macOS policy and "None" setting in Linux policy.<br/>- Metadata is sent for detections even when sample submission is disabled |
       
    3. After files are submitted to cloud protection, the submitted files can be **scanned**, **detonated**, and processed through **big data analysis** **machine-learning** models to reach a verdict. Turning off cloud-delivered protection limits analysis to only what the client can provide through local machine-learning models, and similar functions.
