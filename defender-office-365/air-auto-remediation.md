@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 description: "Learn about automated remediation in automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2."
-ms.date: 04/02/2025
+ms.date: 04/07/2025
 ms.custom: 
 - air
 ms.service: defender-office-365
@@ -60,11 +60,11 @@ The following settings are available on the **Automation settings** page:
 
 - **Message clusters** section: Specifies the types of message clusters that are automatically remediated. Choose one or more of the following options:
 - **Similar files:** When the automated investigation recognizes a malicious file, it creates a cluster around the malicious file. The cluster groups all messages that contain the file into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious file clusters.
-  - **Similar URLs:** When the automated investigation recognizes a malicious URL, it creates a cluster around the malicious URL. The cluster groups all messages that contain the URL into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious URL clusters.
+- **Similar URLs:** When the automated investigation recognizes a malicious URL, it creates a cluster around the malicious URL. The cluster groups all messages that contain the URL into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious URL clusters.
 
   > [!TIP]
-  > Follow the roadmap to stay informed on when more message clusters are available for auto-remediation.
-  
+  > Follow the roadmap to stay informed on when more message clusters are available for automated remediation.
+
 - **Remediation action** section: Specifies the action to take on message cluster types specified in the **Message clusters** section.
 
   Currently, **Soft delete** is the only available action. For more information about soft deleted messages, see [Recoverable Items folder in Exchange Online](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder).
@@ -108,14 +108,18 @@ In Advanced hunting, automatically remediated messages are in the `EmailPostDeli
 - `ActionType` equals **Automated Remediation**
 - `ActionTrigger` equals **Automation**.
 
-For more information about Advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](../defender-xdr/advanced-hunting-overview.md).
+For more information about Advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 :::image type="content" source="media/auto-air-mdo-advanced-hunting.png" alt-text="Screenshot of Advanced hunting for messages removed from mailboxes by automated remediation (EmailPostDeliveryEvents table where the ActionType value is Automated Remediation and the ActionTrigger value is Automation.)" lightbox="media/auto-air-mdo-advanced-hunting.png":::
 
 ## Revert automated remediation actions on messages
 
 > [!NOTE]
-> The ability to recover messages depends on the data still being available in Defender and the mailbox retention settings for soft deleted messages. For more information, on data retention in Defender see [Data retention information for Microsoft Defender for Office 365](/defender-office-365/mdo-data-retention). For more information on soft deletion see [Recoverable Items folder in Exchange Online](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder?branch=main). For more information on mailbox retention settings and to adjust these settings see [Change how long permanently deleted items are kept for an Exchange Online mailbox in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).
+> The ability to recover messages depends on the data still being available in Defender and the mailbox retention settings for soft deleted messages. For more information, see the following articles:
+>
+> - [Data retention information for Microsoft Defender for Office 365](/defender-office-365/mdo-data-retention)
+> - [Recoverable Items folder in Exchange Online](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder)
+> - [Change how long permanently deleted items are kept for an Exchange Online mailbox in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention)
 
 The following methods are available to revert automated remediation actions and restore messages to mailboxes:
 
@@ -127,5 +131,5 @@ The following methods are available to revert automated remediation actions and 
 ## See also
 
 - [AIR in Defender for Office 365 Plan 2](air-about.md)
-- [Review and manage remediation actions in AIR in Defender for Office 365 Plan 2](air-review-approve-pending-completed-actions)
+- [Review and manage remediation actions in AIR in Defender for Office 365 Plan 2](air-review-approve-pending-completed-actions.md)
 - [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md)
