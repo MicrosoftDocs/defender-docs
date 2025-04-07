@@ -69,6 +69,9 @@ The following settings are available on the **Automation settings** page:
 
   Currently, **Soft delete** is the only available action. For more information about soft deleted messages, see [Recoverable Items folder in Exchange Online](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
+  > [!IMPORTANT]
+  > The ability to recover soft deleted messages depends on the retention policy for soft deleted messages in each mailbox. Verify your legal obligations for email retention, including messages marked as malicious. For more information on the retention of soft deleted messages, see [Change how long permanently deleted items are kept for an Exchange Online mailbox in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).
+
 When you're finished on the **Automation settings** page, select **Save**.
 
 :::image type="content" source="media/auto-air-mdo-automation-settings.png" alt-text="Screenshot of automated remediation of malicious entity clusters configuration in the Defender portal at Settings \> Email & collaboration \> MDO automation settings." lightbox="media/auto-air-mdo-automation-settings.png":::
