@@ -42,9 +42,9 @@ We recommend that you maintain an up-to-date inventory of your assets, including
 
 Security posture management is a complex topic that requires a wide range of technical knowledge. Continuously educate and train your operations and incident response staff on Exposure Management technologies and how your organization uses them. This ensures your team is prepared to handle security incidents effectively.
 
-The evolution of vulnerability management includes TI-Based, Risk-Based, and Exposure Management stages. Continuous Exposure Management involves attack surface management, attack path analysis, and unified exposure insights. Microsoft integrates exposure management data across Defender products to enhance security posture.
+The evolution of vulnerability management includes TI-Based, Risk-Based, and Exposure Management stages. Continuous exposure management involves attack surface management, attack path analysis, and unified exposure insights. Microsoft integrates exposure management data across Defender products to enhance security posture.
 
-### Incident classification framework
+**Incident classification framework**
 
 Define what constitutes a "security incident" for your organization and develop a method for classifying incidents. A classification framework helps prioritize response and preparation activities, collect useful metrics, and improve the performance of your posture management program. Categories might include denial of service, malware, or unauthorized access, with impact-based severity levels such as critical, high, medium, or low.
 
@@ -90,4 +90,4 @@ A great starting point for any user is to set a specific goal. For instance, you
 
 ## Ensuring your security posture
 
-Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By using tools like Microsoft Security Exposure Management (Exposure Management), you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. Following the guidelines outlined here and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
+Maintaining a robust security posture is essential for safeguarding your organization's networks, data, and systems against cyber threats. By using tools like Exposure Management, you can gain a comprehensive view of your security landscape, identify critical vulnerabilities, and prioritize remediation efforts effectively. Continuous monitoring and proactive measures are key to staying ahead of potential threats and ensuring that your security posture remains strong. Following the guidelines outlined here and fostering a culture of security awareness, your organization can better protect itself from cyber-attacks and data breaches, building trust with customers and stakeholders.
