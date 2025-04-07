@@ -23,7 +23,7 @@ When integrated with a PAM solution, Microsoft Defender for Identity can detect 
 
 Microsoft Defender for Identity currently supports integration with the following PAM vendors. Dedicated integrations for each partner are now available in the Microsoft 365 Defender partner catalog for streamlined onboarding and visibility.
 
-:::image type="content" source="media/Integrate with partner system services/screenshot-of-mdi-technology-partners.png" alt-text="Screenshot of Defender for Identity PAM partners" lightbox="media/Integrate with partner system services/Screenshot-of-mdi-technology-partners.png":::
+:::image type="content" source="media/Integrate with partner system services/screenshot-of-mdi-technology-partners.png" alt-text="creenshot of Defender for Identity PAM partners" lightbox="media/Integrate with partner system services/Screenshot-of-mdi-technology-partners.png":::
 
 
 |Vendor |Description |
