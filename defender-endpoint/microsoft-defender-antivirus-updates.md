@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/01/2025
+ms.date: 04/07/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,17 +98,24 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### March-2025 (Engine 1.1.25030.1)
+### March-2025 (Platform: 4.18.25030.xxxx | Engine 1.1.25030.1)
 
 - Security intelligence update version: **1.427.3.0**
-- Release date: **April 1, 2025** (Engine only)
-- Platform: **4.18.25020.1009**
+- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
+- Platform: **4.18.25030.xxxx**
 - Engine: **1.1.25030.1**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Product improvements
+- Improved caching of Device Control settings to improve reliability in occasionally connected environments. 
+- Performance improvement when performing on access scanning of files on network locations.
+- Fixed Defender service description to match with the latest installed version.
+- Improved Defender engine update logic when update is included in a custom image.
+- Fix in Health reporting where signature up to date may have been incorrect.
+- Fixed reporting Controlled Folder Access (CFA) protected folders using Get-MpPreference Powershell Cmd-let when CFA is disabled.
+- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
+- Added support for distinguishing regular cloud allow signatures versus clean Indicators of Compromise (IoC) in Attack Surface Reduction (ASR).
 
 ### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
 
