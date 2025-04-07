@@ -45,7 +45,7 @@
         href: microsoft-sentinel-onboard.md
     - name: Reduce security risk
       items:
-      - name: Reduce security risk
+      - name: Improve security posture and reduce risk"
         href: reduce-risk-overview.md
       - name: Protect your environment
         href: overview-msem-strategy.md  
