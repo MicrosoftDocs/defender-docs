@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/21/2024
+ms.date: 04/04/2025
 ---
 
 # Manage system extensions using the manual methods of deployment
@@ -32,15 +32,15 @@ You might see the prompt that's shown in the following screenshot:
 
    :::image type="content" source="media/system-extension-blocked-second-prompt.png" alt-text="The second prompt regarding system extensions being blocked." lightbox="media/system-extension-blocked-second-prompt.png":::
 
-1. From this second-prompt screen, select **OK**. You'll receive a notification message that reads **Installation succeeded**, as shown in the following screenshot:
+1. From this second-prompt screen, select **OK**. You receive a notification message that reads **Installation succeeded**, as shown in the following screenshot:
 
    :::image type="content" source="media/installation-succeeded-notification-message.png" alt-text="The screen displaying the installation succeeded notification message." lightbox="media/installation-succeeded-notification-message.png":::
 
-1. On the screen displaying the **Installation succeeded** notification message, select **OK**. You'll return to the following screen:
+1. On the screen displaying the **Installation succeeded** notification message, select **OK**. You return to the following screen:
 
    :::image type="content" source="media/mde-menu.png" alt-text="The Microsoft Defender for Endpoint menu containing the x symbol." lightbox="media/mde-menu.png":::
 
-1. From the menu bar, click the **x** symbol on the shield. You'll get the options shown in the following screenshot:
+1. From the menu bar, select the **x** symbol on the shield. You get the options shown in the following screenshot:
 
    :::image type="content" source="media/options-on-clicking-x-symbol.png" alt-text="The screen on clicking the x symbol in the shield." lightbox="media/options-on-clicking-x-symbol.png":::
 
@@ -48,23 +48,23 @@ You might see the prompt that's shown in the following screenshot:
 
    :::image type="content" source="media/virus-and-threat-protection-screen.png" alt-text="The Virus & threat protection screen containing the Fix button." lightbox="media/virus-and-threat-protection-screen.png":::
 
-1. Click **Fix** on the top-right corner of this screen. You'll get a prompt, as shown in the following screenshot:
+1. Select **Fix** on the top-right corner of this screen. You get a prompt, as shown in the following screenshot:
 
    :::image type="content" source="media/prompt-on-virus-and-threat-protection-screen.png" alt-text="The prompt dialog box on the Virus & threat protection screen." lightbox="media/prompt-on-virus-and-threat-protection-screen.png":::
 
 1. Enter your password and select **OK**.
-1. Click 
+1. Select 
    :::image type="content" source="media/system-preferences-icon.png" alt-text="The System Preferences icon." lightbox="media/system-preferences-icon.png":::
 
    The **System Preferences** screen appears.
 
    :::image type="content" source="media/system-preferences-screen.png" alt-text="The System Preferences screen." lightbox="media/system-preferences-screen.png":::
 
-1. Click **Security & Privacy**. The **Security & Privacy** screen appears.
+1. Select **Security & Privacy**. The **Security & Privacy** screen appears.
 
    :::image type="content" source="media/security-and-privacy-screen.png" alt-text="The Security & Privacy screen." lightbox="media/security-and-privacy-screen.png":::
 
-1. Select **Click the lock to make changes**. You'll get a prompt as shown in the following screenshot:
+1. Select **Click the lock to make changes**. You get a prompt as shown in the following screenshot:
 
    :::image type="content" source="media/prompt-on-security-and-privacy-screen.png" alt-text="The prompt on the Security & Privacy screen." lightbox="media/prompt-on-security-and-privacy-screen.png":::
 
@@ -76,11 +76,11 @@ You might see the prompt that's shown in the following screenshot:
 
    :::image type="content" source="media/screen-on-clicking-details.png" alt-text="The screen that is displayed on clicking Details." lightbox="media/screen-on-clicking-details.png":::
 
-1. Check both the **Microsoft Defender** checkboxes, and select **OK**. You'll get two pop-up screens, as shown in the following screenshot:
+1. Check both the **Microsoft Defender** checkboxes, and select **OK**. You get two pop-up screens, as shown in the following screenshot:
 
    :::image type="content" source="media/popup-after-checking-both-md-checkboxes.png" alt-text="The popup that appears on checking both the checkboxes." lightbox="media/popup-after-checking-both-md-checkboxes.png":::
 
-1. On the **"Microsoft Defender" Would like to Filter Network Content** pop-up screen, click **Allow**.
+1. On the **"Microsoft Defender" Would like to Filter Network Content** pop-up screen, select **Allow**.
 
 1. On the **Microsoft Defender wants to make changes** pop-up screen, enter your password and select **OK**.
 
@@ -94,7 +94,7 @@ If you run systemextensionsctl list, the following screen appears:
 
    :::image type="content" source="media/privacy-tab.png" alt-text="The Privacy tab." lightbox="media/privacy-tab.png":::
 
-2. Select **Accessibility** from the left navigation pane, and click **+**.
+2. Select **Accessibility** from the left navigation pane, and select **+**.
 
    :::image type="content" source="media/accessibility-and-plus-icon.png" alt-text="The Accessibility menu item and the Plus icon." lightbox="media/accessibility-and-plus-icon.png":::
 
@@ -109,7 +109,7 @@ If you run systemextensionsctl list, the following screen appears:
 ### Full Disk Access
 
 1. On the **Security & Privacy** screen, select the **Privacy** tab.
-1. Select **Full Disk Access** from the left navigation pane, and then click the **Lock** icon.
+1. Select **Full Disk Access** from the left navigation pane, and then select the **Lock** icon.
 
    :::image type="content" source="media/full-disk-access-and-lock-icon.png" alt-text="The Full Disk Access option in the menu and the Lock icon." lightbox="media/full-disk-access-and-lock-icon.png":::
 
@@ -133,7 +133,7 @@ If you run systemextensionsctl list, the following screen appears:
 
 ### What a healthy system looks like
 
-#### mdatp health output
+#### Mdatp health output
 
 :::image type="content" source="media/mdatp-health-output.png" alt-text="The mdatp health output screen." lightbox="media/mdatp-health-output.png":::
 

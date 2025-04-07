@@ -85,7 +85,7 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 | Windows version | Microsoft Defender Antivirus |
 |:---|:---|
 | Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md), and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
-| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified agent](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) | Platform update version `4.18.2001.x.x` or newer |
+| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution) | Platform update version `4.18.2001.x.x` or newer |
 
 ## Why network protection is important
 
@@ -354,11 +354,11 @@ Due to the multi-user nature of Windows 10 Enterprise, keep the following points
 
 ### Alternative option for network protection
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
-2. Execute the following PowerShell commands:
+2. Run the following PowerShell commands:
 
    - `Set-MpPreference -EnableNetworkProtection Enabled`
    - `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
@@ -394,7 +394,7 @@ For more information, see [Turn on network protection](enable-network-protection
 
 #### Network protection suggested registry keys
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
 
 1. Go to **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Microsoft** > **Windows Defender** > **Windows Defender Exploit Guard** > **Network Protection**.
 
@@ -411,7 +411,7 @@ For more information, see: [Turn on network protection](enable-network-protectio
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
-For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
+For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
 
 ```powershell
 
