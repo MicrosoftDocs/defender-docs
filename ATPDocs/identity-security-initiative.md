@@ -30,7 +30,7 @@ Navigate to Microsoft Defender XDR > Exposure Management > Exposure insights > I
 | **Name**               | The name of the recommended action (for example, *Configure VPN integration*, *Enable MFA*). |
 | **State**              | Indicates whether the recommendation is *Compliant* or *Not Compliant*.         |
 | **Impact**             | The security impact level (Low, Medium, or High) of implementing the recommendation. |
-| **Workload**           | The Microsoft service area the recommendation applies to (for example, Defender for Identity, Entra ID). |
+| **Workload**           | The Microsoft service area the recommendation applies to (for example, Defender for Identity, Microsoft Entra ID). |
 | **Domain**             | The security domain (for example, identity, apps) associated with the recommendation.   |
 | **Last calculated**    | The most recent time the recommendation's status was evaluated.                 |
 | **Last state change**  | When the recommendation’s compliance state last changed.                        |
@@ -47,11 +47,9 @@ Security Exposure Management categorizes recommendations by compliance status, a
 Metrics in security initiatives help you to measure exposure risk for different areas within the initiative. Each metric gathers together one or more recommendations for similar assets.
 Metrics can be associated with one or more initiatives.
 
+On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. 
+
 :::image type="content" source="media/Identity-security-initiative/Screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
-
-On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
-
-Review metrics properties, including:
 
 
 |Metric property |Description  |
@@ -71,7 +69,8 @@ Review metrics properties, including:
 
 Set a customized target score for this initiative, taking your organization’s unique set of circumstances, priorities, and risk appetite into account.
 
-## Related content
+### Related content
 
-[Review security initiatives](../exposure-management/initiatives.md)
-[Investigate security initiative metrics](../exposure-management/security-metrics.md)
+[Review security initiatives](/exposure-management/initiatives.md)
+
+[Investigate security initiative metrics](/exposure-management/security-metrics.md)
