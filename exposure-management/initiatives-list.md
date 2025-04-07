@@ -25,6 +25,10 @@ The CIS Microsoft 365 Foundations Benchmark (v3.0.0) is a set of security assess
 
 This initiative aims to reflect the status around cloud security coverage, ROI, health, configuration, and performance. It consists of measurements across multiple domains and disciplines to provide security managers with a high-level view into how posture is enforced in cloud ops.
 
+> [!NOTE]
+>
+> The current Cloud initiative will be deprecated soon. A new Cloud initiative will be available soon. Please use it for updates and support.
+
 ## Critical Asset Protection
 
 Critical asset protection refers to the strategies, processes, and technologies implemented to safeguard an organization's most valuable and important assets from various threats and risks. It involves identifying, prioritizing, and applying targeted security measures to ensure the resilience and integrity of these critical assets.
