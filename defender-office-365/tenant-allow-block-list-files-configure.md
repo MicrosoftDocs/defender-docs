@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block files in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/18/2024
+ms.date: 03/03/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -97,7 +97,7 @@ To create block entries for files, use either of the following methods:
 
 2. On the **Tenant Allow/Block Lists** page, select the **Files** tab.
 
-3. On the **Files** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **Files** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block files** flyout that opens, configure the following settings:
 
@@ -142,6 +142,7 @@ On the **Files** tab, you can sort the entries by clicking on an available colum
 
 - **Value**: The file hash.
 - **Action**: The available values are  **Allow** or **Block**.
+- **Override verdicts**: The available values are **Up to malware** for both block and allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.

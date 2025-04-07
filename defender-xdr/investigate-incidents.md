@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/17/2025
+ms.date: 03/27/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -105,19 +105,35 @@ If the incident or related alerts were the result of an analytics rule you've se
 
 ### Attack paths
 
-The incident graph also contains information about **attack paths**. These paths allows security analysts to identify what other entities an attacker is likely to target next. To view an attack path, you can click on an entity in the incident graph and select **Show attack paths**. Attack paths are available for entities with the **critical asset** tag.
+> [!NOTE]
+> To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
+> To view attack path details with Microsoft Sentinel in the unified security operations platform, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
 
-:::image type="content" source="/defender/media/investigate-incidents/attack-path-small.png" alt-text="Highlighting the Show attack paths action in the incident graph." lightbox="/defender/media/investigate-incidents/attack-path.png":::
+The incident graph also contains information about **attack paths**. These paths allow security analysts to identify what other entities an attacker is likely to target next. To view an attack path, you can click on an entity in the incident graph and select **View attack paths**. The top attack paths are shown within the incident graph. Here's an example.
 
-Upon selecting **Show attack paths**, a side pane opens, displaying a list of attack paths for the selected entity. The attack paths are displayed in a table format, showing the attack path name, entry point, entry point type, target, target type, the target criticality.
+:::image type="content" source="/defender/media/investigate-incidents/attack-path-small.png" alt-text="Highlighting a critical asset and a top attack path in the incident graph" lightbox="/defender/media/investigate-incidents/attack-path.png":::
 
-Selecting an attack path from the list displays the attack path graph, which shows the attack path from the entry point to the target. Selecting **View map** opens a new window to view the attack path in full.
+To view all the possible attack paths, select **View all attack paths** on the incident graph. A flyout pane opens containing the list of all possible attack paths for the selected entity. The attack paths can be filtered based on the attack path name, entry point, entry point type, target, target type, and target criticality. Here's an example.
+
+:::image type="content" source="/defender/media/investigate-incidents/attack-paths-flyout-small.png" alt-text="Screenshot highlighting the view attack paths option and the flyout pane list of attack paths" lightbox="/defender/media/investigate-incidents/attack-paths-flyout.png":::
+
+Selecting an attack path from the list displays the details of that attack path, showing the attack path from the entry point, possible entities involved, and the target. Selecting **View map** opens a new window to view the attack path in full.
 
 :::image type="content" source="/defender/media/investigate-incidents/attack-path-pane-small.png" alt-text="An example of the attack path graph shown in the side pane." lightbox="/defender/media/investigate-incidents/attack-path-pane.png":::
 
-> [!NOTE]
-> To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
-> To view attack path details in the unified security operations platform, a *Sentinel Reader* role is required. To create new attack paths, the Security Administrator role is required.
+> [!TIP]
+> To view the details of an attack path, you must have permissions for the workloads that are part of the attack path. For example, to view an attack path that includes a managed device, you must have permissions for Microsoft Defender for Endpoint.
+
+### Incident details
+
+You can view an incident's details on the right pane of an incident page. The incident details include incident assignment, ID, classification, categories, and first and last activity date and time. It also includes a description of the incident, impacted assets, active alerts, and where applicable, the related threats, recommendations, and disruption summary and impact. Here's an example of the incident details where the incident description is highlighted.
+
+:::image type="content" source="/defender/media/investigate-incidents/incident-desc-small.png" alt-text="An example of incident details where the description is highlighted." lightbox="/defender/media/investigate-incidents/incident-desc.png":::
+
+The incident description provides a brief overview of the incident. In some cases, the first alert in the incident is used as the incident description. In this case, the description is only shown in the portal and not stored in the activity log, advanced hunting tables, or the Microsoft Sentinel in Azure portal.
+
+> [!TIP]
+> Microsoft Sentinel customers can also view and overwrite the same incident description in the Azure portal by setting the incident description through API or automation.
 
 ## Alerts
 

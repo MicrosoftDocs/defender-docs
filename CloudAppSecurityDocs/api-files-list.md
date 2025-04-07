@@ -11,7 +11,7 @@ ms.topic: reference
 > [!NOTE]
 >
 > - This API is not available for Microsoft 365 Cloud App Security.
-> - This endpoint may time out when filtering and paginating large collections.
+> - This endpoint might time out when filtering and paginating large collections.
 
 Run the GET or POST request to fetch a list of files matching the specified filters.
 
@@ -29,7 +29,7 @@ POST /api/v1/files/
 
 | Parameter | Description |
 | --- | --- |
-| filters | Filter objects with all the search filters for the request, see [file filters](api-files.md#filters) for more details |
+| filters | Filter objects with all the search filters for the request, for more details see [file filters](api-files.md#filters)  |
 | skip | Skips the specified number of records |
 | limit | Maximum number of records returned by the request |
 
@@ -37,7 +37,7 @@ POST /api/v1/files/
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/files/" -d '{
@@ -56,7 +56,7 @@ Returns a list of files in JSON format.
 
 ```json
 {
-  "total": 5 // total number of records
+  "total": 5 // approximate number of records
   "hasNext": true // whether there is more data to show or not.
   "data": [
     // returned records

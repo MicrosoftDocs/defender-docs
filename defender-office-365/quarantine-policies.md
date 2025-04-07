@@ -516,6 +516,9 @@ Even if you don't customize quarantine notifications for different languages, se
 
 - **Use my company logo**: Select this option to replace the default Microsoft logo that's used at the top of quarantine notifications. Before you do this step, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](/Microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
+  > [!TIP]
+  > PNG or JPEG logos are the most compatible in quarantine notifications in all versions of Outlook. For the best compatibility with SVG logos in quarantine notifications, use a URL link to the SVG logo instead of directly uploading the SVG file when you customize the Microsoft 365 theme.
+
   A custom logo in a quarantine notification is shown in the following screenshot:
 
   :::image type="content" source="media/quarantine-tags-esn-customization-logo.png" alt-text="A custom logo in a quarantine notification" lightbox="media/quarantine-tags-esn-customization-logo.png":::

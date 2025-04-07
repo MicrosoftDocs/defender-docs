@@ -49,6 +49,16 @@
       "source_path": "defender-office-365/pilot-deploy-defender-office-365.md",
       "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/submissions-error-messages.md",
+      "redirect_url": "/defender-office-365/submissions-result-definitions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/step-by-step-guides/deploy-and-configure-the-report-message-add-in.md",
+      "redirect_url": "/defender-office-365/submissions-outlook-report-messages",
+      "redirect_document_id": false
     }
   ]
 }

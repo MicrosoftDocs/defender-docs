@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 01/16/2025
+ms.date: 02/10/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -23,8 +23,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 - Microsoft Defender Antivirus
 
@@ -34,7 +33,7 @@ search.appverid: met150
 - macOS
 - Linux
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink).
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
 
 ## Overview of network protection
 
@@ -63,9 +62,7 @@ The following table summarizes network protection areas of coverage.
 - Encrypted URLs (full path) are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge).
 - Encrypted URLs (FQDN only) are blocked in non-Microsoft browsers.
 - URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
-
 - Network Protection will block connections on both standard and non-standard ports.
-
 - Full URL path blocks are applied for unencrypted URLs.
 
 There might be up to two hours of latency (usually less) between the time when the action is taken and the URL/IP is blocked.
@@ -88,7 +85,7 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 | Windows version | Microsoft Defender Antivirus |
 |:---|:---|
 | Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md), and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
-| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified agent](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) | Platform update version `4.18.2001.x.x` or newer |
+| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution) | Platform update version `4.18.2001.x.x` or newer |
 
 ## Why network protection is important
 
@@ -125,7 +122,7 @@ Support for Command and Control servers (C2) is an important part of this ransom
 #### Network protection: New toast notifications
 
 | New mapping  | Response category  | Sources |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | `phishing` | `Phishing` | `SmartScreen` |
 | `malicious` | `Malicious` | `SmartScreen` |
 | `command and control` | `C2` | `SmartScreen` |
@@ -135,7 +132,7 @@ Support for Command and Control servers (C2) is an important part of this ransom
 | `by your IT admin` | `CustomPolicy` |   |
 
 > [!NOTE]
-> **customAllowList** does not generate notifications on endpoints.
+> `customAllowList` does not generate notifications on endpoints.
 
 ### New notifications for network protection determination
 
@@ -159,6 +156,26 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 
 > [!NOTE]
 > The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.  
+
+#### Use CSP to enable `Convert warn verdict to block`
+
+[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock)
+
+#### Use Group Policy to enable Convert warn verdict to block
+
+By enabling this setting, network protection blocks network traffic instead of displaying a warning.
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+
+5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
+
+6. Select **OK**. 
 
 #### Block experience
 
@@ -297,7 +314,7 @@ Defender for Endpoint provides detailed reporting into events and blocks as part
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Copy the XML directly](overview-attack-surface-reduction.md).
+1. [Copy the XML directly](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
 
 2. Select **OK**.
 
@@ -337,11 +354,11 @@ Due to the multi-user nature of Windows 10 Enterprise, keep the following points
 
 ### Alternative option for network protection
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
-2. Execute the following PowerShell commands:
+2. Run the following PowerShell commands:
 
    - `Set-MpPreference -EnableNetworkProtection Enabled`
    - `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
@@ -377,7 +394,7 @@ For more information, see [Turn on network protection](enable-network-protection
 
 #### Network protection suggested registry keys
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
 
 1. Go to **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Microsoft** > **Windows Defender** > **Windows Defender Exploit Guard** > **Network Protection**.
 
@@ -394,7 +411,7 @@ For more information, see: [Turn on network protection](enable-network-protectio
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
-For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
+For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
 
 ```powershell
 
@@ -451,12 +468,36 @@ You can disable QUIC at the web browser level. However, this method of disabling
 | Microsoft Edge | `edge://flags/#enable-quic` |
 | Google Chrome | `chrome://flags/#enable-quic` |
 
-
 ## Optimizing network protection performance
 
-Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. You can turn off this capability by using the following PowerShell cmdlet:
+Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. 
 
-`Set-MpPreference -AllowSwitchToAsyncInspection $false`
+#### Use CSP to enable AllowSwitchToAsyncInspection
+
+[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection)
+
+#### Use Group Policy to enable Turn on asynchronous inspection
+
+This procedure enables network protection to improve performance by switching from real-time inspection to asynchronous inspection.
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+3. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
+
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+
+5. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
+
+6. Select **OK**. 
+
+
+#### Use Microsoft Defender Antivirus Powershell cmdlet to enable Turn on asynchronous inspection
+
+You can turn on this capability by using the following PowerShell cmdlet: 
+
+`Set-MpPreference -AllowSwitchToAsyncInspection $true`
 
 ## See also
 

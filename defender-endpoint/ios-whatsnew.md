@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on iOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 01/07/2025
+ms.date: 03/28/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -27,26 +27,43 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
-#### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
+#### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
+
+**March 2025**
+
+As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of the Defender for Endpoint mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
+
+**Key Changes:**
+
+We are pleased to introduce the **Device Protection** feature card for our enterprise users which includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed.
+
+**The main changes involved are**:
+
+- Main dashboard changes
+- A feature card lists the features
+- Detailed feature experience
+- Recommendation cards for alerts
+
+For more information, see [User Experience in Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-new-ux).
+
+#### Microsoft Defender for Endpoint: Open Wi-Fi Detection Update
 
 **February 2025:**
 
-As part of our Microsoft Defender for Mobile application, we offer Open Wi-Fi detection within our Network Protection feature set. When enabled, this feature raises an alert in the Security portal. Currently, the alert is informational and doesn't require any action by the SOC analyst or admin. It serves as a key piece of information that helps with triaging incidents involving mobile devices.
+As part of our Microsoft Defender application, we offer open Wi-Fi detection within the network protection feature set. When enabled, this feature raises an alert in the Microsoft Defender portal. Currently, the alert is informational and doesn't require any action by the SOC analyst or admin. It serves as a key piece of information that helps with triaging incidents involving mobile devices.
 
 **Current Behavior:**
 
 - Every time the end user connects to an open Wi-Fi network, an alert is raised.
-
 - If the user goes out of the open Wi-Fi range and reconnects to the same network, another alert is raised.
 
 Based on our research insights and inputs from Microsoft and other SOC teams, we're implementing a caching behavior to ensure the value of the alerts remains and also doesn't cause fatigue to SOC teams due to sheer volume.
 
-**New behavior:** 
+**New behavior:**
 
 - Every time the end user connects to an open Wi-Fi network, an alert is raised.
-
 - If a user reconnects to the same open wi-fi in the next seven days, another alert won't be raised.
 
 Note that if a user connects to a different open Wi-Fi network, an alert is immediately generated, and there's no change to that behavior.
@@ -60,10 +77,6 @@ Note that if a user connects to a different open Wi-Fi network, an alert is imme
 We're pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
 
 Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
-
-The following screenshot is an example of what the user sees in their dashboard:
-
-:::image type="content" source="media/ios-whatsnew/ios-dashboard.png" alt-text="Screenshot showing the user's dashboard.":::
 
 **Recommendation cards for alerts**:
 
@@ -148,7 +161,7 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 ## 1.1.28250101
 
 - **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/mem/intune/protect/microsoft-tunnel-overview).
-- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
+- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint).
 - Bug fixes.
 
 ## 1.1.24210103
@@ -159,7 +172,7 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 ## 1.1.23250104
 
 - Performance optimizations - Test battery performance with this version and let us know your feedback.
-- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboards for devices enrolled through Microsoft Intune has been added. For more information, see this [Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
+- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboards for devices enrolled through Microsoft Intune has been added. For more information, see this [Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint).
 - **Privacy Controls** - Configure privacy controls for phish alert report. For more information, see [Configure iOS features](ios-configure-features.md).
 
 ## 1.1.23010101

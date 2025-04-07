@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Device Control frequently asked questions
 description: Answers frequently asked questions about device control in Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: asr
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 01/25/2024
+ms.date: 03/10/2025
 ms.reviewer: tewchen, joshbregman
 search.appverid: met150
 ---
@@ -45,7 +45,7 @@ The most common reason is there's no required anti-malware client version.
 
 Another reason could be that the XML file isn't correctly formatted. For example, not using the correct markdown formatting for the "&" character in the XML file or the text editor might add a byte order mark (BOM) 0xEF 0xBB 0xBF at the beginning of the files causing the XML parsing not to work. One simple solution is to download the [sample file](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) (select **Raw** and then **Save as**), and then update.
 
-If you're deploying and managing the policy by using Group Policy, make sure to combine all policy rules into one XML file within a parent node called `PolicyRules`. Also, combine all groups into one XML file within a parent node called `Groups`. If you're managing devices with Intune, keep separate XML files for each group and policy when deploying as `Custom OMA-URI`.
+If you're deploying and managing the policy by using Group Policy, make sure to combine all policy rules into one XML file within a parent node called `PolicyRules`. Also, combine all groups into one XML file within a parent node called `PolicyGroups`. If you're managing devices with Intune, keep separate XML files for each group and policy when deploying as `Custom OMA-URI`.
 
 The device (machine) should have a valid certificate. Run the following command on the machine to check:
 

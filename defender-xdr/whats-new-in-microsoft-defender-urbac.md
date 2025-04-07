@@ -12,12 +12,20 @@ ms.collection:
   - m365-security-compliance
   - tier2
 ms.topic: conceptual
-ms.date: 11/17/2024
+ms.date: 03/02/2025
 ---
 
 # What's new in Microsoft Defender XDR Unified role-based access control (RBAC)
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
+
+## March 2025
+
+Starting March 2, 2025, new Microsoft Defender for Identity tenants will have the Unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
+
+## February 2025
+
+Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model. Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
 
 ## November 2024
 

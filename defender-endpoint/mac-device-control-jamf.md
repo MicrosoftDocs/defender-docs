@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 02/25/2025
 ---
 
 # Deploy and manage Device Control using JAMF
@@ -29,7 +29,7 @@ ms.date: 01/31/2025
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 Device control in Microsoft Defender for Endpoint on macOS enables you to audit, allow, or prevent the read, write, or execute access to removable storage. Device control also allows you to manage iOS and portable devices and Bluetooth media, with or without exclusions.
 
@@ -52,7 +52,7 @@ For more information about settings, rules, and groups, see [Device Control for 
 
 ### Step 2: Validating a JSON policy
 
-You must validate your JSON policy after it's created to ensure there are no syntax or configuration errors. A schema for device control policies is available in [our GitHub repository](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json"https://github.com/microsoft/mdatp-devicecontrol/blob/main/macos/policy/device_control_policy_schema.json"). The Defender for Endpoint application has built-in functionality to compare your JSON to the defined schema. 
+You must validate your JSON policy after it's created to ensure there are no syntax or configuration errors. A schema for device control policies is available in [our GitHub repository](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json). The Defender for Endpoint application has built-in functionality to compare your JSON to the defined schema. 
 
 1. Save your configuration on a local device as a `.json` file.
 

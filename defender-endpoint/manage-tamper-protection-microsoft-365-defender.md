@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your tenant using the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/24/2023
+ms.date: 03/26/2025
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
@@ -84,7 +84,6 @@ search.appverid: met150
 
 - [Built-in protection helps guard against ransomware](built-in-protection.md)
 - [What happens when tamper protection is turned on?](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)
-- [Defender for Endpoint on non-Windows devices](configure-endpoints-non-windows.md)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

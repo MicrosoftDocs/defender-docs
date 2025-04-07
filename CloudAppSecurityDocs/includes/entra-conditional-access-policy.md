@@ -34,9 +34,9 @@ For more information, see [Conditional Access policies](/azure/active-directory/
 
 > [!NOTE]
 > Microsoft Defender for Cloud Apps utilizes the application **Microsoft Defender for Cloud Apps - Session Controls** as part of the Conditional Access App Control service for user sign-in. This application is located within the 'Enterprise Applications' section of Entra ID. 
-To protect your SaaS applications with Session Controls, you must allow access to this application. 
-If you block access to this application through an Entra ID Conditional Access policy, end users won't be able to access the protected applications under session controls. <br>
->
+To protect your SaaS applications with Session Controls, you must allow access to this application.
+> 
+>If you have any Conditional Access policies that have **“Block Access”** selected in the **“Grant Access”** Control under a Microsoft Entra ID Conditional Access policy scoped to this app, end users will not be able to access the protected applications under session controls. <br><br>
 >It's important to ensure that this application isn't unintentionally restricted by any Conditional Access policies. For policies that restrict all or certain applications, please ensure this application is listed as an exception in the **Target resources** or confirm that the blocking policy is deliberate.<br>  
 >
 >To ensure your location-based conditional access policies function correctly, include the **Microsoft Defender for Cloud Apps – Session Controls** application in those policies.

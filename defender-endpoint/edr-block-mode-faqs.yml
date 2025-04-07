@@ -15,7 +15,7 @@ metadata:
   - partner-contribution
   ms.topic: faq
   ms.collection: m365-security
-  ms.date: 09/07/2024
+  ms.date: 03/04/2025
 
 title: Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)
 summary: |
@@ -58,7 +58,7 @@ sections:
       - question: |
           What is the difference between active and passive mode?
         answer: |
-          For endpoints running Windows 10, Windows 11, Windows Server, version 1803 or later, Windows Server 2019, or Windows Server 2022 when Microsoft Defender Antivirus is in active mode, it is used as the primary antivirus on the device. When running in passive mode, Microsoft Defender Antivirus is not the primary antivirus product. In this case, threats are not remediated by Microsoft Defender Antivirus in real time.
+          For endpoints running Windows 10, Windows 11, Windows Server, version 1803 or later, Windows Server 2019, Windows Server 2022, or Windows Server 2025, when Microsoft Defender Antivirus is in active mode, it is used as the primary antivirus on the device. When running in passive mode, Microsoft Defender Antivirus is not the primary antivirus product. In this case, threats are not remediated by Microsoft Defender Antivirus in real time.
 
           > [!NOTE]
           > Microsoft Defender Antivirus can run in passive mode only when the device is onboarded to Microsoft Defender for Endpoint.
@@ -99,12 +99,12 @@ sections:
           - Windows Server, version 1803 or newer
           - Windows Server 2022
           - Windows Server 2019
-          - Windows Server 2016 and Windows Server 2012 R2 (with the [new unified client solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution))
+          - Windows Server 2016 and Windows Server 2012 R2 (with the [new unified client solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution))
 
-          With the [new unified client solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) for Windows Server 2016 and Windows Server 2012 R2, you can run EDR in block mode in either passive mode or active mode.
+          With the [new unified client solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution) for Windows Server 2016 and Windows Server 2012 R2, you can run EDR in block mode in either passive mode or active mode.
 
           > [!NOTE]
-          > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md) for this feature to work.
+          > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](onboard-windows-server-2012r2-2016.md) for this feature to work.
 
       - question: |
           How much time does it take for EDR in block mode to be disabled?

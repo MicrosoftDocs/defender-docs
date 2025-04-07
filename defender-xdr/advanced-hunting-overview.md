@@ -49,7 +49,7 @@ Advanced hunting supports queries that check a broader data set coming from:
 - Microsoft Defender for Identity
 - Microsoft Sentinel
 
-To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md). Or to use advanced hunting with Microsoft Sentinel, [connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md). 
+To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md). Or to use advanced hunting with Microsoft Sentinel, [connect Microsoft Sentinel to the Defender portal](/unified-secops-platform/microsoft-sentinel-onboard). 
 
 
 For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://learn-video.azurefd.net/vod/player?id=ffdedc73-6edf-45a9-8c90-566296e8d4ec). 

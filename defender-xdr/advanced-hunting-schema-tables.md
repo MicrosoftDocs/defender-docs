@@ -63,6 +63,8 @@ The following reference lists all the tables in the schema. Each table name link
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |
 | **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |
+| **[DataSecurityBehaviors](advanced-hunting-datasecuritybehaviors-table.md)** (Preview)| Insights about potentially suspicious user behaviors that violate user-defined or default policies configured in the Microsoft Purview suite of solutions|
+| **[DataSecurityEvents](advanced-hunting-datasecurityevents-table.md)** (Preview)| Information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions |
 | **[DeviceBaselineComplianceAssessment](advanced-hunting-devicebaselinecomplianceassessment-table.md)** (Preview) | Baseline compliance assessment snapshot, which indicates the status of various security configurations related to baseline profiles on devices |
 | **[DeviceBaselineComplianceAssessmentKB](advanced-hunting-devicebaselinecomplianceassessmentkb-table.md)** (Preview) | Information about various security configurations used by baseline compliance to assess devices |
 | **[DeviceBaselineComplianceProfiles](advanced-hunting-devicebaselinecomplianceprofiles-table.md)** (Preview) | Baseline profiles used for monitoring device baseline compliance |
@@ -98,6 +100,10 @@ The following reference lists all the tables in the schema. Each table name link
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |
 | **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)** | Queries for Active Directory objects, such as users, groups, devices, and domains |
+| **[MessageEvents](advanced-hunting-messageevents-table.md)** (Preview) | Messages sent and received within your organization at the time of delivery |
+| **[MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md)** (Preview) | Security events that occurred after the delivery of a Microsoft Teams message in your organization |
+| **[MessageUrlInfo](advanced-hunting-messageurlinfo-table.md)** (Preview) | URLs sent through Microsoft Teams messages in your organization |
+| **[OAuthAppInfo](advanced-hunting-oauthappinfo-table.md)** (Preview) | Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability |
 | **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** | Safe Links clicks from email messages, Teams, and Office 365 apps |
 
 ## Related topics

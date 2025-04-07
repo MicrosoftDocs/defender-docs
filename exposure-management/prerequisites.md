@@ -37,7 +37,7 @@ The following table highlights what a user can access or perform with each of th
 |Permission name|Actions|
 | -------- | -------- |
 |**Exposure Management (read)** |Access to all Exposure Management experiences and read access to all available data|
-|**Exposure Management (manage)**|In addition to the read access, the user can set initiative target score, edit metric values, manage recommendations (might require additional permissions related to the specific actions needed to be taken)|
+|**Exposure Management (manage)**|In addition to the read access, the user can set initiative target score and edit metric values, as long as the user has access to all Defender for Endpoint [device groups](/microsoft-365/security//defender-endpoint/machine-groups).|
 |**Core security settings (manage)**|Connect or change vendor to the External Attack Surface Management initiative|
 
 For full Microsoft Security Exposure Management access, user roles need access to all Defender for Endpoint [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
@@ -62,6 +62,16 @@ For full access, users need one of the following Microsoft Entra ID roles:
 - **Security Operator** (read and limited write permissions)
 - **Global Reader** (read permissions)
 - **Security Reader** (read permissions)
+
+- **Service Support** Administrator (read permissions)
+
+- **User Administrator** (read permissions)
+
+- **Helpdesk Administrator** (read permissions)
+
+- **Exchange Administrator** (read and write permissions)
+
+- **SharePoint Administrator** (read and write permissions)
 
 Permission levels are summarized in the table.
 
@@ -105,6 +115,23 @@ C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the fi
   - For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
 
     ``` DeviceInfo | project DeviceName, ClientVersion ```
+
+## Data freshness, retention, and related functionality
+
+We currently ingest and process supported data from first-party Microsoft products, making it available within the enterprise exposure graph and applicable Microsoft Security Exposure Management experiences built on top of graph data within 72 hours of its production at the source product.
+
+Microsoft product data is retained for no less than 14 days in the enterprise exposure graph and/or Microsoft Security Exposure Management. Only the latest data snapshot received from Microsoft products is retained; we do not store historical data.
+
+Some enterprise exposure graph and/or Microsoft Security Exposure Management experiences data is available for querying via Advanced Hunting and is subject to Advanced Hunting service limitations.
+
+We reserve the right to modify some or all of these parameters in the future, including:
+
+- Data ingestion frequency and freshness: We may increase the current 72-hour latency (decrease the frequency of data ingestion) for some or all Microsoft data sources.
+- Data retention period: We may decrease the current 14-day data retention period.
+- Service features and functionality: We may alter, limit, or discontinue specific features, capabilities, or functionalities of the service built on top of the enterprise exposure graph and/or Microsoft Security Exposure Management data.
+- Data query limits: We may impose limitations on the number, frequency, or type of data queries that can be performed against enterprise exposure graph or Microsoft Security Exposure Management data.
+
+ We will make reasonable efforts to provide advance notice of any significant changes to the service. However, you acknowledge and agree that you are solely responsible for monitoring any such notifications.
 
 ## Getting support
 
