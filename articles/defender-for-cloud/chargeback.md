@@ -12,9 +12,9 @@ ms.author: dacurwin
 
 ## Introduction
 
-The chargeback feature in Defender for Cloud lets organizations accurately allocate cloud expenses across various teams or departments. Defender for Cloud integrates seamlessly with Azure Cost Analysis, enhancing the ability to analyze detailed billing data and facilitating precise chargeback calculations. Implementing this approach fosters transparency, financial accountability, and efficient management of resources within your organization.
+The chargeback feature in Defender for Cloud lets organizations allocate cloud expenses accurately across teams or departments. Defender for Cloud integrates with Azure Cost Analysis to analyze detailed billing data and calculate precise chargebacks. Implementing this approach fosters transparency, financial accountability, and efficient management of resources within your organization.
 
-The chargeback process relies on the [Azure Billing Tags](/azure/cost-management-billing/costs/billing-tags) infrastructure.
+The chargeback process uses the [Azure Billing Tags](/azure/cost-management-billing/costs/billing-tags) infrastructure.
 
 ## How to distribute the cost for chargeback
 
@@ -24,9 +24,9 @@ There are two main ways to split shared costs. You can use the [Azure cost alloc
 
 At the core of the manual chargeback process is Azure Cost Analysis, which provides an extensive billing report. This report details each billed asset, including essential information required for precise cost distribution:
 
-### Report details per selected period
+### Report details for the selected period
 
-- **Asset Name:** Clearly identify each asset.
+- **Asset Name:** Identifies each asset.
 - **Asset Type:** Specifies the category of the asset.
 - **Resource Group:** Lists the resource group containing the asset.
 - **Location:** Indicates the geographic location of the asset.
@@ -38,7 +38,7 @@ At the core of the manual chargeback process is Azure Cost Analysis, which provi
 
 Tags are critical for efficient cost allocation. They function as labels to link assets directly to responsible departments, projects, or individuals. Common tags include:
 
-- **Department:** Identifies the department using the asset.
+- **Department:** Identifies the department that uses the asset.
 - **Project:** Connects the asset with a specific project.
 - **Owner:** Pinpoints the individual or team responsible for asset usage.
 
@@ -47,10 +47,10 @@ Tags are critical for efficient cost allocation. They function as labels to link
 Follow these steps to execute the chargeback process:
 
 > [!NOTE]
-> The following process can be conducted via the Azure portal user interface or programmatically through the Azure Consumption API.
+> The following process can be conducted via the Azure portal user interface or programmatically through the [Azure Consumption API](/rest/api/consumption/usage-details/list).
 
 1. **Review the report:** Thoroughly examine the detailed billing report to identify all assets and their associated costs.
-1. **Identify responsible parties:** Use the provided tags to pinpoint the department, project, or individual responsible for each asset.
+1. **Identify responsible parties:** Use the provided tags to identify the department, project, or individual responsible for each asset.
 1. **Allocate costs:** Assign expenses accurately to each relevant team or department based on tag data.
 1. **Generate statements:** Create detailed chargeback statements for each department or team, clearly reflecting their respective costs.
 
