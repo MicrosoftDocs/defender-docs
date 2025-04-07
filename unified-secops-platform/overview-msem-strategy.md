@@ -31,8 +31,6 @@ Proactively protecting your organization from potential data breaches is more ef
 
 A well-defined plan is essential for effective exposure management. Your plan should outline the purpose and objectives of posture management for your organization, aligning with legal and regulatory requirements and the risks to your organization's goals. Identify internal stakeholders and important external parties and establish clear roles and responsibilities.
 
-:::image type="content" source="media/reduce-risk-overview/MS_products.png" alt-text="Graphic of MSEM and XDR working together":::
-
 ## Discovery - Find vulnerabilities
 
 The **Discovery** step identifies vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
