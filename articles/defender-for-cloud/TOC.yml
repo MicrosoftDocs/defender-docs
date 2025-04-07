@@ -1032,7 +1032,7 @@
         - name: Verify SQL machine protection
           displayName: SQL, SQL servers, defender, machines
           href: verify-machine-protection.md
-        - name: Troubleshoot SQL machine protection
+        - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
         - name: Enable Defender for SQL servers on machines at scale
