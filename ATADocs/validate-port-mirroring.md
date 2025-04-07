@@ -33,10 +33,10 @@ The following steps walk you through the process for validating that port mirror
 
 1. Save the text of this script into a file called *ATAdiag.ps1*.
 1. Run this script on the ATA Gateway that you want to validate.
-The script generates ICMP traffic from the ATA Gateway to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
-If the ATA Gateway sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the ATA Console, it deems port mirroring configured.
+   The script generates ICMP traffic from the ATA Gateway to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
+   If the ATA Gateway sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the ATA Console, it deems port mirroring configured.
 
-  Sample for how to run the script:
+   Sample for how to run the script:
 
     ```powershell
     # ATAdiag.ps1 -CaptureIP n.n.n.n -DCIP n.n.n.n -TestCount n
