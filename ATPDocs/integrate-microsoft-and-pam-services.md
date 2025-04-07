@@ -23,7 +23,7 @@ When integrated with a PAM solution, Microsoft Defender for Identity can detect 
 
 Microsoft Defender for Identity currently supports integration with the following PAM vendors. Dedicated integrations for each partner are now available in the Microsoft 365 Defender partner catalog for streamlined onboarding and visibility.
 
-:::image type="content" source="media/Integrate with partner system services/screenshot-of-mdi-technology-partners.png" alt-text="Screenshot of Defender for Identity PAM partners" lightbox="media/Integrate with partner system services/Screenshot-of-mdi-technology-partners.png":::
+:::image type="content" source="media/integrate-with-partner-system-services/screenshot-of-mdi-technology-partners.png" alt-text="Screenshot of the defender for identity connections page":::
 
 
 |Vendor |Description |
@@ -45,7 +45,7 @@ To reset a password:
 3. Click the three-dot menu (**⋯**) in the top-right corner.
 4. Select **Reset password**. The label might vary based on the vendor (for example, **Reset password by CyberArk**, **Reset password by BeyondTrust**).
 
-:::image type="content" source="media/Screenshot-of-privilege-access-management-tags-for-identities.png" alt-text="Screenshot of the priviledge access management tags assigned to identity accounts":::
+:::image type="content" source="media/screenshot-of-privilege-access-management-tags-for-identities.png" alt-text="Screenshot of the priviledge access management tags assigned to identity accounts" lightbox="media/screenshot-of-privilege-access-management-tags-for-identities.png":::
 
 This capability streamlines containment and response workflows by embedding privileged access controls directly into the investigation experience.
 
