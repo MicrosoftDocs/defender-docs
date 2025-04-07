@@ -35,7 +35,7 @@ A well-defined plan is essential for effective exposure management. Your plan sh
 
 ## Discovery - Find vulnerabilities
 
-The **Discovery** step to identify vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
+The **Discovery** step identifies vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
 
 ### Security governance
 
