@@ -63,7 +63,7 @@ For smaller organizations with a manageable number of attack paths, we recommend
    
 1. Filter by 'Target type: AAD Service principal'
 
-    :::image type="content" source="media/saas-securty-initiative/Screenshot-of-the-attack-paths-aad-service-principal.png" alt-text="Screenshot of the attack paths service add pricipal target type" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-paths-aad-service-principal.png":::
+    :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-attack-paths-aad-service-principal.png" alt-text="Screenshot of the attack paths service add pricipal target type" lightbox="media/saas-securty-initiative/Screenshot-of-the-attack-paths-aad-service-principal.png":::
  
 1. Select the attack path titled: "Device with high severity vulnerabilities allows lateral movement to service principal with sensitive permissions"
 
