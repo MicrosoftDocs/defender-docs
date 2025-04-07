@@ -28,10 +28,6 @@ Proactive security management allows you to manage cybersecurity as an ongoing r
 
 Security teams must address key activities for effective prebreach security.
 
-:::image type="content" source="media/reduce-risk-overview/posture.png" alt-text="Graphic of security integration with Operations" lightbox="media/reduce-risk-overview/posture.png":::
-
-:::image type="content" source="media/reduce-risk-overview/usx.png" alt-text="Graphic of unified security operations":::
-
 Activity | Details
 --- | ---
 **Protect assets and workloads** | Teams must be able to improve posture across all types of corporate resources, including devices, identities, apps, and cloud workloads from code to runtime.
