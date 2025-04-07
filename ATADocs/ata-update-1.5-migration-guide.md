@@ -3,10 +3,6 @@
 
 title: Advanced Threat Analytics update to 1.5 migration guide
 description: Procedures to update ATA to version 1.5
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -32,20 +28,20 @@ The update to ATA 1.5 provides improvements in the following areas:
 
 - Enhanced automatic detection algorithm for NAT (network address translation) devices
 
-- Enhanced name resolution process for non-domain joined devices
+- Enhanced name resolution process for nondomain joined devices
 
 - Support for data migration during product updates
 
 - Better UI responsiveness for suspicious activities with thousands of entities involved
 
-- Improved auto-resolution of health alerts
+- Improved autoresolution of health alerts
 
-- Additional performance counters for enhanced monitoring and troubleshooting
+- Extra performance counters for enhanced monitoring and troubleshooting
 
 ## Updating ATA to version 1.5
 
 > [!NOTE]
-> If ATA is not installed in your environment, download the full version of ATA, which includes version 1.5  and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
+> If ATA isn't installed in your environment, download the full version of ATA, which includes version 1.5  and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
 
 If you already have ATA version 1.4 deployed, this procedure walks you through the steps necessary to update your installation.
 
@@ -82,13 +78,13 @@ Follow these steps to update to ATA version 1.5:
 
         ![Choose full or partial migration.](media/ATA-center-fullpartial.png)
 
-        - If you select **Partial** migration, any network traffic collected and forwarded Windows events analyzed by ATA are deleted and user behavioral profiles have to be relearned; this takes a minimum of three weeks. If you are running low on disk space, then it is helpful to run a **Partial** migration.
+        - If you select **Partial** migration, any network traffic collected and forwarded Windows events analyzed by ATA are deleted and user behavioral profiles have to be relearned; this takes a minimum of three weeks. If you're running low on disk space, then it's helpful to run a **Partial** migration.
 
-        - If you run a **Full** migration, you need additional disk space, as calculated for you on the upgrade page, and the migration may take longer, depending on the network traffic. The full migration retains all previously collected data and user behavioral profiles are maintained, meaning that it will not take additional time for ATA to learn behavior profiles and anomalous behavior can be detected immediately after update.
+        - If you run a **Full** migration, you need extra disk space, as calculated for you on the upgrade page, and the migration might take longer, depending on the network traffic. The full migration retains all previously collected data and user behavioral profiles are maintained, meaning that it will not take extra time for ATA to learn behavior profiles and anomalous behavior can be detected immediately after update.
 
 1. Select **Update**. Once you select **Update**, ATA is offline until the update procedure is complete.
 
-1. After updating the ATA Center, the ATA Gateways will report that they are now outdated.
+1. After updating the ATA Center, the ATA Gateways will report that they're now outdated.
 
     ![Outdated gateways image.](media/ATA-center-outdated.png)
 
@@ -125,14 +121,14 @@ The zip file includes the following files:
     > [!NOTE]
     > You can also use this ATA Gateway package to install new ATA Gateways.
 
-1. Your previous settings are preserved, but it may take a few minutes until for the service to restart.
+1. Your previous settings are preserved, but it might take a few minutes until for the service to restart.
 
 1. Repeat this step for all other ATA Gateways deployed.
 
 > [!NOTE]
 > After successfully updating an ATA Gateway, the outdated notification for the specific ATA Gateway will go away.
 
-You will know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
+You'll know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they're successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
 ![Updated gateways image.](media/ATA-gw-updated.png)
 
