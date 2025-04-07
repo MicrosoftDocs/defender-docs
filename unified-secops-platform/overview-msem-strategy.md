@@ -37,7 +37,6 @@ A well-defined plan is essential for effective exposure management. Your plan sh
 
 The **Discovery** step identifies vulnerabilities within your infrastructure. This involves scanning networks, systems, and applications for potential weaknesses. By regularly conducting vulnerability assessments, you can stay ahead of emerging threats and ensure your security posture remains strong.
 
-### Security governance
 
 Maintain an up-to-date inventory of your assets, including on-premises resources, cloud resources, and endpoints. Work with security governance teams to ensure assets are properly tagged and inventories are current. This helps incident responders quickly identify and address security issues.
 
