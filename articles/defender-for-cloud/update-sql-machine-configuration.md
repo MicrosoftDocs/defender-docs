@@ -11,17 +11,17 @@ ms.date: 04/07/2025
 # Update Defender for SQL Servers on machine's configuration
 
 > [!IMPORTANT]
-> This page is applicable to existing customers that have enabled the plan on a subscription before April 21st, 2025.
+> This page applies to existing customers who enabled the plan on a subscription before April 21, 2025.
 
-Defender for Cloud's SQL Server on machine's plan includes agent architecture that simplifies the onboarding experience and improves overall SQL protection coverage. If you are an existing customer that has already enabled the Defender for SQL Servers on machine plan with SQL VMs and Azure Arc-enabled SQL servers, the change will occur automatically. 
+Defender for Cloud's SQL Server on machine plan includes agent architecture that simplifies the onboarding experience and improves overall SQL protection coverage. If you already use the Defender for SQL Servers on machine plan for SQL VMs and Azure Arc-enabled SQL servers, the change happens automatically.
 
-For all other VMs, you must update your configuration manually in the Defender for Cloud portal.  
+For all other VMs, update your configuration manually in the Defender for Cloud portal.
 
 ## Update the plan on a single subscription
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Search for and select **Microsoft Defender for Cloud**.
+. Search for and select **Microsoft Defender for Cloud**.
 
 1. Select **Environment settings**.
 
@@ -29,7 +29,7 @@ For all other VMs, you must update your configuration manually in the Defender f
 
 1. Locate the Defender for Databases plan and select **Settings**.
 
-1. A pop-up window appeara, select **Update**.
+1. A pop-up window appears, select **Update**.
 
 ## Update the plan on multiple subscriptions
 
@@ -37,7 +37,7 @@ For all other VMs, you must update your configuration manually in the Defender f
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. On the Overview page select **update the configuration in Defender for SQL server on machines plan for multiple subscriptions**.
+1. On the Overview page, select **update the configuration in Defender for SQL Server on machine plan for multiple subscriptions**.
 
 1. Select all the relevant subscriptions.
 
