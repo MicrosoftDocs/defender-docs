@@ -1028,7 +1028,7 @@
           href: defender-for-sql-usage.md
         - name: Update Defender for SQL Servers on machine's configuration
           displayName: SQL, SQL servers, defender, machines
-          href: updates-sql-machine-configuration.md
+          href: update-sql-machine-configuration.md
         - name: Verify SQL machine protection
           displayName: SQL, SQL servers, defender, machines
           href: verify-machine-protection.md

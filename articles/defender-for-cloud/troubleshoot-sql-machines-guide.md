@@ -70,9 +70,8 @@ Use the corresponding error message and recommended actions listed below to reso
 | **SQL Server instance is inactive** | Defender for SQL server on machines can only protect active SQL servers’ instances only. |
 | **Lack of permissions** | Ensure that the SQL Server service account is a member of the sysadmin fixed server role on each SQL Server instance (default setting). Learn more about [SQL Server service permissions](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16). |
 | **Lack of communication** | Ensure outbound HTTPS traffic on TCP port 443 using Transport Layer Security (TLS) is allowed from the virtual machine/Arc-enabled server to the `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud) |
- **SQL server restart is needed** | Restart the SQL Server instance so that the Defender for SQL Server installation takes effect. |
+| **SQL server restart is needed** | Restart the SQL Server instance so that the Defender for SQL Server installation takes effect. |
 | **Internal error** | Please contact support. |
-
 
 ## Step 4: Reverify protection status
 
