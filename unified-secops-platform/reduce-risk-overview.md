@@ -1,5 +1,5 @@
 ---
-title: "Overview - Improve Security Posture and Reduce Risk"
+title: "Improve Security Posture and Reduce Risk"
 description: Provides an overview of solutions that help reduce security risk in Microsoft's unified security operations platform.
 search.appverid: met150
 ms.service: unified-secops-platform
