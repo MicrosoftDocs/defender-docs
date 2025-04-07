@@ -25,10 +25,10 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 > [!NOTE]
 > For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway now read events locally, without the need to configure event forwarding.
 
-To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway isn't deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by configuring Windows Event Forwarding.
 
 > [!NOTE]
-> If you are using Server Core, [wecutil](/windows-server/administration/windows-commands/wecutil) can be used to create and manage subscriptions to events that are forwarded from remote computers.
+> If you're using Server Core, [wecutil](/windows-server/administration/windows-commands/wecutil) can be used to create and manage subscriptions to events that are forwarded from remote computers.
 
 ## WEF configuration for ATA Gateway's with port mirroring
 
@@ -40,7 +40,7 @@ In this scenario, assume that the ATA Gateway is a member of the domain.
 
 1. Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**.
 1. Select **Members**.
-1. If **Network Service** is not listed, select **Add**, type **Network Service** in the **Enter the object names to select** field. Then select **Check Names** and select **OK** twice.
+1. If **Network Service** isn't listed, select **Add**, type **Network Service** in the **Enter the object names to select** field. Then select **Check Names** and select **OK** twice.
 
 After adding the **Network Service** to the **Event Log Readers** group, reboot the domain controllers for the change to take effect.
 

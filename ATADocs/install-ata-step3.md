@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install Advanced Threat Analytics - Step 3
-description: Step three of installing ATA helps you download the ATA Gateway setup package.
+description: Step 3 of installing ATA helps you download the ATA Gateway setup package.
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -28,7 +28,7 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 
 ## Step 3: Download the ATA Gateway setup package
 
-After configuring the domain connectivity settings, you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](ata-architecture.md). 
+After configuring the domain connectivity settings, you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it's installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](ata-architecture.md). 
 
 Select **Download Gateway Setup** in the list of steps at the top of the page to go to the **Gateways** page.
 
@@ -40,7 +40,7 @@ Select **Download Gateway Setup** in the list of steps at the top of the page to
 1. Select **Gateway Setup**.
   ![Download ATA Gateway Setup.](media/download-gateway-setup.png)
 1. Save the package locally.
-1. Copy the package to the dedicated server or domain controller onto which you are installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
+1. Copy the package to the dedicated server or domain controller onto which you're installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following files:
 

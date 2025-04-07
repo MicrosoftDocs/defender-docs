@@ -30,7 +30,7 @@ ms.suite: ems
 
 ## Step 8: Configure IP address exclusions and Honeytoken user
 
-ATA enables the exclusion of specific IP addresses or users from a number of detections.
+ATA enables the exclusion of specific IP addresses or users from many detections.
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.
 
@@ -38,27 +38,27 @@ ATA also enables the configuration of a Honeytoken user, which is used as a trap
 
 To configure this, follow these steps:
 
-1. From the ATA Console, click on the settings icon and select **Configuration**.
+1. From the ATA Console, select on the settings icon and select **Configuration**.
 
     ![ATA configuration settings.](media/ATA-config-icon.png)
 
-1. Under **Detection**, click **Entity tags**.
+1. Under **Detection**, select **Entity tags**.
 
 1. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
 
     ![Screenshot showing Honeytoken account name entry.](media/honeytoken.png)
 
-1. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
+1. Select **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and select the *plus* sign. The **Add entity** (user or computer) field is searchable and automatically fills with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
 
     ![Screenshot showing exclusion of entities from detection.](media/exclusions.png)
 
-1. Click **Save**.
+1. Select **Save**.
 
 Congratulations, you have successfully deployed Microsoft Advanced Threat Analytics!
 
 Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
 
-ATA starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, is not available until ATA has had time to build behavioral profiles (minimum of three weeks).
+ATA starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, isn't available until ATA has had time to build behavioral profiles (minimum of three weeks).
 
 To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](https://aka.ms/ataplaybook).
 
