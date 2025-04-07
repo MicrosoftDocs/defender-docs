@@ -81,4 +81,4 @@ Each investigation in Data Security Investigations (preview) created is recorded
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Investigate data security incidents in the Microsoft Purview portal]
+> [Manage the investigation scope in Microsoft Purview Data Security Investigations (preview)](/purview/data-security-investigations-scope)
