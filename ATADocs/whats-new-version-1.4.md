@@ -3,10 +3,6 @@
 
 title: What's new in Advanced Threat Analytics version 1.4
 description: Lists what was new in ATA version 1.4 along with known issues
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -34,7 +30,7 @@ These release notes provide information about known issues in version 1.4 of  Ad
 
 - Pass-The-Hash detection enhancements on corporate resources by combining DPI (Deep Packet Inspection) and Windows event logs.
 
-- Enhancements for the support of non-domain joined devices and non-Windows devices for detection and visibility.
+- Enhancements for the support of nondomain joined devices and non-Windows devices for detection and visibility.
 
 - Performance improvements to support more traffic per ATA Gateway.
 
@@ -46,7 +42,7 @@ These release notes provide information about known issues in version 1.4 of  Ad
 
 - Automatic detection for NAT devices.
 
-- Automatic failover when domain controllers are not reachable.
+- Automatic failover when domain controllers aren't reachable.
 
 - System health monitoring and notifications now provide the overall health state of the deployment as well as specific issues related to configuration and connectivity.
 
@@ -64,15 +60,15 @@ These release notes provide information about known issues in version 1.4 of  Ad
 The following known issues exist in this version.
 
 ### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software causes the ATA Gateway to stop functioning properly.
+On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865). Don't install Microsoft Message Analyzer or any other network capturing software. Installing other software causes the ATA Gateway to stop functioning properly.
 
 ### Installation from Zip file
-When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation fails.
+When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Don't install the ATA Gateway directly from within the zip file or the installation fails.
 
 ### Uninstalling previous versions of ATA
-If you installed a previous version of ATA, Public Preview or Private Preview versions, you must uninstall the ATA Center and ATA Gateways before installing this release of ATA.
+If you installed a previous version of ATA, including preview versions, you must uninstall the ATA Center and ATA Gateways before installing this release of ATA.
 
-You must also delete the Database files and log files. The databases from previous versions of ATA are not compatible with the GA version of ATA.
+You must also delete the Database files and log files. The databases from previous versions of ATA aren't compatible with the GA version of ATA.
 
 If the ATA installation opens instead of the uninstallation when you attempt to uninstall the ATA Center or ATA Gateway, you need to add the following registry key and then uninstall ATA again.
 
@@ -98,7 +94,7 @@ After uninstalling, delete the installation folder on both the ATA Center and th
 If you have more than one ATA Gateway and have Disconnected ATA Gateway alerts, automatic resolve works on only one of them, leaving the rest in an Open status. Manually confirm that the ATA Gateway is up and the service is running and manually resolve the alert.
 
 ### KB on virtualization host
-Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
+Don't install KB 3047154 on a virtualization host. This might cause port mirroring to stop working properly.
 
 ## See Also
 
