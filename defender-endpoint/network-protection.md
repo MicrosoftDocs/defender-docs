@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/10/2025
+ms.date: 04/08/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -95,7 +95,7 @@ Network protection is a part of the [attack surface reduction](overview-attack-s
 - Block browser access to websites based on category ([Web content filtering](web-content-filtering.md))
 
 > [!TIP]
-> For details about network protection for Windows Server, Linux, MacOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
+> For details about network protection for Windows Server, Linux, macOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ### Block Command and Control attacks
 
@@ -114,7 +114,7 @@ The network protection component of Defender for Endpoint identifies and blocks 
 
 In its initial form, ransomware is a commodity threat that's preprogrammed and focused on limited, specific outcomes (like encrypting a computer). However, ransomware has evolved into a sophisticated threat that is human-driven, adaptive, and focused on larger scale and more widespread outcomes, like holding an entire organization's assets or data for ransom.
 
-Support for Command and Control servers (C2) is an important part of this ransomware evolution, and it's what enables these attacks to adapt to the environment they target. Breaking the link to the command-and-control infrastructure stops the progression of an attack to its next stage. For more information about C2 detection and remediation, see [Detecting and remediating command and control attacks at the network layer](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/detecting-and-remediating-command-and-control-attacks-at-the/ba-p/3650607).
+Support for Command and Control servers (C2) is an important part of this ransomware evolution, and it's what enables these attacks to adapt to the environment they target. Breaking the link to the command-and-control infrastructure stops the progression of an attack to its next stage. For more information about C2 detection and remediation, see [Tech Community blog: Detecting and remediating command and control attacks at the network layer](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/detecting-and-remediating-command-and-control-attacks-at-the/ba-p/3650607).
 
 #### Network protection: New toast notifications
 
@@ -156,23 +156,23 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 
 #### Use CSP to enable `Convert warn verdict to block`
 
-[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock)
+[Defender CSP: Configuration/EnableConvertWarnToBlock](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock)
 
 #### Use Group Policy to enable Convert warn verdict to block
 
 By enabling this setting, network protection blocks network traffic instead of displaying a warning.
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
+5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
 
-6. Select **OK**. 
+6. Select **OK**. 
 
 #### Block experience
 
@@ -293,7 +293,8 @@ After you've enabled network protection, you might need to configure your networ
 - `.smartscreen.microsoft.com`
 - `.smartscreen-prod.microsoft.com`
 
-## Required Browser Configuration
+## Required browser configuration
+
 In non-Microsoft Edge processes, Network Protection determines the fully qualified domain name for each HTTPS connection by examining the content of the TLS handshake that occurs after a TCP/IP handshake. This requires that the HTTPS connection use TCP/IP (not UDP/QUIC) and that the ClientHello message not be encrypted. To disable QUIC and Encrypted Client Hello in Google Chrome, see [QuicAllowed](https://chromeenterprise.google/policies/#QuicAllowed) and [EncryptedClientHelloEnabled](https://chromeenterprise.google/policies/#EncryptedClientHelloEnabled). For Mozilla Firefox, see [Disable EncryptedClientHello](https://mozilla.github.io/policy-templates/#disableencryptedclienthello) and [network.http.http3.enable](https://support.mozilla.org/ml/questions/1408003#answer-1571474).
 
 ## Viewing network protection events
@@ -342,15 +343,11 @@ Here's an example of how that works:
 
 Due to the multi-user nature of Windows 10 Enterprise, keep the following points in mind:
 
-1. Network protection is a device-wide feature and can't be targeted to specific user sessions.
-
-2. Web content filtering policies are also device-wide.
-
-3. If you need to differentiate between user groups, consider creating separate Windows Virtual Desktop host pools and assignments.
-
-4. Test network protection in audit mode to assess its behavior before rolling out.
-
-5. Consider resizing your deployment if you have a large number of users or a large number of multi-user sessions.
+- Network protection is a device-wide feature and can't be targeted to specific user sessions.
+- Web content filtering policies are also device-wide.
+- If you need to differentiate between user groups, consider creating separate Windows Virtual Desktop host pools and assignments.
+- Test network protection in audit mode to assess its behavior before rolling out.
+- Consider resizing your deployment if you have a large number of users or a large number of multi-user sessions.
 
 ### Alternative option for network protection
 
@@ -370,7 +367,7 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 
 ### Network protection for Windows Servers
 
-Following is information specific to Windows Servers.
+The following information is specific to Windows Servers.
 
 #### Verify that network protection is enabled
 
@@ -462,23 +459,23 @@ Network protection includes performance optimization that allows `block` mode to
 
 #### Use CSP to enable AllowSwitchToAsyncInspection
 
-[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection)
+[Defender CSP: Configuration/AllowSwitchToAsyncInspection](/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection)
 
 #### Use Group Policy to enable Turn on asynchronous inspection
 
 This procedure enables network protection to improve performance by switching from real-time inspection to asynchronous inspection.
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
+3. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-5. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
+5. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
 
-6. Select **OK**. 
+6. Select **OK**. 
 
 
 #### Use Microsoft Defender Antivirus Powershell cmdlet to enable Turn on asynchronous inspection
