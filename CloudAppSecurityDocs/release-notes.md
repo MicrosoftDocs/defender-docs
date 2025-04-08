@@ -29,6 +29,13 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## April 2025
 
+
+### OAuth app information is now available in attack paths (Preview)
+
+The Security Exposure Management platform now includes OAuth applications as part of the attack path and attack surface map experiences. This enhancement enables you to visualize how attackers could exploit OAuth apps to move laterally within your environment and access critical assets. By identifying these attack paths and investigating associated permissions, you can reduce exposure and improve the security posture of your Microsoft 365 services.
+
+For more information, see [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
+
 ### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
 
 The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
