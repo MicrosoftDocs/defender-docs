@@ -9,7 +9,7 @@ ms.date: 04/05/2025
 
 Identity security is the practice of protecting the digital identities of individuals and organizations. This includes protecting passwords, usernames, and other credentials that can be used to access sensitive data or systems. Identity security is essential for protecting against a wide range of cyber threats, including phishing, malware, and data breaches.
 
-:::image type="content" source="media/Identity-security-initiative/Screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page":::
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page":::
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Identity security is the practice of protecting the digital identities of indivi
 
  The Security recommendations tab displays a list of prioritized remediation actions related to your identity security posture. Each recommendation is evaluated for compliance and mapped to its corresponding risk impact, workload, and domain. This view helps you triage and take action based on urgency and business relevance.
 
-:::image type="content" source="media/Identity-security-initiative/Screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page":::
+:::image type="content" source="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page":::
 
 1. Navigate to [Microsoft Defender portal](https://security.microsoft.com/) 
 1. From the Exposure management section on the navigation bar, select Exposure insights **>** Initiatives to open the Identity Security page.
@@ -51,7 +51,7 @@ Metrics can be associated with one or more initiatives.
 
 On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. 
 
-:::image type="content" source="media/Identity-security-initiative/Screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
 
 
 |Metric property |Description  |
@@ -73,6 +73,6 @@ Set a customized target score for this initiative, taking your organization’s 
 
 ## Related content
 
-[Review security initiatives](/security-exposure-management/initiatives)
+- [Review security initiatives](/security-exposure-management/initiatives)
 
-[Investigate security initiative metrics](/security-exposure-management/security-metrics)
+- [Investigate security initiative metrics](/security-exposure-management/security-metrics)
