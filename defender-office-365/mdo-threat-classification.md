@@ -59,8 +59,6 @@ Currently available threat classes are described in the following list:
 
 - **Contact establishment**: Email messages (often generic text) to verify whether an inbox is active and to initiate a conversation. These messages aim to bypass security filters and build a trusted reputation for malicious future messages.
 
-- **Credential phishing***: Attackers attempt to steal usernames and passwords by tricking individuals into entering their credentials on a fraudulent website or through manipulative email prompts.
-
 - **Downloader**: A trojan that downloads other malware.
 
 - **Gift cards**: Attackers impersonate trusted individuals or organizations, convincing the recipient to purchase and send gift card codes, often using social engineering tactics.
