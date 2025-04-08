@@ -17,7 +17,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 - The allowance is a daily rate averaged across all machines.
 - You aren't charged extra if the total doesn't exceed your total daily free limit, even if some machines send 100 MB and others send 800 MB.
 - The benefit is granted to the Log Analytics workspace to which the machine reports.
-- The benefit might not appear on your invoice, since a benefit has zero cost. The benefit is visible in the product, and in exports from Azure Cost Management. Learn how to [view your data allocation benefits](https://learn.microsoft.com/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
+- The benefit might not appear on your invoice, since a benefit has zero cost. The benefit is visible in the product, and in exports from Azure Cost Management. Learn how to [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
 
 ## Prerequisites
 
