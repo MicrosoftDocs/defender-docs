@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2025
+ms.date: 04/08/2025
 ---
 
 # Overview of indicators in Microsoft Defender for Endpoint
