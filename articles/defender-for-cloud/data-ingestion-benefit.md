@@ -4,7 +4,7 @@ description: Learn how to take advantage of the data ingestion benefit in Micros
 ms.topic: quickstart
 ms.author: elkrieger
 author: elazark
-ms.date: 04/01/2025
+ms.date: 04/08/2025
 ---
 
 # Use the data ingestion benefit
@@ -36,10 +36,8 @@ The following subset of [security data types](/azure/azure-monitor/reference/tab
 - [ProtectionStatus](/azure/azure-monitor/reference/tables/protectionstatus)
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
-- MaliciousIPCommunication
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
 - [LinuxAuditLog](/azure/azure-monitor/reference/tables/linuxauditlog)
-- SysmonEvent
 
 ## Configure a workspace
 
