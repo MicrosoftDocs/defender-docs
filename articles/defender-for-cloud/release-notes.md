@@ -37,6 +37,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 On April 30, 2025, Defender for App Service alerting capabilities will be enhanced. We will add alerts for suspicious code executions and access to internal or remote endpoints. Additionally, we have improved coverage and reduced noise from relevant alerts by expanding our logic and removing alerts that were causing unnecessary noise. As part of this process, the alert "Suspicious WordPress theme invocation detected" will be deprecated.
 
+## April 2025
+
+|Date | Category | Update|
+|--|--|--|
+| April 21 | Change | [Update to Defender for SQL Servers on machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
+
+### Update to Defender for SQL Servers on machines plan
+
+Defender for Cloud has updated the the Defender for SQL Server on machines plan agent architecture to simplify the onboarding process. This update also improves SQL protection coverage. SQL VMs and Azure Arc-enabled SQL servers will automatically migrate to the updated architecture.
+
+Existing customers are required to [update the configuration manually](update-sql-machine-configuration.md) in Defender for SQL servers on machines plan page after the agent architecture upgrade has occurred.
+
+Learn more about the [timeline and more details of the agent upgrade](defender-for-sql-usage.md). 
+
 ## March 2025
 
 |Date | Category | Update|
