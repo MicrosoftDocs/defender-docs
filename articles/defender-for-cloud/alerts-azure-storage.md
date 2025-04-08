@@ -43,7 +43,7 @@ Applies to: Azure Blob Storage, Azure Data Lake Storage Gen2
 Storage.Files_SuspiciousIp)
 
 **Description**: Indicates that this storage account has been successfully accessed from an IP address that is considered suspicious. This alert is powered by Microsoft Threat Intelligence.
-Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/).
+Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-threat-intelligence/).
 Applies to: Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre Attack
@@ -58,7 +58,7 @@ Storage.Files_PhishingContent)
 **Description**: A URL used in a phishing attack points to your Azure Storage account. This URL was part of a phishing attack affecting users of Microsoft 365.
 Typically, content hosted on such pages is designed to trick visitors into entering their corporate credentials or financial information into a web form that looks legitimate.
 This alert is powered by Microsoft Threat Intelligence.
-Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/).
+Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-threat-intelligence/).
 Applies to: Azure Blob Storage, Azure Files
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
@@ -130,7 +130,7 @@ Storage.Files_MalwareHashReputation)
 
 **Description**: Indicates that a blob containing potential malware has been uploaded to a blob container or a file share in a storage account. This alert is based on hash reputation analysis leveraging the power of Microsoft threat intelligence, which includes hashes for viruses, trojans, spyware and ransomware. Potential causes might include an intentional malware upload by an attacker, or an unintentional upload of a potentially malicious blob by a legitimate user.
 Applies to: Azure Blob Storage, Azure Files (Only for transactions over REST API)
-Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/).
+Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-threat-intelligence/).
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Lateral Movement
 
@@ -280,7 +280,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 Storage.Blob_SuspiciousIp.Sensitive
 
 **Description**: The alert indicates that someone accessed a blob container with sensitive data in the storage account from a known suspicious IP address associated with threat intel by Microsoft Threat Intelligence. Since the access was authenticated, it's possible that the credentials allowing access to this storage account were compromised.
-Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/).
+Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-threat-intelligence/).
 Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen2, or premium block blobs) storage accounts with the new Defender for Storage plan with the data sensitivity threat detection feature enabled.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Pre-Attack

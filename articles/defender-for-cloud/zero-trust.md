@@ -50,7 +50,7 @@ With cloud workloads commonly spanning multiple cloud platforms, cloud security 
 
 ## Protect Azure PaaS services
 
-When Defender for Cloud is available in an Azure subscription, and Defender for Cloud plans enabled for all available resource types, a layer of intelligent threat protection, powered by [Microsoft Threat Intelligence](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/) protects resources in Azure PaaS services, including Azure Key Vault, Azure Storage, Azure DNS, and others. Learn more about the [resource types that Defender for Cloud can secure](defender-for-cloud-introduction.md).
+When Defender for Cloud is available in an Azure subscription, and Defender for Cloud plans enabled for all available resource types, a layer of intelligent threat protection, powered by [Microsoft Defender Threat Intelligence](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-threat-intelligence/) protects resources in Azure PaaS services, including Azure Key Vault, Azure Storage, Azure DNS, and others. Learn more about the [resource types that Defender for Cloud can secure](defender-for-cloud-introduction.md).
 
 ## Automate responses with Azure Logic Apps
 
