@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about threat classification in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/21/2025
+ms.date: 04/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -49,23 +49,21 @@ _Threat detections_ refer to the technologies and methodologies that are used to
 
 _Threat classification_ is the process of categorizing a threat based on intent and the specific nature of the attack. The threat classification system uses LLMs, ML models, and other advanced techniques to understand the intent behind threats and provide a more accurate classification. As the system evolves, you can expect new threat classifications to keep pace with emerging attack methods.
 
-Different threat classes are described in the following list:
+Currently available threat classes are described in the following list:
 
 - **Advance fee scam**: Victims are promised large financial rewards, contracts, or prizes in exchange for upfront payments or a series of payments, which the attacker never delivers.
 
-- **Business intelligence**: Requests for information regarding vendors or invoices, which are used by attackers to build a profile for further targeted attacks, often from a look-alike domain that mimics a trusted source.
+- **Adware**: A program that displays an advertisement that is out of context
 
-- **Callback phishing**: Attackers use phone calls or other communication channels to manipulate individuals into revealing sensitive information or performing actions that compromise security.
+- **Business intelligence**: Requests for information regarding vendors or invoices, which are used by attackers to build a profile for further targeted attacks, often from a look-alike domain that mimics a trusted source.
 
 - **Contact establishment**: Email messages (often generic text) to verify whether an inbox is active and to initiate a conversation. These messages aim to bypass security filters and build a trusted reputation for malicious future messages.
 
-- **Credential phishing**: Attackers attempt to steal usernames and passwords by tricking individuals into entering their credentials on a fraudulent website or through manipulative email prompts.
-
-- **Credit card collection**: Attackers attempt to steal credit card information and other personal details by deceiving individuals into providing their payment information through fake email messages, websites, or messages that appear legitimate.
-
-- **Extortion**: The attacker threatens to release sensitive information, compromise systems, or take malicious actions unless a ransom is paid. This type of attack typically involves psychological manipulation to coerce the victim into compliance.
+- **Downloader**: A trojan that downloads other malware.
 
 - **Gift cards**: Attackers impersonate trusted individuals or organizations, convincing the recipient to purchase and send gift card codes, often using social engineering tactics.
+
+- **HackTool**: Tools that are used for hacking.
 
 - **Invoice fraud**: Invoices that look legitimate, either by altering details of an existing invoice or submitting a fraudulent invoice, with the intent to trick recipients into making payments to the attacker.
 
@@ -73,9 +71,24 @@ Different threat classes are described in the following list:
 
 - **Personally identifiable information (PII) gathering**: Attackers impersonate a high-ranking individual, such as a CEO, to request personal information. These email messages are often followed by a shift to external communication channels like WhatsApp or text messages to evade detection.
 
-- **Social OAuth phishing**: Attackers use single sign-on (SSO) or OAuth services to deceive users into providing their sign in credentials, gaining unauthorized access to personal accounts.
+- **Ransom**: Software (often called ransomware) that prevents users from using or accessing their PC, usually for malicious purposes. The software might take the following actions:
+  - Require users to pay (the ransom).
+  - Encrypt files and other data.
+  - Require users to do activities like answering surveys or CAPTCHAS to regain access to the machine.
+
+    Commonly, users can't move input device focus out of the ransomware, and users can't easily end the malicious process. In some cases, the ransomware denies PC access to users, even after a reboot or booting into Safe Mode.
+
+- **Remote Access Trojan**: Softeare that gives attackers unauthorized remote access and control of infected computers. Bots are a subcategory of backdoor trojans.
+
+- **Spyware**: Software that can steal information from an affected user beyond passwords.
 
 - **Task fraud**: Short, seemingly safe email messages asking for assistance with a specific task. These requests are designed to gather information or induce actions that can compromise security.
+
+<!--- - **Callback phishing**: Attackers use phone calls or other communication channels to manipulate individuals into revealing sensitive information or doing actions that compromise security.
+- **Credential phishing**: Attackers attempt to steal usernames and passwords by tricking individuals into entering their credentials on a fraudulent website or through manipulative email prompts.
+- **Extortion**: The attacker threatens to release sensitive information, compromise systems, or take malicious actions unless a ransom is paid. This type of attack typically involves psychological manipulation to coerce the victim into compliance.
+- **Social OAuth phishing**: Attackers use single sign-on (SSO) or OAuth services to deceive users into providing their sign in credentials, gaining unauthorized access to personal accounts.
+--->
 
 ## Where threat classification results are available
 
