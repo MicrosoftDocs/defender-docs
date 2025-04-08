@@ -36,9 +36,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Update to Defender for SQL Servers on machines plan
 
-Defender for Cloud has updated the the Defender for SQL Server on machines plan agent architecture to simplify the onboarding process. This update also improves SQL protection coverage. SQL VMs and Azure Arc-enabled SQL servers will automatically migrate to the updated architecture.
+Defender for Cloud has updated the Defender for SQL Server on machines plan agent architecture to simplify the onboarding process. This update also improves SQL protection coverage. SQL VMs and Azure Arc-enabled SQL servers will automatically migrate to the updated architecture.
 
-Existing customers are required to [update the configuration manually](update-sql-machine-configuration.md) in Defender for SQL servers on machines plan page after the agent architecture upgrade has occurred.
+Existing customers must [update the configuration manually](update-sql-machine-configuration.md) on the Defender for SQL Servers on machines plan page after the agent architecture upgrade occurs.
 
 Learn more about the [timeline and more details of the agent upgrade](defender-for-sql-usage.md). 
 
