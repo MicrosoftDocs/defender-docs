@@ -49,21 +49,24 @@ _Threat detections_ refer to the technologies and methodologies that are used to
 
 _Threat classification_ is the process of categorizing a threat based on intent and the specific nature of the attack. The threat classification system uses LLMs, ML models, and other advanced techniques to understand the intent behind threats and provide a more accurate classification. As the system evolves, you can expect new threat classifications to keep pace with emerging attack methods.
 
+> [!NOTE]
+> Items marked with (*) are planned for future release. Additional spam and bulk classifications will also be introduced and are not currently reflected in this documentation.
+
 Different threat classes are described in the following list:
 
 - **Advance fee scam**: Victims are promised large financial rewards, contracts, or prizes in exchange for upfront payments or a series of payments, which the attacker never delivers.
 
 - **Business intelligence**: Requests for information regarding vendors or invoices, which are used by attackers to build a profile for further targeted attacks, often from a look-alike domain that mimics a trusted source.
 
-- **Callback phishing**: Attackers use phone calls or other communication channels to manipulate individuals into revealing sensitive information or performing actions that compromise security.
+- **Callback phishing***: Attackers use phone calls or other communication channels to manipulate individuals into revealing sensitive information or performing actions that compromise security.
 
 - **Contact establishment**: Email messages (often generic text) to verify whether an inbox is active and to initiate a conversation. These messages aim to bypass security filters and build a trusted reputation for malicious future messages.
 
-- **Credential phishing**: Attackers attempt to steal usernames and passwords by tricking individuals into entering their credentials on a fraudulent website or through manipulative email prompts.
+- **Credential phishing***: Attackers attempt to steal usernames and passwords by tricking individuals into entering their credentials on a fraudulent website or through manipulative email prompts.
 
-- **Credit card collection**: Attackers attempt to steal credit card information and other personal details by deceiving individuals into providing their payment information through fake email messages, websites, or messages that appear legitimate.
+- **Credit card collection***: Attackers attempt to steal credit card information and other personal details by deceiving individuals into providing their payment information through fake email messages, websites, or messages that appear legitimate.
 
-- **Extortion**: The attacker threatens to release sensitive information, compromise systems, or take malicious actions unless a ransom is paid. This type of attack typically involves psychological manipulation to coerce the victim into compliance.
+- **Extortion***: The attacker threatens to release sensitive information, compromise systems, or take malicious actions unless a ransom is paid. This type of attack typically involves psychological manipulation to coerce the victim into compliance.
 
 - **Gift cards**: Attackers impersonate trusted individuals or organizations, convincing the recipient to purchase and send gift card codes, often using social engineering tactics.
 
@@ -73,9 +76,21 @@ Different threat classes are described in the following list:
 
 - **Personally identifiable information (PII) gathering**: Attackers impersonate a high-ranking individual, such as a CEO, to request personal information. These email messages are often followed by a shift to external communication channels like WhatsApp or text messages to evade detection.
 
-- **Social OAuth phishing**: Attackers use single sign-on (SSO) or OAuth services to deceive users into providing their sign in credentials, gaining unauthorized access to personal accounts.
+- **Social OAuth phishing***: Attackers use single sign-on (SSO) or OAuth services to deceive users into providing their sign in credentials, gaining unauthorized access to personal accounts.
 
 - **Task fraud**: Short, seemingly safe email messages asking for assistance with a specific task. These requests are designed to gather information or induce actions that can compromise security.
+
+- **HackTool**: Tools that are used for hacking.
+
+- **Ransom**: Software (often called ransomware) that denies users from using or accessing their PC or desktop, usually for malicious purposes. These kinds of software may (1) require users to pay a certain amount of money (the ransom) (2) encrypt files and other data (3) require users to perform activities like answering surveys or CAPTCHAS to regain access to the machine. Commonly they prevent the user from diverting input device focus away from the ransomware and don’t give the user an option to terminate the malicious process normally. In some rare cases, the ransomware automatically performs denial of access to users, even after reboot or in safe mode.
+
+- **Downloader**: A trojan that downloads other malware.
+
+- **Adware**: A program that displays an advertisement that is out of context
+
+- **Spyware**: Trojan that has the capability to steal information from an affected user beyond passwords.
+
+- **Remote Access Trojan**: A type of trojan that provides attackers with remote unauthorized access and control of infected computers. Bots are a subcategory of backdoor trojans.
 
 ## Where threat classification results are available
 
