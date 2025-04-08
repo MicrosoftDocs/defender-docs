@@ -7,7 +7,7 @@ ms.subservice: onboard
 ms.author: ewalsh
 author: emmwalshh  
 ms.localizationpriority: medium
-ms.date: 03/28/2025
+ms.date: 04/08/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -73,7 +73,6 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 |Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Protects the entire device. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
 |MAM|Yes, (need to just install, setup isn't required) | Protects only enrolled apps. MAM supports with/without Device enrollment or enrolled with non-Microsoft Enterprise Mobility Management.|[Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)](android-configure-mam.md)|
 |Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint are ending support for android device administrator management on devices with access to Google Mobile Services (GMS) on December 31, 2024.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-device-administrator-enrolled-devices)|
-
 
 ### Unsupported Android enrollment scenarios
 
