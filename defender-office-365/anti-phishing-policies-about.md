@@ -183,7 +183,7 @@ Unauthenticated sender indicators are part of the [Spoof settings](#spoof-settin
 
 - **Show "via" tag**: Adds the "via" tag (`chris@contoso.com <u>via</u> fabrikam.com`) in the From box if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the **MAIL FROM** address. For more information about these addresses, see [An overview of email message standards](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
 
-  :::image type="content" source="media/anti-phishing-policies-safety-tip-via-tag.png" alt-text="Screenshot of the "via" tag in an email message." lightbox="media/anti-phishing-policies-safety-tip-via-tag.png":::
+  :::image type="content" source="media/anti-phishing-policies-safety-tip-via-tag.png" alt-text="Screenshot of the via tag in an email message." lightbox="media/anti-phishing-policies-safety-tip-via-tag.png":::
 
 To prevent the question mark or "via" tag from being added to messages from specific senders, you have the following options:
 
