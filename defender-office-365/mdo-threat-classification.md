@@ -78,7 +78,7 @@ Currently available threat classes are described in the following list:
 
     Commonly, users can't move input device focus out of the ransomware, and users can't easily end the malicious process. In some cases, the ransomware denies PC access to users, even after a reboot or booting into Safe Mode.
 
-- **Remote Access Trojan**: Softeare that gives attackers unauthorized remote access and control of infected computers. Bots are a subcategory of backdoor trojans.
+- **Remote Access Trojan**: Software that gives attackers unauthorized remote access and control of infected computers. Bots are a subcategory of backdoor trojans.
 
 - **Spyware**: Software that can steal information from an affected user beyond passwords.
 
