@@ -27,9 +27,6 @@ ms.date: 03/04/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
-
 ## Overview
 
 By creating indicators for IPs and URLs or domains, you can now allow or block IPs, URLs, or domains based on your own threat intelligence. You can also warn users if they open a risky app. The prompt doesn't stop them from using the app; users can bypass the warning and continue to use the app if needed.
@@ -50,8 +47,8 @@ You can block additional malicious IPs/URLs by configuring "**Custom network ind
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
-- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016) (requires installation through MSI)
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016) (requires installation through MSI)
 - macOS
 - Linux
 - iOS 
