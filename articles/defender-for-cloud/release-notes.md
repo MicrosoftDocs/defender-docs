@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#Enhanced-app-service-alerts) |
+| April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
 
 ### Enhancements for Defender for app service alerts
 
