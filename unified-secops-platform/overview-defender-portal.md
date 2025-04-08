@@ -222,8 +222,6 @@ For more information, see [Microsoft Defender Vulnerability Management](/defende
 
 In the **Email & collaboration** section, monitor, investigate, and manage security threats and responses to email and collaboration apps with Microsoft Defender for Office 365.
 
-<!--can we get a better screenshot here?-->
-
 :::image type="content" source="./media/overview-defender-portal/email-investigations.png" alt-text="Screenshot of the Email Investigations page in the Microsoft Defender portal" lightbox="./media/overview-defender-portal/email-investigations.png":::
 
 Feature | Details
