@@ -83,7 +83,7 @@ It's best practice to only grant minimal permissions to alerts in the Microsoft 
 
 1. Search for the DLP policy name of the alerts and incidents you're interested in.
 
-1. To view the incident summary page, select the incident from the queue. Similarly, select the alert to view the DLP alert page. Note: Select **Summarize** for Security Copilot to generate a summary of the alert. The alert summary will contain the:
+1. To view the incident summary page, select the incident from the queue. Similarly, select the alert to view the DLP alert page. Select **Summarize** for Security Copilot to generate a summary of the alert. The alert summary will contain the:
 
 - alert severity
 - alert title
@@ -91,6 +91,7 @@ It's best practice to only grant minimal permissions to alerts in the Microsoft 
 - the name file involved and a link to the file
 - alert status
 - the email address of the user who performed the action that matched the policy
+
 1. View the **Alert story** for details about policy and the sensitive information types detected in the alert. Select the event in the **Related Events** section to see the user activity details.
 
 1. View the matched sensitive content in the **Sensitive info types** tab and the file content in the **Source** tab if you have the required permission (See details <a href="/microsoft-365/compliance/dlp-alerts-dashboard-get-started#roles" target="_blank">here</a>).
