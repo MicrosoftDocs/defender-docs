@@ -201,17 +201,35 @@ The [summarize operator](/azure/data-explorer/kusto/query/summarizeoperator) agg
 
 Process IDs (PIDs) are recycled in Windows and reused for new processes. On their own, they can't serve as unique identifiers for specific processes.
 
-To get a unique identifier for a process on a specific machine, use the process ID together with the process creation time. When you join or summarize data around processes, include columns for the machine identifier (either `DeviceId` or `DeviceName`), the process ID (`ProcessId` or `InitiatingProcessId`), and the process creation time (`ProcessCreationTime` or `InitiatingProcessCreationTime`)
+Usually, the only way to uniquely identify a process on a specific device was by combining its process ID with its process creation time, along with the device identifier (either `DeviceId` or `DeviceName`). While this approach is still valid, there’s a more direct method using the `ProcessUniqueId` field. Both methods yield unique process instances, but as a best practice we recommend using `ProcessUniqueId` when available, as it simplifies queries and eliminates the need to handle PID reuse scenarios.
 
-The following example query finds processes that access more than 10 IP addresses over port 445 (SMB), possibly scanning for file shares.
+This query demonstrates how to use the `ProcessUniqueId` and `InitiatingProcessUniqueId` fields to link a specific parent process to its child processes. By matching each child’s `InitiatingProcessUniqueId` to the parent’s `ProcessUniqueId`, it isolates only those child processes launched by that exact parent instance, even if process IDs get reused over time.
 
 Example query:
 
 ```kusto
-DeviceNetworkEvents
-| where RemotePort == 445 and Timestamp > ago(12h) and InitiatingProcessId !in (0, 4)
-| summarize RemoteIPCount=dcount(RemoteIP) by DeviceName, InitiatingProcessId, InitiatingProcessCreationTime, InitiatingProcessFileName
-| where RemoteIPCount > 10
+// Step 1: Select a specific parent process instance (for instance, powershell.exe). 
+let parentProcess = 
+    DeviceProcessEvents
+    | where FileName =~ "powershell.exe" // For your specific use case, consider modifying the FileName and adding more identifying properties to specify your query.
+    | where isnotempty(ProcessUniqueId)
+    | top 1 by Timestamp asc 
+    | project DeviceId, DeviceName, ParentProcessUniqueId = ProcessUniqueId, ParentFileName = FileName;
+// Step 2: Find all child processes started by this unique parent.
+DeviceProcessEvents
+| where isnotempty(InitiatingProcessUniqueId)
+| join kind=inner (
+    parentProcess
+) on DeviceId
+| where InitiatingProcessUniqueId == ParentProcessUniqueId
+| project 
+    DeviceName,
+    ParentProcessUniqueId,
+    ParentFileName,
+    ChildProcessName = FileName,
+    ChildProcessId = ProcessId,
+    ChildProcessUniqueId = ProcessUniqueId,
+    Timestamp
 ```
 
 The query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
