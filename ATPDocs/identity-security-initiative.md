@@ -5,7 +5,7 @@ ms.topic: overview
 ms.date: 04/05/2025
 ---
 
-# Identity Security Initiative
+# Identity Security Initiative (Preview)
 
 Identity security is the practice of protecting the digital identities of individuals and organizations. This includes protecting passwords, usernames, and other credentials that can be used to access sensitive data or systems. Identity security is essential for protecting against a wide range of cyber threats, including phishing, malware, and data breaches.
 
@@ -49,7 +49,7 @@ Security Exposure Management categorizes recommendations by compliance status, a
 Metrics in security initiatives help you to measure exposure risk for different areas within the initiative. Each metric gathers together one or more recommendations for similar assets.
 Metrics can be associated with one or more initiatives.
 
-On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. 
+On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
 
 :::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
 
