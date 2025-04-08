@@ -86,8 +86,8 @@ Currently available threat classes are described in the following list:
 
 <!--- - **Callback phishing**: Attackers use phone calls or other communication channels to manipulate individuals into revealing sensitive information or doing actions that compromise security.
 - **Credential phishing**: Attackers attempt to steal usernames and passwords by tricking individuals into entering their credentials on a fraudulent website or through manipulative email prompts.
-- **Extortion***: The attacker threatens to release sensitive information, compromise systems, or take malicious actions unless a ransom is paid. This type of attack typically involves psychological manipulation to coerce the victim into compliance.
-- **Social OAuth phishing***: Attackers use single sign-on (SSO) or OAuth services to deceive users into providing their sign in credentials, gaining unauthorized access to personal accounts.
+- **Extortion**: The attacker threatens to release sensitive information, compromise systems, or take malicious actions unless a ransom is paid. This type of attack typically involves psychological manipulation to coerce the victim into compliance.
+- **Social OAuth phishing**: Attackers use single sign-on (SSO) or OAuth services to deceive users into providing their sign in credentials, gaining unauthorized access to personal accounts.
 --->
 
 ## Where threat classification results are available
