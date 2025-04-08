@@ -54,7 +54,7 @@ A false positive (FP) refers to a false positive in Microsoft's threat intellige
 
 You can use IP and URL/Domain indicators to manage site access.
 
-To block connections to an IP address, type the IP in dotted-quad form (e.g. `8.8.8.8`). Note that wildcards and ranges are not supported.
+To block connections to an IP address, type the IPv4 address in dotted-quad form (e.g. `8.8.8.8`). For IPv6 addresses, specify all 8 segments (e.g. `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges are not supported.
 
 To block connections to a domain and any of its subdomains, specify the domain (e.g. `example.com`). This indicator will match `example.com` as well as `sub.example.com` and `anything.sub.example.com`.
 
