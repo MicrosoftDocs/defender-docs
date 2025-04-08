@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn about the anti-phishing policies that are available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 04/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -179,7 +179,11 @@ Unauthenticated sender indicators are part of the [Spoof settings](#spoof-settin
 
 - **Show (?) for unauthenticated senders for spoof**: Adds a question mark to the sender's photo in the From box if the message doesn't pass SPF or DKIM checks **and** the message doesn't pass DMARC or [composite authentication](email-authentication-about.md#composite-authentication). When this setting is turned off, the question mark isn't added to the sender's photo.
 
-- **Show "via" tag**: Adds the "via" tag (chris@contoso.com <u>via</u> fabrikam.com) in the From box if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the **MAIL FROM** address. For more information about these addresses, see [An overview of email message standards](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
+  :::image type="content" source="media/anti-phishing-policies-safety-tip-unauthenticated-senders.png" alt-text="Screenshot of an unauthenticated sender in an email message." lightbox="media/anti-phishing-policies-safety-tip-unauthenticated-senders.png":::
+
+- **Show "via" tag**: Adds the "via" tag (`chris@contoso.com <u>via</u> fabrikam.com`) in the From box if the domain in the From address (the message sender that's displayed in email clients) is different from the domain in the DKIM signature or the **MAIL FROM** address. For more information about these addresses, see [An overview of email message standards](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
+
+  :::image type="content" source="media/anti-phishing-policies-safety-tip-via-tag.png" alt-text="Screenshot of the via tag in an email message." lightbox="media/anti-phishing-policies-safety-tip-via-tag.png":::
 
 To prevent the question mark or "via" tag from being added to messages from specific senders, you have the following options:
 
@@ -338,13 +342,17 @@ Impersonation safety tips appear to users when messages are identified as impers
 
   This safety tip is controlled by the value 9.20 of the `SFTY` field in the **X-Forefront-Antispam-Report** header of the message. The text says:
 
-  > This sender appears similar to someone who previously sent you email, but may not be that person.
+  > \<Sender\> appears similar to someone who previously sent you email, but may not be that person.
+
+  :::image type="content" source="media/anti-phishing-policies-safety-tip-user-impersonation.png" alt-text="Screenshot of an email message with a user impersonation safety tip." lightbox="media/anti-phishing-policies-safety-tip-user-impersonation.png":::
 
 - **Show domain impersonation safety tip**: The From address contains a domain specified in [domain impersonation protection](#domain-impersonation-protection). Available only if **Enable domains to protect** is turned on and configured.
 
   This safety tip is controlled by the value 9.19 of the `SFTY` field in the **X-Forefront-Antispam-Report** header of the message. The text says:
 
   > This sender might be impersonating a domain that's associated with your organization.
+
+  :::image type="content" source="media/anti-phishing-policies-safety-tip-domain-impersonation.png" alt-text="Screenshot of an email message with a domain impersonation safety tip." lightbox="media/anti-phishing-policies-safety-tip-domain-impersonation.png":::
 
 - **Show user impersonation unusual characters safety tip**: The From address contains unusual character sets (for example, mathematical symbols and text or a mix of uppercase and lowercase letters) in a sender specified in [user impersonation protection](#user-impersonation-protection). Available only if **Enable users to protect** is turned on and configured. The text says:
 
