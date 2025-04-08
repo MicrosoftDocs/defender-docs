@@ -13,7 +13,7 @@ This article provides descriptions and instructions for Defender for Cloud Apps 
 
 ## Activity filters
 
-Below is a list of the activity filters that can be applied. Most filters support multiple values as well as *NOT* to provide you with a powerful tool for policy creation.
+Below is a list of the activity filters that can be applied. Most filters support multiple values and *NOT* to provide you with a powerful tool for policy creation.
 
 - Activity ID - Search only for specific activities by their ID. This filter is useful when you connect Microsoft Defender for Cloud Apps to your SIEM (using the SIEM agent) and you want to further investigate alerts using Defender for Cloud Apps.
 
@@ -30,7 +30,7 @@ Below is a list of the activity filters that can be applied. Most filters suppor
 - Activity type - Search for the app activity.
 
   > [!NOTE]
-  > Apps are added to the filter only if there is activity for that app.
+  > Apps are added to the filter only if there's activity for that app.
 
 - Administrative activity – Search only for administrative activities.
 
@@ -56,7 +56,7 @@ Below is a list of the activity filters that can be applied. Most filters suppor
 
 - IP address – The raw IP address, category, or tag from which the activity was performed.
   - Raw IP address - Enables you to search for activities that were performed on or by raw IP addresses. The raw IPs can equal, don't equal, start with, or don't start with a particular sequence.
-  - IP category - The category of the IP address from which the activity was performed, for example, all activities from the administrative IP address range. The categories need to be configured to include the relevant IP addresses. Some IPs may be categorized by default. for example, there are IP addresses that are considered by Microsoft threat intelligence sources will be categorized as risky. To learn how to configure the IP categories, see [Organize the data according to your needs](ip-tags.md).
+  - IP category - The category of the IP address from which the activity was performed, for example, all activities from the administrative IP address range. The categories need to be configured to include the relevant IP addresses. Some IPs might be categorized by default. for example, there are IP addresses that are considered by Microsoft threat intelligence sources will be categorized as risky. To learn how to configure the IP categories, see [Organize the data according to your needs](ip-tags.md).
   - IP tag - The tag of the IP address from which the activity was performed, for example, all activities from anonymous proxy IP addresses. Defender for Cloud Apps creates a set of built-in IP tags that aren't configurable. Additionally, you can configure your IP tags. For more information about configuring your IP tags, see [Organize the data according to your needs](ip-tags.md).
   The built-in IP tags include the following:
     - Microsoft apps (14 of them)
@@ -88,7 +88,7 @@ Below is a list of the activity filters that can be applied. Most filters suppor
   - User domain - Search for a specific user domain.
   - User organization - The organizational unit of the user who performed the activity, for example, all activities performed by EMEA_marketing users. This is only relevant for connected Google Workspace instances using organizational units.
   - User group - Specific user groups that you can import from connected apps, for example, Microsoft 365 administrators.
-  - User name - Search for a specific username. To see a list of users in a specific user group, in the **Activity drawer**, select the name of the user group. Clicking will take you to the Accounts page, which lists all the users in the group. From there, you can drill down into the details of the accounts of specific users in the group.
+  - User name - Search for a specific username. To see a list of users in a specific user group, in the **Activity drawer**, select the name of the user group. Clicking takes you to the Accounts page, which lists all the users in the group. From there, you can drill down into the details of the accounts of specific users in the group.
   - The **User group** and **User name** filters can be further filtered by using the **As** filter and selecting the role of the user, which can be any of the following:
     - Activity object only - meaning that the user or user group selected didn't perform the activity in question; they were the object of the activity.
     - Actor only - meaning that the user or user group performed the activity.
@@ -132,7 +132,7 @@ Defender for Cloud Apps also provides you with **Suggested queries**. Suggested 
 
 - Sharing activities - Filters all your activities to display only those activities that involve sharing folders and files, including creating a company link, creating an anonymous link, and granting read/write permissions.
 
-- Successful log-in - Filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
+- Successful log in - Filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
 
   ![query activities.](media/queries-activity.png)
 
@@ -162,21 +162,58 @@ For example:
 
 ![Filter after selecting investigate 6 months back.](media/filter-six-months-back.png)
 
-#### Export activities six months back (Preview)
 
-You can export all activities from up to six months by clicking the Export button in the top-left corner  
+### Export activities six months back (Preview)
+
+
+You can export all activities from the past six months by clicking the Export button in the top-left corner  of the Activity log page.
+
 ![Click the export icon to export records.](media/activity-filters-queries/export-button-of-activity-logs.png)
 
+When exporting data:
 
+- You can choose a date range of up to six months.
+- You can choose to exclude private activities.  
+- The exported file is limited to 100,000 records and is delivered in CSV format.
 
+Once the export is complete, the file is available under **Exported reports**.
 
-When exporting data, you can choose a date range of up to six months, and have the ability to exclude private activities.  
-The exported file is limited to 100,000 records and will be in CSV format.
+To access exported files and check export status, navigate to **Reports -> Cloud Apps** in Microsoft 365 Defender portal to view the status of the export process and access past exports.  
 
-The result file will be accessible under the **Exported reports**. Users can navigate to **Reports -> Cloud Apps** in Microsoft 365 Defender portal to view the status of the export process and access past exports.  
-Reports that include private activities will be marked with an Eye icon in the reports page.  
+Reports that include private activities are marked with an Eye icon in the reports page.  
 
 ![eye-icon](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
+
+> [!NOTE] 
+>Exporting and viewing activity data up to six months back is restricted to specific roles with elevated permissions.
+
+The following roles are supported:
+
+- `INVITED_ADMIN`
+
+- `GLOBAL_ADMINISTRATOR`
+
+- `SECURITY_ADMINISTRATOR`
+
+- `MCAS_ADMINISTRATOR`
+
+- `DISCOVERY_ADMIN`
+
+- `SECURITY_OPERATOR`
+
+- `COMPLIANCE_ADMIN`
+
+- `SECURITY_READER`
+
+- `GLOBAL_READER`
+
+- `URBAC_ROLES_GLOBAL_ADMINISTRATOR`
+
+- `URBAC_ROLES_COMPLIANCE_ADMINISTRATOR`
+
+- `URBAC_ROLES_SECURITY_READER`
+
+- `URBAC_ROLES_SECURITY_OPERATOR`
 
 ## Next steps
 
