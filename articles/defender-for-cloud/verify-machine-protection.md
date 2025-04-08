@@ -10,7 +10,7 @@ ms.date: 04/08/2025
 
 # Verify SQL machine protection
 
-After enabling protection for SQL Virtual Machines (VM) with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
+After enabling protection for SQL Servers installed on Virtual Machines (VM), on-premises machines, and multicloud resources with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
 
 ## Verify protection on an entire Azure subscription
 
