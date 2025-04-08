@@ -28,7 +28,11 @@ ms.date: 04/08/2025
 Want to experience Microsoft Defender for Endpoint?
 [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
-This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) and [What's new in Defender for Endpoint on Linux](linux-whatsnew.md). 
+This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, such as what's included in this offering, see the following articles:
+
+- [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) 
+
+- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md) 
 
 ## License requirements
 
