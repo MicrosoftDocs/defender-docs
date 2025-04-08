@@ -52,7 +52,7 @@ For more information about individual attack surface reduction rules, see [Attac
 
 > [!IMPORTANT]
 > To access the attack surface reduction rules report, read permissions are required for the Microsoft Defender portal. 
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in the attack surface reduction rules report, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in the attack surface reduction rules report, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution).
 
 ## Report access permissions
 
