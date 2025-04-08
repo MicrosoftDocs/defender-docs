@@ -1,5 +1,5 @@
 ---
-title: Pre-release testing using Google Play pre-production tracks
+title: Prerelease testing using Google Play preproduction tracks
 description: Describes how to conduct pre-release tests before mainstream release using Google Play pre-production tracks
 ms.service: defender-endpoint
 ms.author: diannegali
@@ -19,7 +19,7 @@ ms.date: 04/14/2025
 #customer intent: As an IT admin, I want to test custom APKs using Google Play pre-production tracks so that I can ensure the app is working as expected before deploying it to users.
 ---
 
-# Conduct pre-release tests using Google Play pre-production tracks
+# Conduct prerelease tests using Google Play preproduction tracks
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -28,9 +28,9 @@ ms.date: 04/14/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-Learn how to deploy custom APKs or conduct pre-release testing using Google Play pre-production tracks. This is useful for testing custom APKs before deploying them to users in your organization. The pre-production track allows you to test the app with a limited number of users before making it available to everyone.
+Learn how to deploy custom APKs or conduct prerelease app tests using Google Play preproduction tracks. This is useful for testing custom APKs before deploying them to users in your organization. The preproduction track allows you to test the app with a limited number of users before making it available to everyone.
 
-It's common for organizations to have custom APKs that are not available on the Google Play Store. These APKs may be developed in-house or by third-party vendors. By using the pre-production track, you can ensure that these custom APKs are working as expected before deploying them to users.
+It's common for organizations to have custom APKs that are not available on the Google Play Store. These APKs may be developed in-house or by third-party vendors. By using the preproduction track, you can ensure that these custom APKs are working as expected before deploying them to users.
 
 This article provides step-by-step instructions on how users can use custom APKs for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
