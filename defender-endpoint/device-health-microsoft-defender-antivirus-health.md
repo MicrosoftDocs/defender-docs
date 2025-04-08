@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 03/13/2025
+ms.date: 04/08/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -36,7 +36,7 @@ The Device Health report provides information about the devices in your organiza
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
 > - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (non MMA), MacOS, Linux 
-> - Sense (MsSense.exe): **10.8210.** \*+. See [Prerequisites](#prerequisites) section for related details.
+> - Sense (MsSense.exe): **10.8210.** \*+.
 >
 > For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution).
 
@@ -48,7 +48,6 @@ In the Microsoft Defender portal, in the navigation pane, select **Reports**, an
   - [View device health cards](#view-device-health-cards)
   - [Report access permissions](#report-access-permissions)
   - [Microsoft Defender Antivirus health tab](#microsoft-defender-antivirus-health-tab)
-    - [Prerequisites](#prerequisites)
     - [Card functionality](#card-functionality)
       - [New Microsoft Defender Antivirus filter definitions](#new-microsoft-defender-antivirus-filter-definitions)
       - [Export report](#export-report)
