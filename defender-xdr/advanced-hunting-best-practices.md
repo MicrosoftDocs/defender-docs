@@ -211,7 +211,7 @@ Example query:
 // Step 1: Select a specific parent process instance (for instance, powershell.exe). 
 let parentProcess = 
     DeviceProcessEvents
-    | where FileName =~ "powershell.exe" // For your specific usecase, consider modifying the FileName and adding more identifying properties to specify your query.
+    | where FileName =~ "powershell.exe" // For your specific use case, consider modifying the FileName and adding more identifying properties to specify your query.
     | where isnotempty(ProcessUniqueId)
     | top 1 by Timestamp asc 
     | project DeviceId, DeviceName, ParentProcessUniqueId = ProcessUniqueId, ParentFileName = FileName;
