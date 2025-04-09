@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 1/29/2024
+ms.date: 04/08/2024
 audience: ITPro
 ms.topic: conceptual
 
@@ -93,10 +93,10 @@ The basic syntax of the DKIM CNAME records for custom domains that send mail fro
 
 ```text
 Hostname: selector1._domainkey
-Points to address or value: selector1-<CustomDomain>._domainkey.<InitialDomain>
+Points to address or value: selector1-<CustomDomain>._domainkey.<InitialDomainPrefix>.n-v1.dkim.mail.microsoft
 
 Hostname: selector2._domainkey
-Points to address or value: selector2-<CustomDomain>._domainkey.<InitialDomain>
+Points to address or value: selector2-<CustomDomain>._domainkey.<InitialDomainPrefix>.n-v2.dkim.mail.microsoft
 ```
 
 - In Microsoft 365, two public-private key pairs are generated when DKIM signing using a custom domain or subdomain is enabled. The private keys that are used to sign the message are inaccessible. The CNAME records point to the corresponding public keys that are used to verify the DKIM signature. These records are known as _selectors_.
@@ -109,7 +109,7 @@ Points to address or value: selector2-<CustomDomain>._domainkey.<InitialDomain>
 
 - **\<CustomDomain\>**: The custom domain or subdomain with periods replaced by dashes. For example, `contoso.com` becomes `contoso-com`, or `marketing.contoso.com` becomes `marketing-contoso-com`.
 
-- **\<InitialDomain\>**: The \*.onmicrosoft.com that you used when you enrolled in Microsoft 365 (for example, contoso.onmicrosoft.com).
+- **\<InitialDomainPrefix\>**: The custom part of the \*.onmicrosoft.com you used to enroll in Microsoft 365. For example, if you used `contoso.onmicrosoft.com`, the value is `contoso`.
 
 For example, your organization has the following domains in Microsoft 365:
 
@@ -121,18 +121,18 @@ You need to create two CNAME records in each custom domain, for a total of four 
 - **CNAME records in the cohovineyard.com domain**:
 
   **Hostname**: `selector1._domainkey`<br>
-  **Points to address or value**: `selector1-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com`
+  **Points to address or value**: `selector1-cohovineyard-com._domainkey.cohovineyardandwinery.n-v1.dkim.mail.microsoft`
 
   **Hostname**: `selector2._domainkey`<br>
-  **Points to address or value**: `selector2-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com`
+  **Points to address or value**: `selector2-cohovineyard-com._domainkey.cohovineyardandwinery.n-v2.dkim.mail.microsoft`
 
 - **CNAME records in the cohowinery.com domain**:
 
   **Hostname**: `selector1._domainkey`<br>
-  **Points to address or value**: `selector1-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com`
+  **Points to address or value**: `selector1-cohowinery-com._domainkey.cohovineyardandwinery.n-v1.dkim.mail.microsoft`
 
   **Hostname**: `selector2._domainkey`<br>
-  **Points to address or value**: `selector2-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com`
+  **Points to address or value**: `selector2-cohowinery-com._domainkey.cohovineyardandwinery.n-v2.dkim.mail.microsoft`
 
 ## Configure DKIM signing of outbound messages in Microsoft 365
 
