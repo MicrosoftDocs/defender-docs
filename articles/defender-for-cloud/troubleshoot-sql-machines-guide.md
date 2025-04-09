@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Defender for SQL on Machines configuration
 description: Troubleshoot configuration issues for SQL Servers on machines using the Azure Monitoring Agent (AMA) autoprovisioning process.
-ms.date: 04/07/2025
+ms.date: 04/09/2025
 ms.topic: how-to
 ms.custom: references_regions
 #customer intent: As a security professional, I want to ensure that my configuration of SQL servers on machines is correct and protects my resources.
@@ -58,14 +58,14 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
 
 Follow the [verification process](verify-machine-protection.md) to identify protection misconfigurations on SQL Server instances.
 
-The recommendation `The status of Microsoft SQL Servers on Machines should be protected` appears and can be used to verify the protection status of SQL Servers. Any SQL server that is unprotected are identified with an error message in the unhealthy section of the recommendation. 
+The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers. Any SQL server that is unprotected are identified with an error message in the unhealthy section of the recommendation. 
 
 Use the corresponding error message and recommended actions to resolve the misconfiguration:
 
 | Error message | Recommended action |
 |--|--|
 | **Missing identity** | Assign user-defined/system-defined managed identity to the virtual machine/Arc-enabled server hosting the SQL Server instance. No Role-based access control permissions are required. |
-| **Defender for SQL extension does not exist** | Ensure that the Defender for SQL extension isn't blocked by  [Azure deny policies](/azure/virtual-machines/extensions/extensions-rmpolicy-howto-ps): <br> - Publisher: Microsoft.Azure.AzureDefenderForSQL <br> - Type: AdvancedThreatProtection.Windows <br> Manually install the Defender for SQL extension on the virtual machine by hosting the SQL Server instance by using the script. Ensure you have version 2.X or above. |
+| **Defender for SQL extension does not exist** | Ensure that the Defender for SQL extension isn't blocked by  [Azure deny policies](/azure/virtual-machines/extensions/extensions-rmpolicy-howto-ps): <br> - Publisher: Microsoft.Azure.AzureDefenderForSQL <br> - Type: AdvancedThreatProtection.Windows <br> Manually install the Defender for SQL extension on the virtual machine by hosting the SQL Server instance by using the provided  script. Ensure you have version 2.X or above. <br><br> 1. Run this script `et-AzVMExtension -Publisher 'Microsoft.Azure.AzureDefenderForSQL' -ExtensionType  'AdvancedThreatProtection.Windows' -ResourceGroupName 'resourceGroupeName' -VMName 'VmName' -Name 'Microsoft.Azure.AzureDefenderForSQL.AdvancedThreatProtection.Windows' -TypeHandlerVersion '2.0' -Location 'vmLocation' -EnableAutomaticUpgrade $true` <br> <br> 2. Run this script to set the context of the right subscription: `connect-AzAccount -Subscription SubscriptionId -UseDeviceAuthentication` |
 | **Defender for SQL extension should be up-to-date** | Update the extension in the Extensions page in the virtual machine/Arc-enabled server resource. |
 | **Error during the installation of the Defender for SQL extension** | Check the Defender for SQL extension status in the portal for additional information to troubleshoot the issue. |
 | **SQL Server instance is inactive** | Defender for SQL server on machines can only protect active SQL servers’ instances only. |
