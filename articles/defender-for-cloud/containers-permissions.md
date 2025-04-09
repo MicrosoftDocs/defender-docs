@@ -134,7 +134,6 @@ The Azure Arc built-in role **Defender Kubernetes Agent Operator** to provision 
 - MDCGkeContainerInventoryCollectionRole
 
   - container.nodes.proxy
-  
   - container.secrets.list
   
 ## Permissions granted in cloud environments
