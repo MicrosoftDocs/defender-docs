@@ -34,7 +34,11 @@ You can also get product updates and important notifications through the [messag
 
 
 ## April 2025
+
+- (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](automatic-attack-disruption.md#automated-response-actions) for more information.
+
 - (Preview) The [OAuthAppInfo](advanced-hunting-oauthappinfo-table.md) table is now available for preview in advanced hunting. The table contains information about Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability.
+
 - The `OnboardingStatus` and `NetworkAdapterDnsSuffix` columns are now available in the [`DeviceNetworkInfo`](advanced-hunting-devicenetworkinfo-table.md) table in advanced hunting.
  
 
