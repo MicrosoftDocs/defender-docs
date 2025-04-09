@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 03/04/2025
 ---
 
 # Create indicators based on certificates
@@ -29,8 +29,6 @@ ms.date: 01/23/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
-
 You can create indicators for certificates. Some common use cases include:
 
 - Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
@@ -42,10 +40,10 @@ It's important to understand the following requirements before creating indicato
 
 - This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 - The anti-malware client version must be `4.18.1901.x` or later.
-- Supported on machines on Windows 10, version 1703 or later, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2022.
+- Supported on machines on Windows 10, version 1703 or later, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2.
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md) for this feature to work.
 
 - The virus and threat protection definitions must be up to date.
 - This feature currently supports entering .CER or .PEM file extensions.

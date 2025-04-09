@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 03/01/2025
 ---
 
 # Run antivirus scan API
@@ -25,8 +25,10 @@ ms.date: 04/17/2024
 **Applies to:** 
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 

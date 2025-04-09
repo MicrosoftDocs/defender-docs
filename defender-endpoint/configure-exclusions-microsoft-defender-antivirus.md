@@ -3,7 +3,7 @@ title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/18/2025
+ms.date: 03/06/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
@@ -22,8 +22,9 @@ search.appverid: met150
 # Configure custom exclusions for Microsoft Defender Antivirus
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -46,7 +47,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 ## Configure and validate exclusions
 
 > [!CAUTION]
-> Use Microsoft Defender Antivirus extensions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+> Use Microsoft Defender Antivirus exclusions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
 > Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format
 
 If you're using Microsoft Intune to manage Microsoft Defender Antivirus or Microsoft Defender for Endpoint, use the following procedures to define exclusions:

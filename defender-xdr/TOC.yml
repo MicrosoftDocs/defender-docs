@@ -55,13 +55,15 @@
     - name: Protect against threats
       items:
       - name: Protect your endpoints
-        href: /defender-endpoint
+        href: /defender-endpoint/microsoft-defender-endpoint?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your identities
-        href: /defender-for-identity
+        href: /defender-for-identity/what-is?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
-        href: /defender-office-365
+        href: /defender-office-365/mdo-about?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your cloud apps
-        href: /defender-cloud-apps
+        href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Protect your IoT/OT assets
+        href: protect-against-iot-ot-threats.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -73,7 +75,7 @@
           - name: Track your score history and meet goals
             href: microsoft-secure-score-history-metrics-trends.md
           - name: Data storage and privacy
-            href: secure-score-data-storage-privacy.md      
+            href: secure-score-data-storage-privacy.md     
     - name: Investigate and respond to threats
       items:
       - name: Overview
@@ -304,6 +306,14 @@
             href: advanced-hunting-identitylogonevents-table.md
           - name: IdentityQueryEvents
             href: advanced-hunting-identityqueryevents-table.md
+          - name: MessageEvents
+            href: advanced-hunting-messageevents-table.md
+          - name: MessagePostDeliveryEvents
+            href: advanced-hunting-messagepostdeliveryevents-table.md
+          - name: MessageUrlInfo
+            href: advanced-hunting-messageurlinfo-table.md                                    
+          - name: OAuthAppInfo
+            href: advanced-hunting-oauthappinfo-table.md            
           - name: UrlClickEvents
             href: advanced-hunting-urlclickevents-table.md
         - name: Custom detections
@@ -458,6 +468,8 @@
       items:
         - name: Microsoft Defender XDR FAQs
           href: m365d-enable-faq.md      
+        - name: Alert policies
+          href: alert-policies.md
         - name: Audit activities and events
           href: microsoft-xdr-auditing.md
         - name: Configure email notifications

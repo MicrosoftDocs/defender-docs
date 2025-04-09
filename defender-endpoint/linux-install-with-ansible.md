@@ -15,17 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/24/2024
+ms.date: 03/13/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Ansible
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -439,7 +439,7 @@ In this step, you apply the playbook. Run the tasks files under `/etc/ansible/pl
 
 ## Troubleshoot installation issues
 
-For self-troubleshooting, follow these steps:
+If you experience any installation issues, for self-troubleshooting, follow these steps:
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
@@ -451,7 +451,7 @@ For self-troubleshooting, follow these steps:
 
 5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
-6. To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/run-analyzer-macos-linux).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
 ## How to configure policies for Microsoft Defender on Linux
 

@@ -22,7 +22,70 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## April 2025
+
+### New Defender for Identity and PAM Integration
+
+Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
+
+**Supported PAM vendors**:
+
+- CyberArk
+- Delinea
+- BeyondTrust
+
+For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+
+## March 2025
+
+### New Service Account Discovery page
+
+
+Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
+
+This update provides:
+
+- Automatic identification of Group Managed Service Accounts, Managed Service Accounts, and user accounts operating as service accounts.
+
+- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
+
+- A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
+
+For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
+
+
+### New Health Issue
+
+New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+
+### Enhanced Identity Inventory
+
+The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The updated Identities Inventory page now includes the following tabs:
+
+- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
+
+- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). 
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory). 
+
+### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
+New LDAP query events were added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
+
 ## February 2025
+
+### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
+
+New Features and Improvements:
+- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDIConfiguration.
+- Support for getting, testing, and setting the proxy configuration on new MDI sensor.
+- The Active Directory Certificate Services registry value for audit filtering now properly sets the type.
+- New-MDIConfigurationReport now shows the name of the tested GPO and supports Server and Identity arguments.
+
+Bug Fixes:
+- Improved reliability for DeletedObjects container permissions on non-English operating systems.
+- Fixed extraneous output for KDS root key creation.
+- Other reliability fixes.
 
 ### New attack paths tab on the Identity profile page
 
@@ -53,6 +116,12 @@ We have added and updated the following events in the `IdentityDirectoryEvents` 
 - Account primary group ID has been changed
 
 Additionally, the **built-in schema reference** for Advanced Hunting in Microsoft Defender XDR has been updated to include detailed information on all supported event types (**`ActionType`** values) in identity-related tables, ensuring complete visibility into available events. For more information, see [Advanced hunting schema details](/defender-xdr/advanced-hunting-schema-tables).
+
+## January 2025
+
+### New Identity guide tour
+
+Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
 
 ## December 2024
 

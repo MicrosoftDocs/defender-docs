@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # Software resource type
@@ -26,8 +26,9 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -37,10 +38,6 @@ ms.date: 12/18/2020
 
 ## Methods
 
-<br>
-
-****
-
 |Method|Return Type|Description|
 |---|---|---|
 |[List software](get-software.md)|Software collection|List the organizational software inventory|
@@ -49,13 +46,9 @@ ms.date: 12/18/2020
 |[List machines by software](get-machines-by-software.md)|MachineRef collection|Retrieve a list of devices that are associated with the software ID|
 |[List vulnerabilities by software](get-vuln-by-software.md)|[Vulnerability](vulnerability.md) collection|Retrieve a list of vulnerabilities associated with the software ID|
 |[Get missing KBs](get-missing-kbs-software.md)|KB collection|Get a list of missing KBs associated with the software ID|
-|
+
 
 ## Properties
-
-<br>
-
-****
 
 |Property|Type|Description|
 |---|---|---|
@@ -67,5 +60,5 @@ ms.date: 12/18/2020
 |activeAlert|Boolean|Active alert is associated with this software|
 |exposedMachines|Long|Number of exposed devices|
 |impactScore|Double|Exposure score impact of this software|
-|
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

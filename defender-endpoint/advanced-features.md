@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 10/17/2024
+ms.date: 02/25/2025
 ---
 
 # Configure advanced features in Defender for Endpoint
@@ -74,7 +74,7 @@ This feature enables you to block potentially malicious files in your network. B
 
 To turn **Allow or block** files on:
 
-1. In the Microsoft Defender portal, in navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
+1. In the Microsoft Defender portal, in the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
 
 2. Toggle the setting between **On** and **Off**.
  
@@ -96,7 +96,7 @@ This setting is turned on by default and is applied tenant wide. If you don't wa
 
 Turning on this feature allows you to create indicators for IP addresses, domains, or URLs, which determine whether they'll be allowed or blocked based on your custom indicator list.
 
-To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11. They should also have network protection in block mode and version 4.18.1906.3 or later of the antimalware platform [see KB 4052623](https://go.microsoft.com/fwlink/?linkid=2099834).
+To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11. 
 
 For more information, see [Overview of indicators](indicators-overview.md).
 
@@ -129,8 +129,7 @@ Enabling the Skype for Business integration gives you the ability to communicate
 
 Enabling this setting forwards Defender for Endpoint signals to Microsoft Defender for Cloud Apps to provide deeper visibility into cloud application usage. Forwarded data is stored and processed in the same location as your Defender for Cloud Apps data.
 
-> [!NOTE]
-> This feature will be available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) on devices running Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441)), Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464)), Windows 10, version 1809 (OS Build 17763.379 with [KB4489899](https://support.microsoft.com/help/4489899)), later Windows 10 versions, or Windows 11.
+For more information, see [Microsoft Defender for Cloud Apps overview](/defender-cloud-apps/what-is-defender-for-cloud-apps).
 
 ## Web content filtering
 

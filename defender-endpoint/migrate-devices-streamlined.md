@@ -3,8 +3,8 @@ title: Migrate devices to use the streamlined onboarding method
 description: Learn how to migrate devices to Defender for Endpoint using the streamlined connectivity method.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 05/09/2024
+ms.date: 03/11/2025
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -31,12 +31,10 @@ This article describes how to migrate (reonboard) devices that had been previous
 In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
-> Limitations and known issues:
->
-> - We found a back-end issue with populating the `ConnectivityType` column in the `DeviceInfo table` in advanced hunting so that you can track migration progress. We aim to resolve this issue as soon as possible.
-> - For device migrations (reonboarding): Offboarding is not required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
-> - Windows 10 versions 1607, 1703, 1709, and 1803 do not support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
-> - Devices running the MMA agent are not supported and must continue using the MMA onboarding method.
+> Limitations and known issues:- For device migrations (reonboarding): Offboarding isn't required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
+- Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
+- Devices running the MMA agent aren't supported and must continue using the MMA onboarding method.
+
 
 ## Migrating devices using the streamlined method
 
@@ -68,7 +66,7 @@ The following table lists migration instructions for the available onboarding to
 ### Windows 10 and 11
 
 > [!IMPORTANT]
-> Windows 10 version 1607, 1703, 1709, and 1803 do not support reonboarding. To migrate existing devices, you will need to fully offboard and onboard using the streamlined onboarding package.
+> Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. To migrate existing devices, you need to fully offboard and onboard using the streamlined onboarding package.
 
 For general information on onboarding Windows client devices, see [Onboarding Windows Client](onboard-windows-client.md).
 
@@ -98,13 +96,13 @@ Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI)
 
 ### Windows Server
 
-For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
 ### Microsoft Defender for Cloud
 
-Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
 
 ### Microsoft Configuration Manager
 
@@ -222,7 +220,7 @@ Once a device is migrated to use the streamlined method and the device establish
 
 If you move the device back to the regular method, the value is "standard".
 
-For devices that haven't yet attempted reonboard, the value remains blank.
+For devices that have not attempted to reonboard, the value remains empty.
 
 ### Tracking locally on a device through Windows Event Viewer
 
@@ -254,7 +252,7 @@ Open the Defender for Endpoint service event log using the following steps:
 
 > [!NOTE]
 > SENSE is the internal name used to refer to the behavioral sensor that powers Microsoft Defender for Endpoint. <br>
-> Events recorded by the service will appear in the log. <br>
+> Events recorded by the service appear in the log. <br>
 > For more information, see [Review events and error using Event Viewer](event-error-codes.md).
 
 ### Run tests to confirm connectivity with Defender for Endpoint services
@@ -288,7 +286,7 @@ For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluation
    ```
 
   > [!NOTE]
-  > This command will only work on Windows 10, version 1703 or higher, or Windows 11.
+  > This command only works on Windows 10, version 1703 or higher, or Windows 11.
   > For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Test Block at First Sight
@@ -321,9 +319,7 @@ For macOS and Linux, you can use the following methods:
 
 ### MDATP connectivity test (macOS and Linux)
 
-Run `mdatp health -details features` to confirm simplified_connectivity: "enabled".
-
-Run `mdatp health -details edr` to confirm `edr_partner_geo_location` is available. The value should be `GW_<geo>` where 'geo' is your tenant's geo-location.
+Run `mdatp health --details edr` to confirm `edr_partner_geo_location` is available. The value should be `GW_<geo>` where 'geo' is your tenant's geo-location.
 
 Run mdatp connectivity test. Ensure the streamlined URL pattern is present. You should expect two for '\storage', one for '\mdav', one for '\xplat', and one for '/packages'.
 
@@ -333,11 +329,29 @@ For example: `https:mdav.us.endpoint.security.microsoft/com/storage`
 
 ### Tracking with advanced hunting in Microsoft Defender XDR
 
-Follow the same instructions as for Windows.
+To view all devices (limit 30k) and their most recently reported connectivity type:
+
+
+```kusto
+DeviceInfo
+| where OnboardingStatus == "Onboarded"
+| summarize arg_max(ConnectivityType, Timestamp) by DeviceName
+```
+
+To view a count of Devices by OSPlatform and their connectivity type in a bar chart:
+
+
+```kusto
+DeviceInfo
+| where OnboardingStatus == "Onboarded"
+| summarize arg_max(ConnectivityType, Timestamp, OSPlatform) by DeviceName
+| summarize count() by OSPlatform, ConnectivityType
+| render columnchart 
+```
 
 ### Use Defender for Endpoint Client Analyzer (cross-platform) to validate connectivity for newly migrated endpoints
 
-Download and run the client analyzer for macOS or Linux. For more information, see [Download and run the client analyzer](download-client-analyzer.md).
+Download and run the client analyzer for macOS or Linux. For more information, see [Download and run the client analyzer](overview-client-analyzer.md).
 
 1. Run `mdeclientanalyzer.cmd -o <path to cmd file>` from within the MDEClientAnalyzer folder. The command uses parameters from the onboarding package to test connectivity.
 

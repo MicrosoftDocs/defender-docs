@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 06/17/2024
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -255,7 +255,7 @@ In Defender for Office 365 Plan 2, you also have access to create and apply cust
 
 ## Step 5: Review and configure user reported message settings
 
-**Summary**: Deploy the [Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md) or a [supported third party tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User-reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
+**Summary**: Use the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or a [supported third party tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User-reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
 
 **Details**:
 
@@ -266,7 +266,6 @@ The important parts of user message reporting are:
 - **How do users report messages?**: Make sure clients are using one of the following methods so reported messages appear on the **User-reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>:
 
 - The built-in **Report** button in Outlook on the web (formerly known as Outlook Web App or OWA).
-- The Microsoft [Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md) for Outlook and Outlook on the web.
 - Third-party reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools).
 
 - **Where do user reported messages go?**: You have the following options:

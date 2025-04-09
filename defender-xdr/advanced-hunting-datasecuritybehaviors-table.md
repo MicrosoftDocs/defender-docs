@@ -57,7 +57,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`ServiceSource`|	`string`|	Product or service that identified the behavior|
 |`DetectionSource`|	`string`|	Detection technology or sensor that identified the notable component or activity|
 |`ActivityCount`|	`int`|	Total user activity events recorded under this behavior|
-|`IsAnomalous`|	`bool`|	Indicates if this user behavior is anomalous by itself or based on insider risk management global settings|
+|`IsAnomalous`|	`bool`|	Indicates if this behavior is anomalous (1) or not (0)|
 |`IsContentHidden`|	`bool`|	Indicates if the behavior involves hidden content on a device|
 |`AccountUpn`|	`string`|	User principal name (UPN) of the account|
 |`AccountEmail`|	`string`|	Email address of the account|

@@ -50,7 +50,7 @@ The following event is required for Microsoft Entra Connect servers:
 
 - 4624: An account was successfully logged on
 
-For more information, see [Configure auditing on Microsoft Entra Connect](../configure-windows-event-collection.md#configure-auditing-for-entra-connect).
+For more information, see [Configure auditing on Microsoft Entra Connect](../configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect).
 
 ### Other required Windows events
 

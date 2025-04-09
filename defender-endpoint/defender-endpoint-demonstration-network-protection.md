@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Network protection demonstrations
 description: Shows how Network protection prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: asr
-ms.date: 01/15/2024
+ms.date: 03/04/2025
 ---
 
 # Network protection demonstrations
@@ -30,10 +30,8 @@ Network Protection helps reduce the attack surface of your devices from Internet
 
 ## Scenario requirements and setup
 
-- Windows 11 or Windows 10 version 1709 build 16273 or newer.
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2 with the new unified MDE Client.
-- macOS
-- Linux
+- Client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, or macOS
+- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 (with the new unified client), or Linux.
 - Microsoft Defender Antivirus
 
 ## Windows

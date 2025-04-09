@@ -44,7 +44,11 @@
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
     - name: Reduce security risk
-      href: reduce-risk-overview.md
+      items:
+      - name: Improve security posture and reduce risk"
+        href: reduce-risk-overview.md
+      - name: Protect your environment with Exposure Management
+        href: overview-msem-strategy.md  
     - name: Detect threats
       href: detect-threats-overview.md
     - name: Uncover adversaries with threat intel
@@ -65,12 +69,15 @@
           href: /azure/sentinel/sentinel-security-copilot?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Investigate with Microsoft Copilot in Microsoft Defender
           href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
-    - name: Respond to threats automatically
+    - name: Respond to threats
       items:
+        - name: Overview
+          href: respond-threats-overview.md
+          displayName: Respond to threats
         - name: Automatic attack disruption 
           href: /defender-xdr/automatic-attack-disruption?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Automation in Microsoft Sentinel (SOAR)
-          href: /azure/sentinel/automation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          href: /azure/sentinel/automation/automation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Automated investigation and response in Microsoft Defender XDR
           href: /defender-xdr/m365d-autoir?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
     - name: Optimize your security operations 
@@ -99,6 +106,10 @@
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution with tenant groups
               href: mto-tenantgroups.md
+            - name: Manage tenants in other Microsoft clouds
+              href: mto-cross-cloud.md              
+            - name: Troubleshoot issues
+              href: mto-troubleshoot.md              
         - name: Configure notifications
           items:
           - name: Get incident notifications

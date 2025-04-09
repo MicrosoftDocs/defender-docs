@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 09/20/2024
+ms.date: 02/24/2025
 ---
 
 # Troubleshoot Network Extension (NetExt) issues in Defender for Endpoint on Mac 
@@ -49,7 +49,9 @@ This article describes how to temporarily disable NetExt which will temporarily 
 At a high level, these are the steps to follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
 1. Create a new "Devices with NetExt disabled" group.
+
 2. Exclude that group from the existing NetExt configuration.
+
 3. Assign the existing configuration to the "Devices with NetExt disabled" device group.
 
 The following sections describe these steps in more detail.

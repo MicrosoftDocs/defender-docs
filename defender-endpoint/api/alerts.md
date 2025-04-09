@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/21/2025
 ---
 
 # Alert resource type
@@ -24,11 +24,12 @@ ms.date: 12/18/2020
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Business](/defender-business)
 
 > [!NOTE]
 > For the full available Alerts API experience across all Microsoft Defenders' products, visit: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 

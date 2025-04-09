@@ -31,7 +31,7 @@ ms.date: 06/03/2021
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -68,6 +68,8 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
     
   - **Windows Server 2022**  
+
+  - **Windows Server 2025**
 
 ## Permissions
 

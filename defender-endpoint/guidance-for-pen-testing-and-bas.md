@@ -70,8 +70,8 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 | Windows | Microsoft Defender for Endpoint security settings management <br/>(*Recommended*) | [Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)](evaluate-mda-using-mde-security-settings-management.md) |
 | Windows | Group Policy | [Evaluate Microsoft Defender Antivirus using Group Policy](evaluate-mdav-using-gp.md)  |
 | Windows | PowerShell | [Evaluate Microsoft Defender Antivirus using PowerShell](microsoft-defender-antivirus-using-powershell.md) |
-| Mac | Jamf (or another tool)  | [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md) |
-| Linux | Configuration profile <br/> Defender for Endpoint security settings management | [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md) |
+| Mac |Microsoft Defender for Endpoint security settings management or Intune or Jamf or another tool| [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md) |
+| Linux |Microsoft Defender for Endpoint security settings management or another tool.| [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md) |
 
 ## How to submit possible false negatives for investigation
 
@@ -89,9 +89,9 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 | Operating system | What to do |
 |--|--|
-| Windows | 1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -getfiles](/defender-endpoint/collect-diagnostic-data). <br/><br/>You can also [collect the investigation package](/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices) in the Microsoft Defender portal. |
-| Mac | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `mdatp log level set--level debug`. <br/>3. Run the following command: `sudo mdatp diagnostic create`. <br/><br/>For more information, see [Resources for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-resources). |
-| Linux | 1. On the device, open Terminal (shell session). <br/>2. Run the following command: `mdatp log level set--level debug`. <br/>`sudo mdatp diagnostic create`. <br/><br/>For more information, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources). |
+| Windows |1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -getfiles](/defender-endpoint/collect-diagnostic-data). <br/><br/>You can also [collect the investigation package](/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices) in the Microsoft Defender portal. |
+| Mac |1. On the device, open Terminal (shell session). <br/>2. Run the following command: `mdatp log level set--level debug`. <br/>3. Run the following command: `sudo mdatp diagnostic create`. <br/><br/>For more information, see [Resources for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-resources). |
+| Linux |1. On the device, open Terminal (shell session). <br/>2. Run the following command: `mdatp log level set--level debug`. <br/>`sudo mdatp diagnostic create`. <br/><br/>For more information, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources). |
 
 ### Step 2: Gather information
 
@@ -113,7 +113,7 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
 
 | Portal | Description |
 |--|--|
-| MDSI portal | The MDSI portal is a service provided by Microsoft Security Intelligence. It allows users to submit files for malware analysis. Microsoft security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions.<br/><br/>This portal was formerly known as the Windows Defender Security Intelligence (WSDI). Because it currently supports Mac, Linux, and Android submissions, its name changed. |
+| MDSI portal | The MDSI portal is a service provided by Microsoft Defender Security Intelligence. It allows users to submit files for malware analysis. Microsoft Defender security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions.<br/><br/>|
 | Microsoft Defender portal | If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
 
 1. Submit the data you gathered during steps 1-2 by using either the MDSI portal or the Microsoft Defender portal.

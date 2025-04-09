@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: asr
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/28/2024
+ms.date: 04/04/2025
 ---
 
 # Evaluate network protection

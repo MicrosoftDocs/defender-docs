@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 06/26/2024
+ms.date: 03/04/2025
 ---
 
 # Take response actions on a file
@@ -200,7 +200,8 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
-> - Devices have Windows 10 version 1703 or later, or Windows server 2016 or 2019, or Windows Server 2022, or Windows 11
+> - Client devices must be running Windows 11 or Windows 10, version 1703 or later
+> - Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016
 
 ### Collect files
 
