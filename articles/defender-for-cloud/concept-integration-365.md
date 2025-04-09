@@ -10,8 +10,8 @@ ms.date: 03/25/2025
 
 **Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender.md
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/
+- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud)
   
 Microsoft Defender for Cloud is integrated with Microsoft Defender Extended Detection and Response (XDR). This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. This integration provides richer context to investigations that span cloud resources, devices, and identities.
 
