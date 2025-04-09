@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/01/2025
+ms.date: 04/09/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -199,51 +199,35 @@ During the technical support (only) phase, commercially reasonable support incid
 
 ## How to install an update
 
-Security intelligence update and Engine update
-
-Get the latest available Security intelligence update and Engine update via:
+To install the latest security intelligence and antivirus engine updates, you can use any of the following methods:
 
 - Windows Update
-
 - Windows Update server (WSUS)
-
 - Software Update server (SUP)
-
 - File server
+- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
+- Command line, as follows:
 
-- UI: [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
+   - ```console
+     "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate
+     ```
 
-- The command line:
+   - ```console
+     "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"
+     ```
 
-
-```
-"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate
-```
-
-
-```console
-"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"
-```
-
-
-```
-"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC
-```
+   - ```console
+     "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC
+     ```
 
 For more information, please review [Manage the sources for Microsoft Defender Antivirus protection updates](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
 
-Platform update
-
-Get the latest available Platform update via 
+To get the latest platform updates, you can use any of the following methods: 
 
 - Windows Update
-
 - Windows Update server (WSUS)
-
 - Software Update server (SUP)
-
-- UI: [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
-
+- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - The [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623)
 
 ## How to roll back an update
