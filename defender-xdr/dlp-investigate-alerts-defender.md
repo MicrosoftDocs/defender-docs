@@ -83,7 +83,7 @@ It's best practice to only grant minimal permissions to alerts in the Microsoft 
 
 1. Search for the DLP policy name of the alerts and incidents you're interested in.
 
-1. To view the incident summary page, select the incident from the queue. Similarly, select the alert to view the DLP alert page. Select **Summarize** for Security Copilot to generate a summary of the alert. The alert summary will contain the:
+1. To view the incident summary page, select the incident from the queue. Similarly, select the alert to view the DLP alert page. Select **Summarize** (preview) for Security Copilot to generate a summary of the alert. The alert summary will contain the:
 
 - alert severity
 - alert title
