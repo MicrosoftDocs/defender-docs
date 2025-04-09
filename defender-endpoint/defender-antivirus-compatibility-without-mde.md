@@ -6,7 +6,7 @@ ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: conceptual
-ms.date: 01/23/2025
+ms.date: 04/09/2025
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
