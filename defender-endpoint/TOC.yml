@@ -556,6 +556,8 @@
       href: onboarding-endpoint-configuration-manager.md
     - name: Onboarding using Microsoft Intune
       href: onboarding-endpoint-manager.md
+    - name: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices
+      href: mobile-pretest-android.md   
 
   - name: Migration guides
     items:
