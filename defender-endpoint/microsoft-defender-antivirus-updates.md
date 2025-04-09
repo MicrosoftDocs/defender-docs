@@ -232,37 +232,31 @@ To get the latest platform updates, you can use any of the following methods:
 
 ## How to roll back an update
 
-In the unfortunate event that you encounter issues after an update, you can roll back to the previous or the inbox version 
+In the unfortunate event that you encounter issues after an update, you can roll back to the previous or the inbox version.
 
-Security intelligence update
+To roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version, run the following command:
 
-- To roll back to the previous or to the original inbox version of the security intelligence version, run the following command:
-
-  ```console
-  "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions
-  ```
+   ```console
+   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions
+   ```
   
-Engine update
+To roll the engine version back to a previous version, run the following command:
 
-- To roll back to the previous engine version, run the following command:
-
-  ```console
-  "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions -Engine
-  ```
+   ```console
+   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions -Engine
+   ```
   
-Platform update
+To roll a platform update back to the previous version, run the following command:
 
-- To roll back to the previous version, run the following command:
-
-  ```console
+   ```console
    "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform
-  ```
+   ```
   
-- To roll back this update to the version shipped with the Operating System ("%ProgramFiles%\Windows Defender")
+To roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`), run the following command:
 
-  ```console
-  "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform
-  ```
+   ```console
+   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform
+   ```
   
 ## Platform version included with Windows 10 releases
 
