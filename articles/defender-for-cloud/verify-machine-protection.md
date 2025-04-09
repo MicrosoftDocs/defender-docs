@@ -14,13 +14,13 @@ After enabling protection for SQL Servers installed on Virtual Machines (VM), on
 
 ## Verify protection on an entire Azure subscription
 
-Defender for Cloud presents [The status of Microsoft SQL Servers on Machines should be protected]() recommendation. This recommendation allows you to review the protection status of Defender for SQL Servers on Machines. The recommendation covers all SQL VMs and Azure Arc SQL Server instances within a specified Azure subscription.
+Defender for Cloud presents [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation) recommendation. This recommendation allows you to review the protection status of Defender for SQL Servers on Machines. The recommendation covers all SQL VMs and Azure Arc SQL Server instances within a specified Azure subscription.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for and select [The status of Microsoft SQL Servers on Machines should be protected]().
+1. Search for and select [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation).
 
 1. Select **View recommendation for all resources**.
 
