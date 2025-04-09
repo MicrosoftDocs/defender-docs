@@ -26,10 +26,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Privileged Identity Tag Now Visible in Defender for Identity Inventory
 
-Identities listed in the ([Identity inventory](https://learn.microsoft.com/en-us/defender-for-identity/identity-inventory#identity-details)) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by **Privileged Identity Management (PIM)**.
+Identities listed in the [Identity inventory](defender-for-identity/identity-inventory) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by **Privileged Identity Management (PIM)**.
 Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
 
-[Learn more about Privileged Identity Management](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)
+[Learn more about Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 
