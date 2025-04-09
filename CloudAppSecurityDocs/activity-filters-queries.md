@@ -135,7 +135,7 @@ Defender for Cloud Apps also provides you with **Suggested queries**. Suggested 
 - Successful log in - Filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
 
   ![query activities.](media/queries-activity.png)
-
+  
 Additionally, you can use the suggested queries as a starting point for a new query. First, select one of the suggested queries. Then, make changes as needed and finally select **Save as** to create a new **Saved query**.
 
 ### Query activities six months back
@@ -183,37 +183,6 @@ To access exported files and check export status, navigate to **Reports -> Cloud
 Reports that include private activities are marked with an Eye icon in the reports page.  
 
 ![eye-icon](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
-
-> [!NOTE] 
->Exporting and viewing activity data up to six months back is restricted to specific roles with elevated permissions.
-
-The following roles are supported:
-
-- `INVITED_ADMIN`
-
-- `GLOBAL_ADMINISTRATOR`
-
-- `SECURITY_ADMINISTRATOR`
-
-- `MCAS_ADMINISTRATOR`
-
-- `DISCOVERY_ADMIN`
-
-- `SECURITY_OPERATOR`
-
-- `COMPLIANCE_ADMIN`
-
-- `SECURITY_READER`
-
-- `GLOBAL_READER`
-
-- `URBAC_ROLES_GLOBAL_ADMINISTRATOR`
-
-- `URBAC_ROLES_COMPLIANCE_ADMINISTRATOR`
-
-- `URBAC_ROLES_SECURITY_READER`
-
-- `URBAC_ROLES_SECURITY_OPERATOR`
 
 ## Next steps
 
