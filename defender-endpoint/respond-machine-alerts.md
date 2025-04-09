@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 03/12/2025
+ms.date: 04/09/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
