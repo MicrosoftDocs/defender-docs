@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Defender for SQL on Machines configuration
 description: Troubleshoot configuration issues for SQL Servers on machines using the Azure Monitoring Agent (AMA) autoprovisioning process.
-ms.date: 04/09/2025
+ms.date: 04/21/2025
 ms.topic: how-to
 ms.custom: references_regions
 #customer intent: As a security professional, I want to ensure that my configuration of SQL servers on machines is correct and protects my resources.

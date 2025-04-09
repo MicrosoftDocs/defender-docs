@@ -4,7 +4,7 @@ description: Verify that SQL VMs are protected with the Defender for SQL Servers
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
-ms.date: 04/08/2025
+ms.date: 04/21/2025
 #customer intent: As a customer, I want to verify that my SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
 ---
 

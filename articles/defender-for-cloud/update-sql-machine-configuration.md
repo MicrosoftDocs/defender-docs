@@ -4,8 +4,8 @@ description: Learn how to update your Microsoft SQL Servers on machine configura
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/08/2025
-#customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
+ms.date: 04/21/2025
+#customer intent: As a security administrator, I want to update the Defender for SQL Servers on machines plan so that I can ensure my SQL servers in various environments have the latest configuration.
 ---
 
 # Update Defender for SQL Servers on machine's configuration
@@ -16,6 +16,9 @@ ms.date: 04/08/2025
 The SQL Server on machine plan in Defender for Cloud includes agent architecture that simplifies the onboarding experience and improves overall SQL protection coverage. If you already use the Defender for SQL Servers on machine plan for SQL VMs and Azure Arc-enabled SQL servers, the change happens automatically.
 
 You must update your configuration manually in the Defender for Cloud portal for all other VMs.
+
+> [!IMPORTANT]
+> The Defender for SQL Servers on machine plan is undergoing a transition to the new agent architecture. for more information, see [Defender for SQL Servers on machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
 
 ## Update the plan on a single subscription
 
