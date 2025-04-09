@@ -211,7 +211,7 @@ To install the latest security intelligence and antivirus engine updates, you ca
    - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"`   
    - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC`   
 
-For more information, please review [Manage the sources for Microsoft Defender Antivirus protection updates](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
+For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
 
 To get the latest platform updates, you can use any of the following methods: 
 
