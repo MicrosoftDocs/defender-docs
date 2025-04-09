@@ -55,11 +55,14 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
 
-2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
+1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
-3. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/defender-endpoint/microsoft-defender-antivirus-updates/).
+1. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/defender-endpoint/microsoft-defender-antivirus-updates/).
 
-4. Select **Check for updates** to download new protection updates (if there are any).
+1. Select **Check for updates** to download new protection updates (if there are any).
+
+> [!TIP]
+> If you have your Microsoft Defender Antivirus updates (Security intelligence, Engine, and Platform), pointing to a [WSUS](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) or [Software Update Point](/intune/configmgr/sum/get-started/prepare-for-software-updates-management) and if you have the Windows Update policy set to “[3 - Auto download and notify for install](/windows/deployment/update/waas-wu-settings)”.  By clicking on “Check for updates”, it will go ahead and install **all** the Microsoft Defender Antivirus updates.
 
 ## Ensure Microsoft Defender Antivirus is enabled in the Windows Security app
 
