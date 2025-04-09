@@ -36,7 +36,7 @@ There are several options you can choose from to customize the identities list v
 
 - Apply filters.
 
-- Search for an identity by name or full UPN, SID and Object ID. 
+- Search for an identity by name or full UPN, SID, and Object ID. 
 
 - Export the list to a CSV file.
 
@@ -67,7 +67,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Tags__ – Custom labels that help categorize or classify identities: Sensitive and Honeytoken.
 
-- **PIM tags** - Custom labels that help categorize identities that are considered high value assets: Priveledged account(PIM)
+- **PIM tags** - Custom labels that help categorize identities that are considered high value assets: Privileged account(PIM).
 
 - __Created time__ – The timestamp when the identity was first created.
 
@@ -77,7 +77,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Last updated__ – The timestamp of the most recent update to the identity's attributes in Active Directory.
 
-Non-default columns: Email and Entra ID risk level.  
+Nondefault columns: Email and Microsoft Entra ID risk level.  
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -101,7 +101,7 @@ You can apply the following filters to limit the list of identities and get a mo
 
 - Account status
 
-Sort option applies to Display name, Domain and Created time columns.
+Sort option applies to Display name, Domain, and Created time columns.
 
 ### Identity inventory insights 
 
