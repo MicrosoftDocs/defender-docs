@@ -207,18 +207,9 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - File server
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - Command line, as follows:
-
-   - ```console
-     "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate
-     ```
-
-   - ```console
-     "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"
-     ```
-
-   - ```console
-     "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC
-     ```
+   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate` 
+   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"` 
+   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC`
 
 For more information, please review [Manage the sources for Microsoft Defender Antivirus protection updates](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
 
@@ -234,29 +225,12 @@ To get the latest platform updates, you can use any of the following methods:
 
 In the unfortunate event that you encounter issues after an update, you can roll back to the previous or the inbox version.
 
-To roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version, run the following command:
-
-   ```console
-   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions
-   ```
-  
-To roll the engine version back to a previous version, run the following command:
-
-   ```console
-   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions -Engine
-   ```
-  
-To roll a platform update back to the previous version, run the following command:
-
-   ```console
-   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform
-   ```
-  
-To roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`), run the following command:
-
-   ```console
-   "%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform
-   ```
+| Scenario | Command |
+|--|--|
+| Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions` |
+| Roll the engine version back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions -Engine` |
+| Roll a platform update back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform` | 
+| Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`) | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform` |
   
 ## Platform version included with Windows 10 releases
 
