@@ -71,7 +71,7 @@ After the app is synced and assigned to a user group, the following steps are re
 
 ## Set up your testing environment in the MAM enrollment scenario
 
-You must first contact Microsoft Support to provide the Google group name for your organization. This group is required to add your information to an inclusion list and make the preproduction build available for testing. To create a Google group, see [Create a group and choose group settings](https://support.google.com/groups/answer/246492).
+You must first contact Microsoft Support to provide the Google group name for your organization. This group is required to add your information to an inclusion list and make the preproduction build available for testing. To create a Google group, see [Create a group and choose group settings](https://support.google.com/groups/answer/2464926).
 
 [SCREENSHOT]
 
