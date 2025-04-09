@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/31/2025
+ms.date: 04/08/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -25,10 +25,11 @@ ms.date: 03/31/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Want to experience Microsoft Defender for Endpoint?
-[Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, such as what's included in this offering, see the following articles:
 
-This article lists hardware and software requirements for Microsoft Defender for Endpoint on Linux.
+- [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) 
+
+- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md) 
 
 ## License requirements
 

@@ -1,6 +1,6 @@
 ---
-title: Defender for Endpoint onboarding Windows Server
-description: Onboard Windows Server to Microsoft Defender for Endpoint.
+title: Onboard Windows Server, version 1803, Windows Server 2019, and later to Microsoft Defender for Endpoint
+description: Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025 to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
@@ -13,10 +13,10 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 02/25/2025
+ms.date: 04/04/2025
 ---
 
-# Defender for Endpoint onboarding Windows Server
+# Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025 to the Microsoft Defender for Endpoint service
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -27,54 +27,82 @@ ms.date: 02/25/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-You'll need to go through the onboarding section of the Defender for Endpoint portal to onboard any of the supported devices. Depending on the device, you'll be guided with appropriate steps and provided management and deployment tool options suitable for the device.
+Defender for Endpoint extends support to include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
 
-Defender for Endpoint extends support to also include the Windows Server operating system. This support provides advanced attack detection and investigation capabilities seamlessly through the Microsoft Defender XDR console. Support for Windows Server provides deeper insight into server activities, coverage for kernel and memory attack detection, and enables response actions.
+> [!NOTE]
+> To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
+> 
+> - [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) (as part of the Defender for Cloud) offering
+> - Microsoft Defender for Endpoint for servers
+> - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
 
-This topic describes how to onboard specific Windows servers to Microsoft Defender for Endpoint.
+This article describes how to onboard Windows Server, version 1803, Windows Server 2109, and Windows Server 2025 to Defender for Endpoint.
 
-For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines.](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines)
+- For guidance on how to onboard Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md).
+- For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines.](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines)
 
+> [!TIP]
+> As a companion to this article, see our [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268522) to review best practices and learn to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. For a customized experience based on your environment, you can access the [Security Analyzer automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615) in the Microsoft 365 admin center.
+> 
 ## Windows Server onboarding overview
 
-You'll need to complete the following general steps to successfully onboard Windows Server. Supported versions include Windows Server 2008 R2, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
+You need to complete the general steps depicted in the following image to successfully onboard Windows servers. 
 
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
-### Windows Server 2012 R2 and Windows Server 2016
+1. Download the onboarding package.
 
-- Download installation and onboarding packages.
-- Apply the installation package.
-- Follow the onboarding steps for the corresponding tool.
+2. Follow the guidance for your preferred tool:
 
-### Windows Server Semi-Annual Enterprise Channel and Windows Server 2019
+   - **Local script**: [Onboard Windows devices using a local script](configure-endpoints-script.md)
+   - **Group Policy**: [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
+   - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
+   - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
+   - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
-- Download the onboarding package.
-- Follow the onboarding steps for the corresponding tool.
+For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Defender for Endpoint](onboard-windows-server-2012r2-2016.md).
+
+> [!NOTE]
+> Windows Hyper-V server editions aren't supported.
+
+## Integration with Microsoft Defender for Servers
+
+Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers and Microsoft Defender for Cloud. If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
+- Onboard servers automatically
+- Have servers that are monitored by Defender for Cloud appear in the Microsoft Defender portal, in the device inventory
+- Conduct detailed investigations as a Defender for Cloud customer
+
+For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
+
+> [!NOTE]
+> - When you use Defender for Cloud to monitor servers, a Defender for Endpoint tenant is created automatically. Data collected by Defender for Endpoint is stored in the geographical location of the tenant, identified during provisioning. (For example, in the US for customers in the USA; in EU for European customers; and in the UK for customers in the United Kingdom.)
+> - If you use Defender for Endpoint before using Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Defender for Cloud at a later time.
+> - Once configured, you can't change the location of where your data is stored. To move your data to another location, [contact support](contact-support.md) to reset your tenant.
+> - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
+> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016, Windows Server 2012 R2, and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Microsoft Defender cloud services. The new solution, such as Defender for Endpoint on Windows Server 2019 (and later) and Windows 10 (and later) doesn't support this gateway.
+> - Linux servers onboarded through Defender for Cloud have their initial configuration set to run Microsoft Defender Antivirus in [passive mode](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions). For information on how to deploy Defender for Endpoint on Linux server, start with the [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md). 
+> - To onboard Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md). 
+
+## Important information for non-Microsoft antivirus/anti-malware solutions
+
+If you intend to use a non-Microsoft anti-malware solution, you need to run Microsoft Defender Antivirus in passive mode. Make sure to set passive mode during the installation and onboarding process. For more information, see [Windows Server and passive mode](/defender-endpoint/microsoft-defender-antivirus-compatibility#windows-server-and-passive-mode).
+
+> [!IMPORTANT]
+> If you're installing Defender for Endpoint on servers running McAfee Endpoint Security or VirusScan Enterprise, the McAfee platform version might need to be updated to ensure that Microsoft Defender Antivirus isn't removed or disabled. For more information on specific version numbers required, see the [McAfee Knowledge Center article](https://kcm.trellix.com/corporate/index?page=content&id=KB88214).
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 with the same method available for Windows 10 client devices.
+You can offboard Windows servers by using the same methods that are available for Windows client devices:
 
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
 - [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
-After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2012 R2 and Windows Server 2016.
-
-For other Windows server versions, you have two options to offboard Windows servers from the service:
-
-- Uninstall the MMA agent
-- Remove the Defender for Endpoint workspace configuration
-
-> [!NOTE]
-> The offboarding instructions in this article apply to previous versions of Windows Server, such as Windows Server 2016 and Windows Server 2012 R2 using the MMA. To migrate to the new, unified solution, see [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
-
 ## Related articles
 
-- [Onboard Windows devices using Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
-- [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
-- [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
+- [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+- [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -7,7 +7,7 @@ ms.subservice: onboard
 ms.author: ewalsh
 author: emmwalshh  
 ms.localizationpriority: medium
-ms.date: 03/28/2025
+ms.date: 04/08/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -26,7 +26,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft Defender for Endpoint on Android and iOS is our **mobile threat defense solution (MTD)**. Typically, companies are proactive in protecting PCs from vulnerabilities and attack while mobile devices often go unmonitored and unprotected. Where mobile platforms have built-in protection such as app isolation and vetted consumer app stores, these platforms remain vulnerable to web-based or other sophisticated attacks. As more employees use devices for work and to access sensitive information, it's imperative that companies deploy an MTD solution to protect devices and your resources from increasingly sophisticated attacks on mobiles.
 
@@ -74,7 +74,6 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 |MAM|Yes, (need to just install, setup isn't required) | Protects only enrolled apps. MAM supports with/without Device enrollment or enrolled with non-Microsoft Enterprise Mobility Management.|[Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)](android-configure-mam.md)|
 |Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint are ending support for android device administrator management on devices with access to Google Mobile Services (GMS) on December 31, 2024.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-device-administrator-enrolled-devices)|
 
-
 ### Unsupported Android enrollment scenarios
 
 These scenarios aren't currently supported:
@@ -88,9 +87,9 @@ These scenarios aren't currently supported:
 |Scenarios|Company portal app required on the device?|Protection Profile/Prerequisites|How to deploy|
 | -------- | -------- | -------- | -------- |
 |Supervised Devices (ADE and Apple Configurator Enrollment|Yes|Protects the entire device. For ADE, if users who use Just in Time (JIT) registration, the Company portal app isn't required because app enrolls the device automatically by connecting to Intune server| [Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)   |
-|Unsupervised Devices (Device Enrollment)|Yes|Protects the entire device. For web-based device enrollment, the company portal app isn't required because after the managed app signs in, the app downloads configuration policies directly and not the company portal app)|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)|
+|Unsupervised Devices (Device Enrollment)|Yes|Protects the entire device. For web-based device enrollment, the company portal app isn't required because after the managed app signs in, the app downloads configuration policies directly and not the company portal app|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#deployment-steps-applicable-for-both-supervised-and-unsupervised-devices)|
 |Unsupervised Devices (User Enrollment)|Yes|Protects work data only. The VPN has access to entire device, and the VPN can scan all app traffic|[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md#user-enrollment-setup-only-for-intune-user-enrolled-devices)|
-|MAM|No|Protects only enrolled apps. The VPN has access to entire device and can scan all app traffic)|[Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management](ios-install-unmanaged.md)|
+|MAM|No|Protects only enrolled apps. The VPN has access to entire device and can scan all app traffic|[Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management](ios-install-unmanaged.md)|
 
 ### Unsupported iOS enrollment scenarios
 

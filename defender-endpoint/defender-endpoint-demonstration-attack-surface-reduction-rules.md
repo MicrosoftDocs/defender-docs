@@ -22,9 +22,8 @@ ms.date: 03/10/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 or Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 Attack surface reduction rules target specific behaviors that are typically used by malware and malicious apps to infect machines, such as:
@@ -36,7 +35,7 @@ Attack surface reduction rules target specific behaviors that are typically used
 ## Scenario requirements and setup
 
 - Windows client devices must be running Windows 11, Windows 10 1709 build 16273, or later
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 (with the [modern, unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution)).
+- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 (with the [Functionality in the modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution)).
 - Microsoft Defender Antivirus
 - Microsoft 365 Apps (formerly referred to as Office apps; required for Office rules and sample)
 - [Download attack surface reduction PowerShell scripts](https://demo.wd.microsoft.com/Content/WindowsDefender_ASR_scripts.zip)

@@ -460,6 +460,8 @@
               href: air-remediation-actions.md
             - name: Review and approve (or reject) pending actions
               href: air-review-approve-pending-completed-actions.md
+            - name: Automated remediation in AIR
+              href: air-auto-remediation.md
          - name: Detect and address compromised user accounts in AIR
            href: address-compromised-users-quickly.md
          - name: Integrate AIR with a custom solution or third-party solution
