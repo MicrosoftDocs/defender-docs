@@ -2,8 +2,8 @@
 title: Investigate an IP address associated with an alert
 description: Use the investigation options to examine possible communication between devices and external IP addresses.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 03/26/2025
 ms.subservice: edr
 search.appverid: met150
 ---
@@ -28,7 +28,7 @@ search.appverid: met150
 - [Microsoft Defender XDR](/defender-xdr)
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Examine possible communication between your devices and external internet protocol (IP) addresses.
 

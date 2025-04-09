@@ -2,20 +2,36 @@
   href: index.yml
   expanded: true
   items:
+  - name: Zero Trust with Defender for Endpoint
+    href: zero-trust-with-microsoft-defender-endpoint.md
   - name: Overview
     items:
     - name: What is Microsoft Defender for Endpoint?
-      href: microsoft-defender-endpoint.md
-    - name: Zero Trust for Microsoft Defender for Endpoint
-      href: zero-trust-with-microsoft-defender-endpoint.md
-    - name: Trial user guide - Microsoft Defender for Endpoint
-      href: defender-endpoint-trial-user-guide.md
-    - name: Pilot and deploy Defender for Endpoint
-      href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
-    - name: Minimum requirements
-      href: minimum-requirements.md
-    - name: Supported Microsoft Defender for Endpoint capabilities by platform
-      href: supported-capabilities-by-platform.md
+      items: 
+      - name: Defender for Endpoint on Windows
+        href: microsoft-defender-endpoint.md
+      - name: Defender for Endpoint on macOS
+        href: microsoft-defender-endpoint-mac.md
+      - name: Defender for Endpoint on Linux
+        href: microsoft-defender-endpoint-linux.md
+      - name: Defender for Endpoint on Android
+        href: microsoft-defender-endpoint-android.md
+      - name: Defender for Endpoint on iOS
+        href: microsoft-defender-endpoint-ios.md
+      - name: Defender for Endpoint for US Government customers
+        href: gov.md
+      - name: Supported Defender for Endpoint capabilities by platform
+        href: supported-capabilities-by-platform.md
+      - name: Antivirus solution compatibility with Defender for Endpoint
+        href: defender-compatibility.md
+      - name: Defender for Endpoint Plan 1
+        items:
+        - name: Overview of Defender for Endpoint Plan 1
+          href: defender-endpoint-plan-1.md
+        - name: Setup and configuration
+          href: mde-p1-setup-configuration.md
+        - name: Get started
+          href: mde-plan1-getting-started.md
     - name: What's new in Defender for Endpoint
       href: whats-new-in-microsoft-defender-endpoint.md
       items: 
@@ -31,41 +47,25 @@
         href: ios-whatsnew.md
       - name: Previous Defender for Endpoint releases (archive)
         href: whats-new-mde-archive.md
+    - name: Minimum requirements
+      href: minimum-requirements.md
+    - name: Trial user guide - Defender for Endpoint
+      href: defender-endpoint-trial-user-guide.md
+    - name: Pilot and deploy Defender for Endpoint
+      href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
 
     - name: Preview features
       href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
-    - name: Defender for Endpoint Plan 1
-      items:
-      - name: Overview
-        href: defender-endpoint-plan-1.md
-      - name: Setup and configuration
-        href: mde-p1-setup-configuration.md
-      - name: Get started
-        href: mde-plan1-getting-started.md
-    - name: Microsoft Defender for Endpoint for US Government customers
-      href: gov.md
-    - name: Microsoft Defender for Endpoint on other platforms
-      href: non-windows.md
-      items: 
-      - name: macOS
-        href: microsoft-defender-endpoint-mac.md
-      - name: Linux
-        href: microsoft-defender-endpoint-linux.md
-      - name: Android
-        href: microsoft-defender-endpoint-android.md
-      - name: iOS
-        href: microsoft-defender-endpoint-ios.md
-
-    - name: Antivirus solution compatibility with Defender for Endpoint
-      href: defender-compatibility.md
 
   - name: Microsoft Defender for Endpoint demonstrations and evaluation
     items:
     - name: Evaluate Microsoft Defender Antivirus
       href: evaluate-microsoft-defender-antivirus.md
       items:
+      - name: Guidance for pen testing and BAS scenarios
+        href: guidance-for-pen-testing-and-bas.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
@@ -162,10 +162,12 @@
         - name: Onboard server devices
           href: onboard-server.md
           items:
-          - name: Onboarding Windows Server overview
+          - name: Onboard Windows Server version 1803, Windows Server 2019, and later
             href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019, and 2022
-            href: configure-server-endpoints.md
+          - name: Onboard Windows Server 2012 R2 and Windows Server 2016
+            href: onboard-windows-server-2012r2-2016.md
+          - name: Defender for Endpoint on Windows Server with SAP
+            href: mde-sap-windows-server.md
           - name: Onboard Windows devices using Configuration Manager
             href: configure-endpoints-sccm.md
           - name: Onboard Windows devices using Group Policy
@@ -174,10 +176,8 @@
             href: configure-endpoints-script.md
           - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
             href: configure-endpoints-vdi.md
-          - name: Defender for Endpoint on Windows Server with SAP
-            href: mde-sap-windows-server.md
-        - name: Onboard non-Windows devices
-          href: configure-endpoints-non-windows.md
+          - name: Direct onboarding with Defender for Cloud
+            href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
         - name: Defender for Endpoint on macOS
           items:
           - name: Deploy Defender for Endpoint on macOS
@@ -230,10 +230,14 @@
             href: mac-resources.md
           - name: Troubleshoot Microsoft Defender for Endpoint on macOS
             items:
+            - name: Troubleshoot agent health issues
+              href: mac-health-status.md
             - name: Troubleshooting mode on macOS
               href: mac-troubleshoot-mode.md
             - name: Troubleshoot macOS installation issues
               href: mac-support-install.md
+            - name: Troubleshoot macOS configuration
+              href: mac-support-configuration.md
             - name: Troubleshoot macOS performance issues overview
               href: mac-support-perf-overview.md
               displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -257,44 +261,56 @@
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
-            - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
-              href: mde-linux-arm.md
-            - name: Puppet based deployment
-              href: linux-install-with-puppet.md
-            - name: Ansible based deployment
-              href: linux-install-with-ansible.md
-            - name: Chef based deployment
-              href: linux-deploy-defender-for-endpoint-with-chef.md
-            - name: Manual deployment
-              href: linux-install-manually.md
-            - name: Saltstack-based deployment
-              href: linux-install-with-saltack.md
-            - name: Advanced deployment for Defender for Endpoint on Linux
-              href: comprehensive-guidance-on-linux-deployment.md
-            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-              href: mde-linux-deployment-on-sap.md
-          - name: Configure Defender for Endpoint on Linux
-            items:
-            - name: Configure and validate exclusions on Linux
-              href: linux-exclusions.md
-            - name: Static proxy configuration
-              href: linux-static-proxy-configuration.md
-            - name: Set preferences
-              href: linux-preferences.md
-            - name: Detect and block Potentially Unwanted Applications
-              href: linux-pua.md
-            - name: Schedule scans with Microsoft Defender for Endpoint on Linux
-              href: linux-schedule-scan-mde.md
-            - name: Schedule antivirus scan in Defender for Endpoint on Linux
-              href: schedule-antivirus-scan-in-mde.md
-            - name: Schedule an update for Microsoft Defender for Endpoint on Linux
-              href: linux-update-MDE-Linux.md
-            - name: Configure eBPF-based sensor
-              href: linux-support-ebpf.md 
-            - name: Configure Offline Security Intelligence Update
-              href: linux-support-offline-security-intelligence-update.md
+            - name: 1 - Prerequisites
+              href: mde-linux-prerequisites.md
+            - name: 2 - Choose a deployment method
+              items:
+              - name: Installer script based deployment
+                href: linux-installer-script.md
+              - name: Ansible based deployment
+                href: linux-install-with-ansible.md
+              - name: Chef based deployment
+                href: linux-deploy-defender-for-endpoint-with-chef.md
+              - name: Puppet based deployment
+                href: linux-install-with-puppet.md
+              - name: Saltstack-based deployment
+                href: linux-install-with-saltack.md
+              - name: Manual deployment
+                href: linux-install-manually.md
+              - name: Direct onboarding with Defender for Cloud
+                href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+              - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
+                href: mde-linux-arm.md
+              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+                href: mde-linux-deployment-on-sap.md
+            - name: 3 - Configuration
+              items:
+              - name: Configure security policies and settings
+                href: linux-preferences.md
+              - name: Static proxy configuration
+                href: linux-static-proxy-configuration.md
+              - name: Configure antivirus scans
+                items:
+                - name: Schedule antivirus scans using Anacron
+                  href: schedule-antivirus-scan-anacron.md
+                - name: Schedule antivirus scans using Crontab
+                  href: schedule-antivirus-scan-crontab.md
+              - name: Network protection for Linux
+                href: network-protection-linux.md
+              - name: Configure and validate exclusions on Linux
+                href: linux-exclusions.md
+              - name: Configure eBPF-based sensor
+                href: linux-support-ebpf.md 
+              - name: Detect and block Potentially Unwanted Applications
+                href: linux-pua.md
+              - name: Configure Offline Security Intelligence Update
+                href: linux-support-offline-security-intelligence-update.md
           - name: Update Defender for Endpoint on Linux
-            href: linux-updates.md
+            items: 
+            - name: Update Defender for Endpoint on Linux
+              href: linux-updates.md
+            - name: Schedule an update for Defender for Endpoint on Linux
+              href: linux-update-mde-linux.md
           - name: Privacy for Defender for Endpoint on Linux
             href: linux-privacy.md
           - name: Resources for Microsoft Defender for Endpoint on Linux
@@ -313,6 +329,9 @@
                 href: ios-install-unmanaged.md
             - name: Configure Mobile Threat Defense
               items:
+              - name: User experiences in Defender for Endpoint on Android
+                href: android-new-ux.md
+              - name: User experiences in Defender for Endpoint on iOS
               - name: Mobile device resources for Defender for Endpoint 
                 href: mobile-resources-defender-endpoint.md
               - name: Configure Defender for Endpoint on Android features
@@ -406,6 +425,8 @@
         href: mde-sec-ops-guide.md
       - name: Troubleshoot
         items:
+        - name: Troubleshoot antivirus scan issues
+          href: troubleshoot-mdav-scan-issues.md
         - name: Troubleshoot onboarding issues
           items:
           - name: Troubleshoot issues during onboarding
@@ -482,12 +503,8 @@
           items:
           - name: Client analyzer overview
             href: overview-client-analyzer.md
-          - name: Download and run the client analyzer
-            href: download-client-analyzer.md
           - name: Run the client analyzer on Windows
             href: run-analyzer-windows.md
-          - name: Run the client analyzer on macOS or Linux
-            href: run-analyzer-macos-linux.md
           - name: Run the client analyzer on Linux
             href: run-analyzer-linux.md
           - name: Run the client analyzer on macOS
@@ -511,6 +528,8 @@
           href: troubleshoot-collect-support-log.md
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
+        - name: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
+          href: troubleshoot-security-intelligence-not-updated.md 
         - name: Troubleshooting Security Intelligence Updates from Microsoft Update source
           href: security-intelligence-update-tshoot.md
           displayName: Troubleshooting Security Intelligence Updates from Microsoft Update source
@@ -530,7 +549,7 @@
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
-      href: /mem/intune/protect/mde-security-integration
+      href: /intune/intune-service/protect/mde-security-integration
     - name: Manage Defender for Endpoint P1/P2 across devices
       href: defender-endpoint-subscription-settings.md
     - name: Onboarding using Microsoft Configuration Manager
@@ -542,7 +561,7 @@
     items:
     - name: Migration guides overview
       href: migration-guides.md
-    - name: Migrate Defender for Endpoint servers to Defender for Cloud
+    - name: Migrate servers to Defender for Cloud
       href: migrating-mde-server-to-cloud.md
     - name: Migrate to Defender for Endpoint
       href: switch-to-mde-overview.md
@@ -603,9 +622,6 @@
       - name: Manage device group and tags
         href: machine-tags.md
 
-    - name: Host firewall reporting in Microsoft Defender for Endpoint
-      href: host-firewall-reporting.md
-
     - name: Tamper resiliency
       href: tamper-resiliency.md
 
@@ -631,8 +647,6 @@
             href: attack-surface-reduction-rules-deployment-operationalize.md
         - name: Attack surface reduction rules reference
           href: attack-surface-reduction-rules-reference.md
-        - name: Attack surface reduction rules report
-          href: attack-surface-reduction-rules-report.md
         - name: Troubleshoot attack surface reduction rules
           href: troubleshoot-asr-rules.md
         - name: Enable ASR rules alternate configuration methods
@@ -663,8 +677,6 @@
           href: device-control-deploy-manage-gpo.md
         - name: Device control frequently asked questions
           href: device-control-faq.md
-        - name: Device control reports
-          href: device-control-report.md
       - name: Exploit protection
         items:
         - name: Protect devices from exploits
@@ -689,8 +701,6 @@
           href: evaluate-network-protection.md
         - name: Turn on network protection
           href: enable-network-protection.md
-        - name: Network protection for Linux
-          href: network-protection-linux.md
         - name: Network protection for MacOS
           href: network-protection-macos.md
       - name: Web protection
@@ -701,8 +711,6 @@
           items:
           - name: Web threat protection overview
             href: web-threat-protection.md
-          - name: Monitor web security
-            href: web-protection-monitoring.md
           - name: Respond to web threats
             href: web-protection-response.md
         - name: Web content filtering
@@ -908,13 +916,6 @@
 
       - name: Diagnostics for Microsoft Defender Antivirus
         items:
-        - name: Device health reports
-          href: device-health-reports.md
-          items:
-          - name: Microsoft Defender Antivirus health report
-            href: device-health-microsoft-defender-antivirus-health.md
-          - name: Sensor health and OS report
-            href: device-health-sensor-health-os.md
         - name: Microsoft Defender Core service overview
           href: microsoft-defender-core-service-overview.md
         - name: Microsoft Defender Core service configurations and experimentation 
@@ -924,29 +925,24 @@
 
       - name: Troubleshooting Microsoft Defender Antivirus
         items:
-        - name: Troubleshoot Microsoft Defender Antivirus performance issues
-          items:
+        - name: Troubleshoot performance issues related to real-time protection
+          href: troubleshoot-performance-issues.md
+          items: 
           - name: Performance analyzer for Microsoft Defender Antivirus
             href: tune-performance-defender-antivirus.md
           - name: Performance analyzer reference
             href: performance-analyzer-reference.md
-            displayName: high cpu msmpeng.exe antimalware engine microsoft defender
-              antivirus windows defender antivirus
-          - name: Troubleshoot performance issues related to real-time protection
-            href: troubleshoot-performance-issues.md
-          - name: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
-            href: troubleshoot-av-performance-issues-with-wprui.md
-            displayName: Troubleshoot antivirus performance issues with WPRUI windows
-              performance recorder UI WPR windows performance recorder
           - name: Troubleshoot Microsoft Defender Antivirus performance issues with Process
               Monitor
             href: troubleshoot-av-performance-issues-with-procmon.md
-            displayName: Troubleshoot Microsoft Defender Antivirus MDAV performance perf
-              issues with Process Monitor ProcMon
-        - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
-          href: troubleshoot-microsoft-defender-antivirus.yml
-        - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
-          href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
+          - name: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
+            href: troubleshoot-av-performance-issues-with-wprui.md
+        - name: Troubleshoot Microsoft Defender Antivirus performance issues
+          items:
+          - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
+            href: troubleshoot-microsoft-defender-antivirus.yml
+          - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
+            href: troubleshoot-microsoft-defender-antivirus-when-migrating.yml
 
       - name: Behavioral blocking and containment
         items:
@@ -1088,23 +1084,15 @@
       - name: Use sensitivity labels to prioritize incident response
         href: information-protection-investigation.md
 
-      - name: Reporting
-        items:
-        - name: Power BI - How to use API - Samples
-          href: api/api-power-bi.md
-        - name: Threat protection reports
-          href: threat-protection-reports.md
-        - name: Monthly security summary
-          href: monthly-security-summary-report.md
-
     - name: Advanced hunting
-      href: /defender-xdr/advanced-hunting-overview
+      href: /defender-xdr/advanced-hunting-overview?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
 
-    - name: Threat analytics overview
-      href: threat-analytics.md
+    - name: Threat analytics
       items:
+      - name: Overview
+        href: /defender-xdr/threat-analytics?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Read the analyst report
-        href: threat-analytics-analyst-reports.md
+        href: /defender-xdr/threat-analytics-analyst-reports?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
 
     - name: EDR in block mode
       href: edr-in-block-mode.md
@@ -1130,54 +1118,29 @@
 
   - name: Reference
     items:
-    - name: Microsoft Security Resources
-      items: 
-        - name: Threat actor naming
-          href: /defender-xdr/microsoft-threat-actor-naming
-        - name: Malware names
-          href: /defender-xdr/malware-naming
-        - name: How Microsoft identifies malware and PUA
-          href: /defender-xdr/criteria
-        - name: Submit files for analysis
-          href: /defender-xdr/submission-guide
-        - name: Troubleshoot MSI portal errors caused by admin block
-          href: /defender-xdr/portal-submission-troubleshooting
-        - name: Microsoft virus initiative
-          href: /defender-xdr/virus-initiative-criteria
-        - name: Software developer FAQ
-          href: /defender-xdr/developer-faq
-    - name: Malware information
-      items: 
-       - name: Understanding malware
-         href: malware/understanding-malware.md
-       - name: Coinminers
-         href: malware/coinminer-malware.md
-       - name: Exploits and Exploit Kits
-         href: malware/exploits-malware.md
-       - name: Fileless threats
-         href: malware/fileless-threats.md
-       - name: Macro threats
-         href: malware/macro-malware.md
-       - name: Phishing trends
-         href: malware/phishing-trends.md
-       - name: Phishing
-         href: malware/phishing.md
-       - name: Prevent malware infection
-         href: malware/prevent-malware-infection.md
-       - name: Rootkits
-         href: malware/rootkits-malware.md
-       - name: Supply chain malware
-         href: malware/supply-chain-malware.md
-       - name: Support scams
-         href: malware/support-scams.md
-       - name: Trojans
-         href: malware/trojans-malware.md
-       - name: Unwanted software
-         href: malware/unwanted-software.md
-       - name: Worms
-         href: malware/worms-malware.md
-    - name: Understand threat intelligence concepts
-      href: threat-indicator-concepts.md
+    - name: Reports
+      items:
+        - name: Microsoft Defender for Endpoint reports
+          href: threat-protection-reports.md
+        - name: Device health reports
+          href: device-health-reports.md
+          items:
+          - name: Microsoft Defender Antivirus health report
+            href: device-health-microsoft-defender-antivirus-health.md
+          - name: Sensor health and OS report
+            href: device-health-sensor-health-os.md
+        - name: Host firewall reporting
+          href: host-firewall-reporting.md
+        - name: Web protection and monitoring reports
+          href: web-protection-monitoring.md
+        - name: Device control reports
+          href: device-control-report.md
+        - name: Attack surface reduction rules report
+          href: attack-surface-reduction-rules-report.md                                                    
+        - name: Aggregated reports
+          href: aggregated-reporting.md
+        - name: Create custom reports using Power BI
+          href: api/api-power-bi.md                         
     - name: Configure integration with other Microsoft solutions
       items:
       - name: Configure conditional access
@@ -1580,7 +1543,59 @@
         href: conditional-access.md
       - name: Microsoft Defender for Cloud Apps integration overview
         href: microsoft-cloud-app-security-integration.md
+    - name: Microsoft Security Resources
+      items: 
+        - name: Threat actor naming
+          href: /unified-secops-platform/microsoft-threat-actor-naming
 
+        - name: Malware names
+          href: /unified-secops-platform/malware-naming
+
+        - name: How Microsoft identifies malware and PUA
+          href: /defender-xdr/criteria
+        - name: Submit files for analysis
+          href: /unified-secops-platform/submission-guide
+
+        - name: Troubleshoot MSI portal errors caused by admin block
+          href: /defender-xdr/portal-submission-troubleshooting
+        - name: Microsoft virus initiative
+          href: /unified-secops-platform/virus-initiative-criteria
+
+        - name: Software developer FAQ
+          href: /defender-xdr/developer-faq        
+    - name: Malware information
+      items: 
+       - name: Understanding malware
+         href: malware/understanding-malware.md
+       - name: Coinminers
+         href: malware/coinminer-malware.md
+       - name: Exploits and Exploit Kits
+         href: malware/exploits-malware.md
+       - name: Fileless threats
+         href: malware/fileless-threats.md
+       - name: Macro threats
+         href: malware/macro-malware.md
+       - name: Phishing trends
+         href: malware/phishing-trends.md
+       - name: Phishing
+         href: malware/phishing.md
+       - name: Prevent malware infection
+         href: malware/prevent-malware-infection.md
+       - name: Rootkits
+         href: malware/rootkits-malware.md
+       - name: Supply chain malware
+         href: malware/supply-chain-malware.md
+       - name: Support scams
+         href: malware/support-scams.md
+       - name: Trojans
+         href: malware/trojans-malware.md
+       - name: Unwanted software
+         href: malware/unwanted-software.md
+       - name: Worms
+         href: malware/worms-malware.md
+    - name: Understand threat intelligence concepts
+      href: threat-indicator-concepts.md
+      
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR

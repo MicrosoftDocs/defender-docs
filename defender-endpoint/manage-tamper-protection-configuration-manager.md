@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off using tenant attach with Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 09/05/2023
+ms.date: 03/26/2025
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
@@ -60,7 +60,6 @@ Using Configuration Manager with tenant attach, you can turn on (or off) the tam
 ## See also
 
 - [Frequently asked questions (FAQs) on tamper protection](faqs-on-tamper-protection.yml)
-- [Defender for Endpoint on non-Windows devices](configure-endpoints-non-windows.md)
 - [Tech Community Blog: Announcing Tamper Protection for Configuration Manager Tenant Attach clients](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/announcing-tamper-protection-for-configuration-manager-tenant/ba-p/1700246#.X3QLR5Ziqq8.linkedin)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 

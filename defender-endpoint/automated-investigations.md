@@ -3,10 +3,10 @@ title: Use automated investigations to investigate and remediate threats
 description: Understand the automated investigation flow in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: edr
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
-ms.date: 08/31/2022
+ms.date: 03/25/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -32,14 +32,14 @@ search.appverid: met150
 
 Want to see how it works? Watch the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bOeh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f7299926-ec86-40f6-9188-372304ab80f9]
 
 The technology in automated investigation uses various inspection algorithms and is based on processes that are used by security analysts. AIR capabilities are designed to examine alerts and take immediate action to resolve breaches. AIR capabilities significantly reduce alert volume, allowing security operations to focus on more sophisticated threats and other high-value initiatives. All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). In the Action center, pending actions are approved (or rejected), and completed actions can be undone if needed.
 
 This article provides an overview of AIR and includes links to next steps and additional resources.
 
 > [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-automated-investigations-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## How the automated investigation starts
 
@@ -86,13 +86,14 @@ Currently, AIR only supports the following OS versions:
 - Windows Server 2016 (Preview)
 - Windows Server 2019
 - Windows Server 2022
+- Windows Server 2025
 - Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
 - Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
 - Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
 - Windows 11
 
 > [!NOTE]
-> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) to be installed. 
+> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution) to be installed. 
 
 ## Next steps
 

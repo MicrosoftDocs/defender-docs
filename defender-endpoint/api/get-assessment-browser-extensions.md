@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/08/2025
+ms.date: 03/04/2025
 ---
 
 # Export browser extensions assessment per device
@@ -24,14 +24,9 @@ ms.date: 01/08/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink).
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
+- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities#vulnerability-management-capabilities-for-endpoints) (add-on for Defender for Endpoint Plan 2 or the standalone version)
+- [Microsoft Defender for Cloud Plan 2](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 Returns all known installed browser extensions and their details for all devices, on a per-device basis.
 
@@ -182,12 +177,16 @@ Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability 
 GET /api/machines/browserextensionsinventoryExport
 ```
 
-### 2.4 Properties
+### 2.4 Parameters
+
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
+
+### 2.5 Properties
 
 > [!NOTE]
 >
-> - The files are gzip compressed & in multiline JSON format.
-> - The download URLs are only valid for 1 hour.
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
@@ -196,7 +195,7 @@ GET /api/machines/browserextensionsinventoryExport
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 
 ### 2.6 Examples

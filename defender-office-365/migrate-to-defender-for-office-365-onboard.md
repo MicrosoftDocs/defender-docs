@@ -215,6 +215,6 @@ Congratulations! You have completed your [migration to Microsoft Defender for Of
 
 Now you begin the normal operation and maintenance of Defender for Office 365. Monitor and watch for issues that are similar to what you experienced during the pilot, but on a larger scale. The [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) and the [impersonation insight](anti-phishing-mdo-impersonation-insight.md) are most helpful, but consider making the following activities a regular occurrence:
 
-- Review user reported messages, especially [user-reported phishing messages](air-examples.md)
+- Review user reported messages, especially [user-reported phishing messages](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook)
 - Review overrides in the [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 - Use [Advanced Hunting](/defender-xdr/advanced-hunting-email-threats) queries to look for tuning opportunities and risky messages.

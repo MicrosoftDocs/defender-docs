@@ -25,6 +25,8 @@
        href: zero-trust-with-microsoft-365-defender-office-365.md
      - name: Mail flow in EOP
        href: mail-flow-about.md
+     - name: Defender for Office 365 in Microsoft Teams
+       href: mdo-support-teams-about.md
      - name: Microsoft Defender portal overview
        href: /defender-xdr/microsoft-365-defender-portal
      - name: Integrate non-Microsoft security services with Microsoft 365
@@ -81,7 +83,7 @@
        items:
        - name: Email - user reported settings
          href: submissions-user-reported-messages-custom-mailbox.md
-       - name: Deploy the Report Message and Report Phishing add-ins
+       - name: Transition from the Report Message and Report Phishing add-ins
          href: submissions-users-report-message-add-in-configure.md
        - name: Teams - user reported settings
          href: submissions-teams.md
@@ -114,8 +116,8 @@
      items:
        - name: Defender for Office 365 SecOps Guide
          href: mdo-sec-ops-guide.md
-       - name: Defender for Office 365 in Microsoft Teams
-         href: mdo-support-teams-about.md
+       - name: Threat classification
+         href: mdo-threat-classification.md
        - name: Security recommendations for priority accounts
          href: priority-accounts-security-recommendations.md
        - name: Usage card in Defender for Office 365
@@ -383,8 +385,6 @@
            href: submissions-submit-files-to-microsoft.md
          - name: Admin review for user reported messages
            href: submissions-admin-review-user-reported-messages.md
-         - name: Errors during submissions
-           href: submissions-error-messages.md
          - name: Submission result definitions
            href: submissions-result-definitions.md
        - name: Threat Explorer and real-time detections
@@ -444,7 +444,7 @@
            items:
            - name: AIR overview
              href: air-about.md
-           - name: How automated investigation and response works
+           - name: AIR examples
              href: air-examples.md
          - name: Review and approve (or reject) pending actions
            href: air-review-approve-pending-completed-actions.md
@@ -460,6 +460,8 @@
               href: air-remediation-actions.md
             - name: Review and approve (or reject) pending actions
               href: air-review-approve-pending-completed-actions.md
+            - name: Automated remediation in AIR
+              href: air-auto-remediation.md
          - name: Detect and address compromised user accounts in AIR
            href: address-compromised-users-quickly.md
          - name: Integrate AIR with a custom solution or third-party solution
@@ -527,8 +529,6 @@
           href: step-by-step-guides/connect-microsoft-defender-for-office-365-to-microsoft-sentinel.md
         - name: How to enable DMARC Reporting for Microsoft Online Email Routing Address (MOERA) and parked Domains
           href: step-by-step-guides/how-to-enable-dmarc-reporting-for-microsoft-online-email-routing-address-moera-and-parked-domains.md
-        - name: How-to deploy and configure the report message add-in
-          href: step-by-step-guides/deploy-and-configure-the-report-message-add-in.md
         - name: Use Microsoft Defender for Office 365 in SharePoint Online
           href: step-by-step-guides/utilize-microsoft-defender-for-office-365-in-sharepoint-online.md
         - name: Tune bulk email filtering

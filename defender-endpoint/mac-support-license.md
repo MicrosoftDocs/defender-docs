@@ -2,8 +2,9 @@
 title: Troubleshoot license issues for Microsoft Defender for Endpoint on Mac
 description: Troubleshoot license issues in Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 03/19/2024
+ms.date: 04/04/2025
 ---
 
 # Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
@@ -29,7 +30,7 @@ ms.date: 03/19/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## No license found
 
@@ -55,17 +56,17 @@ You encounter this message in a different way: If you're using the terminal to e
 
 ### Cause
 
-- You can encounter an error if you've deployed and/or installed the Microsoft Defender for Endpoint on macOS package [Download installation packages](mac-install-manually.md#download-installation-and-onboarding-packages), but you might not have run the configuration script [Download the onboarding package](mac-install-with-intune.md#step-15-download-the-onboarding-package) that contains the license settings. For information on troubleshooting in this scenario, see [If you didn't run the configuration script](#if-you-did-not-run-the-configuration-script).
+- You can encounter an error if you've deployed and/or installed the Microsoft Defender for Endpoint on macOS package [Download installation packages](mac-install-manually.md#download-installation-and-onboarding-packages), but you might not have run the configuration script [Download the onboarding package](mac-install-with-intune.md#step-15-download-the-onboarding-package) that contains the license settings. For information on troubleshooting in this scenario, see [If you didn't run the configuration script](#if-you-didnt-run-the-configuration-script).
 
-- You can encounter an error message when the Microsoft Defender for Endpoint on macOS agent isn't up to date. For information on troubleshooting in this scenario, see [If Microsoft Defender for Endpoint on macOS isn't up to date](#if-microsoft-defender-for-endpoint-on-macos-is-not-up-to-date).
+- You can encounter an error message when the Microsoft Defender for Endpoint on macOS agent isn't up to date. For information on troubleshooting in this scenario, see [If Microsoft Defender for Endpoint on macOS isn't up to date](#if-microsoft-defender-for-endpoint-on-macos-isnt-up-to-date).
 
-- You can encounter an error message if you offboarded and reonboarded Mac from Microsoft Defender for Endpoint on macOS.
+- You can encounter an error message if you offboard and reonboard Mac from Microsoft Defender for Endpoint on macOS.
 
-- You can encounter an error message if a license isn't assigned to a user. For information on troubleshooting in this scenario, see [If a license isn't assigned to a user](#if-a-license-is-not-assigned-to-a-user).
+- You can encounter an error message if a license isn't assigned to a user. For information on troubleshooting in this scenario, see [If a license isn't assigned to a user](#if-a-license-isnt-assigned-to-a-user).
 
 ### Solutions
 
-#### If you did not run the configuration script
+#### If you didn't run the configuration script
 
 This section describes the troubleshooting measures when the error/warning message is caused by nonexecution of the configuration script. The script contains the license settings when the Microsoft Defender for Endpoint on macOS package is installed and deployed.
 
@@ -79,9 +80,9 @@ Depending on the deployment management tool used, follow the tool-specific instr
 |Manual installation      |    [Download installation and onboarding packages](mac-install-manually.md#download-installation-and-onboarding-packages); and [Onboarding Package](mac-install-manually.md#onboarding-package)     |
 
 > [!NOTE]
-> If the onboarding package runs correctly, the licensing information will be located in `/Library/Application Support/Microsoft/Defender/com.microsoft.wdav.atp.plist`.
+> If the onboarding package runs correctly, the licensing information is located in `/Library/Application Support/Microsoft/Defender/com.microsoft.wdav.atp.plist`.
 
-#### If Microsoft Defender for Endpoint on macOS is not up to date
+#### If Microsoft Defender for Endpoint on macOS isn't up to date
 
 For scenarios where Microsoft Defender for Endpoint on macOS isn't up to date, you need to [update](mac-updates.md) the agent.
 
@@ -89,9 +90,9 @@ For scenarios where Microsoft Defender for Endpoint on macOS isn't up to date, y
 
 When the offboarding script is executed on the macOS, it saves a file in `/Library/Application Support/Microsoft/Defender/` and it's named `com.microsoft.wdav.atp.offboarding.plist`.
 
-If the file exists, it will prevent the macOS from being onboarded again.  Delete the **com.microsoft.wdav.atp.offboarding.plist** running the onboarding script again.
+If the file exists, it prevents the macOS from being onboarded again. Delete the **com.microsoft.wdav.atp.offboarding.plist** running the onboarding script again.
 
-#### If a license is not assigned to a user
+#### If a license isn't assigned to a user
 
 1. In the Microsoft Defender portal (security.microsoft.com), select **Settings**, and then select **Endpoints**.
 

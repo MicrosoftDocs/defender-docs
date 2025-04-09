@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/04/2024
+ms.date: 01/15/2025
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint onboarding issues
@@ -23,13 +23,13 @@ ms.date: 11/04/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Windows Server 2012 R2
-- Windows Server 2016
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
+**Windows Server**
+- Windows Server 2012 R2
+- Windows Server 2016
+- Windows Server 2019 and later
 
 You might need to troubleshoot the Microsoft Defender for Endpoint onboarding process if you encounter issues.
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.
@@ -299,15 +299,12 @@ If the verification fails and your environment is using a proxy to connect to th
    >   
    > If Microsoft Defender Antivirus is in passive mode, these drivers are set to manual (`0`).
 
-## Troubleshoot onboarding issues 
-
-> [!NOTE]
-> The following troubleshooting guidance is only applicable for Windows Server 2016 and earlier versions of Windows Server.
+## Troubleshoot onboarding issues on Windows Server 2016 and earlier versions of Windows Server.
 
 If you encounter issues while onboarding a server, go through the following verification steps to address possible issues.
 
-- [Ensure Microsoft Monitoring Agent (MMA) is installed and configured to report sensor data to the service](configure-server-endpoints.md)
-- [Ensure that the server proxy and Internet connectivity settings are configured properly](configure-server-endpoints.md)
+- [Ensure Microsoft Monitoring Agent (MMA) is installed and configured to report sensor data to the service](onboard-windows-server-2012r2-2016.md)
+- [Ensure that the server proxy and Internet connectivity settings are configured properly](onboard-windows-server-2012r2-2016.md)
 
 You might also need to check the following:
 
@@ -331,7 +328,7 @@ You might also need to check the following:
 
 There may be instances when onboarding is deployed on a newly built device but not completed.
 
-The steps below provide guidance for the following scenario:
+The steps in this article provide guidance for the following scenario:
 
 - Onboarding package is deployed to newly built devices
 - Sensor doesn't start because the Out-of-box experience (OOBE) or first user logon hasn't been completed
@@ -340,10 +337,12 @@ The steps below provide guidance for the following scenario:
 
 > [!NOTE]
 > User Logon after OOBE is no longer required for SENSE service to start on the following or more recent Windows versions: 
-> Windows 10, version 1809 or Windows Server 2019, or Windows Server 2022 with [April 22 2021 update rollup](https://support.microsoft.com/kb/5001384). 
-> Windows 10, version 1909 with [April 2021 update rollup](https://support.microsoft.com/kb/5001396). 
-> Windows 10, version 2004/20H2 with [April 28 2021 update rollup](https://support.microsoft.com/kb/5001391). 
+> - Windows 10, version 1809 or newer
+> - Windows Server 2025
+> - Windows Server 2022
+> - Windows Server 2019 
 
+## Troubleshoot onboarding with Microsoft Endpoint Configuration Manager
 
 > [!NOTE]
 > The following steps are only relevant when using Microsoft Endpoint Configuration Manager. For more information about onboarding using Microsoft Endpoint Configuration Manager, see [Microsoft Defender for Endpoint](/mem/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection).

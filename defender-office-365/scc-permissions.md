@@ -20,7 +20,7 @@ description: Admins can learn about the roles and role groups in Microsoft Defen
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 11/27/2024
+ms.date: 02/20/2025
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
@@ -43,8 +43,10 @@ This article contains the inventory of Defender for Office 365 and Microsoft Pur
 
 > [!NOTE]
 > In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
-> 
-> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal**.
+>
+> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.**
+>
+> :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
 ## Role groups in Microsoft Defender for Office 365 and Microsoft Purview
 
@@ -194,8 +196,8 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Manage Review Set Tags**|This role lets users create, edit, and delete review set tags for cases they can access.|eDiscovery Manager|
 |**Organization Configuration**|Run, view, and export audit reports and manage compliance policies for DLP, devices, and preservation.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management|
 |<sup>\*</sup>**Preview**|View a list of items that are returned from content searches, and open each item from the list to view its contents.|Data Investigator <br/><br/> eDiscovery Manager|
-|**Priority Cleanup Admin**||Organization Management|
-|**Priority Cleanup Viewer**||Organization Management|
+|**Priority Cleanup Admin**|Access Priority Cleanup tab within Data Lifecycle Management to create, update and delete policies and modify Priority Cleanup settings for the tenant  |Organization Management|
+|**Priority Cleanup Viewer**|Access Priority Cleanup tab within Data Lifecycle Management to view policies|Organization Management|
 |<sup>\*</sup>**Privacy Management Admin**|Manage policies in Privacy Management and has access to all functionality of the solution.|Privacy Management <br/><br/> Privacy Management Administrators|
 |<sup>\*</sup>**Privacy Management Analysis**|Perform investigation and remediation of the message violations in Privacy Management. Can only view messages metadata.|Privacy Management <br/><br/> Privacy Management Analysts|
 |<sup>\*</sup>**Privacy Management Investigation**|Perform investigation, remediation, and review message violations in Privacy Management. Can view message metadata and the full message.|Privacy Management <br/><br/> Privacy Management Investigators|
@@ -207,7 +209,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |**Quarantine**|Allows viewing and releasing quarantined email.|Organization Management <br/><br/> Quarantine Administrator <br/><br/> Security Administrator|
 |**RecordManagement**|View and edit the configuration of the records management feature.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Records Management|
 |**Retention Management**|Manage retention policies, retention labels, and retention label policies. Includes permissions to add and remove adaptive scopes from these policies, and to create, delete, and modify adaptive scopes.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Records Management|
-|<sup>\*</sup>**Review**|This role lets users access review sets in eDiscovery (Premium) cases. Users who are assigned this role can see and open the list of cases on the **eDiscovery \> Advanced** page in the Microsoft Purview compliance portal that they're members of. After the user accesses an eDiscovery (Premium) case, they can select **Review sets** to access case data. This role doesn't allow the user to preview the results of a collection search that's associated with the case or do other search or case management tasks. Users with this role can only access the data in a review set.|Data Investigator <br/><br/> eDiscovery Manager <br/><br/> Insider Risk Management <br/><br/> Insider Risk Management Investigators <br/><br/> Reviewer|
+|<sup>\*</sup>**Review**|This role lets users access review sets in eDiscovery (Premium) cases. Users who are assigned this role can see and open the list of cases on the **eDiscovery > Advanced** page in the Microsoft Purview compliance portal that they're members of. After the user accesses an eDiscovery (Premium) case, they can select **Review sets** to access case data. This role doesn't allow the user to preview the results of a collection search that's associated with the case or do other search or case management tasks. Users with this role can only access the data in a review set.|Data Investigator <br/><br/> eDiscovery Manager <br/><br/> Insider Risk Management <br/><br/> Insider Risk Management Investigators <br/><br/> Reviewer|
 |<sup>\*</sup>**RMS Decrypt**|Decrypt RMS-protected content when exporting search results.|Data Investigator <br/><br/> eDiscovery Manager|
 |**Role Management**|Manage role group membership and create or delete custom role groups.|Organization Management <br/><br/> Purview Administrators|
 |<sup>\*</sup>**Scan Reader**|Read the different scans created in the tenant.|Compliance Administrator <br/><br/> Data Source Administrators <br/><br/> Information Protection <br/><br/> Information Protection Admins <br/><br/> Information Protection Investigators|

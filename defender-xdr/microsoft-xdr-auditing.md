@@ -1,6 +1,6 @@
 ---
 title: Search the audit log for events in Microsoft Defender XDR
-description: Learn about the Microsoft Defender XDR activities that are logged in the Microsoft 365 audit log.
+description: Learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
@@ -10,21 +10,21 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: overview
-ms.date: 08/14/2024
+ms.topic: how-to
+ms.date: 01/14/2025
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+
+#customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ---
 
 # Search the audit log for events in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-
-The audit log can help you investigate specific activities across Microsoft 365 services. In the Microsoft Defender portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
+The audit log helps you investigate specific activities across Microsoft 365 services. In the Microsoft Defender portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
 
 - Changes to data retention settings
 - Changes to advanced features
@@ -36,33 +36,25 @@ The audit log can help you investigate specific activities across Microsoft 365 
 
 For a complete list of Microsoft Defender XDR activities that are audited, see [Microsoft Defender XDR activities](#microsoft-defender-xdr-activities) and [Microsoft Defender for Endpoint activities](#microsoft-defender-for-endpoint-activities).
 
-## Requirements
+Auditing is automatically turned on for Microsoft Defender XDR. Features that are audited are logged in the audit log automatically. Auditing can also collect audit logs from GCC environments.
+
+## Prerequisites
 
 To access the audit log, you need to have the **View-Only Audit Logs** or **Audit Logs** role in Exchange Online. By default, those roles are assigned to the Compliance Management and Organization Management role groups.
 
 > [!NOTE]
 > Global administrators in Office 365 and Microsoft 365 are automatically added as members of the Organization Management role group in Exchange Online.
 
-## Turn on auditing in Microsoft Defender XDR
-
-Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview), before you can look at the audit data in the Microsoft Defender XDR portal:
-
-- You should confirm that auditing is turned on in the Microsoft Purview compliance portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
-
-- Follow the steps below to enable the unified audit log in the Microsoft Defender XDR portal:
-    1. Log in to [Microsoft Defender XDR](https://security.microsoft.com/homepage) using an account with the Security administrator or Global administrator role assigned.
-    2. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
-    3. Scroll own to **Unified audit log** and toggle the setting to **On**.
-
-   :::image type="content" source="/defender/media/defender/unified-audit-log.png" alt-text="Screenshot of the unified audit log toggle in Microsoft Defender XDR advanced settings" lightbox="/defender/media/defender/unified-audit-log.png":::
-    4. Select **Save preferences**.
+Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft Purview compliance portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
 > [!IMPORTANT]
-> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization.
+> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using accounts with lower permissions helps improve security for your organization.
 
-## Using the audit search in Microsoft Defender XDR
+## Search the audit log
 
-1. To retrieve audit logs for Microsoft Defender XDR activities, navigate to the [Microsoft Defender XDR Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
+Follow these steps to search the audit log:
+
+1. Navigate to the [Microsoft Defender portal's Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
 
    :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
 
@@ -94,7 +86,7 @@ For a list of all events that are logged for user and admin activities in Micros
 - [Response action activities in Defender for Endpoint in the audit log](/purview/audit-log-activities#microsoft-defender-for-endpoint-reponse-actions-activities)
 - [Roles settings activities in Defender for Endpoint in the audit log](/purview/audit-log-activities#microsoft-defender-for-endpoint-roles-settings-activities)
 
-## Using a PowerShell script
+## Search for events using a PowerShell script
 
 You can use the following PowerShell code snippet to query the Office 365 Management API to retrieve information about Microsoft Defender XDR events:
 
@@ -108,10 +100,10 @@ Search-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID
 >[!NOTE]
 > See the API column in Audit activities included for the record type values.
 
-## Additional resources
+For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
 
-- [Search the audit log in the compliance center](/purview/audit-new-search)
-- [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
+## See also
+
 - [Detailed properties in the audit log](/purview/audit-log-detailed-properties)
 - [Export, configure, and view audit log records](/purview/audit-log-export-records)
 - [Office 365 Management Activity API reference](/office/office-365-management-api/office-365-management-activity-api-reference)

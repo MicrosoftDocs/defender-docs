@@ -2,8 +2,9 @@
 title: Resources for Microsoft Defender for Endpoint on Mac
 description: Resources for Microsoft Defender for Endpoint on Mac, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -27,7 +28,7 @@ ms.date: 09/13/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Collecting diagnostic information
 
@@ -184,15 +185,15 @@ All of the uninstall of Microsoft Defender for Endpoint on macOS require the fol
    
 1. Remove the "Set Preferences" policies that contain [Tamper Protection](/defender-endpoint/tamperprotection-macos) or through the manual configuration.
 
-1. Offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+1. In the Microsoft Defender portal, in the navigation pane, select **Settings** > **Offboard**, and then select the operating system to start the process.
 
-1. Uninstall the Microsoft Defender for Endpoint for macOS apps
+1. Uninstall the Microsoft Defender for Endpoint app.
 
 1. Remove the device from the *group* for *system extension* policies if an MDM was used to set them.
 
 ### Interactive uninstallation
 
-- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
+- Open **Finder** > **Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
 
 ### From the command line
 

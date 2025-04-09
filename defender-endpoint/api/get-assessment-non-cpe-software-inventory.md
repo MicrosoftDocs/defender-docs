@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/08/2025
+ms.date: 01/23/2025
 ---
 
 # Export non product code software inventory assessment per device
@@ -29,7 +29,7 @@ ms.date: 01/08/2025
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
@@ -180,12 +180,16 @@ Delegated (work or school account)|Software.Read|\'Read Threat and Vulnerability
 GET /api/machines/SoftwareInventoryNonCpeExport
 ```
 
-### 2.4 Properties
+### 2.4 Parameters
+
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
+
+### 2.5 Properties
 
 > [!NOTE]
 >
-> - The files are gzip compressed & in multiline JSON format.
-> - The download URLs are only valid for 1 hour.
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
@@ -194,19 +198,19 @@ GET /api/machines/SoftwareInventoryNonCpeExport
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
-### 2.5 Examples
+### 2.6 Examples
 
-#### 2.5.1 Request example
+#### 2.6.1 Request example
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCpeExport
 ```
 
-#### 2.5.2 Response example
+#### 2.6.2 Response example
 
 ```json
 {

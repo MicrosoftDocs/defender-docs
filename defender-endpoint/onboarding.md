@@ -31,7 +31,7 @@ ms.date: 04/03/2024
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Onboard devices using any of the supported management tools
 
@@ -46,7 +46,7 @@ To start onboarding your devices:
 
 This video provides a quick overview of the onboarding process and the different tools and methods.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bGqr]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
 
 ## Deploy using a ring-based approach
 

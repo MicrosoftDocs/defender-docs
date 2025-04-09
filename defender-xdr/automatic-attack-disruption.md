@@ -7,27 +7,25 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 09/11/2024
+ms.date: 02/20/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Automatic attack disruption in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 Microsoft Defender XDR correlates millions of individual signals to identify active ransomware campaigns or other sophisticated attacks in the environment with high confidence. While an attack is in progress, Defender XDR disrupts the attack by automatically containing compromised assets that the attacker is using through automatic attack disruption.
 
@@ -46,7 +44,7 @@ Automatic attack disruption operates in three key stages:
 
 - It uses Defender XDR's ability to correlate signals from many different sources into a single, high-confidence incident through insights from endpoints, identities, email and collaboration tools, and SaaS apps.
 - It identifies assets controlled by the attacker and used to spread the attack.
-- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by isolating affected assets.
+- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
 
 This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
 
@@ -63,15 +61,16 @@ Investigations are integral to monitoring our signals and the attack threat land
 
 Automatic attack disruption uses Microsoft-based XDR response actions. Examples of these actions are:
 
-- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device.
+- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device. 
+  - In addition, Defender for Endpoint automatically contains malicious IP addresses associated with undiscovered/not onboarded devices to block any lateral movement and encryption activity to other Defender for Endpoint-onboarded/discovered devices. It does this through its **[Contain IP](/defender-endpoint/respond-machine-alerts#contain-ip-addresses-of-undiscovered-devices)** (Preview) policy. Moreover, [compromised critical assets' IP addresses are also automatically contained](/defender-endpoint/respond-machine-alerts#containing-critical-assets) with specific blocking mechanisms to stop the spread of an attack while avoiding productivity loss.
 
 - [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution. The disable user action behaves differently depending on how the user is hosted in your environment.
   - When the user account is hosted in Active Directory: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity agent.
   - When the user account is hosted in Active Directory and is synced on Microsoft Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Entra ID synced account.
   - When the user account is hosted in Entra ID only (cloud native account): attack disruption disable the user account on the Entra ID synced account.
- 
-> [!NOTE]
-> Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
+
+  > [!NOTE]
+  > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
@@ -79,18 +78,18 @@ For more information, see [remediation actions](m365d-remediation-actions.md) in
 
 ### Automated response actions for SAP with Microsoft Sentinel
 
-If you're using the [unified security operations platform](microsoft-sentinel-onboard.md) and you deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
+If you [onboarded Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md) and deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
 
-For example, deploy attack disruption for SAP to contain compromised assets by locking suspicious SAP users in case of a financial process manipulation attack. 
+For example, deploy attack disruption for SAP to contain compromised assets by locking suspicious SAP users in case of a financial process manipulation attack.
 
-After the risk is mitigated, Microsoft Defender admins can manually unlock the users that had been automatically locked by the attack disruption response. The ability to manually unlock users is available from the Microsoft Defender action center, and only for users that were locked by attack disruption. 
+After the risk is mitigated, Microsoft Defender admins can manually unlock the users that had been automatically locked by the attack disruption response. The ability to manually unlock users is available from the Microsoft Defender action center, and only for users that were locked by attack disruption.
 
 To use attack disruption for SAP, deploy a new data connector agent, or make sure that your agent is using version 90847355 or higher, and then assign and apply the required Azure and SAP roles. For more information, see:
 
 - [Deploy and configure the container hosting the SAP data connector agent](/azure/sentinel/sap/deploy-data-connector-agent-container)
 - [Update Microsoft Sentinel's SAP data connector agent](/azure/sentinel/sap/update-sap-data-connector), especially [Update your system for automatic attack disruption](/azure/sentinel/sap/update-sap-data-connector#update-your-data-connector-agent-for-attack-disruption).
 
-While you configure attack disruption in the Azure portal and your SAP system, automatic attack disruption itself surfaces only in the unified security operations platform in the Microsoft Defender portal.
+While you configure attack disruption in the Azure portal and your SAP system, automatic attack disruption itself surfaces only in the Microsoft Defender portal.
 
 ## Identify when an attack disruption happens in your environment
 
@@ -105,7 +104,7 @@ The Defender XDR user experience now includes additional visual cues to ensure v
 
     - A tag titled *Attack Disruption* appears next to affected incidents
 
-1. On the incident page:
+2. On the incident page:
 
     - A tag titled *Attack Disruption*
     - A yellow banner at the top of the page that highlights the automatic action taken
@@ -121,9 +120,8 @@ For more information, see [view attack disruption details and results](autoad-re
 
 ## Next steps
 
-- [Configuring automatic attack disruption in Microsoft Defender XDR](configure-attack-disruption.md)
+- [Configure automatic attack disruption](configure-attack-disruption.md)
 - [View details and results](autoad-results.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
-
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

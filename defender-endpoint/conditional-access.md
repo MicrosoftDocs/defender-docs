@@ -4,8 +4,8 @@ description: Enable Conditional Access to prevent applications from running if a
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: conceptual
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Enable Conditional Access to better protect users, devices, and data
@@ -25,11 +25,11 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-conditionalaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Conditional Access is a capability that helps you better protect your users and enterprise information by making sure that only secure devices have access to applications.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4byD1]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d5655a77-d21f-4da4-b00c-3260d0bf13d6]
 
 With Conditional Access, you can control access to enterprise information based on the risk level of a device. This helps keep trusted users on trusted devices using trusted applications.
 

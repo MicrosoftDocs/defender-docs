@@ -6,7 +6,7 @@ ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: conceptual
-ms.date: 01/06/2025
+ms.date: 01/23/2025
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
@@ -36,6 +36,7 @@ The following table summarizes what to expect:
 |Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|A non-Microsoft antivirus solution|Disabled (set manually; see the note that follows this table)|
 
 > [!NOTE]
+> Defender for Endpoint support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 > On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus. On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See **[Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](/defender-endpoint/enable-update-mdav-to-latest-ws)**.
 
 Check the services and filter drivers for Microsoft Defender Antivirus by using the following command:
@@ -67,10 +68,18 @@ gsv WinDefend, WdBoot, WdFilter, WdNisSvc, WdNisDrv | ft -auto DisplayName, Name
 
 **A:** We don't support the manual modification of the start type of the services and drivers for Microsoft Defender Antivirus in Windows images. On Windows clients, the supported method is by your non-Microsoft antivirus registering in Windows Security Center (WSC) api. Or, on Windows Server, you can uninstall the Microsoft Defender Antivirus feature by using roles and features MMC or by running the following PowerShell command (as an administrator): 
 
+Windows Server 2019 and newer
 ```powershell
 
 Uninstall-WindowsFeature Windows-Defender
 
+```
+
+Windows Server 2016
+```powershell
+
+Uninstall-WindowsFeature Windows-Defender
+Uninstall-WindowsFeature Windows-Defender-Gui
 ```
 
 **Q:** Can I use Microsoft Defender Antivirus in passive mode without onboarding to Microsoft Defender for Endpoint?

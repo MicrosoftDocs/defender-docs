@@ -3,10 +3,6 @@
 
 title: Advanced Threat Analytics update to 1.8 migration guide
 description: Procedures to update ATA to version 1.8
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
