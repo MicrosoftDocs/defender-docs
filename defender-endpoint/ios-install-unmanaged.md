@@ -49,7 +49,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 ### Prerequisites
 
-1. **Verify that the Intune connector is enabled in Security portal**. <br> On the [unified security console](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced Features** and ensure that **Microsoft Intune connection** is enabled.
+1. **Verify that the Intune connector is enabled in Security portal**. <br> In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced Features** and ensure that **Microsoft Intune connection** is enabled.
 
    :::image type="content" source="media/enable-intune-connection.png" alt-text="The Defender for Endpoint - Intune connector." lightbox="media/enable-intune-connection.png":::
 

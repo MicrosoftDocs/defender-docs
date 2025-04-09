@@ -10,7 +10,7 @@ metadata:
   ms.topic: faq
   ms.service: defender-business
   ms.localizationpriority: medium
-  ms.date: 01/02/2024
+  ms.date: 03/19/2024
   ms.reviewer: efratka, nehabha
   f1.keywords: NOCSH
   ms.collection:
@@ -157,7 +157,7 @@ sections:
           | Cross-platform support <br/>(Mac, iOS, Android)| ✔ | ✔ | ✔ |
           | Windows Server and Linux Server <br/>(requires server licenses) | ✔  | ✔ | ✔ |
           | Microsoft Threat Experts | | | ✔ |
-          | Microsoft 365 Lighthouse <br/>(optimized; for CSPs only) | ✔ | | |
+          | Microsoft 365 Lighthouse <br/>(optimized; for CSPs only) | ✔ | ✔ | ✔ |
           | Microsoft Defender multi-tenant management | ✔ | ✔ | ✔ |
           | APIs | ✔  | ✔ | ✔ |
 

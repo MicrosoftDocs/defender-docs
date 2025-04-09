@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 10/15/2024
+ms.date: 03/24/2025
 ---
 
 # Microsoft Defender for Endpoint on Mac
@@ -24,9 +24,8 @@ ms.date: 10/15/2024
 
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
@@ -159,8 +158,8 @@ Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint has been fully
 
 ## Resources
 
-- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on Mac](mac-resources.md).
-- [Privacy for Microsoft Defender for Endpoint on Mac](mac-privacy.md).
+- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
+- [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

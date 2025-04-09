@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 01/09/2025
+ms.date: 04/07/2025
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -60,6 +60,9 @@ The following product is **not** covered by this service:
 - Microsoft Defender for IoT
 - Other Microsoft services not mentioned in the previous lists
 
+> [!NOTE]
+> Licensing for Microsoft Defender Experts for Hunting is applied at the tenant level and all identities and devices will be included in your license.
+
 ### Defender Experts for Hunting coverage
 
 Defender Experts for Hunting relies on event signals from Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, Defender for Identity. It also relies on proprietary Microsoft Threat Intelligence sources.
@@ -92,7 +95,7 @@ The following sections enumerate additional information about the service's data
 
 All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender XDR service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations)
 
-Defender Experts for Hunting operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the US region for US customers and in the European Union for EU customers, for the length of the service, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender XDR service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
+Defender Experts for Hunting operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the EU region for customers whose Defender XDR data is in scope of European Union data boundary and in the US region for other customers, for the length of the service, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender XDR service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
 
 Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender XDR advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
@@ -108,9 +111,9 @@ This service is available worldwide for customers in our commercial public cloud
 
 This service is currently delivered in English language only.
 
-## Apply for Microsoft Defender Experts for Hunting service 
+## Apply for Microsoft Defender Experts for Hunting service
 
-You can apply for the Defender Experts for Hunting by performing the following steps: 
+You can apply for the Defender Experts for Hunting by performing the following steps:
 
 1. Complete the [customer interest form](https://aka.ms/DEX4HuntingCustomerInterestForm).  
 2. Enter your name, company name, and company email ID. 

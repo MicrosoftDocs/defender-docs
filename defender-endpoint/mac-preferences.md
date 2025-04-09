@@ -294,7 +294,7 @@ Specify threat types.
 Specify what action to take when a threat of the type specified in the preceding section is detected. Choose from the following options:
 
 - **Audit**: your device isn't protected against this type of threat, but an entry about the threat is logged.
-- **Block**: your device is protected against this type of threat and you're notified in the user interface and the security console.
+- **Block**: your device is protected against this type of threat and you're notified in the user interface and the Microsoft Defender portal.
 - **Off**: your device isn't protected against this type of threat and nothing is logged.
 
 |Section|Value|
