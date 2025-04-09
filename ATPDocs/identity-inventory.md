@@ -67,6 +67,8 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Tags__ – Custom labels that help categorize or classify identities: Sensitive and Honeytoken.
 
+- **PIM tags** - Custom labels that help categorize identities that are considered high value assets: Priveledged account(PIM)
+
 - __Created time__ – The timestamp when the identity was first created.
 
 - __Criticality level__ – Indicates the critical level of the identity.

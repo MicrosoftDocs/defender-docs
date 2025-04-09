@@ -12,7 +12,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## What's new scope and references
 
-Defender for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
+Defenders for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
 
 For more information, see also:
 
@@ -24,6 +24,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## April 2025
 
+### Privileged Identity Tag Now Visible in Defender for Identity Inventory
+
+Identities listed in the ([Identity inventory](https://learn.microsoft.com/en-us/defender-for-identity/identity-inventory#identity-details)) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by **Privileged Identity Management (PIM)**.
+Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
+
+[Learn more about Privileged Identity Management](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)
+
 ### New Defender for Identity and PAM Integration
 
 Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
@@ -34,7 +41,7 @@ Microsoft Defender for Identity now supports integration with industry-leading P
 - Delinea
 - BeyondTrust
 
-For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+For more information, see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
 
 ## March 2025
 
