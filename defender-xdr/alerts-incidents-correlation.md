@@ -91,7 +91,15 @@ Even when the correlation logic indicates that two incidents should be merged, D
 
 ### Manual merging of incidents (Preview)
 
+If two incidents should be merged, but aren't merged for any of the reasons listed in the [previous section](#when-incidents-arent-merged), you can now merge the incidents manually after you fix the underlying reasons.
+
+For example, if the incidents weren't merged because they were assigned to two different people, you can remove the assignment of one of the incidents and then merge the incidents manually.
+
+<!-- This paragraph (what I originally wrote) better describes the Cases feature, doesn't it? 
+
 Over the course of investigating an incident, you might discover that other incidents are related to the same attack story or security event, and that these incidents should be investigated together as a unit. In such a case, you can now merge these incidents together into a single incident. This scenario includes cases where the incidents ought to be merged, but weren't because of the circumstances described previously in [When incidents aren't merged](#when-incidents-arent-merged).
+
+-->
 
 Merging incidents together is preferable to unlinking alerts from one incident and linking them to another, because all the incident information (for example, the activity log) is preserved.
 

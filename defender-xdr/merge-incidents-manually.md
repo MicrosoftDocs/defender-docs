@@ -13,14 +13,14 @@ ms.collection:
 - usx-security
 - sentinel-only
 ms.topic: how-to
-ms.date: 11/21/2024
+ms.date: 04/09/2025
 search.appverid: met150
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Merge incidents manually in the Microsoft Defender portal
+# Merge incidents manually in the Microsoft Defender portal (Preview)
 
 Incidents are automatically created in the Microsoft Defender portal when suspicious activities are detected. When two incidents describe parts of the same attack story, Defender usually merges those incidents into a single incident automatically to help you investigate incidents more efficiently and effectively and resolve them more quickly and accurately.
 
