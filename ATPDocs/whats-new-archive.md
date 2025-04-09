@@ -129,7 +129,7 @@ Released May 29, 2023
 
 Released May 15, 2023
 
-- New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required).
+- New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#auditing-on-the-adfs-container-isn't-enabled-as-required).
 
 - The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
 
@@ -151,7 +151,7 @@ In Microsoft Defender XDR, create rule conditions based on evidence types, and t
 
 Released April 23, 2023
 
-- New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required).
+- New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#auditing-on-the-configuration-container-isn't-enabled-as-required).
 - New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -163,7 +163,7 @@ Released March 27, 2023
 
 - We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, certain legacy systems might use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. We're also reviewing the LDAP honeytoken alert over the coming weeks, but remains functional for now.
 
-- We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
+- We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-isn't-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 
 - We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
@@ -232,9 +232,9 @@ Released January 22, 2023
 
 Released January 10, 2023
 
-- New health alert for verifying that Directory Services Object Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required).
+- New health alert for verifying that Directory Services Object Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-object-auditing-isn't-enabled-as-required).
 
-- New health alert for verifying that the sensor’s power settings are configured for optimal performance, as described in the [health alerts page](health-alerts.md#power-mode-is-not-configured-for-optimal-processor-performance).
+- New health alert for verifying that the sensor’s power settings are configured for optimal performance, as described in the [health alerts page](health-alerts.md#power-mode-isn't-configured-for-optimal-processor-performance).
 
 - We've added [MITRE ATT&CK](https://attack.mitre.org/) information to the IdentityLogonEvents, IdentityDirectoryEvents and IdentityQueryEvents tables in Microsoft Defender XDR Advanced Hunting.  In the **AdditionalFields** column, you can find details about the Attack Techniques and the Tactic (Category) associated with some of our logical activities.
 
@@ -256,7 +256,7 @@ Released December 7, 2022
 
 Released November 10, 2022
 
-- New health alert for verifying that Directory Services Advanced Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required).
+- New health alert for verifying that Directory Services Advanced Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-advanced-auditing-isn't-enabled-as-required).
 
 - Some of the changes introduced in [Defender for Identity release 2.191](#defender-for-identity-release-2191) regarding honeytoken alerts were not enabled properly. Those issues have been resolved now.
 
@@ -282,7 +282,7 @@ To learn more about this attack, read [this blog post](https://techcommunity.mic
 
 Released October 23, 2022
 
-- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md#ntlm-auditing-is-not-enabled).
+- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md#ntlm-auditing-isn't-enabled).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
