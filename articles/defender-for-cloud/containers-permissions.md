@@ -132,7 +132,6 @@ The Azure Arc built-in role **Defender Kubernetes Agent Operator** to provision 
   - storage.buckets.getIamPolicy
     
 - MDCGkeContainerInventoryCollectionRole
-
   - container.nodes.proxy
   - container.secrets.list
   
