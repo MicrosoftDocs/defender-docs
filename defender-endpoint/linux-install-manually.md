@@ -397,7 +397,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
    mdatp health --field org_id
    ```
    
-1. Run one of the below scenarios.
+1. Run one of the following commands, depending on your scenario:
 
    > [!NOTE]
    > To run this command, you must have `python` or `python3` installed on the device depending on the distro and version. If needed, see [Step-by-step Instructions for Installing Python on Linux](https://opensource.com/article/20/4/install-python-linux).
@@ -410,7 +410,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
    ```
    
-   For the rest of distros and versions, you need to use `python`. Run the following command:
+   For other distros and versions, you need to use `python`. Run the following command:
    
    ```bash
    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
@@ -481,7 +481,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
    1. Look at the alert details, machine timeline, and perform your typical investigation steps.
       
-## Microsoft Defender for Endpoint package external package dependencies
+## Defender for Endpoint package external package dependencies
 
 The following external package dependencies exist for the `mdatp` package:
 
@@ -538,14 +538,14 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 
 3. Reinstall Microsoft Defender for Endpoint on Linux using the `Production channel`, and onboard the device in the [Microsoft Defender portal](https://security.microsoft.com). 
 
-## How to configure policies for Microsoft Defender for Endpoint on Linux
+## How to configure policies for Defender for Endpoint on Linux
 
-You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
+To configure antivirus and EDR settings, see the following articles:
 
-- [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes the available settings
-- [Security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
-## Uninstall Microsoft Defender for Endpoint on Linux
+## Uninstall Defender for Endpoint on Linux
 
 For manual uninstallation, execute the following command for your Linux distribution.
 
