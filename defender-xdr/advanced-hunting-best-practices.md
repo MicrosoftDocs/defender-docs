@@ -193,8 +193,6 @@ The [summarize operator](/azure/data-explorer/kusto/query/summarizeoperator) agg
     | summarize hint.shufflekey = RecipientEmailAddress count() by Subject, RecipientEmailAddress
     ```
 
-
-
 ## Query scenarios
 
 ### Identify unique processes with process IDs
@@ -233,6 +231,8 @@ DeviceProcessEvents
 ```
 
 The query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
+
+:::image type="content" source="/defender/media/best-practice-unique-processid.png" alt-text="Screenshot of sample query results for getting unique processes in the Microsoft Defender portal." lightbox="/defender/media/best-practice-unique-processid-tb.png":::
 
 ### Query command lines
 There are numerous ways to construct a command line to accomplish a task. For example, an attacker could reference an image file without a path, without a file extension, using environment variables, or with quotes. The attacker could also change the order of parameters or add multiple quotes and spaces.
