@@ -29,7 +29,7 @@ ms.date: 04/10/2025
 
 ## Introduction
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article talks about how to deploy Defender for Endpoint on Linux at scale with Chef using two methods:
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux at scale with Chef using two methods:
 
 - Install using installer script
 - Manually configure the repositories for more granular control over the deployment
@@ -181,7 +181,7 @@ file "#{mdatp}/mdatp_onboard.json" do
 end
 ```
 
->[!NOTE]
+> [!NOTE]
 > You can modify the os distribution, distribution version number, channel (prod/insider-fast, insiders-slow) and repo name to match the version you're deploying to and the channel you'd like to deploy to. Run `chef-client --local-mode --runlist  'recipe[mdatp]'` to test the cookbook on the Chef workstation.
 
 ## Troubleshoot installation issues
