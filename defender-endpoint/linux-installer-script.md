@@ -196,13 +196,13 @@ The following external package dependencies exist for the `mdatp` package:
 
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. 
-> If `eBPF` isn't supported on your machines, or if there are specific requirements to remain on `Auditd`, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following additional dependency on the auditd package exists for `mdatp`:
+> If `eBPF` isn't supported on your machines, or if there are specific requirements to remain on `Auditd`, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or earlier, other dependencies on the auditd package exist for `mdatp`.
 
 ## `mdatp` package dependencies
 
 - The `mdatp RPM` package requires `audit`, `semanage`.
-- For DEBIAN the `mdatp` package requires `auditd`.
-- For Mariner the `mdatp` package requires `audit`.
+- For DEBIAN, the `mdatp` package requires `auditd`.
+- For Mariner, the `mdatp` package requires `audit`.
 
 ### `mde-netfilter` dependencies
 
