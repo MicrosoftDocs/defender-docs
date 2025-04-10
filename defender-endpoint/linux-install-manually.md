@@ -29,7 +29,7 @@ ms.date: 04/10/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
-You can deploy [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, see [See also](#see-also) the section. 
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, see [See also](#see-also) the section. 
 
 ## Manual deployment steps
 
@@ -51,7 +51,7 @@ A successful deployment requires the completion of all of the following tasks:
 
 ## Prerequisites and system requirements
 
-Before you begin, see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements for the current software version.
+Before you begin, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements for the current software version.
 
 > [!WARNING]
 > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
@@ -108,7 +108,7 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
-   Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-fast* channel:
+   Or if you wish to explore new features on selected devices, you might want to deploy Defender for Endpoint on Linux to *insiders-fast* channel:
 
    ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
@@ -134,7 +134,7 @@ In order to preview new features and provide early feedback, it's recommended th
    > [!TIP]
    > Use SPident command to identify system related information including release *[version]*.
 
-   For example, if you're running SLES 12 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
+   For example, if you're running SLES 12 and wish to deploy Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
@@ -172,7 +172,7 @@ In order to preview new features and provide early feedback, it's recommended th
    > [!TIP]
    > Use hostnamectl command to identify system related information including release *[version]*.
 
-   For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
+   For example, if you're running Ubuntu 18.04 and wish to deploy Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
    curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
@@ -248,7 +248,7 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf config-manager --enable mariner-official-extras
    ```
 
-   Or if you wish to explore new features on selected devices, you might want to deploy Microsoft Defender for Endpoint on Linux to *insiders-slow* channel. Use the following commands:
+   Or if you wish to explore new features on selected devices, you might want to deploy Defender for Endpoint on Linux to *insiders-slow* channel. Use the following commands:
   
    ```bash
    sudo dnf install mariner-repos-extras-preview
@@ -556,14 +556,14 @@ For manual uninstallation, execute the following command for your Linux distribu
 
 ## See also
 
-- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-- [Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux](linux-installer-script.md) 
-- [Deploy Microsoft Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
+- [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
 - [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
-- [Deploy Microsoft Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
-- [Deploy Microsoft Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
-- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
-- [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
+- [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
+- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
