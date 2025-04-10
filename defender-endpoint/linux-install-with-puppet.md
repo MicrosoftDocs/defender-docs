@@ -29,13 +29,14 @@ ms.date: 03/14/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article describes how to deploy Defender for Endpoint on Linux using Puppet. 
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Puppet. To use another method, see [See also](#see-also) the section. 
+
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 ## Prerequisites and system requirements
 
- For a description of prerequisites and system requirements, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 In addition, for Puppet deployment, you need to be familiar with Puppet administration tasks, have Puppet configured, and know how to deploy packages. Puppet has many ways to complete the same task. These instructions assume availability of supported Puppet modules, such as *apt* to help deploy the package. Your organization might use a different workflow. For more information, see [Puppet documentation](https://puppet.com/docs).
 
@@ -261,7 +262,7 @@ class install_mdatp (
 > Defender for Endpoint on Linux can be deployed from one of the following channels: **insiders-fast, insiders-slow, prod**. Each channel corresponds to a Linux software repository. The choice of the channel determines the type and frequency of the updates that are offered to your device. Devices in `insiders-fast` are the first ones to receive updates and new features in preview, followed by `insiders-slow`, and lastly by `prod`.
 > Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/[version]`.
 
-> [!Warning]
+> [!WARNING]
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
 ## Include the manifest inside the site.pp file
@@ -320,10 +321,10 @@ To get support from Microsoft, open a support ticket, and provide the log files 
 
 ## How to configure policies for Microsoft Defender on Linux
 
-You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
+To configure antivirus and EDR settings, see the following articles:
 
-- [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes the available settings 
-- [Security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
 ## Operating system upgrades
 
@@ -340,5 +341,17 @@ class remove_mdatp {
     }
 }
 ```
+
+## See also
+
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
+- [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
+- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
+- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
