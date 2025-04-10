@@ -466,20 +466,21 @@ When upgrading your operating system to a new major version, you must first unin
 
 ## See also
 
-- [Add or remove YUM repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html)
-- [Manage packages with the dnf package manager](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html)
-- [Add and remove APT repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
-- [Manage apt-packages](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
-- [Missing event issues](/defender-endpoint/linux-support-events)
+- Ansible documentation:
+   - [Add or remove YUM repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html)
+   - [Manage packages with the dnf package manager](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html)
+   - [Add and remove APT repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
+   - [Manage apt-packages](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
+- [Linux support: Missing event issues](/defender-endpoint/linux-support-events)
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
-- [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
-- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
-- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
-- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
-- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
-- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-
+- Other deployment methods:
+   - [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+   - [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+   - [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
+   - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+   - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+   - [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
+   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
