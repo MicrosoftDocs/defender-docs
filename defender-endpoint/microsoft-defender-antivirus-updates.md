@@ -185,12 +185,14 @@ To install the latest security intelligence and antivirus engine updates, you ca
 
 - Windows Update
 - Windows Update server (WSUS)
-- Software Update server (SUP)
-- File server
+- Software Update Point (SUP)
+
+- [File server](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - Command line, as follows:   
    - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate`   
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"`   
+  - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"``-SignatureUpdate` \\FileServer\ShareName
+    
    - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC`   
 
 For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus).
@@ -199,7 +201,8 @@ To get the latest platform updates, you can use any of the following methods:
 
 - Windows Update
 - Windows Update server (WSUS)
-- Software Update server (SUP)
+- Software Update Point (SUP)
+
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - The [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623)
 
