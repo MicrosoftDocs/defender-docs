@@ -457,11 +457,9 @@ To get support from Microsoft, open a support ticket, and provide the log files 
 
 ## How to configure policies for Microsoft Defender on Linux
 
-You can configure antivirus or EDR settings on your endpoints using following methods:
-
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
-
+- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
+ 
 ## Operating system upgrades
 
 When upgrading your operating system to a new major version, you must first uninstall Defender for Endpoint on Linux, install the upgrade, and finally reconfigure Defender for Endpoint on Linux on your device.
