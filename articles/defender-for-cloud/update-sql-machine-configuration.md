@@ -1,5 +1,5 @@
 ---
-title: Update Defender for SQL servers on Machines configuration
+title: Update Defender for SQL servers on Machines plan configuration
 description: Learn how to update your SQL Servers on machine configuration across Azure VMs, on-premises, and hybrid environments with Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
@@ -8,20 +8,18 @@ ms.date: 04/21/2025
 #customer intent: As a security administrator, I want to update the Defender for SQL servers on Machines plan so that I can ensure my SQL servers in various environments have the latest configuration.
 ---
 
-# Update Defender for SQL Servers on Machines configuration
+# Update Defender for SQL Servers on Machines plan configuration
 
 > [!IMPORTANT]
 > This page applies to existing customers who enabled the plan on a subscription before April 21, 2025.
 
-Microsoft Defender for Cloud's updated Defender for SQL Servers on Machines plan's agent architecture simplifies onboarding and improves SQL protection. Migration to the updated architecture happens automatically on SQL VMs and Azure Arc-enabled SQL servers.
+Defender for SQL Servers on Machines plan's includes an updated agent architecture that simplifies onboarding and improves SQL protection. To gain visibility and provide protection, the plan requires each SQL server instance to be registered within Azure. 
 
-The plan requires each SQL server instance to be registered within Azure to gain visibility and provide protection. SQL IaaS automatic registration performs registration for Azure. Azure extension for SQL server automatically connects Arc-enabled SQL server instances for on-premises and multicloud servers.
+Registration occurs automatically with the SQL Server IaaS Agent extension which [automates registration for Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management?view=azuresql&WT.mc_id=Portal-Microsoft_Azure_Security&tabs=azure-portal). Arc-enabled SQL Server instances are [automatically connected by the Azure extension for SQL Servers](/sql/sql-server/azure-arc/manage-autodeploy?view=sql-server-ver16&WT.mc_id=Portal-Microsoft_Azure_Security).
 
 If automatic registration is disabled, you must manually register each SQL server instance to protect it with Defender for SQL Server on Machines plan.
 
-Learn more (Azure), learn more (Arc).
-
-Existing customers who enabled the plan before April 21st, 2025, must follow the instructions on this page to update the configuration to enable Auto registration through the SQL extension.
+Existing customers must follow the instructions on this page to update the configuration to enable Auto registration through the SQL extension.
 
 > [!IMPORTANT]
 > The Defender for SQL servers on Machines plan is undergoing a transition to the new agent architecture. for more information, see [Defender for SQL servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).

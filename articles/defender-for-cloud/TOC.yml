@@ -1026,7 +1026,7 @@
         - name: Enable Defender for SQL Servers on Machines
           displayName: hybrid, arc, Azure Defender
           href: defender-for-sql-usage.md
-        - name: Update Defender for SQL Servers on Machines configuration
+        - name: Update Defender for SQL Servers on Machines plan configuration
           displayName: SQL, SQL servers, defender, machines
           href: update-sql-machine-configuration.md
         - name: Verify SQL machine protection
