@@ -471,8 +471,11 @@ When upgrading your operating system to a new major version, you must first unin
    - [Manage packages with the dnf package manager](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html)
    - [Add and remove APT repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
    - [Manage apt-packages](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
+
 - [Linux support: Missing event issues](/defender-endpoint/linux-support-events)
+
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+
 - Other deployment methods:
    - [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
    - [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
