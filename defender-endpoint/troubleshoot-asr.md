@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: emmwalshh
 ms.author: ewalsh
-ms.date: 03/11/2025
+ms.date: 04/01/2025
 ms.reviewer:
 manager: deniseb
 ms.custom: asr
@@ -135,6 +135,23 @@ Use the [Microsoft Security Intelligence web-based submission form](https://www.
 ## Collect Microsoft Defender Anti-malware Protection diagnostic data for file submissions
 
 When you report a problem with attack surface reduction rules, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
+
+### Using the MDE Client Analyzer
+
+1. Download the [MDE Client Analyzer](/defender-endpoint/overview-client-analyzer).
+
+2. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
+
+   > [!TIP]
+   > Ensure that log collection takes place during the reproduction attempt. Also, close any applications that aren't essential to reproducing the issue.
+
+3. Run the MDE Client Analyzer with the `-v` switches:
+
+   ```powershell
+   C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v
+   ```
+
+### Manual process
 
 1. Open Command Prompt as an administrator and open the Windows Defender directory:
 

@@ -119,6 +119,21 @@
       "source_path": "defender-endpoint/linux-schedule-scan-mde.md",
       "redirect_url": "/defender-endpoint/schedule-antivirus-scan-crontab",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/non-windows.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-endpoints-non-windows.md",
+      "redirect_url": "/defender-endpoint/onboarding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-server-endpoints.md",
+      "redirect_url": "/defender-endpoint/onboard-windows-server-2012r2-2016",
+      "redirect_document_id": true
     } 
   ]
 }

@@ -70,7 +70,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
 ### Onboarding steps
 
 > [!NOTE]
-> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) for this feature to work.
+> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first. See [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md).
 
 1. Open the VDI configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
@@ -146,7 +146,7 @@ The following registry is relevant only when the aim is to achieve a single entr
 
    ```
 
-2. Follow the [server onboarding process](configure-server-endpoints.md). 
+2. Follow the [server onboarding process](onboard-windows-server-2012r2-2016.md). 
 
 ## Updating virtual desktop infrastructure (VDI) images (persistent or non-persistent)
 

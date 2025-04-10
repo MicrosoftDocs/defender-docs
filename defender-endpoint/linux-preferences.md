@@ -1,12 +1,12 @@
 ---
-title: Set preferences for Microsoft Defender for Endpoint on Linux
+title: Configure security settings in Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 03/12/2025
+ms.date: 03/28/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -18,7 +18,7 @@ ms.subservice: linux
 search.appverid: met150
 ---
 
-# Configure security settings and policies for Microsoft Defender for Endpoint on Linux
+# Configure security settings in Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -29,9 +29,9 @@ search.appverid: met150
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-## Overview of settings and policies to configure
+## Configure your security settings
 
-Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protection, endpoint detection, and response capabilities. This article summarizes important settings to configure, with links to additional resources.
+Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protection, endpoint detection, and response capabilities. This article summarizes important security settings to configure and includes links to additional resources.
 
 | Settings | Description| 
 |--|--|
@@ -44,22 +44,22 @@ Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protec
 | 7. Deploy updates. | Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. <br/><br/>See [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md). |
 | 8. Configure network protection (preview) | Network protection helps prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. <br/><br/>See [Network protection for Linux](network-protection-linux.md). |
 
-## Options for configuring security policies and settings
+## Options for configuring security settings
 
-To configure your security policies and settings for Defender for Endpoint on Linux, you have two main options:
+To configure your security settings in Defender for Endpoint on Linux, you have two main options:
 
 - Use the Microsoft Defender portal (Defender for Endpoint Security Settings Management); or
 - Use a configuration profile
 
-If you prefer to use command line to configure your security settings, you can use that to configure certain settings, gather diagnostics, run scans, and more. See [Resources](linux-resources.md#configure-from-the-command-line).
+If you prefer to use command line, you can use that to configure certain settings, gather diagnostics, run scans, and more. See [Linux resources: Configure using command line](linux-resources.md#configure-from-the-command-line).
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) through functionality known as Security Settings Management. For more information, including how to create, edit, and verify your security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) through functionality known as Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
 
 ### Configuration profile
 
-You can configure Defender for Endpoint on Linux through a configuration profile that uses a `.json` file. After you have set up your profile, you can deploy it by using your management tool of choice. Preferences managed by the enterprise take precedence over the ones set locally on the device. In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions that were added locally.
+You can configure settings in Defender for Endpoint on Linux through a configuration profile that uses a `.json` file. After you have set up your profile, you can deploy it by using your management tool of choice. Preferences managed by the enterprise take precedence over the ones set locally on the device. In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions that were added locally.
 
 This article describes the structure of this profile (including a recommended profile that you can use to get started) and instructions on how to deploy the profile.
 
@@ -456,6 +456,7 @@ By default, NFS and Fuse are unmonitored from RTP, Quick, and Full scans. Howeve
   }
 }
 ```
+
 To remove both NFS and Fuse from unmonitored list of filesystems, use the following snippet:
 
 ```JSON

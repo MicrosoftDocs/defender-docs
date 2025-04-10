@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/14/2025
+ms.date: 04/08/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -25,10 +25,11 @@ ms.date: 03/14/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Want to experience Microsoft Defender for Endpoint?
-[Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, such as what's included in this offering, see the following articles:
 
-This article lists hardware and software requirements for Microsoft Defender for Endpoint on Linux.
+- [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) 
+
+- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md) 
 
 ## License requirements
 
@@ -53,9 +54,10 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-- Linux server endpoints should be able to access the [Microsoft Defender portal](https://security.microsoft.com). If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
+- Linux server endpoints should be able to access the `*.endpoint.security.microsoft.com`. If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
 - Linux server endpoints should have systemd (system manager) installed.
 - Administrative privileges on the Linux server endpoint are required for installation.
+- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
 
 > [!NOTE] 
 > Linux distributions using system manager support both SystemV and Upstart.
@@ -94,8 +96,14 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 - Ubuntu 20.04 Arm64 
 - Ubuntu 22.04 Arm64 
+- Ubuntu 24.04 ARM64
 - Amazon Linux 2 Arm64 
 - Amazon Linux 2023 Arm64 
+- RHEL 8.x ARM64
+- RHEL 9.x ARM64
+- Oracle Linux 8.x ARM64
+- Oracle Linux 9.x ARM64
+- SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
 
 Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/defender-endpoint/mde-linux-arm) is now in preview. 
 
@@ -136,13 +144,12 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 > NFS v3 mount points to be scanned thoroughly and are required to set the `no_root_squash` export option on these mount points.
 > Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
-## Network connections
+## Verify that devices can connect to Defender for Endpoint cloud services
 
-- Verify that your devices can connect to Microsoft Defender for Endpoint cloud services.
 - Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
 - Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
    1. Transparent proxy
-   2. Manual static proxy configuration 
+   2. [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration) 
 - Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE] 
@@ -159,10 +166,23 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 ## External package dependency
 
-For information on external package dependencies, see the following articles:
+If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
 
-- [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux)
-- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
+- The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, and `mde-netfilter`.
+- For RHEL6 the mdatp RPM package requires `policycoreutils`, `libselinux`, and `mde-netfilter`.
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, and `mde-netfilter`.
+
+> [!NOTE]
+> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
+> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following additional dependency on the auditd package exists for mdatp:
+> - The mdatp RPM package requires `audit`, `semanage`.
+> - For DEBIAN, the mdatp package requires `auditd`.
+> - For Mariner, the mdatp package requires `audit`.
+
+The `mde-netfilter` package also has the following package dependencies:
+
+- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
 
 ## Installation instructions 
 
@@ -179,30 +199,15 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
-> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
-### Troubleshoot installation issues
-
-If you experience any installation issues, for self-troubleshooting, follow these steps:
-
-1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
-
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
-
-3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
-
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
-
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
-
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+If you experience any installation issues, self-troubleshooting resources are available. See the links in the [See also](#see-also) section.
 
 ## Next steps
 
 - [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
-- [Run the client analyzer on Linux](run-analyzer-linux.md)
 
 ## See also
 

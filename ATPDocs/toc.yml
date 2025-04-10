@@ -85,6 +85,10 @@ items:
         displayName: standalone
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
+  - name: Integrate with PAM services
+    items:
+    - name: Integrate Defender for Identity with PAM services
+      href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
@@ -128,6 +132,8 @@ items:
       href: identity-inventory.md
     - name: Investigate assets
       href: investigate-assets.md
+    - name: Service accounts
+      href: service-account-discovery.md
   - name: Lateral movement paths
     items:
     - name: Understand and investigate lateral movement paths

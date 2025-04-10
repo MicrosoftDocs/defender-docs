@@ -22,13 +22,43 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## April 2025
+
+### New Defender for Identity and PAM Integration
+
+Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
+
+**Supported PAM vendors**:
+
+- CyberArk
+- Delinea
+- BeyondTrust
+
+For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+
 ## March 2025
+
+### New Service Account Discovery page
+
+
+Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
+
+This update provides:
+
+- Automatic identification of Group Managed Service Accounts, Managed Service Accounts, and user accounts operating as service accounts.
+
+- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
+
+- A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
+
+For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
+
 
 ### New Health Issue
 
 New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
 
-### Enhanced Identity Inventory (Preview)
+### Enhanced Identity Inventory
 
 The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
 The updated Identities Inventory page now includes the following tabs:

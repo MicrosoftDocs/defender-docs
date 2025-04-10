@@ -32,6 +32,19 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+
+## April 2025
+
+- (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](automatic-attack-disruption.md#automated-response-actions) for more information.
+
+- (Preview) The [OAuthAppInfo](advanced-hunting-oauthappinfo-table.md) table is now available for preview in advanced hunting. The table contains information about Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability.
+
+- The `OnboardingStatus` and `NetworkAdapterDnsSuffix` columns are now available in the [`DeviceNetworkInfo`](advanced-hunting-devicenetworkinfo-table.md) table in advanced hunting.
+- (Preview) The following advanced hunting schema tables are now available for preview to help you look through Microsoft Teams events and related information:
+    - The [MessageEvents](advanced-hunting-messageevents-table.md) table contains details about messages sent and received within your organization at the time of delivery
+    - The [MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md) table contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization
+    - The [MessageUrlInfo](advanced-hunting-messageurlinfo-table.md) table contains information about URLs sent through Microsoft Teams messages in your organization
+
 ## March 2025
 
 - (Preview) The incident description has moved within the incident page. The incident description is now displayed after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).

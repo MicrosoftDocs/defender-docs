@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 03/12/2025
+ms.date: 04/09/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,17 +98,43 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### February-2025 (Engine: 1.1.25020.1007)
+### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
+
+- Security intelligence update version: **1.427.3.0**
+- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
+- Platform: **4.18.25030.2**
+- Engine: **1.1.25030.1**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
+- Performance improvement in on-access scans of files in network locations.
+- Fixed the Defender service description to match the latest installed version.
+- Improved Defender engine update logic when the update is included in a custom image.
+- Fix in health reporting where signature update data might have been incorrect.
+- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
+- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
+- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
+
+### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
 
 - Security intelligence update version: **1.425.1.0**
-- Release date: **March 12, 2025** (Engine only)
-- Platform: **4.18.25010.11**
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
+- Platform: **4.18.25020.1009**
 - Engine: **1.1.25020.1007**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Product improvements
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
+- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
+- Increased [device control policy](device-control-policies.md) limits.
+- Improved security resilience for Defender update process.
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
@@ -124,8 +150,8 @@ Updates contain:
 - Improved AMSI scan performance with changes to exclusion handling.
 - Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
 - Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
-- Fixed ASR warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
-- Fixed ASR warn mode processing when exclusions are applied.
+- Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
+- Fixed attack surface reduction warn mode processing when exclusions are applied.
 - Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
 - Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
 - Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
@@ -135,47 +161,6 @@ Updates contain:
 - Added support for wildcards in [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) trusted process.
 - Improved device control policy enforcement in offline environments.
 - Fixed issue in the `WDNisDrv.sys` driver that caused system hangs during shutdown.
-
-### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
-
-- Security intelligence update version: **1.421.12.0**
-- Release date: **October 30, 2024** (Engine and Platform)
-- Platform: **4.18.24090.11**
-- Engine: **1.1.24090.11**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
-- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
-- Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
-- Fixed `SharedSignatureRoot` processing when an empty value was set.
-- Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
-- Improved performance in specific scenarios where network files were accessed.
-- Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
-- Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
-- Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
-- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
-
-> [!IMPORTANT]
-> On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
-
-
-### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
-
-- Security intelligence update version: **1.419.1.0**
-- Release date: **September 17, 2024** (Engine and Platform)
-- Platform: **4.18.24080.9**
-- Engine: **1.1.24080.9**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
-- Fixed an issue with device control regarding printer security checks.
-- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
-- Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
-- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and reached their end-of-servicing date.
 
 ### Previous version updates: Technical upgrade support only
 
@@ -194,18 +179,41 @@ During the technical support (only) phase, commercially reasonable support incid
 > [!NOTE]
 > If you're manually deploying Microsoft Defender Antivirus Platform Update, or if you're using a script or a non-Microsoft management product to deploy Microsoft Defender Antivirus Platform Update, make sure that version `4.18.2001.10` is installed from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=4.18.2001.10) before the latest version of Platform Update (N-2) is installed.
 
+## How to install an update
+
+To install the latest security intelligence and antivirus engine updates, you can use any of the following methods:
+
+- Windows Update
+- Windows Update server (WSUS)
+- Software Update server (SUP)
+- File server
+- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
+- Command line, as follows:   
+   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate`   
+   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"`   
+   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC`   
+
+For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus).
+
+To get the latest platform updates, you can use any of the following methods: 
+
+- Windows Update
+- Windows Update server (WSUS)
+- Software Update server (SUP)
+- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
+- The [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623)
+
 ## How to roll back an update
 
-In the unfortunate event that you encounter issues after a platform update, you can roll back to the previous or the inbox version of the Microsoft Defender platform.  
+In the unfortunate event that you encounter issues after an update, you can roll back to the previous or the inbox version.
 
-- To roll back to the previous version, run the following command:
-
-   `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform`
-
-- To roll back this update to the version shipped with the Operating System ("%ProgramFiles%\Windows Defender")
-
-   `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform`
-
+| Scenario | Command |
+|--|--|
+| Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions` |
+| Roll the engine version back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions -Engine` |
+| Roll a platform update back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform` | 
+| Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`) | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform` |
+  
 ## Platform version included with Windows 10 releases
 
 The table provides the Microsoft Defender Antivirus platform and engine versions that are shipped with the latest Windows 10 releases:
