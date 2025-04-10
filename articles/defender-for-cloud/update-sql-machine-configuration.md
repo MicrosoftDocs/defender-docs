@@ -40,7 +40,7 @@ You must update your configuration manually in the Defender for Cloud portal for
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. On the Overview page, select **update the configuration in Defender for SQL Server on machine plan for multiple subscriptions**.
+1. On the Overview page, select **Update the configuration in Defender for SQL Server on machine plan for multiple subscriptions**.
 
 1. Select all the relevant subscriptions.
 

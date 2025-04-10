@@ -39,7 +39,7 @@ You can also verify the protection status of a single SQL server VM or Azure Arc
     - **SQL virtual machines**
     <br> 
     or
-    - **SQL Server - Azure Arc**.
+    - **SQL Server - Azure Arc**
 
 1. Locate and select the relevant resource.
 

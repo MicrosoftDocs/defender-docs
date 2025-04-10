@@ -38,7 +38,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 April 21, 2025
 
-Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
+The Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
 
 Starting today, we're gradually releasing an enhanced agent solution for the plan. The agent-based solution eliminates the need to deploy the Azure Monitor Agent (AMA) and instead uses the existing SQL infrastructure. The solution is designed to make the onboarding processes easier and improve protection coverage.
 
