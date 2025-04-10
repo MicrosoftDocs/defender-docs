@@ -167,7 +167,7 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 (AI.Azure_SensitiveDataAnomaly)
 
-**Description**: This alerts studies the sensitive data usage patterns of AI resources and aims to detect when an AI application is discussing sensitive data out of pattern. The alert is looking for sensitive info types that have not been previously passed in the model responses, to detect suspicious behavior or intent deviation of the application or data exfiltration. Since this alert is designed to detect anomalies it will not trigger for new resources or newly onboarded subscriptions for a certain period of time.
+**Description**: This alert studies the sensitive data usage patterns of AI resources and aims to detect when an AI application is discussing sensitive data out of pattern. The alert is looking for sensitive info types that have not been previously passed in the model responses, to detect suspicious behavior or intent deviation of the application or data exfiltration. Since this alert is designed to detect anomalies it will not trigger for new resources or newly onboarded subscriptions for a certain period of time.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
 
