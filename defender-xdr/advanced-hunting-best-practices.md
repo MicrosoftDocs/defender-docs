@@ -199,7 +199,18 @@ The [summarize operator](/azure/data-explorer/kusto/query/summarizeoperator) agg
 
 Process IDs (PIDs) are recycled in Windows and reused for new processes. On their own, they can't serve as unique identifiers for specific processes.
 
-Usually, the only way to uniquely identify a process on a specific device was by combining its process ID with its process creation time, along with the device identifier (either `DeviceId` or `DeviceName`). While this approach is still valid, there’s a more direct method using the `ProcessUniqueId` field. Both methods yield unique process instances, but as a best practice we recommend using `ProcessUniqueId` when available, as it simplifies queries and eliminates the need to handle PID reuse scenarios.
+Typically, the only way to uniquely identify a process on a specific device was by combining its process ID with its process creation time, along with the device identifier (either `DeviceId` or `DeviceName`). For instance, the following example query finds processes that access more than 10 IP addresses over port 445 (SMB), possibly scanning for file shares.
+
+```kusto
+DeviceNetworkEvents
+| where RemotePort == 445 and Timestamp > ago(12h) and InitiatingProcessId !in (0, 4)
+| summarize RemoteIPCount=dcount(RemoteIP) by DeviceName, InitiatingProcessId, InitiatingProcessCreationTime, InitiatingProcessFileName
+| where RemoteIPCount > 10
+```
+
+The above query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
+
+This approach is still valid, especially for non-Windows systems. However, in Windows, there’s a more direct method using the `ProcessUniqueId` field. While both the previous method and the one discussed below yield unique process instances, as a best practice we recommend using `ProcessUniqueId` when available, as it simplifies queries and eliminates the need to handle PID reuse scenarios.
 
 This query demonstrates how to use the `ProcessUniqueId` and `InitiatingProcessUniqueId` fields to link a specific parent process to its child processes. By matching each child’s `InitiatingProcessUniqueId` to the parent’s `ProcessUniqueId`, it isolates only those child processes launched by that exact parent instance, even if process IDs get reused over time.
 
@@ -230,7 +241,7 @@ DeviceProcessEvents
     Timestamp
 ```
 
-The query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
+Likewise, the query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
 
 :::image type="content" source="/defender/media/best-practice-unique-processid.png" alt-text="Screenshot of sample query results for getting unique processes in the Microsoft Defender portal." lightbox="/defender/media/best-practice-unique-processid-tb.png":::
 
