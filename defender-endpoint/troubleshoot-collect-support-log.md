@@ -65,9 +65,10 @@ This article provides instructions on how to run the tool via Live Response on W
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
+
 ### Additional information
 
-- The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/MDEClientAnalyzerPreview>.
+- The latest *preview* version of MDE Client Analyzer can be downloaded at [https://aka.ms/MDEClientAnalyzerPreview](https://aka.ms/MDEClientAnalyzerPreview).
 
 - For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or doesn't appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
@@ -92,11 +93,7 @@ The XMDE Client Analyzer tool can be downloaded as a [binary](https://go.microso
 
 ### Installing the XMDE Client Analyzer
 
-Both versions of XMDE Client Analyzer, binary and Python, a self-contained package that must be downloaded and extracted before executing, and the complete set of steps for this process can be found:
-
-- [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux)
-
-- [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux)
+Both versions of XMDE Client Analyzer, binary and Python, a self-contained package that must be downloaded and extracted before executing. For more information, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md)
 
 Due to the limited commands available in Live Response the steps detailed must be executed in a bash script, and by splitting the installation and execution portion of these commands it's possible to run the install script once, while running the execution script multiple times.
 
@@ -105,7 +102,7 @@ Due to the limited commands available in Live Response the steps detailed must b
 
 #### Binary Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -131,7 +128,7 @@ The following script performs the first six steps of the [Running the Binary ver
 
 #### Python Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -237,9 +234,6 @@ The Python Client Analyzer accepts command line parameters to perform different 
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 

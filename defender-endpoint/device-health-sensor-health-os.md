@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 09/06/2022 
+ms.date: 03/25/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -26,12 +26,12 @@ ms.reviewer: mkaminska
 
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
 > [!IMPORTANT]
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution).
 
 In the Microsoft Defender portal, select **Reports**, and then open **Device health and compliance**.
 

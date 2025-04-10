@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 02/20/2025
+ms.date: 04/08/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -43,16 +43,51 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### April-2025 Build: 101.25022.0001 | Release version: 30.125022.0001.0
+
+|Build:             |**101.25022.0001**    |
+|-------------------|----------------------|
+|Released:          |**April 07, 2025**    |
+|Published:         |**April 07, 2025**    |
+|Release version:   |**30.125022.0001.0**  |
+|Engine version:    |**1.1.24090.13**      |
+|Signature version: |**1.421.226.0**       |
+
+What's new
+
+- mdatp diagnostic ebpf-statistics command requires sudo privilege now
+
+- Manage dynamic signature file share source by setting URL and update interval
+
+- Other stability improvements and bug fixes.
+
+### Mar-2025 Build: 101.25012.0000 | Release version: 30.125012.0000.0
+
+| Build:            | **101.25012.0000**   |
+|-------------------|----------------------|
+|Released:          | **March 11, 2025**   |
+|Published:         | **March 11, 2025**   |
+|Release version:   | **30.125012.0000.0** |
+|Engine version:    | **1.1.24090.13**     |
+|Signature version: | **1.421.226.0**      |
+
+What's new
+
+- The MDATP package rollout into production will be done gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
+
+- The vulnerability in curl, CVE-2024-7264, has been addressed.
+
+- Other stability improvements and bug fixes.
+
 ### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
 | Build:             | **101.24122.0008**    |
-| -------- | -------- |
-|Released:| **February 20, 2025**|
+|--------------------|-----------------------|
 | Released:          | **February 20, 2025** |
 | Published:         | **February 20, 2025** |
-| Release version:   | **30.124122.0008.0** |
-| Engine version:    | **1.1.24090.13**   |
-| Signature version: | **1.421.226.0**      |
+| Release version:   | **30.124122.0008.0**  |
+| Engine version:    | **1.1.24090.13**      |
+| Signature version: | **1.421.226.0**       |
 
 #### What's new
 
@@ -62,12 +97,11 @@ This article is updated frequently to let you know what's new in the latest rele
 ### Feb-2025 Build: 101.24112.0003 | Release version: 30.124112.0003.0
 
 | Build:             | **101.24112.0003**    |
-| -------- | -------- |
-|Released:| February 04, 2025|
+|--------------------|-----------------------|
 | Released:          | **February 04, 2025** |
 | Published:         | **February 04, 2025** |
-| Release version:   | **30.124112.0003.0** |
-| Engine version:    | **1.1.24090.13**        |
+| Release version:   | **30.124112.0003.0**  |
+| Engine version:    | **1.1.24090.13**      |
 | Signature version: | **1.421.1681.0**      |
 
 What's new
@@ -96,10 +130,10 @@ What's new
   - Enabled: When eBPF is enabled as working as expected.
   - Disabled: When eBPF is disabled due to one of the following reasons:
     - When MDE is using auditD as a supplementary sensor
-    - When eBPF is not present and we fallback to Netlink as supplementary event provider
-    - There is no supplementary sensor present.
+    - When eBPF isn't present and we fallback to Netlink as supplementary event provider
+    - There's no supplementary sensor present.
 
-- Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast and insiderSlow, are unaffected by this change.
+- Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast, and insiderSlow, are unaffected by this change.
 
 - Stability and performance improvements.
 
@@ -211,7 +245,7 @@ There are multiple fixes and new changes in this release.
 
 There are multiple fixes and new changes in this release.
 
-- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Update to the latest MDE version to avoid any impact.
+- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only affected the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Update to the latest MDE version to avoid any impact.
 
 - We have now simplified the output of `mdatp health --detail features`
 
@@ -351,7 +385,7 @@ There are multiple fixes and new changes in this release:
    | Alma 8.4 and higher | Insiders Slow | https://packages.microsoft.com/config/alma/8/insiders-slow.repo |
    | Alma 9.2 and higher | Insiders Slow | https://packages.microsoft.com/config/alma/9/insiders-slow.repo |
 
-If you already have Defender for Endpoint running on any of these distros and facing any issues in the older versions, upgrade to the latest Defender for Endpoint version from the corresponding ring mentioned above. Refer our [public deployment docs](comprehensive-guidance-on-linux-deployment.md) for more details.
+If you already have Defender for Endpoint running on any of these distros and facing any issues in the older versions, upgrade to the latest Defender for Endpoint version from the corresponding ring mentioned above. 
 
 > [!NOTE]
 > Known issues: 
@@ -1040,7 +1074,7 @@ sudo systemctl disable mdatp
 
 #### Known issues
 
-- While upgrading mdatp to version `101.94.13`, you might notice that health is false, with health_issues as "no active supplementary event provider". This can happen due to misconfigured/conflicting auditd rules on existing machines. To mitigate the issue, the auditd rules on the existing machines need to be fixed. The following steps can help you to identify such auditd rules (these commands need to be run as super user). Take a backup of following file: `/etc/audit/rules.d/audit.rules` as these steps are only to identify failures.
+- While upgrading mdatp to version `101.94.13`, you might notice that health is false, with health_issues as "no active supplementary event provider. This can happen due to misconfigured/conflicting auditd rules on existing machines. To mitigate the issue, the auditd rules on the existing machines need to be fixed. The following steps can help you to identify such auditd rules (these commands need to be run as super user). Take a backup of following file: `/etc/audit/rules.d/audit.rules` as these steps are only to identify failures.
 
   ```bash
   echo -c >> /etc/audit/rules.d/audit.rules
@@ -1333,7 +1367,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 ##### What's new 
 
-- Added a capability to detect vulnerable log4j jars in use by Java applications. The machine is periodically inspected for running Java processes with loaded log4j jars. The information is reported to the Microsoft Defender for Endpoint backend and is exposed in the Vulnerability Management area of the portal.
+- Added a capability to detect vulnerable Log4j jars in use by Java applications. The machine is periodically inspected for running Java processes with loaded Log4j jars. The information is reported to the Microsoft Defender for Endpoint backend and is exposed in the Vulnerability Management area of the portal.
 
 #### Build: 101.47.76  | Release version: 30.121092.14776.0
 
@@ -1343,7 +1377,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
   
 ##### What's new
 
-- Added a new switch to the command-line tool to control whether archives are scanned during on-demand scans. This can be configured through mdatp config scan-archives --value [enabled/disabled]. By default, this setting is set to enabled.
+- Added a new switch to the command-line tool to control whether archives are scanned during on-demand scans. This can be configured through mdatp config scan-archives--value [enabled/disabled]. By default, this setting is set to enabled.
 
 - Bug fixes
 
@@ -1455,4 +1489,3 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Added a new command-line switch (`--ignore-exclusions`) to ignore AV exclusions during custom scans (`mdatp scan custom`)
 - Extended `mdatp diagnostic create` with a new parameter (`--path [directory]`) that allows the diagnostic logs to be saved to a different directory
 - Performance improvements & bug fixes
-

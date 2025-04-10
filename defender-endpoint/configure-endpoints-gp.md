@@ -1,5 +1,5 @@
 ---
-title: Onboard Windows devices to Microsoft Defender for Endpoint via Group Policy
+title: Onboard Windows Servers to Microsoft Defender for Endpoint via Group Policy
 description: Use Group Policy to deploy the configuration package on Windows devices so that they are onboarded to the service.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -27,7 +27,8 @@ search.appverid: met150
 
 - Group Policy
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 

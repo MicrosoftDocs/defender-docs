@@ -2,11 +2,7 @@
 # required metadata
 
 title: Change Advanced Threat Analytics ATA Center config
-description: Describes how to change the IP address, port, console URL or certificate of your ATA Center.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
+description: Describes how to change the IP address, port, console URL, or certificate of your ATA Center.
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -51,11 +47,11 @@ The URL is used in the following scenarios:
     ![Change ATA configuration.](media/change-center-config.png)
 
    > [!NOTE]
-   > If you entered a custom IP address, you cannot click **Activate** until you installed the IP address on the ATA Center.
+   > If you entered a custom IP address, you can't select **Activate** until you installed the IP address on the ATA Center.
     
-1. Wait for the ATA Gateways to sync. They now have two potential URLs through which to access the ATA Console. As long as the ATA Gateway can connect using the original URL, it does not try the new one.
+1. Wait for the ATA Gateways to sync. They now have two potential URLs through which to access the ATA Console. As long as the ATA Gateway can connect using the original URL, it doesn't try the new one.
 
-1. After all the ATA Gateways synced with the updated configuration, in the Center configuration page, click the **Activate** button to activate the new URL. When you activate the new URL, the ATA Gateways will now use the new URL to access the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new URL for the ATA Console. 
+1. After all the ATA Gateways synced with the updated configuration, in the Center configuration page, select the **Activate** button to activate the new URL. When you activate the new URL, the ATA Gateways will now use the new URL to access the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new URL for the ATA Console. 
 
     ![Activate the certificate.](media/center-activation.png)
 
@@ -67,24 +63,24 @@ The URL is used in the following scenarios:
 ## The ATA Center certificate
 
 > [!WARNING]
-> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
+> - The process of renewing an existing certificate isn't supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
 
 
 Replace the certificate by following this process:
 
-1. Before the current certificate expires, create a new certificate and make sure it's installed on the ATA Center server. <br></br>It is recommended that you choose a certificate from an internal certificate authority, but it is also possible to create a new self-signed certificate. For more information, see [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate?view=win10-ps&preserve-view=true).
+1. Before the current certificate expires, create a new certificate and make sure it's installed on the ATA Center server. <br></br>It's recommended that you choose a certificate from an internal certificate authority, but it's also possible to create a new self-signed certificate. For more information, see [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate?view=win10-ps&preserve-view=true).
 
 1. In the ATA settings, under **Center**, select this newly created certificate. At this point, the ATA Center service is still bound to the original certificate. 
 
     ![Change ATA configuration.](media/change-center-config.png)
 
-1. Wait for the ATA Gateways to sync. They now have two potential certificates that are valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it does not try the new one.
+1. Wait for the ATA Gateways to sync. They now have two potential certificates that are valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it doesn't try the new one.
 
 1. After all the ATA Gateways synced with the updated configuration, activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service binds to the new certificate. ATA Gateways now use the new certificate to authenticate with the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new certificate for the ATA Center. 
 
 > [!NOTE]
 > - If an ATA Gateway was offline while you activated the new certificate, and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.
-> - The certificate that you are using must be trusted by the ATA Gateways.
+> - The certificate that you're using must be trusted by the ATA Gateways.
 > - The certificate is also used for the ATA Console, so it should match the ATA Console address to avoid browser warnings.
 > - If you need to deploy a new ATA Gateway after activating the new certificate, you need to download the ATA Gateway Setup package again.
 

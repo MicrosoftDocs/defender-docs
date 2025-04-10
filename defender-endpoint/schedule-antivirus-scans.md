@@ -22,8 +22,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -98,6 +97,5 @@ This optimization applies to machines running Windows 10 Anniversary Update (ver
 
 - [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

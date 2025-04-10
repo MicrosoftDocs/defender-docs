@@ -45,5 +45,5 @@ When troubleshooting performance issues for Microsoft Defender for Endpoint on m
 |wdavdaemon_unprivileged| Antimalware (AV, EPP)|Review [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md).|
 |wdavdaemon_enterprise| Endpoint Detection and Response (EDR)|Open a [Microsoft support case](contact-support.md).|
 
-Additionally, gather [Defender for Endpoint Client Analyzer](run-analyzer-macos-linux.md) files while the issue occurs. This is used by the support team to investigate the issue. 
+Additionally, gather [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs. This is used by the support team to investigate the issue. 
 

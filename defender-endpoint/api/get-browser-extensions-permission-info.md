@@ -29,7 +29,7 @@ ms.date: 03/05/2025
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities#vulnerability-management-capabilities-for-endpoints) (add-on for Defender for Endpoint Plan 2 or the standalone version)
 - [Microsoft Defender for Cloud Plan 2](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 

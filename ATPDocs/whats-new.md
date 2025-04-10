@@ -22,12 +22,55 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## April 2025
+
+### New Defender for Identity and PAM Integration
+
+Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
+
+**Supported PAM vendors**:
+
+- CyberArk
+- Delinea
+- BeyondTrust
+
+For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+
 ## March 2025
 
+### New Service Account Discovery page
+
+
+Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
+
+This update provides:
+
+- Automatic identification of Group Managed Service Accounts, Managed Service Accounts, and user accounts operating as service accounts.
+
+- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
+
+- A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
+
+For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
+
+
+### New Health Issue
+
+New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+
+### Enhanced Identity Inventory
+
+The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The updated Identities Inventory page now includes the following tabs:
+
+- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
+
+- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). 
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory). 
+
 ### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
-New LDAP query events will be added by March 6th to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
-This update may lead to an increase in activity within the Advanced Hunting IdentityQueryEvents table for LDAP queries. If you have custom detections related to these queries, you may see a higher number of triggered alerts.
-We recommend that you review your existing custom detections to ensure they align with your objectives. If needed, you can adjust your query accordingly.
+New LDAP query events were added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
 
 ## February 2025
 

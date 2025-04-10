@@ -180,7 +180,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Volt Typhoon](https://www.microsoft.com/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques)|China|BRONZE SILHOUETTE, VANGUARD PANDA|
 |Wheat Tempest|Financially motivated|GOLD, Gatak|
 |Wisteria Tsunami|India, Private sector offensive actor|DEV-0605|
-|Zigzag Hail|Korea|DUBNIUM, Nemim, TEMPLAR, TieOnJoe, Fallout Team, Purple Pygmy, Dark Hotel, Egobot, Tapaoux, PALADIN, Darkhotel|
+|Zigzag Hail|South Korea|DUBNIUM, Nemim, TEMPLAR, TieOnJoe, Fallout Team, Purple Pygmy, Dark Hotel, Egobot, Tapaoux, PALADIN, Darkhotel|
 
 Read our announcement about this taxonomy for more information: [https://aka.ms/threatactorsblog](https://aka.ms/threatactorsblog)
 

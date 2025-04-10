@@ -29,7 +29,7 @@ ms.date: 03/04/2025
 
 - Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
 - Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2 SP1.
-- Linux Server
+- Linux servers must be running a supported version (see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md))
 - Devices must be onboarded to Defender for Endpoint
 
 Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.

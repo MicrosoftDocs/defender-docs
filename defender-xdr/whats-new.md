@@ -32,14 +32,33 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+
+## April 2025
+
+- (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](automatic-attack-disruption.md#automated-response-actions) for more information.
+
+- (Preview) The [OAuthAppInfo](advanced-hunting-oauthappinfo-table.md) table is now available for preview in advanced hunting. The table contains information about Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability.
+
+- The `OnboardingStatus` and `NetworkAdapterDnsSuffix` columns are now available in the [`DeviceNetworkInfo`](advanced-hunting-devicenetworkinfo-table.md) table in advanced hunting.
+- (Preview) The following advanced hunting schema tables are now available for preview to help you look through Microsoft Teams events and related information:
+    - The [MessageEvents](advanced-hunting-messageevents-table.md) table contains details about messages sent and received within your organization at the time of delivery
+    - The [MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md) table contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization
+    - The [MessageUrlInfo](advanced-hunting-messageurlinfo-table.md) table contains information about URLs sent through Microsoft Teams messages in your organization
+
+## March 2025
+
+- (Preview) The incident description has moved within the incident page. The incident description is now displayed after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).
+
+- The Microsoft 365 alert policies can now only be managed in the Microsoft Defender portal. For more information, see [Alert policies in Microsoft 365](alert-policies.md).
+
+- You can now link Threat analytics reports when setting up custom detections. [Learn more](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports)
+
 ## February 2025
 
 - (Preview) IP addresses can now be excluded from automated responses in attack disruption. This feature allows you to exclude specific IPs from automated containment actions triggered by attack disruption. For more information, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
 
 - (Preview) The `PrivilegedEntraPimRoles` column is available for preview in the advanced hunting [IdentityInfo](advanced-hunting-identityinfo-table.md) table. 
 - (GA) You can now view how Security Copilot came up with the query suggestion in its [responses](advanced-hunting-security-copilot.md#try-your-first-request) in Microsoft Defender advanced hunting. Select **See the logic behind the query** below the query text to validate that the query aligns with your intent and needs, even if you don't have an expert-level understanding of KQL.
-
-
 
 ## January 2025
 

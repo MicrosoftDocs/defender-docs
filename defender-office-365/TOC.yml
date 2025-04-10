@@ -25,6 +25,8 @@
        href: zero-trust-with-microsoft-365-defender-office-365.md
      - name: Mail flow in EOP
        href: mail-flow-about.md
+     - name: Defender for Office 365 in Microsoft Teams
+       href: mdo-support-teams-about.md
      - name: Microsoft Defender portal overview
        href: /defender-xdr/microsoft-365-defender-portal
      - name: Integrate non-Microsoft security services with Microsoft 365
@@ -116,8 +118,6 @@
          href: mdo-sec-ops-guide.md
        - name: Threat classification
          href: mdo-threat-classification.md
-       - name: Defender for Office 365 in Microsoft Teams
-         href: mdo-support-teams-about.md
        - name: Security recommendations for priority accounts
          href: priority-accounts-security-recommendations.md
        - name: Usage card in Defender for Office 365
@@ -460,6 +460,8 @@
               href: air-remediation-actions.md
             - name: Review and approve (or reject) pending actions
               href: air-review-approve-pending-completed-actions.md
+            - name: Automated remediation in AIR
+              href: air-auto-remediation.md
          - name: Detect and address compromised user accounts in AIR
            href: address-compromised-users-quickly.md
          - name: Integrate AIR with a custom solution or third-party solution

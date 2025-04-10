@@ -1,10 +1,10 @@
 ---
-title: Onboard Windows devices using a local script
+title: Onboard Windows Servers using a local script
 description: Use a local script to deploy the configuration package on devices to enable onboarding of the devices to the service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
-ms.date: 02/29/2024
+ms.date: 03/26/2025
 ---
 
 # Onboard Windows devices using a local script
@@ -23,9 +23,9 @@ ms.date: 02/29/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
