@@ -34,7 +34,7 @@ You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linu
 - Install using installer script
 - Manually configure the repositories for more granular control over the deployment
 
-To use another method, see [See also](#see-also) the section.
+To use another method, refer to the [See also](#see-also) section.
 
 ## Prerequisites
 
