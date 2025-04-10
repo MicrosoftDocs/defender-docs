@@ -542,7 +542,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 
 To configure antivirus and EDR settings, see the following articles:
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
 - [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
 ## Uninstall Defender for Endpoint on Linux
