@@ -1018,7 +1018,7 @@
         - name: Advanced Threat Protection for Azure SQL Database
           displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
           href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
-      - name: Defender for SQL Server on Machines
+      - name: Defender for SQL Servers on Machines
         items:
         - name: Overview
           displayName: SQL, SQL servers, defender, machines
@@ -1026,7 +1026,7 @@
         - name: Enable Defender for SQL Servers on Machines
           displayName: hybrid, arc, Azure Defender
           href: defender-for-sql-usage.md
-        - name: Update Defender for SQL Servers on machine's configuration
+        - name: Update Defender for SQL Servers on Machines configuration
           displayName: SQL, SQL servers, defender, machines
           href: update-sql-machine-configuration.md
         - name: Verify SQL machine protection

@@ -31,10 +31,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| April 21 | Change | [Update to Defender for SQL Servers on machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
+| April 21 | Change | [Update to Defender for SQL servers on Machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
 
-### Update to Defender for SQL Servers on machines plan
+### Update to Defender for SQL servers on Machines plan
 
 April 21, 2025
 
