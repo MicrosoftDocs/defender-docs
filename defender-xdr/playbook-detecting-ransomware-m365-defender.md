@@ -14,6 +14,7 @@ ms.localizationpriority:   medium
 ms.collection: 
   - msftsolution-secops
   - tier1
+ms.custom:                 cx-rw
 f1.keywords:               NOCSH
 ---
 
