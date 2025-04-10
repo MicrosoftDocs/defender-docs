@@ -214,7 +214,7 @@ ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/install_mdatp.yml
 
     - name: MDE Deployed
       debug:
-      msg: "MDE succesfully deployed"
+        msg: "MDE succesfully deployed"
 ```
 
 ### How to uninstall Microsoft Defender for Endpoint on Linux Servers
