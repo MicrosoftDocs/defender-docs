@@ -316,8 +316,6 @@
       - name: Internet exposure analysis
         displayName: internet, exposure, analysis
         href: internet-exposure-analysis.md
-      - name: Supported resource types for multicloud in Foundational CSPM
-        href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection
         items:
         - name: Overview
@@ -935,10 +933,12 @@
         items:
           - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
-          - name: Vulnerability assessments for Docker Hub
-            href: agentless-vulnerability-assessment-docker-hub.md
-          - name: Vulnerability assessments for JFrog Artifactory
-            href: agentless-vulnerability-assessment-jfrog-artifactory.md
+          - name: Vulnerability assessments for external registries
+            items:
+            - name: Vulnerability assessments for Docker Hub
+              href: agentless-vulnerability-assessment-docker-hub.md
+            - name: Vulnerability assessments for JFrog Artifactory
+              href: agentless-vulnerability-assessment-jfrog-artifactory.md
           - name: Enable vulnerability assessments
             href: enable-vulnerability-assessment.md
           - name: Remediate vulnerabilities for registry images (risk-based)
@@ -965,6 +965,18 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
+      - name: Container software supply chain (CSSC) security
+        items:
+          - name: Overview
+            href: containers-software-supply-chain-security-introduction.md
+          - name: Securing a container image
+            href: secure-container-image.md
+          - name: Gated deployment
+            items:
+              - name: Overview
+                href: gated-deployment-introduction.md
+              - name: Enable gated deployment
+                href: enable-gated-deployment.md
       - name: Protect clusters with AKS Security Dashboard
         displayName: k8s, containers
         href: cluster-security-dashboard.md
