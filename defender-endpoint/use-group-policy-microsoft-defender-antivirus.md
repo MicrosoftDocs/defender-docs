@@ -33,6 +33,8 @@ search.appverid: met150
 **Platforms**
 - Windows
 
+- Windows Server
+
 We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
 
 > [!IMPORTANT]
@@ -59,7 +61,7 @@ In general, you can use the following procedure to configure or change some sett
 
 ## Group Policy settings and resources
 
-The following table lists commonly used Group Policy settings that are available in Windows 10.
+The following table lists commonly used Group Policy settings that are available in Windows 10 and later, Windows Server 2016 and later, including if you are running Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client.
 
 > [!TIP]
 > For the most current settings, get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
