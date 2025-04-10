@@ -161,8 +161,7 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
     **For an existing connector**
 
    1. In the list of connectors, on the row in which the AWS connector appears, select **Edit settings**.
-   
-       ![Screenshot of the Connected Apps page, showing edit Security Auditing link.](media/aws-connect-app-edit-audit.png)
+
       
    1. On the **Instance name** and **Connect Amazon Web Services** pages, select **Next**. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
    
