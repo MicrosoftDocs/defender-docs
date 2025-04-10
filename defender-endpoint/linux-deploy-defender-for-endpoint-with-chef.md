@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/20/2024
+ms.date: 04/10/2025
 ---
 
 # Deploy Defender for Endpoint on Linux with Chef
