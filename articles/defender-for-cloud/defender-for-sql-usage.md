@@ -13,7 +13,7 @@ ms.date: 04/21/2025
 The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL Servers on Machines to protect SQL virtual machines (VM) and Azure Arc SQL Server instances.
 
 > [!IMPORTANT]
-> The Defender for SQL servers on Machines plan is undergoing a transition to the new agent architecture. for more information, see [Defender for SQL servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
+> The Defender for SQL Servers on Machines plan is undergoing a transition to the new agent architecture. For more information, see [Defender for SQL Servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
 
 ## Prerequisites
 
@@ -98,7 +98,8 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 ## Verify that your machines are protected
 
-Don't skip this step, as it's important to verify your deployment is protected.
+> [!IMPORTANT]
+>Don't skip this step, as it's important to verify your deployment is protected.
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
 

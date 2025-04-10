@@ -37,7 +37,7 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
     - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
     - On-premises machines must be [onboarded to Arc and registered as Azure Arc SQL Server instances](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
-**Communication**: Allow outbound HTTPS traffic on Transmission Control Protocol (TCP) port 443 using Transport Layer Security (TLS) to `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud).
+**Communication**: Allow outbound HTTPS traffic over Transmission Control Protocol (TCP) port 443 using Transport Layer Security (TLS) to `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud).
   
 - **Extensions**: Ensure these extensions aren't blocked in your environment. Learn more about [restricting extensions installation on Windows VMs](/azure/virtual-machines/extensions/extensions-rmpolicy-howto-ps).
     - **Defender for SQL (IaaS and Arc)**
@@ -58,7 +58,7 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
 
 Follow the [verification process](verify-machine-protection.md) to identify protection misconfigurations on SQL Server instances.
 
-The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers. Any SQL server that is unprotected are identified with an error message in the unhealthy section of the recommendation. 
+The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers. Any SQL server that is unprotected is identified with an error message in the unhealthy section of the recommendation. 
 
 Use the corresponding error message and recommended actions to resolve the misconfiguration:
 
