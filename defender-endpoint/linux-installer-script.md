@@ -35,7 +35,7 @@ To use another method, see [See also](#see-also) the section.
 
 ## Prerequisites and system requirements
 
-Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements.
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 ## Deployment process
 
