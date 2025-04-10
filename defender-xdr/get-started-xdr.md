@@ -164,7 +164,7 @@ Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-por
 
 1. In the same Defender Experts settings setup, under **Teams**, select the **Communicate on Teams** checkbox. This creates a private team **Defender Experts team** with a **Managed Response** channel in it. The page then updates to show a **Open Teams channel** link.
 
-2. Add your SOC team members to the channel created by navigating to **Microsoft Teams** > **Defender Experts team** > **More options (...)** > **Manage team** > **Add member**.
+2. Add your SOC team members to the channel created, by navigating to **Microsoft Teams** > **Defender Experts team** > **More options (...)** > **Manage team** > **Add member**.
 
 3. Select **Next** to review your settings.
 
