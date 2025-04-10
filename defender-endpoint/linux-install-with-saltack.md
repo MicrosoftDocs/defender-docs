@@ -27,7 +27,7 @@ ms.date: 04/10/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, see [See also](#see-also) the section.)
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, see [See also](#see-also) the section.)
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
@@ -119,10 +119,10 @@ In this step, you create a SaltState state file in your configuration repository
 
 1. Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
 
-2. In the following commands, replace *[distro]* and *[version]* with your information.
+2. In the following commands, replace `[distro]` and `[version]` with your information.
 
    > [!NOTE]
-   > For Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel." For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
+   > For Oracle Linux and Amazon Linux 2, replace `[distro]` with "rhel." For Amazon Linux 2, replace `[version]` with "7". For Oracle utilize, replace `[version]` with the version of Oracle Linux.
 
    ```bash
    cat /srv/salt/install_mdatp.sls
