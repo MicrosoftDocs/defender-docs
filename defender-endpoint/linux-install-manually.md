@@ -29,7 +29,9 @@ ms.date: 04/10/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
-You can deploy [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, see the 
+You can deploy [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, see [See also](#see-also) the section. 
+
+## Manual deployment steps
 
 A successful deployment requires the completion of all of the following tasks:
 
