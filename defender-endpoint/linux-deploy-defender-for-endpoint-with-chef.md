@@ -38,7 +38,7 @@ To use another method, see [See also](#see-also) the section.
 
 ## Prerequisites
 
-For a description of prerequisites and system requirements, see [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 ## Download the onboarding package
 
@@ -52,8 +52,6 @@ For a description of prerequisites and system requirements, see [Microsoft Defen
    
 4. Extract the contents of the archive using the following command:
 
-   Command:
-   
    ```
    unzip WindowsDefenderATPOnboardingPackage.zip
    ```
@@ -83,9 +81,7 @@ mkdir mdatp/files
 
 Copy `mdatp_onboard.json` to the `/tmp` folder.
 
-On the Chef Workstation, navigate to the **mdatp/recipes** folder, which is automatically created when the cookbook is generated. Use your preferred text editor (like vi or nano) to add the following instructions to the end of the **default.rb** file then save and close the file:
-
-- include_recipe '::install_mdatp'
+On the Chef Workstation, navigate to the **mdatp/recipes** folder, which is automatically created when the cookbook is generated. Use your preferred text editor (like vi or nano) to add the following instructions to the end of the **default.rb** file, and then save and close the file: `include_recipe '::install_mdatp'`.
 
 ## Create a cookbook 
 
