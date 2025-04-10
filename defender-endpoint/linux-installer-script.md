@@ -29,7 +29,7 @@ ms.date: 04/10/2025
 
 ## Introduction
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to automate the deployment of Defender for Endpoint on Linux by using an installer script. This script identifies the distribution and version, selects the right repository, sets up the device to pull the latest agent version, and onboards the device to Defender for Endpoint using the onboarding package. This method is highly recommended for simplifying the deployment process.
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to automate the deployment of Defender for Endpoint on Linux by using an installer script. This script identifies the distribution and version, selects the right repository, sets up the device to pull the latest agent version, and onboards the device to Defender for Endpoint using the onboarding package. This method is highly recommended for simplifying the deployment process.
 
 To use another method, see [See also](#see-also) the section. 
 
@@ -195,7 +195,7 @@ The following external package dependencies exist for the `mdatp` package:
 - For Mariner the `mdatp` package requires `attr`,`diffutils`, `libacl`, `libattr`,`libselinux-utils`, `selinux-policy`, `policycoreutils`,`mde-netfilter`
 
 > [!NOTE]
-> Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. 
+> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. 
 > If `eBPF` isn't supported on your machines, or if there are specific requirements to remain on `Auditd`, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following additional dependency on the auditd package exists for `mdatp`:
 
 ## `mdatp` package dependencies
