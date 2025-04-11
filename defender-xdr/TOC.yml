@@ -414,7 +414,7 @@
           href: advanced-hunting-security-copilot.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
-        - name: Agents in Microsoft Defender
+        - name: Security Copilot agents in Microsoft Defender
           items:
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md

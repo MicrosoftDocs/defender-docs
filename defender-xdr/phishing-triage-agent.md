@@ -1,5 +1,5 @@
 ---
-title: Phishing Triage Agent
+title: Phishing Triage Agent in Microsoft Defender
 description: Learn about the Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
 ms.service: defender-xdr
 f1.keywords:
@@ -21,29 +21,20 @@ search.appverid:
 ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Defender for Office 365 Plan 2
 ---
 
 # Phishing Triage Agent in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-The Phishing Triage Agent is an AI-powered agent designed to effectively manage user-submitted phishing incidents. It assists security operations center (SOC) teams in triaging phishing submissions, thereby reducing the workload and allowing them to focus on critical tasks.
+The Phishing Triage Agent in Microsoft Defender is an AI-powered agent designed to effectively manage user-submitted phishing incidents. It assists security operations center (SOC) teams in triaging phishing submissions, thereby reducing the workload and allowing them to focus on critical tasks.
 
 Managing a huge volume of phishing incidents, which may include false alarms, can be challenging for SOC operations. Analysts need to ensure that these incidents are triaged and resolved efficiently and reliably so they can concentrate on more critical phishing incidents.
 
 With the Phishing Triage Agent, SOC teams can benefit from a virtual agent capable of classifying hundreds of phishing submissions with speed and accuracy. The agent helps remove false alarms, enabling teams to resolve true positive phishing incidents more swiftly.
 
 Phishing Triage adjusts to an organization’s context by actively seeking feedback and learning from its users. The agent provides a transparent rationale for its verdicts, ensuring its operations align with your organization’s established triage parameters. It dynamically adjusts by learning from the feedback it gets to operate according to your organization’s changing needs.
-
-## Know before you begin
-
-Phishing Triage is an agent in Microsoft Defender that extends Microsoft Security Copilot’s capabilities across security tools and improves outcomes at scale. If you’re new to Security Copilot and agents, you should familiarize yourself with these topics:
-
-- What is Security Copilot?
-- Security Copilot experiences
-- Overview of agents
-- Responsible AI frequently asked questions (FAQs)
 
 ## What the Phishing Triage Agent does
 
@@ -53,6 +44,10 @@ The Phishing Triage Agent is designed to assist security operations teams in cla
 - Provide a transparent rationale for its classification verdicts, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions.
 - Learn from user feedback to improve its classification accuracy over time.
 - Operate in the background, continuously triaging phishing incidents without requiring constant human intervention.
+
+### Trigger
+
+The Phishing Triage Agent is triggered when a user in your organization submits a phishing incident. The agent automatically analyzes the submitted email and its attachments, classifying them as either phishing or not phishing based on its training and the context of the organization.
 
 ## Prerequisites
 
@@ -84,7 +79,7 @@ The Phishing Triage Agent requires the following permissions to run:
 
 Users with Security Administrator or Microsoft Entra Admin roles are required to setup the Phishing Triage Agent. 
 
-Users with the following roles can view the Phishing Triage output:
+Users with the following roles can view the Phishing Triage Agent's output:
 
 - [options]
 
@@ -101,7 +96,6 @@ The following plugins must be enabled in Security Copilot:
 
 - Microsoft Defender XDR
 - Microsoft Threat Intelligence
-- Microsoft Defender XDR Phishing Triage Agent
 
 ## Set up the Phishing Triage Agent
 
