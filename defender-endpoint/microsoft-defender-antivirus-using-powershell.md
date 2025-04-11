@@ -27,7 +27,7 @@ search.appverid: met150
 - Microsoft Defender Antivirus
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 
-In Windows 10 or newer and Windows Server 2016 or newer you can use next-generation protection features offered by Microsoft Defender Antivirus(MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
+In Windows 10 or newer and Windows Server 2016 or newer you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
 This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG, and provides you with guidance and links to more information.
 
