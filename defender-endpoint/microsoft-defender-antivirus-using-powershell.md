@@ -27,22 +27,20 @@ search.appverid: met150
 - Microsoft Defender Antivirus
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 
-In Windows 10 (or newer) and Windows Server 2016 (or newer), you can use next-generation protection features offered by Microsoft Defender Antivirus and exploit protection.
+In Windows 10 (or newer) and Windows Server 2016 (or newer), you can use next-generation protection features offered by Microsoft Defender Antivirus with exploit protection.
 
-This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and exploit protection, and provides you with guidance and links to more information.
+This article explains how to enable and test the key protection features in Microsoft Defender Antivirus with exploit protection, and provides you with guidance and links to more information.
 
-We recommend you use [this evaluation PowerShell script](https://aka.ms/wdeppscript) to configure these features, but you can individually enable each feature with the cmdlets described in the rest of this document.
+We recommend you use our [evaluation PowerShell script](https://aka.ms/wdeppscript) to configure these features, but you can individually enable each feature with the cmdlets described in the rest of this document.
 
 For more information about our endpoint protection products and services, see the following resources:
 
 - [Next-generation protection overview](next-generation-protection.md)
+- [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
+- [Microsoft Defender Antivirus on Windows Server](microsoft-defender-antivirus-on-windows-server.md)
+- [Protect devices from exploits](exploit-protection.md)
 
-- [Microsoft Defender Antivirus](https://aka.ms/wdavdocs)
-- [Microsoft Defender Exploit Guard](https://aka.ms/wdegdocs)
-
-This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer.
-
-If you have any questions about a detection that Microsoft Defender AV makes, or you discover a missed detection, you can submit a file to us at [our sample submission help site.](https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx)
+This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer. If you have any questions about a detection that Microsoft Defender Antivirus makes, or you discover a missed detection, you can submit a file to us at [our sample submission help site.](https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx)
 
 ## Use PowerShell to enable the features
 
@@ -55,7 +53,7 @@ To use these cmdlets:
 
 You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps&preserve-view=true).
 
-Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
+Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md).
 
 The Windows event log also records detection and engine events. [See the Microsoft Defender Antivirus events article for a list of event IDs](troubleshoot-microsoft-defender-antivirus.yml) and their corresponding actions.
 
@@ -76,7 +74,7 @@ More details are available in [Use next-gen technologies in Microsoft Defender A
 
 ## Always-on protection (real-time scanning)
 
-Microsoft Defender AV scans files as soon as they're seen by Windows, and will monitor running processes for known or suspected malicious behaviors. If the antivirus engine discovers malicious modification, it will immediately block the process or file from running.
+Microsoft Defender Antivirus scans files as soon as they're seen by Windows, and will monitor running processes for known or suspected malicious behaviors. If the antivirus engine discovers malicious modification, it will immediately block the process or file from running.
 
 For more details on these options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
 
@@ -106,7 +104,7 @@ You can set Microsoft Defender Antivirus to automatically scan certain types of 
 
 ## Manage product and protection updates
 
-Typically, you receive Microsoft Defender AV updates from Windows update once per day. However, you can increase the frequency of those updates by setting the following options, and [ensuring that your updates are managed either in System Center Configuration Manager, with Group Policy, or in Intune](deploy-manage-report-microsoft-defender-antivirus.md).
+Typically, you receive Microsoft Defender Antivirus updates from Windows update once per day. However, you can increase the frequency of those updates by setting the following options, and [ensuring that your updates are managed either in System Center Configuration Manager, with Group Policy, or in Intune](deploy-manage-report-microsoft-defender-antivirus.md).
 
 | Description | PowerShell Command |
 |---|---|
