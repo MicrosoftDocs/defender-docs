@@ -40,13 +40,13 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    wget --quiet -O XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
    ```
 
-1. Verify the download.
+2. Verify the download.
 
    ```bash
    echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
    
-2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
+3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
 
    If you're using a terminal, extract the files by running the following command:
 
@@ -54,24 +54,24 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
    ```
 
-3. Change to the tool's directory by running the following command:
+4. Change to the tool's directory by running the following command:
 
    ```bash
    cd XMDEClientAnalyzerBinary
    ```
 
-4. Notice that the following two zipped files are produced:
+5. Notice that the following two zipped files are produced:
 
    - `SupportToolLinuxBinary.zip`: For all Linux devices
    - `SupportToolMacOSBinary.zip`: For Mac devices
 
-5. Unzip the SupportToolMacOSBinary.zip. 
+6. Unzip the SupportToolMacOSBinary.zip. 
 
    ```bash
     unzip -q SupportToolMacOSBinary.zip
    ```
    
-6. Run the tool as root to generate your diagnostic package:
+7. Run the tool as root to generate your diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
