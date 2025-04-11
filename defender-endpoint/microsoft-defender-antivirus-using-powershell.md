@@ -148,14 +148,8 @@ For more information, see [Microsoft Defender Offline](microsoft-defender-offlin
 |---|---|
 |Ensure notifications allow you to boot the device into a specialized malware removal environment|`Set-MpPreference -UILockdown 0`|
 
-## Resources
+## See also
 
-This section lists many resources that can assist you with evaluating Microsoft Defender Antivirus.
-
-- [Microsoft Defender in Windows 10 library](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Windows Server 2016 library](/windows-server/security/windows-defender/windows-defender-overview-windows-server)
-- [Windows 10 security library](/windows/resources/)
-- [Windows 10 security overview](/windows/security/threat-protection/overview-of-threat-mitigations-in-windows-10)
-- [Microsoft Defender Security Intelligence (Microsoft Malware Protection Center (MMPC)) website – threat research and response](https://www.microsoft.com/wdsi)
-- [Microsoft Security website](https://www.microsoft.com/security)
-- [Microsoft Security blog](https://www.microsoft.com/security/blog)
+- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
+- [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
+- [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md)
