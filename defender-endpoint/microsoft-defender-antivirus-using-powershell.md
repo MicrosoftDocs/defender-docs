@@ -126,15 +126,13 @@ Some rules might block behavior you find acceptable in your organization. In the
 
 #### Enable Tamper Protection
 
-In the Microsoft XDR portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
+In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
 For more information, see [How do I configure or manage tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection). 
 
 #### Check the Cloud Protection network connectivity
 
-It's important to check that the Cloud Protection network connectivity is working during your pen testing.
-
-CMD (Run as admin)
+It's important to check that the Cloud Protection network connectivity is working during your pen testing. Using Command Prompt as an administrator, run the following command:
 
 
 ```
@@ -148,7 +146,7 @@ For more information, see [Use the cmdline tool to validate cloud-delivered prot
 
 Microsoft Defender Offline Scan is a specialized tool that comes with Windows 10 or newer, and allows you to boot a machine into a dedicated environment outside of the normal operating system. It's especially useful for potent malware, such as rootkits.
 
-See [Microsoft Defender Offline](microsoft-defender-offline.md) for more information on how this feature works.
+For more information, see [Microsoft Defender Offline](microsoft-defender-offline.md).
 
 | Description | PowerShell Command |
 |---|---|
