@@ -74,7 +74,7 @@ More details are available in [Use next-gen technologies in Microsoft Defender A
 
 ## Always-on protection (real-time scanning)
 
-Microsoft Defender Antivirus scans files as soon as they're seen by Windows, and will monitor running processes for known or suspected malicious behaviors. If the antivirus engine discovers malicious modification, it will immediately block the process or file from running.
+Microsoft Defender Antivirus scans files as soon as they're seen by Windows, monitors any running processes for known or suspected malicious behaviors. If the antivirus engine discovers malicious modification, immediately blocks the process or file from running.
 
 For more details on these options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
 
@@ -95,7 +95,7 @@ For more details on these options, see [Configure behavioral, heuristic, and rea
 
 ## Email and archive scanning
 
-You can set Microsoft Defender Antivirus to automatically scan certain types of email files and archive files (such as .zip files) when they're seen by Windows. More information about this feature can be found under the [Managed email scans in Microsoft Defender](configure-advanced-scan-types-microsoft-defender-antivirus.md) article.
+You can set Microsoft Defender Antivirus to automatically scan certain types of email files and archive files (such as .zip files) when they're seen by Windows. For more information, see [Managed email scans in Microsoft Defender](configure-advanced-scan-types-microsoft-defender-antivirus.md).
 
 
 | Description | PowerShell Command |
@@ -113,7 +113,7 @@ Typically, you receive Microsoft Defender Antivirus updates from Windows update 
 
 ## Advanced threat and exploit mitigation and prevention Controlled folder access
 
-Microsoft Defender exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies.
+Exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies.
 
 | Description | PowerShell Command |
 |---|---|
@@ -150,7 +150,7 @@ For more information, see [Microsoft Defender Offline](microsoft-defender-offlin
 
 | Description | PowerShell Command |
 |---|---|
-|Ensure notifications allow you to boot the PC into a specialized malware removal environment|Set-MpPreference -UILockdown 0|
+|Ensure notifications allow you to boot the device into a specialized malware removal environment|Set-MpPreference -UILockdown 0|
 
 ## Resources
 
