@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 04/11/2025
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -27,13 +27,15 @@ search.appverid: met150
 - Microsoft Defender Antivirus
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 
-In Windows 10 or newer and Windows Server 2016 or newer you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
+In Windows 10 (or newer) and Windows Server 2016 (or newer), you can use next-generation protection features offered by Microsoft Defender Antivirus and exploit protection.
 
-This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG, and provides you with guidance and links to more information.
+This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and exploit protection, and provides you with guidance and links to more information.
 
 We recommend you use [this evaluation PowerShell script](https://aka.ms/wdeppscript) to configure these features, but you can individually enable each feature with the cmdlets described in the rest of this document.
 
-For more information about our EPP products, see the following product documentation libraries:
+For more information about our endpoint protection products and services, see the following resources:
+
+- [Next-generation protection overview](next-generation-protection.md)
 
 - [Microsoft Defender Antivirus](https://aka.ms/wdavdocs)
 - [Microsoft Defender Exploit Guard](https://aka.ms/wdegdocs)
@@ -113,7 +115,7 @@ Typically, you receive Microsoft Defender AV updates from Windows update once pe
 
 ## Advanced threat and exploit mitigation and prevention Controlled folder access
 
-Microsoft Defender Exploit Guard provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies.
+Microsoft Defender exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies.
 
 | Description | PowerShell Command |
 |---|---|
