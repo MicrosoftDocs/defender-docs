@@ -31,7 +31,7 @@ appliesto:
 In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the unified audit log records supported user and admin operations. Audit records for these events are searchable by security ops, IT admins, insider risk teams, and compliance and legal investigators in the organization. This capability provides visibility into the activities performed across your Microsoft 365 organization.
 
 > [!TIP]
-> Audit log search in Microsoft Defender portal is identical to audit log search in the Microsoft Purview compliance portal at <https://compliance.microsoft.com/auditlogsearch>.
+> Audit log search in Microsoft Defender portal is identical to audit log search in the Microsoft Purview portal at <https://purview.microsoft.com/auditlogsearch>.
 
 ## What do you need to know before you begin?
 
