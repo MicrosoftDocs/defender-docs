@@ -46,12 +46,9 @@ This article describes configuration options in Windows 10 or newer and Windows 
 
 This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/?view=windowsserver2022-ps&preserve-view=true) that configure the features you should use to evaluate our protection.
 
-To use these cmdlets:
+To use these cmdlets, open PowerShell as an administrator, run a command, and then press **Enter**.
 
-1. Open an elevated instance of PowerShell (choose to Run as administrator).
-1. Enter the command listed in this guide and press **Enter**.
-
-You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps&preserve-view=true).
+You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference).
 
 Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md).
 
@@ -61,7 +58,7 @@ The Windows event log also records detection and engine events. [See the Microso
 
 Standard definition updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds.
 
-More details are available in [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](/windows/threat-protection/windows-defender-antivirus/utilize-microsoft-cloud-protection-windows-defender-antivirus).
+For more information, see [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
 | Description | PowerShell Command |
 |---|---|
@@ -69,7 +66,7 @@ More details are available in [Use next-gen technologies in Microsoft Defender A
 |Automatically submit samples to increase group protection|`Set-MpPreference -SubmitSamplesConsent Always`|
 |Always Use the cloud to block new malware within seconds|`Set-MpPreference -DisableBlockAtFirstSeen 0`|
 |Scan all downloaded files and attachments|`Set-MpPreference -DisableIOAVProtection 0`|
-|Set cloud block level to 'High'|`Set-MpPreference -CloudBlockLevel High`|
+|Set cloud block level to High|`Set-MpPreference -CloudBlockLevel High`|
 |High Set cloud block time-out to 1 minute|`Set-MpPreference -CloudExtendedTimeout 50`|
 
 ## Always-on protection (real-time scanning)
@@ -81,7 +78,7 @@ For more information on these options, see [Configure behavioral, heuristic, and
 | Description | PowerShell Command |
 |---|---|
 |Constantly monitor files and processes for known malware modifications | `Set-MpPreference -DisableRealtimeMonitoring 0` |
-|Constantly monitor for known malware behaviors – even in 'clean' files and running programs | `Set-MpPreference -DisableBehaviorMonitoring 0` |
+|Constantly monitor for known malware behaviors, even in files that aren't considered to be a threat, and running programs | `Set-MpPreference -DisableBehaviorMonitoring 0` |
 |Scan scripts as soon as they're seen or run | `Set-MpPreference -DisableScriptScanning 0` |
 |Scan removable drives as soon as they're inserted or mounted | `Set-MpPreference -DisableRemovableDriveScanning 0` |
 
@@ -134,7 +131,6 @@ For more information, see [How do I configure or manage tamper protection](/defe
 
 It's important to check that the Cloud Protection network connectivity is working during your pen testing. Using Command Prompt as an administrator, run the following command:
 
-
 ```
 cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
@@ -150,7 +146,7 @@ For more information, see [Microsoft Defender Offline](microsoft-defender-offlin
 
 | Description | PowerShell Command |
 |---|---|
-|Ensure notifications allow you to boot the device into a specialized malware removal environment|Set-MpPreference -UILockdown 0|
+|Ensure notifications allow you to boot the device into a specialized malware removal environment|`Set-MpPreference -UILockdown 0`|
 
 ## Resources
 
