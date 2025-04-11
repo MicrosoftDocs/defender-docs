@@ -65,12 +65,12 @@ More details are available in [Use next-gen technologies in Microsoft Defender A
 
 | Description | PowerShell Command |
 |---|---|
-|Enable the Microsoft Defender Cloud for near-instant protection and increased protection|Set-MpPreference -MAPSReporting Advanced|
-|Automatically submit samples to increase group protection|Set-MpPreference -SubmitSamplesConsent Always|
-|Always Use the cloud to block new malware within seconds|Set-MpPreference -DisableBlockAtFirstSeen 0|
-|Scan all downloaded files and attachments|Set-MpPreference -DisableIOAVProtection 0|
-|Set cloud block level to 'High'|Set-MpPreference -CloudBlockLevel High|
-|High Set cloud block time-out to 1 minute|Set-MpPreference -CloudExtendedTimeout 50|
+|Enable the Microsoft Defender Cloud for near-instant protection and increased protection|`Set-MpPreference -MAPSReporting Advanced`|
+|Automatically submit samples to increase group protection|`Set-MpPreference -SubmitSamplesConsent Always`|
+|Always Use the cloud to block new malware within seconds|`Set-MpPreference -DisableBlockAtFirstSeen 0`|
+|Scan all downloaded files and attachments|`Set-MpPreference -DisableIOAVProtection 0`|
+|Set cloud block level to 'High'|`Set-MpPreference -CloudBlockLevel High`|
+|High Set cloud block time-out to 1 minute|`Set-MpPreference -CloudExtendedTimeout 50`|
 
 ## Always-on protection (real-time scanning)
 
@@ -80,10 +80,10 @@ For more details on these options, see [Configure behavioral, heuristic, and rea
 
 | Description | PowerShell Command |
 |---|---|
-|Constantly monitor files and processes for known malware modifications | Set-MpPreference -DisableRealtimeMonitoring 0 |
-|Constantly monitor for known malware behaviors – even in 'clean' files and running programs | Set-MpPreference -DisableBehaviorMonitoring 0 |
-|Scan scripts as soon as they're seen or run | Set-MpPreference -DisableScriptScanning 0 |
-|Scan removable drives as soon as they're inserted or mounted | Set-MpPreference -DisableRemovableDriveScanning 0 |
+|Constantly monitor files and processes for known malware modifications | `Set-MpPreference -DisableRealtimeMonitoring 0` |
+|Constantly monitor for known malware behaviors – even in 'clean' files and running programs | `Set-MpPreference -DisableBehaviorMonitoring 0` |
+|Scan scripts as soon as they're seen or run | `Set-MpPreference -DisableScriptScanning 0` |
+|Scan removable drives as soon as they're inserted or mounted | `Set-MpPreference -DisableRemovableDriveScanning 0` |
 
 ## Potentially Unwanted Application protection
 
@@ -91,7 +91,7 @@ For more details on these options, see [Configure behavioral, heuristic, and rea
 
 | Description | PowerShell Command |
 |---|---|
-|Prevent grayware, adware, and other potentially unwanted apps from installing|Set-MpPreference -PUAProtection Enabled|
+|Prevent grayware, adware, and other potentially unwanted apps from installing|`Set-MpPreference -PUAProtection Enabled`|
 
 ## Email and archive scanning
 
@@ -100,7 +100,7 @@ You can set Microsoft Defender Antivirus to automatically scan certain types of 
 
 | Description | PowerShell Command |
 |---|---|
-|Scan email files and archives|Set-MpPreference -DisableArchiveScanning 0 </br> Set-MpPreference -DisableEmailScanning 0|
+|Scan email files and archives|`Set-MpPreference -DisableArchiveScanning 0` </br> `Set-MpPreference -DisableEmailScanning 0`|
 
 ## Manage product and protection updates
 
@@ -108,8 +108,8 @@ Typically, you receive Microsoft Defender Antivirus updates from Windows update 
 
 | Description | PowerShell Command |
 |---|---|
-|Update signatures every day|Set-MpPreference -SignatureUpdateInterval|
-|Check to update signatures before running a scheduled scan|Set-MpPreference -CheckForSignaturesBeforeRunningScan 1|
+|Update signatures every day|`Set-MpPreference -SignatureUpdateInterval`|
+|Check to update signatures before running a scheduled scan|`Set-MpPreference -CheckForSignaturesBeforeRunningScan 1`|
 
 ## Advanced threat and exploit mitigation and prevention Controlled folder access
 
@@ -117,12 +117,12 @@ Microsoft Defender exploit protection provides features that help protect device
 
 | Description | PowerShell Command |
 |---|---|
-|Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with Controlled folder access|Set-MpPreference -EnableControlledFolderAccess Enabled|
-|Block connections to known bad IP addresses and other network connections with [Network protection](network-protection.md)|Set-MpPreference -EnableNetworkProtection Enabled|
-|Apply a standard set of mitigations with [Exploit protection](exploit-protection.md)|Invoke-WebRequest </br> https://demo.wd.microsoft.com/Content/ProcessMitigation.xml -OutFile ProcessMitigation.xml </br >Set-ProcessMitigation -PolicyFilePath ProcessMitigation.xml|
-|Block known malicious attack vectors with [Attack surface reduction](attack-surface-reduction.md)|Add-MpPreference -AttackSurfaceReductionRules\_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules\_Actions Enabled </br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids D4F940AB-401B-4EfC-AADCAD5F3C50688A -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids BE9BA2D9-53EA-4CDC-84E5- 9B1EEEE46550 -AttackSurfaceReductionRules\_Actions Enabled </br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 01443614-CD74-433A-B99E2ECDC07BFC25 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 5BEB7EFE-FD9A-4556801D275E5FFC04CC -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids D3E037E1-3EB8-44C8-A917- 57927947596D -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 3B576869-A4EC-4529-8536- B80A7769E899 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 75668C1F-73B5-4CF0-BB93- 3ECF5CB7CC84 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids e6db77e5-3df2-4cf1-b95a-636979351e5b -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids D1E49AAC-8F56-4280-B9BA993A6D77406C -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 33ddedf1-c6e0-47cb-833e-de6133960387 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids B2B3F03D-6A65-4F7B-A9C7- 1C7EF74A9BA4 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids a8f5898e-1dc8-49a9-9878-85004b8a61e6 -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids 92E97FA1-2EDF-4476-BDD6- 9DD0B4DDDC7B -AttackSurfaceReductionRules\_Actions Enabled</br>Add-MpPreference -AttackSurfaceReductionRules\_Ids C1DB55AB-C21A-4637-BB3FA12568109D35 -AttackSurfaceReductionRules\_Actions Enabled|
+|Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with Controlled folder access|`Set-MpPreference -EnableControlledFolderAccess Enabled`|
+|Block connections to known bad IP addresses and other network connections with [Network protection](network-protection.md)|`Set-MpPreference -EnableNetworkProtection Enabled`|
+|Apply a standard set of mitigations with [Exploit protection](exploit-protection.md)|`Invoke-WebRequest` <br/> `https://demo.wd.microsoft.com/Content/ProcessMitigation.xml -OutFile ProcessMitigation.xml` <br/>`Set-ProcessMitigation -PolicyFilePath ProcessMitigation.xml`|
+|Block known malicious attack vectors with [Attack surface reduction](attack-surface-reduction.md)|`Add-MpPreference -AttackSurfaceReductionRules\_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules\_Actions Enabled` <br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids D4F940AB-401B-4EfC-AADCAD5F3C50688A -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids BE9BA2D9-53EA-4CDC-84E5- 9B1EEEE46550 -AttackSurfaceReductionRules\_Actions Enabled` <br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 01443614-CD74-433A-B99E2ECDC07BFC25 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 5BEB7EFE-FD9A-4556801D275E5FFC04CC -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids D3E037E1-3EB8-44C8-A917- 57927947596D -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 3B576869-A4EC-4529-8536- B80A7769E899 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 75668C1F-73B5-4CF0-BB93- 3ECF5CB7CC84 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids e6db77e5-3df2-4cf1-b95a-636979351e5b -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids D1E49AAC-8F56-4280-B9BA993A6D77406C -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 33ddedf1-c6e0-47cb-833e-de6133960387 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids B2B3F03D-6A65-4F7B-A9C7- 1C7EF74A9BA4 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids a8f5898e-1dc8-49a9-9878-85004b8a61e6 -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids 92E97FA1-2EDF-4476-BDD6- 9DD0B4DDDC7B -AttackSurfaceReductionRules\_Actions Enabled`<br/>`Add-MpPreference -AttackSurfaceReductionRules\_Ids C1DB55AB-C21A-4637-BB3FA12568109D35 -AttackSurfaceReductionRules\_Actions Enabled`|
 
-Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from Enabled to Audit to prevent unwanted blocks.
+Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from `Enabled` to `Audit` to prevent unwanted blocks.
 
 #### Enable Tamper Protection
 
