@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 04/10/2025
+ms.date: 04/11/2025
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -22,7 +22,6 @@ search.appverid: met150
 # Use Group Policy settings to configure and manage Microsoft Defender Antivirus
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Applies to:**
 
@@ -84,7 +83,7 @@ The following table lists commonly used Group Policy settings that are available
 | MAPS |  Configure local setting override for reporting to Microsoft MAPS| [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | MpEngine | Configure extended cloud check| [Configure the cloud block time-out period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) |
 | MpEngine | Disable gradual rollout of Microsoft Defender updates | [Configure updates: Group Policy](configure-updates.md#group-policy) |
-| MpEngine | Enable file hash computation feature | [Create indicators for files](/defender-endpoint/indicator-file#windows-prerequisites) |
+| MpEngine | Enable file hash computation feature |[Create indicators for files](/defender-endpoint/indicator-file#windows-prerequisites)<br/>This drives the ability to enforce Indicators of Compromise (IoC) by using file hash allow/block indicators, available in Defender for Endpoint Plan 1 and Plan 2, and in Defender for Business. Note that Microsoft Defender Antivirus automatically does hash-based computation for the antimalware engine, so you don't have to do anything extra unless it is a [VDI non-persistent image](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus). |
 | MpEngine | Select cloud protection level | [Specify the cloud-delivered protection level](specify-cloud-protection-level-microsoft-defender-antivirus.md) |
 | Network inspection system | Convert warn verdict to block | [Network protection: Warn experience](network-protection.md#warn-experience) |
 | Network inspection system | Specify more definition sets for network traffic inspection | Not used (deprecated) |
@@ -111,7 +110,7 @@ The following table lists commonly used Group Policy settings that are available
 | Remediation | Configure local setting override for the time of day to run a scheduled full scan to complete remediation | [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | Remediation | Specify the day of the week to run a scheduled full scan to complete remediation | [Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
 | Remediation | Specify the time of day to run a scheduled full scan to complete remediation | [Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
-| Reporting | Configure time interval for service health reports  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) | 
+| Reporting | Configure time interval for service health reports  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in critically failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in noncritical failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in recently remediated state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
