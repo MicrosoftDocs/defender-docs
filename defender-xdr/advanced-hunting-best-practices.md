@@ -134,7 +134,7 @@ The [join operator](/azure/data-explorer/kusto/query/joinoperator) merges rows f
     | join kind=inner (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256
     ```
 
-- **Use hints for performance**—Use hints with the `join` operator to instruct the backend to distribute load when running resource-intensive operations. [Learn more about join hints](/azure/data-explorer/kusto/query/joinoperator#join-hints)
+- **Use hints for performance**—Use hints with the `join` operator to instruct the backend to distribute load when running resource-intensive operations. [Learn more about join hints](/azure/data-explorer/kusto/query/joinoperator#join-hints).
 
     For example, the **[shuffle hint](/azure/data-explorer/kusto/query/shufflequery)** helps improve query performance when joining tables using a key with high cardinality—a key with many unique values—such as the `AccountObjectId` in the query below:
 
