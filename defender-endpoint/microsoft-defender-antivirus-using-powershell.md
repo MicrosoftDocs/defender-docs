@@ -76,7 +76,7 @@ More details are available in [Use next-gen technologies in Microsoft Defender A
 
 Microsoft Defender Antivirus scans files as soon as they're seen by Windows, monitors any running processes for known or suspected malicious behaviors. If the antivirus engine discovers malicious modification, immediately blocks the process or file from running.
 
-For more details on these options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
+For more information on these options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
 
 | Description | PowerShell Command |
 |---|---|
@@ -87,7 +87,7 @@ For more details on these options, see [Configure behavioral, heuristic, and rea
 
 ## Potentially Unwanted Application protection
 
-[Potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) are files and apps that aren't traditionally classified as malicious. These include non-Microsoft installers for common software, ad-injection, and certain types of toolbars in your browser.
+[Potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) are files and apps that aren't traditionally classified as malicious. Such applications include non-Microsoft installers for common software, ad-injection, and certain types of toolbars in your browser.
 
 | Description | PowerShell Command |
 |---|---|
