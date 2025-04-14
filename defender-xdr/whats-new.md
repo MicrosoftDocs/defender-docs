@@ -32,8 +32,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
-
 ## April 2025
+
+- (Preview) The Phishing Triage Agent is now available in the Microsoft Defender portal. The Phishing Triage Agent is an AI-powered agent designed to scale security teams' response to user-submitted phishing incidents, assisting by integrating with Microsoft security solutions to autonomously triage volumes of phishing submissions, thereby reducing the team's manual workload and allowing them to focus on critical tasks. For more information, see [Phishing Triage Agent in Microsoft Defender](phishing-triage-agent.md).
 
 - (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](automatic-attack-disruption.md#automated-response-actions) for more information.
 
