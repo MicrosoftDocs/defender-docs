@@ -20,7 +20,7 @@ For example, Contoso protects its environment using conditional access app contr
 So even though Fabrikam doesn't actually use Defender for Cloud Apps, they see the DNS entry or certificate because Contoso does.
 
 > [!NOTE]
-> You may also see the following domains in the transparency logs:
+> You might also see the following domains in the transparency logs:
 >
 > - `*.admin-rs-mcas.ms`
 > - `*.rs-mcas.ms`
@@ -43,7 +43,7 @@ So even though Fabrikam doesn't actually use Defender for Cloud Apps, they see t
 
 This kind of URL is expected and indicates that your organization applies extra security controls to protect business-critical data.
 
-They do this by using Defender for Cloud Apps, a solution for protecting your organization's cloud environment, to replace all relevant URLs and cookies relating to cloud apps that you use.
+They do this by using Defender for Cloud Apps, a solution for protecting your organization's cloud environment, to replace all relevant URLs, and cookies relating to cloud apps that you use.
 
 So when you try accessing a cloud app such as Salesforce, SharePoint Online, or AWS, you notice that its URL is suffixed with `.mcas.ms`, `.mcas-gov.us`, or `.mcas-gov.ms`. For example, when using the XYZ app, the URL you're used to seeing changes from `XYZ.com` to `XYZ.com.mcas.ms`.
 
@@ -52,10 +52,10 @@ If the URL doesn't exactly match one of the replacement patterns, such as `<app_
 If you don't recognize the remaining portion of the URL, such as **myurl.com**.mcas.ms, as associated with any of your business apps, we recommend that you investigate the issue further and consider blocking the URL to avoid any potential security risks.
 
 > [!NOTE]
-> Microsoft Edge users benefit from in-browser protection, and are not redirected to a reverse proxy. Your URLs retain their original syntax in Microsoft Edge, even when access and sessions are protected by Defender for Cloud Apps. For more information, see [In-browser protection with Microsoft Edge for Business (Preview)](in-browser-protection.md).
+> Microsoft Edge users benefit from in-browser protection, and aren't redirected to a reverse proxy. Your URLs retain their original syntax in Microsoft Edge, even when access and sessions are protected by Defender for Cloud Apps. For more information, see [In-browser protection with Microsoft Edge for Business (Preview)](in-browser-protection.md).
 
 > [!IMPORTANT]
-> Access and session policies support IPv4 only. IP address-based conditions are not honored if the user connects over IPv6. To ensure policy enforcement, verify that users have IPv4 connectivity.
+> Access and session policies support IPv4 only. IP address-based conditions aren't honored if the user connects over IPv6. To ensure policy enforcement, verify that users have IPv4 connectivity.
 
 ## Related content
 
