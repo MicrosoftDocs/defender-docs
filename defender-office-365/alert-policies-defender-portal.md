@@ -30,7 +30,7 @@ appliesto:
 In Microsoft 365 organizations with mailboxes in Exchange Online, alert policies generate alerts in the alert dashboard when users take actions that match the conditions of the policy. There are many default alert policies that help you monitor activities. For example, assigning admin privileges in Exchange Online, malware attacks, phishing campaigns, and unusual levels of file deletions and external sharing.
 
 > [!TIP]
-> Alert policies in the Microsoft Defender portal are identical to alert policies in the Microsoft Purview compliance portal at <https://compliance.microsoft.com/alertpolicies>.
+> Alert policies in the Microsoft Defender portal are identical to alert policies in the Microsoft Purview portal at <https://purview.microsoft.com/alertpolicies>.
 
 ## What do you need to know before you begin?
 
