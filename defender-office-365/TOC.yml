@@ -520,7 +520,7 @@
         - name: Getting started with defense in-depth configuration for email security
           href: step-by-step-guides/defense-in-depth-guide.md
         - name: Tune Microsoft Defender for Office 365
-          href: tune-microsoft-defender-for-office-365.md
+          href: step-by-step-guides/tune-microsoft-defender-for-office-365.md
         - name: How to configure quarantine permissions and policies
           href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
         - name: Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365
