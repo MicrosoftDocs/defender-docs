@@ -54,6 +54,9 @@ If you don't recognize the remaining portion of the URL, such as **myurl.com**.m
 > [!NOTE]
 > Microsoft Edge users benefit from in-browser protection, and are not redirected to a reverse proxy. Your URLs retain their original syntax in Microsoft Edge, even when access and sessions are protected by Defender for Cloud Apps. For more information, see [In-browser protection with Microsoft Edge for Business (Preview)](in-browser-protection.md).
 
+> [!IMPORTANT]
+> Access and session policies support IPv4 only. IP address-based conditions are not honored if the user connects over IPv6. To ensure policy enforcement, verify that users have IPv4 connectivity.
+
 ## Related content
 
 - [Protect apps with Microsoft Defender for Cloud Apps Conditional Access app control](proxy-intro-aad.md)
