@@ -191,7 +191,7 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - Command line, as follows:   
    - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate`   
-  - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"``-SignatureUpdate` \\FileServer\ShareName
+  - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate` \\FileServer\ShareName
     
    - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-SignatureUpdate -MMPC`   
 
