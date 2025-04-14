@@ -23,20 +23,21 @@ ms.date: 04/14/2025
 *Applies to: Microsoft Defender for Office 365 Plan 1 and Plan 2*
 
 In this article
-·         [Configuring Security Controls](#Configuring-Security-Controls)
 
-·         [Complex Routing and Dual Filtering Scenarios](#Complex-Routing-and-Dual-Filtering-Scenarios)
+·         [Configuring Security Controls](#configuring-security-controls)
 
-·         [Security Control Thresholds](#Security-Control-Thresholds)
+·         [Complex Routing and Dual Filtering Scenarios](#complex-routing-and-dual-filtering-scenarios)
 
-·         [Customer Configured Allows and Blocks](#Customer-Configured-Allows-and-Blocks)
+·         [Security Control Thresholds](#security-control-thresholds)
 
-·         [Submissions and System Learning](#Submissions-and-System-Learning)
+·         [Customer Configured Allows and Blocks](#customer-configured-allows-and-blocks)
+
+·         [Submissions and System Learning](#submissions-and-system-learning)
 
 
 While Microsoft Defender for Office 365 will start protecting collaboration across Exchange Online, Teams, SharePoint, One Drive for Business, and M365 applications by default when a license containing Microsoft Defender for Office 365 is enabled, some “tuning” can help get the maximum benefit.
 
-“Tuning” is a term that is often used to mean different things.  It can refer to [Configuring Security Controls](#Configuring-Security-Controls) or configuring connectors [for Complex Routing and Dual Filtering Scenarios](#Complex-Routing-and-Dual-Filtering-Scenarios) as part of initial setup.  It can refer to setting [Security Control Thresholds](#Security-Control-Thresholds) on security controls like the bulk email slider and advanced filtering slider to determine how aggressively email will be blocked.  It can refer to adding and managing [Customer configured allows and blocks](#Customer-Configured-Allows-and-Blocks). Allows are a powerful tool for managing email deliverability but can let malicious or unwanted emails be delivered if not correctly managed.  Blocks will ensure unwanted emails are never delivered but can lead to user productivity loss.  Sometimes, it can even refer to [Submissions and System Learning](#Submissions-and-System-Learning), or how the filtering stack self corrects based on the false positive and false negative emails being submitted.
+“Tuning” is a term that is often used to mean different things.  It can refer to [Configuring Security Controls](#configuring-security-controls) or configuring connectors [for Complex Routing and Dual Filtering Scenarios](#complex-routing-and-dual-filtering-scenarios) as part of initial setup.  It can refer to setting [Security Control Thresholds](#security-control-thresholds) on security controls like the bulk email slider and advanced filtering slider to determine how aggressively email will be blocked.  It can refer to adding and managing [Customer configured allows and blocks](#customer-configured-allows-and-blocks). Allows are a powerful tool for managing email deliverability but can let malicious or unwanted emails be delivered if not correctly managed.  Blocks will ensure unwanted emails are never delivered but can lead to user productivity loss.  Sometimes, it can even refer to [Submissions and System Learning](#submissions-and-system-learning), or how the filtering stack self corrects based on the false positive and false negative emails being submitted.
 
 ### Configuring Security Controls
 
