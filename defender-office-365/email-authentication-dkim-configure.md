@@ -84,34 +84,39 @@ The rest of this article describes the DKIM CNAME records that you need to creat
 
 ## Syntax for DKIM CNAME records
 
-> [!NOTE]
-> You use the Defender portal or Exchange Online PowerShell to view the required CNAME values for DKIM signing of outbound messages using a custom domain. The values presented here are for illustration only. To get the required values for your custom domains or subdomains, use the procedures later in this article.
-
 DKIM is exhaustively described in [RFC 6376](https://datatracker.ietf.org/doc/html/rfc6376).
+
+In Microsoft 365, two public-private key pairs are generated when DKIM signing using a custom domain or subdomain is enabled. The private keys that are used to sign the message are inaccessible. The CNAME records point to the corresponding public keys that are used to verify the DKIM signature. These records are known as _selectors_.
+
+- Only one selector is active and used when DKIM signing using a custom domain is enabled.
+- The other selector is inactive. It's activated and used only after any future [DKIM key rotation](#rotate-dkim-keys), and then only after the original selector is deactivated.
+
+The selector that's used to verify the DKIM signature (which infers the private key that was used to sign the message) is stored in the **s=** value in the **DKIM-Signature** header field (for example, `s=selector1-contoso-com`).
+
+> [!IMPORTANT]
+> Use the Defender portal or Exchange Online PowerShell to view the required CNAME values for DKIM signing of outbound messages using a custom domain. The values presented here are for illustration only. To get the required values for your custom domains or subdomains, use the procedures later in this article.
 
 The basic syntax of the DKIM CNAME records for custom domains that send mail from Microsoft 365 is:
 
 ```text
 Hostname: selector1._domainkey
-Points to address or value: selector1-<CustomDomain>._domainkey.<InitialDomainPrefix>.<DynamicPartitionCharacter>-v1.dkim.mail.microsoft
+Points to address or value: selector1-<CustomDomainWithDashes>._domainkey.<InitialDomainPrefix>.<DynamicPartitionCharacter>-v1.dkim.mail.microsoft
 
 Hostname: selector2._domainkey
-Points to address or value: selector2-<CustomDomain>._domainkey.<InitialDomainPrefix>.<DynamicPartitionCharacter>-v1.dkim.mail.microsoft
+Points to address or value: selector2-<CustomDomainWithDashes>._domainkey.<InitialDomainPrefix>.<DynamicPartitionCharacter>-v1.dkim.mail.microsoft
 ```
-
-- In Microsoft 365, two public-private key pairs are generated when DKIM signing using a custom domain or subdomain is enabled. The private keys that are used to sign the message are inaccessible. The CNAME records point to the corresponding public keys that are used to verify the DKIM signature. These records are known as _selectors_.
-  - Only one selector is active and used when DKIM signing using a custom domain is enabled.
-  - The other selector is inactive. It's activated and used only after any future [DKIM key rotation](#rotate-dkim-keys), and then only after the original selector is deactivated.
-
-  The selector that's used to verify the DKIM signature (which infers the private key that was used to sign the message) is stored in the **s=** value in the **DKIM-Signature** header field (for example, `s=selector1-contoso-com`).
 
 - **Hostname**: The values are the same for all Microsoft 365 organizations: `selector1._domainkey` and `selector2._domainkey`.
 
-- **\<CustomDomain\>**: The custom domain or subdomain with periods replaced by dashes. For example, `contoso.com` becomes `contoso-com`, or `marketing.contoso.com` becomes `marketing-contoso-com`.
+- **\<CustomDomainWithDashes\>**: The custom domain or subdomain with periods replaced by dashes. For example, `contoso.com` becomes `contoso-com`, or `marketing.contoso.com` becomes `marketing-contoso-com`.
 
-- **\<InitialDomainPrefix\>**: The custom part of the \*.onmicrosoft.com you used when you enrolled in Microsoft 365. For example, if you used `contoso.onmicrosoft.com`, the value is `contoso`.
+- **\<InitialDomainPrefix\>**: The custom part of the \*.onmicrosoft.com you used to enroll in Microsoft 365. For example, if you used `contoso.onmicrosoft.com`, the value is `contoso`.
 
 - **\<DynamicPartitionCharacter\>**: A dynamically generated character.
+
+- **v1**: The current CNAME format version that's used for both selectors.
+
+- **dkim.mail.microsoft**: The parent DNS zone.
 
 For example, your organization has the following domains in Microsoft 365:
 
@@ -177,8 +182,8 @@ Proceed if the domain satisfies these requirements.
    |Microsoft.Exchange.ManagementTasks.ValidationException|CNAME record does not
    exist for this config. Please publish the following two CNAME records first. Domain Name
    : contoso.com Host Name : selector1._domainkey Points to address or value: selector1-
-   contoso-com._domainkey.contoso.onmicrosoft.com Host Name : selector2._domainkey
-   Points to address or value: selector2-contoso-com._domainkey.contoso.onmicrosoft.com .
+   contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft.com Host Name : selector2._domainkey
+   Points to address or value: selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft .
    If you have already published the CNAME records, sync will take a few minutes to as
    many as 4 days based on your specific DNS. Return and retry this step later.
    ```
@@ -186,10 +191,10 @@ Proceed if the domain satisfies these requirements.
    Therefore, the CNAME records that you need to create in DNS for the contoso.com domain are:
 
    **Hostname**: `selector1._domainkey`<br>
-   **Points to address or value**: `selector1-contoso-com._domainkey.contoso.onmicrosoft.com`
+   **Points to address or value**: `selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`
 
    **Hostname**: `selector2._domainkey`<br>
-   **Points to address or value**: `selector2-contoso-com._domainkey.contoso.onmicrosoft.com`
+   **Points to address or value**: `selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`
 
    Copy the information from the error dialog (select the text and press CTRL+C), and then select **OK**.
 
@@ -304,7 +309,6 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
            - 1024 (default)
            - 2048
 
-          
         For example:
 
         ```powershell
@@ -330,10 +334,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    For example:
 
    **Hostname**: `selector1._domainkey`<br>
-   **Points to address or value**: `selector1-contoso-com._domainkey.contoso.onmicrosoft.com`
+   **Points to address or value**: `selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`
 
    **Hostname**: `selector2._domainkey`<br>
-   **Points to address or value**: `selector2-contoso-com._domainkey.contoso.onmicrosoft.com`
+   **Points to address or value**: `selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`
 
 4. Do one of the following steps:
 
