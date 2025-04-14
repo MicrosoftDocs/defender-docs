@@ -54,6 +54,9 @@ For example, assume that a session policy is configured to prevent downloading f
 
 Session policies don't protect external business-to-business (B2B) collaboration users in Microsoft Teams applications.
 
+## Session Controls with Non-Interactive Tokens
+Some applications utilize non-interactive access tokens to facilitate seamless redirection between apps within the same suite or realm. When one application is onboarded to Conditional Access App Control and the other is not, session controls may not be enforced as expected. For example, if the Teams client retrieves a non-interactive token for SharePoint Online (SPO), it can initiate an active session in SPO without prompting the user for reauthentication. As a result, the session control mechanism cannot intercept or enforce policies on these sessions. To ensure consistent enforcement, it's recommended to onboard all relevant applications, such as Teams, alongside SPO. 
+
 ## Limitations for sessions that the reverse proxy serves
 
 The following limitations apply only on sessions that the reverse proxy serves. Users of Microsoft Edge can benefit from in-browser protection instead of using the reverse proxy, so these limitations don't affect them.
