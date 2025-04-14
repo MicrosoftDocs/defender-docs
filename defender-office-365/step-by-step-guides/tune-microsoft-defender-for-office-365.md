@@ -23,33 +23,35 @@ appliesto:
 
 # Microsoft Defender for Office 365 tuning
 
-While Microsoft Defender for Office 365 will start protecting collaboration across Exchange Online, Teams, SharePoint, One Drive for Business, and M365 applications by default when a license containing Microsoft Defender for Office 365 is enabled, some "tuning" can help get the maximum benefit.
+When a relevant license is enabled, Microsoft Defender for Office 365 protects collaboration across Exchange Online, Teams, SharePoint, OneDrive, and Microsoft 365 applications by default. However, you can do some "tuning" for maximum benefit.
 
-"Tuning" is a term that is often used to mean different things. It can refer to [Configuring Security Controls](#configuring-security-controls) or configuring connectors [for Complex Routing and Dual Filtering Scenarios](#complex-routing-and-dual-filtering-scenarios) as part of initial setup. It can refer to setting [Security Control Thresholds](#security-control-thresholds) on security controls like the bulk email slider and advanced filtering slider to determine how aggressively email will be blocked. It can refer to adding and managing [Customer configured allows and blocks](#customer-configured-allows-and-blocks). Allows are a powerful tool for managing email deliverability but can let malicious or unwanted emails be delivered if not correctly managed. Blocks will ensure unwanted emails are never delivered but can lead to user productivity loss. Sometimes, it can even refer to [Submissions and System Learning](#submissions-and-system-learning), or how the filtering stack self corrects based on the false positive and false negative emails being submitted.
+The term "tuning" is used often and can mean different things. For example:
 
-### Configuring Security Controls
+- [Configuring security controls](#configuring-security-controls) or [configuring connectors for complex routing and dual filtering scenarios](#complex-routing-and-dual-filtering-scenarios) as part of initial setup.
+- Setting [security control thresholds](#security-control-thresholds) (for example, the bulk email slider and the advanced filtering slider) to determine how aggressively email is blocked.
+- Adding and managing [customer configured allows and blocks](#customer-configured-allows-and-blocks). Allows are a powerful tool for managing email deliverability but can let malicious or unwanted email be delivered if not correctly managed. Blocks ensure unwanted email isn't delivered but can lead to user productivity loss.
+- [Submissions and system learning](#submissions-and-system-learning), or how the filtering stack self corrects based on the submission of false positive and false negative email.
 
-The easiest and safest way to configure security controls is by onboarding to preset security policies. By using preset security policies (Standard or Strict), you'll always have Microsoft's recommended, best practice, configuration for your users. Here are [Steps to set up the Standard or Strict preset security policies for Microsoft Defender for Office 365](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
+## Configuring security controls
 
-Worried about attacks targeting your CEO, CIO, or CFO? You can [Protect your c-suite with Priority account protection in Microsoft Defender for Office 365 Plan 2](protect-your-c-suite-with-priority-account-protection.md).
+The easiest and safest way to configure security controls is by onboarding to [preset security policies](../preset-security-policies.md). By using the Standard or Strict preset security policies, you always have Microsoft's recommended, best practice configuration for users. For instructions, see [Steps to set up the Standard or Strict preset security policies for Microsoft Defender for Office 365](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
 
-If custom security policies are being used, config analyzer will make recommendations to make sure Microsoft best practices are being followed. You can [Optimize and correct security policies with configuration analyzer](optimize-and-correct-security-policies-with-configuration-analyzer.md).
+Are you worried about attacks targeting your CEO, CIO, or CFO? You can [Protect your c-suite with Priority account protection in Microsoft Defender for Office 365 Plan 2](protect-your-c-suite-with-priority-account-protection.md).
 
-### Complex Routing and Dual Filtering Scenarios
+If you use custom security policies, configuration analyzer gives recommendations to make sure you follow Microsoft's best practices. You can [Optimize and correct security policies with configuration analyzer](optimize-and-correct-security-policies-with-configuration-analyzer.md).
 
-Using a non-Microsoft email filtering solution in conjunction with Microsoft Defender for Office 365 requires some additional configuration to ensure you are getting the best from both filtering solutions. Learn more about [Getting started with defense in-depth configuration for email security](defense-in-depth-guide.md). Care must be taken when using connectors to route mail to these solutions to ensure that Microsoft Defender for Office 365 has access to the original email sender information. Configure [Enhanced filtering for connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+## Complex routing and dual filtering scenarios
 
-### Security Control Thresholds
+Using a non-Microsoft email filtering solution with Defender for Office 365 requires some extra configuration to ensure you're getting the best from both filtering solutions. For more information, see [Getting started with defense in-depth configuration for email security](defense-in-depth-guide.md). You need to be careful when using connectors to route mail to ensure that Defender for Office 365 has access to the original email sender information. To meet this requirement, configure [Enhanced filtering for connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 
+## Security control thresholds
 
-The bulk email slider and the advanced phishing slider allow you to determine how aggressively each of those filters are applied. To optimize the threshold where bulk mail is treated as spam you can [Assess and tune your filtering for bulk mail in Defender for Office 365](tune-bulk-mail-filtering-walkthrough.md). [Microsoft recommendations for EOP and Defender for Office 365 security settings](../recommended-settings-for-eop-and-office365.md) contains best practices for choosing the right [Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365](../anti-phishing-policies-about.md) for your organization.
+The bulk email slider and the advanced phishing slider allow you to determine how aggressively each of those filters is applied. To optimize the threshold where bulk mail is treated as spam, you can [Assess and tune your filtering for bulk mail in Defender for Office 365](tune-bulk-mail-filtering-walkthrough.md). [Microsoft recommendations for EOP and Defender for Office 365 security settings](../recommended-settings-for-eop-and-office365.md) contains best practices for choosing the right [Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365](../anti-phishing-policies-about.md) for your organization.
 
-### Customer configured allows and blocks
+## Customer configured allows and blocks
 
+Overrides are a powerful tool that can be used to deliver or block email regardless of how Defender for Office 365 evaluates the message. [Understanding overrides within the email entity page in Microsoft Defender for Office 365](understand-overrides-in-email-entity.md) provides a guide for using the email entity page to understand why a message was allowed or blocked across all the different types of available overrides.
 
-Overrides are a powerful tool that can be used to deliver or block emails regardless of how Microsoft Defender for Office 365 dispositions the message. [Understanding overrides within the email entity page in Microsoft Defender for Office 365](understand-overrides-in-email-entity.md) provides a guide for leveraging the email entity page to understand why a message was allowed or blocked across all the different types of available overrides.
+### Submissions and system Learning
 
-### Submissions and System Learning
-
-
-The single most important thing you can do to improve the accuracy of email filtering for your users is to [Report spam, non-spam, phishing, suspicious emails and files to Microsoft](../submissions-report-messages-files-to-microsoft.md). This informs the Microsoft Security Analyst team what changes need to be made across the entire filtering stack to ensure your users have the best possible experience. Here are some best practices for [How to handle malicious emails that are delivered to recipients using Microsoft Defender for Office 365](how-to-handle-false-negatives-in-microsoft-defender-for-office-365.md) and [How to handle legitimate emails getting blocked from delivery using Microsoft Defender for Office 365](how-to-handle-false-positives-in-microsoft-defender-for-office-365.md).
+The single most important thing you can do to improve the accuracy of email filtering for users is to [Report spam, non-spam, phishing, suspicious email and files to Microsoft](../submissions-report-messages-files-to-microsoft.md). This information informs the Microsoft Security Analyst team what changes need to be made across the entire filtering stack to ensure users have the best possible experience. Here are some best practices for [How to handle malicious emails that are delivered to recipients using Microsoft Defender for Office 365](how-to-handle-false-negatives-in-microsoft-defender-for-office-365.md) and [How to handle legitimate emails getting blocked from delivery using Microsoft Defender for Office 365](how-to-handle-false-positives-in-microsoft-defender-for-office-365.md).
