@@ -50,6 +50,13 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) for more information.
 
+- (GA) **Attack Surface Reduction (ASR) Rules**
+
+Two new ASR rules are now generally available:
+
+  - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference): This rule prevents the execution of commands to restart machines in Safe Mode.
+  - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+    
 ## February 2025
 
 - (GA) **Aggregated reporting in Microsoft Defender for Endpoint** is now generally available. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
