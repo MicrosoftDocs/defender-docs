@@ -146,7 +146,7 @@ You can review the overall performance of the Phishing Triage Agent by navigatin
 
 [SCREENSHOT]
 
-## Providing feedback to the Phishing Triage Agent
+## Provide feedback to the Phishing Triage Agent
 
 The Phishing Triage Agent relies on your feedback on its output to continuously improve its triaging activities and adapt to you organization's evolving security needs. We recommend that you regularly provide feedback to the agent to improve to ensure that it adapts to your organization’s specific needs.
 
@@ -156,6 +156,8 @@ There are two ways to provide feedback to the agent:
 2. You can improve the agent's accuracy by providing feedback whenever you change an incident's classification. See [Review the agent's actions](#review-the-agents-actions) for the steps.
 
 ## Frequently asked questions (FAQs)
+
+Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, navigate to the [overview](#overview) and [prerequisites](#prerequisites) sections of this article.
 
 ### How is the Phishing Triage Agent different from Microsoft Defender for Office 365 automated investigation and response (AIR)?
 
@@ -175,9 +177,9 @@ All the agent's data storage follows Security Copilot privacy and data security 
 
 ### What does the Phishing Triage Agent do with emails that users don't report?
 
-Like an SOC analyst with *Email & collaboration content (read)* permissions, the Phishing Triage Agent can read emails that users don't report. Since all preview or download actions by an SOC analyst are logged and audited in the audit logs, the same applies to the Phishing Triage Agent. The agent will not take any action on emails that are not reported by users unless it is explicitly configured to do so.
+Like an SOC analyst with *Email & collaboration content (read)* permissions, the Phishing Triage Agent can read emails that users don't report. Since all preview or download actions by an SOC analyst are logged and audited in the audit logs, the same applies to the Phishing Triage Agent.
 
-### Can we specify the mailboxes scope for the Phishing Triage Agent?
+### Can we specify the mailbox scope for the Phishing Triage Agent?
 
 Scoping mailboxes is currently not supported in Defender for Office 365, and therefore not supported for the Phishing Triage Agent. The agent can't scope the mailboxes it can triage, but its analysis is limited to user-reported emails that are part of the alert policy **Email reported by user as malware or phish**.
 
