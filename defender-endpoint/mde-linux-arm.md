@@ -4,7 +4,7 @@ description: Defender for Endpoint on Linux now supports ARM devices. Learn how 
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb 
-ms.date: 03/12/2025
+ms.date: 04/10/2025
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: linux
@@ -46,18 +46,12 @@ Initially, the following Linux distributions are supported in preview:
 - Ubuntu 20.04 ARM64
 - Ubuntu 22.04 ARM64
 - Ubuntu 24.04 ARM64
-
 - Amazon Linux 2 ARM64
 - Amazon Linux 2023 ARM64
-
 - RHEL 8.x ARM64
-
 - RHEL 9.x ARM64
-
 - Oracle Linux 8.x ARM64
-
 - Oracle Linux 9.x ARM64
-
 - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
 
 > [!NOTE]
@@ -362,7 +356,6 @@ See these articles:
 - [Enable the Defender for Endpoint integration: Linux](/azure/defender-for-cloud/enable-defender-for-endpoint#linux)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud: Onboard your Linux server](/azure/defender-for-cloud/quickstart-onboard-machines#onboard-your-linux-server)
 
-
 ## Troubleshoot deployment issues
 
 If you run into any issues deploying Defender for Endpoint on Linux to your ARM64-based devices, help is available. First, review our list of common issues and how to resolve them. If the problem persists, [contact us](#contact-us-if-you-need-help).
@@ -401,5 +394,4 @@ When you contact us at `mdearmsupport@microsoft.com`, make sure to describe the 
 ## See also
 
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-
 - [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md)
