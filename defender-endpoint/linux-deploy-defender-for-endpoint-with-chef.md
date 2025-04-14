@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/20/2024
+ms.date: 04/10/2025
 ---
 
 # Deploy Defender for Endpoint on Linux with Chef
@@ -29,14 +29,16 @@ ms.date: 12/20/2024
 
 ## Introduction
 
-This article talks about how to deploy Defender for Endpoint on Linux at scale with Chef using two methods:
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux at scale with Chef using two methods:
 
-1. Install using installer script
-2. Manually configuring the repositories for more granular control over the deployment
+- Install using installer script
+- Manually configure the repositories for more granular control over the deployment
+
+To use another method, refer to the [See also](#see-also) section.
 
 ## Prerequisites
 
-For a description of prerequisites and system requirements, see [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 ## Download the onboarding package
 
@@ -50,8 +52,6 @@ For a description of prerequisites and system requirements, see [Microsoft Defen
    
 4. Extract the contents of the archive using the following command:
 
-   Command:
-   
    ```
    unzip WindowsDefenderATPOnboardingPackage.zip
    ```
@@ -81,9 +81,7 @@ mkdir mdatp/files
 
 Copy `mdatp_onboard.json` to the `/tmp` folder.
 
-On the Chef Workstation, navigate to the **mdatp/recipes** folder, which is automatically created when the cookbook is generated. Use your preferred text editor (like vi or nano) to add the following instructions to the end of the **default.rb** file then save and close the file:
-
-- include_recipe '::install_mdatp'
+On the Chef Workstation, navigate to the **mdatp/recipes** folder, which is automatically created when the cookbook is generated. Use your preferred text editor (like vi or nano) to add the following instructions to the end of the **default.rb** file, and then save and close the file: `include_recipe '::install_mdatp'`.
 
 ## Create a cookbook 
 
@@ -183,7 +181,7 @@ file "#{mdatp}/mdatp_onboard.json" do
 end
 ```
 
->[!NOTE]
+> [!NOTE]
 > You can modify the os distribution, distribution version number, channel (prod/insider-fast, insiders-slow) and repo name to match the version you're deploying to and the channel you'd like to deploy to. Run `chef-client --local-mode --runlist  'recipe[mdatp]'` to test the cookbook on the Chef workstation.
 
 ## Troubleshoot installation issues
@@ -235,5 +233,17 @@ end
 ```
 
 To include this step as part of the recipe, add `include_recipe ':: uninstall_mdatp` to your `default.rb` file within the recipe folder. Ensure that you have removed the `include_recipe '::install_mdatp'` from the `default.rb` file.
+
+## See also
+
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
+- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
+- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
+- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

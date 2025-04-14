@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 03/05/2025
+ms.date: 04/10/2025
 ---
 
 # Get started with Microsoft Defender Experts for XDR
@@ -99,7 +99,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 :::image type="content" source="media/exclude-user-groups.png" alt-text="Screenshot to exclude user groups in Defender Experts for XDR." lightbox="media/exclude-user-groups.png":::
 
 > [!NOTE]
-> You can only exclude users by adding them to an Microsoft Entra ID security group. On-prem Entra ID users cannot be excluded at this time.
+> You can only exclude users by adding them to a Microsoft Entra ID security group. On-prem Entra ID users cannot be excluded at this time.
 
 To edit or update exclusions after the initial setup, go to **Settings** > **Defender Experts** > **Exclusions**, then go to the **Device groups** or **User groups** tab.
 
@@ -162,13 +162,15 @@ Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-por
 
 **To turn on Teams notifications and chat:**
 
-1. In the same Defender Experts settings setup, under **Teams**, select the **Communicate on Teams** checkbox.  
+1. In the same Defender Experts settings setup, under **Teams**, select the **Communicate on Teams** checkbox. This creates a private team **Defender Experts team** with a **Managed Response** channel in it. The page then updates to show a **Open Teams channel** link.
 
-2. Select **Next** to review your settings.
+2. Add your SOC team members to the channel created, by navigating to **Microsoft Teams** > **Defender Experts team** > **More options (...)** > **Manage team** > **Add member**.
 
-3. Select **Submit**. The step-by-step guide then completes the initial setup.
+3. Select **Next** to review your settings.
 
-4. Select **View readiness assessment** to complete the necessary actions required to [optimize your security posture](#prepare-your-environment-for-the-defender-experts-service).
+4. Select **Submit**. The step-by-step guide then completes the initial setup.
+
+5. Select **View readiness assessment** to complete the necessary actions required to [optimize your security posture](#prepare-your-environment-for-the-defender-experts-service).
 
 > [!NOTE]
 > To set up the Defender Experts Teams application, you must have either the **Global administrator** or **Security administrator** role assigned, and a Microsoft Teams license.
@@ -177,8 +179,6 @@ To turn on Teams notifications and chat after the initial setup, go to **Setting
 
 :::image type="content" source="/defender/media/xdr/Teams-managed-response.png" alt-text="Screenshot of option to activate Teams for receiving managed response." lightbox="/defender/media/xdr/Teams-managed-response.png":::
 
-- You can add new members to the channel by navigating to **Defender Experts team** \> **More options (...)** >  **Manage team** > **Add member**.
-- You can limit who can join this team by navigating to **Defender Experts team** > **More options (...)** > **Settings** > **Edit** > **Manage team** > **Private**.
 
 ## Prepare your environment for the Defender Experts service
 

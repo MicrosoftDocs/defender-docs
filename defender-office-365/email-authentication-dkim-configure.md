@@ -107,16 +107,11 @@ Points to address or value: selector2-<CustomDomainWithDashes>._domainkey.<Initi
 ```
 
 - **Hostname**: The values are the same for all Microsoft 365 organizations: `selector1._domainkey` and `selector2._domainkey`.
-
 - **\<CustomDomainWithDashes\>**: The custom domain or subdomain with periods replaced by dashes. For example, `contoso.com` becomes `contoso-com`, or `marketing.contoso.com` becomes `marketing-contoso-com`.
-
 - **\<InitialDomainPrefix\>**: The custom part of the \*.onmicrosoft.com you used to enroll in Microsoft 365. For example, if you used `contoso.onmicrosoft.com`, the value is `contoso`.
-
-- **\<DynamicPartitionCharacter\>**: A dynamically generated character.
-
+- **\<DynamicPartitionCharacter\>**: A dynamically generated character that's used for both selectors.
 - **v1**: The current CNAME format version that's used for both selectors.
-
-- **dkim.mail.microsoft**: The parent DNS zone.
+- **dkim.mail.microsoft**: The parent DNS zone that's the same for both selectors.
 
 For example, your organization has the following domains in Microsoft 365:
 
