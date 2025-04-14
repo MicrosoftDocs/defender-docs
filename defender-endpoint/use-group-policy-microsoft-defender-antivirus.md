@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 03/12/2025
-ms.reviewer: ksarens, jtoole, pahuijbr
+ms.date: 04/11/2025
+ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
 manager: deniseb
 ms.subservice: ngp
 audience: ITPro
@@ -23,7 +23,6 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
@@ -32,6 +31,7 @@ search.appverid: met150
 
 **Platforms**
 - Windows
+- Windows Server
 
 We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
 
@@ -59,11 +59,10 @@ In general, you can use the following procedure to configure or change some sett
 
 ## Group Policy settings and resources
 
-The following table lists commonly used Group Policy settings that are available in Windows 10.
+The following table lists commonly used Group Policy settings that are available in Windows 10 and later, Windows Server 2016 and later, including if you are running Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client.
 
 > [!TIP]
 > For the most current settings, get the latest ADMX files in your central store to access the correct policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
-
 
 | Location | Setting | Article |
 |---|---|---|
@@ -84,7 +83,7 @@ The following table lists commonly used Group Policy settings that are available
 | MAPS |  Configure local setting override for reporting to Microsoft MAPS| [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | MpEngine | Configure extended cloud check| [Configure the cloud block time-out period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) |
 | MpEngine | Disable gradual rollout of Microsoft Defender updates | [Configure updates: Group Policy](configure-updates.md#group-policy) |
-| MpEngine | Enable file hash computation feature | [Create indicators for files](/defender-endpoint/indicator-file#windows-prerequisites) |
+| MpEngine | Enable file hash computation feature |[Create indicators for files](/defender-endpoint/indicator-file#windows-prerequisites)<br/>This drives the ability to enforce Indicators of Compromise (IoC) by using file hash allow/block indicators, available in Defender for Endpoint Plan 1 and Plan 2, and in Defender for Business. Note that Microsoft Defender Antivirus automatically does hash-based computation for the antimalware engine, so you don't have to do anything extra unless it is a [VDI non-persistent image](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus). |
 | MpEngine | Select cloud protection level | [Specify the cloud-delivered protection level](specify-cloud-protection-level-microsoft-defender-antivirus.md) |
 | Network inspection system | Convert warn verdict to block | [Network protection: Warn experience](network-protection.md#warn-experience) |
 | Network inspection system | Specify more definition sets for network traffic inspection | Not used (deprecated) |
@@ -111,7 +110,7 @@ The following table lists commonly used Group Policy settings that are available
 | Remediation | Configure local setting override for the time of day to run a scheduled full scan to complete remediation | [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | Remediation | Specify the day of the week to run a scheduled full scan to complete remediation | [Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
 | Remediation | Specify the time of day to run a scheduled full scan to complete remediation | [Configure scheduled Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
-| Reporting | Configure time interval for service health reports  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) | 
+| Reporting | Configure time interval for service health reports  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in critically failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in noncritical failed state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Reporting | Configure time out for detections in recently remediated state  | [Configure Microsoft Defender Antivirus notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
@@ -193,21 +192,7 @@ The following table lists commonly used Group Policy settings that are available
 > Instead of using "Run full scan on mapped network drives", if you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaption Protocol (ICAP) scanning with the Microsoft Defender Antivirus engine. For more information, see **[Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234)**.
 
 > [!TIP]
-> **Performance tip** Due to a variety of factors (examples listed below) Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues; some examples are:
->
-> - Top paths that impact scan time
-> - Top files that impact scan time
-> - Top processes that impact scan time
-> - Top file extensions that impact scan time
-> - Combinations – for example:
->   - top files per extension
->   - top paths per extension
->   - top processes per path
->   - top scans per file
->   - top scans per file per process
->
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
-> See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
+> **Performance tip** Due to a variety of factors, Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues. You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. For more information, see: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 ## See also
 

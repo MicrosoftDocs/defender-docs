@@ -6,7 +6,7 @@ ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: conceptual
-ms.date: 01/23/2025
+ms.date: 04/09/2025
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
@@ -84,7 +84,7 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 **Q:** Can I use Microsoft Defender Antivirus in passive mode without onboarding to Microsoft Defender for Endpoint?
 
-**A:** No. Passive mode is a functionality in Microsoft Defender for Endpoint Plan 2.
+**A:** No. Passive mode is a functionality in Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2 and Microsoft Defender for Business.
 
 **Q:** Can I use [EDR in block mode](edr-in-block-mode.md) without onboarding to Microsoft Defender for Endpoint?
 

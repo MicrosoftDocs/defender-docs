@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 04/01/2025
+ms.date: 04/07/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,30 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
+
+- Security intelligence update version: **1.421.12.0**
+- Release date: **October 30, 2024** (Engine and Platform)
+- Platform: **4.18.24090.11**
+- Engine: **1.1.24090.11**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
+- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
+- Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
+- Fixed `SharedSignatureRoot` processing when an empty value was set.
+- Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
+- Improved performance in specific scenarios where network files were accessed.
+- Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
+- Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
+- Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
+- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
+
+> [!IMPORTANT]
+> On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
 
 ### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
 
