@@ -26,7 +26,7 @@ ms.date: 04/15/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-If you're already completed the steps to [prepare your environment for Defender for Endpoint](production-deployment.md), and you have assigned roles and permissions for Defender for Endpoint, your next step is to create a plan for onboarding. Your plan begins with identifying your architecture and choosing your deployment method.
+If you're already completed the steps to [prepare your environment for Defender for Endpoint](production-deployment.md), and you have [assigned roles and permissions for Defender for Endpoint](prepare-deployment.md), your next step is to create a plan for onboarding. This plan should begin with identifying your architecture and choosing your deployment method.
 
 We understand that every enterprise environment is unique, so we've provided several options to give you the flexibility in choosing how to deploy the service. Deciding how to onboard endpoints to the Defender for Endpoint service comes down to two important steps:
 
@@ -43,13 +43,13 @@ Depending on your environment, some tools are better suited for certain architec
 |**On-premises**|For enterprises who want to take advantage of the cloud-based capabilities of Microsoft Defender for Endpoint while also maximizing their investments in Configuration Manager or Active Directory Domain Services, we recommend this architecture.|
 |**Evaluation and local onboarding**|We recommend this architecture for SOCs (Security Operations Centers) who are looking to evaluate or run a Microsoft Defender for Endpoint pilot, but don't have existing management or deployment tools. This architecture can also be used to onboard devices in small environments without management infrastructure, such as a DMZ (Demilitarized Zone).|
 
-## Step 2: Select deployment method
+## Step 2: Select your deployment method
 
-Once you have determined the architecture of your environment and have created an inventory as outlined in the [requirements section](mde-planning-guide.md#requirements), use the table below to select the appropriate deployment tools for the endpoints in your environment. This will help you plan the deployment effectively.
+Once you have determined the architecture of your environment and have created an inventory as outlined in the [requirements section](mde-planning-guide.md#requirements), use the table below to select the appropriate deployment tools for the endpoints in your environment. This information will help you plan the deployment effectively.
 
 |Endpoint|Deployment tool|
 |---|---|
-|**Windows**|[Local script (up to 10 devices)](configure-endpoints-script.md) <br/>  [Group Policy](configure-endpoints-gp.md) <br/>  [Microsoft Intune/ Mobile Device Manager](configure-endpoints-mdm.md) <br/>   [Microsoft Configuration Manager](configure-endpoints-sccm.md) <br/> [VDI scripts](configure-endpoints-vdi.md)|
+| Windows devices |[Microsoft Intune / Mobile Device Manager](configure-endpoints-mdm.md) <br/>[Microsoft Configuration Manager](configure-endpoints-sccm.md)<br/>[Local script (up to 10 devices)](configure-endpoints-script.md)<br/>[Group Policy](configure-endpoints-gp.md)<br/>[Non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)<br/>[Azure Virtual Desktop](onboard-windows-multi-session-device.md)|
 |**Windows servers<br/>Linux servers** <br/>(Requires a server license) | [Onboard Windows devices using a local script](configure-endpoints-script.md)<br/>[Integration with Microsoft Defender for Cloud](azure-server-integration.md) |
 |**macOS**|[Local script](mac-install-manually.md) <br/> [Microsoft Intune](mac-install-with-intune.md) <br/> [JAMF Pro](mac-install-with-jamf.md) <br/> [Mobile Device Management](mac-install-with-other-mdm.md)|
 |**Linux servers**|[Local script](linux-install-manually.md) <br/> [Puppet](linux-install-with-puppet.md) <br/> [Ansible](linux-install-with-ansible.md) <br/> [Chef](linux-deploy-defender-for-endpoint-with-chef.md)<br/> [Saltstack](linux-install-with-saltack.md)<br/>[Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)|
