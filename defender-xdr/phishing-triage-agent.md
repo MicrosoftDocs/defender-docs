@@ -148,12 +148,10 @@ You can review the overall performance of the Phishing Triage Agent by navigatin
 
 ## Provide feedback to the Phishing Triage Agent
 
-The Phishing Triage Agent relies on your feedback on its output to continuously improve its triaging activities and adapt to you organization's evolving security needs. We recommend that you regularly provide feedback to the agent to improve to ensure that it adapts to your organization’s specific needs.
+The Phishing Triage Agent relies on feedback on its output to continuously improve its triage activities and ensure that it adapts to your organization's evolving security needs. You can provide feedback to the agent in the following ways:
 
-There are two ways to provide feedback to the agent:
-
-1. Select the thumbs up/thumbs down options on the Copilot card.
-2. You can improve the agent's accuracy by providing feedback whenever you change an incident's classification. See [Review the agent's actions](#review-the-agents-actions) for the steps.
+1. You can provide feedback on the agent's classification verdict by selecting **Change classification** in the incident page. This opens the Manage alert pane where you can provide the classification and add comments. Tick the **Use this feedback to teach the agent** option to improve the agent’s subsequent responses.
+2. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot pane. Based on your assessment, you can select **Looks right**, **Needs improvement**, or **Inappropriate**. Add comments to provide more context about your feedback.
 
 ## Frequently asked questions (FAQs)
 
