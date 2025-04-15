@@ -49,6 +49,15 @@ The Phishing Triage Agent is designed to scale your security operations teams' p
 
 The Phishing Triage Agent is triggered when a user in your organization submits a phishing incident. The agent automatically analyzes the submitted email and its attachments to classify them as either phishing or not phishing based on its training and the context of the organization.
 
+## Prerequisites
+
+The following are organizational requirements to run Phishing Triage Agent in your environment:
+
+- Access to Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information
+- Access to the Microsoft Defender portal
+- The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information
+- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information
+
 ### Permissions
 
 The Phishing Triage Agent requires the following permissions to run:
@@ -58,6 +67,16 @@ The Phishing Triage Agent requires the following permissions to run:
 - Email & collaboration metadata (read)
 - Security Copilot (read)
 - Alerts (manage)
+
+### Role-based access
+
+Users with Security Administrator or Microsoft Entra Administrator roles are required to setup the Phishing Triage Agent.
+
+Users with the following roles can view the Phishing Triage Agent's output:
+
+- Role 1
+- Role 2
+- Role 3
 
 ### Identity
 
@@ -80,25 +99,6 @@ The following plugins must be enabled in Security Copilot:
 
 - Microsoft Defender XDR
 - Microsoft Threat Intelligence
-
-### Role-based access
-
-Users with Security Administrator or Microsoft Entra Administrator roles are required to setup the Phishing Triage Agent.
-
-Users with the following roles can view the Phishing Triage Agent's output:
-
-- Role 1
-- Role 2
-- Role 3
-
-## Prerequisites
-
-The following are organizational requirements to run Phishing Triage Agent in your environment:
-
-- Access to Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information
-- Access to the Microsoft Defender portal
-- The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information
-- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information
 
 ## Set up the Phishing Triage Agent
 
@@ -153,39 +153,11 @@ You can review the overall performance of the Phishing Triage Agent by navigatin
 The Phishing Triage Agent relies on feedback on its output to continuously improve its triage activities and ensure that it adapts to your organization's evolving security needs. You can provide feedback to the agent in the following ways:
 
 1. You can provide feedback on the agent's classification verdict by selecting **Change classification** in the incident page. This opens the Manage alert pane where you can provide the classification and add comments. Tick the **Use this feedback to teach the agent** option to improve the agent’s subsequent responses.
-2. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot pane. Based on your assessment, you can select **Looks right**, **Needs improvement**, or **Inappropriate**. Add comments to provide more context about your feedback.
+2. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of the Phishing Triage Agent card in the Copilot pane. Based on your assessment, you can select **Looks right**, **Needs improvement**, or **Inappropriate**. Add comments to provide more context about your feedback.
 
 ## Frequently asked questions (FAQs)
 
 Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, navigate to the [overview](#overview) and [prerequisites](#prerequisites) sections of this article.
-
-### How is the Phishing Triage Agent different from Microsoft Defender for Office 365 automated investigation and response (AIR)?
-
-Defender for Office 365 provides built-in automation that helps organizations triage, investigate, remediate, and respond to user reports of phishing and other email and collaboration-related threats. The Phishing Triage agent augments this capability by automating actions expert SOC analysts take to deeply investigate an email reported as potential phishing.  Within minutes, the agent summarizes all findings and provides a final verdict for the message. A further advantage of the agent is its ability to adapt to the customer's environment based on history, customizations, and analyst feedback to enhance automated response to user-reported threats.
-
-When the Phishing Triage Agent is enabled, [automated Investigations and response (AIR) in Defender for Office 365](/defender-office-365/air-about) consumes the agent’s analysis. AIR investigations then expand on the agent’s output to detect similar threats and identify threat remediation actions for SOC analyst to approve. Customers can also enable auto-remediation in AIR to further enhance customer protection and SOC efficiency.
-
-### Can the Phishing Triage Agent handle encrypted emails?
-
-The Phishing Triage Agent follows the same API model as the Microsoft Defender for Office 365. The agent can triage encrypted emails, but it cannot decrypt them. The agent provides a verdict based on the information available in the email header and metadata. If the email is encrypted, the agent isn't able to analyze its content or attachments.
-
-### Does the Phishing Triage Agent store emails?
-
-The agent stores logs of the input and output of its activities, and as part of that it might contain submission artifacts. The agent doesn't store email copy directly.
-
-All the agent's data storage follows Security Copilot privacy and data security policies. See [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security) for more information.
-
-### What does the Phishing Triage Agent do with emails that users don't report?
-
-Like an SOC analyst with *Email & collaboration content (read)* permissions, the Phishing Triage Agent can read emails that users don't report. Since all preview or download actions by an SOC analyst are logged and audited in the audit logs, the same applies to the Phishing Triage Agent.
-
-### Can we specify the mailbox scope for the Phishing Triage Agent?
-
-Scoping mailboxes is currently not supported in Defender for Office 365, and therefore not supported for the Phishing Triage Agent. The agent can't scope the mailboxes it can triage, but its analysis is limited to user-reported emails that are part of the alert policy **Email reported by user as malware or phish**.
-
-### Can I still use the Phishing Triage Agent if I'm using third-party reporting tools for user submissions?
-
-You might be able to use the Phishing Triage Agent if the third-party reporting tool is integrated with Microsoft Defender for Office 365. See [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox#options-for-third-party-reporting-tools) for more information.
 
 ### Can I remove the Phishing Triage Agent?
 
