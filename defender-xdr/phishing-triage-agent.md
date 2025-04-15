@@ -83,9 +83,13 @@ The following plugins must be enabled in Security Copilot:
 
 ### Role-based access
 
+Users with Security Administrator or Microsoft Entra Administrator roles are required to setup the Phishing Triage Agent.
+
 Users with the following roles can view the Phishing Triage Agent's output:
 
-- [options]
+- Role 1
+- Role 2
+- Role 3
 
 ## Prerequisites
 
@@ -95,8 +99,6 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 - Access to the Microsoft Defender portal
 - The alert policy **Email reported by user as malware or phish** must be turned on. See Alert policies in the Microsoft Defender portal for more information
 - Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information.
-
-Users with Security Administrator or Microsoft Entra Administrator roles are required to setup the Phishing Triage Agent.
 
 ## Set up the Phishing Triage Agent
 
