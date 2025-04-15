@@ -41,6 +41,8 @@ If you're onboarding devices in the Microsoft Defender portal, follow these step
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
+   :::image type="content" source="media/mde-device-onboarding-ui.png" alt-text="Screenshot showing device onboarding in the Microsoft Defender portal for Defender for Endpoint.":::
+
 2. Under **Select operating system to start onboarding process**, select the operating system for the device.
 
 3. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
