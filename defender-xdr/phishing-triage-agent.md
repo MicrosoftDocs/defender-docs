@@ -30,20 +30,20 @@ appliesto:
 
 The Phishing Triage Agent is a Microsoft Security Copilot agent designed to scale security teams' response to efficiently triage and classify user-submitted phishing incidents in Microsoft Defender. It assists security operations center (SOC) teams by integrating with Microsoft security solutions to autonomously triage volumes of phishing submissions, reducing the team's manual workload and allowing them to focus on critical tasks and strategic actions.
 
-Managing a huge volume of phishing incidents, which may include false alarms, can be challenging for SOC operations. Analysts need to ensure that these incidents are triaged and resolved efficiently and reliably so they can concentrate on more critical phishing incidents.
+Managing a huge volume of phishing incidents, which may include false positives, can be challenging for SOC operations. Analysts need to ensure that these incidents are triaged and resolved efficiently and reliably so they can concentrate on more critical phishing incidents.
 
-With the Phishing Triage Agent, SOC teams can benefit from an AI-powered virtual agent capable of classifying hundreds of phishing submissions with speed and accuracy. The agent also helps remove false alarms, enabling teams to resolve true positive phishing incidents more swiftly.
+With the Phishing Triage Agent, SOC teams can benefit from an AI-powered virtual agent capable of classifying hundreds of phishing submissions with speed and accuracy. The agent also helps remove false positives, enabling teams to resolve true positive phishing incidents more swiftly.
 
-Phishing Triage adjusts to an organization’s context by actively seeking feedback and learning from its users. The agent provides a transparent rationale for its verdicts, ensuring its operations align with your organization’s established triage parameters. It dynamically adjusts by learning from the feedback it gets to operate according to your organization’s changing needs.
+Phishing Triage adjusts to an organization’s context by actively seeking feedback and learning from its users. The agent provides a transparent rationale for its verdicts using natural language, using clear reasoning and explanations for its process. Through dynamic learning, the Phishing Triage ensures its alignment with your organization’s established triage parameters. It dynamically adjusts by learning from the feedback it gets to operate according to your organization’s changing needs.
 
 ## Overview
 
-The Phishing Triage Agent is designed to scale your security operations teams' processes in classifying and triaging user-submitted phishing incidents. The agent can help you with the following tasks:
+The Phishing Triage Agent is designed to scale your security operations teams' processes in the triage and classification of user-submitted phishing incidents. The agent can help you with the following tasks:
 
 - Autonomously classify hundreds of phishing incidents based on user-submitted emails and attachments.
-- Provide a transparent rationale for its classification verdicts, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions.
+- Provide a transparent rationale for its classification verdicts in natural language, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions.
 - Learn from user feedback to improve its classification accuracy over time.
-- Operate in the background, continuously triaging phishing incidents without requiring constant human intervention.
+- Operate in the background to continuously triage phishing incidents without requiring constant human intervention.
 
 ### Trigger
 
@@ -53,10 +53,14 @@ The Phishing Triage Agent is triggered when a user in your organization submits 
 
 The following are organizational requirements to run Phishing Triage Agent in your environment:
 
-- Access to Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information
-- Access to the Microsoft Defender portal
-- The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information
-- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information
+|Components|Details|
+|:---|:---|
+|Licenses|- Tenant must have a license for Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Tenant must have any of the following licenses deployed: - Microsoft Defender for Office Plan 2 </br> - Microsoft 365 E5|
+|Accessing the agent|- Tenant must have access to the Microsoft Defender portal </br> - Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information|
+|Roles required|- **Security Administrator** role is required to set up the Phishing Triage Agent </br> - The following roles can access the Phishing Triage Agent output </br> - Role 1 </br> - Role 2|
+|Alert policy|The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
+
+The following requirements are needed when setting up the Phishing Triage Agent:
 
 ### Permissions
 
@@ -68,16 +72,6 @@ The Phishing Triage Agent requires the following permissions to run:
 - Security Copilot (read)
 - Alerts (manage)
 
-### Role-based access
-
-Users with the Security Administrator role are required to setup the Phishing Triage Agent.
-
-Users with the following roles can view the Phishing Triage Agent's output:
-
-- Role 1
-- Role 2
-- Role 3
-
 ### Identity
 
 The Phishing Triage Agent requires an identity to run. You can create the Phishing Triage Agent’s identity to access plugins and services and to operate with the correct permissions.
@@ -85,13 +79,6 @@ The Phishing Triage Agent requires an identity to run. You can create the Phishi
 You can also select the agent’s identity from the following options:
 
 - [options]
-
-### Products
-
-The tenant must have any of the following licenses deployed:
-
-- Microsoft Defender for Office 365 Plan 2
-- Microsoft 365 E5
 
 ### Plugins
 
