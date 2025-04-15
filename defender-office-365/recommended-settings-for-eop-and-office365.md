@@ -19,7 +19,7 @@ ms.collection:
   - tier1
 description: What are best practices for Exchange Online Protection (EOP) and Defender for Office 365 security settings? What's the current recommendations for standard protection? What should be used if you want to be more strict? And what extras do you get if you also use Defender for Office 365?
 ms.service: defender-office-365
-ms.date: 02/05/2025
+ms.date: 04/14/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -30,9 +30,9 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-**Exchange Online Protection (EOP)** is the core of security for Microsoft 365 subscriptions and helps keep malicious emails from reaching your employee's inboxes. But with new, more sophisticated attacks emerging every day, improved protections are often required. **Microsoft Defender for Office 365** Plan 1 or Plan 2 contain additional features that give more layers of security, control, and investigation.
+**Exchange Online Protection (EOP)** is the core of security for Microsoft 365 subscriptions and helps keep malicious emails from reaching your employee's inboxes. But with new, more sophisticated attacks emerging every day, improved protections are often required. **Microsoft Defender for Office 365** Plan 1 or Plan 2 contain more features that give more layers of security, control, and investigation.
 
-Although we empower security administrators to customize their security settings, there are two security levels in EOP and Microsoft Defender for Office 365 that we recommend: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help prevent unwanted mail from reaching your employees' Inbox in most situations.
+Although we empower security administrators to customize their security settings, there are two security levels in EOP and Microsoft Defender for Office 365 that we recommend: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help prevent unwanted mail from reaching user Inboxes in most situations.
 
 To automatically apply the Standard or Strict settings to users, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
 
@@ -116,17 +116,17 @@ Admins can create or use quarantine policies with more restrictive or less restr
 |**Bulk compliant level (BCL) met or exceeded** (_BulkSpamAction_)|**Move message to Junk Email folder** (`MoveToJmf`)|**Move message to Junk Email folder** (`MoveToJmf`)|**Quarantine message** (`Quarantine`)||
 |**Quarantine policy** for **Bulk compliant level (BCL) met or exceeded** (_BulkQuarantineTag_)|DefaultFullAccessPolicy¹|DefaultFullAccessPolicy|DefaultFullAccessWithNotificationPolicy|The quarantine policy is meaningful only if bulk detections are quarantined.|
 |**Intra-Organizational messages to take action on** (_IntraOrgFilterState_)|**Default** (Default)|**Default** (Default)|**Default** (Default)|The value **Default** is the same as selecting **High confidence phishing messages**. Currently, in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the value **Default** is the same as selecting **None**.|
-|**Retain spam in quarantine for this many days** (_QuarantineRetentionPeriod_)|15 days|30 days|30 days|This value also affects messages that are quarantined by anti-phishing policies. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).|
+|**Retain spam in quarantine for this many days** (_QuarantineRetentionPeriod_)|15 days|30 days|30 days|This value also affects messages quarantined by anti-phishing policies. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).|
 |**Enable spam safety tips** (_InlineSafetyTipsEnabled_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |Enable zero-hour auto purge (ZAP) for phishing messages (_PhishZapEnabled_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |Enable ZAP for spam messages (_SpamZapEnabled_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Allow & block list**|||||
 |Allowed senders (_AllowedSenders_)|None|None|None||
-|Allowed sender domains (_AllowedSenderDomains_)|None|None|None|Adding domains to the allowed domains list is a very bad idea. Attackers would be able to send you email that would otherwise be filtered out. <br/><br/> Use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) and the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list) to review all senders who are spoofing sender email addresses in your organization's email domains or spoofing sender email addresses in external domains.|
+|Allowed sender domains (_AllowedSenderDomains_)|None|None|None|Adding domains to the allowed domains list is a bad idea. Attackers would be able to send you email that would otherwise be filtered out. <br/><br/> Use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) and the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list) to review who's spoofing sender email addresses in your domains or external domains.|
 |Blocked senders (_BlockedSenders_)|None|None|None||
 |Blocked sender domains (_BlockedSenderDomains_)|None|None|None||
 
-¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy in the default security policy or in new custom security policies that you create. The only difference between these two quarantine policies is quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
+¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy. Quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
 
 #### ASF settings in anti-spam policies
 
@@ -152,7 +152,7 @@ For more information about Advanced Spam Filter (ASF) settings in anti-spam poli
 |**Test mode** (_TestModeAction_)|None|None|None|For ASF settings that support **Test** as an action, you can configure the test mode action to **None**, **Add default X-Header text**, or **Send Bcc message** (`None`, `AddXHeader`, or `BccMessage`). For more information, see [Enable, disable, or test ASF settings](anti-spam-policies-asf-settings-about.md#enable-disable-or-test-asf-settings).|
 
 > [!NOTE]
-> ASF adds `X-CustomSpam:` X-header fields to messages _after_ the messages have been processed by Exchange mail flow rules (also known as transport rules), so you can't use mail flow rules to identify and act on messages that were filtered by ASF.
+> ASF adds `X-CustomSpam:` X-header fields to messages _after_ Exchange mail flow rules (also known as transport rules) processes messages, so you can't use mail flow rules to identify and act on messages that were filtered by ASF.
 
 #### EOP outbound spam policy settings
 
@@ -161,7 +161,7 @@ To create and configure outbound spam policies, see [Configure outbound spam fil
 For more information about the default sending limits in the service, see [Sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
 > [!NOTE]
-> Outbound spam policies are not part of Standard or Strict preset security policies. The **Standard** and **Strict** values indicate our **recommended** values in the default outbound spam policy or custom outbound spam policies that you create.
+> Outbound spam policies aren't part of Standard or Strict preset security policies. The **Standard** and **Strict** values indicate our **recommended** values in the default outbound spam policy or custom outbound spam policies that you create.
 
 |Security feature name|Default|Recommended<br/>Standard|Recommended<br/>Strict|Comment|
 |---|:---:|:---:|:---:|---|
@@ -199,22 +199,24 @@ Admins can create or use quarantine policies with more restrictive or less restr
 |**Show (?) for unauthenticated senders for spoof** (_EnableUnauthenticatedSender_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Adds a question mark (?) to the sender's photo in Outlook for unidentified spoofed senders. For more information, see [Unauthenticated sender indicators](anti-phishing-policies-about.md#unauthenticated-sender-indicators).|
 |**Show "via" tag** (_EnableViaTag_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Adds a via tag (`chris@contoso.com via fabrikam.com`) to the From address if it's different from the domain in the DKIM signature or the **MAIL FROM** address. <br/><br/> For more information, see [Unauthenticated sender indicators](anti-phishing-policies-about.md#unauthenticated-sender-indicators).|
 
-¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy in the default security policy or in new custom security policies that you create. The only difference between these two quarantine policies is quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
+¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy. Quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
 
 ## Microsoft Defender for Office 365 security
 
-Additional security benefits come with a Microsoft Defender for Office 365 subscription. For the latest news and information, you can see [What's new in Defender for Office 365](defender-for-office-365-whats-new.md).
+Extra security benefits come with a Microsoft Defender for Office 365 subscription. For the latest news and information, you can see [What's new in Defender for Office 365](defender-for-office-365-whats-new.md).
 
 > [!IMPORTANT]
 >
-> - The default anti-phishing policy in Microsoft Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](#advanced-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) are not configured or enabled in the default policy. To enable all protection features, use one of the following methods:
+> - The default anti-phishing policy in Microsoft Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](#advanced-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured or enabled in the default policy. To enable all protection features, use one of the following methods:
 >   - Turn on and use the Standard and/or Strict [preset security policies](preset-security-policies.md) and configure impersonation protection there.
 >   - Modify the default anti-phishing policy.
->   - Create additional anti-phishing policies.
+>   - Create more anti-phishing policies.
 >
 > - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies). For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
 >
 > - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) protection and [Safe Documents](safe-documents-in-e5-plus-security-about.md) protection have no dependencies on Safe Links policies.
+>
+> - [Microsoft Teams protection](#microsoft-teams-protection) has no dependency on preset security policies, any custom policies, or any default policies.
 
 If your subscription includes Microsoft Defender for Office 365 or if you've purchased Defender for Office 365 as an add-on, set the following Standard or Strict configurations.
 
@@ -261,11 +263,11 @@ Admins can create or use quarantine policies with more restrictive or less restr
 |**Show domain impersonation safety tip** (_EnableSimilarDomainsSafetyTips_)|Off (`$false`)|Selected (`$true`)|Selected (`$true`)||
 |**Show user impersonation unusual characters safety tip** (_EnableUnusualCharactersSafetyTips_)|Off (`$false`)|Selected (`$true`)|Selected (`$true`)||
 
-¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy in the default security policy or in new custom security policies that you create. The only difference between these two quarantine policies is quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
+¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy. Quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
 
 #### EOP anti-phishing policy settings in Microsoft Defender for Office 365
 
-These are the same settings that are available in [anti-spam policy settings in EOP](#eop-anti-spam-policy-settings).
+These settings are also available in [anti-spam policy settings in EOP](#eop-anti-spam-policy-settings).
 
 ### Safe Attachments settings
 
@@ -335,7 +337,7 @@ In PowerShell, you use the [New-SafeLinksPolicy](/powershell/module/exchange/new
 |**Apply real-time URL scanning for suspicious links and links that point to files** (_ScanUrls_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Wait for URL scanning to complete before delivering the message** (_DeliverMessageAfterScan_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Do not rewrite URLs, do checks via Safe Links API only** (_DisableURLRewrite_)|Selected (`$false`)<sup>\*</sup>|Selected (`$true`)|Not selected (`$false`)|Not selected (`$false`)|<sup>\*</sup> In new Safe Links policies that you create in the Defender portal, this setting is selected by default. In new Safe Links policies that you create in PowerShell, the default value of the _DisableURLRewrite_ parameter is `$false`.|
-|**Do not rewrite the following URLs in email** (_DoNotRewriteUrls_)|Blank|Blank|Blank|Blank|We have no specific recommendation for this setting. <br/><br/> **Note**: Entries in the "Don't rewrite the following URLs" list aren't scanned or wrapped by Safe Links during mail flow. Report the URL as **I've confirmed it's clean** and then select **Allow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).|
+|**Do not rewrite the following URLs in email** (_DoNotRewriteUrls_)|Blank|Blank|Blank|Blank|We have no specific recommendation for this setting. <br/><br/> **Note**: Safe Links doesn't scan or wrap entries in the "Don't rewrite the following URLs" list during mail flow. Report the URL as **I've confirmed it's clean** and then select **Allow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).|
 |**Teams**|||||The setting in this section affects time of click protection in Microsoft Teams.|
 |**On: Safe Links checks a list of known, malicious links when users click links in Microsoft Teams. URLs are not rewritten.** (_EnableSafeLinksForTeams_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Office 365 apps**|||||The setting in this section affects time of click protection in Office apps.|
@@ -346,6 +348,22 @@ In PowerShell, you use the [New-SafeLinksPolicy](/powershell/module/exchange/new
 |**Display the organization branding on notification and warning pages** (_EnableOrganizationBranding_)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)|We have no specific recommendation for this setting. <br/><br/> Before you turn on this setting, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.|
 |**Notification**||||||
 |**How would you like to notify your users?** (_CustomNotificationText_ and _UseTranslatedNotificationText_)|**Use the default notification text** (Blank and `$false`)|**Use the default notification text** (Blank and `$false`)|**Use the default notification text** (Blank and `$false`)|**Use the default notification text** (Blank and `$false`)|We have no specific recommendation for this setting. <br/><br/> You can select **Use custom notification text** (`-CustomNotificationText "<Custom text>"`) to enter and use customized notification text. If you specify custom text, you can also select **Use Microsoft Translator for automatic localization** (`-UseTranslatedNotificationText $true`) to automatically translate the text into the user's language.|
+
+### Microsoft Teams protection
+
+For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
+
+In PowerShell, you use the [New-TeamsProtectionPolicy](/powershell/module/exchange/new-teamsprotectionpolicy), [New-TeamsProtectionPolicyRule](/powershell/module/exchange/new-teamsprotectionpolicyrule), [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy), and [Set-TeamsProtectionPolicyRule](/powershell/module/exchange/set-teamsprotectionpolicyrule) cmdlets for Microsoft Teams protection settings.
+
+> [!NOTE]
+> Microsoft Teams protection isn't part of the Standard or Strict preset security policies, any default policies, or any custom policies. The **Standard** and **Strict** values indicate our **recommended** values.
+
+|Security feature name|Default|Standard|Strict|Comment|
+|---|:---:|:---:|:---:|---|
+|**Zero-hour auto purge (ZAP)** (_ZapEnabled_)|**Off** (`$false`)|**On** (`$true`)|**On** (`$true`)||
+|**Quarantine policies**|||||
+|&nbsp;&nbsp;**Malware** (_MalwareQuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||
+|&nbsp;&nbsp;**High confidence phishing** (_HighConfidencePhishQuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||
 
 ## Related articles
 
