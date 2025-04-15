@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/12/2024
+ms.date: 04/15/2025
 ---
 
 # Identify Defender for Endpoint architecture and deployment method
@@ -26,7 +26,7 @@ ms.date: 12/12/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-If you're already completed the steps to set up your Microsoft Defender for Endpoint deployment, and you have assigned roles and permissions for Defender for Endpoint, your next step is to create a plan for onboarding. Your plan begins with identifying your architecture and choosing your deployment method.
+If you're already completed the steps to prepare your environment for Defender for Endpoint, and you have assigned roles and permissions for Defender for Endpoint, your next step is to create a plan for onboarding. Your plan begins with identifying your architecture and choosing your deployment method.
 
 We understand that every enterprise environment is unique, so we've provided several options to give you the flexibility in choosing how to deploy the service. Deciding how to onboard endpoints to the Defender for Endpoint service comes down to two important steps:
 
