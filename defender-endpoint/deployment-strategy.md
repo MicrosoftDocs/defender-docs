@@ -49,15 +49,21 @@ Once you have determined the architecture of your environment and have created a
 
 |Endpoint|Deployment tool|
 |---|---|
-| **Windows devices** |[Microsoft Intune / Mobile Device Management (MDM)](configure-endpoints-mdm.md) <br/>[Microsoft Configuration Manager](configure-endpoints-sccm.md)<br/>[Local script (up to 10 devices)](configure-endpoints-script.md)<br/>[Group Policy](configure-endpoints-gp.md)<br/>[Non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)<br/>[Azure Virtual Desktop](onboard-windows-multi-session-device.md)<br/>[System Center Endpoint Protection and Microsoft Monitoring Agent](onboard-downlevel.md) (for previous versions of Windows) |
+| **Windows client devices** |[Microsoft Intune / Mobile Device Management (MDM)](configure-endpoints-mdm.md) <br/>[Microsoft Configuration Manager](configure-endpoints-sccm.md)<br/>[Local script (up to 10 devices)](configure-endpoints-script.md)<br/>[Group Policy](configure-endpoints-gp.md)<br/>[Non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)<br/>[Azure Virtual Desktop](onboard-windows-multi-session-device.md)<br/>[System Center Endpoint Protection and Microsoft Monitoring Agent](onboard-downlevel.md) (for previous versions of Windows) |
+|**Windows Server** <br/>(Requires a server license) | [Local script](configure-endpoints-script.md)<br/>[Integration with Microsoft Defender for Cloud](azure-server-integration.md)<br/>[Guidance for Windows Server with SAP](mde-sap-windows-server.md) |
 |**macOS**| [Intune](mac-install-with-intune.md)<br/>[JAMF Pro](mac-install-with-jamf.md) <br/>[Local script](mac-install-manually.md)(manual deployment) <br/>[MDM tools](mac-install-with-other-mdm.md)|
-|**Windows servers<br/>Linux servers** <br/>(Requires a server license) | [Onboard Windows devices using a local script](configure-endpoints-script.md)<br/>[Integration with Microsoft Defender for Cloud](azure-server-integration.md) |
-|**Linux servers**|[Local script](linux-install-manually.md) <br/> [Puppet](linux-install-with-puppet.md) <br/> [Ansible](linux-install-with-ansible.md) <br/> [Chef](linux-deploy-defender-for-endpoint-with-chef.md)<br/> [Saltstack](linux-install-with-saltack.md)<br/>[Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)|
+|**Linux server**|[Installer script based deployment](linux-installer-script.md)<br/>[Ansible](linux-install-with-ansible.md)<br/>[Chef](linux-deploy-defender-for-endpoint-with-chef.md)<br/>[Puppet](linux-install-with-puppet.md) <br/>[Saltstack](linux-install-with-saltack.md)<br/>[Manual deployment](linux-install-manually.md)<br/>[Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)<br/>[Guidance for ARM64-based devices (preview)](mde-linux-arm.md)<br/>[Guidance for Linux with SAP](mde-linux-deployment-on-sap.md)|
 |**Android**|[Microsoft Intune](android-intune.md)|
 |**iOS**|[Microsoft Intune](ios-install.md) <br/> [Mobile Application Manager](ios-install-unmanaged.md) |
 
 > [!NOTE]
-> For devices that aren't managed by Microsoft Intune or Microsoft Configuration Manager, you can use the Security Management for Microsoft Defender for Endpoint to receive security configurations for Microsoft Defender directly from Intune.
+> For devices that aren't managed by Intune or Configuration Manager, you can use the Defender for Endpoint Security Settings Management to receive security configurations directly from Intune.
+> To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
+>
+> - [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) (as part of the Defender for Cloud) offering
+- Microsoft Defender for Endpoint for servers
+- [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
+
 
 ## Next step
 
