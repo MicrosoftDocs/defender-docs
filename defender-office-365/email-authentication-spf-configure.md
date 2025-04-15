@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 1/29/2024
+ms.date: 04/15/2025
 audience: ITPro
 ms.topic: how-to
 
@@ -181,7 +181,7 @@ Important points to remember:
 
 - **One SPF record per domain or subdomain**: Multiple SPF TXT records for the same domain or subdomain cause a DNS lookup loop that makes SPF fail, so use only one SPF record per domain or subdomain.
 
-- **Recommendation for TTL on SPF TXT Records**: It is recommended to have a minimum TTL(Time to Live) value of 3600 on SPF TXT records to avoid DNS lookup timeouts.
+- **Time to live (TTL)**: We recommended a minimum TTL value of 3600 seconds (one hour) on SPF TXT records to avoid DNS lookup timeouts.
 
 - **Less than 10 DNS lookups**: When destination email systems query the SPF TXT record for valid sources for the MAIL FROM address domain, the query scans through the IP addresses and `include:` statements in the record until the message source (ultimately, an IP address) matches one of the specified sources. If the number of DNS lookups (which can be different than the number of DNS _queries_) is greater than 10, the message fails SPF with a permanent error (also known as a `permerror`). The destination email system rejects the message in a non-delivery report (also known as an NDR or _bounce message_) with one of the following errors:
   - The message exceeded the hop count.
