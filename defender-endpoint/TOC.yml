@@ -114,9 +114,9 @@
           href: prepare-deployment.md
         - name: Step 3 - Identify your architecture and select a deployment method
           href: deployment-strategy.md
-        - name: Step 4 - Onboard devices
+        - name: Step 4 - Onboard devices to Defender for Endpoint
           href: onboarding.md
-        - name: Step 5 - Configure Microsoft Defender for Endpoint capabilities
+        - name: Step 5 - Configure Defender for Endpoint capabilities
           href: onboard-configure.md
 
       - name: Onboard and configure devices
