@@ -108,11 +108,11 @@
         items:
         - name: Overview
           href: mde-planning-guide.md
-        - name: Step 1 - Set up Defender for Endpoint deployment
+        - name: Step 1 - Prepare for deployment
           href: production-deployment.md
         - name: Step 2 - Assign roles and permissions
           href: prepare-deployment.md
-        - name: Step 3 - Identify your architecture and deployment method
+        - name: Step 3 - Identify your architecture and select a deployment method
           href: deployment-strategy.md
         - name: Step 4 - Onboard devices
           href: onboarding.md
