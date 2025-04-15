@@ -95,10 +95,10 @@ Users with the following roles can view the Phishing Triage Agent's output:
 
 The following are organizational requirements to run Phishing Triage Agent in your environment:
 
-- Access to Security Copilot. See purchase information to know the prerequisites for using Security Copilot
+- Access to Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information
 - Access to the Microsoft Defender portal
-- The alert policy **Email reported by user as malware or phish** must be turned on. See Alert policies in the Microsoft Defender portal for more information
-- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information.
+- The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information
+- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information
 
 ## Set up the Phishing Triage Agent
 
