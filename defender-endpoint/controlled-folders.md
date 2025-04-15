@@ -92,6 +92,8 @@ Default folders appear in the user's profile, under **This PC**, as shown in the
 
 ![Protected Windows default systems folders](media/defaultfolders.png)
 
+The same profile folders are also protected for system accounts like LocalService, NetworkService, systemprofile, ... . For example, `C:\Windows\System32\config\systemprofile\Documents` will also be protected in case it exists.
+
 > [!NOTE]
 > You can configure more folders as protected, but you can't remove the Windows system folders that are protected by default.
 
