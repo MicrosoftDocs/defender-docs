@@ -1,5 +1,5 @@
 ---
-title: Set up Microsoft Defender for Endpoint deployment
+title: Prepare to deploy Microsoft Defender for Endpoint
 description: Learn how to set up the deployment for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -17,10 +17,10 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 05/08/2024
+ms.date: 04/15/2025
 ---
 
-# Set up Microsoft Defender for Endpoint deployment
+# Prepare to deploy Microsoft Defender for Endpoint deployment
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
