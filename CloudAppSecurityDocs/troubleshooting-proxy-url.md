@@ -39,9 +39,13 @@ So even though Fabrikam doesn't actually use Defender for Cloud Apps, they see t
 > - `*.admin-mcas-gov-df.ms`
 > - `*.mcas-gov-df.ms`
 
+
 ## Here's why you see `*.mcas.ms`, `*.mcas-gov.us`, or `*.mcas-gov.ms` in your URL
 
 This kind of URL is expected and indicates that your organization applies extra security controls to protect business-critical data.
+
+> [!IMPORTANT]
+> Access and session policies support IPv4 only. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
 
 They do this by using Defender for Cloud Apps, a solution for protecting your organization's cloud environment, to replace all relevant URLs, and cookies relating to cloud apps that you use.
 
@@ -53,9 +57,6 @@ If you don't recognize the remaining portion of the URL, such as **myurl.com**.m
 
 > [!NOTE]
 > Microsoft Edge users benefit from in-browser protection, and aren't redirected to a reverse proxy. Your URLs retain their original syntax in Microsoft Edge, even when access and sessions are protected by Defender for Cloud Apps. For more information, see [In-browser protection with Microsoft Edge for Business (Preview)](in-browser-protection.md).
-
-> [!IMPORTANT]
-> Access and session policies support IPv4 only. IP address-based conditions aren't honored if the user connects over IPv6. To ensure policy enforcement, verify that users have IPv4 connectivity.
 
 ## Related content
 

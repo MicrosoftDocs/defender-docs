@@ -41,9 +41,6 @@ The following table lists more examples of files that are and aren't scanned:
 |A Word file composed of images and text, 4-MB size and 2 million characters |No |
 |A Word file composed of images and text, 40-MB size and 400K characters |No |
 
-> [!IMPORTANT]
-> Access and session policies support IPv4 only. IP address-based conditions are not honored if the user connects over IPv6. To ensure policy enforcement, verify that users have IPv4 connectivity.
-
 ## Files encrypted with sensitivity labels
 
 For tenants that enable coauthoring for files encrypted with sensitivity labels, a session policy to block file upload/download that relies on label filters or file content will operate based on the **Always apply the selected action even if data cannot be scanned** policy setting.
@@ -100,6 +97,9 @@ The following table lists example results when you define the **Block upload of 
 ## Limitations for sessions that are served with Edge in-browser protection
 
 The following limitations apply only on sessions that are served with Edge in-browser protection.
+
+> [!IMPORTANT]
+> Access and session policies support IPv4 only. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
 
 ### Deep link is lost when user switches to Edge by clicking 'Continue in Edge'  
 
