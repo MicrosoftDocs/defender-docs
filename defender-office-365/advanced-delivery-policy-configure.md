@@ -524,7 +524,7 @@ This example modifies the (presumably only) phishing simulation override rule wi
 These changes don't affect existing entries in the rule.
 
 ```powershell
-Get-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule -AddSenderDomainIs blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
+Get-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule -AddSenderDomainIs blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
 For detailed syntax and parameter information, see [Set-ExoPhishSimOverrideRule](/powershell/module/exchange/set-exophishsimoverriderule).
