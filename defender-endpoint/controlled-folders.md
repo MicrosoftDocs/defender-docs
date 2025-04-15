@@ -3,7 +3,7 @@ title: Protect important folders from ransomware from encrypting your files with
 description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/04/2025
+ms.date: 04/15/2025
 author: denisebmsft
 ms.author: deniseb
 audience: ITPro
@@ -38,6 +38,7 @@ search.appverid: met150
 ## What is controlled folder access?
 
 Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using the Windows Security App, Microsoft Endpoint Configuration Manager, or Intune (for managed devices). Controlled folder access is supported on:
+
 - Windows 11
 - Windows 10
 - Windows Server 2025
@@ -92,10 +93,10 @@ Default folders appear in the user's profile, under **This PC**, as shown in the
 
 ![Protected Windows default systems folders](media/defaultfolders.png)
 
-The same profile folders are also protected for system accounts like LocalService, NetworkService, systemprofile, ... . For example, `C:\Windows\System32\config\systemprofile\Documents` will also be protected in case it exists.
+The same profile folders are also protected for system accounts, such as `LocalService`, `NetworkService`, `systemprofile`, etc. For example, `C:\Windows\System32\config\systemprofile\Documents` is also protected (if it exists).
 
 > [!NOTE]
-> You can configure more folders as protected, but you can't remove the Windows system folders that are protected by default.
+> You can configure more folders as protected, but you can't remove Windows system folders that are protected by default.
 
 ## Requirements for controlled folder access
 
