@@ -1,5 +1,5 @@
 ---
-title: Onboard to Microsoft Defender for Endpoint
+title: Onboard devices to Microsoft Defender for Endpoint
 description: Learn how to onboard endpoints to Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -20,7 +20,7 @@ search.appverid: met150
 ms.date: 04/03/2024
 ---
 
-# Onboard to Microsoft Defender for Endpoint
+# Onboard devices to Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -35,16 +35,19 @@ ms.date: 04/03/2024
 
 ## Onboard devices using any of the supported management tools
 
-The deployment tool you use influences how you onboard endpoints to the service.
+The deployment tool you use influences how you onboard endpoints to the service. Refer to your selected [deployment method](deployment-strategy.md#step-2-select-deployment-method).
 
-To start onboarding your devices:
+If you're onboarding devices in the Microsoft Defender portal, follow these steps:
 
-1. Go to [Select deployment method](deployment-strategy.md#step-2-select-deployment-method).
-2. Choose the Operating System for the devices you wish to Onboard.
-3. Select the tool you plan to use.
-4. Follow the instructions to Onboard your devices.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
-This video provides a quick overview of the onboarding process and the different tools and methods.
+2. Under **Select operating system to start onboarding process**, select the operating system for the device.
+
+3. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+
+4. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, if there is one available). Follow the instructions to onboard your devices.
+
+The following video provides a quick overview of the onboarding process and the different tools and methods: 
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
 
