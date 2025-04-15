@@ -353,7 +353,7 @@ In PowerShell, you use the [New-SafeLinksPolicy](/powershell/module/exchange/new
 
 For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
 
-In PowerShell, you use the [New-TeamsProtectionPolicy](/powershell/module/exchange/new-teamsprotectionpolicy), [New-TeamsProtectionPolicyRule](/powershell/module/exchange/new-teamsprotectionpolicyrule), [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy), and [Set-TeamsProtectionPolicyRule](/powershell/module/exchange/set-teamsprotectionpolicyrule) cmdlets for Microsoft Teams protection settings.
+In PowerShell, you use the [New-TeamsProtectionPolicy](/powershell/module/exchange/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
 
 > [!NOTE]
 > Microsoft Teams protection isn't part of the Standard or Strict preset security policies, any default policies, or any custom policies. The **Standard** and **Strict** values indicate our **recommended** values.
