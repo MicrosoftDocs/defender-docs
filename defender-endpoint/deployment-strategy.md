@@ -1,5 +1,5 @@
 ---
-title: Identify Defender for Endpoint architecture and deployment method
+title: Identify your architecture and select a deployment method for Defender for Endpoint
 description: Select the best Microsoft Defender for Endpoint deployment strategy for your environment.
 ms.service: defender-endpoint
 ms.author: deniseb
@@ -16,7 +16,7 @@ search.appverid: met150
 ms.date: 04/15/2025
 ---
 
-# Identify Defender for Endpoint architecture and deployment method
+# Identify your architecture and select a deployment method for Defender for Endpoint
 
 **Applies to:**
 
