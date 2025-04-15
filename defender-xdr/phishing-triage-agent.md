@@ -70,7 +70,7 @@ The Phishing Triage Agent requires the following permissions to run:
 
 ### Role-based access
 
-Users with Security Administrator or Microsoft Entra Administrator roles are required to setup the Phishing Triage Agent.
+Users with the Security Administrator role are required to setup the Phishing Triage Agent.
 
 Users with the following roles can view the Phishing Triage Agent's output:
 
