@@ -153,7 +153,7 @@ You can use the Windows Security app to view the list of folders that are protec
 
 4. If controlled folder access is turned off, you need to turn it on. Select **protected folders**.
 
-5. Do one of the following steps:
+5. Take one of the following steps:
 
    - To add a folder, select **+ Add a protected folder**.
    - To remove a folder, select it, and then select **Remove**.
