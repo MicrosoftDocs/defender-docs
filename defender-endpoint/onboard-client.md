@@ -23,9 +23,13 @@ ms.date: 04/16/2025
 
 **Applies to:**
 
+**Applies to:**
+
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Endpoint data loss prevention (DLP)](/microsoft-365/compliance/endpoint-dlp-learn-about)
+- [Insider risk management](/microsoft-365/compliance/insider-risk-management)
 
 To onboard client devices running Windows or macOS, follow this general process:
 
@@ -41,6 +45,7 @@ To onboard client devices running Windows or macOS, follow this general process:
    | Windows 8.1 Enterprise or Pro<br/>Windows 7 SP1 Enterprise or Pro| [Microsoft Monitoring Agent](update-agent-mma-windows.md) |
    |Mac<br/>(see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md))|[Local script](mac-install-manually.md) (also referred to as manual deployment) <br/> [Microsoft Intune](mac-install-with-intune.md) <br/> [JAMF Pro](mac-install-with-jamf.md) <br/> [Mobile Device Management](mac-install-with-other-mdm.md)|
 
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 ## See also
 
