@@ -40,9 +40,11 @@ This article provides step-by-step instructions on how to set up your environmen
 To set up your environment for prerelease testing, follow these steps:
 
 1. Contact Microsoft Support to provide the Google Play Store Organization ID for your organization and wait for confirmation. The ID is required to add your information to an inclusion list and make the prerelease build available for testing. You can find the Organization ID from the Microsoft Intune Admin center under **Apps > Android > Add - > App type > Managed Google Play** then selecting the icon on the top right corner. Here's an example.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/icon-select-small.png" alt-text="Screenshot of Microsoft Intune admin center highlighting the org ID" lightbox="/defender-endpoint/media/mobile-pretest-android/icon-select.png":::
 
 2. Sync the prerelease build of the app with Microsoft Intune to publish it to the managed Google Play Store. See [Sync a Managed Google Play app with Intune](/intune/intune-service/apps/apps-add-android-for-work#sync-a-managed-google-play-app-with-intune) for more information. The sync steps in Intune looks like the following:
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/intune-sync.png" alt-text="Screenshot selecting an app for managed Play in the Microsoft Intune admin center":::
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/manage-sync.png" alt-text="Screenshot highlighting the Sync option in the Managed Play store":::
@@ -52,12 +54,15 @@ To set up your environment for prerelease testing, follow these steps:
 4. In the portal, navigate to **Apps > All apps** and search for *Microsoft Defender: Antivirus*.
 
 5. In the **Properties** pane, select **Edit** beside **Assignments** and then add the user group under *Available for enrolled devices*.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/assignments-edit.png" alt-text="Screenshot highlighting the Microsoft Defender Antivirus properties":::
 
 6. In the **Edit application** list, select the added group to open the **Edit assignment** pane.
 
 7. In the Edit assignment pane, select **Included** as the mode. Then select **Custom testing track (number)** in the **Tracks** dropdown list. Then select default under **Update priority**.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/edit-assign-settings.png" alt-text="Screenshot of the required Edit assignment settings":::
+
 8. Select **Review + save** to review and save the details.
 
 After the app is synced and assigned to a user group, the following steps are required for the members of the user group to test the prerelease build on the Android device:
@@ -79,15 +84,19 @@ To set up your environment for prerelease testing, follow these steps:
 3. Users testing the prerelease build must sign in to the Google Play Store using the Google account that's part of the Google group.
 
 4. Search and download the prerelease build from the test link provided by the administrator. Users are then redirected to a *Welcome to the testing program* page. Here's an example.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/welcome-test.png" alt-text="Screenshot of a Welcome page to test the prelease build of Microsoft Defender Antivirus":::
 
 5. Follow the steps from the test link to install **Microsoft Defender: Antivirus (Beta)**.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/beta-app.png" alt-text="Screenshot of a prerelease version of Microsoft Defender Antivirus in the Google Play Store":::
 
 6. Sign in to the Defender app using the work/corporate account. Then follow the prompts to complete the onboarding process.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/defender-signin.png" alt-text="Screenshot of the Microsoft Defender Antivirus sign in page":::
 
 7. Once successfully onboarded, the app shows a *Preview build* label on top. Here's an example.
+
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/preview-build.png" alt-text="Screenshot of a prerelease version of Microsoft Defender Antivirus installed on a device":::
 
 > [!TIP]
