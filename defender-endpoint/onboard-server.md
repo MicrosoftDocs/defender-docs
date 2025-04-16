@@ -84,7 +84,11 @@ You need to complete the general steps depicted in the following image to succes
 
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
-1. Download the onboarding package.
+1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
+
+2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
+
+3. In the **Select operating system to start onboarding process** list, select **Windows Server 2019, 2022, and 2025**.
 
 2. Follow the guidance for your preferred tool:
 
