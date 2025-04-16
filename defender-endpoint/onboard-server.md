@@ -162,6 +162,27 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 - To automatically, deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
+## Onboard Linux servers
+
+To onboard servers running Linux, follow these steps:
+
+1. Make sure to review the [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md).
+
+2. Choose a deployment method. Dpending on your particular environment, you can choose from several options:
+
+   - [Installer script based deployment](/defender-endpoint/linux-installer-script) 
+   - [Ansible](linux-install-with-ansible.md) 
+   - [Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Puppet](linux-install-with-puppet.md) 
+   - [Saltstack](linux-install-with-saltack.md)
+   - [Manual deployment](linux-install-manually.md) (uses a local script) 
+   - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+   - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/quickstart-onboard-machines)
+   - [Guidance for ARM64-based Linux servers (preview)](mde-linux-arm.md)
+   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+
+3. Configure your capabilities. See [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md).
+
 ## Run a detection test to verify onboarding
 
 After onboarding the device, you can choose to run a detection test to verify that a device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md).
@@ -169,7 +190,7 @@ After onboarding the device, you can choose to run a detection test to verify th
 > [!NOTE]
 > Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Defender for Endpoint sensor (SENSE) is running.
 
-1. Run the following command to verify that Microsoft Defender Antivirus is installed:
+1. On Windows Server devices, run the following command to verify that Microsoft Defender Antivirus is installed:
 
    > [!NOTE]
    > This verification step is only required if you're using Microsoft Defender Antivirus as your active antimalware solution.
@@ -208,6 +229,7 @@ After offboarding, you can proceed to uninstall the unified solution package on 
 ## Next steps
 
 - [Configure capabilities](onboard-configure.md#configure-capabilities) 
+- [View the device inventory](machines-view-overview.md)
 
 ## See also
 
