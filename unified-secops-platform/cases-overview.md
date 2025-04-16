@@ -117,7 +117,7 @@ Each case has a threshold of 100 linked incidents.
 
 ### Activity log
 
-Need to write down notes, or that key detection logic to pass along? Create plain text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case.
+Need to write down notes, or that key detection logic to pass along? Create rich text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case such as queries, tables, links, and structured content.
 
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
