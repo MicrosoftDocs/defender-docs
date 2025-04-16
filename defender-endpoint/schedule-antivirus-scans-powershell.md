@@ -42,9 +42,9 @@ This article describes how to configure scheduled scans using PowerShell cmdlets
 |Avg CPU Load Factor|50/Not Configured (Default)|Set-MpPreference -ScanAvgCPULoadFactor <Byte><br>For example: Set-MpPreference -ScanAvgCPULoadFactor 50 <br>Note: The default value is 50.  The acceptable values are 5 through 100.  <br>Note 2: The lower you set it, the longer the scan will take. <br>Note 3: If both ScanOnlyIfIdleEnabled and DisableCpuThrottleOnIdleScans are both enabled, then the value of ScanAvgCPULoadFactor is ignored. <br>Note 4: Applies to scheduled scans.|
 |Start the scheduled scan only when device is on but not in use|True/Not Configured (Default)|Set-MpPreference -ScanOnlyIfIdleEnabled <Boolean><br>For example: Set-MpPreference -ScanOnlyIfIdleEnabled $True <br>Note: Applies to scheduled scans.|
 |Disable CPU throttle on idle scans|Enabled/Not Configured (Default)|Set-MpPreference -DisableCpuThrottleOnIdleScans <Boolean><br>For example: Set-MpPreference -DisableCpuThrottleOnIdleScans $True <br>Idle here means 90% of CPU utilization or below|
-|Enable Low CPU Priority|Disabled/Not Configured (Default)|Set-MpPreference -EnableLowCpuPriority <Boolean><br>For example: Set-MpPreference -EnableLowCpuPriority $false|
-|Disable Catchup Quick Scan|Enabled/Not Configured (Default)|Set-MpPreference -DisableCatchupQuickScan <Boolean><br>For example: |
-|Disable Catchup Full Scan|Disabled/Not Configured (Default)|Set-MpPreference -DisableCatchupFullScan <Boolean><br>For example: |
+|Enable Low CPU Priority|Disabled/Not Configured (Default)|Set-MpPreference -EnableLowCpuPriority <Boolean><br>For example: Set-MpPreference -EnableLowCpuPriority $False|
+|Disable Catchup Quick Scan|Enabled/Not Configured (Default)|Set-MpPreference -DisableCatchupQuickScan <Boolean><br>For example: Set-MpPreference -DisableCatchupQuickScan $False|
+|Disable Catchup Full Scan|Disabled/Not Configured (Default)|Set-MpPreference -DisableCatchupFullScan <Boolean><br>For example: Set-MpPreference -DisableCatchupFullScan $True|
 |Enable full scan on battery power|Disabled/Not Configured (Default)|Set-MpPreference -EnableFullScanOnBatteryPower <Boolean><br>For example: Set-MpPreference -EnableFullScanOnBatteryPower $False|
 
 ## Use PowerShell cmdlets to schedule scans
