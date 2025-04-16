@@ -159,12 +159,9 @@
             href: onboard-downlevel.md
 
         - name: Onboard server devices
-          href: onboard-server.md
           items:
-          - name: Onboard Windows Server version 1803, Windows Server 2019, and later
-            href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2 and Windows Server 2016
-            href: onboard-windows-server-2012r2-2016.md
+          - name: Onboard servers
+            href: onboard-server.md
           - name: Defender for Endpoint on Windows Server with SAP
             href: mde-sap-windows-server.md
           - name: Onboard Windows devices using Configuration Manager
