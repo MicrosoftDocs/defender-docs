@@ -136,7 +136,7 @@ The following table lists the supported operating systems for rules that are cur
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
 
 > [!NOTE]
-> - For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md). 
+> - For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016](onboard-server.md#onboard-windows-server-2012-r2-and-windows-server-2016). 
 > - If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
 > - For Windows client devices, "version 1809 or later" and "version 1903 (build 18362)" apply to Windows 10 only.
 
