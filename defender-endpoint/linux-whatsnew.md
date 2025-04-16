@@ -43,9 +43,9 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
-### April-2025 Build: 101.25022.0001 | Release version: 30.125022.0001.0
+### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
 
-|Build:             |**101.25022.0001**    |
+|Build:             |**101.25022.0002**    |
 |-------------------|----------------------|
 |Released:          |**April 07, 2025**    |
 |Published:         |**April 07, 2025**    |
