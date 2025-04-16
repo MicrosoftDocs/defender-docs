@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
@@ -32,7 +32,7 @@ ms.date: 04/30/2024
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-You can submit feedback by opening Microsoft Defender for Endpoint on Mac on your device and by navigating to **Help > Send feedback**.
+You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device and by navigating to **Help > Send feedback**.
 
 Another option is to submit feedback via the Microsoft Defender XDR by launching **security.microsoft.com** and selecting the **Give feedback** tab.
 
@@ -42,15 +42,15 @@ Starting with macOS BigSur (11), Apple's macOS requires all system extensions to
 
 ## Symptom
 
-You'll notice that the Microsoft Defender for Endpoint has an **x** symbol in the shield, as shown in the following screenshot:
+You notice that the Microsoft Defender for Endpoint has an **x** symbol in the shield, as shown in the following screenshot:
 
 :::image type="content" source="media/mde-screen-with-x-symbol.png" alt-text="The Microsoft Defender for Endpoint screen that displays the x symbol on its menu." lightbox="media/mde-screen-with-x-symbol.png":::
 
-If you click the shield with the **x** symbol, you'll get options as shown in the following screenshot:
+If you select the shield with the **x** symbol, you get options as shown in the following screenshot:
 
 :::image type="content" source="media/options-on-clicking-x-symbol.png" alt-text="The options you get on clicking the x symbol." lightbox="media/options-on-clicking-x-symbol.png":::
 
-Click **Action needed**.
+Select **Action needed**.
 
 The screen as shown in the following screenshot appears:
 
@@ -90,7 +90,7 @@ If you didn't approve the system extension during the deployment/installation of
 
    :::image type="content" source="media/check-system-extension.png" alt-text="The screen that shows what should be done to check the system extension." lightbox="media/check-system-extension.png":::
 
-You'll notice that both Microsoft Defender for Endpoint on macOS extensions are in the **[activated waiting for user]** state.
+You notice that both Microsoft Defender for Endpoint on macOS extensions is in the **[activated waiting for user]** state.
 
 2. In the terminal, run the following command:
 
@@ -98,7 +98,7 @@ You'll notice that both Microsoft Defender for Endpoint on macOS extensions are 
    mdatp health --details system_extensions
    ```
 
-You'll get the following output:
+You get the following output:
 
 ```OutputCopy
 network_extension_enabled                 : false
@@ -126,7 +126,7 @@ To troubleshoot the issue of missing files to make Microsoft Defender for Endpoi
 
 ## Solution
 
-This section describes the solution of approving the functions such system extension, background services, notifications, full disk access, and so on using the management tools, namely Intune, JamF, Other MDM, and using the method of manual deployment. To perform these functions using these management tools, see:
+This section describes the solution of approving the functions such system extension, background services, notifications, full disk access, and so on, using the management tools, namely Intune, JamF, Other MDM, and using the method of manual deployment. To perform these functions using these management tools, see:
 
 - [Intune](manage-profiles-approve-sys-extensions-intune.md#manage-profiles-and-approve-extensions-using-intune)
 - [JamF](manage-sys-extensions-using-jamf.md#manage-system-extensions-using-jamf)
@@ -143,7 +143,7 @@ If you're using Intune, see [Manage macOS software update policies in Intune](/m
 
 :::image type="content" source="media/refresh-devices.png" alt-text="The screen on which you refresh the devices." lightbox="media/refresh-devices.png":::
 
-1. Click the ellipses (three dots).
+1. Select the ellipses (three dots).
 1. Select **Refresh devices**. The screen as shown in the following screenshot appears:
 
    :::image type="content" source="media/screen-on-clicking-refresh-devices.png" alt-text="The screen that appears on clicking Refresh devices." lightbox="media/screen-on-clicking-refresh-devices.png":::
@@ -168,7 +168,7 @@ The section [Sections that provide guidance on enabling profiles needed for Micr
 Using the recommended naming convention enables you to confirm that the correct profiles are dropping down at the time of checking.
 
 > [!TIP]
-> To ensure that the correct profiles are coming down, instead of typing **.mobileconfig (plist)**, you can download this profile from Github, to avoid typos elongated hyphens.
+> To ensure that the correct profiles are coming down, instead of typing.mobileconfig (plist)**, you can download this profile from GitHub, to avoid typos elongated hyphens.
 
 In terminal, enter the following syntax:
 
@@ -241,7 +241,7 @@ For example,
 #### Step 3: Test the installed profiles using macOS built-in 'profile' tool.  It compares your profiles with what we have published in GitHub, reporting inconsistent profiles or profiles missing altogether
 
 1. Download the script from https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm.
-1. Click **Raw**. The new URL will be https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py.
+1. Select **Raw**. The new URL is https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py.
 1. Save it as *analyze_profiles.py* to **Downloads** by running the following command in terminal:
 
 ```BashCopy
@@ -270,7 +270,7 @@ OR
    > [!NOTE]
    > Sudo permissions are required to execute this command.
 
-The output will show all potential issues with profiles.
+The output shows all potential issues with profiles.
 
 ## Recommended content
 
@@ -278,4 +278,4 @@ The output will show all potential issues with profiles.
 - [Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro](mac-jamfpro-policies.md): Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
 - [Set up device groups in Jamf Pro](mac-jamfpro-device-groups.md): 
 Learn how to set up device groups in Jamf Pro for Microsoft Defender for Endpoint on macOS.
-- [Log in to Jamf Pro](mac-install-jamfpro-login.md)
+- [Sign-in to Jamf Pro](mac-install-jamfpro-login.md)
