@@ -41,13 +41,13 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 - In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
 
-- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Please upgrade to macOS Sequoia version 15.1 or newer.
+- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
 
-- On macOS Sequoia (Version 15.0 - 15.1.1), users may encounter prompts about incoming network connections from applications when the native firewall is active.  
+- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.  
 
    ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
   
-If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't impact Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web).  This issue is fixed in macOS Sequoia 15.2.
+If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web).  This issue is fixed in macOS Sequoia 15.2.
 
 ## Sequoia support
 
@@ -56,7 +56,7 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 ## macOS Deprecation
 
 - Microsoft Defender for Endpoint no longer supports Big Sur (11).
-- macOS 12 (Monterey) will not be supported starting December 2024.
+- macOS 12 (Monterey) won't be supported starting December 2024.
 
 ## Releases for Defender for Endpoint on macOS
 
@@ -112,7 +112,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 ##### What's new
 
 - Removed support of macOS 12, the minimal requirement is now macOS 13.0 or later
-- Fix: Defender quarantines a file even if it is marked as immutable
+- Fix: Defender quarantines a file even if it's marked as immutable
 - `mdatp health` can return [`out_of_date`](device-health-microsoft-defender-antivirus-health.md#up-to-date-definitions) status for `definitions_status`
 - Bug and performance fixes
 
@@ -290,7 +290,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 > [!NOTE]
 > If you use Device Control v1, consider migrating to v2 (that includes all v1 functionality and more).
 > Device Control v1 will be considered deprecated in the nearest future.
-> To check, run the `[mdatp health --details device_control](mac-device-control-overview.md#status)` command, and inspect the `active` property, it should not contain "v1".
+> To check, run the `[mdatp health --details device_control](mac-device-control-overview.md#status)` command, and inspect the `active` property, it shouldn't contain "v1".
 
 ### Oct-2023 (Build: 101.23082.0018  | Release version: 20.123082.18.0)
 
@@ -881,7 +881,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- This product version has been validated on macOS Big Sur 11 preview 9.
+- This product version is validated on macOS Big Sur 11 preview 9.
 - The new syntax for the mdatp command-line tool is now the default one. For more information on the new syntax, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md#configuring-from-the-command-line).
 > [!NOTE]
 > The old command-line tool syntax will be removed from the product on **January 1st, 2021**.
@@ -913,15 +913,15 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Addressed a performance regression introduced in version `101.05.17`. The regression was introduced with the fix to eliminate the kernel panics some customers have observed when accessing SMB shares. We have reverted this code change and are investigating alternative ways to eliminate the kernel panics.
+- Addressed a performance regression introduced in version `101.05.17`. The regression was introduced with the fix to eliminate the kernel panics some customers observed when accessing SMB shares. We reverted this code change and are investigating alternative ways to eliminate the kernel panics.
 
 &ensp;Build: **101.05.17**<br>
 
 **What's new**
 
 > [!IMPORTANT]
-> We are working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
-> We will continue supporting the old syntax in parallel with the new syntax and will provide more communication around the deprecation plan for the old syntax in the upcoming months.
+> We're working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
+> We continue supporting the old syntax in parallel with the new syntax and provides more communications around the deprecation plan for the old syntax in the upcoming months.
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
 - Performance improvements & Product improvements
 
@@ -980,9 +980,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 > [!CAUTION]
-> To ensure the most complete protection for your macOS devices and in alignment with Apple stopping delivery of macOS native security updates to OS versions older than [current - 2], MDATP for macOS deployment and updates will no longer be supported on macOS Sierra [10.12]. MDATP for macOS updates and enhancements will be delivered to devices running versions Catalina [10.15], Mojave [10.14], and High Sierra [10.13].
+> To ensure the most complete protection for your macOS devices and in alignment with Apple stopping delivery of macOS native security updates to OS versions older than [current - 2], MDATP for macOS deployment and updates will no longer be supported on macOS Sierra [10.12]. MDATP for macOS updates and enhancements are delivered to devices running versions Catalina [10.15], Mojave [10.14], and High Sierra [10.13].
 >
-> If you already have MDATP for macOS devices deployed to your Sierra [10.12] devices, please upgrade to the latest macOS version to eliminate risks of losing protection.
+> If you already have MDATP for macOS devices deployed to your Sierra [10.12] devices, upgrade to the latest macOS version to eliminate risks of losing protection.
 
 - Performance improvements & Product improvements
 
@@ -1046,9 +1046,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Added support for macOS Catalina.
 
 > [!CAUTION]
-> macOS 10.15 (Catalina) contains new security and privacy enhancements. Beginning with this version, by default, applications are not able to access certain locations on disk (such as Documents, Downloads, Desktop, etc.) without explicit consent. In the absence of this consent, Microsoft Defender for Endpoint is not able to fully protect your device.
+> macOS 10.15 (Catalina) contains new security and privacy enhancements. Beginning with this version, by default, applications aren't able to access certain locations on disk (such as Documents, Downloads, Desktop, etc.) without explicit consent. In the absence of this consent, Microsoft Defender for Endpoint isn't able to fully protect your device.
 > > The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
-> - For manual deployments, see the updated instructions in the [Manual deployment topic](mac-install-manually.md#allow-full-disk-access).
+> - For manual deployments, see the updated instructions in the [Manual deployment article](mac-install-manually.md#allow-full-disk-access).
 - For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) articles.
 
 - Performance improvements & Product improvements

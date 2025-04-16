@@ -48,7 +48,7 @@ Real-time protection (RTP) is a feature of Defender for Endpoint on macOS that c
 Prerequisites:
 
 - Microsoft Defender for Endpoint version (Platform Update) 100.90.70 or newer
-- If you have [Tamper protection](tamperprotection-macos.md) turned on in block mode, use [Troubleshooting mode](mac-troubleshoot-mode.md) to capture real-time-protection-statistics. Otherwise, you'll get null results. 
+- If you have [Tamper protection](tamperprotection-macos.md) turned on in block mode, use [Troubleshooting mode](mac-troubleshoot-mode.md) to capture real-time-protection-statistics. Otherwise, you get null results. 
 
 > [!TIP]
 > As a general best practice, it's recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.

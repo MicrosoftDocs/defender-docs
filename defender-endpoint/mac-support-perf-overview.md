@@ -7,7 +7,7 @@ ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/29/2024
+ms.date: 04/16/2025
 ms.subservice: macos
 manager: deniseb
 ms.custom: partner-contribution
@@ -42,7 +42,7 @@ When troubleshooting performance issues for Microsoft Defender for Endpoint on m
 |Daemon name|Component|Troubleshooting guide|
 | -------- | -------- |-------- |
 |wdavdaemon| Core (privileged)|Open a [Microsoft support case](contact-support.md).|
-|wdavdaemon_unprivileged| Antimalware (AV, EPP)|Review [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md).|
+|wdavdaemon_unprivileged| Anti-malware (AV, EPP)|Review [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md).|
 |wdavdaemon_enterprise| Endpoint Detection and Response (EDR)|Open a [Microsoft support case](contact-support.md).|
 
 Additionally, gather [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs. This is used by the support team to investigate the issue. 

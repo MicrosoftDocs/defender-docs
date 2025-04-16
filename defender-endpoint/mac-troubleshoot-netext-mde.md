@@ -77,7 +77,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Select **Members**, and then select **Add members**.
 
-5. On the **Devices** tab, select the devices for which you want to disable NetExt. Then click **Select**.
+5. On the **Devices** tab, select the devices for which you want to disable NetExt. Then select **Select**.
 
 6. Select **Refresh**. You should now be able to see your devices. 
 
@@ -91,7 +91,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Next to **Assignments**, select **Edit**.
 
-5. Under **Excluded groups**, select **Add groups**, and then select the "Devices with NetExt disabled" device group. Then click **Select**.
+5. Under **Excluded groups**, select **Add groups**, and then select the "Devices with NetExt disabled" device group. Then select **Select**.
 
 6. Select **Review + save**, and then select **Save**.
 
@@ -105,7 +105,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Next to **Assignments**, select **Edit**.
 
-5. Under **Add groups**, select the device group that you created earlier (for example, `Devices with NetExt disabled`). Then click **Select**.
+5. Under **Add groups**, select the device group that you created earlier (for example, `Devices with NetExt disabled`). Then select **Select**.
 
 6. Select **Review + save**, and then select **Save**.
 
@@ -123,7 +123,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
    - System Extensions 
 
    > [!CAUTION]
-   > Do not repeat this procedure for NetExt. 
+   > Don't repeat this procedure for NetExt. 
 
    After you complete these steps, see if you're able to reproduce the issue. 
 
@@ -141,7 +141,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 4. Select the **Assignments** tab.
 
-5. Select the devices select the devices for which you want to disable NetExt. Then select **Save**.
+5. Select the devices for which you want to disable NetExt. Then select **Save**.
 
    Under **Computers - Static Computer Groups**, you should be able to see your new group. 
 
@@ -187,7 +187,7 @@ The following sections describe how to create a new "Devices with NetExt disable
    - System Extensions 
 
    > [!CAUTION]
-   > Do not repeat this procedure for NetExt. 
+   > Don't repeat this procedure for NetExt. 
 
    After you complete these steps, see if you're able to reproduce the issue. 
 

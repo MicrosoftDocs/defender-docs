@@ -66,7 +66,7 @@ File, folder, and process exclusions support the following wildcards:
 >
 > The product attempts to resolve firm links when evaluating exclusions. Firm link resolution doesn't work when the exclusion contains wildcards or the target file (on the `Data` volume) doesn't exist.
 
-## Best practices for adding antimalware exclusions for Microsoft Defender for Endpoint on macOS
+## Best practices for adding anti-malware exclusions for Microsoft Defender for Endpoint on macOS
 
 1. Write down why an exclusion was added to a central location where only SecOps and/or Security Administrator have access. For example, list the submitter, date, app name, reason, and exclusion information.
 
@@ -74,7 +74,7 @@ File, folder, and process exclusions support the following wildcards:
 
    *except for apps that the ISV stated that there's no other tweaking that could be done to prevent the false positive or higher cpu utilization from occurring.
 
-1. Avoid migrating non-Microsoft antimalware exclusions since they might no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
+1. Avoid migrating non-Microsoft anti-malware exclusions since they might no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
 
 1. Order of exclusions to consider top (more secure) to bottom (least secure):
 

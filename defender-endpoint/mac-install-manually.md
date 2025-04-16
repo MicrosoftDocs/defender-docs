@@ -16,7 +16,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Manual deployment for Microsoft Defender for Endpoint on macOS
@@ -179,7 +179,7 @@ You can view applications permitted to run in background in System Settings => s
 
 :::image type="content" source="media/background-items.png" alt-text="Screenshot that shows background items":::
 
-Make sure all Microsoft Defender and Microsoft Corporation items are enabled. If they are disabled, then macOS won't start Microsoft Defender after a machine restart.
+Make sure all Microsoft Defender and Microsoft Corporation items are enabled. If they're disabled, then macOS won't start Microsoft Defender after a machine restart.
 
 ## Bluetooth permissions
 
@@ -261,7 +261,7 @@ See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove M
 > [!TIP]
 >
 > - Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).
-> - If you have any feedback that you'll like to share, submit it by opening Microsoft Defender Endpoint on macOS on your device and navigate to **Help** \> **Send feedback**.
+> - If you have any feedback that you like to share, submit it by opening Microsoft Defender Endpoint on macOS on your device and navigate to **Help** \> **Send feedback**.
 
 ## Recommended content
 
