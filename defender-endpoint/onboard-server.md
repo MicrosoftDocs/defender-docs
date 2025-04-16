@@ -229,7 +229,7 @@ You can offboard Windows servers by using the same methods that are available fo
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
-After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2016 and Windows Server 2012 R2. For prevous versions of Windows Server, you have two options to offboard Windows servers from the service:
+After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2016 and Windows Server 2012 R2. For previous versions of Windows Server, you have two options to offboard Windows servers from the service:
 
 - Uninstall the MMA agent
 - Remove the Defender for Endpoint workspace configuration
