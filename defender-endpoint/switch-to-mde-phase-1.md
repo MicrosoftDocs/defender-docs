@@ -69,7 +69,7 @@ Now that you've updated your organization's devices, the next step is to get Def
 
 1. Buy or try Defender for Endpoint today. [Start a free trial or request a quote](https://aka.ms/mdatp). Microsoft 365 E3 includes Defender for Endpoint Plan 1, and Microsoft 365 E5 includes Defender for Endpoint Plan 2.
 
-2. Verify that your licenses are properly provisioned. [Check your license state](production-deployment.md#check-license-state).
+2. Verify that your licenses are properly provisioned. [Check your license state](production-deployment.md#check-your-license-state).
 
 3. Set up your dedicated cloud instance of Defender for Endpoint. See [Defender for Endpoint setup: Tenant configuration](production-deployment.md#tenant-configuration).
 
