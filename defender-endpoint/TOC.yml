@@ -160,7 +160,7 @@
 
         - name: Onboard server devices
           items:
-          - name: Onboard servers
+          - name: Onboard servers through Defender for Endpoint's experience
             href: onboard-server.md
           - name: Defender for Endpoint on Windows Server with SAP
             href: mde-sap-windows-server.md
