@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
 ms.localizationpriority: medium
-ms.date: 04/06/2025
+ms.date: 04/16/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
