@@ -172,9 +172,9 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 - Not all attack surface reduction rules are applicable to all operating systems. See [Attack surface reduction rules](attack-surface-reduction-rules-reference.md).
 
-- Operating system upgrades aren't supported. Offboard then uninstall before upgrading. The installer package can only be used to upgrade installations that haven't yet been updated with new antimalware platform or EDR sensor update packages.
+- Operating system upgrades aren't supported. Offboard then uninstall before upgrading. The installer package can only be used to upgrade installations that haven't yet been updated with new anti-malware platform or EDR sensor update packages.
 
-- To automatically, deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
+- To automatically deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
 ## Onboard Linux servers
 
@@ -182,7 +182,7 @@ To onboard servers running Linux, follow these steps:
 
 1. Make sure to review the [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md).
 
-2. Choose a deployment method. Dpending on your particular environment, you can choose from several options:
+2. Choose a deployment method. Depending on your particular environment, you can choose from several options:
 
    - [Installer script based deployment](/defender-endpoint/linux-installer-script) 
    - [Ansible based deployment](linux-install-with-ansible.md) 
