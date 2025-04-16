@@ -32,6 +32,21 @@ search.appverid: met150
 
 This article describes how to configure scheduled scans using PowerShell cmdlets. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
+## Use PowerShell cmdlets to set the general settings for Scheduled scan and/or On-Demand scan
+
+| Description | Setting|Powershell cmdlet|
+| -------- | -------- | -------- |
+|Check for Security Intelligence Updates Before Running Scan |Disabled/Not configured (Default)|Set-MpPreference -CheckForSignaturesBeforeRunningScan <Boolean><br>For example: Set-MpPreference -CheckForSignaturesBeforeRunningScan $False|
+|Randomize Schedule Task Times|Disabled/Not configured (Default)|Set-MpPreference -RandomizeScheduleTaskTimes <Boolean> <br>Example for physical devices: Set-MpPreference -RandomizeScheduleTaskTimes  $False <br>Example for Virtual Machines (VM's) or Virtual Desktop Infrastructure (VDI's) or Azure Virtual Desktop (AVD): Set-MpPreference -RandomizeScheduleTaskTimes $True <br>Note: The default randomization time is within an interval of 30 minutes after the specified start time, if the "Scheduler Randomization Time" is also not configured.<br>|
+|Scheduler Randomization Time|0/Not Configured (Default, Scheduled tasks won't be randomized)|Set-MpPreference -SchedulerRandomizationTime <UInt32> <br>For example: Set-MpPreference -SchedulerRandomizationTime 1<br>Note: If Randomize Schedule Task Times is "Not configured" and "Randomize Schedule Task Times" is also set to "Not configured", then the system will use the default behavior within an interval of 30 minutes after the specific start time.<br>Note: If you enable this setting, you must pick a randomization window in hours between 1 and 23. <br> Note 2: Applies to scheduled scans.|
+|Avg CPU Load Factor|50/Not Configured (Default)|Set-MpPreference -ScanAvgCPULoadFactor <Byte><br>For example: Set-MpPreference -ScanAvgCPULoadFactor 50 <br>Note: The default value is 50.  The acceptable values are 5 through 100.  <br>Note 2: The lower you set it, the longer the scan will take. <br>Note 3: If both ScanOnlyIfIdleEnabled and DisableCpuThrottleOnIdleScans are both enabled, then the value of ScanAvgCPULoadFactor is ignored. <br> Note 4: Applies to scheduled scans. |
+||True/Not Configured (Default)|Set-MpPreference -ScanOnlyIfIdleEnabled <Boolean><br>For example: Set-MpPreference -ScanOnlyIfIdleEnabled $True|
+||Enabled/Not Configured (Default)|Set-MpPreference -DisableCpuThrottleOnIdleScans <Boolean><br>For example: Set-MpPreference -DisableCpuThrottleOnIdleScans $True <br> Idle here means 90% of CPU utilization or below|
+|Enable Low CPU Priority|Disabled (Default)|Set-MpPreference -EnableLowCpuPriority <Boolean><br>|
+|Disable Catchup Quick Scan|Enabled (Default)|Set-MpPreference -DisableCatchupQuickScan <Boolean><br>|
+|Disable Catchup Full Scan|Disabled (Default)|Set-MpPreference -DisableCatchupFullScan <Boolean><br>|
+|||Set-MpPreference -EnableFullScanOnBatteryPower <Boolean><br>|
+
 ## Use PowerShell cmdlets to schedule scans
 
 Use the following cmdlets:
@@ -79,6 +94,14 @@ Set-MpPreference -ScanScheduleQuickScanTime
 ```
 
 For more information about how to use PowerShell with Microsoft Defender Antivirus, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
+
+#### See also
+
+[Troubleshoot Microsoft Defender Antivirus scan issues](/defender-endpoint/troubleshoot-mdav-scan-issues)
+
+[Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
+
+[Defender Antivirus specific Powershell functions](/powershell/module/defender/?view=windowsserver2025-ps)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
