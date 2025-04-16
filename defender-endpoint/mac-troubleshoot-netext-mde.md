@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on Mac
+title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on macOS
 description: Learn how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot Network Extension (NetExt) issues in Defender for Endpoint on Mac 
@@ -30,7 +30,7 @@ ms.date: 02/24/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 > [!NOTE]
-> You can submit feedback by opening Microsoft Defender for Endpoint on Mac on your device, and going to **Help** > **Send feedback**. Another option is to submit feedback via the Microsoft Defender portal. Go to [security.microsoft.com](https://security.microsoft.com), and selecting the **Give feedback** tab. 
+> You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device, and going to **Help** > **Send feedback**. Another option is to submit feedback via the Microsoft Defender portal. Go to [security.microsoft.com](https://security.microsoft.com), and selecting the **Give feedback** tab. 
 
 ## Overview 
 
@@ -44,7 +44,7 @@ You might notice issues with network related latencies when using your browser o
 
 **Temporary solution**:
 
-This article describes how to temporarily disable NetExt which will temporarily disable network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
+This article describes how to temporarily disable NetExt which will temporarily disable network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on macOS.
 
 At a high level, these are the steps to follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
@@ -77,7 +77,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Select **Members**, and then select **Add members**.
 
-5. On the **Devices** tab, select the devices for which you want to disable NetExt. Then click **Select**.
+5. On the **Devices** tab, select the devices for which you want to disable NetExt. Then select **Select**.
 
 6. Select **Refresh**. You should now be able to see your devices. 
 
@@ -91,7 +91,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Next to **Assignments**, select **Edit**.
 
-5. Under **Excluded groups**, select **Add groups**, and then select the "Devices with NetExt disabled" device group. Then click **Select**.
+5. Under **Excluded groups**, select **Add groups**, and then select the "Devices with NetExt disabled" device group. Then select **Select**.
 
 6. Select **Review + save**, and then select **Save**.
 
@@ -105,7 +105,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Next to **Assignments**, select **Edit**.
 
-5. Under **Add groups**, select the device group that you created earlier (for example, `Devices with NetExt disabled`). Then click **Select**.
+5. Under **Add groups**, select the device group that you created earlier (for example, `Devices with NetExt disabled`). Then select **Select**.
 
 6. Select **Review + save**, and then select **Save**.
 
@@ -123,7 +123,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
    - System Extensions 
 
    > [!CAUTION]
-   > Do not repeat this procedure for NetExt. 
+   > Don't repeat this procedure for NetExt. 
 
    After you complete these steps, see if you're able to reproduce the issue. 
 
@@ -141,7 +141,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 4. Select the **Assignments** tab.
 
-5. Select the devices select the devices for which you want to disable NetExt. Then select **Save**.
+5. Select the devices for which you want to disable NetExt. Then select **Save**.
 
    Under **Computers - Static Computer Groups**, you should be able to see your new group. 
 
@@ -187,13 +187,13 @@ The following sections describe how to create a new "Devices with NetExt disable
    - System Extensions 
 
    > [!CAUTION]
-   > Do not repeat this procedure for NetExt. 
+   > Don't repeat this procedure for NetExt. 
 
    After you complete these steps, see if you're able to reproduce the issue. 
 
 ## Manual method
 
-If you have Defender for Endpoint installed on your Mac, you can remove the NetExt extension temporarily by following these steps:
+If you have Defender for Endpoint installed on your macOS device, you can remove the NetExt extension temporarily by following these steps:
 
 1. On your Mac, open **System Settings**.
 
