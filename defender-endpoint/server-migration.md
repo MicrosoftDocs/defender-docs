@@ -70,7 +70,7 @@ For instructions on how to migrate using Configuration Manager older than versio
 
 ## If you are running a non-Microsoft antivirus solution
 
-1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [prerequisites for Windows Server 2016](onboard-server.md#prerequisites-for-windows-server-2016-and-windows-server-2012-r2) are met.
+1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) are met.
 
 2. Ensure your non-Microsoft antivirus management solution no longer pushes antivirus agents to these machines.
 
@@ -98,7 +98,7 @@ In the preceding procedure, steps 2 and 7 apply only if you intend to replace yo
 
 ## If you are running System Center Endpoint Protection but aren't managing the machine using Configuration Manager (MECM/ConfigMgr)
 
-1. Fully update the device, including Microsoft Defender Antivirus (on Windows Server 2016) ensuring [prerequisites](onboard-server.md#prerequisites-for-windows-server-2016-and-windows-server-2012-r2) are met.
+1. Fully update the device, including Microsoft Defender Antivirus (on Windows Server 2016) ensuring [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) are met.
 
 2. Create and apply policies using Group Policy, PowerShell, or a non-Microsoft management solution.
 
