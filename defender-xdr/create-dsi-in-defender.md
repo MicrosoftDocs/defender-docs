@@ -16,7 +16,7 @@ ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 04/09/2025
+ms.date: 04/21/2025
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As a security administrator, I want to create data security investigations from the Microsoft Defender portal.
@@ -47,7 +47,7 @@ To view and access the investigation in Data Security Investigations (preview) i
 
 Microsoft Defender XDR identifies possibly impacted sensitive data in incidents, where you can start creating an investigation in Data Security Investigations (preview). Investigations support mailboxes, files, and mail messages as the scope of the investigation.
 
-To create a data security investigation in the Microsoft Defender portal, follow these steps:
+To create an investigation in Data Security Investigations (preview) in the Microsoft Defender portal, follow these steps:
 
 1. Sign in to the Microsoft Defender portal at [security.microsoft.com](https://security.microsoft.com).
 2. In the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents** to open the incident queue. Select an incident from the queue to open the incident page.
@@ -60,7 +60,7 @@ To create a data security investigation in the Microsoft Defender portal, follow
    > You can attach either mailboxes or files and mail messages in an investigation, but not both at the same time. If an incident involves both mailboxes and files or mail messages, you need to create separate investigations. For example, create one investigation for all mailboxes and another for all files and mail messages. Files and mail messages can be attached in one investigation.
 6. Select **Create investigation** to finish creating the data security investigation.
 
-Once the data security investigation is created, a link to the Microsoft Purview portal appears on the message banner in the incident page. Here’s an example.
+Once the investigation in Data Security Investigations (preview) is created, a link to the Microsoft Purview portal appears on the message banner in the incident page. Here’s an example.
 
 :::image type="content" source="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link-small.png" alt-text="Screenshot highlighting the link to Microsoft Purview portal after successful creation" lightbox="/defender-xdr/media/xdr-dsi/xdr-dsi-success-link.png":::
 
