@@ -185,10 +185,10 @@ To onboard servers running Linux, follow these steps:
 2. Choose a deployment method. Dpending on your particular environment, you can choose from several options:
 
    - [Installer script based deployment](/defender-endpoint/linux-installer-script) 
-   - [Ansible](linux-install-with-ansible.md) 
-   - [Chef](linux-deploy-defender-for-endpoint-with-chef.md)
-   - [Puppet](linux-install-with-puppet.md) 
-   - [Saltstack](linux-install-with-saltack.md)
+   - [Ansible based deployment](linux-install-with-ansible.md) 
+   - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Puppet based deployment](linux-install-with-puppet.md) 
+   - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Manual deployment](linux-install-manually.md) (uses a local script) 
    - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
    - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/quickstart-onboard-machines)
