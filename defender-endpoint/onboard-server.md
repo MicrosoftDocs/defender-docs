@@ -96,17 +96,6 @@ You need to complete the general steps depicted in the following image to succes
 
 ## Onboard Windows Server 2012 R2 and Windows Server 2016 
 
-### Prerequisites for Windows Server 2016 and Windows Server 2012 R2
-
-- It's recommended to install the latest available Servicing Stack Update (SSU) and Latest Cumulative Update (LCU) on the server.
-- The SSU from September 14, 2021 or later must be installed.
-- The LCU from September 20, 2018 or later must be installed.  
-- Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
-- Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
-- On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. See [information for Windows Server 2012 R2 and Windows Server 2016](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016).
-
-### Onboarding Windows Server 2016 and Windows Server 2012 R2
-
 The following diagram shows the general steps required to successfully onboard servers.
 
 :::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
@@ -130,6 +119,15 @@ The following diagram shows the general steps required to successfully onboard s
    - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
    - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
    - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+
+### Prerequisites for Windows Server 2016 and Windows Server 2012 R2
+
+- It's recommended to install the latest available Servicing Stack Update (SSU) and Latest Cumulative Update (LCU) on the server.
+- The SSU from September 14, 2021 or later must be installed.
+- The LCU from September 20, 2018 or later must be installed.  
+- Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
+- Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
+- On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. See [information for Windows Server 2012 R2 and Windows Server 2016](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016).
 
 ### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
