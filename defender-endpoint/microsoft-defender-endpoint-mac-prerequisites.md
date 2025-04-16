@@ -1,5 +1,5 @@
 ---
-title: How to install Microsoft Defender for Endpoint on macOS
+title: Microsoft Defender for Endpoint on macOS Prerequisites
 ms.reviewer: joshbregman
 description: Learn how to install, configure, update, and use Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
