@@ -112,7 +112,7 @@ Device control for macOS has similar capabilities to Device control for Windows,
 
 - macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example, a `portableDevice` policy can deny or allow `download_photos_from_device`.
 
-- To stay consistent with Windows, there are `generic_read`,`generic_write` , and `generic_execute` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
+- To stay consistent with Windows, there are `generic_read`, `generic_write`, and `generic_execute` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
 - Creating a `deny` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.
 
 
