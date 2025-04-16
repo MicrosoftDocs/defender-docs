@@ -47,8 +47,8 @@ You can block additional malicious IPs/URLs by configuring "**Custom network ind
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016) (requires installation through MSI)
-- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-windows-server-2012r2-2016) (requires installation through MSI)
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
 - macOS
 - Linux
 - iOS 
