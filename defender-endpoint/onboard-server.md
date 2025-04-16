@@ -70,7 +70,7 @@ If you intend to use a non-Microsoft anti-malware solution, you need to run Micr
 
 ## Server onboarding options
 
-The following table summarizes various deployment methods for onboarding servers:
+You can choose from several deployment methods and tools to onboard servers, as summarized in the following table:
 
 |Operating system| Deployment method |
 |---|---|
