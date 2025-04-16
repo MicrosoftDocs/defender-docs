@@ -45,7 +45,7 @@ To onboard servers to Defender for Endpoint, [server licenses](/office365/servic
 
 ## Integration with Microsoft Defender for Servers
 
-Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers (in Defender for Cloud). If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
+Defender for Endpoint integrates seamlessly with [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) (in Defender for Cloud). If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
 
 - Onboard servers automatically
 - Have servers that are monitored by Defender for Cloud appear in the Microsoft Defender portal, in the device inventory
