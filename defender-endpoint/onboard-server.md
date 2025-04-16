@@ -204,10 +204,7 @@ After onboarding the device, you can choose to run a detection test to verify th
 > [!NOTE]
 > Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Defender for Endpoint sensor (SENSE) is running.
 
-1. On Windows Server devices, run the following command to verify that Microsoft Defender Antivirus is installed:
-
-   > [!NOTE]
-   > This verification step is only required if you're using Microsoft Defender Antivirus as your active antimalware solution.
+1. On Windows Server devices that should have Microsoft Defender Antivirus installed in active mode, run the following command:
 
    ```cmd
    sc.exe query Windefend
