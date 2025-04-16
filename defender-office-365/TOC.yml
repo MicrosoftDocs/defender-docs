@@ -460,6 +460,8 @@
               href: air-remediation-actions.md
             - name: Review and approve (or reject) pending actions
               href: air-review-approve-pending-completed-actions.md
+            - name: Automated remediation in AIR
+              href: air-auto-remediation.md
          - name: Detect and address compromised user accounts in AIR
            href: address-compromised-users-quickly.md
          - name: Integrate AIR with a custom solution or third-party solution
@@ -517,6 +519,8 @@
         items:
         - name: Getting started with defense in-depth configuration for email security
           href: step-by-step-guides/defense-in-depth-guide.md
+        - name: Tune Microsoft Defender for Office 365
+          href: step-by-step-guides/tune-microsoft-defender-for-office-365.md
         - name: How to configure quarantine permissions and policies
           href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
         - name: Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365

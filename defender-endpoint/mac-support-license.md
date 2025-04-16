@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot license issues for Microsoft Defender for Endpoint on Mac
-description: Troubleshoot license issues in Microsoft Defender for Endpoint on Mac.
+title: Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
+description: Troubleshoot license issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/04/2025
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
@@ -30,7 +30,7 @@ ms.date: 04/04/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## No license found
 
@@ -60,7 +60,7 @@ You encounter this message in a different way: If you're using the terminal to e
 
 - You can encounter an error message when the Microsoft Defender for Endpoint on macOS agent isn't up to date. For information on troubleshooting in this scenario, see [If Microsoft Defender for Endpoint on macOS isn't up to date](#if-microsoft-defender-for-endpoint-on-macos-isnt-up-to-date).
 
-- You can encounter an error message if you offboard and reonboard Mac from Microsoft Defender for Endpoint on macOS.
+- You can encounter an error message if your offboard and reonboard macOS devices from Microsoft Defender for Endpoint on macOS.
 
 - You can encounter an error message if a license isn't assigned to a user. For information on troubleshooting in this scenario, see [If a license isn't assigned to a user](#if-a-license-isnt-assigned-to-a-user).
 

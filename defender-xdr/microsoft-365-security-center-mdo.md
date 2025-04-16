@@ -32,7 +32,7 @@ The Defender portal combines security capabilities from existing Microsoft 365 s
 
 For more information about the benefits of the unified Microsoft Defender XDR, see [Overview of Defender XDR](microsoft-365-defender.md).
 
-If you're looking for compliance-related items, see [Microsoft Purview compliance portal](/purview/purview-compliance-portal).
+If you're looking for compliance-related items, see [Microsoft Purview portal](/purview/purview-compliance-portal).
 
 ## Capabilities
 
