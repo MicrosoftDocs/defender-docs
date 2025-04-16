@@ -47,7 +47,7 @@ To facilitate upgrades when Microsoft Endpoint Configuration Manager isn't yet a
 
 2. Remove System Center Endpoint Protection (SCEP) client if installed.
 
-3. Review the [Prerequisites for Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-windows-server-2012-r2).
+3. Review the [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2).
 
 4. Enable and update the Microsoft Defender Antivirus feature on Windows Server 2016.
 
