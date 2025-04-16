@@ -103,7 +103,7 @@ You can choose from several deployment methods and tools to onboard servers, as 
 
 ## Onboard Windows Server 2016 and Windows Server 2012 R2
 
-:::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
+:::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices." lightbox="media/server-onboarding-tools-methods.png":::
 
 1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md) and [Prerequisites for Windows Server 2016 and 2012 R2](#prerequisites-for-windows-server-2016-and-2012-r2).
 
