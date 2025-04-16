@@ -76,7 +76,7 @@ For instructions on how to migrate using Configuration Manager older than versio
 
 3. Author your policies for the protection capabilities in Defender for Endpoint and target those to the machine in the tool of your choice.
 
-4. Install the Defender for Endpoint package for Windows Server 2012 R2 and Windows Server 2016, and set it to passive mode. See [Onboard Windows Server 2012 R2 and Windows Server 2016](onboard-server.md#onboard-windows-server-2012-r2-and-windows-server-2016).
+4. Install the Defender for Endpoint package for Windows Server 2012 R2 and Windows Server 2016, and set it to passive mode. 
 
 5. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
