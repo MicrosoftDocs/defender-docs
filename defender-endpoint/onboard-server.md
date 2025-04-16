@@ -42,9 +42,9 @@ To onboard servers to Defender for Endpoint, [server licenses](/office365/servic
 
 ## Server onboarding options
 
-The following table lists articles that describe how to onboard servers using various deployment methods:
+The following table summarizes various deployment methods for onboarding servers:
 
-|Operating system|Articles|
+|Operating system| Deployment method |
 |---|---|
 | Windows Server 2025 <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803 | [Local script](configure-endpoints-script.md) (uses an onboarding package)<br/>[Defender for Servers](/azure/defender-for-cloud/tutorial-enable-servers-plan)<br/> [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) <br/> [Group Policy](configure-endpoints-gp.md) <br/>[VDI scripts](configure-endpoints-vdi.md) <br/>[Onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)|
 | Windows Server 2016 <br/>Windows Server 2012 R2 | [Onboard Windows Server 2012 R2 and Windows Server 2016 using the modern, unified solution](onboard-windows-server-2012r2-2016.md) |
