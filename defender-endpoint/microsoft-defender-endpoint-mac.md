@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 04/16/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS
@@ -105,7 +105,7 @@ When adding exclusions, be mindful of [common exclusion mistakes for Microsoft D
 
 ### Network connections
 
-Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, please reference [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, reference [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
 Microsoft Defender for Endpoint can connect through a proxy server by using the following methods:
 
