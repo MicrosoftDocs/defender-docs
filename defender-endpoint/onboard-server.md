@@ -80,8 +80,6 @@ The following table summarizes various deployment methods for onboarding servers
 
 ## Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025
 
-You need to complete the general steps depicted in the following image to successfully onboard Windows servers. 
-
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
 1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
@@ -90,17 +88,21 @@ You need to complete the general steps depicted in the following image to succes
 
 3. In the **Select operating system to start onboarding process** list, select **Windows Server 2019, 2022, and 2025**.
 
-2. Follow the guidance for your preferred tool:
+   :::image type="content" source="media/mde-onboard-winserver201920222025-ui.png" alt-text="Screenshot showing the onboarding screen for Windows Server 2019 and later in Defender for Endpoint.":::
 
-   - **Local script**: [Onboard Windows devices using a local script](configure-endpoints-script.md)
-   - **Group Policy**: [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
-   - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
-   - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
-   - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+
+5. Under **Deployment method**, select an option, and then download the onboarding package. 
+
+5. See the following articles for your deployment method:
+
+   - [Local script](configure-endpoints-script.md)
+   - [Group Policy](configure-endpoints-gp.md)
+   - [Configuration Manager](configure-endpoints-sccm.md)
+   - [VDI onboarding scripts for non-persistent devices](configure-endpoints-vdi.md)
+   - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
 ## Onboard Windows Server 2016 and Windows Server 2012 R2
-
-The following diagram shows the general steps required to successfully onboard servers.
 
 :::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
 
