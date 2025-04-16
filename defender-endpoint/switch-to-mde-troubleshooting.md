@@ -100,6 +100,6 @@ If you are using a non-Microsoft antivirus/antimalware solution on Windows Serve
 ## See also
 
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
-- [Onboarding tools and methods for Windows devices in Defender for Endpoint](onboard-windows-client.md)
+- [Onboarding tools and methods for Windows and Mac devices in Defender for Endpoint](onboard-client.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

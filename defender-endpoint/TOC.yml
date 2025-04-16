@@ -138,10 +138,9 @@
               href: migrate-devices-streamlined.md
 
         - name: Onboard client devices
-          href: onboard-client.md
           items:
-          - name: Onboarding Windows client overview
-            href: onboard-windows-client.md
+          - name: Onboard client devices running Windows or macOS
+            href: onboard-client.md
           - name: Defender for Endpoint plug-in for WSL
             href: mde-plugin-wsl.md
           - name: Onboard Windows devices to Defender for Endpoint using Intune
