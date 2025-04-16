@@ -32,6 +32,9 @@ ms.date: 04/02/2025
 
 Depending on your particular environment, you can choose from several options to onboard servers to Defender for Endpoint. This article describes available options and includes links to additional resources.
 
+> [!TIP]
+> As a companion to this article, see our [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268522) to review best practices and learn to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. For a customized experience based on your environment, you can access the [Security Analyzer automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615) in the Microsoft 365 admin center.
+
 ## Server plans
 
 To onboard servers to Defender for Endpoint, [server licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint) are required. You can choose from these options:
@@ -39,6 +42,24 @@ To onboard servers to Defender for Endpoint, [server licenses](/office365/servic
 - [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) (as part of the Defender for Cloud) offering
 - Microsoft Defender for Endpoint for servers
 - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
+
+## Integration with Microsoft Defender for Servers
+
+Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers (in Defender for Cloud). If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
+
+- Onboard servers automatically
+- Have servers that are monitored by Defender for Cloud appear in the Microsoft Defender portal, in the device inventory
+- Conduct detailed investigations as a Defender for Cloud customer
+
+Here are a few things to keep in mind:
+
+- When you use Defender for Cloud to monitor servers, a Defender for Endpoint tenant is created automatically. Data collected by Defender for Endpoint is stored in the geographical location of the tenant, identified during provisioning. (For example, in the US for customers in the USA; in EU for European customers; and in the UK for customers in the United Kingdom.)
+- If you use Defender for Endpoint before using Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Defender for Cloud at a later time.
+- Once configured, you can't change the location of where your data is stored. To move your data to another location, [contact support](contact-support.md) to reset your tenant.
+- Server endpoint monitoring utilizing this integration is not currently available for Office 365 GCC customers.
+- Linux servers onboarded through Defender for Cloud have their initial configuration set to run Microsoft Defender Antivirus in [passive mode](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions). For information on how to deploy Defender for Endpoint on Linux server, start with the [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md). 
+
+For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
 
 ## Server onboarding options
 
