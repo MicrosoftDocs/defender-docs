@@ -78,7 +78,7 @@ If Microsoft Defender Antivirus features and installation files were previously 
 
 ### Are you using Windows Server 2012 R2 or Windows Server 2016?
 
-You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016 using the method described in the previous section. For more information, see [Onboarding Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboarding-windows-server-2016-and-windows-server-2012-r2).
+You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016 using the method described in the previous section. For more information, see [Onboarding Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboard-windows-server-2016-and-windows-server-2012-r2).
 
 ## Step 2: Configure Defender for Endpoint Plan 1 or Plan 2
 

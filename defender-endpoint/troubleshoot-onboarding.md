@@ -305,7 +305,7 @@ If you encounter issues while onboarding a server, go through the following veri
 
 - Ensure Microsoft Monitoring Agent (MMA) is installed and configured to report sensor data to the service
 - Ensure that the server proxy and Internet connectivity settings are configured properly
-- See [Onboard Windows Server 2012 R2 and Windows Server 2016](onboard-server.md#onboard-windows-server-2012-r2-and-windows-server-2016)
+- See [Onboard Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboard-windows-server-2016-and-windows-server-2012-r2)
 
 You might also need to check the following:
 
