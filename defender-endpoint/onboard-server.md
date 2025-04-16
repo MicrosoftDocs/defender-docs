@@ -106,7 +106,7 @@ The following table summarizes various deployment methods for onboarding servers
 
 :::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
 
-1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
+1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md) and [Prerequisites for Windows Server 2016 and 2012 R2](#prerequisites-for-windows-server-2016-and-2012-r2).
 
 2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
@@ -131,7 +131,7 @@ The following table summarizes various deployment methods for onboarding servers
    - [Migrate servers from Microsoft Monitoring Agent to the modern unified solution](server-migration.md)
    - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
-### Prerequisites for Windows Server 2016 and Windows Server 2012 R2
+### Prerequisites for Windows Server 2016 and 2012 R2
 
 - It's recommended to install the latest available Servicing Stack Update (SSU) and Latest Cumulative Update (LCU) on the server.
 - The SSU from September 14, 2021 or later must be installed.
