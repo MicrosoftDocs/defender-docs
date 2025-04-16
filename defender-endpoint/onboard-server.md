@@ -94,7 +94,7 @@ You need to complete the general steps depicted in the following image to succes
    - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
    - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 
-## Onboard Windows Server 2012 R2 and Windows Server 2016 
+## Onboard Windows Server 2016 and Windows Server 2012 R2
 
 The following diagram shows the general steps required to successfully onboard servers.
 
@@ -102,9 +102,12 @@ The following diagram shows the general steps required to successfully onboard s
 
 1. Download the installation package and onboarding package by following these steps:
 
-   1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Onboarding**.
+   1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then under **Device management**, select **Onboarding**.
+
    2. **Windows Server 2016 and Windows Server 2012 R2**.
+
    3. Select **Download installation package** and save it on the device. The installation package contains an MSI file that installs the Defender for Endpoint agent.
+
    4. Select **Download onboarding package** and save the zipped folder on the device. The onboarding package contains `WindowsDefenderATPOnboardingScript.cmd`, which contains the onboarding script.
 
    > [!NOTE]
@@ -127,7 +130,7 @@ The following diagram shows the general steps required to successfully onboard s
 - The LCU from September 20, 2018 or later must be installed.  
 - Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
 - Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
-- On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. See [information for Windows Server 2012 R2 and Windows Server 2016](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016).
+- On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. 
 
 ### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
