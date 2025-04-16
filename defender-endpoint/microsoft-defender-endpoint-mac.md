@@ -36,7 +36,7 @@ Microsoft Defender for Endpoint on macOS is a unified endpoint security solution
 
 The following table describes capabilities in Defender for Endpoint on macOS:
 
-|Capability|Description|
+|Category|Description|
 |---|---|
 |**Prevention**|||||
 |Device Control| Control access to removable storage devices and peripherals. |
