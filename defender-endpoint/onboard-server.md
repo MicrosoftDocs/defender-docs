@@ -93,7 +93,7 @@ You can choose from several deployment methods and tools to onboard servers, as 
 
 5. Under **Deployment method**, select an option, and then download the onboarding package. 
 
-5. See the following articles for your deployment method:
+6. Follow the instructions in one of the following articles for your deployment method:
 
    - [Local script](configure-endpoints-script.md)
    - [Group Policy](configure-endpoints-gp.md)
@@ -121,7 +121,7 @@ You can choose from several deployment methods and tools to onboard servers, as 
    > The installation package is updated monthly. Be sure to download the latest package before usage.
    > To update after installation, you don't have to run the installer package again. If you do, the installer asks you to offboard first as that is a requirement for uninstallation. See [Update packages for Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
 
-5. See the following articles for your deployment method:
+5. SFollow the instructions in one of the following articles for your deployment method:
 
    - [Local script](configure-endpoints-script.md)
    - [Group Policy](configure-endpoints-gp.md)
