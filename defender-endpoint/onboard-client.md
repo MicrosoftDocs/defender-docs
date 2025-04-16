@@ -31,7 +31,7 @@ ms.date: 04/16/2025
 - [Endpoint data loss prevention (DLP)](/microsoft-365/compliance/endpoint-dlp-learn-about)
 - [Insider risk management](/microsoft-365/compliance/insider-risk-management)
 
-## Overview of onboarding client devices running Windows or macOS
+## Overview of onboarding client devices
 
 To onboard client devices running Windows or macOS, follow this general process:
 
