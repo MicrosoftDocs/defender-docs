@@ -35,7 +35,7 @@ ms.date: 04/16/2025
 
 To onboard client devices running Windows or macOS, follow this general process:
 
-1. Make sure to review the [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
+1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
 
 2. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
