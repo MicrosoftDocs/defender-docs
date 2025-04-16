@@ -99,7 +99,7 @@ sections:
           - Windows Server, version 1803 or newer
           - Windows Server 2022
           - Windows Server 2019
-          - Windows Server 2016 and Windows Server 2012 R2 (with the [new unified client solution](onboard-server.md#functionality-in-the-modern-unified-solution))
+          - Windows Server 2016 and Windows Server 2012 R2 (with the new unified client solution)
 
           With the [new unified client solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) for Windows Server 2016 and Windows Server 2012 R2, you can run EDR in block mode in either passive mode or active mode.
 
