@@ -33,11 +33,13 @@ ms.date: 04/16/2025
 
 To onboard client devices running Windows or macOS, follow this general process:
 
-1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
+1. Make sure to review the [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
-2. In the navigation pane, select **Settings** > **Endpoints** > **Onboarding**. 
+2. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-3. Select an operating system and a deployment method. Make sure to review the [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). The following table lists available options:
+3. In the navigation pane, select **Settings** > **Endpoints** > **Onboarding**. 
+
+4. Select an operating system and a deployment method.  The following table lists available options:
 
    |Operating system | Deployment method |
    |---|---|
