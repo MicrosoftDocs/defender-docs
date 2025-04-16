@@ -3,8 +3,8 @@ title: Configure your devices to connect to the Defender for Endpoint service us
 description: Learn how to configure your devices to enable communication with the cloud service using a proxy.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -39,7 +39,7 @@ Depending on the operating system, the proxy to be used for Microsoft Defender f
 
 - For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article).
 - For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).
-- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections).
+- For macOS devices, see [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-prerequisites.md#network-connections).
 
 The Defender for Endpoint sensor requires Microsoft Windows HTTP (`WinHTTP`) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the `LocalSystem` account.
 

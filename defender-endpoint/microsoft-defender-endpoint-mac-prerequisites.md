@@ -18,8 +18,6 @@ search.appverid: met150
 ms.date: 04/16/2025
 ---
 
-# Microsoft Defender for Endpoint on macOS
-
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
