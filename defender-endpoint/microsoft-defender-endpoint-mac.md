@@ -30,21 +30,34 @@ ms.date: 04/16/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article describes how to install, configure, update, and use Defender for Endpoint on macOS.
+## What is Microsoft Defender for Endpoint on macOS?
+
+Microsoft Defender for Endpoint on macOS is a unified endpoint security solution that provides advanced threat protection, detection, and response capabilities for macOS devices. It helps organizations protect their endpoints from a wide range of threats, including malware, ransomware, and other advanced persistent threats (APTs).
+
+The following table describes capabilities in Defender for Endpoint on macOS:
+
+| Capability | Description |
+|---|---|
+|**Prevention**|||||
+|Device Control| Control access to removable storage devices and peripherals. |
+|Network Protection| Protect against web-based threats by blocking access to malicious websites and content. |
+|Next-generation protection| Use machine learning and behavioral analysis to detect and block advanced threats. |
+|Tamper Protection| Prevent unauthorized changes to security settings and configurations. |
+|Web Protection| Protect against web-based threats by blocking access to malicious websites and content. |
+|**Detection**|||||
+|Advanced Hunting| Use advanced queries to search for and investigate potential threats across your environment. |
+|Custom file indicators| Create custom indicators to detect specific files or file types. |
+|Custom network indicators| Create custom indicators to detect specific network traffic patterns. |
+|Passive Mode| Run Defender for Endpoint in passive mode to allow coexistence with other endpoint protection solutions. |
+|Sense detection sensor| Collect and analyze telemetry data from endpoints to detect and respond to threats. |
+|Vulnerability management| Identify and manage vulnerabilities across your environment. |
+|**Response**|||||
+|Device response capabilities| Collect investigation packages, run antivirus scans, and isolate devices to respond to threats. |
+|Device isolation| Isolate devices from the network to prevent the spread of threats. |
+|Live response| Perform live response actions on devices to investigate and remediate threats. |
 
 > [!CAUTION]
 > Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can still safely take advantage of Defender for Endpoint on macOS EDR functionality after configuring the antivirus functionality to run in [Passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
-
-## What's new in the latest release
-
-[What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-
-[What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
-
-> [!TIP]
-> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
-
-To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
 
 ## How to install Microsoft Defender for Endpoint on macOS
 

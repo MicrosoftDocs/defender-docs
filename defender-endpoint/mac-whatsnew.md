@@ -34,6 +34,13 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
+- [What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
+
+> [!TIP]
+> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
+
+To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
 
 ## Known issues
 
