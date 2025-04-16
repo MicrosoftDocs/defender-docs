@@ -41,6 +41,8 @@ To onboard client devices running Windows or macOS, follow this general process:
 
 3. In the navigation pane, select **Settings** > **Endpoints** > **Onboarding**. 
 
+   :::image type="content" source="media/mde-device-onboarding-ui.png" alt-text="Screenshot of device onboarding in the Microsoft Defender portal for Defender for Endpoint.":::
+
 4. Select an operating system and a deployment method.  The following table lists available options:
 
    |Operating system | Deployment method |
