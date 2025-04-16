@@ -30,7 +30,7 @@ ms.date: 04/02/2025
 
 [Defender for Endpoint](microsoft-defender-endpoint.md) can help protect your organization's servers with capabilities that include posture management, threat protection, and endpoint detection and response. Defender for Endpoint provides your security team with deeper insight into server activities, coverage for kernel and memory attack detection, and the ability to take response actions when necessary. Defender for Endpoint also integrates with Microsoft Defender for Cloud, providing your organization with a comprehensive server protection solution. 
 
-Depending on your particular environment, you can choose from several options to onboard servers to Defender for Endpoint. This article describes available options for Windows Server and Linux, and includes links to additional resources.
+Depending on your particular environment, you can choose from several options to onboard servers to Defender for Endpoint. This article describes available options for Windows Server and Linux, important points to consider, how to run a detection test after onboarding, and how to offboard servers.
 
 > [!TIP]
 > As a companion to this article, see our [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268522) to review best practices and learn to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. For a customized experience based on your environment, you can access the [Security Analyzer automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615) in the Microsoft 365 admin center.
