@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot configuration issues for Microsoft Defender for Endpoint on Mac
-description: Troubleshoot configuration issues in Microsoft Defender for Endpoint on Mac.
+title: Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS 
+description: Troubleshoot configuration issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/202
 ---
 
 # Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS

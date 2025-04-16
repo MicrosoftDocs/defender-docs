@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
@@ -32,7 +32,7 @@ ms.date: 04/30/2024
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-You can submit feedback by opening Microsoft Defender for Endpoint on Mac on your device and by navigating to **Help > Send feedback**.
+You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device and by navigating to **Help > Send feedback**.
 
 Another option is to submit feedback via the Microsoft Defender XDR by launching **security.microsoft.com** and selecting the **Give feedback** tab.
 

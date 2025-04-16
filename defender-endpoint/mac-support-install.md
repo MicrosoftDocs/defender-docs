@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot installation issues for Microsoft Defender for Endpoint on Mac
-description: Troubleshoot installation issues in Microsoft Defender for Endpoint on Mac.
+title: Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS 
+description: Troubleshoot installation issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh

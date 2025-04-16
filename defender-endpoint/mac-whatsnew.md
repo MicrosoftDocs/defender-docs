@@ -1,12 +1,12 @@
 ---
-title: What's new in Microsoft Defender for Endpoint on Mac
-description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Mac.
+title: What's new in Microsoft Defender for Endpoint on macOS
+description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: deniseb
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 04/16/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -18,7 +18,7 @@ search.appverid: met150
 ms.reviewer: mavel
 ---
 
-# What's new in Microsoft Defender for Endpoint on Mac
+# What's new in Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -58,7 +58,7 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 - Microsoft Defender for Endpoint no longer supports Big Sur (11).
 - macOS 12 (Monterey) will not be supported starting December 2024.
 
-## Releases for Defender for Endpoint on Mac
+## Releases for Defender for Endpoint on macOS
 
 ### Behavior Monitoring for macOS is now in public preview
 
@@ -319,7 +319,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 - Product improvements and performance fixes
 - Fix: Security Portal events might have missed ancestors details for short lived processes
 - Fix: Major performance issues on macOS when Network Protection is set to Audit mode
-- **(GA) Mac devices receive built-in protection**. Tamper protection is turned on in block mode by default. This setting helps secure your Mac against threats. To learn more, see [Protect macOS security settings with tamper protection](built-in-protection.md).
+- **(GA) macOS devices receive built-in protection**. Tamper protection is turned on in block mode by default. This setting helps secure your Mac against threats. To learn more, see [Protect macOS security settings with tamper protection](built-in-protection.md).
 
 ### Aug-2023 (Build: 101.23062.0016  | Release version: 20.123062.16.0)
 
@@ -489,7 +489,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Fix - Mac TP in Block mode causing device hang on shutdown/crashes on reboot
+- Fix - macOS TP in Block mode causing device hang on shutdown/crashes on reboot
 - Add a mdatp command-line switch to view the on-demand scan history
 - Improve Performance of Device Owner on macOS
 - Ready for macOS Ventura (13.0)
@@ -605,7 +605,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Fixed a regression introduced in version 101.61.69 where the status menu icon was sometimes showing an error icon, even though no action was required from the end user
-- Improved the `conflicting_applications` field in `mdatp health` to show only the most recent 10 processes and also to include the process names. This improvement makes it easier to identify which processes are potentially conflicting with Microsoft Defender for Endpoint for Mac.
+- Improved the `conflicting_applications` field in `mdatp health` to show only the most recent 10 processes and also to include the process names. This improvement makes it easier to identify which processes are potentially conflicting with Microsoft Defender for Endpoint for macOS.
 - Resolved an issue in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
 - Performance improvements & other product improvements
 
@@ -641,8 +641,8 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - This version adds support for macOS 12.3. Starting with macOS 12.3, [Apple is removing Python 2.7](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). There's no Python version preinstalled on macOS by default. **ACTION NEEDED**:
-  - Users must update Microsoft Defender for Endpoint for Mac to version 101.59.50 (or newer) before updating their devices to macOS Monterey 12.3 (or newer). This minimal version 101.59.50 is a prerequisite to eliminating Python-related issues with Microsoft Defender for Endpoint for Mac on macOS Monterey.
-  - For remote deployments, existing MDM setups must be updated to Microsoft Defender for Endpoint for Mac version 101.59.50 (or newer). Pushing via MDM an older Microsoft Defender for Endpoint for Mac version to macOS Monterey 12.3 (or newer) results in an installation failure.
+  - Users must update Microsoft Defender for Endpoint for Mac to version 101.59.50 (or newer) before updating their devices to macOS Monterey 12.3 (or newer). This minimal version 101.59.50 is a prerequisite to eliminating Python-related issues with Microsoft Defender for Endpoint for macOS devices on macOS Monterey.
+  - For remote deployments, existing MDM setups must be updated to Microsoft Defender for Endpoint for macOS version 101.59.50 (or newer). Pushing via MDM an older Microsoft Defender for Endpoint for macOS version to macOS Monterey 12.3 (or newer) results in an installation failure.
 
 ### Feb-2022 (Build: 101.59.10 | Release version: 20.122012.15910.0)
 
@@ -682,10 +682,10 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - The application is renamed from *Microsoft Defender ATP* to *Microsoft Defender*. End users observe the following changes:
    - The application installation path changed from `/Application/Microsoft Defender ATP.app` to `/Applications/Microsoft Defender.app`.
    - Within the user experience, occurrences of *Microsoft Defender ATP* are replaced by *Microsoft Defender*
-- Resolved an issue where some VPN applications couldn't connect due to the network content filter that is distributed with Microsoft Defender for Endpoint for Mac
+- Resolved an issue where some VPN applications couldn't connect due to the network content filter that is distributed with Microsoft Defender for Endpoint for macOS.
 - Addressed an issue discovered in macOS 12.2 preview 2 where the installation package couldn't be opened due to a change in the operating system (OS) that prevents installation of packages with certain characteristics. While it appears that this OS change isn't included in the final release of macOS 12.2, it's likely that it will be reintroduced in a future macOS version. As such, we encourage all enterprise administrators to refresh the Microsoft Defender for Endpoint package in their management console to this product version (or a newer version).
 - Addressed an issue seen on some M1 devices where the product was stuck with invalid anti-malware definitions and couldn't successfully update to a working set of definitions.
-- `mdatp health` output has been extended with a more attribute called `full_disk_access_enabled` that can be used to determine whether Full Disk Access has been granted to all components of Microsoft Defender for Endpoint for Mac.
+- `mdatp health` output has been extended with a more attribute called `full_disk_access_enabled` that can be used to determine whether Full Disk Access has been granted to all components of Microsoft Defender for Endpoint for macOS.
 - Performance improvements & Product improvements
 
 ### Jan-2022 (Build: 101.54.16 | Release version: 20.121111.15416.0)
@@ -860,7 +860,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Removed conditions when Microsoft Defender for Endpoint was triggering a macOS 11 (Big Sur) issue that manifests into a kernel panic.
-- Fixed a memory leak in the Endpoint Security system extension when running on mac 11 (Big Sur).
+- Fixed a memory leak in the Endpoint Security system extension when running on macOS 11 (Big Sur).
 - Product improvements
 
 &ensp;Build: **101.10.72** <br>
@@ -980,9 +980,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 > [!CAUTION]
-> To ensure the most complete protection for your macOS devices and in alignment with Apple stopping delivery of macOS native security updates to OS versions older than [current - 2], MDATP for Mac deployment and updates will no longer be supported on macOS Sierra [10.12]. MDATP for Mac updates and enhancements will be delivered to devices running versions Catalina [10.15], Mojave [10.14], and High Sierra [10.13].
+> To ensure the most complete protection for your macOS devices and in alignment with Apple stopping delivery of macOS native security updates to OS versions older than [current - 2], MDATP for macOS deployment and updates will no longer be supported on macOS Sierra [10.12]. MDATP for macOS updates and enhancements will be delivered to devices running versions Catalina [10.15], Mojave [10.14], and High Sierra [10.13].
 >
-> If you already have MDATP for Mac deployed to your Sierra [10.12] devices, please upgrade to the latest macOS version to eliminate risks of losing protection.
+> If you already have MDATP for macOS devices deployed to your Sierra [10.12] devices, please upgrade to the latest macOS version to eliminate risks of losing protection.
 
 - Performance improvements & Product improvements
 
@@ -1010,7 +1010,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Fixed an issue where Microsoft Defender for Endpoint on Mac was sometimes interfering with Time Machine.
+- Fixed an issue where Microsoft Defender for Endpoint on macOS was sometimes interfering with Time Machine.
 - Added a new switch to the command-line utility for testing the connectivity with the backend service
 
    ```bash

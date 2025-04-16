@@ -1,6 +1,6 @@
 ---
-title: Deploy updates for Microsoft Defender for Endpoint on Mac
-description: Control updates for Microsoft Defender for Endpoint on Mac in enterprise environments.
+title: Deploy updates for Microsoft Defender for Endpoint on macOS
+description: Control updates for Microsoft Defender for Endpoint on macOS in enterprise environments.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 04/16/2025
 ---
 
 # Deploy updates for Microsoft Defender for Endpoint on macOS
@@ -43,7 +43,7 @@ Microsoft regularly publishes software updates to improve performance, security,
 
 To update Microsoft Defender for Endpoint on macOS, Microsoft AutoUpdate (MAU) is used. MAU checks updates periodically, and automatically downloads and installs them.
 
-You can deploy preferences to configure how and when MAU checks for updates for the Macs in your organization.
+You can deploy preferences to configure how and when MAU checks for updates for the macOS devices in your organization.
 
 ## Use msupdate
 

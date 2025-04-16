@@ -1,6 +1,6 @@
 ---
-title: Resources for Microsoft Defender for Endpoint on Mac
-description: Resources for Microsoft Defender for Endpoint on Mac, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
+title: Resources for Microsoft Defender for Endpoint on macOS
+description: Resources for Microsoft Defender for Endpoint on macOS, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh

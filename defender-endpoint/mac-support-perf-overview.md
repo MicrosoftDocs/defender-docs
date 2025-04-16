@@ -30,7 +30,7 @@ Depending on the applications that you're running and your device characteristic
 > As a general best practice, it's recommended to [update the Microsoft Defender for Endpoint agent to latest available version](/defender-endpoint/mac-whatsnew) and confirming that the issue still persists before investigating further.
 
 > [!CAUTION]
-> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can configure Microsoft Defender Antivirus to run in **[Passive mode](mac-preferences.md)**. After you configure Passive mode, you can use Defender for Endpoint on Mac EDR functionality.
+> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can configure Microsoft Defender Antivirus to run in **[Passive mode](mac-preferences.md)**. After you configure Passive mode, you can use Defender for Endpoint on macOS EDR functionality.
 
 > [!WARNING]
 > Before starting, make sure that other security products aren't currently running on the device. Multiple security products might conflict and affect system performance.

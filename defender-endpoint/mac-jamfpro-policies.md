@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 12/02/2024
+ms.date: 04/16/2025
 ---
 
 # Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
@@ -28,7 +28,7 @@ ms.date: 12/02/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-Use this article to set up policies for Defender for Endpoint on Mac using Jamf Pro. 
+Use this article to set up policies for Defender for Endpoint on macOS using Jamf Pro.
 
 ## Step 1: Get the Microsoft Defender for Endpoint onboarding package
 
@@ -385,7 +385,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 ## Step 4: Configure notifications settings
 
 > [!NOTE]
-> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
+> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on macOS requires macOS 11 or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
@@ -659,7 +659,7 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal.
 
 > [!NOTE]
-> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
+> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on macOS requires macOS 11 or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 

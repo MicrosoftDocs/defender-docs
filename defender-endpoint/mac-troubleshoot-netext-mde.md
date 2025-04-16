@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on Mac
+title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on macOS
 description: Learn how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot Network Extension (NetExt) issues in Defender for Endpoint on Mac 
@@ -30,7 +30,7 @@ ms.date: 02/24/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 > [!NOTE]
-> You can submit feedback by opening Microsoft Defender for Endpoint on Mac on your device, and going to **Help** > **Send feedback**. Another option is to submit feedback via the Microsoft Defender portal. Go to [security.microsoft.com](https://security.microsoft.com), and selecting the **Give feedback** tab. 
+> You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device, and going to **Help** > **Send feedback**. Another option is to submit feedback via the Microsoft Defender portal. Go to [security.microsoft.com](https://security.microsoft.com), and selecting the **Give feedback** tab. 
 
 ## Overview 
 
@@ -44,7 +44,7 @@ You might notice issues with network related latencies when using your browser o
 
 **Temporary solution**:
 
-This article describes how to temporarily disable NetExt which will temporarily disable network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
+This article describes how to temporarily disable NetExt which will temporarily disable network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on macOS.
 
 At a high level, these are the steps to follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
@@ -193,7 +193,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 ## Manual method
 
-If you have Defender for Endpoint installed on your Mac, you can remove the NetExt extension temporarily by following these steps:
+If you have Defender for Endpoint installed on your macOS device, you can remove the NetExt extension temporarily by following these steps:
 
 1. On your Mac, open **System Settings**.
 

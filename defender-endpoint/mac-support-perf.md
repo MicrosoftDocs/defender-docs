@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/05/2024
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -100,7 +100,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    
    > [!NOTE]
    > Using `--output json` (note the double dash) ensures that the output format is ready for parsing. The output of this command shows all processes and their associated scan activity. 
-6. On your Mac system, download the sample Python parser `high_cpu_parser.py` using the command:
+6. On your macOS system, download the sample Python parser `high_cpu_parser.py` using the command:
 
       ```bash
    curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/linux/diagnostic/high_cpu_parser.py
@@ -146,7 +146,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    125  CrashPlanService 164
    ```
 
-8. To improve the performance of Defender for Endpoint on Mac, locate the one with the highest number under the **Total files scanned** row, and then add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on macOS](mac-exclusions.md).
+8. To improve the performance of Defender for Endpoint on macOS, locate the one with the highest number under the **Total files scanned** row, and then add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on macOS](mac-exclusions.md).
 
    > [!NOTE]
    > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off aren't counted. Additionally, only events which triggered scans are counted.

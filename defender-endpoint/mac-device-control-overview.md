@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 04/16/2025
 ---
 
 # Device Control for macOS
@@ -33,7 +33,7 @@ ms.date: 01/31/2025
 
 ## Requirements
 
-Device control for Mac has the following prerequisites:
+Device control for macOS has the following prerequisites:
 
 - Defender for Endpoint or Defender for Business licenses (can be a trial subscription)
 - Minimum OS version: macOS 11 or higher

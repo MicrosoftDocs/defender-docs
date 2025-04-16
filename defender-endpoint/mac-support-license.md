@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot license issues for Microsoft Defender for Endpoint on Mac
-description: Troubleshoot license issues in Microsoft Defender for Endpoint on Mac.
+title: Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
+description: Troubleshoot license issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -60,7 +60,7 @@ You encounter this message in a different way: If you're using the terminal to e
 
 - You can encounter an error message when the Microsoft Defender for Endpoint on macOS agent isn't up to date. For information on troubleshooting in this scenario, see [If Microsoft Defender for Endpoint on macOS isn't up to date](#if-microsoft-defender-for-endpoint-on-macos-isnt-up-to-date).
 
-- You can encounter an error message if you offboard and reonboard Mac from Microsoft Defender for Endpoint on macOS.
+- You can encounter an error message if you offboard and reonboard macOS devices from Microsoft Defender for Endpoint on macOS.
 
 - You can encounter an error message if a license isn't assigned to a user. For information on troubleshooting in this scenario, see [If a license isn't assigned to a user](#if-a-license-isnt-assigned-to-a-user).
 

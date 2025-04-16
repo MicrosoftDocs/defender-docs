@@ -1,6 +1,6 @@
 ---
-title: Set preferences for Microsoft Defender for Endpoint on Mac
-description: Configure Microsoft Defender for Endpoint on Mac in enterprise organizations.
+title: Set preferences for Microsoft Defender for Endpoint on macOS
+description: Configure Microsoft Defender for Endpoint on macOS in enterprise organizations.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 04/16/2025
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
@@ -190,7 +190,7 @@ Specify content excluded from being scanned by full file path.
 
 ## Supported exclusion types
 
-The following table shows the exclusion types supported by Defender for Endpoint on Mac.
+The following table shows the exclusion types supported by Defender for Endpoint on macOS.
 
 |Exclusion|Definition|Examples|
 |---|---|---|
@@ -247,7 +247,7 @@ Specify a process for which all file activity is excluded from scanning. The pro
 
 #### Allowed threats
 
-Specify threats by name that aren't blocked by Defender for Endpoint on Mac. These threats will be allowed to run.
+Specify threats by name that aren't blocked by Defender for Endpoint on macOS. These threats will be allowed to run.
 
 |Section|Value|
 |---|---|
