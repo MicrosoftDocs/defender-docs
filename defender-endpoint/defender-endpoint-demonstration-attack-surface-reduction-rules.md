@@ -35,7 +35,7 @@ Attack surface reduction rules target specific behaviors that are typically used
 ## Scenario requirements and setup
 
 - Windows client devices must be running Windows 11, Windows 10 1709 build 16273, or later
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 (with the [Functionality in the modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution)).
+- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)).
 - Microsoft Defender Antivirus
 - Microsoft 365 Apps (formerly referred to as Office apps; required for Office rules and sample)
 - [Download attack surface reduction PowerShell scripts](https://demo.wd.microsoft.com/Content/WindowsDefender_ASR_scripts.zip)

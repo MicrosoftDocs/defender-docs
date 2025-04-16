@@ -96,13 +96,13 @@ Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI)
 
 ### Windows Server
 
-For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
+For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
 ### Microsoft Defender for Cloud
 
-Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-windows-server-2012r2-2016.md).
+Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
 ### Microsoft Configuration Manager
 
