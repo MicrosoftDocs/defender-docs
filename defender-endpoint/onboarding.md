@@ -49,7 +49,7 @@ If you're onboarding devices in the Microsoft Defender portal, follow these step
 
 4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
 
-5. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, if there is one available). For more information, see the following articles:
+5. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, as appropriate). For more information, see the following articles:
 
    - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
    - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
