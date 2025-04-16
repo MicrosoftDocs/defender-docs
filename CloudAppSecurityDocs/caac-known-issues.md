@@ -11,6 +11,9 @@ This article describes known limitations for working with Conditional Access app
 
 To learn more about security limitations, contact our support team.
 
+> [!IMPORTANT]
+> Access and session policies support IPv4 only. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
+
 ## Maximum file size for session policies
 
 You can apply session policies on files that have a maximum size of 50 MB. For example, this maximum file size is relevant when you're defining policies to monitor file downloads from OneDrive, block file updates, or block downloads or uploads of malware files.
@@ -98,8 +101,6 @@ The following table lists example results when you define the **Block upload of 
 
 The following limitations apply only on sessions that are served with Edge in-browser protection.
 
-> [!IMPORTANT]
-> Access and session policies support IPv4 only. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
 
 ### Deep link is lost when user switches to Edge by clicking 'Continue in Edge'  
 
