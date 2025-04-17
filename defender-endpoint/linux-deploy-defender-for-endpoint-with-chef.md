@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/10/2025
+ms.date: 04/17/2025
 ---
 
 # Deploy Defender for Endpoint on Linux with Chef
@@ -243,7 +243,6 @@ To include this step as part of the recipe, add `include_recipe ':: uninstall_md
 - [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
