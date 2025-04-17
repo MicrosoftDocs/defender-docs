@@ -20,7 +20,7 @@ ms.date: 04/17/2025
 
 # Microsoft Defender for Endpoint on macOS Prerequisites
 
-[!INCLUDE [Microsoft Defender for Endpoint on macOS](../includes/defender-endpoint-mac.md)]
+[!INCLUDE [Microsoft Defender for Endpoint on macOS](../includes/defender-endpoint-mac-prerequisites.md)]
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
