@@ -4,8 +4,8 @@ description: Protect your network by preventing Linux users from accessing known
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.subservice: linux
 ms.topic: overview
@@ -60,7 +60,7 @@ You can use web content filtering for testing with network protection for Linux.
 - **Microsoft Defender for Endpoint Linux client version**: 101.78.13 or later on Insiders-Slow or insiders-Fast channel.
     
 > [!IMPORTANT]
-> In order to evaluate network protection for Linux, please send email to `xplatpreviewsupport@microsoft.com` with your Org ID. We will enable the feature on your tenant per request basis.
+> In order to evaluate network protection for Linux, please send email to `xplatpreviewsupport@microsoft.com` with your Org ID. We will enable the feature on your tenant per request basis. Network Protection feature is available in preview only for AMD64 based Linux servers. 
 
 ## Instructions
 
