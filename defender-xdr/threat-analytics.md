@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 04/17/2025
 ---
 
 # Threat analytics in Microsoft Defender XDR
