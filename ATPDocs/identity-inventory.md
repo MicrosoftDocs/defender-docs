@@ -28,7 +28,7 @@ The Identities inventory page includes the following tabs:
 
 - **Identities**: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
 
-- **Cloud application accounts:** Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). Learn more about [Cloud application accounts from connected apps.](/defender-cloud-apps/accounts) 
+- **Cloud application accounts:** Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). Learn more about [Cloud application accounts from connected apps.](/defender-cloud-apps/accounts)
 
 There are several options you can choose from to customize the identities list view. On the top navigation you can:
 
@@ -49,7 +49,7 @@ There are several options you can choose from to customize the identities list v
 
 ### Identity details 
 
-The **Identities** list offers a consolidated view of identities across Active Directory and Entra ID. It highlights key details, including the following columns by default:
+The **Identities** list offers a consolidated view of identities across Active Directory and Microsoft Entra IDs. It highlights key details, including the following columns by default:
 
 - __Display name__ – The full name of the identity as shown in the directory.
 
@@ -57,9 +57,9 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Domain__ – The Active Directory domain to which the identity belongs.
 
-- __Object ID__ – A unique identifier for the identity in Entra ID.
+- __Object ID__ – A unique identifier for the identity in Microsoft Entra ID.
 
-- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from AD to Entra ID).
+- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Entra ID).
 
 - __Type__ – Specifies if the identity is a user account or service account.
 
@@ -67,7 +67,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Tags__ – Custom labels that help categorize or classify identities: Sensitive and Honeytoken.
 
-- **PIM tags** - Custom labels that help categorize identities that are considered high value assets. For example, privileged accounts that are managed by a [Priviledged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) service (PIM).
+- **PIM tags** - Custom labels that help categorize identities that are considered high value assets. For example, privileged accounts managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service.
 
 - __Created time__ – The timestamp when the identity was first created.
 
@@ -107,7 +107,7 @@ Sort option applies to Display name, Domain, and Created time columns.
 
 - The __Classify critical assets__ card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). 
 
-- **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Entra ID security administrators and Global admin users.
+- **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
 
 - **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
