@@ -67,7 +67,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Tags__ – Custom labels that help categorize or classify identities: Sensitive and Honeytoken.
 
-- **PIM tags** - Custom labels that help categorize identities that are considered high value assets: Privileged account(PIM).
+- **PIM tags** - Custom labels that help categorize identities that are considered high value assets. For example, privileged accounts that are managed by a [Priviledged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) service (PIM).
 
 - __Created time__ – The timestamp when the identity was first created.
 
