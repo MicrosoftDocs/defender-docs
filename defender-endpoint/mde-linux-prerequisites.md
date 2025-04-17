@@ -190,7 +190,7 @@ The `mde-netfilter` package also has the following package dependencies:
 
 ## Installation instructions 
 
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers) :
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers):
 
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
 - [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
