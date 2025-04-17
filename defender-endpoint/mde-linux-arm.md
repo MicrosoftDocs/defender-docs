@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender for Endpoint on Linux for ARM64-based devices (preview)
 description: Defender for Endpoint on Linux now supports ARM devices. Learn how it works and how to deploy it.            
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb 
 ms.date: 04/10/2025
 ms.topic: how-to
