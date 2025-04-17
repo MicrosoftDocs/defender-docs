@@ -1,6 +1,6 @@
 ---
-title: Advanced hunting in Microsoft Defender multi-tenant management
-description: Learn about advanced hunting in Microsoft Defender multi-tenant management
+title: Advanced hunting in Microsoft Defender multitenant management
+description: Learn about advanced hunting in Microsoft Defender multitenant management
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: deniseb
@@ -20,15 +20,15 @@ appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Advanced hunting in Microsoft Defender multi-tenant management
+# Advanced hunting in Microsoft Defender multitenant management
 
-Advanced hunting in Microsoft Defender multi-tenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
+Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
 
-Multiple workspaces per tenant are supported in multi-tenant Advanced hunting as preview.
+Multiple workspaces per tenant are supported in multitenant Advanced hunting as preview.
 
 ## Run cross-tenant queries
 
-You can run any query that you already have access to in the multi-tenant management **Advanced hunting** page.
+You can run any query that you already have access to in the multitenant management **Advanced hunting** page.
 
 1. Queries listed on the **Queries** tab are filtered by tenant. Select a tenant to view the queries available for each one.
 
@@ -91,7 +91,7 @@ You can also manage custom detection rules from multiple tenants in the custom d
 1. To view custom detection rules, go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management.
 2. View the **Tenant name** column to see which tenant the detection rule comes from:
 
-   :::image type="content" source="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant custom detection page" lightbox="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png":::
+   :::image type="content" source="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multitenant custom detection page" lightbox="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png":::
 
 To view only a specific tenant's custom detection rules, select **Filter**, choose the tenant or tenants and select **Apply**.
 
