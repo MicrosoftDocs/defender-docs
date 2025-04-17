@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/13/2025
+ms.date: 04/10/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Ansible
@@ -29,7 +29,9 @@ ms.date: 03/13/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article describes how to deploy Defender for Endpoint on Linux using Ansible. A successful deployment requires the completion of all of the following tasks:
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Ansible. To use another method, refer to the [See also](#see-also) section.
+
+A successful deployment requires the completion of all of the following tasks:
 
 - [Prerequisites and system requirements](#prerequisites-and-system-requirements-applicable-to-both-the-methods)
 - [Download the onboarding package](#download-the-onboarding-package-applicable-to-both-the-methods)
@@ -48,7 +50,7 @@ Deploy Microsoft Defender for Endpoint on Linux Servers using Ansible to automat
 
 ## Prerequisites and system requirements applicable to both the methods
 
-Before you get started, see [the main Defender for Endpoint on Linux page](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements.
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 In addition, for Ansible deployment, you need to be familiar with Ansible administration tasks, have Ansible configured, and know how to deploy playbooks and tasks. Ansible has many ways to complete the same task. These instructions assume availability of supported Ansible modules, such as *apt* and *unarchive* to help deploy the package. Your organization might use a different workflow. For more information, see [Ansible documentation](https://docs.ansible.com).
 
@@ -214,7 +216,7 @@ ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/install_mdatp.yml
 
     - name: MDE Deployed
       debug:
-      msg: "MDE succesfully deployed"
+        msg: "MDE succesfully deployed"
 ```
 
 ### How to uninstall Microsoft Defender for Endpoint on Linux Servers
@@ -455,21 +457,33 @@ To get support from Microsoft, open a support ticket, and provide the log files 
 
 ## How to configure policies for Microsoft Defender on Linux
 
-You can configure antivirus or EDR settings on your endpoints using following methods:
-
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
-
+- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
+ 
 ## Operating system upgrades
 
 When upgrading your operating system to a new major version, you must first uninstall Defender for Endpoint on Linux, install the upgrade, and finally reconfigure Defender for Endpoint on Linux on your device.
 
 ## See also
 
-- [Add or remove YUM repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html)
-- [Manage packages with the dnf package manager](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html)
-- [Add and remove APT repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
-- [Manage apt-packages](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
-- [Missing event issues](/defender-endpoint/linux-support-events)
+- Ansible documentation:
+   - [Add or remove YUM repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html)
+   - [Manage packages with the dnf package manager](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html)
+   - [Add and remove APT repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
+   - [Manage apt-packages](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
+
+- [Linux support: Missing event issues](/defender-endpoint/linux-support-events)
+
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+
+- Other deployment methods:
+   - [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+   - [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+   - [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
+   - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+   - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+   - [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
+   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
