@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/16/2025
+ms.date: 04/17/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS
@@ -38,20 +38,17 @@ The following table describes capabilities in Defender for Endpoint on macOS:
 
 |Capability|Description|
 |---|---|
-|**Prevention**|||||
 |Device Control| Control access to removable storage devices and peripherals. |
 |Network Protection| Protect against web-based threats by blocking access to malicious websites and content. |
 |Next-generation protection| Use machine learning and behavioral analysis to detect and block advanced threats. |
 |Tamper Protection| Prevent unauthorized changes to security settings and configurations. |
 |Web Protection| Protect against web-based threats by blocking access to malicious websites and content. |
-|**Detection**|||||
 |Advanced Hunting| Use advanced queries to search for and investigate potential threats across your environment. |
 |Custom file indicators| Create custom indicators to detect specific files or file types. |
 |Custom network indicators| Create custom indicators to detect specific network traffic patterns. |
 |Passive Mode| Run Defender for Endpoint in passive mode to allow coexistence with other endpoint protection solutions. |
 |Sense detection sensor| Collect and analyze telemetry data from endpoints to detect and respond to threats. |
 |Vulnerability management| Identify and manage vulnerabilities across your environment. |
-|**Response**|||||
 |Device response capabilities| Collect investigation packages, run antivirus scans, and isolate devices to respond to threats. |
 |Device isolation| Isolate devices from the network to prevent the spread of threats. |
 |Live response| Perform live response actions on devices to investigate and remediate threats. |
