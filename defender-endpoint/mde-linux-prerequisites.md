@@ -92,20 +92,24 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Alma 9.2 and higher 
 - Mariner 2 
 
-**The following Linux server distributions on Arm64 are now supported in preview:**
+**The following Linux server distributions on ARM64 are now GA:**
 
-- Ubuntu 20.04 Arm64 
-- Ubuntu 22.04 Arm64 
+- Ubuntu 20.04 ARM64 
+
+- Ubuntu 22.04 ARM64 
+
 - Ubuntu 24.04 ARM64
-- Amazon Linux 2 Arm64 
-- Amazon Linux 2023 Arm64 
+- Debian 11, 12 ARM64
+
+- Amazon Linux 2 ARM64 
+
+- Amazon Linux 2023 ARM64 
+
 - RHEL 8.x ARM64
 - RHEL 9.x ARM64
 - Oracle Linux 8.x ARM64
 - Oracle Linux 9.x ARM64
 - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
-
-Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/defender-endpoint/mde-linux-arm) is now in preview. 
 
 > [!NOTE]
 > The workstation and desktop versions of these distributions are unsupported
