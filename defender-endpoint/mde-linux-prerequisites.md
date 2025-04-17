@@ -95,16 +95,11 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 **The following Linux server distributions on ARM64 are now GA:**
 
 - Ubuntu 20.04 ARM64 
-
 - Ubuntu 22.04 ARM64 
-
 - Ubuntu 24.04 ARM64
 - Debian 11, 12 ARM64
-
 - Amazon Linux 2 ARM64 
-
 - Amazon Linux 2023 ARM64 
-
 - RHEL 8.x ARM64
 - RHEL 9.x ARM64
 - Oracle Linux 8.x ARM64
@@ -150,11 +145,14 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 ## Verify that devices can connect to Defender for Endpoint cloud services
 
-- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
-- Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
-   1. Transparent proxy
-   2. [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration) 
-- Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
+1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
+
+2. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
+
+   - Transparent proxy
+   - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration) 
+
+3. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE] 
 > Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
@@ -199,7 +197,6 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
 - [Manual deployment](/defender-endpoint/linux-install-manually)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- [Guidance for Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 - [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
