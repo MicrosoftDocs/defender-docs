@@ -107,51 +107,51 @@ There are two ways to create a manifest file:
 1. Download the installer bash script. Pull the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) from Microsoft GitHub Repository or use the following command to download it.
 
 
-```bash
-wget https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/linux/installation/mde_installer.sh /etc/puppetlabs/code/environments/production/modules/install_mdatp/files/
-```
+  ```bash
+  wget https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/linux/installation/mde_installer.sh /etc/puppetlabs/code/environments/production/modules/install_mdatp/files/
+  ```
 
 2. Add the following content to the `install_mdatp/manifests/init.pp` file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/puppet.install_mdatp_simplified.init.pp)
 
-```bash
+  ```bash
 
-# Puppet manifest to install Microsoft Defender for Endpoint on Linux.
-# @param channel The release channel based on your environment, insider-fast or prod.
+  # Puppet manifest to install Microsoft Defender for Endpoint on Linux.
+  # @param channel The release channel based on your environment, insider-fast or prod.
 
-class install_mdatp (
-  $channel = 'prod',
-) {
-  # Ensure that the directory /tmp/mde_install exists
-  file { '/tmp/mde_install':
-    ensure => directory,
-    mode   => '0755',
+  class install_mdatp (
+    $channel = 'prod',
+  ) {
+    # Ensure that the directory /tmp/mde_install exists
+    file { '/tmp/mde_install':
+      ensure => directory,
+      mode   => '0755',
+    }
+
+    # Copy the installation script to the destination
+    file { '/tmp/mde_install/mde_installer.sh':
+      ensure => file,
+      source => 'puppet:///modules/install_mdatp/mde_installer.sh',
+      mode   => '0777',
+    }
+
+    # Copy the onboarding script to the destination
+    file { '/tmp/mde_install/mdatp_onboard.json':
+      ensure => file,
+      source => 'puppet:///modules/install_mdatp/mdatp_onboard.json',
+      mode   => '0777',
+    }
+
+    # Install MDE on the host using an external script
+    exec { 'install_mde':
+      command     => "/tmp/mde_install/mde_installer.sh --install --channel ${channel} --onboard /tmp/mde_install/mdatp_onboard.json",
+      path        => '/bin:/usr/bin',
+      user        => 'root',
+      logoutput   => true,
+      require     => File['/tmp/mde_install/mde_installer.sh', '/tmp/mde_install/mdatp_onboard.json'], # Ensure the script is copied before running the installer
+    }
+
   }
-
-  # Copy the installation script to the destination
-  file { '/tmp/mde_install/mde_installer.sh':
-    ensure => file,
-    source => 'puppet:///modules/install_mdatp/mde_installer.sh',
-    mode   => '0777',
-  }
-
-  # Copy the onboarding script to the destination
-  file { '/tmp/mde_install/mdatp_onboard.json':
-    ensure => file,
-    source => 'puppet:///modules/install_mdatp/mdatp_onboard.json',
-    mode   => '0777',
-  }
-
-  # Install MDE on the host using an external script
-  exec { 'install_mde':
-    command     => "/tmp/mde_install/mde_installer.sh --install --channel ${channel} --onboard /tmp/mde_install/mdatp_onboard.json",
-    path        => '/bin:/usr/bin',
-    user        => 'root',
-    logoutput   => true,
-    require     => File['/tmp/mde_install/mde_installer.sh', '/tmp/mde_install/mdatp_onboard.json'], # Ensure the script is copied before running the installer
-  }
-
-}
-```
+  ```
 > [!NOTE]
 > The installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help.
 >`./mde_installer.sh --help`
