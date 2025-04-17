@@ -20,8 +20,8 @@ ms.date: 04/08/2025
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
 
-> [!TIP] 
-> Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
+> [!TIP]
+> Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in GA.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -190,7 +190,7 @@ The `mde-netfilter` package also has the following package dependencies:
 
 ## Installation instructions 
 
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux:
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers) :
 
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
 - [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
