@@ -18,7 +18,9 @@ search.appverid: met150
 ms.date: 04/17/2025
 ---
 
-# Microsoft Defender for Endpoint on macOS Prerequisites
+# Microsoft Defender for Endpoint on macOS prerequisites
+
+[!INCLUDE [Microsoft Defender for Endpoint on macOS](../includes/defender-mde-mac-intro.md)]
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -30,23 +32,13 @@ ms.date: 04/17/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-## How to install Microsoft Defender for Endpoint on macOS
+## Prerequisites, installation, and configuration instructions
 
 ### Prerequisites
 
 - A Defender for Endpoint subscription and access to the Microsoft Defender portal
 - Beginner-level experience in macOS and BASH scripting
 - Administrative privileges on the device (in manual deployment)
-
-### Installation instructions
-
-There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on macOS.
-
-- [Microsoft Intune-based deployment](mac-install-with-intune.md)
-- Non-Microsoft management tools:
-    - [JAMF-based deployment](mac-install-with-jamf.md)
-    - [Other MDM products](mac-install-with-other-mdm.md)
-- Command-line tool: [Manual deployment](mac-install-manually.md)
 
 ### System requirements
 
@@ -60,6 +52,16 @@ These three most recent major releases of macOS are supported.
 - Disk space: 1GB
 
 - Beta versions of macOS aren't supported.
+
+### Installation instructions
+
+There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on macOS.
+
+- [Microsoft Intune-based deployment](mac-install-with-intune.md)
+- Non-Microsoft management tools:
+    - [JAMF-based deployment](mac-install-with-jamf.md)
+    - [Other MDM products](mac-install-with-other-mdm.md)
+- Command-line tool: [Manual deployment](mac-install-manually.md)
 
 > [!IMPORTANT]
 > On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
@@ -103,7 +105,7 @@ If a proxy or firewall is blocking anonymous traffic, make sure that anonymous t
 > Authenticated proxies aren't supported. Ensure that only PAC, WPAD, or a static proxy is being used.
 > SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Microsoft Defender for Endpoint on macOS to the relevant URLs without interception. Adding your interception certificate to the global store won't allow for interception.
 
-#### Test network connectivity
+### Test network connectivity
 
 To test that a connection isn't blocked, open `https://x.cp.wd.microsoft.com/api/report` and `https://cdn.x.cp.wd.microsoft.com/ping` in a browser.
 
