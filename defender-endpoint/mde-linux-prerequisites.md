@@ -199,7 +199,6 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
 - [Manual deployment](/defender-endpoint/linux-install-manually)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- [Guidance for Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 - [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
