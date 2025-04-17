@@ -7,7 +7,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 04/04/2025
+ms.date: 04/17/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -56,6 +56,8 @@ Two new ASR rules are now generally available:
 
   - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference): This rule prevents the execution of commands to restart machines in Safe Mode.
   - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+
+- (GA) Defender for Endpoint supports ARM64-based Linux servers across various Linux distributions, including Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers. For more information, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
     
 ## February 2025
 
