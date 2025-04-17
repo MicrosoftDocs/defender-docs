@@ -108,15 +108,15 @@
         items:
         - name: Overview
           href: mde-planning-guide.md
-        - name: Step 1 - Set up Defender for Endpoint deployment
+        - name: Step 1 - Prepare for deployment
           href: production-deployment.md
         - name: Step 2 - Assign roles and permissions
           href: prepare-deployment.md
-        - name: Step 3 - Identify your architecture and deployment method
+        - name: Step 3 - Identify your architecture and select a deployment method
           href: deployment-strategy.md
-        - name: Step 4 - Onboard devices
+        - name: Step 4 - Onboard devices to Defender for Endpoint
           href: onboarding.md
-        - name: Step 5 - Configure Microsoft Defender for Endpoint capabilities
+        - name: Step 5 - Configure Defender for Endpoint capabilities
           href: onboard-configure.md
 
       - name: Onboard and configure devices
@@ -138,10 +138,9 @@
               href: migrate-devices-streamlined.md
 
         - name: Onboard client devices
-          href: onboard-client.md
           items:
-          - name: Onboarding Windows client overview
-            href: onboard-windows-client.md
+          - name: Onboard client devices running Windows or macOS
+            href: onboard-client.md
           - name: Defender for Endpoint plug-in for WSL
             href: mde-plugin-wsl.md
           - name: Onboard Windows devices to Defender for Endpoint using Intune
@@ -160,12 +159,9 @@
             href: onboard-downlevel.md
 
         - name: Onboard server devices
-          href: onboard-server.md
           items:
-          - name: Onboard Windows Server version 1803, Windows Server 2019, and later
-            href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2 and Windows Server 2016
-            href: onboard-windows-server-2012r2-2016.md
+          - name: Onboard servers through Defender for Endpoint's experience
+            href: onboard-server.md
           - name: Defender for Endpoint on Windows Server with SAP
             href: mde-sap-windows-server.md
           - name: Onboard Windows devices using Configuration Manager

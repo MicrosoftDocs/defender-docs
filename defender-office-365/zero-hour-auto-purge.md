@@ -200,7 +200,7 @@ ZAP actions might be overridden by [Safe sender lists](create-safe-sender-lists-
 - The MX record for your Microsoft 365 domain points to another service or device, and you use a mail flow rule to [bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) (high confidence phishing).
 - [Admin submissions of false positives to Microsoft](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days (malware and high confidence phishing).
 
-It's important for you to carefully consider the implications of bypassing filtering, as it could compromise the security posture of your organizatione.
+It's important for you to carefully consider the implications of bypassing filtering, as it could compromise the security posture of your organization.
 
 ### What are the licensing requirements for ZAP?
 

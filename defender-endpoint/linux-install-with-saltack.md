@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/24/2024
+ms.date: 04/10/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Saltstack
@@ -27,14 +27,13 @@ ms.date: 12/24/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-
-This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article.
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, refer to the [See also](#see-also) section.)
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 ## Prerequisites and system requirements
 
-Before you get started, see [the main Defender for Endpoint on Linux page](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements for the current software version.
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 In addition, for Saltstack deployment, you need to be familiar with Saltstack administration, have Saltstack installed, configure the Master and Minions, and know how to apply states. Saltstack has many ways to complete the same task. These instructions assume availability of supported Saltstack modules, such as *apt* and *unarchive* to help deploy the package. Your organization might use a different workflow. For more information, see [Saltstack documentation](https://docs.saltproject.io/).
 
@@ -120,10 +119,10 @@ In this step, you create a SaltState state file in your configuration repository
 
 1. Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
 
-2. In the following commands, replace *[distro]* and *[version]* with your information.
+2. In the following commands, replace `[distro]` and `[version]` with your information.
 
    > [!NOTE]
-   > For Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel." For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
+   > For Oracle Linux and Amazon Linux 2, replace `[distro]` with "rhel." For Amazon Linux 2, replace `[version]` with "7". For Oracle utilize, replace `[version]` with the version of Oracle Linux.
 
    ```bash
    cat /srv/salt/install_mdatp.sls
@@ -258,7 +257,7 @@ This step applies to both the installer script or manual configuration method. I
    ```
 
    > [!IMPORTANT]
-   > When the product starts for the first time, it downloads the latest antimalware definitions. Depending on your Internet connection, this can take up to a few minutes.
+   > When the product starts for the first time, it downloads the latest anti-malware definitions. Depending on your Internet connection, this process can take a few minutes.
 
 2. Validation/configuration:
 
@@ -303,8 +302,18 @@ You can configure antivirus or EDR settings on your endpoints using any of the f
 
 When upgrading your operating system to a new major version, you must first uninstall Defender for Endpoint on Linux, install the upgrade, and finally reconfigure Defender for Endpoint on your Linux device.
 
-## Reference
+## See also
 
 - [SALT Project documentation](https://docs.saltproject.io/en/latest/topics/about_salt_project.html)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
+- [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
+- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
