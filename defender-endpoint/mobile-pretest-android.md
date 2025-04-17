@@ -15,7 +15,7 @@ ms.custom: partner-contribution
 ms.topic: how-to
 ms.subservice: android
 search.appverid: met150
-ms.date: 04/16/2025
+ms.date: 04/18/2025
 #customer intent: As a customer, I want to know how to set up my Android devices for prerelease testing using Google Play preproduction tracks so that I can test the app before mainstream release.
 ---
 
@@ -43,7 +43,7 @@ To set up your environment for prerelease testing, follow these steps:
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/icon-select-small.png" alt-text="Screenshot of Microsoft Intune admin center highlighting the org ID" lightbox="/defender-endpoint/media/mobile-pretest-android/icon-select.png":::
 
-2. Sync the prerelease build of the app with Microsoft Intune to publish it to the managed Google Play Store. See [Sync a Managed Google Play app with Intune](/intune/intune-service/apps/apps-add-android-for-work#sync-a-managed-google-play-app-with-intune) for more information. The sync steps in Intune looks like the following:
+2. Sync the managed Google Play app with Intune. See [Sync a Managed Google Play app with Intune](/intune/intune-service/apps/apps-add-android-for-work#sync-a-managed-google-play-app-with-intune) for more information. The sync steps look like the following:
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/intune-sync.png" alt-text="Screenshot selecting an app for managed Play in the Microsoft Intune admin center":::
 
@@ -68,7 +68,7 @@ To set up your environment for prerelease testing, follow these steps:
 After the app is synced and assigned to a user group, the following steps are required for the members of the user group to test the prerelease build on the Android device:
 
 1. Open the Microsoft Intune Company Portal on the Android device and sign in with the user account that is part of the user group assigned to the prerelease build.
-2. In the device's work profile, open the **Play Store** app and search for *Microsoft Defender: Antivirus*.
+2. In the device's managed section, open the **Play Store** app and search for *Microsoft Defender: Antivirus*.
 3. Select the app and then **Install** to install the prerelease build on the device.
 4. Open the app and sign in with the user account that is part of the user group assigned to the prerelease build.
 5. Follow the prompts to complete the onboarding process.
@@ -77,17 +77,17 @@ After the app is synced and assigned to a user group, the following steps are re
 
 To set up your environment for prerelease testing, follow these steps:
 
-1. Create a Google group for your organization. This group is required to add your information to an inclusion list and make the prerelease build available for testing. To create a Google group, see [Create a group and choose group settings](https://support.google.com/groups/answer/2464926).
+1. Create a Google group for your organization, which is required to add your information to an inclusion list and make the prerelease build available to your group. To create a Google group, see [Create a group and choose group settings](https://support.google.com/groups/answer/2464926). The group you create appears in the Google Groups list. Here's an example.
 
-2. Contact Microsoft Support to provide the Google group name for your organization then wait for confirmation. Then, provide the test link to the members of the Google group where they can download the prerelease build.
+   :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/group-name.png" alt-text="Screenshot of highlighting the Google group added to the list":::
+
+2. Contact Microsoft Support to provide the Google group name for your organization then wait for confirmation. Then, provide the [test link](https://play.google.com/apps/testing/com.microsoft.scmx?pli=1) where they can download the prerelease build to the members of the Google group.
 
 3. Users testing the prerelease build must sign in to the Google Play Store using the Google account that's part of the Google group.
 
-4. Search and download the prerelease build from the test link provided by the administrator. Users are then redirected to a *Welcome to the testing program* page. Here's an example.
+4. Search and download the prerelease build from the [test link](https://play.google.com/apps/testing/com.microsoft.scmx?pli=1). Users are then redirected to a *Welcome to the testing program* page and an install page for Microsoft Defender: Antivirus. Here are examples.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/welcome-test.png" alt-text="Screenshot of a Welcome page to test the prelease build of Microsoft Defender Antivirus":::
-
-5. Follow the steps from the test link to install **Microsoft Defender: Antivirus (Beta)**.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/beta-app.png" alt-text="Screenshot of a prerelease version of Microsoft Defender Antivirus in the Google Play Store":::
 
@@ -95,7 +95,7 @@ To set up your environment for prerelease testing, follow these steps:
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/defender-signin.png" alt-text="Screenshot of the Microsoft Defender Antivirus sign in page":::
 
-7. Once successfully onboarded, the app shows a *Preview build* label on top. Here's an example.
+7. Once successfully onboarded, the app shows a label on top to indicate that the prerelease version is running. Here's an example.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/preview-build.png" alt-text="Screenshot of a prerelease version of Microsoft Defender Antivirus installed on a device":::
 
