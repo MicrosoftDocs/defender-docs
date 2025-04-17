@@ -30,7 +30,7 @@ ms.date: 04/02/2025
 
 [Defender for Endpoint](microsoft-defender-endpoint.md) can help protect your organization's servers with capabilities that include posture management, threat protection, and endpoint detection and response. Defender for Endpoint provides your security team with deeper insight into server activities, coverage for kernel and memory attack detection, and the ability to take response actions when necessary. Defender for Endpoint also integrates with Microsoft Defender for Cloud, providing your organization with a comprehensive server protection solution. 
 
-Depending on your particular environment, you can choose from several options to onboard servers to Defender for Endpoint. This article describes available options and includes links to additional resources.
+Depending on your particular environment, you can choose from several options to onboard servers to Defender for Endpoint. This article describes available options for Windows Server and Linux, important points to consider, how to run a detection test after onboarding, and how to offboard servers.
 
 > [!TIP]
 > As a companion to this article, see our [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268522) to review best practices and learn to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. For a customized experience based on your environment, you can access the [Security Analyzer automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615) in the Microsoft 365 admin center.
@@ -45,7 +45,7 @@ To onboard servers to Defender for Endpoint, [server licenses](/office365/servic
 
 ## Integration with Microsoft Defender for Servers
 
-Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender for Servers (in Defender for Cloud). If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
+Defender for Endpoint integrates seamlessly with [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) (in Defender for Cloud). If your subscription includes Defender for Servers Plan 1 or Plan 2, you can:
 
 - Onboard servers automatically
 - Have servers that are monitored by Defender for Cloud appear in the Microsoft Defender portal, in the device inventory
@@ -56,7 +56,7 @@ Here are a few things to keep in mind:
 - When you use Defender for Cloud to monitor servers, a Defender for Endpoint tenant is created automatically. Data collected by Defender for Endpoint is stored in the geographical location of the tenant, identified during provisioning. (For example, in the US for customers in the USA; in EU for European customers; and in the UK for customers in the United Kingdom.)
 - If you use Defender for Endpoint before using Defender for Cloud, your data is stored in the location you specified when you created your tenant, even if you integrate with Defender for Cloud at a later time.
 - Once configured, you can't change the location of where your data is stored. To move your data to another location, [contact support](contact-support.md) to reset your tenant.
-- Server endpoint monitoring utilizing this integration is not currently available for Office 365 GCC customers.
+- Server endpoint monitoring utilizing this integration isn't currently available for Office 365 GCC customers.
 - Linux servers onboarded through Defender for Cloud have their initial configuration set to run Microsoft Defender Antivirus in [passive mode](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions). For information on how to deploy Defender for Endpoint on Linux server, start with the [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md). 
 
 For more information, see [Protect your endpoints with Defender for Endpoint integration with Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint). 
@@ -70,66 +70,74 @@ If you intend to use a non-Microsoft anti-malware solution, you need to run Micr
 
 ## Server onboarding options
 
-The following table summarizes various deployment methods for onboarding servers:
+You can choose from several deployment methods and tools to onboard servers, as summarized in the following table:
 
 |Operating system| Deployment method |
 |---|---|
-| Windows Server 2025 <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803 | [Local script](configure-endpoints-script.md) (uses an onboarding package)<br/>[Defender for Servers](/azure/defender-for-cloud/tutorial-enable-servers-plan)<br/> [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) <br/> [Group Policy](configure-endpoints-gp.md) <br/>[VDI scripts](configure-endpoints-vdi.md) <br/>[Onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)|
-| Windows Server 2016 <br/>Windows Server 2012 R2 | [Onboard Windows Server 2012 R2 and Windows Server 2016 using the modern, unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) |
-|Linux |[Installer script based deployment](/defender-endpoint/linux-installer-script) <br/>[Ansible](linux-install-with-ansible.md) <br/>[Chef](linux-deploy-defender-for-endpoint-with-chef.md)<br/>[Puppet](linux-install-with-puppet.md) <br/>[Saltstack](linux-install-with-saltack.md)<br/> [Manual deployment](linux-install-manually.md) (uses a local script) <br/>[Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)<br/>[Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/quickstart-onboard-machines)<br/>[Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)<br/>[Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md) |
+| Windows Server 2025 <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803 <br/>Windows Server 2016 <br/>Windows Server 2012 R2 | [Local script](configure-endpoints-script.md) (uses an onboarding package)<br/>[Defender for Servers](/azure/defender-for-cloud/tutorial-enable-servers-plan)<br/> [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) <br/> [Group Policy](configure-endpoints-gp.md) <br/>[VDI scripts](configure-endpoints-vdi.md) <br/>[Onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) <br/>[Modern, unified solution for Windows Server 2016 and 2012 R2](#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) |
+|Linux |[Installer script based deployment](/defender-endpoint/linux-installer-script) <br/>[Ansible script based deployment](linux-install-with-ansible.md) <br/>[Chef script based deployment](linux-deploy-defender-for-endpoint-with-chef.md)<br/>[Puppet script based deployment](linux-install-with-puppet.md) <br/>[Saltstack script based deployment](linux-install-with-saltack.md)<br/> [Manual deployment](linux-install-manually.md) (uses a local script) <br/>[Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)<br/>[Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/quickstart-onboard-machines)<br/>[Guidance for ARM64-based Linux devices (preview)](mde-linux-arm.md)<br/>[Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md) |
 
 ## Onboard Windows Server, version 1803, Windows Server 2019, and Windows Server 2025
 
-You need to complete the general steps depicted in the following image to successfully onboard Windows servers. 
-
 :::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
-1. Download the onboarding package.
+1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
 
-2. Follow the guidance for your preferred tool:
+2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
-   - **Local script**: [Onboard Windows devices using a local script](configure-endpoints-script.md)
-   - **Group Policy**: [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
-   - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
-   - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
-   - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+3. In the **Select operating system to start onboarding process** list, select **Windows Server 2019, 2022, and 2025**.
 
-## Onboard Windows Server 2012 R2 and Windows Server 2016 
+   :::image type="content" source="media/mde-onboard-winserver201920222025-ui.png" alt-text="Screenshot showing the onboarding screen for Windows Server 2019 and later in Defender for Endpoint.":::
 
-### Prerequisites for Windows Server 2016 and Windows Server 2012 R2
+4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+
+5. Under **Deployment method**, select an option, and then download the onboarding package. 
+
+6. Follow the instructions in one of the following articles for your deployment method:
+
+   - [Local script](configure-endpoints-script.md)
+   - [Group Policy](configure-endpoints-gp.md)
+   - [Configuration Manager](configure-endpoints-sccm.md)
+   - [VDI onboarding scripts for non-persistent devices](configure-endpoints-vdi.md)
+   - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+
+## Onboard Windows Server 2016 and Windows Server 2012 R2
+
+:::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices." lightbox="media/server-onboarding-tools-methods.png":::
+
+1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md) and [Prerequisites for Windows Server 2016 and 2012 R2](#prerequisites-for-windows-server-2016-and-2012-r2).
+
+2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
+
+3. In the **Select operating system to start onboarding process** list, select **Windows Server 2016 and Windows Server 2012 R2**.
+
+   :::image type="content" source="media/mde-onboard-winserver20122016-ui.png" alt-text="Screenshot showing the device onboarding page in Defender for Endpoint.":::
+
+3. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+
+4. Under **Deployment method**, select an option, and then download the installation package and onboarding package. 
+
+   > [!NOTE]
+   > The installation package is updated monthly. Be sure to download the latest package before usage.
+   > To update after installation, you don't have to run the installer package again. If you do, the installer asks you to offboard first as that is a requirement for uninstallation. See [Update packages for Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
+
+5. Follow the instructions in one of the following articles for your deployment method:
+
+   - [Local script](configure-endpoints-script.md)
+   - [Group Policy](configure-endpoints-gp.md)
+   - [Configuration Manager](configure-endpoints-sccm.md)
+   - [VDI onboarding scripts for non-persistent devices](configure-endpoints-vdi.md)
+   - [Migrate servers from Microsoft Monitoring Agent to the modern unified solution](server-migration.md)
+   - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+
+### Prerequisites for Windows Server 2016 and 2012 R2
 
 - It's recommended to install the latest available Servicing Stack Update (SSU) and Latest Cumulative Update (LCU) on the server.
 - The SSU from September 14, 2021 or later must be installed.
 - The LCU from September 20, 2018 or later must be installed.  
 - Enable the Microsoft Defender Antivirus feature and ensure it's up to date. For more information on enabling Defender Antivirus on Windows Server, see [Re-enable Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Defender Antivirus on Windows Server if it was uninstalled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
 - Download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
-- On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. See [information for Windows Server 2012 R2 and Windows Server 2016](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016).
-
-### Onboarding Windows Server 2016 and Windows Server 2012 R2
-
-The following diagram shows the general steps required to successfully onboard servers.
-
-:::image type="content" source="media/server-onboarding-tools-methods.png" alt-text="An illustration of onboarding flow for Windows Servers and Windows 10 devices.":::
-
-1. Download the installation package and onboarding package by following these steps:
-
-   1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Onboarding**.
-   2. **Windows Server 2016 and Windows Server 2012 R2**.
-   3. Select **Download installation package** and save it on the device. The installation package contains an MSI file that installs the Defender for Endpoint agent.
-   4. Select **Download onboarding package** and save the zipped folder on the device. The onboarding package contains `WindowsDefenderATPOnboardingScript.cmd`, which contains the onboarding script.
-
-   > [!NOTE]
-   > The installation package is updated monthly. Be sure to download the latest package before usage.
-   > To update after installation, you don't have to run the installer package again. If you do, the installer asks you to offboard first as that is a requirement for uninstallation. See  [Update packages for Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
-
-2. Follow the guidance for your preferred tool to install Defender for Endpoint:
-
-   - **Migrate from MMA to the modern unified solution**: [Migrating servers from Microsoft Monitoring Agent to the modern unified solution](server-migration.md)
-   - **Local script**: [Onboard Windows devices using a local script](configure-endpoints-script.md)
-   - **Group Policy**:  [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
-   - **Microsoft Configuration Manager**: [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
-   - **VDI scripts**: [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md)
-   - **Direct onboarding with Defender for Cloud**: [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+- On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature and fully updated before installation. 
 
 ### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
@@ -158,15 +166,15 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 - Always download the latest installer package from the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) before performing a new installation and ensure prerequisites are met. After installation, ensure to regularly update using component updates described in the section [Update packages for Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-windows-server-2016-or-windows-server-2012-r2).
 
-- An operating system update can introduce an installation issue on machines with slower disks due to a time out with service installation. Installation fails with the message "Couldn't find c:\program files\windows defender\mpasdesc.dll, - 310 WinDefend". Use the latest installation package, and the latest [install.ps1](https://github.com/microsoft/mdefordownlevelserver) script to help clear the failed installation if necessary.
+- An operating system update can introduce an installation issue on machines with slower disks due to a time out with service installation. Installation fails with the message `Couldn't find c:\program files\windows defender\mpasdesc.dll, - 310 WinDefend`. Use the latest installation package, and the latest [install.ps1](https://github.com/microsoft/mdefordownlevelserver) script to help clear the failed installation if necessary.
 
-- The user interface on Windows Server 2016 and Windows Server 2012 R2 only allows for basic operations. To perform operations on a device locally, refer to [Manage Defender for Endpoint with PowerShell, WMI, and MPCmdRun.exe](preferences-setup.md). As a result, features that specifically rely on user interaction, such as where the user is prompted to make a decision or perform a specific task, may not work as expected. It's recommended to disable or not enable the user interface nor require user interaction on any managed server as it may impact protection capability.
+- The user interface on Windows Server 2016 and Windows Server 2012 R2 only allows for basic operations. To perform operations on a device locally, refer to [Manage Defender for Endpoint with PowerShell, WMI, and MPCmdRun.exe](preferences-setup.md). As a result, features that specifically rely on user interaction, such as where the user is prompted to make a decision or perform a specific task, might not work as expected. It's recommended to disable or not enable the user interface nor require user interaction on any managed server as it may impact protection capability.
 
 - Not all attack surface reduction rules are applicable to all operating systems. See [Attack surface reduction rules](attack-surface-reduction-rules-reference.md).
 
-- Operating system upgrades aren't supported. Offboard then uninstall before upgrading. The installer package can only be used to upgrade installations that haven't yet been updated with new antimalware platform or EDR sensor update packages.
+- Operating system upgrades aren't supported. Offboard then uninstall before upgrading. The installer package can only be used to upgrade installations that haven't yet been updated with new anti-malware platform or EDR sensor update packages.
 
-- To automatically, deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
+- To automatically deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
 ## Onboard Linux servers
 
@@ -174,13 +182,13 @@ To onboard servers running Linux, follow these steps:
 
 1. Make sure to review the [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md).
 
-2. Choose a deployment method. Dpending on your particular environment, you can choose from several options:
+2. Choose a deployment method. Depending on your particular environment, you can choose from several options:
 
    - [Installer script based deployment](/defender-endpoint/linux-installer-script) 
-   - [Ansible](linux-install-with-ansible.md) 
-   - [Chef](linux-deploy-defender-for-endpoint-with-chef.md)
-   - [Puppet](linux-install-with-puppet.md) 
-   - [Saltstack](linux-install-with-saltack.md)
+   - [Ansible based deployment](linux-install-with-ansible.md) 
+   - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Puppet based deployment](linux-install-with-puppet.md) 
+   - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Manual deployment](linux-install-manually.md) (uses a local script) 
    - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
    - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/quickstart-onboard-machines)
@@ -196,10 +204,7 @@ After onboarding the device, you can choose to run a detection test to verify th
 > [!NOTE]
 > Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Defender for Endpoint sensor (SENSE) is running.
 
-1. On Windows Server devices, run the following command to verify that Microsoft Defender Antivirus is installed:
-
-   > [!NOTE]
-   > This verification step is only required if you're using Microsoft Defender Antivirus as your active antimalware solution.
+1. On Windows Server devices that should have Microsoft Defender Antivirus installed in active mode, run the following command:
 
    ```cmd
    sc.exe query Windefend
@@ -224,7 +229,7 @@ You can offboard Windows servers by using the same methods that are available fo
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
-After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2016 and Windows Server 2012 R2. For other Windows server versions, you have two options to offboard Windows servers from the service:
+After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2016 and Windows Server 2012 R2. For previous versions of Windows Server, you have two options to offboard Windows servers from the service:
 
 - Uninstall the MMA agent
 - Remove the Defender for Endpoint workspace configuration
