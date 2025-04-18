@@ -9,7 +9,7 @@ ms.author: ewalsh
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: conceptual
-ms.date: 04/04/2025
+ms.date: 04/17/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -27,7 +27,6 @@ ms.collection:
 - Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender Antivirus
 
-
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 
 - Windows Server 2025
@@ -41,7 +40,7 @@ Microsoft Defender Antivirus is available in the following editions/versions of 
 
 The process of setting up and running Microsoft Defender Antivirus on Windows Server includes the following steps:
 
-1. [Enable the interface](#enable-the-user-interface-on-windows-server).
+1. [Enable the user interface](#enable-the-user-interface-on-windows-server).
 2. [Install Microsoft Defender Antivirus](#install-microsoft-defender-antivirus-on-windows-server).
 3. [Verify Microsoft Defender Antivirus is running](#verify-microsoft-defender-antivirus-is-running).
 4. [Update your antimalware Security intelligence](#update-antimalware-security-intelligence).
@@ -54,7 +53,7 @@ The process of setting up and running Microsoft Defender Antivirus on Windows Se
 > [!IMPORTANT]
 > If you're using Windows Server 2012 R2, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
-By default, Microsoft Defender Antivirus is installed and functional on Windows Server. Sometimes, the user interface (GUI) is installed by default. The GUI isn't required; you can use PowerShell, Group Policy, or other methods to manage Microsoft Defender Antivirus. However, many organizations prefer to use the GUI for Microsoft Defender Antivirus. To install the GUI, use one of the procedures in the following table:
+By default, Microsoft Defender Antivirus is installed and functional on Windows Server. Sometimes, the user interface (GUI) is installed by default, and other times it has to be enabled. The GUI isn't required; you can use PowerShell, Group Policy, or other methods to manage Microsoft Defender Antivirus. If your organization prefers to use the GUI, use one of the procedures in the following table:
 
 | Procedure | What to do |
 |:---|:---|
