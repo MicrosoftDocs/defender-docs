@@ -68,26 +68,15 @@ If you need to install or reinstall Microsoft Defender Antivirus on Windows Serv
 
 ## Verify Microsoft Defender Antivirus is running
 
-After you've installed (or reinstalled) Microsoft Defender Antivirus, your next step is to verify that it's running. Use the PowerShell cmdlets in the following table:
+After you've installed (or reinstalled) Microsoft Defender Antivirus, your next step is to verify that it's running. You can use either PowerShell or Command Prompt.
 
-| Procedure | PowerShell cmdlet |
-|:---|:---|
-| Verify that Microsoft Defender Antivirus is running | `Get-Service -Name windefend` |
-| Verify that firewall protection is turned on | `Get-Service -Name mpssvc` |
+- PowerShell: `Get-Service -Name windefend`
+- Command Prompt: `sc query Windefend`
 
-As an alternative to PowerShell, you can use Command Prompt to verify that Microsoft Defender Antivirus is running. To do that, run the following command from a command prompt:
+To verify that firewall protection is turned on using PowerShell, run the following command: `Get-Service -Name mpssvc`.
 
-```cmd
-sc query Windefend
-```
+To view verify the state of all services using Command Prompt, run the following command: `sc query state= all`.
 
-The `sc query` command returns information about the Microsoft Defender Antivirus service. When Microsoft Defender Antivirus is running, the `STATE` value displays `RUNNING`.
-
-To view all the services that aren't running, run the following PowerShell cmdlet:
-
-```cmd
-sc query state= all
-```
 
 ## Update antimalware security intelligence
 
