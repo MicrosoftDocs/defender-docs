@@ -28,22 +28,22 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-The Phishing Triage Agent is a Microsoft Security Copilot agent designed to scale security teams' response to efficiently triage and classify user-submitted phishing incidents in Microsoft Defender. It assists security operations center (SOC) teams by integrating with Microsoft security solutions to autonomously triage volumes of phishing submissions, reducing the team's manual workload and allowing them to focus on critical tasks and strategic actions.
+> [!IMPORTANT]
+> Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
 
-Managing a huge volume of phishing incidents, which may include false positives, can be challenging for SOC operations. Analysts need to ensure that these incidents are triaged and resolved efficiently and reliably so they can concentrate on more critical phishing incidents.
+Phishing remains one of the most common ways attackers gain initial access. The Phishing Triage Agent, a Microsoft Security Copilot agent designed to scale security teams' response in triaging and classifying user-submitted phishing incidents in Microsoft Defender, can help organizations address phishing efficiently. It assists security operations center (SOC) teams by autonomously triaging phishing submissions, determining whether they are genuine phishing attempts or false alarms. By alleviating the burden of reactive work, it reduces the team's manual workload and allows them to focus on critical tasks.
 
-With the Phishing Triage Agent, SOC teams can benefit from an AI-powered virtual agent capable of classifying hundreds of phishing submissions with speed and accuracy. The agent also helps remove false positives, enabling teams to resolve true positive phishing incidents more swiftly.
+With the Phishing Triage Agent, SOC teams can benefit from an AI-powered virtual agent capable of classifying hundreds of phishing submissions with speed and accuracy. The agent also helps remove false alarms from the queue, enabling teams to identify and resolve true positive phishing incidents more swiftly.
 
-Phishing Triage adjusts to an organization’s context by actively seeking feedback and learning from its users. The agent provides a transparent rationale for its verdicts using natural language, using clear reasoning and explanations for its process. Through dynamic learning, the Phishing Triage ensures its alignment with your organization’s established triage parameters. It dynamically adjusts by learning from the feedback it gets to operate according to your organization’s changing needs.
+Phishing Triage adjusts to an organization's context by actively seeking feedback and learning from its users. The agent provides a transparent rationale for its verdicts, ensuring its operations align with your organization's established triage parameters. It dynamically adjusts by learning from the feedback it gets to operate according to your organization's changing needs.
 
 ## Overview
 
-The Phishing Triage Agent is designed to scale your security operations teams' processes in the triage and classification of user-submitted phishing incidents. The agent can help you with the following tasks:
+The Phishing Triage Agent is designed to scale your security operations teams' processes in classifying and triaging user-submitted phishing incidents. Some of the agent’s highlights include:
 
-- Autonomously classify hundreds of phishing incidents based on user-submitted emails and attachments.
-- Provide a transparent rationale for its classification verdicts in natural language, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions.
-- Learn from user feedback to improve its classification accuracy over time.
-- Operate in the background to continuously triage phishing incidents without requiring constant human intervention.
+- It operates autonomously. The Phishing Triage Agent leverages advanced AI tools to perform sophisticated assessments and determine whether a phishing submission is a real threat or a false alarm, without requiring step-by-step human input or code.
+- It provides a transparent rationale for its classification verdicts in natural language, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions. It also shows a visual representation of its reasoning process for every decision.
+- It continuously learns and improves its accuracy based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
 ### Trigger
 
@@ -97,13 +97,13 @@ To set up the Phishing Triage Agent, follow these steps:
 4. In the Agent identity roles, select a role for the agent. Ensure that the role has the required permissions to view and analyze emails.
 5. Select **Deploy agent** to create the agent identity. The agent is created and deployed in the background.
 
-## Review the Phishing Triage Agent output
+## Assess and provide feedback on the agent's output
 
-Users can review the Phishing Triage Agent’s triaged agents, actions taken in an incident, and overall performance in terms of total incidents resolved and mean time to resolve.
+Users can review the Phishing Triage Agent's triaged incidents, provide feedback on the actions taken by the agent, and assess the agent's overall performance in terms of total incidents resolved and mean time to resolve.
 
 ### Review triaged incidents
 
-After setting up the Phishing Triage Agent, it will automatically run in the background and begin to triage user-submitted phishing incidents. You can filter the incident queue for incidents with the **Agent** tag to view the incidents triaged by the agent.
+After setting up the Phishing Triage Agent, it automatically runs in the background and begins to triage user-submitted phishing incidents. You can filter the queue for incidents with the **Agent** tag to view the incidents triaged by the agent.
 
 [SCREENSHOT]
 
@@ -111,21 +111,21 @@ Select an incident to review. In the incident page, look for the Phishing Triage
 
 [SCREENSHOT]
 
-Review the agent’s classification verdict and reason. If the agent’s classification does not align with your parameters, select **Change classification**. To learn more about the agent’s actions before arriving at a classification, select **View agent activity**.
+### Provide feedback to the agent
+
+Review the agent's classification verdict and reason. If the agent's classification does not align with your parameters, select **Change classification**.
 
 [SCREENSHOT]
 
-### Review the agent's actions
-
-In the **Activity** tab of an incident page, you can view all the actions taken by the agent. You can follow how the agent validates its action per step.
+Selecting this option opens the Manage alert pane where you can provide the classification and add comments. You can explain your reasoning to the agent using natural language. Once you’re done, select **Use this feedback to teach the agent option** to improve the agent's subsequent responses so they’re better aligned with your organization’s context.
 
 [SCREENSHOT]
 
-Select the final verdict to read about the agent’s reason, investigation details, email preview, and to view other evidence the agent used for its verdict.
+To learn more about the agent’s actions before arriving at a classification, select **View agent activity** in the Phishing Triage Agent card.
 
 [SCREENSHOT]
 
-You can **Change classification** on the final verdict card. Selecting this option opens the Manage alert pane where you can provide the classification and add comments. Tick the **Use this feedback to teach the agent** option to improve the agent’s subsequent responses.
+You can view all the actions taken by the agent and follow how the agent validates its action per step in the Activity pane.
 
 [SCREENSHOT]
 
@@ -135,16 +135,33 @@ You can review the overall performance of the Phishing Triage Agent by navigatin
 
 [SCREENSHOT]
 
-## Provide feedback to the Phishing Triage Agent
-
-The Phishing Triage Agent relies on feedback on its output to continuously improve its triage activities and ensure that it adapts to your organization's evolving security needs. You can provide feedback to the agent in the following ways:
-
-1. You can provide feedback on the agent's classification verdict by selecting **Change classification** in the incident page. This opens the Manage alert pane where you can provide the classification and add comments. Tick the **Use this feedback to teach the agent** option to improve the agent’s subsequent responses.
-2. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of the Phishing Triage Agent card in the Copilot pane. Based on your assessment, you can select **Looks right**, **Needs improvement**, or **Inappropriate**. Add comments to provide more context about your feedback.
-
 ## Frequently asked questions (FAQs)
 
 Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, navigate to the [overview](#overview) and [prerequisites](#prerequisites) sections of this article.
+
+### Why is the Phishing Triage Agent important?
+
+Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports.
+
+Consequently, managing these incidents becomes a tedious and repetitive task for SOC analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, which have a limited amount of time to dedicate to competing and critical demands. 
+
+By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
+
+### When is the agent triggered?
+
+The agent runs automatically when a user submits a potential phishing email.
+
+### How do I grant the agent access to plugins and services?
+
+You can create an agent identity using a service principal and assign it to an appropriate Tier 1 equivalent RBAC role in your environment to manage agent access. Alternatively, you can connect it to an existing user account by logging in to manage access. Note that service principals are supported for public preview.
+
+### Can the Phishing Triage Agent be trusted?
+
+Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. The Phishing Triage Agent is fully incorporated into these controls. 
+
+During setup, the agent is assigned an identity and configured with the minimum required permissions for its operation, ensuring it is not over-permissioned. Furthermore, all agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. 
+
+Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
 
 ### Can I remove the Phishing Triage Agent?
 
