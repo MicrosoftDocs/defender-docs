@@ -77,15 +77,16 @@ To verify that firewall protection is turned on using PowerShell, run the follow
 
 To view verify the state of all services using Command Prompt, run the following command: `sc query state= all`.
 
-## Update antimalware security intelligence
-
 > [!IMPORTANT]
-> Beginning with [platform version 4.18.2208.0 and later](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Defender for Endpoint, the "Turn off Windows Defender" setting in [Group Policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it will places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows Microsoft Defender Antivirus to switch to active mode but not to passive mode.
-> 
-> - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, there will be no change and Defender Antivirus will remain disabled.
-> - To switch Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
-> 
-> Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection will prevent it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
+> Beginning with [platform version 4.18.2208.0 and later](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Defender for Endpoint, the "Turn off Windows Defender" setting in [Group Policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows Microsoft Defender Antivirus to switch to active mode but not to passive mode.
+>
+> If "Turn off Windows Defender" is already set before onboarding the device to Defender for Endpoint, there's no change and Microsoft Defender Antivirus remains disabled.
+>
+> To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
+>
+> Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection will prevents Microsoft Defender Antivirus from going into passive mode, even if `ForceDefenderPassiveMode` is set to `1`.
+
+## Update antimalware security intelligence
 
 To get your regular security intelligence updates, the Windows Update service must be running. If you use an update management service, like Windows Server Update Services (WSUS), make sure Microsoft Defender Antivirus Security intelligence updates are approved for the computers you manage.
 
@@ -106,62 +107,16 @@ The following table lists the services for Microsoft Defender Antivirus and the 
 
 | Service Name | File Location | Description |
 |---|---|---|
-| Windows Defender Service (WinDefend) | `C:\Program Files\Windows Defender\MsMpEng.exe` | This service is the main Microsoft Defender Antivirus service that needs to be running always.|
-| Windows Error Reporting Service (Wersvc) | `C:\WINDOWS\System32\svchost.exe -k WerSvcGroup` | This service sends error reports back to Microsoft. |
-| Windows Firewall (MpsSvc) | `C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork` | We recommend keeping the Windows Firewall service enabled. |
-| Windows Update (Wuauserv) | `C:\WINDOWS\system32\svchost.exe -k netsvcs`| Windows Update is needed to get Security intelligence updates and antimalware engine updates |
+| Windows Defender Service (`WinDefend`) | `C:\Program Files\Windows Defender\MsMpEng.exe` | This service is the main Microsoft Defender Antivirus service that needs to be running always.|
+| Windows Error Reporting Service (`Wersvc`) | `C:\WINDOWS\System32\svchost.exe -k WerSvcGroup` | This service sends error reports back to Microsoft. |
+| Windows Firewall (`MpsSvc`) | `C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork` | We recommend keeping the Windows Firewall service enabled. |
+| Windows Update (`Wuauserv`) | `C:\WINDOWS\system32\svchost.exe -k netsvcs`| Windows Update is needed to get Security intelligence updates and antimalware engine updates |
 
-## Submit samples
+## Additional settings to consider
 
-Sample submission allows Microsoft to collect samples of potentially malicious software. To help provide continued and up-to-date protection, Microsoft researchers use these samples to analyze suspicious activities and produce updated antimalware Security intelligence. We collect program executable files, such as .exe files and .dll files. We don't collect files that contain personal data, like Microsoft Word documents and PDF files.
-
-### Submit a file
-
-1. Review the [submission guide](/unified-secops-platform/submission-guide).
-
-2. Visit the [sample submission portal](https://www.microsoft.com/wdsi/filesubmission), and submit your file.
-
-### Enable automatic sample submission
-
-To enable automatic sample submission, start a Windows PowerShell console as an administrator, and set the **SubmitSamplesConsent** value data according to one of the following settings:
-
-|Setting|Description|
-|---|---|
-| **0** - **Always prompt** | The Microsoft Defender Antivirus service prompts you to confirm submission of all required files. This setting is the default for Microsoft Defender Antivirus, but isn't recommended for installations on Windows Server 2016 or 2019, or Windows Server 2022 and later without a GUI. |
-| **1**  - **Send safe samples automatically** | The Microsoft Defender Antivirus service sends all files marked as "safe" and prompts for the remainder of the files. |
-| **2** - **Never send** | The Microsoft Defender Antivirus service doesn't prompt and doesn't send any files. |
-| **3** - **Send all samples automatically** | The Microsoft Defender Antivirus service sends all files without a prompt for confirmation. |
-
-> [!NOTE]
-> This option is not available for Windows Server 2012 R2. 
-
-## Configure automatic exclusions
-
-To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install when using Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
-
-See [Configure exclusions in Microsoft Defender Antivirus on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
-
-## Passive mode and Windows Server
-
-If you're using a non-Microsoft antivirus product as your primary antivirus solution on Windows Server, you must set Microsoft Defender Antivirus to passive mode or disable it manually. 
-
-- If your Windows Server endpoint is onboarded to Microsoft Defender for Endpoint, you can set Microsoft Defender Antivirus to passive mode. 
-- If you're not using Microsoft Defender for Endpoint, set Microsoft Defender Antivirus to disabled mode. 
-
-If you uninstall your non-Microsoft antivirus product, make sure to re-enable Microsoft Defender Antivirus. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](/defender-endpoint/enable-update-mdav-to-latest-ws#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
-
-The following table describes methods to set Microsoft Defender Antivirus to passive mode, disable Microsoft Defender Antivirus, and uninstall Microsoft Defender Antivirus:
-
-| Procedure | Description |
-|---|---|
-| Set Microsoft Defender Antivirus to passive mode by using a registry key | Set the `ForceDefenderPassiveMode` registry key as follows: <br/>- Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection` <br/>- Name: `ForceDefenderPassiveMode` <br/>- Type: `REG_DWORD` <br/>- Value: `1` |
-| Turn off the Microsoft Defender Antivirus user interface using PowerShell (Windows Server 2016 only)| Open Windows PowerShell as an administrator, and run the following PowerShell cmdlet: `Uninstall-WindowsFeature -Name Windows-Defender-GUI`|
-| Disable Microsoft Defender Antivirus real-time protection using PowerShell | Use the following PowerShell cmdlet: `Set-MpPreference -DisableRealtimeMonitoring $true` |
-| Disable Microsoft Defender Antivirus using the Remove Roles and Features wizard | See [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard), and use the **Remove Roles and Features Wizard**. <br/><br/>When you get to the **Features** step of the wizard, clear the **Windows Defender Features** option. <br/><br/> If you clear **Windows Defender** by itself under the **Windows Defender Features** section, you're prompted to remove the interface option **GUI for Windows Defender**.<br/><br/>Microsoft Defender Antivirus runs normally without the user interface, but the user interface can't be enabled if you disable the core **Windows Defender** feature. |
-| Uninstall Microsoft Defender Antivirus using PowerShell | Use the following PowerShell cmdlet: `Uninstall-WindowsFeature -Name Windows-Defender` |
-| Disable Microsoft Defender Antivirus using Group Policy | In your Local Group Policy Editor, navigate to **Administrative Template** > **Windows Component** > **Endpoint Protection** > **Disable Endpoint Protection**, and then select **Enabled** > **OK**. |
-
-For more information, see [Working with Registry Keys](/powershell/scripting/samples/working-with-registry-keys).
+- [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md)
+- [Configure Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
+- [Learn more about Windows Server and passive mode](microsoft-defender-antivirus-compatibility.md#windows-server-and-passive-mode)
 
 ### Are you using Windows Server 2012 R2 or Windows Server 2016?
 
