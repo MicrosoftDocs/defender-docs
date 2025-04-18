@@ -118,14 +118,7 @@ The following table lists the services for Microsoft Defender Antivirus and the 
 - [Configure Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
 - [Learn more about Windows Server and passive mode](microsoft-defender-antivirus-compatibility.md#windows-server-and-passive-mode)
 
-### Are you using Windows Server 2012 R2 or Windows Server 2016?
-
-If your Windows Server is onboarded to Microsoft Defender for Endpoint, you can run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and Windows Server 2016. See the following articles:
-
-- [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
-- [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
-
-### What happens if a non-Microsoft antivirus product is uninstalled?
+## What happens if a non-Microsoft antivirus product is uninstalled?
 
 If a non-Microsoft antivirus product was installed on Windows Server, Microsoft Defender Antivirus was probably set to passive mode. When the non-Microsoft antivirus product is uninstalled, Microsoft Defender Antivirus should switch to active mode automatically. However, that might not occur on certain versions of Windows Server, such as Windows Server 2016. Use the following procedure to check the status of Microsoft Defender Antivirus, and if necessary, set it to active mode:
 
