@@ -81,7 +81,7 @@ Do you want your Defender for Office 365 experience to be active or passive? The
 - **Audit mode**: Special _evaluation policies_ are created for anti-phishing (which includes impersonation protection), Safe Attachments, and Safe Links. These evaluation policies are configured to _detect_ threats only. Defender for Office 365 detects harmful messages for reporting, but the messages aren't acted upon (for example, detected messages aren't quarantined). The settings of these evaluation policies are described in the [Policies in audit mode](#policies-in-audit-mode) section later in this article.
 
   > [!NOTE]
-  > The following protection features **take action** by default in audit mode:
+  > The following protection features are **on by default** and can **take action** on items, even in audit mode:
   >
   > - Safe Links time of click protection in non-email workloads (for example, Microsoft Teams, SharePoint, and OneDrive).
   > - [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
@@ -105,7 +105,7 @@ The key factors that determine which modes are available to you are:
 
     :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with protection from EOP and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
-    In these environments, **audit mode** or **blocking mode** are available, depending on your licensing as explained in the next section
+    In these environments, **audit mode** or **blocking mode** are available, depending on your licensing as explained in the next section.
 
   - You're currently using a third-party service or device for email protection of your Microsoft 365 mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
 
