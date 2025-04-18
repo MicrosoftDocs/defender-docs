@@ -47,6 +47,6 @@ The following capabilities are included in this integration:
 ## Related articles
 
 - [Onboard previous versions of Windows](onboard-downlevel.md)
-- [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](onboard-windows-server-2012r2-2016.md)
+- [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
