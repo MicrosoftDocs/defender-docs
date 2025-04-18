@@ -275,8 +275,6 @@
                 href: linux-install-manually.md
               - name: Direct onboarding with Defender for Cloud
                 href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
-              - name: Defender for Endpoint on Linux for ARM64-based devices (preview)
-                href: mde-linux-arm.md
               - name: Deployment guidance for Defender for Endpoint on Linux for SAP
                 href: mde-linux-deployment-on-sap.md
             - name: 3 - Configuration
