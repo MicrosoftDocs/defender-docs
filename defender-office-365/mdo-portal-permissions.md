@@ -42,7 +42,7 @@ You need to be member of the **Global Administrator**<sup>\*</sup> role in Micro
 
   :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
-- For information about permissions in the Microsoft Purview compliance portal, see [Permissions in the Microsoft Purview compliance portal](/purview/microsoft-365-compliance-center-permissions).
+- For information about permissions in the Microsoft Purview portal, see [Permissions in the Microsoft Purview portal](/purview/purview-permissions).
 
 > [!IMPORTANT]
 > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -65,7 +65,7 @@ On the **Permissions** page in the Defender portal at <https://security.microsof
 
 - **Microsoft Entra roles**: You can view the roles and assigned users, but you can't manage them directly in the Microsoft Defender portal. Microsoft Entra roles are central roles that assign permissions for **all** Microsoft 365 services.
 
-- **Email & collaboration roles**: You can view and manage these role groups directly in the Microsoft Defender portal. These permissions are specific to the Microsoft Defender portal and the Microsoft Purview compliance portal. These permissions don't cover all of the permissions that you need in other Microsoft 365 workloads.
+- **Email & collaboration roles**: You can view and manage these role groups directly in the Microsoft Defender portal. These permissions are specific to the Microsoft Defender portal and the Microsoft Purview portal. These permissions don't cover all of the permissions that you need in other Microsoft 365 workloads.
 
 :::image type="content" source="media/m365-sc-permissions-and-roles-page.png" alt-text="The Permissions & roles page in the Microsoft Defender portal" lightbox="media/m365-sc-permissions-and-roles-page.png":::
 
@@ -96,12 +96,12 @@ For more information, see [Assign Microsoft Entra roles to users](/entra/identit
 The same role groups and roles are available in the Defender portal and in the Purview compliance portal:
 
 - [Defender portal](https://security.microsoft.com): **Permissions** \> **Email & collaboration roles** \> **Roles** or directly at <https://security.microsoft.com/emailandcollabpermissions>
-- [Purview compliance portal](https://compliance.microsoft.com): **Roles & Scopes** \> **Permissions** \> **Microsoft Purview solutions** \> **Roles** or directly at <https://compliance.microsoft.com/compliancecenterpermissions>
+- [Purview compliance portal](https://purview.microsoft.com): **Roles & Scopes** \> **Permissions** \> **Microsoft Purview solutions** \> **Roles** or directly at <https://purview.microsoft.com/compliancecenterpermissions>
 
 For complete information about these role groups, see [Roles and role groups in the Microsoft Defender XDR and Microsoft Purview compliance portals](scc-permissions.md)
 
 > [!NOTE]
-> Defender for Office 365 data that's available in the Microsoft Defender portal isn't affected by adaptive scopes that are configured in the Microsoft Purview compliance portal. For more information about adaptive scopes, see [Adaptive scopes](/purview/purview-adaptive-scopes).
+> Defender for Office 365 data that's available in the Microsoft Defender portal isn't affected by adaptive scopes that are configured in the Microsoft Purview portal. For more information about adaptive scopes, see [Adaptive scopes](/purview/purview-adaptive-scopes).
 
 The following actions are available for Email & collaboration role groups in the Defender portal:
 
