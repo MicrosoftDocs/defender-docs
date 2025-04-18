@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 04/18/2025
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
@@ -27,6 +27,17 @@ ms.date: 03/21/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+#### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
+
+April 2025
+
+**Setup a secure environment to test prerelease builds of Defender for Endpoint on Android**. Learn the steps on how to set up your environment for prerelease testing of Defender for Endpoint on Android. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
+
+- Android Enterprise scenarios
+- Mobile Application Mangement (MAM) enrollment scenarios
+
+For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
 
 #### Defender for Endpoint on Android now supports Android 10 as the minimum version
 
