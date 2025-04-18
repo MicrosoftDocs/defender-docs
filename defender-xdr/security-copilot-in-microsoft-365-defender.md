@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 03/10/2025
+ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -121,6 +121,18 @@ Ask Copilot to summarize the relevant threats impacting your environment, to pri
 
 <a name='access-security-copilot-in-microsoft-365-defender'></a>
 
+## Phishing Triage Agent in Microsoft Defender
+
+The Phishing Triage Agent is a Security Copilot agent designed to scale security teams' response in triaging and classifying user-submitted phishing incidents in Microsoft Defender, can help organizations address phishing efficiently. It assists security operations center (SOC) teams by autonomously triaging phishing submissions, determining whether they are genuine phishing attempts or false alarms. By alleviating the burden of reactive work, it reduces the team's manual workload and allows them to focus on critical tasks.
+
+[SCREENSHOT]
+
+Some of the agent’s highlights include:
+
+- It operates autonomously. The Phishing Triage Agent leverages advanced AI tools to perform sophisticated assessments and determine whether a phishing submission is a real threat or a false alarm, without requiring step-by-step human input or code.
+- It provides a transparent rationale for its classification verdicts in natural language, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions. It also shows a visual representation of its reasoning process for every decision.
+- It continuously learns and improves its accuracy based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
+
 ## Access Copilot in Defender
 
 To ensure that you have access to Copilot in Defender, see the [Security Copilot purchase and licensing information](/security-copilot/faq-security-copilot). Once you have access to Security Copilot, the key features become available in the Microsoft Defender portal.
@@ -176,6 +188,7 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 - [Generate KQL queries](advanced-hunting-security-copilot.md)
 - [Create incident reports](security-copilot-m365d-create-incident-report.md)
 - [Use threat intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)
+- [Phishing Triage Agent in Microsoft Defender](phishing-triage-agent.md)
 
 ## See also
 
