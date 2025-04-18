@@ -59,7 +59,9 @@ What's new
 
 - Manage dynamic signature file share source by setting URL and update interval
 
-- Other stability improvements and bug fixes.
+- Other stability improvements and bug fixes
+
+- Support for ARM64 Linux servers 
 
 ### Mar-2025 Build: 101.25012.0000 | Release version: 30.125012.0000.0
 
