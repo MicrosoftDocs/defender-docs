@@ -44,15 +44,16 @@ This article describes how to enable the user interface, install or reinstall Mi
 
 ## Enable the user interface on Windows Server
 
-> [!IMPORTANT]
-> If you're using Windows Server 2012 R2, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-
-By default, Microsoft Defender Antivirus is installed and functional on Windows Server 2016 and later. Sometimes, the user interface (GUI) is installed by default, and other times it has to be enabled. The GUI isn't required; you can use PowerShell, Group Policy, or other methods to manage Microsoft Defender Antivirus. If your organization prefers to use the GUI, use one of the procedures in the following table to enable it:
+On Windows Server, the Microsoft Defender Antivirus user interface (GUI) is installed by default, and other times it has to be enabled. The GUI isn't required; you can use PowerShell, Group Policy, or other methods to manage Microsoft Defender Antivirus. If your organization prefers to use the GUI, use one of the procedures in the following table to enable it:
 
 | Procedure | What to do |
 |:---|:---|
 | Turn on the GUI using the Add Roles and Features Wizard | 1. See [Install roles, role services, and features by using the add Roles and Features Wizard](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard), and use the **Add Roles and Features Wizard**. <br/><br/>2. When you get to the **Features** step of the wizard, under **Windows Defender Features**, select the **GUI for Windows Defender** option. |
 | Turn on the GUI using PowerShell (Windows Server 2016 only)| 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
+
+> [!IMPORTANT]
+> If you're using Windows Server 2012 R2, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+
 
 For more information, see [Getting Started with PowerShell](/powershell/scripting/learn/ps101/01-getting-started).
 
