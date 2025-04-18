@@ -19,7 +19,7 @@ ms.date: 04/18/2025
 #customer intent: As a customer, I want to know how to set up my Android devices for prerelease testing using Google Play preproduction tracks so that I can test the app before mainstream release.
 ---
 
-# Deploy Microsoft Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
+# Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
