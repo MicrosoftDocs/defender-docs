@@ -49,13 +49,10 @@ On Windows Server, the Microsoft Defender Antivirus user interface (GUI) is inst
 | Procedure | What to do |
 |:---|:---|
 | Turn on the GUI using the Add Roles and Features Wizard | 1. See [Install roles, role services, and features by using the add Roles and Features Wizard](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard), and use the **Add Roles and Features Wizard**. <br/><br/>2. When you get to the **Features** step of the wizard, under **Windows Defender Features**, select the **GUI for Windows Defender** option. |
-| Turn on the GUI using PowerShell (Windows Server 2016 only)| 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
+| Turn on the GUI using PowerShell (Windows Server 2016 only)| 1. On Windows Server 2016, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
 
 > [!IMPORTANT]
-> If you're using Windows Server 2012 R2, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-
-
-For more information, see [Getting Started with PowerShell](/powershell/scripting/learn/ps101/01-getting-started).
+> If you're using Windows Server 2012 R2, see [Onboard Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboard-windows-server-2016-and-windows-server-2012-r2).
 
 ## Install Microsoft Defender Antivirus on Windows Server
 
