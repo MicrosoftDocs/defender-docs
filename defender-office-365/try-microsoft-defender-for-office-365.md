@@ -512,14 +512,15 @@ The settings are also described in the following tables.
 |EnableViaTag|True|
 |ExcludedDomains|{}|
 |ExcludedSenders|{}|
+|ExcludedSubDomains|{}|
 |HonorDmarcPolicy|True|
 |ImpersonationProtectionState|Manual|
 |IsDefault|False|
 |MailboxIntelligenceProtectionAction|NoAction|
 |MailboxIntelligenceProtectionActionRecipients|{}|
 |MailboxIntelligenceQuarantineTag|DefaultFullAccessPolicy|
-|PhishThresholdLevel|1|
-|PolicyTag|blank|
+|PhishThresholdLevel|3|
+|PolicyTag||
 |RecommendedPolicyType|Evaluation|
 |SpoofQuarantineTag|DefaultFullAccessPolicy|
 |TargetedDomainActionRecipients|{}|
@@ -537,21 +538,15 @@ The settings are also described in the following tables.
 |---|---|
 |Name|Evaluation Policy|
 |Action|Allow|
-|ActionOnError|True<sup>\*</sup>|
 |AdminDisplayName|Evaluation Policy|
-|ConfidenceLevelThreshold|80|
 |Enable|True|
 |EnableOrganizationBranding|False|
 |IsBuiltInProtection|False|
 |IsDefault|False|
-|OperationMode|Delay|
 |QuarantineTag|AdminOnlyAccessPolicy|
 |RecommendedPolicyType|Evaluation|
 |Redirect|False|
-|RedirectAddress|blank|
-|ScanTimeout|30|
-
-<sup>\*</sup> This parameter has been deprecated and is no longer used.
+|RedirectAddress||
 
 #### Safe Links evaluation policy settings
 
@@ -560,15 +555,15 @@ The settings are also described in the following tables.
 |Name|Evaluation Policy|
 |AdminDisplayName|Evaluation Policy|
 |AllowClickThrough|True|
-|CustomNotificationText|blank|
+|CustomNotificationText||
 |DeliverMessageAfterScan|True|
 |DisableUrlRewrite|True|
 |DoNotRewriteUrls|{}|
 |EnableForInternalSenders|False|
 |EnableOrganizationBranding|False|
 |EnableSafeLinksForEmail|True|
-|EnableSafeLinksForOffice|True|
-|EnableSafeLinksForTeams|True|
+|EnableSafeLinksForOffice|False|
+|EnableSafeLinksForTeams|False|
 |IsBuiltInProtection|False|
 |LocalizedNotificationTextList|{}|
 |RecommendedPolicyType|Evaluation|
