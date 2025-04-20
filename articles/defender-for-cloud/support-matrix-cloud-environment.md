@@ -27,24 +27,24 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA|
 |[Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA|
 |[Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | Preview | NA | NA |
-|**FOUNDATIONAL CSPM FEATURES (FREE)** | | ||
+|**FOUNDATIONAL Cloud Security Posture Management (CSPM) FEATURES (FREE)** | | ||
 |[Asset inventory](asset-inventory.md) | GA | GA | GA|
 |[Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA|
 |[Recommendation exemptions](exempt-resource.md) | Preview | NA | NA|
 |[Secure score](secure-score-security-controls.md) | GA | GA | GA|
 |[DevOps security posture](concept-devops-environment-posture-management-overview.md) | Preview | NA | NA|
-| **DEFENDER CSPM FEATURES** | | | |
+| **DEFENDER Cloud Security Posture Management (CSPM) FEATURES** | | | |
 | [Data security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
 | [AI security posture management](ai-security-posture.md) | GA | NA | NA |
-| [Active user](active-user.md) | PP | NA | NA |
+| [Active user](active-user.md) | Public preview | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | ||
-|[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
+|[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | NA | NA|
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
 |[Defender for Containers](defender-for-containers-introduction.md)<br/>[Review detailed feature support](support-matrix-defender-for-containers.md) | GA | GA | GA|
 |[DevOps Security](defender-for-devops-introduction.md) | GA | NA | NA|
-|[Defender for DNS](defender-for-dns-introduction.md) | GA | GA | GA|
+|[Defender for Domain Name System (DNS)](defender-for-dns-introduction.md) | GA | GA | GA|
 |[Defender for Key Vault](defender-for-key-vault-introduction.md) | GA | NA | NA|
 |[Defender for Resource Manager](defender-for-resource-manager-introduction.md) | GA | GA | GA|
 |[Defender for Servers](plan-defender-for-servers.md)<br/>[Review detailed feature support](support-matrix-defender-for-servers.md). | GA | GA | GA|
