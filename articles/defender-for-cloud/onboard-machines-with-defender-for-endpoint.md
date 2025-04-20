@@ -66,7 +66,8 @@ Deploying the Defender for Endpoint agent on your on-premises Windows and Linux 
   | -------- | -------- |
   |Windows 2019| 10.8555|
   |Windows 2012 R2, 2016 (modern, unified agent)|10.8560|
-  |Linux|30.101.23052.009|
+  |Linux (AMD64)|30.101.23052.009|
+  |Linux (ARM64)|30.101.25022.004|
 
 ## Next steps
 
