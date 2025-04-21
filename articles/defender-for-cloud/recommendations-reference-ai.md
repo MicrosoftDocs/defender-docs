@@ -133,7 +133,7 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Severity**: Medium
 
-### Azure Databricks Workspaces should disable public network access (Preview).
+### Azure Databricks Workspaces should disable public network access (Preview)
 
 **Description & related policy**: Disabling public network access improves security by ensuring that the resource isn't exposed on the public internet. You can control exposure of your resources by creating private endpoints instead. For more information, see [Enable Azure Private Link](/azure/databricks/administration-guide/cloud-configurations/azure/private-link).
 
