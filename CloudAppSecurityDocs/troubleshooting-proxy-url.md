@@ -45,7 +45,7 @@ So even though Fabrikam doesn't actually use Defender for Cloud Apps, they see t
 This kind of URL is expected and indicates that your organization applies extra security controls to protect business-critical data.
 
 > [!IMPORTANT]
-> Access and session policies support IPv4 only. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
+>Access and session policies support IPv4 only for reverse proxy and Edge in-browser. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
 
 They do this by using Defender for Cloud Apps, a solution for protecting your organization's cloud environment, to replace all relevant URLs, and cookies relating to cloud apps that you use.
 
