@@ -60,11 +60,11 @@ For each alert, ask the following questions to determine the alert classificatio
 
 Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyberattack kill chain. Learn more about each phase and the alerts designed to detect each attack, using the following links:
 
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
+- [Reconnaissance and discovery alerts](reconnaissance-discovery-alerts.md)
+- [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Credential access alerts](credential-access-alerts.md)
+- [Other security alerts](other-alerts.md)
 
 ## Advanced security alert investigation
 
