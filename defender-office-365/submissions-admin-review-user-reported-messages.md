@@ -61,7 +61,7 @@ Admins can mark messages and notify users of review results only if the user [re
 
 ## Notify users from within the portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Email & collaboration** \> **Submissions**. Or, to go directly to the **Submissions** tab, use <https://security.microsoft.com/reportsubmission>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & Submissions** \> **Submissions**. Or, to go directly to the **Submissions** tab, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **User reported** tab.
 

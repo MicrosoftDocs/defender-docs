@@ -81,7 +81,7 @@ For a deeper dive into what's happening in your service account click on the dom
 
 When you investigate a specific Service account, you'll see the following details under the connections tab:
 
-:::image type="content" source="media/Screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page." lightbox="media/Screenshot-of-the-connections-page.png":::
+:::image type="content" source="media/screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page." lightbox="media/Screenshot-of-the-connections-page.png":::
 
 |Service account connection details  |Description |
 |---------|---------|
