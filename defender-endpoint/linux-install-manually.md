@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/10/2025
+ms.date: 04/17/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -563,7 +563,6 @@ For manual uninstallation, execute the following command for your Linux distribu
 - [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
 - [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
 - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
