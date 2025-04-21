@@ -199,7 +199,7 @@ items:
          href: security-assessment-unsecure-domain-configurations.md
      - name: Certificates
        items: 
-       - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
+       - name: Enforce encryption for RPC certificate enrollment interface (ESC11)
          href: security-assessment-enforce-encryption-rpc.md
        - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
          href: security-assessment-insecure-adcs-certificate-enrollment.md

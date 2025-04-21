@@ -129,7 +129,7 @@ New Active Directory Certificate Services (ADCS) related recommendations:**
 - **Certificate authority recommended actions** :
   - [Edit vulnerable Certificate Authority setting](/defender-for-identity/security-assessment-edit-vulnerable-ca-setting)
   - [Edit misconfigured Certificate Authority ACL (ESC7)](/defender-for-identity/security-assessment-edit-misconfigured-ca-acl)
-  - [Enforce encryption for RPC certificate enrollment interface (ESC8)](/defender-for-identity/security-assessment-enforce-encryption-rpc)
+  - [Enforce encryption for RPC certificate enrollment interface (ESC11)](/defender-for-identity/security-assessment-enforce-encryption-rpc)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](/defender-for-identity/security-assessment).
 
