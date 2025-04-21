@@ -65,9 +65,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __UPN (User Principal Name)__ – The unique login name of the identity in an email-like format.
 
-- __Tags__ – Custom labels that help categorize or classify identities: Sensitive and Honeytoken.
-
-- **PIM tags** - Custom labels that help categorize identities that are considered high value assets. For example, privileged accounts managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service.
+- __Tags__ – Custom labels that help categorize identities that are considered high value assets. For example, **Sensitive**, **Honeytoken** or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service.
 
 - __Created time__ – The timestamp when the identity was first created.
 
