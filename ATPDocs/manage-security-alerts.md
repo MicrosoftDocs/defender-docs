@@ -43,11 +43,11 @@ The alerts are displayed with information in the following columns: **Alert name
 
 Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
 
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
+- [Reconnaissance and discovery alerts](reconnaissance-discovery-alerts.md)
+- [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Credential access alerts](credential-access-alerts.md)
+- [Other security alerts](other-alerts.md)
 
 ## Manage alerts
 
