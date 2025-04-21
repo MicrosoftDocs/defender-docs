@@ -146,13 +146,13 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ## Rate limits and limitations
 
-- **Rate limits** include 1000 requests per minute (per API key/connector instance).
+- **Rate limits** include 1,000 requests per minute (per API key/connector instance).
 
     For more information about the Atlassian API limitation, see [Atlassian admin REST APIs](https://developer.atlassian.com/cloud/admin/about/#about-the-cloud-admin-rest-apis).
 
 - **Limitations** include:
 
-    - Activities will be shown in Defender for Cloud Apps only for users with a verified domain.
+    - Activities are shown in Defender for Cloud Apps only for users with a verified domain.
 
     - The API key has a maximum expiration period of one year. After one year, you'll need to create another API key from the Atlassian Admin portal and replace it for the old API Key in the Defender for Cloud Apps console.
 
