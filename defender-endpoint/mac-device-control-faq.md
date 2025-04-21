@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # macOS Device Control policies frequently asked questions (FAQ)
