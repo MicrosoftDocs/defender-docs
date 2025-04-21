@@ -41,7 +41,7 @@ The alerts appear in Key Vault's **Security** page, the Workload protections, an
 
 ## Respond to Microsoft Defender for Key Vault alerts
 
-When you receive an alert from [Microsoft Defender for Key Vault](defender-for-key-vault-introduction.md), we recommend you investigate and respond to the alert as described below. Microsoft Defender for Key Vault protects applications and credentials, so even if you're familiar with the application or user that triggered the alert, it's important to verify the situation surrounding every alert.  
+When you receive an alert from Microsoft Defender for Key Vault, we recommend you investigate and respond to the alert as described below. Microsoft Defender for Key Vault protects applications and credentials, so even if you're familiar with the application or user that triggered the alert, it's important to verify the situation surrounding every alert.  
 
 Alerts from Microsoft Defender for Key Vault include these elements:
 
