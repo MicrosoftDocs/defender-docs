@@ -2,12 +2,12 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 01/29/2025
+ms.date: 04/21/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
 
-Workloads commonly span multiple cloud platforms. Cloud security services must do the same. Microsoft Defender for Cloud helps protect workloads in Amazon Web Services (AWS), but you need to set up the connection between them and Defender for Cloud.
+Workloads often span multiple cloud platforms, so cloud security services must do the same. Microsoft Defender for Cloud helps protect workloads in Amazon Web Services (AWS), but you need to set up the connection between them and Defender for Cloud.
 
 The following screenshot shows AWS accounts displayed in the Defender for Cloud [overview dashboard](overview-page.md).
 
@@ -15,32 +15,33 @@ The following screenshot shows AWS accounts displayed in the Defender for Cloud 
 
 You can learn more by watching the [New AWS connector in Defender for Cloud](episode-one.md) video from the *Defender for Cloud in the Field* video series.
 
-## **AWS authentication process**
+## AWS authentication process
 
-Federated authentication is used between Microsoft Defender for Cloud and AWS. All of the resources related to the authentication are created as a part of the CloudFormation template deployment, including:
 
-- An identity provider (OpenID connect)
+## AWS authentication process
 
-- Identity and Access Management (IAM) roles with a federated principal (connected to the identity providers).
+Defender for Cloud and AWS use federated authentication. All resources related to authentication are created as part of the CloudFormation template deployment, including:
 
-The architecture of the authentication process across clouds is as follows:
+- An identity provider (OpenID Connect)
+- Identity and Access Management (IAM) roles with a federated principal (connected to the identity providers)
+
+The architecture of the authentication process across clouds includes
 
 :::image type="content" source="media/quickstart-onboard-aws/architecture-authentication-across-clouds.png" alt-text="Diagram showing architecture of authentication process across clouds.":::
 
-Microsoft Defender for Cloud CSPM service acquires a Microsoft Entra token with a validity life time of 1 hour that is signed by the Microsoft Entra ID using the RS256 algorithm.
+Defender for Cloud CSPM service acquires a Entra token with a validity lifetime of 1 hour, signed by Entra ID using the RS256 algorithm.
 
-The Microsoft Entra token is exchanged with AWS short living credentials and Defender for Cloud's CSPM service assumes the CSPM IAM role (assumed with web identity).
+The Entra token is exchanged for AWS short-living credentials, and Defender for Cloud's CSPM service assumes the CSPM IAM role (assumed with web identity).
 
-Since the principle of the role is a federated identity as defined in a trust relationship policy, the AWS identity provider validates the Microsoft Entra token against the Microsoft Entra ID through a process that includes:
+Since the principal of the role is a federated identity defined in a trust relationship policy, the AWS identity provider validates the Entra token against Entra ID through a process that includes:
 
 - audience validation
-
 - token digital signature validation
 - certificate thumbprint
 
-The Microsoft Defender for Cloud CSPM role is assumed only after the validation conditions defined at the trust relationship have been met. The conditions defined for the role level are used for validation within AWS and allows only the Microsoft Defender for Cloud CSPM application (validated audience) access to the specific role (and not any other Microsoft token).
+The Defender for Cloud CSPM role is assumed only after the validation conditions defined at the trust relationship have been met. The conditions defined for the role level are used for validation within AWS and allows only the Microsoft Defender for Cloud CSPM application (validated audience) access to the specific role (and not any other Microsoft token).
 
-After the Microsoft Entra token is validated by the AWS identity provider, the AWS STS exchanges the token with AWS short-living credentials which the CSPM service uses to scan the AWS account.
+After the Entra token is validated by the AWS identity provider, the AWS STS exchanges the token with AWS short-living credentials which the CSPM service uses to scan the AWS account.
 
 ## Prerequisites
 
@@ -57,20 +58,20 @@ To complete the procedures in this article, you need:
 - If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md#before-you-start) for your tenant.
 
 > [!NOTE]
-> The AWS connector is not available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
+> The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
 
 ## Native connector plan requirements
 
 Each plan has its own requirements for the native connector.
 
-### Defender for Containers
+### [Defender for Containers](#tab/Defender-for-Containers)
 
 If you choose the Microsoft Defender for Containers plan, you need:
 
 - At least one Amazon EKS cluster with permission to access to the EKS Kubernetes API server. If you need to create a new EKS cluster, follow the instructions in [Getting started with Amazon EKS – eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html).
 - The resource capacity to create a new Amazon SQS queue, ```Kinesis Data Firehose``` delivery stream, and Amazon S3 bucket in the cluster's region.
 
-### Defender for SQL
+### [Defender for SQL](#tab/Defender-for-SQL)
 
 If you choose the Microsoft Defender for SQL plan, you need:
 
@@ -94,7 +95,7 @@ Make sure the selected Log Analytics workspace has a security solution installed
 
 [Learn more about monitoring components](monitoring-components.md) for Defender for Cloud.
 
-### Defender for open-source databases (Preview)
+### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-(Preview))
 
 If you choose the Defender for open-source relational databases plan, you need:
 
@@ -104,9 +105,9 @@ If you choose the Defender for open-source relational databases plan, you need:
 
 - Connect your [Azure account](connect-azure-subscription.md) or AWS account.
 
-Region availability: All public AWS regions (excluding Tel Aviv, Milan, Jakarta, Spain and Bahrain).
+Region availability: All public AWS regions (excluding Tel Aviv, Milan, Jakarta, Spain, and Bahrain).
 
-### Defender for Servers
+### [Defender for Servers](#tab/Defender-for-Servers)
 
 If you choose the Microsoft Defender for Servers plan, you need:
 
@@ -126,7 +127,7 @@ Ensure that your SSM Agent has the managed policy [AmazonSSMManagedInstanceCore]
 **You must have the SSM Agent for auto provisioning Arc agent on EC2 machines. If the SSM doesn't exist, or is removed from the EC2, the Arc provisioning won't be able to proceed.**
 
 > [!NOTE]
-> As part of the CloudFormation template that is run during the onboarding process, an automation process is created and triggered every 30 days, over all the EC2s that existed during the initial run of the CloudFormation. The goal of this scheduled scan is to ensure that all the relevant EC2s have an IAM profile with the required IAM policy that allows Defender for Cloud to access, manage, and provide the relevant security features (including the Arc agent provisioning). The scan does not apply to EC2s that were created after the run of the CloudFormation.
+> As part of the CloudFormation template that is run during the onboarding process, an automation process is created and triggered every 30 days, over all the EC2s that existed during the initial run of the CloudFormation. The goal of this scheduled scan is to ensure that all the relevant EC2s have an IAM profile with the required IAM policy that allows Defender for Cloud to access, manage, and provide the relevant security features (including the Arc agent provisioning). The scan doesn't apply to EC2s that were created after the run of the CloudFormation.
 
 If you want to manually install Azure Arc on your existing and future EC2 instances, use the [EC2 instances should be connected to Azure Arc](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/231dee23-84db-44d2-bd9d-c32fbcfb42a3) recommendation to identify instances that don't have Azure Arc installed.
 
@@ -145,7 +146,7 @@ Make sure the selected Log Analytics workspace has a security solution installed
 
 Defender for Servers assigns tags to your Azure ARC resources on top of your EC2 instances to manage the autoprovisioning process. You must have these tags properly assigned to your resources so that Defender for Cloud can manage them: `AccountId`, `Cloud`, `InstanceId`, and `MDFCSecurityConnector`.
 
-### Defender CSPM
+### [Defender CSPM](#tab/Defender-for-CSPM)
 
 If you choose the Microsoft Defender CSPM plan, you need:
 
@@ -157,7 +158,12 @@ If you choose the Microsoft Defender CSPM plan, you need:
 
 Learn more about how to [enable Defender CSPM](tutorial-enable-cspm-plan.md).
 
+---
+
 ## Connect your AWS account
+
+> [!IMPORTANT]
+> If your AWS account is already connected to Microsoft Sentinel, Defender for Cloud cannot connect to it. Follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](troubleshoot-aws-connector.md), to connect your AWS account and ensure that it works.
 
 To connect your AWS to Defender for Cloud by using a native connector:
 
@@ -177,7 +183,7 @@ To connect your AWS to Defender for Cloud by using a native connector:
 
 1. Select an interval to scan the AWS environment every 4, 6, 12, or 24 hours.
 
-    Some data collectors run with fixed scan intervals and are not affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
+    Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
 
     | Data collector name | Scan interval |
     |--|--|
@@ -185,7 +191,7 @@ To connect your AWS to Defender for Cloud by using a native connector:
     | EcsClusterArn <br> EcsService <br> EcsServiceArn <br> EcsTaskDefinition <br> EcsTaskDefinitionArn <br> EcsTaskDefinitionTags <br> AwsPolicyVersion <br> LocalPolicyVersion <br> AwsEntitiesForPolicy <br> LocalEntitiesForPolicy <br> BucketEncryption <br> BucketPolicy <br> S3PublicAccessBlockConfiguration <br> BucketVersioning <br> S3LifecycleConfiguration <br> BucketPolicyStatus <br> S3ReplicationConfiguration <br> S3AccessControlList <br> S3BucketLoggingConfig <br> PublicAccessBlockConfiguration | 12 hours |
 
 > [!NOTE]
-> (Optional) Select **Management account** to create a connector to a management account. Connectors are then created for each member account discovered under the provided management account. Auto-provisioning is also enabled for all of the newly onboarded accounts.
+> (Optional) Select **Management account** to create a connector to a management account. Connectors are then created for each member account discovered under the provided management account. Autoprovisioning is also enabled for all of the newly onboarded accounts.
 >
 > (Optional) Use the AWS regions dropdown menu to select specific AWS regions to be scanned. All regions are selected by default.
 
@@ -200,16 +206,16 @@ In this section of the wizard, you select the Defender for Cloud plans that you 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot that shows the tab for selecting plans for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
     > [!IMPORTANT]
-    > To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they *are* registered in CloudTrail if you've enabled a trail for read events.
+    > To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they're registered in CloudTrail if you enable a trail for read events.
     >
-    > As explained in [the AWS documentation](https://aws.amazon.com/cloudtrail/pricing/), there are no additional charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws`. (This is the default role name. Confirm the role name configured on your account.)
+    > As explained in [the AWS documentation](https://aws.amazon.com/cloudtrail/pricing/), there are no extra charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws`. (This is the default role name. Confirm the role name configured on your account.)
 
 1. By default, the **Servers** plan is set to **On**. This setting is necessary to extend the coverage of Defender for Servers to AWS EC2. Ensure that you fulfilled the [network requirements for Azure Arc](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
 
     Optionally, select **Configure** to edit the configuration as required.
 
     > [!NOTE]
-    > The respective Azure Arc servers for EC2 instances or GCP virtual machines that no longer exist (and the respective Azure Arc servers with a status of [Disconnected or Expired](/azure/azure-arc/servers/overview)) are removed after 7 days. This process removes irrelevant Azure Arc entities to ensure that only Azure Arc servers related to existing instances are displayed.
+    > The respective Azure Arc servers for EC2 instances or GCP virtual machines that no longer exist (and the respective Azure Arc servers with a status of [Disconnected or Expired](/azure/azure-arc/servers/overview)) are removed after seven days. This process removes irrelevant Azure Arc entities to ensure that only Azure Arc servers related to existing instances are displayed.
 
 1. By default, the **Containers** plan is set to **On**. This setting is necessary to have Defender for Containers protect your AWS EKS clusters. Ensure that you fulfilled the [network requirements](./defender-for-containers-enable.md?pivots=defender-for-container-eks&source=docs&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#network-requirements) for the Defender for Containers plan.
 
@@ -227,14 +233,14 @@ In this section of the wizard, you select the Defender for Cloud plans that you 
     a. Select a deployment type:
 
     - **Default access**: Allows Defender for Cloud to scan your resources and automatically include future capabilities.
-    - **Least privilege access**: Grants Defender for Cloud access only to the current permissions needed for the selected plans. If you select the least privileged permissions, you'll receive notifications on any new roles and permissions that are required to get full functionality for connector health.
+    - **Least privilege access**: Grants Defender for Cloud access only to the current permissions needed for the selected plans. If you select the least privileged permissions, you receive notifications on any new roles and permissions that are required to get full functionality for connector health.
 
     b. Select a deployment method: **AWS CloudFormation** or **Terraform**.
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
     > [!NOTE]
-    > If you select **Management account** to create a connector to a management account, then the tab to onboard with Terraform is not visible in the UI, but you can still onboard using Terraform, similar to what's covered at [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
+    > If you select **Management account** to create a connector to a management account, then the tab to onboard with Terraform isn't visible in the UI, but you can still onboard using Terraform, similar to what's covered at [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. If you're onboarding a management account, you need to run the CloudFormation template both as Stack and as StackSet. Connectors are created for the member accounts up to 24 hours after the onboarding.
 
@@ -284,7 +290,7 @@ Deploy the CloudFormation template by using Stack (or StackSet if you have a man
     > When running the CloudFormation StackSets when onboarding an AWS management account, you might encounter the following error message:
     > `You must enable organizations access to operate a service managed stack set`
     >
-    > This error indicates that you have noe enabled [the trusted access for AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html).
+    > This error indicates that you haven't enabled [the trusted access for AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html).
     >
     > To remediate this error message, your CloudFormation StackSets page has a prompt with a button that you can select to enable trusted access. After trusted access is enabled, the CloudFormation Stack must be run again.
 
