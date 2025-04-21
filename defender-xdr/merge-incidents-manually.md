@@ -30,6 +30,7 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 - Users must have permissions to view the incidents queue.
 - Users must have read and write permissions on all the incidents they wish to merge. Incidents from different sources have different RBAC roles defined.
+- Incidents that are candidates for merging must have the same values for **Assigned to**, **Classification**, and **Determination**.
 
 ## Merge incidents from the incident queue page
 
@@ -49,7 +50,7 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 1. In the confirmation dialog that appears, select **Merge**. When the merge is complete, a "Success" notification appears, with a link to follow to go to the merged (target) incident.
 
-    If the merge fails, a dialog box appears with a message that the incidents failed to merge. For the merge to succeed, both incidents must have the same values for **Assigned to**, **Classification**, and **Determination**.
+    If the merge fails, a dialog box appears with a message that the incidents failed to merge. Verify that both incidents have the same values for **Assigned to**, **Classification**, and **Determination**.
 
 ## Merge incidents from within the incident page
 
