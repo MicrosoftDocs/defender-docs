@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/10/2025
+ms.date: 04/17/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -151,13 +151,13 @@ In order to preview new features and provide early feedback, it's recommended th
 1. Install `curl` if it isn't installed yet:
 
    ```bash
-   sudo apt-get install curl
+   sudo apt install curl
    ```
 
 2. Install `libplist-utils` if it isn't installed yet:
 
    ```bash
-   sudo apt-get install libplist-utils
+   sudo apt install libplist-utils
    ```
 
    > [!NOTE]
@@ -193,13 +193,13 @@ In order to preview new features and provide early feedback, it's recommended th
 5. Install the `gpg` package if not already installed:
 
    ```bash
-   sudo apt-get install gpg
+   sudo apt install gpg
    ```
 
    If `gpg` isn't available, then install `gnupg`.
 
    ```bash
-   sudo apt-get install gnupg
+   sudo apt install gnupg
    ```
 
 6. Install the Microsoft GPG public key:
@@ -219,13 +219,13 @@ In order to preview new features and provide early feedback, it's recommended th
 7. Install the HTTPS driver if not already installed:
 
    ```bash
-   sudo apt-get install apt-transport-https
+   sudo apt install apt-transport-https
    ```
 
 8. Update the repository metadata:
 
    ```bash
-   sudo apt-get update
+   sudo apt update
    ```
 
 ### Mariner
@@ -313,7 +313,7 @@ sudo zypper install packages-microsoft-com-prod:mdatp
 ### Ubuntu and Debian systems
 
 ```bash
-sudo apt-get install mdatp
+sudo apt install mdatp
 ```
 
 > [!NOTE]
@@ -551,7 +551,7 @@ For manual uninstallation, execute the following command for your Linux distribu
 
 - `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
 - `sudo zypper remove mdatp` for SLES and variants.
-- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
+- `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
 
 ## See also
@@ -563,7 +563,6 @@ For manual uninstallation, execute the following command for your Linux distribu
 - [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
 - [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
 - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

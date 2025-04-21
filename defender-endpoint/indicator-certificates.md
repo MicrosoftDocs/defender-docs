@@ -43,7 +43,7 @@ It's important to understand the following requirements before creating indicato
 - Supported on machines on Windows 10, version 1703 or later, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2.
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for this feature to work.
 
 - The virus and threat protection definitions must be up to date.
 - This feature currently supports entering .CER or .PEM file extensions.
