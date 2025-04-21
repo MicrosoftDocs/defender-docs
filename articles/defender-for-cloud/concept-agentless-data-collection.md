@@ -69,7 +69,7 @@ The built-in role **VM scanner operator** has read-only permissions for VM disks
 - `Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read`
 - `Microsoft.Compute/virtualMachineScaleSets/virtualMachines/instanceView/read`
 
-When coverage for CMK encrypted disks is enabled, more permissions are used:
+When coverage for CMK encrypted disks is enabled, more permissions are required:
 
 - `Microsoft.KeyVault/vaults/keys/read`
 - `Microsoft.KeyVault/vaults/keys/wrap/action`
