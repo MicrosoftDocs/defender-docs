@@ -185,7 +185,7 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Severity** Medium
 
-### Root access should be disabled on Workbench instances (Preview).
+### Root access should be disabled on Workbench instances (Preview)
 
 **Description:** Defender for Cloud has identified that root access is not disabled on the GCP Workbench instance. To reduce the risk of accidental or malicious system damage, it is essential to disable root access on your Google Cloud Vertex AI notebook instances. This measure limits administrative privileges within the instances, ensuring a more secure environment.
 
