@@ -78,7 +78,7 @@ By default, all onboarded devices running on Windows 10 version 1809 or later, W
 - `DHCPv6`
 - `IP` (headers)
 - `LLDP`
-- LL`MNR
+- `LLMNR`
 - `mDNS`
 - `MNDP`
 - `MSSQL`

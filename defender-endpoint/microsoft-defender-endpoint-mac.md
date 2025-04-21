@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Endpoint on Mac
+title: Microsoft Defender for Endpoint on macOS
 ms.reviewer: joshbregman
-description: Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
+description: Learn how to install, configure, update, and use Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,10 +15,10 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 04/16/2025
 ---
 
-# Microsoft Defender for Endpoint on Mac
+# Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -30,23 +30,23 @@ ms.date: 03/24/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
+This article describes how to install, configure, update, and use Defender for Endpoint on macOS.
 
 > [!CAUTION]
-> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on Mac is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can still safely take advantage of Defender for Endpoint on Mac EDR functionality after configuring the antivirus functionality to run in [Passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
+> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can still safely take advantage of Defender for Endpoint on macOS EDR functionality after configuring the antivirus functionality to run in [Passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
 
 ## What's new in the latest release
 
 [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 
-[What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
+[What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
 
 > [!TIP]
-> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on Mac on your device and navigating to **Help** \> **Send feedback**.
+> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
 
-To get the latest features, including preview capabilities (such as endpoint detection and response for your Mac devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
+To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
 
-## How to install Microsoft Defender for Endpoint on Mac
+## How to install Microsoft Defender for Endpoint on macOS
 
 ### Prerequisites
 
@@ -56,7 +56,7 @@ To get the latest features, including preview capabilities (such as endpoint det
 
 ### Installation instructions
 
-There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on Mac.
+There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on macOS.
 
 - [Microsoft Intune-based deployment](mac-install-with-intune.md)
 - Non-Microsoft management tools:
@@ -84,7 +84,7 @@ After you've enabled the service, you might need to configure your network or fi
 
 ### Licensing requirements
 
-Microsoft Defender for Endpoint on Mac requires one of the following Microsoft Volume Licensing offers:
+Microsoft Defender for Endpoint on macOS requires one of the following Microsoft Volume Licensing offers:
 
 - Microsoft 365 E5
 - Microsoft 365 E5 Security
@@ -105,7 +105,7 @@ When adding exclusions, be mindful of [common exclusion mistakes for Microsoft D
 
 ### Network connections
 
-Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, please reference [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, reference [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
 Microsoft Defender for Endpoint can connect through a proxy server by using the following methods:
 
@@ -144,13 +144,13 @@ Once Microsoft Defender for Endpoint is installed, connectivity can be validated
 mdatp connectivity test
 ```
 
-## How to update Microsoft Defender for Endpoint on Mac
+## How to update Microsoft Defender for Endpoint on macOS
 
-Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. To update Microsoft Defender for Endpoint on Mac, a program named Microsoft AutoUpdate (MAU) is used. To learn more, see [Deploy updates for Microsoft Defender for Endpoint on Mac](mac-updates.md).
+Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. To update Microsoft Defender for Endpoint on macOS devices, a program named Microsoft AutoUpdate (MAU) is used. To learn more, see [Deploy updates for Microsoft Defender for Endpoint on macOS](mac-updates.md).
 
-## How to configure Microsoft Defender for Endpoint on Mac
+## How to configure Microsoft Defender for Endpoint on macOS
 
-Guidance for how to configure the product in enterprise environments is available in [Set preferences for Microsoft Defender for Endpoint on Mac](mac-preferences.md).
+Guidance for how to configure the product in enterprise environments is available in [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
 
 ## macOS kernel and system extensions
 
