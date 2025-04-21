@@ -687,8 +687,8 @@ Security subassessment on a resource
 | properties.id              | string                                                       | Vulnerability ID                                    |
 | properties.impact          | string                                                       | Description of the impact of this subassessment    |
 | properties.remediation     | string                                                       | Information on how to remediate this subassessment |
-| properties.resourceDetails | ResourceDetails: <br> [Azure Resource Details](subassessment-rest-api.md#resourcedetails---azure) <br> [AWS/GCP Resource Details](subassessment-rest-api.md#resourcedetails---aws--gcp) | Details of the resource that was assessed           |
-| properties.status          | [SubAssessmentStatus](subassessment-rest-api.md#subassessmentstatus) | Status of the subassessment                        |
+| properties.resourceDetails | ResourceDetails: <br> [Azure Resource Details](#resourcedetails---azure) <br> [AWS/GCP Resource Details](#resourcedetails---aws--gcp) | Details of the resource that was assessed           |
+| properties.status          | [SubAssessmentStatus](#subassessmentstatus) | Status of the subassessment                        |
 | properties.timeGenerated   | string                                                       | The date and time the subassessment was generated  |
 | type                       | string                                                       | Resource type                                       |
 
