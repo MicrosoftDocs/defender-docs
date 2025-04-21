@@ -2,28 +2,29 @@
 title: Review security recommendations
 description: Learn how to review security recommendations in Microsoft Defender for Cloud and improve the security posture of your environments.
 ms.topic: how-to
-author: dcurwin
-ms.author: dacurwin
-ms.date: 03/07/2024
+author: ElazarK
+ms.author: elkrieger
+ms.date: 04/21/2025
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
 ---
 
 # Review security recommendations
 
-In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security standards enabled in your Azure subscriptions, AWS accounts, and GCP projects. Based on those assessments, security recommendations provide practical steps to remediate security issues, and improve security posture.
+In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security standards enabled in your Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects. Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
 
-Defender for Cloud proactively utilizes a dynamic engine which assesses the risks in your environment while taking into account the potential for the exploitation and the potential business impact to your organization. The engine [prioritizes security recommendations based on the risk factors](risk-prioritization.md) of each resource, which are determined by the context of the environment, including the resource's configuration, network connections, and security posture.
+Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment while considering the potential for exploitation and the potential business impact on your organization. The engine prioritizes security recommendations based on the risk factors of each resource, determined by the context of the environment, including the resource's configuration, network connections, and security posture.
+
 
 ## Prerequisites
 
-- You must [enable Defender CSPM](enable-enhanced-security.md) on your environment.
+- You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md) on your environment.
 
 > [!NOTE]
-> Recommendations are included by default with Defender for Cloud, but you will not be able to see risk prioritization without Defender CSPM enabled on your environment.
+> Recommendations are included by default with Defender for Cloud, but you will not be able to see [risk prioritization](risk-prioritization.md) without Defender CSPM enabled on your environment.
 
-## Review recommendation details
+## Review the recommendations page
 
-It's important to review all of the details related to a recommendation before trying to understand the process needed to resolve the recommendation. We recommend ensuring that all of the recommendation details are correct before resolving the recommendation.
+Review all of the details related to a recommendation before trying to understand the process needed to resolve the recommendation. Ensure that all of the recommendation details are correct before resolving the recommendation.
 
 **To review a recommendation's details**:
 
@@ -33,24 +34,24 @@ It's important to review all of the details related to a recommendation before t
 
 1. Select a recommendation.
 
-1. In the recommendation page, review the details:
-    - **Risk level** - The exploitability and the business impact of the underlying security issue, taking into account environmental resource context such as: Internet exposure, sensitive data, lateral movement, and more.
-    - **Risk factors** - Environmental factors of the resource affected by the recommendation, which influence the exploitability and the business impact of the underlying security issue. Examples for risk factors include internet exposure, sensitive data, lateral movement potential.
+1. On the recommendation page, review the following details:
+    - **Risk level** - The vulnerability and business impact of the underlying security issue, considering environmental resource context such as internet exposure, sensitive data, lateral movement, and more.
+    - **Risk factors** - Environmental factors of the resource affected by the recommendation, which influence the vulnerability and business impact of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
     - **Resource** - The name of the affected resource.
-    - **Status** - The status of the recommendation. For example, unassigned, on time, overdue.
-    - **Description** - A short description of the security issue.
+    - **Status** - The status of the recommendation, such as unassigned, on time, or overdue.
+    - **Description** - A brief description of the security issue.
     - **Attack Paths** - The number of attack paths.
     - **Scope** - The affected subscription or resource.
-    - **Freshness** - The freshness interval for the recommendation.
-    - **Last change date** - The date this recommendation last had a change
-    - **Severity** - The severity of the recommendation (High, Medium, or Low). More details below.
-    - **Owner** - The person assigned to this recommendation.
-    - **Due date** - The assigned date the recommendation must be resolved by.
+    - **Freshness** - The freshness interval of the recommendation.
+    - **Last change date** - The date this recommendation was last changed.
+    - **Severity** - The severity of the recommendation (High, Medium, or Low). More details are provided below.
+    - **Owner** - The person assigned to the recommendation.
+    - **Due date** - The assigned due date for resolving the recommendation.
     - **Tactics & techniques** - The tactics and techniques mapped to MITRE ATT&CK.
 
 ## Explore a recommendation
 
-You can perform many actions to interact with recommendations. If an option isn't available, it isn't relevant for the recommendation.
+You can perform various actions to interact with recommendations. If an option isn't available, it's not relevant to the recommendation.
 
 **To explore a recommendation**:
 
@@ -60,20 +61,23 @@ You can perform many actions to interact with recommendations. If an option isn'
 
 1. Select a recommendation.
 
-1. In the recommendation, you can perform the following actions:
+1. In the recommendation, you can perform these actions:
 
-    - Select **Open query** to view detailed information about the affected resources using an Azure Resource Graph Explorer query.
+    - Select **Open query** to view detailed information about the affected resources with an Azure Resource Graph Explorer query.
 
-    - Select **View policy definition** to view the Azure Policy entry for the underlying recommendation (if relevant).
+    - Select **View policy definition** to view the Azure Policy entry for the underlying recommendation, if relevant.
+
+    - Select **View recommendation for all resources** to view all resources affected by the recommendation.
 
 1. In **Take action**:
-    - **Remediate**: A description of the manual steps required to remediate the security issue on the affected resources. For recommendations with the **Fix** option, you can select **View remediation logic** before applying the suggested fix to your resources.
 
-    - **Assign owner and due date**: If you have a [governance rule](governance-rules.md) turned on for the recommendation, you can assign an owner and due date.
+    - **Remediate**: A description of the manual steps required to resolve the security issue on the affected resources. For recommendations with the **Fix** option, you can select **View remediation logic** before applying the suggested fix to your resources.
 
-    - **Exempt**: You can exempt resources from the recommendation, or disable specific findings using disable rules.
+    - **Recommendation owner and set due date**: If you have a [governance rule](governance-rules.md) enabled for the recommendation, you can assign an owner and due date.
 
-    - **Workflow automation**: Set a logic app to trigger with this recommendation.
+    - **Exempt**: You can exempt resources from the recommendation or disable specific findings using disable rules.
+
+    - **Workflow automation**: Set a logic app to trigger with the recommendation.
 
     :::image type="content" source="media/review-security-recommendations/recommendation-take-action.png" alt-text="Screenshot that shows what you can see in the recommendation when you select the take action tab." lightbox="media/review-security-recommendations/recommendation-take-action.png":::
 
