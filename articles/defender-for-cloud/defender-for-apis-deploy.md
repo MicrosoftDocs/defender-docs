@@ -37,7 +37,7 @@ Learn more about [Defender for APIs](defender-for-apis-introduction.md).
 
 When selecting a plan, consider these points:
 
-- Defender for APIs protects only those APIs that are onboarded to Defender for APIs. This means you can activate the plan at the subscription level, and complete the second step of onboarding by fixing the onboarding recommendation. For more information about onboarding, see the [onboarding guide](defender-for-apis-deploy.md#enable-the-defender-for-apis-plan).
+- Defender for APIs protects only those APIs that are onboarded to Defender for APIs. This means you can activate the plan at the subscription level, and complete the second step of onboarding by fixing the onboarding recommendation.
 - Defender for APIs has five pricing plans, each with a different entitlement limit and monthly fee. The billing is done at the subscription level.  
 - Billing is applied to the entire subscription based on the total amount of API traffic monitored over the month for the subscription.
 - The API traffic counted towards the billing is reset to 0 at the start of each month (every billing cycle).
