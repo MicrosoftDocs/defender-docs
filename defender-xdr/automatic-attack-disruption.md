@@ -18,7 +18,7 @@ ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 09/11/2024
+ms.date: 02/20/2025
 appliesto:
   - Microsoft Defender XDR
 ---
@@ -61,15 +61,16 @@ Investigations are integral to monitoring our signals and the attack threat land
 
 Automatic attack disruption uses Microsoft-based XDR response actions. Examples of these actions are:
 
-- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device.
+- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device. 
+  - In addition, Defender for Endpoint automatically contains malicious IP addresses associated with undiscovered/not onboarded devices to block any lateral movement and encryption activity to other Defender for Endpoint-onboarded/discovered devices. It does this through its **[Contain IP](/defender-endpoint/respond-machine-alerts#contain-ip-addresses-of-undiscovered-devices)** (Preview) policy. Moreover, [compromised critical assets' IP addresses are also automatically contained](/defender-endpoint/respond-machine-alerts#containing-critical-assets) with specific blocking mechanisms to stop the spread of an attack while avoiding productivity loss.
 
 - [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution. The disable user action behaves differently depending on how the user is hosted in your environment.
   - When the user account is hosted in Active Directory: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity agent.
   - When the user account is hosted in Active Directory and is synced on Microsoft Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Entra ID synced account.
-  - When the user account is hosted in Entra ID only (cloud native account): attack disruption disables the user account on the Entra ID synced account.
- 
-> [!NOTE]
-> Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
+  - When the user account is hosted in Entra ID only (cloud native account): attack disruption disable the user account on the Entra ID synced account.
+
+  > [!NOTE]
+  > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
@@ -122,6 +123,5 @@ For more information, see [view attack disruption details and results](autoad-re
 - [Configure automatic attack disruption](configure-attack-disruption.md)
 - [View details and results](autoad-results.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
-
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

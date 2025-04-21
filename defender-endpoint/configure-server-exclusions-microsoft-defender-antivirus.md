@@ -67,7 +67,7 @@ On Windows Server 2016 or later, you shouldn't need to define exclusions for ser
 
 ### Windows Server 2012 R2
 
-Windows Server 2012 R2 does not support the automatic server role exclusions feature. Windows Server 2012 R2 also does not have Microsoft Defender Antivirus as an installable feature. When you onboard those servers to Defender for Endpoint, you'll install Microsoft Defender Antivirus, and default built-in exclusions for operating system files are applied. However, automatic server role exclusions (as specified below) will not be automatically applied. If these exclusions are desired, you should add custom exclusions for these paths and processes as appropriate. To learn more about onboarding Microsoft Defender Antivirus on Windows Server 2012 R2, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+Windows Server 2012 R2 does not support the automatic server role exclusions feature. Windows Server 2012 R2 also does not have Microsoft Defender Antivirus as an installable feature. When you onboard those servers to Defender for Endpoint, you'll install Microsoft Defender Antivirus, and default built-in exclusions for operating system files are applied. However, automatic server role exclusions (as specified below) will not be automatically applied. If these exclusions are desired, you should add custom exclusions for these paths and processes as appropriate. To learn more about onboarding Microsoft Defender Antivirus on Windows Server 2012 R2, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
 
 ### Automatic exclusions include:

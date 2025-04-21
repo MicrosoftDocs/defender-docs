@@ -9,7 +9,7 @@ ms.reviewer: mkaminska, yongrhee
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
-ms.date: 03/18/2025
+ms.date: 04/16/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -69,7 +69,7 @@ Microsoft Defender Antivirus and cloud protection automatically block most new, 
       |---|---|
       | **Send safe samples automatically** | - Safe samples are samples considered to not commonly contain PII data. Examples include `.bat`, `.scr`, `.dll`, and `.exe`. <br/>- If file is likely to contain PII, the user gets a request to allow file sample submission.<br/>- This option is the default configuration on Windows, macOS, and Linux. |
       | **Always Prompt** | - If configured, the user is always prompted for consent before file submission<br/>- This setting isn't available in macOS and Linux cloud protection |
-      | **Send all samples automatically** | - If configured, all samples are sent automatically<br/>- If you would like sample submission to include macros embedded in Word docs, you must choose **Send all samples automatically**<br/>- "Send all samples automatically" is the equivalent to "All" setting in macOS policy |
+      | **Send all samples automatically** | - If configured, all samples are sent automatically<br/>- If you would like sample submission to include macros embedded in Word docs, you must choose **Send all samples automatically**<br/>- "Send all samples automatically" is the equivalent to the "Enable" setting in macOS policy |
       | **Do not send** | - Prevents "block at first sight" based on file sample analysis<br/>- "Don't send" is the equivalent to the "Disabled" setting in macOS policy and "None" setting in Linux policy.<br/>- Metadata is sent for detections even when sample submission is disabled |
       
    3. After files are submitted to cloud protection, the submitted files can be **scanned**, **detonated**, and processed through **big data analysis** **machine-learning** models to reach a verdict. Turning off cloud-delivered protection limits analysis to only what the client can provide through local machine-learning models, and similar functions.
@@ -128,7 +128,7 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 
 | Scenario | Description |
 |:---|:---|
-|Manual file sample collection in the Microsoft Defender portal | When onboarding devices to Defender for Endpoint, you can configure settings for [endpoint detection and response (EDR)](overview-endpoint-detection-response.md). For example, there's a setting to enable sample collections from the device, which can easily be confused with the sample submission settings described in this article. <br/><br/>The EDR setting controls file sample collection from devices when requested through the Microsoft Defender portal, and is subject to the roles and permissions already established. This setting can allow or block file collection from the endpoint for features such as deep analysis in the Microsoft Defender portal. If this setting isn't configured, the default is to enable sample collection. <br/><br/>Learn about Defender for Endpoint configuration settings, see: [Onboarding tools and methods for Windows 10 devices in Defender for Endpoint](onboard-windows-client.md) |
+|Manual file sample collection in the Microsoft Defender portal | When onboarding devices to Defender for Endpoint, you can configure settings for [endpoint detection and response (EDR)](overview-endpoint-detection-response.md). For example, there's a setting to enable sample collections from the device, which can easily be confused with the sample submission settings described in this article. <br/><br/>The EDR setting controls file sample collection from devices when requested through the Microsoft Defender portal, and is subject to the roles and permissions already established. This setting can allow or block file collection from the endpoint for features such as deep analysis in the Microsoft Defender portal. If this setting isn't configured, the default is to enable sample collection. <br/><br/>Learn about Defender for Endpoint configuration settings, see [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md) |
 | Automated investigation and response content analysis | When [automated investigations](automated-investigations.md) are running on devices (when configured to run automatically in response to an alert or manually run), files that are identified as suspicious can be collected from the endpoints for further inspection. If necessary, the file content analysis feature for automated investigations can be disabled in the Microsoft Defender portal. <br/><br/> The file extension names can also be modified to add or remove extensions for other file types that are automatically submitted during an automated investigation. <br/><br/> To learn more, see [Manage automation file uploads](manage-automation-file-uploads.md). |
 
 

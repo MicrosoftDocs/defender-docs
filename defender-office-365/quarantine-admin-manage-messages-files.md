@@ -539,7 +539,7 @@ Admins can search the audit log to find events for messages that were deleted fr
 1. In the Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
 
    > [!TIP]
-   > You can also get to the **Audit** page in the Microsoft Purview compliance portal at <https://compliance.microsoft.com/auditlogsearch>
+   > You can also get to the **Audit** page in the Microsoft Purview portal at <https://purview.microsoft.com/auditlogsearch>
 
 2. On the **Audit** page, verify that the **New Search** tab is selected, and then configure the following settings:
 

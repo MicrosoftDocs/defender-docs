@@ -3,11 +3,11 @@ title: What's new in Microsoft Defender for Endpoint
 description: See what features are generally available (GA) in the latest release of Microsoft Defender for Endpoint, and security features in Windows 10 and Windows Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 02/12/2025
+ms.date: 04/17/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -46,6 +46,22 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 - [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
 
+## April 2025
+
+- (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) for more information.
+
+- (GA) **Attack Surface Reduction (ASR) Rules**
+
+Two new ASR rules are now generally available:
+
+  - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference): This rule prevents the execution of commands to restart machines in Safe Mode.
+  - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+
+- (GA) Defender for Endpoint supports ARM64-based Linux servers across various Linux distributions, including Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers. For more information, see the following articles:
+
+   - [Tech Community Blog: Defender for Endpoint extends support to ARM-based Linux servers](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/defender-for-endpoint-extends-support-to-arm-based-linux-servers/4364066)
+   - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+    
 ## February 2025
 
 - (GA) **Aggregated reporting in Microsoft Defender for Endpoint** is now generally available. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
@@ -65,7 +81,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## August 2024
 
-- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users are able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
     
 ## July 2024
 
@@ -107,8 +123,8 @@ For more information on what's new with other Microsoft Defender security produc
 
 Two new ASR rules are now in public preview:
 
-- [Block rebooting machine in Safe Mode (preview)](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode-preview): This rule prevents the execution of commands to restart machines in Safe Mode.
-- [Block use of copied or impersonated system tools (preview)](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools-preview): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+- [Block rebooting machine in Safe Mode](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode): This rule prevents the execution of commands to restart machines in Safe Mode.
+- [Block use of copied or impersonated system tools](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
 
 **Microsoft Defender for Endpoint on macOS** features are in public preview:
 
