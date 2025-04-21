@@ -17,9 +17,6 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 
 ## AWS authentication process
 
-
-## AWS authentication process
-
 Defender for Cloud and AWS use federated authentication. All resources related to authentication are created as part of the CloudFormation template deployment, including:
 
 - An identity provider (OpenID Connect)
@@ -95,7 +92,7 @@ Make sure the selected Log Analytics workspace has a security solution installed
 
 [Learn more about monitoring components](monitoring-components.md) for Defender for Cloud.
 
-### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-(Preview))
+### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-Preview)
 
 If you choose the Defender for open-source relational databases plan, you need:
 
