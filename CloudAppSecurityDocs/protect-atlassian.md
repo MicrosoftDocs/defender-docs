@@ -8,9 +8,9 @@ ms.topic: how-to
 
 
 
-Atlassian is an online collaborative and software development platform (including Confluence, Jira and Bitbucket). Along with the benefits of effective collaboration in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include posts, tasks, and files with potentially sensitive information, collaboration, and partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
+Atlassian is an online collaborative and software development platform (including Confluence, Jira, and Bitbucket). Along with the benefits of effective collaboration in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include posts, tasks, and files with potentially sensitive information, collaboration, and partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
 
-Connecting Atlassian to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior. The connector will cover all users in your organization that use the Atlassian platform, and will show activities from Confluence, Jira, and specific Bitbucket activities.
+Connecting Atlassian to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior. The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities.
 
 Main threats include:
 
@@ -68,7 +68,7 @@ For more information, see:
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Atlassian products using the App Connector APIs. This connection gives you visibility into and control over your organization's Atlassian use.
 
 >[!NOTE]
->The connector will cover all users in your organization that use the Atlassian platform, and will show activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
+>The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
 
 ### Prerequisites
 
@@ -116,7 +116,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 >[!NOTE]
 >
 > - The first connection can take up to four hours to get all users and their activities.
-> - The activities that will display are the activities that were generated from the moment the connector is connected.
+> - The activities displayed are the activities that were generated from the moment the connector is connected.
 > - Activities from the "Atlassian Access" audit log are fetched by Defender for Cloud apps. Other activities aren't fetched currently. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
 > - After the connector’s **Status** is marked as **Connected**, the connector is live and works.
 
@@ -124,7 +124,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Microsoft recommends using short lived keys or tokens for connecting apps as a security best practice.
 1. We recommend refreshing the Atlassian API key every 6 months as a best practice. To refresh the key, revoke the existing API key and generate a new key.
-1. To revoke API key, navigate to **admin.atlassian.com** > **Settings** > **API keys**, determine the API key used for integration and select **Revoke**.
+1. To revoke API key, navigate to **admin.atlassian.com** > **Settings** > **API keys**, determine the API key used for integration, and select **Revoke**.
 1. Recreate an API key in the Atlassian admin portal with the steps described above.
 1. Afterwards, go to the **App Connectors** page in the Microsoft Defender Portal and edit the connector.
 
