@@ -145,7 +145,7 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Severity**: Medium
 
-### Azure Databricks Workspaces should be in a virtual network (Preview).
+### Azure Databricks Workspaces should be in a virtual network (Preview)
 
 **Description & related policy**: Azure Virtual Networks provide enhanced security and isolation for your Azure Databricks Workspaces, as well as subnets, access control policies, and other features to further restrict access. For more information, see [Deploy Azure Databricks in your Azure virtual network](/azure/databricks/administration-guide/cloud-configurations/azure/vnet-inject).
 
