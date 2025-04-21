@@ -111,7 +111,7 @@ The following table lists the supported operating systems for rules that are cur
 
 > [!NOTE]
 > Unless otherwise indicated, the minimum Windows 10 build is version 1709 (RS3, build 16299) or later; the minimum Windows Server build is version 1809 or later.
-> Attack surface reduction rules in Windows Server 2012 R2 and Windows Server 2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution).
+> Attack surface reduction rules in Windows Server 2012 R2 and Windows Server 2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 | Rule name| Windows 10 and 11 | Windows Server version 1803, 2019, and later | Windows Server 2016 and 2012 R2 |
 |---|---|---|---|
@@ -136,7 +136,7 @@ The following table lists the supported operating systems for rules that are cur
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
 
 > [!NOTE]
-> - For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md). 
+> - For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboard-windows-server-2016-and-windows-server-2012-r2). 
 > - If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
 > - For Windows client devices, "version 1809 or later" and "version 1903 (build 18362)" apply to Windows 10 only.
 
