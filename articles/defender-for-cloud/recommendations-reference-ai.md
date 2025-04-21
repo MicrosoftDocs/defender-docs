@@ -151,7 +151,7 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 **Severity**: Medium
 
-### Azure Databricks Workspaces should use private link (Preview).
+### Azure Databricks Workspaces should use private link (Preview)
 
 **Description & related policy**: Azure Private Link lets you connect your virtual networks to Azure services without a public IP address at the source or destination. The Private Link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to Azure Databricks workspaces, you can reduce data leakage risks. For more information, see [Create the workspace and private endpoints in the Azure portal UI](/azure/databricks/administration-guide/cloud-configurations/azure/private-link-standard#create-the-workspace-and-private-endpoints-in-the-azure-portal-ui).
 
