@@ -11,9 +11,6 @@ This article describes known limitations for working with Conditional Access app
 
 To learn more about security limitations, contact our support team.
 
-> [!IMPORTANT]
-> Access and session policies support IPv4 only. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
-
 ## Maximum file size for session policies
 
 You can apply session policies on files that have a maximum size of 50 MB. For example, this maximum file size is relevant when you're defining policies to monitor file downloads from OneDrive, block file updates, or block downloads or uploads of malware files.
@@ -60,6 +57,10 @@ Some applications utilize non-interactive access tokens to facilitate seamless r
 ## Limitations for sessions that the reverse proxy serves
 
 The following limitations apply only on sessions that the reverse proxy serves. Users of Microsoft Edge can benefit from in-browser protection instead of using the reverse proxy, so these limitations don't affect them.
+
+### IPv6 limitations
+
+Access and session policies support IPv4 only for reverse proxy and Edge in-browser. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
 
 ### Built-in app and browser plug-in limitations
 
