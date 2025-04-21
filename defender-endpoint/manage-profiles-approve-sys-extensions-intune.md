@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 03/21/2024
+ms.date: 04/04/2025
 ---
 
 # Manage profiles and approve extensions using Intune
@@ -46,109 +46,109 @@ The custom configuration profile enables the network extension and grants Full D
 
 1. Save the following content to a file named *sysext.xml*:
 
-```powershell
-   <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1">
-    <dict>
-        <key>PayloadUUID</key>
-        <string>7E53AC50-B88D-4132-99B6-29F7974EAA3C</string>
-        <key>PayloadType</key>
-        <string>Configuration</string>
-        <key>PayloadOrganization</key>
-        <string>Microsoft Corporation</string>
-        <key>PayloadIdentifier</key>
-        <string>7E53AC50-B88D-4132-99B6-29F7974EAA3C</string>
-        <key>PayloadDisplayName</key>
-        <string>Microsoft Defender System Extensions</string>
-        <key>PayloadDescription</key>
-        <string/>
-        <key>PayloadVersion</key>
-        <integer>1</integer>
-        <key>PayloadEnabled</key>
-        <true/>
-        <key>PayloadRemovalDisallowed</key>
-        <true/>
-        <key>PayloadScope</key>
-        <string>System</string>
-        <key>PayloadContent</key>
-        <array>
-            <dict>
-                <key>PayloadUUID</key>
-                <string>2BA070D9-2233-4827-AFC1-1F44C8C8E527</string>
-                <key>PayloadType</key>
-                <string>com.apple.webcontent-filter</string>
-                <key>PayloadOrganization</key>
-                <string>Microsoft Corporation</string>
-                <key>PayloadIdentifier</key>
-                <string>CEBF7A71-D9A1-48BD-8CCF-BD9D18EC155A</string>
-                <key>PayloadDisplayName</key>
-                <string>Approved Network Extension</string>
-                <key>PayloadDescription</key>
-                <string/>
-                <key>PayloadVersion</key>
-                <integer>1</integer>
-                <key>PayloadEnabled</key>
-                <true/>
-                <key>FilterType</key>
-                <string>Plugin</string>
-                <key>UserDefinedName</key>
-                <string>Microsoft Defender Network Extension</string>
-                <key>PluginBundleID</key>
-                <string>com.microsoft.wdav</string>
-                <key>FilterSockets</key>
-                <true/>
-                <key>FilterDataProviderBundleIdentifier</key>
-                <string>com.microsoft.wdav.netext</string>
-                <key>FilterDataProviderDesignatedRequirement</key>
-                <string>identifier &quot;com.microsoft.wdav.netext&quot; and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
-            </dict>
-            <dict>
-                <key>PayloadUUID</key>
-                <string>56105E89-C7C8-4A95-AEE6-E11B8BEA0366</string>
-                <key>PayloadType</key>
-                <string>com.apple.TCC.configuration-profile-policy</string>
-                <key>PayloadOrganization</key>
-                <string>Microsoft Corporation</string>
-                <key>PayloadIdentifier</key>
-                <string>56105E89-C7C8-4A95-AEE6-E11B8BEA0366</string>
-                <key>PayloadDisplayName</key>
-                <string>Privacy Preferences Policy Control</string>
-                <key>PayloadDescription</key>
-                <string/>
-                <key>PayloadVersion</key>
-                <integer>1</integer>
-                <key>PayloadEnabled</key>
-                <true/>
-                <key>Services</key>
+    ```powershell
+    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1">
+        <dict>
+            <key>PayloadUUID</key>
+            <string>7E53AC50-B88D-4132-99B6-29F7974EAA3C</string>
+            <key>PayloadType</key>
+            <string>Configuration</string>
+            <key>PayloadOrganization</key>
+            <string>Microsoft Corporation</string>
+            <key>PayloadIdentifier</key>
+            <string>7E53AC50-B88D-4132-99B6-29F7974EAA3C</string>
+            <key>PayloadDisplayName</key>
+            <string>Microsoft Defender System Extensions</string>
+            <key>PayloadDescription</key>
+            <string/>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadEnabled</key>
+            <true/>
+            <key>PayloadRemovalDisallowed</key>
+            <true/>
+            <key>PayloadScope</key>
+            <string>System</string>
+            <key>PayloadContent</key>
+            <array>
                 <dict>
-                    <key>SystemPolicyAllFiles</key>
-                    <array>
-                        <dict>
-                            <key>Identifier</key>
-                            <string>com.microsoft.wdav.epsext</string>
-                            <key>CodeRequirement</key>
-                            <string>identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
-                            <key>IdentifierType</key>
-                            <string>bundleID</string>
-                            <key>StaticCode</key>
-                            <integer>0</integer>
-                            <key>Allowed</key>
-                            <integer>1</integer>
-                        </dict>
-                    </array>
+                    <key>PayloadUUID</key>
+                    <string>2BA070D9-2233-4827-AFC1-1F44C8C8E527</string>
+                    <key>PayloadType</key>
+                    <string>com.apple.webcontent-filter</string>
+                    <key>PayloadOrganization</key>
+                    <string>Microsoft Corporation</string>
+                    <key>PayloadIdentifier</key>
+                    <string>CEBF7A71-D9A1-48BD-8CCF-BD9D18EC155A</string>
+                    <key>PayloadDisplayName</key>
+                    <string>Approved Network Extension</string>
+                    <key>PayloadDescription</key>
+                    <string/>
+                    <key>PayloadVersion</key>
+                    <integer>1</integer>
+                    <key>PayloadEnabled</key>
+                    <true/>
+                    <key>FilterType</key>
+                    <string>Plugin</string>
+                    <key>UserDefinedName</key>
+                    <string>Microsoft Defender Network Extension</string>
+                    <key>PluginBundleID</key>
+                    <string>com.microsoft.wdav</string>
+                    <key>FilterSockets</key>
+                    <true/>
+                    <key>FilterDataProviderBundleIdentifier</key>
+                    <string>com.microsoft.wdav.netext</string>
+                    <key>FilterDataProviderDesignatedRequirement</key>
+                    <string>identifier &quot;com.microsoft.wdav.netext&quot; and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
                 </dict>
-            </dict>
-        </array>
-    </dict>
-</plist>
-```
+                <dict>
+                    <key>PayloadUUID</key>
+                    <string>56105E89-C7C8-4A95-AEE6-E11B8BEA0366</string>
+                    <key>PayloadType</key>
+                    <string>com.apple.TCC.configuration-profile-policy</string>
+                    <key>PayloadOrganization</key>
+                    <string>Microsoft Corporation</string>
+                    <key>PayloadIdentifier</key>
+                    <string>56105E89-C7C8-4A95-AEE6-E11B8BEA0366</string>
+                    <key>PayloadDisplayName</key>
+                    <string>Privacy Preferences Policy Control</string>
+                    <key>PayloadDescription</key>
+                    <string/>
+                    <key>PayloadVersion</key>
+                    <integer>1</integer>
+                    <key>PayloadEnabled</key>
+                    <true/>
+                    <key>Services</key>
+                    <dict>
+                        <key>SystemPolicyAllFiles</key>
+                        <array>
+                            <dict>
+                                <key>Identifier</key>
+                                <string>com.microsoft.wdav.epsext</string>
+                                <key>CodeRequirement</key>
+                                <string>identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
+                                <key>IdentifierType</key>
+                                <string>bundleID</string>
+                                <key>StaticCode</key>
+                                <integer>0</integer>
+                                <key>Allowed</key>
+                                <integer>1</integer>
+                            </dict>
+                        </array>
+                    </dict>
+                </dict>
+            </array>
+        </dict>
+    </plist>
+    ```
 
-Verify that the above content was copied into the file correctly. From terminal, run the following command and verify that it outputs to the result as shown in the following example:
+1. Verify that the above content was copied into the file correctly. From terminal, run the following command and verify that it outputs to the result as shown in the following example:
 
-```powershell-interactive
-$ plutil -lint sysext.xml
-sysext.xml: OK
-```
+   ```powershell-interactive
+   $ plutil -lint sysext.xml
+   sysext.xml: OK
+   ```
 
 ### Deploy this custom configuration profile
 
@@ -157,7 +157,7 @@ sysext.xml: OK
 1. Open the configuration profile and upload the *sysext.xml* file.
 1. Select **OK**.
 
-:::image type="content" source="media/deploy-custom-configuration-profile.png" alt-text="Deploying custom configuration profile." lightbox="media/deploy-custom-configuration-profile.png":::
+   :::image type="content" source="media/deploy-custom-configuration-profile.png" alt-text="Deploying custom configuration profile." lightbox="media/deploy-custom-configuration-profile.png":::
 
-5. In the **Assignments** tab, assign this profile to **All Users & All devices**.
-6. Review and create this configuration profile.
+1. In the **Assignments** tab, assign this profile to **All Users & All devices**.
+1. Review and create this configuration profile.

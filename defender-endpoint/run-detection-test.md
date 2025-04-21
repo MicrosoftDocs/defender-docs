@@ -30,7 +30,7 @@ ms.subservice: onboard
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
 
@@ -55,8 +55,8 @@ The Command Prompt window closes automatically. If successful, a new alert appea
 
 ## Related articles
 
-- [Onboard Windows devices](onboard-windows-client.md)
-- [Onboard servers](configure-server-endpoints.md)
+- [Onboard client devices](onboard-client.md)
+- [Onboard servers](onboard-server.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

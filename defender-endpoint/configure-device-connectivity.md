@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 03/12/2025
+ms.date: 04/16/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -193,10 +193,10 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 
 3. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
 
-- [Onboard Windows Client](onboard-windows-client.md)
-- [Onboard Windows Server](configure-server-endpoints.md)
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)
-- [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
+   - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
+   - [Onboard client devices running Windows or macOS](onboard-client.md)
+   - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+   - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
 
 
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.

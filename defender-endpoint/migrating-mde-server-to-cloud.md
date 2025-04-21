@@ -105,7 +105,7 @@ After you complete the relevant migration steps, Defender for Cloud deploys the 
 
 The extension acts as a management and deployment interface, which orchestrates and wraps the Defender for Endpoint installation scripts inside the operating system and reflects its provisioning state to the Azure management plane. The installation process recognizes an existing Defender for Endpoint installation and connects it to Defender for Cloud by automatically adding Defender for Endpoint service tags.
 
-In case you have devices running Windows Server 2012 R2 or Windows Server 2016, and those devices are provisioned with the legacy, Log Analytics-based Defender for Endpoint solution, Defender for Cloud's deployment process deploys the Defender for Endpoint [unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution). After successful deployment, it stops and disables the legacy Defender for Endpoint process (`MsSense.exe`) on these machines.
+In case you have devices running Windows Server 2012 R2 or Windows Server 2016, and those devices are provisioned with the legacy, Log Analytics-based Defender for Endpoint solution, Defender for Cloud's deployment process deploys the Defender for Endpoint [unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). After successful deployment, it stops and disables the legacy Defender for Endpoint process (`MsSense.exe`) on these machines.
 
 ## See also
 
