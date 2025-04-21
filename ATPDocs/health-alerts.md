@@ -32,7 +32,7 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
     :::image type="content" source="media/health-issues/close-suppress.png" alt-text="Screenshot of a health issue details pane." lightbox="media/health-issues/close-suppress.png":::
 
-## Managing health alert status
+## Health alert status
 
 Health alerts in Microsoft Defender for Identity can have different statuses depending on their state and how they're handled. Two key statuses to understand are Closed and Suppressed:
 
@@ -40,9 +40,7 @@ Health alerts in Microsoft Defender for Identity can have different statuses dep
 This status indicates that the underlying issue triggering the alert is resolved.
 Microsoft Defender for Identity automatically sets a health alert to Closed when it detects that the underlying issue is resolved.
 
-- **Suppressed:**
-
-If you're aware of a known issue that's expected to persist temporarily, you can suppress the health alert for seven days.
+- **Suppressed:** If you're aware of a known issue that's expected to persist temporarily, you can suppress the health alert for seven days.
 
 For example, if a domain controller is taken offline for maintenance, a "Sensor stopped communicating" alert might be triggered. You can use the API to change the alert status from Open to Suppressed. Once the domain controller is back online, revert the status to Open and let Microsoft Defender for Identity close the alert automatically when the issue is resolved.
 
