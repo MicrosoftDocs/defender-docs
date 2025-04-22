@@ -42,6 +42,9 @@ Health issues in Microsoft Defender for Identity can have different statuses dep
 
 For example, if a domain controller is taken offline for maintenance, a "Sensor stopped communicating" alert might be triggered. You can use the API to change the alert status from Open to Suppressed. Once the domain controller is back online, revert the status to Open and let Microsoft Defender for Identity close the alert automatically when the issue is resolved.
 
+> [!NOTE]
+> If you want to manually close or suppress a health issue, you must have [Azure ATP (workspace name) Administrator](/defender-for-identity/role-groups#defender-for-identity-security-groups) permissions.
+
 ## Health issues
 
 This section describes all the health issues for each component, listing the cause and the steps needed to resolve the problem.
