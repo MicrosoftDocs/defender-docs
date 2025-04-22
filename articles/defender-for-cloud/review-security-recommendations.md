@@ -4,7 +4,7 @@ description: Learn how to review security recommendations in Microsoft Defender 
 ms.topic: how-to
 author: ElazarK
 ms.author: elkrieger
-ms.date: 04/21/2025
+ms.date: 04/22/2025
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
 ---
 
@@ -66,7 +66,7 @@ You can perform various actions to interact with recommendations. If an option i
 
     - Select **View policy definition** to view the Azure Policy entry for the underlying recommendation, if relevant.
 
-    - Select **View recommendation for all resources** to view all resources affected by the recommendation.
+    - Select **View recommendation for all resources** to view all resources affected by the recommendation.
 
 1. In **Take action**:
 
