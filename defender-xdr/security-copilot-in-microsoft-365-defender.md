@@ -22,6 +22,8 @@ ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+#customer intent: As an IT admin, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
+#customer intent: As a security analyst, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
 ---
 
 # Microsoft Copilot in Microsoft Defender

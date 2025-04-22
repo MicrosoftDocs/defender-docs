@@ -22,6 +22,7 @@ ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2
+#customer intent: As a security analyst, I want to learn about the Phishing Triage Agent in Microsoft Defender so that I can triage and classify user-submitted phishing incidents efficiently.
 ---
 
 # Phishing Triage Agent in Microsoft Defender

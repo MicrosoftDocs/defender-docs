@@ -21,6 +21,8 @@ search.appverid:
 ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
+#customer intent: As a security analyst, I want to know about the Security Copilot agents available in Microsoft Defender so that I can use them to perform my security tasks efficiently.
 ---
 
 # Microsoft Security Copilot Agents in Microsoft Defender
