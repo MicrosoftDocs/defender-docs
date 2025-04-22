@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-mdti
 ms.topic: conceptual
-ms.date: 01/15/2025
+ms.date: 04/22/2025
 ---
 
 # Microsoft Security Copilot in Microsoft Defender Threat Intelligence
