@@ -117,7 +117,7 @@ To set up the Phishing Triage Agent, follow these steps:
 
    [SCREENSHOT]
 
-7. After signing in, assign the identity an appropriate role to grant it the required permissions. To create a role and manage the agent's access, see [Create a custom role](create-custom-rbac-roles.md#custom-role).
+7. After signing in, assign the identity an appropriate role to grant it the required permissions. To create a role and manage the agent's access, see [Create a custom role](create-custom-rbac-roles.md#create-a-custom-role).
 
 8. Select **Deploy agent** to create the agent identity.
 
