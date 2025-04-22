@@ -16,12 +16,12 @@ ms.custom:
 - cx-ti
 - cx-mdti
 ms.topic: conceptual
-ms.date: 01/15/2025
+ms.date: 04/22/2025
 ---
 
 # Microsoft Security Copilot in Microsoft Defender Threat Intelligence
 
-Microsoft Security Copilot is a cloud-based AI platform that provides natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, read [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot).
+Microsoft Security Copilot is a cloud-based AI platform that provides a natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, read [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot).
 
 Security Copilot customers gain for each of their authenticated Copilot users access to Microsoft Defender Threat Intelligence (Defender TI). To ensure that you have access to Copilot, see the [Security Copilot purchase and licensing information](/copilot/security/faq-security-copilot).
 
@@ -158,9 +158,17 @@ Get detailed information about an indicator (for example, IP addresses, domains,
 - Show me all resolutions for IP address _\<IP address\>_.
 - Show me the open services in _\<IP address\>_.
 
+### Malware information
+
+Get detailed information about a specific malware detection, which is derived from the [Microsoft Security Intelligence threat encyclopedia](https://www.microsoft.com/en-us/wdsi/threats/threat-search). 
+
+**Sample prompt**:
+
+- What can you tell me about Ransom:Win32/WannaCrypt?
+
 ## Provide feedback
 
-Your feedback on the Defender TI integration in Security Copilot helps with development. To provide feedback, in Copilot, select **How's this response?** At the bottom of each completed prompt and choose any of the following options:
+Your feedback on the Defender TI integration in Security Copilot helps with development. To provide feedback, in Copilot, select **How's this response?** at the bottom of each completed prompt and choose any of the following options:
 - **Looks right** - Select this button if the results are accurate, based on your assessment. 
 - **Needs improvement** - Select this button if any detail in the results is incorrect or incomplete, based on your assessment. 
 - **Inappropriate** - Select this button if the results contain questionable, ambiguous, or potentially harmful information.
