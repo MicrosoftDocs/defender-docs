@@ -58,7 +58,9 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
 
 Follow the [verification process](verify-machine-protection.md) to identify protection misconfigurations on SQL Server instances.
 
-The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers, but the recommendation should be remediated at the resource level. Any SQL server that is unprotected is identified in the unhealthy resource section of the recommendation with a protection status listed and a reason. 
+The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers, but the recommendation should be remediated at the resource level. Any SQL server that is unprotected is identified in the unhealthy resource section of the recommendation with a protection status listed and a reason.
+
+The recommendation is only updated every 12 hours. If you have just enabled the Defender for SQL servers on Machines plan, you should follow the steps in the [verification process](verify-machine-protection.md) to view the protection status of each resource for immediate results.
 
 Use the corresponding unhealthy reason and recommended actions to resolve the misconfiguration:
 
