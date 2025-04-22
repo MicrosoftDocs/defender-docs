@@ -149,6 +149,11 @@
       "source_path": "defender-endpoint/onboard-windows-server-2012r2-2016.md",
       "redirect_url": "/defender-endpoint/onboard-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/mde-linux-arm.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-linux",
+      "redirect_document_id": false
     } 
   ]
 }

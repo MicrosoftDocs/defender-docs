@@ -4,9 +4,9 @@ description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
-ms.reviewer: kumasumit, gopkr
+ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 04/08/2025
+ms.date: 04/18/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -43,9 +43,9 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
-### April-2025 Build: 101.25022.0001 | Release version: 30.125022.0001.0
+### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
 
-|Build:             |**101.25022.0001**    |
+|Build:             |**101.25022.0002**    |
 |-------------------|----------------------|
 |Released:          |**April 07, 2025**    |
 |Published:         |**April 07, 2025**    |
@@ -59,7 +59,9 @@ What's new
 
 - Manage dynamic signature file share source by setting URL and update interval
 
-- Other stability improvements and bug fixes.
+- Other stability improvements and bug fixes
+
+- Support for ARM64 Linux servers 
 
 ### Mar-2025 Build: 101.25012.0000 | Release version: 30.125012.0000.0
 
