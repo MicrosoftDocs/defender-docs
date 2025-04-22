@@ -20,6 +20,21 @@ ms.topic: concept-article
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
 
+## May 2025
+
+- [Microsoft Sentinel use cases generally available in Microsoft's unified SecOps platform](#microsoft-sentinel-use-cases-generally-available-in-microsofts-unified-secops-platform)
+
+### Microsoft Sentinel use cases generally available in Microsoft's unified SecOps platform
+
+All Microsoft Sentinel use cases that are in general availability, including multi-tenant and multi-workspace capabilities and support for all government and commercial clouds, are now also supported for general availability in the unified SecOps platform in the Defender portal. Starting in May 2026, customers using the Microsoft Sentinel experience in the Azure portal will be redirected to the unified SecOps platform in the Microsoft Defender portal. While support for the Microsoft Sentinel API will continue as usual, Microsoft Sentinel in the Azure portal will be decommissioned on July 1, 2026.
+
+To prepare for this change, we recommend that customers that are still using the Microsoft Sentinel experience in the Azure portal proactively move to Microsoft's unified SecOps platform in the Microsoft Defender portal. For more information, see:
+
+- [Moving to Microsoft's unified SecOps platform](transition.md)
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?branch=main&branchFallbackFrom=pr-en-us-3535&toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json)
+
+<!--add link to blog-->
+
 ## April 2025
 
 - [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
