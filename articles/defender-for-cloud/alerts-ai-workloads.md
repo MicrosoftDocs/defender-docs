@@ -160,7 +160,7 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
-### Suspicious anomaly detected in sensitive data exposed by an AI resource
+### (Preview) Suspicious anomaly detected in sensitive data exposed by an AI resource
 
 (AI.Azure_SensitiveDataAnomaly)
 
