@@ -36,7 +36,7 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
 Health issues in Microsoft Defender for Identity can have different statuses depending on their state and how they're handled. 
 
-- **Open:** : The health issue is currently marked as open. 
+- **Open:**: The health issue is marked as open. 
 - **Closed:** A health issue is automatically marked as **Closed** when Microsoft Defender for Identity detects that the underlying issue is resolved. If you have Azure ATP (workspace name) Administrators permissions, you can also manually close a health issue.
 - **Suppressed:** If you're aware of a known issue that's expected to persist temporarily, you can suppress the health alert for seven days.
 
