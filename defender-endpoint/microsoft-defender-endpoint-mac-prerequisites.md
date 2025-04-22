@@ -58,7 +58,7 @@ There are several methods and deployment tools that you can use to install and c
 - [Microsoft Intune-based deployment](mac-install-with-intune.md)
 - Non-Microsoft management tools:
     - [JAMF-based deployment](mac-install-with-jamf.md)
-    - [Other MDM products](mac-install-with-other-mdm.md)
+    - [Other Mobile Device Management products](mac-install-with-other-mdm.md)
 - Command-line tool: [Manual deployment](mac-install-manually.md)
 
 > [!IMPORTANT]
