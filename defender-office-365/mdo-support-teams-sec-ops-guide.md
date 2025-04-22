@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Teams protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 04/16/2025
+ms.date: 04/22/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -82,6 +82,7 @@ SecOps team members can proactively hunt for potentially malicious Teams message
   - **Content malware** tab: This tab contains files detected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. You can use the [available filters](threat-explorer-real-time-detections-about.md#filterable-properties-in-the-content-malware-view-in-threat-explorer-and-real-time-detections) to hunt on detection data.
   - **URL click** tab: This tab contains all user clicks on URLs in email, in supported Office files in SharePoint and OneDrive, and in Microsoft Teams. You can use the [available filters](threat-explorer-real-time-detections-about.md#filterable-properties-in-the-url-clicks-view-in-threat-explorer) to hunt on detection data.
 
+<!---
 - On the **Advanced hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>. The following hunting tables are available for Teams-related threats:
   - [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table): Contains raw data about every internal and external Teams message that included a URL. Sender address, Sender display name, Sender type, and more are available in this table.
   - [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table): Contains raw data about ZAP events on Teams messages.
@@ -102,3 +103,4 @@ SecOps team members can proactively hunt for potentially malicious Teams message
   ```
 
   [Community queries in advanced hunting](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/use-community-queries-to-hunt-more-effectively-across-email-and-collaboration-th/4254664) also offers Teams query examples.
+--->
