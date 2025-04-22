@@ -51,7 +51,7 @@ These three most recent major releases of macOS are supported.
 
 - Beta versions of macOS aren't supported.
 
-### Installation instructions
+### Deploy for Defender for Endpoint on macOS
 
 There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on macOS.
 
@@ -127,17 +127,6 @@ Once Microsoft Defender for Endpoint is installed, connectivity can be validated
 ```bash
 mdatp connectivity test
 ```
-
-## Deploy for Defender for Endpoint on macOS
-
-To deploy and configure policies for Defender for Endpoint on macOS, you can use the following methods:
-- [Microsoft Intune](https://learn.microsoft.com/mem/intune/protect/protect-macos)
-- [JAMF](https://learn.microsoft.com/jamf/protect/)
-- [Intune](https://learn.microsoft.com/mem/intune/protect/protect-macos)
-- [MDM tools](mac-install-with-other-mdm.md)
-
-> [!IMPORTANT]
-> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported.
 
 ## How to update Microsoft Defender for Endpoint on macOS
 
