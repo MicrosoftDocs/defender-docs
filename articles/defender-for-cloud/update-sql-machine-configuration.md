@@ -4,7 +4,7 @@ description: Learn how to update your SQL Servers on machine configuration acros
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/21/2025
+ms.date: 04/22/2025
 #customer intent: As a security administrator, I want to update the Defender for SQL servers on Machines plan so that I can ensure my SQL servers in various environments have the latest configuration.
 ---
 
@@ -28,15 +28,15 @@ Existing customers must follow the instructions on this page to update the confi
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Search for and select **Microsoft Defender for Cloud**.
-
-1. Select **Environment settings**.
+1. Search for and select **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant subscription.
 
 1. Locate the Defender for Databases plan and select **Settings**.
 
 1. Select **Update** in the pop-up window.
+
+    :::image type="content" source="media/update-sql-machine-configuration/update-notification.png" alt-text="Screenshot that shows where to locate the update button." lightbox="media/update-sql-machine-configuration/update-notification.png":::
 
 ## Update the plan on multiple subscriptions
 
