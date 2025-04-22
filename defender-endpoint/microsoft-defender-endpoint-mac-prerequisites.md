@@ -47,7 +47,7 @@ These three most recent major releases of macOS are supported.
 
 - Supported processors: x64 and ARM64
 
-- Disk space: 1GB
+- Disk space: 1 GB
 
 - Beta versions of macOS aren't supported.
 
@@ -138,7 +138,7 @@ Guidance for how to configure the product in enterprise environments is availabl
 
 ## macOS kernel and system extensions
 
-Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint has been fully migrated from kernel extension to system extensions.
+Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint is fully migrated from kernel extension to system extensions.
 
 ## Resources
 
