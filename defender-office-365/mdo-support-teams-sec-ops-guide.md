@@ -69,15 +69,10 @@ SecOps team members can use threat hunting or information from external threat i
 
 SecOps team members can triage and respond to false positive Teams messages (good messages blocked) on the **Quarantine** page in Defender for Office 365 at <https://security.microsoft.com/quarantine>.
 
-- Teams messages detected by zero-hour auto protection (ZAP) are available on the **Teams messages** tab. SecOps team members can [take action](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-teams-messages) on these messages. For example, preview messages, download messages, submit messages to Microsoft for review, and release the messages from quarantine.
+Teams messages detected by zero-hour auto protection (ZAP) are available on the **Teams messages** tab. SecOps team members can [take action](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-teams-messages) on these messages. For example, preview messages, download messages, submit messages to Microsoft for review, and release the messages from quarantine.
 
-  > [!TIP]
-  > Teams messages released from quarantine are available to senders and recipients in the original location in Teams chats and channel posts.
-
-- Files in Teams messages detected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams are available on the **Files** tab. SecOps team members can [take action](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-files) on these files. For example, view file details, download files, submit messages to Microsoft for review, and release the files from quarantine.
-
-  > [!TIP]
-  > Files released from quarantine are available to users in the original location in SharePoint, OneDrive, and Teams.
+> [!TIP]
+> Teams messages released from quarantine are available to senders and recipients in the original location in Teams chats and channel posts.
 
 ## Enable SecOps to hunt for threats and detections in Microsoft Teams
 
