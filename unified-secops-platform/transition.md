@@ -25,13 +25,15 @@ For more information, see the relevant documentation for each feature and [Capab
 
 Transitioning to the unified SecOps platform offers the following benefits, and more:
 
-- **Streamlined Operations**: Manage all security incidents, alerts, and investigations from a single, unified interface.
-- **Enhanced Threat Detection**: Leverage advanced AI and machine learning for faster and more accurate threat detection and response. Benefit from an improved signal-to-noise ratio and enhanced alert correlation, ensuring that critical threats are identified and addressed promptly.
-- **New Features**: Access robust tools like Case Management for organizing and managing security incidents.
-- **Embedded Copilot Experience**: For customers using Copilot, enjoy a seamless experience for incident summaries and reports, guided investigation, auto-generated Microsoft Teams messages, code analysis, and more.
-- **Unified hunting, incidents, and investigation**: For customers using Defender XDR, benefit from a comprehensive view for more efficient threat detection and response.
-- **Enhanced visibility and reduced risk exposure**: Analyze attack paths to see how a cyber attacker could exploit vulnerabilities to move laterally across exposed assets in your environment. Use guided recommendations to reduce exposure and prioritize actions based on each exposure's potential impact.
-- **Tailored post-incident recommendations**: Prevent similar or repeat cyberattacks with tailored post incident recommendations tied to Microsoft Security Exposure Management initiatives.
+| **Benefit**      | **Description**                                   |
+|--------------------|--------------------------------------------|
+| **Streamlined operations**                   | Manage all security incidents, alerts, and investigations from a single, unified interface.                                                                                                                    |
+| **Enhanced threat detection**                | Leverage advanced AI and machine learning for faster and more accurate threat detection and response. Benefit from an improved signal-to-noise ratio and enhanced alert correlation, ensuring critical threats are addressed promptly. |
+| **New features**                             | Access robust tools like Case Management for organizing and managing security incidents.                                                                                                                       |
+| **Embedded Security Copilot experience**              | Enjoy a seamless experience for incident summaries, guided investigation, auto-generated Microsoft Teams messages, code analysis, and more.                                                                    |
+| **Unified hunting, incidents, and investigation** | Benefit from a comprehensive view for more efficient threat detection and response.                                                                                                                            |
+| **Enhanced visibility and reduced risk exposure** | Analyze attack paths to see how a cyber attacker could exploit vulnerabilities. Use guided recommendations to reduce exposure and prioritize actions based on potential impact.                                  |
+| **Tailored post-incident recommendations**   | Prevent similar or repeat cyberattacks with tailored recommendations tied to Microsoft Security Exposure Management initiatives.                              |
 
 For more information, see [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
