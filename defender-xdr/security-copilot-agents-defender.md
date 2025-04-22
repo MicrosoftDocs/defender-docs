@@ -78,3 +78,7 @@ The following plugins must be enabled in Security Copilot:
 
 - Microsoft Defender XDR
 - Microsoft Threat Intelligence
+
+## Related content
+
+- [Security Copilot in Defender](security-copilot-in-microsoft-365-defender.md)
