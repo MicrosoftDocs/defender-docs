@@ -74,6 +74,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
+- Hardware UUID is now displayed in the Security Portal
 - Bug and performance fixes
 
 ### Mar-2025 (Build: 101.25022.0003  | Release version: 20.125022.3.0)
