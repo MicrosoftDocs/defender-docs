@@ -16,6 +16,8 @@ After enabling protection for SQL Servers installed on Virtual Machines (VM), on
 
 Defender for Cloud presents [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation) recommendation. This recommendation allows you to review the protection status of Defender for SQL Servers on Machines. The recommendation covers all SQL VMs and Azure Arc SQL Server instances within a specified Azure subscription.
 
+Defender for Cloud updates the status of the recommendations every 12 hours. If you have only just enabled the Defender for SQL Servers on Machines plan, you can follow these steps to view each resource's protection status for immediate results.
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
@@ -26,9 +28,13 @@ Defender for Cloud presents [The status of Microsoft SQL Servers on Machines sho
 
     :::image type="content" source="media/verify-machines-protection/view-recommendation.png" alt-text="Screenshot that shows were to locate the View recommendation for all resources button is located. " lightbox="media/verify-machines-protection/view-recommendation.png":::
 
-1. Review the healthy and unhealthy resources.
+1. Review the the protection status and the unhealthy reason.
 
-If databases aren't protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.
+    :::image type="content" source="media/verify-machines-protection/protection-status-reason.png" alt-text="Screenshot that shows where to locate the protection status and the reason for that status." lightbox="media/verify-machines-protection/protection-status-reason.png":::
+
+1. Select the unhealthy resource.
+
+1. Follow the troubleshooting guide steps starting at [Step 3: Identify and resolve protection misconfigurations at the SQL Server instance Level](troubleshoot-sql-machines-guide.md#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level).
 
 ## Verify protection on a single SQL server VM
 
