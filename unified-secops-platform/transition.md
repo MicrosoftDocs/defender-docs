@@ -70,15 +70,15 @@ The following content is relevant for security engineers on a SecOps team that's
     - [Microsoft Sentinel data connectors](/azure/sentinel/connect-data-sources?tabs=defender-portal)
     - Experience in the Defender portal:
         - [Visibility of connectors used by the unified security operations platform](/azure/sentinel/microsoft-sentinel-defender-portal)
-        - [Defender for Cloud](/azure/sentinel/microsoft-sentinel-defender-portal) <!--add bookmarks for data connector specifics, also add content there re mdc and dlp items. that's on ed>
-        - [DLP data](/azure/sentinel/microsoft-sentinel-defender-portal) <!--add bookmarks for data connector specifics, also add content there re mdc and dlp items. that's on ed>
+        - [Defender for Cloud](/azure/sentinel/microsoft-sentinel-defender-portal) <!--add bookmarks for data connector specifics, also add content there re mdc and dlp items. that's on ed-->
+        - [DLP data](/azure/sentinel/microsoft-sentinel-defender-portal) <!--add bookmarks for data connector specifics, also add content there re mdc and dlp items. that's on ed-->
 
 - **Automation**: [Automation in the Microsoft Defender portal](/azure/sentinel/automation/automation#automation-in-the-microsoft-defender-portal)
 
 - **Ecosystem**: Distribute content across workspaces using one of the following methods:
 
     - [Deploy content as code from your repository](/azure/sentinel/ci-cd)
-    - [Microsoft Defender multitenant management](../mto-overview.md)
+    - [Microsoft Defender multitenant management](mto-overview.md)
 
 - **SOC optimization**: [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json&tabs=defender-portal)
 
@@ -93,19 +93,57 @@ The following content is relevant for security analysts or security managers on 
 
 - **Incident and alert management**
 
-- **Attack disruption**
+    The streamlined incident triage workflow in the Defender portal may require some retraining of analysts and updates to existing SOC processes. For example, incidents may now contain multiple cross-security domain alerts, reducing the number of required analysts and potentially combining tier 1 and tier 2 analysts.
+
+    - [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation?view=o365-worldwide)
+
+- **Attack disruption**:
+
+    - [Automatic attack disruption](/defender-xdr/automatic-attack-disruption)
+    - [Details and results of an automatic attack disruption action](/defender-xdr/autoad-results)
+    - [Exclude assets from automated responses](/defender-xdr/automatic-attack-disruption-exclusions)
 
 - **Advanced hunting**
 
+    - [Advanced hunting with Microsoft Sentinel data in Microsoft Defender](/defender-xdr/advanced-hunting-microsoft-defender)
+    - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+
 - **Entities and user and entity behavior analytics (UEBA)**
 
-- **Case management**
+    - [Advanced threat detection with UEBA](/azure/sentinel/identify-threats-with-entity-behavior-analytics)
+    - [Enable UEBA](/azure/sentinel/enable-entity-behavior-analytics?tabs=defender)
+    - [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference)
+    - [Investigate users](/defender-xdr/investigate-users)
+    - [Device entity pages](/defender-xdr/entity-page-device)
+    - [Global search](/defender-xdr/microsoft-365-defender-portal#global-search)
 
-- **Security Copilot integraton**
+- **Case management**: [Manage cases in Microsoft's unified security operations platform](/unified-secops-platform/cases-overview)
 
-- **Threat intelligence**
+- **Security Copilot integration**:
 
-- **Visualization and reporting with workbooks**
+    - [Summarize incidents](/microsoft-365/security/defender/security-copilot-m365d-incident-summary)
+    - [Summarize identities](/defender-xdr/security-copilot-defender-identity-summary)
+    - [Use guided response](/microsoft-365/security/defender/security-copilot-m365d-guided-response)
+    - [Analyze files](/microsoft-365/security/defender/copilot-in-defender-file-analysis)
+    - [Analyze scripts and codes](/microsoft-365/security/defender/security-copilot-m365d-script-analysis)
+    - [Create incident reports](/microsoft-365/security/defender/security-copilot-m365d-create-incident-report)
+    - [Generate KQL queries for hunting](/microsoft-365/security/defender/advanced-hunting-security-copilot)
+    - [Summarize device information](/microsoft-365/security/defender/copilot-in-defender-device-summary)
+
+- **Threat intelligence**: Extra features are available in the Defender portal with unified SecOps, including:
+
+    - [Threat analytics](/defender-xdr/threat-analytics)
+    - [Intel profiles](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/whats-new-intel-profiles-deliver-crucial-information-context-about-threats/3780076) <!--do we have nothing in docs about this?-->
+    - [Searching and pivoting with the Intel explorer](/defender/threat-intelligence/searching-and-pivoting)
+    - [Intel projects](/defender/threat-intelligence/using-projects)
+
+    For more information, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json).
+
+- **Visualization and reporting with workbooks**:
+
+    - [Visualize and monitor your data by using workbooks with Microsoft Sentinel](/azure/sentinel/monitor-your-data?tabs=defender-portal)
+    - [Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview)
+    - [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json) <!--add bookmark for workbooks related information-->
 
 ## Related content
 
