@@ -42,6 +42,9 @@ Tags are critical for efficient cost allocation. They function as labels to link
 - **Project:** Connects the asset with a specific project.
 - **Owner:** Pinpoints the individual or team responsible for asset usage.
 
+> [!NOTE]
+> Both Defender for Endpoint machine tags and cloud tags are used as billing tags. Therefore, you'll see both tag types listed as billing tags in the detailed reports.
+
 ## Manual chargeback calculation steps
 
 Follow these steps to execute the chargeback process:
