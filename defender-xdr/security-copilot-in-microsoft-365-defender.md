@@ -123,7 +123,7 @@ Ask Copilot to summarize the relevant threats impacting your environment, to pri
 
 <a name='access-security-copilot-in-microsoft-365-defender'></a>
 
-## Phishing Triage Agent in Microsoft Defender
+### Phishing Triage Agent in Microsoft Defender
 
 The [Phishing Triage Agent](phishing-triage-agent.md) is a Security Copilot agent designed to scale security teams' response in triaging and classifying user-submitted phishing incidents in Microsoft Defender, can help organizations address phishing efficiently. It assists security operations center (SOC) teams by autonomously triaging phishing submissions, determining whether they are genuine phishing attempts or false alarms. By alleviating the burden of reactive work, it reduces the team's manual workload and allows them to focus on critical tasks.
 

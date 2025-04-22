@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 - security-copilot
 - magic-ai-copilot 
-ms.topic: conceptual
+ms.topic: concept
 search.appverid:
 - MOE150
 - MET150
@@ -79,6 +79,13 @@ The Phishing Triage Agent requires an identity to run. You can create the Phishi
 You can also select the agent’s identity from the following options:
 
 - [options]
+
+### Products
+
+The tenant must have the following products:
+
+- Microsoft Defender for Office 365 Plan 2
+- Microsoft Defender XDR
 
 ### Plugins
 
