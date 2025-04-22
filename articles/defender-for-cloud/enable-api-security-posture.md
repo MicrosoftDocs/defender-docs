@@ -62,7 +62,7 @@ APIs onboarded to the Defender CSPM plan appear in the API security dashboard un
 Review API security posture findings along with your API inventory in the Microsoft Defender for Cloud Inventory experience.  
 
 > [!NOTE]
-> Sensitive data exposure won't be scanned if the sensitive data discovery extension is turned off. Enable sensitive data discovery to scan for sensitive information in your APIs. This setting only affects APIs onboarded to the Defender CSPM plan. If you have the Defender for APIs workload protection plan enabled on the same APIs, they will still be scanned for sensitive data.
+> Sensitive data exposure won't be scanned if the [sensitive data discovery extension](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) is turned off. Enable sensitive data discovery to scan for sensitive information in your APIs. This setting only affects APIs onboarded to the Defender CSPM plan. If you have the Defender for APIs workload protection plan enabled on the same APIs, they will still be scanned for sensitive data.
 
 1. Navigate to the Microsoft Defender for Cloud menu and select **Inventory**.  
 1. Within the **Inventory** page, apply filters by selecting resource types and select **API Management API**, **API Management operation**, and **API Management service** to see all your API assets.  
