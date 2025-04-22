@@ -11,7 +11,7 @@ ms.custom: template-how-to-pattern
 
 # Enable data security posture management
 
-This article describes how to enable [data security posture management](data-security-posture-enable.md) in Microsoft Defender for Cloud.
+This article describes how to enable data security posture management in Microsoft Defender for Cloud.
 
 ## Before you start
 
@@ -34,7 +34,7 @@ Follow these steps to enable data security posture management. Don't forget to r
 
 ## Enable in Defender CSPM (AWS)
 
-### Before you start
+### Before you start in AWS
 
 - Don't forget to: [review the requirements](concept-data-security-posture-prepare.md#discovery) for AWS discovery, and [required permissions](concept-data-security-posture-prepare.md#whats-supported).
 - Check that there's no policy that blocks the connection to your Amazon S3 buckets.
