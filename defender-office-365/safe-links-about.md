@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 12/24/2024
+ms.date: 04/22/2025
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -166,7 +166,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 >
 > Safe Links protection for Teams is supported in Teams desktop and web instances.
 >
-> Websites opened from Teams might require re-authentication when SameSite=Strict cookies are required by the target page for authentication. This occurs because the intermediary page that performs Safe Links validation executes a redirect to the target page, which is treated as a cross-site request. The same applies to links opened from Teams for Web (with Safe Links disabled).
+> Websites opened from Teams might require re-authentication when `SameSite=Strict` cookies are required for authentication by the target page. This behavior occurs because the intermediary page that does Safe Links validation redirects to the target page, which is treated as a cross-site request. The same issue applies to links opened from Teams for Web with Safe Links disabled.
 
 URLs in Teams are checked against a list of known malicious links when the protected user clicks the link (time-of-click protection). URLs aren't rewritten. If a link is found to be malicious, users have the following experiences:
 
