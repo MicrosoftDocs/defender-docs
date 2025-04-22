@@ -51,7 +51,7 @@ These three most recent major releases of macOS are supported.
 
 - Beta versions of macOS aren't supported.
 
-### Deploy for Defender for Endpoint on macOS
+### Deployment methods
 
 There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on macOS.
 
@@ -62,7 +62,7 @@ There are several methods and deployment tools that you can use to install and c
 - Command-line tool: [Manual deployment](mac-install-manually.md)
 
 > [!IMPORTANT]
-> On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
+> On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#deployment-methods).
 
 After you've enabled the service, you might need to configure your network or firewall to allow outbound connections between it and your endpoints.
 
