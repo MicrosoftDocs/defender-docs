@@ -4,9 +4,9 @@ description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
-ms.reviewer: kumasumit, gopkr
+ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 03/11/2025
+ms.date: 04/18/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -43,17 +43,35 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
+
+|Build:             |**101.25022.0002**    |
+|-------------------|----------------------|
+|Released:          |**April 07, 2025**    |
+|Published:         |**April 07, 2025**    |
+|Release version:   |**30.125022.0001.0**  |
+|Engine version:    |**1.1.24090.13**      |
+|Signature version: |**1.421.226.0**       |
+
+What's new
+
+- mdatp diagnostic ebpf-statistics command requires sudo privilege now
+
+- Manage dynamic signature file share source by setting URL and update interval
+
+- Other stability improvements and bug fixes
+
+- Support for ARM64 Linux servers 
+
 ### Mar-2025 Build: 101.25012.0000 | Release version: 30.125012.0000.0
 
-| Build:             | **101.25012.0000**    |
-| -------- | -------- |
-|Released:|March 11, 2025|
-|Released:| **March 11, 2025**|
-| Released:          |**March 11, 2025** |
-| Published:         | **March 11, 2025** |
-| Release version:   | **30.125012.0000.0** |
-| Engine version:    | **1.1.24090.13**   |
-| Signature version: | **1.421.226.0**      |
+| Build:            | **101.25012.0000**   |
+|-------------------|----------------------|
+|Released:          | **March 11, 2025**   |
+|Published:         | **March 11, 2025**   |
+|Release version:   | **30.125012.0000.0** |
+|Engine version:    | **1.1.24090.13**     |
+|Signature version: | **1.421.226.0**      |
 
 What's new
 
@@ -66,13 +84,12 @@ What's new
 ### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
 | Build:             | **101.24122.0008**    |
-| -------- | -------- |
-|Released:| **February 20, 2025**|
+|--------------------|-----------------------|
 | Released:          | **February 20, 2025** |
 | Published:         | **February 20, 2025** |
-| Release version:   | **30.124122.0008.0** |
-| Engine version:    | **1.1.24090.13**   |
-| Signature version: | **1.421.226.0**      |
+| Release version:   | **30.124122.0008.0**  |
+| Engine version:    | **1.1.24090.13**      |
+| Signature version: | **1.421.226.0**       |
 
 #### What's new
 
@@ -82,12 +99,11 @@ What's new
 ### Feb-2025 Build: 101.24112.0003 | Release version: 30.124112.0003.0
 
 | Build:             | **101.24112.0003**    |
-| -------- | -------- |
-|Released:| February 04, 2025|
+|--------------------|-----------------------|
 | Released:          | **February 04, 2025** |
 | Published:         | **February 04, 2025** |
-| Release version:   | **30.124112.0003.0** |
-| Engine version:    | **1.1.24090.13**        |
+| Release version:   | **30.124112.0003.0**  |
+| Engine version:    | **1.1.24090.13**      |
 | Signature version: | **1.421.1681.0**      |
 
 What's new
@@ -1475,4 +1491,3 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Added a new command-line switch (`--ignore-exclusions`) to ignore AV exclusions during custom scans (`mdatp scan custom`)
 - Extended `mdatp diagnostic create` with a new parameter (`--path [directory]`) that allows the diagnostic logs to be saved to a different directory
 - Performance improvements & bug fixes
-

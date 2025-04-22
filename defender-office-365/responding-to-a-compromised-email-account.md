@@ -180,7 +180,7 @@ For more information, see the following articles:
 
 - [List Azure role assignments using the Azure portal](/azure/role-based-access-control/role-assignments-list-portal)
 - [List Microsoft Entra role assignments](/entra/identity/role-based-access-control/view-assignments?tabs=admin-center#list-role-assignments-for-a-user)
-- [Permissions in the Microsoft Purview compliance portal](/purview/purview-compliance-portal-permissions)
+- [Permissions in the Microsoft Purview portal](/purview/purview-compliance-portal-permissions)
 - [Microsoft Defender for Office 365 permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions)
 
 ### Step 6: Review mail forwarders

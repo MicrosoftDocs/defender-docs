@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot configuration issues for Microsoft Defender for Endpoint on Mac
-description: Troubleshoot configuration issues in Microsoft Defender for Endpoint on Mac.
+title: Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS 
+description: Troubleshoot configuration issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS
@@ -75,7 +75,7 @@ Check the following files:
 
 The file paths and names must be exactly like described! If you see a similar but a bit different file path, then it means that Microsoft Defender ignores it.
 
-If you expect some MDM settings and don't see those files, it means that MDM has not delivered configuration profiles to your machine at all. 
+If you expect some MDM settings and don't see those files, it means that MDM hasn't delivered configuration profiles to your machine at all. 
 To troubleshoot profiles delivery, consult your MDM software (JAMF, Intune, etc.) resources.
 
 If you expect some settings and you see those files, then check their content:
@@ -120,7 +120,7 @@ If you don't see any managed profile for com.microsoft.wdav, then MDM didn't del
 
 If you see *more than one* configuration profile for the same com.microsoft.wdav, then it can be the reason of not expected configuration of Microsoft Defender.
 macOS performs some merging of those profiles into a single .plist, but it can properly merge only the top level of configuration.
-I.e., you can't spread different "antivirusEngine" settings across two com.microsoft.wdav configuration profiles, MDM uses only one of them randomly, and ignore the rest. You can use extra com.microsoft.wdav.ext profile if you need to put settings to two profiles (again, there must be at most one configuration profile with com.microsoft.wdav.ext as well).
+That is, you can't spread different "antivirusEngine" settings across two com.microsoft.wdav configuration profiles, MDM uses only one of them randomly, and ignore the rest. You can use extra com.microsoft.wdav.ext profile if you need to put settings to two profiles (again, there must be at most one configuration profile with com.microsoft.wdav.ext as well).
 
 In other words, avoid having more than one configuration profile for the same identifier.
 

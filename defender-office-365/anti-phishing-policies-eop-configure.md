@@ -16,7 +16,7 @@ ms.custom:
 description: Admins can learn how to create, modify, and delete the anti-phishing policies that are available in Exchange Online Protection (EOP) organizations with or without Exchange Online mailboxes.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 01/29/2025
+ms.date: 04/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
 ---
@@ -137,6 +137,8 @@ For anti-phishing policy procedures in organizations with Microsoft Defender for
      - **Show "via" tag**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds tag named via (`chris@contoso.com` via fabrikam.com) to the From address if it's different from the domain in the DKIM signature or the **MAIL FROM** address. This setting is selected by default.
 
      To turn on a setting, select the check box. To turn it off, clear the check box.
+
+     For examples of what these indicators look like, see [Unauthenticated sender indicators](anti-phishing-policies-about.md#unauthenticated-sender-indicators).
 
    When you're finished on the **Actions** page, select **Next**.
 
