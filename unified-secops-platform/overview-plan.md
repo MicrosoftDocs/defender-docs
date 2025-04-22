@@ -178,12 +178,19 @@ The following table describes portals for other workloads that can impact your s
 
 ## Plan roles and permissions
 
-Use Microsoft Entra role based access control (RBAC) to create and assign roles within your security operations team to grant appropriate access to services included in Microsoft's unified SecOps platform.
+Microsoft's unified security operations (SecOps) platform unifies the following role-based access control (RBAC) models:
 
-The Microsoft Defender XDR Unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across several security solutions. For more information, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+- [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview), used for delegating access to Defender access, like device groups
+- [Azure RBAC](/azure/role-based-access-control/), used by Microsoft Sentinel to delegate permissions
+- [Defender unified RBAC](/defender-xdr/manage-rbac), used to delegate permissions across Defender solutions
+
+While permissions granted through Azure RBAC for Microsoft Sentinel are federated during runtime with Defender's unified RBAC, Azure RBAC and Defender RBAC are still managed separately.
+
+Defender's unified RBAC isn't required to onboard your workspace to the Defender portal, and Microsoft Sentinel permissions continue to work as expected in the Defender portal even without unified RBAC. However, using unified RBAC does simplify the delegation of permissions across Defender solutions. For more information, see [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac).
+
+[!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 
 For the following services, use the different roles available, or create custom roles, to give you fine-grained control over what users can see and do. For more information, see:
-
 
 | Security service         | Link to role requirements                  |
 | ------------------------ | ------------------------------------------- |
@@ -200,6 +207,13 @@ For the following services, use the different roles available, or create custom 
 | Microsoft Security Exposure Management     | [Permissions for Microsoft Security Exposure Management](/security-exposure-management/prerequisites)   |
 | Microsoft Defender for Cloud      | [User roles and permissions](/azure/defender-for-cloud/permissions) |
 | Microsoft Purview Insider Risk Management | [Enable permissions for insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal#step-1-required-enable-permissions-for-insider-risk-management) |
+
+For more information, see:
+
+- [Plan roles and permissions for Microsoft Sentinel](/azure/sentinel/roles)
+- [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
+- [Microsoft Sentinel roles](/azure/role-based-access-control/built-in-roles#security)
+- [Onboarding prerequisites](deploy/microsoft-sentinel-onboard.md#prerequisites)
 
 ## Plan Zero Trust activities
 

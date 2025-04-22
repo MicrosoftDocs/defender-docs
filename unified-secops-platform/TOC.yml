@@ -20,6 +20,8 @@
             href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
           - name: Experience in the Defender portal
             href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - name: Transition to unified SecOps from the Azure portal
+            href: transition.md
         - name: Microsoft Copilot
           href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Microsoft Security Exposure Management
@@ -40,9 +42,11 @@
     - name: Deploy
       items:
       - name: Overview
-        href: overview-deploy.md
+        href: deploy/overview-deploy.md
       - name: Connect Microsoft Sentinel to Microsoft Defender
-        href: microsoft-sentinel-onboard.md
+        href: deploy/microsoft-sentinel-onboard.md
+      - name: Transition to unified SecOps by persona
+        href: deploy/transition.md
     - name: Reduce security risk
       items:
       - name: Improve security posture and reduce risk"
