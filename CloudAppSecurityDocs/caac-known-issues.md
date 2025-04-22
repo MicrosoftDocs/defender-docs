@@ -54,13 +54,13 @@ Session policies don't protect external business-to-business (B2B) collaboration
 ## Session Controls with Non-Interactive Tokens
 Some applications utilize non-interactive access tokens to facilitate seamless redirection between apps within the same suite or realm. When one application is onboarded to Conditional Access App Control and the other is not, session controls may not be enforced as expected. For example, if the Teams client retrieves a non-interactive token for SharePoint Online (SPO), it can initiate an active session in SPO without prompting the user for reauthentication. As a result, the session control mechanism cannot intercept or enforce policies on these sessions. To ensure consistent enforcement, it's recommended to onboard all relevant applications, such as Teams, alongside SPO. 
 
+## IPv6 limitations for sessions served by reverse proxy and Edge in-browser protection
+
+Access and session policies support IPv4 only. If a request is made over IPv6, IP-based policy rules will not be honored. This limitation applies to both reverse proxy and Edge in-browser protection.
+
 ## Limitations for sessions that the reverse proxy serves
 
 The following limitations apply only on sessions that the reverse proxy serves. Users of Microsoft Edge can benefit from in-browser protection instead of using the reverse proxy, so these limitations don't affect them.
-
-### IPv6 limitations
-
-Access and session policies support IPv4 only for reverse proxy and Edge in-browser. If the request originates from an IPv6 address, IP address-based conditions in the policy will not be honored.
 
 ### Built-in app and browser plug-in limitations
 
