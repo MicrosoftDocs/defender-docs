@@ -1,6 +1,6 @@
 ---
 title: Moving to Microsoft's unified SecOps platform
-description: Learn about the different security roles involved in transitioning to Microsoft's unified SecOps platform from Microsoft Sentinel in the Azure portal.
+description: Learn about the different security roles involved in moving to Microsoft's unified SecOps platform from Microsoft Sentinel in the Azure portal.
 ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
@@ -10,7 +10,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: conceptual
-# customer intent: As a security professional, I want to understand the benefits and process of transitioning to Microsoft's unified SecOps platform so I can effectively plan my organization's migration from the standalone Microsoft Sentinel portal before its decommissioning.
+# customer intent: As a security professional, I want to understand the benefits and features related to moving from Microsoft Sentinel in the Azure portal to unified security operations in the Defender portal.
 ---
 
 # Moving to Microsoft's unified SecOps platform
