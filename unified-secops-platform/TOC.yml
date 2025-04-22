@@ -42,11 +42,11 @@
     - name: Deploy
       items:
       - name: Overview
-        href: deploy/overview-deploy.md
+        href: overview-deploy.md
       - name: Connect Microsoft Sentinel to Microsoft Defender
-        href: deploy/microsoft-sentinel-onboard.md
+        href: microsoft-sentinel-onboard.md
       - name: Transition to unified SecOps by persona
-        href: deploy/transition.md
+        href: transition.md
     - name: Reduce security risk
       items:
       - name: Improve security posture and reduce risk"

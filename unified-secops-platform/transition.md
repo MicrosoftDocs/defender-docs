@@ -41,16 +41,16 @@ The following content is relevant for security architects on a SecOps team that'
 
 - **Access**: 
 
-    [!INCLUDE [mininum-access-requirements](../includes/mininum-access-requirements.md)]
+    [!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 
-    - [Plan roles and permissions](../overview-plan.md#plan-roles-and-permissions), including role-based access control (RBAC)
+    - [Plan roles and permissions](overview-plan.md#plan-roles-and-permissions), including role-based access control (RBAC)
     - [Configure roles and permissions](overview-deploy.md#configure-roles-and-permissions)
     
 - **Multiple workspaces and tenants**:
 
     - [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/prepare-multiple-workspaces)
     - [Extend Microsoft Sentinel across workspaces and tenants](/azure/sentinel/extend-sentinel-across-workspaces-tenants)
-    - [Microsoft Defender multitenant management](../mto-overview.md)
+    - [Microsoft Defender multitenant management](mto-overview.md)
 
 - **Log tiering and retention**: 
 

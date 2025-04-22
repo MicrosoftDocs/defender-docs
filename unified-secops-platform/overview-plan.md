@@ -213,7 +213,7 @@ For more information, see:
 - [Plan roles and permissions for Microsoft Sentinel](/azure/sentinel/roles)
 - [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
 - [Microsoft Sentinel roles](/azure/role-based-access-control/built-in-roles#security)
-- [Onboarding prerequisites](deploy/microsoft-sentinel-onboard.md#prerequisites)
+- [Onboarding prerequisites](microsoft-sentinel-onboard.md#prerequisites)
 
 ## Plan Zero Trust activities
 
