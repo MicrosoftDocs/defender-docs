@@ -117,8 +117,8 @@ The first time you activate Defender for Identity capabilities on your domain co
 Defender for Identity capabilities on domain controllers currently support the following Defender for Identity functionality:
 
 - Investigation features on the [ITDR dashboard](#check-the-itdr-dashboard), [identity inventory](#confirm-entity-page-details), and [identity advanced hunting data](#test-advanced-hunting-tables)
-- [Specified security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
-- [Specified alert detections](#test-alert-functionality)
+- [Security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
+- [Alert detections](#test-alert-functionality)
 - [Remediation actions](#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
