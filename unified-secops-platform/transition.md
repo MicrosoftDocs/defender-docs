@@ -78,7 +78,7 @@ The following content is relevant for security engineers on a SecOps team that's
 - **Ecosystem**: Distribute content across workspaces using one of the following methods:
 
     - [Deploy content as code from your repository](/azure/sentinel/ci-cd)
-    - [Microsoft Defender multitenant management](../mto-overview.md)
+    - [Microsoft Defender multitenant management](mto-overview.md)
 
 - **SOC optimization**: [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json&tabs=defender-portal)
 
