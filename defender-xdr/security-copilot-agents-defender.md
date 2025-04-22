@@ -56,12 +56,7 @@ The agent requires the following permissions to run:
 
 #### Role-based access
 
-A Security Administrator role is required to setup and manage the agent.
-
-Users with the following roles can view the agent's results:
-
-- role 1
-- role 2
+A Security Administrator role is required to setup and manage the agent. Users with the same permissions as the agent can view the agent's output.
 
 #### Identity
 
