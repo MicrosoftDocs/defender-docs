@@ -21,7 +21,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
 
-## Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2
+# Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2
 
 Even if you aren't using Microsoft Defender for Office 365 Plan 2 for email protection, you can still use it for Microsoft Teams protection.
 

@@ -32,12 +32,14 @@ This article assumes you have a production Microsoft 365 tenant and are piloting
 
 Defender for Office 365 contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
 
+<!---
 > [!TIP]
 > For information about configuring protection for Microsoft Teams, see the following articles:
 >
 > - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](/defender-office-365/mdo-support-teams-about)
 > - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](/defender-office-365/mdo-support-teams-quick-configure)
 > - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](/defender-office-365/mdo-support-teams-sec-ops-guide)
+--->
 
 ## End-to-end deployment for Microsoft Defender XDR
 
