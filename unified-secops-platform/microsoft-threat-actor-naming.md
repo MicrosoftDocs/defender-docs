@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 4/22/2025
+ms.date: 4/23/2025
 ---
 
 # How Microsoft names threat actors
