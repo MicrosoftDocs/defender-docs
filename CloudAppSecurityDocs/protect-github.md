@@ -129,7 +129,7 @@ These steps can be completed independently of the [Configure GitHub Enterprise C
    
    1. Select the **GitHub Profile picture** -> **your enterprises**.
    1. Select **your enterprise account** and choose the account you want to connect to Microsoft Defender for Cloud Apps.
-   1. Confirm that the URL is the enterprise slug. For instance, in this example `https://github.com/enterprises/testEnterprise` *testEnterprise* is the enterprise slug.
+   1. Confirm that the URL is the enterprise slug. For instance, in this example `https://github.com/enterprises/testEnterprise` *testEnterprise* is the enterprise slug. Enter only the enterprise slug, not the entire URL.
 
 1. Select **Next**.
 
@@ -142,7 +142,7 @@ These steps can be completed independently of the [Configure GitHub Enterprise C
     - **admin:org** - required for synchronizing your organization's audit log
     - **read:user** and **user:email** - required for synchronizing your organization's members
     - **repo:status** - required for synchronizing repository-related events in the audit log
-    - **admin:enterprise** - required for SSPM capabilities, Note that provided user must be the owner of the enterprise account.
+    - **read:enterprise** - required for SSPM capabilities. Note that provided user must be the owner of the enterprise account.
 
     For more information about OAuth scopes, see [Understanding scopes for OAuth Apps](https://docs.github.com/developers/apps/building-oauth-apps/scopes-for-oauth-apps).
 
