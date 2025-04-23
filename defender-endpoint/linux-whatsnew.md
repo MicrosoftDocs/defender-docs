@@ -593,7 +593,7 @@ sudo systemctl disable mdatp
   - Defender for Endpoint is now available for Debian 12 and Amazon Linux 2023
   
   - Support to enable Signature verification of updates downloaded
-    - You must update the manajed.json as shown below
+    - You must update the manajed.json as shown:
       ```
         "features":{
           "OfflineDefinitionUpdateVerifySig":"enabled"
@@ -713,7 +713,7 @@ There are multiple fixes and new changes in this release
    - Files
    - Executables
     
-- Network Protection: Connections that are blocked by Network Protection and have the block overridden by users are now correctly reported to Microsoft Defender XDR
+- Network Protection: Connections that is blocked by Network Protection and have the block overridden by users is now correctly reported to Microsoft Defender XDR
 
 - Improved logging in Network Protection block and audit events for debugging
 |
@@ -1118,7 +1118,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-As an alternative to the above, you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
+As an alternative, you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade.
 Caution: Some customers(<1%) are experiencing issues with this method.
@@ -1186,7 +1186,7 @@ sudo systemctl disable mdatp
 
 #### What's new
 
-- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) aren't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
+- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) isn't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
 
 #### Known issues
 
@@ -1367,7 +1367,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 #### What's new
 
-- Fixed a product crash introduced in 101.53.02 and that has impacted multiple customers
+- Fixed a product crash introduced in 101.53.02 that affected multiple customers
 
 ### Jan-2022 Build: 101.53.02 | Release version: 30.121112.15302.0
 
