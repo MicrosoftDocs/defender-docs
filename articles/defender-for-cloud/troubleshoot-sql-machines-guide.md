@@ -76,6 +76,13 @@ Use the corresponding unhealthy reason and recommended actions to resolve the mi
 | **SQL server restart is needed** | Restart the SQL Server instance so that the Defender for SQL Server installation takes effect. |
 | **Internal error** | Please contact support. |
 
+If you have multiple instances installed on the same VM, it could be for one of the following reasons:
+- SQL server restart is needed
+- Lack of permissions
+- SQL Server instance is inactive
+
+You will need to go to the extensions message and check which instance has which error message
+
 ## Step 4: Reverify protection status
 
 After completing the remediation of all errors for each SQL Server instance, [reverify the protection status of each SQL Server instance](verify-machine-protection.md).
