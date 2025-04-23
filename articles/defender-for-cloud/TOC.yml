@@ -1046,7 +1046,7 @@
           - name: Enable Defender for SQL Servers on Machines government
             displayName: hybrid, arc, Azure Defender
             href: defender-for-sql-usage-gov.md
-          - name: Verify SQL machine protection
+          - name: Verify SQL machine protection government
             displayName: SQL, SQL servers, defender, machines
             href: verify-machine-protection-gov.md
           - name: Troubleshoot SQL machine protection configuration government
