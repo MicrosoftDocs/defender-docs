@@ -11,7 +11,7 @@ ms.date: 04/23/2025
 # Verify SQL machine protection government
 
 > [!IMPORTANT]
-> This article applies to government clouds. If you are using commercial clouds, see the [Verify SQL machine protection](verify-machine-protection.md) article.
+> This article applies to government clouds. If you're using commercial clouds, see the [Verify SQL machine protection](verify-machine-protection.md) article.
 
 After enabling protection for SQL VMs with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
 

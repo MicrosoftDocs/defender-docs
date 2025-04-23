@@ -10,7 +10,7 @@ ms.custom: references_regions
 # Troubleshoot Defender for SQL on machines configuration
 
 > [!IMPORTANT]
-> This article applies to commercial clouds. If you are using Government clouds, see the [Troubleshoot Defender for SQL on machines configuration government](troubleshoot-sql-machines-guide-gov.md) article.
+> This article applies to commercial clouds. If you're using Government clouds, see the [Troubleshoot Defender for SQL on machines configuration government](troubleshoot-sql-machines-guide-gov.md) article.
 
 Before starting the troubleshooting steps, you must [enable Defender for SQL server on Machines](defender-for-sql-usage.md) at the [subscription](defender-for-sql-usage.md#enable-the-plan-on-an-azure-subscription) or [SQL resource level.](defender-for-sql-usage.md#enable-the-plan-at-the-sql-server-resource-level).
 
@@ -63,7 +63,7 @@ Follow the [verification process](verify-machine-protection.md) to identify prot
 
 The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers, but the recommendation should be remediated at the resource level. Any SQL server that is unprotected is identified in the unhealthy resource section of the recommendation with a protection status listed and a reason.
 
-The recommendation is only updated every 12 hours. If you have just enabled the Defender for SQL servers on Machines plan, you should follow the steps in the [verification process](verify-machine-protection.md) to view the protection status of each resource for immediate results.
+The recommendation is only updated every 12 hours. If you recently enabled the Defender for SQL servers on Machines plan, you should follow the steps in the [verification process](verify-machine-protection.md) to view the protection status of each resource for immediate results.
 
 Use the corresponding unhealthy reason and recommended actions to resolve the misconfiguration:
 
@@ -79,17 +79,17 @@ Use the corresponding unhealthy reason and recommended actions to resolve the mi
 | **SQL server restart is needed** | Restart the SQL Server instance so that the Defender for SQL Server installation takes effect. |
 | **Internal error** | Please contact support. |
 
-### Multiple SQL Server instances on the same VM
+### Multiple SQL Server instances on the same virtual machine
 
-If you have multiple SQL Server instances installed on the same virtual machine, the Defender for SQL extension is installed on the virtual machine and not on each SQL Server instance. If your SQL Server instance is unprotected, it could be due to the following reasons:
+If you have multiple SQL Server instances installed on the same virtual machine, the Defender for SQL extension is installed on the virtual machine and not on each SQL Server instance. If your SQL Server instance is unprotected, it might be due to the following reasons:
 
-- SQL server restart is needed
-- Lack of permissions
-- SQL Server instance is inactive
+- Restart the SQL Server
+- Check permissions
+- Ensure the SQL Server instance is active
 
-In this situation, the recommendation `The status of Microsoft SQL Servers on Machines should be protected`, isn't able to differentiate between instances. You need to investigate each extension to view the reason for the unhealthy reason status and check which instance has which error message.
+In this situation, the recommendation `The status of Microsoft SQL Servers on Machines should be protected`, can't differentiate between instances. Investigate each extension to determine the reason for the unhealthy status and check which instance has which error message.
 
-1. In the Azure portal, navigate to **SQL virtual machine**.
+1. In the Azure portal, search for and select **SQL virtual machine**.
 
 1. Select the relevant virtual machine.
 
@@ -97,11 +97,11 @@ In this situation, the recommendation `The status of Microsoft SQL Servers on Ma
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/extensions.png" alt-text="Screenshot that shows where to locate the Extensions and applications section." lightbox="media/troubleshoot-sql-machines-guide/extensions.png":::
 
-1. Select the relevant extension to view the status.
+1. To view the status, select the relevant extension.
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/extension-status.png" alt-text="Screenshot that shows the information screen for the selected extension." lightbox="media/troubleshoot-sql-machines-guide/extension-status.png":::
 
-Based on the status, you can take the appropriate action to remediate the issue. 
+Based on the status, take the appropriate action to remediate the issue.
 
 ## Step 4: Reverify protection status
 

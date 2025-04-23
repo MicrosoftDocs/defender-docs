@@ -12,7 +12,7 @@ ms.author: elkrieger
 # Troubleshoot machine protection in Defender for SQL on Machines government
 
 > [!IMPORTANT]
-> This article applies to government clouds. If you are using commercial clouds, see the [Troubleshoot Defender for SQL on Machines deployment](troubleshoot-sql-machines-guide.md) article.
+> This article applies to government clouds. If you're using commercial clouds, see the [Troubleshoot Defender for SQL on Machines deployment](troubleshoot-sql-machines-guide.md) article.
 
 If you enable Defender for SQL Server on Machines and some SQL instances aren't in a protected state, use this article to troubleshoot deployment issues.
 

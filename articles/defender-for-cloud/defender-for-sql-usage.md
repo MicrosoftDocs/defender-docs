@@ -11,7 +11,7 @@ ms.date: 04/23/2025
 # Enable Defender for SQL Servers on Machines
 
 > [!IMPORTANT]
-> This article applies to commercial clouds. If you are using Government clouds, see the [Enable Defender for SQL servers on Machines government](defender-for-sql-usage-gov.md) article.
+> This article applies to commercial clouds. If you're using Government clouds, see the [Enable Defender for SQL servers on Machines government](defender-for-sql-usage-gov.md) article.
 
 The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL Servers on Machines to protect SQL virtual machines (VM) and Azure Arc SQL Server instances.
 
