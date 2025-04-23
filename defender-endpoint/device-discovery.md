@@ -18,7 +18,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 04/23/2024
 ---
 
 # Device discovery overview
@@ -95,7 +95,7 @@ For more information, see [Network devices](network-devices.md).
 
 To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint now supports the following integration:
 
-- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal (Preview) to secure:
+- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal to secure:
 
     - OT devices, such as servers or packaging systems. For more information, see [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started).
     - Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs). For more information, see [Get started with Enterprise IoT security](/defender-for-iot/enterprise-iot-get-started).
