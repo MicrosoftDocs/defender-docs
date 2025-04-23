@@ -75,7 +75,7 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo yum install yum-utils
    ```
 
-1. Locate the correct package for your distribution and version. Use the following table to help guide you in locating the package:
+2. Locate the correct package for your distribution and version. Use the following table to help guide you in locating the package:
 
    |Distro & version|Package|
    |---|---|
@@ -91,7 +91,7 @@ In order to preview new features and provide early feedback, it's recommended th
    | Rocky 8.7 and higher|[https://packages.microsoft.com/config/rocky/8/prod.repo](https://packages.microsoft.com/config/rocky/8/prod.repo)|
    | Rocky 9.2 and higher|[https://packages.microsoft.com/config/rocky/9/prod.repo](https://packages.microsoft.com/config/rocky/9/prod.repo)|
    
-      > [!NOTE]
+   > [!NOTE]
    > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
 
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
