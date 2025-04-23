@@ -34,7 +34,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Secure score](secure-score-security-controls.md) | GA | GA | GA|
 |[DevOps security posture](concept-devops-environment-posture-management-overview.md) | Preview | NA | NA|
 | **DEFENDER CSPM FEATURES** | | | |
-| [Data security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
+| [Data and AI security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
 | [AI security posture management](ai-security-posture.md) | GA | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | ||
