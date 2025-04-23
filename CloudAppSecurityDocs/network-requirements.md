@@ -9,7 +9,7 @@ ms.topic: reference
 
 >[!IMPORTANT]
 >
-> **Take Immediate Action by April, 21 2025**, to ensure optimal service quality and prevent the interruption of some services. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively, if you currently allow outbound traffic based on Azure service tags, please add the new Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’ to your allowlist. This tag  will be adjusted to reflect the above range by April 21, 2025.
+> **Take Immediate Action by April, 29 2025**, to ensure optimal service quality and prevent the interruption of some services. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively, if you currently allow outbound traffic based on Azure service tags, please add the new Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’ to your allowlist. This tag  will be adjusted to reflect the above range by April 28, 2025.
 > This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.
 
 This article provides a list of ports and IP addresses you need to allow and allowlist to work with Microsoft Defender for Cloud Apps.
@@ -19,7 +19,7 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 | Service tag name    |    Defender for Cloud Apps services included   |
 |:---|:---|
 | MicrosoftCloudAppSecurity | Portal access, Access and session controls, SIEM agent connection, App connector, Mail server, Log collector. |
-| AzureFrontDoor.MicrosoftSecurity (available starting April 21 2025)  | Portal access, SIEM agent connection. |
+| AzureFrontDoor.MicrosoftSecurity (available starting April 28 2025)  | Portal access, SIEM agent connection. |
 
 The following tables list the current static IP ranges covered by the MicrosoftCloudAppSecurity service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
