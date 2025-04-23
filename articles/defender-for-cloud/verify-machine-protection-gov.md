@@ -40,7 +40,7 @@ Retrieve and review the Defender for SQL Servers on Machines protection status r
 
 1. If the `ProtectionStatusLastUpdate` field doesn't show a date within the last day, the machine might not be protected. [Verify the protection of the single SQL server VM](#verify-protection-on-a-single-sql-server-vm).
 
-    :::image type="content" source="media/verify-machines-protection/status-update.png" alt-text="Screenshot that shows the last status update for the SQL instance." lightbox="media/verify-machines-protection/status-update.png":::
+    :::image type="content" source="media/verify-machines-protection-gov/status-update.png" alt-text="Screenshot that shows the last status update for the SQL instance." lightbox="media/verify-machines-protection-gov/status-update.png":::
 
 The script can return the following possible protection statuses:
 - **Protected**: Defender for SQL actively protects the instance. Ensure the information isn't outdated by checking the  Last Update field.

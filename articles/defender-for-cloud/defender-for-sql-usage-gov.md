@@ -1,6 +1,6 @@
 ---
 title: Enable Microsoft Defender for SQL Servers on Machines government
-description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud.
+description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on government clouds with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
