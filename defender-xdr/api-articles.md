@@ -37,7 +37,8 @@ ms.date: 02/08/2024
 
 The following resources provide more information about APIs available for other Microsoft security solutions, beyond the Microsoft Defender XDR API.
 
-- [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/apis-intro)
+- [Microsoft Defender for Endpoint](/defender-endpoint/api/apis-intro)
 - [Microsoft Defender for Office 365](/office/office-365-management-api/)
 - [Microsoft Defender for Cloud Apps](/cloud-app-security/api-introduction)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
