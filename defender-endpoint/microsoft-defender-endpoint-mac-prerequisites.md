@@ -15,12 +15,14 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS prerequisites
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+This article lists the prerequisites for installing and configuring Microsoft Defender for Endpoint on macOS. It also includes links to additional resources for more information.
 
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)

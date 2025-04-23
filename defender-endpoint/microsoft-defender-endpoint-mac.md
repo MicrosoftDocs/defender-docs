@@ -15,12 +15,14 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/17/2025
+ms.date: 04/23/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+This article provides an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information.
 
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)
