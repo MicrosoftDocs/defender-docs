@@ -32,11 +32,13 @@ appliesto:
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
 
-Phishing remains one of the most common ways attackers gain initial access. The Phishing Triage Agent, a Microsoft Security Copilot agent designed to scale security teams' response in triaging and classifying user-submitted phishing incidents in Microsoft Defender, can help organizations address phishing efficiently. It assists security operations center (SOC) teams by autonomously triaging phishing submissions, determining whether they are genuine phishing attempts or false alarms. By alleviating the burden of reactive work, it reduces the team's manual workload and allows them to focus on critical tasks.
+Phishing remains one of the most common ways attackers gain initial access. It also represents one of the highest-volume challenges security operations center (SOC) teams face, due to the large number of user-reported suspicious emails that must be investigated daily.
 
-With the Phishing Triage Agent, SOC teams can benefit from an AI-powered virtual agent capable of classifying hundreds of phishing submissions with speed and accuracy. The agent also helps remove false alarms from the queue, enabling teams to identify and resolve true positive phishing incidents more swiftly.
+To help security teams address phishing efficiently, Microsoft Security Copilot is introducing the Phishing Triage Agent in Microsoft Defender. This AI-powered virtual agent is designed to scale security teams' response in triaging and classifying user-submitted phishing incidents, allowing organizations to improve their efficiency by reducing manual effort and streamlining their phishing response.
 
-Phishing Triage adjusts to an organization's context by actively seeking feedback and learning from its users. The agent provides a transparent rationale for its verdicts, ensuring its operations align with your organization's established triage parameters. It dynamically adjusts by learning from the feedback it gets to operate according to your organization's changing needs.
+The Phishing Triage Agent uses advanced large language model-based analysis to understand the content of reported emails and autonomously determine whether a submission is a genuine phishing attempt or a false alarm. Unlike rule-based systems, it does not rely on predefined input or code to operate. Instead, it applies dynamic reasoning to analyze and act on incoming reports at scale.
+
+By removing false positives from the queue, the agent significantly reduces the team's manual workload and allows them to focus on higher-priority tasks. With this automation, security teams can more efficiently process hundreds or thousands of phishing submissions, accelerating detection and response for incidents that require immediate attention
 
 ## Overview
 
@@ -48,7 +50,7 @@ The Phishing Triage Agent is designed to scale your security operations teams' p
 
 ### Trigger
 
-The Phishing Triage Agent is triggered when a user in your organization submits a phishing incident. The agent automatically analyzes the submitted email and its attachments to classify them as either phishing or not phishing based on its training and the context of the organization.
+The Phishing Triage Agent is triggered when a user in your organization submits a phishing incident. The agent automatically analyzes email content to classify them as either phishing or not phishing based on its training and the context of the organization.
 
 ## Prerequisites
 
@@ -82,7 +84,7 @@ The Phishing Triage Agent requires an identity to run. You can connect it to an 
 
 ### Products
 
-The tenant must have Microsoft Defender for Office 365 with *monitor reported messages in Outlook* and submissions alert policy turned on.
+The tenant must have Microsoft Defender for Office 365 with *Monitor reported messages in Outlook* and submissions alert policy turned on.
 
 ### Plugins
 
