@@ -451,7 +451,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       mdatp config real-time-protection --value enabled
       ```
       
-   1. To run a detection test, open a Terminal window. and then run the following command:
+   1. To run a detection test, open a Terminal window, and then run the following command:
    
       ``` bash
       curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
