@@ -4,15 +4,15 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to summarize recommendations with Microsoft Security Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 06/05/2024
+ms.date: 04/23/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to summarize recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Summarize recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to summarize a recommendation to get a better understanding of the risks and vulnerabilities that are present in your environment.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you summarize a recommendation to understand the risks and vulnerabilities in your environment better.
 
-By summarizing a recommendation, you can get a quick overview of the recommendation in natural language. Summarizing the recommendation helps you understand the information presented in a recommendation and allows you to prioritize your remediation efforts.
+By summarizing a recommendation, you can get a quick overview of the recommendation in natural language. This summary helps you understand the information presented in a recommendation and lets you prioritize your remediation efforts.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Once a recommendation is selected, you can summarize it with Copilot. By using p
 
     :::image type="content" source="media/summarize-with-copilot/summarize-with-copilot-results.png" alt-text="Screenshot of the Copilot window that shows the summary of the recommendation." lightbox="media/summarize-with-copilot/summarize-with-copilot-results.png":::
 
-Once you have a better understanding of the recommendation, you can decide how best to handle it. Copilot remains open and you can enter other prompts as needed.
+Once you understand the recommendation better, you can decide how best to handle it. Copilot remains open and you can enter other prompts as needed.
 
 ## Next step
 

@@ -4,15 +4,15 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to delegate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 06/10/2024
+ms.date: 04/23/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to delegate recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Delegate recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to delegate recommendations that are present on the recommendations page with natural language prompts. Recommendations can be delegated to another person or team. 
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you delegate recommendations on the recommendations page with natural language prompts. Recommendations can be delegated to another person or team.
 
-Delegating recommendations can improve your security posture by having the right people address the risks and vulnerabilities presented by the recommendations that are present in your environment.
+Delegating recommendations can improve your security posture by having the right people address the risks and vulnerabilities in your environment.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Delegating recommendations can improve your security posture by having the right
 
 ## Delegate a recommendation
 
-You can use Copilot to delegate recommendations to ensure the right person or team is handling the risks and vulnerabilities that are present in your environment.
+You can use Copilot to delegate recommendations to ensure the right person or team handles the risks and vulnerabilities in your environment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -50,7 +50,7 @@ You can use Copilot to delegate recommendations to ensure the right person or te
 
 1. Select **Send**.
 
-Once the recommendation is delegated, you can monitor the progress of the remediation on Defender for Cloud's recommendations page. Copilot remains open and you can enter other prompts as needed.
+Once the recommendation is delegated, you can monitor the progress of the remediation on Defender for Cloud's recommendations page. Copilot stays open, and you can enter other prompts as needed.
 
 ## Next step
 

@@ -4,15 +4,15 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to analyze recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 06/10/2024
+ms.date: 04/23/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to analyze recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Analyze recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to analyze all of the recommendations presented on the recommendations page. By narrowing the scope of the recommendations page, you can focus on specific recommendations and get a better understanding of your security posture.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you analyze all of the recommendations presented on the recommendations page. Narrowing the scope of the recommendations page lets you focus on specific recommendations and understand your security posture better.
 
-Once the list of recommendations is filtered, you can investigate specific recommendations and gain a better understanding of the risks and vulnerabilities that are present in your environment.
+Once the list of recommendations is filtered, you can investigate specific recommendations and understand the risks and vulnerabilities in your environment better.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Once the list of recommendations is filtered, you can investigate specific recom
 
 ## Analyze a recommendation
 
-Microsoft Security Copilot gives you the ability to analyze your recommendations. Through the use of prompts, you can filter and refine the presented recommendations to focus on specific areas of interest.
+Microsoft Security Copilot lets you analyze your recommendations. Using prompts, you can filter and refine the presented recommendations to focus on specific areas of interest.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -53,7 +53,7 @@ Microsoft Security Copilot gives you the ability to analyze your recommendations
 
     :::image type="content" source="media/analyze-with-copilot/show-results-copilot.png" alt-text="Screenshot that shows where the Apply filter button is located in the Copilot window." lightbox="media/analyze-with-copilot/show-results-copilot.png":::
 
-The recommendations page updates with the appropriate filters applied based on the prompt you provided. Copilot remains open and you can enter other prompts as needed.
+The recommendations page updates with the appropriate filters applied based on the prompt you give. Copilot remains open and you can enter other prompts as needed.
 
 ## Next step
 
