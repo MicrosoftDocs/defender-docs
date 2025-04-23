@@ -71,6 +71,19 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
+### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
+
+| Build:             | **101.25032.0006**         |
+|--------------------|-----------------------|
+| Release version:   | **20.125032.6.0** |
+| Engine version:    | **1.1.25020.3000**       |
+| Signature version: | **1.427.158.0**      |
+
+##### What's new
+
+- Hardware UUID is now displayed in the Security Portal
+- Bug and performance fixes
+
 ### Mar-2025 (Build: 101.25022.0003  | Release version: 20.125022.3.0)
 
 | Build:             | **101.25022.0003**    |
