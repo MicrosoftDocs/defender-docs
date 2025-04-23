@@ -9,6 +9,9 @@ ms.custom: references_regions
 
 # Troubleshoot Defender for SQL on machines configuration
 
+> [!IMPORTANT]
+> This article applies to commercial clouds. If you are using Government clouds, see the [Troubleshoot Defender for SQL on machines configuration government](troubleshoot-sql-machines-guide-gov.md) article.
+
 Before starting the troubleshooting steps, you must [enable Defender for SQL server on Machines](defender-for-sql-usage.md) at the [subscription](defender-for-sql-usage.md#enable-the-plan-on-an-azure-subscription) or [SQL resource level.](defender-for-sql-usage.md#enable-the-plan-at-the-sql-server-resource-level).
 
 ## Step 1: Required resources and enablement process
