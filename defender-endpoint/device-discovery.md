@@ -18,7 +18,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 04/23/2024
 ---
 
 # Device discovery overview
