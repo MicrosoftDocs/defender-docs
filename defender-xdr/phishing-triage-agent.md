@@ -48,17 +48,13 @@ The Phishing Triage Agent is designed to scale your security operations teams' p
 - It provides a transparent rationale for its classification verdicts in natural language, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions. It also shows a visual representation of its reasoning process for every decision.
 - It continuously learns and improves its accuracy based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
-### Trigger
-
-The Phishing Triage Agent is triggered when a user in your organization submits a phishing incident. The agent automatically analyzes email content to classify them as either phishing or not phishing based on its training and the context of the organization.
-
 ## Prerequisites
 
 The following are organizational requirements to run Phishing Triage Agent in your environment:
 
 |Components|Details|
 |:---|:---|
-|Licenses|- A tenant must have a license for Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - A tenant must have any of the following licenses deployed: - Microsoft Defender for Office Plan 2 </br> - Microsoft 365 E5|
+|Licenses|- A tenant must have provisioned access to Security Copilot. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - A tenant must have any of the following licenses deployed: - Microsoft Defender for Office Plan 2 </br> - Microsoft 365 E5|
 |Accessing the agent|- A tenant must have access to the Microsoft Defender portal </br> - Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information|
 |Roles required|- **Security Administrator** role is required to set up and manage the Phishing Triage Agent </br> - Users with the same permissions as the agent can view the agent's output|
 |Alert policy|The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
@@ -148,6 +144,8 @@ To manage the Phishing Triage Agent, follow these steps:
     [SCREENSHOT]
 
 ## Assess and provide feedback on the agent's output
+
+Once the Phishing Triage Agent is fully setup and running, it's triggered when a user in your organization submits a phishing incident. The agent automatically analyzes email content, classifying the incident as either phishing or not phishing based on its training and the context of the organization.
 
 Users can review the Phishing Triage Agent's triaged incidents, provide feedback on the actions taken by the agent, and assess the agent's overall performance in terms of total incidents resolved and mean time to resolve.
 
