@@ -47,8 +47,7 @@ For more information, see:
 
 ## Protect GitHub in real time
 
-Review our best practices for [securing and collaborating with external users]
-(best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls).
+Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls).
 
 ## Connect GitHub Enterprise Cloud to Microsoft Defender for Cloud Apps
 
@@ -143,7 +142,7 @@ These steps can be completed independently of the [Configure GitHub Enterprise C
     - **admin:org** - required for synchronizing your organization's audit log
     - **read:user** and **user:email** - required for synchronizing your organization's members
     - **repo:status** - required for synchronizing repository-related events in the audit log
-    - **read:enterprise** - required for SSPM capabilities, Note that provided user must be the owner of the enterprise account.
+    - **read:enterprise** - required for SSPM capabilities. Note that provided user must be the owner of the enterprise account.
 
     For more information about OAuth scopes, see [Understanding scopes for OAuth Apps](https://docs.github.com/developers/apps/building-oauth-apps/scopes-for-oauth-apps).
 
