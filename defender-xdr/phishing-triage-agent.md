@@ -177,7 +177,7 @@ You can view all the actions taken by the agent and follow how the agent validat
 
 [SCREENSHOT]
 
-You can also provide feedback to Copilot in the Copilot pane by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png) located at the bottom of the Phishing Triage Agent card. Based on your assessment of Copilot's response, you can select **Looks right**, **Needs improvement**, or **Inappropriate**. Add comments to provide more context for your feedback.
+You can also provide feedback to Copilot in the Copilot side panel by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png) located at the bottom of the Phishing Triage Agent card. Based on your assessment of Copilot's response, you can select **Looks right**, **Needs improvement**, or **Inappropriate**. Add comments to provide more context for your feedback.
 
 ## Frequently asked questions (FAQs)
 
@@ -187,7 +187,7 @@ Following are responses to commonly asked questions about the Phishing Triage Ag
 
 Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports.
 
-Consequently, managing these incidents becomes a tedious and repetitive task for SOC analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, which have a limited amount of time to dedicate to competing and critical demands. 
+Consequently, managing these incidents becomes a tedious and repetitive task for SOC analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, which have a limited amount of time to dedicate to competing and critical demands.
 
 By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
 
