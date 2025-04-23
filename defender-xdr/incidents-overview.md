@@ -1,6 +1,6 @@
 ---
 title: Incidents and alerts in the Microsoft Defender portal
-description: An introduction to incidents and alerts, and the differences between them, in the unified security operations platform in the Microsoft Defender portal.
+description: An introduction to incidents and alerts, and the differences between them, in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -27,7 +27,7 @@ appliesto:
 
 # Incidents and alerts in the Microsoft Defender portal
 
-The Microsoft Defender portal brings together a unified set of security services to reduce your exposure to security threats, improve your organizational security posture, detect security threats, and investigate and respond to breaches. These services collect and produce signals that are displayed in the portal. The two main kinds of signals are:
+Microsoft's unified SecOps platform in the Microsoft Defender portal brings together a unified set of security services to reduce your exposure to security threats, improve your organizational security posture, detect security threats, and investigate and respond to breaches. These services collect and produce signals that are displayed in the portal. The two main kinds of signals are:
 
 **Alerts**: Signals that result from various threat detection activities. These signals indicate the occurrence of malicious or suspicious events in your environment.
 
@@ -53,7 +53,7 @@ Incidents also provide you with a framework for managing and documenting your in
 
 Alerts in the Microsoft Defender portal come from many sources. These sources include the many services that are part of Microsoft Defender XDR, as well as other services with varying degrees of integration with the Microsoft Defender portal. 
 
-For example, when Microsoft Sentinel is [onboarded](/defender-xdr/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
+For example, when Microsoft Sentinel is [onboarded](/unified-secops-platform/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
 
 Microsoft Defender XDR itself also creates alerts. Defender XDR's unique correlation capabilities provide another layer of data analysis and threat detection for all the non-Microsoft solutions in your digital estate. These detections produce Defender XDR alerts, in addition to the alerts already provided by Microsoft Sentinel's analytics rules.
 

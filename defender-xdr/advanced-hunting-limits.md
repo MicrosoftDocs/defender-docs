@@ -41,8 +41,10 @@ Refer to the following table to understand existing quotas and usage parameters.
 | Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it doesn't complete within 10 minutes, the service displays an error.
 | CPU resources | Based on tenant size | Every 15 minutes | The portal displays a warning whenever a query runs and the tenant consumes over 10% of allocated resources. [Queries are blocked](advanced-hunting-errors.md) if the tenant reaches 100% until after the next 15-minute cycle. |
 
+In the unified Microsoft Defender portal, you are able to run queries over Microsoft Sentinel tables by onboarding a workspace. [Log analytics workspace limits](/azure/azure-monitor/service-limits#log-analytics-workspaces) therefore also apply. 
+
 > [!NOTE]
-> A separate set of quotas and parameters apply to advanced hunting queries performed through the API. [Read about advanced hunting APIs](./api-advanced-hunting.md)
+> A separate set of quotas and parameters apply to advanced hunting queries performed through the API. [Read about advanced hunting APIs](./api-advanced-hunting.md) 
 
 ## View query resources report to find inefficient queries
 

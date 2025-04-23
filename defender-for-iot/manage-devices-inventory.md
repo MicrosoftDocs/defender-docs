@@ -10,7 +10,7 @@ ms.topic: how-to
 ---
 
 # Discover and manage devices
-<!-- possibly add to h1 in the device inventory-->
+
 Microsoft Defender for IoT in the Microsoft Defender portal includes the device inventory, which helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to discover and manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more.
 
 Learn more about the benefits of OT [device discovery](device-discovery.md).
@@ -41,6 +41,10 @@ To customize the device inventory views:
 - [Use columns](/defender-endpoint/machines-view-overview#use-columns-to-customize-the-device-inventory-views)
 
 [!INCLUDE [defender-iot-site-association](includes/site-association.md)]
+
+### OT network tag
+
+When a Defender for Endpoint agent is associated with a site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that these devices are part of the site. This tag helps users focus on devices that belong to their OT network.
 
 ## Manage OT devices
 

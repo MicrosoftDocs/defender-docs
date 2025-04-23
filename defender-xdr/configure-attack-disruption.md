@@ -1,6 +1,6 @@
 ---
-title: Configure automatic attack disruption capabilities in Microsoft Defender XDR
-description: Configure automatic attack disruption options in Microsoft Defender XDR
+title: Configure automatic attack disruption in Microsoft Defender XDR
+description: Learn how to set up automatic attack disruption in Microsoft Defender XDR and ensure prerequisites are met.
 search.appverid: MET150
 ms.author: diannegali
 author: diannegali
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 12/24/2024
+ms.date: 02/16/2025
 ms.collection:
 - m365-security
 - tier2
@@ -20,22 +20,17 @@ ms.reviewer: evaldm, isco
 f1.keywords: CSH
 ---
 
-# Configure automatic attack disruption capabilities in Microsoft Defender XDR
+# Configure automatic attack disruption in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 Microsoft Defender XDR includes powerful [automated attack disruption](automatic-attack-disruption.md) capabilities that can protect your environment from sophisticated, high-impact attacks.
 
-This article describes how to configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> with these steps:
+This article describes how to configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to settings.
 
-1. [Review the prerequisites](#prerequisites-for-automatic-attack-disruption-in-microsoft-365-defender).
-2. [Review or change the automated response exclusions for users](#review-or-change-automated-response-exclusions-for-users).
+## Prerequisites
 
-Then, after you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to settings.
-
-<a name='prerequisites-for-automatic-attack-disruption-in-microsoft-365-defender'></a>
-
-## Prerequisites for automatic attack disruption in Microsoft Defender XDR
+The following are prerequisites for configuring automatic attack disruption in Microsoft Defender XDR:
 
 |Requirement|Details|
 |---|---|
@@ -43,7 +38,7 @@ Then, after you're all set up, you can view and manage containment actions in In
 |Deployment requirements|<ul><li>Deployment across Defender products (e.g., Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, the relevant product should be deployed to execute an automated response action. For example, Microsoft Defender for Endpoint is required to automatically contain a device. </li></ul><li>Microsoft Defender for Endpoint's device discovery is set to 'standard discovery' (prerequisite for the automatic initiation of the "Contain Device" action)</li></ul>|
 |Permissions|To configure automatic attack disruption capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
-### Microsoft Defender for Endpoint Prerequisites
+### Microsoft Defender for Endpoint prerequisites
 
 #### Minimum Sense Client version (MDE client)
 
@@ -57,18 +52,17 @@ Review the configured automation level for your device group policies, whether a
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
+2. Go to **System** \> **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
-3. Review your device group policies. Look at the **Automation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To exclude a device group from automated containment, set its automation level to **no automated response**. Note that this is not highly recommended and should only be done for a limited number of devices.
+3. Review your device group policies and look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.
 
-#### Device discovery configuration
+You can also create or edit your device groups to set the appropriate remediation level for each group. Selecting the **Semi automation** level allows triggering of automatic attack disruption without the need for manual approval. To exclude a device group from automated containment, you can set its automation level to **no automated response**. Note that this setting is not highly recommended and should only be done for a limited number of devices.
 
-Device discovery settings must be activated to "Standard Discovery" at a minimum. Learn how to configure device discovery in [Set up device discovery](/defender-endpoint/configure-device-discovery).
 
->[!NOTE]
->Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.
+> [!NOTE]
+> Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.
 
-### Microsoft Defender for Identity Prerequisites
+### Microsoft Defender for Identity prerequisites
 
 #### Set up auditing in domain controllers
 
@@ -82,12 +76,12 @@ You can find more information on the action accounts in [Configure Microsoft Def
 
 The Defender for Identity sensor needs to be deployed on the domain controller where the Active Directory account is to be turned off.
 
->[!NOTE]
->If you have automations in place to activate or block a user, check if the automations can interfere with Disruption. For example, if there is an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
+> [!NOTE]
+> If you have automation in place to activate or block a user, check if the automation can interfere with disruption. For example, if there is an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
 
 ### Microsoft Defender for Cloud Apps prerequisites
 
-#### Microsoft Office 365 Connector 
+#### Microsoft Office 365 connector 
 
 Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 through the connector. To connect Defender for Cloud Apps, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps). 
 
@@ -113,27 +107,15 @@ The following mailbox events need to be audited by minimum:
 
 Review [manage mailbox auditing](/purview/audit-mailboxes) to learn about managing mailbox auditing.
 
-#### Safelinks policy needs to be present.
-
-## Review or change automated response exclusions for users
-
-Automatic attack disruption enables the exclusion of specific user accounts from automated containment actions. Excluded users won't be affected by automated actions triggered by attack disruption. You must be a global administrator or security administrator to perform the following procedure:
-
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
-
-2. Go to **Settings** \> **Microsoft Defender XDR** \> **Identity automated response**. Check the user list to exclude accounts.
-:::image type="content" source="/defender/media/automatic-attack-disruption/Fig3-exclude-specific-users.png" alt-text="Selecting user accounts for automated response exclusion" lightbox="/defender/media/automatic-attack-disruption/Fig3-exclude-specific-users.png":::
-
-3. To exclude a new user account, select **Add user exclusion**.
-
-Excluding user accounts is not recommended, and accounts added to this list won't be suspended in all supported attack types like business email compromise (BEC) and human-operated ransomware.
+#### Safelinks policy needs to be present
 
 ## Next steps
 
 - [View details and results](autoad-results.md)
+- [Set and manage attack disruption exclusions](automatic-attack-disruption-exclusions.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
 
-## See also
+## Related content
 
 - [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
 - [Automatic attack disruption for SAP](/azure/sentinel/sap/deployment-attack-disrupt)

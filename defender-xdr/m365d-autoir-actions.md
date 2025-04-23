@@ -9,7 +9,7 @@ ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 ms.date: 11/25/2024
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -19,12 +19,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand how to view and manage remediation actions in the Action center
 ---
 
 # View and manage actions in the Action center
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat protection features in Microsoft Defender XDR can result in certain remediation actions. Here are some examples:
 

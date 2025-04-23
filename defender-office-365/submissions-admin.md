@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 11/08/2024
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -51,7 +51,7 @@ When admins or users submit messages to Microsoft for analysis, we do the follow
 
 Watch this short video to learn how to use admin submissions in Microsoft Defender for Office 365 to submit messages to Microsoft for evaluation.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9357652e-0c17-49ab-8299-36838c3532aa]
 
 For more information about how **users** can submit messages and files to Microsoft, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
@@ -309,6 +309,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 > - By default, allow entries for domains and email addresses are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. By default, allow entries for spoofed senders never expire.
 > - For messages that were incorrectly blocked by [domain or user impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), the allow entry for the domain or sender is not created in the Tenant Allow/Block List. Instead, the domain or sender is added to the **Trusted senders and domains** section in the [anti-phishing policy](anti-phishing-policies-mdo-configure.md#use-the-microsoft-defender-portal-to-modify-anti-phishing-policies) that detected the message.
 > - When you override the verdict in the spoof intelligence insight, the spoofed sender becomes a manual allow or block entry that only appears on the **Spoofed senders** on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>.
+> - If you allow at least 7 email addresses in the same domain in the Tenant Allow/Block List, submissions automatically roll up the email addresses into a domain allow entry. This action happens when submission is trying to add an email address allow for that domain.
 
 ### Report good email attachments to Microsoft
 
@@ -823,6 +824,8 @@ The analysis results of the reported item are shown in the details flyout that o
 - Current detonation results to see if the URLs or files in the message were malicious or not.
 - Feedback from graders.
 
+[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
+
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
 ### Actions for admin submissions in Defender for Office 365
@@ -847,7 +850,6 @@ For email messages, admins can see what users are reporting on the **User report
 - The [user reported settings](submissions-user-reported-messages-custom-mailbox.md) are turned on.
 - **Email messages**: You're using supported methods for users to report messages:
   - The [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
-  - The [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md).
   - [Supported third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-third-party-reporting-tools)
 - **Teams messages**: [User reporting settings for Teams messages](submissions-teams.md#user-reporting-settings-for-teams-messages) is turned on.
 
@@ -1157,7 +1159,7 @@ After you submit a user reported message to Microsoft from the **User reported**
 
 :::image type="content" source="media/admin-submission-user-reported-submit-button-options.png" alt-text="The Trigger investigation action in the Submit to Microsoft for analysis dropdown list." lightbox="media/admin-submission-user-reported-submit-button-options.png":::
 
-For more information, see [Trigger an investigation](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
+For more information, see [A security administrator triggers an investigation from Threat Explorer](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
 #### Notify users about admin submitted messages to Microsoft
 

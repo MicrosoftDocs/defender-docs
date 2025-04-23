@@ -26,7 +26,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!IMPORTANT]
-> Some information in this article relates to a prereleased product, which may be substantially modified before it’s commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here
+> Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here
 
 Security operations can now investigate and respond to container-related alerts in near real-time and hunt for related activities with the integration of cloud-native response actions and investigation logs in the Microsoft Defender portal. The availability of attack paths can also help analysts immediately investigate and address critical security issues to prevent a potential breach.
 
@@ -100,7 +100,7 @@ Access threat analytics reports from **Threat intelligence > Threat analytics**.
 
 :::image type="content" source="/defender/media/defender-containers/view-threat-analytics-small.png" alt-text="Highlighting how to view threat analytics reports from the incident page." lightbox="/defender/media/defender-containers/view-threat-analytics.png":::
 
-Threat analytics reports also contain relevant mitigation, recovery, and prevention methods that analysts can assess and apply to their environment. Using the information in threat analytics reports helps SOC teams defend and protect their environment from container attacks. Here’s an example of an analyst report about a container attack.
+Threat analytics reports also contain relevant mitigation, recovery, and prevention methods that analysts can assess and apply to their environment. Using the information in threat analytics reports helps SOC teams defend and protect their environment from container attacks. Here's an example of an analyst report about a container attack.
 
 :::image type="content" source="/defender/media/defender-containers/threat-analytics-sample-small.png" alt-text="Sample page of a container attack threat analytics report." lightbox="/defender/media/defender-containers/threat-analytics-sample.png":::
 

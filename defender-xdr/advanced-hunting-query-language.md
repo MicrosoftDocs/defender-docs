@@ -33,7 +33,7 @@ Advanced hunting is based on the [Kusto query language](/azure/kusto/query/). Yo
 
 Watch this short video to learn some handy Kusto query language basics.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfJ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=5cb7c7bc-a3ad-4509-ae80-285b4711f16f]
 
 To understand these concepts better, run your first query.
 

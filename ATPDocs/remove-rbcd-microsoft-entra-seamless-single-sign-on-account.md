@@ -2,7 +2,7 @@
 title: 'Security assessment: Remove Resource Based Constrained Delegation for Microsoft Entra seamless SSO account'
 description: This article describes Microsoft Defender for Identity's Microsoft Entra Seamless Single sign-on (SSO) account with Resource Based Constrained Delegation (RBCD) applied security posture assessment report.
 author: RonitLitinsky
-ms.author: t-rlitinsky
+ms.author: rlitinsky
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/22/2024

@@ -2,8 +2,9 @@
 title: Manage system extensions using Jamf
 description: Manage system extensions using Jamf for Microsoft Defender for Endpoint to work properly on macOS.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: joshbregman
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/21/2024
+ms.date: 03/26/2025
 ---
 
 # Manage system extensions using Jamf

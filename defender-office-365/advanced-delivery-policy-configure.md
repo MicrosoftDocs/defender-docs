@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use the advanced delivery policy in Exchange Online Protection (EOP) to identify messages that shouldn't be filtered in specific supported scenarios (third-party phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
-ms.date: 07/16/2024
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -42,7 +42,7 @@ Use the _advanced delivery policy_ in EOP to prevent inbound messages _in these 
 - [AIR and clustering in Defender for Office 365](air-about.md) ignores these messages.
 - Specifically for third-party phishing simulations:
   - [Admin submission](submissions-admin.md) generates an automatic response saying that the message is part of a phishing simulation campaign and isn't a real threat. Alerts and AIR aren't triggered. The admin submissions experience shows these messages as a simulated threat.
-  - When a user reports a phishing simulation message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook), the system doesn't generate an alert, investigation, or incident. The links or files aren't detonated, but the message appears on the **User reported** tab of the **Submissions** page.
+  - When a user reports a phishing simulation message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), the system doesn't generate an alert, investigation, or incident. The links or files aren't detonated, but the message appears on the **User reported** tab of the **Submissions** page.
 
 Messages that are identified by the advanced delivery policy aren't security threats, so the messages are marked with system overrides. Admin experiences show these messages as **Phishing simulation** or **SecOps mailbox** system overrides. Admins can use these values to filter and analyze messages in the following experiences:
 
@@ -132,7 +132,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 >
 > Currently, the advanced delivery policy for third-party phishing simulations doesn't support simulations within the same organization (`DIR:INT`), especially when email is routed through an Exchange Server gateway before Microsoft 365 in Hybrid mail flow. To work around this issue, you have the following options:
 >
-> - Create a dedicated [send connector](/exchange/mail-flow/mail-routing/connector-selection) that doesn't authenticate the phishing simulation messages as internal.
+> - Create a dedicated [Receive connector](/exchange/mail-flow/connectors/receive-connectors#receive-connector-authentication-mechanisms) that doesn't authenticate the phishing simulation messages as internal.
 > - Configure the phishing simulation to bypass the Exchange Server infrastructure and route mail directly to your Microsoft 365 MX record (for example, contoso-com.mail.protection.outlook.com).
 > - Although you can set intra-organization message scanning to None in [anti-spam policies](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-create-anti-spam-policies) we don't recommend this option because it affects other email messages.
 >
@@ -524,7 +524,7 @@ This example modifies the (presumably only) phishing simulation override rule wi
 These changes don't affect existing entries in the rule.
 
 ```powershell
-Get-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule -AddSenderDomainIs blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
+Get-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule -AddSenderDomainIs blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
 For detailed syntax and parameter information, see [Set-ExoPhishSimOverrideRule](/powershell/module/exchange/set-exophishsimoverriderule).

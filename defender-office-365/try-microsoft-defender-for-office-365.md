@@ -18,7 +18,7 @@ ms.collection:
 ms.custom: 
 ms.service: defender-office-365
 ROBOTS:
-ms.date: 12/10/2024
+ms.date: 04/18/2025
 ---
 
 # Try Microsoft Defender for Office 365
@@ -27,7 +27,7 @@ As an existing Microsoft 365 customer, the **Trials** and **Evaluation** pages i
 
 Before you try Defender for Office 365 Plan 2, there are some key questions that you need to ask yourself:
 
-- Do I want to passively observe what Defender for Office 365 Plan 2 can do for me (*audit*), or do I want Defender for Office 365 Plan 2 to take direct action on issues that it finds (*block*)?
+- Do I want to passively observe what Defender for Office 365 Plan 2 can do for me (_audit_), or do I want Defender for Office 365 Plan 2 to take direct action on issues that it finds (_block_)?
 - Either way, how can I tell what Defender for Office 365 Plan 2 is doing for me?
 - How long do I have before I need to make the decision to keep Defender for Office 365 Plan 2?
 
@@ -48,7 +48,7 @@ You can also learn more about Defender for Office 365 at this [interactive guide
 
 Watch this short video to learn more about how you can get more done in less time with Microsoft Defender for Office 365.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMmIe]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=29ff5c90-7b71-468c-92b9-d1d8ca9ee8fa]
 
 For pricing information, see [Microsoft Defender for Office 365](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-office-365).
 
@@ -78,7 +78,13 @@ The default policies for these EOP features are always on, apply to all recipien
 
 Do you want your Defender for Office 365 experience to be active or passive? The following modes are available:
 
-- **Audit mode**: Special _evaluation policies_ are created for anti-phishing (which includes impersonation protection), Safe Attachments, and Safe Links. These evaluation policies are configured to _detect_ threats only. Defender for Office 365 detects harmful messages for reporting, but the messages aren't acted upon (for example, detected messages aren't quarantined). The settings of these evaluation policies are described in the [Policies in audit mode](#policies-in-audit-mode) section later in this article. We also automatically turn on SafeLinks time of click protection in audit mode for non-email workloads (for example, Microsoft Teams, SharePoint, and OneDrive for Business)
+- **Audit mode**: Special _evaluation policies_ are created for anti-phishing (which includes impersonation protection), Safe Attachments, and Safe Links. These evaluation policies are configured to _detect_ threats only. Defender for Office 365 detects harmful messages for reporting, but the messages aren't acted upon (for example, detected messages aren't quarantined). The settings of these evaluation policies are described in the [Policies in audit mode](#policies-in-audit-mode) section later in this article.
+
+  > [!NOTE]
+  > The following protection features are **on by default** and can **take action** on items, even in audit mode:
+  >
+  > - Safe Links time of click protection in non-email workloads (for example, Microsoft Teams, SharePoint, and OneDrive).
+  > - [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 
   You can also selectively turn on or turn off anti-phishing protection (spoofing and impersonation), Safe Links protection, and Safe Attachments protection. For instructions, see [Manage evaluation settings](#manage-evaluation-settings).
 
@@ -99,7 +105,7 @@ The key factors that determine which modes are available to you are:
 
     :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with protection from EOP and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
-    In these environments, **audit mode** or **blocking mode** are available, depending on your licensing as explained in the next section
+    In these environments, **audit mode** or **blocking mode** are available, depending on your licensing as explained in the next section.
 
   - You're currently using a third-party service or device for email protection of your Microsoft 365 mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
 
@@ -177,6 +183,9 @@ Remember, when you evaluate or try Defender for Office 365 in audit mode, specia
        - The specified Microsoft 365 Groups.
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
+     > [!TIP]
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
+
      Click in the box, start typing a value, and select the value from the results below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value in the box.
 
      For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users, enter an asterisk (\*) by itself to see all available values.
@@ -246,6 +255,9 @@ Remember, when you try Defender for Office 365 in **blocking mode**, the Standar
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
        - The specified Microsoft 365 Groups.
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
+
+     > [!TIP]
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
      Click in the box, start typing a value, and select the value from the results below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value in the box.
 
@@ -470,7 +482,7 @@ A: See [Order of precedence for preset security policies and other policies](pre
 To see these policies and their settings, run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
 ```powershell
-Write-Output -InputObject ("`r`n"*3),"Evaluation anti-phishing policy",("-"*79);Get-AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Evaluation"; Write-Output -InputObject ("`r`n"*3),"Evaluation Safe Attachments policy",("-"*79);Get-SafeAttachmentPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Evaluation"; Write-Output -InputObject ("`r`n"*3),"Evaluation Safe Links policy",("-"*79);Get-SafeLinksPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Evaluation"
+Write-Output -InputObject ("`r`n"*3),"Evaluation anti-phishing policy",("-"*79); Get-AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Evaluation"; Write-Output -InputObject ("`r`n"*3),"Evaluation Safe Attachments policy",("-"*79); Get-SafeAttachmentPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Evaluation"; Write-Output -InputObject ("`r`n"*3),"Evaluation Safe Links policy",("-"*79);Get-SafeLinksPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Evaluation"
 ```
 
 The settings are also described in the following tables.
@@ -500,14 +512,15 @@ The settings are also described in the following tables.
 |EnableViaTag|True|
 |ExcludedDomains|{}|
 |ExcludedSenders|{}|
+|ExcludedSubDomains|{}|
 |HonorDmarcPolicy|True|
 |ImpersonationProtectionState|Manual|
 |IsDefault|False|
 |MailboxIntelligenceProtectionAction|NoAction|
 |MailboxIntelligenceProtectionActionRecipients|{}|
 |MailboxIntelligenceQuarantineTag|DefaultFullAccessPolicy|
-|PhishThresholdLevel|1|
-|PolicyTag|blank|
+|PhishThresholdLevel|3|
+|PolicyTag||
 |RecommendedPolicyType|Evaluation|
 |SpoofQuarantineTag|DefaultFullAccessPolicy|
 |TargetedDomainActionRecipients|{}|
@@ -525,21 +538,15 @@ The settings are also described in the following tables.
 |---|---|
 |Name|Evaluation Policy|
 |Action|Allow|
-|ActionOnError|True<sup>\*</sup>|
 |AdminDisplayName|Evaluation Policy|
-|ConfidenceLevelThreshold|80|
 |Enable|True|
 |EnableOrganizationBranding|False|
 |IsBuiltInProtection|False|
 |IsDefault|False|
-|OperationMode|Delay|
 |QuarantineTag|AdminOnlyAccessPolicy|
 |RecommendedPolicyType|Evaluation|
 |Redirect|False|
-|RedirectAddress|blank|
-|ScanTimeout|30|
-
-<sup>\*</sup> This parameter has been deprecated and is no longer used.
+|RedirectAddress||
 
 #### Safe Links evaluation policy settings
 
@@ -548,15 +555,15 @@ The settings are also described in the following tables.
 |Name|Evaluation Policy|
 |AdminDisplayName|Evaluation Policy|
 |AllowClickThrough|True|
-|CustomNotificationText|blank|
+|CustomNotificationText||
 |DeliverMessageAfterScan|True|
 |DisableUrlRewrite|True|
 |DoNotRewriteUrls|{}|
 |EnableForInternalSenders|False|
 |EnableOrganizationBranding|False|
 |EnableSafeLinksForEmail|True|
-|EnableSafeLinksForOffice|True|
-|EnableSafeLinksForTeams|True|
+|EnableSafeLinksForOffice|False|
+|EnableSafeLinksForTeams|False|
 |IsBuiltInProtection|False|
 |LocalizedNotificationTextList|{}|
 |RecommendedPolicyType|Evaluation|

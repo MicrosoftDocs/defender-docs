@@ -1,35 +1,32 @@
 ---
-title: Frequently asked questions when turning on Microsoft Defender XDR
-description: Get answers to the most commonly asked questions about licensing, permissions, initial settings, and other products and services related to enabling Microsoft Defender XDR
+title: Microsoft Defender XDR frequently asked questions
+description: Get answers to the most commonly asked questions about topics and issues related to Microsoft Defender XDR.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/17/2021
+ms.date: 01/17/2025
+appliesto:
+- Microsoft Defender XDR
 ---
 
-# Frequently asked questions when turning on Microsoft Defender XDR
+# Microsoft Defender XDR frequently asked questions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-
-- Microsoft Defender XDR
-
-Read responses to the most commonly asked questions about turning on [Microsoft Defender XDR](microsoft-365-defender.md), including required licenses and permissions, deploying support services, and initial settings.
+Read responses to the most commonly asked questions about [Microsoft Defender XDR](microsoft-365-defender.md), including required licenses and permissions, deploying support services, initial settings, and feedback.
 
 For instructions on how to turn on the service, [read Turn on Microsoft Defender XDR](m365d-enable.md).
 
@@ -75,15 +72,15 @@ Microsoft Defender XDR is available at: <a href="https://go.microsoft.com/fwlink
 
 Accounts assigned the following Microsoft Entra roles can access Microsoft Defender XDR functionality and data:
 
-- Global administrator
-- Security administrator
-- Security Operator
-- Global Reader
-- Security Reader
-- Compliance Administrator
-- Compliance Data Administrator
-- Application Administrator
-- Cloud Application Administrator
+- [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
+- [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+- [Security Operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)
+- [Global Reader](/entra/identity/role-based-access-control/permissions-reference#global-reader)
+- [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+- [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)
+- [Compliance Data Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-data-administrator)
+- [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
+- [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
 
 > [!NOTE]
 > Role-based access control settings in Microsoft Defender for Endpoint influence access to data. For more information, read about [managing access to Microsoft Defender XDR](m365d-permissions.md).
@@ -94,7 +91,11 @@ Accounts assigned the following Microsoft Entra roles can access Microsoft Defen
 
 ## What time zone does Microsoft Defender XDR default to?
 
-By default, Microsoft Defender XDR displays time information in the UTC time zone. You can change this setting to use your local time zone. [Learn about setting the time zone](m365d-time-zone.md)
+By default, Microsoft Defender XDR displays time information in the UTC time zone. You can also change this setting to use your local time zone.
+
+To change time zone, sign in to the Microsoft Defender portal then go to **System > Settings > Microsoft Defender portal** and select your preferred time zone. Refresh your browser to ensure that changes are applied immediately.
+
+The time zone settings is applied to the dates and times displayed in incidents, automated investigation and remediation, and advanced hunting.
 
 <a name='how-can-i-learn-about-new-microsoft-365-defender-feature-and-ui-updates'></a>
 
@@ -102,12 +103,23 @@ By default, Microsoft Defender XDR displays time information in the UTC time zon
 
 Microsoft regularly provides information through the various channels, including:
 
-- Blogposts in the [Microsoft 365 security & compliance tech community](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/bg-p/MicrosoftThreatProtectionBlog)
+- Blog posts in the [Microsoft Defender XDR Blog](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/blog/microsoftthreatprotectionblog)
 - Go to [Defender monthly news](https://aka.ms/defendernews)
 - The [message center](/Microsoft-365/admin/manage/message-center) in Microsoft 365 admin center
 
-
 Get the latest publicly available experiences by turning on [preview features](preview.md).
+
+<a name='how-can-i-provide-feedback-or-suggestions-for-microsoft-365-defender'></a>
+
+## How can I provide feedback or suggestions for Microsoft Defender XDR?
+
+Your feedback helps us get better at protecting your environment from advanced attacks. Share your experience, impressions, and requests by providing feedback.
+
+In the Microsoft Defender portal, select the feedback icon on the top right and provide your feedback.
+
+![Screenshot of the portal menu, highlighting the feedback icon](/defender/media/portal-feedback.png)
+
+Rate your experience and provide details on what you liked or where improvements can be made. You can also choose to be contacted about the feedback.
 
 ## Related topics
 

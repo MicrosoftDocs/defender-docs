@@ -7,13 +7,12 @@ ms.topic: how-to
 
 # Activate Microsoft Defender for Identity capabilities directly on a domain controller
 
-Microsoft Defender for Endpoint customers, who've already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using a [Microsoft Defender for Identity sensor](deploy-defender-identity.md).
+Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using [Microsoft Defender for Identity classic sensor](deploy-defender-identity.md).
 
 This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!IMPORTANT]
-> Information in this article relates to a feature that is currently in limited availablility for a select set of use cases. If you weren't directed to use the Defender for Identity **Activation** page, use our [main deployment guide](deploy-defender-identity.md) instead.
->
+> The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
 
 ## Prerequisites
 
@@ -21,7 +20,7 @@ Before activating the Defender for Identity capabilities on your domain controll
 
 ### Defender for Identity sensor conflicts
 
-The configuration described in this article doesn't support side-by-side installation with an existing Defender for Identity sensor, and isn't recommended as a replacement for the Defender for Identity sensor.
+The configuration described in this article doesn't support side-by-side installation with an existing Defender for Identity sensor, and isn't recommended as a replacement for the Defender for Identity classic sensor.
 
 Make sure that the domain controller where you're planning to activate Defender for Identity capabilities doesn't have a [Defender for Identity sensor](deploy-defender-identity.md) deployed.
 
@@ -30,10 +29,8 @@ Make sure that the domain controller where you're planning to activate Defender 
 
 Direct Defender for Identity capabilities are supported on domain controllers only, using the one of the following operating systems:
 
-- Windows Server 2019
-- Windows Server 2022
-
-You must also have the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) installed.
+- Windows Server 2019 or above
+- [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later
 
 > [!IMPORTANT]
 >After installing the March 2024 Cumulative Update, LSASS might experience a memory leak on domain controllers when on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests.
@@ -46,7 +43,7 @@ Your domain controller must be onboarded to Microsoft Defender for Endpoint.
 
 For more information, see [Onboard a Windows server](/microsoft-365/security/defender-endpoint/onboard-windows-server).
 
-### Required permissions
+### Permissions requirements 
 
 To access the Defender for Identity **Activation** page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following Unified RBAC permissions:
 
@@ -83,15 +80,35 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Activate Defender for Identity capabilities
 
-After ensuring that your environment is completely configured, activate the  Microsoft Defender for Identity capabilities on your domain controller.
+After ensuring that your environment is completely configured, activate the Microsoft Defender for Identity capabilities on your domain controller.
 
-1. In the [Defender portal](https://security.microsoft.com), select **Settings > Identities > [Activation](https://security.microsoft.com/settings/identities?tabid=onboarding)**.
+Activate the Defender for Identity from the [Microsoft Defender portal](https://security.microsoft.com).
 
-    The **Activation** page lists any detected and eligible domain controllers.
+1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
-1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted.
+   The Activation page lists servers discovered in Device Inventory and identified as eligible domain controllers. 
 
-When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.
+1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+
+    :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
+
+    > [!NOTE]
+    > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
+
+1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
+
+    :::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to seethe onboarded servers.":::
+
+## Onboarding Confirmation 
+
+To confirm the sensor has been onboarded: 
+
+1. Navigate to **System** > **Settings** > **Identities** > **Sensors**. 
+
+2. Check that the onboarded domain controller is listed. 
+
+> [!NOTE]
+> The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 ## Test activated capabilities
 
@@ -100,8 +117,8 @@ The first time you activate Defender for Identity capabilities on your domain co
 Defender for Identity capabilities on domain controllers currently support the following Defender for Identity functionality:
 
 - Investigation features on the [ITDR dashboard](#check-the-itdr-dashboard), [identity inventory](#confirm-entity-page-details), and [identity advanced hunting data](#test-advanced-hunting-tables)
-- [Specified security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
-- [Specified alert detections](#test-alert-functionality)
+- [Security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
+- [Alert detections](#test-alert-functionality)
 - [Remediation actions](#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
@@ -109,10 +126,9 @@ Use the following procedures to test your environment for Defender for Identity 
 
 ### Check the ITDR dashboard
 
-In the Defender portal, select **Identities > Dashboard** and review the details shown, checking for expected results from your environment.
+In the Defender portal, select **Identities** > **Dashboard**, and review the details shown, checking for expected results from your environment.
 
-For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
-
+For more information, see [Work with Defender for Identity's ITDR dashboard](../dashboard.md).
 
 ### Confirm entity page details
 
@@ -122,11 +138,11 @@ In the Defender portal, check for the following details:
 
 - **Device entities**: Select **Assets > Devices**, and select the machine for your new sensor. Defender for Identity events are shown on the device timeline.
 
-- **User entities**. Select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
+- **User entities**: Select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
-    If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
+   If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
@@ -148,16 +164,7 @@ IdentityQueryEvents
 For more information, see [Advanced hunting in the Microsoft Defender portal](/microsoft-365/security/defender/advanced-hunting-microsoft-defender).
 
 
-### Test Identity Security Posture Management (ISPM) recommendations
-
-Defender for Identity capabilities on domain controllers support the following ISPM assessments:
-
-- [**Install Defender for Identity Sensor on all Domain Controllers**](../security-assessment-unmonitored-domain-controller.md)
-- [**Microsoft LAPS usage**](../security-assessment-laps.md)
-- [**Resolve unsecure domain configurations**](../security-assessment-unsecure-domain-configurations.md)
-- **Set a honeytoken account**
-- [**Unsecure account attributes**](../security-assessment-unsecure-account-attributes.md)
-- [**Unsecure SID History attributes**](../security-assessment-unsecure-sid-history-attribute.md)
+## Test Identity Security Posture Management (ISPM) recommendations
 
 We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
 
@@ -187,37 +194,6 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 ### Test alert functionality
 
-The following alerts are supported by Defender for Identity capabilities on domain controllers:
-
-:::row:::
-   :::column span="":::
-    - [Account enumeration reconnaissance](../reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-external-id-2003)
-    - [Active Directory attributes Reconnaissance using LDAP](../reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210)
-    - [Exchange Server Remote Code Execution (CVE-2021-26855)](../lateral-movement-alerts.md#exchange-server-remote-code-execution-cve-2021-26855-external-id-2414)
-    - [Honeytoken user attributes modified](../persistence-privilege-escalation-alerts.md#honeytoken-user-attributes-modified-external-id-2427)
-    - [Honeytoken was queried via LDAP](../reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-ldap-external-id-2429)
-    - [Honeytoken authentication activity](../credential-access-alerts.md#honeytoken-authentication-activity-external-id-2014)
-    - [Honeytoken group membership changed](../persistence-privilege-escalation-alerts.md#honeytoken-group-membership-changed-external-id-2428) 
-    - [Remote code execution attempt](../other-alerts.md#remote-code-execution-attempt-external-id-2019)
-    - [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
-    - [Suspicious service creation](../other-alerts.md#suspicious-service-creation-external-id-2026)
-    - [Suspected NTLM relay attack (Exchange account)](../lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)
-   :::column-end:::
-   :::column span="":::
-    - [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
-    - [Suspicious additions to sensitive groups](../persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)
-    - [Suspicious modification of a dNSHostName attribute (CVE-2022-26923)](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-a-dnshostname-attribute-cve-2022-26923--external-id-2421)
-    - [Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287)](../credential-access-alerts.md#suspicious-modification-of-a-samnameaccount-attribute-cve-2021-42278-and-cve-2021-42287-exploitation-external-id-2419)
-    - [Suspected DCShadow attack (domain controller promotion)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)
-    - [Suspected DFSCoerce attack using Distributed File System Protocol](../credential-access-alerts.md#suspected-dfscoerce-attack-using-distributed-file-system-protocol-external-id-2426) 
-    - [Suspected DCShadow attack (domain controller replication request)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)
-    - [Suspected account takeover using shadow credentials](../credential-access-alerts.md#suspected-account-takeover-using-shadow-credentials-external-id-2431)
-    - [Suspected SID-History injection](../persistence-privilege-escalation-alerts.md#suspected-sid-history-injection-external-id-1106)
-    - [Suspected AD FS DKM key read](../credential-access-alerts.md#suspected-ad-fs-dkm-key-read-external-id-2413)
-   :::column-end:::
-:::row-end:::
-
-
 Test alert functionality by simulating risky activity in a test environment. For example:
 
 - Tag an account as a honeytoken account, and then try signing in to the honeytoken account against the activated domain controller.
@@ -232,17 +208,9 @@ Test remediation actions on a test user. For example:
 
 1. In the Defender portal, go to the user details page for a test user.
 
-1. From the options menu, select any or all of the following, one at a time:
+2. From the **Options** menu, select any of the available remediation actions.
 
-    - **Disable user in AD**
-    - **Enable user in AD**
-    - **Force password reset**
-
-1. Check Active Directory for the expected activity.
-
-> [!NOTE]
-> The current version does not collect the User Account Control (UAC) flags correctly. So disabled users, would still appear as Enabled in the portal.
-
+3. Check Active Directory for the expected activity.
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
@@ -250,8 +218,10 @@ For more information, see [Remediation actions in Microsoft Defender for Identit
 
 If you want to deactivate Defender for Identity capabilities on your domain controller, delete it from the **Sensors** page:
 
-1. In the Defender portal, select **Settings > Identities > Sensors**.
-1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+1. In the Defender portal, select **Settings** > **Identities** > **Sensors**.
+2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+
+    :::image type="content" source="media/activate-capabilities/3.jpg" lightbox="media/activate-capabilities/3.jpg" alt-text="Screenshot that shows how to deactivate a server.":::
 
 Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/).
 

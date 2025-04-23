@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 4/12/2024
+ms.date: 01/16/2025
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-office-365
@@ -196,6 +196,7 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 The **Analysis** view contains information that helps you analyze the message in depth. The following information is available in this view:
 
 - **Threat detection details** section: Information about threats detected in the message:
+  - **Threat classification**: AI determination of the threat. For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).
   - **Threats**: The primary threat is indicated by :::image type="icon" source="media/m365-cc-sc-primary-threat-icon.png" border="false"::: **Primary threat**.
   - **Confidence level**: Values are **High**, **Medium**, or **Low**.
   - **Priority account protection**: Values are **Yes** or **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
@@ -511,6 +512,7 @@ The following sections are available on the Email summary panel for all features
   - **Delivery action**
   - **Detection technologies**
   - **Primary override : Source**
+  - **Threat classification**
 
 - **Email details** section:
   - **Sender display name**

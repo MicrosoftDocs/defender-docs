@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 01/18/2024
+ms.date: 02/10/2025
 ---
 
 # Onboard Windows devices in Azure Virtual Desktop
@@ -41,7 +41,7 @@ Familiarize yourself with the [considerations for non-persistent VDI](configure-
 > - Single entry for each virtual desktop
 > - Multiple entries for each virtual desktop
 
-Microsoft recommends onboarding Azure Virtual Desktop as a single entry per virtual desktop. This ensures that the investigation experience in the Microsoft Defender for Endpoint portal is in the context of one device based on the machine name. Organizations that frequently delete and redeploy AVD hosts should strongly consider using this method as it prevents multiple objects for the same machine from being created in the Microsoft Defender for Endpoint portal. This can lead to confusion when investigating incidents. For test or non-volatile environments, you may opt to choose differently.
+Microsoft recommends onboarding Azure Virtual Desktop as a single entry per virtual desktop. This ensures that the investigation experience in the Microsoft Defender for Endpoint portal is in the context of one device based on the machine name. Organizations that frequently delete and redeploy AVD hosts should strongly consider using this method as it prevents multiple objects for the same machine from being created in the Microsoft Defender for Endpoint portal. This can lead to confusion when investigating incidents. For test or non-volatile environments, you may opt to choose differently. When using the single entry per virtual desktop method, it is not necessary to offboard the virtual desktops.
 
 Microsoft recommends adding the Microsoft Defender for Endpoint onboarding script to the AVD golden image. This way, you can be sure that this onboarding script runs immediately at first boot. It's executed as a startup script at first boot on all the AVD machines that are provisioned from the AVD golden image. However, if you're using one of the gallery images without modification, place the script in a shared location and call it from either local or domain group policy.
 

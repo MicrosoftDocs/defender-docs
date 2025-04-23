@@ -18,16 +18,14 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Overview of Microsoft Defender XDR APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -51,7 +49,7 @@ Along with these Microsoft Defender XDR-specific APIs, each of our other securit
 > The transition to the unified portal should not affect the PowerBi dashboards based on Microsoft Defender for Endpoint APIs. You can continue to work with the existing APIs regardless of the interactive portal transition.
 
 Watch this short video to learn how you can use Microsoft Defender XDR to automate workflows and integrate apps.  
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4d73M?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f6300637-b48e-49d7-aa76-2778a711ae6c]
 
 ## Learn more
 

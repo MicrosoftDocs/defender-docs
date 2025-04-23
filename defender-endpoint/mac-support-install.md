@@ -1,9 +1,10 @@
 ---
-title: Troubleshoot installation issues for Microsoft Defender for Endpoint on Mac
-description: Troubleshoot installation issues in Microsoft Defender for Endpoint on Mac.
+title: Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS 
+description: Troubleshoot installation issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS
@@ -29,7 +30,7 @@ ms.date: 04/30/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Installation failed
 
@@ -51,7 +52,7 @@ preinstall com.microsoft.wdav end [2020-03-11 13:08:49 -0700] 804 => 1
 In this example, the actual reason is prefixed with `[ERROR]`.
 The installation failed because a downgrade between these versions isn't supported.
 
-## MDATP install log missing or not updated
+## MDATP installs log missing or not updated
 
 In rare cases, installation leaves no trace in MDATP's /Library/Logs/Microsoft/mdatp/install.log file.
 First, verify that an installation happened. Then analyze possible errors by querying macOS logs. It's helpful to do this in MDM deployments, when there's no client UI. We recommend that you use a narrow time window to run a query and filter by the logging process name, as there will be a huge amount of information.

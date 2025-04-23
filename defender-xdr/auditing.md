@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 01/14/2025
 ---
 
 # Auditing
@@ -28,19 +28,19 @@ ms.date: 10/30/2024
 
 As a tenant administrator, you can use Microsoft Purview to search the audit logs for the times Microsoft Defender Experts signed into your tenant and the actions they did there to perform their investigations. You can also search the audit logs for the changes done by your tenant administrators to the Defender Experts settings.
 
-[Audit (Standard)](/microsoft-365/compliance/audit-solutions-overview) is turned on by default for all Microsoft Defender Experts for XDR customers when paid licenses are assigned to the tenant. If you have a trial license, work with your service delivery manager to turn on Audit if it isn't yet.
+Auditing is automatically turned on in the Microsoft Defender portal. Features that are audited are logged in the audit log automatically. Auditing can also collect audit logs from GCC environments.
 
 > [!NOTE]
 > Make sure you have the right [permissions](/microsoft-365/compliance/audit-log-search#before-you-search-the-audit-log) to search for audit logs.
 
 ## Search the audit logs for actions performed by Defender Experts
 
-1. Sign into the [Microsoft Purview compliance portal](https://compliance.microsoft.com/) to use [Audit New Search](/microsoft-365/compliance/audit-new-search).
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) to use [Audit New Search](/microsoft-365/compliance/audit-new-search).
 2. Provide a **Date and time range (UTC)**.
 3. Select the **Workload** and **Record type** from the list shown in the following table to further narrow your search.
 4. Select **Search** to list the audit logs related to actions taken by our experts in your tenant.
 
-:::image type="content" source="/defender/media/xdr/audit.png" alt-text="Partial screenshot of Microsoft Purview compliance portal Defender New search page." lightbox="/defender/media/xdr/audit.png":::
+:::image type="content" source="/defender/media/xdr/audit.png" alt-text="Partial screenshot of Microsoft Purview portal Defender New search page." lightbox="/defender/media/xdr/audit.png":::
 
 | Action performed by Defender Experts | Workload | Record type |
 |--------------|-----|-----------|
@@ -54,16 +54,16 @@ As a tenant administrator, you can use Microsoft Purview to search the audit log
 
 ## Search the audit logs for actions performed by your administrators in the Defender Experts settings
 
-1. Sign into the [Microsoft Purview compliance portal](https://compliance.microsoft.com/) to use [Audit New Search](/microsoft-365/compliance/audit-new-search).
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) to use [Audit New Search](/microsoft-365/compliance/audit-new-search).
 2. Provide a **Date and time range (UTC)**.
 3. Under **Workload**, choose _MicrosoftDefenderExperts_.
 4. Select **Search** to list the audit logs related to actions taken by your tenant administrators to the Defender Experts settings.
 
-:::image type="content" source="/defender/media/xdr/audit-3.png" alt-text="Partial screenshot of Microsoft Purview compliance portal Defender New search page showing the Workload field selected to MicrosoftDefenderExperts." lightbox="/defender/media/xdr/audit-3.png":::
+:::image type="content" source="/defender/media/xdr/audit-3.png" alt-text="Partial screenshot of Microsoft Purview portal Defender New search page showing the Workload field selected to MicrosoftDefenderExperts." lightbox="/defender/media/xdr/audit-3.png":::
 
 ## Search the audit logs using a PowerShell script
 
-In addition to using Audit New Search in the Microsoft Purview compliance portal, you can use PowerShell cmdlets to search for audit logs. [Learn more](/microsoft-365/compliance/audit-log-search-script).
+In addition to using Audit New Search in the Microsoft Purview portal, you can use PowerShell cmdlets to search for audit logs. [Learn more](/microsoft-365/compliance/audit-log-search-script).
 
 ### See also
 

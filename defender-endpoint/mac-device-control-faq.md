@@ -2,8 +2,9 @@
 title: macOS Device control policies frequently asked questions (FAQ)
 description: Get answers to common questions about device control policies using JAMF or Intune.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # macOS Device Control policies frequently asked questions (FAQ)
@@ -39,7 +40,7 @@ Answer: Run _mdatp device-control policy preferences list_ to see all the iOS po
 
 :::image type="content" source="media/macos-device-control-faq-enabled-default-enforcement.png" alt-text="Shows how to run mdatp device-control policy preferences list to see if a device is Device Control enabled. " lightbox="media/macos-device-control-faq-enabled-default-enforcement.png":::
 
-### How do I know whether the policy has been delivered to the client machine?
+### How do I know if the policy is delivered to the client machine?
 
 Answer: Run _mdatp device-control policy rules list_ to see all the iOS policies on this machine:
 

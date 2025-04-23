@@ -3,7 +3,7 @@ title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 09/13/2024
+ms.date: 03/06/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
@@ -22,8 +22,9 @@ search.appverid: met150
 # Configure custom exclusions for Microsoft Defender Antivirus
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -36,15 +37,29 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 > [!TIP]
 > For a detailed overview of suppressions, submissions, and exclusions across Microsoft Defender Antivirus and Defender for Endpoint, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
 
+## Hide the antivirus exclusions from users and/or local administrators
+
+| Setting | Description | Default value |
+| -------- | -------- | -------- |
+|**Configure if exclusions are visible to Local Admins** | - **Disabled (Default)**:  If you disable or don't configure this setting, Local Admins are able to see exclusions in the Windows Security App or via PowerShell. <br> - **Enabled**: If this setting is enabled, Local Admins no longer see the exclusion list in Windows Security App or via PowerShell.  <br> - Please note that applying this setting won't remove exclusions, it prevents them from being visible to Local Admins. This is reflected in Get-MpPreference. <br>  | Disabled |
+|**Configure whether exclusions are visible to local users** | - Use this policy setting to configure whether or not exclusions are visible to Local Admins (HideExclusionsFromLocalAdmins).  | Disabled |
+
 ## Configure and validate exclusions
 
 > [!CAUTION]
-> Use Microsoft Defender Antivirus extensions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+> Use Microsoft Defender Antivirus exclusions sparingly. Make sure to review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+> Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format
 
 If you're using Microsoft Intune to manage Microsoft Defender Antivirus or Microsoft Defender for Endpoint, use the following procedures to define exclusions:
 
-- [Manage antivirus exclusions in Intune (for existing policies)](#manage-antivirus-exclusions-in-intune-for-existing-policies)
-- [Create a new antivirus policy with exclusions in Intune](#create-a-new-antivirus-policy-with-exclusions-in-intune)
+- [Configure custom exclusions for Microsoft Defender Antivirus](#configure-custom-exclusions-for-microsoft-defender-antivirus)
+  - [Hide the antivirus exclusions from users and/or local administrators.](#hide-the-antivirus-exclusions-from-users-andor-local-administrators)
+  - [Configure and validate exclusions](#configure-and-validate-exclusions)
+      - [Manage antivirus exclusions in Intune (for existing policies)](#manage-antivirus-exclusions-in-intune-for-existing-policies)
+      - [Create a new antivirus policy with exclusions in Intune](#create-a-new-antivirus-policy-with-exclusions-in-intune)
+  - [Important points about exclusions](#important-points-about-exclusions)
+  - [Audit antivirus exclusions on Exchange systems](#audit-antivirus-exclusions-on-exchange-systems)
+  - [See also](#see-also)
 
 If you're using another tool, such as Configuration Manager or Group Policy, or you want more detailed information about custom exclusions, see these articles:
 
@@ -109,7 +124,7 @@ Remember these important points:
 
 ## Audit antivirus exclusions on Exchange systems
 
-Microsoft Exchange has supported integration with the Antimalware Scan Interface (AMSI) since the June 2021 Quarterly Updates for Exchange (see [Running Windows antivirus software on Exchange servers](/exchange/antispam-and-antimalware/windows-antivirus-software)). It's highly recommended to install these updates and make sure that AMSI is working properly. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).  
+Microsoft Exchange has supported integration with the anti-malware Scan Interface (AMSI) since the June 2021 Quarterly Updates for Exchange (see [Running Windows antivirus software on Exchange servers](/exchange/antispam-and-antimalware/windows-antivirus-software)). It's highly recommended to install these updates and make sure that AMSI is working properly. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).  
 
 Many organizations exclude the Exchange directories from antivirus scans for performance reasons. Microsoft recommends auditing Microsoft Defender Antivirus exclusions on Exchange systems and assessing whether exclusions can be removed without impacting performance in your environment to ensure the highest level of protection. Exclusions can be managed by using Group Policy, PowerShell, or systems management tools like Microsoft Intune.
 

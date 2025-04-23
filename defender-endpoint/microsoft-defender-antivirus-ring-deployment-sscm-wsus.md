@@ -16,7 +16,7 @@ ms.custom: intro-overview
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
+ms.date: 03/26/2025
 ---
 
 # Microsoft Defender Antivirus ring deployment using System Center Configuration Manager and Windows Server Update Services
@@ -25,8 +25,8 @@ ms.date: 07/21/2023
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -34,7 +34,7 @@ ms.date: 07/21/2023
 - Windows
 - Windows Server
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
@@ -83,7 +83,7 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
    
    These settings are shown in the following image:
    
-   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings for the Software Updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png":::
+     :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings for the Software Updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png":::
    
    > [!TIP]
    > Click **Preview** - to make sure "Security Intelligence Update for Windows Defender Antivirus" is listed. You should see **KB2267602**.
@@ -131,7 +131,7 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
    
 1. On the **Distribution location** page, under **Specify the update languages for product**, under **product**, select **Windows Update**. 
    
-1. Select **Next**. On the **Download Settings** page, under **Specify the software updates download behavior for clients on slow site boundaries**,  select the following:
+1. Select **Next**. On the **Download Settings** page, under **Specify the software updates download behavior for clients on slow site boundaries**, select the following:
    
    | In: | Change: |
    |:---|:---|

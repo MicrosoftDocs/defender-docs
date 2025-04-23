@@ -29,7 +29,7 @@ appliesto:
 If you already have an existing third-party protection service or device that sits in front of Microsoft 365, you can use this guide to migrate your protection to Microsoft Defender for Office 365. Defender for Office 365 gives you the benefits of a consolidated management experience, potentially reduced cost (using products that you already pay for), and a mature product with integrated security protection. For more information, see [Microsoft Defender for Office 365](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
 
 Watch this short video to learn more about migrating to Defender for Office 365.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfH]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=41c64de1-92ce-4ff6-9660-557a4d6f74f1]
 
 This guide provides specific and actionable steps for your migration, and assumes the following facts:
 
@@ -50,6 +50,13 @@ Eliminating your existing protection service in favor of Defender for Office 365
 The high-level migration steps are illustrated in the following diagram. The actual steps are listed in the section named [The migration process](#the-migration-process) later in this article.
 
 :::image type="content" source="media/mdo-migration-overview.png" alt-text="The process of migration from a third-party protection solution or device to Defender for Office 365" lightbox="media/mdo-migration-overview.png":::
+
+> [!TIP]
+> For information about configuring protection for Microsoft Teams, see the following articles:
+>
+> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
 ## Why use the steps in this guide?
 

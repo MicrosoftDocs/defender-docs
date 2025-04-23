@@ -7,11 +7,7 @@ ms.topic: how-to
 
 # File policies in Microsoft Defender for Cloud Apps
 
-
-
 File Policies allow you to enforce a wide range of automated processes using the cloud provider's APIs. Policies can be set to provide continuous compliance scans, legal eDiscovery tasks, DLP for sensitive content shared publicly, and many more use cases. Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters (for example, access level, file type).
-
-For a list of file filters that can be applied see [File filters in Microsoft Defender for Cloud Apps](file-filters.md).
 
 ## Supported file types
 
@@ -26,8 +22,9 @@ The engine combines three aspects under each policy:
 * Context filters including user roles, file metadata, sharing level, organizational group integration, collaboration context, and additional customizable attributes.
 
 * Automated actions for governance and remediation.
-    > [!NOTE]
-    > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has already applied a sensitivity label to a file, a second file policy cannot apply another sensitivity label to it.
+
+  > [!NOTE]
+  > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has already applied a sensitivity label to a file, a second file policy cannot apply another sensitivity label to it.
 
 Once enabled, the policy continuously scans your cloud environment and identifies files that match the content and context filters, and apply the requested automated actions. These policies detect and remediate any violations for at-rest information or when new content is created. Policies can be monitored using real-time alerts or using console-generated reports.
 
@@ -57,7 +54,7 @@ To create a new file policy, follow this procedure:
 
 1. Select **Create policy** and select **File policy**.
 
-    ![Create a Information Protection policy.](media/create-policy-from-information-protection-tab.png)
+   ![Create a Information Protection policy.](media/create-policy-from-information-protection-tab.png)
    
 1. Give your policy a name and description, if you want you can base it on a template, for more information on policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
@@ -66,10 +63,12 @@ To create a new file policy, follow this procedure:
 1. Within **Category**, link the policy to the most appropriate risk type. This field is informative only and helps you search for specific policies and alerts later, based on risk type.  The risk may already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
 
 1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
+
    > [!NOTE]
    > When using the policy filters, **Contains**  searches only for full words – separated by commas, dots, spaces, or underscores. For example if you search for **malware** or **virus**, it finds virus_malware_file.exe but it does not find malwarevirusfile.exe. If you search for **malware.exe**, then you find ALL files with either malware or exe in their filename, whereas if you search for **"malware.exe"** (with the quotation marks) you find only files that contain exactly "malware.exe". **Equals** searches only for the complete string, for example if you search for **malware.exe** it finds malware.exe but not malware.exe.txt.
    >
    > For more information about File Policy Filters, see [File filters in Microsoft Defender for Cloud Apps](file-filters.md#file-filters).
+
 1. Under the first **Apply to** filter, select **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive, where you can enforce your file policy over all files on the app or on specific folders. You're redirected to sign in the cloud app, and then add the relevant folders.
 
 1. Under the second **Apply to** filter, select either **all file owners**, **file owners from selected user groups** or **all file owners excluding selected groups**. Then select the relevant user groups to determine which users and groups should be included in the policy.
@@ -127,15 +126,18 @@ Each policy is composed of the following parts:
 You can go to the Policy center to review file policy violations.
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**, and then select the **Information protection** tab.
+
 1. For each file policy, you can see the file policy violations by selecting the **matches**.  
 
-    ![Screenshot of sample PCI matches.](media/pci-matches.png "Screenshot of sample PCI matches.")
+   :::image type="content" alt-text="Screenshot of sample PCI matches." source="media/pci-matches.png" lightbox="media/pci-matches.png":::
 
 1. You can select the file itself to get information about the files.  
 
-    ![Screenshot of sample PCI content matches.](media/pci-content-matches.png "Screenshot of sample PCI content matches.")
+   :::image type="content" alt-text="Screenshot of sample PCI content matches." source="media/pci-content-matches.png" lightbox="media/pci-content-matches.png":::
 
-1. For example, you can select **Collaborators** to see who has access to this file, and you can select **Matches** to see the Social Security numbers. ![Content matches credit card numbers.](media/content-matches-ccn.png "content matches Social Security numbers")
+1. For example, you can select **Collaborators** to see who has access to this file, and you can select **Matches** to see the Social Security numbers. 
+
+   :::image type="content" alt-text="Content matches Social Security numbers." source="media/content-matches-ccn.png" lightbox="media/content-matches-ccn.png":::
 
 ## Related videos
 

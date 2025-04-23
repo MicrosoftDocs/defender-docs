@@ -5,12 +5,11 @@ search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb 
-audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 12/10/2024
+ms.date: 03/04/2025
 ms.reviewer: yonghree, pahuijbr
 f1.keywords: NOCSH
 ms.collection: 
@@ -53,7 +52,7 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 | Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3) |
 | Browser requirements | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
 | Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
-| Operating systems (server) | Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution)<br/>[Linux Server](microsoft-defender-endpoint-linux.md)   |
+| Operating systems (server) | Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/>[Linux](microsoft-defender-endpoint-linux.md)   |
 | Datacenter | One of the following datacenter locations: <br/>- European Union <br/>- United Kingdom <br/>- United States |
 
 > [!NOTE]
@@ -104,6 +103,10 @@ Microsoft recommends assigning users only the level of permission they need to p
 
 - With basic permissions management, Global Administrators and Security Administrators have full access, whereas Security Readers have read-only access.
 - With RBAC, you can set more granular permissions through more roles. For example, you can have Security Readers, Security Operators, Security Administrators, Endpoint Administrators, and more.
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 The following table describes key roles to consider for Defender for Endpoint in your organization: <br/><br/>
 

@@ -1,6 +1,6 @@
 ---
 title: Configure the deception capability in Microsoft Defender XDR
-description: Learn how to create, edit, and delete deception rules in Microsoft Defender XDR.
+description: Learn how to create, edit, and delete deception rules in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
@@ -12,20 +12,19 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
 - MOE150
 - MET150
 ms.date: 01/12/2024
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a security analyst, I want to learn how to configure the deception capability so that I can protect my organization from high-impact attacks that use human-operated lateral movement.
 ---
 
 # Configure the deception capability in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!NOTE]
 > The built-in [deception](deception-overview.md) capability in Microsoft Defender XDR covers all Windows clients onboarded to Microsoft Defender for Endpoint. Learn how to onboard clients to Defender for Endpoint in [Onboard to Microsoft Defender for Endpoint](/defender-endpoint/onboarding).
