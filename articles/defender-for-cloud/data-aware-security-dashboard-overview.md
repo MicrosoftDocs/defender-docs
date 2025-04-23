@@ -1,12 +1,12 @@
 ---
-title: Data and AI security dashboard (Preview)
+title: Data and AI security dashboard
 description: Discover the capabilities of the Data and AI Security Dashboard in Microsoft Defender for Cloud. Enhance your security posture and manage risks effectively.
 ms.topic: concept-article
-ms.date: 03/03/2025
+ms.date: 01/05/2025
 #customer intent: As a security professional, I want to understand the information presented to me on the data and AI security dashboard so that I can effectively manage the security of my organization's data and AI estate, risks and insights.
 ---
 
-# Data and AI security dashboard (Preview)
+# Data and AI security dashboard
 
 Microsoft Defender for Cloud's Data and AI security dashboard provides a centralized platform to monitor and manage data and AI resources, their associated risks, and protection status. The dashboard highlights critical security issues, resources needing attention, and internet-exposed resources, enabling proactive risk mitigation. Additionally, it provides insights into sensitive data within data resources and AI workloads, strengthening the overall security posture.
 
