@@ -46,12 +46,11 @@ The following table shows how the family names map to the threat actors that we 
 
 |Threat actor category|Type|Family name|
 |:---|:---|:---|
-|Nation-state|China<br>Iran<br>Lebanon<br>North Korea<br>Russia<br>South Korea<br>Turkey<br>Vietnam|Typhoon<br>Sandstorm<br>Rain<br>Sleet<br>Blizzard<br>Hail<br>Dust<br>Cyclone|
+|Nation-state|China<br>Germany<br>India<br>Iran<br>North Korea<br>Lebanon<br>Pakistan<br>Palestinian Authority<br>Russia<br>Singapore<br>South Korea<br>Spain<br>Syria<br>Türkiye<br>Ukraine<br>United States<br>Vietnam|Typhoon<br>Gale<br>Monsoon<br>Sandstorm<br>Sleet<br>Rain<br>Whirlwind<br>Lightning<br>Blizzard<br>Squall<br>Hail<br>Derecho<br>Haze<br>Dust<br>Frost<br>Tornado<br>Cyclone|
 |Financially motivated|Financially motivated|Tempest|
 |Private sector offensive actors|PSOAs|Tsunami|
 |Influence operations|Influence operations|Flood|
 |Groups in development|Groups in development|Storm|
-
 
 The following table lists publicly disclosed threat actor names with their origin or threat actor category, previous names, and corresponding names used by other security vendors where available. This page will be updated as more info on other vendors' names become available.  
 
