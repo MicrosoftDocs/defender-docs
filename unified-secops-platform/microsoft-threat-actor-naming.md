@@ -137,7 +137,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Seashell Blizzard](https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/)|Russia|IRIDIUM, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
 |[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|Russia|KRYPTON, VENOMOUS BEAR, Uroburos, Snake, Blue Python, Turla, WRAITH, ATG26|
 |Sefid Flood|Iran, Influence operations||
-|Shadow Typhoon|China|DarkShadow, Oro0lxy|
+|Shadow Typhoon|China|DarkShadow, Oro0lxy, Storm-0062|
 |[Silk Typhoon](https://www.microsoft.com/en-us/security/blog/tag/silk-typhoon-hafnium/)|China|HAFNIUM, timmy|
 |Smoke Sandstorm|Iran|UNC1549|
 |Spandex Tempest|Financially motivated|TA505|
@@ -184,7 +184,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Wheat Tempest|Financially motivated|GOLD, Gatak|
 |Wisteria Tsunami|India, Private sector offensive actor|DEV-0605|
 |Yulong Flood|China,, Influence operations|Storm-1852|
-|Zigzag Hail|South Korea|DUBNIUM, Nemim, TEMPLAR, TieOnJoe, Fallout Team, Purple Pygmy, Dark Hotel, Egobot, Tapaoux, PALADIN, Darkhotel|
+|Zigzag Hail|South Korea|DUBNIUM, Nemim, TEMPLAR, TieOnJoe, Fallout Team, Purple Pygmy, Dark Hotel, Egobot, Tapaoux, PALADIN, APT-C-60|
 
 Read our announcement about this taxonomy for more information: [https://aka.ms/threatactorsblog](https://aka.ms/threatactorsblog)
 
