@@ -27,7 +27,7 @@ Multiple security rules may affect the deployment of a container image. The cond
 ## Limitations
 - If the image is deployed before the MDVM scan for vulnerability assessment, no gating is applied, and the image gets deployed
 - **Kubelet Identity Requirement:** Automatic installation can't be applied to clusters without a kubelet identity. Clusters using service principals instead of identities aren't supported due to the lack of pod identity support.
-- **Registry Support:** Currently only registries with Azure Active Directory (AAD) authentication are supported. Customers need to enable secret access. ARM configuration can be used.
+- **Registry Support:** Currently only registries with Azure Active Directory (Azure AD) authentication are supported. Customers need to enable secret access. ARM configuration can be used.
 - **OIDC and Workload Identity:** During installation, we enable OpenID Connect (OIDC) and workload identity on the cluster, and add federated credentials to the kubelet identity. 
 - **Agent Deletion:** Automatic deletion of agents (Tivan and Gating) isn't supported. Tivan indicates that we can't determine if we installed the agents or if they were installed via CLI/ARM, so we don't delete them
 - **Multi-Arch Image Support:** Currently, there isn't support for multi-architecture images.
