@@ -1,7 +1,7 @@
 ---
 title: Before you begin using the Microsoft Defender Experts for XDR service
 ms.reviewer:
-description: To enable us to get started with this defender experts managed service, we require the following licensing prerequisites
+description: To enable us to get started with the defender experts managed service, we require the following licensing prerequisites
 ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
