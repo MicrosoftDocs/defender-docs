@@ -20,31 +20,58 @@ This article explains the benefits and procedures to connect Mend.io to Defender
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can sign up for a free subscription.
-- Enable Microsoft Defender for Cloud on your Azure subscription.
-- Enable Defender Cloud Security Posture Management (CSPM) on your Azure subscription.
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+
+- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+
+- You must [enable Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
+
 - Connect your DevOps environments to Defender for Cloud:
-    - Azure DevOps organizations
-    - GitHub organizations
-    - GitLab groups
-- Have an account with Mend.io.
+  - [Azure DevOps organizations](quickstart-onboard-devops.md)
+  - [GitHub organizations](quickstart-onboard-github.md)
+  - [GitLab groups](quickstart-onboard-devops.md)
+
+- Have an account with [Mend.io](https://www.mend.io/).
+
 - Have an API key from Mend.io with read-only permissions. We recommend setting the expiration date to be 180 days.
+
 - You must have the appropriate role to:
-  - Create DevOps connectors: Security Admin or Contributor assigned at the subscription level through Azure role-based-access control (RBAC).
-  - Create the Mend.io connector: Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra. Permissions can be granted through Privileged Identity Management.
-  - View reachability analysis findings: Security Admin or Security Reader assigned at the subscription level through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector.
-- You can only have one connector to Mend.io per tenant.
-- Findings from Mend.io will only be shown if the corresponding repository is also connected to Defender for Cloud.
+
+    | Task | Role |
+    |--|--|
+    | Create DevOps connectors | Security Admin or Contributor assigned at the subscription level through Azure role-based-access control (RBAC) |
+    | Create the Mend.io connector | Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra. Permissions can be granted through Privileged Identity Management |
+    | View reachability analysis findings | Security Admin or Security Reader assigned at the subscription level through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector |
+
+- Connect only one Mend.io connector per tenant.
+
+- Ensure the corresponding repository is connected to Defender for Cloud. Failing to connect the corresponding repository will prevent findings from appearing in Defender for Cloud.
 
 ## Connect Mend.io
 
 To connect your Mend.io account to Defender for Cloud:
 
-1. Sign in to the Azure portal.
-2. Navigate to Microsoft Defender for Cloud > Environment settings.
-3. Select Integrations.
-4. Select Add integration > Mend.io.
-   > **Note:** The option to add the Mend.io integration is not available if you don't have the appropriate permissions, or if you already have an existing connector to Mend.io.
-5. Enter a Mend.io namespace, API key ID, and API secret.
-6. Select Create.
-   > A notice appears after the integration is successfully created. Defender for Cloud scans repositories connected to Mend.io and populates results after six hours.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Integrations**.
+
+   :::image type="content" border="true" source="./media/connect-mend-io/integrations.png" alt-text="Screenshot of environment settings page that shows where to select the ServiceNow option.":::
+
+1. Select **Add integration** > **Mend.io**.
+
+   :::image type="content" border="true" source="./media/connect-mend-io/add-mend-io.png" alt-text="Screenshot that shows where the Add Integration button is and the ServiceNow option." lightbox="media/connect-mend-io/add-mend-io.png":::
+
+    > [!NOTE] 
+    > The option to add the Mend.io integration is not available if you don't have the appropriate permissions, or if you already have an existing connector to Mend.io.
+
+1. Enter a Mend.io namespace, API key ID, and API secret.
+
+1. Select **Create**.
+
+A notice appears after the integration is successfully created. Defender for Cloud scans repositories connected to Mend.io and populates results after six hours.
+
+## Related content
+
+Learn more about [partner integrations](partner-integrations.md).
