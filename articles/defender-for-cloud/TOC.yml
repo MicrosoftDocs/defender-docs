@@ -1041,6 +1041,9 @@
         - name: Migrate to AMA
           displayName: vulnerability, assessment, findings, migrate
           href: defender-for-sql-autoprovisioning.md
+        - name: Disable Defender for SQL Servers on Machines
+          displayName: SQL, SQL servers, defender, machines, disable
+          href: disable-sql-machine-protection.md
         - name: Government clouds
           items:
           - name: Enable Defender for SQL Servers on Machines government
