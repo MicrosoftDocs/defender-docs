@@ -51,8 +51,6 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
 
-[Security Copilot agents](#security-copilot-agents-in-microsoft-defender) are also available in Microsoft Defender to help security teams automate and scale their security operations. The [Phishing Triage Agent](#phishing-triage-agent) is a Security Copilot agent designed to scale security teams' response in triaging and classifying user-submitted phishing incidents in Microsoft Defender.
-
 Security Copilot operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
 
 ## Key features
@@ -125,23 +123,6 @@ Ask Copilot to summarize the relevant threats impacting your environment, to pri
 
 <a name='access-security-copilot-in-microsoft-365-defender'></a>
 
-### Security Copilot agents in Microsoft Defender
-
-> [!IMPORTANT]
-> Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
-
-#### Phishing Triage Agent
-
-The [Phishing Triage Agent](phishing-triage-agent.md) is a Security Copilot agent designed to scale security teams' response in triaging and classifying user-submitted phishing incidents in Microsoft Defender, can help organizations address phishing efficiently. It assists security operations center (SOC) teams by autonomously triaging phishing submissions, determining whether they are genuine phishing attempts or false alarms. By alleviating the burden of reactive work, it reduces the team's manual workload and allows them to focus on critical tasks.
-
-[SCREENSHOT]
-
-Some of the agent’s highlights include:
-
-- It operates autonomously. The Phishing Triage Agent leverages advanced AI tools to perform sophisticated assessments and determine whether a phishing submission is a real threat or a false alarm, without requiring step-by-step human input or code.
-- It provides a transparent rationale for its classification verdicts in natural language, including the reasoning behind its decisions and the evidence it used to arrive at those conclusions. It also shows a visual representation of its reasoning process for every decision.
-- It continuously learns and improves its accuracy based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
-
 ## Access Copilot in Defender
 
 To ensure that you have access to Copilot in Defender, see the [Security Copilot purchase and licensing information](/security-copilot/faq-security-copilot). Once you have access to Security Copilot, the key features become available in the Microsoft Defender portal.
@@ -197,7 +178,6 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 - [Generate KQL queries](advanced-hunting-security-copilot.md)
 - [Create incident reports](security-copilot-m365d-create-incident-report.md)
 - [Use threat intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)
-- [Phishing Triage Agent in Microsoft Defender](phishing-triage-agent.md)
 
 ## See also
 
@@ -205,6 +185,5 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 - [Privacy and data security in Copilot](/security-copilot/privacy-data-security)
 - [Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
 - Other [Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
-- [Security Copilot agents in Microsoft Defender](security-copilot-agents-defender.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
