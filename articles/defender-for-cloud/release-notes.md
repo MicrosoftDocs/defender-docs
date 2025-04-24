@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| April 28 | Preview | [Defender for Cloud integration with Mend.io](#defender-for-cloud-integration-with-mendio) |
+| April 28 | Preview | [Defender for Cloud integration with Mend.io (Preview)](#defender-for-cloud-integration-with-mendio-preview) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
 
 ### Defender for Cloud integration with Mend.io (Preview)
