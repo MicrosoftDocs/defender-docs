@@ -83,13 +83,14 @@ In order to preview new features and provide early feedback, it's recommended th
    | Alma 9.2 and higher|[https://packages.microsoft.com/config/alma/9/prod.repo](https://packages.microsoft.com/config/alma/9/prod.repo)|
    | RHEL/Centos/Oracle 9.0-9.8|[https://packages.microsoft.com/config/rhel/9/prod.repo](https://packages.microsoft.com/config/rhel/9/prod.repo)|
    | RHEL/Centos/Oracle 8.0-8.10|[https://packages.microsoft.com/config/rhel/8/prod.repo](https://packages.microsoft.com/config/rhel/8/prod.repo)|
-   | RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |[https://packages.microsoft.com/config/rhel/7.2/prod.repo](https://packages.microsoft.com/config/rhel/7.2/prod.repo)|
+   | RHEL/Centos/Oracle 7.2-7.9|[https://packages.microsoft.com/config/rhel/7.2/prod.repo](https://packages.microsoft.com/config/rhel/7.2/prod.repo)|
+   | Amazon Linux 2 |[https://packages.microsoft.com/config/amazonlinux/2/prod.repo](https://packages.microsoft.com/config/amazonlinux/2/prod.repo)|
    | Amazon Linux 2023 |[https://packages.microsoft.com/config/amazonlinux/2023/prod.repo](https://packages.microsoft.com/config/amazonlinux/2023/prod.repo)|
    | Fedora 33|[https://packages.microsoft.com/config/fedora/33/prod.repo](https://packages.microsoft.com/config/fedora/33/prod.repo)|
    | Fedora 34|[https://packages.microsoft.com/config/fedora/34/prod.repo](https://packages.microsoft.com/config/fedora/34/prod.repo)|
    | Rocky 8.7 and higher|[https://packages.microsoft.com/config/rocky/8/prod.repo](https://packages.microsoft.com/config/rocky/8/prod.repo)|
    | Rocky 9.2 and higher|[https://packages.microsoft.com/config/rocky/9/prod.repo](https://packages.microsoft.com/config/rocky/9/prod.repo)|
-  
+   
    > [!NOTE]
    > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
 
@@ -453,7 +454,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       mdatp config real-time-protection --value enabled
       ```
       
-   1. To run a detection test, open a Terminal window. and then run the following command:
+   1. To run a detection test, open a Terminal window, and then run the following command:
    
       ``` bash
       curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
