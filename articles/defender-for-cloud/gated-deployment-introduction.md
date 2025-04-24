@@ -20,17 +20,17 @@ Multiple security rules may affect the deployment of a container image. The cond
 
 | Aspect   | Details |
 | -------- | -------- |
-| **Required Environmental Requirements** | <br> * **Defender for Containers plan** should be enabled. <br> * **Defender sensor** in Azure toggle under the Defender for Containers plan must be activated. <br> *  This feature currently works on **Azure AKS** and **Azure ACR** only.  <br> *  **AKS** must be on version **1.31 ** or higher to use this feature.
+| **Required Environmental Requirements** | <br> * **Defender for Containers plan** should be enabled. <br> * **Defender sensor** in Azure toggle under the Defender for Containers plan must be activated. <br> *  This feature currently works on **Azure AKS** and **Azure ACR** only.  <br> *  **AKS** must be on version **1.31** or higher to use this feature.
 | **Required Roles & Permissions**| <br> *  Subscription owner permissions. <br> *  Cluster owner permissions
 | **Supported Clouds**| <br> * Available on **Azure**, **Commercial Cloud** only| 
 
 ## Limitations
-- If the image has been deployed prior to the MDVM scan for vulnerability assessment no gating applied, and image would be deployed.
-- **Kubelet Identity Requirement:** Automatic installation cannot be applied to clusters without a kubelet identity. Clusters using service principals instead of identities are not supported due to the lack of pod identity support.
-- **Registry Support:** Initially, only registries with Azure Active Directory (AAD) authentication are supported. Customers need to enable secret access.(This feature will be added in the future when CLI support is available. In the meantime, ARM configuration can be used)
+- If the image is deployed before the MDVM scan for vulnerability assessment, no gating is applied, and the image gets deployed
+- **Kubelet Identity Requirement:** Automatic installation can't be applied to clusters without a kubelet identity. Clusters using service principals instead of identities aren't supported due to the lack of pod identity support.
+- **Registry Support:** Initially, only registries with Azure Active Directory (AAD) authentication are supported. Customers need to enable secret access. This feature will be added in the future when CLI support is available. In the meantime, ARM configuration can be used)
 - **OIDC and Workload Identity:** During installation, we enable OpenID Connect (OIDC) and workload identity on the cluster, and add federated credentials to the kubelet identity. 
-- **Agent Deletion:** Automatic deletion of agents (Tivan and Gating) is not supported. Tivan has indicated that we cannot determine if the agents were installed by us or via CLI/ARM, so we do not delete them.
-- **Multi-Arch Image Support:** Currently, there is no support for multi-architecture images.
+- **Agent Deletion:** Automatic deletion of agents (Tivan and Gating) isn't supported.Tivan indicates that we can't determine if we installed the agents or if they were installed via CLI/ARM, so we don't delete them
+- **Multi-Arch Image Support:** Currently, there isn't support for multi-architecture images.
 
 ## Next steps
 - Learn how to enable your [Gated Deployment functionality](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/enable-gated-deployment.md).
