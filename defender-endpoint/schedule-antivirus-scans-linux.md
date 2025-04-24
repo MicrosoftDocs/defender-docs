@@ -79,3 +79,12 @@ Different antivirus settings / configurations can impact performance and protect
 Refer to the following article to see how to configure the above settings using CLI / managed json:
 
 [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences#antivirus-engine-preferences)
+
+
+## Recommended Best Practices and Considerations
+
+Microsoft Defender for Endpoint on Linux by default runs the antivirus engine in `passive` mode from version 101.23062.0001 onwards. Since real-time protection is turned off, it is recommended to use scheduled scans as per the requirement.
+
+Running a full scan once after you have enabled or installed Microsoft Defender for Endpoint on Linux can be useful to scan systems to detect existing threats.
+
+For regular, scheduled scans on the system, prefer quick scans, which help provide strong coverage both for malware that starts with the system and kernel-level malware, and have minimal performance impact on the device.
