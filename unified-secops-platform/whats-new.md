@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 03/31/2025
+ms.date: 04/24/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -19,6 +19,20 @@ ms.topic: concept-article
 # What's new in Microsoft's unified security operations platform
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
+
+## May 2025
+
+- [Microsoft Sentinel use cases generally available in Microsoft's unified SecOps platform](#microsoft-sentinel-use-cases-generally-available-in-microsofts-unified-secops-platform)
+
+### Microsoft Sentinel use cases generally available in Microsoft's unified SecOps platform
+
+All Microsoft Sentinel use cases that are in general availability, including [multi-tenant](mto-overview) and [multi-workspace](/azure/sentinel/workspaces-defender-portal) capabilities and support for all government and commercial clouds, are now also supported for general availability in the unified SecOps platform in the Defender portal.
+
+We recommend that you [onboard your workspaces to the Defender portal](microsoft-sentinel-onboard.md) to take advantage of a single location for all your security operations. For more information, see:
+
+<!--link to blog-->
+- [Moving to Microsoft's unified SecOps platform, by persona](https://aka.ms/move-to-defender)
+- [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md)
 
 ## April 2025
 

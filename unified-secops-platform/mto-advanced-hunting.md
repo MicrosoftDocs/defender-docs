@@ -24,8 +24,6 @@ appliesto:
 
 Advanced hunting in Microsoft Defender multi-tenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
 
-Multiple workspaces per tenant are supported in multi-tenant Advanced hunting as preview.
-
 ## Run cross-tenant queries
 
 You can run any query that you already have access to in the multi-tenant management **Advanced hunting** page.
@@ -61,7 +59,7 @@ You can run any query that you already have access to in the multi-tenant manage
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
-## Run cross-workspace queries (Preview)
+## Run cross-workspace queries
 
 To run queries across multiple workspaces in the same tenant, use the [workspace( ) expression](/azure/azure-monitor/logs/cross-workspace-query#query-across-log-analytics-workspaces-using-workspace), with the workspace identifier as the argument in your query to refer to a table in a different workspace.
 
